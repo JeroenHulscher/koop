@@ -1,0 +1,17 @@
+strong {
+  font-style: normal;
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.text--muted {
+  color: $darkerGrey;
+}
+
+small, .small {
+  font-size: 85%;
+}

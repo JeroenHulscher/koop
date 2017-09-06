@@ -1,0 +1,56 @@
+.tabs {
+
+  &__list {
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid $lighterGrey;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    a {
+      display: inline-block;
+      text-align: center;
+      padding: .5em 1em;
+      background: $white;
+      text-decoration: none;
+      position: relative;
+      border-top: 2px solid transparent;
+
+      &:hover {
+        color: $darkBlue;
+        background-color: $lightGrey;
+      }
+
+      &[aria-selected="true"] {
+        border-left: 1px solid $lighterGrey;
+        border-right: 1px solid $lighterGrey;
+        border-top: 2px solid $primaryBlue;
+        border-bottom-color: $white;
+        bottom: -1px;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &--justified {
+
+    .tabs__list {
+      display: flex;
+
+      li {
+        flex: 1;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

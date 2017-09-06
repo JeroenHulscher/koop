@@ -1,0 +1,128 @@
+.button {
+  appearance: none;
+  background-color: $buttonBackgroundColor;
+  border-radius: $borderRadius;
+  border: 1px solid $buttonBorderColor;
+  color: $buttonTextColor;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  margin: 0 .5em .5em 0;
+  max-width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+  padding: $standardButtonPadding; // 40px total height
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: .875em;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+
+  &[href] {
+    text-decoration: none;
+  }
+
+  &[href]:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid $yellow;
+    outline-offset: 0;
+    z-index: 1;
+  }
+
+  &:hover {
+    outline: none;
+  }
+
+  &:active {
+    transition: none;
+    background-color: $buttonBackgroundActiveColor;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: $lightGrey;
+    color: $mediumGrey;
+  }
+
+  &--smaller {
+    font-size: .75em;
+  }
+
+  &--larger {
+    font-size: 1em;
+  }
+
+  &--primary {
+    background-color: $buttonPrimaryBackgroundColor;
+    color: $white;
+    border: 1px solid transparent;
+
+    &:active {
+      background-color: $buttonPrimaryBackgroundActiveColor;
+    }
+  }
+
+  &--icon-right {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartRightIcon;
+    background-size: 5px 10px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-left {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartLeftIcon;
+    background-size: 5px 10px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-top {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartTopIcon;
+    background-size: 10px 5px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-down {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartDownIcon;
+    background-size: 10px 5px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-hamburger {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $hamburgerIcon;
+    background-size: 1em;
+    padding-left: 2em;
+  }
+
+  &--secondary {
+    background-color: $buttonBackgroundSecondaryColor;
+    color: $black;
+    border: 1px solid transparent;
+  }
+}

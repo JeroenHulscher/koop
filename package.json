@@ -1,0 +1,31 @@
+{
+  "name": "koop-componentenbibliotheek",
+  "version": "1.0.0",
+  "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tfs.officielebekendmakingen.nl:8080/tfs/Projects/KOOP/_git/applicatie-overheidnl-frontend"
+  },
+  "author": "Hidde de Vries, Jeroen Hulscher",
+  "license": "ISC",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.4",
+    "@frctl/mandelbrot": "^1.1.0",
+    "autoprefixer": "^6.4.1",
+    "browserify": "^14.3.0",
+    "del": "^2.2.2",
+    "eslint": "^3.13.1",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-changed": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

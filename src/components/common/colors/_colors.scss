@@ -1,0 +1,80 @@
+.color-sample {
+  width: 7em;
+  height: 7em;
+  border: 1px solid $black;
+  margin: 1em 1em 1em 0;
+  padding: 1.75em .25em;
+  display: inline-block;
+  border-radius: 100%;
+  text-align: center;
+
+  &.darkBlue {
+    background: $darkBlue;
+    color: $white;
+  }
+
+  &.primaryBlue {
+    background: $primaryBlue;
+    color: $white;
+  }
+
+  &.mediumBlue {
+    background: $mediumBlue;
+    color: $black;
+  }
+
+  &.lightBlue {
+    background: $lightBlue;
+    color: $black;
+  }
+
+  &.bgBlue {
+    background: $bgBlue;
+    color: $black;
+  }
+
+  &.darkGrey {
+    background: $darkGrey;
+    color: $white;
+  }
+
+  &.darkerGrey {
+    background: $darkerGrey;
+    color: $white;
+  }
+
+  &.mediumGrey {
+    background: $mediumGrey;
+    color: $black;
+  }
+
+  &.lighterGrey {
+    background: $lighterGrey;
+    color: $black;
+  }
+
+  &.lightGrey {
+    background: $lightGrey;
+    color: $black;
+  }
+
+  &.green {
+    background: $green;
+    color: $white;
+  }
+
+  &.yellow {
+    background: $yellow;
+    color: $black;
+  }
+
+  &.orange {
+    background: $orange;
+    color: $black;
+  }
+
+  &.red {
+    background: $red;
+    color: $white;
+  }
+}

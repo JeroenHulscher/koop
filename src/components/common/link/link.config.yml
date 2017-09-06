@@ -1,0 +1,12 @@
+title: Link
+context:
+  Text: link
+  Action: /link/intern/
+variants:
+  - name: extern
+    label: extern
+    context:
+      Text: externe link
+      TypeVariant: 'rel="external"'
+      Action: http://www.google.nl
+

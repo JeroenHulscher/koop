@@ -1,0 +1,140 @@
+$defaultFontFamily: 'Rijksoverheid Sans';
+$defaultFontStack: $defaultFontFamily, sans-serif;
+
+$defaultSerifFontFamily: 'Rijksoverheid Serif';
+$defaultHeadingFontStack: $defaultSerifFontFamily, serif;
+
+@font-face{
+  font-family: $defaultFontFamily;
+  src: url( '../fonts/ROsanswebtextregular.eot' );
+  src: url( '../fonts/ROsanswebtextregular.eot?#iefix' ) format( 'embedded-opentype' ),
+       url( '../fonts/ROsanswebtextregular.ttf' ) format( 'truetype' ),
+       url( '../fonts/ROsanswebtextregular.woff' ) format( 'woff' );
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: $defaultFontFamily;
+  src: url( '../fonts/ROsanswebtextitalic.eot' );
+  src: url( '../fonts/ROsanswebtextitalic.eot?#iefix' ) format( 'embedded-opentype' ),
+       url( '../fonts/ROsanswebtextitalic.ttf' ) format( 'truetype' ),
+       url( '../fonts/ROsanswebtextitalic.woff' ) format( 'woff' );
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: $defaultFontFamily;
+  src: url( '../fonts/ROsanswebtextbold.eot' );
+  src: url( '../fonts/ROsanswebtextbold.eot?#iefix' ) format( 'embedded-opentype' ),
+       url( '../fonts/ROsanswebtextbold.ttf' ) format( 'truetype' ),
+       url( '../fonts/ROsanswebtextbold.woff' ) format( 'woff' );
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $defaultSerifFontFamily;
+  src: url( '../fonts/ROserifwebregular.eot?' ) format( 'embedded-opentype' ),
+       url( '../fonts/ROserifwebregular.woff' ) format( 'opentype' );
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: $defaultSerifFontFamily;
+  src: url( '../fonts/ROserifwebitalic.eot?' ) format( 'embedded-opentype' ),
+       url( '../fonts/ROserifwebitalic.woff' ) format( 'opentype' );
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: $defaultSerifFontFamily;
+  src: url( '../fonts/ROserifwebbold.eot?' ) format( 'embedded-opentype' ),
+       url( '../fonts/ROserifwebbold.woff' ) format( 'opentype' );
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  background-color: $white;
+  box-sizing: border-box;
+  color: $textColor;
+  font-family: $defaultFontStack;
+  font-size: 100%;
+  line-height: 1.5;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::placeholder {
+  color: $darkGrey;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.hidden-mobile {
+  display: none !important;
+
+  @media ( min-width: 50em ) {
+    display: block !important;
+  }
+}
+
+.hidden-desktop {
+
+  @media ( min-width: 50em ) {
+    display: none !important;
+  }
+}
+
+.visually-hidden {
+  border: none;
+  clip: rect( 1px, 1px, 1px, 1px );
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+.no-scroll--mobile {
+  overflow: hidden;
+  position: fixed;
+
+  @media ( min-width: 50em ) {
+    overflow: visible;
+    position: static;
+  }
+}

@@ -1,0 +1,59 @@
+table {
+
+  width: 100%;
+  border-collapse: collapse;
+
+  caption {
+    color: $darkerGrey;
+    text-align: left;
+    padding: .5em 0;
+  }
+
+  thead tr th,
+  thead tr td {
+    border-bottom: 2px solid $lighterGrey;
+  }
+
+  tr td,
+  tr th {
+    border-bottom: 1px solid $lighterGrey;
+    padding: $standardPadding;
+  }
+
+  th {
+    font-weight: 700;
+    text-align: left;
+  }
+
+  td {
+    font-weight: 400;
+    min-width: 15%;
+  }
+
+  &.table--striped {
+    tbody tr:nth-child(odd) td,
+    tbody tr:nth-child(odd) th {
+      background: $lightGrey;
+    }
+
+  }
+
+  &.table--condensed {
+    tr td,
+    tr th {
+      padding: .25em;
+    }
+  }
+
+  &.table--hover {
+    tbody tr:nth-child(odd):hover,
+    tbody tr:nth-child(even):hover {
+      background: $lighterGrey;
+
+      td,
+      th {
+        background: $lighterGrey;
+      }
+    }
+  }
+}

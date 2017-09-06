@@ -1,0 +1,16 @@
+.footer {
+
+  .container {
+    background: $lightBlue;
+    border-top: 1em solid $mediumBlue;
+    padding: 1.5em 0 1.5em 2em;
+
+  }
+
+  ul {
+    width: calc( 25% - .5em );
+    display: inline-block;
+    background: #ccc;
+  }
+
+}

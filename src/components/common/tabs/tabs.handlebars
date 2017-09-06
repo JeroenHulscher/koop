@@ -1,0 +1,16 @@
+<div class="tabs {{ modifier }}" data-decorator="init-tabs">
+  {{#if tabs }}
+  <ul class="tabs__list">
+    {{#each tabs}}
+    <li role="presentation">
+      <a href="#panel-{{ id }}" data-handler="open-tab" role="tab" id="tab-{{ id }}" aria-controls="panel-{{ id }}">{{ label }}</a>
+    </li>
+    {{/each}}
+  </ul>
+  {{#each tabs }}
+  <div id="panel-{{ id }}" role="tabpanel" aria-labelledby="tab-{{ id }}">
+    {{{ content }}}
+  </div>
+  {{/each}}
+  {{/if}}
+</div>

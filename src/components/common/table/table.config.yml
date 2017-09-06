@@ -1,0 +1,17 @@
+title: Table
+status: ready
+context:
+  label: default
+variants:
+  - name: striped
+    label: striped
+    context:
+      modifier: table--striped
+  - name: condensed
+    label: condensed
+    context:
+      modifier: table--condensed
+  - name: hover
+    label: hover
+    context:
+      modifier: table--hover

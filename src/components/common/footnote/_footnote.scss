@@ -1,0 +1,23 @@
+.footnotes {
+  border-top: 1px solid $mediumGrey;
+  padding: 1em 2em;
+  font-size: 90%;
+}
+
+.reference {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  text-decoration: none;
+
+  &::after {
+    content: '↵';
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    color: $darkBlue;
+  }
+}

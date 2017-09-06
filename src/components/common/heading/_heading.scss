@@ -1,0 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font: {
+    size: 1.5em;
+    weight: normal;
+    family: $defaultSerifFontFamily;
+  }
+  color: $darkBlue;
+}
+
+h2 {
+  font: {
+    size: 1.25em;
+    weight: 700;
+  }
+  color: $darkBlue;
+}
+
+h3 {
+  font: {
+    size: 1em;
+    weight: 700;
+  }
+  color: $darkBlue;
+}
+
+h4 {
+  font: {
+    size: 1.25em;
+    weight: 700;
+  }
+  color: $black;
+}
+
+h5 {
+  font: {
+    size: .875em;
+    weight: 700;
+  }
+  color: $black;
+}
+
+h6 {
+  font: {
+    size: .75em;
+    weight: 700;
+  }
+  color: $black;
+}

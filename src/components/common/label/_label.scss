@@ -1,0 +1,39 @@
+.label {
+  display: inline-block;
+  padding: .25em .5em;
+  font-size: 75%;
+  font-weight: 700;
+  border-radius: $borderRadius;
+  background: $lightGrey;
+  color: $black;
+
+  &--blue {
+    background: $darkBlue;
+    color: $white;
+  }
+
+  &--primary {
+    background: $primaryBlue;
+    color: $white;
+  }
+
+  &--orange {
+    background: $orange;
+    color: $black;
+  }
+
+  &--success {
+    background: $green;
+    color: $white;
+  }
+
+  &--warning {
+    background: $yellow;
+    color: $black;
+  }
+
+  &--danger {
+    background: $red;
+    color: $white;
+  }
+}

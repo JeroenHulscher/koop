@@ -1,0 +1,22 @@
+{{#if orderedList }}
+  <ol class="{{ modifier }}">
+{{else}}
+  <ul class="{{ modifier }}">
+{{/if }}
+
+  {{#each items }}
+    <li>{{{ text }}}</li>
+    {{#if subitems }}
+      <ul>
+      {{#each subitems }}
+        <li>{{{ text }}}</li>
+      {{/each }}
+      </ul>
+    {{/if }}
+  {{/each }}
+
+{{#if orderedList }}
+  </ol>
+{{else}}
+  </ul>
+{{/if }}

@@ -1,2 +1,3 @@
-# koop
-KOOP component library
+# KOOP componentenbibliotheek
+
+De componentenbibliotheek voor KOOP. 

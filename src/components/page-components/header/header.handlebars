@@ -1,0 +1,58 @@
+<header class="header">
+  <div class="header__start">
+    <div class="container">
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      {{> @logo }}
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <div class="container">
+      <h2 class="visually-hidden">Primaire navigatie</h2>
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        <li><a href="#">Particulieren</a></li>
+        <li><a href="#">Ondernemers</a></li>
+        <li><a href="#">Overheidsinformatie</a></li>
+      </ul>
+      <h2 class="visually-hidden">Secundaire navigatie</h2>
+      <ul class="header__secondary-nav list list--unstyled">
+        <li><a href="#">Over deze site</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">English</a></li>
+        <li class="hidden-desktop"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="header__more" id="other-sites">
+  <div class="container">
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank over twee regels</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

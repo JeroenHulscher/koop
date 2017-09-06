@@ -1,0 +1,46 @@
+label: Lijst
+context:
+  items:
+    - text: 1e item
+    - text: 2e item
+    - text: Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt.
+      subitems:
+        - text: 1e subitem
+        - text: 2e subitem
+    - text: 4e item
+variants:
+  - name: ordered
+    label: geordend
+    context:
+      orderedList: true
+      items:
+        - text: Eerste item
+        - text: Tweede item
+        - text: Derde item
+        - text: Vierde item
+        - text: Vijfde item
+        - text: Zesde item
+        - text: Zevende item
+        - text: Achtste item
+        - text: Negende item
+        - text: Tiende item
+        - text: Elfde item
+        - text: Laatste item
+  - name: unstyled
+    label: ongestijld
+    context:
+      modifier: list--unstyled
+      items:
+        - text: 1e item
+        - text: 2e item
+        - text: 3e item
+        - text: 4e item
+  - name: linklist
+    label: linklijst
+    context:
+      modifier: list--linked
+      items:
+        - text: <a href="#">1e item</a>
+        - text: <a href="#">2e item</a>
+        - text: <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
+        - text: <a href="#">4e item</a>

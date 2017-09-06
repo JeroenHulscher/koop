@@ -1,0 +1,38 @@
+a {
+  color: $darkBlue;
+  text-decoration: underline;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+
+  &[href*="//"]:not(.button),
+  &[rel="external"] {
+    padding-right: 1.25em;
+    margin-right: .25em;
+    background: {
+      repeat: no-repeat;
+      image: $externalLinkIcon;
+      position: right 3px;
+      size: 13px 12px;
+    }
+  }
+
+  &:focus {
+    outline-color: $focus;
+    outline-offset: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: $primaryBlue;
+    outline: none;
+  }
+
+  &:active {
+    color: $mediumBlue;
+  }
+}
+
+p a {
+  text-decoration: underline;
+}

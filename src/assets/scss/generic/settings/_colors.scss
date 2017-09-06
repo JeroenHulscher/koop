@@ -1,0 +1,38 @@
+// Colors
+
+$black: #000;
+$darkBlue: #154273;
+$primaryBlue: #007bc7;
+$mediumBlue: #b2d7ee;
+$lightBlue: #e5f1f9;
+$bgBlue: #f2f8fc;
+$white: #fff;
+
+$darkGrey: #333;
+$darkerGrey: #777;
+$mediumGrey: #b4b4b4;
+$lighterGrey: #ccc;
+$lightGrey: #f3f3f3;
+
+$green: #39870c;
+$yellow: #ffb612;
+$orange: #e17000;
+$red: #d52b1e;
+
+$focus: $yellow;
+
+$textColor: $darkGrey;
+
+$buttonBackgroundColor: $white;
+$buttonBackgroundActiveColor: $lightGrey;
+$buttonPrimaryBackgroundColor: $primaryBlue;
+$buttonPrimaryBackgroundActiveColor: $darkBlue;
+$buttonBackgroundSecondaryColor: $orange;
+$buttonTextColor: $textColor;
+$buttonBorderColor: $lighterGrey;
+
+$headerBackgroundColor: $primaryBlue;
+$headerBorderColor: $mediumBlue;
+$headerLinkColor: $white;
+$headerLinkCurrentColor: $black;
+$headerLinkBackgroundColor: transparent;
