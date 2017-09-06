@@ -6,7 +6,10 @@
     line-height: 1;
   }
 
-  input,
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"],
   textarea {
     background: $white;
     border: 1px solid $mediumGrey;
