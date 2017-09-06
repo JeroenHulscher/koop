@@ -1,0 +1,8 @@
+---
+label: Input telefoon
+status: ready
+context:
+  id: 1
+  fieldLabel: Telefoonnummer
+  fieldInstruction: optioneel
+  fieldPlaceholder: 'Bijv: 0612345678'

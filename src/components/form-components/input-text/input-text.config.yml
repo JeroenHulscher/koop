@@ -1,3 +1,8 @@
 ---
 label: Input text
 status: ready
+context:
+  id: 1
+  fieldLabel: Voornaam
+  fieldInstruction: optioneel
+  fieldPlaceholder: 'Bijv: Jan de Vries'

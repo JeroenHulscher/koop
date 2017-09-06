@@ -1,0 +1,9 @@
+---
+label: Textarea
+status: ready
+context:
+  id: 1
+  fieldLabel: Uw opmerking
+  fieldInstruction: verplicht veld
+  fieldPlaceholder: 'Uw opmerkingen'
+  rows: 5

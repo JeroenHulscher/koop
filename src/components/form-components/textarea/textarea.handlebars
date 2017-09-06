@@ -1,8 +1,5 @@
 <div class="form__element">
-
-  <label for="textarea--0">Uw opmerking</label>
-  <small>verplicht veld</small>
-  <textarea class="textarea" id="textarea--0" placeholder="Uw opmerkingen" rows="5"></textarea>
-
-
+  <label for="textarea--{{ id }}">{{ fieldLabel }}</label>
+  <small>{{ fieldInstruction }}</small>
+  <textarea class="textarea" id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" rows="{{ rows }}"></textarea>
 </div>
