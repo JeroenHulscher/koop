@@ -6,6 +6,27 @@
     line-height: 1;
   }
 
+  input,
+  textarea {
+    background: $white;
+    border: 1px solid $mediumGrey;
+    display: block;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 .5em;
+    font-size: .85em;
+    margin: .25em 0;
+
+
+    &::placeholder {
+      color: $darkerGrey;
+    }
+  }
+
+  input {
+    height: 2.5em;
+  }
+
   small {
     line-height: 2;
     color: $darkerGrey;
