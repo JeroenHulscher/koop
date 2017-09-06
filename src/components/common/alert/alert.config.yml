@@ -1,0 +1,17 @@
+title: alerts
+context:
+  text: default
+  modifier: alert-default
+variants:
+  - name: warning
+    context:
+      text: to do
+      modifier: alert--warning
+  - name: info
+    context:
+      text: to do
+      modifier: alert--info
+  - name: success
+    context:
+      text: to do
+      modifier: alert--success

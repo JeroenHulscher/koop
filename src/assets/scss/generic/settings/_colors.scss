@@ -24,10 +24,11 @@ $focus: $yellow;
 $textColor: $darkGrey;
 
 $buttonBackgroundColor: $white;
-$buttonBackgroundActiveColor: $lightGrey;
+$buttonBackgroundActiveColor: $mediumGrey;
 $buttonPrimaryBackgroundColor: $primaryBlue;
 $buttonPrimaryBackgroundActiveColor: $darkBlue;
 $buttonBackgroundSecondaryColor: $orange;
+$buttonBackgroundSecondaryActiveColor: darken($orange, 10%);
 $buttonTextColor: $textColor;
 $buttonBorderColor: $lighterGrey;
 

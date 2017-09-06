@@ -1,5 +1,10 @@
 .form__element {
   border: none;
+  margin: .5em 0;
+
+  &:not(.radiogroup){
+    padding: 0;
+  }
 
   legend {
     font-weight: 700;
@@ -15,6 +20,7 @@
   input[type="tel"],
   input[type="url"],
   input[type="date"],
+  input[type="password"],
   textarea {
     background: $white;
     border: 1px solid $mediumGrey;
@@ -35,13 +41,17 @@
   input[type="text"],
   input[type="tel"],
   input[type="url"],
-  input[type="date"] {
+  input[type="date"],
+  input[type="password"] {
     height: 2.5em;
   }
 
   small {
     line-height: 2;
     color: $darkerGrey;
+  }
+
+  label + small {
 
     @media ( min-width: 50em ) {
       float: right;
