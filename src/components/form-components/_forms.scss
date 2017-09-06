@@ -32,7 +32,10 @@
     }
   }
 
-  input {
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"] {
     height: 2.5em;
   }
 
