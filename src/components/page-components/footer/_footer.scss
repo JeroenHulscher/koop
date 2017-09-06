@@ -2,15 +2,17 @@
 
   .container {
     background: $lightBlue;
-    border-top: 1em solid $mediumBlue;
+    border-top: .75em solid $mediumBlue;
     padding: 1.5em 0 1.5em 2em;
 
   }
 
-  ul {
-    width: calc( 25% - .5em );
-    display: inline-block;
-    background: #ccc;
+  @media ( min-width: 50em ) {
+    ul {
+      width: calc( 25% - 1.5em );
+      margin-right: 1em;
+      display: inline-block;
+    }
   }
 
 }
