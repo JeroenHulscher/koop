@@ -1,0 +1,8 @@
+---
+label: Input URL
+status: ready
+context:
+  id: 1
+  fieldLabel: URL
+  fieldInstruction: optioneel
+  fieldPlaceholder: 'Bijv: https://www.voorbeeld.nl'

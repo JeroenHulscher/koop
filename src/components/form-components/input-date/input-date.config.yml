@@ -1,0 +1,8 @@
+---
+label: Input datum
+status: ready
+context:
+  id: 1
+  fieldLabel: Datum
+  fieldInstruction: optioneel
+  fieldPlaceholder: 'Bijv: 06-10-1960'
