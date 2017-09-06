@@ -1,9 +1,12 @@
+{{#if heading }}
+  <h4 class="facet--heading">{{ heading }}</h4>
+{{/if }}
+
 {{#if orderedList }}
   <ol class="{{ modifier }}">
 {{else}}
   <ul class="{{ modifier }}">
 {{/if }}
-
   {{#each items }}
     <li>{{{ text }}}</li>
     {{#if subitems }}
@@ -14,7 +17,6 @@
       </ul>
     {{/if }}
   {{/each }}
-
 {{#if orderedList }}
   </ol>
 {{else}}
