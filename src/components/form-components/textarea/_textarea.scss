@@ -1,0 +1,19 @@
+.form__element {
+
+  .textarea {
+    background: $white;
+    border: 1px solid $mediumGrey;
+    display: block;
+    line-height: 1.5;
+    width: 100%;
+    padding: .5em;
+    font-size: .85em;
+    margin: .25em 0;
+
+
+    &::placeholder {
+      color: $darkerGrey;
+    }
+  }
+
+}

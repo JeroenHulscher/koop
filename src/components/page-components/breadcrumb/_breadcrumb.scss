@@ -1,0 +1,37 @@
+.breadcrumb {
+  background: $lightBlue;
+  padding: .5em 1em;
+  font-size: 85%;
+
+  @media ( min-width: 50em ) {
+
+    padding: 0 1em;
+
+    p {
+      display: inline-block;
+    }
+
+    ol {
+      display: inline-block;
+      padding: 0;
+    }
+
+    li {
+      padding: 0 .5em 0 0;
+      display: inline-block;
+
+      &::after {
+        position: relative;
+        content: '/';
+        margin-left: .5em;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+.form__element {
+
+  label {
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  small {
+    line-height: 2;
+    color: $darkerGrey;
+
+    @media ( min-width: 50em ) {
+      float: right;
+    }
+  }
+}

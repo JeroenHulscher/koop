@@ -1,0 +1,20 @@
+.form__element {
+
+  .input--text {
+    background: $white;
+    border: 1px solid $mediumGrey;
+    display: block;
+    height: 2.5em;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 .5em;
+    font-size: .85em;
+    margin: .25em 0;
+
+
+    &::placeholder {
+      color: $darkerGrey;
+    }
+  }
+
+}
