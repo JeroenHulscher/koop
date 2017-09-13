@@ -25,32 +25,18 @@ module.exports = function initTabs( element ) {
 
 function switchTab( event ) {
   var ui = require( 'helpers/ui' );
-  var openTab = require( 'common/tabs/handlers/openTab' );
-  var currentTab = event.target;
-  var previousTab;
-  var nextTab;
-
-  if ( currentTab.parentElement.nextElementSibling ) {
-    nextTab = currentTab.parentElement.nextElementSibling.firstElementChild;
-  }
-  else {
-    nextTab = currentTab.parentElement.parentElement.firstElementChild.firstElementChild;
-  }
-
-  if ( currentTab.parentElement.previousElementSibling ) {
-    previousTab = currentTab.parentElement.previousElementSibling.firstElementChild;
-  }
-  else {
-    previousTab = currentTab.parentElement.parentElement.lastElementChild.lastElementChild;
-  }
+  var tabs = require( 'common/tabs/tabs' );
+  var currentPanel = event.target;
+  var nextPanel = tabs.getNextPanel( currentPanel );
+  var previousPanel = tabs.getPreviousPanel( currentPanel );
 
   if ( event.which === 39 ) {
-    nextTab.focus();
-    openTab( nextTab );
+    nextPanel.focus();
+    tabs.openPanel( nextPanel );
   }
 
   if ( event.which === 37 ) {
-    previousTab.focus();
-    openTab( previousTab );
+    previousPanel.focus();
+    tabs.openPanel( previousPanel );
   }
 }
