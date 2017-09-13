@@ -1,0 +1,29 @@
+.alert {
+  border: 1px solid $mediumGrey;
+  background: $lightGrey;
+  background-position: 1em 50%;
+  background-repeat: no-repeat;
+  border-radius: $borderRadius;
+  padding: 1em;
+
+  &--warning {
+    background-color: lighten($orange, 50%);
+    background-image: $warningIcon;
+    border-color: $orange;
+    padding-left: 2.5em;
+  }
+
+  &--info {
+    background-color: lighten($primaryBlue, 50%);
+    background-image: $infoIcon;
+    border-color: $primaryBlue;
+    padding-left: 2.5em;
+  }
+
+  &--success {
+    background-color: lighten($green, 60%);
+    background-image: $successIcon;
+    border-color: $green;
+    padding-left: 2.5em;
+  }
+}

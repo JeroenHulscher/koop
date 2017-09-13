@@ -44,3 +44,13 @@ variants:
         - text: <a href="#">2e item</a>
         - text: <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
         - text: <a href="#">4e item</a>
+  - name: facet list
+    label: facetten
+    context:
+      modifier: list--facet
+      heading: Eerste categorie
+      items:
+        - text: <a href="#">1e facet (0)</a>
+        - text: <a href="#">2e facet (0)</a>
+        - text: <a href="#">3e facet (0)</a>
+        - text: <a href="#">4e facet (0)</a>

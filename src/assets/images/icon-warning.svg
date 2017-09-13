@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-309.000000, -425.000000)"></g>
+        <g id="icon-alert-g4">
+            <polygon id="Triangle" stroke="#e17000" fill="#FFFFFF" points="9.85598677 2 18.7119735 17.928889 1 17.928889"></polygon>
+            <path d="M10,8 L10,11.5" id="Line" stroke="#e17000" stroke-width="2" stroke-linecap="round"></path>
+            <circle id="Oval" fill="#e17000" cx="10" cy="15" r="1"></circle>
+        </g>
+    </g>
+</svg>

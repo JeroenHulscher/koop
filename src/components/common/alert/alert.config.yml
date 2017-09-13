@@ -1,0 +1,14 @@
+title: alerts
+context:
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ac lectus ac maximus. <a href="#">Bekijk hier de toelichting</a>
+  modifier: alert-default
+variants:
+  - name: warning
+    context:
+      modifier: alert--warning
+  - name: info
+    context:
+      modifier: alert--info
+  - name: success
+    context:
+      modifier: alert--success

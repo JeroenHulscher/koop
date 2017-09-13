@@ -47,6 +47,8 @@
 
   &:hover {
     outline: none;
+    background-color: $lighterGrey;
+    color: $black;
   }
 
   &:active {
@@ -71,12 +73,34 @@
   }
 
   &--primary {
-    background-color: $buttonPrimaryBackgroundColor;
+    background-color: $primaryBlue;
     color: $white;
     border: 1px solid transparent;
 
+    &:hover {
+      color: $black;
+      background-color: $mediumBlue;
+    }
+
     &:active {
-      background-color: $buttonPrimaryBackgroundActiveColor;
+      color: $white;
+      background-color: $darkBlue;
+    }
+  }
+
+  &--secondary {
+    background-color: $buttonBackgroundSecondaryColor;
+    color: $black;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $black;
+      background-color: lighten($orange, 10%);
+    }
+
+    &:active {
+      background-color: $buttonBackgroundSecondaryActiveColor;
+      color: $white;
     }
   }
 
@@ -120,9 +144,5 @@
     padding-left: 2em;
   }
 
-  &--secondary {
-    background-color: $buttonBackgroundSecondaryColor;
-    color: $black;
-    border: 1px solid transparent;
-  }
+
 }

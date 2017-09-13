@@ -1,6 +1,14 @@
-ul,
-ol {
-  padding-left: 1em;
+.facet--heading {
+  font-size: 1em;
+  font-family: $defaultHeadingFontStack;
+  margin: 0;
+  padding: 0 0 0 .75em;
+  background: {
+    position: 0 50%;
+    repeat: no-repeat;
+    image: $dartRightIcon;
+    size: 6px 9px;
+  }
 }
 
 .list--unstyled {
@@ -25,5 +33,15 @@ ol {
       text-decoration: none;
       display: block;
     }
+  }
+}
+
+.list--facet {
+  list-style: none;
+  padding-left: .75em;
+  margin-top: .5em;
+
+  a {
+    text-decoration: none;
   }
 }
