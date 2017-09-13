@@ -31,7 +31,12 @@
     a {
       padding-left: 1em;
       text-decoration: none;
-      display: block;
+      display: inline-block;
+      background-position: right 50%;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -43,5 +48,9 @@
 
   a {
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
