@@ -2,4 +2,12 @@ title: Logo
 context:
   file: logo.svg
   alt: Overheid.nl logo
+variants:
+- name: Hier bent u
+  context:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Particulieren
+      - text: Buitenland
 
