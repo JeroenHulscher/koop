@@ -28,26 +28,6 @@ var modal = {
     if ( previouslyFocused ) {
       ui.focus( previouslyFocused );
     }
-  },
-  runCountDown: function( time, timeElement ) {
-    var endTime = Date.now() + parseInt( time, 10 );
-    var parseTime = require( 'core/parseTime' );
-
-    function update() {
-      var now = Date.now();
-      var remainingMilliseconds = endTime - now;
-      var remaining = parseTime( endTime - now );
-
-      if ( remainingMilliseconds > 0 ) {
-        timeElement.textContent = remaining.minutes + ':' + remaining.seconds;
-        window.requestAnimationFrame( update );
-      }
-      else {
-        window.cancelAnimationFrame( update );
-      }
-    }
-
-    window.requestAnimationFrame( update );
   }
 };
 
