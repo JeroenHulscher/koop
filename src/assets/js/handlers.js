@@ -12,6 +12,7 @@ module.exports = {
   'open-previous-panel': require( 'common/tabs/handlers/openPrevPanel' ),
   'open-next-panel': require( 'common/tabs/handlers/openNextPanel' ),
   'open-panel': require( 'common/tabs/handlers/openPanel' ),
-  'open-modal': require( 'common/modal/handlers/openModal' )
+  'open-modal': require( 'common/modal/handlers/openModal' ),
+  'close-modal': require( 'common/modal/handlers/closeModal' )
 };
 
