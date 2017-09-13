@@ -1,0 +1,39 @@
+<div class="form__element">
+  <label for="multi-select-{{ id }}">{{ fieldLabel }}</label>
+  <small>{{ fieldInstruction }}</small>
+  <input id="multi-select-{{ id }}" type="text" data-decorator="init-custom-select" data-multi-select-options="multi-select-options-{{ id }}">
+  <div id="multi-select-options-{{ id }}">
+    <div class="optgroup" role="group" aria-labelledby="color">
+      <div class="optgroup-label" id="color">Color</div>
+      <div class="option">Red</div>
+      <div class="option">Yellow</div>
+      <div class="option">Green</div>
+      <div class="option">Orange</div>
+    </div>
+    <div class="optgroup" role="group" aria-labelledby="year">
+      <div class="optgroup-label" id="year">Year</div>
+      <div class="option">2007</div>
+      <div class="option">2001</div>
+      <div class="option">1999</div>
+      <div class="option">2005</div>
+      <div class="option">2016</div>
+      <div class="option">2006</div>
+    </div>
+    <div class="optgroup" role="group" aria-labelledby="make">
+      <div class="optgroup-label" id="make">Make</div>
+      <div class="option">Ford</div>
+      <div class="option">GM</div>
+      <div class="option">Chrysler</div>
+    </div>
+    <div class="optgroup" role="group" aria-labelledby="doors">
+      <div class="optgroup-label" id="doors">Doors</div>
+      <div class="option">2 Door</div>
+      <div class="option">4 Door</div>
+    </div>
+    <div class="optgroup" role="group" aria-labelledby="transmission">
+      <div class="optgroup-label" id="transmission">Transmission</div>
+      <div class="option">Automatic</div>
+      <div class="option">Manual</div>
+    </div>
+  </div>
+</div>
