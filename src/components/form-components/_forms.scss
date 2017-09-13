@@ -21,7 +21,8 @@
   input[type="url"],
   input[type="date"],
   input[type="password"],
-  textarea {
+  textarea,
+  select {
     background: $white;
     border: 1px solid $mediumGrey;
     display: block;
@@ -42,7 +43,8 @@
   input[type="tel"],
   input[type="url"],
   input[type="date"],
-  input[type="password"] {
+  input[type="password"],
+  select {
     height: 2.5em;
   }
 
@@ -70,4 +72,6 @@
       margin: 0 .5em 0 0;
     }
   }
+
+
 }

@@ -50,7 +50,7 @@ variants:
       modifier: list--facet
       heading: Eerste categorie
       items:
-        - text: <a href="#">1e facet (0)</a>
-        - text: <a href="#">2e facet (0)</a>
-        - text: <a href="#">3e facet (0)</a>
-        - text: <a href="#">4e facet (0)</a>
+        - text: <a href="#">1e facet&nbsp;(0)</a>
+        - text: <a href="#">2e facet&nbsp;(0)</a>
+        - text: <a href="#">3e facet&nbsp;(0)</a>
+        - text: <a href="#">4e facet&nbsp;(0)</a>
