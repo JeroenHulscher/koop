@@ -5,3 +5,23 @@ context:
   id: 1
   fieldLabel: Zoeken in verzamelingen
   fieldInstruction: optioneel
+  optionGroups:
+    - label: Overheidsthema's
+      groupId: optiongroup-1
+      options:
+        - text: Belastingen
+        - text: Bouwen, wonen en leefomgeving
+        - text: Cultuur, sport, vrije tijd
+        - text: Defensie
+        - text: Economie en ondernemen
+    - label: Rechtsgebieden
+      groupId: optiongroup-2
+      options:
+        - text: Agrarisch recht
+        - text: Arbeidsrecht
+        - text: Pensioenrecht
+    - label: Soorten regelingen
+      groupId: optiongroup-3
+      options:
+          - text: Wetten
+          - text: Rijkswetten
