@@ -9,6 +9,7 @@
 module.exports = {
   'toggle-other-sites': require( 'page-components/header/handlers/toggleOtherSites' ),
   'toggle-nav': require( 'page-components/header/handlers/toggleNav' ),
-  'open-tab': require( 'common/tabs/handlers/openTab' )
+  'open-tab': require( 'common/tabs/handlers/openTab' ),
+  'toggle-collapsible': require( 'common/collapsible/handlers/toggleCollapsible' )
 };
 

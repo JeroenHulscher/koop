@@ -1,5 +1,5 @@
 var dom = require( 'helpers/dom' );
-var collapsibles = require( '../collapsibles' );
+var collapsibles = require( '../collapsible' );
 
 module.exports = function ( element, event ) {
   var collapsibleElement = element.closest( '.collapsible' );

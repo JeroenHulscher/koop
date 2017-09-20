@@ -54,3 +54,17 @@
     }
   }
 }
+
+.list--relations {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 0 0 1em;
+  }
+
+  small {
+    display: block;
+    color: $darkGrey;
+  }
+}
