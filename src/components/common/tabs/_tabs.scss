@@ -53,4 +53,20 @@
       }
     }
   }
+
+  &__panels {
+    :first-child {
+
+      .tabs__prev {
+        display: none;
+      }
+    }
+
+    :last-child {
+
+      .tabs__next {
+        display: none;
+      }
+    }
+  }
 }

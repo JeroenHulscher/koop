@@ -1,0 +1,16 @@
+<p>Deze pagina demonstreert de KOOP modal.</p>
+<p>De modal maakt gebruikt van:</p>
+<ul>
+  <li><code>_modal.scss</code> voor styling</li>
+  <li><code>core/modal.js</code> voor functies die het gedrag uitvoeren</li>
+  <li>een <code>data-handler</code> of <code>data-decorator</code> die het gedrag triggert</li>
+</ul>
+<p>Als voorbeeld hieronder een button die het openen van een modal triggert.</p>
+<p><button type="button" data-handler="open-modal" data-modal="modal-1" class="button">Open modal</button></p>
+<div id="modal-1" class="modal {{#if initClosed }}modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
+  <div class="modal__content">
+    <h2>Voorbeeld</h2>
+    <p>Dit is een voorbeeld van een modal.</p>
+    <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+  </div>
+</div>
