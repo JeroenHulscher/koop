@@ -1,0 +1,11 @@
+<div class="browse">
+  <h2>{{ title }}</h2>
+  <p>{{ intro }}</p>
+  {{#if items }}
+  <ul class="browse__list">
+    {{#each items }}
+    <li><a href="{{ link }}">{{ text }} <span class="browse__count">{{ count }} <span class="visually-hidden"> {{ count_context }}</span></span></a></li>
+    {{/each}}
+  </ul>
+  {{/if}}
+</div>
