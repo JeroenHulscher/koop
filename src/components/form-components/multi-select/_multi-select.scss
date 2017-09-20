@@ -1,16 +1,7 @@
 .multi-select {
 
   &__input {
-    width: 250px;
-    padding: 10px 35px 10px 5px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
     position: relative;
-    font-size: 14px;
-    text-align: left;
-    background-color: #fff;
-    color: #212E59;
-    box-shadow: 0 0 5px #000;
   }
 
   &__options {
@@ -20,7 +11,7 @@
     left: 0;
     width: 100%;
     padding: 0;
-    background: #fff;
+    background: $white;
     z-index: 1;
     max-height: 250px;
     overflow-y: auto;
@@ -57,5 +48,6 @@
 
   &__optgroup-label {
     font-weight: bold;
+    padding: .25em;
   }
 }
