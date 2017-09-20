@@ -1,6 +1,5 @@
 .treeview {
 
-
   li {
 
     list-style: none;
@@ -25,6 +24,34 @@
       }
     }
 
+  }
+
+  &.treeview--foldable {
+    li {
+      a {
+        padding: .25em 1em .25em 1.5em;
+        position: relative;
+      }
+
+      a.foldable {
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: .25em;
+          top: .5em;
+          width: 1em;
+          height: 1em;
+          background: pink;
+        }
+
+        &:hover {
+          &:before {
+            background-color: red;
+          }
+        }
+      }
+    }
   }
 
 }
