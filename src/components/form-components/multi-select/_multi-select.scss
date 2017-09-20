@@ -45,7 +45,13 @@
     }
 
     &--active {
+      color: $black;
       background-color: $lightBlue;
+
+      &.multi-select__optgroup-option--selected {
+        color: $white;
+        background-color: $primaryBlue;
+      }
     }
   }
 
