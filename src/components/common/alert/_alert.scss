@@ -26,4 +26,12 @@
     border-color: $green;
     padding-left: 2.5em;
   }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+  }
 }

@@ -12,3 +12,6 @@ variants:
   - name: success
     context:
       modifier: alert--success
+  - name: fixed to top
+    context:
+      modifier: alert--fixed
