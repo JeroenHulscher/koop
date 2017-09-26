@@ -1,0 +1,15 @@
+<div class="form__element multi-select">
+  <label for="multi-select-{{ id }}">{{ fieldLabel }}</label>
+  <small>{{ fieldInstruction }}</small>
+  <input id="multi-select-{{ id }}" class="multi-select__input" type="text" data-decorator="init-custom-select" data-multi-select-options="multi-select-options-{{ id }}">
+  <div id="multi-select-options-{{ id }}" class="multi-select__options">
+    {{#each optionGroups }}
+    <div class="multi-select__optgroup" role="group" aria-labelledby="{{ labelId }}">
+      <div class="multi-select__optgroup-label" id="{{ labelId }}">{{ label }}</div>
+      {{#each options }}
+      <div class="multi-select__optgroup-option">{{ text }}</div>
+      {{/each}}
+    </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,53 @@
+.multi-select {
+
+  &__input {
+    position: relative;
+  }
+
+  &__options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background: $white;
+    z-index: 1;
+    max-height: 250px;
+    overflow-y: auto;
+    border-bottom: 1px solid $black;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &__optgroup-option {
+    padding: .25em .5em;
+    cursor: default;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+
+    &--selected {
+      color: $white;
+      background-color: $primaryBlue;
+    }
+
+    &--active {
+      color: $black;
+      background-color: $lightBlue;
+
+      &.multi-select__optgroup-option--selected {
+        color: $white;
+        background-color: $primaryBlue;
+      }
+    }
+  }
+
+  &__optgroup-label {
+    font-weight: bold;
+    padding: .25em;
+  }
+}
