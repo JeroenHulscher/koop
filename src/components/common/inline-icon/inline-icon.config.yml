@@ -1,0 +1,16 @@
+label: Inline icon
+context:
+    text: icon text
+    modifier: icon--overheid
+variants:
+  - name: download icon
+    label: download icoon
+    context:
+      text: Download icoon
+      modifier: icon--download
+  - name: remove icon
+    label: remove icoon
+    context:
+      text: Verwijderen icoon
+      modifier: icon--remove
+

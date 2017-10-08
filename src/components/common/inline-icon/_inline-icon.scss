@@ -1,0 +1,16 @@
+.icon {
+  padding-left: 1.5em;
+  background: {
+    position: left 50%;
+    size: 1em;
+    repeat: no-repeat;
+  }
+
+  &--download {
+    background-image: $downloadIcon;
+  }
+
+  &--remove {
+    background-image: $removeIcon;
+  }
+}

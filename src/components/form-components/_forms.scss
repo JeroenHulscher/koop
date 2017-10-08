@@ -33,9 +33,16 @@
     font-size: .85em;
     margin: .25em 0;
 
-
     &::placeholder {
       color: $darkerGrey;
+    }
+
+    &.input--error {
+      border: 1px solid $red;
+
+      &::placeholder {
+        color: $red;
+      }
     }
   }
 
@@ -74,5 +81,8 @@
     }
   }
 
+  .form__error {
+    color: $red;
+  }
 
 }
