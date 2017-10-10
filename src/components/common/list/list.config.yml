@@ -51,7 +51,7 @@ variants:
       heading: Eerste categorie
       items:
         - text: <a href="#">1e facet&nbsp;(0)</a>
-        - text: <a href="#">2e facet&nbsp;(0)</a>
+        - text: <a href="#" class="is-active">2e facet&nbsp;(0)</a>
         - text: <a href="#">3e facet&nbsp;(0)</a>
         - text: <a href="#">4e facet&nbsp;(0)</a>
   - name: relationlist

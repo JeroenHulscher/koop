@@ -52,9 +52,15 @@ ul ul {
 
   a {
     text-decoration: none;
+    padding: .25em;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &.is-active {
+      background-color: $darkBlue;
+      color: $white;
     }
   }
 }

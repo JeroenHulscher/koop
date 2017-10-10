@@ -73,6 +73,17 @@
         color: $headerLinkCurrentColor;
         background-color: $headerBorderColor;
       }
+
+      &[href*="//"]:not(.button),
+      &[rel="external"] {
+        background-image: none;
+        margin-right: 0;
+      }
+
+      &.is-active {
+        background: $headerLinkCurrentColor;
+        color: $lightBlue;
+      }
     }
 
     [data-handler="toggle-other-sites"] {
