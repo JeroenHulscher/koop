@@ -1,2 +1,14 @@
 label: Inloggen
 status: ready
+context:
+  loginField:
+    id: 1
+    fieldLabel: Inlognaam
+    fieldInstruction: Verplicht veld
+    fieldPlaceholder: 'Bijv. uw e-mailadres'
+  passwordField:
+    id: 2
+    fieldLabel: Wachtwoord
+    fieldInstruction: Verplicht veld
+  submitButton:
+    text: Inloggen
