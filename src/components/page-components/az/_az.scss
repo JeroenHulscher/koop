@@ -3,13 +3,13 @@
     ul {
       padding: 0;
       margin: .25em 0;
-      display: flex;
     }
 
     li {
+      float: left;
       list-style: none;
       border: 1px solid $lighterGrey;
-      margin-left: -1px;
+      margin: 0 0 3px -1px;
       line-height: 1;
       display: inline-block;
 
@@ -17,7 +17,7 @@
         color: $white;
         background: $primaryBlue;
         border-color: $primaryBlue;
-        padding: 3px 8px;
+        padding: 5px 8px;
       }
 
       &:first-child {
@@ -27,7 +27,7 @@
       a {
         text-decoration: none;
         display: block;
-        padding: 3px 8px;
+        padding: 5px 8px;
 
         &:hover {
           color: $primaryBlue;
