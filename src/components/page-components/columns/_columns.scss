@@ -1,0 +1,23 @@
+$gutter: 2em;
+
+.columns {
+  display: flex;
+  flex-direction: column;
+
+  @media ( min-width: 50em ) {
+    flex-direction: row;
+  }
+
+  > div {
+    flex: 1;
+
+    @media ( min-width: 50em ) {
+      margin-left: $gutter;
+    }
+  }
+
+  > div:first-child,
+  > div:only-child {
+    margin-left: 0;
+  }
+}
