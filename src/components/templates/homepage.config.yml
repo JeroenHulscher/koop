@@ -1,3 +1,7 @@
 ---
 title: Homepage
 status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
