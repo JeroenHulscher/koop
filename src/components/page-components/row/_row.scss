@@ -1,6 +1,12 @@
 $spacing: 2em;
+$fatBorder: .75em;
 
 .row {
   padding-top: $spacing;
   padding-bottom: $spacing;
+  &--footer {
+    background-color: $lightBlue;
+    border-top: $fatBorder solid $mediumBlue;
+    padding: 1.5em;
+  }
 }
