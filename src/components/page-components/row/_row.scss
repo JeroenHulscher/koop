@@ -1,5 +1,6 @@
 $spacing: 2em;
 
 .row {
-  padding: $spacing 0;
+  padding-top: $spacing;
+  padding-bottom: $spacing;
 }
