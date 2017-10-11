@@ -150,12 +150,6 @@
       }
     }
 
-    &[hidden="true"] {
-      display: block;
-      position: absolute;
-      top: -9999em;
-    }
-
     &[hidden="true"] .container {
       animation: closeNav 0.8s ease-in-out;
     }
