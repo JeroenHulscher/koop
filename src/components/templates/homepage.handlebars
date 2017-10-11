@@ -1,19 +1,28 @@
 {{ render "@header" header merge=true }}
-<div class="container columns row">
-  <div>
-    <h2>Welke informatie vindt u op deze website?</h2>
-    <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, Provinciale bladen, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
-    <h2>Direct uitgebreid zoeken</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
-  </div>
-  <div>
-    <h2>Vandaag bekendgemaakt</h2>
-    <p><a href="#">Totaal 453 publicaties op vrijdag 14 september</a></p>
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+    <h2>Zoeken in alle documenten</h2>
+    <p>Uitgebreid zoeken in <a href="#">parlementaire documenten</a> of <a href="#">officiële bekendmakingen</a>.</p>
   </div>
 </div>
-<div class="container">
+<div class="row row--browse">
+  <div class="container columns">
+    <div>
+      <h2>Welke informatie vindt u op deze website?</h2>
+      <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, Provinciale bladen, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
+      <h2>Direct uitgebreid zoeken</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
+    </div>
+    <div>
+      <h2>Vandaag bekendgemaakt</h2>
+      <p><a href="#">Totaal 453 publicaties op vrijdag 14 september</a></p>
+    </div>
+  </div>
+</div>
+<div class="container row">
   <h2>Over deze website</h2>
-  <div class="columns row">
+  <div class="columns">
     <div>
       <h3><a href="#">Collectie uitgebreid met de Parlementaire documenten 1945 – 2009</a></h3>
       <p>Op deze website vindt u sinds kort ook de parlementaire documenten uit de periode 1945 – 2009.</p>

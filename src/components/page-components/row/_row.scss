@@ -4,6 +4,23 @@ $fatBorder: .75em;
 .row {
   padding-top: $spacing;
   padding-bottom: $spacing;
+
+  &--page-opener {
+    background-color: $lightBlue;
+
+    + .row--browse {
+      margin-top: 0;
+    }
+  }
+
+  &--browse {
+    border-top: $fatBorder solid $lighterGrey;
+    border-bottom: $fatBorder solid $lighterGrey;
+    background-color: $lightGrey;
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+  }
+
   &--footer {
     background-color: $lightBlue;
     border-top: $fatBorder solid $mediumBlue;
