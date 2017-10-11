@@ -89,16 +89,21 @@
     }
 
     [data-handler="toggle-other-sites"] {
-      background-color: $white;
       color: $headerLinkCurrentColor;
       position: relative;
       margin: 0 -1em;
-      padding: .5em 1.5em;
+      padding: .5em 2em;
       z-index: 0;
+      background: {
+        color: $white;
+        image: $dartDownIcon;
+        repeat: no-repeat;
+        position: right .5em center;
+      };
 
       @media ( min-width: 50em ) {
         margin: 0;
-        padding: .5em;
+        padding: .5em 2em .5em 1em;
       }
 
       &::before {
@@ -125,6 +130,7 @@
     }
 
     [aria-expanded="true"] {
+      background-image: $dartTopIcon;
 
       &::before {
         opacity: 1;
@@ -151,7 +157,7 @@
       padding-bottom: 1em;
       display: flex;
       flex-direction: column;
-      animation: openNav 0.8s ease-in-out;
+      animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
 
       @media ( min-width: 50em ) {
         flex-direction: row;
@@ -178,13 +184,11 @@
 @keyframes openNav {
 
     0% {
-      display: none;
       transform: translateY( -100% );
       margin-top: -100%;
     }
 
     1% {
-      display: block;
       z-index: -1;
     }
 
@@ -198,23 +202,19 @@
 @keyframes closeNav {
 
     0% {
-      transform: translateY(0);
+      transform: translateY( 0 );
       z-index: 1;
       opacity: 1;
       margin-top: 0;
       position: static;
-      display: block;
-      background-color: blue;
     }
 
     99% {
       z-index: -1;
-      opacity: 0.1;
     }
 
     100% {
       opacity: 0;
-      display: none;
       transform: translateY(-100%);
       position: absolute;
       margin-top: -100%;
