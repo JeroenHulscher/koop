@@ -22,11 +22,17 @@
     border-radius: 0;
     margin: 0;
     padding: 1em 2em;
+    text-align: center;
   }
 
   &__fields {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+
+    @media ( min-width: 50em ) {
+      flex-direction: row;
+    }
 
     > input[type="text"],
     .multi-select {
