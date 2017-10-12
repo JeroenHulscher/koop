@@ -5,3 +5,8 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - text: <a href="#">Veelgestelde vragen</a>
