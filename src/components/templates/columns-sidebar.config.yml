@@ -1,6 +1,7 @@
 ---
-title: Columns + sidebar
-status: prototype
+title: Detailpagina (FAQ)
+label: Detailpagina (FAQ)
+status: wip
 context:
   header:
     file: logo.svg

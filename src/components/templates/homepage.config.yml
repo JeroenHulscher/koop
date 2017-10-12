@@ -1,6 +1,6 @@
 ---
 title: Homepage
-status: prototype
+status: wip
 context:
   header:
     file: logo.svg
