@@ -4,6 +4,7 @@ status: wip
 context:
   id: 1
   fieldLabel: Zoeken in verzamelingen
+  visuallyHideLabel: false
   fieldInstruction: optioneel
   optionGroups:
     - label: Overheidsthema's

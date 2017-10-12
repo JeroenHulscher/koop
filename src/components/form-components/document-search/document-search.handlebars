@@ -1,12 +1,16 @@
 <form class="document-search" id="search">
   <fieldset>
-    <caption>Zoeken in alle documenten</caption>
+    <legend class="h1">Zoeken in alle documenten</legend>
 
-    <label for="search-term">Zoekterm of dossiernummer</label>
-    <input type="text" id="search-term" placeholder="Typ hier uw zoekterm of (dossier)nummer">
+    <div class="document-search__fields">
+      <label for="search-term" class="visually-hidden">Zoekterm of dossiernummer</label>
+      <input type="text" id="search-term" placeholder="Typ hier uw zoekterm of (dossier)nummer">
 
-    {{ render "@multi-select" searchScope merge="true "}}
+      {{ render "@multi-select" searchScope merge="true" }}
 
-    <input type="submit" />
+      <input type="submit" value="Zoeken" class="button button--secondary" />
+    </div>
+
+    <p>Uitgebreid zoeken in <a href="#">parlementaire documenten</a> of <a href="#">officiële bekendmakingen</a>.</p>
   </fieldset>
 </form>

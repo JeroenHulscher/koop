@@ -1,8 +1,5 @@
 .multi-select {
-
-  &__input {
-    position: relative;
-  }
+  position: relative;
 
   &__options {
     display: none;
@@ -15,7 +12,9 @@
     z-index: 1;
     max-height: 250px;
     overflow-y: auto;
-    border-bottom: 1px solid $black;
+    border-left: 1px solid $lighterGrey;
+    border-right: 1px solid $lighterGrey;
+    border-bottom: 1px solid $lighterGrey;
 
     &--open {
       display: block;

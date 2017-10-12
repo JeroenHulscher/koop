@@ -7,6 +7,8 @@ context:
     id: search-scope
     fieldLabel: Selecteer documentsoort
     fieldInstruction: ''
+    visuallyHideLabel: true
+    placeholder: Collecties
     optionGroups:
       - label: Parlementaire documenten
         groupId: search-scope-set-1
