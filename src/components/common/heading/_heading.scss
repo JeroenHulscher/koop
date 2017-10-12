@@ -1,10 +1,22 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   margin: 1em 0;
   padding: 0;
   line-height: 1.25;
 }
 
-h1 {
+h1,
+.h1 {
   font: {
     size: 1.5em;
     weight: normal;
@@ -13,7 +25,8 @@ h1 {
   color: $darkBlue;
 }
 
-h2 {
+h2,
+.h2 {
   font: {
     size: 1.25em;
     weight: 700;
@@ -21,7 +34,8 @@ h2 {
   color: $darkBlue;
 }
 
-h3 {
+h3,
+.h3 {
   font: {
     size: 1em;
     weight: 700;
@@ -29,7 +43,8 @@ h3 {
   color: $darkBlue;
 }
 
-h4 {
+h4,
+.h4 {
   font: {
     size: 1.25em;
     weight: 700;
@@ -37,7 +52,8 @@ h4 {
   color: $black;
 }
 
-h5 {
+h5,
+.h5 {
   font: {
     size: .875em;
     weight: 700;
@@ -45,7 +61,8 @@ h5 {
   color: $black;
 }
 
-h6 {
+h6,
+.h6 {
   font: {
     size: .75em;
     weight: 700;
