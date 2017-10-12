@@ -8,6 +8,10 @@
     margin-bottom: 2em;
   }
 
+  .row &:only-child {
+    margin-bottom: -2em;
+  }
+
   @media ( min-width: 50em ) {
 
     padding: 0;
