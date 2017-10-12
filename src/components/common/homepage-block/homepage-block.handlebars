@@ -1,12 +1,32 @@
-<div class="homepageblock temp">
+{{#if blockLink }}
+  <a href="{{ blockLink }}" class="blockLink">
+{{/if }}
 
-  <h2>Iets regelen of vragen</h2>
+  <div class="homepageblock {{ modifier }} {{ color }}" style="background-image: url({{ image }});">
 
-  <ul class="homepageblock-options">
-    <li><a href="#">18 jaar geworden</a></li>
-    <li><a href="#">Werkloos</a></li>
-    <li><a href="#">Rijbewijs verlengen</a></li>
-    <li><a href="#">Subsidie energiebesparing</a></li>
-  </ul>
+    <div class="content--inner">
 
-</div>
+      <h2>{{ heading }}</h2>
+
+      {{#if subtitle }}
+        <span>{{ subtitle }}</span>
+      {{/if }}
+
+      {{#if items }}
+        <ul>
+          {{#each items }}
+            <li><a href="#">{{{ text }}}</a></li>
+          {{/each }}
+        </ul>
+      {{/if }}
+
+      {{#if contextLinkText }}
+        <a href="{{ contextLink }}" class="context-Link">{{ contextLinkText }}</a>
+      {{/if }}
+
+    </div>
+
+  </div>
+{{#if blockLink }}
+  </a>
+{{/if }}

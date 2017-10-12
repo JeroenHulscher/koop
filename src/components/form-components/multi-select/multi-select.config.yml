@@ -5,7 +5,7 @@ context:
   id: 1
   fieldLabel: Zoeken in verzamelingen
   visuallyHideLabel: false
-  fieldInstruction: optioneel
+  fieldInstruction: ''
   optionGroups:
     - label: Overheidsthema's
       groupId: optiongroup-1

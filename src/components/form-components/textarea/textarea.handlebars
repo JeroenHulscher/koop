@@ -1,5 +1,7 @@
 <div class="form__element">
   <label for="textarea--{{ id }}">{{ fieldLabel }}</label>
-  <small>{{ fieldInstruction }}</small>
+  {{#if fieldInstruction }}
+    <small>{{ fieldInstruction }}</small>
+  {{/if }}
   <textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" rows="{{ rows }}"></textarea>
 </div>

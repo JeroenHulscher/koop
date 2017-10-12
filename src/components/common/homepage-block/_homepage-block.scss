@@ -1,16 +1,99 @@
 .homepageblock {
-  display: block;
-  padding: .5em;
+  @include aspect-ratio(16, 9);
+  background: {
+    repeat: no-repeat;
+    position: left top;
+    size: cover;
+  }
+
+  &.targetaudience {
+    min-height: 20em;
+  }
 
   h2 {
-    display: block;
-    width: calc(100% - 2em);
     padding: .5em;
     background: $white;
+    margin: 0;
+    display: inline-block;
+    font-size: 1.5em;
   }
 
-  &.temp {
-    background: url(../images/temp/homepage-block-bg.png) no-repeat left top;
+  span {
+    color: $white;
+    display: block;
+    font-size: 1.25em;
+    padding: 0 3em 0 .6em;
+    line-height: 1;
   }
 
+  ul {
+    margin-top: 1em;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: .5em;
+
+      a {
+        background: $white;
+        padding: .25em .5em;
+        text-decoration: none;
+        font-size: 1.25em;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .context-Link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: {
+      color: $white;
+      image: $dartRightIcon;
+      repeat: no-repeat;
+      position: 95% 50%;
+    }
+    padding: .5em 1.5em .5em .5em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.related {
+
+    &--orange {
+      border: 2px solid $orange;
+
+      .content--inner {
+        background: {
+          color: rgba(225, 112, 0, 0.8);
+          image: $externalLinkWhiteIcon;
+          repeat: no-repeat;
+          position: 97% .75em;
+          size: 2.5em;
+        }
+      }
+    }
+
+    .content--inner {
+      height: 40%;
+      top: 60%;
+
+      h2 {
+        background: transparent;
+        color: $white;
+        padding: .5em 3em 0 .5em;
+      }
+    }
+  }
+}
+
+a.blockLink[href*="//"] {
+  background: none;
 }

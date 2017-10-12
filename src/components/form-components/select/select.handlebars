@@ -1,6 +1,8 @@
 <div class="form__element">
   <label for="select--{{ id }}">{{ fieldLabel }}</label>
-  <small>{{ fieldInstruction }}</small>
+  {{#if fieldInstruction }}
+    <small>{{ fieldInstruction }}</small>
+  {{/if }}
   <select id="select--{{ id }}">
     <option value="10">10</option>
     <option value="25">25</option>

@@ -4,5 +4,5 @@ status: ready
 context:
   id: 1
   fieldLabel: Voornaam
-  fieldInstruction: optioneel
+  fieldInstruction:
   fieldPlaceholder: 'Bijv: Jan de Vries'

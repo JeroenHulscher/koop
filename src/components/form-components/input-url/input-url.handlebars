@@ -1,5 +1,7 @@
 <div class="form__element">
   <label for="input--{{ id }}">{{ fieldLabel }}</label>
-  <small>{{ fieldInstruction }}</small>
+  {{#if fieldInstruction }}
+    <small>{{ fieldInstruction }}</small>
+  {{/if }}
   <input type="url" id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
 </div>
