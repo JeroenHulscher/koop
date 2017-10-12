@@ -1,1 +1,13 @@
-homepage-block.config.yml
+label: homepage blok
+context:
+  heading: Iets regelen of vragen
+  modifier: temp
+  items:
+    - text: 18 jaar geworden
+    - text: Werkloos
+    - text: Rijbewijs verlengen
+    - text: Subsidie energiebesparing
+  contextLinkText: iets anders regelen of vragen
+variants:
+  heading: Hoe werkt democratie
+  modifier: temp

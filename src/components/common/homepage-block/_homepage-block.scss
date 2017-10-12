@@ -1,16 +1,60 @@
 .homepageblock {
-  display: block;
-  padding: .5em;
+  @include aspect-ratio(16, 9);
+  min-height: 20em;
 
   h2 {
-    display: block;
-    width: calc(100% - 2em);
     padding: .5em;
     background: $white;
+    margin: 0;
+    display: inline-block;
+    font-size: 1.5em;
+  }
+
+  ul {
+    margin-top: 1em;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: .5em;
+
+      a {
+        background: $white;
+        padding: .25em .5em;
+        text-decoration: none;
+        font-size: 1.25em;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .context-Link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: {
+      color: $white;
+      image: $dartRightIcon;
+      repeat: no-repeat;
+      position: 95% 50%;
+    }
+    padding: .5em 1.5em .5em .5em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.temp {
-    background: url(../images/temp/homepage-block-bg.png) no-repeat left top;
+    background: {
+      image: url(../images/temp/homepage-block-bg.png);
+      repeat: no-repeat;
+      position: left top;
+      size: cover;
+    }
   }
-
 }

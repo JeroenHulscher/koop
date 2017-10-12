@@ -1,12 +1,16 @@
-<div class="homepageblock temp">
+<div class="homepageblock {{ modifier }}">
 
-  <h2>Iets regelen of vragen</h2>
+  <div class="content--inner">
 
-  <ul class="homepageblock-options">
-    <li><a href="#">18 jaar geworden</a></li>
-    <li><a href="#">Werkloos</a></li>
-    <li><a href="#">Rijbewijs verlengen</a></li>
-    <li><a href="#">Subsidie energiebesparing</a></li>
-  </ul>
+    <h2>{{ heading }}</h2>
+
+    <ul class="homepageblock-options">
+      {{#each items }}
+        <li><a href="#">{{{ text }}}</a></li>
+      {{/each }}
+    </ul>
+
+    <a href="#" class="context-Link">{{ contextLinkText }}</a>
+  </div>
 
 </div>
