@@ -1,6 +1,8 @@
 <div class="form__element">
   <label for="input--{{ id }}">{{ fieldLabel }}</label>
-  <small>{{ fieldInstruction }}</small>
+  {{#if fieldInstruction }}
+    <small>{{ fieldInstruction }}</small>
+  {{/if }}
   <input type="text" id="input--{{ id }}" class="input--error" aria-labelledby="input--{{ id }} error__input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
 
   <p id="error__input--{{ id }}" class="form__error"><strong>Let op:</strong> U moet deze vraag beantwoorden</p>
