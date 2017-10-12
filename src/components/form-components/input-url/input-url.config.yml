@@ -4,5 +4,5 @@ status: ready
 context:
   id: 1
   fieldLabel: URL
-  fieldInstruction: optioneel
+  fieldInstruction:
   fieldPlaceholder: 'Bijv: https://www.voorbeeld.nl'
