@@ -72,7 +72,35 @@
 
       .content--inner {
         background: {
-          color: rgba(225, 112, 0, 0.8);
+          color: rgba( 225, 112, 0, .8 );
+          image: $externalLinkWhiteIcon;
+          repeat: no-repeat;
+          position: 97% .75em;
+          size: 2.5em;
+        }
+      }
+    }
+
+    &--darkBlue {
+      border: 2px solid $darkBlue;
+
+      .content--inner {
+        background: {
+          color: rgba( 21, 66, 115, .8 );
+          image: $externalLinkWhiteIcon;
+          repeat: no-repeat;
+          position: 97% .75em;
+          size: 2.5em;
+        }
+      }
+    }
+
+    &--lightBlue {
+      border: 2px solid $lightBlue;
+
+      .content--inner {
+        background: {
+          color: rgba( 0, 119, 192, .8 );
           image: $externalLinkWhiteIcon;
           repeat: no-repeat;
           position: 97% .75em;
@@ -83,7 +111,9 @@
 
     .content--inner {
       height: 40%;
-      top: 60%;
+      min-height: 6em;
+      top: auto;
+      bottom: 0px;
 
       h2 {
         background: transparent;

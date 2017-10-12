@@ -1,16 +1,16 @@
-label: homepage blok
-default: hoe-blok
+label: Homepage blok
+default: Hoe-blok
 context:
   heading: Hoe werkt democratie
   image: /images/temp/homepage-block-bg.png
   blockLink: http://www.google.nl
 variants:
   - name: targetlink
-    label: doelgroepingang
+    label: Doelgroepingang
     context:
       heading: Iets regelen of vragen
       modifier: targetaudience
-      image: /images/temp/homepage-block-bg.png
+      image: /images/temp/homepage-block-bg2.png
       blockLink:
       items:
         - text: 18 jaar geworden
@@ -19,12 +19,29 @@ variants:
         - text: Subsidie energiebesparing
       contextLinkText: iets anders regelen of vragen
       contextLink: #
-  - name: related info
-    label: gerelateerde informatie
+  - name: related orange
+    label: Gerelateerd (oranje)
     context:
       modifier: related
       color: related--orange
       heading: MijnOverheid.nl
+      subtitle: Berichten, lopende zaken en Persoonlijke Gegevens
+      blockLink: http://www.mijnoverheid.nl
+  - name: related darkblue
+    label: Gerelateerd (donkerblauw)
+    context:
+      modifier: related
+      color: related--darkBlue
+      image: /images/temp/homepage-block-bg2.png
+      heading: Rijksoverheid.nl
+      subtitle: Berichten, lopende zaken en Persoonlijke Gegevens
+      blockLink: http://www.mijnoverheid.nl
+  - name: related lightblue
+    label: Gerelateerd (lichtblauw)
+    context:
+      modifier: related
+      color: related--lightBlue
+      heading: ondernemersplein.nl
       subtitle: Berichten, lopende zaken en Persoonlijke Gegevens
       blockLink: http://www.mijnoverheid.nl
 
