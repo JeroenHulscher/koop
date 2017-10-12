@@ -1,0 +1,16 @@
+.homepageblock {
+  display: block;
+  padding: .5em;
+
+  h2 {
+    display: block;
+    width: calc(100% - 2em);
+    padding: .5em;
+    background: $white;
+  }
+
+  &.temp {
+    background: url(../images/temp/homepage-block-bg.png) no-repeat left top;
+  }
+
+}

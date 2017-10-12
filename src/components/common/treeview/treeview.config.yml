@@ -1,0 +1,10 @@
+title: Treeview
+status: ready
+context:
+  label: default
+variants:
+- name: foldable
+  label: foldable
+  status: wip
+  context:
+    modifier: treeview--foldable

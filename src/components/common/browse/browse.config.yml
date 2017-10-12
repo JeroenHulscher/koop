@@ -1,0 +1,27 @@
+---
+title: browse
+label: Bladeren
+context:
+  title: Bladeren
+  intro: Blader door de collecties van overheid.nl.
+  items:
+    - link: '#'
+      text: Wetten
+      count: 25
+      count_context: gepubliceerd
+    - link: '#'
+      text: Ruimtelijke plannen
+      count: 3
+      count_context: gepubliceerd
+    - link: '#'
+      text: Officiële bekendmakingen
+      count: 14
+      count_context: bekend gemaakt
+    - link: '#'
+      text: Staatsblad
+      count: 5
+      count_context: gepubliceerd
+    - link: '#'
+      text: Internetconsultatie
+      count: 3
+      count_context: gepubliceerd

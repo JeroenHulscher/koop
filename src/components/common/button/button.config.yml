@@ -46,6 +46,7 @@ variants:
       text: Icoon down
       modifier: button--icon-down
   - name: Icon hamburger
+    label: icon hamburger
     context:
       text: Menu
       modifier: button--icon-hamburger
