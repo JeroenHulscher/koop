@@ -1,7 +1,7 @@
 <div class="multi-select">
   <label for="multi-select-{{ id }}" {{#if visuallyHideLabel }}class="visually-hidden"{{/if}}>{{ fieldLabel }}</label>
   <small>{{ fieldInstruction }}</small>
-  <input id="multi-select-{{ id }}" class="multi-select__input" type="text" data-decorator="init-custom-select" data-multi-select-options="multi-select-options-{{ id }}" {{#if placeholder }}placeholder="{{ placeholder }}"{{/if}} autocomplete="false">
+  <input id="multi-select-{{ id }}" class="multi-select__input" type="text" data-decorator="init-custom-select" data-multi-select-options="multi-select-options-{{ id }}" {{#if placeholder }}placeholder="{{ placeholder }}"{{/if}} autocomplete="off">
   <div id="multi-select-options-{{ id }}" class="multi-select__options">
     {{#each optionGroups }}
     <div class="multi-select__optgroup" role="group" aria-labelledby="{{ labelId }}">
