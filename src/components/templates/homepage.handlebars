@@ -1,9 +1,8 @@
-{{ render "@header" header merge=true }}
+  {{ render "@header" header merge=true }}
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
-    <h2>Zoeken in alle documenten</h2>
-    <p>Uitgebreid zoeken in <a href="#">parlementaire documenten</a> of <a href="#">officiële bekendmakingen</a>.</p>
+    {{ render "@document-search" }}
   </div>
 </div>
 <div class="row row--browse">
@@ -15,8 +14,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
     </div>
     <div>
-      <h2>Vandaag bekendgemaakt</h2>
-      <p><a href="#">Totaal 453 publicaties op vrijdag 14 september</a></p>
+      {{ render "@browse" }}
     </div>
   </div>
 </div>

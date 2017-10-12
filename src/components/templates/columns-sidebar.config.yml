@@ -1,7 +1,13 @@
 ---
-title: Columns + sidebar
-status: prototype
+title: Detailpagina (FAQ)
+label: Detailpagina (FAQ)
+status: wip
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - text: <a href="#">Veelgestelde vragen</a>

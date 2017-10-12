@@ -1,8 +1,5 @@
 .multi-select {
-
-  &__input {
-    position: relative;
-  }
+  position: relative;
 
   &__options {
     display: none;
@@ -15,7 +12,7 @@
     z-index: 1;
     max-height: 250px;
     overflow-y: auto;
-    border-bottom: 1px solid $black;
+    border: 1px solid $lighterGrey;
 
     &--open {
       display: block;
@@ -32,7 +29,13 @@
 
     &--selected {
       color: $white;
-      background-color: $primaryBlue;
+      background: {
+        color: $primaryBlue;
+        image: $iconCheckWhite;
+        repeat: no-repeat;
+        position: right 1em center;
+        size: 1em;
+      };
     }
 
     &--active {

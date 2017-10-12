@@ -1,9 +1,15 @@
-$spacing: 2em;
+$mobileSpacing: 1em;
+$desktopSpacing: 2em;
 $fatBorder: .75em;
 
 .row {
-  padding-top: $spacing;
-  padding-bottom: $spacing;
+  padding-top: $mobileSpacing;
+  padding-bottom: $mobileSpacing;
+
+  @media ( min-width: 50em ) {
+    padding-top: $desktopSpacing;
+    padding-bottom: $desktopSpacing;
+  }
 
   &--page-opener {
     background-color: $lightBlue;
@@ -17,8 +23,13 @@ $fatBorder: .75em;
     border-top: $fatBorder solid $lighterGrey;
     border-bottom: $fatBorder solid $lighterGrey;
     background-color: $lightGrey;
-    margin-top: $spacing;
-    margin-bottom: $spacing;
+    margin-top: $mobileSpacing;
+    margin-bottom: $mobileSpacing;
+
+    @media ( min-width: 50em ) {
+      margin-top: $desktopSpacing;
+      margin-bottom: $desktopSpacing;
+    }
   }
 
   &--footer {
