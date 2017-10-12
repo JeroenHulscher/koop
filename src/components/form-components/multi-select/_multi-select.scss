@@ -12,9 +12,7 @@
     z-index: 1;
     max-height: 250px;
     overflow-y: auto;
-    border-left: 1px solid $lighterGrey;
-    border-right: 1px solid $lighterGrey;
-    border-bottom: 1px solid $lighterGrey;
+    border: 1px solid $lighterGrey;
 
     &--open {
       display: block;
@@ -31,7 +29,12 @@
 
     &--selected {
       color: $white;
-      background-color: $primaryBlue;
+      background: {
+        color: $primaryBlue;
+        image: $iconCheckWhite;
+        repeat: no-repeat;
+        position: right 1em center;
+      };
     }
 
     &--active {

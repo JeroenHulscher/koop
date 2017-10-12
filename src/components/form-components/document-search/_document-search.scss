@@ -16,6 +16,15 @@
   .multi-select input {
     font-size: 1em;
     padding: 1em;
+    border: 1px solid $lighterGrey;
+  }
+
+  .multi-select input {
+    background: {
+      image: $dartDownIcon;
+      repeat: no-repeat;
+      position: right 1em center;
+    };
   }
 
   input[type=submit] {
@@ -23,6 +32,7 @@
     margin: 0;
     padding: 1em 2em;
     text-align: center;
+    border-color: transparent;
   }
 
   &__fields {
@@ -37,6 +47,7 @@
     > input[type="text"],
     .multi-select {
       flex: 1;
+
 
       input {
         width: 100%;
