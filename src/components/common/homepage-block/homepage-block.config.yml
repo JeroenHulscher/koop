@@ -1,10 +1,31 @@
 label: homepage blok
+default: hoe-blok
 context:
-  heading: Iets regelen of vragen
-  modifier: temp
-  items:
-    - text: 18 jaar geworden
-    - text: Werkloos
-    - text: Rijbewijs verlengen
-    - text: Subsidie energiebesparing
-  contextLinkText: iets anders regelen of vragen
+  heading: Hoe werkt democratie
+  image: /images/temp/homepage-block-bg.png
+  blockLink: http://www.google.nl
+variants:
+  - name: targetlink
+    label: doelgroepingang
+    context:
+      heading: Iets regelen of vragen
+      modifier: targetaudience
+      image: /images/temp/homepage-block-bg.png
+      blockLink:
+      items:
+        - text: 18 jaar geworden
+        - text: Werkloos
+        - text: Rijbewijs verlengen
+        - text: Subsidie energiebesparing
+      contextLinkText: iets anders regelen of vragen
+      contextLink: #
+  - name: related info
+    label: gerelateerde informatie
+    context:
+      modifier: related
+      color: related--orange
+      heading: MijnOverheid.nl
+      subtitle: Berichten, lopende zaken en Persoonlijke Gegevens
+      blockLink: http://www.mijnoverheid.nl
+
+

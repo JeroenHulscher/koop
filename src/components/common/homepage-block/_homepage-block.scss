@@ -1,6 +1,14 @@
 .homepageblock {
   @include aspect-ratio(16, 9);
-  min-height: 20em;
+  background: {
+    repeat: no-repeat;
+    position: left top;
+    size: cover;
+  }
+
+  &.targetaudience {
+    min-height: 20em;
+  }
 
   h2 {
     padding: .5em;
@@ -8,6 +16,14 @@
     margin: 0;
     display: inline-block;
     font-size: 1.5em;
+  }
+
+  span {
+    color: $white;
+    display: block;
+    font-size: 1.25em;
+    padding: 0 3em 0 .6em;
+    line-height: 1;
   }
 
   ul {
@@ -49,12 +65,35 @@
     }
   }
 
-  &.temp {
-    background: {
-      image: url(../images/temp/homepage-block-bg.png);
-      repeat: no-repeat;
-      position: left top;
-      size: cover;
+  &.related {
+
+    &--orange {
+      border: 2px solid $orange;
+
+      .content--inner {
+        background: {
+          color: rgba(225, 112, 0, 0.8);
+          image: $externalLinkWhiteIcon;
+          repeat: no-repeat;
+          position: 97% .75em;
+          size: 2.5em;
+        }
+      }
+    }
+
+    .content--inner {
+      height: 40%;
+      top: 60%;
+
+      h2 {
+        background: transparent;
+        color: $white;
+        padding: .5em 3em 0 .5em;
+      }
     }
   }
+}
+
+a.blockLink[href*="//"] {
+  background: none;
 }

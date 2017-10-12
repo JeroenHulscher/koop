@@ -1,16 +1,32 @@
-<div class="homepageblock {{ modifier }}">
+{{#if blockLink }}
+  <a href="{{ blockLink }}" class="blockLink">
+{{/if }}
 
-  <div class="content--inner">
+  <div class="homepageblock {{ modifier }} {{ color }}" style="background-image: url({{ image }});">
 
-    <h2>{{ heading }}</h2>
+    <div class="content--inner">
 
-    <ul class="homepageblock-options">
-      {{#each items }}
-        <li><a href="#">{{{ text }}}</a></li>
-      {{/each }}
-    </ul>
+      <h2>{{ heading }}</h2>
 
-    <a href="#" class="context-Link">{{ contextLinkText }}</a>
+      {{#if subtitle }}
+        <span>{{ subtitle }}</span>
+      {{/if }}
+
+      {{#if items }}
+        <ul>
+          {{#each items }}
+            <li><a href="#">{{{ text }}}</a></li>
+          {{/each }}
+        </ul>
+      {{/if }}
+
+      {{#if contextLinkText }}
+        <a href="{{ contextLink }}" class="context-Link">{{ contextLinkText }}</a>
+      {{/if }}
+
+    </div>
+
   </div>
-
-</div>
+{{#if blockLink }}
+  </a>
+{{/if }}
