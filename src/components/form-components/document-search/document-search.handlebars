@@ -1,0 +1,12 @@
+<form class="document-search" id="search">
+  <fieldset>
+    <caption>Zoeken in alle documenten</caption>
+
+    <label for="search-term">Zoekterm of dossiernummer</label>
+    <input type="text" id="search-term" placeholder="Typ hier uw zoekterm of (dossier)nummer">
+
+    {{ render "@multi-select" searchScope merge="true "}}
+
+    <input type="submit" />
+  </fieldset>
+</form>

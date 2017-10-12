@@ -1,0 +1,28 @@
+---
+label: Document search
+status: ready
+context:
+  id: 1
+  searchScope:
+    id: search-scope
+    fieldLabel: Selecteer documentsoort
+    fieldInstruction: ''
+    optionGroups:
+      - label: Parlementaire documenten
+        groupId: search-scope-set-1
+        options:
+          - text: Alle parlementaire documenten
+          - text: Handelingen
+          - text: Moties
+          - text: Kamervragen
+          - text: Kamerstukken
+          - text: Agenda's
+      - label: Officiële bekendmakingen
+        groupId: search-scope-set-2
+        options:
+          - text: Alle bekendmakingen
+          - text: Tractatenblad
+          - text: Staatsblad
+          - text: Staatscourant
+          - text: Gemeenteblad
+          - text: Provinciaal blad
