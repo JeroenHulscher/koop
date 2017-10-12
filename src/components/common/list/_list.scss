@@ -1,3 +1,7 @@
+ul ul {
+  padding-left: 1em;
+}
+
 .facet--heading {
   font-size: 1em;
   font-family: $defaultHeadingFontStack;
@@ -48,9 +52,53 @@
 
   a {
     text-decoration: none;
+    padding: .25em;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &.is-active {
+      background-color: $darkBlue;
+      color: $white;
+    }
+  }
+}
+
+.list--relations {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 0 0 1em;
+  }
+
+  small {
+    display: block;
+    color: $darkGrey;
+  }
+}
+
+.list--metadata {
+  padding: 0;
+
+  li {
+    display: inline-block;
+    color: $darkerGrey;
+    font-size: 90%;
+    margin: 0 .5em 0 0;
+    padding: 0 .5em 0 0;
+
+    &:after {
+      content: '|';
+      left: .5em;
+      position: relative;
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
     }
   }
 }

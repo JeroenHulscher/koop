@@ -1,0 +1,43 @@
+.az {
+
+    ul {
+      padding: 0;
+      margin: .25em 0;
+    }
+
+    li {
+      float: left;
+      list-style: none;
+      border: 1px solid $lighterGrey;
+      margin: 0 0 3px -1px;
+      line-height: 1;
+      display: inline-block;
+
+      &.active {
+        color: $white;
+        background: $primaryBlue;
+        border-color: $primaryBlue;
+        padding: 5px 8px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 5px 8px;
+
+        &:hover {
+          color: $primaryBlue;
+          background: $lightGrey;
+        }
+      }
+    }
+
+    @media ( min-width: 50em ) {
+      float: left;
+    }
+
+}
