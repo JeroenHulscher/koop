@@ -1,0 +1,44 @@
+$gutter: 2em;
+
+.columns {
+  display: flex;
+  flex-direction: column;
+
+  @media ( min-width: 50em ) {
+    flex-direction: row;
+  }
+
+  > * {
+    flex: 1;
+
+    @media ( min-width: 50em ) {
+      margin-left: $gutter;
+    }
+  }
+
+  > *:first-child,
+  > *:only-child {
+    margin-left: 0;
+  }
+
+  &--sidebar {
+
+    /* in columns with a sidebar, the main content is the first
+    element in the markup, and the 'sidebar' the second. In desktop
+    layout, the sidebar appears on the left, and the main content
+    on the right */
+
+    @media ( min-width: 50em ) {
+      > *:first-child {
+        flex: 3;
+        order: 2;
+        margin-left: $gutter;
+      }
+
+      > * {
+        flex: 1;
+        margin-left: 0;
+      }
+    }
+  }
+}

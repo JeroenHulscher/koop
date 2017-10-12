@@ -4,23 +4,13 @@
 
   <fieldset class="form__element">
 
-    <div class="form__element">
-      <label for="inlognaam">Inlognaam</label>
-      <small>Verplicht veld</small>
-      <input type="text" id="inlognaam" placeholder="Bijv. uw e-mailadres" />
-    </div>
+    {{ render "@input-text" loginField merge=true }}
 
-
-    <div class="form__element">
-      <label for="wachtwoord">Wachtwoord</label>
-      <small>Verplicht veld</small>
-      <input type="password" id="wachtwoord" />
-      <small>Wachtwoord vergeten? <a href="#">Stel uw wachtwoord opnieuw in</a></small>
-    </label>
+    {{ render "@input-text" passwordField merge=true }}
 
   </fieldset>
 
-  <button type="submit" class="button button--secondary">Inloggen</button>
+  {{ render "@button--secondary" submitButton merge=true }}
 
   <a href="#" class="pull-right">Registreer bij Naam service</a>
 

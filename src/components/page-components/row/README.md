@@ -1,0 +1,1 @@
+De class `.row` wordt gebruikt om secties binnen de pagina op te maken. Een standaard ‘row’ heeft ruimte boven en onder, varianten op de ‘row’ zijn bijvoorbeeld achtergrondkleuren en borders boven en/of onder.
