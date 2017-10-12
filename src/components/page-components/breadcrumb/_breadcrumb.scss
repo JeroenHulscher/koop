@@ -1,11 +1,11 @@
 .breadcrumb {
   background: $lightBlue;
-  padding: .5em 1em;
+  padding: .5em 0;
   font-size: 85%;
 
   @media ( min-width: 50em ) {
 
-    padding: 0 1em;
+    padding: 0;
 
     p {
       display: inline-block;
