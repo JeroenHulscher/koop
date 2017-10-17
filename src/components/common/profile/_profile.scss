@@ -1,0 +1,17 @@
+.profile {
+
+  [data-toggler] {
+    position: relative;
+
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: 0;
+      text-indent: -9999em;
+    }
+  }
+}

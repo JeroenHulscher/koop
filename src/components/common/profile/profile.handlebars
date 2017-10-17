@@ -1,0 +1,17 @@
+<div class="profile {{ modifier }}" data-decorator="init-profile-toggle">
+  {{#if loggedIn }}
+  <p data-toggler>U bent ingelogd</p>
+  <div class="profile__options" data-toggled id="profile-options-{{ id }}">
+    <h3>Opties:</h3>
+    {{#if options }}
+    <ul>
+      {{#each options }}
+      <li><a href="{{ url }}">{{ text }}</a></li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+  {{else}}
+  U bent uitgelogd
+  {{/if}}
+</div>
