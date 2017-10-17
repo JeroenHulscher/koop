@@ -5,6 +5,9 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  spoedpublicatiemelding:
+    modifier: alert--info
+    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
   filter1:
     modifier: list--facet
     heading: Vandaag gepubliceerd
