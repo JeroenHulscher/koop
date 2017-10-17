@@ -1,0 +1,26 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+<div class="container columns columns--sidebar row">
+  <div>
+    <h2>Spoedpublicaties (1)</h2>
+    {{ render "@alert" spoedpublicatiemelding merge="true" }}
+    {{ render "@resultlist" }}
+    <h2>Vandaag zijn er 528 publicaties</h2>
+    {{ render "@resultlist" }}
+    {{ render "@resultlist" }}
+    {{ render "@resultlist" }}
+    {{ render "@resultlist" }}
+  </div>
+  <div>
+    <h2>Verfijn bekendmakingen</h2>
+    {{ render "@list--facetlist" filter1 merge=true }}
+    {{ render "@list--facetlist" filter2 merge=true }}
+    {{ render "@list--facetlist" filter3 merge=true }}
+  </div>
+</div>
+
+{{ render "@footer" }}

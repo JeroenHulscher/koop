@@ -1,0 +1,40 @@
+---
+title: Zoekresultaten
+status: done
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  spoedpublicatiemelding:
+    modifier: alert--info
+    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  filter1:
+    modifier: list--facet
+    heading: Vandaag gepubliceerd
+    items:
+      - text: <a href="#">Tractatenblad (0)</a>
+      - text: <a href="#">Staatblad (0)</a>
+      - text: <a href="#">Staatscourant (0)</a>
+      - text: <a href="#">Gemeenteblad (0)</a>
+      - text: <a href="#">Provenciaal blad (0)</a>
+      - text: <a href="#">Waterschapsblad (0)</a>
+      - text: <a href="#">Blad gemeenschappelijke regeling (0)</a>
+  filter2:
+    modifier: list--facet
+    heading: Organisatie
+    items:
+      - text: <a href="#">Ministerie van Binnenlandse zaken (8)</a>
+      - text: <a href="#">Ministerie van Defensie (25)</a>
+  filter3:
+    modifier: list--facet
+    heading: Rubriek
+    items:
+      - text: <a href="#">Defensie (4)</a>
+      - text: <a href="#">Europese zaken (3)</a>
+      - text: <a href="#">Fiscaal (12)</a>
+      - text: <a href="#">Internationale samenwerking (4)</a>
+      - text: <a href="#">Militaire missies (3)</a>
+      - text: <a href="#">Ontwikkelingssamenwerking (12)</a>
+      - text: <a href="#">Organisatie en beleid (4)</a>
+      - text: <a href="#">Militaire missies (3)</a>
+      - text: <a href="#">Reizen (12)</a>
