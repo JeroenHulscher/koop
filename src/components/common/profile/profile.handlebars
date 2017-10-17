@@ -2,9 +2,9 @@
   {{#if loggedIn }}
   <p data-toggler>U bent ingelogd</p>
   <div class="profile__options" data-toggled id="profile-options-{{ id }}">
-    <h3>Opties:</h3>
+    <h3 class="visually-hidden">Opties:</h3>
     {{#if options }}
-    <ul>
+    <ul class="list list--unstyled profile__option-list">
       {{#each options }}
       <li><a href="{{ url }}">{{ text }}</a></li>
       {{/each}}
