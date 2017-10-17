@@ -1,0 +1,17 @@
+---
+title: profile
+status: ready
+default: Ingelogd
+context:
+  id: 1
+  loggedIn: true
+  options:
+    - text: Mijn abonnementen
+      url: '#'
+    - text: Wachtwoord wijzigen
+      url: '#'
+variants:
+  - name: Uitgelogd
+    context:
+      id: 2
+      loggedIn: false
