@@ -3,6 +3,8 @@ table {
   width: 100%;
   border-collapse: collapse;
 
+
+
   caption {
     color: $darkerGrey;
     text-align: left;
@@ -32,13 +34,7 @@ table {
     min-width: 15%;
   }
 
-  &.table--striped {
-    tbody tr:nth-child(odd) td,
-    tbody tr:nth-child(odd) th {
-      background: $lightGrey;
-    }
 
-  }
 
   &.table--condensed {
     tr td,
@@ -47,15 +43,88 @@ table {
     }
   }
 
-  &.table--hover {
-    tbody tr:nth-child(odd):hover,
-    tbody tr:nth-child(even):hover {
-      background: $lighterGrey;
+  @media ( min-width: 50em ) {
+    &.table--striped {
+      tbody tr:nth-child(odd) td,
+      tbody tr:nth-child(odd) th {
+        background: $lightGrey;
+      }
 
-      td,
-      th {
+    }
+
+    &.table--hover {
+      tbody tr:nth-child(odd):hover,
+      tbody tr:nth-child(even):hover {
         background: $lighterGrey;
+
+        td,
+        th {
+          background: $lighterGrey;
+        }
       }
     }
   }
 }
+
+@media ( max-width: 50em ) {
+
+  table,
+  &.table--condensed,
+  &.table--striped,
+  &.table--hover {
+    position: relative;
+
+    thead {
+      display: none;
+    }
+
+    tbody tr:nth-child(odd) td {
+      background: transparent;
+    }
+
+    tr {
+      display: block;
+      border: 2px solid $lighterGrey;
+      margin: 1em 0;
+    }
+
+    th {
+      position: absolute;
+      left: -999em;
+    }
+
+    td {
+      width: 50%;
+      left: 50%;
+      position: relative;
+      display: block;
+      clear: both;
+      border: none !important;
+
+      &:nth-child(odd) {
+        background: $lightGrey !important;
+
+        &::before {
+          background: $lightGrey !important;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        padding: $standardPadding;
+        height: inherit;
+        font-weight: 700;
+        content: attr(data-before);
+      }
+    }
+
+    &.table--condensed td::before {
+      padding: .25em;
+    }
+  }
+}
+
+

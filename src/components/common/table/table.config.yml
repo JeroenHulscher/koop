@@ -2,6 +2,9 @@ title: Table
 status: ready
 context:
   label: default
+  value1: Voornaam
+  value2: Achternaam
+  value3: Woonplaats
 variants:
   - name: striped
     label: striped
