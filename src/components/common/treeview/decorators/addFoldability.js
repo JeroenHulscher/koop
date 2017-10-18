@@ -1,7 +1,10 @@
+var treeview = require( 'common/treeview/treeview' );
+
 module.exports = function addFoldability( element ) {
   var openText = 'Toon onderliggende';
   var closeText = 'Verberg onderliggende';
-  var needsFoldability = element.parentNode.children.length > 1;
+  var foldableChildren = treeview.getFoldableChildren( element );
+  var needsFoldability = foldableChildren.length > 0;
   var toggleButton;
 
   console.log( element );
