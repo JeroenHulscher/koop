@@ -1,5 +1,5 @@
-  <label for="multi-select-{{ id }}">{{ fieldLabel }}</label>
 <div class="{{#if regularFormElement }}form__element {{/if}}multi-select">
+  <label for="multi-select-{{ id }}" {{#if visuallyHideLabel}}class="visually-hidden"{{/if}}>{{ fieldLabel }}</label>
   {{#if fieldInstruction }}
     <small>{{ fieldInstruction }}</small>
   {{/if }}
