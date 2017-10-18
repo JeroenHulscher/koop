@@ -1,6 +1,7 @@
 ---
 title: Question Explanation
+label: Toelichting
 context:
   id: 1
-  Helptext: <p>U moet dit <a href="#">formulier</a> volledig en naar waarheid invullen.</p><p>Als achteraf blijkt dat de informatie die u heeft ingevuld niet klopt of niet compleet is, dan kan dit gevolgen hebben voor uw aanvraag. Als uw gegevens onjuist zijn, dan kunt u uw uitkering kwijtraken en een boete krijgen.</p>
+  Helptext: <p>U moet dit <a href="#">formulier</a> volledig en naar waarheid invullen.</p>
   Text: Voornaam

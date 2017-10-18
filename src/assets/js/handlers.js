@@ -15,6 +15,8 @@ module.exports = {
   'open-panel': require( 'common/tabs/handlers/openPanel' ),
   'open-modal': require( 'common/modal/handlers/openModal' ),
   'close-modal': require( 'common/modal/handlers/closeModal' ),
-  'toggle-profile-options': require( 'common/profile/handlers/toggleProfileOptions' )
+  'toggle-profile-options': require( 'common/profile/handlers/toggleProfileOptions' ),
+  'toggle-explanation': require( 'form-components/question-explanation/toggleExplanation' ),
+  'close-explanation': require( 'form-components/question-explanation/closeExplanation' )
 };
 

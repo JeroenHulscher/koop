@@ -2,21 +2,17 @@
 
 .question-explanation-link {
   display: none;
-
-  .single-checkbox + label & {
-    left: -1.75em;
-  }
 }
 
 .has-js .question-explanation-link {
   background: {
-    color: green;
+    image: $explanationIcon;
     repeat: no-repeat;
     position: center center;
     size: 20px;
   };
-  width: 200px;
-  height: 200px;
+  width: 20px;
+  height: 20px;
   text-indent: -9999em;
   display: inline-block;
   vertical-align: middle;
@@ -24,7 +20,7 @@
 
   &:hover,
   &:focus {
-    background-image: none;
+    background-image: $explanationHoverIcon;
   }
 }
 
@@ -33,30 +29,30 @@
 }
 
 .has-js .question-explanation /* only style as question explanation when there is JS */ {
-  border: 1px solid red;
+  border: 1px solid $mediumGrey;
   font-size: inherit;
-  background-color: blue;
+  background-color: $white;
   margin: 1.5em 0 1em;
   padding: .75em 3em .75em 1.5em;
   position: relative;
+  left: -1em;
   outline: none;
-  border-radius: $borderRadius;
-  color: $white;
+  color: $black;
+  max-width: 20em;
 
   a {
-    color: red;
+    color: $darkBlue;
   }
 
   a:hover,
   a:focus {
-    color: green;
+    color: $lightBlue;
   }
 
   // scss-lint:disable PropertyCount
   &::before {
     background-color: inherit;
-    border: 1px solid $black;
-    border-radius: $borderRadius;
+    border: 1px solid $mediumGrey;
     border-right-color: transparent;
     border-bottom-color: transparent;
     content: ' ';
@@ -94,12 +90,12 @@
 
   &::after {
     background: {
-      image: none;
+      image: $modalCloser;
       position: .5em;
       repeat: no-repeat;
       size: 50%;
-      color: $black;
     }
+
     content: ' ';
     position: absolute;
     top: 0;
@@ -110,6 +106,6 @@
 
   &:hover::after,
   &:focus::after {
-    background-color: $red;
+    background-image: $modalCloserHover;
   }
 }
