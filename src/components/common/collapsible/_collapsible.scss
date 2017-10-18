@@ -13,7 +13,7 @@
       }
       padding-left: 1em;
       background: {
-        image: $dartDownIcon;
+        image: $dartTopIcon;
         repeat: no-repeat;
         position: 0 55%;
       }
@@ -25,7 +25,7 @@
 
       &[aria-expanded="true"] {
         background: {
-          image: $dartTopIcon;
+          image: $dartDownIcon;
           repeat: no-repeat;
           position: 0 55%;
         }
@@ -37,5 +37,4 @@
     border-top: 1px solid $lightGrey;
     margin: 0 1em;
   }
-
 }

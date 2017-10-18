@@ -1,2 +1,8 @@
 ---
 label: Document banner
+context:
+  value1: Datum publicatie
+  value2: Organisatie
+  value3: Jaargang en nummer
+  value4: Rubriek
+  value5: Datum totstandkoming

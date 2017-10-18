@@ -1,5 +1,5 @@
 var dom = require( 'helpers/dom' );
-var collapsibles = require( '../collapsibles' );
+var collapsibles = require( '../collapsible' );
 
 module.exports = function initCollapsible( element ) {
   var showInitially = dom.$('.collapsible--initially-visible', element ).length > 0;

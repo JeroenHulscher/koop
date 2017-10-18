@@ -1,0 +1,115 @@
+// explanation to go with questions
+
+.question-explanation-link {
+  display: none;
+
+  .single-checkbox + label & {
+    left: -1.75em;
+  }
+}
+
+.has-js .question-explanation-link {
+  background: {
+    color: green;
+    repeat: no-repeat;
+    position: center center;
+    size: 20px;
+  };
+  width: 200px;
+  height: 200px;
+  text-indent: -9999em;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.25em;
+
+  &:hover,
+  &:focus {
+    background-image: none;
+  }
+}
+
+.question-explanation {
+  font-size: .875em;
+}
+
+.has-js .question-explanation /* only style as question explanation when there is JS */ {
+  border: 1px solid red;
+  font-size: inherit;
+  background-color: blue;
+  margin: 1.5em 0 1em;
+  padding: .75em 3em .75em 1.5em;
+  position: relative;
+  outline: none;
+  border-radius: $borderRadius;
+  color: $white;
+
+  a {
+    color: red;
+  }
+
+  a:hover,
+  a:focus {
+    color: green;
+  }
+
+  // scss-lint:disable PropertyCount
+  &::before {
+    background-color: inherit;
+    border: 1px solid $black;
+    border-radius: $borderRadius;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    content: ' ';
+    height: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 1.5em;
+    transform: rotate( 45deg );
+    transform-origin: 100% 0;
+    width: 1.5em;
+  }
+  // scss-lint:enable PropertyCount
+
+  &[hidden="false"] {
+    display: block;
+  }
+
+  .choice-single legend + &,
+  .choice-multiple legend + & {
+    margin-top: .5em;
+  }
+}
+
+.question-explanation__close {
+  display: none;
+}
+
+.has-js .question-explanation__close {
+  display: block;
+  height: 2em;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  width: 2em;
+
+  &::after {
+    background: {
+      image: none;
+      position: .5em;
+      repeat: no-repeat;
+      size: 50%;
+      color: $black;
+    }
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $red;
+  }
+}
