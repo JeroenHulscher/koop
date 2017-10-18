@@ -4,6 +4,7 @@ module.exports = function addFoldability( element ) {
   var openText = 'Toon onderliggende';
   var closeText = 'Verberg onderliggende';
   var foldableChildren = treeview.getFoldableChildren( element );
+  var foldableChildrenIDRef = treeview.getFoldableChildrenIDRef( foldableChildren );
   var needsFoldability = foldableChildren.length > 0;
   var toggleButton;
 
@@ -14,6 +15,10 @@ module.exports = function addFoldability( element ) {
     toggleButton.type = 'button';
     toggleButton.textContent = closeText;
     toggleButton.setAttribute( 'data-handler', 'toggle-fold' );
+
+    if ( foldableChildrenIDRef ) {
+      toggleButton.setAttribute( 'aria-controls', foldableChildrenIDRef );
+    }
 
     element.appendChild( toggleButton );
   }
