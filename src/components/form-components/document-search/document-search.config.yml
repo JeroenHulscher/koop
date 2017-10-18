@@ -8,6 +8,7 @@ context:
     fieldLabel: Selecteer documentsoort
     fieldInstruction: ''
     visuallyHideLabel: true
+    regularFormElement: false
     placeholder: Collecties
     optionGroups:
       - label: Parlementaire documenten

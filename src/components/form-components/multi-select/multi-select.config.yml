@@ -6,6 +6,7 @@ context:
   fieldLabel: Zoeken in verzamelingen
   visuallyHideLabel: false
   fieldInstruction: ''
+  regularFormElement: true
   optionGroups:
     - label: Overheidsthema's
       groupId: optiongroup-1
