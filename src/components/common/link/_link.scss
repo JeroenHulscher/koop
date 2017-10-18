@@ -5,8 +5,8 @@ a {
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
-  &[href*="//"]:not(.button),
-  &[rel="external"] {
+  .main-content &[href*="//"]:not(.button),
+  .main-content &[rel="external"] {
     padding-right: 1.25em;
     margin-right: .25em;
     background: {
@@ -15,6 +15,13 @@ a {
       position: right 3px;
       size: 13px 12px;
     }
+  }
+
+  .main-content &[href*="https://www.officielebekendmakingen.nl/"],
+  .main-content &[href*="https://www.overheid.nl/"] {
+    padding-right: initial;
+    margin-right: 0;
+    background: none;
   }
 
   &:focus {

@@ -4,12 +4,12 @@
   font-size: 85%;
 
   .row & {
-    margin-top: -2em;
+    margin-top: -1em;
     margin-bottom: 2em;
   }
 
   .row &:only-child {
-    margin-bottom: -2em;
+    margin-bottom: -1em;
   }
 
   @media ( min-width: 50em ) {
