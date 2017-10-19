@@ -15,7 +15,7 @@
         <li><a href="#">Overheidsinformatie</a></li>
       </ul>
       <h2 class="visually-hidden">Zoekfunctie</h2>
-      <form action="/" data-decorator="init-search-toggle" class="search-form">
+      <form action="/" {{#if toggleableSearch }}data-decorator="init-search-toggle"{{/if}} class="search-form">
         <input type="search" class="search-form__term" />
         <button type="submit" class="search-form__submit">Zoek</button>
       </form>
