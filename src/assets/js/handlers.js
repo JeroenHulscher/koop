@@ -16,6 +16,7 @@ module.exports = {
   'open-modal': require( 'common/modal/handlers/openModal' ),
   'close-modal': require( 'common/modal/handlers/closeModal' ),
   'toggle-profile-options': require( 'common/profile/handlers/toggleProfileOptions' ),
+  'toggle-fold': require( 'common/treeview/handlers/toggleFold' ),
   'toggle-explanation': require( 'form-components/question-explanation/toggleExplanation' ),
   'close-explanation': require( 'form-components/question-explanation/closeExplanation' ),
   'remove-element': require( 'handlers/removeElement' )
