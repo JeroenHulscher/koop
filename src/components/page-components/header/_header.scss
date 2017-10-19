@@ -50,6 +50,7 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      position: relative; // provide positioning context
 
       @media ( min-width: 50em ) {
         flex-direction: row;
@@ -130,7 +131,7 @@
       }
     }
 
-    [aria-expanded="true"] {
+    [aria-controls="other-sites"][aria-expanded="true"] {
       background-image: $dartTopIcon;
 
       &::before {
@@ -172,6 +173,35 @@
 
     &[hidden="true"] .container {
       animation: closeNav 0.8s ease-in-out;
+    }
+  }
+
+  .search-form {
+    overflow: hidden;
+    position: relative;
+    width: 17em;
+
+    .search-form__term {
+      -webkit-appearance: none;
+      transition: width 0.4s ease-in-out;
+      position: absolute;
+      right: 5em;
+      width: 12em;
+      height: 5em;
+
+      &--hidden {
+        width: 0;
+        border: 0;
+        padding: 0;
+      }
+    }
+
+    .search-form__submit {
+      transition: none;
+      width: 5em;
+      height: 5em;
+      position: absolute;
+      right: 0;
     }
   }
 }
