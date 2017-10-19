@@ -3,4 +3,3 @@ status: ready
 context:
   file: logo.svg
   alt: Overheid.nl logo
-  toggleableSearch: true

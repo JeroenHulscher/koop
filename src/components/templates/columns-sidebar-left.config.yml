@@ -6,7 +6,6 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-    toggleableSearch: true
   sidebar:
     modifier: list--facet
     heading: Officiële bekendmakingen
