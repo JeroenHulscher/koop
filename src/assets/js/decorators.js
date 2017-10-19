@@ -8,7 +8,8 @@ var decorators = {
   'init-tabs': require( 'common/tabs/decorators/initTabs' ),
   'init-custom-select': require( 'form-components/multi-select/decorators/initCustomSelect' ),
   'init-profile-toggle': require( 'common/profile/decorators/initProfileToggle' ),
-  'init-collapsible': require( 'common/collapsible/decorators/initCollapsible' )
+  'init-collapsible': require( 'common/collapsible/decorators/initCollapsible' ),
+  'init-search-toggle': require( 'page-components/header/decorators/initSearchToggle' )
 };
 
 module.exports = decorators;
