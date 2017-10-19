@@ -8,4 +8,5 @@ module.exports = function initSearchToggle( element ) {
   searchTerm.classList.add( searchTermHiddenClass );
   searchTerm.addEventListener( 'keyup', searchToggle.handleInputChange );
   searchButton.textContent = searchToggle.context.open;
+  searchButton.setAttribute( 'data-handler', 'toggle-search' );
 };
