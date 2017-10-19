@@ -6,6 +6,7 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    toggleableSearch: true
   spoedpublicatiemelding:
     modifier: alert--info
     text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
