@@ -1,7 +1,7 @@
 ---
 title: Content sidebar
 label: Content sidebar
-status: ready
+status: wip
 context:
   header:
     file: logo.svg

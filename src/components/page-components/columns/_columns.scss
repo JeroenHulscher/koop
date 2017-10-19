@@ -9,7 +9,7 @@ $gutter: 2em;
   }
 
   > * {
-    flex: 1;
+    flex: 2;
 
     @media ( min-width: 50em ) {
       margin-left: $gutter;
@@ -19,6 +19,7 @@ $gutter: 2em;
   > *:first-child,
   > *:only-child {
     margin-left: 0;
+    flex: 4;
   }
 
   > *:only-child {
@@ -34,8 +35,8 @@ $gutter: 2em;
 
     @media ( min-width: 50em ) {
       > *:first-child {
-        flex: 2;
-        order: 2;
+        flex: 3;
+        order: 1;
         margin-left: $gutter;
       }
 
@@ -56,7 +57,7 @@ $gutter: 2em;
       }
 
       > *:first-child {
-        flex: 2;
+        flex: 3;
         margin-left: 0;
       }
     }
