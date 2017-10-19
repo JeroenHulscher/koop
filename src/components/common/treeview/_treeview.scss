@@ -13,6 +13,7 @@
         repeat: no-repeat;
         position: 98% .75em;
       }
+      position: relative;
 
       &:hover {
         background-color: $lightGrey;
@@ -22,6 +23,27 @@
         display: block;
         color: $darkGrey;
       }
+
+      button[data-handler="toggle-fold"] {
+        background: {
+          repeat: no-repeat;
+          position: center center;
+          size: 1.5em;
+          color: transparent;
+          image: $minusIcon;
+        };
+        width: 1.5em;
+        height: 1.5em;
+        border: 0;
+        position: absolute;
+        left: 0;
+        top: .75em;
+        text-indent: -9999em;
+      }
+
+      button[aria-expanded="false"] {
+        background-image: $plusIcon;
+      }
     }
 
   }
@@ -29,27 +51,7 @@
   &.treeview--foldable {
     li {
       a {
-        padding: .25em 1em .25em 1.5em;
-        position: relative;
-      }
-
-      a.foldable {
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: .25em;
-          top: .5em;
-          width: 1em;
-          height: 1em;
-          background: pink;
-        }
-
-        &:hover {
-          &:before {
-            background-color: red;
-          }
-        }
+        padding-left: 1.5em;
       }
     }
   }
