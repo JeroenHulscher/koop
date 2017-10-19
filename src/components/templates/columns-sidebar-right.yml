@@ -1,7 +1,7 @@
 ---
-title: Detailpagina (FAQ)
-label: Detailpagina (FAQ)
-status: wip
+title: Content sidebar
+label: Content sidebar
+status: ready
 context:
   header:
     file: logo.svg
