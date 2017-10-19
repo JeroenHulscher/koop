@@ -12,13 +12,16 @@ module.exports = function toggleSearch( submitButton, event ) {
   }
   else {
     if ( searchTerm.classList.contains( searchTermHiddenClass ) ) {
+      // open
       searchTerm.classList.remove( searchTermHiddenClass );
       searchTerm.focus();
       searchButton.textContent = searchToggle.context.close;
     }
     else {
+      // close
       searchTerm.classList.add( searchTermHiddenClass );
       searchButton.textContent = searchToggle.context.open;
+      searchTerm.value = ''; // reset so we don't submit while term is hidden
     }
   }
 };
