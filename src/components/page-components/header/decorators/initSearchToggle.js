@@ -6,5 +6,6 @@ module.exports = function initSearchToggle( element ) {
   var searchTermHiddenClass = searchToggle.context.searchTermHiddenClass;
 
   searchTerm.classList.add( searchTermHiddenClass );
+  searchTerm.addEventListener( 'keyup', searchToggle.handleInputChange );
   searchButton.textContent = searchToggle.context.open;
 };
