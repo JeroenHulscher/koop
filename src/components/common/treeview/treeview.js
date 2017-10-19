@@ -9,7 +9,6 @@ module.exports = {
     var string = '';
 
     for ( var i = 0; i < foldableChildren.length; i++ ) {
-
       if ( i > 0 ) {
         string += ' ' + foldableChildren[i].id;
       }
