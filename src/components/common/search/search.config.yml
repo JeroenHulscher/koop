@@ -1,0 +1,8 @@
+---
+name: search
+context:
+  toggleableSearch: true
+variants:
+  - name: niet togglebaar
+    context:
+      toggleableSearch: false

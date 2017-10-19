@@ -1,7 +1,7 @@
 module.exports = function toggleSearch( submitButton, event ) {
-  var searchToggle = require( 'page-components/header/searchToggle' );
+  var searchToggle = require( 'common/search/searchToggle' );
   var form = submitButton.closest( 'form' );
-  var searchTerm = form.querySelector( '.search-form__term' );
+  var searchTerm = form.querySelector( '.search__term' );
   var searchButton = form.querySelector( 'button' );
   var searchTermHiddenClass = searchToggle.context.searchTermHiddenClass;
 

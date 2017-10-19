@@ -9,7 +9,7 @@ var decorators = {
   'init-custom-select': require( 'form-components/multi-select/decorators/initCustomSelect' ),
   'init-profile-toggle': require( 'common/profile/decorators/initProfileToggle' ),
   'init-collapsible': require( 'common/collapsible/decorators/initCollapsible' ),
-  'init-search-toggle': require( 'page-components/header/decorators/initSearchToggle' ),
+  'init-search-toggle': require( 'common/search/decorators/initSearchToggle' ),
   'add-foldability': require( 'common/treeview/decorators/addFoldability' )
 };
 
