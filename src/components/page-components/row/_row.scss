@@ -13,6 +13,7 @@ $fatBorder: .75em;
 
   &--page-opener {
     background-color: $lightBlue;
+    padding: 1em 0;
 
     + .row--browse {
       margin-top: 0;

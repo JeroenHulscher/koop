@@ -13,7 +13,6 @@ h6,
   margin: 1em 0;
   padding: 0;
   line-height: 1.25;
-  display: inline-block;
 }
 
 h1,
@@ -33,6 +32,10 @@ h2,
     weight: 700;
   }
   color: $darkBlue;
+}
+
+.columns--sidebar h2 {
+    display: inline-block;
 }
 
 h3,

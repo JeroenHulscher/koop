@@ -1,11 +1,9 @@
 .breadcrumb {
-  background: $lightBlue;
-  padding: .5em 0;
-  font-size: 85%;
+  padding: .25em 0;
 
   .row & {
     margin-top: -1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   .row &:only-child {
@@ -26,8 +24,16 @@
     }
 
     li {
-      padding: 0 .5em 0 0;
+      padding: 0 0 0 .5em;
       display: inline-block;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
       &::after {
         position: relative;

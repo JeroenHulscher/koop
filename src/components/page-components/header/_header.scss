@@ -68,8 +68,9 @@
     a {
       color: $headerLinkColor;
       text-decoration: none;
-      padding: .5em 1em;
+      padding: .75em 1em;
       display: block;
+      font-size: 112.5%;
 
       &:hover {
         color: $headerLinkCurrentColor;
@@ -92,18 +93,18 @@
       color: $headerLinkCurrentColor;
       position: relative;
       margin: 0 -1em;
-      padding: .5em 2em;
+      padding: .75em 2em;
       z-index: 0;
       background: {
         color: $white;
         image: $dartDownIcon;
         repeat: no-repeat;
-        position: right .5em center;
+        position: right .75em center;
       };
 
       @media ( min-width: 50em ) {
         margin: 0;
-        padding: .5em 2em .5em 1em;
+        padding: .75em 2em .75em 1em;
       }
 
       &::before {

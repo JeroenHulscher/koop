@@ -17,6 +17,7 @@ module.exports = {
   'close-modal': require( 'common/modal/handlers/closeModal' ),
   'toggle-profile-options': require( 'common/profile/handlers/toggleProfileOptions' ),
   'toggle-explanation': require( 'form-components/question-explanation/toggleExplanation' ),
-  'close-explanation': require( 'form-components/question-explanation/closeExplanation' )
+  'close-explanation': require( 'form-components/question-explanation/closeExplanation' ),
+  'remove-element': require( 'handlers/removeElement' )
 };
 
