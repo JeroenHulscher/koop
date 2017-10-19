@@ -130,7 +130,7 @@
       }
     }
 
-    [aria-expanded="true"] {
+    [aria-controls="other-sites"][aria-expanded="true"] {
       background-image: $dartTopIcon;
 
       &::before {
