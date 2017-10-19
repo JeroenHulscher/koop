@@ -1,17 +1,20 @@
-module.exports = function toggleSearch( element ) {
-  var ui = require( 'helpers/ui' );
-  var openText = 'Toon zoekfunctie';
-  var closeText = 'Verberg zoekfunctie';
-  var search = document.getElementById( element.getAttribute( 'aria-controls' ) );
+module.exports = function toggleSearch( submitButton, event ) {
+  var form = submitButton.closest( 'form' );
+  var searchTerm = form.querySelector( '.search-form__term' );
+  var searchTermHiddenClass = 'search-form__term--hidden';
 
-  if ( ui.isHidden( search ) ) {
-    ui.show( search );
-    element.textContent = closeText;
-    element.setAttribute( 'aria-expanded', 'true' );
+  event.preventDefault();
+
+  if ( searchTerm.value.length > 0 ) {
+    form.submit();
   }
   else {
-    ui.hide( search );
-    element.textContent = openText;
-    element.setAttribute( 'aria-expanded', 'false' );
+    if ( searchTerm.classList.contains( searchTermHiddenClass ) ) {
+      searchTerm.classList.remove( searchTermHiddenClass );
+      searchTerm.focus();
+    }
+    else {
+      searchTerm.classList.add( searchTermHiddenClass );
+    }
   }
 };
