@@ -50,6 +50,7 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      position: relative; // provide positioning context
 
       @media ( min-width: 50em ) {
         flex-direction: row;
@@ -173,6 +174,14 @@
     &[hidden="true"] .container {
       animation: closeNav 0.8s ease-in-out;
     }
+  }
+
+  [aria-controls="search-form"] {
+    width: 2em;
+    height: 2em;
+    background: #000;
+    position: absolute;
+    right: 0;
   }
 }
 
