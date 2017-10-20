@@ -1,7 +1,7 @@
 <div class="search">
   <h2 class="visually-hidden">Zoekfunctie</h2>
   <form action="/" {{#if toggleableSearch }}data-decorator="init-search-toggle"{{/if}}>
-    <input type="search" class="search__term" />
+    <input type="search" class="search__term" placeholder="{{ placeholder }}" />
     <button type="submit" class="search__submit">Zoek</button>
   </form>
 </div>

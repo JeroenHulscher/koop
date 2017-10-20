@@ -1,6 +1,7 @@
 var searchToggle = {
   'context': {
     'searchTermHiddenClass' : 'search__term--hidden',
+    'searchTermAnimateClass' : 'search__term--animating',
     'open' : 'Open zoekveld',
     'close' : 'Sluit zoekveld',
     'submit' : 'Zoek'

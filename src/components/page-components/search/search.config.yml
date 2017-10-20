@@ -2,7 +2,9 @@
 name: search
 context:
   toggleableSearch: true
+  placeholder: Waar zoekt u naar?
 variants:
   - name: niet togglebaar
     context:
       toggleableSearch: false
+
