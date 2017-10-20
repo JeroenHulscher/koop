@@ -10,20 +10,29 @@
     margin-bottom: -1em;
   }
 
+  p {
+    position: absolute;
+    left: -999em;
+  }
+
   @media ( min-width: 50em ) {
 
     padding: 0;
 
     p {
+      position: relative;
+      left: auto;
       display: inline-block;
     }
 
-    ol {
-      display: inline-block;
-      padding: 0;
-    }
+  }
 
-    li {
+  ol {
+    display: inline-block;
+    padding: 0;
+  }
+
+   li {
       padding: 0 0 0 .5em;
       display: inline-block;
 
@@ -47,6 +56,6 @@
         }
       }
     }
-  }
+
 }
 
