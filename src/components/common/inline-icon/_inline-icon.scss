@@ -11,6 +11,12 @@
   }
 
   &--remove {
-    background-image: $removeIcon;
+    background: {
+      image: $removeIcon;
+      position: right 50%;
+    }
+    padding-left: 0;
+    padding-right: 1.5em;
+
   }
 }

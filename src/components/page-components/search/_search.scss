@@ -16,6 +16,9 @@
     font-family: inherit;
     padding: 0 .5em;
     font-size: .85em;
+    outline: 2px solid transparent;
+    outline-offset: .5em;
+    transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
     &--hidden {
       width: 0;
@@ -25,6 +28,11 @@
       + button {
         background-color: $headerBackgroundColor;
       }
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: -2px;
     }
   }
 
@@ -41,9 +49,18 @@
     right: 0;
     top: .6em;
     text-indent: -999em;
+    outline: 2px solid transparent;
+    outline-offset: .5em;
+    transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
     border: none;
     appearance: none;
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: -2px;
+
+    }
 
     background: {
       color: $black;
