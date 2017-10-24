@@ -1,41 +1,95 @@
-  {{ render "@header" header merge=true }}
+{{ render "@header" header merge=true }}
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
-    {{ render "@document-search" }}
-  </div>
-</div>
-<div class="row row--browse">
-  <div class="container columns">
-    <div>
-      <h2>Welke informatie vindt u op deze website?</h2>
-      <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, Provinciale bladen, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
-      <h2>Direct uitgebreid zoeken</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
-    </div>
-    <div>
-      {{ render "@browse" }}
-    </div>
   </div>
 </div>
 <div class="container row">
-  <h2>Over deze website</h2>
-  <div class="columns">
-    <div>
-      <h3><a href="#">Collectie uitgebreid met de Parlementaire documenten 1945 – 2009</a></h3>
-      <p>Op deze website vindt u sinds kort ook de parlementaire documenten uit de periode 1945 – 2009.</p>
-      <p>De bestanden vanaf 2009 tot heden waren al onderdeel van de parlementaire collectie. U kunt de nieuwe bestanden doorzoeken met behulp van een afzonderlijk zoekformulier.</p>
+  <div class="columns columns--homepage-tiles">
+
+    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(/images/temp/homepage-block-bg.png);">
+      <div class="content--inner">
+        <h2>In de buurt</h2>
+        <span>Alle belangrijke zaken bij u in de buurt</span>
+      </div>
+    </a>
+
+    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(/images/temp/homepage-block-bg2.png);">
+      <div class="content--inner">
+        <h2>Producten &amp; Diensten</h2>
+        <span>Alle belangrijke zaken bij u in de buurt</span>
+      </div>
+    </a>
+
+    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(/images/temp/homepage-block-bg.png);">
+      <div class="content--inner">
+        <h2>Overheidsinformatie</h2>
+        <span>Alle belangrijke zaken bij u in de buurt</span>
+      </div>
+    </a>
+
+    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(/images/temp/homepage-block-bg2.png);">
+      <div class="content--inner">
+        <h2>Contactinformatie</h2>
+        <span>Alle belangrijke zaken bij u in de buurt</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+<div class="row row--browse">
+  <div class="container">
+    <h2>Hoe werkt de overheid?</h2>
+
+    <div class="columns">
+      <a href="http://www.google.nl"> <div class="homepageblock " style="background-image: url(/images/temp/homepage-block-bg.png);"> <div class="content--inner"> <h3>Hoe werkt democratie?</h3> </div> </div> </a>
+
+      <a href="http://www.google.nl"> <div class="homepageblock " style="background-image: url(/images/temp/homepage-block-bg2.png);"> <div class="content--inner"> <h3>Hoe zit de overheid in elkaar?</h3> </div> </div> </a>
+
+      <a href="http://www.google.nl"> <div class="homepageblock " style="background-image: url(/images/temp/homepage-block-bg.png);"> <div class="content--inner"> <h3>Hoe functioneert de overheid?</h3> </div> </div> </a>
     </div>
-    <div>
-      <h3><a href="#">Oproepingen per 1 juli 2015 in de Staatscourant</a></h3>
-      <p>Per 1 juli 2015 kunnen burgers In de Staatscourant lezen of ze recentelijk zijn opgeroepen, of dat ze belanghebbende zijn bij een persoon of bedrijf dat in een oproeping is vermeld. Oproepingen blijven zichtbaar tot de dag na de zitting, en zijn desgewenst niet meer vindbaar via de zoekfunctie(s).</p>
-      <p>De oproepingen kunnen bijvoorbeeld te maken hebben met nog openstaande verkeersboetes of geldboetes.</p>
-    </div>
-    <div>
-      <h3><a href="#">Per 1 juli 2015 in de Staatscourant</a></h3>
-      <p>Per 1 juli 2015 kunnen burgers In de Staatscourant lezen of ze recentelijk zijn opgeroepen, of dat ze belanghebbende zijn bij een persoon of bedrijf dat in een oproeping is vermeld. </p>
-      <p>De oproepingen kunnen bijvoorbeeld te maken hebben met nog openstaande verkeersboetes of geldboetes.</p>
-    </div>
+
   </div>
 </div>
+
+<div class="row container">
+
+  <h2>Gerelateerde informatie</h2>
+
+  <div class="columns columns--relatedinfo">
+
+    <a href="http://www.mijnoverheid.nl" class="blockLink">
+
+      <div class="homepageblock related related--orange" style="background-image: url(/images/temp/homepage-block-bg.png);">
+
+        <div class="content--inner">
+          <h3>MijnOverheid.nl</h3>
+            <span>Berichten, lopende zaken en Persoonlijke Gegevens</span>
+          </div>
+      </div>
+    </a>
+
+    <a href="http://www.ondernemersplein.nl" class="blockLink">
+      <div class="homepageblock related related--lightBlue" style="background-image: url(/images/temp/homepage-block-bg2.png);">
+        <div class="content--inner">
+          <h3>ondernemersplein.nl</h3>
+          <span>Berichten, lopende zaken en Persoonlijke Gegevens</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="http://www.rijksoverheid.nl" class="blockLink">
+      <div class="homepageblock related related--darkBlue" style="background-image: url(/images/temp/homepage-block-bg.png);">
+        <div class="content--inner">
+          <h3>Rijksoverheid.nl</h3>
+          <span>Berichten, lopende zaken en Persoonlijke Gegevens</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
 {{ render "@footer" }}

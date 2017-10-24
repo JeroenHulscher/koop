@@ -1,4 +1,6 @@
 .homepageblock {
+  margin-bottom: 1em;
+
   @include aspect-ratio(16, 9);
   background: {
     repeat: no-repeat;
@@ -10,12 +12,13 @@
     min-height: 20em;
   }
 
-  h2 {
-    padding: .5em;
+  h2, 
+  h3 {
+    padding: .25em;
     background: $white;
     margin: 0;
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   span {
@@ -67,7 +70,9 @@
 
   &.related {
 
+
     &--orange {
+      @include aspect-ratio(4, 3);
       border: 2px solid $orange;
 
       .content--inner {
@@ -82,6 +87,7 @@
     }
 
     &--darkBlue {
+      @include aspect-ratio(4, 3);
       border: 2px solid $darkBlue;
 
       .content--inner {
@@ -96,7 +102,8 @@
     }
 
     &--lightBlue {
-      border: 2px solid $lightBlue;
+      @include aspect-ratio(4, 3);
+      border: 2px solid $mediumBlue;
 
       .content--inner {
         background: {
@@ -109,21 +116,30 @@
       }
     }
 
+    &--primaryBlue {
+      border: 2px solid $primaryBlue;
+
+      .content--inner {
+        background: {
+          color: rgba( 0, 123, 199, 1 );
+          image: none;
+        }
+      }
+    }
+
     .content--inner {
       height: 40%;
       min-height: 6em;
       top: auto;
       bottom: 0px;
 
-      h2 {
+      h2, 
+      h3 {
         background: transparent;
         color: $white;
         padding: .5em 3em 0 .5em;
+        font-size: 1.5em;
       }
     }
   }
-}
-
-a.blockLink[href*="//"] {
-  background: none;
 }

@@ -1,9 +1,4 @@
 ---
-title: Homepage
+name: homepage A-variant
+label: Homepage A-variant
 status: wip
-context:
-  header:
-    file: logo.svg
-    alt: Overheid.nl logo
-    search:
-      toggleableSearch: false
