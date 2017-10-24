@@ -64,17 +64,20 @@ $gutter: 2em;
 
   &--homepage-tiles {
     flex-wrap: wrap;
+    padding-top: 2em;
 
     @media ( min-width: 50em ) {
-      > *:first-child {
+      > *:nth-child(odd) {
         margin-right: 1em;
-        margin-left: 1em;
+        margin-left: 0;
+        flex: 1 calc( 50% - 1em);
         margin-bottom: 2em;
       }
-      > * {
-        flex: 1 calc( 50% - 2em);
-        margin-right: 1em;
+
+      > *:nth-child(even) {
+        flex: 1 calc( 50% - 1em);
         margin-left: 1em;
+        margin-right: 0;
         margin-bottom: 2em;
       }
     }
