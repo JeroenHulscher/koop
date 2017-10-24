@@ -6,3 +6,12 @@ context:
   fieldLabel: Voornaam
   fieldInstruction:
   fieldPlaceholder: 'Bijv: Jan de Vries'
+variants:
+  - name: postal code
+    label: input postcode
+    context:
+      modifier: input--postalcode
+      id: 1
+      fieldLabel: Postcode
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 2282LL'

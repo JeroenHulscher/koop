@@ -1,6 +1,7 @@
 ---
 title: Contentpagina
-status: wip
+label: Content enkele kolom
+status: ready
 context:
   header:
     file: logo.svg

@@ -34,7 +34,8 @@ h2,
   color: $darkBlue;
 }
 
-.columns--sidebar h2 {
+.columns--sidebar-left h2,
+.columns--sidebar-right h2 {
     display: inline-block;
 }
 
