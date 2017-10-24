@@ -60,4 +60,36 @@ $gutter: 2em;
         margin-left: 0;
       }
     }
-  }}
+  }
+
+  &--homepage-tiles {
+    flex-wrap: wrap;
+
+    @media ( min-width: 50em ) {
+      > *:first-child {
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-bottom: 2em;
+      }
+      > * {
+        flex: 1 calc( 50% - 2em);
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-bottom: 2em;
+      }
+    }
+  }
+
+  &--related-info {
+    flex-wrap: wrap;
+
+    @media ( min-width: 50em ) {
+
+      > * {
+        flex: 2;
+
+        margin-left: .5em;
+      }
+    }
+  }
+}

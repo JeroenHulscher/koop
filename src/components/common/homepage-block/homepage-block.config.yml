@@ -19,6 +19,14 @@ variants:
         - text: Subsidie energiebesparing
       contextLinkText: iets anders regelen of vragen
       contextLink: #
+  - name: related default
+    label: Gerelateerd (default)
+    context:
+      modifier: related
+      color: related--primaryBlue
+      heading: In de buurt
+      subtitle: Alle belangrijke zaken bij u in de buurt
+      blockLink: #
   - name: related orange
     label: Gerelateerd (oranje)
     context:
