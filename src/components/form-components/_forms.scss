@@ -38,8 +38,12 @@
       color: $darkerGrey;
     }
 
-    &.input--postalcode {
+    &.input--small {
       max-width: 8em;
+    }
+
+    &.input--medium {
+      max-width: 12em;
     }
 
     &.input--error {
