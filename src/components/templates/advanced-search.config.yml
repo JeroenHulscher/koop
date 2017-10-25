@@ -1,0 +1,24 @@
+---
+label: Geavanceerd zoeken
+status: wip
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  postalCodeStraal:
+    fieldLabel: Kies een straal rondom uw postcode
+    options:
+      - id: 1
+        text: -geen-
+      - id: 2
+        text: 250 meter
+      - id: 3
+        text: 500 meter
+      - id: 4
+        text: 1000 meter
+      - id: 5
+        text: 1500 meter
+      - id: 6
+        text: 3000 meter
+      - id: 7
+        text: Hele gemeente

@@ -1,0 +1,21 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+<div class="container columns row">
+  <div>
+    <h2>Zoek op locatie</h2>
+    <h3>Zoek op locatie</h3>
+    <p>Typ de postode waarvoor u bekendmakingen wilt vinden.</p>
+    {{ render '@input-text--postal-code' }}
+    {{ render '@input-radio' postalCodeStraal merge="true" }}
+  </div>
+  <div>
+    <h2>Zoek op woord of zinsdeel</h2>
+    <h2>Zoek op onderwerp</h2>
+  </div>
+</div>
+
+{{ render "@footer" }}
