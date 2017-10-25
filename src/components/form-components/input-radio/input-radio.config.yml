@@ -1,3 +1,13 @@
 ---
 label: Input radio
 status: ready
+context:
+  fieldLabel: Wat is je favoriete Amerikaanse president?
+  name: presidents
+  options:
+    - id: 1
+      text: B. Obama
+    - id: 2
+      text: Donald J. Trump
+    - id: 3
+      text: Hillary Clinton
