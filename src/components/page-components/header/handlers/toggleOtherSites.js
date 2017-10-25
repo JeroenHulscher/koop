@@ -11,6 +11,14 @@ module.exports = function toggleOtherSites( element ) {
 
   else {
     ui.show( otherSites );
+
+    if ( ui.getFocusableElements( otherSites ).length > 0 ) {
+      ui.focus( ui.getFocusableElements( otherSites )[0] );
+    }
+    else {
+      ui.focus ( otherSites );
+    }
+
     element.setAttribute( 'aria-expanded', 'true' );
   }
 };
