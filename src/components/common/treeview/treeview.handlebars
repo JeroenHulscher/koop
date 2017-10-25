@@ -1,30 +1,30 @@
 <ul class="treeview {{ modifier }}" id="treeview-{{ id }}">
   <li>
-    <a href="#" class="foldable" data-decorator="add-foldability">
+    <a href="#" class="foldable"{{#if foldability }} data-decorator="add-foldability"{{/if}}>
       Hoofdstuk 1
       <small>Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</small>
     </a>
 
     <ul id="unique-id-1">
-      <li><a href="#" data-decorator="add-foldability">Artikel 1</a>
+      <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1</a>
         <ul id="unique-id-2">
-          <li><a href="#" data-decorator="add-foldability">Artikel 1.1</a></li>
-          <li><a href="#" data-decorator="add-foldability">Artikel 1.2</a>
+          <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
+          <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
             <ul id="unique-id-3">
-              <li><a href="#" data-decorator="add-foldability">Artikel 1.1</a></li>
-              <li><a href="#" data-decorator="add-foldability">Artikel 1.2</a>
+              <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
+              <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
                 <ul>
-                  <li><a href="#" data-decorator="add-foldability">Artikel 1.1</a></li>
-                  <li><a href="#" data-decorator="add-foldability">Artikel 1.2</a></li>
+                  <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
+                  <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a></li>
                 </ul>
               </li>
             </ul>
             <ul id="unique-id-4">
-              <li><a href="#" data-decorator="add-foldability">Artikel 1.1</a></li>
-              <li><a href="#" data-decorator="add-foldability">Artikel 1.2</a>
+              <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
+              <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
                 <ul>
-                  <li><a href="#" data-decorator="add-foldability">Artikel 1.1</a></li>
-                  <li><a href="#" data-decorator="add-foldability">Artikel 1.2</a></li>
+                  <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
+                  <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a></li>
                 </ul>
               </li>
             </ul>

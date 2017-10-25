@@ -1,10 +1,12 @@
 title: Treeview
-status: wip
+status: ready
 context:
   label: default
+  foldability: false
 variants:
 - name: foldable
   label: foldable
   status: ready
   context:
     modifier: treeview--foldable
+    foldability: true
