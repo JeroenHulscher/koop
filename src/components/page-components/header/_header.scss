@@ -55,12 +55,7 @@
 
   &__nav {
     background-color: $headerBackgroundColor;
-    animation: openNav 0.8s ease-in-out;
     position: relative;
-
-    @media ( min-width: 50em ) {
-      animation: none;
-    }
 
     > .container {
       display: flex;
@@ -175,10 +170,10 @@
       padding-bottom: 1em;
       display: flex;
       flex-direction: column;
-      animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
 
       @media ( min-width: 50em ) {
         flex-direction: row;
+        animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
       }
 
       div {
