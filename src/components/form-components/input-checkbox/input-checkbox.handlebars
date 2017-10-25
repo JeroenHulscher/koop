@@ -1,20 +1,8 @@
-<fieldset class="form__element checkboxgroup">
-  <legend>Welke landen vormden de Geallieerden?</legend>
-
-  <label for="option-1">
-    <input type="checkbox" id="option-1" name="alliedforces" />Groot-Brittanië
+<fieldset class="form__element checkboxgroup {{ modifier }}">
+  <legend>{{ fieldLabel }} </legend>
+  {{#each options }}
+  <label for="option-{{ id  }}">
+    <input type="checkbox" id="option-{{ id }}" name="{{ ../name }}" />{{ text }}
   </label>
-
-  <label for="option-2">
-    <input type="checkbox" id="option-2" name="alliedforces" />Verenigden Staten
-  </label>
-
-  <label for="option-3">
-    <input type="checkbox" id="option-3" name="alliedforces" />Het Duitse Rijk
-  </label>
-
-  <label for="option-4">
-    <input type="checkbox" id="option-4" name="alliedforces" />Canada
-  </label>
-
+  {{/each}}
 </fieldset>

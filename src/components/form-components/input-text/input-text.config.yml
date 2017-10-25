@@ -10,7 +10,7 @@ variants:
   - name: postal code
     label: input postcode
     context:
-      modifier: input--postalcode
+      modifier: input--postalcode input--small
       id: 1
       fieldLabel: Postcode
       fieldInstruction:
