@@ -2,31 +2,45 @@
   overflow: hidden;
   position: relative;
   width: 17em;
+  margin: 0.5em 1em 1em;
+
+  @media ( min-width: 50em ) {
+    margin: 0;
+  }
 
   .search__term {
     -webkit-appearance: none;
-    position: absolute;
-    right: 40px;
-    top: .5em;
-    width: 15em;
-    height: 40px;
-    left: -999em;
-
     border: none;
     font-family: inherit;
     padding: 0 .5em;
     font-size: .85em;
+    height: 40px;
+    width: 100%;
     outline: 2px solid transparent;
     outline-offset: .5em;
     transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
+    @media ( min-width: 50em ) {
+      position: absolute;
+      right: 40px;
+      top: .5em;
+      width: 15em;
+      left: -999em;
+    }
+
     &--hidden {
-      width: 0;
-      border: 0;
-      padding: 0;
+
+      @media ( min-width: 50em ) {
+        width: 0;
+        border: 0;
+        padding: 0;
+      }
 
       + button {
-        background-color: $headerBackgroundColor;
+
+        @media ( min-width: 50em ) {
+          background-color: $headerBackgroundColor;
+        }
       }
     }
 
@@ -47,21 +61,13 @@
     height: 40px;
     position: absolute;
     right: 0;
-    top: .6em;
+    top: 0;
     text-indent: -999em;
     outline: 2px solid transparent;
     outline-offset: .5em;
     transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
-
     border: none;
     appearance: none;
-
-    &:focus {
-      outline: 2px solid $yellow;
-      outline-offset: -2px;
-
-    }
-
     background: {
       color: $black;
       image: $searchIcon;
@@ -70,9 +76,15 @@
       size: 30px;
     }
     cursor: pointer;
+
+    @media ( min-width: 50em ) {
+      top: .6em;
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: -2px;
+    }
   }
-
-
-
 }
 
