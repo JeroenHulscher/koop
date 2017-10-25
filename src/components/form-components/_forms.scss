@@ -9,6 +9,11 @@
 
   legend {
     font-weight: 700;
+
+    &.form--intro {
+      font-size: 1.25em;
+      color: $darkBlue;
+    }
   }
 
   label {
@@ -89,5 +94,27 @@
   .form__error {
     color: $red;
   }
+}
 
+.form--options {
+  line-height: .5;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding-right: .25em;
+
+
+    &::after {
+      content: '|';
+      position: relative;
+      margin-left: .25em;
+    }
+
+    &:last-child {
+      &::after {
+        content: '';
+      }
+    }
+  }
 }

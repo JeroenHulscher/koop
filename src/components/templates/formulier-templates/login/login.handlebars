@@ -1,8 +1,8 @@
 <div class="well">
 
-  <h2>Inloggen</h2>
-
   <fieldset class="form__element">
+
+    <legend class="form--intro">Inloggen</legend>
 
     {{ render "@input-text" loginField merge=true }}
 
@@ -12,7 +12,10 @@
 
   {{ render "@button--secondary" submitButton merge=true }}
 
-  <a href="#" class="pull-right">Registreer bij Naam service</a>
+  <ul class="form--options pull-right">
+    <li><a href="/berichten_over_uw_buurt_registreren">Registreer bij Naam service</a></li>
+    <li><a href="/berichten_over_uw_buurt_ww_vergeten">Wachtwoord vergeten</a></li>
+  </ul>
 
 </div>
 

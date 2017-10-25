@@ -20,24 +20,22 @@ $fatBorder: .75em;
     }
   }
 
+  &--heading {
+    padding: 1em 1em 0 1em;
+    margin: 0 auto -1em auto;
+  }
+
   &--browse {
     border-top: $fatBorder solid $lighterGrey;
     border-bottom: $fatBorder solid $lighterGrey;
     background-color: $lightGrey;
-    margin-top: $mobileSpacing;
-
   }
 
   &--highlight {
     border-top: $fatBorder solid $mediumBlue;
     border-bottom: $fatBorder solid $mediumBlue;
-    background-color: $primaryBlue;
-    color: $white;
+    background-color: $lightBlue;
 
-    h2,
-    a {
-      color: $white;
-    }
   }
 
   &--footer {

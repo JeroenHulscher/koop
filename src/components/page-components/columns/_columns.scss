@@ -63,8 +63,11 @@ $gutter: 2em;
   }
 
   &--homepage-tiles {
-    flex-wrap: wrap;
-    padding-top: 2em;
+    @media ( min-width: 50em ) {
+      flex-wrap: wrap;
+    }
+
+    padding-top: 1em;
 
     @media ( min-width: 50em ) {
       > *:nth-child(odd) {

@@ -4,10 +4,15 @@
     {{ render "@breadcrumb" }}
   </div>
 </div>
+
+<div class="container row row--heading">
+  <h1>Geavanceerd zoeken</h1>
+</div>
+
 <div class="container columns row">
   <div>
+
     <h2>Zoek op locatie</h2>
-    <h3>Zoek op locatie</h3>
     <p>Typ de postode waarvoor u bekendmakingen wilt vinden.</p>
     {{ render '@input-text--postal-code' }}
     {{ render '@input-radio' postalCodeStraal merge="true" }}
