@@ -25,10 +25,18 @@ $fatBorder: .75em;
     border-bottom: $fatBorder solid $lighterGrey;
     background-color: $lightGrey;
     margin-top: $mobileSpacing;
-    margin-bottom: $mobileSpacing;
 
-    @media ( min-width: 50em ) {
-      margin-top: $desktopSpacing;
+  }
+
+  &--highlight {
+    border-top: $fatBorder solid $mediumBlue;
+    border-bottom: $fatBorder solid $mediumBlue;
+    background-color: $primaryBlue;
+    color: $white;
+
+    h2,
+    a {
+      color: $white;
     }
   }
 
