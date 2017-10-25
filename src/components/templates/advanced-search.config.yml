@@ -26,7 +26,7 @@ context:
   gemeenteSelect:
     fieldLabel: Gemeenten
     visuallyHideLabel: false
-    fieldInstruction: 'U kunt meerdere selecteren'
+    fieldInstruction: 'U kunt meerdere opties selecteren'
     regularFormElement: true
     id: gemeenteselect
     optionGroups:
@@ -43,7 +43,7 @@ context:
   provinceSelect:
     fieldLabel: Provincies
     visuallyHideLabel: false
-    fieldInstruction: 'U kunt meerdere selecteren'
+    fieldInstruction: 'U kunt meerdere opties selecteren'
     regularFormElement: true
     id: provinceselect
     optionGroups:
@@ -65,7 +65,7 @@ context:
   waterschappen:
     fieldLabel: Waterschappen
     visuallyHideLabel: false
-    fieldInstruction: 'U kunt meerdere selecteren'
+    fieldInstruction: 'U kunt meerdere opties selecteren'
     regularFormElement: true
     id: waterschappenselect
     optionGroups:
@@ -125,7 +125,7 @@ context:
   regionalOrgsSelect:
     fieldLabel: Regionale samenwerkingsorganen
     visuallyHideLabel: false
-    fieldInstruction: 'U kunt meerdere selecteren'
+    fieldInstruction: 'U kunt meerdere opties selecteren'
     regularFormElement: true
     id: regionalorgsselect
     optionGroups:
@@ -145,7 +145,7 @@ context:
   onderwerpen:
     fieldLabel: Onderwerpen
     visuallyHideLabel: false
-    fieldInstruction: 'U kunt meerdere selecteren'
+    fieldInstruction: 'U kunt meerdere opties selecteren'
     regularFormElement: true
     id: onderwerpenselect
     optionGroups:

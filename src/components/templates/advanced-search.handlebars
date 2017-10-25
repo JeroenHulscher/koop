@@ -4,20 +4,11 @@
     {{ render "@breadcrumb" }}
   </div>
 </div>
-<<<<<<< HEAD
 
 <div class="container row row--heading">
   <h1>Geavanceerd zoeken</h1>
 </div>
 
-<div class="container columns row">
-  <div>
-
-    <h2>Zoek op locatie</h2>
-    <p>Typ de postode waarvoor u bekendmakingen wilt vinden.</p>
-    {{ render '@input-text--postal-code' }}
-    {{ render '@input-radio' postalCodeStraal merge="true" }}
-=======
 <form action="">
   <div class="container columns row">
     <div>
@@ -41,13 +32,15 @@
       <h2>Zoek op datum</h2>
       <p>Kies de periode waarbinnen de bekendmakingen zijn gepubliceerd.</p>
       {{ render '@input-radio' timeScale merge="true" }}
-      {{ render '@input-text' dateFrom merge="true" }}
-      {{ render '@input-text' dateTo merge="true" }}
+
+      <div class="daterange">
+        {{ render '@input-text' dateFrom merge="true" }}
+        {{ render '@input-text' dateTo merge="true" }}
+      </div>
     </div>
->>>>>>> 542f777006c342bb36ba1f75f4b150370ec0ad9e
   </div>
   <div class="container row">
-    <input type="submit" class="button" value="Zoeken" >
+    <input type="submit" class="button button--primary" value="Zoeken" >
   </div>
 </form>
 

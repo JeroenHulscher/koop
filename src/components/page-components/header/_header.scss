@@ -1,5 +1,21 @@
 .header {
   border-bottom: .5em solid $headerBorderColor;
+  position: relative;
+
+  .skiplinks {
+    position: relative;
+    a {
+      position: absolute;
+      left: -999em;
+      top: -2em;
+
+      &:focus {
+        left: 15em;
+        background: $white;
+        color: $darkBlue;
+      }
+    }
+  }
 
   ul,
   p {

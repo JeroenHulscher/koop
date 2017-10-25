@@ -1,8 +1,14 @@
 <header class="header">
+
   <div class="header__start">
     <div class="container">
       <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
       {{> @logo }}
+
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+        <a href="#search">Direct zoeken</a>
+      </div>
     </div>
   </div>
   <nav class="header__nav header__nav--closed" id="nav">
