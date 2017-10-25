@@ -7,18 +7,224 @@ context:
     alt: Overheid.nl logo
   postalCodeStraal:
     fieldLabel: Kies een straal rondom uw postcode
+    name: postcodestraal
     options:
-      - id: 1
+      - id: straal-1
         text: -geen-
-      - id: 2
+      - id: straal-2
         text: 250 meter
-      - id: 3
+      - id: straal-3
         text: 500 meter
-      - id: 4
+      - id: straal-4
         text: 1000 meter
-      - id: 5
+      - id: straal-5
         text: 1500 meter
-      - id: 6
+      - id: straal-6
         text: 3000 meter
-      - id: 7
+      - id: straal-7
         text: Hele gemeente
+  gemeenteSelect:
+    fieldLabel: Gemeenten
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: gemeenteselect
+    optionGroups:
+      - label: Gemeenten
+        groupId: gemeente-select-option-group-1
+        options:
+          - text: Groningen
+          - text: Leeuwarden
+          - text: Assen
+          - text: Heerenveen
+          - text: Den Haag
+          - text: Rotterdam
+          - text: Maastricht
+  provinceSelect:
+    fieldLabel: Provincies
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: provinceselect
+    optionGroups:
+      - label: Provincies
+        groupId: provincie-select-option-group-1
+        options:
+          - text: Drenthe
+          - text: Flevoland
+          - text: Friesland
+          - text: Gelderland
+          - text: Groningen
+          - text: Limburg
+          - text: Noord-Brabant
+          - text: Noord-Holland
+          - text: Overijssel
+          - text: Utrecht
+          - text: Zeeland
+          - text: Zuid-Holland
+  waterschappen:
+    fieldLabel: Waterschappen
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: waterschappenselect
+    optionGroups:
+      - label: Waterschappen
+        groupId: waterschappen-select-option-group-1
+        options:
+          - text: Hoogheemraadschap Amstel, Gooi en Vecht
+          - text: Hoogheemraadschap De Stichtse Rijnlanden
+          - text: Hoogheemraadschap Hollands Noorderkwartier
+          - text: Hoogheemraadschap van Delfland
+          - text: Hoogheemraadschap van Rijnland
+          - text: Hoogheemraadschap van Schieland en de Krimpenswaard
+          - text: Waterschap Aa en Maas
+          - text: Waterschap  Blija Buitendijks
+          - text: Waterschap Brabantse Delta
+          - text: Waterschap De Dommel
+          - text: Waterschap Hunze en Aa's
+          - text: Waterschap Limburg
+          - text: Waterschap Noorderzijlvest
+          - text: Waterschap Peel en Maasvallei
+          - text: Waterschap Rijn en IJssel
+  waterschappenCheckboxGroup:
+    modifier: checkboxgroup--many
+    name: waterschappen
+    fieldLabel: Waterschappen
+    options:
+      - id: waterschappen-1
+        text: Hoogheemraadschap Amstel, Gooi en Vecht
+      - id: waterschappen-2
+        text: Hoogheemraadschap De Stichtse Rijnlanden
+      - id: waterschappen-3
+        text: Hoogheemraadschap Hollands Noorderkwartier
+      - id: waterschappen-4
+        text: Hoogheemraadschap van Delfland
+      - id: waterschappen-5
+        text: Hoogheemraadschap van Rijnland
+      - id: waterschappen-6
+        text: Hoogheemraadschap van Schieland en de Krimpenswaard
+      - id: waterschappen-7
+        text: Waterschap Aa en Maas
+      - id: waterschappen-8
+        text: Waterschap  Blija Buitendijks
+      - id: waterschappen-9
+        text: Waterschap Brabantse Delta
+      - id: waterschappen-10
+        text: Waterschap De Dommel
+      - id: waterschappen-11
+        text: Waterschap Hunze en Aa's
+      - id: waterschappen-12
+        text: Waterschap Limburg
+      - id: waterschappen-13
+        text: Waterschap Noorderzijlvest
+      - id: waterschappen-14
+        text: Waterschap Peel en Maasvallei
+      - id: waterschappen-15
+        text: Waterschap Rijn en IJssel
+  regionalOrgsSelect:
+    fieldLabel: Regionale samenwerkingsorganen
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: regionalorgsselect
+    optionGroups:
+      - label: Regionale samenwerkingsorganen
+        groupId: regional-orgs-select-option-group-1
+        options:
+          - text: ABG-organisatie
+          - text: Amstelland- en Meerlandenoverleg
+          - text: Aqualysis
+          - text: Avres
+          - text: Avri
+  searchSubject:
+    id: search-subject
+    fieldLabel: In tekst
+    fieldInstruction: ''
+    fieldPlaceholder: ''
+  onderwerpen:
+    fieldLabel: Onderwerpen
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: onderwerpenselect
+    optionGroups:
+      - label: Onderwerpen
+        groupId: onderwerpen-select-option-group-1
+        options:
+          - text: Aankondiging
+          - text: Aanlegvergunning
+          - text: Aanwijzigingsbesluit
+          - text: Agenda en notulen
+          - text: APV vergunning
+          - text: Belastingbesluit
+          - text: Besluitingslijst
+          - text: Bestemmingsplan
+          - text: Bodembeschermingsvergunning
+          - text: Bouwvergunning
+          - text: Collectievergunning
+          - text: Delegatiebesluit
+          - text: Drank- en horecavergunning
+          - text: Evenementenvergunning
+          - text: Exploitatievergunning
+          - text: Gebruikersvergunning
+  onderwerpenCheckboxGroup:
+    modifier: checkboxgroup--many
+    name: onderwerpen
+    fieldLabel: Onderwerpen
+    options:
+      - id: onderwerpen-1
+        text: Aankondiging
+      - id: onderwerpen-2
+        text: Aanlegvergunning
+      - id: onderwerpen-3
+        text: Aanwijzigingsbesluit
+      - id: onderwerpen-4
+        text: Agenda en notulen
+      - id: onderwerpen-5
+        text: APV vergunning
+      - id: onderwerpen-6
+        text: Belastingbesluit
+      - id: onderwerpen-7
+        text: Besluitingslijst
+      - id: onderwerpen-8
+        text: Bestemmingsplan
+      - id: onderwerpen-9
+        text: Bodembeschermingsvergunning
+      - id: onderwerpen-10
+        text: Bouwvergunning
+      - id: onderwerpen-11
+        text: Collectievergunning
+      - id: onderwerpen-12
+        text: Delegatiebesluit
+      - id: onderwerpen-13
+        text: Drank- en horecavergunning
+      - id: onderwerpen-14
+        text: Evenementenvergunning
+      - id: onderwerpen-15
+        text: Exploitatievergunning
+      - id: onderwerpen-16
+        text: Gebruikersvergunning
+  timeScale:
+    fieldLabel: Publicatiedatum
+    name: publicationdate
+    options:
+      - id: time-1
+        text: -geen-
+      - id: time-2
+        text: Afgelopen week
+      - id: time-3
+        text: Afgelopen maand
+      - id: time-4
+        text: Afgelopen twee maanden
+      - id: time-5
+        text: Afgelopen jaar
+  dateFrom:
+    fieldLabel: Van
+    modifier: input--small
+    fieldPlaceholder: 'MM-DD-JJJJ'
+  dateTo:
+    fieldLabel: Tot
+    modifier: input--small
+    fieldPlaceholder: 'MM-DD-JJJJ'
+

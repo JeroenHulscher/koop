@@ -1,6 +1,6 @@
 .form__element {
   border: none;
-  margin: .5em 0;
+  margin: .5em 0 1.5em 0;
 
   &:not(.radiogroup),
   &:not(.checkboxgroup) {
@@ -43,8 +43,12 @@
       color: $darkerGrey;
     }
 
-    &.input--postalcode {
+    &.input--small {
       max-width: 8em;
+    }
+
+    &.input--medium {
+      max-width: 12em;
     }
 
     &.input--error {
@@ -88,6 +92,20 @@
 
     input {
       margin: 0 .5em 0 0;
+    }
+
+    &--many {
+      max-height: 10em;
+      background-image: linear-gradient($white 95%, $lighterGrey 105%);
+      overflow: scroll;
+      border: 1px solid $lighterGrey;
+      padding: 0 .5em;
+
+      legend {
+        background: $white;
+        padding: 0 .5em;
+        margin: 0 .5em;
+      }
     }
   }
 
