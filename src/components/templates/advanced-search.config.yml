@@ -62,6 +62,41 @@ context:
           - text: Utrecht
           - text: Zeeland
           - text: Zuid-Holland
+  waterschappen:
+    modifier: checkboxgroup--many
+    name: waterschappen
+    fieldLabel: Waterschappen
+    options:
+      - id: waterschappen-1
+        text: Hoogheemraadschap Amstel, Gooi en Vecht
+      - id: waterschappen-2
+        text: Hoogheemraadschap De Stichtse Rijnlanden
+      - id: waterschappen-3
+        text: Hoogheemraadschap Hollands Noorderkwartier
+      - id: waterschappen-4
+        text: Hoogheemraadschap van Delfland
+      - id: waterschappen-5
+        text: Hoogheemraadschap van Rijnland
+      - id: waterschappen-6
+        text: Hoogheemraadschap van Schieland en de Krimpenswaard
+      - id: waterschappen-7
+        text: Waterschap Aa en Maas
+      - id: waterschappen-8
+        text: Waterschap  Blija Buitendijks
+      - id: waterschappen-9
+        text: Waterschap Brabantse Delta
+      - id: waterschappen-10
+        text: Waterschap De Dommel
+      - id: waterschappen-11
+        text: Waterschap Hunze en Aa's
+      - id: waterschappen-12
+        text: Waterschap Limburg
+      - id: waterschappen-13
+        text: Waterschap Noorderzijlvest
+      - id: waterschappen-14
+        text: Waterschap Peel en Maasvallei
+      - id: waterschappen-15
+        text: Waterschap Rijn en IJssel
   regionalOrgsSelect:
     fieldLabel: Regionale samenwerkingsorganen
     visuallyHideLabel: false
