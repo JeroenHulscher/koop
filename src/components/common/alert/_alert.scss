@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   border-radius: $borderRadius;
   padding: 1em;
+  margin: 1em 0;
 
   &--warning {
     background-color: lighten($orange, 50%);
