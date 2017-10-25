@@ -18,5 +18,17 @@ module.exports = function initCustomSelect( element ) {
     },
     multiselect: true,
     noResultsText: 'Geen resultaten gevonden'
-});
+  });
+
+  // force showing the current value when item gets focus,
+  // even if there are two or more selections
+  multiSelect.addEventListener( 'selection', function( e ) {
+    element.value = this.config.selectionValue(this.selected);
+  });
+
+  // force showing the current value when item gets focus,
+  // even if there are two or more selections
+  multiSelect.addEventListener( 'deselection', function( e ) {
+    element.value = this.config.selectionValue(this.selected);
+  });
 };
