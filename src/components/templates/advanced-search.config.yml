@@ -168,4 +168,12 @@ context:
         text: Afgelopen twee maanden
       - id: time-5
         text: Afgelopen jaar
+  dateFrom:
+    fieldLabel: Van
+    modifier: input--small
+    fieldPlaceholder: 'MM-DD-JJJJ'
+  dateTo:
+    fieldLabel: Tot
+    modifier: input--small
+    fieldPlaceholder: 'MM-DD-JJJJ'
 
