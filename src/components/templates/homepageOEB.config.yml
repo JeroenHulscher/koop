@@ -2,6 +2,7 @@
 title: Homepage
 label: Homepage OOP
 status: ready
+hidden: true
 context:
   header:
     file: logo.svg

@@ -1,6 +1,6 @@
 ---
 label: Geavanceerd zoeken
-status: wip
+status: ready
 context:
   header:
     file: logo.svg
