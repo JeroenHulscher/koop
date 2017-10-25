@@ -7,7 +7,6 @@
 <div class="container columns row">
   <div>
     <h2>Zoek op locatie</h2>
-    <h3>Zoek op locatie</h3>
     <p>Typ de postode waarvoor u bekendmakingen wilt vinden.</p>
     {{ render '@input-text--postal-code' }}
     {{ render '@input-radio' postalCodeStraal merge="true" }}
@@ -23,6 +22,7 @@
     <h2>Zoek op onderwerp</h2>
     {{ render '@input-text' searchSubject }}
     <h2>Zoek op onderwerp</h2>
+    {{ render '@input-checkbox--many' onderwerpen }}
     <h2>Zoek op datum</h2>
     <p>Kies de periode waarbinnen de bekendmakingen zijn gepubliceerd.</p>
     {{ render '@input-radio' timeScale merge="true" }}

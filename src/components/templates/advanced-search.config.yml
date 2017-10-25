@@ -117,6 +117,43 @@ context:
     fieldLabel: In tekst
     fieldInstruction: ''
     fieldPlaceholder: ''
+  onderwerpen:
+    modifier: checkboxgroup--many
+    name: onderwerpen
+    fieldLabel: Onderwerpen
+    options:
+      - id: onderwerpen-1
+        text: Aankondiging
+      - id: onderwerpen-2
+        text: Aanlegvergunning
+      - id: onderwerpen-3
+        text: Aanwijzigingsbesluit
+      - id: onderwerpen-4
+        text: Agenda en notulen
+      - id: onderwerpen-5
+        text: APV vergunning
+      - id: onderwerpen-6
+        text: Belastingbesluit
+      - id: onderwerpen-7
+        text: Besluitingslijst
+      - id: onderwerpen-8
+        text: Bestemmingsplan
+      - id: onderwerpen-9
+        text: Bodembeschermingsvergunning
+      - id: onderwerpen-10
+        text: Bouwvergunning
+      - id: onderwerpen-11
+        text: Collectievergunning
+      - id: onderwerpen-12
+        text: Delegatiebesluit
+      - id: onderwerpen-13
+        text: Drank- en horecavergunning
+      - id: onderwerpen-14
+        text: Evenementenvergunning
+      - id: onderwerpen-15
+        text: Exploitatievergunning
+      - id: onderwerpen-16
+        text: Gebruikersvergunning
   timeScale:
     fieldLabel: Publicatiedatum
     name: publicationdate
