@@ -87,9 +87,16 @@
 
     &--many {
       max-height: 10em;
-      max-width: 24em;
-      background-image: linear-gradient(#fff 95%, #ccc 105%);
+      background-image: linear-gradient($white 95%, $lighterGrey 105%);
       overflow: scroll;
+      border: 1px solid $lighterGrey;
+      padding: 0 .5em;
+
+      legend {
+        background: $white;
+        padding: 0 .5em;
+        margin: 0 .5em;
+      }
     }
   }
 
