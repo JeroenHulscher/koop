@@ -84,6 +84,13 @@
     input {
       margin: 0 .5em 0 0;
     }
+
+    &--many {
+      max-height: 10em;
+      max-width: 24em;
+      background-image: linear-gradient(#fff 95%, #ccc 105%);
+      overflow: scroll;
+    }
   }
 
   .form__error {
