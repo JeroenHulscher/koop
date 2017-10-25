@@ -7,18 +7,93 @@ context:
     alt: Overheid.nl logo
   postalCodeStraal:
     fieldLabel: Kies een straal rondom uw postcode
+    name: postcodestraal
     options:
-      - id: 1
+      - id: straal-1
         text: -geen-
-      - id: 2
+      - id: straal-2
         text: 250 meter
-      - id: 3
+      - id: straal-3
         text: 500 meter
-      - id: 4
+      - id: straal-4
         text: 1000 meter
-      - id: 5
+      - id: straal-5
         text: 1500 meter
-      - id: 6
+      - id: straal-6
         text: 3000 meter
-      - id: 7
+      - id: straal-7
         text: Hele gemeente
+  gemeenteSelect:
+    fieldLabel: Gemeenten
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    id: gemeenteselect
+    optionGroups:
+      - label: Gemeenten
+        groupId: gemeente-select-option-group-1
+        options:
+          - text: Groningen
+          - text: Leeuwarden
+          - text: Assen
+          - text: Heerenveen
+          - text: Den Haag
+          - text: Rotterdam
+          - text: Maastricht
+  provinceSelect:
+    fieldLabel: Provincies
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    id: provinceselect
+    optionGroups:
+      - label: Provincies
+        groupId: provincie-select-option-group-1
+        options:
+          - text: Drenthe
+          - text: Flevoland
+          - text: Friesland
+          - text: Gelderland
+          - text: Groningen
+          - text: Limburg
+          - text: Noord-Brabant
+          - text: Noord-Holland
+          - text: Overijssel
+          - text: Utrecht
+          - text: Zeeland
+          - text: Zuid-Holland
+  regionalOrgsSelect:
+    fieldLabel: Regionale samenwerkingsorganen
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    id: regionalorgsselect
+    optionGroups:
+      - label: Regionale samenwerkingsorganen
+        groupId: regional-orgs-select-option-group-1
+        options:
+          - text: ABG-organisatie
+          - text: Amstelland- en Meerlandenoverleg
+          - text: Aqualysis
+          - text: Avres
+          - text: Avri
+  searchSubject:
+    id: search-subject
+    fieldLabel: In tekst
+    fieldInstruction: ''
+    fieldPlaceholder: ''
+  timeScale:
+    fieldLabel: Publicatiedatum
+    name: publicationdate
+    options:
+      - id: time-1
+        text: -geen-
+      - id: time-2
+        text: Afgelopen week
+      - id: time-3
+        text: Afgelopen maand
+      - id: time-4
+        text: Afgelopen twee maanden
+      - id: time-5
+        text: Afgelopen jaar
+
