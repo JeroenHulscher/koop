@@ -26,7 +26,7 @@ context:
   gemeenteSelect:
     fieldLabel: Gemeenten
     visuallyHideLabel: false
-    fieldInstruction: ''
+    fieldInstruction: 'U kunt meerdere selecteren'
     regularFormElement: true
     id: gemeenteselect
     optionGroups:
@@ -43,7 +43,7 @@ context:
   provinceSelect:
     fieldLabel: Provincies
     visuallyHideLabel: false
-    fieldInstruction: ''
+    fieldInstruction: 'U kunt meerdere selecteren'
     regularFormElement: true
     id: provinceselect
     optionGroups:
@@ -63,6 +63,31 @@ context:
           - text: Zeeland
           - text: Zuid-Holland
   waterschappen:
+    fieldLabel: Waterschappen
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: waterschappenselect
+    optionGroups:
+      - label: Waterschappen
+        groupId: waterschappen-select-option-group-1
+        options:
+          - text: Hoogheemraadschap Amstel, Gooi en Vecht
+          - text: Hoogheemraadschap De Stichtse Rijnlanden
+          - text: Hoogheemraadschap Hollands Noorderkwartier
+          - text: Hoogheemraadschap van Delfland
+          - text: Hoogheemraadschap van Rijnland
+          - text: Hoogheemraadschap van Schieland en de Krimpenswaard
+          - text: Waterschap Aa en Maas
+          - text: Waterschap  Blija Buitendijks
+          - text: Waterschap Brabantse Delta
+          - text: Waterschap De Dommel
+          - text: Waterschap Hunze en Aa's
+          - text: Waterschap Limburg
+          - text: Waterschap Noorderzijlvest
+          - text: Waterschap Peel en Maasvallei
+          - text: Waterschap Rijn en IJssel
+  waterschappenCheckboxGroup:
     modifier: checkboxgroup--many
     name: waterschappen
     fieldLabel: Waterschappen
@@ -100,7 +125,7 @@ context:
   regionalOrgsSelect:
     fieldLabel: Regionale samenwerkingsorganen
     visuallyHideLabel: false
-    fieldInstruction: ''
+    fieldInstruction: 'U kunt meerdere selecteren'
     regularFormElement: true
     id: regionalorgsselect
     optionGroups:
@@ -118,6 +143,32 @@ context:
     fieldInstruction: ''
     fieldPlaceholder: ''
   onderwerpen:
+    fieldLabel: Onderwerpen
+    visuallyHideLabel: false
+    fieldInstruction: 'U kunt meerdere selecteren'
+    regularFormElement: true
+    id: onderwerpenselect
+    optionGroups:
+      - label: Onderwerpen
+        groupId: onderwerpen-select-option-group-1
+        options:
+          - text: Aankondiging
+          - text: Aanlegvergunning
+          - text: Aanwijzigingsbesluit
+          - text: Agenda en notulen
+          - text: APV vergunning
+          - text: Belastingbesluit
+          - text: Besluitingslijst
+          - text: Bestemmingsplan
+          - text: Bodembeschermingsvergunning
+          - text: Bouwvergunning
+          - text: Collectievergunning
+          - text: Delegatiebesluit
+          - text: Drank- en horecavergunning
+          - text: Evenementenvergunning
+          - text: Exploitatievergunning
+          - text: Gebruikersvergunning
+  onderwerpenCheckboxGroup:
     modifier: checkboxgroup--many
     name: onderwerpen
     fieldLabel: Onderwerpen
