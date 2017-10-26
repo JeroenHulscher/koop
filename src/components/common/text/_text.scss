@@ -14,10 +14,7 @@ em {
 
 .intro--text {
   font-size: 1.25em;
-
-  @media ( min-width: 50em ) {
-    padding-right: 25%;
-  }
+  max-width: 70%;
 }
 
 small, .small {

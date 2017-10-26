@@ -1,6 +1,7 @@
 $mobileSpacing: 1em;
 $desktopSpacing: 2em;
 $fatBorder: .75em;
+$thinBorder: .5em;
 
 .row {
   padding-top: $mobileSpacing;
@@ -21,8 +22,8 @@ $fatBorder: .75em;
   }
 
   &--heading {
-    padding: 1em 1em 0 1em;
-    margin: 0 auto -1em auto;
+    padding: 1em 1em 0;
+    margin: 0 auto -1em;
   }
 
   &--browse {
@@ -32,10 +33,35 @@ $fatBorder: .75em;
   }
 
   &--highlight {
-    border-top: $fatBorder solid $mediumBlue;
-    border-bottom: $fatBorder solid $mediumBlue;
-    background-color: $lightBlue;
+    border-top: $thinBorder solid $lightBlue;
+    border-bottom: $thinBorder solid $lightBlue;
+    background-color: $primaryBlue;
 
+    h2,
+    p,
+    li,
+    a {
+      color: $white;
+    }
+  }
+
+  &--image {
+    background: {
+      size: cover;
+      repeat: no-repeat;
+    }
+
+    .content--onimage {
+      background: $white;
+      width: auto;
+      padding: 1em 2em 2em;
+      max-width: 60%;
+      margin-bottom: 5em;
+
+      .intro--text {
+        max-width: 100%;
+      }
+    }
   }
 
   &--footer {
