@@ -64,6 +64,13 @@ $thinBorder: .5em;
     }
   }
 
+  &--landing {
+      .content--onimage {
+        padding: .5em 1em 1em;
+        margin-bottom: 2em;
+      }
+    }
+
   &--footer {
     background-color: $lightBlue;
     border-top: $fatBorder solid $mediumBlue;
