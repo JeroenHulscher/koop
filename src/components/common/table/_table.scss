@@ -24,9 +24,14 @@ table {
 
   th {
     font-weight: 700;
-    line-height: 1.25;
     text-align: left;
     vertical-align: bottom;
+  }
+
+  &.table__data-overview {
+    th {
+      vertical-align: top;
+    }
   }
 
   td {
@@ -68,7 +73,7 @@ table {
 
 @media ( max-width: 50em ) {
 
-  table,
+  table:not(.table__data-overview),
   &.table--condensed,
   &.table--striped,
   &.table--hover {

@@ -55,8 +55,10 @@ $thinBorder: .5em;
       background: $white;
       width: auto;
       padding: 1em 2em 2em;
-      max-width: 60%;
-      margin-bottom: 5em;
+      @media ( min-width: 50em ) {
+        max-width: 60%;
+        margin-bottom: 5em;
+      }
 
       .intro--text {
         max-width: 100%;

@@ -37,4 +37,20 @@
     border-top: 1px solid $lightGrey;
     margin: 0 1em;
   }
+
+  &--small {
+    .collapsible__header {
+      a {
+        padding: 0 0 0 1em;
+        font: {
+          family: $defaultFontStack;
+          size: 100%;
+        }
+        background: {
+          size: 10px;
+          position: 0 50%;
+        }
+      }
+    }
+  }
 }

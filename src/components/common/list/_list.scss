@@ -2,6 +2,17 @@ ul {
   padding-left: 1em;
 }
 
+td ul {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 ul ul {
   padding-left: 1em;
 }
@@ -72,6 +83,7 @@ ul ul {
 .list--relations {
   list-style: none;
   padding: 0;
+  margin: 0;
 
   li {
     margin: 0 0 1em;

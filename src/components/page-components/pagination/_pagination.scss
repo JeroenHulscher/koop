@@ -21,6 +21,8 @@
       list-style: none;
       border: 1px solid $lighterGrey;
       margin-left: -1px;
+      min-width: 2.35em;
+      text-align: center;
 
       &.active {
         color: $white;
