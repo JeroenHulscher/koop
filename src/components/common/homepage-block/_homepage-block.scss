@@ -70,7 +70,6 @@
 
   &.related {
 
-
     &--orange {
       @include aspect-ratio(4, 3);
       border: 2px solid $orange;
@@ -82,6 +81,15 @@
           repeat: no-repeat;
           position: 97% .75em;
           size: 2.5em;
+        }
+      }
+
+      &:hover {
+        border: 2px solid lighten( $orange, 10% );
+
+
+        .content--inner {
+          background-color: rgba( 225, 112, 0, .7 );
         }
       }
     }
@@ -99,6 +107,15 @@
           size: 2.5em;
         }
       }
+
+      &:hover {
+        border: 2px solid lighten( $darkBlue, 10% );
+
+
+        .content--inner {
+          background-color: rgba( 21, 66, 115, .7 );
+        }
+      }
     }
 
     &--lightBlue {
@@ -114,6 +131,15 @@
           size: 2.5em;
         }
       }
+
+      &:hover {
+        border: 2px solid lighten( $mediumBlue, 10% );
+
+
+        .content--inner {
+          background-color: rgba( 0, 119, 192, .7 );
+        }
+      }
     }
 
     &--primaryBlue {
@@ -125,9 +151,19 @@
           image: none;
         }
       }
+
+      &:hover {
+        border: 2px solid lighten( $primaryBlue, 10% );
+
+
+        .content--inner {
+          background-color: rgba( 0, 123, 199, .8 );
+        }
+      }
     }
 
     .content--inner {
+      transition: background-color $fastEaseInOut;
       height: 40%;
       min-height: 6em;
       top: auto;
