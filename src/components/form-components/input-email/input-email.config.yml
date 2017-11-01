@@ -1,0 +1,7 @@
+---
+label: Input email
+status: ready
+context:
+  id: 1
+  fieldLabel: E-mail
+  fieldInstruction:
