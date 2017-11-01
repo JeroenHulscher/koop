@@ -1,8 +1,7 @@
 ---
 title: Homepage
-label: Homepage OOP
+label: Homepage OEP
 status: ready
-hidden: true
 context:
   header:
     file: logo.svg
