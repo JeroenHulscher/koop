@@ -20,6 +20,7 @@ module.exports = {
   'toggle-explanation': require( 'form-components/question-explanation/toggleExplanation' ),
   'close-explanation': require( 'form-components/question-explanation/closeExplanation' ),
   'remove-element': require( 'handlers/removeElement' ),
-  'toggle-search': require( 'page-components/search/handlers/toggleSearch' )
+  'toggle-search': require( 'page-components/search/handlers/toggleSearch' ),
+  'toggle': require( 'handlers/toggle' )
 };
 
