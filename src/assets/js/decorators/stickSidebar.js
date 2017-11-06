@@ -27,17 +27,18 @@ var updateStickability = function( element, initialWidth, elementPosition, foote
   });
 }
 
-module.exports = function stickSidebar( element ) {
+var stickSidebar = function( element ) {
   var elementPosition = dom.offset( element );
   var initialWidth = element.clientWidth;
   var footer = dom.$( '.footer' )[0];
   var footerOffset = dom.offset( footer );
 
   elementPosition.top -= 16;
-  elementPosition.left -= element.offsetLeft; // add offset as sidebar can have margin left
+  elementPosition.left -= element.offsetLeft - 16; // add offset as sidebar can have margin left
 
   window.requestAnimationFrame( function() {
     updateStickability( element, initialWidth, elementPosition, footerOffset );
   });
 };
 
+module.exports = stickSidebar;
