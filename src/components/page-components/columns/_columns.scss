@@ -113,11 +113,12 @@ $gutter: 2em;
 
     > .columns--sticky-sidebar__sidebar {
       position: absolute;
-      top: 0;
+      top: 1em;
       left: 0;
       width: 25%;
       margin-left: 0;
-      padding-left: 1em;
+      border: 1px solid #ccc;
+      padding: .5em 1em;
     }
   }
 }
