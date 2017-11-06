@@ -122,8 +122,9 @@ $gutter: 2em;
       @media ( min-width: 50em ) {
         position: absolute;
         top: 1em;
-        left: 0;
+        left: 1em;
         width: 25%;
+        width: calc( 25% - 2em );
       }
     }
   }
