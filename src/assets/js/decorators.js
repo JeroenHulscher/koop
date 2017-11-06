@@ -11,7 +11,8 @@ var decorators = {
   'init-collapsible': require( 'common/collapsible/decorators/initCollapsible' ),
   'init-search-toggle': require( 'page-components/search/decorators/initSearchToggle' ),
   'add-foldability': require( 'common/treeview/decorators/addFoldability' ),
-  'stick-sidebar': require( 'decorators/stickSidebar' )
+  'stick-sidebar': require( 'decorators/stickSidebar' ),
+  'add-mobile-foldability': require( 'decorators/addMobileFoldability' )
 };
 
 module.exports = decorators;
