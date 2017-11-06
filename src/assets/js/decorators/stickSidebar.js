@@ -3,6 +3,7 @@ var dom = require( 'helpers/dom' );
 var updateStickability = function( element, initialWidth, elementPosition, footerOffset ) {
   var howMuchOfFooterIsVisible = Math.max( window.scrollY - footerOffset.top + window.innerHeight, 0 );
   var sidebarHeight = window.innerHeight;
+  var newHeight = ( sidebarHeight - howMuchOfFooterIsVisible - 32 ) + 'px';
 
   if ( window.scrollY > elementPosition.top ) {
     element.scrollTop = 0;
@@ -16,7 +17,8 @@ var updateStickability = function( element, initialWidth, elementPosition, foote
     element.style.left = elementPosition.left + 'px';
     element.style.overflow = 'auto';
     element.style.width = initialWidth + 'px';
-    element.style.height = ( sidebarHeight - howMuchOfFooterIsVisible - 32 ) + 'px';
+    element.style.height = newHeight;
+    element.clientHeight = newHeight;
   }
   else {
     element.removeAttribute( 'style' );
