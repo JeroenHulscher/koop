@@ -18,7 +18,6 @@ var updateStickability = function( element, initialWidth, elementPosition, foote
     element.style.overflow = 'auto';
     element.style.width = initialWidth + 'px';
     element.style.height = newHeight;
-    element.clientHeight = newHeight;
   }
   else {
     element.removeAttribute( 'style' );
