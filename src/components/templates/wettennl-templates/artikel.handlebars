@@ -7,6 +7,12 @@
 <div class="container columns columns--sticky-sidebar row">
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <h2>Inhoudsopgave</h2>
+
+    <ul class="list--unstyled">
+      <li><a href="#" class="icon icon--openall">Alles openklappen</a></li>
+      <li><a href="#" class="icon icon--closeall">Alles dichtklappen</a></li>
+    </ul>
+
     {{ render "@treeview--foldable" }}
   </div>
   <div>

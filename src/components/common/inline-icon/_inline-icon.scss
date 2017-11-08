@@ -19,4 +19,24 @@
     padding-right: 1.5em;
 
   }
+
+  &--openall {
+    background: {
+      image: $plusIcon;
+      position: right 50%;
+    }
+    padding-left: 0;
+    padding-right: 1.5em;
+
+  }
+
+  &--closeall {
+    background: {
+      image: $minusIcon;
+      position: right 50%;
+    }
+    padding-left: 0;
+    padding-right: 1.5em;
+
+  }
 }

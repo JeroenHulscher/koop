@@ -6,23 +6,23 @@
 </div>
 <div class="container columns columns--sidebar-left row">
   <div>
-    <h1>Spoedpublicaties (1)</h1>
-    {{ render "@alert" spoedpublicatiemelding merge="true" }}
-    {{ render "@pagination" }}
+    <h1>Uw zoekopdracht heeft x resultaten opgeleverd</h1>
     {{ render "@sort" }}
+    <h2>Wetten</h2>
     {{ render "@resultlist" }}
-    <h2>Vandaag zijn er 528 publicaties</h2>
+    <h2>AMVB's en andere KB's</h2>
     {{ render "@resultlist" }}
     {{ render "@resultlist" }}
     {{ render "@resultlist" }}
+    <h2>Minsteriële regelingen</h2>
     {{ render "@resultlist" }}
     {{ render "@pagination" }}
   </div>
   <div>
-    <h2>Verfijn bekendmakingen</h2>{{ render "@question-explanation" }}
+    <h2>Verfijn uw resultaten</h2>{{ render "@question-explanation" }}
     {{ render "@list--facetlist" filter1 merge=true }}
     {{ render "@list--facetlist" filter2 merge=true }}
-    {{ render "@list--facetlist" filter3 merge=true }}
+
   </div>
 </div>
 
