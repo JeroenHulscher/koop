@@ -17,6 +17,15 @@ ul ul {
   padding-left: 1em;
 }
 
+ol {
+  padding-left: 1em;
+  list-style-type: decimal;
+
+  > li > ol {
+    list-style-type: lower-alpha;
+  }
+}
+
 .facet--heading {
   font-size: 1em;
   font-family: $defaultHeadingFontStack;
