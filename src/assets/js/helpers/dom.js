@@ -43,6 +43,16 @@ var dom = {
   // return either the custom required element or the actual required element
   getRequiredElement: function( element ) {
     return element.querySelector( element.querySelector( '[required]' ) );
+  },
+  offset: function( element ) {
+    var rect = element.getBoundingClientRect();
+    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    return {
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft
+    }
   }
 };
 

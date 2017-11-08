@@ -92,9 +92,39 @@ $gutter: 2em;
     @media ( min-width: 50em ) {
 
       > * {
-        flex: 2;
+      flex: 2;
 
         margin-left: .5em;
+      }
+    }
+  }
+
+  &--sticky-sidebar {
+    display: block; /* note, with this modifier, the columns implementation doesn't use flexbox */
+    position: relative;
+
+    &.container {
+
+      @media ( min-width: 50em ) {
+        padding-left: 25%;
+      }
+    }
+
+    > div {
+      margin-left: $gutter;
+    }
+
+    > .columns--sticky-sidebar__sidebar {
+      margin-left: 0;
+      border: 1px solid #ccc;
+      padding: .5em 1em;
+
+      @media ( min-width: 50em ) {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 25%;
+        width: calc( 25% - 2em );
       }
     }
   }
