@@ -1,0 +1,139 @@
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+              <span>Publicaties</span>
+              <span>Nationale wet- en regelgeving</span>
+          </p>
+      </div>
+
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+        <a href="#search">Direct zoeken</a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <div class="container">
+      <h2 class="visually-hidden">Primaire navigatie</h2>
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        <li><a href="#">Particulieren</a></li>
+        <li><a href="#" class="active">Ondernemers</a></li>
+        <li><a href="#">Overheidsinformatie</a></li>
+      </ul>
+      {{ render "@search" search merge="true" }}
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+<div class="header__more" id="other-sites">
+  <div class="container">
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank over twee regels</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container row row--heading">
+  <h1>Zoek naar nationale Wet- en regelgeving</h1>
+  <p class="intro--text">Typ een of meer woorden die exact zo moeten voorkomen in de tekst.</p>
+</div>
+
+<form action="">
+  <div class="container">
+
+    <div class="tabs " data-decorator="init-tabs">
+    <ul class="tabs__list">
+        <li role="presentation">
+            <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1">Eenvoudig zoeken</a>
+        </li>
+        <li role="presentation">
+            <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Uitgebreid zoeken</a>
+        </li>
+        <li role="presentation">
+            <a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3">Zoeken op EU-richtlijn</a>
+        </li>
+    </ul>
+    <div class="tabs__panels">
+        <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+          <div class="container columns row">
+            <div>
+              <h2>Kies een soort regeling</h2>
+
+              <ul>
+                <li><a href="#" rel="external">Europese regelingen (EUR-Lex)</a></li>
+                <li><a href="#" rel="external">Regelingen van provincies, gemeenten, <abbr title="Bonaire, Sint Eustatius en Sint Maarten">BES</abbr>, waterschappen en voormalige Nederlandse Antillen</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2>Zoek op woord of zinsdeel</h2>
+              <p>Typ een of meer woorden die exact zo moeten voorkomen in de tekst.</p>
+              <h3>In de titel</h3>
+              {{ render '@input-text' searchSubject }}
+
+              {{ render '@input-text' searchSubject }}
+
+              {{ render '@input-text' searchSubject }}
+
+              <h2>Zoek op datum</h2>
+              <p>Kies de periode waarbinnen de bekendmakingen zijn gepubliceerd.</p>
+              {{ render '@input-radio' timeScale merge="true" }}
+
+              <div class="daterange">
+                {{ render '@input-text' dateFrom merge="true" }}
+                {{ render '@input-text' dateTo merge="true" }}
+              </div>
+
+              <div class="container row">
+                <input type="submit" class="button button--primary" value="Zoeken" >
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+            <div class="container columns row">
+            </div>
+        </div>
+        <div id="panel-3" role="tabpanel" aria-labelledby="tab-3">
+            <div class="container columns row">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+
+{{ render "@footer" }}

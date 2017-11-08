@@ -3,7 +3,8 @@ context:
   file: logo.svg
   alt: Overheid.nl logo
 variants:
-- name: Hier bent u
+- name: logo--uitgebreid
+  label: Hier bent u
   context:
     file: logo.svg
     alt: Overheid.nl logo
