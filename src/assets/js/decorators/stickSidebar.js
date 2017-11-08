@@ -1,44 +1,53 @@
 var dom = require( 'helpers/dom' );
 
-var updateStickability = function( element, initialWidth, elementPosition, footerOffset ) {
-  var howMuchOfFooterIsVisible = Math.max( window.scrollY - footerOffset.top + window.innerHeight, 0 );
-  var sidebarHeight = window.innerHeight;
-  var newHeight = ( sidebarHeight - howMuchOfFooterIsVisible - 32 ) + 'px';
+var getScrollY = function() {
+  var supportPageOffset = window.pageXOffset !== undefined;
+  var isCSS1Compat = ( ( document.compatMode || '' ) === 'CSS1Compat' );
 
-  if ( window.scrollY > elementPosition.top ) {
-    element.scrollTop = 0;
+  return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+}
+
+var updateStickability = function( element, footer ) {
+  var footerOffset = footer.getBoundingClientRect();
+  var elementPosition = element.getBoundingClientRect();
+  var scrollY = getScrollY();
+  var howMuchOfFooterIsVisible = Math.max( scrollY - window.innerHeight, 0 );
+  var sidebarHeight = window.innerHeight;
+  var newHeight = ( sidebarHeight - howMuchOfFooterIsVisible - 32 );
+
+  elementPosition.top -= 16;
+  elementPosition.left -= element.offsetLeft - 16; // add offset as sidebar can have margin left
+
+  if ( howMuchOfFooterIsVisible > 0 ) {
+    newHeight += 32;
   }
 
-  if ( window.scrollY > elementPosition.top &&
+  if ( scrollY > elementPosition.top &&
        window.matchMedia &&
        window.matchMedia( '(min-width: 50em)' ).matches ) {
     element.style.position = 'fixed';
     element.style.top = '1em';
     element.style.left = elementPosition.left + 'px';
     element.style.overflow = 'auto';
-    element.style.width = initialWidth + 'px';
-    element.style.height = newHeight;
+    element.style.width = element.initialWidth + 'px';
+    element.style.height = newHeight + 'px';
   }
   else {
     element.removeAttribute( 'style' );
   }
 
   window.requestAnimationFrame( function() {
-    updateStickability( element, initialWidth, elementPosition, footerOffset );
+    updateStickability( element, footer );
   });
 }
 
 var stickSidebar = function( element ) {
-  var elementPosition = dom.offset( element );
-  var initialWidth = element.clientWidth;
   var footer = dom.$( '.footer' )[0];
-  var footerOffset = dom.offset( footer );
 
-  elementPosition.top -= 16;
-  elementPosition.left -= element.offsetLeft - 16; // add offset as sidebar can have margin left
+  element.initialWidth = element.clientWidth;
 
   window.requestAnimationFrame( function() {
-    updateStickability( element, initialWidth, elementPosition, footerOffset );
+    updateStickability( element, footer );
   });
 };
 
