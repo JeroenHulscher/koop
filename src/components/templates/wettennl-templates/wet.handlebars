@@ -5,6 +5,12 @@
   </div>
 </div>
 <div class="container columns columns--sticky-sidebar row">
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <h2>Acties</h2>
+    {{ render "@browse" actieblok }}
+    <h2>Inhoudsopgave</h2>
+    {{ render "@treeview--foldable" }}
+  </div>
   <div>
     <h1>Goedkeuringswet Verdrag tussen Nederland en Noorwegen inzake het gebruik van een [...] vonnissen opgelegde vrijheidsstraffen (Trb. 2015, 37)</h1>
     <p>Wet van 30 juni 2015 tot goedkeuring en uitvoering van het op 2 maart 2015 te Veenhuizen tot stand gekomen Verdrag tussen het Koninkrijk der Nederlanden en het Koninkrijk Noorwegen inzake het gebruik van een penitentiaire inrichting in Nederland voor de tenuitvoerlegging van bij Noorse vonnissen opgelegde vrijheidsstraffen (Trb. 2015, 37)</p>
@@ -26,12 +32,6 @@
     <p>Lasten en bevelen dat deze in het Staatsblad zal worden geplaatst en dat alle ministeries, autoriteiten, colleges en ambtenaren die zulks aangaat, aan de nauwkeurige uitvoering de hand zullen houden.</p>
     <p>Gegeven te</p>
     <p>Wassenaar, 30 juni 2015</p>
-  </div>
-  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
-    <h2>Acties</h2>
-    {{ render "@browse" actieblok }}
-    <h2>Inhoudsopgave</h2>
-    {{ render "@treeview--foldable" }}
   </div>
 </div>
 
