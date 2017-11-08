@@ -11,10 +11,14 @@ module.exports = function toggle( element ) {
     button.textContent = labelOpen;
     button.setAttribute( 'aria-expanded', 'false' );
     ui.hide( toggles );
+    document.body.classList.remove( 'no-scroll' );
+    ui.unbindFocusTrap( button.parentNode );
   }
   else {
     button.textContent = labelClose;
     button.setAttribute( 'aria-expanded', 'true' );
     ui.show( toggles );
+    document.body.classList.add( 'no-scroll' );
+    ui.bindFocusTrap( button.parentNode );
   }
 };
