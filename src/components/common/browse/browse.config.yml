@@ -25,3 +25,21 @@ context:
       text: Internetconsultatie
       count: 3
       count_context: gepubliceerd
+variants:
+  - name: icons
+    label: Met iconen
+    context:
+      title: ''
+      intro: ''
+      modifier: browse--icons
+      items:
+        - link: '#'
+          text: Authentieke versie
+        - link: '#'
+          text: Informatie over de publicatie
+        - link: '#'
+          text: Gerelateerde documenten
+        - link: '#'
+          text: Printen
+        - link: '#'
+          text: Delen

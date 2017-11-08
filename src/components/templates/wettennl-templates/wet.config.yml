@@ -11,3 +11,18 @@ context:
     heading: Officiële bekendmakingen
     items:
       - text: <a href="#">Veelgestelde vragen</a>
+  actieblok:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        text: Authentieke versie
+      - link: '#'
+        text: Informatie over de publicatie
+      - link: '#'
+        text: Gerelateerde documenten
+      - link: '#'
+        text: Printen
+      - link: '#'
+        text: Delen
