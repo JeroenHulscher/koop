@@ -1,5 +1,5 @@
 var dom = require( 'helpers/dom' );
-var toggle = require( 'handlers/toggle' );
+var toggle = require( 'handlers/toggleSidebar' );
 
 module.exports = function addMobileFoldability( element ) {
   var button = document.createElement( 'button' );
@@ -12,7 +12,7 @@ module.exports = function addMobileFoldability( element ) {
   // set data to button
   button.classList.add( 'hidden-desktop' );
   button.type = 'button';
-  button.setAttribute( 'data-handler', 'toggle' );
+  button.setAttribute( 'data-handler', 'toggle-sidebar' );
   button.setAttribute( 'aria-controls', element.id );
   button.setAttribute( 'data-toggle-open', labels.open );
   button.setAttribute( 'data-toggle-close', labels.close );
