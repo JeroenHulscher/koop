@@ -24,5 +24,7 @@ module.exports = function addMobileFoldability( element ) {
   element.parentNode.appendChild( button );
 
   // apply first time
-  toggle( button );
+  if ( ! ( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
+    toggle( button );
+  }
 };
