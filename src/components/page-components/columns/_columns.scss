@@ -119,6 +119,44 @@ $gutter: 2em;
       border: 1px solid #ccc;
       padding: .5em 1em;
 
+      &::before {
+        content: '';
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        opacity: .6;
+        top: 0;
+
+        @media ( min-width: 50em ) {
+          display: none;
+        }
+      }
+
+      > div {
+        background-color: $white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        z-index: 3;
+        padding: 0 1em;
+        overflow: auto;
+
+        @media ( min-width: 50em ) {
+          background: transparent;
+          z-index: auto;
+          position: static;
+          width: auto;
+          padding: 0;
+          overflow: visible;
+        }
+      }
+
       @media ( min-width: 50em ) {
         position: absolute;
         top: 1em;
@@ -126,6 +164,13 @@ $gutter: 2em;
         width: 25%;
         width: calc( 25% - 2em );
       }
+    }
+
+    [data-handler="toggle-sidebar"][aria-expanded="true"] {
+      position: fixed;
+      left: 80%;
+      z-index: 3;
+      top: 1em;
     }
   }
 }
