@@ -1,5 +1,6 @@
 .browse {
   background-color: $lightGrey;
+  padding: .5em;
 
   &__list {
     margin: 0;
@@ -33,5 +34,12 @@
 
   &__count {
     float: right;
+  }
+
+  &--icons {
+
+    .browse__list a {
+      background-image: none;
+    }
   }
 }
