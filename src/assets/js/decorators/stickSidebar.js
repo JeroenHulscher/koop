@@ -12,14 +12,13 @@ var updateStickability = function( element, footer ) {
   var elementPosition = element.getBoundingClientRect();
   var scrollY = getScrollY();
   var howMuchOfFooterIsVisible = Math.max( scrollY - window.innerHeight, 0 );
-  var sidebarHeight = window.innerHeight;
-  var newHeight = ( sidebarHeight - howMuchOfFooterIsVisible - 32 );
+  var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
 
-  elementPosition.top -= 16;
+  elementPosition.top = elementPosition.top + scrollY - 16;
   elementPosition.left -= element.offsetLeft - 16; // add offset as sidebar can have margin left
 
   if ( howMuchOfFooterIsVisible > 0 ) {
-    newHeight += 32;
+    sidebarHeight += 32;
   }
 
   if ( scrollY > elementPosition.top &&
@@ -30,13 +29,13 @@ var updateStickability = function( element, footer ) {
     element.style.left = elementPosition.left + 'px';
     element.style.overflow = 'auto';
     element.style.width = element.initialWidth + 'px';
-    element.style.height = newHeight + 'px';
+    element.style.height = sidebarHeight + 'px';
   }
   else {
     element.removeAttribute( 'style' );
   }
 
-  window.requestAnimationFrame( function() {
+  requestAnimationFrame( function() {
     updateStickability( element, footer );
   });
 }
@@ -46,7 +45,7 @@ var stickSidebar = function( element ) {
 
   element.initialWidth = element.clientWidth;
 
-  window.requestAnimationFrame( function() {
+  requestAnimationFrame( function() {
     updateStickability( element, footer );
   });
 };
