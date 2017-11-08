@@ -5,8 +5,8 @@ a {
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
-  .columns &[href*="//"]:not(.button, .homepageblock),
-  .columns &[rel="external"] {
+   &[href*="//"]:not(.button),
+   &[rel="external"] {
     padding-right: 1.25em;
     margin-right: .25em;
     background: {
@@ -15,14 +15,6 @@ a {
       position: right 3px;
       size: 13px 12px;
     }
-  }
-
-  .columns a[href*="https://www.officielebekendmakingen.nl/"],
-  .columns a[href*="https://www.overheid.nl/"],
-  .columns--relatedinfo a[href*="//"] {
-    padding-right: initial;
-    margin-right: 0;
-    background: none;
   }
 
   &:focus {
@@ -43,4 +35,13 @@ a {
 
 p a {
   text-decoration: underline;
+}
+
+.columns a[href*="https://www.officielebekendmakingen.nl/"],
+.columns a[href*="https://www.overheid.nl/"],
+.columns a[href*="//"]:not(.homepageblock),
+.columns--relatedinfo a[href*="//"] {
+  padding-right: initial;
+  margin-right: 0;
+  background: none;
 }
