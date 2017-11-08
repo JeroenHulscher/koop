@@ -21,7 +21,7 @@ module.exports = function addMobileFoldability( element ) {
   button.setAttribute( 'aria-expanded', 'true' );
   button.textContent = labels.close;
 
-  element.parentNode.appendChild( button );
+  element.before( button );
 
   // apply first time
   if ( ! ( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
