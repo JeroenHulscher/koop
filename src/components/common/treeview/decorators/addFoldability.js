@@ -8,8 +8,6 @@ module.exports = function addFoldability( element ) {
   var needsFoldability = foldableChildren.length > 0;
   var toggleButton;
 
-  console.log( element );
-
   if ( needsFoldability ) {
     toggleButton = document.createElement( 'button' )
     toggleButton.type = 'button';
