@@ -106,7 +106,7 @@ $gutter: 2em;
     &.container {
 
       @media ( min-width: 50em ) {
-        padding-left: 25%;
+        padding-left: 22em;
       }
     }
 
@@ -118,6 +118,14 @@ $gutter: 2em;
       margin-left: 0;
       border: 1px solid #ccc;
       padding: .5em 1em;
+
+      @media ( min-width: 50em ) {
+        position: absolute;
+        top: 2em;
+        left: 1em;
+        width: 20em;
+        overflow: auto;
+      }
 
       &::before {
         content: '';
@@ -156,14 +164,24 @@ $gutter: 2em;
           overflow: visible;
         }
       }
+    }
 
-      @media ( min-width: 50em ) {
-        position: absolute;
-        top: 1em;
-        left: 1em;
-        width: 25%;
-        width: calc( 25% - 2em );
-      }
+    [data-handler="toggle-sidebar"] {
+      border: 0;
+      text-indent: -9999em;
+      width: 2.5em;
+      height: 2.5em;
+      background: {
+        image: $doubleRightIcon;
+        repeat: no-repeat;
+        size: 2em;
+        color: #fff;
+        position: center center;
+      };
+      position: absolute;
+      left: 0;
+      box-shadow: 0 0 4px -1px $black;
+      border-radius: 0 $borderRadius $borderRadius 0;
     }
 
     [data-handler="toggle-sidebar"][aria-expanded="true"] {
@@ -171,6 +189,8 @@ $gutter: 2em;
       left: 80%;
       z-index: 3;
       top: 1em;
+      background-image: $doubleLeftIcon;
+
     }
   }
 }
