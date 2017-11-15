@@ -106,7 +106,7 @@ $gutter: 2em;
     &.container {
 
       @media ( min-width: 50em ) {
-        padding-left: 25%;
+        padding-left: 22em;
       }
     }
 
@@ -118,6 +118,14 @@ $gutter: 2em;
       margin-left: 0;
       border: 1px solid #ccc;
       padding: .5em 1em;
+
+      @media ( min-width: 50em ) {
+        position: absolute;
+        top: 2em;
+        left: 1em;
+        width: 20em;
+        overflow: auto;
+      }
 
       &::before {
         content: '';
@@ -155,14 +163,6 @@ $gutter: 2em;
           padding: 0;
           overflow: visible;
         }
-      }
-
-      @media ( min-width: 50em ) {
-        position: absolute;
-        top: 1em;
-        left: 1em;
-        width: 25%;
-        width: calc( 25% - 2em );
       }
     }
 
