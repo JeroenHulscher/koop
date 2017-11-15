@@ -4,7 +4,7 @@
   @include aspect-ratio(16, 9);
   background: {
     repeat: no-repeat;
-    position: left top;
+    position: right top;
     size: cover;
   }
 
@@ -173,7 +173,7 @@
       h3 {
         background: transparent;
         color: $white;
-        padding: .5em 3em 0 .5em;
+        padding: .5em .5em 0 .5em;
         font-size: 1.5em;
       }
     }
