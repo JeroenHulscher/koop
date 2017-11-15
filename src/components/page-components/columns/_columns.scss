@@ -181,6 +181,7 @@ $gutter: 2em;
       position: absolute;
       left: 0;
       box-shadow: 0 0 4px -1px $black;
+      border-radius: 0 $borderRadius $borderRadius 0;
     }
 
     [data-handler="toggle-sidebar"][aria-expanded="true"] {
