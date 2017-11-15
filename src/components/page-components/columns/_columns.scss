@@ -166,11 +166,30 @@ $gutter: 2em;
       }
     }
 
+    [data-handler="toggle-sidebar"] {
+      border: 0;
+      text-indent: -9999em;
+      width: 2.5em;
+      height: 2.5em;
+      background: {
+        image: $doubleRightIcon;
+        repeat: no-repeat;
+        size: 2em;
+        color: #fff;
+        position: center center;
+      };
+      position: absolute;
+      left: 0;
+      box-shadow: 0 0 4px -1px $black;
+    }
+
     [data-handler="toggle-sidebar"][aria-expanded="true"] {
       position: fixed;
       left: 80%;
       z-index: 3;
       top: 1em;
+      background-image: $doubleLeftIcon;
+
     }
   }
 }
