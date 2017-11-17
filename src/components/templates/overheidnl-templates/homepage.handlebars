@@ -1,108 +1,164 @@
-{{ render "@header" header merge=true }}
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+              <span>Beleid en regelgeving</span>
+              <span>Wettenbank</span>
+          </p>
+      </div>
+
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+        <a href="#search">Direct zoeken</a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <div class="container">
+      <h2 class="visually-hidden">Primaire navigatie</h2>
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+      </ul>
+      {{ render "@search" search merge="true" }}
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+<div class="header__more" id="other-sites">
+  <div class="container">
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank over twee regels</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
   </div>
 </div>
-<div class="container row row--heading">
-  <h1>Welkom op overheid.nl</h1>
-  <p class="intro--text">
-    De website Overheid.nl is de wegwijzer naar informatie en diensten van alle overheidsorganisaties in Nederland. Deze website is een initiatief van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties in samenwerking met de andere ministeries, de Eerste- en Tweede Kamer, gemeenten, provincies, waterschappen en andere overheidsorganisaties.
-  </p>
-</div>
+
 
 <div class="container row">
   <div class="columns columns--homepage-tiles">
 
-    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-indebuurt.jpg);">
+    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-indebuurt.jpg);">
       <div class="content--inner">
         <h2>In de buurt</h2>
         <span>Hier vindt u berichtgeving, die betrekking op uw buurt heeft.</span>
+         <ul>
+          <li><a href="#">Officiele bekendmakingen</a></li>
+          <li><a href="#">Plaatselijke regelgeving</a></li>
+        </ul>
+        <a href="#" class="more-link">Alle diensten in uw buurt</a>
       </div>
-    </a>
+    </div>
 
-    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-diensten.jpg);">
+    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-diensten.jpg);">
       <div class="content--inner">
         <h2>Diensten</h2>
         <span>Diensten van de Overheid voor particulieren en ondernemers.</span>
+        <ul>
+          <li><a href="#">Wettenbank</a></li>
+          <li><a href="#">Open data</a></li>
+          <li><a href="#">Staatscourant</a></li>
+          <li><a href="#">Overige producten en diensten</a></li>
+        </ul>
+        <a href="#" class="more-link">Alle diensten van de overheid</a>
       </div>
-    </a>
+    </div>
 
-    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-beleid.jpg);">
+    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-beleid.jpg);">
       <div class="content--inner">
         <h2>Beleid &amp; Regelgeving</h2>
         <span>Hier bekijkt u publicaties omtrent beleid, wet- en regelgeving.</span>
+        <ul>
+          <li><a href="#">Wettenbank</a></li>
+          <li><a href="#">Open data</a></li>
+          <li><a href="#">Staatscourant</a></li>
+          <li><a href="#">Overige producten en diensten</a></li>
+        </ul>
+        <a href="#" class="more-link">Alle beleid &amp; regelgeving</a>
       </div>
-    </a>
+    </div>
 
-    <a href="#" class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-overheidsinformatie.jpg);">
+    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-overheidsinformatie.jpg);">
       <div class="content--inner">
         <h2>Contactgegevens Overheden</h2>
         <span>Hier vindt u informatie en contactgegevens van de Overheid.</span>
+        <ul>
+          <li><a href="#">Gemeenten</a></li>
+          <li><a href="#">Provincies</a></li>
+          <li><a href="#">Waterschappen</a></li>
+          <li><a href="#">Overige instellingen</a></li>
+        </ul>
       </div>
-    </a>
-
-  </div>
-
-</div>
-
-<div class="row row--browse">
-  <div class="container">
-    <h2>Hoe werkt de overheid?</h2>
-
-    <div class="columns">
-      <a href="http://www.google.nl"> <div class="homepageblock " style="background-image: url(../../images/temp/wat-doet-overheid.jpg);"> <div class="content--inner"> <h3>Wat doet de overheid?</h3> </div> </div> </a>
-
-      <a href="http://www.google.nl"> <div class="homepageblock " style="background-image: url(../../images/temp/structuur-overheid.jpg);"> <div class="content--inner"> <h3>Wie vormen de overheid?</h3> </div> </div> </a>
-
-      <a href="http://www.google.nl"> <div class="homepageblock " style="background-image: url(../../images/temp/hoe-werkt-democratie.jpg);"> <div class="content--inner"> <h3>Hoe werkt de democratie?</h3> </div> </div> </a>
     </div>
 
-    <p>
-      De overheid heeft diverse rollen in het maatschappelijk proces. Lees meer over hoe de overheid dit realiseert.
-    </p>
-
-
-
   </div>
+
 </div>
 
 <div class="row container">
-
-  <h2>Gerelateerde informatie</h2>
-
-  <div class="columns columns--relatedinfo">
-
-    <a href="http://www.mijnoverheid.nl" class="blockLink">
-
-      <div class="homepageblock related related--orange" style="background-image: url(../../images/temp/mijnoverheid.png);">
-
-        <div class="content--inner">
-          <h3>MijnOverheid.nl</h3>
-            <span>Berichten, lopende zaken en Persoonlijke Gegevens</span>
-          </div>
-      </div>
-    </a>
-
-    <a href="http://www.ondernemersplein.nl" class="blockLink">
-      <div class="homepageblock related related--lightBlue" style="background-image: url(../../images/temp/ondernemersplein.jpg);">
-        <div class="content--inner">
-          <h3>ondernemersplein.nl</h3>
-          <span>Antwoorden op al uw ondernemersvragen</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="http://www.rijksoverheid.nl" class="blockLink">
-      <div class="homepageblock related related--darkBlue" style="background-image: url(../../images/temp/rijksoverheid.jpg);">
-        <div class="content--inner">
-          <h3>Rijksoverheid.nl</h3>
-          <span>Beleidsplannen, wetten en regels voor u uitgelegd</span>
-        </div>
-      </div>
-    </a>
+  <h2>To be decided</h2>
+  <p>
+    De website Overheid.nl is de wegwijzer naar informatie en diensten van alle overheidsorganisaties in Nederland.
+  </p>
+  <div class="columns">
+    <ul class="list list--linked">
+      <li><a href="#">Belastingen, uitkeringen en toeslagen</a></li>
+      <li><a href="#">Buitenland: werken, wonen en reizen</a></li>
+      <li><a href="#">Consumentenzaken</a></li>
+    </ul>
+    <ul class="list list--linked">
+      <li><a href="#">Immigratie, inburgering en integratie</a></li>
+      <li><a href="#">Natuur en milieu</a></li>
+      <li><a href="#">Ondernemen</a></li>
+      <li><a href="#">Familie, jeugd en gezin</a></li>
+    </ul>
+    <ul class="list list--linked">
+      <li><a href="#">Rechtspraak en veiligheid</a></li>
+      <li><a href="#">Verkeer, voertuigen en wegen</a></li>
+      <li><a href="#">Werk en loopbaan</a></li>
+      <li><a href="#">Overheid en democratie</a></li>
+    </ul>
+    <ul class="list list--linked">
+      <li><a href="#">Wonen en leefomgeving</a></li>
+      <li><a href="#">Zorg en gezondheid</a></li>
+      <li><a href="#">Onderwijs</a></li>
+      <li><a href="#">Cultuur, sport en vrije tijd</a></li>
+    </ul>
   </div>
-
 </div>
+
+
 
 {{ render "@footer" }}

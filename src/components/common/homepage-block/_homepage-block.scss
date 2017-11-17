@@ -1,11 +1,11 @@
 .homepageblock {
   margin-bottom: 1em;
 
-  @include aspect-ratio(16, 9);
+  @include aspect-ratio(16,9);
   background: {
     repeat: no-repeat;
     position: right top;
-    size: cover;
+    size: 100%;
   }
 
   &.targetaudience {
@@ -14,7 +14,6 @@
 
   h2,
   h3 {
-    padding: .25em;
     background: $white;
     margin: 0;
     display: inline-block;
@@ -25,23 +24,23 @@
     color: $white;
     display: block;
     font-size: 1.25em;
-    padding: 0 3em 0 .6em;
+    padding: 0;
     line-height: 1;
   }
 
   ul {
     margin-top: 1em;
-    padding: 0;
-    list-style: none;
+    padding-left: 2em;
+    color: $white;
+
 
     li {
-      margin: .5em;
 
       a {
-        background: $white;
-        padding: .25em .5em;
+        color: $white;
+
         text-decoration: none;
-        font-size: 1.25em;
+
 
         &:hover {
           text-decoration: underline;
@@ -69,6 +68,13 @@
   }
 
   &.related {
+    @media ( max-width: 50em ) {
+    height: 20em;
+    }
+
+    @media ( min-width: 50em ) {
+      @include aspect-ratio(9, 16);
+    }
 
     &--orange {
       @include aspect-ratio(4, 3);
@@ -144,8 +150,13 @@
 
     &--primaryBlue {
       border: 2px solid $primaryBlue;
+      @media ( min-width: 50em ) {
+        margin-right: 1.5em !important;
+        margin-left: 0;
+      }
 
       .content--inner {
+        height: 70%;
         background: {
           color: rgba( 0, 123, 199, 1 );
           image: none;
@@ -157,24 +168,44 @@
 
 
         .content--inner {
-          background-color: rgba( 0, 123, 199, .8 );
+          /*background-color: rgba( 0, 123, 199, .8 );*/
         }
       }
     }
 
     .content--inner {
       transition: background-color $fastEaseInOut;
-      height: 40%;
       min-height: 6em;
       top: auto;
       bottom: 0;
+      padding: 1em 1em 3em 1em;
+
+       @media ( max-width: 50em ) {
+        height: 100%;
+       }
 
       h2,
       h3 {
         background: transparent;
         color: $white;
-        padding: .5em .5em 0 .5em;
-        font-size: 1.5em;
+        padding: 0px;
+        font-size: 1.25em;
+        margin-bottom: .5em;
+      }
+
+      span {
+        font-size: 1.1em;
+      }
+
+      ul {
+        padding: 0;
+        padding-left: 1em;
+      }
+
+      .more-link {
+        color: $white;
+        position: absolute;
+        bottom: 1em;
       }
     }
   }

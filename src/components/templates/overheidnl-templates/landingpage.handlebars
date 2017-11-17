@@ -1,17 +1,78 @@
-{{ render "@header" header merge=true }}
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+              <span>Beleid en regelgeving</span>
+              <span>Overzichtspagina</span>
+          </p>
+      </div>
+
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+        <a href="#search">Direct zoeken</a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <div class="container">
+      <h2 class="visually-hidden">Primaire navigatie</h2>
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+      </ul>
+      {{ render "@search" search merge="true" }}
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+<div class="header__more" id="other-sites">
+  <div class="container">
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank over twee regels</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
   </div>
 </div>
-<div class="row row--image row--landing" style="background-image: url(../../images/temp/homepage-block-bg2.png);">
+<div class="row row--image row--landing" style="background-image: url(../../images/temp/homepage-beleid.jpg);">
 
   <div class="container">
     <div class="content--onimage">
-      <h1>Levensgebeurtenissen</h1>
+      <h1>Beleid &amp; Regelgeving</h1>
 
       <p class="intro--text">
-        Bij belangrijke levensgebeurtenissen komt veel op u af. Hier vindt u de informatie die voor die gebeurtenissen relevant is.
+        Hier bekijkt u publicaties omtrent beleid, wet- en regelgeving.
       </p>
     </div>
   </div>
@@ -22,34 +83,47 @@
   <div class="container">
 
     <div class="columns">
-      <div>
-        <h2>Ik ga scheiden</h2>
-        <p>Als u gaat scheiden of uit elkaar gaat, kan dit gevolgen hebben voor de toeslagen, voorlopige aanslag of aangifte inkomstenbelasting van u of uw ex-partner. Ga bijvoorbeeld na of u nog fiscale partners bent. Controleer wat de scheiding voor uw persoonlijke situatie betekent en wat u moet doen.</p>
-        <ul>
-          <li><a href="#">Stappenplan bij scheiden</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Ik word werkloos</h2>
-        <p>Als u werkloos wordt verandert uw financiële situatie, en ook uw rechten en plichten naar de overheid. Zo kunt u soms een uitkering of aanvulling krijgen, maar wordt daarvoor ook een tegenprestatie verwacht.</p>
-        <ul>
-          <li><a href="#">Stappenplan bij werkloosheid</a></li>
-      </div>
-      <div>
-        <h2>Er is iemand overleden</h2>
-        <p>Het overlijden van een partner, kind of familielid is ingrijpend. In deze moeilijke tijd moet u vaak veel regelen, ook met de overheid. Controleer welke wijzigingen in belastingen en rechten op inkomen van de overheid op u van toepassing zijn, wat er van u verwacht wordt en hoe u een en ander kunt regelen.</p>
-        <ul>
-          <li><a href="#">Stappenplan bij overlijden</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Ik ben 18 jaar</h2>
-        <p>Als u 18 jaar wordt bent u meerderjarig. Daaraan zijn vanuit de overheid ook een aantal rechten en plichten verbonden. Controleer welke wijzigingen in belastingen en rechten op inkomen van de overheid op u van toepassing zijn, wat er van u verwacht wordt en hoe u een en ander kunt regelen.</p>
 
-        <ul>
-          <li><a href="#">Stappenplan bij volwassenheid</a></li>
-        </ul>
+      <div>
+        <h2>Beleidsonderzoek</h2>
+
+        <ul class="linklist"><li class="extern"> <a href="http://www.wrr.nl">Wetenschappelijke Raad voor het Regeringsbeleid (WRR) </a> </li><li class="extern"> <a href="http://www.cpb.nl/">Centraal Planbureau (CPB) </a> </li><li class="extern"> <a href="http://www.scp.nl/">Sociaal en Cultureel Planbureau (SCP) </a> </li><li class="extern"> <a href="http://www.cbs.nl">Centraal Bureau voor de Statistiek (CBS) </a> </li><li class="extern"> <a href="http://www.wodc.nl">Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC) </a> </li><li class="extern"> <a href="http://www.pbl.nl/">Planbureau voor de Leefomgeving (PBL) </a> </li><li class="extern"> <a href="http://www.arbeidenoverheid.nl/">Kennisbank Arbeidszaken Publieke Sector (KAPS) </a> </li></ul>
       </div>
+      <div>
+        <h2>Advies en besluitvorming</h2>
+        <ul class="linklist"><li> <a href="http://internetconsultatie.overheid.nl">Internetconsultatie</a> </li><li class="extern"> <a href="http://www.raadvanstate.nl/adviezen.html">Adviezen Raad van State </a> </li><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/parlementaire_documenten">Parlementaire documenten (bijvoorbeeld Kamervragen, Kamerstukken)</a> </li><li> <a href="http://almanak.overheid.nl/categorie/53/Adviescolleges/">Meer adviesorganen</a> </li></ul>
+      </div>
+      <div>
+        <h2>Bekendmaking</h2>
+        <ul class="linklist"><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/staatsblad">Staatsblad (landelijk)</a> </li><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/staatscourant">Staatscourant (landelijk)</a> </li><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/tractatenblad">Tractatenblad (landelijk)</a> </li><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/gemeenteblad">Gemeenteblad</a> </li><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/provinciaal_blad" title="Opens external link in new window" class="external-link-new-window">Provinciaal blad</a> </li><li> <a href="https://zoek.officielebekendmakingen.nl/zoeken/waterschapsblad">Waterschapsblad</a></li><li><a href="https://zoek.officielebekendmakingen.nl/zoeken/blad_gemeenschappelijke_regeling" title="Opens external link in new window" class="external-link-new-window">Blad gemeenschappelijke regeling</a></li><li> <a href="https://www.officielebekendmakingen.nl">Officiële bekendmakingen vandaag</a> </li><li> <a href="https://zoek.overheid.nl/berichten_over_uw_buurt_eenvoudig_zoeken" title="Opens external link in new window" class="external-link-new-window">Publicaties op websites van gemeenten, provincies, waterschappen en regionale samenwerkingsverbanden</a> </li></ul>
+      </div>
+
+      <div>
+        <h2>Wet- en regelgeving</h2>
+        <ul class="linklist"><li class="extern"> <a href="http://eur-lex.europa.eu/collection/eu-law.html" title="Opens external link in new window" class="external-link-new-window">Europees </a> </li><li> <a href="http://wetten.overheid.nl">Landelijk</a></li><li><a href="https://wetgevingskalender.overheid.nl/" title="Opens external link in new window" class="external-link-new-window">Wetgevingskalender</a></li><li> <a href="http://zoekdienst.overheid.nl/ictu_website/CVDR/CVDRZoeken.aspx?searchtype=Simple&amp;connection=CVDR">Plaatselijk (gemeente, provincie, waterschap, regionaal samenwerkingsverband)</a> </li><li class="extern"> <a href="http://www.ruimtelijkeplannen.nl">Ruimtelijkeplannen.nl </a> </li></ul>
+      </div>
+
+    </div>
+
+    <div class="columns">
+
+      <div>
+        <h2>Uitvoering</h2>
+
+        <ul class="linklist"><li> <a href="http://wetten.overheid.nl">Landelijk (beleidsregels, circulaires, uitvoeringsaanwijzingen)</a> </li><li> <a href="http://www.overheid.nl/overheidsinformatie/vergunningen">Plaatselijke vergunningen</a> </li><li> <a href="http://vergunningenbank.overheid.nl/natuurbeschermingswet">Vergunningen Natuurbeschermingswet</a> </li></ul>
+      </div>
+      <div>
+        <h2>Klachten en rechtspraak</h2>
+        <ul class="linklist"><li class="extern"> <a href="http://mensenrechten.nl/publicaties/oordelen">College voor de Rechten van de Mens </a> </li><li class="extern"> <a href="http://www.nationaleombudsman.nl/" title="Opens external link in new window" class="external-link-new-window">Nationale ombudsman </a> </li><li class="extern"> <a href="http://www.rechtspraak.nl">Rechtspraak.nl </a> </li><li> <a href="http://tuchtrecht.overheid.nl/nieuw">Tuchtrecht</a> </li></ul>
+      </div>
+      <div>
+        <h2>Toezicht</h2>
+        <ul class="linklist"><li class="extern"> <a href="http://www.inspectieloket.nl">Inspectieloket </a> </li></ul>
+      </div>
+
+      <div>
+      </div>
+
     </div>
   </div>
 </div>
