@@ -68,14 +68,14 @@ $gutter: 2em;
     }
 
     padding-top: 1em;
+    padding-bottom: 0;
     margin: 0;
 
     @media ( min-width: 50em ) {
-
-        margin-right: .5em;
-        margin-left: 0;
-        flex: 1 calc( 25% - .5em);
-
+      > * {
+        margin-left: 1em;
+        flex: 1 calc( 25% - 1em);
+      }
     }
   }
 

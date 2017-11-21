@@ -5,20 +5,6 @@ context:
   image: /images/temp/homepage-block-bg.png
   blockLink: http://www.google.nl
 variants:
-  - name: targetlink
-    label: Doelgroepingang
-    context:
-      heading: Iets regelen of vragen
-      modifier: targetaudience
-      image: /images/temp/homepage-block-bg2.png
-      blockLink:
-      items:
-        - text: 18 jaar geworden
-        - text: Werkloos
-        - text: Rijbewijs verlengen
-        - text: Subsidie energiebesparing
-      contextLinkText: iets anders regelen of vragen
-      contextLink: #
   - name: related default
     label: Gerelateerd (default)
     context:

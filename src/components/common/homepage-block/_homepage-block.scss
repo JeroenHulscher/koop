@@ -1,15 +1,10 @@
 .homepageblock {
   margin-bottom: 1em;
 
-  @include aspect-ratio(16,9);
   background: {
     repeat: no-repeat;
     position: right top;
     size: 100%;
-  }
-
-  &.targetaudience {
-    min-height: 20em;
   }
 
   h2,
@@ -49,32 +44,7 @@
     }
   }
 
-  .context-Link {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: {
-      color: $white;
-      image: $dartRightIcon;
-      repeat: no-repeat;
-      position: 95% 50%;
-    }
-    padding: .5em 1.5em .5em .5em;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   &.related {
-    @media ( max-width: 50em ) {
-    height: 20em;
-    }
-
-    @media ( min-width: 50em ) {
-      @include aspect-ratio(9, 16);
-    }
 
     &--orange {
       @include aspect-ratio(4, 3);
@@ -150,38 +120,23 @@
 
     &--primaryBlue {
       border: 2px solid $primaryBlue;
-      @media ( min-width: 50em ) {
-        margin-right: 1.5em !important;
-        margin-left: 0;
-      }
 
       .content--inner {
-        height: 70%;
+        height: calc( 100% - 8em );
         background: {
           color: rgba( 0, 123, 199, 1 );
           image: none;
         }
       }
-
-      &:hover {
-        border: 2px solid lighten( $primaryBlue, 10% );
-
-
-        .content--inner {
-          /*background-color: rgba( 0, 123, 199, .8 );*/
-        }
-      }
     }
 
     .content--inner {
-      transition: background-color $fastEaseInOut;
-      min-height: 6em;
-      top: auto;
-      bottom: 0;
+      margin-top: 8em;
       padding: 1em 1em 3em 1em;
+      position: relative;
 
        @media ( max-width: 50em ) {
-        height: 100%;
+        margin: 0;
        }
 
       h2,
