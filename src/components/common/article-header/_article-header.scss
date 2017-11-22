@@ -3,7 +3,17 @@
   padding: .5em;
   margin: .25em 0;
 
+  &--part {
+    background: $lightBlue;
+  }
+
+  &--chapter {
+    background: $bgBlue;
+  }
+
+  h2,
   h3,
+  h4,
   p {
     padding: 0;
     margin: 0;

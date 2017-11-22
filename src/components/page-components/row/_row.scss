@@ -30,7 +30,13 @@ $thinBorder: .5em;
     border-top: $fatBorder solid $lighterGrey;
     border-bottom: $fatBorder solid $lighterGrey;
     background-color: $lightGrey;
+
+
   }
+
+  &--before-footer {
+      border-bottom: 0px solid transparent;
+    }
 
   &--highlight {
     border-top: $thinBorder solid $lightBlue;

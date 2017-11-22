@@ -22,6 +22,9 @@
       <h2 class="visually-hidden">Primaire navigatie</h2>
       <ul class="header__primary-nav list list--unstyled">
         <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        <li><a href="#" class="is-active">Eenvoudig zoeken</a></li>
+        <li><a href="#">Uitgebreid zoeken</a></li>
+        <li><a href="#">Zoeken op EU-richtlijn</a></li>
       </ul>
       {{ render "@search" search merge="true" }}
       <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
@@ -62,212 +65,207 @@
 </div>
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    <div class="breadcrumb">
+      <p>U bent hier:</p>
+
+      <ol>
+        <li>Wettenbank</li>
+        <li><a href="#">Zoeken</a></li>
+      </ol>
+    </div>
+
   </div>
 </div>
 
 <div class="container row row--heading">
-  <h1>Zoeken in nationale wet- en regelgeving</h1>
+  <h1>Nationale wet- en regelgeving</h1>
 </div>
 
 <form action="">
-  <div class="container">
 
-    <div class="tabs " data-decorator="init-tabs">
-    <ul class="tabs__list">
-        <li role="presentation">
-            <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1">Eenvoudig zoeken</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Uitgebreid zoeken</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3">Zoeken op EU-richtlijn</a>
-        </li>
-    </ul>
-    <div class="tabs__panels">
-        <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
-          <div class="container columns row">
-            <div>
-              <h2>Kies een soort regeling</h2>
+    <div class="container columns row">
+      <div>
+        <h2>Kies een soort regeling</h2>
 
-              <fieldset class="form__element checkboxgroup ">
-                <legend>Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
-                <label for="option-checkbox-11">
-                  <input type="checkbox" id="option-checkbox-11" name="regelingen" />Verdragen
-                </label>
-                <label for="option-checkbox-12">
-                  <input type="checkbox" id="option-checkbox-12" name="regelingen" />Wetten
-                </label>
-                <label for="option-checkbox-13">
-                  <input type="checkbox" id="option-checkbox-13" name="regelingen" />AMvB's en andere Koninklijke besluiten
-                </label>
-                <label for="option-checkbox-14">
-                  <input type="checkbox" id="option-checkbox-14" name="regelingen" />Ministriële regelingen
-                  <a class="question-explanation-link" href="#question-explanation-11" id="question-explanation-link-11" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
-                  <div class="question-explanation" id="question-explanation-11" data-decorator="hide-self">
-                      <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
-                      <a href="#question-explanation-link-11" class="question-explanation__close" data-handler="close-explanation">
-                      <span class="visually-hidden">
-                        Sluiten
-                      </span>
-                    </a>
-                  </div>
-                </label>
-                <label for="option-checkbox-15">
-                  <input type="checkbox" id="option-checkbox-15" name="regelingen" />Beleidsregels rijksdienst
-                </label>
-                <label for="option-checkbox-16">
-                  <input type="checkbox" id="option-checkbox-16" name="regelingen" />Circulaire rijksdienst
-                </label>
-                <label for="option-checkbox-17">
-                  <input type="checkbox" id="option-checkbox-17" name="regelingen" />Regelingen zelfstandige bestuursorganen (ZBO's)
-                </label>
-                <label for="option-checkbox-18">
-                  <input type="checkbox" id="option-checkbox-18" name="regelingen" />Regelingen publieke organisatie voor beroep en bedrijf
-                </label>
-                <label for="option-checkbox-19">
-                  <input type="checkbox" id="option-checkbox-19" name="regelingen" />Reglementen van de Staten-Generaal
-                </label>
-              </fieldset>
-
-              <fieldset class="form__element checkboxgroup ">
-                <legend>Specifieker zoeken</legend>
-                <label for="option-checkbox-111">
-                  <input type="checkbox" id="option-checkbox-111" name="bes" />Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
-                </label>
-                <label for="option-checkbox-121">
-                  <input type="checkbox" id="option-checkbox-121" name="bes" />Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
-                  <a class="question-explanation-link" href="#question-explanation-111" id="question-explanation-link-111" data-handler="toggle-explanation">Toelichting regelingen BES</a>
-                  <div class="question-explanation" id="question-explanation-111" data-decorator="hide-self">
-                      <p>Door dit aan te vinken, zoekt u alleen binnen de voormalige Antilliaanse regelgeving die is overgenomen door Nederland.</p>
-                      <a href="#question-explanation-link-111" class="question-explanation__close" data-handler="close-explanation">
-                      <span class="visually-hidden">
-                        Sluiten
-                      </span>
-                    </a>
-                  </div>
-                </label>
-
-              <ul>
-                <li><a href="#" rel="external">Europese regelingen (EUR-Lex)</a></li>
-                <li><a href="#" rel="external">Regelingen van provincies, gemeenten, <abbr title="Bonaire, Sint Eustatius en Sint Maarten">BES</abbr>, waterschappen en voormalige Nederlandse Antillen</a></li>
-              </ul>
+        <fieldset class="form__element checkboxgroup ">
+          <legend>Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
+          <label for="option-checkbox-11">
+            <input type="checkbox" id="option-checkbox-11" name="regelingen" />Verdragen
+          </label>
+          <label for="option-checkbox-12">
+            <input type="checkbox" id="option-checkbox-12" name="regelingen" />Wetten
+          </label>
+          <label for="option-checkbox-13">
+            <input type="checkbox" id="option-checkbox-13" name="regelingen" />AMvB's en andere Koninklijke besluiten
+          </label>
+          <label for="option-checkbox-14">
+            <input type="checkbox" id="option-checkbox-14" name="regelingen" />Ministriële regelingen
+            <a class="question-explanation-link" href="#question-explanation-11" id="question-explanation-link-11" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
+            <div class="question-explanation" id="question-explanation-11" data-decorator="hide-self">
+                <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+                <a href="#question-explanation-link-11" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
             </div>
-            <div>
-              <h2>Zoek op woord of zinsdeel</h2>
-              <p>Typ een of meer woorden die exact zo moeten voorkomen in de tekst.</p>
+          </label>
+          <label for="option-checkbox-15">
+            <input type="checkbox" id="option-checkbox-15" name="regelingen" />Beleidsregels rijksdienst
+          </label>
+          <label for="option-checkbox-16">
+            <input type="checkbox" id="option-checkbox-16" name="regelingen" />Circulaire rijksdienst
+          </label>
+          <label for="option-checkbox-17">
+            <input type="checkbox" id="option-checkbox-17" name="regelingen" />Regelingen zelfstandige bestuursorganen (ZBO's)
+          </label>
+          <label for="option-checkbox-18">
+            <input type="checkbox" id="option-checkbox-18" name="regelingen" />Regelingen publieke organisatie voor beroep en bedrijf
+          </label>
+          <label for="option-checkbox-19">
+            <input type="checkbox" id="option-checkbox-19" name="regelingen" />Reglementen van de Staten-Generaal
+          </label>
+        </fieldset>
 
-              <div class="form__element">
-                  <label for="input-1">In de titel</label>
-                  <a class="question-explanation-link" href="#question-explanation-1" id="question-explanation-link-1" data-handler="toggle-explanation">Toelichting zoeken in de titel</a>
-                  <div class="question-explanation" id="question-explanation-1" data-decorator="hide-self">
-                      <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>
-                      <a href="#question-explanation-link-1" class="question-explanation__close" data-handler="close-explanation">
-                      <span class="visually-hidden">
-                        Sluiten
-                      </span>
-                    </a>
-                  </div>
-                  <input type="text" id="input-1" class="input " placeholder="Bijv: Omgevingswet" />
-              </div>
-
-              <div class="form__element checkboxgroup ">
-
-                <label for="option-checkbox-1">
-                  <input type="checkbox" id="option-checkbox-1" name="alliedforces" />Exact zoeken
-                </label>
-
-                <label for="option-checkbox-2">
-                  <input type="checkbox" id="option-checkbox-2" name="alliedforces" />Afkorting of volledige titel
-                </label>
-
-              </div>
-
-              <div class="form__element">
-                  <label for="input-3">In de tekst</label>
-                  <a class="question-explanation-link" href="#question-explanation-2" id="question-explanation-link-2" data-handler="toggle-explanation">Toelichting zoeken in de tekst</a>
-                  <div class="question-explanation" id="question-explanation-2" data-decorator="hide-self">
-                      <p>U zoekt hier op woord(en) in de volledige tekst van de regelingen.</p>
-                      <a href="#question-explanation-link-2" class="question-explanation__close" data-handler="close-explanation">
-                      <span class="visually-hidden">
-                        Sluiten
-                      </span>
-                    </a>
-                  </div>
-                  <input type="text" id="input-3" class="input " placeholder="Bijv: geluidsnorm" />
-              </div>
-
-              <div class="form__element checkboxgroup ">
-
-                <label for="option-checkbox-4">
-                  <input type="checkbox" id="option-checkbox-4" name="alliedforces" />Exact zoeken
-                </label>
-              </div>
-
-              <div class="form__element">
-                  <label for="input-5">Artikelnummer</label>
-                  <input type="text" id="input-5" class="input " placeholder="Bijv: 3.7a" />
-              </div>
-
-              <fieldset class="form__element radiogroup">
-                  <legend>Hoe wilt u zoeken </legend>
-                  <label for="option-6">
-                  <input type="radio" id="option-6" name="presidents" />Artikel
-                </label>
-                  <label for="option-7">
-                  <input type="radio" id="option-7" name="presidents" />Bijlage (niet voor verdragen)
-                </label>
-              </fieldset>
-
-              <h2>Zoek op datum</h2>
-
-              <div class="form__element">
-                  <label for="input--8">Regeling geldig op</label>
-                  <input type="date" class="input " id="input--8" placeholder="Bijv: 06-10-1960" />
-              </div>
-
-              <div class="form__element checkboxgroup ">
-
-                <label for="option-checkbox-5">
-                  <input type="checkbox" id="option-checkbox-5" name="alliedforces" />Ook materieel uitgewerkte regelingen
-                  <a class="question-explanation-link" href="#question-explanation-5" id="question-explanation-link-5" data-handler="toggle-explanation">Toelichting uitgewerkte regellingen</a>
-                  <div class="question-explanation" id="question-explanation-5" data-decorator="hide-self">
-                      <p>Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.</p>
-                      <a href="#question-explanation-link-5" class="question-explanation__close" data-handler="close-explanation">
-                      <span class="visually-hidden">
-                        Sluiten
-                      </span>
-                    </a>
-                  </div>
-                </label>
-              </div>
-
-
-              <input type="submit" class="button" value="Wis scherm" >
-              <input type="submit" class="button button--primary" value="Zoeken" >
-
+        <fieldset class="form__element checkboxgroup ">
+          <legend>Specifieker zoeken</legend>
+          <label for="option-checkbox-111">
+            <input type="checkbox" id="option-checkbox-111" name="bes" />Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
+          </label>
+          <label for="option-checkbox-121">
+            <input type="checkbox" id="option-checkbox-121" name="bes" />Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
+            <a class="question-explanation-link" href="#question-explanation-111" id="question-explanation-link-111" data-handler="toggle-explanation">Toelichting regelingen BES</a>
+            <div class="question-explanation" id="question-explanation-111" data-decorator="hide-self">
+                <p>Door dit aan te vinken, zoekt u alleen binnen de voormalige Antilliaanse regelgeving die is overgenomen door Nederland.</p>
+                <a href="#question-explanation-link-111" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
             </div>
+          </label>
 
-          </div>
-        </div>
-        <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
-            <div class="container columns row">
-            </div>
-        </div>
-        <div id="panel-3" role="tabpanel" aria-labelledby="tab-3">
-            <div class="container columns row">
-            </div>
-        </div>
+        <ul>
+          <li><a href="#" rel="external">Europese regelingen (EUR-Lex)</a></li>
+          <li><a href="#" rel="external">Regelingen van provincies, gemeenten, <abbr title="Bonaire, Sint Eustatius en Sint Maarten">BES</abbr>, waterschappen en voormalige Nederlandse Antillen</a></li>
+        </ul>
       </div>
+
+      <div>
+        <h2>Zoek op woord of zinsdeel</h2>
+        <p>Typ een of meer woorden die exact zo moeten voorkomen in de tekst.</p>
+
+        <div class="form__element">
+            <label for="input-1">In de titel</label>
+            <a class="question-explanation-link" href="#question-explanation-1" id="question-explanation-link-1" data-handler="toggle-explanation">Toelichting zoeken in de titel</a>
+            <div class="question-explanation" id="question-explanation-1" data-decorator="hide-self">
+                <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>
+                <a href="#question-explanation-link-1" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+            <input type="text" id="input-1" class="input " placeholder="Bijv: Omgevingswet" />
+        </div>
+
+        <div class="form__element checkboxgroup ">
+
+          <label for="option-checkbox-1">
+            <input type="checkbox" id="option-checkbox-1" name="alliedforces" />Exact zoeken
+          </label>
+
+          <label for="option-checkbox-2">
+            <input type="checkbox" id="option-checkbox-2" name="alliedforces" />Afkorting of volledige titel
+          </label>
+
+        </div>
+
+        <div class="form__element">
+            <label for="input-3">In de tekst</label>
+            <a class="question-explanation-link" href="#question-explanation-2" id="question-explanation-link-2" data-handler="toggle-explanation">Toelichting zoeken in de tekst</a>
+            <div class="question-explanation" id="question-explanation-2" data-decorator="hide-self">
+                <p>U zoekt hier op woord(en) in de volledige tekst van de regelingen.</p>
+                <a href="#question-explanation-link-2" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+            <input type="text" id="input-3" class="input " placeholder="Bijv: geluidsnorm" />
+        </div>
+
+        <div class="form__element checkboxgroup ">
+
+          <label for="option-checkbox-4">
+            <input type="checkbox" id="option-checkbox-4" name="alliedforces" />Exact zoeken
+          </label>
+        </div>
+
+        <div class="form__element">
+            <label for="input-5">Artikelnummer</label>
+            <input type="text" id="input-5" class="input " placeholder="Bijv: 3.7a" />
+        </div>
+
+        <fieldset class="form__element radiogroup">
+            <legend>Hoe wilt u zoeken </legend>
+            <label for="option-6">
+            <input type="radio" id="option-6" name="presidents" />Artikel
+          </label>
+            <label for="option-7">
+            <input type="radio" id="option-7" name="presidents" />Bijlage (niet voor verdragen)
+          </label>
+        </fieldset>
+
+        <h2>Zoek op datum</h2>
+
+        <div class="form__element">
+            <label for="input--8">Regeling geldig op</label>
+            <input type="date" class="input " id="input--8" placeholder="Bijv: 06-10-1960" />
+        </div>
+
+        <div class="form__element checkboxgroup ">
+
+          <label for="option-checkbox-5">
+            <input type="checkbox" id="option-checkbox-5" name="alliedforces" />Ook materieel uitgewerkte regelingen
+            <a class="question-explanation-link" href="#question-explanation-5" id="question-explanation-link-5" data-handler="toggle-explanation">Toelichting uitgewerkte regellingen</a>
+            <div class="question-explanation" id="question-explanation-5" data-decorator="hide-self">
+                <p>Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.</p>
+                <a href="#question-explanation-link-5" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+          </label>
+        </div>
+
+        <input type="submit" class="button" value="Wis scherm" >
+        <input type="submit" class="button button--primary" value="Zoeken" >
+
+      </div>
+    </div>
 
       <div class="container row">
         <p>De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen heeft een officieel karakter.</p>
       </div>
-    </div>
+
   </div>
 
-
 </form>
+
+<div class="row row--browse row--before-footer">
+  <div class="container columns">
+    <div>
+      <h2>Welke informatie vindt u op deze website?</h2>
+      <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, <a href="#">Provinciale bladen</a>, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
+      <h2>Direct uitgebreid zoeken</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
+    </div>
+    <div>
+      {{ render "@browse" }}
+    </div>
+  </div>
+</div>
 
 {{ render "@footer" }}
