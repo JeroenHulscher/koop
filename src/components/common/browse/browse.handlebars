@@ -4,7 +4,19 @@
   {{#if items }}
   <ul class="browse__list">
     {{#each items }}
-    <li><a href="{{ link }}">{{ text }}{{#if count }}<span class="browse__count">{{ count }} <span class="visually-hidden"> {{ count_context }}</span></span>{{/if}}</a></li>
+    <li>
+      <a href="{{ link }}">
+      {{#if icon }}
+      <img src="../../images/{{ icon }}" alt="" role="presentation" />
+      {{/if}}
+      {{ text }}
+      {{#if count }}
+      <span class="browse__count">
+        {{ count }}
+        <span class="visually-hidden"> {{ count_context }}</span></span>
+      {{/if}}
+      </a>
+    </li>
     {{/each}}
   </ul>
   {{/if}}
