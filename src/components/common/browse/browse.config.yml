@@ -35,11 +35,16 @@ variants:
       items:
         - link: '#'
           text: Authentieke versie
+          icon: icon-download.svg
         - link: '#'
           text: Informatie over de publicatie
+          icon: icon-info.svg
         - link: '#'
           text: Gerelateerde documenten
+          icon: icon-related-docs.svg
         - link: '#'
           text: Printen
+          icon: icon-print.svg
         - link: '#'
           text: Delen
+          icon: icon-share.svg

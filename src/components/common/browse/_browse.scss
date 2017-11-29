@@ -41,5 +41,22 @@
     .browse__list a {
       background-image: none;
     }
+
+    .browse__list a {
+      padding-left: 2em;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 1.25em;
+        height: 1.25em;
+        left: .25em;
+        top: 1.125em;
+      }
+
+      svg {
+        fill: $darkBlue;
+      }
+    }
   }
 }
