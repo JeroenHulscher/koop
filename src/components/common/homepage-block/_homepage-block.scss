@@ -13,6 +13,16 @@
     margin: 0;
     display: inline-block;
     font-size: 1.25em;
+    min-height: 2.5em;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   span {
@@ -33,12 +43,13 @@
 
       a {
         color: $white;
-
-        text-decoration: none;
-
-
+        line-height: 0.5;
         &:hover {
           text-decoration: underline;
+        }
+
+        &[rel="external"] {
+          background-image: $externalLinkWhiteIcon;
         }
       }
     }
@@ -155,6 +166,15 @@
       ul {
         padding: 0;
         padding-left: 1em;
+
+        ul {
+          margin: 0;
+        }
+
+        li {
+          padding: .15em 0;
+          line-height: 1.25;
+        }
       }
 
       .more-link {
