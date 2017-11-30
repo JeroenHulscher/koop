@@ -80,72 +80,83 @@
   </div>
 </div>
 <div class="container row">
-<h1>Faillissementswet</h1>
 
-<div class="article__header--law">
+  <h1>Faillissementswet</h1>
 
-  <ul>
-    <li><a href="#">Versie informatie <span class="visually-hidden">Artikel 2</span></a></li>
-    <li><a href="#">Versie vergelijk <span class="visually-hidden">Artikel 2</span></a></li>
-    <li><a href="#">Relaties <span class="visually-hidden">Artikel 2</span> (11)</a></li>
-    <li><a href="#">Permanente link <span class="visually-hidden">Artikel 2</span></a></li>
-    <li><a href="#">Print <span class="visually-hidden">Artikel 2</span></a></li>
-    <li><a href="#">Bewaar <span class="visually-hidden">Artikel 2</span></a></li>
-  </ul>
-</div>
+  <div class="tabs" data-decorator="init-tabs">
+    <ul class="tabs__list">
+      <li role="presentation"><a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1">Algemeen</a></li>
+      <li role="presentation"><a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Vergelijk</a></li>
+    </ul>
 
-  <h2>Vergelijk versies</h2>
-  <table>
-    <thead>
-      <tr>
-        <td colspan="3"></td>
-        <th scope="col" colspan="3">Ontstaansbron</th>
-        <th scope="col" colspan="2">Inwerkingstreding</th>
-      </tr>
-      <tr>
-        <th colspan="8">
-          <p>Kies twee toestanden van de regeling door deze aan te vinken</p>
-          <button type="button" class="button">Vergelijk twee versies</button>
-        </th>
-      </tr>
-      <tr>
-        <th scope="col">Datum van inwerkingtreding</th>
-        <th scope="col">Terugwerkende kracht</th>
-        <th scope="col">Betreft</th>
-        <th scope="col">Ondertekening</th>
-        <th scope="col">Bekendmaking</th>
-        <th scope="col">Kamerstukken</th>
-        <th scope="col">Ondertekening</th>
-        <th scope="col">Bekendmaking</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-before="Datum van inwerkingtreding">
-          <label><input type="checkbox" name="" /> 01-02-2018</label>
-        </td>
-        <td data-before="Terugwerkende kracht"></td>
-        <td data-before="Betreft">Wijziging</td>
-        <td data-before="Ondertekening">13-07-2016</td>
-        <td data-before="Bekendmaking"><a href="#">Stb. 2016, 290</a></td>
-        <td data-before="Kamerstukken"><a href="#">34212</a></td>
-        <td data-before="Ondertekening">01-05-2017</td>
-        <td data-before="Bekendmaking"><a href="#">Stb. 2017, 174</a></td>
-      </tr>
-      <tr>
-        <td data-before="Datum van inwerkingtreding">
-          <label><input type="checkbox" name="" /> 01-01-2018</label>
-        </td>
-        <td data-before="Terugwerkende kracht"></td>
-        <td data-before="Betreft">Wijziging</td>
-        <td data-before="Ondertekening">13-05-2016</td>
-        <td data-before="Bekendmaking"><a href="#">Stb. 2013, 300</a></td>
-        <td data-before="Kamerstukken"><a href="#">312</a></td>
-        <td data-before="Ondertekening">01-05-2017</td>
-        <td data-before="Bekendmaking"><a href="#">Stb. 2015, 174</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <div class="tabs__panels">
+      <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+        <div class="columns columns--sidebar-left">
+          <div>
+            <h2>Algemene informatie over deze wet</h2>
+            <p>Dit is algemene informatie.</p>
+          </div>
+          <div>
+            <p>Een submenu</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+        <h2>Vergelijk versies</h2>
+        <table>
+          <thead>
+            <tr>
+              <td colspan="3"></td>
+              <th scope="col" colspan="3">Ontstaansbron</th>
+              <th scope="col" colspan="2">Inwerkingstreding</th>
+            </tr>
+            <tr>
+              <th colspan="8">
+                <p>Kies twee toestanden van de regeling door deze aan te vinken</p>
+                <button type="button" class="button">Vergelijk twee versies</button>
+              </th>
+            </tr>
+            <tr>
+              <th scope="col">Datum van inwerkingtreding</th>
+              <th scope="col">Terugwerkende kracht</th>
+              <th scope="col">Betreft</th>
+              <th scope="col">Ondertekening</th>
+              <th scope="col">Bekendmaking</th>
+              <th scope="col">Kamerstukken</th>
+              <th scope="col">Ondertekening</th>
+              <th scope="col">Bekendmaking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-before="Datum van inwerkingtreding">
+                <label><input type="checkbox" name="" /> 01-02-2018</label>
+              </td>
+              <td data-before="Terugwerkende kracht"></td>
+              <td data-before="Betreft">Wijziging</td>
+              <td data-before="Ondertekening">13-07-2016</td>
+              <td data-before="Bekendmaking"><a href="#">Stb. 2016, 290</a></td>
+              <td data-before="Kamerstukken"><a href="#">34212</a></td>
+              <td data-before="Ondertekening">01-05-2017</td>
+              <td data-before="Bekendmaking"><a href="#">Stb. 2017, 174</a></td>
+            </tr>
+            <tr>
+              <td data-before="Datum van inwerkingtreding">
+                <label><input type="checkbox" name="" /> 01-01-2018</label>
+              </td>
+              <td data-before="Terugwerkende kracht"></td>
+              <td data-before="Betreft">Wijziging</td>
+              <td data-before="Ondertekening">13-05-2016</td>
+              <td data-before="Bekendmaking"><a href="#">Stb. 2013, 300</a></td>
+              <td data-before="Kamerstukken"><a href="#">312</a></td>
+              <td data-before="Ondertekening">01-05-2017</td>
+              <td data-before="Bekendmaking"><a href="#">Stb. 2015, 174</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 {{ render "@footer" }}
