@@ -1,0 +1,151 @@
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+              <span>Beleid en regelgeving</span>
+              <span>Wettenbank</span>
+          </p>
+      </div>
+
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+        <a href="#search">Direct zoeken</a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <div class="container">
+      <h2 class="visually-hidden">Primaire navigatie</h2>
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        <li><a href="#">Eenvoudig zoeken</a></li>
+        <li><a href="#">Uitgebreid zoeken</a></li>
+        <li><a href="#">Zoeken op EU-richtlijn</a></li>
+      </ul>
+      {{ render "@search" search merge="true" }}
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+<div class="header__more" id="other-sites">
+  <div class="container">
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank over twee regels</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Verdragenbank</h2>
+      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <ul class="list list--linked">
+        <li><a href="#">Verdragenbank</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row row--page-opener">
+  <div class="container">
+    <div class="breadcrumb">
+      <p>U bent hier:</p>
+
+      <ol>
+        <li>Wettenbank</li>
+        <li><a href="#">Zoeken</a></li>
+        <li><a href="#">Zoekresultaten (2/9774)</a></li>
+        <li><a href="#">Regeling</a></li>
+        <li>Informatie</li>
+      </ol>
+    </div>
+
+  </div>
+</div>
+<div class="container row">
+<h1>Faillissementswet</h1>
+
+<div class="article__header--law">
+
+  <ul>
+    <li><a href="#">Versie informatie <span class="visually-hidden">Artikel 2</span></a></li>
+    <li><a href="#">Versie vergelijk <span class="visually-hidden">Artikel 2</span></a></li>
+    <li><a href="#">Relaties <span class="visually-hidden">Artikel 2</span> (11)</a></li>
+    <li><a href="#">Permanente link <span class="visually-hidden">Artikel 2</span></a></li>
+    <li><a href="#">Print <span class="visually-hidden">Artikel 2</span></a></li>
+    <li><a href="#">Bewaar <span class="visually-hidden">Artikel 2</span></a></li>
+  </ul>
+</div>
+
+  <h2>Vergelijk versies</h2>
+  <table>
+    <thead>
+      <tr>
+        <td colspan="3"></td>
+        <th scope="col" colspan="3">Ontstaansbron</th>
+        <th scope="col" colspan="2">Inwerkingstreding</th>
+      </tr>
+      <tr>
+        <th colspan="8">
+          <p>Kies twee toestanden van de regeling door deze aan te vinken</p>
+          <button type="button" class="button">Vergelijk twee versies</button>
+        </th>
+      </tr>
+      <tr>
+        <th scope="col">Datum van inwerkingtreding</th>
+        <th scope="col">Terugwerkende kracht</th>
+        <th scope="col">Betreft</th>
+        <th scope="col">Ondertekening</th>
+        <th scope="col">Bekendmaking</th>
+        <th scope="col">Kamerstukken</th>
+        <th scope="col">Ondertekening</th>
+        <th scope="col">Bekendmaking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-before="Datum van inwerkingtreding">
+          <label><input type="checkbox" name="" /> 01-02-2018</label>
+        </td>
+        <td data-before="Terugwerkende kracht"></td>
+        <td data-before="Betreft">Wijziging</td>
+        <td data-before="Ondertekening">13-07-2016</td>
+        <td data-before="Bekendmaking"><a href="#">Stb. 2016, 290</a></td>
+        <td data-before="Kamerstukken"><a href="#">34212</a></td>
+        <td data-before="Ondertekening">01-05-2017</td>
+        <td data-before="Bekendmaking"><a href="#">Stb. 2017, 174</a></td>
+      </tr>
+      <tr>
+        <td data-before="Datum van inwerkingtreding">
+          <label><input type="checkbox" name="" /> 01-01-2018</label>
+        </td>
+        <td data-before="Terugwerkende kracht"></td>
+        <td data-before="Betreft">Wijziging</td>
+        <td data-before="Ondertekening">13-05-2016</td>
+        <td data-before="Bekendmaking"><a href="#">Stb. 2013, 300</a></td>
+        <td data-before="Kamerstukken"><a href="#">312</a></td>
+        <td data-before="Ondertekening">01-05-2017</td>
+        <td data-before="Bekendmaking"><a href="#">Stb. 2015, 174</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{ render "@footer" }}
