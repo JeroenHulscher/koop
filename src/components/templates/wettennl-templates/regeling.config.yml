@@ -1,0 +1,32 @@
+---
+title: Regeling
+status: wip
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - text: <a href="#">Veelgestelde vragen</a>
+  actieblok:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        text: Authentieke versie
+        icon: icon-download.svg
+      - link: '#'
+        text: Informatie over de publicatie
+        icon: icon-info-ro.svg
+      - link: '#'
+        text: Gerelateerde documenten
+        icon: icon-related-docs.svg
+      - link: '#'
+        text: Printen
+        icon: icon-print.svg
+      - link: '#'
+        text: Delen
+        icon: icon-share.svg
