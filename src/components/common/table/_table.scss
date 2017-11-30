@@ -35,6 +35,7 @@ table {
   td {
     font-weight: 400;
     min-width: 15%;
+    min-height: 2.5em; /* always have a height, even if field has no content; this is specifically needed on small screens */
   }
 
 
