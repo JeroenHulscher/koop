@@ -54,3 +54,11 @@
     }
   }
 }
+
+.article__header--law  {
+  .collapsible .collapsible__header a {
+    padding: 0 0 0 15px;
+    font-family: $defaultFontStack;
+    font-size: .95em;
+  }
+}
