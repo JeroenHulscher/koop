@@ -69,6 +69,10 @@
           &:hover {
             text-decoration: underline;
           }
+
+          @media ( max-width: 50em ) {
+            display: none;
+          }
         }
       }
     }
