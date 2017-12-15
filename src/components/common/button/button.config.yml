@@ -6,37 +6,30 @@ context:
   action: http://www.google.nl
 variants:
   - name: primary
-    label: Primair
     context:
       text: primaire knop
       modifier: button--primary
   - name: secondary
-    label: Secundair
     context:
       text: Secundaire knop
       modifier: button--secondary
   - name: small
-    label: Klein
     context:
       text: Kleine knop
       modifier: button--smaller
   - name: large
-    label: Groot
     context:
       text: Grote knop
       modifier: button--larger
   - name: icon right
-    label: icon rechts
     context:
       text: Icoon rechts
       modifier: button--icon-right
   - name: icon left
-    label: icon links
     context:
       text: Icoon links
       modifier: button--icon-left
   - name: icon top
-    label: icon top
     context:
       text: Icoon top
       modifier: button--icon-top

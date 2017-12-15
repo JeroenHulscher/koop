@@ -4,13 +4,13 @@ context:
     modifier: icon--overheid
 variants:
   - name: download icon
-    label: download icoon
+    label: download icon
     context:
-      text: Download icoon
+      text: Download icon
       modifier: icon--download
   - name: remove icon
-    label: remove icoon
+    label: remove icon
     context:
-      text: Verwijderen icoon
+      text: Verwijderen icon
       modifier: icon--remove
 

@@ -1,4 +1,4 @@
-label: Lijst
+label: List
 context:
   items:
     - text: 1e item
@@ -10,7 +10,6 @@ context:
     - text: 4e item
 variants:
   - name: ordered
-    label: geordend
     context:
       orderedList: true
       items:
@@ -27,7 +26,6 @@ variants:
         - text: Elfde item
         - text: Laatste item
   - name: unstyled
-    label: ongestijld
     context:
       modifier: list--unstyled
       items:
@@ -36,7 +34,6 @@ variants:
         - text: 3e item
         - text: 4e item
   - name: linklist
-    label: linklijst
     context:
       modifier: list--linked
       items:
@@ -45,7 +42,6 @@ variants:
         - text: <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
         - text: <a href="#">4e item</a>
   - name: facetlist
-    label: facetten
     context:
       modifier: list--facet
       heading: Eerste categorie
@@ -55,7 +51,7 @@ variants:
         - text: <a href="#">3e facet&nbsp;(0)</a>
         - text: <a href="#">4e facet&nbsp;(0)</a>
   - name: relationlist
-    label: relaties
+    status: prototype
     context:
       modifier: list--relations
       items:
