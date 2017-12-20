@@ -2,3 +2,26 @@
 name: homepage A-variant
 label: Homepage A-variant
 status: ready
+context:
+  headerContext:
+    metaLinks:
+      url: '#'
+      text: MijnOverheid.nl
+  homepageBlock1:
+    image: '../../images/temp/homepage-indebuurt.jpg'
+    heading: <a href="#">Aankondigingen over<br />uw buurt</a>
+    subtitle: Zoals bouwplannen en evenementen.
+    items:
+      - url: '#'
+        text: Aankondigingen over uw buurt
+      - url: '#'
+        text: Abonneren op aankondigingen over uw buurt
+  homepageBlock2:
+    image: '../../images/temp/homepage-diensten.jpg'
+    heading: <a href="#">Dienstverlening</a>
+    subtitle: Zoals belastingen, uitkeringen en subsidies.
+    items:
+      - url: '#'
+        text: Particulieren
+      - url: '#'
+        text: Ondernemersplein

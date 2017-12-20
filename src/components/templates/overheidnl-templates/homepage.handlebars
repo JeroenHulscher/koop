@@ -1,101 +1,16 @@
-<header class="header">
+{{ render "@header" headerContext merge="true" }}
 
-  <div class="header__start">
-    <div class="container">
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
-      <div class="logo ">
-          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
-          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
-              <span>Beleid en regelgeving</span>
-              <span>Wettenbank</span>
-          </p>
-      </div>
-
-      <div class="skiplinks">
-        <a href="#content">Direct naar content</a>
-        <a href="#search">Direct zoeken</a>
-      </div>
-
-      <div class="header__meta">
-        <a href="#" class="">MijnOverheid.nl</a>
-      </div>
-
-    </div>
-  </div>
-  <nav class="header__nav header__nav--closed" id="nav">
-    <div class="container">
-      <h2 class="visually-hidden">Primaire navigatie</h2>
-      <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
-      </ul>
-      {{ render "@search" search merge="true" }}
-      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
-    </div>
-  </nav>
-</header>
-<div class="header__more" id="other-sites">
-  <div class="container">
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank over twee regels</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
   </div>
 </div>
 
-
 <div class="container row">
   <div class="columns columns--homepage-tiles">
 
-    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-indebuurt.jpg);">
-      <div class="content--inner">
-        <h2><a href="#">Aankondigingen over<br />uw buurt</a></h2>
-        <span>Zoals bouwplannen en evenementen.</span>
-         <ul>
-          <li><a href="#">Aankondigingen over uw buurt</a></li>
-          <li><a href="#">Abonneren op aankondigingen over uw buurt</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-diensten.jpg);">
-      <div class="content--inner">
-        <h2><a href="#">Dienstverlening</a></h2>
-        <span>Zoals belastingen, uitkeringen en subsidies.</span>
-        <ul>
-          <li><a href="#">Particulieren</a></li>
-          <li><a href="#" rel="external">Ondernemersplein</a></li>
-        </ul>
-      </div>
-    </div>
+    {{ render "@homepage-block--related" homepageBlock1 merge="true" }}
+    {{ render "@homepage-block--related" homepageBlock2 merge="true" }}
 
     <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-beleid.jpg);">
       <div class="content--inner">
@@ -116,21 +31,7 @@
       </div>
     </div>
 
-    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-overheidsinformatie.jpg);">
-      <div class="content--inner">
-        <h2><a href="#">Contactgegevens Overheden</a></h2>
-        <span>Adressen en contactpersonen van Overheidsorganisaties.</span>
-        <ul>
-          <li><a href="#">In uw regio</a></li>
-          <li><a href="#">Gemeenten</a></li>
-          <li><a href="#">Provincies</a></li>
-          <li><a href="#">Waterschappen</a></li>
-          <li><a href="#">Ministeries</a></li>
-          <li><a href="#">Alle overheden</a></li>
-        </ul>
-      </div>
-    </div>
-
+    {{ render "@homepage-block--related" homepageBlock4 merge="true" }}
   </div>
 
 </div>

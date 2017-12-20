@@ -2,17 +2,25 @@
 
   <div class="header__start">
     <div class="container">
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
       {{> @logo }}
 
+      {{#if skipLinks }}
       <div class="skiplinks">
-        <a href="#content">Direct naar content</a>
-        <a href="#search">Direct zoeken</a>
+        {{#each skipLinks }}
+        <a href="{{ url }}">{{ text }}</a>
+        <a href="{{ url }}">{{ text }}</a>
+        {{/each}}
       </div>
+      {{/if}}
 
+      {{#if metaLinks }}
       <div class="header__meta">
-        <a href="#" class="">MijnOverheid.nl</a>
+        {{#each metaLinks }}
+        <a href="{{ url }}" class="">{{ text }}</a>
+        {{/each}}
       </div>
+      {{/if}}
     </div>
   </div>
   <nav class="header__nav header__nav--closed" id="nav">
@@ -22,39 +30,28 @@
         <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
       </ul>
       {{ render "@search" search merge="true" }}
+      {{#if headerMore }}
       <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+      {{/if}}
     </div>
   </nav>
 </header>
+{{#if headerMore }}
 <div class="header__more" id="other-sites">
   <div class="container">
+    {{#each headerMore }}
     <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+      {{#if links }}
       <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
+        {{#each links }}
+        <li><a href="{{ url }}">{{ text}}</a></li>
+        {{/each}}
       </ul>
+      {{/if}}
     </div>
-    <div>
-      <h2>Verdragenbank over twee regels</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
+    {{/each}}
   </div>
 </div>
+{{/if}}
