@@ -1,6 +1,7 @@
 ---
-title: theme lijst
-label: Themalijst
+title: theme list
+label: Theme list
+status: prototype
 context:
   heading: Thema lijst
   items:
