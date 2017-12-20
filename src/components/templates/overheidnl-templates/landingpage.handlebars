@@ -1,171 +1,40 @@
-<header class="header">
+{{ render "@header" headerContext merge="true" }}
 
-  <div class="header__start">
-    <div class="container">
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
-      <div class="logo ">
-          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
-          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
-              <span>Beleid en regelgeving</span>
-              <span>Overzichtspagina</span>
-          </p>
-      </div>
-
-      <div class="skiplinks">
-        <a href="#content">Direct naar content</a>
-        <a href="#search">Direct zoeken</a>
-      </div>
-    </div>
-  </div>
-  <nav class="header__nav header__nav--closed" id="nav">
-    <div class="container">
-      <h2 class="visually-hidden">Primaire navigatie</h2>
-      <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
-      </ul>
-      {{ render "@search" search merge="true" }}
-      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
-    </div>
-  </nav>
-</header>
-<div class="header__more" id="other-sites">
-  <div class="container">
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank over twee regels</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
   </div>
 </div>
-<div class="row row--image row--landing" style="background-image: url(../../images/temp/homepage-beleid.jpg);">
 
+{{#each rowLanding }}
+<div class="row row--image row--landing" style="background-image: url({{ image }});">
   <div class="container">
     <div class="content--onimage">
-      <h1>Beleid &amp; Regelgeving</h1>
-
-      <p class="intro--text">
-        Hier bekijkt u publicaties omtrent beleid, wet- en regelgeving.
-      </p>
+      <h1>{{ title }}</h1>
+      <p class="intro--text">{{ intro }}</p>
     </div>
   </div>
-
 </div>
+{{/each}}
+
 <div class="row">
-
   <div class="container">
-
+  {{#each linkSetGroup }}
     <div class="columns">
-
+      {{#each linkSet }}
       <div>
-        <h2>Beleidsonderzoek</h2>
-
+        <h2>{{ title }}</h2>
+        {{#if links }}
         <ul class="list--linked">
-          <li><a href="https://www.wrr.nl">Wetenschappelijke Raad voor het Regeringsbeleid (WRR) </a></li>
-          <li><a href="https://www.cpb.nl/">Centraal Planbureau (CPB) </a></li>
-          <li><a href="https://www.scp.nl/">Sociaal en Cultureel Planbureau (SCP)</a></li>
-          <li><a href="https://www.cbs.nl">Centraal Bureau voor de Statistiek (CBS)</a></li>
-          <li><a href="https://www.wodc.nl">Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC)</a></li>
-          <li><a href="https://www.pbl.nl/">Planbureau voor de Leefomgeving (PBL)</a></li>
-          <li><a href="https://www.arbeidenoverheid.nl/">Kennisbank Arbeidszaken Publieke Sector (KAPS)</a></li>
+        {{#each links }}
+          <li><a href="{{ url }}">{{ text }}</a></li>
+        {{/each}}
         </ul>
+        {{/if}}
       </div>
-      <div>
-        <h2>Advies en besluitvorming</h2>
-        <ul class="list--linked">
-          <li><a href="http://internetconsultatie.overheid.nl">Internetconsultatie</a></li>
-          <li><a href="http://www.raadvanstate.nl/adviezen.html">Adviezen Raad van State</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/parlementaire_documenten">Parlementaire documenten (bijvoorbeeld Kamervragen, Kamerstukken)</a></li>
-          <li><a href="http://almanak.overheid.nl/categorie/53/Adviescolleges/">Meer adviesorganen</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Bekendmaking</h2>
-        <ul class="list--linked">
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/staatsblad">Staatsblad (landelijk)</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/staatscourant">Staatscourant (landelijk)</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/tractatenblad">Tractatenblad (landelijk)</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/gemeenteblad">Gemeenteblad</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/provinciaal_blad">Provinciaal blad</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/waterschapsblad">Waterschapsblad</a></li>
-          <li><a href="https://zoek.officielebekendmakingen.nl/zoeken/blad_gemeenschappelijke_regeling">Blad gemeenschappelijke regeling</a></li>
-          <li><a href="https://www.officielebekendmakingen.nl">Officiële bekendmakingen vandaag</a></li>
-          <li><a href="https://zoek.overheid.nl/berichten_over_uw_buurt_eenvoudig_zoeken">Publicaties op websites van gemeenten, provincies, waterschappen en regionale samenwerkingsverbanden</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Wet- en regelgeving</h2>
-        <ul class="list--linked">
-          <li><a href="http://eur-lex.europa.eu/collection/eu-law.html">Europees </a> </li>
-          <li><a href="http://wetten.overheid.nl">Landelijk</a></li>
-          <li><a href="https://wetgevingskalender.overheid.nl/">Wetgevingskalender</a></li>
-          <li><a href="http://zoekdienst.overheid.nl/ictu_website/CVDR/CVDRZoeken.aspx?searchtype=Simple&amp;connection=CVDR">Plaatselijk (gemeente, provincie, waterschap, regionaal samenwerkingsverband)</a> </li>
-          <li><a href="http://www.ruimtelijkeplannen.nl">Ruimtelijkeplannen.nl </a> </li>
-        </ul>
-      </div>
-
+      {{/each}}
     </div>
-
-    <div class="columns">
-
-      <div>
-        <h2>Uitvoering</h2>
-
-        <ul class="list--linked">
-          <li><a href="http://wetten.overheid.nl">Landelijk (beleidsregels, circulaires, uitvoeringsaanwijzingen)</a></li>
-          <li><a href="http://www.overheid.nl/overheidsinformatie/vergunningen">Plaatselijke vergunningen</a></li>
-          <li><a href="http://vergunningenbank.overheid.nl/natuurbeschermingswet">Vergunningen Natuurbeschermingswet</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Klachten en rechtspraak</h2>
-        <ul class="list--linked">
-          <li><a href="http://mensenrechten.nl/publicaties/oordelen">College voor de Rechten van de Mens </a> </li>
-          <li><a href="http://www.nationaleombudsman.nl/">Nationale ombudsman </a> </li>
-          <li><a href="http://www.rechtspraak.nl">Rechtspraak.nl </a> </li>
-          <li> <a href="http://tuchtrecht.overheid.nl/nieuw">Tuchtrecht</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Toezicht</h2>
-        <ul class="list--linked">
-          <li class="extern"> <a href="http://www.inspectieloket.nl">Inspectieloket </a> </li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Hoe werkt de overheid</h2>
-      </div>
-
-    </div>
+  {{/each}}
   </div>
 </div>
 

@@ -1,10 +1,15 @@
 label: Homepage block
 default: Hoe-blok
 context:
-  modifier: related
-  color: related--primaryBlue
-  heading: In de buurt
-  subtitle: Alle belangrijke zaken bij u in de buurt
-  blockLink: #
-
-
+  heading: Hoe werkt democratie
+  image: /images/temp/homepage-block-bg.png
+  blockLink: http://www.google.nl
+variants:
+  - name: related
+    label: Gerelateerd
+    context:
+      modifier: related
+      color: related--primaryBlue
+      heading: In de buurt
+      subtitle: Alle belangrijke zaken bij u in de buurt
+      blockLink: #

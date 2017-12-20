@@ -3,3 +3,31 @@ status: ready
 context:
   file: logo.svg
   alt: Overheid.nl logo
+  hamburgerButtonText: Menu
+  skipLinks:
+    - url: '#content'
+      text: Direct naar content
+    - url: '#search'
+      text: Direct zoeken
+  headerMore:
+    - title: Verdragenbank
+      description: De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.
+      links:
+        - url: '#'
+          text: Verdragenbank
+    - title: Verdragenbank over twee regels
+      description: De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.
+      links:
+        - url: '#'
+          text: Verdragenbank
+    - title: Verdragenbank over twee regels
+      description: De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.
+      links:
+        - url: '#'
+          text: Verdragenbank
+    - title: Verdragenbank over twee regels
+      description: De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.
+      links:
+        - url: '#'
+          text: Verdragenbank
+
