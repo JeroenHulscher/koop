@@ -38,7 +38,10 @@ table {
     min-height: 2.5em; /* always have a height, even if field has no content; this is specifically needed on small screens */
   }
 
-
+  tbody tr.current td,
+  tbody tr.current th {
+    background: $mediumBlue;
+  }
 
   &.table--condensed {
     tr td,
