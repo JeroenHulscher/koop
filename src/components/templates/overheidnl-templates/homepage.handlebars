@@ -8,29 +8,9 @@
 
 <div class="container row">
   <div class="columns columns--homepage-tiles">
-
     {{ render "@homepage-block--related" homepageBlock1 merge="true" }}
     {{ render "@homepage-block--related" homepageBlock2 merge="true" }}
-
-    <div class="homepageblock related related--primaryBlue" style="background-image: url(../../images/temp/homepage-beleid.jpg);">
-      <div class="content--inner">
-        <h2><a href="#">Beleid &amp; Regelgeving</a></h2>
-        <span>Officiële publicaties van de Overheid.</span>
-        <ul>
-          <li>Wettenbank
-            <ul>
-              <li><a href="#"><span class="visually-hidden">Wetten</span> nationaal</a></li>
-              <li><a href="#"><span class="visually-hidden">Wetten</span> lokaal</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Bekendmakingen</a></li>
-          <li><a href="#">Parlementaire stukken</a></li>
-          <li><a href="#">Internetconsultatie</a></li>
-          <li><a href="#">Alle beleid &amp; regelgeving</a></li>
-        </ul>
-      </div>
-    </div>
-
+    {{ render "@homepage-block--related" homepageBlock3 merge="true" }}
     {{ render "@homepage-block--related" homepageBlock4 merge="true" }}
   </div>
 
