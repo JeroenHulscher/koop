@@ -1,92 +1,61 @@
 {{ render "@header" header merge=true }}
+
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
   </div>
 </div>
-<div class="row row--image" style="background-image: url(../../images/temp/homepage-block-bg2.png);">
 
+{{#each rowImage }}
+<div class="row row--image row--landing" style="background-image: url({{ image }});">
   <div class="container">
     <div class="content--onimage">
-      <h1>Welkom op Overheid.nl</h1>
-
-      <p class="intro--text">
-        De website Overheid.nl is de wegwijzer naar informatie en diensten van alle overheidsorganisaties in Nederland.
-      </p>
+      <h1>{{ title }}</h1>
+      <p class="intro--text">{{ intro }}</p>
     </div>
   </div>
-
 </div>
+{{/each}}
+
+{{#each highlights }}
 <div class="row row--highlight">
-
   <div class="container">
-
     <div class="columns">
+      {{#each linkSet }}
       <div>
-        <h2>In de buurt</h2>
-        <p>Hier vindt u berichtgeving, die betrekking heeft op uw buurt</p>
+        <h2>{{ title }}</h2>
+        <p>{{ intro }}</p>
+        {{#if links }}
         <ul>
-          <li><a href="#">Officiele bekendmakingen</a></li>
-          <li><a href="#">Plaatselijke regelgeving</a></li>
+        {{#each links }}
+          <li><a href="{{ url }}">{{ text }}</a></li>
+        {{/each}}
         </ul>
+        {{/if}}
       </div>
-      <div>
-        <h2>Diensten</h2>
-        <p>Diensten van de Overheid voor particulieren en ondernemers.</p>
-        <ul>
-          <li><a href="#">Diensten</a></li>
-      </div>
-      <div>
-        <h2>Beleid &amp; Regelgeving</h2>
-        <p>Hier bekijkt u publicaties omtrent beleid, wet- en regelgeving.</p>
-        <ul>
-          <li><a href="#">Wettenbank</a></li>
-          <li><a href="#">Open data</a></li>
-          <li><a href="#">Staatscourant</a></li>
-          <li><a href="#">Overige producten en diensten</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Contactgegevens Overheden</h2>
-        <p>Hier vindt u informatie en contactgegevens van de Overheid.</p>
-
-        <ul>
-          <li><a href="#">Gemeenten</a></li>
-          <li><a href="#">Provincies</a></li>
-          <li><a href="#">Waterschappen</a></li>
-          <li><a href="#">Overige instellingen</a></li>
-        </ul>
-      </div>
+      {{/each}}
     </div>
   </div>
 </div>
+{{/each}}
+
+{{#each subjects  }}
 <div class="row container">
-    <h2>Zoeken op onderwerp</h2>
-    <div class="columns">
+  <h2>{{ title }}</h2>
+  <div class="columns">
+    {{#each linkSet }}
+    <div>
+      {{#if links }}
       <ul class="list list--linked">
-        <li><a href="#">Belastingen, uitkeringen en toeslagen</a></li>
-        <li><a href="#">Buitenland: werken, wonen en reizen</a></li>
-        <li><a href="#">Consumentenzaken</a></li>
+      {{#each links }}
+        <li><a href="{{ url }}">{{ text }}</a></li>
+      {{/each}}
       </ul>
-      <ul class="list list--linked">
-        <li><a href="#">Immigratie, inburgering en integratie</a></li>
-        <li><a href="#">Natuur en milieu</a></li>
-        <li><a href="#">Ondernemen</a></li>
-        <li><a href="#">Familie, jeugd en gezin</a></li>
-      </ul>
-      <ul class="list list--linked">
-        <li><a href="#">Rechtspraak en veiligheid</a></li>
-        <li><a href="#">Verkeer, voertuigen en wegen</a></li>
-        <li><a href="#">Werk en loopbaan</a></li>
-        <li><a href="#">Overheid en democratie</a></li>
-      </ul>
-      <ul class="list list--linked">
-        <li><a href="#">Wonen en leefomgeving</a></li>
-        <li><a href="#">Zorg en gezondheid</a></li>
-        <li><a href="#">Onderwijs</a></li>
-        <li><a href="#">Cultuur, sport en vrije tijd</a></li>
-      </ul>
+      {{/if}}
+    </div>
+    {{/each}}
   </div>
 </div>
+{{/each}}
 
 {{ render "@footer" }}

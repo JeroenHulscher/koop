@@ -2,3 +2,76 @@
 title: Homepage B-variant
 label: Homepage B-variant
 status: ready
+context:
+  rowImage:
+    - image: '../../images/temp/homepage-block-bg2.png'
+      title: Welkom op Overheid.nl
+      intro: De website Overheid.nl is de wegwijzer naar informatie en diensten van alle overheidsorganisaties in Nederland.
+  highlights:
+  - linkSet:
+    - title: In de buurt
+      intro: Hier vindt u berichtgeving, die betrekking heeft op uw buurt
+      links:
+        - url: '#'
+          text: Officiele bekendmakingen
+        - url: '#'
+          text: Plaatselijke regelgeving
+    - title: Diensten
+      intro: Hier bekijkt u publicaties omtrent beleid, wet- en regelgeving.
+      links:
+        - url: '#'
+          text: Wettenbank
+        - url: '#'
+          text: Open data
+        - url: '#'
+          text: Staatscourant
+        - url: '#'
+          text: Overige producten en diensten
+    - title: Contactgegevens overheden
+      intro: Hier vindt u informatie en contactgegevens van de Overheid.
+      links:
+        - url: '#'
+          text: Gemeenten
+        - url: '#'
+          text: Provincies
+        - url: '#'
+          text: Waterschappen
+        - url: '#'
+          text: Overige instellingen
+  subjects:
+  - title: Zoeken op onderwerp
+    linkSet:
+    - links:
+      - url: '#'
+        text: Belastingen, uitkeringen en toeslagen
+      - url: '#'
+        text: 'Buitenland: werken, wonen en reizen'
+      - url: '#'
+        text: Consumentenzaken
+    - links:
+      - url: '#'
+        text: Immigratie, inburgering en integratie
+      - url: '#'
+        text: Natuur en milieu
+      - url: '#'
+        text: Ondernemen
+      - url: '#'
+        text: Familie, jeugd en gezin
+    - links:
+      - url: '#'
+        text: Rechtspraak en veiligheid
+      - url: '#'
+        text: Verkeer, voertuigen en wegen
+      - url: '#'
+        text: Werk en loopbaan
+      - url: '#'
+        text: Overheid en democratie
+    - links:
+      - url: '#'
+        text: Wonen en leefomgeving
+      - url: '#'
+        text: Zorg en gezondheid
+      - url: '#'
+        text: Onderwijs
+      - url: '#'
+        text: Cultuur, sport en vrije tijd
