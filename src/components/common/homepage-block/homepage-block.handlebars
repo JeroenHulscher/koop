@@ -2,7 +2,7 @@
 
     <div class="content--inner">
 
-      <h2>{{ heading }}</h2>
+      <h2>{{{ heading }}}</h2>
 
       {{#if subtitle }}
         <span>{{ subtitle }}</span>
@@ -11,7 +11,29 @@
       {{#if items }}
         <ul>
           {{#each items }}
-            <li><a href="#">{{{ text }}}</a></li>
+            <li>
+              {{#if url }}
+              <a href="{{ url }}">
+              {{/if}}
+              {{{ text }}}
+              {{#if subItems }}
+              {{#each subItems }}
+              <ul>
+                <li>
+                  {{#if url }}
+                  <a href="{{ url }}">
+                  {{/if}}
+                  {{{ text }}}
+                  {{#if url }}
+                  </a>
+                  {{/if}}
+              </ul>
+              {{/each}}
+              {{/if}}
+              {{#if url }}
+              </a>
+              {{/if}}
+            </li>
           {{/each }}
         </ul>
       {{/if }}
@@ -19,6 +41,10 @@
       {{#if contextLinkText }}
         <a href="{{ contextLink }}" class="context-Link">{{ contextLinkText }}</a>
       {{/if }}
+
+      {{#if content }}
+        {{ content }}
+      {{/if}}
 
     </div>
 
