@@ -1,11 +1,11 @@
 title: Link
-default: intern
+default: internal
 context:
   text: link
   action: /link/intern/
 variants:
   - name: extern
-    label: extern
+    label: External
     context:
       text: externe link
       typeVariant: 'rel="external"'

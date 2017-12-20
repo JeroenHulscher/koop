@@ -24,6 +24,6 @@ variants:
         - id: 3
           label: Berichten over uw buurt
           content: <h2>Berichten over uw buurt</h2><p>Zoek in berichten en bekendmakingen van voornamelijk gemeenten, provincies en waterschappen.</p>
-  - name: Met buttons
+  - name: With buttons
     context:
       hasButtons: true
