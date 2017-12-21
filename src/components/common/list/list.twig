@@ -1,0 +1,19 @@
+{% if heading %}
+  <h4 class="facet--heading">{{ heading }}</h4>
+{% endif %}
+
+{% include 'common/well/well.twig' %}
+
+{% if orderedList %}
+  <ol class="{{ modifier }}">
+{% else %}
+  <ul class="{{ modifier }}">
+{% endif %}
+{% for item in items %}
+    <li>{{ item }}</li>
+{% endfor %}
+{% if orderedList %}
+  </ol>
+{% else %}
+  </ul>
+{% endif %}
