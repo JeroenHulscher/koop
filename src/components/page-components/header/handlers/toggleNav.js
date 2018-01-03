@@ -6,6 +6,7 @@ module.exports = function toggleNav( element ) {
   if ( element.getAttribute( 'aria-expanded' ) === 'false' ) {
     nav.classList.remove( closedClass );
     element.setAttribute( 'aria-expanded', 'true' );
+    ui.focus( nav );
   }
   else {
     nav.classList.add( closedClass );
