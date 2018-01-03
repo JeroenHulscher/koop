@@ -57,9 +57,12 @@
     }
 
     .header__meta {
-      position: absolute;
-      right: 1em;
-      top: .5em;
+
+      @media ( min-width: 50em ) {
+        position: absolute;
+        right: 1em;
+        top: .5em;
+      }
 
       a {
         text-decoration: none;
