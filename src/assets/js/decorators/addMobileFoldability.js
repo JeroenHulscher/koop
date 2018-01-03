@@ -3,10 +3,9 @@ var toggle = require( 'handlers/toggleSidebar' );
 
 module.exports = function addMobileFoldability( element ) {
   var button = document.createElement( 'button' );
-  var title = ' ' + dom.$( 'h2', element )[0].textContent || '';
   var labels = {
-    open: 'Open' + title,
-    close: 'Sluit' + title
+    open: 'Open sidebar',
+    close: 'Sluit sidebar'
   };
 
   // set data to button
