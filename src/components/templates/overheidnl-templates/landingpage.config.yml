@@ -5,8 +5,8 @@ status: ready
 context:
   headerContext:
     metaLinks:
-      url: '#'
-      text: MijnOverheid.nl
+      - url: '#'
+        text: MijnOverheid.nl
   rowLanding:
     - image: '../../images/temp/homepage-beleid.jpg'
       title: Beleid & Regelgeving
