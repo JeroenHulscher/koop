@@ -46,8 +46,6 @@
       padding: 1em;
     }
 
-
-
     button {
       float: right;
       position: relative;
@@ -56,19 +54,19 @@
 
     .container {
       position: relative;
+    }
 
-      .header__meta {
-        position: absolute;
-        right: 1em;
-        top: .5em;
+    .header__meta {
+      position: absolute;
+      right: 1em;
+      top: .5em;
 
-        a {
-          text-decoration: none;
-          font-weight: 700;
+      a {
+        text-decoration: none;
+        font-weight: 700;
 
-          &:hover {
-            text-decoration: underline;
-          }
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
