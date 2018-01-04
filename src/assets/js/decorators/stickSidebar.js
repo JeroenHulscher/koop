@@ -5,7 +5,7 @@ var getScrollY = function() {
   var isCSS1Compat = ( ( document.compatMode || '' ) === 'CSS1Compat' );
 
   return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
-}
+};
 
 var updateStickability = function( element, footer ) {
   var footerOffset = footer.getBoundingClientRect();
@@ -31,7 +31,7 @@ var updateStickability = function( element, footer ) {
   window.requestAnimationFrame( function() {
     updateStickability( element, footer );
   });
-}
+};
 
 var stickSidebar = function( element ) {
   var footer = dom.$( '.footer' )[0];
@@ -46,11 +46,11 @@ var stickSidebar = function( element ) {
     window.setTimeout( function() {
       element.referenceTop = element.getBoundingClientRect().top + getScrollY();
     }, 500 );
-  })
+  });
 
   window.addEventListener( 'othersites:close', function() {
     element.referenceTop = element.getBoundingClientRect().top + getScrollY();
-  })
+  });
 };
 
 module.exports = stickSidebar;

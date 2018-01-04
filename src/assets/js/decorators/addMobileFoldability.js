@@ -1,4 +1,3 @@
-var dom = require( 'helpers/dom' );
 var toggle = require( 'handlers/toggleSidebar' );
 
 module.exports = function addMobileFoldability( element ) {
@@ -23,7 +22,7 @@ module.exports = function addMobileFoldability( element ) {
   element.before( button );
 
   // apply first time
-  if ( ! ( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
+  if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
     toggle( button );
   }
 };
