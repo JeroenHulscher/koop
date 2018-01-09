@@ -1,21 +1,25 @@
 <div class="well">
 
-  <fieldset class="form__element">
+  <form>
 
-    <legend class="form--intro">Inloggen</legend>
+    <fieldset class="form__element">
 
-    {{ render "@input-text" loginField merge=true }}
+      <legend class="form--intro">Inloggen</legend>
 
-    {{ render "@input-text" passwordField merge=true }}
+      {{ render "@input-text" loginField merge=true }}
 
-  </fieldset>
+      {{ render "@input-text" passwordField merge=true }}
 
-  {{ render "@button--secondary" submitButton merge=true }}
+    </fieldset>
 
-  <ul class="form--options pull-right">
-    <li><a href="/berichten_over_uw_buurt_registreren">Registreer bij Naam service</a></li>
-    <li><a href="/berichten_over_uw_buurt_ww_vergeten">Wachtwoord vergeten</a></li>
-  </ul>
+    {{ render "@button--secondary" submitButton merge=true }}
+
+    <ul class="form--options pull-right">
+      <li><a href="/berichten_over_uw_buurt_registreren">Registreer bij Naam service</a></li>
+      <li><a href="/berichten_over_uw_buurt_ww_vergeten">Wachtwoord vergeten</a></li>
+    </ul>
+
+  </form>
 
 </div>
 
