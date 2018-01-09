@@ -16,6 +16,7 @@
   "dependencies": {
     "@frctl/fractal": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",
+    "@frctl/twig": "^1.0.0-beta.2",
     "autoprefixer": "^6.4.1",
     "browserify": "^14.3.0",
     "combobo": "1.0.2",
