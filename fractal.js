@@ -10,10 +10,9 @@ const myCustomisedTheme = mandelbrot({
 });
 
 fractal.set( 'project.title', 'KOOP componentenbibliotheek' );
-fractal.components.set( 'path', `${__dirname}/src/components` );
+fractal.components.set( 'path', `${__dirname}/src/@koop-components` );
 fractal.components.set( 'default.preview', '@preview.default' );
 fractal.components.set( 'ext', '.handlebars' );
-fractal.docs.set( 'path', `${__dirname}/src/docs` );
 fractal.web.set( 'builder.dest', `${__dirname}/component-library` );
 fractal.web.set( 'static.path', `${__dirname}/public` );
 fractal.web.theme(myCustomisedTheme);

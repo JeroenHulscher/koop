@@ -16,7 +16,7 @@ const paths = {
   scripts : 'src/assets/js',
   fonts : 'src/assets/fonts',
   images : 'src/assets/images',
-  components: 'src/components',
+  components: 'src/@koop-components',
   allSrc: 'src',
   drop : 'public'
 };
