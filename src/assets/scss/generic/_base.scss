@@ -83,6 +83,10 @@ body {
   color: $darkGrey;
 }
 
+a img {
+  border: 0;
+}
+
 [hidden] {
   display: none;
 }
