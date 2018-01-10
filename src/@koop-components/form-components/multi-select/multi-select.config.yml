@@ -1,6 +1,6 @@
 ---
 label: Multi select
-status: wip
+status: prototype
 context:
   id: 1
   fieldLabel: Zoeken in verzamelingen
