@@ -10,7 +10,7 @@
   legend {
     font-weight: 700;
 
-    &.form--intro {
+    &.form__intro {
       font-size: 1.25em;
       color: $darkBlue;
     }
@@ -123,7 +123,7 @@
   }
 }
 
-.form--options {
+.form__options {
   line-height: .5;
 
   li {
