@@ -1,0 +1,23 @@
+<div class="actionblock">
+  {{#if title }}<h2>{{ title }}</h2>{{/if}}
+  {{#if intro }}<p>{{ intro }}</p>{{/if}}
+  {{#if items }}
+  <ul class="actionblock__list">
+    {{#each items }}
+    <li>
+      <a href="{{ link }}">
+      {{#if icon }}
+      <img src="../../images/{{ icon }}" alt="" role="presentation" />
+      {{/if}}
+      {{ text }}
+      {{#if count }}
+      <span class="browse__count">
+        {{ count }}
+        <span class="visually-hidden"> {{ count_context }}</span></span>
+      {{/if}}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+</div>

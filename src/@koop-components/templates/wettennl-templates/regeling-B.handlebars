@@ -72,22 +72,27 @@
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
       <div>
 
-        <a href="#">&laquo; Terug naar zoekresultaten</a>
+        <a href="#" class="icon--backlink">Terug naar zoekresultaten (9430)</a>
 
-        <h2>Goedkeuringswet Verdrag tussen Nederland en Noorwegen inzake (...)</h2>
-        <p>Geldend van 01-07-2016 t/m heden</p>
+        <a href="#">&laquo; Vorige</a> <a href="#" class="pull-right">Volgende &raquo;</a>
 
-        <ul class="list--linked">
-          <li><a href="#">Vorige regeling</a></li>
-          <li><a href="#">Volgende regeling</a></li>
-        </ul>
-
-        <h2>Acties</h2>
-
-        <ul class="list--unstyled">
-          <li><a href="#" class="icon icon--openall">Alles openklappen</a></li>
-          <li><a href="#" class="icon icon--closeall">Alles dichtklappen</a></li>
-        </ul>
+        <h2>Goedkeuringswet Verdrag tussen Nederland en Noorwegen (...) <span>Geldend van 01-07-2016 t/m heden</span></h2>
+        <div class="actionblock">
+            <ul class="actionblock__list">
+                <li>
+                    <a href="#">
+              <img src="../../images/icon-plus.svg" alt="" role="presentation" />
+              Alles openklappen
+              </a>
+                </li>
+                <li>
+                    <a href="#">
+              <img src="../../images/icon-minus.svg" alt="" role="presentation" />
+              Alles dichtklappen
+              </a>
+                </li>
+            </ul>
+        </div>
 
         <h2>Inhoudsopgave</h2>
         {{ render "@treeview" }}

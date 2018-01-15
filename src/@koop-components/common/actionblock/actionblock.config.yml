@@ -1,0 +1,21 @@
+---
+title: actionblock
+context:
+  title: ''
+  intro: ''
+  items:
+    - link: '#'
+      text: Alles openklappen
+      icon: icon-plus.svg
+    - link: '#'
+      text: Alles dichtklappen
+      icon: icon-minus.svg
+    - link: '#'
+      text: Alles aanvinken
+      icon: icon-checkall.svg
+    - link: '#'
+      text: Alles uitvinken
+      icon: icon-uncheckall.svg
+    - link: '#'
+      text: Toon aanvinkte elementen
+      icon: icon-dart-right.svg
