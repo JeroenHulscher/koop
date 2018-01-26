@@ -6,21 +6,36 @@
   </div>
 </div>
 
-<div class="container row">
+<div class="row container">
 
-  <h1>Zoeken</h1>
+    <h1>Zoeken</h1>
 
-  {{ render "@roi-search" }}
+    {{ render "@roi-search" }}
 
 </div>
 
-<div class="container row columns">
+<div class="row container columns">
   <div>
+
     <h2>kenmerken</h2>
+
+    {{ render "@collapsible" filter1 merge=true }}
+    {{ render "@collapsible" filter2 merge=true }}
+    {{ render "@collapsible" filter3 merge=true }}
+    {{ render "@collapsible" filter4 merge=true }}
+
   </div>
 
   <div>
     <h2>Datum</h2>
+
+    {{ render "@input-radio" }}
+
+    <h2>Nummers</h2>
+
+    {{ render "@input-text" filter5 merge=true }}
+
+    <input type="submit" value="Zoeken" class="button button--secondary pull-right" />
   </div>
 
 </div>

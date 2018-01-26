@@ -37,11 +37,16 @@ $gutter: 2em;
         flex: 2;
         order: 2;
         margin-left: $gutter;
+
       }
 
       > * {
         flex: 1;
         margin-left: 0;
+      }
+
+      >*:last-child {
+        padding-top: 1.65em;
       }
     }
   }
@@ -156,6 +161,10 @@ $gutter: 2em;
           padding: 0;
           overflow: visible;
         }
+      }
+
+      .icon--backlink {
+        border-bottom: 1px solid $lighterGrey;
       }
     }
 

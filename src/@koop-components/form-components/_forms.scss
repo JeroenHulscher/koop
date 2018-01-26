@@ -22,6 +22,7 @@
     line-height: 1;
   }
 
+
   input[type="text"],
   input[type="tel"],
   input[type="url"],
@@ -46,10 +47,12 @@
 
     &.input--small {
       max-width: 8em;
+      display: inline-block;
     }
 
     &.input--medium {
       max-width: 12em;
+
     }
 
     &.input--error {
@@ -92,6 +95,14 @@
       line-height: 1.5;
     }
 
+
+    &.inline-group {
+      label {
+        display: inline-block;
+        margin-right: 1em;
+      }
+    }
+
     input {
       margin: 0 .5em 0 0;
     }
@@ -113,6 +124,28 @@
 
   .form__error {
     color: $red;
+  }
+
+  &--search {
+    clear: both;
+    min-height: 2.6em;
+
+    input[type="text"],
+    button.button {
+      float: left;
+    }
+
+    input[type="text"] {
+      max-width: 60%;
+      margin: 0;
+      height: 2.6em;
+    }
+
+    button.button {
+      max-width: 20%;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 }
 

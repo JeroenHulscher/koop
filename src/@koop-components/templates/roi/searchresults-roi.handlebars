@@ -1,0 +1,26 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <h1>Zoekresultaten</h1>
+    {{ render "@pagination" }}
+    {{ render "@sort" }}
+    {{ render "@resultlist" }}
+    {{ render "@resultlist" }}
+    {{ render "@resultlist" }}
+    {{ render "@pagination" }}
+  </div>
+  <div>
+    <h2>Verfijnen</h2>{{ render "@question-explanation" }}
+    {{ render "@sidebar-search" }}
+    {{ render "@list--facetlist" filter1 merge=true }}
+    {{ render "@list--facetlist" filter2 merge=true }}
+
+  </div>
+</div>
+
+{{ render "@footer" }}

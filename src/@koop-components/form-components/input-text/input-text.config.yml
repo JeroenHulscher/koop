@@ -3,9 +3,9 @@ label: Input text
 status: ready
 context:
   id: 1
-  fieldLabel: Voornaam
+  fieldLabel: Op nummer zoeken
   fieldInstruction:
-  fieldPlaceholder: 'Bijv: Jan de Vries'
+  fieldPlaceholder: 'Bijv: BK001'
 variants:
   - name: postal code
     label: input postcode

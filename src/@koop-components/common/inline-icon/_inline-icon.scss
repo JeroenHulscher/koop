@@ -42,7 +42,6 @@
 
   &--backlink {
     display: block;
-    border-bottom: 1px solid $lighterGrey;
     padding: 0 0 .5em 1.5em;
     margin-bottom: .5em;
     background: {
@@ -51,6 +50,5 @@
       repeat: no-repeat;
       position: left .25em;
     }
-
   }
 }
