@@ -10,7 +10,7 @@ var getScrollY = function() {
 var updateStickability = function( element, footer ) {
   var footerOffset = footer.getBoundingClientRect();
   var elementPosition = element.getBoundingClientRect();
-  var elementReferenceTop = element.referenceTop - 16;
+  var elementReferenceTop = element.referenceTop;
   var scrollY = getScrollY();
   var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
   var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
@@ -35,8 +35,9 @@ var updateStickability = function( element, footer ) {
 
 var stickSidebar = function( element ) {
   var footer = dom.$( '.footer' )[0];
+  var referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + 16;
 
-  element.referenceTop = element.getBoundingClientRect().top;
+  element.referenceTop = referenceTop;
 
   window.requestAnimationFrame( function() {
     updateStickability( element, footer );
