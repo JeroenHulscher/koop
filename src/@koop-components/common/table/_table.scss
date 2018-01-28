@@ -2,6 +2,7 @@ table {
 
   width: 100%;
   border-collapse: collapse;
+  margin: 1em 0;
 
   caption {
     color: $darkerGrey;
@@ -23,7 +24,7 @@ table {
   th {
     font-weight: 700;
     text-align: left;
-    vertical-align: bottom;
+    vertical-align: top;
   }
 
   &.table__data-overview {

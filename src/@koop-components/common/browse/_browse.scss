@@ -1,5 +1,4 @@
 .browse {
-  background-color: $lightGrey;
 
   &__list {
     margin: 0;
@@ -11,7 +10,7 @@
 
     a {
       display: block;
-      margin-bottom: 2px;
+      border-bottom: 2px solid $lightGrey;
       padding: 1em 2em 1em 1em;
       background-color: $white;
       text-decoration: none;

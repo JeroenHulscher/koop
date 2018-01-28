@@ -55,17 +55,24 @@ ol {
       image: $dartRightBlueIcon;
       size: 6px 9px;
     }
+    padding-left: 1em;
 
     a {
-      padding-left: 1em;
       text-decoration: none;
-      display: inline-block;
       background-position: right 50%;
 
       &:hover {
         text-decoration: underline;
       }
+
+      &:first-child {
+        display: block;
+        clear: both;
+
+      }
     }
+
+
   }
 }
 

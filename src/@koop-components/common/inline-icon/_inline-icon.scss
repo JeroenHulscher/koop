@@ -39,4 +39,16 @@
     padding-right: 1.5em;
 
   }
+
+  &--backlink {
+    display: block;
+    padding: 0 0 .5em 1.5em;
+    margin-bottom: .5em;
+    background: {
+      image: $doubleLeftIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: left .25em;
+    }
+  }
 }

@@ -1,0 +1,22 @@
+name: home ROI
+label: home ROI
+context:
+  filter1:
+    heading: Soort organisatie
+    id: 1
+    text: <fieldset class="form__element checkboxgroup "><legend class="visually-hidden">Geldigheid </legend><label for="option-1"><input type="checkbox" id="option-1" name="geldigheid" />Laatste versies</label><label for="option-2"><input type="checkbox" id="option-2" name="geldigheid" />Geldig vandaag</label><label for="option-3"><input type="checkbox" id="option-3" name="geldigheid" />test</label></fieldset>
+  filter2:
+    heading: Vestigingsplaats
+    id: 1
+    text: <fieldset class="form__element checkboxgroup "><legend class="visually-hidden">Geldigheid </legend><label for="option-1"><input type="checkbox" id="option-1" name="geldigheid" />Laatste versies</label><label for="option-2"><input type="checkbox" id="option-2" name="geldigheid" />Geldig vandaag</label><label for="option-3"><input type="checkbox" id="option-3" name="geldigheid" />test</label></fieldset>
+  filter3:
+    heading: Ministerie
+    id: 1
+    text: <fieldset class="form__element checkboxgroup "><legend class="visually-hidden">Geldigheid </legend><label for="option-1"><input type="checkbox" id="option-1" name="geldigheid" />Laatste versies</label><label for="option-2"><input type="checkbox" id="option-2" name="geldigheid" />Geldig vandaag</label><label for="option-3"><input type="checkbox" id="option-3" name="geldigheid" />test</label></fieldset>
+  filter4:
+    heading: Classificatie
+    id: 1
+    text: <fieldset class="form__element checkboxgroup "><legend class="visually-hidden">Geldigheid </legend><label for="option-1"><input type="checkbox" id="option-1" name="geldigheid" />Laatste versies</label><label for="option-2"><input type="checkbox" id="option-2" name="geldigheid" />Geldig vandaag</label><label for="option-3"><input type="checkbox" id="option-3" name="geldigheid" />test</label></fieldset>
+  filter5:
+    modifier: input--medium
+    fieldPlaceholder: 'Bijv: OO12820-KL'

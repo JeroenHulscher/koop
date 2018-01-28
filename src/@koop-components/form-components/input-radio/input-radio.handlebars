@@ -1,8 +1,8 @@
-<fieldset class="form__element radiogroup">
+<fieldset class="form__element radiogroup {{ modifier }}">
   <legend>{{ fieldLabel }} </legend>
   {{#each options }}
   <label for="option-{{ id  }}">
-    <input type="radio" id="option-{{ id }}" name="{{ ../name }}" />{{ text }}
+    <input type="radio" id="option-{{ id }}" name="{{ ../name }}" />{{{ text }}}
   </label>
   {{/each}}
 </fieldset>

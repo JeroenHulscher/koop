@@ -2,12 +2,17 @@
 label: Input radio
 status: ready
 context:
-  fieldLabel: Wat is je favoriete Amerikaanse president?
-  name: presidents
+  fieldLabel: Geldigheid
+  name: geldigheid
   options:
     - id: 1
-      text: B. Obama
+      text: Laatste versies
     - id: 2
-      text: Donald J. Trump
+      text: Geldig vandaag
     - id: 3
-      text: Hillary Clinton
+      text: Geldig op <input type="date" class="input input--date input--medium" id="input--12" placeholder="mm-dd-jj" />
+variants:
+  - name: inline radiogroup
+    label: inline radiogroup
+    context:
+      modifier: inline-group

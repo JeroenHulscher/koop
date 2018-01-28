@@ -35,6 +35,13 @@ h2,
   }
   color: $darkBlue;
   margin: 1em 0;
+
+  span {
+    color: $black;
+    display: block;
+    font-size: .8em;
+    font-weight: 400;
+  }
 }
 
 .columns--sidebar-left h2,
