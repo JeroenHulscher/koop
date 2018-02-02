@@ -6,8 +6,8 @@
 
       <legend class="form__intro">Inloggen</legend>
 
-      {% for var in vars|default() %}
-      {% include "@koop-components/form-components/input/input.twig" with var only %}
+      {% for key in vars|keys|default() if not (key starts with '#') %}
+      {% include "@koop-components/form-components/input/input.twig" with vars[key] only %}
       {% endfor %}
 
     </fieldset>
