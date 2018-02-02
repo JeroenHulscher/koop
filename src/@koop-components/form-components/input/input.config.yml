@@ -1,0 +1,13 @@
+variants:
+  - name: With error
+    context:
+      error: Dit is een vereist veld
+  - name: Date
+    context:
+      type: date
+  - name: Postal code
+    context:
+      modifier: input--small
+      label: Postcode
+      instructions:
+      placeholder: 'Bijv: 2282LL'

@@ -1,0 +1,29 @@
+<div class="form__element">
+
+  <label for="input-{{ id }}">{{ label|default('Veld') }}</label>
+
+  {% if instructions is defined %}
+  <small>{{ instructions }}</small>
+  {% endif %}
+
+  {% if type|default('text') == 'text' %}
+  <input type="text" id="input-{{ id }}" class="input {{ modifier }} {{ error is defined ? 'input--error' }}" placeholder="{{ placeholder }}">
+  {% elseif type == 'date' %}
+  <input type="date" class="input {{ modifier }}" id="input-{{ id }}" placeholder="{{ placeholder }}">
+  {% elseif type == 'email' %}
+  <input type="email" id="input-{{ id }}">
+  {% elseif type == 'password' %}
+  <input type="password" id="input-{{ id }}">
+  {% elseif type == 'url' %}
+  <input type="url" class="input {{ modifier }}" id="input-{{ id }}" placeholder="{{ placeholder }}">
+  {% elseif type == 'tel' %}
+  <input type="tel" class="input {{ modifier }}" id="input-{{ id }}" placeholder="{{ placeholder }}">
+  {% elseif type == 'textarea' %}
+  <textarea id="textarea--{{ id }}" placeholder="{{ placeholder }}" rows="{{ rows }}"></textarea>
+  {% endif %}
+
+  {% if error is defined %}
+  <p id="input-{{ id }}-error" class="form__error"><strong>Let op:</strong> {{ error }}</p>
+  {% endif %}
+
+</div>
