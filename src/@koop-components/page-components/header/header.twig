@@ -1,0 +1,56 @@
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
+      {% include "@koop-components/common/logo/logo.twig" with { youAreHere: youAreHere|default() } %}
+
+      {% if skipLinks is defined %}
+      <div class="skiplinks">
+        {% for skipLink in skipLinks %}
+        <a href="{{ skipLink.url }}">{{ skipLink.text }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if metaLinks is defined %}
+      <div class="header__meta">
+        {% for metaLink in metaLinks %}
+        <a href="{{ metaLink.url }}" class="">{{ metaLink.text }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+      </ul>
+      {% include "@koop-components/page-components/search/search.twig" %}
+      {% if headerMore is defined %}
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+      {% endif %}
+    </div>
+  </nav>
+</header>
+{% if headerMore is defined %}
+<div class="header__more" id="other-sites">
+  <div class="container">
+    {% for more in headerMore %}
+    <div>
+      <h2>{{ more.title }}</h2>
+      <p>{{ more.description }}</p>
+      {% if more.links %}
+      <ul class="list list--linked">
+        {% for link in more.links %}
+        <li><a href="{{ link.url }}">{{ link.text}}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

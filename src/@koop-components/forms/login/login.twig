@@ -1,0 +1,24 @@
+<div class="well">
+
+  <form {{ helpers.attr(attributes, {class: 'form'}) }}>
+
+    <fieldset class="form__element">
+
+      <legend class="form__intro">Inloggen</legend>
+
+      {% for key in vars|keys|default() if not (key starts with '#') %}
+      {% include "@koop-components/form-components/input/input.twig" with vars[key] only %}
+      {% endfor %}
+
+    </fieldset>
+
+    {% include "@koop-components/common/button/button.twig" %}
+
+    <ul class="form__options pull-right">
+      <li><a href="/berichten_over_uw_buurt_registreren">Registreer bij Naam service</a></li>
+      <li><a href="/berichten_over_uw_buurt_ww_vergeten">Wachtwoord vergeten</a></li>
+    </ul>
+
+  </form>
+
+</div>
