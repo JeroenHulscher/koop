@@ -190,18 +190,14 @@
     .container {
       padding-top: 1em;
       padding-bottom: 1em;
-      display: flex;
-      flex-direction: column;
+
 
       @media ( min-width: 50em ) {
         flex-direction: row;
         animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
       }
 
-      div {
-        flex: 1;
-        padding-right: 2em;
-      }
+
     }
 
     &[hidden="true"] .container {

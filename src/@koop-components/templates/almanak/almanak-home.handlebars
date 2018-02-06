@@ -1,0 +1,51 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="row container">
+
+  <div>
+    <h1>Overheidsorganisaties</h1>
+
+    <p class="intro--text">In dit onderdeel staan de namen, adressen en andere contactgegevens van de Nederlandse overheidsorganisaties. Ook de persoonsgegevens van (voornamelijk) leidinggevende personen binnen de Nederlandse overheid zijn opgenomen. Publicatie geschiedt in opdracht van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties, op basis van een Koninklijk Besluit van 16 juli 1859.</p>
+
+    <p class="intro--text">De organisaties zijn zelf verantwoordelijk voor de volledigheid, juistheid en actualiteit van de gegevens.</p>
+
+    {{ render "@sidebar-search" }}
+
+    <div class="row container columns">
+      <ul class="list--linked">
+        <li><a href="#">Gemeenten</a></li>
+        <li><a href="#">Provincies</a></li>
+        <li><a href="#">Waterschappen</a></li>
+        <li><a href="#">Regionale samenwerkingsorganen</a></li>
+        <li><a href="#">Openbare lichamen voor beroep en bedrijf</a></li>
+        <li><a href="#">Staten-Generaal</a></li>
+        <li><a href="#">Hoge Colleges van Staat</a></li>
+      </ul>
+
+      <ul class="list--linked">
+        <li><a href="#">Ministeries</a></li>
+        <li><a href="#">Adviescolleges</a></li>
+        <li><a href="#">Rechterlijke macht</a></li>
+        <li><a href="#">Politie en brandweer</a></li>
+        <li><a href="#">Caribisch gebied (BES-eilanden)</a></li>
+        <li><a href="#">Aruba, curaçao en Sint Maarten</a></li>
+        <li><a href="#">Zelfstandige bestuursorganen</a></li>
+      </ul>
+
+    </div>
+
+    <h3>Zie ook</h3>
+    <ul class="list--linked">
+      <li><a href="#">Organisaties buiten de Nederlandse Overheid</a></li>
+    </ul>
+  </div>
+</div>
+
+
+{{ render "@footer" }}

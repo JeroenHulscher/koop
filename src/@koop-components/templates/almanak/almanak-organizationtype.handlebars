@@ -1,0 +1,24 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="row container">
+
+  <div>
+
+    <h1>Gemeenten A-Z</h1>
+
+    {{ render "@az" }}
+
+    {{ render "@list--linklist" list--linklist merge="true" }}
+
+
+  </div>
+</div>
+
+
+{{ render "@footer" }}

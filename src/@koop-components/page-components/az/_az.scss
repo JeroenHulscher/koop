@@ -1,5 +1,11 @@
 .az {
 
+  display: block;
+  min-height: 2em;
+  clear: both;
+  width: 100%;
+  margin: 1em 0;
+
     ul {
       padding: 0;
       margin: .25em 0;
@@ -12,6 +18,7 @@
       margin: 0 0 3px -1px;
       line-height: 1;
       display: inline-block;
+
 
       button {
         border-radius: 0;
@@ -35,10 +42,6 @@
         margin-left: 0;
       }
 
-    }
-
-    @media ( min-width: 50em ) {
-      float: left;
     }
 
 }
