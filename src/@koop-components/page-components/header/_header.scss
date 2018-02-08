@@ -111,12 +111,6 @@
         background-color: $headerBorderColor;
       }
 
-      &[href*="//"]:not(.button),
-      &[rel="external"] {
-        background-image: none;
-        margin-right: 0;
-      }
-
       &.is-active {
         background: $mediumBlue;
         color: $black;
