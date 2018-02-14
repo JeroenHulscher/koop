@@ -7,17 +7,17 @@ a {
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
-  //  &[href*="//"]:not(.button),
-  //  &[rel="external"] {
-  //   padding-right: 1.25em;
-  //   margin-right: .25em;
-  //   background: {
-  //     repeat: no-repeat;
-  //     image: $externalLinkIcon;
-  //     position: right 3px;
-  //     size: 13px 12px;
-  //   }
-  // }
+  &[href*="//"]:not([href*="overheid.nl"]),
+  &[rel="external"] {
+    padding-right: 1.25em;
+    margin-right: .25em;
+    background: {
+      repeat: no-repeat;
+      image: $externalLinkIcon;
+      position: right 3px;
+      size: 13px 12px;
+    }
+  }
 
   &:focus {
     outline-color: $focus;
@@ -38,12 +38,3 @@ a {
 p a {
   text-decoration: underline;
 }
-
-// .columns a[href*="https://www.officielebekendmakingen.nl/"],
-// .columns a[href*="https://www.overheid.nl/"],
-// .columns a[href*="//"]:not(.homepageblock),
-// .columns--relatedinfo a[href*="//"] {
-//   padding-right: initial;
-//   margin-right: 0;
-//   background: none;
-// }
