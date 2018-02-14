@@ -8,6 +8,5 @@ variants:
     label: External
     context:
       text: externe link
-      typeVariant: 'rel="external"'
       action: http://www.google.nl
 

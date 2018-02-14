@@ -20,11 +20,13 @@
       display: inline-block;
 
 
-      button {
+      button, a {
+        display: inline-block;
         border-radius: 0;
         border: none;
         background: $white;
         padding: 5px 8px;
+        font: inherit;
 
         &:hover {
           background: $lighterGrey;
