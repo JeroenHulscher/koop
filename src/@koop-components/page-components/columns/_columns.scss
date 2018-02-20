@@ -6,7 +6,6 @@ $gutter: 1em;
 
   @media ( min-width: 50em ) {
     flex-direction: row;
-    flex-wrap: wrap;
   }
 
   > * {
@@ -31,7 +30,7 @@ $gutter: 1em;
     @media ( min-width: 50em ) {
       display: flex;
       > * {
-        flex: 0 1 calc((100% - 3em) / 4);
+        flex: 0 1 calc((100% - #{$gutter*3}) / 4);
         &:nth-child(4n+5) {
           margin-left: 0;
         }
@@ -51,7 +50,6 @@ $gutter: 1em;
         flex: 2;
         order: 2;
         margin-left: 2em;
-
       }
 
       > * {
@@ -68,7 +66,6 @@ $gutter: 1em;
   &--sidebar-right {
 
     @media ( min-width: 50em ) {
-
       > * {
         flex: 1;
         margin-left: $gutter;
@@ -93,7 +90,7 @@ $gutter: 1em;
     @media ( min-width: 50em ) {
       > * {
         margin-left: 1em;
-        flex: 1 calc( 25% - 1em);
+        flex: 1 calc(25% - 1em);
       }
     }
   }
@@ -102,10 +99,8 @@ $gutter: 1em;
     flex-wrap: wrap;
 
     @media ( min-width: 50em ) {
-
       > * {
-      flex: 2;
-
+        flex: 2;
         margin-left: .5em;
       }
     }
@@ -207,7 +202,6 @@ $gutter: 1em;
       z-index: 3;
       top: 1em;
       background-image: $doubleLeftIcon;
-
     }
   }
 }
