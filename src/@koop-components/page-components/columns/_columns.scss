@@ -6,6 +6,7 @@ $gutter: 1em;
 
   @media ( min-width: 50em ) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   > * {
@@ -23,6 +24,15 @@ $gutter: 1em;
 
   > *:only-child {
     max-width: 40em;
+  }
+
+  &--fixed {
+    > * {
+      flex: 0 1 calc((100% - 3em) / 4);
+      &:nth-child(4n+5) {
+        margin-left: 0;
+      }
+    }
   }
 
   &--sidebar-left {
