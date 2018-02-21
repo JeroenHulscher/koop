@@ -1,0 +1,187 @@
+.themeblock {
+  display: block;
+  position: relative;
+  padding: .5em;
+  width: 9em;
+  height: 9em;
+  text-decoration: none;
+  color: $white;
+  background: $lighterGrey;
+
+  h3 {
+    color: $white;
+    line-height: 1;
+  }
+
+  p {
+    color: $white;
+    margin: 0;
+    position: absolute;
+    bottom: .5em;
+    right: .5em;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    z-index: 1;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1.5em 0 0 -1.5em;
+    transition: all $slowEaseInOut;
+    background: {
+      repeat: no-repeat;
+      position: 50% 50%;
+      size: cover;
+    }
+  }
+
+  &--governance {
+    background-color: #4a1eea;
+
+    &::after {
+      background-image: $governanceIcon;
+    }
+  }
+
+  &--culture {
+    background-color: #42145f;
+
+    &::after {
+      background-image: $cultureIcon;
+    }
+  }
+
+  &--economy {
+    background-color: #a90061;
+
+    &::after {
+      background-image: $economyIcon;
+    }
+  }
+
+  &--finance {
+    background-color: #d52b1e;
+
+    &::after {
+      background-image: $financeIcon;
+    }
+  }
+
+  &--housing {
+    background-color: #94710a;
+
+    &::after {
+      background-image: $housingIcon;
+    }
+  }
+
+  &--international {
+    background-color: #777c00;
+
+    &::after {
+      background-image: $internationalIcon;
+    }
+  }
+
+  &--agriculture {
+    background-color: #bf360c;
+
+    &::after {
+      background-image: $agricultureIcon;
+    }
+  }
+
+  &--migration {
+    background-color: #673327;
+
+    &::after {
+      background-image: $migrationIcon;
+    }
+  }
+
+  &--nature {
+    background-color: #39870c;
+
+    &::after {
+      background-image: $natureIcon;
+    }
+  }
+
+  &--education {
+    background-color: #42145f;
+
+    &::after {
+      background-image: $educationIcon;
+    }
+  }
+
+  &--security {
+    background-color: #275937;
+
+    &::after {
+      background-image: $securityIcon;
+    }
+  }
+
+  &--law {
+    background-color: #ca005d;
+
+    &::after {
+      background-image: $lawIcon;
+    }
+  }
+
+  &--infrastructure {
+    background-color: #007bc7;
+
+    &::after {
+      background-image: $infrastructureIcon;
+    }
+  }
+
+  &--social {
+    background-color: #673327;
+
+    &::after {
+      background-image: $socialIcon;
+    }
+  }
+
+  &--traffic {
+    background-color: #bf360c;
+
+    &::after {
+      background-image: $trafficIcon;
+    }
+  }
+
+  &--jobs {
+    background-color: #a90061;
+
+    &::after {
+      background-image: $jobsIcon;
+    }
+  }
+
+  &--healthcare {
+    background-color: #d52b1e;
+
+    &::after {
+      background-image: $healthcareIcon;
+    }
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+    &::after {
+      transform: rotateY(360deg) scale(1.25, 1.25);
+    }
+  }
+
+}
+
+

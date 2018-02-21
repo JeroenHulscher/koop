@@ -2,30 +2,21 @@
 <caption>Deze tabel bevat teamleden van KOOP Overheid.nl</caption>
 <thead>
   <tr>
-    <th>#</th>
-    <th>{{ value1 }}</th>
-    <th>{{ value2 }}</th>
-    <th>{{ value3 }}</th>
+    {{#each items }}
+      {{#each item }}
+        <th>{{ type }} </th>
+      {{/each }}
+    {{/each }}
   </tr>
 </thead>
 <tbody>
+  {{#each items }}
   <tr>
-    <th scope="row">1</th>
-    <td data-before="{{ value1 }}">Alexander</td>
-    <td data-before="{{ value2 }}">Fase</td>
-    <td data-before="{{ value3 }}">Delft</td>
+    {{#each item }}
+      <td data-before="{{ type }}">{{ value }}</td>
+    {{/each }}
   </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td data-before="{{ value1 }}">Ted van der</td>
-    <td data-before="{{ value2 }}">Geest</td>
-    <td data-before="{{ value3 }}">Delft</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td data-before="{{ value1 }}">Ard van der</td>
-    <td data-before="{{ value2 }}">Heijden</td>
-    <td data-before="{{ value3 }}">Hoog in Nederland</td>
-  </tr>
+  {{/each }}
+
 </tbody>
 </table>

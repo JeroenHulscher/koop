@@ -1,0 +1,89 @@
+name: theme block
+context:
+  label: Bestuur
+  modifier: themeblock--governance
+  theme-title: Bestuur
+  counter: 1433
+variants:
+  - name: cultuur
+    context:
+      modifier: themeblock--culture
+      theme-title: cultuur en recreactie
+      counter: 546
+  - name: economie
+    context:
+      modifier: themeblock--economy
+      theme-title: Economie
+      counter: 1013
+  - name: financien
+    context:
+      modifier: themeblock--finance
+      theme-title: Financiën
+      counter: 133
+  - name: huisvesting
+    context:
+      modifier: themeblock--housing
+      theme-title: Huisvesting
+      counter: 81
+  - name: internationaal
+    context:
+      modifier: themeblock--international
+      theme-title: Internationaal
+      counter: 63
+  - name: landbouw
+    context:
+      modifier: themeblock--agriculture
+      theme-title: Landbouw
+      counter: 258
+  - name: migratie
+    context:
+      modifier: themeblock--migration
+      theme-title: Migratie en integratie
+      counter: 133
+  - name: natuur
+    context:
+      modifier: themeblock--nature
+      theme-title: Natuur en milieu
+      counter: 2426
+  - name: onderwijs
+    context:
+      modifier: themeblock--education
+      theme-title: Onderwijs en wetenschap
+      counter: 150
+  - name: veiligheid
+    context:
+      modifier: themeblock--security
+      theme-title: Openbare orde en veiligheid
+      counter: 120
+  - name: recht
+    context:
+      modifier: themeblock--law
+      theme-title: Recht
+      counter: 21
+  - name: infrastructuur
+    context:
+      modifier: themeblock--infrastructure
+      theme-title: Ruimte en infrastructuur
+      counter: 622
+  - name: sociale zekerheid
+    context:
+      modifier: themeblock--social
+      theme-title: Sociale zekerheid
+      counter: 342
+  - name: verkeer
+    context:
+      modifier: themeblock--traffic
+      theme-title: Verkeer
+      counter: 840
+  - name: werk
+    context:
+      modifier: themeblock--jobs
+      theme-title: Werk
+      counter: 321
+  - name: zorg
+    context:
+      modifier: themeblock--healthcare
+      theme-title: Zorg en gezondheid
+      counter: 185
+
+

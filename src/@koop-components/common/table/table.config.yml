@@ -2,9 +2,46 @@ title: Table
 status: ready
 context:
   label: default
-  value1: Voornaam
-  value2: Achternaam
-  value3: Woonplaats
+  items:
+    - item:
+      - column:
+        type:
+        value: 1
+      - column:
+        type: Voornaam
+        value: Alexander
+      - column:
+        type: Achternaam
+        value: Fase
+      - column:
+        type: Woonplaats
+        value: Delft
+    - item:
+      - column:
+        type:
+        value: 1
+      - column:
+        type: Voornaam
+        value: Ted
+      - column:
+        type: Achternaam
+        value: van Geest
+      - column:
+        type: Woonplaats
+        value: Delft
+    - item:
+      - column:
+        type:
+        value: 1
+      - column:
+        type: Voornaam
+        value: Ard
+      - column:
+        type: Achternaam
+        value: van der Heijden
+      - column:
+        type: Woonplaats
+        value: Alkmaar
 variants:
   - name: striped
     label: striped
@@ -18,3 +55,29 @@ variants:
     label: hover
     context:
       modifier: table--hover
+  - name: datakalender (donl)
+    context:
+      items:
+        - type: Data-eigenaar
+        - type: Soort organisatie
+        - type: Valt onder
+        - type: Datasets
+        - type: Link-kwaliteit
+        - type: Status
+        - type: Exporteren
+      rows:
+        - type: Data-eigenaar
+          value: 1
+        - type: Soort organisatie
+          value: 2
+        - type: Valt onder
+          value: 3
+        - type: Datasets
+          value: 4
+        - type: Link-kwaliteit
+          value: 5
+        - type: Status
+          value: 6
+        - type: Exporteren
+          value: 7
+
