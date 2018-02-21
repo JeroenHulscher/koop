@@ -58,26 +58,70 @@ variants:
   - name: datakalender (donl)
     context:
       items:
-        - type: Data-eigenaar
-        - type: Soort organisatie
-        - type: Valt onder
-        - type: Datasets
-        - type: Link-kwaliteit
-        - type: Status
-        - type: Exporteren
-      rows:
-        - type: Data-eigenaar
-          value: 1
-        - type: Soort organisatie
-          value: 2
-        - type: Valt onder
-          value: 3
-        - type: Datasets
-          value: 4
-        - type: Link-kwaliteit
-          value: 5
-        - type: Status
-          value: 6
-        - type: Exporteren
-          value: 7
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Jeroen
+          - column:
+            type: Soort organisatie
+            value: BV
+          - column:
+            type: Valt onder
+            value: Niemand
+          - column:
+            type: Datasets
+            value: veel
+          - column:
+            type: Link-kwaliteit
+            value: top
+          - column:
+            type: Status
+            value: actueel
+          - column:
+            type: Exporteren
+            value: pdf
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Krijn
+          - column:
+            type: Soort organisatie
+            value: VOF
+          - column:
+            type: Valt onder
+            value: 2 kindren
+          - column:
+            type: Datasets
+            value: weinig
+          - column:
+            type: Link-kwaliteit
+            value: super
+          - column:
+            type: Status
+            value: nieuw
+          - column:
+            type: Exporteren
+            value: xml
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Jeroen
+          - column:
+            type: Soort organisatie
+            value: BV
+          - column:
+            type: Valt onder
+            value: Niemand
+          - column:
+            type: Datasets
+            value: veel
+          - column:
+            type: Link-kwaliteit
+            value: top
+          - column:
+            type: Status
+            value: actueel
+          - column:
+            type: Exporteren
+            value: pdf
 

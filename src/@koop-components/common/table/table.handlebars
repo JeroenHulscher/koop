@@ -2,12 +2,14 @@
 <caption>Deze tabel bevat teamleden van KOOP Overheid.nl</caption>
 <thead>
   {{#each items }}
+  {{#if @first}}
   <tr>
-      {{#each item }}
-        <th>{{ type }} </th>
-      {{/each }}
-    {{/each }}
+    {{#each item }}
+    <th>{{ type }}</th>
+    {{/each}}
   </tr>
+  {{/if}}
+  {{/each }}
 </thead>
 <tbody>
   {{#each items }}
@@ -17,6 +19,5 @@
     {{/each }}
   </tr>
   {{/each }}
-
 </tbody>
 </table>
