@@ -1,5 +1,7 @@
 <table class="{{ modifier }}">
-<caption>Deze tabel bevat teamleden van KOOP Overheid.nl</caption>
+{{#if caption }}
+  <caption>{{ caption }} </caption>
+{{/if}}
 <thead>
   {{#each items }}
   {{#if @first}}
@@ -17,6 +19,8 @@
     {{#each item }}
       {{#if cellType }}
       <td data-before="{{ type }}" class="status {{ cellType }}"><span>{{ value }}</span></td>
+      {{ else if download }}
+        <td data-before="{{ type }}" class="status"><a href="#">{{ value }}</a></td>
       {{ else }}
        <td data-before="{{ type }}">{{ value }}</td>
       {{/if }}

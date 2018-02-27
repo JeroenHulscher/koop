@@ -44,8 +44,8 @@ h2,
   }
 }
 
-.columns--sidebar-left h2,
-.columns--sidebar-right h2 {
+.columns--sidebar-left div:last-child h2,
+.columns--sidebar-right div:last-child h2 {
     display: inline-block;
 }
 

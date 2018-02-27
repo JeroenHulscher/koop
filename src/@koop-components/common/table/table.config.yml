@@ -2,6 +2,7 @@ title: Table
 status: ready
 context:
   label: default
+  caption: Deze tabel bevat teamleden van KOOP Overheid.nl
   items:
     - item:
       - column:
@@ -55,8 +56,9 @@ variants:
     label: hover
     context:
       modifier: table--hover
-  - name: datakalender (donl)
+  - name: datakalender
     context:
+      caption:
       items:
         - item:
           - column:
@@ -81,6 +83,7 @@ variants:
           - column:
             type: Exporteren
             value: pdf
+            download: true
         - item:
           - column:
             type: Data-eigenaar
@@ -104,6 +107,7 @@ variants:
           - column:
             type: Exporteren
             value: csv
+            download: true
         - item:
           - column:
             type: Data-eigenaar
@@ -127,4 +131,149 @@ variants:
           - column:
             type: Exporteren
             value: xml
+            download: true
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: ZBO | Centraal Bureau voor de Statistiek
+          - column:
+            type: Soort organisatie
+            value: zelfstandig
+          - column:
+            type: Valt onder
+            value: zelfstandig
+          - column:
+            type: Datasets
+            value: 4,504
+          - column:
+            type: Link-kwaliteit
+            value: 9065 / 9066 - 99.99%
+          - column:
+            type: Status
+            value: alles werkt
+            cellType: status--green
+          - column:
+            type: Exporteren
+            value: pdf
+            download: true
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Leveranciers (geen overheid) | Zonatlas NL B.V
+          - column:
+            type: Soort organisatie
+            value: Stichting
+          - column:
+            type: Valt onder
+            value: Regionaal
+          - column:
+            type: Datasets
+            value: 1
+          - column:
+            type: Link-kwaliteit
+            value: 0 / 0 - 0%
+          - column:
+            type: Status
+            value: sommige werken
+            cellType: status--orange
+          - column:
+            type: Exporteren
+            value: csv
+            download: true
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Jeroen
+          - column:
+            type: Soort organisatie
+            value: BV
+          - column:
+            type: Valt onder
+            value: Niemand
+          - column:
+            type: Datasets
+            value: veel
+          - column:
+            type: Link-kwaliteit
+            value: top
+          - column:
+            type: Status
+            value: niets werkt
+            cellType: status--red
+          - column:
+            type: Exporteren
+            value: xml
+            download: true
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: ZBO | Centraal Bureau voor de Statistiek
+          - column:
+            type: Soort organisatie
+            value: zelfstandig
+          - column:
+            type: Valt onder
+            value: zelfstandig
+          - column:
+            type: Datasets
+            value: 4,504
+          - column:
+            type: Link-kwaliteit
+            value: 9065 / 9066 - 99.99%
+          - column:
+            type: Status
+            value: alles werkt
+            cellType: status--green
+          - column:
+            type: Exporteren
+            value: pdf
+            download: true
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Leveranciers (geen overheid) | Zonatlas NL B.V
+          - column:
+            type: Soort organisatie
+            value: Stichting
+          - column:
+            type: Valt onder
+            value: Regionaal
+          - column:
+            type: Datasets
+            value: 1
+          - column:
+            type: Link-kwaliteit
+            value: 0 / 0 - 0%
+          - column:
+            type: Status
+            value: sommige werken
+            cellType: status--orange
+          - column:
+            type: Exporteren
+            value: csv
+            download: true
+        - item:
+          - column:
+            type: Data-eigenaar
+            value: Jeroen
+          - column:
+            type: Soort organisatie
+            value: BV
+          - column:
+            type: Valt onder
+            value: Niemand
+          - column:
+            type: Datasets
+            value: veel
+          - column:
+            type: Link-kwaliteit
+            value: top
+          - column:
+            type: Status
+            value: niets werkt
+            cellType: status--red
+          - column:
+            type: Exporteren
+            value: xml
+            download: true
 

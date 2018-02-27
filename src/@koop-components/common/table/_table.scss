@@ -41,13 +41,28 @@ table {
   }
 
   td.status {
-    text-align: center;
+    @media ( min-width: 50em ) {
+      text-align: center;
+
+      span {
+        width: 2.5em;
+        text-indent: -999em;
+      }
+    }
 
     span {
       display: inline-block;
-      width: 2.5em;
       border-radius: .5em;
-      text-indent: -999em;
+      padding: 0.25em;
+      color: $white;
+    }
+
+    a {
+      display: inline-block;
+      width: 2.5em;
+      padding: .25em;
+      background: $bgBlue;
+      border: 1px solid $lightBlue;
     }
 
     &--green {

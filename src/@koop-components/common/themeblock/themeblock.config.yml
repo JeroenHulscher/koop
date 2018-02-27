@@ -1,4 +1,4 @@
-name: theme block
+name: themeblock
 context:
   label: Bestuur
   modifier: themeblock--governance
@@ -65,7 +65,7 @@ variants:
       modifier: themeblock--infrastructure
       theme-title: Ruimte en infrastructuur
       counter: 622
-  - name: sociale zekerheid
+  - name: socialezekerheid
     context:
       modifier: themeblock--social
       theme-title: Sociale zekerheid

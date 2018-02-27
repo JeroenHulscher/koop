@@ -27,10 +27,14 @@ $gutter: 1em;
   }
 
   &--fixed {
-    > * {
-      flex: 0 1 calc((100% - 3em) / 4);
-      &:nth-child(4n+5) {
-        margin-left: 0;
+    display: block;
+    @media ( min-width: 50em ) {
+      display: flex;
+      > * {
+        flex: 0 1 calc((100% - 3em) / 4);
+        &:nth-child(4n+5) {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -46,7 +50,7 @@ $gutter: 1em;
       > *:first-child {
         flex: 2;
         order: 2;
-        margin-left: $gutter;
+        margin-left: 2em;
 
       }
 
