@@ -40,6 +40,40 @@ table {
     min-height: 2.5em; /* always have a height, even if field has no content; this is specifically needed on small screens */
   }
 
+  td.status {
+    text-align: center;
+
+    span {
+      display: inline-block;
+      width: 2.5em;
+      border-radius: .5em;
+      text-indent: -999em;
+    }
+
+    &--green {
+      span {
+        background-color: $green;
+      }
+    }
+
+    &--orange {
+      span {
+        background-color: $orange;
+      }
+    }
+
+    &--red {
+      span {
+        background-color: $red;
+      }
+    }
+
+
+
+  }
+
+
+
   tbody tr.current td,
   tbody tr.current th {
     background: $mediumBlue;

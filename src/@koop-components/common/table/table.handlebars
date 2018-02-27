@@ -5,7 +5,7 @@
   {{#if @first}}
   <tr>
     {{#each item }}
-    <th>{{ type }}</th>
+    <th scope="col">{{ type }}</th>
     {{/each}}
   </tr>
   {{/if}}
@@ -15,7 +15,11 @@
   {{#each items }}
   <tr>
     {{#each item }}
-      <td data-before="{{ type }}">{{ value }}</td>
+      {{#if cellType }}
+      <td data-before="{{ type }}" class="status {{ cellType }}"><span>{{ value }}</span></td>
+      {{ else }}
+       <td data-before="{{ type }}">{{ value }}</td>
+      {{/if }}
     {{/each }}
   </tr>
   {{/each }}
