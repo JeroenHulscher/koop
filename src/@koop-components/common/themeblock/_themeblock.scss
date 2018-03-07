@@ -6,7 +6,7 @@
   padding: .5em;
   text-decoration: none;
   color: $white;
-  background: $lighterGrey;
+  border-bottom: 2px solid $lighterGrey;
   margin: 0 0 1em 0;
 
   @media ( max-width: 50em ) {
@@ -17,12 +17,13 @@
   }
 
   h3 {
-    color: $white;
+    color: inherit;
     line-height: 1;
+    font-weight: 400;
   }
 
   p {
-    color: $white;
+    color: inherit;
     margin: 0;
     position: absolute;
     bottom: .5em;
@@ -48,7 +49,10 @@
   }
 
   &--governance {
-    background-color: #4a1eea;
+    border-color: #4a1eea;
+    color: #4a1eea;
+
+
 
     &::after {
       background-image: $governanceIcon;
@@ -56,7 +60,8 @@
   }
 
   &--culture {
-    background-color: #42145f;
+    border-color: #42145f;
+    color: #42145f;
 
     &::after {
       background-image: $cultureIcon;
@@ -64,7 +69,8 @@
   }
 
   &--economy {
-    background-color: #a90061;
+    border-color: #a90061;
+    color: #a90061;
 
     &::after {
       background-image: $economyIcon;
@@ -72,7 +78,8 @@
   }
 
   &--finance {
-    background-color: #d52b1e;
+    border-color: #d52b1e;
+    color: #d52b1e;
 
     &::after {
       background-image: $financeIcon;
@@ -80,7 +87,8 @@
   }
 
   &--housing {
-    background-color: #94710a;
+    border-color: #94710a;
+    color: #94710a;
 
     &::after {
       background-image: $housingIcon;
@@ -88,7 +96,8 @@
   }
 
   &--international {
-    background-color: #777c00;
+    border-color: #777c00;
+    color: #777c00;
 
     &::after {
       background-image: $internationalIcon;
@@ -96,7 +105,8 @@
   }
 
   &--agriculture {
-    background-color: #bf360c;
+    border-color: #bf360c;
+    color: #bf360c;
 
     &::after {
       background-image: $agricultureIcon;
@@ -104,7 +114,8 @@
   }
 
   &--migration {
-    background-color: #673327;
+    border-color: #673327;
+    color: #673327;
 
     &::after {
       background-image: $migrationIcon;
@@ -112,7 +123,8 @@
   }
 
   &--nature {
-    background-color: #39870c;
+    border-color: #39870c;
+    color: #39870c;
 
     &::after {
       background-image: $natureIcon;
@@ -120,7 +132,8 @@
   }
 
   &--education {
-    background-color: #42145f;
+    border-color: #42145f;
+    color: #42145f;
 
     &::after {
       background-image: $educationIcon;
@@ -128,7 +141,8 @@
   }
 
   &--security {
-    background-color: #275937;
+    border-color: #275937;
+    color: #275937;
 
     &::after {
       background-image: $securityIcon;
@@ -136,7 +150,8 @@
   }
 
   &--law {
-    background-color: #ca005d;
+    border-color: #ca005d;
+    color: #ca005d;
 
     &::after {
       background-image: $lawIcon;
@@ -144,7 +159,8 @@
   }
 
   &--infrastructure {
-    background-color: #007bc7;
+    border-color: #007bc7;
+    color: #007bc7;
 
     &::after {
       background-image: $infrastructureIcon;
@@ -152,7 +168,8 @@
   }
 
   &--social {
-    background-color: #673327;
+    border-color: #673327;
+    color: #673327;
 
     &::after {
       background-image: $socialIcon;
@@ -160,7 +177,8 @@
   }
 
   &--traffic {
-    background-color: #bf360c;
+    border-color: #bf360c;
+    color: #bf360c;
 
     &::after {
       background-image: $trafficIcon;
@@ -168,7 +186,8 @@
   }
 
   &--jobs {
-    background-color: #a90061;
+    border-color: #a90061;
+    color: #a90061;
 
     &::after {
       background-image: $jobsIcon;
@@ -176,7 +195,8 @@
   }
 
   &--healthcare {
-    background-color: #d52b1e;
+    border-color: #d52b1e;
+    color: #d52b1e;
 
     &::after {
       background-image: $healthcareIcon;
