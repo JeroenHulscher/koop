@@ -135,7 +135,7 @@
       .content--inner {
         height: calc( 100% - 8em );
         background: {
-          color: rgba( 0, 123, 199, 1 );
+          color: $primaryBlue;
           image: none;
         }
       }
