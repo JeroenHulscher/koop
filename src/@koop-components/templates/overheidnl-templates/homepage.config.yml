@@ -23,7 +23,7 @@ context:
     items:
       - url: '#'
         text: Particulieren
-      - url: '#'
+      - url: 'http://www.ondernemersplein.nl/'
         text: Ondernemersplein
   homepageBlock3:
     image: '../../images/temp/homepage-beleid.jpg'
