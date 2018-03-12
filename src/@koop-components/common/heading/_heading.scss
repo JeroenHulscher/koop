@@ -36,11 +36,20 @@ h2,
   color: $darkBlue;
   margin: 1em 0;
 
-  span {
+  span,
+  a.question-explanation-link,
+  p {
     color: $black;
     display: block;
     font-size: .8em;
     font-weight: 400;
+  }
+
+  &.title--underlined {
+    font-size: 1.15em;
+    border-bottom: 1px solid $darkBlue;
+    margin: 0.5em 0;
+    position: relative;
   }
 }
 

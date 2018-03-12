@@ -47,6 +47,7 @@
 
     &.input--small {
       max-width: 8em;
+      margin: 0 .5em;
       display: inline-block;
     }
 
@@ -72,6 +73,12 @@
   input[type="email"],
   select {
     height: 2.5em;
+  }
+
+  input[type="date"] {
+    width: 10.5em;
+    margin: 0 .5em;
+    display: inline-block;
   }
 
   small {

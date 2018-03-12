@@ -4,9 +4,9 @@
     padding: 0;
 
     > li {
-      margin-bottom: 1em;
-      padding-bottom: 1em;
-      border-bottom: 1px solid $lightGrey;
+      margin-bottom: .5em;
+      padding-bottom: .5em;
+      border-bottom: 1px solid $lighterGrey;
     }
   }
 
@@ -26,6 +26,7 @@
       weight: 700;
     }
     color: $darkBlue;
+    text-decoration: none;
   }
 
   .result--actions {

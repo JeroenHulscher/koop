@@ -8,14 +8,14 @@
       text-decoration: none;
       font: {
         family: $defaultSerifFontFamily;
-        weight: 700;
+        weight: 400;
         size: 110%;
       }
       padding-left: 1em;
       background: {
-        image: $dartTopIcon;
+        image: $plusIcon;
         repeat: no-repeat;
-        position: 0 55%;
+        position: 0 50%;
       }
       color: $black;
 
@@ -25,9 +25,9 @@
 
       &[aria-expanded="true"] {
         background: {
-          image: $dartDownIcon;
+          image: $minusIcon;
           repeat: no-repeat;
-          position: 0 55%;
+          position: 0 50%;
         }
       }
     }
