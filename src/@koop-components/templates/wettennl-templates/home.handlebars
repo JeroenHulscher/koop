@@ -90,47 +90,74 @@
         </h2>
 
         <fieldset class="form__element checkboxgroup ">
-          <legend>Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
-          <label for="option-checkbox-11">
-            <input type="checkbox" id="option-checkbox-11" name="regelingen" />Verdragen
-          </label>
-          <label for="option-checkbox-12">
-            <input type="checkbox" id="option-checkbox-12" name="regelingen" />Wetten
-          </label>
-          <label for="option-checkbox-13">
-            <input type="checkbox" id="option-checkbox-13" name="regelingen" />AMvB's en andere Koninklijke besluiten
-          </label>
-          <label for="option-checkbox-14">
-            <input type="checkbox" id="option-checkbox-14" name="regelingen" />Ministriële regelingen
-            <a class="question-explanation-link" href="#question-explanation-11" id="question-explanation-link-11" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
-            <div class="question-explanation" id="question-explanation-11" data-decorator="hide-self">
-                <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
-                <a href="#question-explanation-link-11" class="question-explanation__close" data-handler="close-explanation">
-                <span class="visually-hidden">
-                  Sluiten
-                </span>
-              </a>
-            </div>
-          </label>
-          <label for="option-checkbox-15">
-            <input type="checkbox" id="option-checkbox-15" name="regelingen" />Beleidsregels rijksdienst
-          </label>
-          <label for="option-checkbox-16">
-            <input type="checkbox" id="option-checkbox-16" name="regelingen" />Circulaire rijksdienst
-          </label>
-          <label for="option-checkbox-17">
-            <input type="checkbox" id="option-checkbox-17" name="regelingen" />Regelingen zelfstandige bestuursorganen (ZBO's)
-          </label>
-          <label for="option-checkbox-18">
-            <input type="checkbox" id="option-checkbox-18" name="regelingen" />Regelingen publieke organisatie voor beroep en bedrijf
-          </label>
-          <label for="option-checkbox-19">
-            <input type="checkbox" id="option-checkbox-19" name="regelingen" />Reglementen van de Staten-Generaal
-          </label>
+          <legend class="visually-hidden">Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
+          <ul class="list--unstyled">
+            <li>
+                <label for="option-checkbox-011">
+                  <input type="checkbox" id="option-checkbox-011" name="regelingen" />Alle soorten regelingen of:
+                </label>
+              <ul>
+                <li>
+                  <label for="option-checkbox-11">
+                    <input type="checkbox" id="option-checkbox-11" name="regelingen" />Verdragen
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-12">
+                    <input type="checkbox" id="option-checkbox-12" name="regelingen" />Wetten
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-13">
+                    <input type="checkbox" id="option-checkbox-13" name="regelingen" />AMvB's en andere Koninklijke besluiten
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-14">
+                    <input type="checkbox" id="option-checkbox-14" name="regelingen" />Ministriële regelingen
+                    <a class="question-explanation-link" href="#question-explanation-11" id="question-explanation-link-11" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
+                    <div class="question-explanation" id="question-explanation-11" data-decorator="hide-self">
+                        <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+                        <a href="#question-explanation-link-11" class="question-explanation__close" data-handler="close-explanation">
+                        <span class="visually-hidden">
+                          Sluiten
+                        </span>
+                      </a>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-15">
+                    <input type="checkbox" id="option-checkbox-15" name="regelingen" />Beleidsregels rijksdienst
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-16">
+                    <input type="checkbox" id="option-checkbox-16" name="regelingen" />Circulaire rijksdienst
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-17">
+                    <input type="checkbox" id="option-checkbox-17" name="regelingen" />Regelingen zelfstandige bestuursorganen (ZBO's)
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-18">
+                    <input type="checkbox" id="option-checkbox-18" name="regelingen" />Regelingen publieke organisatie voor beroep en bedrijf
+                  </label>
+                </li>
+                <li>
+                  <label for="option-checkbox-19">
+                    <input type="checkbox" id="option-checkbox-19" name="regelingen" />Reglementen van de Staten-Generaal
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </fieldset>
 
         <fieldset class="form__element checkboxgroup ">
-          <legend>Specifieker zoeken</legend>
+          <legend class="visually-hidden">Specifieker zoeken</legend>
           <label for="option-checkbox-111">
             <input type="checkbox" id="option-checkbox-111" name="bes" />Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
           </label>
@@ -164,7 +191,6 @@
               </span>
             </a>
           </div></h2>
-        <p>Typ een of meer woorden die exact zo moeten voorkomen in de tekst.</p>
 
         <div class="form__element">
             <label for="input-1">In de titel</label>

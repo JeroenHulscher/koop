@@ -7,16 +7,35 @@
 {{else}}
   <ul class="{{ modifier }}">
 {{/if }}
+{{#if orderedList }}
   {{#each items }}
-    <li>{{{ text }}}</li>
     {{#if subitems }}
-      <ul>
+    <li>{{{ text }}}
+      <ol>
       {{#each subitems }}
         <li>{{{ text }}}</li>
       {{/each }}
-      </ul>
+      </ol>
+    </li>
+    {{else}}
+      <li>{{{ text }}}</li>
     {{/if }}
   {{/each }}
+{{else}}
+  {{#each items }}
+    {{#if subitems }}
+    <li>{{{ text }}}
+      <ol>
+      {{#each subitems }}
+        <li>{{{ text }}}</li>
+      {{/each }}
+      </ol>
+    </li>
+    {{else}}
+      <li>{{{ text }}}</li>
+    {{/if }}
+  {{/each }}
+{{/if}}
 {{#if orderedList }}
   </ol>
 {{else}}

@@ -23,7 +23,13 @@ ol {
 
   > li > ol {
     list-style-type: lower-alpha;
+
+    > li > ol {
+      list-style-type: lower-roman;
+    }
   }
+
+
 }
 
 .facet--heading {
@@ -42,6 +48,10 @@ ol {
 .list--unstyled {
   list-style: none;
   padding-left: 0;
+  ul {
+    list-style: none;
+    padding-left: 1em;
+  }
 }
 
 .list--linked {
@@ -68,6 +78,20 @@ ol {
     }
 
 
+  }
+}
+
+.list--law {
+  font-weight: 700;
+
+  li {
+    margin: 0;
+  }
+
+  > li p,
+  ol > li > p {
+    font-weight: 400;
+    margin: 0 0 0 1em;
   }
 }
 

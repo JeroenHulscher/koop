@@ -58,4 +58,17 @@ variants:
         - text: <a href="#">1e item over belangrijke zaken</a><small>Item omschrijving</small>
         - text: <a href="#" rel="external">2e item over minder belangrijke zaken</a>
         - text: <a href="#">3e item</a><small>Item omschrijving met iets meer context</small>
+  - name: Law list
+    status: prototype
+    context:
+      orderedList: true
+      modifier: list--law
+      items:
+      - text: <p>1e item</p>
+      - text: <p>2e item</p>
+      - text: <p>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
+        subitems:
+          - text: <p>1e subitem</p>
+          - text: <p>2e subitem</p>
+      - text: <p>4e item</p>
 
