@@ -35,18 +35,17 @@
   var updateStickability = function( element, footer ) {
     var footerOffset = footer.getBoundingClientRect();
     var elementPosition = element.getBoundingClientRect();
+    var elementPositionLeft = elementPosition.left - element.offsetLeft + 16;
     var elementReferenceTop = element.referenceTop;
     var scrollY = getScrollY();
     var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
     var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
 
-    elementPosition.left -= element.offsetLeft - 16;
-
     if ( scrollY > elementReferenceTop && onDesktop ) {
       element.style.position = 'fixed';
       element.style.top = '1em';
-      element.style.left = elementPosition.left + 'px';
+      element.style.left = elementPositionLeft + 'px';
       element.style.height = sidebarHeight + 'px';
     }
     else {
