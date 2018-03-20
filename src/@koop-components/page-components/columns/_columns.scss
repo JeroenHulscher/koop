@@ -1,17 +1,12 @@
 $gutter: 1em;
 
 .columns {
-  display: flex;
-  flex-direction: column;
 
   @media ( min-width: 50em ) {
     flex-direction: row;
-  }
-
-  > * {
-    flex: 1;
-
-    @media ( min-width: 50em ) {
+    display: flex;
+    > * {
+      flex: 1;
       margin-left: $gutter;
     }
   }
@@ -26,11 +21,11 @@ $gutter: 1em;
   }
 
   &--fixed {
-    display: block;
     @media ( min-width: 50em ) {
-      display: flex;
+      flex-wrap: wrap;
       > * {
         flex: 0 1 calc((100% - #{$gutter*3}) / 4);
+
         &:nth-child(4n+5) {
           margin-left: 0;
         }
