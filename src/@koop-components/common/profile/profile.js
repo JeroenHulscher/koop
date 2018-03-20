@@ -7,18 +7,18 @@
     var isExpanded = element.getAttribute( 'aria-expanded' ) === 'true';
 
     if ( isExpanded ) {
-      ohnl.ui.hide( toggledElement );
+      onl.ui.hide( toggledElement );
       element.setAttribute( 'aria-expanded', 'false' );
     } else {
-      ohnl.ui.show( toggledElement );
+      onl.ui.show( toggledElement );
       element.setAttribute( 'aria-expanded', 'true' );
     }
   };
 
-  ohnl.decorate({
+  onl.decorate({
     'init-profile-toggle': function( element ) {
-      var togglerHolder = ohnl.dom.$( '[data-toggler]', element )[0];
-      var toggled = ohnl.dom.$( '[data-toggled]', element )[0];
+      var togglerHolder = onl.dom.$( '[data-toggler]', element )[0];
+      var toggled = onl.dom.$( '[data-toggled]', element )[0];
       var toggler = document.createElement( 'button' );
 
       toggler.type = 'button';
@@ -32,7 +32,7 @@
     }
   });
 
-  ohnl.handle({
+  onl.handle({
     'toggle-profile-options': function( element ) {
       toggle(element);
     }

@@ -5,16 +5,16 @@
   var tabs = {
     'openPanel': function( element ) {
       var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
-      var tabs = ohnl.dom.$( '[role="tab"]', tabsHolder );
-      var currentTab = ohnl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
+      var tabs = onl.dom.$( '[role="tab"]', tabsHolder );
+      var currentTab = onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
       var currentPanel = document.getElementById( currentTab.getAttribute( 'aria-controls' ) );
       var panelToShow = document.getElementById( element.getAttribute('aria-controls') );
 
       // hide current panel
-      ohnl.ui.hide( currentPanel );
+      onl.ui.hide( currentPanel );
 
       // show panel to show
-      ohnl.ui.show( panelToShow );
+      onl.ui.show( panelToShow );
 
       // update aria-selected attributes
       tabs.forEach( function( tab ) {
@@ -45,7 +45,7 @@
     'getCurrentPanel': function( element ) {
       var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
 
-      return ohnl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
+      return onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
     },
     switch: function(event) {
       var currentPanel = event.target;
@@ -64,10 +64,10 @@
     }
   };
 
-  ohnl.decorate({
+  onl.decorate({
     'init-tabs': function( element ) {
-      var theseTabs = ohnl.dom.$( '[role="tab"]', element );
-      var panels = ohnl.dom.$( '[role="tabpanel"]', element );
+      var theseTabs = onl.dom.$( '[role="tab"]', element );
+      var panels = onl.dom.$( '[role="tabpanel"]', element );
 
       // set all selected states
       // fire switchTab function when keys are pressed
@@ -78,18 +78,18 @@
 
       // hide all panels
       panels.forEach( function( panel ) {
-        ohnl.ui.hide( panel );
+        onl.ui.hide( panel );
       });
 
       // show first panel
-      ohnl.ui.show( panels[0] );
+      onl.ui.show( panels[0] );
 
       // give first tab selected state
       theseTabs[0].setAttribute( 'aria-selected', 'true' );
     }
   });
 
-  ohnl.handle({
+  onl.handle({
     'open-panel': function( element, event ) {
       event.preventDefault();
       tabs.openPanel( element );

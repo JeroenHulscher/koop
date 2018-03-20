@@ -1,7 +1,7 @@
 document.documentElement.className = 'has-js';
 
 // run all decorators on page load
-ohnl.run();
+onl.run();
 
 // bind click handler so that handlers run on click
 // of elements with data-handler="handler"
@@ -27,8 +27,8 @@ document.addEventListener( 'click', function handleClick( event ) {
   }
 
   handler.split( /\s+/ ).forEach( function( handlerName ) {
-    if ( ohnl.handlers[handlerName] instanceof Function ) {
-      ohnl.handlers[handlerName]( element, event );
+    if ( onl.handlers[handlerName] instanceof Function ) {
+      onl.handlers[handlerName]( element, event );
     }
   });
 

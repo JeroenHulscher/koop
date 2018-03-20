@@ -23,7 +23,7 @@
     }
   };
 
-  ohnl.handle({
+  onl.handle({
     'toggle-search': function toggleSearch( submitButton, event ) {
       var form = submitButton.closest( 'form' );
       var searchTerm = form.querySelector( '.search__term' );
@@ -53,7 +53,7 @@
 });
 
 
-  ohnl.decorate({
+  onl.decorate({
     'init-search-toggle': function(element) {
       var searchTerm = element.querySelector( '.search__term' );
       var searchButton = element.querySelector( 'button' );

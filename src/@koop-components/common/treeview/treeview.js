@@ -24,7 +24,7 @@
     }
   };
 
-  ohnl.handle({
+  onl.handle({
     'toggle-fold': function(element, event) {
 
       var openText = 'Toon onderliggende';
@@ -35,13 +35,13 @@
       event.preventDefault();
 
       subLists.forEach( function( toggleable ) {
-        if ( ohnl.ui.isHidden( toggleable ) ) {
-          ohnl.ui.show( toggleable );
+        if ( onl.ui.isHidden( toggleable ) ) {
+          onl.ui.show( toggleable );
           element.textContent = closeText;
           element.setAttribute( 'aria-expanded', 'true' );
         }
         else {
-          ohnl.ui.hide( toggleable );
+          onl.ui.hide( toggleable );
           element.textContent = openText;
           element.setAttribute( 'aria-expanded', 'false' );
         }
@@ -49,7 +49,7 @@
     }
   });
 
-  ohnl.decorate({
+  onl.decorate({
     'add-foldability': function(element) {
 
       var openText = 'Toon onderliggende';

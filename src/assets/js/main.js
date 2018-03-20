@@ -1,11 +1,11 @@
 'use strict';
 
-window.ohnl = {
+window.onl = {
 
   ui: {
     // toggle visibility of `element`
     toggle: function( element ) {
-      if ( !ohnl.ui.isHidden( element ) ) {
+      if ( !onl.ui.isHidden( element ) ) {
         element.setAttribute( 'hidden', true );
       }
       else {
@@ -14,17 +14,17 @@ window.ohnl = {
     },
     // hide `element`
     hide: function( element, focusElement ) {
-      if ( !ohnl.ui.isHidden( element ) ) {
+      if ( !onl.ui.isHidden( element ) ) {
         element.setAttribute( 'hidden', true );
       }
-      ohnl.ui.focus( focusElement );
+      onl.ui.focus( focusElement );
     },
     // show `element`
     show: function( element, focusElement ) {
-      if ( ohnl.ui.isHidden( element ) ) {
+      if ( onl.ui.isHidden( element ) ) {
         element.removeAttribute( 'hidden' );
       }
-      ohnl.ui.focus( focusElement );
+      onl.ui.focus( focusElement );
     },
     // check if `element` is hidden
     isHidden: function( element, checkForHiddenParents ) {
@@ -77,7 +77,7 @@ window.ohnl = {
       }
       element._tabIndex = element.tabIndex;
       element.tabIndex = -1;
-      if ( ohnl.dom.isDisableable( element ) ) {
+      if ( onl.dom.isDisableable( element ) ) {
         element.disabled = true;
       }
       // if we're not dealing with an element that can be disabled
@@ -86,7 +86,7 @@ window.ohnl = {
         element.setAttribute( 'aria-disabled', true );
       }
     },
-    // enable disabled `element`, see `ohnl.ui.disable` above
+    // enable disabled `element`, see `onl.ui.disable` above
     // also restore tabindex
     enable: function( element ) {
       // already enabled
@@ -95,7 +95,7 @@ window.ohnl = {
       }
       element.tabIndex = element._tabIndex;
       delete element._tabIndex;
-      if ( ohnl.dom.isDisableable( element ) ) {
+      if ( onl.dom.isDisableable( element ) ) {
         element.disabled = false;
       }
       // if we're not dealing with an element that can be disabled
@@ -106,21 +106,21 @@ window.ohnl = {
     },
     // basic way of getting focusable elements in `baseElement`
     getFocusableElements: function( baseElement ) {
-      return ohnl.dom.$( 'a[href], button, input[type="text"], input[type="radio"], input[type="checkbox"], select', baseElement )
-      .filter( ohnl.dom.isVisibleElement );
+      return onl.dom.$( 'a[href], button, input[type="text"], input[type="radio"], input[type="checkbox"], select', baseElement )
+      .filter( onl.dom.isVisibleElement );
     },
     // set up a focus trap within a specific element
     bindFocusTrap: function( element ) {
-      element.addEventListener( 'keydown', ohnl.ui.trapFocus );
+      element.addEventListener( 'keydown', onl.ui.trapFocus );
     },
     // undo a focus trap within a specifc element
     unbindFocusTrap: function( element ) {
-      element.removeEventListener( 'keydown', ohnl.ui.trapFocus );
+      element.removeEventListener( 'keydown', onl.ui.trapFocus );
     },
     // prevent (shift) tabbing away from an element
     trapFocus: function( event ) {
       var element = event.currentTarget;
-      var focusableEls = ohnl.ui.getFocusableElements( element );
+      var focusableEls = onl.ui.getFocusableElements( element );
       var firstFocusableEl = focusableEls[0];
       var lastFocusableEl = focusableEls[focusableEls.length - 1];
       var isTabPressed = ( event.key === 'Tab' || event.keyCode === 9 );
@@ -177,12 +177,12 @@ window.ohnl = {
       var CHECK_FOR_HIDDEN_PARENTS = true;
 
       // only return elements that are not hidden and not inside a hidden parent
-      return !ohnl.ui.isHidden( element, CHECK_FOR_HIDDEN_PARENTS );
+      return !onl.ui.isHidden( element, CHECK_FOR_HIDDEN_PARENTS );
     },
     // get all *visible* elements that have a required or data-custom-required attribute
     getRequiredElements: function( element ) {
-      return ohnl.dom.$( '[required]', element )
-      .filter( ohnl.dom.isVisibleElement );
+      return onl.dom.$( '[required]', element )
+      .filter( onl.dom.isVisibleElement );
     },
     // return either the custom required element or the actual required element
     getRequiredElement: function( element ) {
@@ -208,8 +208,8 @@ window.ohnl = {
 
   handle: function(handlers) {
     for (var handler in handlers) {
-      if (!ohnl.handlers[handler]) {
-        ohnl.handlers[handler] = handlers[handler];
+      if (!onl.handlers[handler]) {
+        onl.handlers[handler] = handlers[handler];
       } else {
         console.log('Conflicting handler: ' + handler);
       }
@@ -218,8 +218,8 @@ window.ohnl = {
 
   decorate: function(decorators) {
     for (var decorator in decorators) {
-      if (!ohnl.decorators[decorator]) {
-        ohnl.decorators[decorator] = decorators[decorator];
+      if (!onl.decorators[decorator]) {
+        onl.decorators[decorator] = decorators[decorator];
       } else {
         console.log('Conflicting decorator: ' + decorator);
       }
@@ -229,14 +229,14 @@ window.ohnl = {
   run: function(scope) {
     var WHITESPACE = /\s+/;
 
-    ohnl.dom.$( '[data-decorator]', scope || document ).forEach( function( element ) {
+    onl.dom.$( '[data-decorator]', scope || document ).forEach( function( element ) {
       var decoratorArr = element.getAttribute( 'data-decorator' )
       .toLowerCase()
       .split( WHITESPACE );
 
       decoratorArr.forEach( function( decorator ) {
-        if ( typeof ohnl.decorators[ decorator ] === 'function' ) {
-          ohnl.decorators[ decorator ]( element );
+        if ( typeof onl.decorators[ decorator ] === 'function' ) {
+          onl.decorators[ decorator ]( element );
         }
       });
     });

@@ -6,7 +6,7 @@ const fractal = require( '@frctl/fractal' ).create();
 fractal.components.engine(require('@frctl/handlebars')({}));
 fractal.components.set( 'ext', '.handlebars' );
 
-// // Twig
+// Twig
 // fractal.components.engine(require('@frctl/twig')({handlePrefix: '#DONTUSE', importContext: true}));
 // fractal.components.set( 'ext', '.twig' );
 

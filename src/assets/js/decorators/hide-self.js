@@ -1,5 +1,5 @@
-ohnl.decorate({
+onl.decorate({
   'hide-self': function(element) {
-    ohnl.ui.hide( element );
+    onl.ui.hide( element );
   }
 });

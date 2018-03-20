@@ -19,16 +19,16 @@
     if ( isOpen ) {
       button.textContent = labelOpen;
       button.setAttribute( 'aria-expanded', 'false' );
-      ohnl.ui.hide( toggles );
+      onl.ui.hide( toggles );
       document.body.classList.remove( 'no-scroll' );
-      ohnl.ui.unbindFocusTrap( button.parentNode );
+      onl.ui.unbindFocusTrap( button.parentNode );
     }
     else {
       button.textContent = labelClose;
       button.setAttribute( 'aria-expanded', 'true' );
-      ohnl.ui.show( toggles );
+      onl.ui.show( toggles );
       document.body.classList.add( 'no-scroll' );
-      ohnl.ui.bindFocusTrap( button.parentNode );
+      onl.ui.bindFocusTrap( button.parentNode );
     }
   }
 
@@ -58,7 +58,7 @@
     });
   };
 
-  ohnl.decorate({
+  onl.decorate({
     'add-mobile-foldability': function( element ) {
       var button = document.createElement( 'button' );
       var labels = {
@@ -86,7 +86,7 @@
       }
     },
     'stick-sidebar': function( element ) {
-      var footer = ohnl.dom.$( '.footer' )[0];
+      var footer = onl.dom.$( '.footer' )[0];
       var referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + 16;
 
       element.referenceTop = referenceTop;
@@ -108,7 +108,7 @@
 
   });
 
-  ohnl.handle({
+  onl.handle({
     'toggle-sidebar': function( element ) {
       toggle(element);
     }

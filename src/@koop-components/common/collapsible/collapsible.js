@@ -16,7 +16,7 @@
     }
   };
 
-  ohnl.handle({
+  onl.handle({
     'toggle-collapsible': function( element, event ) {
       var collapsibleElement = element.closest( '.collapsible' );
       var collapsiblesParentContainer = collapsibleElement.parentElement;
@@ -39,7 +39,7 @@
     }
   });
 
-  ohnl.decorate({
+  onl.decorate({
     'init-collapsible': function( element ) {
       var showInitially = dom.$('.collapsible--initially-visible', element ).length > 0;
 
