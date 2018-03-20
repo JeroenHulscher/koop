@@ -34,15 +34,3 @@ This is a button that can open a modal:
 ```
 
 Note that the `data-modal` attribute contains the ID of the modal, this corresponds to the `id` attribute on the actual modal.
-
-### Triggering/opening modal from JavaScript
-
-You can also open a modal with JavaScript. For this, you'll need to `require` the core modal code:
-
-```javascript
-var modal = require( 'core/modal' );
-```
-
-Which will let you open a modal using `modal.open( element )`, where `element` is the modal div that exists in your page.
-
-See the `open-modal` handler as an example of how this can be used.
