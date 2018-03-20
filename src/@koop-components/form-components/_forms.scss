@@ -63,6 +63,16 @@
         color: $red;
       }
     }
+
+    &[disabled],
+    &[read-only] {
+      background-color: $readOnlyBackgroundColor;
+      color: $readOnlyTextColor;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   input[type="text"],
