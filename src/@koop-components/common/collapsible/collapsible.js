@@ -4,15 +4,15 @@
 
   var collapsibles = {
     show: function ( collapsible ) {
-      dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'true' );
-      ui.show( dom.$( '.collapsible__content', collapsible )[0] );
+      onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'true' );
+      onl.ui.show( onl.dom.$( '.collapsible__content', collapsible )[0] );
     },
     hide: function ( collapsible ) {
-      dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'false' );
-      ui.hide( dom.$( '.collapsible__content', collapsible )[0] );
+      onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'false' );
+      onl.ui.hide( onl.dom.$( '.collapsible__content', collapsible )[0] );
     },
     isCollapsed: function ( collapsible ) {
-      return ui.isHidden( dom.$( '.collapsible__content', collapsible )[0] );
+      return onl.ui.isHidden( onl.dom.$( '.collapsible__content', collapsible )[0] );
     }
   };
 
@@ -20,7 +20,7 @@
     'toggle-collapsible': function( element, event ) {
       var collapsibleElement = element.closest( '.collapsible' );
       var collapsiblesParentContainer = collapsibleElement.parentElement;
-      var collapsibleSiblings = dom.$( '.collapsible', collapsiblesParentContainer ).filter( function( element ) {
+      var collapsibleSiblings = onl.dom.$( '.collapsible', collapsiblesParentContainer ).filter( function( element ) {
         return element.id === collapsibleElement.id;
       });
 
@@ -41,7 +41,7 @@
 
   onl.decorate({
     'init-collapsible': function( element ) {
-      var showInitially = dom.$('.collapsible--initially-visible', element ).length > 0;
+      var showInitially = onl.dom.$('.collapsible--initially-visible', element ).length > 0;
 
       if ( showInitially === true ){
         collapsibles.show( element );
