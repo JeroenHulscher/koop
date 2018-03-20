@@ -45,13 +45,13 @@ gulp.task( 'fractal:build', function(){
 });
 
 gulp.task( 'lint', function() {
-  return gulp.src([paths.scripts + '/**/*.js'])
+  return gulp.src(['src/**/*.js'])
     .pipe( eslint( { 'configFile': './.eslintrc.yml' } ) )
     .pipe( eslint.format() );
 });
 
 gulp.task( 'lint:watch', function() {
-  gulp.watch([paths.scripts + '/**/*.js'], gulp.series( 'lint' ) );
+  gulp.watch(['src/**/*.js'], gulp.series( 'lint' ) );
 });
 
  // SCSS -> CSS

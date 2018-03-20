@@ -1,4 +1,4 @@
-(function () {
+( function() {
 
   'use strict';
 
@@ -6,10 +6,15 @@
     var supportPageOffset = window.pageXOffset !== undefined;
     var isCSS1Compat = ( ( document.compatMode || '' ) === 'CSS1Compat' );
 
-    return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+    if ( supportPageOffset ) {
+      return window.pageYOffset;
+    }
+    else {
+      return isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+    }
   };
 
-  var toggle = function(element) {
+  var toggle = function( element ) {
     var button = element;
     var labelOpen = button.getAttribute( 'data-toggle-open' ) || 'Open';
     var labelClose = button.getAttribute( 'data-toggle-close' ) || 'Sluit';
@@ -30,7 +35,7 @@
       document.body.classList.add( 'no-scroll' );
       onl.ui.bindFocusTrap( button.parentNode );
     }
-  }
+  };
 
   var updateStickability = function( element, footer ) {
     var footerOffset = footer.getBoundingClientRect();
@@ -109,7 +114,7 @@
 
   onl.handle({
     'toggle-sidebar': function( element ) {
-      toggle(element);
+      toggle( element );
     }
   });
 

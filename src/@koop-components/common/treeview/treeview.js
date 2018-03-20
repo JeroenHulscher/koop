@@ -1,17 +1,21 @@
-(function () {
+( function() {
 
   'use strict';
 
+  var openText = 'Toon onderliggende';
+  var closeText = 'Verberg onderliggende';
+
   var treeview = {
-    'getFoldableChildren' : function( element ) {
+    getFoldableChildren: function( element ) {
       // note: element is <a> element that contains button ;
       // this returns an array of all the elements except the
       return Array.prototype.slice.call( element.parentNode.children, 1 );
     },
-    'getFoldableChildrenIDRef': function( foldableChildren ) {
+    getFoldableChildrenIDRef: function( foldableChildren ) {
       var string = '';
+      var i;
 
-      for ( var i = 0; i < foldableChildren.length; i++ ) {
+      for ( i = 0; i < foldableChildren.length; i++ ) {
         if ( i > 0 ) {
           string += ' ' + foldableChildren[i].id;
         }
@@ -25,10 +29,8 @@
   };
 
   onl.handle({
-    'toggle-fold': function(element, event) {
+    'toggle-fold': function( element, event ) {
 
-      var openText = 'Toon onderliggende';
-      var closeText = 'Verberg onderliggende';
       var containingLink = element.parentNode;
       var subLists = treeview.getFoldableChildren( containingLink );
 
@@ -45,22 +47,20 @@
           element.textContent = openText;
           element.setAttribute( 'aria-expanded', 'false' );
         }
-      })
+      });
     }
   });
 
   onl.decorate({
-    'add-foldability': function(element) {
+    'add-foldability': function( element ) {
 
-      var openText = 'Toon onderliggende';
-      var closeText = 'Verberg onderliggende';
       var foldableChildren = treeview.getFoldableChildren( element );
       var foldableChildrenIDRef = treeview.getFoldableChildrenIDRef( foldableChildren );
       var needsFoldability = foldableChildren.length > 0;
       var toggleButton;
 
       if ( needsFoldability ) {
-        toggleButton = document.createElement( 'button' )
+        toggleButton = document.createElement( 'button' );
         toggleButton.type = 'button';
         toggleButton.textContent = closeText;
         toggleButton.setAttribute( 'data-handler', 'toggle-fold' );

@@ -1,16 +1,16 @@
-(function () {
+( function() {
 
   'use strict';
 
   var searchToggle = {
-    'context': {
-      'searchTermHiddenClass' : 'search__term--hidden',
-      'searchTermAnimateClass' : 'search__term--animating',
-      'open' : 'Open zoekveld',
-      'close' : 'Sluit zoekveld',
-      'submit' : 'Zoek'
+    context: {
+      searchTermHiddenClass : 'search__term--hidden',
+      searchTermAnimateClass : 'search__term--animating',
+      open : 'Open zoekveld',
+      close : 'Sluit zoekveld',
+      submit : 'Zoek'
     },
-    'handleInputChange': function( event ) {
+    handleInputChange: function( event ) {
       var input = event.target;
       var button = input.form.querySelector( 'button' );
 
@@ -37,24 +37,23 @@
       }
       else {
         if ( searchTerm.classList.contains( searchTermHiddenClass ) ) {
-      // open
-      searchTerm.classList.remove( searchTermHiddenClass );
-      searchTerm.focus();
-      searchButton.textContent = searchToggle.context.close;
+          // open
+          searchTerm.classList.remove( searchTermHiddenClass );
+          searchTerm.focus();
+          searchButton.textContent = searchToggle.context.close;
+        }
+        else {
+          // close
+          searchTerm.classList.add( searchTermHiddenClass );
+          searchButton.textContent = searchToggle.context.open;
+          searchTerm.value = ''; // reset so we don't submit while term is hidden
+        }
+      }
     }
-    else {
-      // close
-      searchTerm.classList.add( searchTermHiddenClass );
-      searchButton.textContent = searchToggle.context.open;
-      searchTerm.value = ''; // reset so we don't submit while term is hidden
-    }
-  }
-}
-});
-
+  });
 
   onl.decorate({
-    'init-search-toggle': function(element) {
+    'init-search-toggle': function( element ) {
       var searchTerm = element.querySelector( '.search__term' );
       var searchButton = element.querySelector( 'button' );
 
@@ -71,6 +70,5 @@
       }, 500 );
     }
   });
-
 
 })();

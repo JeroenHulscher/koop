@@ -1,5 +1,5 @@
 onl.handle({
-  'toggle-other-sites': function (element, event) {
+  'toggle-other-sites': function( element, event ) {
     var otherSites = onl.dom.getElementFromHref( element.href );
     var toggleState = element.getAttribute( 'aria-expanded' );
     var openEvent = document.createEvent( 'Event' );
@@ -30,7 +30,7 @@ onl.handle({
       window.dispatchEvent( openEvent );
     }
   },
-  'toggle-nav': function(element) {
+  'toggle-nav': function( element ) {
     var nav = document.getElementById( element.getAttribute( 'aria-controls' ) );
     var closedClass = 'header__nav--closed';
 
@@ -47,7 +47,7 @@ onl.handle({
 });
 
 onl.decorate({
-  'init-toggle-other-sites': function(element) {
+  'init-toggle-other-sites': function( element ) {
     var otherSites = onl.dom.getElementFromHref( element.href );
 
     element.setAttribute( 'aria-controls', otherSites.id );

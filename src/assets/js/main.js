@@ -164,9 +164,9 @@ window.onl = {
         return document.getElementById( id );
       })
       .filter( function( element ) {
-          // only return existing elements
-          return element;
-        });
+        // only return existing elements
+        return element;
+      });
     },
     // check if an element can natively be disabled
     isDisableable: function( element ) {
@@ -196,7 +196,7 @@ window.onl = {
       return {
         top: rect.top + scrollTop,
         left: rect.left + scrollLeft
-      }
+      };
     }
   },
 
@@ -206,27 +206,33 @@ window.onl = {
   decorators: {
   },
 
-  handle: function(handlers) {
-    for (var handler in handlers) {
-      if (!onl.handlers[handler]) {
+  handle: function( handlers ) {
+    var handler;
+
+    for ( handler in handlers ) {
+      if ( !onl.handlers[handler] ) {
         onl.handlers[handler] = handlers[handler];
-      } else {
-        console.log('Conflicting handler: ' + handler);
+      }
+      else {
+        console.log( 'Conflicting handler: ' + handler );
       }
     }
   },
 
-  decorate: function(decorators) {
-    for (var decorator in decorators) {
-      if (!onl.decorators[decorator]) {
+  decorate: function( decorators ) {
+    var decorator;
+
+    for ( decorator in decorators ) {
+      if ( !onl.decorators[decorator] ) {
         onl.decorators[decorator] = decorators[decorator];
-      } else {
-        console.log('Conflicting decorator: ' + decorator);
+      }
+      else {
+        console.log( 'Conflicting decorator: ' + decorator );
       }
     }
   },
 
-  run: function(scope) {
+  run: function( scope ) {
     var WHITESPACE = /\s+/;
 
     onl.dom.$( '[data-decorator]', scope || document ).forEach( function( element ) {
