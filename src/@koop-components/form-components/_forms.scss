@@ -66,8 +66,8 @@
 
     &[disabled],
     &[read-only] {
-      background-color: $readOnlyBackgroundColor;
-      color: $readOnlyTextColor;
+      background-color: $mediumGrey;
+      color: $mediumGrey;
 
       &:focus {
         outline: none;
