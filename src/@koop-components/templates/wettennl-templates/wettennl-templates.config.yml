@@ -1,1 +1,10 @@
 label: Wetten.nl
+context:
+  headerContext:
+    navLinks:
+    - url: '#'
+      text: Eenvoudig zoeken
+    - url: '#'
+      text: uitgebreid zoeken
+    - url: '#'
+      text: zoeken in EU-richtlijnen

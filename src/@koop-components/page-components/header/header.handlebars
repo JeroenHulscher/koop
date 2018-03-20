@@ -27,6 +27,11 @@
     <div class="container">
       <ul class="header__primary-nav list list--unstyled">
         <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        {{#if navLinks }}
+        {{#each navLinks }}
+        <li><a href="{{ url }}" class="">{{ text }}</a></li>
+        {{/each}}
+        {{/if}}
       </ul>
       {{ render "@search" search merge="true" }}
       {{#if headerMore }}
