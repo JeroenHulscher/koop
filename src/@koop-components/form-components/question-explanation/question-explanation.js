@@ -24,3 +24,9 @@ onl.handle({
     event.preventDefault();
   }
 });
+
+onl.decorate({
+  'hide-self': function(element) {
+    onl.ui.hide( element );
+  }
+});
