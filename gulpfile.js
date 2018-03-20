@@ -4,13 +4,13 @@
 const gulp = require( 'gulp' );
 const sass = require( 'gulp-sass' );
 const postcss = require( 'gulp-postcss' );
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 const autoprefixer = require( 'autoprefixer' );
 const eslint = require( 'gulp-eslint' );
 const del = require( 'del' );
 const imageOptim = require( 'gulp-imagemin' );
 const changed = require( 'gulp-changed' );
-const browserify = require( 'browserify' );
-const source = require( 'vinyl-source-stream' );
 const paths = {
   styles : 'src/assets/scss',
   scripts : 'src/assets/js',
@@ -118,30 +118,24 @@ gulp.task( 'fonts:watch', function() {
   gulp.watch( paths.fonts + '/**/*', gulp.parallel( 'fonts' ) );
 });
 
-// just copy for now, concatenating and minifying will happen at a later stage
-gulp.task( 'js:copy', function() {
-  return gulp.src( [ paths.scripts + '/polyfills.js' ] )
-    .pipe( gulp.dest( paths.drop + '/js' ) );
-});
-
 gulp.task( 'js:clean', function( done ) {
   return del([paths.drop + '/js'], done );
 });
 
-gulp.task( 'js:browserify', function() {
-  return browserify( paths.scripts + '/main.js', {
-    // paths in which to look for modules
-    'paths' : [
-      paths.components,
-      paths.scripts
-    ]
-  })
-    .bundle()
-    .pipe( source('main.js') )
-    .pipe( gulp.dest( paths.drop + '/js' ) );
+gulp.task( 'js:build', function() {
+  return gulp.src([
+    paths.scripts + '/polyfills.js',
+    paths.scripts + '/main.js',
+    paths.components + '/**/*.js',
+    paths.scripts + '/decorators/*.js',
+    paths.scripts + '/run.js'
+  ])
+  .pipe( concat('main.js') )
+  // .pipe( uglify() )
+  .pipe( gulp.dest( paths.drop + '/js' ) );
 });
 
-gulp.task( 'js', gulp.series( 'js:clean', 'js:browserify', 'js:copy' ) );
+gulp.task( 'js', gulp.series( 'js:clean', 'js:build' ) );
 
 gulp.task( 'js:watch', function() {
   gulp.watch( paths.allSrc + '/**/*.js', gulp.parallel( 'js' ) );
