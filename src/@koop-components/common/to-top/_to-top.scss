@@ -1,12 +1,16 @@
 .to-top {
-position: fixed;
-bottom: -2.25em;
-left: calc(50% - 1em);
-width: 4em;
-height: 4em;
-border-radius: 100%;
-background: $primaryBlue $dartTopWhiteIcon no-repeat 50% 0.5em;
-background-size: 1.5em;
-color: $white;
-text-indent: -999em;
+  position: fixed;
+  bottom: -2.25em;
+  left: calc(50% - 1em);
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+  background: $primaryBlue $dartTopWhiteIcon no-repeat 50% 0.5em;
+  background-size: 1.5em;
+  color: $white;
+  text-indent: -999em;
+  transition: .2s ease-out;
+  &.irrelevant {
+    transform: translateY(100%);
+  }
 }
