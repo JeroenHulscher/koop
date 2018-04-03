@@ -1,8 +1,12 @@
 <fieldset class="form__element checkboxgroup {{ modifier }}">
   <legend>{{ fieldLabel }} </legend>
-  {{#each options }}
-  <label for="option-{{ id  }}">
-    <input type="checkbox" id="option-{{ id }}" name="{{ ../name }}" />{{ text }}
-  </label>
-  {{/each}}
+  <ul class="list--unstyled">
+    {{#each options }}
+    <li>
+      <label for="option-{{ id  }}">
+        <input type="checkbox" id="option-{{ id }}" name="{{ ../name }}" />{{ text }}
+      </label>
+    </li>
+    {{/each}}
+  </ul>
 </fieldset>

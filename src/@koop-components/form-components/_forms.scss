@@ -126,16 +126,23 @@
     }
 
     &--many {
-      max-height: 10em;
-      background-image: linear-gradient($white 95%, $lighterGrey 105%);
-      overflow: scroll;
-      border: 1px solid $lighterGrey;
-      padding: 0 .5em;
 
-      legend {
-        background: $white;
+      position: relative;
+
+      ul {
+        max-height: 10em;
+        overflow: scroll;
         padding: 0 .5em;
-        margin: 0 .5em;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 10px;
+          pointer-events: none;
+          background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(204, 204, 204, .5));
+        }
       }
     }
   }
