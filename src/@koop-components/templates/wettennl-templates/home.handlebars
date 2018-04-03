@@ -38,19 +38,19 @@
                   <input type="checkbox" id="option-checkbox-11" name="regelingen" data-set="which-types" />Verdragen
                 </label>
               </li>
-              <li>
+              <li class="separator">
                 <label for="option-checkbox-12">
-                  <input type="checkbox" id="option-checkbox-12" name="regelingen" data-set="which-types" />Wetten
+                  <input type="checkbox" id="option-checkbox-12" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Wetten
                 </label>
               </li>
               <li>
                 <label for="option-checkbox-13">
-                  <input type="checkbox" id="option-checkbox-13" name="regelingen" data-set="which-types" />AMvB's en andere Koninklijke besluiten
+                  <input type="checkbox" id="option-checkbox-13" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />AMvB's en andere Koninklijke besluiten
                 </label>
               </li>
               <li>
                 <label for="option-checkbox-14">
-                  <input type="checkbox" id="option-checkbox-14" name="regelingen" data-set="which-types" />Ministriële regelingen
+                  <input type="checkbox" id="option-checkbox-14" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Ministriële regelingen
                   <a class="question-explanation-link" href="#question-explanation-11" id="question-explanation-link-11" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
                 </label>
                 <div class="question-explanation" id="question-explanation-11" data-decorator="hide-self">
@@ -64,15 +64,35 @@
               </li>
               <li>
                 <label for="option-checkbox-15">
-                  <input type="checkbox" id="option-checkbox-15" name="regelingen" data-set="which-types" />Beleidsregels rijksdienst
+                  <input type="checkbox" id="option-checkbox-15" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Beleidsregels rijksdienst
                 </label>
               </li>
               <li>
                 <label for="option-checkbox-16">
-                  <input type="checkbox" id="option-checkbox-16" name="regelingen" data-set="which-types" />Circulaire rijksdienst
+                  <input type="checkbox" id="option-checkbox-16" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Circulaire rijksdienst
                 </label>
+                <fieldset class="form__element checkboxgroup" id="ministerie-options" data-decorator="hide-self">
+                  <legend>Van de ministeries</legend>
+                  <ul class="list--unstyled">
+                    <li><label><input type="checkbox"> Algemene Zaken (az)</label></li>
+                    <li><label><input type="checkbox"> Binnenlandse Zaken en Koninkrijksrelaties (bzk)</label></li>
+                    <li><label><input type="checkbox"> Buitenlandse Zaken (buza)</label></li>
+                    <li><label><input type="checkbox"> Defensie (def)</label></li>
+                    <li><label><input type="checkbox"> Economische Zaken (ez)</label></li>
+                    <li><label><input type="checkbox"> Economische Zaken en Klimaat (ezk)</label></li>
+                    <li><label><input type="checkbox"> Financiën (fin)</label></li>
+                    <li><label><input type="checkbox"> Infrastructuur en Milieu (im)</label></li>
+                    <li><label><input type="checkbox"> Infrastructuur en Waterstaat (iw)</label></li>
+                    <li><label><input type="checkbox"> Justitie en Veiligheid (jv)</label></li>
+                    <li><label><input type="checkbox"> Landbouw, Natuur en Voedselkwaliteit (lnv)</label></li>
+                    <li><label><input type="checkbox"> Onderwijs, Cultuur en Wetenschap (ocw)</label></li>
+                    <li><label><input type="checkbox"> Sociale Zaken en Werkgelegenheid (szw)</label></li>
+                    <li><label><input type="checkbox"> Veiligheid en Justitie (vj)</label></li>
+                    <li><label><input type="checkbox"> Volksgezondheid, Welzijn en Sport (vws)</label></li>
+                  </ul>
+                </fieldset>
               </li>
-              <li>
+              <li class="separator">
                 <fieldset class="form__element checkboxgroup">
                   <legend>
                     <label for="option-checkbox-17">
@@ -102,7 +122,7 @@
                   </ul>
                 </fieldset>
               </li>
-              <li>
+              <li class="separator">
                 <fieldset class="form__element checkboxgroup">
                   <legend>
                     <label for="option-checkbox-18">
@@ -132,7 +152,7 @@
                   </ul>
                 </fieldset>
               </li>
-              <li>
+              <li class="separator">
                 <label for="option-checkbox-19">
                   <input type="checkbox" id="option-checkbox-19" name="regelingen" data-set="which-types" />Reglementen van de Staten-Generaal
                 </label>
@@ -195,7 +215,7 @@
         <div class="form__element checkboxgroup inline-group">
 
           <label for="option-checkbox-1">
-            <input type="checkbox" id="option-checkbox-1" name="alliedforces" />Exact zoeken
+            <input type="checkbox" id="option-checkbox-1" name="alliedforces" data-handler="toggle-option" data-for="option-checkbox-2" checked />Exact zoeken
           </label>
 
           <label for="option-checkbox-2">
@@ -220,7 +240,7 @@
 
         <div class="form__element checkboxgroup">
           <label for="option-checkbox-4">
-            <input type="checkbox" id="option-checkbox-4" name="alliedforces" />Exact zoeken
+            <input type="checkbox" id="option-checkbox-4" name="alliedforces" checked />Exact zoeken
           </label>
         </div>
 
@@ -229,23 +249,23 @@
           <ul class="list--unstyled">
             <li>
               <label>
-                <input type="radio" name="zoek-in-onderdelen" checked data-handler="hide-extra-options" data-options="wetstechnische-information-options"> Wetstechnische informatie
+                <input type="radio" name="zoek-in-onderdelen" checked data-handler="hide-extra-options" data-options="wetstechnische-information-options">Alle wetstechnische informatie
               </label>
             </li>
             <li>
               <fieldset class="form__element checkboxgroup">
                 <legend>
                   <label>
-                    <input type="radio" name="zoek-in-onderdelen" data-handler="show-extra-options" data-options="wetstechnische-information-options"> Specifieke informatie
+                    <input type="radio" name="zoek-in-onderdelen" data-handler="show-extra-options" data-options="wetstechnische-information-options">Specifieke onderdelen
                   </label>
                 </legend>
                 <ul class="list--unstyled" data-decorator="hide-self" id="wetstechnische-information-options">
-                  <li><label><input type="checkbox"> Opschrift en aanhef</label></li>
-                  <li><label><input type="checkbox"> Opschriften binnen het lichaam van de regeling</label></li>
-                  <li><label><input type="checkbox"> Artikelen of daarmee vergelijkbare tekst</label></li>
-                  <li><label><input type="checkbox"> Ondertekening en slotformulier</label></li>
-                  <li><label><input type="checkbox"> Bijlagen</label></li>
-                  <li><label><input type="checkbox"> Officiële inhoudsopgave</label></li>
+                  <li><label><input type="checkbox">Opschrift en aanhef</label></li>
+                  <li><label><input type="checkbox">Opschriften binnen het lichaam van de regeling</label></li>
+                  <li><label><input type="checkbox">Artikelen of daarmee vergelijkbare tekst</label></li>
+                  <li><label><input type="checkbox">Ondertekening en slotformulier</label></li>
+                  <li><label><input type="checkbox">Bijlagen</label></li>
+                  <li><label><input type="checkbox">Officiële inhoudsopgave</label></li>
                 </ul>
               </fieldset>
             </li>
@@ -286,7 +306,6 @@
         </div>
 
         <div class="form__element checkboxgroup">
-
           <label for="option-checkbox-5">
             <input type="checkbox" id="option-checkbox-5" name="alliedforces" />Ook materieel uitgewerkte regelingen
             <a class="question-explanation-link" href="#question-explanation-5" id="question-explanation-link-5" data-handler="toggle-explanation">Toelichting uitgewerkte regellingen</a>
@@ -300,6 +319,39 @@
             </a>
           </div>
         </div>
+
+        <fieldset class="form__element radiogroup">
+          <legend>Datum van</legend>
+          <ul class="list--unstyled">
+            <label>
+              <input type="radio" name="datum-van" value="Inwerkingtreding" checked>Inwerkingtreding
+            </label>
+            <label>
+              <input type="radio" name="datum-van" value="Ondertekeninginfo">Ondertekening
+              <a class="question-explanation-link" href="#question-explanation-Ondertekening" id="question-explanation-link-Ondertekening" data-handler="toggle-explanation">Toelichting Ondertekening</a>
+            </label>
+            <div class="question-explanation" id="question-explanation-Ondertekening" data-decorator="hide-self">
+              <p>Zoeken op datum ondertekening is niet mogelijk bij verdragen.</p>
+              <a href="#question-explanation-link-Ondertekening" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+            <label>
+              <input type="radio" name="datum-van" value="Totstandkominginfo">Totstandkoming
+              <a class="question-explanation-link" href="#question-explanation-Totstandkoming" id="question-explanation-link-Totstandkoming" data-handler="toggle-explanation">Toelichting Totstandkoming</a>
+            </label>
+            <div class="question-explanation" id="question-explanation-Totstandkoming" data-decorator="hide-self">
+              <p>Zoeken op datum totstandkoming is alleen mogelijk bij verdragen.</p>
+              <a href="#question-explanation-link-Totstandkoming" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+          </ul>
+        </fieldset>
 
         <input type="submit" class="button button--primary" value="Zoeken" >
 

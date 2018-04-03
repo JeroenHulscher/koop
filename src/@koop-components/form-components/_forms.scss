@@ -23,7 +23,6 @@
     line-height: 1;
   }
 
-
   input[type="text"],
   input[type="tel"],
   input[type="url"],
@@ -148,6 +147,10 @@
 
   .form__error {
     color: $red;
+  }
+
+  .separator {
+    border-top: 1px solid $lighterGrey;
   }
 
   &--search {
