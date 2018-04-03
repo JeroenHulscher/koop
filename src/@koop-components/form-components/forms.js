@@ -28,8 +28,27 @@
       }
     },
 
+    'toggle-option': function ( element ) {
+      var option = element.getAttribute('data-for');
+      if (!option) {
+        return;
+      }
+      option = document.getElementById(option);
+      if (!option) {
+        return;
+      }
+      if (element.checked) {
+        option.disabled = false;
+      } else {
+        option.checked = false;
+        option.disabled = true;
+      }
+    },
+
     'toggle-extra-options': function( element ) {
       var options = element.getAttribute('data-options');
+      var checked = element.checked;
+      var otherElements = onl.dom.$( '[data-options="' + options + '"]' );
       if (!options) {
         return;
       }
@@ -38,10 +57,18 @@
         return;
       }
 
-      if ( onl.ui.isHidden( options ) ) {
+      if ( otherElements ) {
+        otherElements.forEach( function( input ) {
+          if ( input.checked ) {
+            checked = true;
+          }
+        });
+      }
+
+      if ( checked && onl.ui.isHidden( options ) ) {
         onl.ui.show( options );
       }
-      else {
+      else if ( !checked ) {
         onl.ui.hide( options );
       }
     },
