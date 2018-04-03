@@ -1,5 +1,6 @@
 .to-top {
   position: fixed;
+  z-index: 1;
   bottom: -2.25em;
   left: calc(50% - 1em);
   width: 4em;
