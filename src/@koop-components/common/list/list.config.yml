@@ -71,4 +71,16 @@ variants:
           - text: <p>1e subitem</p>
           - text: <p>2e subitem</p>
       - text: <p>4e item</p>
+  - name: Law list unordered
+    status: prototype
+    context:
+      modifier: list--law__unordered
+      items:
+      - text: <span>1</span>1e item
+      - text: <span>2</span>2e item
+      - text: <span>3</span>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.
+        subitems:
+          - text: <span>a.</span>1e subitem
+          - text: <span>b.</span>2e subitem
+      - text: <span>4</span>4e item
 

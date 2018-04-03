@@ -54,6 +54,14 @@ $gutter: 1em;
 
       >*:last-child {
         padding-top: 1.65em;
+
+      }
+
+    }
+
+    @media print {
+      >*:last-child {
+        display: none;
       }
     }
   }

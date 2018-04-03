@@ -7,6 +7,23 @@
   padding: 1em;
   margin: 1em 0;
 
+  &--update {
+    background-color: lighten($orange, 50%);
+    border-color: $orange;
+    border-radius: 0;
+    margin: .5em 0;
+    padding: 0.5em 1em 0;
+
+    h3 {
+      color: $black;
+    }
+
+    *:not(h3){
+      background: lighten($orange, 30%);
+    }
+  }
+
+
   &--warning {
     background-color: lighten($orange, 50%);
     background-image: $warningIcon;
@@ -34,5 +51,13 @@
     left: 0;
     border-radius: 0;
     width: 100%;
+  }
+
+  &--small {
+    padding: .1em .5em;
+    margin: 0.25em 0;
+    background-image: none;
+    border: none;
+    display: inline-block;
   }
 }

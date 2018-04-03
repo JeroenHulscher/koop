@@ -38,6 +38,10 @@
         }
       }
     }
+
+    @media print {
+      display: none;
+    }
   }
 
   &--justified {
@@ -67,6 +71,20 @@
 
       .tabs__next {
         display: none;
+      }
+    }
+  }
+
+  @media print {
+    &__panels div {
+      display: block;
+
+      input {
+        display: none;
+      }
+
+      tr {
+        page-break-inside: avoid;
       }
     }
   }
