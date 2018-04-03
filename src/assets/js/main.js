@@ -24,7 +24,9 @@ window.onl = {
       if ( onl.ui.isHidden( element ) ) {
         element.removeAttribute( 'hidden' );
       }
-      onl.ui.focus( focusElement );
+      if (focusElement) {
+        onl.ui.focus( focusElement );
+      }
     },
     // check if `element` is hidden
     isHidden: function( element, checkForHiddenParents ) {

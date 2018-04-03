@@ -8,6 +8,7 @@
   }
 
   legend {
+    padding: 0;
     font-weight: 700;
 
     &.form__intro {
@@ -138,6 +139,11 @@
         margin: 0 .5em;
       }
     }
+  }
+
+  .radiogroup,
+  .checkboxgroup {
+    margin: 0;
   }
 
   .form__error {

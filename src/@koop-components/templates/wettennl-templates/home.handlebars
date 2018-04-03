@@ -32,7 +32,7 @@
             <label for="option-checkbox-011">
               <input type="checkbox" id="option-checkbox-011" name="regelingen" data-decorator="check-all" data-for="which-types" />Alle soorten regelingen of:
             </label>
-            <ul>
+            <ul class="list--unstyled">
               <li>
                 <label for="option-checkbox-11">
                   <input type="checkbox" id="option-checkbox-11" name="regelingen" data-set="which-types" />Verdragen
@@ -73,14 +73,64 @@
                 </label>
               </li>
               <li>
-                <label for="option-checkbox-17">
-                  <input type="checkbox" id="option-checkbox-17" name="regelingen" data-set="which-types" />Regelingen zelfstandige bestuursorganen (ZBO's)
-                </label>
+                <fieldset class="form__element checkboxgroup">
+                  <legend>
+                    <label for="option-checkbox-17">
+                      <input type="checkbox" id="option-checkbox-17" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="zbo-options" />Regelingen zelfstandige bestuursorganen (ZBO's)
+                    </label>
+                  </legend>
+                  <ul class="list--unstyled" data-decorator="hide-self" id="zbo-options">
+                    <li><label><input type="checkbox"> Autoriteit Consument en Markt (acm)</label></li>
+                    <li><label><input type="checkbox"> Autoriteit Financiële Markten (afm)</label></li>
+                    <li><label><input type="checkbox"> Autoriteit Persoonsgegevens (ap)</label></li>
+                    <li><label><input type="checkbox"> Bureau Architectenregister (bar)</label></li>
+                    <li><label><input type="checkbox"> Bureau Financieel Toezicht (bft)</label></li>
+                    <li><label><input type="checkbox"> CAK (cak)</label></li>
+                    <li><label><input type="checkbox"> CEVO (cevo)</label></li>
+                    <li><label><input type="checkbox"> Centraal Bureau Rijvaardigheidsbewijzen (cbr)</label></li>
+                    <li><label><input type="checkbox"> Centraal Bureau voor de Statistiek - Directeur-Generaal van de Statistiek (cbs)</label></li>
+                    <li><label><input type="checkbox"> Centraal Orgaan opvang Asielzoekers (coa)</label></li>
+                    <li><label><input type="checkbox"> Centrale Commissie Dierproeven (ccd)</label></li>
+                    <li><label><input type="checkbox"> Centrale Commissie Mensgebonden Onderzoek (ccmo)</label></li>
+                    <li><label><input type="checkbox"> Centrale Organisatie Werk en Inkomen (cwi)</label></li>
+                    <li><label><input type="checkbox"> Centrum Indicatiestelling Zorg (ciz)</label></li>
+                    <li><label><input type="checkbox"> College Gerechtelijk deskundigen (cgd)</label></li>
+                    <li><label><input type="checkbox"> College Sanering Ziekenhuisvoorzieningen (cszi)</label></li>
+                    <li><label><input type="checkbox"> College sanering zorginstellingen (cszo)</label></li>
+                    <li><label><input type="checkbox"> College ter Beoordeling van Geneesmiddelen (cbg)</label></li>
+                    <li><label><input type="checkbox"> College van toezicht op de zorgverzekeringen (ctz)</label></li>
+                  </ul>
+                </fieldset>
               </li>
               <li>
-                <label for="option-checkbox-18">
-                  <input type="checkbox" id="option-checkbox-18" name="regelingen" data-set="which-types" />Regelingen publieke organisatie voor beroep en bedrijf
-                </label>
+                <fieldset class="form__element checkboxgroup">
+                  <legend>
+                    <label for="option-checkbox-18">
+                      <input type="checkbox" id="option-checkbox-18" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="organisaties-options" />Regelingen publieke organisatie voor beroep en bedrijf
+                    </label>
+                  </legend>
+                  <ul class="list--unstyled" data-decorator="hide-self" id="organisaties-options">
+                    <li><label><input type="checkbox"> Bedrijfschap Afbouw (ba)</label></li>
+                    <li><label><input type="checkbox"> Bedrijfschap Horeca en Catering (hor)</label></li>
+                    <li><label><input type="checkbox"> Bedrijfschap voor het Natuursteenbedrijf (Opgeheven) (bnb)</label></li>
+                    <li><label><input type="checkbox"> Bedrijfschap voor het Slagersbedrijf (Opgeheven) (bsb)</label></li>
+                    <li><label><input type="checkbox"> Bosschap (bos)</label></li>
+                    <li><label><input type="checkbox"> Hoofdbedrijfschap Agrarische Groothandel (hbag)</label></li>
+                    <li><label><input type="checkbox"> Hoofdbedrijfschap Ambachten (hba)</label></li>
+                    <li><label><input type="checkbox"> Hoofdbedrijfschap Detailhandel (hbd)</label></li>
+                    <li><label><input type="checkbox"> Hoofdproductschap Akkerbouw (hpa)</label></li>
+                    <li><label><input type="checkbox"> Kenniscentra beroepsonderwijs bedrijfsleven (kbob)</label></li>
+                    <li><label><input type="checkbox"> Koninklijk Nederlands Instituut van Registeraccountants (nivra)</label></li>
+                    <li><label><input type="checkbox"> Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders (kbvg)</label></li>
+                    <li><label><input type="checkbox"> Koninklijke Notariële Beroepsorganisatie (knb)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse Loodsencorporatie (nlc)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse Orde van Accountants-Administratieconsulenten (novaa)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse Orde van Advocaten (nova)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse beroepsorganisatie van accountants (nba)</label></li>
+                    <li><label><input type="checkbox"> Productschap Akkerbouw (pa)</label></li>
+                    <li><label><input type="checkbox"> Productschap Diervoeder (pdv)</label></li>
+                  </ul>
+                </fieldset>
               </li>
               <li>
                 <label for="option-checkbox-19">
@@ -169,11 +219,38 @@
         </div>
 
         <div class="form__element checkboxgroup">
-
           <label for="option-checkbox-4">
             <input type="checkbox" id="option-checkbox-4" name="alliedforces" />Exact zoeken
           </label>
         </div>
+
+        <fieldset class="form__element radiogroup">
+          <legend>Zoek in onderdelen</legend>
+          <ul class="list--unstyled">
+            <li>
+              <label>
+                <input type="radio" name="zoek-in-onderdelen" checked data-handler="hide-extra-options" data-options="wetstechnische-information-options"> Wetstechnische informatie
+              </label>
+            </li>
+            <li>
+              <fieldset class="form__element checkboxgroup">
+                <legend>
+                  <label>
+                    <input type="radio" name="zoek-in-onderdelen" data-handler="show-extra-options" data-options="wetstechnische-information-options"> Specifieke informatie
+                  </label>
+                </legend>
+                <ul class="list--unstyled" data-decorator="hide-self" id="wetstechnische-information-options">
+                  <li><label><input type="checkbox"> Opschrift en aanhef</label></li>
+                  <li><label><input type="checkbox"> Opschriften binnen het lichaam van de regeling</label></li>
+                  <li><label><input type="checkbox"> Artikelen of daarmee vergelijkbare tekst</label></li>
+                  <li><label><input type="checkbox"> Ondertekening en slotformulier</label></li>
+                  <li><label><input type="checkbox"> Bijlagen</label></li>
+                  <li><label><input type="checkbox"> Officiële inhoudsopgave</label></li>
+                </ul>
+              </fieldset>
+            </li>
+          </ul>
+        </fieldset>
 
         <div class="form__element">
           <label for="input-5">Artikelnummer</label>
@@ -205,7 +282,7 @@
         <div class="form__element">
           <label for="input--8">Regeling geldig op</label>
           <input type="date" class="input " id="input--8" placeholder="Bijv: 06-10-1960" />
-          <small><a href="#">Vandaag</a></small>
+          <small><a href="#" data-handler="select-today" data-for="input--8">Vandaag</a></small>
         </div>
 
         <div class="form__element checkboxgroup">
@@ -224,7 +301,6 @@
           </div>
         </div>
 
-        <input type="submit" class="button" value="Wis scherm" >
         <input type="submit" class="button button--primary" value="Zoeken" >
 
       </div>
