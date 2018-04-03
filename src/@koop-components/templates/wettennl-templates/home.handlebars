@@ -215,7 +215,7 @@
         <div class="form__element checkboxgroup inline-group">
 
           <label for="option-checkbox-1">
-            <input type="checkbox" id="option-checkbox-1" name="alliedforces" data-handler="toggle-option" data-for="option-checkbox-2" />Exact zoeken
+            <input type="checkbox" id="option-checkbox-1" name="alliedforces" data-handler="toggle-option" data-for="option-checkbox-2" checked />Exact zoeken
           </label>
 
           <label for="option-checkbox-2">
@@ -240,7 +240,7 @@
 
         <div class="form__element checkboxgroup">
           <label for="option-checkbox-4">
-            <input type="checkbox" id="option-checkbox-4" name="alliedforces" />Exact zoeken
+            <input type="checkbox" id="option-checkbox-4" name="alliedforces" checked />Exact zoeken
           </label>
         </div>
 
@@ -249,23 +249,23 @@
           <ul class="list--unstyled">
             <li>
               <label>
-                <input type="radio" name="zoek-in-onderdelen" checked data-handler="hide-extra-options" data-options="wetstechnische-information-options"> Alle wetstechnische informatie
+                <input type="radio" name="zoek-in-onderdelen" checked data-handler="hide-extra-options" data-options="wetstechnische-information-options">Alle wetstechnische informatie
               </label>
             </li>
             <li>
               <fieldset class="form__element checkboxgroup">
                 <legend>
                   <label>
-                    <input type="radio" name="zoek-in-onderdelen" data-handler="show-extra-options" data-options="wetstechnische-information-options"> Specifieke onderdelen
+                    <input type="radio" name="zoek-in-onderdelen" data-handler="show-extra-options" data-options="wetstechnische-information-options">Specifieke onderdelen
                   </label>
                 </legend>
                 <ul class="list--unstyled" data-decorator="hide-self" id="wetstechnische-information-options">
-                  <li><label><input type="checkbox"> Opschrift en aanhef</label></li>
-                  <li><label><input type="checkbox"> Opschriften binnen het lichaam van de regeling</label></li>
-                  <li><label><input type="checkbox"> Artikelen of daarmee vergelijkbare tekst</label></li>
-                  <li><label><input type="checkbox"> Ondertekening en slotformulier</label></li>
-                  <li><label><input type="checkbox"> Bijlagen</label></li>
-                  <li><label><input type="checkbox"> Officiële inhoudsopgave</label></li>
+                  <li><label><input type="checkbox">Opschrift en aanhef</label></li>
+                  <li><label><input type="checkbox">Opschriften binnen het lichaam van de regeling</label></li>
+                  <li><label><input type="checkbox">Artikelen of daarmee vergelijkbare tekst</label></li>
+                  <li><label><input type="checkbox">Ondertekening en slotformulier</label></li>
+                  <li><label><input type="checkbox">Bijlagen</label></li>
+                  <li><label><input type="checkbox">Officiële inhoudsopgave</label></li>
                 </ul>
               </fieldset>
             </li>
@@ -306,7 +306,6 @@
         </div>
 
         <div class="form__element checkboxgroup">
-
           <label for="option-checkbox-5">
             <input type="checkbox" id="option-checkbox-5" name="alliedforces" />Ook materieel uitgewerkte regelingen
             <a class="question-explanation-link" href="#question-explanation-5" id="question-explanation-link-5" data-handler="toggle-explanation">Toelichting uitgewerkte regellingen</a>
@@ -320,6 +319,39 @@
             </a>
           </div>
         </div>
+
+        <fieldset class="form__element radiogroup">
+          <legend>Datum van</legend>
+          <ul class="list--unstyled">
+            <label>
+              <input type="radio" name="datum-van" value="Inwerkingtreding" checked>Inwerkingtreding
+            </label>
+            <label>
+              <input type="radio" name="datum-van" value="Ondertekeninginfo">Ondertekening
+              <a class="question-explanation-link" href="#question-explanation-Ondertekening" id="question-explanation-link-Ondertekening" data-handler="toggle-explanation">Toelichting Ondertekening</a>
+            </label>
+            <div class="question-explanation" id="question-explanation-Ondertekening" data-decorator="hide-self">
+              <p>Zoeken op datum ondertekening is niet mogelijk bij verdragen.</p>
+              <a href="#question-explanation-link-Ondertekening" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+            <label>
+              <input type="radio" name="datum-van" value="Totstandkominginfo">Totstandkoming
+              <a class="question-explanation-link" href="#question-explanation-Totstandkoming" id="question-explanation-link-Totstandkoming" data-handler="toggle-explanation">Toelichting Totstandkoming</a>
+            </label>
+            <div class="question-explanation" id="question-explanation-Totstandkoming" data-decorator="hide-self">
+              <p>Zoeken op datum totstandkoming is alleen mogelijk bij verdragen.</p>
+              <a href="#question-explanation-link-Totstandkoming" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+          </ul>
+        </fieldset>
 
         <input type="submit" class="button button--primary" value="Zoeken" >
 
