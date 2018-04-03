@@ -2,20 +2,15 @@
 
   'use strict';
 
-  var getScrollY = function() {
-    var supportPageOffset = window.pageXOffset !== undefined;
-    var isCSS1Compat = ( ( document.compatMode || '' ) === 'CSS1Compat' );
+  var referenceTop;
+  var element;
+  var footer;
 
-    if ( supportPageOffset ) {
-      return window.pageYOffset;
-    }
-    else {
-      return isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
-    }
+  var getScrollY = function() {
+    return window.pageYOffset || document.documentElement.scrollTop;
   };
 
-  var toggle = function( element ) {
-    var button = element;
+  var toggle = function( button ) {
     var labelOpen = button.getAttribute( 'data-toggle-open' ) || 'Open';
     var labelClose = button.getAttribute( 'data-toggle-close' ) || 'Sluit';
     var toggles = document.getElementById( button.getAttribute( 'aria-controls' ) );
@@ -37,16 +32,15 @@
     }
   };
 
-  var updateStickability = function( element, footer ) {
+  var updateStickability = function() {
     var footerOffset = footer.getBoundingClientRect();
     var elementPosition = element.getBoundingClientRect();
-    var elementReferenceTop = element.referenceTop;
     var scrollY = getScrollY();
     var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
     var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
 
-    if ( scrollY > elementReferenceTop && onDesktop ) {
+    if ( scrollY > referenceTop && onDesktop ) {
       element.style.position = 'fixed';
       element.style.top = '1em';
       element.style.left = elementPosition.left + 'px';
@@ -56,13 +50,11 @@
       element.removeAttribute( 'style' );
     }
 
-    window.requestAnimationFrame( function() {
-      updateStickability( element, footer );
-    });
+    window.requestAnimationFrame(updateStickability);
   };
 
   onl.decorate({
-    'add-mobile-foldability': function( element ) {
+    'add-mobile-foldability': function( el ) {
       var button = document.createElement( 'button' );
       var labels = {
         open: 'Open sidebar',
@@ -73,7 +65,7 @@
       button.classList.add( 'hidden-desktop' );
       button.type = 'button';
       button.setAttribute( 'data-handler', 'toggle-sidebar' );
-      button.setAttribute( 'aria-controls', element.id );
+      button.setAttribute( 'aria-controls', el.id );
       button.setAttribute( 'data-toggle-open', labels.open );
       button.setAttribute( 'data-toggle-close', labels.close );
 
@@ -81,39 +73,36 @@
       button.setAttribute( 'aria-expanded', 'true' );
       button.textContent = labels.close;
 
-      element.before( button );
+      el.before( button );
 
       // apply first time
       if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
         toggle( button );
       }
     },
-    'stick-sidebar': function( element ) {
-      var footer = onl.dom.$( '.footer' )[0];
-      var referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + 16;
+    'stick-sidebar': function( el ) {
+      footer = onl.dom.$( '.footer' )[0];
+      element = el;
+      referenceTop = el.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + 16;
 
-      element.referenceTop = referenceTop;
-
-      window.requestAnimationFrame( function() {
-        updateStickability( element, footer );
-      });
+      window.requestAnimationFrame(updateStickability);
 
       window.addEventListener( 'othersites:open', function() {
         window.setTimeout( function() {
-          element.referenceTop = element.getBoundingClientRect().top + getScrollY();
+          referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + getScrollY() + 16;
         }, 500 );
       });
 
       window.addEventListener( 'othersites:close', function() {
-        element.referenceTop = element.getBoundingClientRect().top + getScrollY();
+        referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + 16;
       });
     }
 
   });
 
   onl.handle({
-    'toggle-sidebar': function( element ) {
-      toggle( element );
+    'toggle-sidebar': function( el ) {
+      toggle( el );
     }
   });
 
