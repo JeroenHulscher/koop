@@ -117,7 +117,7 @@
     &.inline-group {
       label {
         display: inline-block;
-        margin-right: 1em;
+        margin-right: .5em;
       }
     }
 
@@ -131,7 +131,7 @@
 
       ul {
         max-height: 10em;
-        overflow: scroll;
+        overflow-y: scroll;
         padding: 0 .5em;
         &::after {
           content: '';
@@ -177,7 +177,6 @@
     }
 
     button.button {
-      max-width: 20%;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -188,6 +187,10 @@
   div {
     display: inline-block;
     margin-right: 1em;
+  }
+
+  select {
+    width: auto;
   }
 }
 
@@ -211,5 +214,18 @@
         content: '';
       }
     }
+  }
+}
+
+.form__fixedWidth {
+  label {
+    display: inline-block;
+    min-width: 40%;
+  }
+
+  label + .question-explanation-link,
+  label ~ .question-explanation-link {
+    min-width: auto;
+    border: 1px solid red;
   }
 }

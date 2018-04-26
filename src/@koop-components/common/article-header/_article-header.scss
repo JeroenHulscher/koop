@@ -2,6 +2,7 @@
   background: $lightGrey;
   padding: .5em;
   margin: .25em 0;
+  position: relative;
 
   &--part {
     background: $lightBlue;
@@ -13,32 +14,90 @@
 
   h2,
   h3,
-  h4,
-  p {
+  h4 {
     padding: 0;
     margin: 0;
     display: inline-block;
   }
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+@media ( min-width: 50em ) {
+  p {
+    display: inline-block;
+  }
+}
+
 
   ul {
     padding: 0;
     margin: 0;
-
+    position: absolute;
+    right: .5em;
+    top: .5em;
   }
 
   li {
     display: inline-block;
-    margin-right: .5em;
-    padding-right: .5em;
+    margin-right: .25em;
+    padding-right: .25em;
 
-    &::after {
-      content: '|';
-      position: relative;
-      left: .5em;
+    &:last-child {
+      margin: 0;
+      padding: 0;
     }
 
-    &:last-child::after {
-      display: none;
+    a {
+      display: inline-block;
+      text-indent: -999em;
+      width: 1.5em;
+      height: 1.5em;
+      background: {
+        repeat: no-repeat;
+        size: 1em;
+        position: 50% 50%;
+      }
     }
+
+    &.action--version a {
+      background: {
+        image: $infoIcon;
+      }
+    }
+
+    &.action--compare a {
+      background: {
+        image: $compareIcon;
+      }
+    }
+
+    &.action--relations a {
+      background: {
+        image: $relationsIcon;
+        size: .8em;
+      }
+    }
+
+    &.action--permalink a {
+      background: {
+        image: $permalinkIcon;
+      }
+    }
+
+    &.action--download a {
+      background: {
+        image: $downloadIcon;
+      }
+    }
+
+    &.action--print a {
+      background: {
+        image: $printIcon;
+      }
+    }
+
   }
 }

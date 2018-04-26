@@ -39,75 +39,19 @@
 
     <p>Geldend van 01-07-2016 t/m heden</p>
 
-    <div class="article__header--law">
+    {{ render "@article-header" }}
 
-      <ul>
-        <li><a href="#">Versie informatie <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Versie vergelijk <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Relaties <span class="visually-hidden">Artikel 2</span> (11)</a></li>
-        <li><a href="#">Permanente link <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Print <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Bewaar <span class="visually-hidden">Artikel 2</span></a></li>
-      </ul>
-    </div>
     <p>Wet van 30 juni 2015 tot goedkeuring en uitvoering van het op 2 maart 2015 te Veenhuizen tot stand gekomen Verdrag tussen het Koninkrijk der Nederlanden en het Koninkrijk Noorwegen inzake het gebruik van een penitentiaire inrichting in Nederland voor de tenuitvoerlegging van bij Noorse vonnissen opgelegde vrijheidsstraffen (Trb. 2015, 37)</p>
     <p>Wij Willem-Alexander, bij de gratie Gods, Koning der Nederlanden, Prins van Oranje-Nassau, enz. enz. enz.</p>
     <p>Allen, die deze zullen zien of horen lezen, saluut! doen te weten:</p>
     <p>Alzo Wij in overweging genomen hebben, dat het op 2 maart 2015 te Veenhuizen tot stand gekomen Verdrag tussen het Koninkrijk der Nederlanden en het Koninkrijk Noorwegen inzake het gebruik van een penitentiaire inrichting in Nederland voor de tenuitvoerlegging van bij Noorse vonnissen opgelegde vrijheidsstraffen ingevolge artikel 91, eerste lid, van de Grondwet de goedkeuring van de Staten-Generaal behoeft, alvorens het Koninkrijk daaraan kan worden gebonden en voorts dat het noodzakelijk is enige wettelijke voorzieningen te treffen teneinde uitvoering te geven aan genoemd verdrag;</p>
     <p>Zo is het, dat Wij, de Afdeling advisering van de Raad van State gehoord, en met gemeen overleg der Staten-Generaal, hebben goedgevonden en verstaan, gelijk Wij goedvinden en verstaan bij deze:</p>
 
-    <div class="article__header--law article__header--law--part">
-      <div class="collapsible {{ modifier }}" data-decorator="init-collapsible" id="1">
-        <div class="collapsible__header">
-          <h2><a href="#1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Deel 1. Algemene bepalingen</a></h2>
-        </div>
-        <div class="collapsible__content" id="collapsible-content-1">
-          <ul>
-            <li><a href="#">Versie informatie <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Versie vergelijk <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Relaties <span class="visually-hidden">Artikel 2</span> (11)</a></li>
-            <li><a href="#">Permanente link <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Print <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Bewaar <span class="visually-hidden">Artikel 2</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    {{ render "@article-header" counter1 }}
 
-    <div class="article__header--law article__header--law--chapter">
+    {{ render "@article-header" counter2 }}
 
-      <div class="collapsible {{ modifier }}" data-decorator="init-collapsible" id="2">
-        <div class="collapsible__header">
-          <h3><a href="#2" aria-controls="collapsible-content-2" aria-expanded="true" data-handler="toggle-collapsible">Hoofdstuk 1.1 Begripsbepalingen</a></h3>
-        </div>
-        <div class="collapsible__content" id="collapsible-content-2">
-          <ul>
-            <li><a href="#">Versie informatie <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Versie vergelijk <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Relaties <span class="visually-hidden">Artikel 2</span> (11)</a></li>
-            <li><a href="#">Permanente link <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Print <span class="visually-hidden">Artikel 2</span></a></li>
-            <li><a href="#">Bewaar <span class="visually-hidden">Artikel 2</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="article__header--law">
-
-      <h4>Artikel 1.1</h4>
-      <p>Geldend van 01-04-2012</p>
-
-      <ul>
-        <li><a href="#">Versie informatie <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Versie vergelijk <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Relaties <span class="visually-hidden">Artikel 2</span> (11)</a></li>
-        <li><a href="#">Permanente link <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Print <span class="visually-hidden">Artikel 2</span></a></li>
-        <li><a href="#">Bewaar <span class="visually-hidden">Artikel 2</span></a></li>
-      </ul>
-
-    </div>
+    {{ render "@article-header" counter3 }}
 
     <ol class="list--law">
       <li><p>Voor de toepassing van deze wet en van de tot haar uitvoering genomen besluiten wordt verstaan onder:</p>

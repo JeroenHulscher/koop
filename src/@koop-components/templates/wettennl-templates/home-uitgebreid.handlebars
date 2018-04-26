@@ -1,0 +1,764 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row row--heading">
+  <h1>Wet- en regelgeving</h1>
+</div>
+
+
+<div>
+
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="73FFBE04">
+  <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+</div>
+
+<div class="form">
+    <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ValidationSummary1" style="color:Red;display:none;">
+
+</div>
+
+
+
+    <div class="container columns row">
+        <div>
+            <h2 class="title--underlined">Kies een soort regeling
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoKiesSoortRegeling" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl00" class="question-explanation-link" data-handler="toggle-explanation">Toelichting Kies een soort regeling</a>
+            </h2>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoKiesSoortRegeling" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+                <p>U kunt hieronder één, meerdere of alle soorten regelingen aanvinken. Tevens kunt u een selectie naar verantwoordelijke organisatie maken. Via [Startinstellingen opslaan] kunt u een door u gemaakte selectie als standaardselectie opslaan.</p>
+            <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+            <fieldset class="form__element checkboxgroup">
+                <legend class="visually-hidden">Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
+                <ul class="list--unstyled">
+                    <li>
+                        <label for="AlleSoorten">
+                            <input id="AlleSoorten" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$AlleSoorten" data-decorator="check-all" data-for="which-types">Alle soorten regelingen of:
+                            <span id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerRegelingen" class="form__error" style="color:Red;display:none;">Geen regelingen typen geselecteerd.</span>
+                        </label>
+                        <ul>
+                            <li>
+                                <label for="Verdrag">
+                                    <input id="Verdrag" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag" data-set="which-types">Verdragen
+                                </label>
+                            </li>
+
+                            <li class="listbreaker">
+                                <ul class="subselection">
+                                    <li>Van de ministeries:
+
+<ul id="overheidbwb.eerstverantwoordelijkeministerie" class=" geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer</a>
+
+
+                                        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_EerstVerantwoordelijke_Ministerie" id="ZoekOp_EerstVerantwoordelijke_Ministerie">
+                                        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_EerstVerantwoordelijke_Ministerie" id="Aanvinken_EerstVerantwoordelijke_Ministerie" value="Wetten,Rijkswetten,AMvB,RijksKBs,MinR,MinRArchief,MinROverig,Beleid,Circulaires">
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="separator">
+                                <label for="Wetten">
+                                    <input id="Wetten" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Wetten" checked="checked" data-set="which-typess">Wetten (excl. Rijkswetten)
+                                </label>
+                            </li>
+                            <li>
+                                <label for="Rijkswetten">
+                                    <input id="Rijkswetten" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Rijkswetten" checked="checked" data-set="which-typess">Rijkswetten
+                                </label>
+                            </li>
+                            <li>
+                                <label for="AMvB">
+                                    <input id="AMvB" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$AMvB" checked="checked" data-set="which-typess">AMvB's en andere KB's (excl. RijksKB's)
+                                </label>
+                            </li>
+                            <li>
+                                <label for="RijksKBs">
+                                    <input id="RijksKBs" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$RijksKBs" checked="checked" data-set="which-typess">RijksKB's
+                                </label>
+                            </li>
+                            <li>
+                                <label for="MinR">
+                                    <input id="MinR" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$MinR" data-set="which-typess">Ministeriële regelingen
+                                </label>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <label for="MinRArchief">
+                                            <input id="MinRArchief" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$MinRArchief" checked="checked" data-set="which-typess">Archiefselectielijsten
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="MinROverig">
+                                            <input id="MinROverig" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$MinROverig" checked="checked" data-set="which-typess">Overige ministeriële regelingen
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label for="Beleid">
+                                    <input id="Beleid" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Beleid" data-set="which-typess">Beleidsregels rijksdienst
+                                </label>
+                            </li>
+                            <li>
+                                <label for="Circulaires">
+                                    <input id="Circulaires" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Circulaires" data-set="which-typess">Circulaires rijksdienst
+                                </label>
+                            </li>
+
+
+                            <li class="listbreaker">
+                                <ul class="subselection">
+                                    <li>Van de ZBO's:
+
+<ul id="overheidbwb.eerstverantwoordelijkezbo" class=" geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_ZBO_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer</a>
+
+
+
+                                        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_EerstVerantwoordelijke_ZBO" id="ZoekOp_EerstVerantwoordelijke_ZBO">
+                                        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_EerstVerantwoordelijke_ZBO" id="Aanvinken_EerstVerantwoordelijke_ZBO" value="ZBO">
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="separator">
+                                <label for="ZBO">
+                                    <input id="ZBO" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZBO" data-set="which-typess">Regelingen zelfstandige bestuursorganen (ZBO's)
+                                </label>
+                            </li>
+
+
+                            <li class="listbreaker">
+                                <ul class="subselection">
+                                    <li>Van de organisaties:
+
+<ul id="overheidbwb.eerstverantwoordelijkepbo" class=" geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_PBO_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer</a>
+
+
+                                        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_EerstVerantwoordelijke_PBO" id="ZoekOp_EerstVerantwoordelijke_PBO">
+                                        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_EerstVerantwoordelijke_PBO" id="Aanvinken_EerstVerantwoordelijke_PBO" value="Bedrijf">
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="separator">
+                                <label for="Bedrijf">
+                                    <input id="Bedrijf" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Bedrijf" data-set="which-typess">Regelingen publieke organisatie voor beroep en bedrijf
+                                </label>
+                            </li>
+
+
+                            <li class="listbreaker"></li>
+
+
+                            <li class="separator">
+                                <label for="Reglementen">
+                                    <input id="Reglementen" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Reglementen" data-set="which-typess">Reglementen van de Staten-Generaal
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset class="form__element checkboxgroup">
+                <legend class="visually-hidden">Specifieker zoeken</legend>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBES" class="form__error" style="display:none;">U moet één van de volgende keuzes selecteren: 'Ook zoeken in regelingen BES' of 'Alleen zoeken in regelingen BES'.</p>
+
+                <label for="OokBES">
+                    <input id="OokBES" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$OokBES">Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
+                </label>
+                <label for="AlleenBES">
+                    <input id="AlleenBES" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$AlleenBES">Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
+
+                    <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoAlleenBES" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl01" class="question-explanation-link" data-handler="toggle-explanation">Toelichting regelingen BES</a>
+                </label>
+                <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoAlleenBES" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+                    <p>Door dit aan te vinken, zoekt u alleen binnen de voormalige Antilliaanse regelgeving die is overgenomen door Nederland.</p>
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl01" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+            </fieldset>
+        </div>
+
+        <div>
+            <h2 class="title--underlined">Zoek op woord of zinsdeel
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenOpWoordOfZinsdeel" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl02" class="question-explanation-link" data-handler="toggle-explanation">Toelichting zoeken op woord of zinsdeel</a>
+            </h2>
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenOpWoordOfZinsdeel" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+                <p>U kunt hier zoeken op een of meer woorden die voorkomen in de titel of in de tekst. Wanneer u 'Exact zoeken' uitvinkt, dan zoekt u ook op spellingsvarianten en woordsamenstellingen, e.d.</p>
+            <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl02" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+            <div class="form__element">
+                <label for="ZoekOp_Titel">In de titel</label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken in de titel
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Titel" type="text" id="ZoekOp_Titel" class="input" placeholder="Bijv: Omgevingswet">
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTitel" class="form__error" style="display:none;"></p>
+            </div>
+
+            <div class="form__element checkboxgroup inline-group">
+                <label for="ZoekOp_TitelExact">
+                    <input id="ZoekOp_TitelExact" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TitelExact" checked="checked">Exact zoeken
+                </label>
+                <label for="ZoekOp_TitelAfkorting">
+                    <input id="ZoekOp_TitelAfkorting" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TitelAfkorting">Afkorting of volledige titel
+                </label>
+            </div>
+
+            <div class="form__element">
+                <label for="ZoekOp_Tekst">In de tekst</label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken in de tekst
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoekt hier op woord(en) in de volledige tekst van de regelingen.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst" class="input" placeholder="Bijv: geluidsnorm">
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+            </div>
+
+            <div class="form__element checkboxgroup">
+                <label for="ZoekOp_TekstExact">
+                    <input id="ZoekOp_TekstExact" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TekstExact" checked="checked">Exact zoeken
+                </label>
+            </div>
+
+            <div class="form__element">
+                <label for="ZoekOp_Onderdeeltype">Zoek in onderdelen</label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken in onderdelen
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U kunt hier onderdelen van de tekst selecteren om binnen te zoeken.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+
+<ul id="overheidbwb.onderdeeltype" class="category_selection geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Onderdeeltype_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer onderdelen</a>
+
+
+
+                <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Onderdeeltype" id="ZoekOp_Onderdeeltype">
+                <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Uitvinken_Onderdeeltype" id="Uitvinken_Onderdeeltype" value="ZoekOp_WTI">
+            </div>
+
+            <div class="form__element checkboxgroup">
+                <label for="ZoekOp_TekstExact">
+                    <input id="ZoekOp_WTI" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_WTI">Wetstechnische informatie
+                </label>
+            </div>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_Artikelnummer">Artikelnummer
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InformatieTekst1_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InformatieTekst1_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op artikelnummer
+</a></label>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InformatieTekst1_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U kunt zoeken op alle voorkomende artikelnummers, zoals “1”, “1.1”, “1:1”.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InformatieTekst1_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Artikelnummer" type="text" id="ZoekOp_Artikelnummer" class="input input--small" placeholder="Bijv: 3.7a">
+            </div>
+
+            <fieldset class="form__element radiogroup inline-group">
+                <legend class="visually-hidden">Hoe wilt u zoeken </legend>
+                <label for="ZoekOp_ArtikelnummerArtikel">
+                    <input id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ZoekOp_ArtikelnummerArtikel" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp" value="ZoekOp_ArtikelnummerArtikel" checked="checked" title="Selecteer het veld waarbinnen gezocht wordt">Artikel
+                </label>
+                <label for="ZoekOp_ArtikelnummerBijlage">
+                    <input id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ZoekOp_ArtikelnummerBijlage" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp" value="ZoekOp_ArtikelnummerBijlage" title="Selecteer het veld waarbinnen gezocht wordt">Bijlage (niet voor verdragen)
+                </label>
+            </fieldset>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_Wetsfamilie">Wetsfamilie <a class="question-explanation-link" href="#question-explanation-6" id="question-explanation-link-6" data-handler="toggle-explanation">Toelichting zoeken op artikelnummer</a>
+                </label>
+
+                <div class="question-explanation" id="question-explanation-6" data-decorator="hide-self" hidden="true">
+                    <p>Als u zoekt op de wetsfamilie van een regeling, wordt de zoekopdracht beperkt tot de ingevulde  regeling met zijn gedelegeerde en gesubdelegeerde regelingen. <em>Geldt niet voor verdragen</em>.</p>
+                    <a href="#question-explanation-link-6" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+                </div>
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Wetsfamilie" type="text" id="ZoekOp_Wetsfamilie" class="input input--small">
+            </div>
+
+            <h2 class="title--underlined">Zoek op datum
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOpDatum" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl03" class="question-explanation-link" data-handler="toggle-explanation">Toelichting zoeken op datum</a>
+            </h2>
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOpDatum" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+                <p>U kunt zoeken in de regelingen zoals geldend op de datum vandaag (standaard), of een eerdere datum. Regelingen die materieel zijn uitgewerkt worden standaard niet doorzocht, tenzij u het vakje aanvinkt.</p>
+            <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl03" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_Geldigheidsdatum">Regeling geldig op</label>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Geldigheidsdatum" type="date" value="11-04-2018" id="ZoekOp_Geldigheidsdatum" class="input">
+                <small><a href="#">Vandaag</a></small>
+
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum10102010" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052005" class="form__error" style="display:none;">Er kan niet voor 1-5-2005 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052003" class="form__error" style="display:none;">Er kan niet voor 1-5-2003 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052002" class="form__error" style="display:none;">Er kan niet voor 1-5-2002 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum" class="form__error" style="display:none;">Er kan niet na de zichtdatum worden gezocht.</p>
+            </div>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_Zichtdatum">Zichtdatum</label>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Zichtdatum" type="date" value="11-04-2018" id="ZoekOp_Zichtdatum" class="input">
+                <small><a href="#">Vandaag</a></small>
+
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum10102010" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052005" class="form__error" style="display:none;">Er kan niet voor 1-5-2005 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052003" class="form__error" style="display:none;">Er kan niet voor 1-5-2003 worden gezocht.</p>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052002" class="form__error" style="display:none;">Er kan niet voor 1-5-2002 worden gezocht.</p>
+            </div>
+
+            <div class="form__element checkboxgroup inline-group">
+                <label for="ZoekOp_OokMaterieel">
+                    <input id="ZoekOp_OokMaterieel" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_OokMaterieel">Ook materieel uitgewerkte regelingen
+                </label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_OokMaterieel_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_OokMaterieel_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken materieel uitgewerkte regelingen
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_OokMaterieel_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_OokMaterieel_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+            </div>
+
+            <fieldset class="form__element radiogroup inline-group">
+                <legend>Scope </legend>
+                <label for="ZoekOp_DatumscopeRegeling">
+                    <input id="ZoekOp_DatumscopeRegeling" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumscope" value="ZoekOp_DatumscopeRegeling" checked="checked" title="">Regeling
+                </label>
+                <label for="ZoekOp_DatumscopeArtikel">
+                    <input id="ZoekOp_DatumscopeArtikel" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumscope" value="ZoekOp_DatumscopeArtikel" title="">Artikel
+                </label>
+            </fieldset>
+
+            <fieldset class="form__element radiogroup">
+                <legend>Datum van</legend>
+
+                <label for="ZoekOp_DatumtypeInwerkingtreding">
+                    <input id="ZoekOp_DatumtypeInwerkingtreding" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype" value="ZoekOp_DatumtypeInwerkingtreding" checked="checked" title="">Inwerkingtreding
+                </label>
+                <label for="ZoekOp_DatumtypeOndertekening">
+                    <input id="ZoekOp_DatumtypeOndertekening" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype" value="ZoekOp_DatumtypeOndertekening" title="">Ondertekening
+                    <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoOndertekeningsdatum" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl04" class="question-explanation-link" data-handler="toggle-explanation">Toelichting zoeken op datum ondertekening</a>
+                </label>
+                <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoOndertekeningsdatum" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+                    <p>Zoeken op datum ondertekening is niet mogelijk bij verdragen.</p>
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl04" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <label for="ZoekOp_DatumtypeTotstandkoming">
+                    <input id="ZoekOp_DatumtypeTotstandkoming" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype" value="ZoekOp_DatumtypeTotstandkoming" title="">Totstandkoming
+                    <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoDatumTotstandkoming" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl05" class="question-explanation-link" data-handler="toggle-explanation">Toelichting zoeken op datum totstandkoming</a>
+                </label>
+                <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoDatumTotstandkoming" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+                    <p>Zoeken op datum totstandkoming is alleen mogelijk bij verdragen.</p>
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl05" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+            </fieldset>
+
+            <div class="daterange">
+                <div class="form__element">
+                    <select name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumbereik" id="ZoekOp_Datumbereik" title="Bereik" class="input--small">
+                      <option selected="selected" value="1">voor</option>
+                      <option value="2">na</option>
+                      <option value="3">tussen</option>
+                      <option value="4">op</option>
+
+                    </select>
+
+                    <label for="ZoekOp_Startdatum" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Label1" ><span class="visually-hidden">Datum</span>
+                    <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Startdatum" type="date" id="ZoekOp_Startdatum"></label>
+                    <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+
+
+                    <label for="ZoekOp_Einddatum">
+                        t/m
+                        <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Einddatum" type="date"  id="ZoekOp_Einddatum"><p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerEinddatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+                      </label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container columns row">
+        <div>
+            <h2 class="title--underlined">Zoek op publicatie / thema</h2>
+            <div class="daterange">
+                <div class="form__element">
+                    <label for="ZoekOp_BronPublicatie">Gepubliceerd in</label>
+
+
+                    <select name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_BronPublicatie" id="ZoekOp_BronPublicatie" class="input--small">
+  <option value="">Publicatie</option>
+  <option value="Stb">Staatsblad</option>
+  <option value="Stcrt">Staatscourant</option>
+  <option value="Supplement-Stcrt">Staatscourant-supplement</option>
+  <option value="Trb">Tractatenblad</option>
+  <option value="Uitleg">Uitleg</option>
+  <option value="Infob">Infobulletin</option>
+  <option value="Vbbo">PBO blad</option>
+
+</select>
+
+                    <label for="ZoekOp_BronPublicatieJaar" class="visually-hidden">Jaar</label>
+
+                    <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_BronPublicatieJaar" type="text" id="ZoekOp_BronPublicatieJaar" class="input--small" placeholder="jaar">
+                    <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer" class="form__error" style="display:none;">Naast een publicatiejaar en soort is ook een publicatienummer vereist.</p>
+                    <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar" class="form__error" style="display:none;">Ongeldig publicatiejaar opgegeven.</p>
+
+                    <label for="ZoekOp_BronPublicatieNummer" class="visually-hidden">Nummer</label>
+                    <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_BronPublicatieNummer" type="text" id="ZoekOp_BronPublicatieNummer" class="input--small" placeholder="nr">
+                </div>
+            </div>
+            <div class="form__element">
+                <label for="ZoekOp_Overheidsdomein">Overheidsthema's</label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op overheidsdomein
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>Hier kunt u een of meerdere overheidsthema’s selecteren waarbinnen u wilt gaan zoeken.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Overheidsdomein" id="ZoekOp_Overheidsdomein">
+                <!--
+<ul id="overheidbwb.overheidsdomein" class="category_selection geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Overheidsdomein_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer Overheidsthema&#39;s</a>
+<script type="text/javascript">
+    openPopupWaardelijst("#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Overheidsdomein_selecteerWaardelijstitem", "Selecteer overheidsthema's", "overheidbwb.overheidsdomein", "", "overheidbwb.overheidsdomein", false, false, "ZoekOp_Overheidsdomein", "", "");
+</script>
+-->
+            </div>
+            <div class="form__element">
+                <label for="ZoekOp_Rechtsgebied">Rechtsgebieden</label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op rechtsgebied
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>Hier kunt u een of meerdere rechtsgebieden selecteren waarbinnen u wilt gaan zoeken.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+                <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Rechtsgebied" id="ZoekOp_Rechtsgebied">
+                <!--
+<ul id="overheidbwb.rechtsgebied" class="category_selection geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Rechtsgebied_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer rechtsgebieden</a>
+<script type="text/javascript">
+    openPopupWaardelijst("#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Rechtsgebied_selecteerWaardelijstitem", "Selecteer rechtsgebieden", "overheidbwb.rechtsgebied", "", "overheidbwb.rechtsgebied", false, true, "ZoekOp_Rechtsgebied", "", "");
+</script>
+-->
+            </div>
+            <div class="form__element">
+                <label for="ZoekOp_Taxonomie">Thema's verdragen</label>
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op taxonimie
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>Hier kunt u een of meerdere verdragsthema’s selecteren waarbinnen u wilt gaan zoeken.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Taxonomie" id="ZoekOp_Taxonomie">
+                <!--
+<ul id="overheidbwb.onderwerpVerdrag" class="category_selection geen-items">
+
+
+
+    <li class="verborgen"></li>
+</ul>
+<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Taxonomie_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer een thema</a>
+<script type="text/javascript">
+    openPopupWaardelijst("#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Taxonomie_selecteerWaardelijstitem", "Selecteer thema's verdragen", "overheidbwb.onderwerpVerdrag", "", "overheidbwb.onderwerpVerdrag", false, true, "ZoekOp_Taxonomie", "Aanvinken_Taxonomie_Ministerie", "ZoekOp_Taxonomie");
+</script>
+-->
+                <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_Taxonomie_Ministerie" id="Aanvinken_Taxonomie_Ministerie" value="Verdrag">
+            </div>
+        </div>
+        <div>
+            <h2 class="title--underlined">Zoek op nummer</h2>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_BWBID">BWB-ID
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op BWB-ID
+</a></label>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoekt hier op de identifier van een in wetten.overheid.nl opgenomen regeling.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_BWBID" type="text" id="ZoekOp_BWBID" class="input--small">
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID" class="form__error" style="display:none;">U heeft geen geldig BWB-ID ingevoerd.</p>
+            </div>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_Kamerstuknummer">Kamerstuknummer
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op kamerstuknummer
+</a></label>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoekt hier op het dossiernummer van de Kamerstukken behorend bij zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Kamerstuknummer" type="text" id="ZoekOp_Kamerstuknummer" class="input--small">
+            </div>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_Kenmerk">Kenmerk regeling
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kenmerk_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kenmerk_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op kenmerk regeling
+</a></label>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kenmerk_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoek hier op het (departementaal) kenmerk van de regeling.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kenmerk_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Kenmerk" type="text" id="ZoekOp_Kenmerk" class="input--small">
+            </div>
+
+            <div class="form__element form__fixedWidth">
+                <label for="ZoekOp_JuriconnectID">Juriconnect-ID
+                <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_ctl00" class="question-explanation-link" data-handler="toggle-explanation">
+    Toelichting zoeken op Juriconnect-ID
+</a>
+</label>
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_Inhoud" class="question-explanation" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoekt hier op de juriconnect-identifier van een in wetten.overheid.nl opgenomen regeling(selement).</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_ctl00" class="question-explanation__close" data-handler="close-explanation"><span class="visually-hidden">Sluiten</span></a>
+</div>
+
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_JuriconnectID" type="text" id="ZoekOp_JuriconnectID" class="input--small">
+                <span id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuriconnectID" class="form__error" style="color:Red;display:none;">U heeft geen geldig juriconnect-ID ingevoerd.</span>
+            </div>
+
+            <div class="button--bar">
+            <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnWisScherm" value="Wis scherm" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnWisScherm" class="button">
+            <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnStartinstellingenOpslaan" value="Startinstellingen opslaan" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnStartinstellingenOpslaan&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnStartinstellingenOpslaan" class="button">
+            <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken" value="Zoeken" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnZoeken" class="button button--primary">
+          </div>
+        </div>
+    </div>
+
+    <div class="container row">
+        <p>
+            De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen heeft een officieel
+            karakter.
+        </p>
+    </div>
+
+</div>
+
+    <div class="row row--browse row--before-footer">
+            <div class="container columns">
+                <div>
+                    <h2>Welke informatie vindt u op deze website?</h2>
+                    <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, <a href="#">Provinciale bladen</a>, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
+                    <h2>Direct uitgebreid zoeken</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
+                </div>
+                <div>
+                    <div class="browse ">
+                        <h2>Bladeren</h2>
+                        <p>Blader door de collecties van overheid.nl.</p>
+                        <ul class="browse__list">
+                            <li>
+                                <a href="#">Wetten
+      <span class="browse__count">25
+        <span class="visually-hidden">gepubliceerd</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Ruimtelijke plannen
+      <span class="browse__count">3
+        <span class="visually-hidden">gepubliceerd</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Officiële bekendmakingen
+      <span class="browse__count">14
+        <span class="visually-hidden">bekend gemaakt</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Staatsblad
+      <span class="browse__count">5
+        <span class="visually-hidden">gepubliceerd</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Internetconsultatie
+      <span class="browse__count">3
+        <span class="visually-hidden">gepubliceerd</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="footer row--footer">
+            <div class="container columns">
+                <ul class="list--linked">
+
+                    <li><a href="#">Over deze website</a></li>
+                    <li><a href="#" lang="en">English version</a></li>
+                    <li><a href="#">Help </a></li>
+
+                </ul>
+
+                <ul class="list--linked">
+
+                    <li><a href="#">Sitemap</a></li>
+
+                </ul>
+
+                <ul class="list--linked">
+
+                    <li><a href="#">Zoeken</a></li>
+
+                </ul>
+
+                <ul class="list--linked">
+                    <li><a href="https://mijn.overheid.nl/">MijnOverheid.nl</a></li>
+                    <li><a href="http://www.rijksoverheid.nl/">Rijksoverheid.nl</a></li>
+                    <li><a href="http://www.ondernemersplein.nl/">Ondernemersplein.nl</a></li>
+                    <li><a href="http://www.werkenbijdeoverheid.nl/">Werkenbijdeoverheid.nl</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+<div class="row row--browse row--before-footer">
+  <div class="container columns">
+    <div>
+      <h2>Welke informatie vindt u op deze website?</h2>
+      <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, <a href="#">Provinciale bladen</a>, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
+      <h2>Direct uitgebreid zoeken</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
+    </div>
+    <div>
+      {{ render "@browse" }}
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}
