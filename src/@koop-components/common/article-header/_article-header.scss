@@ -43,7 +43,6 @@
   li {
     display: inline-block;
     margin-right: .25em;
-    padding-right: .25em;
 
     &:last-child {
       margin: 0;
@@ -84,6 +83,7 @@
     &.action--permalink a {
       background: {
         image: $permalinkIcon;
+        position: right 50%;
       }
     }
 
