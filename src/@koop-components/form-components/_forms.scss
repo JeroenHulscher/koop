@@ -184,7 +184,7 @@
 }
 
 .daterange {
-  div {
+  div:not('.question-explanation') {
     display: inline-block;
     margin-right: 1em;
   }
