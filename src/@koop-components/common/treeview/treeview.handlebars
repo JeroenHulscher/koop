@@ -7,8 +7,11 @@
 
     <ul id="unique-id-1">
       <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1</a>
+          <span>(Artikelen 1.1-1.23)</span>
         <ul id="unique-id-2">
-          <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
+          <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a>
+           <span>(Artikelen 1.1-1.23)</span>
+         </li>
           <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
             <ul id="unique-id-3">
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
@@ -32,12 +35,14 @@
         </ul>
       </li>
       <li><a href="#">Artikel 2</a>
+         <span>(Artikelen 1.1-1.23)</span>
     </ul>
   </li>
   <li>
     <a href="#">
       Hoofdstuk 2
       <small>Ministerie van Defensie</small>
+      <span>(Artikelen 1.1-1.23)</span>
     </a>
   </li>
 </ul>
