@@ -1,0 +1,20 @@
+---
+title: Regeling + WTI
+status: wip
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - text: <a href="#">Veelgestelde vragen</a>
+  counter1:
+    counter: Hoofdstuk 1
+    modifier: article__header--law--part
+  counter2:
+    counter: Artikel 1
+    modifier: article__header--law--chapter
+  counter3:
+    counter: Artikel 1.1
