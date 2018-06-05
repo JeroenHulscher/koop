@@ -124,6 +124,7 @@ gulp.task( 'js:clean', function( done ) {
 
 gulp.task( 'js:build', function() {
   return gulp.src([
+    paths.scripts + '/jquery.js',
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',
     paths.components + '/**/*.js',
