@@ -27,6 +27,8 @@
     }
     color: $darkBlue;
     text-decoration: none;
+    display: block;
+    max-width: calc(100% - 6em);
   }
 
   .result--actions {
