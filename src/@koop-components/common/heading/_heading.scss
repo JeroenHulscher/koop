@@ -74,7 +74,7 @@ h3,
 h4,
 .h4 {
   font: {
-    size: .95em;
+    size: 1em;
     weight: 700;
   }
   color: $black;
@@ -83,17 +83,9 @@ h4,
 h5,
 .h5 {
   font: {
-    size: .875em;
-    weight: 700;
+    size: 1em;
+    weight: 400;
   }
   color: $black;
 }
 
-h6,
-.h6 {
-  font: {
-    size: .75em;
-    weight: 700;
-  }
-  color: $black;
-}
