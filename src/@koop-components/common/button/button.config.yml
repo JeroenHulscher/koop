@@ -1,44 +1,54 @@
 ---
 title: Button
-status: ready
+status: prototype
+default: Ghost button
 context:
   text: Knop
   action: http://www.google.nl
 variants:
-  - name: primary
+  - name: standard
+    status: ready
     context:
       text: primaire knop
       modifier: button--primary
-  - name: secondary
+  - name: call to action
+    status: ready
     context:
       text: Secundaire knop
       modifier: button--secondary
   - name: small
+    status: prototype
     context:
       text: Kleine knop
       modifier: button--smaller
   - name: large
+    status: ready
     context:
       text: Grote knop
       modifier: button--larger
   - name: icon right
+    status: ready
     context:
       text: Icoon rechts
       modifier: button--icon-right
   - name: icon left
+    status: ready
     context:
       text: Icoon links
       modifier: button--icon-left
   - name: icon top
+    status: ready
     context:
       text: Icoon top
       modifier: button--icon-top
   - name: icon down
+    status: ready
     label: icon down
     context:
       text: Icoon down
       modifier: button--icon-down
   - name: Icon hamburger
+    status: ready
     label: icon hamburger
     context:
       text: Menu

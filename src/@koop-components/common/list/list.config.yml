@@ -46,10 +46,14 @@ variants:
       modifier: list--facet
       heading: Eerste categorie
       items:
-        - text: <a href="#">1e facet&nbsp;(0)</a>
-        - text: <a href="#" class="is-active">2e facet&nbsp;(0)</a>
-        - text: <a href="#">3e facet&nbsp;(0)</a>
-        - text: <a href="#">4e facet&nbsp;(0)</a>
+        - text: <a href="#"><span>AMvB</span> <span>(107)</span></a>
+        - text: <a href="#" class="is-active"><span>AMvB-BES</span> <span>(3)</span></a>
+        - text: <a href="#"><span>Ministeriele Regeling Archiefstukken</span> <span>(1)</span></a>
+        - text: <a href="#"><span>Rijkswet</span> <span>(817)</span></a>
+        - text: <a href="#"><span>Verdrag</span> <span>(12)</span></a>
+        - text: <a href="#"><span>Wet</span> <span>(3)</span></a>
+        - text: <a href="#"><span>zbo</span> <span>(19)</span></a>
+        - text: <a href="#"><span>Wet-BES</span> <span>(104)</span></a>
   - name: relationlist
     status: prototype
     context:

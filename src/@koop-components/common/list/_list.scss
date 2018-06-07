@@ -118,10 +118,20 @@ ol {
 
   a {
     text-decoration: none;
+    display: inline-block;
+    line-height: 1;
     padding: .25em;
 
-    &:hover {
-      text-decoration: underline;
+
+    span {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:first-child {
+        text-overflow: ellipsis;
+        max-width: 180px;
+      }
     }
 
     &.is-active {
