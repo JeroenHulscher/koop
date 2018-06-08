@@ -53,6 +53,8 @@
 
     &.input--medium {
       max-width: 12em;
+      display: inline-block;
+      margin: 0 .5em;
 
     }
 
@@ -226,6 +228,5 @@
   label + .question-explanation-link,
   label ~ .question-explanation-link {
     min-width: auto;
-    border: 1px solid red;
   }
 }

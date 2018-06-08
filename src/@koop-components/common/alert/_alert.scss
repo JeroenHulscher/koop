@@ -18,7 +18,7 @@
       color: $black;
     }
 
-    *:not(h3){
+    *:not(h3):not(a) {
       background: lighten($orange, 30%);
     }
   }
@@ -57,6 +57,6 @@
     margin: 0.25em 0;
     background-image: none;
     border: none;
-    display: inline-block;
+    display: table;
   }
 }
