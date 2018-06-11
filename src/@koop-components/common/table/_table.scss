@@ -10,6 +10,12 @@ table {
     padding: .5em 0;
   }
 
+  a[href*="//"]:not(.button):not([href*=".overheid.nl/"]) {
+    background-image: none;
+    margin: 0;
+    padding: 0;
+  }
+
   thead tr th,
   thead tr td {
     border-bottom: 2px solid $lighterGrey;

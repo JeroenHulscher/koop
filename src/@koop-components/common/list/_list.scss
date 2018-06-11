@@ -104,10 +104,18 @@ ol {
     list-style: none;
   }
 
+  p {
+    display: block;
+    margin: 0 0 1em 1.5em;
+    position: relative;
+  }
+
   span {
     font-weight: 700;
     display: inline-block;
-    width: 2em;
+    position: absolute;
+    left: -1.5em;
+    width: 1.5em;
   }
 }
 

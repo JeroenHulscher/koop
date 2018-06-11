@@ -64,6 +64,7 @@
         toggleButton.type = 'button';
         toggleButton.textContent = closeText;
         toggleButton.setAttribute( 'data-handler', 'toggle-fold' );
+        toggleButton.setAttribute( 'aria-expanded', 'false' );
 
         if ( foldableChildrenIDRef ) {
           toggleButton.setAttribute( 'aria-controls', foldableChildrenIDRef );
