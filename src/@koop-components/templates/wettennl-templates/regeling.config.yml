@@ -14,7 +14,7 @@ context:
     counter: Hoofdstuk 1
     modifier: article__header--law--part
   counter2:
-    counter: Artikel 1
+    counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
     modifier: article__header--law--chapter
   counter3:
     counter: Artikel 1.1
