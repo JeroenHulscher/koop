@@ -1,0 +1,27 @@
+.input-datepicker {
+  & ~ .ui-datepicker-trigger {
+    border: 0;
+    padding: 0;
+    background: white;
+    img {
+      width: 2.25em;
+      height: 2.25em;
+      position: relative;
+      top: 0.636em;
+    }
+  }
+}
+
+.ui-datepicker:not(:empty) {
+  background: white;
+  padding: .5em;
+  border: 1px solid $datepickerContainerBorderColor;
+
+  .ui-datepicker-title {
+    text-align: center;
+
+    .ui-datepicker-month {
+      margin-left: 1em;
+    }
+  }
+}
