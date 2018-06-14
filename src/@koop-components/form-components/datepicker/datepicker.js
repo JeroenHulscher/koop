@@ -13,10 +13,10 @@
     $(element).attr('type', 'text').datepicker({
       showOn: 'button',
       changeYear: true,
-      buttonImage: 'https://dequeuniversity.com/assets/images/calendar.png', // File (and file path) for the calendar image
+      buttonImage: '/images/icon-plus.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
-      dayNamesShort: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      dayNamesShort: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"],
       showButtonPanel: true,
       closeText: 'Close',
       onClose: this.removeAria
@@ -542,6 +542,7 @@
       }
     });
     $(dates).each(function (index, date) {
+      var datePickDiv = document.getElementById('ui-datepicker-div');
       var currentRow = $(date).closest('tr'),
         currentTds = $('td', currentRow),
         currentIndex = $.inArray(date.parentNode, currentTds),
@@ -549,7 +550,7 @@
         dayIndex = headThs[currentIndex],
         daySpan = $('span', dayIndex)[0],
         monthName = $('.ui-datepicker-month', datePickDiv)[0].innerHTML,
-        year = $('.ui-datepicker-year', datePickDiv)[0].innerHTML,
+        year = $('.ui-datepicker-year', datePickDiv).val(),
         number = date.innerHTML;
 
       if (!daySpan || !monthName || !number || !year) {
@@ -558,7 +559,7 @@
 
       // AT Reads: {month} {date} {year} {day}
       // "December 18 2014 Thursday"
-      var dateText = date.innerHTML + ' ' + monthName + ' ' + year + ' ' + daySpan.title;
+      var dateText = date.innerHTML + ' ' + monthName + ' ' + year; // + ' ' + daySpan.title;
       // AT Reads: {date(number)} {name of day} {name of month} {year(number)}
       // var dateText = date.innerHTML + ' ' + daySpan.title + ' ' + monthName + ' ' + year;
       // add an aria-label to the date link reading out the currently focused date
