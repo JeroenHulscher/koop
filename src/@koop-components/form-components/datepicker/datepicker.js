@@ -28,15 +28,19 @@
     $( element ).attr( 'type', 'text' ).datepicker({
       showOn: 'button',
       changeYear: true,
-      buttonImage: '/images/icon-calendar.svg', // File (and file path) for the calendar image
+      buttonImage: '/images/icon-calendar-white.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
       monthNames: this.config.months,
+      dayNamesMin: [ "M", "D", "W", "D", "V", "Z", "Z" ],
       dayNamesShort: [ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ],
       showButtonPanel: true,
       closeText: 'Sluiten',
       dateFormat: 'dd-mm-yy',
-      onClose: this.removeAria
+      onClose: this.removeAria,
+      beforeShow: function (input, inst) {
+        inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
+      }
     });
 
     $( '.ui-datepicker-trigger' ).attr( 'aria-describedby', 'datepickerLabel' );
@@ -78,13 +82,30 @@
       }, 100 );
     });
   },
+  datepicker.prototype.createHeaderSummary = function() {
+    var container = document.getElementById('ui-datepicker-div');
+    $(container).prepend('<div class="ui-datepicker-summary"><div class="ui-datepicker-summary__year"></div><div class="ui-datepicker-summary__date"></div></div>');
+
+    this.containerSummaryYear = $('.ui-datepicker-summary__year');
+    this.containerSummaryYear.text(this.currentDate.getFullYear());
+    this.containerSummaryDate = $('.ui-datepicker-summary__date');
+    var formattedDate = this.currentDate.getDate() + " " + this.config.months[this.currentDate.getMonth()];
+    this.containerSummaryDate.text(formattedDate );
+
+  },
   datepicker.prototype.initiatePicker = function() {
     var _this = this;
     var activeDate;
     var container = document.getElementById( 'ui-datepicker-div' );
 
+    this.currentDate = $(this.element).datepicker("getDate");
+
     if ( !container || !this.element ) {
       return;
+    }
+
+    if ( this.currentDate ) {
+      this.createHeaderSummary();
     }
 
     container.setAttribute( 'role', 'application' );
@@ -579,6 +600,11 @@
     var context = document.getElementById('ui-datepicker-div');
     if (!context) {
       return;
+    }
+
+    var currentDate = $(this.element).datepicker("getDate");
+    if (currentDate) {
+      this.createHeaderSummary();
     }
 
     var prev = $('.ui-datepicker-prev', context)[0];
