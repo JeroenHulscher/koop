@@ -1,0 +1,7 @@
+<div class="form__element">
+  <label for="input--{{ id }}">{{ fieldLabel }}</label>
+  {{#if fieldInstruction }}
+    <small>{{ fieldInstruction }}</small>
+  {{/if }}
+  <input type="date" class="input-datepicker" data-decorator="init-datepicker" id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+</div>

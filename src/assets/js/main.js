@@ -55,6 +55,9 @@ window.onl = {
         }
       }
     },
+    isTouch: function() {
+      return 'ontouchstart' in window;
+    },
     debounce: function( originalFunction, delay ) {
       var timer = null;
 

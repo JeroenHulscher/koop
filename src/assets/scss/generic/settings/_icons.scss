@@ -1,3 +1,9 @@
+$chevronRight:  url( '../images/icon-chevron-right.svg' ) !default;
+$chevronLeft:  url( '../images/icon-chevron-left.svg' ) !default;
+
+$datepickerButtonNext: $chevronRight;
+$datepickerButtonPrev: $chevronLeft;
+
 $dartLeftIcon: url( '../images/icon-dart-left.svg' ) !default;
 $dartRightIcon: url( '../images/icon-dart-right.svg' ) !default;
 $dartTopIcon: url( '../images/icon-dart-top.svg' ) !default;
@@ -56,6 +62,8 @@ $socialIcon: url( '../images/theme-icons/social.svg' ) !default;
 $trafficIcon: url( '../images/theme-icons/traffic.svg' ) !default;
 $jobsIcon: url( '../images/theme-icons/jobs.svg' ) !default;
 $healthcareIcon: url( '../images/theme-icons/healthcare.svg' ) !default;
+
+
 
 
 
