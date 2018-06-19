@@ -25,3 +25,45 @@
     }
   }
 }
+
+table.ui-datepicker-calendar {
+  //needed to reset default table behaviour
+  @media ( max-width: 50em ) {
+    thead {
+      display: table-header-group;
+      width: 100%;
+    }
+
+    tr {
+      display: table-row;
+      border: 2px solid $lighterGrey;
+      width: 100%;
+      margin: 0;
+    }
+
+    th {
+      position: relative;
+      left: auto;
+      display: table-cell;
+    }
+
+    td {
+      width: auto;
+      left: auto;
+      position: relative;
+      display: table-cell;
+
+      &:nth-child(odd) {
+        background: transparent !important;
+
+        &::before {
+          background: transparent !important;
+        }
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

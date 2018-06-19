@@ -2,13 +2,26 @@
 
   'use strict';
 
+  onl.decorate({
+    'init-datepicker': function (element) {
+      new datepicker(element);
+    }
+  });
+
   var datepicker = function( element ) {
     this.element = element;
-    this.init( element );
+    this.config = [];
+    // todo: make config extendable on component level.
+    this.config.isTouch = onl.ui.isTouch();
+    this.config.months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+
+    if ( !this.config.isTouch ) {
+      this.initDatepicker( element );
+    }
   };
 
 
-  datepicker.prototype.init = function( element ) {
+  datepicker.prototype.initDatepicker = function( element ) {
 
     // datepicker config
     // todo: make customizable.
@@ -18,9 +31,10 @@
       buttonImage: '/images/icon-calendar.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
-      dayNamesShort: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"],
+      monthNames: this.config.months,
+      dayNamesShort: [ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ],
       showButtonPanel: true,
-      closeText: 'Close',
+      closeText: 'Sluiten',
       dateFormat: 'dd-mm-yy',
       onClose: this.removeAria
     });
@@ -33,7 +47,7 @@
   datepicker.prototype.activateTrigger = function() {
     var _this = this;
 
-    $('.ui-datepicker-trigger').click( function() {
+    $( '.ui-datepicker-trigger' ).click( function() {
       setTimeout( function() {
         var today = $( '.ui-datepicker-today a' )[0];
 
@@ -57,10 +71,10 @@
 
         _this.initiatePicker();
 
-
         $( document ).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
           _this.closeCalendar();
         });
+
       }, 100 );
     });
   },
@@ -119,7 +133,7 @@
         return _this.closeCalendar();
       } else if (which === 9 && keyVent.shiftKey) { // SHIFT + TAB
         keyVent.preventDefault();
-        if ($(target).hasClass('ui-datepicker-close')) { // close button
+        if ( $(target).hasClass( 'ui-datepicker-close' )) { // close button
           $('.ui-datepicker-prev')[0].focus();
         } else if ($(target).hasClass('ui-state-default')) { // a date link
           $('.ui-datepicker-close')[0].focus();
@@ -218,16 +232,17 @@
   },
   datepicker.prototype.closeCalendar = function() {
     var container = $('#ui-datepicker-div');
-    $(container).off('keydown');
     var input = this.element;
+
+    $(container).off('keydown');
     $(input).datepicker('hide');
 
     input.focus();
   },
-  datepicker.prototype.isOdd = function(num) {
+  datepicker.prototype.isOdd = function( num ) {
     return num % 2;
   },
-  datepicker.prototype.moveOneMonth = function(currentDate, dir) {
+  datepicker.prototype.moveOneMonth = function( currentDate, dir ) {
     var button = (dir === 'next')
       ? $('.ui-datepicker-next')[0]
       : $('.ui-datepicker-prev')[0];
@@ -271,7 +286,6 @@
   },
   datepicker.prototype.handleNextClicks = function() {
     var _this = this;
-    console.log('_this', _this);
     setTimeout(function () {
       _this.updateHeaderElements();
       _this.prepHighlightState();
@@ -566,9 +580,6 @@
     if (!context) {
       return;
     }
-    console.log('context', context);
-
-    //  $(context).find('table').first().attr('role', 'grid');
 
     var prev = $('.ui-datepicker-prev', context)[0];
     var next = $('.ui-datepicker-next', context)[0];
@@ -583,11 +594,9 @@
     this.appendOffscreenMonthText(next);
     this.appendOffscreenMonthText(prev);
 
-    // $(next).on('click', function (event) { _this.handleNextClicks(event); });
     next.addEventListener( 'click', function(e) { this.handleNextClicks(e); }.bind( this ), false );
     prev.addEventListener( 'click', function(e) { this.handlePrevClicks(e); }.bind( this ), false );
-    year.addEventListener('change', function (e) { this.handleYearChange(e); }.bind( this ), false );
-    // $(year).on('change', this.handleYearChange);
+    year.addEventListener( 'change', function (e) { this.handleYearChange(e); }.bind( this ), false );
 
     // add month day year text
     this.monthDayYearText();
@@ -615,14 +624,7 @@
   datepicker.prototype.appendOffscreenMonthText = function(button) {
     var buttonText;
     var isNext = $(button).hasClass('ui-datepicker-next');
-    var months = [
-      'january', 'february',
-      'march', 'april',
-      'may', 'june', 'july',
-      'august', 'september',
-      'october',
-      'november', 'december'
-    ];
+    var months = this.config.months;
 
     var currentMonth = $('.ui-datepicker-title .ui-datepicker-month').text().toLowerCase();
     var monthIndex = $.inArray(currentMonth.toLowerCase(), months);
@@ -639,8 +641,8 @@
     }
 
     buttonText = (isNext)
-      ? 'Next Month, ' + this.firstToCap(months[adjacentIndex]) + ' ' + currentYear
-      : 'Previous Month, ' + this.firstToCap(months[adjacentIndex]) + ' ' + currentYear;
+      ? 'Volgende maand, ' + this.firstToCap(months[adjacentIndex]) + ' ' + currentYear
+      : 'Vorige maand, ' + this.firstToCap(months[adjacentIndex]) + ' ' + currentYear;
 
     $(button).find('.ui-icon').html(buttonText);
 
@@ -653,13 +655,5 @@
     $("#dp-container").removeAttr('aria-hidden');
     $("#skipnav").removeAttr('aria-hidden');
   }
-
-
-  onl.decorate({
-    'init-datepicker': function (element) {
-      var lol = new datepicker(element);
-      console.log('init-datepicker', element);
-    }
-  });
 
 })();
