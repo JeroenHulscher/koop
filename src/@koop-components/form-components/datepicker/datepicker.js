@@ -18,8 +18,15 @@
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
     }
+
+    this.element.addEventListener( 'blur', function( e ) { this.handleBlurDatefield(e); }.bind(this), false);
   };
 
+  datepicker.prototype.handleBlurDatefield = function(e) {
+    if ( $(this.element).val() === '') {
+      $(this.element).removeClass('has-date');
+    }
+  };
 
   datepicker.prototype.initDatepicker = function( element ) {
 
@@ -28,16 +35,23 @@
     $( element ).attr( 'type', 'text' ).datepicker({
       showOn: 'button',
       changeYear: true,
-      buttonImage: '/images/icon-calendar-white.svg', // File (and file path) for the calendar image
+      buttonImage: '/images/icon-calendar-white.svg',
       buttonImageOnly: false,
-      buttonText: 'Calendar View',
+      buttonText: 'kalender',
       monthNames: this.config.months,
       dayNamesMin: [ "M", "D", "W", "D", "V", "Z", "Z" ],
       dayNamesShort: [ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ],
       showButtonPanel: true,
       closeText: 'Sluiten',
       dateFormat: 'dd-mm-yy',
-      onClose: this.removeAria,
+      onClose: function (selectedDate, inst) {
+        if ( selectedDate ) {
+          $(this).addClass('has-date');
+        }
+        $("#dp-container").removeAttr('aria-hidden');
+        $("#skipnav").removeAttr('aria-hidden');
+      },
+      // onClose: this.onClose(),
       beforeShow: function (input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
       }
@@ -83,6 +97,7 @@
     });
   },
   datepicker.prototype.createHeaderSummary = function() {
+    $('.ui-datepicker-summary').remove();
     var container = document.getElementById('ui-datepicker-div');
     $(container).prepend('<div class="ui-datepicker-summary"><div class="ui-datepicker-summary__year"></div><div class="ui-datepicker-summary__date"></div></div>');
 
@@ -661,7 +676,7 @@
     if (isNext && currentMonth === 'december') {
       currentYear = parseInt(currentYear, 10) + 1;
       adjacentIndex = 0;
-    } else if (!isNext && currentMonth === 'january') {
+    } else if (!isNext && currentMonth === 'januari') {
       currentYear = parseInt(currentYear, 10) - 1;
       adjacentIndex = months.length - 1;
     }
@@ -675,11 +690,6 @@
   },
   datepicker.prototype.firstToCap = function(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);
-  },
-  datepicker.prototype.removeAria = function() {
-  // make the rest of the page accessible again:
-    $("#dp-container").removeAttr('aria-hidden');
-    $("#skipnav").removeAttr('aria-hidden');
   }
 
 })();

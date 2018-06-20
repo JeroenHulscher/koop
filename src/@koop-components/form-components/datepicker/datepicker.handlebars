@@ -3,5 +3,7 @@
   {{#if fieldInstruction }}
     <small>{{ fieldInstruction }}</small>
   {{/if }}
-  <input type="date" class="input-datepicker" data-decorator="init-datepicker" id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+  <div class="datepicker">
+    <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+  </div>
 </div>

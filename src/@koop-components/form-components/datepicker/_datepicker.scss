@@ -8,9 +8,9 @@
   &-summary {
     background: $datepickerHeaderBackgroundColor;
     color: $datepickerHeaderTextColor;
-    padding: .5em 1em 1em;
+    padding: 0.636em 1em 1.091em;
     margin: -1em -1em 1em -1em;
-    line-height: 2em;
+    line-height: 1.8em;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 
@@ -40,7 +40,7 @@
   &-prev {
     background-image: $datepickerButtonPrev;
     right: auto;
-    left: 0;
+    left: 0.4em;
   }
 
   &-title {
@@ -48,23 +48,58 @@
 
     .ui-datepicker-month {
       margin-left: 1em;
+      margin-right: .5em;
     }
+  }
+
+  .ui-state-default {
+    padding: 0.125em .25em;
+    color: $textColor;
+    text-decoration: none;
+  }
+
+  &-current-day {
+    .ui-state-active {
+      border-radius: 100%;
+      background: $datepickerDayActiveBackgroundColor;
+      color: $datepickerDayActiveTextColor;
+      width: 1.5em;
+      display: block;
+      padding: 0 0.25em;
+    }
+  }
+
+  &-buttonpane {
+    text-align: right;
+    padding-right: .25em;
+  }
+
+  &-close.ui-state-default {
+    background: none;
+    border: 0;
+    padding: 0;
+    text-decoration: underline;
+    font-family: inherit;
+    font-size: 1em;
+    color: $darkBlue;
+    cursor: pointer;
   }
 }
 
 table.ui-datepicker-calendar {
-
+  font-size: 1.063em;
+  margin: .5em 0;
 
   thead tr th {
     border: 0;
     text-align: center;
-    padding: 0.125em 0.333em;
+    padding: 0.125em 0.063em;
     font-weight: normal;
   }
   tbody tr td {
     border: 0;
     text-align: center;
-    padding: 0.125em 0.333em;
+    padding: 0.063em 0.063em;
   }
 
   //needed to reset default table behaviour

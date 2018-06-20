@@ -79,24 +79,36 @@
     }
   }
 
-  .input-datepicker {
+  .datepicker {
+    position: relative;
+    display: inline-block;
+  }
+  input.datepicker__input {
+    display: inline-block;
+    margin: 0;
+    padding-right: 2em;
+
 
     & ~ .ui-datepicker-trigger {
       border: 0;
-      padding: 0.5em;
       background: $datepickerTriggerBackgroundColor;
-      margin-left: -1em;
-      position: relative;
-      top: 0.375em;
       border-bottom: 1px solid $datepickerTriggerBackgroundColor;
       border-bottom-right-radius: 5px;
       border-top-right-radius: 5px;
 
-      img {
-        width: 2.25em;
-        height: 1.8em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
 
+      img {
+        position: relative;
+        top:0.125em;
+        margin: 0 0.5em;
       }
+    }
+    &.has-date ~ .ui-datepicker-trigger {
+      background: $datepickerTriggerActiveBackgroundColor;
     }
   }
 
@@ -110,8 +122,7 @@
     height: 2.5em;
   }
 
-  input[type="date"],
-  input.input-datepicker {
+  input[type="date"] {
     width: 10.5em;
     margin: 0 .5em;
     display: inline-block;
