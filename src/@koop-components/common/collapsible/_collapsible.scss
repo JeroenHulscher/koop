@@ -13,11 +13,12 @@
       }
       padding-left: 1em;
       background: {
-        image: $plusIcon;
         repeat: no-repeat;
-        position: 0 55%;
-        size: 0.75em;
-      }
+        position: left 50%;
+        size: 11px;
+        color: transparent;
+        image: $plusIcon;
+      };
       color: $black;
 
       &:hover {
@@ -25,11 +26,7 @@
       }
 
       &[aria-expanded="true"] {
-        background: {
-          image: $minusIcon;
-          repeat: no-repeat;
-          position: 0 55%;
-        }
+        background-image: $minusIcon;
       }
     }
   }
