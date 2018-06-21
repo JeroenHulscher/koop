@@ -2,29 +2,10 @@
 
   'use strict';
 
-  var formSubselection = function( element ) {
-    this.element = element;
-    this.init();
-  };
-
-  formSubselection.prototype.init = function() {
-    this.containerSummary = onl.dom.$(".subselection__summary", this.element);
-    this.buttonClose = onl.dom.$("[data-handler='close-modal']", this.element);
-    this.items = [];
-    this.items.push('appel');
-    console.log(this.items);
-    this.buttonClose.addEventListener( 'click', this.parseSelectedOptions );
-
-  };
-
-  formSubselection.prototype.parseSelectedOptions = function() {
-    console.log('hoi');
-  };
-
   onl.handle({
 
     'select-today': function( element, event ) {
-      var input = element.getAttribute('data-for');
+      var input = element.getAttribute( 'data-for' );
       var now = new Date();
       var pad = function( num ) {
         if (num < 10) {
@@ -120,10 +101,6 @@
   })
 
   onl.decorate({
-
-    'init-form-subselection': function (element) {
-      new formSubselection(element);
-    },
 
     'check-all': function( element ) {
       var elements = element.getAttribute('data-for');
