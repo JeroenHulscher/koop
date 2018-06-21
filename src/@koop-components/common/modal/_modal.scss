@@ -27,6 +27,16 @@
     left: -100%;
   }
 
+  &--hidden {
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__buttonpane {
+    margin-top: 1em;
+  }
+
   &__close {
     position: absolute;
     top: 0;
