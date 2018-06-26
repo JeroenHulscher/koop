@@ -1,0 +1,23 @@
+---
+label: Subselection
+status: prototype
+context:
+  id: 1
+  linkText: Selecteer
+  modalTitle: Selecteer ministeries
+  fieldLabel: fieldLabel
+  fieldInstruction:
+  fieldPlaceholder: 'Bijv: 0612345678'
+  Options:
+    - Option: 1
+      id: 1
+      title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+      short: lnv
+    - Option: 2
+      id: 2
+      title: Onderwijs, Cultuur en Wetenschap (ocw)
+      short: ocw
+    - Option: 3
+      id: 3
+      title: Sociale Zaken en Werkgelegenheid (szw)
+      short: szw

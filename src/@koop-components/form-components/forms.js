@@ -5,7 +5,7 @@
   onl.handle({
 
     'select-today': function( element, event ) {
-      var input = element.getAttribute('data-for');
+      var input = element.getAttribute( 'data-for' );
       var now = new Date();
       var pad = function( num ) {
         if (num < 10) {
@@ -101,6 +101,7 @@
   })
 
   onl.decorate({
+
     'check-all': function( element ) {
       var elements = element.getAttribute('data-for');
 
