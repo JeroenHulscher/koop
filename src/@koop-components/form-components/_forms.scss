@@ -40,6 +40,7 @@
     padding: 0 .5em;
     font-size: .85em;
     margin: .25em 0;
+    border-radius: 5px;
 
     &::placeholder {
       color: $darkerGrey;
@@ -78,6 +79,27 @@
     }
   }
 
+  .input-datepicker {
+
+    & ~ .ui-datepicker-trigger {
+      border: 0;
+      padding: 0.5em;
+      background: $datepickerTriggerBackgroundColor;
+      margin-left: -1em;
+      position: relative;
+      top: 0.375em;
+      border-bottom: 1px solid $datepickerTriggerBackgroundColor;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+
+      img {
+        width: 2.25em;
+        height: 1.8em;
+
+      }
+    }
+  }
+
   input[type="text"],
   input[type="tel"],
   input[type="url"],
@@ -88,7 +110,8 @@
     height: 2.5em;
   }
 
-  input[type="date"] {
+  input[type="date"],
+  input.input-datepicker {
     width: 10.5em;
     margin: 0 .5em;
     display: inline-block;

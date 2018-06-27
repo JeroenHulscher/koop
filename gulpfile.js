@@ -124,14 +124,15 @@ gulp.task( 'js:clean', function( done ) {
 
 gulp.task( 'js:build', function() {
   return gulp.src([
-    paths.scripts + '/jquery.js',
+    paths.scripts + '/vendor/jquery.js', // 3.3.1
+    paths.scripts + '/vendor/jquery-ui.min.js', // 1.2
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',
     paths.components + '/**/*.js',
     paths.scripts + '/decorators/*.js',
     paths.scripts + '/run.js'
   ])
-  .pipe( concat('main.js') )
+  .pipe( concat( 'main.js' ) )
   // .pipe( uglify() )
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
