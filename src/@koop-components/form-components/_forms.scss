@@ -1,3 +1,16 @@
+.form__chapter {
+  &__heading {
+    border-bottom: 1px solid $darkBlue;
+    margin: 0.5em 0;
+    h2, h3 {
+      font-size: 1.15em;
+      position: relative;
+      display: inline-block;
+      margin: 0 0 0 0; // needed for IE11 (strange)
+    }
+  }
+}
+
 .form__element {
   border: none;
   margin: 0 0 .5em 0;
