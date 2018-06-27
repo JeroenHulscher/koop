@@ -1,9 +1,11 @@
-<a class="question-explanation-link" href="#question-explanation-{{ id }}" id="question-explanation-link-{{ id }}" data-handler="toggle-explanation">{{ Text }}</a>
-<div class="question-explanation" id="question-explanation-{{ id }}" data-decorator="hide-self">
-  {{{ Helptext }}}
-  <a href="#question-explanation-link-{{ id }}" class="question-explanation__close" data-handler="close-explanation">
-    <span class="visually-hidden">
-      {{ Text }}
-    </span>
-  </a>
+<div class="question-explanation">
+
+  <a class="question-explanation__link" href="#question-explanation-{{ id }}" id="question-explanation-link-{{ id }}" data-handler="toggle-explanation">{{ Text }}</a>
+  <div class="question-explanation__content" id="question-explanation-{{ id }}" data-decorator="hide-self">
+    {{{ Helptext }}}
+    <a href="#question-explanation-link-{{ id }}" class="question-explanation__close" data-handler="close-explanation">
+        {{ Text }}
+    </a>
+  </div>
+
 </div>
