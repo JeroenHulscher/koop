@@ -1,0 +1,225 @@
+$fstColorGrayLight1: #D7D7D7;
+$fstColorGrayDark1: #232323;
+$fstColorMain1: #43A2F3;
+
+.fstElement {
+  display: inline-block;
+  position: relative;
+  border: 1px solid $fstColorGrayLight1;
+  box-sizing: border-box;
+  color: $fstColorGrayDark1;
+  font-size: 1.1em;
+  background-color: #fff;
+
+	> select,
+	> input { position: absolute; left: -999em; }
+}
+
+.fstToggleBtn {
+  font-size: inherit;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: em(10,14) em(20,14) em(10,14) em(10,14);
+  min-width: em(200,14);
+	cursor: pointer;
+
+	&:after {
+    position: absolute;
+    content:""; right:
+    em(10,14);
+    top: 50%;
+    margin-top: em(-5/2,14);
+    border: em(5,14) solid transparent;
+    border-top-color: darken($fstColorGrayLight1,5%);
+	}
+
+}
+
+.fstResults {
+  position: absolute;
+  left: -1px;
+  top: 100%;
+  right: -1px;
+  max-height: 30em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid $fstColorGrayLight1;
+  border-top: 0;
+  background-color: #FFF;
+	display: none;
+}
+
+.fstResultItem {
+  font-size: inherit;
+  display: block;
+  padding: em(7,14) em(10,14);
+  margin: 0;
+  cursor: pointer;
+  border-top: 1px solid #fff;
+
+	&.fstUserOption {
+		color: lighten($fstColorGrayDark1, 30%);
+	}
+
+	&.fstFocused {
+    color: #fff;
+    background-color: $fstColorMain1;
+    border-color: lighten($fstColorMain1,10%);
+	}
+
+	&.fstSelected {
+    color: #fff;
+    background-color: darken($fstColorMain1,6%);
+    border-color: lighten($fstColorMain1,10%);
+	}
+}
+
+.fstGroupTitle {
+  font-size: inherit;
+  display: block;
+  padding: em(7,14) em(10,14);
+  margin: 0;
+	font-weight: bold;
+}
+
+.fstGroup {
+	padding-top: 1em;
+	&:first-child {
+    padding-top: 0;
+  }
+
+}
+
+.fstNoResults {
+  font-size: inherit;
+  display: block;
+  padding: em(10,14) em(10,14);
+  margin: 0;
+	color: #999;
+}
+
+.fstSingleMode {
+	.fstControls {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 100%;
+    padding: 0.5em;
+    border: 1px solid $fstColorGrayLight1;
+    background-color: #fff;
+		display: none;
+	}
+
+	.fstQueryInput {
+    font-size: inherit;
+    display: block;
+    width: 100%;
+    padding: em(7,14) em(5,14);
+    color: #999;
+    border: 1px solid $fstColorGrayLight1;
+	}
+
+	&.fstActive {
+		z-index: 100;
+
+		&.fstElement,
+		.fstControls,
+		.fstResults { box-shadow: 0 0.2em 0.2em rgba(#000, 0.1); }
+		.fstControls { display: block; }
+		.fstResults { display: block; z-index: 10; margin-top: -1px; }
+	}
+}
+
+.fstChoiceItem {
+  display: inline-block;
+  font-size: inherit;
+  position: relative;
+  margin: 0 .5em 0 0;
+  padding: .2em 2.5em .2em .5em;
+  display: inline-block;
+  border-radius: em(3,12);
+  border: 1px solid $fstColorMain1;
+  cursor: auto;
+  color: #fff;
+	background-color: $fstColorMain1;
+
+	&.mod1 {
+    background-color: #F9F9F9;
+    border: 1px solid $fstColorGrayLight1;
+		color: $fstColorGrayDark1;
+
+		> .fstChoiceRemove {
+
+			color: darken($fstColorGrayLight1, 20%);
+		}
+	}
+
+}
+
+.fstChoiceRemove {
+	margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.25em;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  color: #fff;
+  width: 1.5em;
+  bottom: 0;
+}
+
+.fstMultipleMode {
+
+	.fstControls {
+    box-sizing: border-box;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    overflow: hidden;
+    width: em(200,10);
+		cursor: text;
+	}
+
+	.fstQueryInput {
+    font-size: inherit;
+    margin: 0 0 em(5,14) 0;
+    width: 2em;
+    color: #999;
+    border: 0;
+    outline: 0;
+	}
+
+	.fstQueryInputExpanded {
+    float: none;
+    width: 100%;
+    padding: em(4,14) em(5,14);
+	}
+
+	.fstFakeInput {
+
+		font-size: inherit;
+
+	}
+
+	&.fstActive {
+
+		&,
+		.fstResults {
+
+			box-shadow: 0 0.2em 0.2em rgba(#000, 0.1);
+
+		}
+
+		.fstResults {
+
+			display: block; z-index: 10; border-top: 1px solid $fstColorGrayLight1;
+
+		}
+
+	}
+
+}

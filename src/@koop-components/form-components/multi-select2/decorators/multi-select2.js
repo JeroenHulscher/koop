@@ -1,0 +1,1 @@
+$('.multipleSelect').fastselect();

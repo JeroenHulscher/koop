@@ -1,0 +1,15 @@
+---
+label: Multi select 2
+status: prototype
+context:
+  id: 1
+  fieldLabel: Zoeken in verzamelingen
+  visuallyHideLabel: false
+  fieldInstruction: ''
+  regularFormElement: true
+  options:
+    - text: Belastingen
+    - text: Bouwen, wonen en leefomgeving
+    - text: Cultuur, sport, vrije tijd
+    - text: Defensie
+    - text: Economie en ondernemen
