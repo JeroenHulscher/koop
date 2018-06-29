@@ -369,13 +369,6 @@
   </div>
   <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-4"
     class="button">Selecteer</a>
-
-
-  <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_EerstVerantwoordelijke_Ministerie"
-    id="ZoekOp_EerstVerantwoordelijke_Ministerie">
-  <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_EerstVerantwoordelijke_Ministerie"
-    id="Aanvinken_EerstVerantwoordelijke_Ministerie" value="Wetten,Rijkswetten,AMvB,RijksKBs,MinR,MinRArchief,MinROverig,Beleid,Circulaires">
-
 </div>
 </div>
 
@@ -619,6 +612,7 @@
 -->
             </div>
             <div class="form__element">
+                <div class="form__element__label">
                 <label for="ZoekOp_Rechtsgebied">Rechtsgebieden</label>
                 <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation__link" data-handler="toggle-explanation">
     Toelichting zoeken op rechtsgebied
@@ -630,6 +624,39 @@
                         <p>Hier kunt u een of meerdere rechtsgebieden selecteren waarbinnen u wilt gaan zoeken.</p>
 
 <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+</div>
+</div>
+<div class="form__element__inputs">
+  <div class="subselection" data-decorator="init-form-subselection">
+    <span class="subselection__summary"></span>
+    <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
+      <div class="modal__content">
+        <h2>Selecteer ministeries</h2>
+        <ul class="list--unstyled">
+          <li>
+            <label for="Verdrag211">
+              <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
+            </label>
+            <label for="Verdrag311">
+              <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
+            </label>
+            <label for="Verdrag411">
+              <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
+            </label>
+          </li>
+        </ul>
+        <div class="modal__buttonpane">
+          <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+          <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-5"
+      class="button">Selecteer</a>
+  </div>
 </div>
                 <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Rechtsgebied" id="ZoekOp_Rechtsgebied">
                 <!--
