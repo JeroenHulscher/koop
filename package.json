@@ -27,7 +27,8 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
-    "npm": "^5.7.1"
+    "npm": "^5.7.1",
+    "growl": "^1.10.5"
   },
   "devDependencies": {
     "gulp-concat": "^2.6.1",

@@ -1,12 +1,13 @@
 del {
-  background: $red;
-  color: $white;
+  background: $lightRed;
+  border: 1px solid $darkRed;
+  color: $darkBlue;
   padding: 0.25em;
-
 }
 
 ins {
-  background: $green;
-  color: $white;
+  background: $lightGreen;
+  border: 1px solid $darkGreen;
+  color: $darkBlue;
   padding: 0.25em;
 }
