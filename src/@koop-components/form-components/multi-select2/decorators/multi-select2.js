@@ -28,14 +28,9 @@
       placeholder: this.config.placeholder,
       searchPlaceholder: this.config.searchPlaceholder,
       noResultsText: this.config.noResultsText,
-      userOptionPrefix: this.config.userOptionPrefix
+      userOptionPrefix: this.config.userOptionPrefix,
+      clearQueryOnSelect: true
     });
-    $('.multipleSelect').on('blur', function() {
-      console.log('12');
-      $(this).parents('.fstElement').removeClass('fstResultsOpened');
-      $(this).parents('.fstElement').removeClass('fstActive');
-    });
-
   };
 
 })();

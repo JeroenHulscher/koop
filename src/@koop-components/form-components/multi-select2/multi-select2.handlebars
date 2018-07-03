@@ -3,12 +3,10 @@
     <label id="labelid">Kies iets</label>
   </div>
   <div class="form__element__label">
-    <select aria-describedby="labelid" data-multiselect-id="423" class="multipleSelect" multiple name="language" data-decorator="init-multiselect" data-decorator-placeholder="Kies een optie" data-multiselect-helptext="Use tabulation (or down) key to access and browse suggestions after input. Confirm your choice with enter key, or esc key
-    to close suggestions box.">
+    <select aria-describedby="labelid" data-multiselect-id="{{id}}" class="multipleSelect" multiple name="{{name}}" data-decorator="init-multiselect" data-decorator-placeholder="{{placeholder}}" data-multiselect-helptext="{{helptext}}">
       {{#each options }}
         <option value="{{text}}">{{text}}</option>
       {{/each}}
     </select>
-    {{!-- <span id="multiselect__helptext" class="multiselect__helptext visually-hidden"></span> --}}
   </div>
 </div>

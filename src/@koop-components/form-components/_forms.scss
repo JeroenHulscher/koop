@@ -109,6 +109,10 @@
     }
   }
 
+  select[multiple] {
+    min-height: 7em;
+  }
+
   .input-datepicker {
 
     & ~ .ui-datepicker-trigger {
