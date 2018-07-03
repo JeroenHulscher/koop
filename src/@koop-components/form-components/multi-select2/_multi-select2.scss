@@ -2,7 +2,7 @@ $fstColorGrayLight1: #D7D7D7;
 $fstColorGrayDark1: #232323;
 $fstColorMain1: #43A2F3;
 
-.fstElement {
+.multiselect__container {
   display: inline-block;
   position: relative;
   border: 1px solid $fstColorGrayLight1;
@@ -34,7 +34,7 @@ $fstColorMain1: #43A2F3;
 
 // }
 
-.fstResults {
+.multiselect__resultscontainer {
   position: absolute;
   left: -1px;
   top: 100%;
@@ -49,7 +49,7 @@ $fstColorMain1: #43A2F3;
 	display: none;
 }
 
-.fstResultItem {
+.multiselect__result {
   font-size: inherit;
   display: block;
   padding: .2em .5em;
@@ -61,27 +61,27 @@ $fstColorMain1: #43A2F3;
 		color: lighten($fstColorGrayDark1, 30%);
 	}
 
-	&.fstFocused {
+	&.has-focus {
     color: #fff;
     background-color: $fstColorMain1;
     border-color: lighten($fstColorMain1,10%);
 	}
 
-	&.fstSelected {
+	&.is-selected {
     color: #fff;
     background-color: darken($fstColorMain1,6%);
     border-color: lighten($fstColorMain1,10%);
 	}
 }
 
-.fstGroupTitle {
+.multiselect__group-title {
   font-size: inherit;
   display: block;
   margin: 0;
 	font-weight: bold;
 }
 
-.fstGroup {
+.multiselect__group {
 	padding-top: 1em;
 	&:first-child {
     padding-top: 0;
@@ -89,7 +89,7 @@ $fstColorMain1: #43A2F3;
 
 }
 
-.fstNoResults {
+.has-noresults {
   font-size: inherit;
   display: block;
   padding: .2em .5em;
@@ -97,8 +97,8 @@ $fstColorMain1: #43A2F3;
 	color: #999;
 }
 
-.fstSingleMode {
-	.fstControls {
+.multiselect--singlemode {
+	.multiselect__controls {
     position: absolute;
     left: -1px;
     right: -1px;
@@ -109,7 +109,7 @@ $fstColorMain1: #43A2F3;
 		display: none;
 	}
 
-	.fstQueryInput {
+	.multiselect__input {
     font-size: inherit;
     display: block;
     width: 100%;
@@ -121,15 +121,15 @@ $fstColorMain1: #43A2F3;
 	&.fstActive {
 		z-index: 100;
 
-		&.fstElement,
-		.fstControls,
-		.fstResults { box-shadow: 0 0.2em 0.2em rgba(#000, 0.1); }
-		.fstControls { display: block; }
-		.fstResults { display: block; z-index: 10; margin-top: -1px; }
+		&.multiselect__container,
+		.multiselect__controls,
+		.multiselect__resultscontainer { box-shadow: 0 0.2em 0.2em rgba(#000, 0.1); }
+		.multiselect__controls { display: block; }
+		.multiselect__resultscontainer { display: block; z-index: 10; margin-top: -1px; }
 	}
 }
 
-.fstChoiceItem {
+.multiselect__choice {
   display: inline-block;
   font-size: .85em;
   position: relative;
@@ -148,7 +148,7 @@ $fstColorMain1: #43A2F3;
     border: 1px solid $fstColorGrayLight1;
 		color: $fstColorGrayDark1;
 
-		> .fstChoiceRemove {
+		> .multiselect__choiceremove {
 
 			color: darken($fstColorGrayLight1, 20%);
 		}
@@ -156,7 +156,7 @@ $fstColorMain1: #43A2F3;
 
 }
 
-.fstChoiceRemove {
+.multiselect__choiceremove {
 	margin: 0;
   padding: 0;
   border: 0;
@@ -172,9 +172,9 @@ $fstColorMain1: #43A2F3;
   bottom: 0;
 }
 
-.fstMultipleMode {
+.multiselect--multiplemode {
 
-	.fstControls {
+	.multiselect__controls {
     box-sizing: border-box;
     padding: 0.5em 0.5em 0.5em 0.5em;
     overflow: hidden;
@@ -182,33 +182,33 @@ $fstColorMain1: #43A2F3;
 		cursor: text;
 	}
 
-	.fstQueryInput {
+	.multiselect__input {
     font-size: .85em;
     margin: 0;
     width: 5em;
     color: #999;
     border: 0;
     outline: 0;
+
+    &.is-expanded {
+      float: none;
+      width: 100%;
+      padding: .2em .5em;
+    }
 	}
 
-	.fstQueryInputExpanded {
-    float: none;
-    width: 100%;
-    padding: .2em .5em;
-	}
-
-	.fstFakeInput {
+	.multiselect__fakeinput {
 		font-size: inherit;
 	}
 
-	&.fstActive {
+	&.is-active {
 
 		&,
-		.fstResults {
+		.multiselect__resultscontainer {
 			box-shadow: 0 0.2em 0.2em rgba(#000, 0.1);
 		}
 
-		.fstResults {
+		.multiselect__resultscontainer {
 			display: block; z-index: 10; border-top: 1px solid $fstColorGrayLight1;
 		}
 
