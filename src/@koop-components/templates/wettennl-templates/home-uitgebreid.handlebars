@@ -247,8 +247,10 @@
               </div>
               </div>
 </div>
-            <div class="form__element form__fixedWidth">
+            <div class="form__element">
+              <div class="form__element__label">
                 <label for="ZoekOp_Titel">In de titel</label>
+
                 <div class="question-explanation">
                   <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_ctl00" class="question-explanation__link" data-handler="toggle-explanation">
                       Toelichting zoeken in de titel
@@ -262,21 +264,33 @@
                   <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_ctl00" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
                   </div>
                   </div>
-
+</div>
+<div class="form__element__inputs">
                 <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Titel" type="text" id="ZoekOp_Titel" class="input input--medium" placeholder="Bijv: Omgevingswet">
+                <div class="form__element checkboxgroup inline-group">
+                  <ul class="list--unstyled">
+                    <li>
+                      <label for="ZoekOp_TitelExact">
+                        <input id="ZoekOp_TitelExact" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TitelExact"
+                          checked="checked">Exact zoeken
+                      </label>
+                    </li>
+                    <li>
+                      <label for="ZoekOp_TitelAfkorting">
+                        <input id="ZoekOp_TitelAfkorting" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TitelAfkorting">Afkorting of volledige titel
+                      </label>
+                    </li>
+                  </ul>
+
+                </div>
+                </div>
                 <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTitel" class="form__error" style="display:none;"></p>
             </div>
 
-            <div class="form__element checkboxgroup inline-group">
-                <label for="ZoekOp_TitelExact">
-                    <input id="ZoekOp_TitelExact" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TitelExact" checked="checked">Exact zoeken
-                </label>
-                <label for="ZoekOp_TitelAfkorting">
-                    <input id="ZoekOp_TitelAfkorting" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TitelAfkorting">Afkorting of volledige titel
-                </label>
-            </div>
 
-            <div class="form__element form__fixedWidth">
+
+            <div class="form__element">
+              <div class="form__element__label">
                 <label for="ZoekOp_Tekst">In de tekst</label>
                 <div class="question-explanation">
                   <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__link" data-handler="toggle-explanation">
@@ -291,18 +305,61 @@
 <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
 </div>
 </div>
+</div>
+<div class="form__element__inputs">
 
                 <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst" class="input input--medium" placeholder="Bijv: geluidsnorm">
+                <div class="form__element checkboxgroup">
+                  <label for="ZoekOp_TekstExact">
+                    <input id="ZoekOp_TekstExact" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TekstExact"
+                      checked="checked">Exact zoeken
+                  </label>
+                </div>
+                </div>
                 <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
             </div>
 
-            <div class="form__element checkboxgroup">
-                <label for="ZoekOp_TekstExact">
-                    <input id="ZoekOp_TekstExact" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_TekstExact" checked="checked">Exact zoeken
-                </label>
+
+            <div class="form__element">
+              <div class="form__element__label">
+                <label for="ZoekOp_Tekst">Met welke auto</label>
+                <div class="question-explanation">
+                  <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__link" data-handler="toggle-explanation">
+    Toelichting zoeken in de tekst
+</a>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" class="question-explanation__content" data-decorator="hide-self" hidden="true">
+
+
+                        <p>U zoekt hier op woord(en) in de volledige tekst van de regelingen.</p>
+
+<a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+</div>
+</div>
+</div>
+<div class="form__element__inputs">
+
+                <select aria-describedby="labelid" class="multipleSelect" multiple name="autos" data-decorator="init-multiselect" data-decorator-placeholder="Type auto"
+                  data-multiselect-helptext="helptekst">
+                  <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                  </optgroup>
+                  <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </optgroup>
+                </select>
+
+
+                </div>
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
             </div>
 
-            <div class="form__element form__fixedWidth">
+
+
+            <div class="form__element">
+              <div class="form__element__label">
                 <label for="ZoekOp_Onderdeeltype">Zoek in onderdelen</label>
                 <div class="question-explanation"><a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_ctl00" class="question-explanation__link" data-handler="toggle-explanation">
     Toelichting zoeken in onderdelen
@@ -316,6 +373,8 @@
 <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekenInOnderdelen_ctl00" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
 </div>
 </div>
+</div>
+<div class="form__element__inputs">
 
 
 <div class="subselection" data-decorator="init-form-subselection">
@@ -347,13 +406,7 @@
   </div>
   <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-4"
     class="button">Selecteer</a>
-
-
-  <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_EerstVerantwoordelijke_Ministerie"
-    id="ZoekOp_EerstVerantwoordelijke_Ministerie">
-  <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_EerstVerantwoordelijke_Ministerie"
-    id="Aanvinken_EerstVerantwoordelijke_Ministerie" value="Wetten,Rijkswetten,AMvB,RijksKBs,MinR,MinRArchief,MinROverig,Beleid,Circulaires">
-
+</div>
 </div>
 
 
@@ -596,6 +649,7 @@
 -->
             </div>
             <div class="form__element">
+                <div class="form__element__label">
                 <label for="ZoekOp_Rechtsgebied">Rechtsgebieden</label>
                 <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_Inhoud" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation__link" data-handler="toggle-explanation">
     Toelichting zoeken op rechtsgebied
@@ -607,6 +661,39 @@
                         <p>Hier kunt u een of meerdere rechtsgebieden selecteren waarbinnen u wilt gaan zoeken.</p>
 
 <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+</div>
+</div>
+<div class="form__element__inputs">
+  <div class="subselection" data-decorator="init-form-subselection">
+    <span class="subselection__summary"></span>
+    <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
+      <div class="modal__content">
+        <h2>Selecteer ministeries</h2>
+        <ul class="list--unstyled">
+          <li>
+            <label for="Verdrag211">
+              <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
+            </label>
+            <label for="Verdrag311">
+              <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
+            </label>
+            <label for="Verdrag411">
+              <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
+            </label>
+          </li>
+        </ul>
+        <div class="modal__buttonpane">
+          <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+          <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-5"
+      class="button">Selecteer</a>
+  </div>
 </div>
                 <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Rechtsgebied" id="ZoekOp_Rechtsgebied">
                 <!--
