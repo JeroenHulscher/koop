@@ -251,16 +251,11 @@
                 // $tag = $('<' + (url ? 'a' : 'span') + '>').html(html).addClass(options.itemClass);
                 $tag = $('<span tabindex="0">').html(html).addClass(options.itemClass);
                 $tag.on('keydown', function(event) {
-                  console.log('----');
                   if (event.keyCode === 13 /* ENTER */ ) {
-                  //     autocomplete.chooseItem(event);
-                    console.log('ENTER');
                     self.onEnter(event);
                   }
                   if (event.keyCode === 40) /* arrow down */ {
-                      // autocomplete.selectNextChoice(event);
                       self.navigateItem('down');
-                      console.log('volgened!');
                   }
                   if (event.keyCode === 38) /* arrow up */ {
                     self.navigateItem('up');
