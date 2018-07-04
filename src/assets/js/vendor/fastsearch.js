@@ -278,7 +278,6 @@
             if (!$content && this.resultsOpened) {
                 return;
             }
-          console.log('this.options.resultsOpenedClass', this.options.resultsOpenedClass);
             this.$el.removeClass(this.options.loadingClass).addClass(this.options.resultsOpenedClass);
 
             if (this.options.flipOnBottom) {
@@ -353,10 +352,8 @@
             var $currentItem = this.$resultItems.filter(':focus'),
                 maxPosition = this.$resultItems.length - 1;
 
-          console.log('$currentItem', $currentItem);
 
             if ($currentItem.length === 0) {
-              console.log('here');
                 // this.$resultItems.eq(direction === 'up' ? maxPosition : 0).addClass(this.options.focusedItemClass);
                 this.$resultItems.eq(direction === 'up' ? maxPosition : 0).focus();
                 return;
