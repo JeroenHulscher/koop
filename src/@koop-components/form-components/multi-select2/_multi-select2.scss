@@ -5,34 +5,39 @@ $fstColorMain1: #43A2F3;
 .multiselect__container {
   display: inline-block;
   position: relative;
-  border: 1px solid $fstColorGrayLight1;
+  border: 1px solid $mediumGrey;
+  border-radius: 5px;
   box-sizing: border-box;
   color: $fstColorGrayDark1;
   background-color: #fff;
+  background-image: $dartDownIcon;
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  width: 100%;
 
 	> select,
-	> input { position: absolute; left: -999em; }
+	> input { position: absolute; left: -999em; display: none; }
 }
 
-// .fstToggleBtn {
-//   font-size: inherit;
-//   display: block;
-//   position: relative;
-//   box-sizing: border-box;
-//   min-width: 1em;
-// 	cursor: pointer;
+.multiselect__togglebutton {
+  font-size: inherit;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 1em;
+	cursor: pointer;
 
-// 	&:after {
-//     position: absolute;
-//     content:"";
-//     right: em(10,14);
-//     top: 50%;
-//     margin-top: em(-5/2,14);
-//     border: em(5,14) solid transparent;
-//     border-top-color: darken($fstColorGrayLight1,5%);
-// 	}
+	&:after {
+    position: absolute;
+    content:"";
+    right: em(10,14);
+    top: 50%;
+    margin-top: em(-5/2,14);
+    border: em(5,14) solid transparent;
+    border-top-color: darken($fstColorGrayLight1,5%);
+	}
 
-// }
+}
 
 .multiselect__resultscontainer {
   position: absolute;
@@ -116,6 +121,7 @@ $fstColorMain1: #43A2F3;
     padding: em(7,14) em(5,14);
     color: #999;
     border: 1px solid $fstColorGrayLight1;
+
 	}
 
 	&.fstActive {
@@ -133,8 +139,8 @@ $fstColorMain1: #43A2F3;
   display: inline-block;
   font-size: .85em;
   position: relative;
-  margin: 0 .5em .2em 0;
-  padding: .2em 2.5em .2em .5em;
+  margin: 0 .25em 0 0;
+  padding: 0 2.5em 0 .5em;
   display: inline-block;
   border-radius: 3px;
   border: 1px solid $fstColorMain1;
@@ -142,6 +148,7 @@ $fstColorMain1: #43A2F3;
   color: #fff;
   background-color: $fstColorMain1;
   animation: fstAnimationEnter 0.2s;
+  top: -1px;
 
 	&.mod1 {
     background-color: #F9F9F9;
@@ -176,9 +183,9 @@ $fstColorMain1: #43A2F3;
 
 	.multiselect__controls {
     box-sizing: border-box;
-    padding: 0.5em 0.5em 0.5em 0.5em;
+    padding: 0.286em;
     overflow: hidden;
-    width: 20em;
+    width: 12em;
 		cursor: text;
 	}
 
@@ -186,14 +193,23 @@ $fstColorMain1: #43A2F3;
     font-size: .85em;
     margin: 0;
     width: 5em;
+    padding: 0;
     color: #999;
     border: 0;
     outline: 0;
+    background: transparent;
+    font-size: .85em;
+    font-family: inherit;
+    // cursor: pointer;
+
+    &::placeholder {
+      color: $darkerGrey;
+    }
 
     &.is-expanded {
       float: none;
       width: 100%;
-      padding: .2em .5em;
+      // padding: .2em .5em;
     }
 	}
 

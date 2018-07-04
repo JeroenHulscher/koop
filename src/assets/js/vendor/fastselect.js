@@ -26,8 +26,9 @@
 
     init: function (inputElement, options) {
 
+      this.ens = '.fastselect' + (++instanceNum);
       this.$input = $(inputElement);
-      this.id = this.$input.data('multiselect-id');
+      this.id = instanceNum;
       this.helptextText = this.$input.data('multiselect-helptext');
 
       this.options = pickTo($.extend(true, {}, Fastselect.defaults, options, {
@@ -36,7 +37,7 @@
           'url', 'loadOnce', 'apiParam', 'initialValue', 'userOptionAllowed'
         ]);
 
-      this.ens = '.fastselect' + (++instanceNum);
+
       this.hasCustomLoader = this.$input.is('input');
       this.isMultiple = !!this.$input.attr('multiple');
       this.userOptionAllowed = this.hasCustomLoader && this.isMultiple && this.options.userOptionAllowed;
@@ -61,6 +62,11 @@
         this.$controls.appendTo(this.$el);
         this.$el.insertAfter(this.$input);
         this.$input.detach().appendTo(this.$el);
+        // var self = this;
+        // this.$toggleBtn.on('click', function(){
+        //   self.$input.focus();
+        //   $(this).hide();
+        // });
 
       });
 
@@ -85,13 +91,14 @@
 
       var self = this,
         options = self.options,
+        toggleBtnText = initialOptions && initialOptions.length ? initialOptions[0].text : this.options.placeholder,
         initialOptions = this.processInitialOptions();
 
       this.$el.addClass(options.multipleModeClass);
       this.$controls = $('<div>').addClass(options.controlsClass);
       this.$queryInput = $('<input>').attr({ 'aria-expanded': false, 'aria-activedescendant': '', 'aria-autocomplete': 'both', 'aria-describedby': 'fstHelptext-' + this.id }).attr('aria-owns', 'fstResults-' + this.id).addClass(options.queryInputClass).appendTo(this.$controls);
       this.$inputHelptext = $('<p>').attr('id', 'fstHelptext-' + this.id).addClass(this.options.inputHelptextClass).addClass('visually-hidden').text(this.helptextText).appendTo(this.$el);
-
+      // this.$toggleBtn = $('<div>').addClass(this.options.toggleButtonClass).text(toggleBtnText).appendTo(this.$el);
 
       initialOptions && $.each(initialOptions, function (i, option) {
 
@@ -148,7 +155,7 @@
       $(
         '<div data-text="' + optionModel.text + '" data-value="' + optionModel.value + '" class="' + this.options.choiceItemClass + '">' +
         $('<div>').html(optionModel.text).text() +
-        '<button class="' + this.options.choiceRemoveClass + '" type="button" aria-label="Item verwijderen">×</button>' +
+        '<button class="' + this.options.choiceRemoveClass + '" type="button" aria-label="Item verwijderen: ' + optionModel.text+'">×</button>' +
         '</div>'
       ).insertBefore(this.$queryInput);
 
@@ -175,6 +182,8 @@
         fillInputId: false,
 
         elementId: this.id,
+
+        activeClass: this.options.activeClass,
 
         responseFormat: {
           label: 'text',

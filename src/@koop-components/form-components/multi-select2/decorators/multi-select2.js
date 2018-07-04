@@ -23,8 +23,8 @@
   };
 
 
-  multiselect.prototype.init = function (element) {
-    $('.multipleSelect').fastselect({
+  multiselect.prototype.init = function() {
+    $( this.element ).fastselect({
       placeholder: this.config.placeholder,
       searchPlaceholder: this.config.searchPlaceholder,
       noResultsText: this.config.noResultsText,

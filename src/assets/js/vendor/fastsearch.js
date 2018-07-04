@@ -243,12 +243,32 @@
         },
 
         generateItem: function(item) {
-
+          var self = this;
             var options = this.options,
                 format = options.responseFormat,
                 url = item[format.url],
                 html = item[format.html] || item[format.label],
-                $tag = $('<' + (url ? 'a' : 'span') + '>').html(html).addClass(options.itemClass);
+                // $tag = $('<' + (url ? 'a' : 'span') + '>').html(html).addClass(options.itemClass);
+                $tag = $('<span tabindex="0">').html(html).addClass(options.itemClass);
+                $tag.on('keydown', function(event) {
+                  console.log('----');
+                  if (event.keyCode === 13 /* ENTER */ ) {
+                  //     autocomplete.chooseItem(event);
+                    console.log('ENTER');
+                    self.onEnter(event);
+                  }
+                  if (event.keyCode === 40) /* arrow down */ {
+                      // autocomplete.selectNextChoice(event);
+                      self.navigateItem('down');
+                      console.log('volgened!');
+                  }
+                  if (event.keyCode === 38) /* arrow up */ {
+                    self.navigateItem('up');
+                  }
+                  // if (event.keyCode === 27 /* ESC */ ) {
+                  //     autocomplete.close(input, true);
+                  // }
+              });
 
             url && $tag.attr('href', url);
 
@@ -263,7 +283,7 @@
             if (!$content && this.resultsOpened) {
                 return;
             }
-
+          console.log('this.options.resultsOpenedClass', this.options.resultsOpenedClass);
             this.$el.removeClass(this.options.loadingClass).addClass(this.options.resultsOpenedClass);
 
             if (this.options.flipOnBottom) {
@@ -335,12 +355,15 @@
 
         navigateItem: function(direction) {
 
-            var $currentItem = this.$resultItems.filter(this.focusedItemSelector),
+            var $currentItem = this.$resultItems.filter(':focus'),
                 maxPosition = this.$resultItems.length - 1;
 
-            if ($currentItem.length === 0) {
+          console.log('$currentItem', $currentItem);
 
-                this.$resultItems.eq(direction === 'up' ? maxPosition : 0).addClass(this.options.focusedItemClass);
+            if ($currentItem.length === 0) {
+              console.log('here');
+                // this.$resultItems.eq(direction === 'up' ? maxPosition : 0).addClass(this.options.focusedItemClass);
+                this.$resultItems.eq(direction === 'up' ? maxPosition : 0).focus();
                 return;
 
             }
@@ -353,7 +376,8 @@
 
             $currentItem.removeClass(this.options.focusedItemClass);
 
-            this.$resultItems.eq(nextPosition).addClass(this.options.focusedItemClass);
+          // this.$resultItems.eq(nextPosition).addClass(this.options.focusedItemClass);
+          this.$resultItems.eq(nextPosition).focus();
 
             this.$input.attr('aria-activedescendant', $currentItem.text());
 
@@ -373,7 +397,7 @@
 
         onEnter: function(e) {
 
-            var $currentItem = this.$resultItems.filter(this.focusedItemSelector);
+            var $currentItem = this.$resultItems.filter(':focus');
 
             if ($currentItem.length) {
                 e.preventDefault();
@@ -437,10 +461,16 @@
 
         hideResults: function() {
 
+          this.$input.focus();
+
+          // test
+          this.resultsOpened = true;
+
             if (this.resultsOpened) {
 
                 this.resultsOpened = false;
                 this.$el.removeClass(this.options.resultsOpenedClass);
+                this.$el.removeClass(this.options.activeClass);
                 this.$input.trigger('closingResults');
                 this.documentCancelEvents('off');
 
