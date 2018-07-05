@@ -147,7 +147,7 @@
   input[type="date"],
   input.input-datepicker {
     width: 10.5em;
-    margin: 0 .5em;
+    // margin: 0 .5em; // why do we need this?
     display: inline-block;
   }
 
