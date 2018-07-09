@@ -55,20 +55,20 @@ describe('Multi-select', function () {
     expect(result.isPresent().toBeFalsy);
 
   });
-  // it('should hide resultlist when ESC', function () {
-  //   browser.get('http://localhost:3000/components/preview/multi-select2');
+  xit('should hide resultlist when ESC', function () {
+    browser.get('http://localhost:3000/components/preview/multi-select2');
 
-  //   var input = element(by.css('.multiselect__controls input'));
+    var input = element(by.css('.multiselect__controls input'));
 
-  //   input.sendKeys('Volvo');
+    input.sendKeys('Volvo');
 
-  //   browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
-  //   browser.driver.sleep(250);
+    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+    browser.driver.sleep(250);
 
-  //   var selectedContainer = element(by.css('.multiselect__controls'));
+    var selectedContainer = element(by.css('.multiselect__controls'));
 
-  //   expect( selectedContainer.isPresent().toBeFalsy() );
-  // });
+    expect( selectedContainer.isPresent().toBeFalsy() );
+  });
 
 
 });
