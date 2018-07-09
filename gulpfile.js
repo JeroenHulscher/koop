@@ -131,6 +131,7 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',
     paths.components + '/**/*.js',
+    '!' + paths.components + '/**/*.e2e.js',
     paths.scripts + '/decorators/*.js',
     paths.scripts + '/run.js'
   ])
