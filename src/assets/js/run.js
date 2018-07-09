@@ -33,3 +33,5 @@ document.addEventListener( 'click', function handleClick( event ) {
   });
 
 });
+
+// Fastselect: Copyright(c) 2015 Damir Brekalo

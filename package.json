@@ -21,7 +21,9 @@
     "combobo": "1.0.2",
     "del": "^2.2.2",
     "eslint": "^3.13.1",
-    "gulp": "gulpjs/gulp#4.0",
+    "fastselect": "^0.7.3",
+    "growl": "^1.10.5",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-changed": "^2.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-imagemin": "^3.1.1",
@@ -31,6 +33,7 @@
     "growl": "^1.10.5"
   },
   "devDependencies": {
+    "fastsearch": "^1.11.1",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.0"
   }
