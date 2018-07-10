@@ -1,17 +1,20 @@
-{{ render "@header" headerContext merge="true" }}
+<div class="wrapper">
 
-<div class="row row--page-opener">
-  <div class="container">
-    {{ render "@breadcrumb" }}
+  {{ render "@header" headerContext merge="true" }}
+
+  <div class="row row--page-opener">
+    <div class="container">
+      {{ render "@breadcrumb" }}
+    </div>
   </div>
-</div>
 
-<div class="container row">
-  <div class="columns columns--homepage-tiles">
-    {{ render "@homepage-block--related" homepageBlock1 merge="true" }}
-    {{ render "@homepage-block--related" homepageBlock2 merge="true" }}
-    {{ render "@homepage-block--related" homepageBlock3 merge="true" }}
-    {{ render "@homepage-block--related" homepageBlock4 merge="true" }}
+  <div class="container row">
+    <div class="columns columns--homepage-tiles">
+      {{ render "@homepage-block--related" homepageBlock1 merge="true" }}
+      {{ render "@homepage-block--related" homepageBlock2 merge="true" }}
+      {{ render "@homepage-block--related" homepageBlock3 merge="true" }}
+      {{ render "@homepage-block--related" homepageBlock4 merge="true" }}
+    </div>
   </div>
 
 </div>
