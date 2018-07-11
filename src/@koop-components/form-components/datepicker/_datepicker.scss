@@ -1,3 +1,9 @@
+.datepicker {
+  display: inline-block;
+  padding-right: 2em;
+  position: relative;
+}
+
 .ui-datepicker:not(:empty) {
   background: white;
   padding: 1em;

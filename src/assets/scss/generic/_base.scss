@@ -66,12 +66,27 @@ html {
   position: relative;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  @media (min-width: 50em) {
+    padding-bottom: 11em;
+  }
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
 }
+
+@media (min-width: 50em) {
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 11em;
+  }
+}
+
 
 *,
 *::before,

@@ -26,6 +26,7 @@
 
     init: function (inputElement, options) {
 
+      this.inputElement = inputElement;
       this.ens = '.fastselect' + (++instanceNum);
       this.$input = $(inputElement);
       this.id = instanceNum;
@@ -158,7 +159,24 @@
         '<button class="' + this.options.choiceRemoveClass + '" type="button" aria-label="Item verwijderen: ' + optionModel.text+'">×</button>' +
         '</div>'
       ).insertBefore(this.$queryInput);
+      this.setSelectChoiceToSelected(optionModel.value);
 
+    },
+
+    setSelectChoiceToSelected: function(value) {
+      this.$input.find('option').each(function () {
+        if( $(this).val() === value ) {
+          $(this).attr('selected', true);
+        }
+      });
+    },
+
+    removeSelectChoiceToSelected: function (value) {
+      this.$input.find('option').each(function () {
+        if ($(this).val() === value) {
+          $(this).attr('selected', false);
+        }
+      });
     },
 
     setupFastsearch: function () {
@@ -431,6 +449,7 @@
 
       this.updateDomElements();
       this.writeToInput();
+      this.removeSelectChoiceToSelected(option.value);
 
     },
 

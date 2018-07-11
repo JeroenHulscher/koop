@@ -14,8 +14,10 @@
 .form__element {
   border: none;
   margin: 0 0 .5em 0;
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: 50em) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   // align-items: center;
 
   &:not(.radiogroup),
@@ -24,12 +26,16 @@
   }
 
   &__label {
-    flex: 1 0 40%;
+    @media (min-width: 50em) {
+      flex: 1 0 40%;
+    }
     padding-top: 0.25em;
   }
 
   &__inputs {
-    flex: 2 0 60%;
+    @media (min-width: 50em) {
+      flex: 2 0 60%;
+    }
     margin-left: 40%;
   }
 
@@ -69,11 +75,17 @@
     font-family: inherit;
     padding: 0 .5em;
     font-size: .85em;
-    margin: .25em 0;
+    margin: 0 0 .25em;
     border-radius: 5px;
 
     &::placeholder {
       color: $darkerGrey;
+    }
+
+    &.input--xsmall {
+      max-width: 4em;
+      margin: 0 .5em 0 0;
+      display: inline-block;
     }
 
     &.input--small {
@@ -113,22 +125,27 @@
     min-height: 7em;
   }
 
-  .input-datepicker {
+  input[type="text"].datepicker__input {
+    margin: 0;
 
     & ~ .ui-datepicker-trigger {
       border: 0;
       padding: 0.5em;
       background: $datepickerTriggerBackgroundColor;
-      margin-left: -1em;
-      position: relative;
-      top: 0.375em;
+      // margin-left: -1em;
+      position: absolute;
+      // top: 0.375em;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 4em;
       border-bottom: 1px solid $datepickerTriggerBackgroundColor;
       border-bottom-right-radius: 5px;
       border-top-right-radius: 5px;
 
       img {
-        width: 2.25em;
-        height: 1.8em;
+        width: 24px;
+        height: 20px;
 
       }
     }
@@ -145,7 +162,7 @@
   }
 
   input[type="date"],
-  input.input-datepicker {
+  input.datepicker__input {
     width: 10.5em;
     // margin: 0 .5em; // why do we need this?
     display: inline-block;

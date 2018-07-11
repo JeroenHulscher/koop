@@ -233,13 +233,15 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__element checkboxgroup">
+      <fieldset class="form__element checkboxgroup inline-group">
         <legend class="visually-hidden">Specifieker zoeken</legend>
         <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBES" class="form__error" style="display:none;">U moet één van de volgende keuzes selecteren: 'Ook zoeken in regelingen BES' of 'Alleen zoeken in regelingen BES'.</p>
-
-        <label for="OokBES">
+      <ul class="list--unstyled">
+        <li><label for="OokBES">
           <input id="OokBES" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$OokBES">Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
         </label>
+        </li>
+        <li>
         <label for="AlleenBES">
           <input id="AlleenBES" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$AlleenBES">Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
 
@@ -257,6 +259,8 @@
               data-handler="close-explanation">Sluiten</a>
           </div>
         </div>
+        </li>
+        </ul>
       </fieldset>
     </div>
 
@@ -385,7 +389,7 @@
         </div>
         <div class="form__element__inputs">
 
-          <select aria-describedby="labelid" class="multipleSelect" multiple name="autos" data-decorator="init-multiselect" data-decorator-placeholder="Type auto"
+          <select aria-describedby="labelid" class="multipleSelect" multiple name="autos" data-decorator="init-multiselect" data-decorator-placeholder="Selecteer al uw auto's"
             data-multiselect-helptext="helptekst">
             <optgroup label="Swedish Cars">
               <option value="volvo">Volvo</option>
@@ -557,11 +561,9 @@
 
         </div>
         <div class="form__element__inputs">
-            <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Geldigheidsdatum" type="date" value="11-04-2018"
-              id="ZoekOp_Geldigheidsdatum" class="input">
-            <small>
-              <a href="#">Vandaag</a>
-            </small>
+            <div class="datepicker">
+              <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--1" placeholder="dd/mm/yyyy" />
+            </div>
 
             <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
             <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum10102010" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
@@ -577,11 +579,10 @@
           <label for="ZoekOp_Zichtdatum">Zichtdatum</label>
         </div>
         <div class="form__element__inputs">
-          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Zichtdatum" type="date" value="11-04-2018"
-          id="ZoekOp_Zichtdatum" class="input">
-          <small>
-            <a href="#">Vandaag</a>
-          </small>
+          <div class="datepicker">
+            <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--2" placeholder="dd/mm/yyyy" />
+          </div>
+
 
           <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
           <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum10102010" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
@@ -641,38 +642,45 @@
         </div>
         <div class="form__element__inputs">
           <fieldset class="form__element radiogroup inline-group">
+            <ul class="list--unstyled">
+              <li>
             <label for="ZoekOp_DatumtypeInwerkingtreding">
               <input id="ZoekOp_DatumtypeInwerkingtreding" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
                 value="ZoekOp_DatumtypeInwerkingtreding" checked="checked" title="">Inwerkingtreding
             </label>
-            <label for="ZoekOp_DatumtypeOndertekening">
-              <input id="ZoekOp_DatumtypeOndertekening" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
-                value="ZoekOp_DatumtypeOndertekening" title="">Ondertekening
+            </li>
+            <li>
+              <label for="ZoekOp_DatumtypeOndertekening">
+                <input id="ZoekOp_DatumtypeOndertekening" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
+                  value="ZoekOp_DatumtypeOndertekening" title="">Ondertekening
 
-            </label>
-            <div class="question-explanation">
-              <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoOndertekeningsdatum"
-                  id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl04" class="question-explanation__link"
-                  data-handler="toggle-explanation">Toelichting zoeken op datum ondertekening</a>
-              <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoOndertekeningsdatum" class="question-explanation__content"
-                data-decorator="hide-self" hidden="true">
+              </label>
+              <div class="question-explanation">
+                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoOndertekeningsdatum"
+                    id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl04" class="question-explanation__link"
+                    data-handler="toggle-explanation">Toelichting zoeken op datum ondertekening</a>
+                <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoOndertekeningsdatum" class="question-explanation__content"
+                  data-decorator="hide-self" hidden="true">
 
-                <p>Zoeken op datum ondertekening is niet mogelijk bij verdragen.</p>
-                <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl04" class="question-explanation__close"
-                  data-handler="close-explanation">Sluiten</a>
+                  <p>Zoeken op datum ondertekening is niet mogelijk bij verdragen.</p>
+                  <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl04" class="question-explanation__close"
+                    data-handler="close-explanation">Sluiten</a>
+                </div>
               </div>
-            </div>
-
+            </li>
+            <li>
             <label for="ZoekOp_DatumtypeTotstandkoming">
               <input id="ZoekOp_DatumtypeTotstandkoming" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
                 value="ZoekOp_DatumtypeTotstandkoming" title="">Totstandkoming
 
             </label>
+
             <div class="question-explanation">
               <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoDatumTotstandkoming"
                   id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl05" class="question-explanation__link"
-                  data-handler="toggle-explanation">Toelichting zoeken op datum totstandkoming</a>
-                  <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoDatumTotstandkoming" class="question-explanation__content"
+                  data-handler="toggle-explanation">Toelichting zoeken op datum totstandkoming
+              </a>
+              <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoDatumTotstandkoming" class="question-explanation__content"
                 data-decorator="hide-self" hidden="true">
 
                 <p>Zoeken op datum totstandkoming is alleen mogelijk bij verdragen.</p>
@@ -680,6 +688,8 @@
                   data-handler="close-explanation">Sluiten</a>
               </div>
             </div>
+            </li>
+            </ul>
           </fieldset>
           <div class="daterange">
             <div class="form__element">
@@ -694,24 +704,27 @@
 
               <label for="ZoekOp_Startdatum" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Label1">
                 <span class="visually-hidden">Datum</span>
-                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Startdatum" type="date" id="ZoekOp_Startdatum">
+                <div class="datepicker">
+                  <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--1" placeholder="dd/mm/yyyy" />
+                </div>
 
               </label>
 
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+
               <div class="question-explanation">
                 <a class="question-explanation__link" href="#question-explanation-121" id="question-explanation-link-121" data-handler="toggle-explanation">Toelichting regelingen BES</a>
-              </div>
-              <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
-              <div style="display:none;" class="question-explanation" id="question-explanation-121" data-decorator="hide-self">
+
+                <div class="question-explanation__content" id="question-explanation-121" data-decorator="hide-self">
                 <p>Door dit aan te vinken, zoekt u alleen binnen de voormalige Antilliaanse regelgeving die is overgenomen door Nederland.
                 </p>
                 <a href="#question-explanation-link-121" class="question-explanation__close" data-handler="close-explanation">
-                  <span class="visually-hidden">
+
                     Sluiten
-                  </span>
+
                 </a>
               </div>
-
+              </div>
 
               <label style="display:none;" for="ZoekOp_Einddatum">
                 t/m
@@ -754,7 +767,7 @@
             <label for="ZoekOp_BronPublicatieJaar" class="visually-hidden">Jaar</label>
 
             <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_BronPublicatieJaar" type="text" id="ZoekOp_BronPublicatieJaar"
-              class="input--small" placeholder="jaar">
+              class="input--xsmall" placeholder="jaar">
             <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer" class="form__error"
               style="display:none;">Naast een publicatiejaar en soort is ook een publicatienummer vereist.</p>
             <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar" class="form__error" style="display:none;">Ongeldig publicatiejaar opgegeven.</p>
@@ -768,7 +781,7 @@
       <div class="form__element">
         <div class="form__element__label">
         <label for="ZoekOp_Overheidsdomein">Overheidsthema's</label>
-
+        <div class="question-explanation">
           <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud"
             id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
             data-handler="toggle-explanation">
@@ -784,15 +797,46 @@
             <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
               class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
           </div>
+          </div>
       </div>
       <div class="form__element__inputs">
-          <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Overheidsdomein" id="ZoekOp_Overheidsdomein">
-          input
+        <div class="subselection" data-decorator="init-form-subselection">
+          <span class="subselection__summary"></span>
+          <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
+            <div class="modal__content">
+              <h2>Selecteer Overheidsthemas</h2>
+              <ul class="list--unstyled">
+                <li>
+                  <label for="Verdrag211">
+                    <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
+                  </label>
+                  <label for="Verdrag311">
+                    <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
+                  </label>
+                  <label for="Verdrag411">
+                    <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
+                  </label>
+                </li>
+              </ul>
+              <div class="modal__buttonpane">
+                <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+          </div>
+          <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-5"
+            class="button">Selecteer</a>
+        </div>
       </div>
       </div>
       <div class="form__element">
         <div class="form__element__label">
           <label for="ZoekOp_Rechtsgebied">Rechtsgebieden</label>
+          <div class="question-explanation">
+
           <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_Inhoud"
             id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Rechtsgebied_ctl00" class="question-explanation__link"
             data-handler="toggle-explanation">
@@ -809,12 +853,13 @@
               class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
           </div>
         </div>
+        </div>
         <div class="form__element__inputs">
           <div class="subselection" data-decorator="init-form-subselection">
             <span class="subselection__summary"></span>
             <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
               <div class="modal__content">
-                <h2>Selecteer ministeries</h2>
+                <h2>Selecteer rechtsgebieden</h2>
                 <ul class="list--unstyled">
                   <li>
                     <label for="Verdrag211">
@@ -841,24 +886,12 @@
               class="button">Selecteer</a>
           </div>
         </div>
-        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Rechtsgebied" id="ZoekOp_Rechtsgebied">
-        <!--
-<ul id="overheidbwb.rechtsgebied" class="category_selection geen-items">
-
-
-
-    <li class="verborgen"></li>
-</ul>
-<a href="javascript:void(0)" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Rechtsgebied_selecteerWaardelijstitem" class="selection_popup category_selection">Selecteer rechtsgebieden</a>
-<script type="text/javascript">
-    openPopupWaardelijst("#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Selectie_Rechtsgebied_selecteerWaardelijstitem", "Selecteer rechtsgebieden", "overheidbwb.rechtsgebied", "", "overheidbwb.rechtsgebied", false, true, "ZoekOp_Rechtsgebied", "", "");
-</script>
--->
       </div>
       <div class="form__element">
         <div class="form__element__label">
         <label for="ZoekOp_Taxonomie">Thema's verdragen</label>
-        <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_Inhoud"
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_Inhoud"
           id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_ctl00" class="question-explanation__link"
           data-handler="toggle-explanation">
           Toelichting zoeken op taxonimie
@@ -873,13 +906,42 @@
           <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Taxonomie_ctl00"
             class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
         </div>
+        </div>
 
         <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Taxonomie" id="ZoekOp_Taxonomie">
         </div>
         <div class="form__element__inputs">
-        <input type="hidden" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Aanvinken_Taxonomie_Ministerie"
-          id="Aanvinken_Taxonomie_Ministerie" value="Verdrag">
-      </div>
+          <div class="subselection" data-decorator="init-form-subselection">
+            <span class="subselection__summary"></span>
+            <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
+              <div class="modal__content">
+                <h2>Selecteer verdragen</h2>
+                <ul class="list--unstyled">
+                  <li>
+                    <label for="Verdrag211">
+                      <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                        data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
+                    </label>
+                    <label for="Verdrag311">
+                      <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                        data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
+                    </label>
+                    <label for="Verdrag411">
+                      <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                        data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
+                    </label>
+                  </li>
+                </ul>
+                <div class="modal__buttonpane">
+                  <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+                  <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+                </div>
+              </div>
+            </div>
+            <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-5"
+              class="button">Selecteer</a>
+          </div>
+        </div>
       </div>
     </div>
     <div>
@@ -890,7 +952,8 @@
       <div class="form__element">
         <div class="form__element__label">
           <label for="ZoekOp_BWBID">BWB-ID</label>
-          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_Inhoud"
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_Inhoud"
             id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_ctl00" class="question-explanation__link"
             data-handler="toggle-explanation">
             Toelichting zoeken op BWB-ID
@@ -903,6 +966,7 @@
 
             <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_BWBID_ctl00"
               class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
           </div>
         </div>
         <div class="form__element__inputs">
@@ -918,7 +982,8 @@
           <label for="ZoekOp_Kamerstuknummer">Kamerstuknummer
 
           </label>
-          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_Inhoud"
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_Inhoud"
             id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_ctl00" class="question-explanation__link"
             data-handler="toggle-explanation">
             Toelichting zoeken op kamerstuknummer
@@ -932,6 +997,7 @@
 
             <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kamerstuknummer_ctl00"
               class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
           </div>
         </div>
         <div class="form__element__inputs">
@@ -948,6 +1014,7 @@
         <label for="ZoekOp_Kenmerk">Kenmerk regeling
 
         </label>
+        <div class="question-explanation">
         <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kenmerk_Inhoud"
           id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Kenmerk_ctl00" class="question-explanation__link"
           data-handler="toggle-explanation">
@@ -963,6 +1030,7 @@
             class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
         </div>
         </div>
+        </div>
         <div class="form__element__inputs">
 
         <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Kenmerk" type="text" id="ZoekOp_Kenmerk"
@@ -976,6 +1044,7 @@
         <label for="ZoekOp_JuriconnectID">Juriconnect-ID
 
         </label>
+        <div class="question-explanation">
         <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_Inhoud"
             id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_ctl00" class="question-explanation__link"
             data-handler="toggle-explanation">
@@ -988,6 +1057,7 @@
 
           <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_JuriconnectID_ctl00"
             class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+        </div>
         </div>
 </div>
 <div class="form__element__inputs">

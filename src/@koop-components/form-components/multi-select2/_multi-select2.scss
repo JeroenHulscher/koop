@@ -1,43 +1,43 @@
-$fstColorGrayLight1: #D7D7D7;
-$fstColorGrayDark1: #232323;
-$fstColorMain1: #43A2F3;
-
 .multiselect__container {
   display: inline-block;
   position: relative;
   border: 1px solid $mediumGrey;
   border-radius: 5px;
   box-sizing: border-box;
-  color: $fstColorGrayDark1;
+  color: $textColor;
   background-color: #fff;
   background-image: $dartDownIcon;
   background-repeat: no-repeat;
   background-position: right 1em center;
   width: 100%;
 
+  &.is-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
 	> select,
 	> input { position: absolute; left: -999em; display: none; }
 }
 
-.multiselect__togglebutton {
-  font-size: inherit;
-  display: block;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 1em;
-	cursor: pointer;
+// .multiselect__togglebutton {
+//   font-size: inherit;
+//   display: block;
+//   position: relative;
+//   box-sizing: border-box;
+//   min-width: 1em;
+// 	cursor: pointer;
 
-	&:after {
-    position: absolute;
-    content:"";
-    right: em(10,14);
-    top: 50%;
-    margin-top: em(-5/2,14);
-    border: em(5,14) solid transparent;
-    border-top-color: darken($fstColorGrayLight1,5%);
-	}
-
-}
+// 	&:after {
+//     position: absolute;
+//     content:"";
+//     right: em(10,14);
+//     top: 50%;
+//     margin-top: em(-5/2,14);
+//     border: em(5,14) solid transparent;
+//     border-top-color: darken($mediumGrey,5%);
+// 	}
+// }
 
 .multiselect__resultscontainer {
   position: absolute;
@@ -48,10 +48,12 @@ $fstColorMain1: #43A2F3;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid $fstColorGrayLight1;
+  border: 1px solid $mediumGrey;
   border-top: 0;
   background-color: #FFF;
-	display: none;
+  display: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .multiselect__result {
@@ -61,21 +63,30 @@ $fstColorMain1: #43A2F3;
   margin: 0;
   cursor: pointer;
   border-top: 1px solid #fff;
+  position: relative;
 
 	&.fstUserOption {
-		color: lighten($fstColorGrayDark1, 30%);
+		color: lighten($mediumGrey, 30%);
 	}
 
-	&.has-focus {
-    color: #fff;
-    background-color: $fstColorMain1;
-    border-color: lighten($fstColorMain1,10%);
+  &.has-focus,
+  &:focus {
+    background-color: $multiSelectOptionHoverBGColor;
 	}
 
 	&.is-selected {
-    color: #fff;
-    background-color: darken($fstColorMain1,6%);
-    border-color: lighten($fstColorMain1,10%);
+    color: $multiSelectOptionSelectedCrossTextColor;
+    background-color: $multiSelectOptionSelectedBGColor;
+    &:after {
+      content: "";
+      background: $multiSelectOptionSelectedCrossBGColor $iconCheck no-repeat center center;
+      background-size: .75em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 2em;
+    }
 	}
 }
 
@@ -83,6 +94,7 @@ $fstColorMain1: #43A2F3;
   font-size: inherit;
   display: block;
   margin: 0;
+  padding: .5em;
 	font-weight: bold;
 }
 
@@ -91,7 +103,9 @@ $fstColorMain1: #43A2F3;
 	&:first-child {
     padding-top: 0;
   }
-
+  .multiselect__result {
+    padding-left: 1em;
+  }
 }
 
 .has-noresults {
@@ -109,7 +123,7 @@ $fstColorMain1: #43A2F3;
     right: -1px;
     top: 100%;
     padding: 0.5em;
-    border: 1px solid $fstColorGrayLight1;
+    border: 1px solid $mediumGrey;
     background-color: #fff;
 		display: none;
 	}
@@ -120,7 +134,7 @@ $fstColorMain1: #43A2F3;
     width: 100%;
     padding: em(7,14) em(5,14);
     color: #999;
-    border: 1px solid $fstColorGrayLight1;
+    border: 1px solid $mediumGrey;
 
 	}
 
@@ -143,33 +157,30 @@ $fstColorMain1: #43A2F3;
   padding: 0 2.5em 0 .5em;
   display: inline-block;
   border-radius: 3px;
-  border: 1px solid $fstColorMain1;
   cursor: auto;
-  color: #fff;
-  background-color: $fstColorMain1;
+  color: $multiSelectOptionSelectedCrossTextColor;
+  background-color: $multiSelectOptionSelectedBGColor;
   animation: fstAnimationEnter 0.2s;
   top: -1px;
 
 	&.mod1 {
     background-color: #F9F9F9;
-    border: 1px solid $fstColorGrayLight1;
-		color: $fstColorGrayDark1;
+    border: 1px solid $mediumGrey;
+		color: $mediumGrey;
 
 		> .multiselect__choiceremove {
-
-			color: darken($fstColorGrayLight1, 20%);
+			color: $multiSelectOptionSelectedCrossBGColor;
 		}
 	}
 
 }
 
 .multiselect__choiceremove {
-	margin: 0;
+  margin: 0;
   padding: 0;
   border: 0;
   font-size: 1.25em;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.1);
   position: absolute;
   right: 0;
   top: 0;
@@ -177,6 +188,12 @@ $fstColorMain1: #43A2F3;
   color: #fff;
   width: 1.5em;
   bottom: 0;
+  text-indent: -9999em;
+  background: $multiSelectOptionSelectedCrossBGColor $iconCross no-repeat center center;
+  background-size: 0.5em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
 }
 
 .multiselect--multiplemode {
@@ -185,7 +202,7 @@ $fstColorMain1: #43A2F3;
     box-sizing: border-box;
     padding: 0.286em;
     overflow: hidden;
-    width: 12em;
+    width: 100%;
 		cursor: text;
 	}
 
@@ -225,7 +242,7 @@ $fstColorMain1: #43A2F3;
 		}
 
 		.multiselect__resultscontainer {
-			display: block; z-index: 10; border-top: 1px solid $fstColorGrayLight1;
+			display: block; z-index: 10; border-top: 1px solid $mediumGrey;
 		}
 
 	}

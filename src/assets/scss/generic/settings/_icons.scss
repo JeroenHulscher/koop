@@ -1,5 +1,7 @@
 $chevronRight:  url( '../images/icon-chevron-right.svg' ) !default;
 $chevronLeft:  url( '../images/icon-chevron-left.svg' ) !default;
+$iconCross: url( '../images/icon-close.svg' );
+$iconCrossWhite: url( '../images/icon-close-white.svg' );
 
 $datepickerButtonNext: $chevronRight;
 $datepickerButtonPrev: $chevronLeft;
@@ -38,9 +40,10 @@ $relationsIcon: url( '../images/icon-relations.svg' ) !default;
 $permalinkIcon: url( '../images/icon-permalink.svg' ) !default;
 $compareIcon: url( '../images/icon-compare.svg' ) !default;
 
-$modalCloser: url( '../images/icon-close.svg' ) !default;
+$modalCloser: $iconCross !default;
 $modalCloserHover: url( '../images/icon-close-hover.svg' ) !default;
 
+$iconCheck: url( '../images/icon-check.svg' ) !default;
 $iconCheckWhite: url( '../images/icon-check-white.svg' ) !default;
 $loadingIcon: url( '../images/icon-loading.svg' ) !default;
 
