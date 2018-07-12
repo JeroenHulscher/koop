@@ -4,13 +4,16 @@
 const gulp = require( 'gulp' );
 const sass = require( 'gulp-sass' );
 const postcss = require( 'gulp-postcss' );
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const concat = require( 'gulp-concat' );
+const packagejson = require( './package.json' );
+const uglify = require( 'gulp-uglify' );
 const autoprefixer = require( 'autoprefixer' );
 const eslint = require( 'gulp-eslint' );
 const del = require( 'del' );
 const imageOptim = require( 'gulp-imagemin' );
 const changed = require( 'gulp-changed' );
+const header = require( 'gulp-header' );
+const cleancss = require('gulp-clean-css');
 const paths = {
   styles : 'src/assets/scss',
   scripts : 'src/assets/js',
@@ -20,6 +23,7 @@ const paths = {
   allSrc: 'src',
   drop : 'public'
 };
+
 
 gulp.task( 'fractal:start', function(){
   const fractal = require( './fractal.js' );
@@ -65,6 +69,8 @@ gulp.task( 'css:process', function() {
       this.emit( 'end' );
     })
     .pipe( postcss([autoprefixer({ browsers: ['last 2 versions'] })]) )
+    .pipe( cleancss ({ compatibility: 'ie8' }) )
+    .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
     .pipe( gulp.dest( paths.drop + '/css' ) );
 });
 
@@ -136,7 +142,8 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/run.js'
   ])
   .pipe( concat( 'main.js' ) )
-  // .pipe( uglify() )
+  .pipe( uglify() )
+  .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
 
