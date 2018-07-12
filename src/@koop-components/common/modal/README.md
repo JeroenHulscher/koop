@@ -1,10 +1,10 @@
-The modal component can be used if information needs to be overlayed on top of the page, with the rest of the page inaccessible.
+Het modal component kan informatie tonen in een vlak dat over de rest van de pagina heenligt, en waarbij de rest van de pagina ontoegankelijk is gemaakt.
 
-## Implementation notes
+# Implementatie
 
-### Adding a modal to the page
+## Voeg een modal toe aan de pagina
 
-To add a modal in the page, add it just before the `<body>`.  It is added in its invisible state. Example markup:
+De code voor een model moet toegevoegd worden net voor voor de `<body>`-tag. Als je het toevoegt is het standaard niet-zichtbaar. Een voorbeeld van de broncode:
 
 ```markup
 <div id="modal-1" class="modal modal--off-screen" hidden role="alert">
@@ -16,21 +16,21 @@ To add a modal in the page, add it just before the `<body>`.  It is added in its
 </div>
 ```
 
-Note that it has:
+Let op, het bevat altijd:
 
-* an ID, this is used to identify this modal
-* classnames, they are used for styling (the modal, and the modal's off screen state)
-* the hidden attribute, this hides the modal
-* a `role` of `alert`
-* the `.modal` element for the outer modal and the `.model__content` element for its content
-* a close button; this can be any button element with `data-handler="close-modal"`
+- een id, wat wordt gebruikt om het modal te kunnen aanroepen vanuit een knop
+- een classname, die wordt gebruikt voor de opmaak van het modal en het verbergen van het modal.
+- een hidden-attribuut, om het attribuut default te verbergen
+- een role="alert" zodat screenreaders het netjes oplezen zodra het wordt getoond.
+- `.modal` element als buitenste elementen, en `.model__content` element voor de inhoud
+- Een 'close'-button, wat elke opmaak kan bevatten zolang het maar `data-handler="close-modal"` bevat.
 
-### Triggering/opening modal with a button
+## Openen/triggeren met een button
 
-This is a button that can open a modal:
+Dit kan iedere knop zijn met in ieder geval deze attributen:
 
 ```markup
 <button type="button" data-handler="open-modal" data-modal="modal-1" class="button">Open modal</button>
 ```
 
-Note that the `data-modal` attribute contains the ID of the modal, this corresponds to the `id` attribute on the actual modal.
+**Let op**: het `data-modal` attribuut bevat het ID van het gekoppelde modal, en moet gelijk zijn aan het `id` attribute in het bijbehorende modal.
