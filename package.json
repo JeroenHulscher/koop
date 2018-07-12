@@ -1,6 +1,6 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
