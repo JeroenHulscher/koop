@@ -9,4 +9,9 @@
     size: cover;
     repeat: no-repeat;
   }
+
+  span {
+    position: absolute;
+    left: -999em;
+  }
 }
