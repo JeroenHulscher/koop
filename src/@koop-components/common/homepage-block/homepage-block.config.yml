@@ -9,8 +9,6 @@ context:
       text: Interne link
     - url: https://www.google.com/
       text: Google
-    - url: https://wetten.overheid.nl/
-      text: wetten.overheid.nl
 variants:
   - name: related
     label: Gerelateerd
