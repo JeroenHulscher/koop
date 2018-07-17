@@ -25,12 +25,12 @@
     }
   }
 
-  span {
+  h2 ~ p {
     color: $white;
     display: block;
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 0;
-    line-height: 1;
+    line-height: 1.25;
   }
 
   ul {

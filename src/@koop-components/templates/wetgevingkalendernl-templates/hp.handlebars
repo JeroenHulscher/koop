@@ -1,0 +1,73 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+{{#each rowLanding }}
+<div class="row row--image row--landing" style="background-image: url({{ image }});">
+  <div class="container">
+    <div class="content--onimage">
+      <h1>{{ title }}</h1>
+      <p class="intro--text">{{ intro }}</p>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+<div class="container columns columns--sidebar-left row">
+
+    <div class="container">
+      {{#each linkSetGroup }}
+      <div class="columns">
+        {{#each linkSet }}
+        <div>
+          <h2>{{ title }}</h2>
+           {{#if intro }}
+            <p>{{ intro }}</p>
+           {{/if}}
+          {{#if links }}
+          <ul class="list--linked">
+            {{#each links }}
+            <li>
+              <a href="{{ url }}">{{ text }}</a>
+            </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+
+  <div>
+    <div class="well">
+
+      <form>
+
+        <fieldset class="form__element">
+
+          <legend class="form--intro">Zoeken</legend>
+
+          <div class="form__element">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+
+        </fieldset>
+
+        <button type="submit" class="button button--secondary">Zoek in Wetgevingskalender</button>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}
