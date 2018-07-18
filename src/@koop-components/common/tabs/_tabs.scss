@@ -26,7 +26,8 @@
         background-color: $lightGrey;
       }
 
-      &[aria-selected="true"] {
+      &[aria-selected="true"],
+      &.is-selected {
         border-left: 1px solid $lighterGrey;
         border-right: 1px solid $lighterGrey;
         border-top: 2px solid $primaryBlue;

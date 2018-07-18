@@ -70,7 +70,7 @@
           </fieldset>
           <div class="form__element">
             <div class="form__element__inputs">
-              <button type="submit" class="button button--secondary">Zoek in Wetgevingskalender</button>
+              <button type="submit" class="button button--secondary">Filter</button>
             </div>
           </div>
       </form>
@@ -78,17 +78,66 @@
 
     <div class="tabs" data-decorator="init-tabs">
       <ul class="tabs__list">
-        <li role="presentation"><a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1">Voorbereiding (117)</a></li>
-        <li role="presentation"><a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Raad van State (134)</a></li>
-        <li role="presentation"><a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3">Tweede Kamer (64)</a></li>
-        <li role="presentation"><a href="#panel-4" data-handler="open-panel" role="tab" id="tab-4" aria-controls="panel-4">Eerste Kamer (27)</a></li>
-        <li role="presentation"><a href="#panel-5" data-handler="open-panel" role="tab" id="tab-5" aria-controls="panel-5">Bekendmaking (95)</a></li>
+        <li role="presentation"><a href="#" aria-selected="true" class="is-selected" role="tab" id="tab-1" aria-controls="panel-1">Voorbereiding (117)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-2" aria-controls="panel-2">Raad van State (134)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-3" aria-controls="panel-3">Tweede Kamer (64)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-4" aria-controls="panel-4">Eerste Kamer (27)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-5" aria-controls="panel-5">Bekendmaking (95)</a></li>
       </ul>
 
       <div class="tabs__panels">
-        <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
-            1
-        </div>
+        {{!-- <div id="panel-1" role="tabpanel" aria-labelledby="tab-1"> --}}
+            <div class="result--list">
+
+              <ul>
+                <li>
+                  <a href="#" class="result--title">Actualisatie regeling ammoniak en veehouderij en regeling geurhinder en veehouderij</a>
+
+                  <ul class="list--metadata">
+                    <li>Regeling</li>
+                    <li>Ministerie van Infrastructuur en Waterstaat</li>
+                  </ul>
+
+                </li>
+
+                <li>
+                  <a href="#" class="result--title">Wet verwijzingsportaal bankgegevens</a>
+
+                  <ul class="list--metadata">
+                    <li>Financiën</li>
+                    <li>Financieel toezicht Wet</li>
+                    <li>Ministerie van Financiën</li>
+                  </ul>
+
+                </li>
+              </ul>
+            </div>
+
+            <div class="pagination">
+
+              <div class="pagination__index">
+
+                <ul>
+                  <li>
+                    <a href="#">1</a>
+                  </li>
+                  <li class="active">2</li>
+                  <li>...</li>
+                  <li>
+                    <a href="#">102</a>
+                  </li>
+                  <li>
+                    <a href="#">&raquo;</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+            </div>
+
+
+        {{!-- </div>
         <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
             2
         </div>
@@ -100,9 +149,10 @@
         </div>
         <div id="panel-5" role="tabpanel" aria-labelledby="tab-5">
             5
-        </div>
+        </div> --}}
       </div>
-    </div>
+
+
 
   </div>
   <div>

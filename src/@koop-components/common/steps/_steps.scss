@@ -1,0 +1,27 @@
+.steps {
+	position: relative;
+
+  &__step {
+    display: inline-block;
+    padding: em(4) em(16);
+    position: relative;
+    background: grey;
+
+    &:after {
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      border-left: 16px solid red;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: -16px;
+      top: 0;
+      width: 0;
+      z-index: 2;
+    }
+    &:last-child:after {
+      border: none;
+      right: 0;
+    }
+  }
+}
