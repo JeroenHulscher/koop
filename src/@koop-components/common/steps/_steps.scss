@@ -3,25 +3,47 @@
 
   &__step {
     display: inline-block;
-    padding: em(4) em(16);
+    padding: em(4) em(16) em(4) em(32);
     position: relative;
-    background: grey;
+    background: $lightBlue;
+    font-size: em(14);
+
+    &:first-child {
+      padding-left: em(16);
+    }
 
     &:after {
-      border-top: 16px solid transparent;
-      border-bottom: 16px solid transparent;
-      border-left: 16px solid red;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 14px solid $lightBlue;
       content: "";
       height: 0;
       position: absolute;
-      right: -16px;
+      right: -14px;
       top: 0;
       width: 0;
       z-index: 2;
     }
-    &:last-child:after {
-      border: none;
-      right: 0;
+
+    &:before {
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-left: 18px solid white;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: -18px;
+      top: -4px;
+      width: 0;
+      z-index: 2;
+    }
+
+
+    &:last-child {
+      background: $mediumBlue;
+      &:after {
+        border-left: 14px solid $mediumBlue;
+      }
     }
   }
 }

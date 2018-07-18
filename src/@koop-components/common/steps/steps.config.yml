@@ -2,4 +2,8 @@ title: Steps
 context:
   text: link
   action: /link/intern/
+  steps:
+    - title: Start
+    - title: Tussen
+    - title: Finish
 

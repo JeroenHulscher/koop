@@ -11,6 +11,13 @@ context:
     - image: '../../images/temp/homepage-beleid.jpg'
       title: Wetgevingskalender
       intro: Op deze website vindt u informatie over de totstandkoming en inwerkingtreding van nationale wetgeving..
+  steps:
+    steps:
+      - title: Voorbereiding
+      - title: Raad van State
+      - title: Tweede kamer
+      - title: Eerste kamer
+      - title: Bekendmaking
   linkSetGroup:
     - linkSet:
       - title: Wetgeving in wording
