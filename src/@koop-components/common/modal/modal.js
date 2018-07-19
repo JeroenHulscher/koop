@@ -34,6 +34,29 @@
     }
   };
 
+  onl.decorate({
+    'init-modal': function() {
+      var resizeTimeout;
+
+      function recalculateAndSetBounds() {
+        var height = window.innerHeight;
+        var dialogContent = document.querySelector( '.modal__content' );
+
+        dialogContent.style.height = height - 100 + 'px';
+      }
+      recalculateAndSetBounds();
+
+      window.addEventListener( 'resize', function() {
+        if ( resizeTimeout ) {
+          clearTimeout( resizeTimeout );
+        }
+        resizeTimeout = window.setTimeout( function() {
+          recalculateAndSetBounds();
+        }, 50 );
+      });
+    }
+  });
+
   onl.handle({
     'open-modal': function(element) {
       var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
