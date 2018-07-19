@@ -12,13 +12,17 @@
   transition: opacity .5s;
   z-index: 2;
 
-  &__content {
+  &__inner {
     max-width: 32em;
     background: $white;
     border: 1px solid $lightGrey;
     padding: 1.5em;
     margin: auto;
     position: relative;
+  }
+
+  &__content {
+    overflow: auto;
   }
 
   &--off-screen {
