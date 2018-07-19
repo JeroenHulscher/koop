@@ -440,15 +440,15 @@
                 <ul class="list--unstyled">
                   <li>
                     <label for="Verdrag211">
-                      <input id="Verdrag211" value="1" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag211" value="1" data-value="onderdeel1" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
                     </label>
                     <label for="Verdrag311">
-                      <input id="Verdrag311" value="2" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag311" value="2" data-value="onderdeel2" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
                     </label>
                     <label for="Verdrag411">
-                      <input id="Verdrag411" value="3" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag411" value="3" data-value="onderdeel3" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
                     </label>
                   </li>
@@ -812,15 +812,15 @@
               <ul class="list--unstyled">
                 <li>
                   <label for="Verdrag211">
-                    <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                    <input id="Verdrag211" value="lnv" data-value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                       data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
                   </label>
                   <label for="Verdrag311">
-                    <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                    <input id="Verdrag311" value="ocw" data-value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                       data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
                   </label>
                   <label for="Verdrag411">
-                    <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                    <input id="Verdrag411" value="szw" data-value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                       data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
                   </label>
                 </li>
@@ -862,20 +862,21 @@
           <div class="subselection" data-decorator="init-form-subselection">
             <span class="subselection__summary"></span>
             <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
+              <div class="modal__inner">
               <div class="modal__content">
                 <h2>Selecteer rechtsgebieden</h2>
                 <ul class="list--unstyled">
                   <li>
                     <label for="Verdrag211">
-                      <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag211" value="lnv" data-value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
                     </label>
                     <label for="Verdrag311">
-                      <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag311" value="ocw" data-value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
                     </label>
                     <label for="Verdrag411">
-                      <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag411" value="szw" data-value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
                     </label>
                   </li>
@@ -884,6 +885,7 @@
                   <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
                   <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
                 </div>
+              </div>
               </div>
             </div>
             <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-5"
@@ -918,20 +920,21 @@
           <div class="subselection" data-decorator="init-form-subselection">
             <span class="subselection__summary"></span>
             <div id="modal-5" class="modal modal--off-screen modal--hidden" hidden role="alert">
+              <div class="modal__inner">
               <div class="modal__content">
                 <h2>Selecteer verdragen</h2>
                 <ul class="list--unstyled">
                   <li>
                     <label for="Verdrag211">
-                      <input id="Verdrag211" value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag211" value="lnv" data-value="lnv" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Landbouw, Natuur en Voedselkwaliteit (lnv)
                     </label>
                     <label for="Verdrag311">
-                      <input id="Verdrag311" value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag311" value="ocw" data-value="ocw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Onderwijs, Cultuur en Wetenschap (ocw)
                     </label>
                     <label for="Verdrag411">
-                      <input id="Verdrag411" value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
+                      <input id="Verdrag411" value="szw" data-value="szw" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$Verdrag"
                         data-set="which-types">Sociale Zaken en Werkgelegenheid (szw)
                     </label>
                   </li>
@@ -940,6 +943,7 @@
                   <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
                   <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
                 </div>
+              </div>
               </div>
             </div>
             <a href="javascript:void(0)" id="id123" class="selection_popup category_selection" data-handler="open-modal" data-modal="modal-5"
