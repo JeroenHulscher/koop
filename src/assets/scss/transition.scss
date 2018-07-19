@@ -1,10 +1,10 @@
 @import 'generic/settings';
 
 // overwrite settings;
-@import 'substyle/settings/colors';
+@import 'transition/settings/colors';
 
 @import 'generic/base';
 
-@import 'substyle/components';
+@import 'transition/components';
 
 @import 'generic/print';
