@@ -9,10 +9,51 @@
   <script>
     document.documentElement.className = 'has-js';
   </script>
-  <link rel="stylesheet" href="{{~ path '/css/generic.css' ~}}">
+  <link rel="stylesheet" title="default" href="{{~ path '/css/generic.css' ~}}">
+  <link rel="alternate stylesheet" title="substyle" href="{{~ path '/css/substyle.css' ~}}">
+
+
 </head>
 <body class="preview">
   {{{ yield }}}
+
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll('link[title]'));
+      const styles = Array.from(new Set(links.map(link => link.title)));
+      const select = document.createElement('select');
+      let title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        links.forEach(link => {
+          link.disabled = true;
+          link.disabled = link.title !== title;
+        });
+
+        localStorage.setItem('title', title);
+      }
+
+
+        if (title) {
+          selectStyle(title);
+        }
+        select.setAttribute('style', 'position: absolute; top: 1em; right: 1em;');
+        for (let i = 0; i < styles.length; i++) {
+          const option = document.createElement('option');
+          option.text = 'CSS: ' + styles[i];
+          option.value = styles[i];
+          option.selected = styles[i] === title;
+          select.add(option);
+        }
+        document.body.appendChild(select);
+
+        select.addEventListener('change', function (event) {
+          title = event.target.options[event.target.selectedIndex].value;
+          selectStyle(title);
+        });
+
+    }());
+  </script>
 
   <script src="{{~ path '/js/main.js' ~}}"></script>
 
