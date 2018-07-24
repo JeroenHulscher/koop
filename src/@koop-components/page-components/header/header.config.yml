@@ -6,6 +6,11 @@ context:
   youAreHere:
     - text: Register voor overheidsinstanties
   hamburgerButtonText: Menu
+  navLinks:
+    - url: '#'
+      text: Zoeken
+    - url: '#'
+      text: uitgebreid zoeken
   skipLinks:
     - url: '#content'
       text: Direct naar content

@@ -81,6 +81,22 @@
     }
   }
 
+  &--cta {
+    background-color: $darkBlue;
+    color: $white;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $black;
+      background-color: $mediumBlue;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $primaryBlue;
+    }
+  }
+
   &--secondary {
     background-color: $buttonBackgroundSecondaryColor;
     color: $black;

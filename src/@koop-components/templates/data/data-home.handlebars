@@ -1,142 +1,20 @@
-<header class="header">
-
-  <div class="header__start">
-    <div class="container">
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
-      <div class="logo ">
-          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
-          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
-              <span>Beleid en regelgeving</span>
-              <span>Wettenbank</span>
-          </p>
-      </div>
-
-      <div class="skiplinks">
-        <a href="#content">Direct naar content</a>
-        <a href="#search">Direct zoeken</a>
-      </div>
-    </div>
-  </div>
-  <nav class="header__nav header__nav--closed" id="nav">
-    <h2 class="visually-hidden">Primaire navigatie</h2>
-    <div class="container">
-      <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
-        <li><a href="#">Data</a></li>
-        <li><a href="#">Monitor</a></li>
-        <li><a href="#">Dataverzoeken</a></li>
-        <li><a href="#">Ondersteuning</a></li>
-        <li><a href="#">Over ons</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      {{ render "@search" search merge="true" }}
-      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
-    </div>
-  </nav>
-</header>
-<div class="header__more" id="other-sites">
-  <div class="container">
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank over twee regels</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+{{ render "@header" headerContext merge="true" }}
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
   </div>
 </div>
 
-<div class="container columns columns--sidebar-left row">
-  <div>
+<div class="container columns row columns--centered">
 
-    <h1>Zoek datasets</h1>
+  <div>
+    <h1>Leefbaarometer 2.0 = meting 2016</h1>
 
     <div class="well">
-     {{ render "@roi-search" }}
+      <h2>Data-eigenaar</h2>
     </div>
-    <h3>Totaal aantal datasets beschikbaar op data.overheid.nl: 13732</h3>
-
-    <h2>Blader in datasets op thema (thema's nog niet compleet)</h2>
-    <div>
-      {{ render "@themeblock" }}
-      {{ render "@themeblock--cultuur" }}
-      {{ render "@themeblock--economie" }}
-      {{ render "@themeblock--financien" }}
-      {{ render "@themeblock--huisvesting" }}
-      {{ render "@themeblock--internationaal" }}
-      {{ render "@themeblock--landbouw" }}
-      {{ render "@themeblock--migratie" }}
-      {{ render "@themeblock--natuur" }}
-      {{ render "@themeblock--onderwijs" }}
-      {{ render "@themeblock--veiligheid" }}
-      {{ render "@themeblock--recht" }}
-      {{ render "@themeblock--infrastructuur" }}
-      {{ render "@themeblock--socialezekerheid" }}
-      {{ render "@themeblock--verkeer" }}
-      {{ render "@themeblock--werk" }}
-      {{ render "@themeblock--zorg" }}
-    </div>
-
-    <h2>Dataverzoeken op data.overheid.nl</h2>
-
-    <p>Op data.overheid.nl zijn dataverzoeken inzichtelijk van 1-1-2015 tot heden. Bekijk alle dataverzoeken die bezoekers hebben gedaan of de <a href="#">statistieken van de dataverzoeken</a> tot nu toe. Doe zelf een dataverzoek via het aanmeldformulier.</p>
-
-    <h2>Wat is open data?</h2>
-
-    <p>De data is openbaar;</p>
-
-    <ul>
-      <li>Er berust geen auteursrecht of andere rechten van derden op;</li>
-      <li>De data zijn bekostigd uit publieke middelen, beschikbaar gesteld voor de uitvoering van die taak;</li>
-      <li>De data voldoen bij voorkeur aan ‘open standaarden’ (geen barrières voor het gebruik door ICT-gebruikers of door ICT-aanbieders);</li>
-      <li>Open Data is bij voorkeur computer-leesbaar, zodat zoekmachines informatie in documenten kunnen vinden.</li>
-    </ul>
-
-    <p>Kijk in de handreiking open data voor meer informatie over het openen van data van uw organisatie. Raadpleeg de Leidraad Open Data voor een richtlijn voor het openen van data.</p>
-
   </div>
 
-  <div>
-    {{ render "@banner" }}
-
-    <h3>Actueel</h3>
-
-    {{ render "@list--linklist" list--linklist merge="true" }}
-
-    <h3>Voor hergebruikers</h3>
-
-    {{ render "@list--linklist" list--linklist merge="true" }}
-
-    <h3>Voor data-eigenaren</h3>
-
-    {{ render "@list--linklist" list--linklist merge="true" }}
-  </div>
 </div>
 
 {{ render "@footer" }}
