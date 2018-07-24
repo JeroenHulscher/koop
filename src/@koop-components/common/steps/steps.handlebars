@@ -1,7 +1,7 @@
-<div class="steps">
+<ol class="steps">
   {{#each steps}}
-    <div class="steps__step">
-       {{title}}
-    </div>
+    <li class="steps__step">
+       {{#if @last}}<span class="visually-hidden">Huidige stap: </span>{{/if}}{{title}}
+    </li>
   {{/each}}
-</div>
+</ol>

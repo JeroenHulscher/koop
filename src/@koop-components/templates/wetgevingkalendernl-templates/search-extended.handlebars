@@ -1,0 +1,376 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <div class="tabs tabs--justified">
+      <ul class="tabs__list">
+        <li role="presentation">
+          <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true">Zoek op wet- en regelgeving</a>
+        </li>
+        <li role="presentation">
+          <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Zoek op EU-richtlijn</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form__chapter__heading">
+      <h2 class="">Titel</h2>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Woord(en) of zinsdeel</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Kamerstuknummer" type="text" id="ZoekOp_Kamerstuknummer"
+          class="input">
+      </div>
+    </div>
+
+    <div class="form__chapter__heading">
+      <h2 class="">Regelgeving</h2>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Keten-ID</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Kamerstuknummer" type="text" id="ZoekOp_Kamerstuknummer"
+          class="input input--small">
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Type</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer type...</option>
+          <option>Amvb</option>
+          <option>Wet</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Beleidsonderwerp</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer beleidsonderwerp...</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Implementatie</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer implementatie...</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Ministerie</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer ministerie...</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form__chapter__heading">
+      <h2 class="">Voortgang</h2>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Ministerie</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <ul class="list--unstyled">
+          <li>
+            <label for="ZoekOp_DatumtypeInwerkingtreding">
+              <input id="ZoekOp_DatumtypeInwerkingtreding" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
+                value="ZoekOp_DatumtypeInwerkingtreding" checked="checked" title="">Inwerkingtreding
+            </label>
+          </li>
+          <li>
+            <label for="ZoekOp_DatumtypeOndertekening">
+              <input id="ZoekOp_DatumtypeOndertekening" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
+                value="ZoekOp_DatumtypeOndertekening" title="">Ondertekening
+            </label>
+          </li>
+          <li>
+            <label for="ZoekOp_DatumtypeTotstandkoming">
+              <input id="ZoekOp_DatumtypeTotstandkoming" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
+                value="ZoekOp_DatumtypeTotstandkoming" title="">Totstandkoming
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Fase</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer fase...</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form__chapter__heading">
+      <h2 class="">Ondetekening</h2>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Eerste ondertekenaar</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer ondertekenaar...</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Overheidsdomein">Medeondertekenaar</label>
+        <div class="question-explanation">
+          <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2"
+            id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00" class="question-explanation__link"
+            data-handler="toggle-explanation">
+            Toelichting zoeken op {variable}
+          </a>
+
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_Inhoud2" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+
+            <p>{text}</p>
+
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOp_Overheidsdomein_ctl00"
+              class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+      <div class="form__element__inputs">
+        <select>
+          <option>Selecteer medeondertekenaar...</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="form__element">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--secondary">Zoek in Wetgevingskalender</button>
+      </form>
+    </div>
+    <p>
+      <a href="#" class="link link--back">Startpagina</a>
+    </p>
+
+    <ul class="list list--linked">
+        <li><a href="#">Wetgeving in wording</a></li>
+        <li><a href="#">Inwerkingtredingen</a></li>
+        <li><a href="#">Implementatie EU-richtlijnen</a></li>
+    </ul>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

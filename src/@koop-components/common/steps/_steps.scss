@@ -1,5 +1,7 @@
 .steps {
-	position: relative;
+  position: relative;
+  margin-left: 0;
+  padding-left: 0;
 
   &__step {
     display: inline-block;
