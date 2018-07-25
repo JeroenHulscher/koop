@@ -1,4 +1,5 @@
-table {
+table,
+.table {
 
   width: 100%;
   border-collapse: collapse;
@@ -38,6 +39,10 @@ table {
     font-weight: 700;
     text-align: left;
     vertical-align: top;
+  }
+
+  &__container {
+    overflow: auto;
   }
 
   &.table__data-overview {
@@ -201,5 +206,4 @@ table {
     }
   }
 }
-
 
