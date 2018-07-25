@@ -5,14 +5,41 @@
   </div>
 </div>
 
-<div class="container columns row columns--centered">
+<div class="container container--centered">
 
-  <div>
-    <h1>Leefbaarometer 2.0 = meting 2016</h1>
+  <h1 class="centered--title">Dataregister van de Nederlandse Overheid</h1>
 
-    <div class="well">
-      <h2>Data-eigenaar</h2>
-    </div>
+  <div class="well well--pagesearch">
+    <h2>Zoek binnen de <a href="#">12483</a> beschikbare datasets</h2>
+
+    {{ render "@pagesearch" }}
+  </div>
+</div>
+
+<div class="container row">
+
+  <h2>Thema's</h2>
+
+  <div class="themeblocks">
+
+    {{ render "@themeblock" }}
+    {{ render "@themeblock--cultuur" }}
+    {{ render "@themeblock--economie" }}
+    {{ render "@themeblock--financien" }}
+    {{ render "@themeblock--huisvesting" }}
+    {{ render "@themeblock--internationaal" }}
+    {{ render "@themeblock--landbouw" }}
+    {{ render "@themeblock--migratie" }}
+    {{ render "@themeblock--natuur" }}
+    {{ render "@themeblock--onderwijs" }}
+    {{ render "@themeblock--veiligheid" }}
+    {{ render "@themeblock--recht" }}
+    {{ render "@themeblock--infrastructuur" }}
+    {{ render "@themeblock--socialezekerheid" }}
+    {{ render "@themeblock--verkeer" }}
+    {{ render "@themeblock--werk" }}
+    {{ render "@themeblock--zorg" }}
+
   </div>
 
 </div>

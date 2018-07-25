@@ -33,15 +33,6 @@ $gutter: 1em;
     }
   }
 
-  &--centered {
-    @media ( min-width: 50em ) {
-      > div:first-child {
-        width: 52em;
-        margin: 0 auto;
-      }
-    }
-  }
-
   &--sidebar-left {
 
     /* in columns with a sidebar, the main content is the first
