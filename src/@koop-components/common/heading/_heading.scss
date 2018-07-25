@@ -25,6 +25,12 @@ h1,
   color: $darkBlue;
   margin-top: .5em;
   margin-bottom: 0;
+
+  &.centered--title {
+    text-align: center;
+    display: block;
+    margin: 1em 0;
+  }
 }
 
 h2,
