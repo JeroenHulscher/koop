@@ -1,2 +1,12 @@
 title: resultlist
 label: Resultlist
+context:
+  resultlist:
+    - title: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      actions: true
+      description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      meta: false
+      metas:
+        - text: Wetten
+        - text: Regelgeving
+        - text: Beleid
