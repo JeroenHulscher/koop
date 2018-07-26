@@ -1,4 +1,5 @@
-table {
+table,
+.table {
 
   width: 100%;
   border-collapse: collapse;
@@ -21,16 +22,27 @@ table {
     border-bottom: 2px solid $lighterGrey;
   }
 
+  tr {
+    &.uneven {
+      background: $lightGrey;
+    }
+  }
+
   tr td,
   tr th {
     border-bottom: 1px solid $lighterGrey;
     padding: $standardPadding;
+    vertical-align: top;
   }
 
   th {
     font-weight: 700;
     text-align: left;
     vertical-align: top;
+  }
+
+  &__container {
+    overflow: auto;
   }
 
   &.table__data-overview {
@@ -44,6 +56,10 @@ table {
     font-weight: 400;
     min-width: 15%;
     min-height: 2.5em; /* always have a height, even if field has no content; this is specifically needed on small screens */
+  }
+
+  .date {
+    min-width: em(100);
   }
 
   td.status {
@@ -190,5 +206,4 @@ table {
     }
   }
 }
-
 

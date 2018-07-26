@@ -66,7 +66,24 @@
   }
 
   &--primary {
-    background-color: $primaryBlue;
+    background-color: $darkBlue;
+    color: $white;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $white;
+      background-color: $primaryBlue;
+    }
+
+    &:active {
+      color: $black;
+      background-color: $mediumBlue;
+
+    }
+  }
+
+  &--cta {
+    background-color: $darkBlue;
     color: $white;
     border: 1px solid transparent;
 
@@ -77,7 +94,7 @@
 
     &:active {
       color: $white;
-      background-color: $darkBlue;
+      background-color: $primaryBlue;
     }
   }
 
@@ -95,6 +112,14 @@
       background-color: $buttonBackgroundSecondaryActiveColor;
       color: $white;
     }
+  }
+
+  &--search {
+    padding-right: 2em;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-image: $searchIcon;
+    background-size: 1.25em;
   }
 
   &--icon-right {

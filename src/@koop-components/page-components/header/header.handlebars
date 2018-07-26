@@ -29,11 +29,14 @@
         <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
         {{#if navLinks }}
         {{#each navLinks }}
-        <li><a href="{{ url }}" class="">{{ text }}</a></li>
+          {{#if modifier }}
+            <li><button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button></li>
+          {{else}}
+            <li><a href="{{ url }}" class="">{{ text }}</a></li>
+          {{/if}}
         {{/each}}
         {{/if}}
       </ul>
-      {{ render "@search" search merge="true" }}
       {{#if headerMore }}
       <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
       {{/if}}

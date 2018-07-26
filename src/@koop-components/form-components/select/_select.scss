@@ -1,8 +1,13 @@
 .form__element {
 
-  select {
+  select,
+  .select {
     clear: both;
     display: block;
+
+    &--small {
+      max-width: 12em;
+    }
   }
 
 }
