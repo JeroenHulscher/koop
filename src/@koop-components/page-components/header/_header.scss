@@ -117,6 +117,12 @@
       }
     }
 
+    button.button--cta {
+      position: absolute;
+      right: .5em;
+      top: .375em;
+    }
+
     [data-handler="toggle-other-sites"] {
       color: $headerLinkCurrentColor;
       position: relative;
@@ -221,13 +227,4 @@
     100% {
       max-height: 0;
     }
-}
-.has-js .header__more,
-.js .header__more {
-  height: 0;
-}
-
-.has-js .header__more--closed,
-.js .header__more--closed {
-  height: auto;
 }

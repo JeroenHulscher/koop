@@ -40,6 +40,7 @@
   formSubselection.prototype.collectValues = function() {
     var y;
     var option;
+    var value;
 
     // reset items;
     this.items = [];
@@ -48,7 +49,8 @@
     for ( y = 0; y < this.options.length; y++ ) {
       option = [];
       if ( this.options[y].checked ) {
-        option.push( this.options[y].value, this.options[y].closest( 'label' ).innerText );
+        value = this.options[y].getAttribute( 'data-value' ) || this.options[y].value;
+        option.push( value, this.options[y].closest( 'label' ).innerText );
         this.items.push( option );
       }
     }

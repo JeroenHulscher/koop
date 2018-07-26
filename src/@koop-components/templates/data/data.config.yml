@@ -1,5 +1,7 @@
-label: Wetgevingkalender
+label: Data.overheid.nl
 context:
+  youAreHere:
+    - text: Open data van de Overheid
   headerContext:
     navLinks:
     - url: '#'

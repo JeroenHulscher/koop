@@ -1,213 +1,243 @@
+.themelist {}
 .themeblock {
   display: inline-block;
   position: relative;
-  width: 10em;
-  height: 10em;
-  padding: .5em;
+  width: 33%;
+  padding: 1.5em 1.5em 1.5em 4em;
   text-decoration: none;
-  color: $white;
-  border-bottom: 2px solid $lighterGrey;
-  margin: 0 0 1em 0;
+  color: $darkBlue;
+  margin: 0;
 
   @media ( max-width: 50em ) {
-
     display: inline-block;
     vertical-align: top;
-    margin: 0 1em 1em 0;
   }
 
   h3 {
     color: inherit;
     line-height: 1;
-    font-weight: 400;
+    font-size: 1.25em;
+    margin: 0;
   }
 
   p {
     color: inherit;
     margin: 0;
     position: absolute;
-    bottom: .5em;
-    right: .5em;
+    top: 1.2em;
+    right: 1.5em;
     z-index: 2;
+    line-height: 2em;
+    font-style: italic;
+
   }
 
-  &::after {
+  &::before {
     content: '';
     z-index: 1;
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -1.5em 0 0 -1.5em;
-    transition: all $slowEaseInOut;
+    left: 1.5em;
+    top: 1.125em;
     background: {
       repeat: no-repeat;
       position: 50% 50%;
-      size: cover;
+      size: 1.75em;
     }
   }
 
   &--governance {
-    border-color: #4a1eea;
-    color: #4a1eea;
 
+    &:hover {
+      color: #4a1eea;
+      background-color: rgba(74,30,234, 0.1);
+    }
 
-
-    &::after {
+    &::before {
       background-image: $governanceIcon;
     }
   }
 
   &--culture {
-    border-color: #42145f;
-    color: #42145f;
+    &:hover {
+      color: #42145f;
+      background-color: rgba(66,20,95, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $cultureIcon;
     }
   }
 
   &--economy {
-    border-color: #a90061;
-    color: #a90061;
+    &:hover {
+      color: #a90061;
+      background-color: rgba(169,0,97, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $economyIcon;
     }
   }
 
   &--finance {
-    border-color: #d52b1e;
-    color: #d52b1e;
+    &:hover {
+      color: #d52b1e;
+      background-color: rgba(213,43,30, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $financeIcon;
     }
   }
 
   &--housing {
-    border-color: #94710a;
-    color: #94710a;
+    &:hover {
+      color: #94710a;
+      background-color: rgba(148,113,10, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $housingIcon;
     }
   }
 
   &--international {
-    border-color: #777c00;
-    color: #777c00;
+    &:hover {
+      color: #777c00;
+      background-color: rgba(119,124,0, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $internationalIcon;
     }
   }
 
   &--agriculture {
-    border-color: #bf360c;
-    color: #bf360c;
+    &:hover {
+      color: #bf360c;
+      background-color: rgba(191,54,12, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $agricultureIcon;
     }
   }
 
   &--migration {
-    border-color: #673327;
-    color: #673327;
+    &:hover {
+      color: #673327;
+      background-color: rgba(103,51,39, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $migrationIcon;
     }
   }
 
   &--nature {
-    border-color: #39870c;
-    color: #39870c;
+    &:hover {
+      color: #39870c;
+      background-color: rgba(57,135,12, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $natureIcon;
     }
   }
 
   &--education {
-    border-color: #42145f;
-    color: #42145f;
+    &:hover {
+      color: #42145f;
+      background-color: rgba(66,20,95, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $educationIcon;
     }
   }
 
   &--security {
-    border-color: #275937;
-    color: #275937;
+    &:hover {
+      color: #275937;
+      background-color: rgba(39,89,55, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $securityIcon;
     }
   }
 
   &--law {
-    border-color: #ca005d;
-    color: #ca005d;
+    &:hover {
+      color: #ca005d;
+      background-color: rgba(202,0,93, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $lawIcon;
     }
   }
 
   &--infrastructure {
-    border-color: #007bc7;
-    color: #007bc7;
+    &:hover {
+      color: #007bc7;
+      background-color: rgba(0,123,199, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $infrastructureIcon;
     }
   }
 
   &--social {
-    border-color: #673327;
-    color: #673327;
+    &:hover {
+      color: #673327;
+      background-color: rgba(103,51,39, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $socialIcon;
     }
   }
 
   &--traffic {
-    border-color: #bf360c;
-    color: #bf360c;
+    &:hover {
+      color: #bf360c;
+      background-color: rgba(191,54,12, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $trafficIcon;
     }
   }
 
   &--jobs {
-    border-color: #a90061;
-    color: #a90061;
+    &:hover {
+      color: #a90061;
+      background-color: rgba(169,0,97, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $jobsIcon;
     }
   }
 
   &--healthcare {
-    border-color: #d52b1e;
-    color: #d52b1e;
+    &:hover {
+      color: #d52b1e;
+      background-color: rgba(213,43,30, 0.1);
+    }
 
-    &::after {
+    &::before {
       background-image: $healthcareIcon;
     }
   }
 
   &:hover, &:focus {
     text-decoration: none;
-    &::after {
-      transform: rotateY(360deg) scale(1.25, 1.25);
-    }
+
   }
 
 }
