@@ -1,4 +1,3 @@
-.themelist {}
 .themeblock {
   display: inline-block;
   position: relative;
@@ -11,6 +10,7 @@
   @media ( max-width: 50em ) {
     display: inline-block;
     vertical-align: top;
+    width: 100%;
   }
 
   h3 {
