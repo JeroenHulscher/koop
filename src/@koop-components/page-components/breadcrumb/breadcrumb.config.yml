@@ -1,0 +1,12 @@
+---
+title: Breadcrumb
+label: Breadcrumb
+status: ready
+context:
+  breadcrumb:
+    last: Informatie
+    items:
+      - label: Zoeken
+      - label: Zoekresultaten
+      - label: Regeling
+

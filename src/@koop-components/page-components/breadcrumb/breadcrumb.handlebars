@@ -2,9 +2,10 @@
   <p>U bent hier:</p>
 
   <ol>
-    <li><a href="#">Zoeken</a></li>
-    <li><a href="#">Zoekresultaten</a></li>
-    <li><a href="#">Regeling</a></li>
-    <li>Informatie</li>
+    {{#each breadcrumb.items }}
+      <li><a href="#">{{label}}</a></li>
+    {{/each}}
+    <li>{{breadcrumb.last}}</li>
+
   </ol>
 </div>
