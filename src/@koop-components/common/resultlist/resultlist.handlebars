@@ -3,10 +3,11 @@
     {{#each resultlist }}
     <li>
       <a href="#" class="result--title">{{title}}</a>
-      {{#if actions }}
+      {{#if showActions }}
       <ul class="result--actions">
-        <li><a href="#" class="icon icon--download"><span>Download de</span> pdf (22kb)</a></li>
-        <li><a href="#" class="icon icon--download"><span>Download de</span> xml (22kb)</a></li>
+         {{#each actions }}
+          <li><a href="#" class="icon icon--download"><span>Download de</span> {{ext}} ({{size}})</a></li>
+        {{/each}}
       </ul>
       {{/if}}
 
@@ -18,7 +19,7 @@
         <p><small>{{ subdescription }}</small></p>
       {{/if}}
 
-      {{#if meta }}
+      {{#if showMeta }}
       <ul class="list--metadata">
          {{#each metas }}
         <li>{{text}}</li>
