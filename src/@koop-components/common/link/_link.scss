@@ -36,6 +36,15 @@ a {
   &:active {
     color: $mediumBlue;
   }
+
+  &.cta {
+    background: {
+      repeat: no-repeat;
+      image: $arrowCTAIcon;
+      position: right 3px;
+      size: 13px 12px;
+    }
+  }
 }
 
 p a {

@@ -16,9 +16,11 @@
   </div>
 </div>
 
-<div class="container row">
+<div class="container row transitional-size">
 
   <h2>Thema's</h2>
+
+  <div class="themelist">
 
     {{ render "@themeblock" }}
     {{ render "@themeblock--cultuur" }}
@@ -38,9 +40,11 @@
     {{ render "@themeblock--werk" }}
     {{ render "@themeblock--zorg" }}
 
+  </div>
+
 </div>
 
-<div class="container row">
+<div class="container row transitional-size">
 
   <h2>Uitgelicht</h2>
 
@@ -66,20 +70,33 @@
 
 </div>
 
-<div class="container row">
-  <h2>Actueel</h2>
+<div class="container columns row transitional-size">
+  <div>
+    <h2>Actueel</h2>
 
-  <h2>Veel bezocht</h2>
+    {{ render "@list--relationlist" }}
+  </div>
+
+  <div>
+    <h2>Veel bezocht</h2>
+
+    {{ render "@list--relationlist" }}
+  </div>
+
 </div>
 
-<div class="container row">
-  <div class="">
+<div class="container columns row transitional-size">
+  <div class="well well--pagesearch">
     <h2>Voor data gebruikers</h2>
+
+    {{ render "@list--linklist" }}
 
   </div>
 
-  <div class="">
+  <div class="well well--pagesearch">
     <h2>Voor data eigenaren</h2>
+
+    {{ render "@list--linklist" }}
   </div>
 </div>
 

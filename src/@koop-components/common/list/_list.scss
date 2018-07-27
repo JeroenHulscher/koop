@@ -193,8 +193,12 @@ ol {
 
 .list--highlights {
 
-  padding: 0;
+  padding: 0 1em;
   margin: 0;
+
+  width: calc(100% + 3em);
+  position: relative;
+  left: -1.5em;
 
   li {
     display: inline-block;
@@ -202,6 +206,11 @@ ol {
     padding: 0;
     vertical-align: top;
     max-height: 23.75em;
+
+    h3 {
+      margin: 0;
+      min-height: 3em;
+    }
 
 
     @media ( min-width: 50em ) {
@@ -211,6 +220,7 @@ ol {
     a {
       padding: .5em;
       display: block;
+      text-decoration: none;
 
       &:hover {
         background: $lightBlue;
