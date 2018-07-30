@@ -14,4 +14,4 @@ context:
       text: Toepassingen
     - url: '#'
       text: Dataset aanmelden
-      modifier: button--cta
+      modifier: button--primary
