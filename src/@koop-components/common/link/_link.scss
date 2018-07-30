@@ -38,11 +38,14 @@ a {
   }
 
   &.cta {
+    text-decoration: none;
+    margin: 0 0 0 1em;
+    padding: 0 2em 0 0;
     background: {
       repeat: no-repeat;
       image: $arrowCTAIcon;
       position: right 3px;
-      size: 13px 12px;
+      size: 1em;
     }
   }
 }
@@ -56,7 +59,7 @@ p a {
 
   &--forward {
     background: {
-      position: 0 .325em;
+      position: 0 center;
       repeat: no-repeat;
       image: $dartRightIcon;
       size: 6px 9px;
@@ -65,7 +68,7 @@ p a {
   }
   &--back {
     background: {
-      position: 0 .325em;
+      position: 0 center;
       repeat: no-repeat;
       image: $dartLeftIcon;
       size: 6px 9px;
