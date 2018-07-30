@@ -83,7 +83,7 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      position: relative; // provide positioning context
+      position: relative;
 
       @media ( min-width: 50em ) {
         flex-direction: row;
@@ -117,7 +117,7 @@
       }
     }
 
-    button.button--cta {
+    button.button--primary {
       position: absolute;
       right: .5em;
       top: .375em;

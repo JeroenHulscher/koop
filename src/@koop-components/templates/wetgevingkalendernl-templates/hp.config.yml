@@ -10,7 +10,7 @@ context:
   rowLanding:
     - image: '../../images/temp/homepage-beleid.jpg'
       title: Wetgevingskalender
-      intro: Op deze website vindt u informatie over de totstandkoming en inwerkingtreding van nationale wetgeving..
+      intro: Op deze website vindt u informatie over de totstandkoming en inwerkingtreding van nationale wetgeving.
   linkSetGroup:
     - linkSet:
       - title: Wetgeving in wording

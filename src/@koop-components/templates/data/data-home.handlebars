@@ -10,17 +10,21 @@
   <h1 class="centered--title">Dataregister van de Nederlandse Overheid</h1>
 
   <div class="well well--pagesearch">
+
+    <a href="#" class="link link--forward pull-right">Bekijk statistieken</a>
     <h2>Zoek binnen de <a href="#">12483</a> beschikbare datasets</h2>
+
+
 
     {{ render "@pagesearch" }}
   </div>
 </div>
 
-<div class="container row">
+<div class="container row transitional-size">
 
   <h2>Thema's</h2>
 
-  <div class="themeblocks">
+  <div class="themelist">
 
     {{ render "@themeblock" }}
     {{ render "@themeblock--cultuur" }}
@@ -42,6 +46,62 @@
 
   </div>
 
+</div>
+
+<div class="container row transitional-size">
+
+  <h2>Uitgelicht</h2>
+
+  <ul class="list--highlights">
+    <li>
+      <a href="#">
+        <img src="/images/temp/uitgelicht01.png" alt="referentiedatasets" />
+        <h3>Nieuwe pilot met referentiedatasets</h3>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="/images/temp/uitgelicht02.png" alt="gebruikersbijeenkomst" />
+        <h3>Verslag gebruikersbijeenkomst 22 juni 2018</h3>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="/images/temp/uitgelicht03.png" alt="voorbeeld datasets" />
+        <h3>Bekijk hier het portfolio van geselecteerde voorbeeld datasets</h3>
+      </a>
+    </li>
+
+</div>
+
+<div class="container columns row transitional-size">
+  <div>
+    <h2>Actueel</h2>
+
+    {{ render "@list--relationlist" }}
+  </div>
+
+  <div>
+    <h2>Veel bezocht</h2>
+
+    {{ render "@list--relationlist" }}
+  </div>
+
+</div>
+
+<div class="container columns row transitional-size">
+  <div class="well well--pagesearch">
+    <h2>Voor data gebruikers</h2>
+
+    {{ render "@list--linklist" }}
+
+  </div>
+
+  <div class="well well--pagesearch">
+    <h2>Voor data eigenaren</h2>
+
+    {{ render "@list--linklist" }}
+  </div>
 </div>
 
 {{ render "@footer" }}
