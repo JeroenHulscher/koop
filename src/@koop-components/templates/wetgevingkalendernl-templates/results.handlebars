@@ -1,0 +1,184 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <h1>Wetgeving in wording</h1>
+    <p>
+       Wetten en amvb’s waarvan de inwerkingtredingsdatum nog niet bekend is. Ingedeeld op fase van het totstandkomingsproces.
+    </p>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="visually-hidden">Zoeken</legend>
+            <div class="form__element">
+              <div class="form__element__label">
+                <label for="ZoekOp_Wetsfamilie">Beleidsonderwerp</label>
+              </div>
+              <div class="form__element__inputs">
+                <select id="BeleidsOnderwerp" name="BeleidsOnderwerp">
+                  <option value="">Selecteer beleidsonderwerp...</option>
+                  <option value="Bestuur | Organisatie en beleid">Bestuur | Organisatie en beleid</option>
+                  <option value="Bestuur | Gemeenten">Bestuur | Gemeenten</option>
+                  <option value="Bestuur | Koninklijk Huis">Bestuur | Koninklijk Huis</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__element">
+              <div class="form__element__label">
+                <label for="ZoekOp_Wetsfamilie">Type</label>
+              </div>
+              <div class="form__element__inputs">
+                <select id="RegelgevingType" name="RegelgevingType">
+                  <option value="">Selecteer type...</option>
+                  <option value="Amvb">Amvb</option>
+                  <option value="Wet">Wet</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__element">
+              <div class="form__element__label">
+                <label for="ZoekOp_Wetsfamilie">Ministerie</label>
+              </div>
+              <div class="form__element__inputs">
+                <select id="Ministerie" name="Ministerie">
+                  <option value="">Selecteer ministerie...</option>
+                  <option value="Ministerie van Algemene Zaken">Ministerie van Algemene Zaken</option>
+                  <option value="Ministerie van Binnenlandse Zaken en Koninkrijksrelaties">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</option>
+                  <option value="Ministerie van Buitenlandse Zaken">Ministerie van Buitenlandse Zaken</option>
+                  <option value="Ministerie van Defensie">Ministerie van Defensie</option>
+                  <option value="Ministerie van Economische Zaken">Ministerie van Economische Zaken</option>
+                  <option value="Ministerie van Economische Zaken en Klimaat">Ministerie van Economische Zaken en Klimaat</option>
+                  <option value="Ministerie van Financiën">Ministerie van Financiën</option>
+                  <option value="Ministerie van Infrastructuur en Milieu">Ministerie van Infrastructuur en Milieu</option>
+                  <option value="Ministerie van Infrastructuur en Waterstaat">Ministerie van Infrastructuur en Waterstaat</option>
+                  <option value="Ministerie van Justitie en Veiligheid">Ministerie van Justitie en Veiligheid</option>
+                  <option value="Ministerie van Landbouw, Natuur en Voedselkwaliteit">Ministerie van Landbouw, Natuur en Voedselkwaliteit</option>
+                  <option value="Ministerie van Onderwijs, Cultuur en Wetenschap">Ministerie van Onderwijs, Cultuur en Wetenschap</option>
+                  <option value="Ministerie van Sociale Zaken en Werkgelegenheid">Ministerie van Sociale Zaken en Werkgelegenheid</option>
+                  <option value="Ministerie van Veiligheid en Justitie">Ministerie van Veiligheid en Justitie</option>
+                  <option value="Ministerie van Volksgezondheid, Welzijn en Sport">Ministerie van Volksgezondheid, Welzijn en Sport</option>
+                </select>
+              </div>
+            </div>
+
+          </fieldset>
+          <div class="form__element">
+            <div class="form__element__inputs">
+              <button type="submit" class="button button--primary">Filter</button>
+            </div>
+          </div>
+      </form>
+    </div>
+
+    <div class="tabs" data-decorator="init-tabs">
+      <ul class="tabs__list">
+        <li role="presentation"><a href="#" aria-selected="true" class="is-selected" role="tab" id="tab-1" aria-controls="panel-1">Voorbereiding (117)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-2" aria-controls="panel-2">Raad van State (134)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-3" aria-controls="panel-3">Tweede Kamer (64)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-4" aria-controls="panel-4">Eerste Kamer (27)</a></li>
+        <li role="presentation"><a href="#"  role="tab" id="tab-5" aria-controls="panel-5">Bekendmaking (95)</a></li>
+      </ul>
+
+      <div class="tabs__panels">
+        {{!-- <div id="panel-1" role="tabpanel" aria-labelledby="tab-1"> --}}
+            <div class="result--list">
+
+              <ul>
+                <li>
+                  <a href="#" class="result--title">Actualisatie regeling ammoniak en veehouderij en regeling geurhinder en veehouderij</a>
+
+                  <ul class="list--metadata">
+                    <li>Regeling</li>
+                    <li>Ministerie van Infrastructuur en Waterstaat</li>
+                  </ul>
+
+                </li>
+
+                <li>
+                  <a href="#" class="result--title">Wet verwijzingsportaal bankgegevens</a>
+
+                  <ul class="list--metadata">
+                    <li>Financiën</li>
+                    <li>Financieel toezicht Wet</li>
+                    <li>Ministerie van Financiën</li>
+                  </ul>
+
+                </li>
+              </ul>
+            </div>
+
+            <div class="pagination">
+
+              <div class="pagination__index">
+
+                <ul>
+                  <li>
+                    <a href="#">1</a>
+                  </li>
+                  <li class="active">2</li>
+                  <li>...</li>
+                  <li>
+                    <a href="#">102</a>
+                  </li>
+                  <li>
+                    <a href="#">&raquo;</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+            </div>
+
+
+        {{!-- </div>
+        <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+            2
+        </div>
+        <div id="panel-3" role="tabpanel" aria-labelledby="tab-3">
+            3
+        </div>
+        <div id="panel-4" role="tabpanel" aria-labelledby="tab-4">
+            4
+        </div>
+        <div id="panel-5" role="tabpanel" aria-labelledby="tab-5">
+            5
+        </div> --}}
+      </div>
+
+
+
+  </div>
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="form__element">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--secondary">Zoek in Wetgevingskalender</button>
+      </form>
+    </div>
+    <p>
+      <a href="#" class="link link--back">Startpagina</a>
+    </p>
+    <ul class="list list--linked">
+        <li><a href="#"><strong>Wetgeving in wording</strong></a></li>
+        <li><a href="#">Inwerkingtredingen</a></li>
+        <li><a href="#">Implementatie EU-richtlijnen</a></li>
+      </ul>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

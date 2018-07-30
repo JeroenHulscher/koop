@@ -1,6 +1,14 @@
 .well {
-  border: 1px solid $mediumGrey;
+  border-radius: .5em;
   background: $bgBlue;
   padding: 1em;
   margin: 0 0 2em 0;
+
+  &--pagesearch {
+    padding: 2.75em 10%;
+
+    h2 {
+      margin: 0 0 .5em 0;
+    }
+  }
 }
