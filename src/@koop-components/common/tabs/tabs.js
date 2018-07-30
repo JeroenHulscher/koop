@@ -3,12 +3,15 @@
   'use strict';
 
   var tabs = {
-    'openPanel': function( element ) {
+    openPanel: function( element ) {
       var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
       var tabs = onl.dom.$( '[role="tab"]', tabsHolder );
       var currentTab = onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
       var currentPanel = document.getElementById( currentTab.getAttribute( 'aria-controls' ) );
-      var panelToShow = document.getElementById( element.getAttribute('aria-controls') );
+      var panelToShow = document.getElementById( element.getAttribute( 'aria-controls' ) );
+
+      // set tab-hash in url;
+      window.location.hash = element.getAttribute( 'aria-controls' );
 
       // hide current panel
       onl.ui.hide( currentPanel );
@@ -24,7 +27,7 @@
       element.setAttribute( 'aria-selected', 'true' );
     },
     // get next panel element based on current tab element
-    'getNextPanel': function( currentPanel ) {
+    getNextPanel: function( currentPanel ) {
       if ( currentPanel.parentElement.nextElementSibling ) {
         return currentPanel.parentElement.nextElementSibling.firstElementChild;
       }
@@ -33,7 +36,7 @@
       }
     },
     // get previous panel element based on current tab element
-    'getPreviousPanel': function( currentPanel ) {
+    getPreviousPanel: function( currentPanel ) {
       if ( currentPanel.parentElement.previousElementSibling ) {
         return currentPanel.parentElement.previousElementSibling.firstElementChild;
       }
@@ -42,12 +45,12 @@
       }
     },
     // get current panel element from any element inside tabs element
-    'getCurrentPanel': function( element ) {
+    getCurrentPanel: function( element ) {
       var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
 
       return onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
     },
-    switch: function(event) {
+    switch: function( event ) {
       var currentPanel = event.target;
       var nextPanel = tabs.getNextPanel( currentPanel );
       var previousPanel = tabs.getPreviousPanel( currentPanel );
@@ -68,6 +71,7 @@
     'init-tabs': function( element ) {
       var theseTabs = onl.dom.$( '[role="tab"]', element );
       var panels = onl.dom.$( '[role="tabpanel"]', element );
+      var totalPanels = 0;
 
       // set all selected states
       // fire switchTab function when keys are pressed
@@ -81,11 +85,22 @@
         onl.ui.hide( panel );
       });
 
-      // show first panel
-      onl.ui.show( panels[0] );
+      var hash = window.location.hash;
+      if ( window.location.hash !== '' ) {
+        hash = hash.substr (1, 500 );
 
-      // give first tab selected state
-      theseTabs[0].setAttribute( 'aria-selected', 'true' );
+        panels.forEach( function( panel ) {
+          if ( hash !== '' && hash === panel.getAttribute( 'id' ) ) {
+            onl.ui.show( panel );
+            theseTabs[totalPanels].setAttribute( 'aria-selected', 'true' );
+          }
+          totalPanels++;
+        });
+      } else {
+        // show first panel
+        onl.ui.show( panels[0] );
+        theseTabs[0].setAttribute( 'aria-selected', 'true' );
+      }
     }
   });
 
