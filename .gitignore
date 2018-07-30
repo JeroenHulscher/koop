@@ -3,3 +3,5 @@
 /public
 /component-library
 *.log
+package-lock.json
+*.json
