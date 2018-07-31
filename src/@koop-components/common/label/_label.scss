@@ -9,7 +9,7 @@
 
 .label {
   display: inline-block;
-  margin-right: .25em;
+  margin: 0 .25em .25em 0;
   padding: .25em .5em;
   font-size: 75%;
   font-weight: 400;
@@ -45,5 +45,49 @@
   &--danger {
     background: $red;
     color: $white;
+  }
+
+  &--ok {
+    background: {
+      color: $lightGreen;
+      image: $okIcon;
+      repeat: no-repeat;
+      position: .75em 50%;
+      size: 1em;
+    }
+    padding: .25em .5em .25em 2em;
+  }
+
+  &--characteristic {
+  background: {
+      color: $lightPurple;
+      image: $characteristicIcon;
+      repeat: no-repeat;
+      position: .5em 50%;
+      size: 1.3em;
+    }
+    padding: .25em .5em .25em 2em;
+  }
+
+  &--area {
+    background: {
+      color: $lightOrange;
+      image: $areaIcon;
+      repeat: no-repeat;
+      position: .5em 50%;
+      size: 1.3em;
+    }
+    padding: .25em .5em .25em 2em;
+  }
+
+  &--basis {
+    background: {
+      color: $blueGray;
+      image: $basisIcon;
+      repeat: no-repeat;
+      position: .5em 50%;
+      size: 1.3em;
+    }
+    padding: .25em .5em .25em 2em;
   }
 }
