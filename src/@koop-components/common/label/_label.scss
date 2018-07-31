@@ -1,8 +1,18 @@
+.container--labels {
+  margin: .5em 0 1.5em 0;
+
+  h3 {
+    display: inline;
+    margin: 0 1.5em 0 0;
+  }
+}
+
 .label {
   display: inline-block;
+  margin-right: .25em;
   padding: .25em .5em;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: 400;
   border-radius: $borderRadius;
   background: $lightGrey;
   color: $black;
