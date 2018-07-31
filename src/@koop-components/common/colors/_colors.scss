@@ -62,9 +62,25 @@
     background: $green;
     color: $white;
   }
+  &.darkgreen {
+    background: $darkGreen;
+    color: $white;
+  }
+  &.lightgreen {
+    background: $lightGreen;
+    color: $black;
+  }
 
   &.yellow {
     background: $yellow;
+    color: $black;
+  }
+  &.darkyellow {
+    background: $darkYellow;
+    color: $black;
+  }
+  &.lightyellow {
+    background: $lightYellow;
     color: $black;
   }
 
@@ -72,9 +88,17 @@
     background: $orange;
     color: $black;
   }
+  &.lightorange {
+    background: $lightOrange;
+    color: $black;
+  }
 
   &.red {
     background: $red;
     color: $white;
+  }
+  &.lightred {
+    background: $lightRed;
+    color: $black;
   }
 }
