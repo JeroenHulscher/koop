@@ -3,47 +3,55 @@
   'use strict';
 
   onl.decorate({
-    'init-inputfile': function (element) {
-      new inputfile(element);
+    'init-inputfile': function( element ) {
+      new inputfile( element );
     }
   });
 
-  var inputfile = function (element) {
+  var inputfile = function( element ) {
     this.element = element;
-    this.config = [];
-    // todo: make config extendable on component level.
-    this.config.isTouch = onl.ui.isTouch();
-    this.config.months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
-
-    if (!this.config.isTouch) {
-      this.init(element);
-    }
+    this.label = element.querySelector( 'label' );
+    this.input = element.querySelector( 'input' );
+    this.init( element );
   };
 
+  inputfile.prototype.init = function( element ) {
+    var self = this;
+    var labelVal = this.input.innerHTML;
 
-  inputfile.prototype.init = function (element) {
-      var label = element.querySelector('label');
-      console.log('label', label);
-      console.log('label', label.innerHTML);
-      var labelVal = element.querySelector('input').innerHTML;
+    element.addEventListener( 'change', function( e ) {
+      var fileName = '';
 
-      element.addEventListener('change', function (e) {
-        var fileName = '';
-        if (this.files && this.files.length > 1)
-          fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-        else
-          fileName = e.target.value.split('\\').pop();
+      if ( this.files && this.files.length > 1 ) {
+        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+      }
+      else {
+        fileName = e.target.value.split( '\\' ).pop();
+      }
 
-        if (fileName)
-          label.querySelector('span').innerHTML = fileName;
-        else
-          label.innerHTML = labelVal;
-      });
+      if ( fileName ) {
+        self.label.querySelector( 'span' ).innerHTML = fileName;
+      }
+      else {
+        self.label.innerHTML = labelVal;
+      }
+    });
+
+    this.eventListers();
+
+  };
+
+  inputfile.prototype.eventListers = function() {
+    this.label.addEventListener( 'keyup', function( event ) {
+      event.preventDefault();
+      if ( event.keyCode === 13 ) {
+        this.click();
+      }
+    });
 
     // Firefox bug fix
-    element.addEventListener('focus', function () { element.classList.add('has-focus'); });
-    element.addEventListener('blur', function () { element.classList.remove('has-focus'); });
-
+    this.element.addEventListener('focus', function () { element.classList.add('has-focus'); });
+    this.element.addEventListener('blur', function () { element.classList.remove('has-focus'); });
   };
 
 })();

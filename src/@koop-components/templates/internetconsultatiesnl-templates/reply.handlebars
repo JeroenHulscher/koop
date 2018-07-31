@@ -30,11 +30,13 @@
           toelichting.
         </p>
         <textarea id="txtVraag" rows="5" placeholder="Uw reactie"></textarea>
-        <button type="submit" class="button button--primary">Verder</button>
       </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
     </form>
 
-     {{ render "@steps" stepsContext2 }}
+    {{ render "@steps" stepsContext2 }}
 
      <p>
        Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier insturen.
@@ -45,14 +47,39 @@
     <form>
       <fieldset class="form__element">
         {{!-- <div class="form__element__label"> --}}
-          Document insturen
+          <h3>Document insturen</h3>
         {{!-- </div> --}}
         {{!-- <div class="form__element__inputs"> --}}
           {{ render "@input-file" fileContext }}
         {{!-- </div> --}}
 
-        <button type="submit" class="button button--primary">Verder</button>
       </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
+    </form>
+
+    {{ render "@steps" stepsContext3 }}
+
+     <p>
+       Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier insturen.
+      Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet groter zijn
+      dan 3MB.
+     </p>
+
+    <form>
+      <fieldset class="form__element">
+        {{!-- <div class="form__element__label"> --}}
+          <h3>Document insturen</h3>
+        {{!-- </div> --}}
+        {{!-- <div class="form__element__inputs"> --}}
+          {{ render "@input-file" fileContext }}
+        {{!-- </div> --}}
+
+      </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
     </form>
 
 

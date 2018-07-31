@@ -11,6 +11,12 @@
   }
 }
 
+.form {
+  &__buttons {
+    margin-top: rem(16);
+  }
+}
+
 .form__element {
   border: none;
   margin: 0 0 .5em 0;

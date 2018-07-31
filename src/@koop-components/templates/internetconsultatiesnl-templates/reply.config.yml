@@ -19,5 +19,11 @@ context:
     - title: Stap 2
       active: true
     - title: Stap 3
+  stepsContext3:
+    steps:
+    - title: Stap 1
+    - title: Stap 2
+    - title: Stap 3
+      active: true
   fileContext:
     fieldLabel: Documenten
