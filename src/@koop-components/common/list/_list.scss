@@ -192,13 +192,15 @@ ol {
 }
 
 .list--highlights {
-
-  padding: 0 1em;
+  padding: 0;
   margin: 0;
 
-  width: calc(100% + 3em);
-  position: relative;
-  left: -1.5em;
+  @media (min-width: 50em) {
+    width: calc(100% + 3em);
+    position: relative;
+    left: -1.5em;
+    padding: 0 1em;
+  }
 
   li {
     display: inline-block;
@@ -226,5 +228,17 @@ ol {
         background: $lightBlue;
       }
     }
+  }
+}
+
+.list--inline {
+
+  text-align: right;
+
+  li {
+    @media ( min-width: 50em ) {
+      display: inline;
+    }
+    list-style: none;
   }
 }

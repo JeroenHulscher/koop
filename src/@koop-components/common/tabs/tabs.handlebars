@@ -12,10 +12,10 @@
     <div id="panel-{{ id }}" role="tabpanel" aria-labelledby="tab-{{ id }}">
       {{{ content }}}
 
-      {{!-- {{#if hasButtons }} --}}
+      {{#if hasButtons }}
         <button type="button" data-handler="open-previous-panel" class="tabs__prev button button--secondary">Vorige</button>
         <button type="button" data-handler="open-next-panel" class="tabs__next button button--secondary">Volgende</button>
-      {{!-- {{/if}} --}}
+      {{/if}}
     </div>
     {{/each}}
   </div>

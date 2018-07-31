@@ -1,71 +1,4 @@
-<header class="header">
-
-  <div class="header__start">
-    <div class="container">
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
-      <div class="logo ">
-          <img src="../../images/logo.svg" alt="Overheid.nl logo" />
-          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
-              <span>Beleid en regelgeving</span>
-              <span>Wettenbank</span>
-          </p>
-      </div>
-
-      <div class="skiplinks">
-        <a href="#content">Direct naar content</a>
-        <a href="#search">Direct zoeken</a>
-      </div>
-    </div>
-  </div>
-  <nav class="header__nav header__nav--closed" id="nav">
-    <h2 class="visually-hidden">Primaire navigatie</h2>
-    <div class="container">
-      <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
-        <li><a href="#" class="is-active">Data</a></li>
-        <li><a href="#">Monitor</a></li>
-        <li><a href="#">Dataverzoeken</a></li>
-        <li><a href="#">Ondersteuning</a></li>
-        <li><a href="#">Over ons</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      {{ render "@search" search merge="true" }}
-      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
-    </div>
-  </nav>
-</header>
-<div class="header__more" id="other-sites">
-  <div class="container">
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank over twee regels</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Verdragenbank</h2>
-      <p>De Verdragenbank bevat de gegevens van de verdragen waarbij het Koninkrijk der Nederlanden partij is. Er is ook een Engelse versie.</p>
-      <ul class="list list--linked">
-        <li><a href="#">Verdragenbank</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+{{ render "@header" headerContext merge="true" }}
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
@@ -73,70 +6,60 @@
 </div>
 
 <div class="container row">
-
-  <h1>Locatie stembureaus Delfzijl 2017</h1>
-
-  <div class="tabs " data-decorator="init-tabs">
-    <ul class="tabs__list">
-        <li role="presentation">
-            <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1">Datasets</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Organisaties</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3">Groepen</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-4" data-handler="open-panel" role="tab" id="tab-4" aria-controls="panel-4">Dataset aanmelden</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-5" data-handler="open-panel" role="tab" id="tab-5" aria-controls="panel-5">Groepen</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-6" data-handler="open-panel" role="tab" id="tab-6" aria-controls="panel-6">Toelichting bij data</a>
-        </li>
-        <li role="presentation">
-            <a href="#panel-7" data-handler="open-panel" role="tab" id="tab-7" aria-controls="panel-7">Statistieken</a>
-        </li>
-    </ul>
-    <div class="tabs__panels">
-        <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
-            <h2>Organisaties</h2>
-            <div class="well">
-              {{ render "@roi-search" }}
-            </div>
-
-            {{ render "@table--datakalender" }}
-
-            {{ render "@pagination" }}
-
-
-        </div>
-        <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
-
-
-            <h2>Datasets</h2>
-            <div class="container row columns columns--sidebar-left">
-              <div>
-                test
-              </div>
-
-              <div>
-                sidebar
-              </div>
-            <div>
-        </div>
-        <div id="panel-3" role="tabpanel" aria-labelledby="tab-3">
-            <h2>Groepen</h2>
-            <p>Zoek in berichten en bekendmakingen van voornamelijk gemeenten, provincies en waterschappen.</p>
-
-
-        </div>
-    </div>
+  <a href="#" class="link cta__backwards">Terug naar alle datasets</a>
 </div>
 
+<div class="container row container--centered">
+	<p>Dataset</p>
+	<h1>Leefbaarometer 2.0 = meting 2016</h1>
+
+	<div class="container--labels">
+		<span class="label label--ok">ok</span>
+		<span class="label label--characteristic">high value</span>
+		<span class="label label--characteristic">referentieset</span>
+		<span class="label label--characteristic">basisregister</span>
+		<span class="label label--area">standaard</span>
+		<span class="label label--basis">grondslag bekend</span>
+	</div>
+
+	<div class="well well--pageblock">
+		<h2>Data-eigenaar</h2>
+		<p><a href="#">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a> | Uit catalogus: <a href="#">Data.overheid.nl</a></p>
+
+		<a href="#" class="link link--forward">Alle datasets van deze eigenaar</a>
+	</div> 
+
+	{{ render "@tabs" tabsContext merge="true" }}
+
+	<div class="container--labels">
+		<h3>Tags</h3>
+		<span class="label">BZK</span>
+		<span class="label">bewoners</span>
+		<span class="label">buurten</span>
+		<span class="label">leefbaarheid</span>
+		<span class="label">leefbarometer</span>
+		<span class="label">veiligheid</span>
+		<span class="label">wijken</span>
+	</div>
 
 </div>
+
+<div class="container row container--centered">
+	
+	{{ render "@tabs" tabsSourcesContext merge="true" }}
+
+
+	<div class="container row">
+	  <div class="well well--pageblock">
+	    <h2>Is dit niet de dataset die u zoekt?</h2>
+
+	    {{ render "@list--linklist" }}
+
+	  </div>
+
+	</div>
+
+</div>
+
 
 {{ render "@footer" }}
