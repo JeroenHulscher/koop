@@ -4,11 +4,12 @@
 
   var tabs = {
     openPanel: function( element ) {
-      var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
+      var tabsHolder = element.closest( '[data-decorator="init-tabs"]' );
       var tabs = onl.dom.$( '[role="tab"]', tabsHolder );
       var currentTab = onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
-      var currentPanel = document.getElementById( currentTab.getAttribute( 'aria-controls' ) );
-      var panelToShow = document.getElementById( element.getAttribute( 'aria-controls' ) );
+      // var currentPanel = document.getElementById( currentTab.getAttribute( 'aria-controls' ) );
+      var currentPanel = onl.dom.$( '#' + currentTab.getAttribute( 'aria-controls' ), tabsHolder )[0];
+      var panelToShow = onl.dom.$( '#' + element.getAttribute( 'aria-controls' ), tabsHolder )[0];
 
       // set tab-hash in url;
       window.location.hash = element.getAttribute( 'aria-controls' );
