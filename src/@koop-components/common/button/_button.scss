@@ -97,6 +97,28 @@
     }
   }
 
+  &--share {
+    background: {
+      color: $darkBlue;
+      image: $shareWhiteIcon;
+      position: 90% center;
+      repeat: no-repeat;
+    }
+    color: $white;
+    border: 1px solid transparent;
+    padding-right: 2em;
+
+    &:hover {
+      color: $black;
+      background-color: $mediumBlue;
+    }
+
+    &:active {
+      color: $black;
+      background-color: $lightBlue;
+    }
+  }
+
   &--search {
     padding-right: 2em;
     background-position: 90% 50%;

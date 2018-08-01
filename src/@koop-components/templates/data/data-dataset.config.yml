@@ -26,6 +26,19 @@ context:
       - id: 3
         label: Activiteitenstroom
         content: <h2>Activiteitenstroom</h2>
-      - id: 43
+      - id: 4
         label: Metadata
         content: <h2>Metadata</h2>
+      - cta: true
+        action: #
+        text: dataset delen
+        modifier: button--share
+  tabsSourcesContext:
+    tabs:
+      - id: 5
+        label: Databronnen
+        content: test
+      - id: 6
+        label: Documentatie
+        content: <h2>TBD</h2>
+      

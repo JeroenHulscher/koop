@@ -1,0 +1,13 @@
+<dl>
+	{{#if divContainer }}
+	{{#each items}}
+	<div>
+		<dt>{{ type }}</dt>
+		<dd>{{ value }}</dd>
+	</div>
+	{{/each}}
+	{{else}}
+	<dt>{{ type }}</dt>
+	<dd>{{ value }}</dd>
+	{{/if}}
+</dl>
