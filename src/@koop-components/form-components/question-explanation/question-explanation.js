@@ -15,13 +15,15 @@ onl.handle({
       explanation.setAttribute( 'data-explanation-opener', element.id );
     }
     if ( onl.ui.isHidden( explanation ) ) {
+      var windowWidth = window.innerWidth;
+
       onl.ui.show( explanation, explanation );
 
       var targetRect = explanation.getBoundingClientRect();
       var targetWidth = targetRect.width || ( targetRect.left - targetRect.right );
 
       // IF tooltip position too big for placement on the right;
-      if ( window.innerWidth <= targetRect.left + targetWidth ) {
+      if ( windowWidth <= targetRect.left + targetWidth ) {
         explanation.classList.add( 'question-explanation__content--left' );
         // recalculate its bounds;
         targetRect = explanation.getBoundingClientRect();
@@ -30,6 +32,7 @@ onl.handle({
           explanation.classList.add( 'question-explanation__content--fixed' );
         }
       }
+
     }
     else {
       onl.ui.hide( explanation );
