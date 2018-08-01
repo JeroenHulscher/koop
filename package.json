@@ -1,0 +1,45 @@
+{
+  "name": "koop-componentenbibliotheek",
+  "version": "0.9.0",
+  "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "gulp dev",
+    "e2e": "protractor protractor.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tfs.officielebekendmakingen.nl:8080/tfs/Projects/KOOP/_git/applicatie-overheidnl-frontend"
+  },
+  "author": "Hidde de Vries, Jeroen Hulscher",
+  "license": "ISC",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.4",
+    "@frctl/mandelbrot": "^1.1.0",
+    "@frctl/twig": "^1.0.0-beta.2",
+    "autoprefixer": "^6.4.1",
+    "combobo": "1.0.2",
+    "del": "^2.2.2",
+    "eslint": "^3.13.1",
+    "fastselect": "^0.7.3",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-changed": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "npm": "^5.7.1",
+    "growl": "^1.10.5",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "~5.1.0",
+    "selenium-standalone-jar": "2.45.0"
+  },
+  "devDependencies": {
+    "fastsearch": "^1.11.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.5",
+    "gulp-uglify": "^3.0.0"
+  }
+}
