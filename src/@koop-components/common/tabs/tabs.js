@@ -73,6 +73,9 @@
       var theseTabs = onl.dom.$( '[role="tab"]', element );
       var panels = onl.dom.$( '[role="tabpanel"]', element );
       var totalPanels = 0;
+      var hasHashTab;
+
+      console.log( 'theseTabs', theseTabs );
 
       // set all selected states
       // fire switchTab function when keys are pressed
@@ -88,15 +91,20 @@
 
       var hash = window.location.hash;
       if ( window.location.hash !== '' ) {
-        hash = hash.substr (1, 500 );
+        hash = hash.substr ( 1, 500 );
 
         panels.forEach( function( panel ) {
           if ( hash !== '' && hash === panel.getAttribute( 'id' ) ) {
             onl.ui.show( panel );
             theseTabs[totalPanels].setAttribute( 'aria-selected', 'true' );
+            hasHashTab = true;
           }
           totalPanels++;
         });
+        if ( !hasHashTab ) {
+          onl.ui.show(panels[0]);
+          theseTabs[0].setAttribute('aria-selected', 'true');
+        }
       } else {
         // show first panel
         onl.ui.show( panels[0] );
