@@ -75,8 +75,6 @@
       var totalPanels = 0;
       var hasHashTab;
 
-      console.log( 'theseTabs', theseTabs );
-
       // set all selected states
       // fire switchTab function when keys are pressed
       theseTabs.forEach( function( tab ) {
