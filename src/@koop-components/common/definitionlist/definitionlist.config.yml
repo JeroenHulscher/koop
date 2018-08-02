@@ -1,0 +1,16 @@
+label: definitionlist
+context:
+  divContainer: true
+  items:
+    - type: Thema
+      value: Huisvesting
+    - type: Status
+      value: Beschikbaar
+    - type: Toegang
+      value: Publiek
+    - type: Update
+      value: 8-1-2018
+    - type: Licentie
+      value: CC-0
+    - type: Taal
+      value: Nederlands
