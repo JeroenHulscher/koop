@@ -1,0 +1,26 @@
+<ul class="list--sources">
+	{{#each items }}
+		<li>
+			<div>{{ name }}</div>
+			<div><span class="xml">XML</span><span class="xls">XLS</span></div>
+			
+			{{#if moreInfo }}
+				<a href="#">Meer informatie tonen</a>
+
+				<div class="foldout">
+					{{#if tableData }}
+						<table>
+							{{#each tableData }}
+								<tr>
+									<th>{{ type }}</th>
+									<td>{{{ value }}}</td>
+							{{/each}}
+						</table>
+					{{/if}}
+				</div>
+			{{/if}}
+
+			<button href="{{ buttonLink }}" class="button button--primary">{{ buttonText }}</button>
+		</li>
+	{{/each}}
+</ul>

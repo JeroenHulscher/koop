@@ -1,3 +1,7 @@
+.columns .tabs__list {
+  padding: 0;
+}
+
 .tabs {
   padding: .25em 0;
 
@@ -15,7 +19,7 @@
     a {
       display: inline-block;
       text-align: center;
-      padding: .5em .5em;
+      padding: .5em .75em;
       background: $white;
       text-decoration: none;
       position: relative;
@@ -30,7 +34,7 @@
       &.is-selected {
         border-left: 1px solid $lighterGrey;
         border-right: 1px solid $lighterGrey;
-        border-top: 2px solid $primaryBlue;
+        border-top: 2px solid $darkBlue;
         border-bottom-color: $white;
         bottom: -1px;
 
@@ -49,6 +53,48 @@
 
     @media print {
       display: none;
+    }
+    
+
+    @media ( max-width: 50em ) {
+      border: none;
+      padding: 0;
+
+
+      button {
+        position: relative;
+        bottom: auto;
+        right: auto;
+      }
+
+      li {
+        margin: 0 .25em .5em 0;
+      }
+
+      a {
+        border: 1px solid $darkBlue;
+        color: $darkBlue;
+        font-weight: 700;
+        border-radius: $borderRadius;
+
+        &:hover {
+          background: $primaryBlue;
+          color: $white;
+        }
+
+        &[aria-selected="true"],
+        &.is-selected {
+          background-color: $darkBlue;
+          border: 1px solid $darkBlue;
+          color: $white;
+          bottom: 0;
+
+          &:hover {
+            background-color: $primaryBlue;
+            color: $white;
+          }
+        }
+      }
     }
   }
 

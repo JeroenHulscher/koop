@@ -3,7 +3,7 @@
   <ul class="tabs__list">
     {{#each tabs}}
       {{#if cta }}
-        <button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button>
+        <li><button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button></li>
       {{else}}
         <li role="presentation">
           <a href="#panel-{{ id }}" data-handler="open-panel" role="tab" id="tab-{{ id }}" aria-controls="panel-{{ id }}">{{ label }}</a>
