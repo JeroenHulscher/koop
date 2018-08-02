@@ -7,7 +7,11 @@ dl {
 	width: 100%;
 
 	div {
-		width: 33%;
+		width: 50%;
+		@media ( min-width: 50em ) {
+			width: 33%;
+		}
+
 	}
 
 	dt {

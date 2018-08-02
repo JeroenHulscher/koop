@@ -2,21 +2,33 @@ label: sources-list
 context:
   items:
     - name: Score Gemeente 2016
-      filetypes: xml, xls
+      files:
+      - type: xml
+        status: success
+      - type: xls
+        status: warning
       buttonText: download bestand
       buttonLink: #
     - name: Score wijk 2016
-      filetypes: xls
+      files:
+      - type: xml
+        status: warning
       buttonText: download bestand
       buttonLink: #
       moreInfo: true
+      title: Toegankslink
+      link: https://data.overheid.nl/data/dataset/af2b6af6-7ffe-40f1-851c-0d114b5ebf2b/resource/6bb787c2-7826-499e-86e6-43cd88ee476a/download/stembureausdelfzijl.csv 
       tableData:
         - type: Score wijk 2016
           value: <a href="#">Locatie stembureaus Delfzijl 2016</a>
         - type: Laatst gewijzigd
           value: 9 maart 2017
     - name: Score PC4 2016
-      filetypes: csv
+      files:
+      - type: xml
+        status: success
+      - type: xls
+        status: warning
       buttonText: download bestand
       buttonLink: #
       remark: true

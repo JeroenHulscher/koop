@@ -1,35 +1,47 @@
 <ul class="list--sources">
 	{{#each items }}
 		<li>
-			<div>{{ name }}</div>
-			<div><span class="label label--warning">XML</span><span class="label label--success">XLS</span></div>
+			<div class="list--source__information">
+
+				{{ name }}
 			
+				{{#if files }}
+					{{#each files }}
+						<span class="label label--{{ status }}">{{ type}}</span>
+					{{/each}}
+				{{/if}}
+			</div>
+
+			<button href="{{ buttonLink }}" class="button button--primary">{{ buttonText }}</button>
+
 			{{#if moreInfo }}
 
-				<div class="collapsible" data-decorator="init-collapsible" id="c1">
+				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
 				  <div class="collapsible__header">
 				    <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Meer informatie tonen</a>
 				  </div>
 				  <div class="collapsible__content" id="collapsible-content-1">
-				    
-					{{#if tableData }}
-						<table>
-							{{#each tableData }}
-								<tr>
-									<th>{{ type }}</th>
-									<td>{{{ value }}}</td>
-							{{/each}}
-						</table>
-					{{/if}}
+
+				  	<div>
+					  	<h3>{{ title }}</h3>
+					  	<p>{{ link }}</p>
+					    
+						{{#if tableData }}
+							<table>
+								{{#each tableData }}
+									<tr>
+										<th>{{ type }}</th>
+										<td data-before="{{ type }}">{{{ value }}}</td>
+								{{/each}}
+							</table>
+						{{/if}}
+					</div>
 
 				  </div>
 				</div>
 
 				
 			{{/if}}
-
-
-			<button href="{{ buttonLink }}" class="button button--primary">{{ buttonText }}</button>
 		</li>
 	{{/each}}
 </ul>
