@@ -2,12 +2,16 @@
 	{{#each items }}
 		<li>
 			<div>{{ name }}</div>
-			<div><span class="xml">XML</span><span class="xls">XLS</span></div>
+			<div><span class="label label--warning">XML</span><span class="label label--success">XLS</span></div>
 			
 			{{#if moreInfo }}
-				<a href="#">Meer informatie tonen</a>
 
-				<div class="foldout">
+				<div class="collapsible" data-decorator="init-collapsible" id="c1">
+				  <div class="collapsible__header">
+				    <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Meer informatie tonen</a>
+				  </div>
+				  <div class="collapsible__content" id="collapsible-content-1">
+				    
 					{{#if tableData }}
 						<table>
 							{{#each tableData }}
@@ -17,8 +21,13 @@
 							{{/each}}
 						</table>
 					{{/if}}
+
+				  </div>
 				</div>
+
+				
 			{{/if}}
+
 
 			<button href="{{ buttonLink }}" class="button button--primary">{{ buttonText }}</button>
 		</li>
