@@ -48,20 +48,41 @@
 
 <div class="container row container--centered">
 
-	{{ render "@tabs" tabsSourcesContext }}
+	<div class="tabs " data-decorator="init-tabs">
+	    <ul class="tabs__list">
+	        <li role="presentation">
+	            <a href="#panel-5" data-handler="open-panel" role="tab" id="tab-5" aria-controls="panel-5">Databronnen</a>
+	        </li>
+	        <li role="presentation">
+	            <a href="#panel-6" data-handler="open-panel" role="tab" id="tab-6" aria-controls="panel-6">Documentatie</a>
+	        </li>
+	    </ul>
+	    <div class="tabs__panels">
+	        <div id="panel-5" role="tabpanel" aria-labelledby="tab-5">
+	            {{ render "@sources-list" }}
+	        </div>
+	        <div id="panel-6" role="tabpanel" aria-labelledby="tab-6">
+	            <h2>Documentatie</h2>
+	            <p>
+	                <p>Volgt</p>
 
-
-	<div class="container row">
-	  <div class="well well--pageblock">
-	    <h2>Is dit niet de dataset die u zoekt?</h2>
-
-	    {{ render "@list--linklist" }}
-
-	  </div>
-
+	        </div>
+	        
+	    </div>
 	</div>
 
 </div>
+
+<div class="container row container--centered">
+  <div class="well well--pageblock">
+    <h2>Is dit niet de dataset die u zoekt?</h2>
+
+    {{ render "@list--linklist" }}
+
+  </div>
+
+</div>
+
 
 
 {{ render "@footer" }}

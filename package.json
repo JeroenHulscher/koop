@@ -23,15 +23,15 @@
     "del": "^2.2.2",
     "eslint": "^3.13.1",
     "fastselect": "^0.7.3",
-    "gulp": "gulpjs/gulp#4.0",
+    "growl": "^1.10.5",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-changed": "^2.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
-    "npm": "^5.7.1",
-    "growl": "^1.10.5",
     "jasmine-spec-reporter": "^4.2.1",
+    "npm": "^5.7.1",
     "protractor": "~5.1.0",
     "selenium-standalone-jar": "2.45.0"
   },
@@ -40,6 +40,6 @@
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.5",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.1"
   }
 }

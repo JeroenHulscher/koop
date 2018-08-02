@@ -1,0 +1,62 @@
+.list--sources {
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: block;
+		list-style: none;
+		border-bottom: 1px solid $lightGrey;
+		position: relative;
+		min-height: 3.5em;
+		padding: 1em;
+		@media ( min-width: 50em ) {
+			padding: 0;
+		}
+
+
+		.list--source__information {
+			display: block;
+			@media ( min-width: 50em ) {
+				position: absolute;
+				left: 0;
+				top: 1em;
+			}
+		}
+	}
+
+	
+
+	.collapsible__header {
+		@media ( min-width: 50em ) {
+			position: absolute;
+			right: 12em;
+			top: 1em;
+		}
+	}
+
+	.collapsible__content {
+		clear: both;
+		@media ( min-width: 50em ) {
+			padding: 2em 0 0 0;
+		}
+		margin: 0;
+
+		div {
+			margin: 2em 0 0 0;
+			background: $bgBlue;
+			padding: 1em;
+		}
+	}
+
+	button {
+		width: 100%;
+		margin: 1em 0;
+		@media ( min-width: 50em ) {
+			position: absolute;
+			right: 0em;
+			top: .4em;
+			margin: 0;
+			width: auto;
+		}
+	}
+}
