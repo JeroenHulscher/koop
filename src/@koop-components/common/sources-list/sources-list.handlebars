@@ -19,12 +19,15 @@
 				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
 				  <div class="collapsible__header">
 				    <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Meer informatie tonen</a>
+
 				  </div>
 				  <div class="collapsible__content" id="collapsible-content-1">
 
 				  	<div>
 					  	<h3>{{ title }}</h3>
 					  	<p>{{ link }}</p>
+
+					  	<button href="{{ link }}" class="button button--primary">Data API</button>
 					    
 						{{#if tableData }}
 							<table>
