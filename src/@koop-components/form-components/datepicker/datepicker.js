@@ -28,7 +28,7 @@
     $( element ).attr( 'type', 'text' ).datepicker({
       showOn: 'button',
       changeYear: true,
-      buttonImage: '/images/icon-calendar-white.svg', // File (and file path) for the calendar image
+      buttonImage: '../../images/icon-calendar-white.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
       monthNames: this.config.months,
