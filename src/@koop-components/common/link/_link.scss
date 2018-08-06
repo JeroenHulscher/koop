@@ -38,11 +38,29 @@ a {
   }
 
   &.cta {
+    text-decoration: none;
+    margin: 0 0 0 1em;
+    padding: 0 2em 0 0;
+    font-size: 1.25em;
+    font-weight: 700;
     background: {
       repeat: no-repeat;
       image: $arrowCTAIcon;
       position: right 3px;
-      size: 13px 12px;
+      size: 1em;
+    }
+  }
+
+  &.cta__backwards {
+    text-decoration: none;
+    padding: 0 0 0 2em;
+    font-size: 1.25em;
+    font-weight: 700;
+    background: {
+      repeat: no-repeat;
+      image: $arrowCTABackwardsIcon;
+      position: left 3px;
+      size: 1em;
     }
   }
 }
@@ -52,17 +70,25 @@ p a {
 }
 
 
-
 .link {
 
-}
-
-.link--back {
-  background: {
-    position: 0 .325em;
-    repeat: no-repeat;
-    image: $dartLeftIcon;
-    size: 6px 9px;
+  &--forward {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartRightIcon;
+      size: 6px 9px;
+    }
+    padding-left: 1em;
   }
-  padding-left: 1em;
+  &--back {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartLeftIcon;
+      size: 6px 9px;
+    }
+    padding-left: 1em;
+  }
+
 }

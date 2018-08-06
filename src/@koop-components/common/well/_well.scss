@@ -4,11 +4,15 @@
   padding: 1em;
   margin: 0 0 2em 0;
 
-  &--pagesearch {
+  &--pageblock {
     padding: 2.75em 10%;
 
     h2 {
       margin: 0 0 .5em 0;
+    }
+
+    .link--forward {
+      margin: 0 .75em 0 0;
     }
   }
 }

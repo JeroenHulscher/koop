@@ -9,15 +9,20 @@
 
   <h1 class="centered--title">Dataregister van de Nederlandse Overheid</h1>
 
-  <div class="well well--pagesearch">
+  <div class="well well--pageblock">
 
     <a href="#" class="link link--forward pull-right">Bekijk statistieken</a>
     <h2>Zoek binnen de <a href="#">12483</a> beschikbare datasets</h2>
 
-
-
     {{ render "@pagesearch" }}
   </div>
+
+  <ul class="list list--inline">
+    <li><a href="#" class="cta">Hulp bij zoeken naar datasets</a></li>
+    <li><a href="#" class="cta">Ik wil een dataset aanmelden</a></li>
+    
+  </ul>
+
 </div>
 
 <div class="container row transitional-size">
@@ -55,22 +60,23 @@
   <ul class="list--highlights">
     <li>
       <a href="#">
-        <img src="/images/temp/uitgelicht01.png" alt="referentiedatasets" />
+        <img src="../../images/temp/uitgelicht01.png" alt="referentiedatasets" />
         <h3>Nieuwe pilot met referentiedatasets</h3>
       </a>
     </li>
     <li>
       <a href="#">
-        <img src="/images/temp/uitgelicht02.png" alt="gebruikersbijeenkomst" />
+        <img src="../../images/temp/uitgelicht02.png" alt="gebruikersbijeenkomst" />
         <h3>Verslag gebruikersbijeenkomst 22 juni 2018</h3>
       </a>
     </li>
     <li>
       <a href="#">
-        <img src="/images/temp/uitgelicht03.png" alt="voorbeeld datasets" />
+        <img src="../../images/temp/uitgelicht03.png" alt="voorbeeld datasets" />
         <h3>Bekijk hier het portfolio van geselecteerde voorbeeld datasets</h3>
       </a>
     </li>
+  </ul>
 
 </div>
 
@@ -90,14 +96,14 @@
 </div>
 
 <div class="container columns row transitional-size">
-  <div class="well well--pagesearch">
+  <div class="well well--pageblock">
     <h2>Voor data gebruikers</h2>
 
     {{ render "@list--linklist" }}
 
   </div>
 
-  <div class="well well--pagesearch">
+  <div class="well well--pageblock">
     <h2>Voor data eigenaren</h2>
 
     {{ render "@list--linklist" }}

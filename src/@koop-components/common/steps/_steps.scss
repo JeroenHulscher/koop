@@ -5,9 +5,10 @@
 
   &__step {
     display: inline-block;
-    padding: em(4) em(16) em(4) em(32);
+    padding: em(8) em(16) em(8) em(32);
     position: relative;
     background: $lightBlue;
+    font-weight: 700;
     font-size: em(14);
     margin-bottom: em(4);
 
@@ -16,9 +17,9 @@
     }
 
     &:after {
-      border-top: 14px solid transparent;
-      border-bottom: 14px solid transparent;
-      border-left: 14px solid $lightBlue;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-left: 18px solid $lightBlue;
       content: "";
       height: 0;
       position: absolute;
@@ -29,9 +30,9 @@
     }
 
     &:before {
-      border-top: 18px solid transparent;
-      border-bottom: 18px solid transparent;
-      border-left: 18px solid white;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      border-left: 22px solid white;
       content: "";
       height: 0;
       position: absolute;
@@ -45,7 +46,7 @@
     &:last-child {
       background: $mediumBlue;
       &:after {
-        border-left: 14px solid $mediumBlue;
+        border-left: 18px solid $mediumBlue;
       }
     }
   }

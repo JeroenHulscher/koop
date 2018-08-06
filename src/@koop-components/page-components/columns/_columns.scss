@@ -42,7 +42,7 @@ $gutter: 1em;
 
     @media ( min-width: 50em ) {
       > *:first-child {
-        flex: 2;
+        flex: 3;
         order: 2;
         margin-left: 2em;
       }

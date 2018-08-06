@@ -2,9 +2,13 @@
   {{#if tabs }}
   <ul class="tabs__list">
     {{#each tabs}}
-    <li role="presentation">
-      <a href="#panel-{{ id }}" data-handler="open-panel" role="tab" id="tab-{{ id }}" aria-controls="panel-{{ id }}">{{ label }}</a>
-    </li>
+      {{#if cta }}
+        <li><button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button></li>
+      {{else}}
+        <li role="presentation">
+          <a href="#panel-{{ id }}" data-handler="open-panel" role="tab" id="tab-{{ id }}" aria-controls="panel-{{ id }}">{{ label }}</a>
+        </li>
+      {{/if}}
     {{/each}}
   </ul>
   <div class="tabs__panels">
@@ -12,10 +16,10 @@
     <div id="panel-{{ id }}" role="tabpanel" aria-labelledby="tab-{{ id }}">
       {{{ content }}}
 
-      {{!-- {{#if hasButtons }} --}}
+      {{#if hasButtons }}
         <button type="button" data-handler="open-previous-panel" class="tabs__prev button button--secondary">Vorige</button>
         <button type="button" data-handler="open-next-panel" class="tabs__next button button--secondary">Volgende</button>
-      {{!-- {{/if}} --}}
+      {{/if}}
     </div>
     {{/each}}
   </div>
