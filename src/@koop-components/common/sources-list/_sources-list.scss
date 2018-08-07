@@ -46,9 +46,11 @@
 			background: $bgBlue;
 			padding: 1em;
 
-			button {
-				right: 2em;
-				top: 3.5em;
+			@media ( min-width: 50em ) {
+				button {
+					right: 2em;
+					top: 3.5em;
+				}
 			}
 		}
 	}
