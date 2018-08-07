@@ -21,7 +21,19 @@
 
     *:not(h3):not(a) {
       background: lighten($orange, 30%);
+      padding: 0 .5em;
     }
+  }
+
+  &--update &__inner {
+    background: lighten($orange, 30%);
+    padding: .5em;
+    margin-bottom: 1em;
+    p, ul, ol {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   }
 
   &--warning {
