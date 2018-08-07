@@ -1,6 +1,6 @@
 .result--list {
 
-  ul:first-child {
+  > ul:first-child {
     padding: 0;
 
     > li {
@@ -10,7 +10,7 @@
     }
   }
 
-  li {
+  > ul > li {
     position: relative;
     list-style: none;
 
