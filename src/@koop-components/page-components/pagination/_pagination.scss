@@ -1,15 +1,9 @@
 .pagination {
   overflow: hidden;
+  margin: 1em 0;
 
   &__index {
-
-    h2 {
-      font-size: 1em;
-      font-weight: 700;
-      line-height: 1;
-      color: $black;
-      margin: 0;
-    }
+    margin: 1.5em 0 0 0;
 
     ul {
       padding: 0;
@@ -19,15 +13,13 @@
 
     li {
       list-style: none;
-      border: 1px solid $lighterGrey;
-      margin-left: -1px;
       min-width: 2.35em;
       text-align: center;
+      margin-right: 1px;
 
       &.active {
         color: $white;
         background: $primaryBlue;
-        border-color: $primaryBlue;
         padding: 5px 12px;
       }
 
@@ -39,10 +31,11 @@
         text-decoration: none;
         display: block;
         padding: 5px 12px;
+        background: $bgBlue;
 
         &:hover {
-          color: $primaryBlue;
-          background: $lightGrey;
+          color: $darkBlue;
+          background: $mediumBlue;
         }
       }
     }
@@ -57,6 +50,11 @@
     display: block;
     clear: both;
     margin: 1em 0;
+
+    label {
+      font-weight: 400;
+      margin: 0.5em 0;
+    }
 
     @media ( min-width: 50em ) {
       float: right;

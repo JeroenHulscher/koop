@@ -10,7 +10,7 @@
 .label {
   display: inline-block;
   margin: 0 .25em .25em 0;
-  padding: .25em .5em;
+  padding: .25em .75em;
   font-size: 75%;
   font-weight: 400;
   border-radius: $borderRadius;
@@ -32,17 +32,17 @@
     color: $black;
   }
 
-  &--success {
+  &--success, &--xml {
     background: $green;
     color: $white;
   }
 
-  &--warning {
+  &--warning, &--csv, &--xls {
     background: $yellow;
     color: $black;
   }
 
-  &--danger {
+  &--danger, &--pdf {
     background: $red;
     color: $white;
   }

@@ -4,6 +4,7 @@ context:
   items:
     - type: Thema
       value: Huisvesting
+      modifier: icon--housing
     - type: Status
       value: Beschikbaar
     - type: Toegang

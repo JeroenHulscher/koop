@@ -1,38 +1,53 @@
-<div class="result--list">
-
+<div class="result--list {{ modifier }}">
   <ul>
+  {{#each items }}
     <li>
-      <a href="#" class="result--title">Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent</a>
-      <ul class="result--actions">
-        <li><a href="#" class="icon icon--download"><span>Download de</span> pdf (22kb)</a></li>
-        <li><a href="#" class="icon icon--download"><span>Download de</span> xml (22kb)</a></li>
-      </ul>
+      {{#if theme }}
+      <span class="icon icon--{{theme}}">{{ theme-name }}</span>
+      {{/if}}
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!</p>
+      <a href="#" class="result--title">{{ title }}</a>
 
-      <ul class="list--metadata">
-        <li>Wetten</li>
-        <li>Regelgeving</li>
-        <li>Beleid</li>
-      </ul>
+      <p>{{ text }}</p>
 
+      {{#if owner }}
+        <p>Organisatie: {{ owner }}<br />
+      {{/if}}
+
+      {{#if metadata }}
+        {{#if theme }}
+          Onderwerpen: 
+          {{#each metadata }}
+            {{#if last }}
+              <a href="{{link}}">{{value }}</a>
+            {{else}}
+            <a href="{{link}}">{{value }}</a>,
+            {{/if}}
+          {{/each}}
+          </p>
+        {{else}}
+          <ul class="list--metadata">
+            {{#each metadata }}
+              <li>{{ value }}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
+
+      {{#if downloads }}
+        {{#if theme }}
+          {{#each downloads }}
+            <span class="label label--{{type }}">{{type}}</span>
+          {{/each}}
+        {{else}}
+          <ul class="result--actions">
+            {{#each downloads }}
+              <li><a href="#" class="icon icon--download"><span>Download de</span> {{ type }} {{ size }}</a></li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
     </li>
-
-    <li>
-      <a href="#" class="result--title">Titel eerste resultaat</a>
-      <ul class="result--actions">
-        <li><a href="#" class="icon icon--download"><span>Download de</span> pdf (22kb)</a></li>
-        <li><a href="#" class="icon icon--download"><span>Download de</span> xml (22kb)</a></li>
-      </ul>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!</p>
-
-      <ul class="list--metadata">
-        <li>Wetten</li>
-        <li>Regelgeving</li>
-        <li>Beleid</li>
-      </ul>
-
-    </li>
+  {{/each}}
   </ul>
 </div>
