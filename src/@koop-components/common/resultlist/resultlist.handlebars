@@ -1,0 +1,53 @@
+<div class="result--list {{ modifier }}">
+  <ul>
+  {{#each items }}
+    <li>
+      {{#if theme }}
+      <span class="icon icon--{{theme}}">{{ theme-name }}</span>
+      {{/if}}
+
+      <a href="#" class="result--title">{{ title }}</a>
+
+      <p>{{ text }}</p>
+
+      {{#if owner }}
+        <p>Organisatie: {{ owner }}<br />
+      {{/if}}
+
+      {{#if metadata }}
+        {{#if theme }}
+          Onderwerpen: 
+          {{#each metadata }}
+            {{#if last }}
+              <a href="{{link}}">{{value }}</a>
+            {{else}}
+            <a href="{{link}}">{{value }}</a>,
+            {{/if}}
+          {{/each}}
+          </p>
+        {{else}}
+          <ul class="list--metadata">
+            {{#each metadata }}
+              <li>{{ value }}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
+
+      {{#if downloads }}
+        {{#if theme }}
+          {{#each downloads }}
+            <span class="label label--{{type }}">{{type}}</span>
+          {{/each}}
+        {{else}}
+          <ul class="result--actions">
+            {{#each downloads }}
+              <li><a href="#" class="icon icon--download"><span>Download de</span> {{ type }} {{ size }}</a></li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
+    </li>
+  {{/each}}
+  </ul>
+</div>
