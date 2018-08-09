@@ -1,14 +1,13 @@
 ---
 label: Definitionlist
 context:
-  divContainer: "false"
   items:
     - type: Status
       value: Compleet
 variants:
-  - name: Columns 3
+  - name: data
     context:
-      modifier: "columns columns--3"
+      modifier: "columns--data"
       divContainer: true
       items:
         - type: Thema

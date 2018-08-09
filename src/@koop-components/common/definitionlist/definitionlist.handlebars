@@ -1,7 +1,7 @@
 <dl class="dl {{ modifier }}">
   {{#if divContainer }}
     {{#each items}}
-
+      <div>
         <dt>{{ type }}</dt>
         {{#if modifier }}
           <dd class="icon {{ modifier }}">{{ value }}</dd>
@@ -11,7 +11,10 @@
       </div>
     {{/each}}
   {{else}}
-    <dt>{{ type }}</dt>
-    <dd>{{ value }}</dd>
+    {{#each items}}
+      <dt>{{ type }}</dt>
+      <dd>{{ value }}</dd>
+    {{/each}}
   {{/if}}
+  
 </dl>
