@@ -1,1 +1,11 @@
 name: characteristic
+context:
+  items:
+    - id: 1
+      modifier: characteristic-ok
+      text: ok
+      explanation: "Betekenis: De wettelijke grondslag van de dataset is bekend."
+    - id: 2
+      modifier: characteristic-basis
+      text: grondslag
+      explanation: "Betekenis: De wettelijke grondslag van de dataset is bekend."
