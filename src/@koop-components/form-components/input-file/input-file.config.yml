@@ -1,0 +1,8 @@
+---
+label: Input file
+status: ready
+context:
+  id: 1
+  fieldLabel: Choose file
+  fieldInstruction:
+  fieldPlaceholder: 'placeholder'
