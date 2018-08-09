@@ -12,6 +12,8 @@
 
   var formSubselection = function( element ) {
     this.element = element;
+    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
+    this.config.type = this.config.type || 'span';
     this.init();
   };
 
@@ -61,7 +63,7 @@
     var summary = '';
 
     for ( y = 0; y < this.items.length; y++ ) {
-      summary += '<abbr title="' + this.items[y][1] + '">' + this.items[y][0] + '</abbr> ';
+      summary += '<' + this.config.type + ' title="' + this.items[y][1] + '">' + this.items[y][0] + '</' + this.config.type +'> ';
     }
     this.containerSummary.innerHTML = summary;
   };
