@@ -40,7 +40,7 @@
 		}
 		margin: 0;
 
-		div {
+		> div {
 			position: relative;
 			margin: 2em 0 0 0;
 			background: $bgBlue;
@@ -51,6 +51,12 @@
 					right: 2em;
 					top: 3.5em;
 				}
+			}
+		}
+
+		.well--linkContainer {
+			@media ( min-width: 50em ) {
+				margin-right: 10em;
 			}
 		}
 	}

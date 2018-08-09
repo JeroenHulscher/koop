@@ -51,4 +51,180 @@
       position: left .25em;
     }
   }
+
+  &--housing {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $housingIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--default {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $governanceIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--default {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $cultureIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--economy {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $economyIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--finance {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $financeIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--international {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $internationalIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--agriculture {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $agricultureIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--migration {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $migrationIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--nature {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $natureIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--education {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $educationIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--law {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $lawIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--infrastucture {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $infrastructureIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--social {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $socialIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--traffic {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $trafficIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--jobs {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $jobsIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--healthcare {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $healthcareIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
 }

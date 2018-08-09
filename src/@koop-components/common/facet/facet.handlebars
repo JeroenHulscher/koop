@@ -1,0 +1,10 @@
+{{#each items }}
+	<div class="facet">
+		<label for="{{ id }}">
+			<input type="checkbox" id="{{ id }}" name="{{ group }}" />
+			{{ value }}
+		</label>
+
+		<span>{{ count }}</span>
+	</div>
+{{/each}}

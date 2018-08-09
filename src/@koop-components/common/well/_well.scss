@@ -13,6 +13,26 @@
 
     .link--forward {
       margin: 0 .75em 0 0;
+
+      @media ( max-width: 50em ) {
+        &.pull-right {
+          float: none;
+          margin: 0 0 1em 0;
+          display: block;
+        }
+      }
     }
   }
+
+  &--linkContainer {
+    background: $white;
+    border-radius: 0;
+    display: block;
+    border: 1px solid $lighterGrey;
+    overflow: hidden;
+  }
+}
+
+.columns--sidebar-left .well {
+  margin: 0 0 1em 0;
 }

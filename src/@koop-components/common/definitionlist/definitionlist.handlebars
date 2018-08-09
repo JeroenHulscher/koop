@@ -3,7 +3,11 @@
 	{{#each items}}
 	<div>
 		<dt>{{ type }}</dt>
+		{{#if modifier }}
+			<dd class="icon {{ modifier }}">{{ value }}</dd>
+		{{else}}
 		<dd>{{ value }}</dd>
+		{{/if}}
 	</div>
 	{{/each}}
 	{{else}}

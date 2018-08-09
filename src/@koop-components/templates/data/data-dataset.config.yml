@@ -37,7 +37,7 @@ context:
     tabs:
       - id: 5
         label: Databronnen
-        content: test @[sources-list]
+        content: test 
       - id: 6
         label: Documentatie
         content: <h2>TBD</h2>

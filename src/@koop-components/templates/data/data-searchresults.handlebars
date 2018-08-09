@@ -4,6 +4,13 @@
 
 	<div>
 		<h1>2957 zoekresultaten</h1>
+
+		{{ render "@pagination" }}
+		{{ render "@sort" }}
+
+		{{ render "@resultlist--data" }}
+
+		{{ render "@pagination" }}
 	</div>
 
 	<div>
@@ -20,6 +27,20 @@
 	        <button type="submit" class="button button--primary">Zoek open data</button>
 	      </form>
 	    </div>
+
+	    <h2>Status</h2>
+
+	    {{ render "@facet" }}
+
+	    <h2>Toegang</h2>
+
+	    {{ render "@facet" localAccessFacets }}
+
+	    <h2>Data-eigenaar</h2>
+
+	    {{ render "@facet" localFacets }}
+
+
 
 	</div>
 
