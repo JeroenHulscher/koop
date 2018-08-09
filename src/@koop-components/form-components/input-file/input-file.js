@@ -12,14 +12,14 @@
     this.element = element;
     this.label = element.querySelector( 'label' );
     this.input = element.querySelector( 'input' );
-    this.init( element );
+    this.init();
   };
 
-  inputfile.prototype.init = function( element ) {
+  inputfile.prototype.init = function( ) {
     var self = this;
     var labelVal = this.input.innerHTML;
 
-    element.addEventListener( 'change', function( e ) {
+    this.element.addEventListener( 'change', function( e ) {
       var fileName = '';
 
       if ( this.files && this.files.length > 1 ) {
