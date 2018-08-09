@@ -1,0 +1,43 @@
+---
+title: IC - Details
+label: IC - Details
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: '#'
+        text: MijnOverheid.nl
+  breadcrumbContext:
+    breadcrumb:
+      last: NFP wijzigingspakket 2018-1
+      items:
+        - label: Home
+        - label: Overheidsinformatie
+        - label: Internetconsultatie
+  facelistContextActions:
+    modifier: list--facet
+    heading: Acties
+    items:
+      - text: <a href="#">Afdrukken</a>
+      - text: <a href="#">XML-versie opslaan</a>
+  facelistContextShare:
+    modifier: list--facet
+    heading: Delen regeling
+    items:
+      - text: <a href="#">Twitter</a>
+      - text: <a href="#">Facebook</a>
+      - text: <a href="#">LinkedIn</a>
+      - text: <a href="#">Google+</a>
+      - text: <a href="#">Tumblr</a>
+  resultlistContextDownloads:
+    resultlist:
+      - title: Concept regeling
+        showActions: true
+        showMeta: false
+        actions:
+          - ext: pdf
+            size: 142kb
+        description: Ontwerpbesluit NFP wijziging pakket 2018-1
+
+
+

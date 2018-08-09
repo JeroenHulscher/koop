@@ -1,0 +1,47 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbContext }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <h1>Wijziging van de Wet op de ondernemingsraden i.v.m. regeling van topbeloningen</h1>
+    <p>
+       Op deze website krijgt u informatie over wet- en regelgeving die door het kabinet of het parlement wordt voorbereid en waarover
+      via internet wordt geconsulteerd. U kunt reageren op nieuwe voorstellen voor wet- en regelgeving, zodat uw reactie bijdraagt
+      aan een verbetering van de regelingen. Hieronder zijn alle consultaties over concept-regelingen vermeld waarop u nu kunt
+      reageren. Via de zoekfunctie kunt u ook afgeronde consultaties zoeken en bekijken.
+    </p>
+
+    <h2>Lopende consultaties</h2>
+    {{ render "@resultlist" resultlistContext }}
+
+    {{ render "@pagination" }}
+
+  </div>
+
+
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="form__element">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--primary">Zoek in Wetgevingskalender</button>
+      </form>
+    </div>
+
+    {{ render "@list" facelistContext }}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
