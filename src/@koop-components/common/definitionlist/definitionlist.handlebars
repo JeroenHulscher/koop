@@ -1,17 +1,17 @@
-<dl>
-	{{#if divContainer }}
-	{{#each items}}
-	<div>
-		<dt>{{ type }}</dt>
-		{{#if modifier }}
-			<dd class="icon {{ modifier }}">{{ value }}</dd>
-		{{else}}
-		<dd>{{ value }}</dd>
-		{{/if}}
-	</div>
-	{{/each}}
-	{{else}}
-	<dt>{{ type }}</dt>
-	<dd>{{ value }}</dd>
-	{{/if}}
+<dl class="dl {{ modifier }}">
+  {{#if divContainer }}
+    {{#each items}}
+
+        <dt>{{ type }}</dt>
+        {{#if modifier }}
+          <dd class="icon {{ modifier }}">{{ value }}</dd>
+        {{else}}
+        <dd>{{ value }}</dd>
+        {{/if}}
+      </div>
+    {{/each}}
+  {{else}}
+    <dt>{{ type }}</dt>
+    <dd>{{ value }}</dd>
+  {{/if}}
 </dl>

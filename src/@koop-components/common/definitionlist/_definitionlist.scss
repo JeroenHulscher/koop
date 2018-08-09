@@ -1,18 +1,24 @@
 dl {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
 
-	div {
-		width: 50%;
-		@media ( min-width: 50em ) {
-			width: 33%;
-		}
+  &.columns {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
-	}
+  &.columns--3 {
+    div {
+      flex: none;
+      width: 50%;
+      margin-left: 0;
+      @media ( min-width: 50em ) {
+        width: 33%;
+      }
+    }
+  }
 
 	dt {
 		color: $darkBlue;
