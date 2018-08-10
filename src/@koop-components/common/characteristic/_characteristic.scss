@@ -27,7 +27,7 @@
 
 		&--ok {
 			&::before {
-				background-color: $lightGreen;
+				background-color: $lightGreen !important;
 				background-image: $okIcon;
 				background-size: .8em;
 			}
@@ -49,7 +49,7 @@
 
 		&--international {
 			&::before {
-				background-color: $lightBlue;
+				background-color: #F5E4E0;
 				background-image: $internationalIcon;
 			}
 		}
