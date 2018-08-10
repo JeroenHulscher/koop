@@ -1,6 +1,6 @@
 ---
-title: IC - Details
-label: IC - Details
+title: Ic Details
+label: Ic Details
 status: ready
 context:
   headerContext:
@@ -18,8 +18,11 @@ context:
     modifier: list--facet
     heading: Acties
     items:
+      - text: <a href="#">Reageren op consultatie</a>
+      - text: <a href="#">Notificaties per email</a>
+      - text: <a href="#">Doorsturen</a>
+      - text: <a href="#">PDF-document openen</a>
       - text: <a href="#">Afdrukken</a>
-      - text: <a href="#">XML-versie opslaan</a>
   facelistContextShare:
     modifier: list--facet
     heading: Delen regeling

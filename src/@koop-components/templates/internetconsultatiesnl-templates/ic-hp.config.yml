@@ -1,0 +1,47 @@
+---
+title: Ic Homepage
+label: Ic Homepage
+status: ready
+context:
+  id: 1
+  headerContext:
+    metaLinks:
+      - url: 'penis'
+        text: MijnOverheid.nl
+  breadcrumbContext:
+    breadcrumb:
+      last: Internet consultaties
+      items:
+        - label: Home
+  resultlistContext:
+    items:
+    - title: NFP wijzigingspakket 2018-1
+      text: Het ontwerpbesluit Nationaal Frequentieplan wijzigingspakket 2018-1 wordt ter inzage gelegd om eenieder de gelegenheid te bieden opmerkingen over het wijzigingsbesluit in te dienen en de frequentietabel te controleren op de correcte vermelding van rechten.
+      metadata:
+        - value: "Sluitingsdatum: 07-09-2018"
+        - value: Ministerie van Ministerie van Economische Zaken en Klimaat
+    - title: Besluit houdende regels tot wijziging van het Besluit uitvoering EU-verordeningen financiële markten
+      text: Aanwijzing verordening op overtreding waarvan een bestuursverbod kan worden opgelegd met betrekking tot niet-financiële ondernemingen
+      metadata:
+        - value: "Sluitingsdatum: 07-09-2018"
+        - value: Ministerie van Ministerie van Financiën
+    - title: NFP wijzigingspakket 2018-1
+      text: Het ontwerpbesluit Nationaal Frequentieplan wijzigingspakket 2018-1 wordt ter inzage gelegd om eenieder de gelegenheid te bieden opmerkingen over het wijzigingsbesluit in te dienen en de frequentietabel te controleren op de correcte vermelding van rechten.
+      metadata:
+        - value: "Sluitingsdatum: 07-09-2018"
+        - value: Ministerie van Ministerie van Economische Zaken en Klimaat
+    - title: Besluit houdende regels tot wijziging van het Besluit uitvoering EU-verordeningen financiële markten
+      text: Aanwijzing verordening op overtreding waarvan een bestuursverbod kan worden opgelegd met betrekking tot niet-financiële ondernemingen
+      metadata:
+        - value: "Sluitingsdatum: 07-09-2018"
+        - value: Ministerie van Ministerie van Financiën
+  facelistContext:
+    modifier: list--facet
+    heading: Meer informatie
+    items:
+      - text: <a href="#">Gesloten consultaties</a>
+      - text: <a href="#">Abonneren nieuwe consultaties</a>
+      - text: <a href="#">Veelgestelde vragen</a>
+      - text: <a href="#">Wet- en regelgeving</a>
+      - text: <a href="#">RSS nieuwe consultaties</a>
+

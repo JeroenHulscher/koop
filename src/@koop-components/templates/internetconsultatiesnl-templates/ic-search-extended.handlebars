@@ -1,0 +1,70 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+      <h1>Zoeken</h1>
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Overheidsdomein">Zoek op woord of zinsdeel</label>
+        </div>
+        <div class="form__element__inputs">
+          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Kamerstuknummer" type="text" id="ZoekOp_Kamerstuknummer"
+            class="input">
+        </div>
+      </div>
+
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <strong>Datum</strong>
+        </div>
+        <div class="form__element__inputs">
+          <div class="form__row">
+          <label for="ZoekOp_Overheidsdomein">van</label>
+          <div class="datepicker">
+            <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--1" placeholder="dd/mm/yyyy" />
+          </div>
+          </div>
+          <div>
+          <label for="ZoekOp_Overheidsdomein">t/m</label>
+          <div class="datepicker">
+            <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--1" placeholder="dd/mm/yyyy" />
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Overheidsdomein">Organisatie</label>
+        </div>
+        <div class="form__element__inputs">
+          <select>
+            <option>Selecteer type...</option>
+            <option>Ministerie A..</option>
+            <option>Ministerie B..</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="button--bar">
+        <input type="submit" name="asd" value="Uitgebreid zoeken" id="asd" class="button button--primary">
+      </div>
+
+  </div>
+
+  <div>
+
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
