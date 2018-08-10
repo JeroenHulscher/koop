@@ -23,6 +23,11 @@
 
   &__content {
     overflow: auto;
+    padding-right: 1em;
+
+    ol {
+      padding-left: 1em;
+    }
   }
 
   &--off-screen {

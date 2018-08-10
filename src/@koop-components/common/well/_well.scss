@@ -25,11 +25,24 @@
   }
 
   &--linkContainer {
-    background: $white;
     border-radius: 0;
     display: block;
     border: 1px solid $lighterGrey;
     overflow: hidden;
+    padding: .5em 2em .5em .5em;
+    background: {
+      color: $white;
+      image: $copyIcon;
+      position: 99% .25em;
+      size: 1em;
+      repeat: no-repeat;
+    }
+
+    &.well--lawLink {
+      font-family: Monospace;
+      background-color: $lightGrey;
+      min-height: 3em;
+    }
   }
 }
 
