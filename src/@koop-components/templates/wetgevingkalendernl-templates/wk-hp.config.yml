@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD:src/@koop-components/templates/wetgevingkalendernl-templates/wk-hp.config.yml
 title: Wk Homepage
 label: Wk Homepage
-=======
-title: WG - Homepage
-label: WG - Homepage
->>>>>>> characteristic update:src/@koop-components/templates/wetgevingkalendernl-templates/hp.config.yml
 status: ready
 context:
   headerContext:
