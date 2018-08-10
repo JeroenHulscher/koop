@@ -6,7 +6,6 @@
     show: function ( collapsible ) {
       onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'true' );
       if(onl.dom.$( '.collapsible__header a', collapsible )[0].getAttribute( 'data-text') == 'show/hide'){
-        console.log('ja');
         onl.dom.$( '.collapsible__header a', collapsible )[0].innerHTML='Toon minder informatie';
       }
       onl.ui.show( onl.dom.$( '.collapsible__content', collapsible )[0] );

@@ -1,3 +1,14 @@
+.table--container {
+  max-width: 100%;
+  overflow-x: scroll;
+  border: 1px solid $lightBlue;
+  padding: .5em;
+
+  p {
+    margin: 0;
+  }
+}
+
 table,
 .table {
 
@@ -154,64 +165,65 @@ table,
   }
 }
 
-@media ( max-width: 50em ) {
 
-  table:not(.table__data-overview),
-  &.table--condensed,
-  &.table--striped,
-  &.table--hover {
-    position: relative;
+  @media ( max-width: 50em ) {
 
-    thead {
-      display: none;
-    }
-
-    tbody tr:nth-child(odd) td {
-      background: transparent;
-    }
-
-    tr {
-      display: block;
-      border: 2px solid $lighterGrey;
-      margin: 1em 0;
-    }
-
-    th {
-      position: absolute;
-      left: -999em;
-    }
-
-    td {
-      width: 50%;
-      left: 50%;
+    table:not(.table__data-overview):not(.table__regulation),
+    &.table--condensed,
+    &.table--striped,
+    &.table--hover {
       position: relative;
-      display: block;
-      clear: both;
-      border: none !important;
 
-      &:nth-child(odd) {
-        background: $lightGrey !important;
+      thead {
+        display: none;
+      }
 
-        &::before {
+      tbody tr:nth-child(odd) td {
+        background: transparent;
+      }
+
+      tr {
+        display: block;
+        border: 2px solid $lighterGrey;
+        margin: 1em 0;
+      }
+
+      th {
+        position: absolute;
+        left: -999em;
+      }
+
+      td {
+        width: 50%;
+        left: 50%;
+        position: relative;
+        display: block;
+        clear: both;
+        border: none !important;
+
+        &:nth-child(odd) {
           background: $lightGrey !important;
+
+          &::before {
+            background: $lightGrey !important;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          left: -100%;
+          top: 0;
+          width: 100%;
+          padding: $standardPadding;
+          height: 100%;
+          font-weight: 700;
+          content: attr(data-before);
         }
       }
 
-      &:before {
-        position: absolute;
-        left: -100%;
-        top: 0;
-        width: 100%;
-        padding: $standardPadding;
-        height: 100%;
-        font-weight: 700;
-        content: attr(data-before);
+      &.table--condensed td::before {
+        padding: .25em;
       }
     }
-
-    &.table--condensed td::before {
-      padding: .25em;
-    }
   }
-}
 
