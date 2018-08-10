@@ -1,6 +1,6 @@
 ---
-title: WK - Search extended
-label: WK - Search extended
+title: Wk Homepage
+label: Wk Homepage
 status: ready
 context:
   headerContext:
@@ -10,14 +10,7 @@ context:
   rowLanding:
     - image: '../../images/temp/homepage-beleid.jpg'
       title: Wetgevingskalender
-      intro: Op deze website vindt u informatie over de totstandkoming en inwerkingtreding van nationale wetgeving..
-  steps:
-    steps:
-      - title: Voorbereiding
-      - title: Raad van State
-      - title: Tweede kamer
-      - title: Eerste kamer
-      - title: Bekendmaking
+      intro: Op deze website vindt u informatie over de totstandkoming en inwerkingtreding van nationale wetgeving.
   linkSetGroup:
     - linkSet:
       - title: Wetgeving in wording
