@@ -12,14 +12,14 @@
     }
     label {
       max-width: 80%;
-      font-size: 1.25rem;
+      font-size: inherit;
       font-weight: 700;
       text-overflow: ellipsis;
       white-space: nowrap;
       cursor: pointer;
       display: inline-block;
       overflow: hidden;
-      padding: 0.625rem 1.25rem;
+      padding: 0.625rem 1rem;
       color: #f1e5e6;
       background-color: #d3394c;
     }
