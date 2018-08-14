@@ -203,7 +203,7 @@ select {
 
     label {
       display: block;
-      width: 100%;
+      // width: 100%; // todo: remove @ 16 aug
       font-weight: 400;
       line-height: 1.5;
     }
@@ -361,7 +361,7 @@ select {
 .checkboxgroup {
   label {
     display: block;
-    width: 100%;
+    // width: 100%; // todo: remove @ 16 aug
     font-weight: 400;
     line-height: 1.5;
   }
