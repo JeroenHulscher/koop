@@ -125,11 +125,11 @@ $gutter: 1em;
     }
 
     > .columns--sticky-sidebar__sidebar {
-      margin-left: 0;
-      border: 1px solid #ccc;
-      padding: .5em 1em;
 
       @media ( min-width: 50em ) {
+        margin-left: 0;
+        border: 1px solid #ccc;
+        padding: .5em 1em;
         position: absolute;
         top: 2em;
         left: 1em;
@@ -149,9 +149,17 @@ $gutter: 1em;
         z-index: 2;
         opacity: .6;
         top: 0;
+        display: none;
 
         @media ( min-width: 50em ) {
           display: none;
+        }
+
+        .has-stickysidebar-open & {
+          display: block;
+          @media ( min-width: 50em ) {
+            display: none;
+          }
         }
       }
 
@@ -165,6 +173,11 @@ $gutter: 1em;
         z-index: 3;
         padding: 0 1em;
         overflow: auto;
+        display: none;
+
+        .has-stickysidebar-open & {
+          display: block;
+        }
 
         @media ( min-width: 50em ) {
           background: transparent;
@@ -173,6 +186,7 @@ $gutter: 1em;
           width: auto;
           padding: 0;
           overflow: visible;
+          display: block;
         }
       }
 
