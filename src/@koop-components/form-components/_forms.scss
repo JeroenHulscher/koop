@@ -1,3 +1,63 @@
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  background: $white;
+  border: 1px solid $mediumGrey;
+  line-height: 1.5;
+  font-family: inherit;
+  padding: 0 .5em;
+  font-size: .85em;
+  border-radius: .5em;
+
+  &::placeholder {
+    color: $darkGrey;
+  }
+
+  &.input--xsmall {
+    max-width: 4em;
+    margin: 0 .5em 0 0;
+    display: inline-block;
+  }
+
+  &.input--small {
+    max-width: 8em;
+    margin: 0 .5em 0 0;
+    display: inline-block;
+  }
+
+  &.input--medium {
+    max-width: 12em;
+    display: inline-block;
+    margin: 0 .5em 0 0;
+
+  }
+
+  &.input--error {
+    border: 1px solid $red;
+
+    &::placeholder {
+      color: $red;
+    }
+  }
+
+  &:disabled,
+  &[disabled],
+  &[read-only] {
+    background-color: $mediumGrey;
+    color: $mediumGrey;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
 .form__chapter {
   &__heading {
     border-bottom: 1px solid $darkBlue;
@@ -72,58 +132,11 @@
   input[type="email"],
   textarea,
   select {
-    background: $white;
-    border: 1px solid $mediumGrey;
     display: block;
-    line-height: 1.5;
     width: 100%;
-    font-family: inherit;
-    padding: 0 .5em;
-    font-size: .85em;
     margin: 0 0 .25em;
-    border-radius: .5em;
 
-    &::placeholder {
-      color: $darkGrey;
-    }
 
-    &.input--xsmall {
-      max-width: 4em;
-      margin: 0 .5em 0 0;
-      display: inline-block;
-    }
-
-    &.input--small {
-      max-width: 8em;
-      margin: 0 .5em 0 0;
-      display: inline-block;
-    }
-
-    &.input--medium {
-      max-width: 12em;
-      display: inline-block;
-      margin: 0 .5em 0 0;
-
-    }
-
-    &.input--error {
-      border: 1px solid $red;
-
-      &::placeholder {
-        color: $red;
-      }
-    }
-
-    &:disabled,
-    &[disabled],
-    &[read-only] {
-      background-color: $mediumGrey;
-      color: $mediumGrey;
-
-      &:focus {
-        outline: none;
-      }
-    }
   }
 
   select[multiple] {
