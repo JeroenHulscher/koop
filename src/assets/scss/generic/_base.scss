@@ -68,7 +68,7 @@ html {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
   @media (min-width: 50em) {
-    padding-bottom: 11em;
+    padding-bottom: 12em;
   }
 }
 
@@ -83,7 +83,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 11em;
+    height: 12em;
   }
 }
 
@@ -111,4 +111,8 @@ a img {
   li {
     font-size: 1.25em;
   }
+}
+
+label {
+  display: block;
 }

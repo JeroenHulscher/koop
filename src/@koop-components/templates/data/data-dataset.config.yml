@@ -37,8 +37,25 @@ context:
     tabs:
       - id: 5
         label: Databronnen
-        content: test @[sources-list]
+        content: test 
       - id: 6
         label: Documentatie
         content: <h2>TBD</h2>
+  definitionlistContext:
+    modifier: "columns--data"
+    divContainer: true
+    items:
+      - type: Thema
+        value: Huisvesting
+        modifier: icon--housing
+      - type: Status
+        value: Beschikbaar
+      - type: Toegang
+        value: Publiek
+      - type: Update
+        value: 8-1-2018
+      - type: Licentie
+        value: CC-0
+      - type: Taal
+        value: Nederlands
       

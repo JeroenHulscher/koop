@@ -15,4 +15,51 @@ context:
     - url: '#'
       text: Dataset aanmelden
       modifier: button--primary
+  localFacets:
+    group: data-eigenaar
+    items:
+      - id: facet-20
+        value: Centraal Bureau voor de Statistieken
+        count: 12221
+      - id: facet-21
+        value: Rijkswaterstaat
+        count: 121
+      - id: facet-22
+        value: Drenthe
+        count: 50
+      - id: facet-23
+        value: Provincie Utrecht
+        count: 25
+      - id: facet-25
+        value: Dataplatform NL
+        count: 602343
+      - id: facet-30
+        value: Centraal Bureau voor de Statistieken
+        count: 12221
+      - id: facet-31
+        value: Rijkswaterstaat
+        count: 121
+      - id: facet-32
+        value: Drenthe
+        count: 50
+      - id: facet-33
+        value: Provincie Utrecht
+        count: 25
+      - id: facet-34
+        value: Dataplatform NL
+        count: 829348290
+  localAccessFacets:
+    group: toegang
+    items:
+      - id: facet-40
+        value: Publiek
+        count: 12254
+      - id: facet-41
+        value: Beperkt
+        count: 16
+      - id: facet-42
+        value: Gesloten
+        count: 23
+
+
 

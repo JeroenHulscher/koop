@@ -1,4 +1,5 @@
 .browse {
+  margin-bottom: em(16);
 
   &__list {
     margin: 0;
@@ -6,6 +7,11 @@
 
     li {
       list-style: none;
+      &.is-active {
+        background-color: $lightBlue;
+        color: $darkBlue;
+        text-decoration: none;
+      }
     }
 
     a {
@@ -28,6 +34,10 @@
         text-decoration: none;
       }
     }
+  }
+
+  &__item-date {
+    display: block;
   }
 
   &__count {

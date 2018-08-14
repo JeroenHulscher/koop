@@ -1,0 +1,16 @@
+name: facet
+context:
+  group: status
+  items:
+    - id: facet-01
+      value: beschikbaar
+      count: 12221
+    - id: facet-02
+      value: In onderzoek
+      count: 121
+    - id: facet-03
+      value: Niet beschikbaar
+      count: 50
+    - id: facet-04
+      value: Gepland
+      count: 25

@@ -6,7 +6,7 @@
     > li {
       margin-bottom: .5em;
       padding-bottom: .5em;
-      border-bottom: 1px solid $lighterGrey;
+      border-bottom: 1px solid $lightGrey;
     }
   }
 
@@ -17,7 +17,6 @@
     p {
       padding-right: 6em;
     }
-
   }
 
   .result--title {
@@ -45,6 +44,32 @@
       font-size: 0;
     }
 
+  }
+
+  &__data {
+    > ul > li {
+      padding: .5em 0;
+
+      @media ( max-width: 50em ) {
+        p {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .result--title {
+      font-size: 1.25em;
+      margin: 0 0 -.5em 0;
+    }
+
+
+    .icon {
+      padding-left: 1.5em !important;
+      background-position: left 50% !important;
+      font-weight: 700;
+      color: $darkBlue;
+      margin: 0 0 .5em 0;
+    }
   }
 }
 

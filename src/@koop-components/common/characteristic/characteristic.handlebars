@@ -1,0 +1,11 @@
+<div class="characteristics">
+	{{#each items }}
+		<div class="characteristic {{ modifier }}">
+			<a href="#question-explanation-{{ id }}" id="question-explanation-link-{{ id }}" data-explanation-opener="question-explanation-{{ id }}" data-handler="toggle-explanation">{{ text }}</a>
+			<div class="question-explanation__content" id="question-explanation-{{ id }}" data-decorator="hide-self">
+		        <p>{{ explanation }}</p>
+		        <a href="#question-explanation-link-{{ id }}" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+    {{/each}}
+</div>

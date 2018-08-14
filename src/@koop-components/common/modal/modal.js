@@ -31,38 +31,49 @@
       if ( previouslyFocused ) {
         onl.ui.focus( previouslyFocused );
       }
-    }
-  };
+    },
+    recalculateAndSetBounds: function( modalElement ) {
+      var modal = modalElement;
+      var height = window.innerHeight;
+      var dialogContent = modal.querySelector( '.modal__content' );
 
-  onl.decorate({
-    'init-modal': function() {
+      // reset height, before calculating
+      dialogContent.style.height = 'auto';
+
+      if ( ( dialogContent.offsetHeight + 100 ) >= height ) {
+        dialogContent.style.height = height - 100 + 'px';
+      } else {
+        dialogContent.style.height = 'auto';
+      }
+    },
+    setHeight: function( modalElement ) {
       var resizeTimeout;
 
-      function recalculateAndSetBounds() {
-        var height = window.innerHeight;
-        var dialogContent = document.querySelector( '.modal__content' );
-
-        dialogContent.style.height = height - 100 + 'px';
-      }
-      recalculateAndSetBounds();
+      modal.recalculateAndSetBounds( modalElement );
 
       window.addEventListener( 'resize', function() {
         if ( resizeTimeout ) {
           clearTimeout( resizeTimeout );
         }
         resizeTimeout = window.setTimeout( function() {
-          recalculateAndSetBounds();
+          modal.recalculateAndSetBounds( modalElement );
         }, 50 );
       });
     }
+  };
+
+  onl.decorate({
+    'init-modal': function( ) {}
   });
 
   onl.handle({
-    'open-modal': function(element) {
+    'open-modal': function( element ) {
       var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
+
       modal.open( modalElement );
+      modal.setHeight ( modalElement );
     },
-    'close-modal': function(element) {
+    'close-modal': function( element ) {
       var modalElement;
 
       if ( element.getAttribute( 'data-modal' ) ) {

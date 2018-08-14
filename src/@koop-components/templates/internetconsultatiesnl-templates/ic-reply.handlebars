@@ -1,0 +1,114 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+    <h1>NFP wijzigingspakket 2018-1</h1>
+
+    <h2>Reageren op consultatie</h2>
+
+    {{ render "@steps" stepsContext }}
+
+    <p>
+       Hieronder staan één of meer vragen die horen bij de consultatie. U kunt uw reactie geven in de ruimte onder de vraag. Daarnaast
+      is het mogelijk om een document aan uw reactie toe te voegen, bijvoorbeeld als u achtergrondinformatie wilt bijvoegen.
+    </p>
+    <p>
+      <a href="#" class="link link--forward">Direct naar document toevoegen</a>
+    </p>
+
+    <form>
+      <fieldset class="form__element">
+        <label for="txtVraag">Vraag</label>
+        <p>
+           Geïnteresseerden kunnen een openbare reactie geven op alle onderdelen van het ontwerpbesluit en de bijbehorende nota van
+          toelichting.
+        </p>
+        <textarea id="txtVraag" rows="5" placeholder="Uw reactie"></textarea>
+      </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
+    </form>
+
+    {{ render "@steps" stepsContext2 }}
+
+     <p>
+       Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier insturen.
+      Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet groter zijn
+      dan 3MB.
+     </p>
+
+    <form>
+      <fieldset class="form__element">
+        {{!-- <div class="form__element__label"> --}}
+          <h3>Document insturen</h3>
+        {{!-- </div> --}}
+        {{!-- <div class="form__element__inputs"> --}}
+          {{ render "@input-file" fileContext }}
+        {{!-- </div> --}}
+
+      </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
+    </form>
+
+    {{ render "@steps" stepsContext3 }}
+
+    <p>
+      Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier insturen.
+    Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet groter zijn
+    dan 3MB.
+    </p>
+
+    <form>
+      <fieldset class="form__element">
+        {{!-- <div class="form__element__label"> --}}
+          <h3>Document insturen</h3>
+        {{!-- </div> --}}
+        {{!-- <div class="form__element__inputs"> --}}
+          {{ render "@input-file" fileContext }}
+        {{!-- </div> --}}
+
+      </fieldset>
+      <div class="form__buttons">
+        <button type="submit" class="button button--primary">Verder</button>
+      </div>
+    </form>
+
+
+  </div>
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="form__element">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--primary">Zoek in Wetgevingskalender</button>
+      </form>
+      <a href="#" class="link link--forward">Zoek uitgebreid</a>
+    </div>
+    <p>
+      <a href="#" class="link link--back">Startpagina</a>
+    </p>
+    <ul class="list list--linked">
+        <li><a href="#"><strong>Wetgeving in wording</strong></a></li>
+        <li><a href="#">Inwerkingtredingen</a></li>
+        <li><a href="#">Implementatie EU-richtlijnen</a></li>
+      </ul>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

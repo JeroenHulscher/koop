@@ -1,0 +1,29 @@
+---
+title: Ic Reply
+label: Ic Reply
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: '#'
+        text: MijnOverheid.nl
+  stepsContext:
+    steps:
+    - title: Stap 1
+      active: true
+    - title: Stap 2
+    - title: Stap 3
+  stepsContext2:
+    steps:
+    - title: Stap 1
+    - title: Stap 2
+      active: true
+    - title: Stap 3
+  stepsContext3:
+    steps:
+    - title: Stap 1
+    - title: Stap 2
+    - title: Stap 3
+      active: true
+  fileContext:
+    fieldLabel: Documenten

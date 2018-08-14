@@ -1,34 +1,37 @@
 dl {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
 
-	div {
-		width: 50%;
-		@media ( min-width: 50em ) {
-			width: 33%;
-		}
+  dt {
+    color: $darkBlue;
+    font-weight: 700;
+    padding: 0;
+  }
 
-	}
+  dd {
+    padding: 0;
+    margin: 0 0 2em 0;
 
-	dt {
-		color: $darkBlue;
-		font-weight: 700;
-		padding: 0;
-	}
+    &:after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
 
-	dd {
+  &.columns--data {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 
-		padding: 0;
-		margin: 0 0 2em 0;
+    div {
+      width: 50%;
+      
+      @media ( min-width: 50em ) {
+        width: 33%;
+      }
+    }
 
-		&:after {
-			content: '\A';
-			white-space: pre;
-		}
 
-	}
+  }
 }

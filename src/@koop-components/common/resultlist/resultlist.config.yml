@@ -1,2 +1,142 @@
 title: resultlist
 label: Resultlist
+context:
+  items:
+    - title: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      downloads:
+        - type: pdf
+          size: 22kb
+        - type: xml
+          size: 832kb
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      metadata:
+        - value: wetten
+        - value: regelgeving
+        - value: beleid
+    - title: Afdeling 1.2.3. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      downloads:
+        - type: pdf
+          size: 22kb
+        - type: xml
+          size: 832kb
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      metadata:
+        - value: wetten
+        - value: regelgeving
+        - value: beleid
+variants:
+  - name: data
+    context:
+      modifier: result--list__data
+      items:
+        - theme: housing
+          theme-name: Huisvesting
+          title: Locatie stembureaus Delfzijl 2017
+          text: Gegevens van alle stemlokalen binnen de gemeente Delfzijl voor verkiezingen. Locatie in X en Y in RD-Amersfoort, nummer, naam van het gebouw,...
+          owner: Delfzijl
+          downloads:
+            - type: csv
+          metadata:
+            - value: Delfzijl
+              link: #
+            - value: stembureau
+              link: #
+            - value: stemmen
+              link: #
+            - value: verkiezing
+              link: #
+              last: true
+        - theme: healthcare
+          theme-name: Zorg
+          title: Leefbaarometer 2.0 = meting 2016
+          text: Gegevens van alle stemlokalen binnen de gemeente Delfzijl voor verkiezingen. Locatie in X en Y in RD-Amersfoort, nummer, naam van het gebouw,...
+          owner: Delfzijl
+          downloads:
+            - type: csv
+            - type: pdf
+            - type: shape
+          metadata:
+            - value: Delfzijl
+              link: #
+            - value: stembureau
+              link: #
+            - value: stemmen
+              link: #
+            - value: verkiezing
+              link: #
+              last: true
+        - theme: jobs
+          theme-name: Werk
+          title: Locatie stembureaus Delfzijl 2017
+          text: Gegevens van alle stemlokalen binnen de gemeente Delfzijl voor verkiezingen. Locatie in X en Y in RD-Amersfoort, nummer, naam van het gebouw,...
+          owner: Delfzijl
+          downloads:
+            - type: csv
+          metadata:
+            - value: Delfzijl
+              link: #
+            - value: stembureau
+              link: #
+            - value: stemmen
+              link: #
+            - value: verkiezing
+              link: #
+              last: true
+        - theme: traffic
+          theme-name: Verkeer
+          title: Leefbaarometer 2.0 = meting 2016
+          text: Gegevens van alle stemlokalen binnen de gemeente Delfzijl voor verkiezingen. Locatie in X en Y in RD-Amersfoort, nummer, naam van het gebouw,...
+          owner: Delfzijl
+          downloads:
+            - type: csv
+            - type: pdf
+            - type: shape
+          metadata:
+            - value: Delfzijl
+              link: #
+            - value: stembureau
+              link: #
+            - value: stemmen
+              link: #
+            - value: verkiezing
+              link: #
+              last: true
+        - theme: migration
+          theme-name: Migratie
+          title: Locatie stembureaus Delfzijl 2017
+          text: Gegevens van alle stemlokalen binnen de gemeente Delfzijl voor verkiezingen. Locatie in X en Y in RD-Amersfoort, nummer, naam van het gebouw,...
+          owner: Delfzijl
+          downloads:
+            - type: csv
+          metadata:
+            - value: Delfzijl
+              link: #
+            - value: stembureau
+              link: #
+            - value: stemmen
+              link: #
+            - value: verkiezing
+              link: #
+              last: true
+        - theme: agriculture
+          theme-name: Landbouw
+          title: Leefbaarometer 2.0 = meting 2016
+          text: Gegevens van alle stemlokalen binnen de gemeente Delfzijl voor verkiezingen. Locatie in X en Y in RD-Amersfoort, nummer, naam van het gebouw,...
+          owner: Delfzijl
+          downloads:
+            - type: csv
+            - type: pdf
+            - type: shape
+          metadata:
+            - value: Delfzijl
+              link: #
+            - value: stembureau
+              link: #
+            - value: stemmen
+              link: #
+            - value: verkiezing
+              link: #
+              last: true
+
+
+          

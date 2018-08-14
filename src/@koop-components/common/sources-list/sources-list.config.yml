@@ -4,15 +4,12 @@ context:
     - name: Score Gemeente 2016
       files:
       - type: xml
-        status: success
       - type: xls
-        status: warning
       buttonText: download bestand
       buttonLink: #
     - name: Score wijk 2016
       files:
       - type: xml
-        status: warning
       buttonText: download bestand
       buttonLink: #
       moreInfo: true
@@ -26,10 +23,9 @@ context:
     - name: Score PC4 2016
       files:
       - type: xml
-        status: success
       - type: xls
-        status: warning
       buttonText: download bestand
       buttonLink: #
+      buttonDisabled: disabled
       remark: true
       remarkText: <p>Link is niet ok.<br />Laatste controle op 18-07-2018</p>

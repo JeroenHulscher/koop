@@ -1,0 +1,28 @@
+name: characteristic
+context:
+  items:
+    - id: 1
+      modifier: characteristic--ok
+      text: ok
+      explanation: "Betekenis: De wettelijke grondslag van de dataset is bekend."
+    - id: 2
+      text: high value
+      explanation: "Betekenis: "
+    - id: 3
+      text: referentieset
+      explanation: "Betekenis: "
+    - id: 4
+      text: basisregister
+      explanation: "Betekenis: "
+    - id: 5
+      modifier: characteristic--international
+      text: standaard
+      explanation: "Betekenis: "
+    - id: 6
+      modifier: characteristic--basis
+      text: grondslag bekend
+      explanation: "Betekenis: "
+    - id: 7
+      modifier: characteristic--share
+      text: delen
+      explanation: "Betekenis: "

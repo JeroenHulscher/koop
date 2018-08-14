@@ -14,21 +14,18 @@
   var toggle = function( button ) {
     var labelOpen = button.getAttribute( 'data-toggle-open' ) || 'Open';
     var labelClose = button.getAttribute( 'data-toggle-close' ) || 'Sluit';
-    var toggles = document.getElementById( button.getAttribute( 'aria-controls' ) );
     var isOpen = button.getAttribute( 'aria-expanded' ) === 'true';
 
     if ( isOpen ) {
       button.textContent = labelOpen;
       button.setAttribute( 'aria-expanded', 'false' );
-      onl.ui.hide( toggles );
-      document.body.classList.remove( 'no-scroll' );
+      document.body.classList.remove( 'has-stickysidebar-open' );
       onl.ui.unbindFocusTrap( button.parentNode );
     }
     else {
       button.textContent = labelClose;
       button.setAttribute( 'aria-expanded', 'true' );
-      onl.ui.show( toggles );
-      document.body.classList.add( 'no-scroll' );
+      document.body.classList.add( 'has-stickysidebar-open' );
       onl.ui.bindFocusTrap( button.parentNode );
     }
   };
@@ -70,8 +67,8 @@
       button.setAttribute( 'data-toggle-close', labels.close );
 
       // set initial state
-      button.setAttribute( 'aria-expanded', 'true' );
-      button.textContent = labels.close;
+      // button.setAttribute( 'aria-expanded', 'true' );
+      // button.textContent = labels.close;
 
       el.before( button );
 

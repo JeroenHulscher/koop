@@ -13,14 +13,7 @@
 	<p>Dataset</p>
 	<h1>Leefbaarometer 2.0 = meting 2016</h1>
 
-	<div class="container--labels">
-		<span class="label label--ok">ok</span>
-		<span class="label label--characteristic">high value</span>
-		<span class="label label--characteristic">referentieset</span>
-		<span class="label label--characteristic">basisregister</span>
-		<span class="label label--area">standaard</span>
-		<span class="label label--basis">grondslag bekend</span>
-	</div>
+	{{ render "@characteristic" }}
 
 	<div class="well well--pageblock">
 		<h2>Data-eigenaar</h2>
@@ -28,7 +21,7 @@
 
 		<p><a href="#" class="link link--forward">Alle datasets van deze eigenaar</a></p>
 
-		{{ render "@definitionlist" }}
+		{{ render "@definitionlist" definitionlistContext merge="true" }}
 	</div> 
 
 	{{ render "@tabs" tabsContext merge="true" }}

@@ -1,0 +1,27 @@
+.has-js {
+  .input-file {
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    label {
+      max-width: 80%;
+      font-size: inherit;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      padding: 0.625rem 1rem;
+      color: #f1e5e6;
+      background-color: #d3394c;
+    }
+  }
+}
