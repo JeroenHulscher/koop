@@ -33,14 +33,17 @@ context:
       - text: <a href="#">Google+</a>
       - text: <a href="#">Tumblr</a>
   resultlistContextDownloads:
-    resultlist:
-      - title: Concept regeling
-        showActions: true
-        showMeta: false
-        actions:
-          - ext: pdf
-            size: 142kb
-        description: Ontwerpbesluit NFP wijziging pakket 2018-1
+      items:
+        - title: Concept regeling
+          downloads:
+            - ext: pdf
+              size: 142kb
+          text: Ontwerpbesluit NFP wijziging pakket 2018-1
+        - title: Concept regeling
+          downloads:
+            - ext: pdf
+              size: 142kb
+          text: Ontwerpbesluit NFP wijziging pakket 2018-1
 
 
 
