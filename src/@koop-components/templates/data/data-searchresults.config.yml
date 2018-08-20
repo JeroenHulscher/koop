@@ -16,50 +16,61 @@ context:
       text: Dataset aanmelden
       modifier: button--primary
   localFacets:
-    group: data-eigenaar
     items:
       - id: facet-20
         value: Centraal Bureau voor de Statistieken
         count: 12221
+        group: data-eigenaar
       - id: facet-21
         value: Rijkswaterstaat
         count: 121
+        group: data-eigenaar
       - id: facet-22
         value: Drenthe
         count: 50
+        group: data-eigenaar
       - id: facet-23
         value: Provincie Utrecht
         count: 25
+        group: data-eigenaar
       - id: facet-25
         value: Dataplatform NL
         count: 602343
+        group: data-eigenaar
       - id: facet-30
         value: Centraal Bureau voor de Statistieken
         count: 12221
+        group: data-eigenaar
       - id: facet-31
         value: Rijkswaterstaat
         count: 121
+        group: data-eigenaar
       - id: facet-32
         value: Drenthe
         count: 50
+        group: data-eigenaar
       - id: facet-33
         value: Provincie Utrecht
         count: 25
+        group: data-eigenaar
       - id: facet-34
         value: Dataplatform NL
         count: 829348290
+        group: data-eigenaar
   localAccessFacets:
-    group: toegang
     items:
       - id: facet-40
         value: Publiek
         count: 12254
+        group: toegang
       - id: facet-41
         value: Beperkt
         count: 16
+        group: toegang
       - id: facet-42
         value: Gesloten
         count: 23
+        group: toegang
 
 
 

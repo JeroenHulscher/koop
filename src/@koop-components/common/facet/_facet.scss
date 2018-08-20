@@ -21,4 +21,9 @@
 		clear: both;
 		display: block;
 	}
+
+	&.checked label,
+	&.checked span {
+		font-weight: 700;
+	}
 }
