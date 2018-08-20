@@ -1,5 +1,5 @@
-<blockquote>
-  <p lang="en">Yes, we can.</p>
+<blockquote {{#if modifier}}class="blockquote blockquote--{{modifier}}"{{/if}}>
+  <p lang="en">{{text}}</p>
 
-  <cite>Barack Obama</cite>
+  {{#if cite}}<cite>{{cite}}</cite>{{/if}}
 </blockquote>
