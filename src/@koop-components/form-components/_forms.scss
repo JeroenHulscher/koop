@@ -66,11 +66,31 @@ select {
     display: flex;
     flex-wrap: wrap;
   }
-  // align-items: center;
 
   &:not(.radiogroup),
   &:not(.checkboxgroup) {
     padding: 0;
+  }
+
+  &--fixed-view {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--fixed-view &__label {
+    flex: 1 0 40%;
+    @media (max-width: 50em) {
+      padding-top: 0;
+    }
+  }
+  &--fixed-view &__inputs {
+    flex: 2 0 60%;
+  }
+  &--fixed-view .radiogroup,
+  &--fixed-view .inline-group {
+    > label {
+      display: block !important;
+    }
   }
 
   &__label {
@@ -85,6 +105,8 @@ select {
       flex: 2 0 60%;
     }
     margin-left: 40%;
+
+
   }
 
   &__label ~ &__inputs {
@@ -117,24 +139,24 @@ select {
   select {
     display: block;
     width: 100%;
-    margin: 0 0 .25em;
+    margin: 0 0 .5em;
 
     &.input--xsmall {
       max-width: 4em;
-      margin: 0 .5em 0 0;
+      margin-right:.5em;
       display: inline-block;
     }
 
     &.input--small {
       max-width: 8em;
-      margin: 0 .5em 0 0;
+      margin-right:.5em;
       display: inline-block;
     }
 
     &.input--medium {
       max-width: 12em;
       display: inline-block;
-      margin: 0 .5em 0 0;
+      margin-right:.5em;
 
     }
   }
