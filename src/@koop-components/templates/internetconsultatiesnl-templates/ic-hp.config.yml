@@ -38,6 +38,7 @@ context:
   facelistContext:
     modifier: list--facet
     heading: Meer informatie
+    headingType: h3
     items:
       - text: <a href="#">Gesloten consultaties</a>
       - text: <a href="#">Abonneren nieuwe consultaties</a>
