@@ -62,10 +62,8 @@ select {
 .form__element {
   border: none;
   margin: 0 0 .5em 0;
-  @media (min-width: 50em) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  float:left;
+  width: 100%;
 
   &:not(.radiogroup),
   &:not(.checkboxgroup) {
@@ -95,18 +93,17 @@ select {
 
   &__label {
     @media (min-width: 50em) {
-      flex: 1 0 40%;
+      float:left;
+      width: 40%;
     }
     padding-top: 0.25em;
   }
 
   &__inputs {
     @media (min-width: 50em) {
-      flex: 2 0 60%;
+      float:left;
+      width: 60%;
     }
-    margin-left: 40%;
-
-
   }
 
   &__label ~ &__inputs {
