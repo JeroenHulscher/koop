@@ -298,6 +298,8 @@ select {
 
   &--pagesearch {
     margin: 0;
+    float: none;
+    width: auto;
 
     input[type="text"],
     button.button {
