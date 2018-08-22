@@ -1,0 +1,6 @@
+name: copydata
+status: wip
+context:
+  triggerLabel: Kopieer link
+  triggerLabelCopied: Gekopieerd
+  text: Aanbestedingswet 2012
