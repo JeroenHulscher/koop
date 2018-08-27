@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm test",
     "start": "gulp dev",
-    "e2e": "protractor protractor.config.js"
+    "e2e": "protractor protractor.config.js",
+    "vrtest": "backstop referece & backstop test"
   },
   "repository": {
     "type": "git",
