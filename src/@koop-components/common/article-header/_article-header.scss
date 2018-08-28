@@ -3,7 +3,9 @@
   padding: .5em 1em .5em .5em;
   margin: .25em 0;
   position: relative;
-  display: table;
+  @media (min-width: 50em) {
+    display: table;
+  }
   width: 100%;
 
   &--part {
@@ -26,15 +28,20 @@
   p {
     padding: 0;
     margin: 0;
-    display: table-row;
+    @media (min-width: 50em) {
+      display: table-row;
+    }
   }
 
   ul {
     padding: 0;
     margin: 0;
-    display: table-cell;
-    width: 14em;
-    text-align: right;
+    @media (min-width: 50em) {
+      display: table-cell;
+      width: 14em;
+      text-align: right;
+    }
+
   }
 
   li {
