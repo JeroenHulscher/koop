@@ -1,0 +1,53 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div role="main">
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbContext }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar-left row">
+  <div>
+
+    <ul class="tabs__list">
+      <li role="presentation">
+        <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true">Nieuw</a>
+      </li>
+      <li role="presentation">
+        <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false">Zoeken</a>
+      </li>
+      <li role="presentation">
+        <a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">Zoeken binnen domein</a>
+      </li>
+    </ul>
+
+    {{ render "@actionblock" actionblockContext }}
+    {{ render "@actionblock" actionblockContext2 }}
+
+  </div>
+
+
+  <div>
+    <div class="well">
+      <form>
+        <fieldset class="form__element">
+          <legend class="form--intro">Zoeken</legend>
+          <div class="form__element">
+            <label for="emailadres" class="visually-hidden">Zoeken op</label>
+            <input type="text" id="emailadres" placeholder="Vul een zoekterm in">
+          </div>
+        </fieldset>
+        <button type="submit" class="button button--primary">Zoek</button>
+      </form>
+    </div>
+
+    {{ render "@list" facelistContext }}
+    {{ render "@list" facelistContext2 }}
+
+  </div>
+
+</div>
+</div>
+
+{{ render "@footer" }}
