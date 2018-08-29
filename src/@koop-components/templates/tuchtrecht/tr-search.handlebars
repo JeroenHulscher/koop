@@ -1,0 +1,330 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="">
+    <ul class="tabs__list">
+      <li role="presentation">
+        <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false">Nieuw</a>
+      </li>
+      <li role="presentation">
+        <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="true">Zoeken</a>
+      </li>
+      <li role="presentation">
+        <a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">Zoeken binnen domein</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container row ">
+  <h1>Zoeken</h1>
+</div>
+
+<div class="form">
+
+  <div class="container columns row">
+    <div>
+
+      <div class="form__chapter__heading">
+        <h2 class="">Selecteer domein</h2>
+      </div>
+      <fieldset class="form__element checkboxgroup">
+        <legend class="visually-hidden">In welke domeinen zoek je iets?</legend>
+        <ul class="list list--unstyled">
+          <li>
+            <div class="form__row">
+              <label for="AlleSoorten">
+                <input id="AlleSoorten" type="checkbox" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$AlleSoorten"
+                  data-decorator="check-all" data-for="which-types">Alle domeinen
+              </label>
+            </div>
+            <ul>
+              <li>
+                <div class="form__row">
+                  <strong>Vrije beroepen</strong>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Accountants
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Advocaten
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Diergeneeskundigen
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Gerechtsdeurwaarders
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Gezondheidszorg
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Notarissen
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Scheepvaart
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="form__row">
+                  <strong>Producten</strong>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Pluimvee en eieren
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Akkerbouw
+                  </label>
+                  <label for="">
+                    <input id="" type="checkbox" name="" data-set="which-types">Vee en vlees
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </fieldset>
+
+
+    </div>
+
+    <div>
+      <div class="form__chapter__heading">
+        <h2 class="">Zoek op</h2>
+      </div>
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Titel">Woord(en) of zinsdeel</label>
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting zoeken in woord of zinsdeel
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+              <p>
+                 U kunt hier zoeken op woord(en) of zinsdeel zoals voorkomend in de tekst van de uitspraak. Wilt u alleen in de inhoudsindicatie
+                (samenvatting) en niet de gehele tekst zoeken, klik dan hiernaast op "Inhoudsindicatie".
+
+              </p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+          <input name="" type="text" id="ZoekOp_Titel"
+            class="input input--medium">
+          <div class="form__element checkboxgroup inline-group">
+            <ul class="list--unstyled">
+              <li>
+                <label for="ZoekOp_TitelExact">
+                  <input id="ZoekOp_TitelExact" type="checkbox" name=""
+                    checked="checked">Tekst uitspraak
+                </label>
+              </li>
+              <li>
+                <label for="ZoekOp_TitelAfkorting">
+                  <input id="ZoekOp_TitelAfkorting" type="checkbox" name="">Inhoudsindicatie
+                </label>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTitel" class="form__error" style="display:none;"></p>
+      </div>
+
+
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Tekst">Onderwerp</label>
+        </div>
+        <div class="form__element__inputs">
+
+          <select>
+            <option>Geen</option>
+          </select>
+
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+      </div>
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Tekst">Beslissing</label>
+        </div>
+        <div class="form__element__inputs">
+
+          <select>
+            <option>Geen</option>
+          </select>
+
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+      </div>
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Tekst">ECLI</label>
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting ECLI
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+              <p>
+                Elke uitspraak die wordt opgenomen in de collectie Tuchtrecht krijgt een uniek Europees Jurisprudentie Nummer, de European
+                Case Law Identifier (ECLI). U kunt dit nummer hier invullen en vervolgens op 'zoeken' klikken. Er zal nooit meer
+                dan één uitspraak gevonden worden.
+              </p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+
+          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst"
+            class="input input--medium" placeholder="Bijv: geluidsnorm">
+
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+      </div>
+
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Tekst">Zaaknummer</label>
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting zaaknummer
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+
+              <p>Alle uitspraken krijgen een zaaknummer mee van de instantie die de uitspraak doet. Dit nummer kan uit een combinatie van
+              letters en/of cijfers bestaan, al dan niet met - of / ertussen. U kunt hierop zoeken, maar het zaaknummer dat u invult, moet
+              dan wel precies overeenkomen met hetgeen in de uitspraak staat.
+</p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+
+        <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst"
+          class="input input--medium">
+
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+      </div>
+
+
+
+
+
+      <div class="form__chapter__heading">
+        <h2 class="">Zoek op datum</h2>
+        <div class="question-explanation">
+          <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOpDatum" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl03"
+            class="question-explanation__link" data-handler="toggle-explanation">Toelichting zoeken op datum</a>
+          <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfoZoekOpDatum" class="question-explanation__content"
+            data-decorator="hide-self" hidden="true">
+
+            <p>U kunt zoeken in de regelingen zoals geldend op de datum vandaag (standaard), of een eerdere datum. Regelingen
+              die materieel zijn uitgewerkt worden standaard niet doorzocht, tenzij u het vakje aanvinkt.</p>
+            <a href="../../Controls/Zoeken/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ctl03" class="question-explanation__close"
+              data-handler="close-explanation">Sluiten</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form__element ">
+        <div class="form__element__label">
+          <strong>Datum van</strong>
+        </div>
+        <div class="form__element__inputs">
+          <fieldset class="form__element radiogroup inline-group">
+            <ul class="list list--unstyled">
+              <li>
+                <label for="ZoekOp_DatumtypeInwerkingtreding">
+                  <input id="ZoekOp_DatumtypeInwerkingtreding" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
+                    value="ZoekOp_DatumtypeInwerkingtreding" checked="checked" title="">Uitspraak
+                </label>
+              </li>
+              <li>
+                <label for="ZoekOp_DatumtypeOndertekening">
+                  <input id="ZoekOp_DatumtypeOndertekening" type="radio" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumtype"
+                    value="ZoekOp_DatumtypeOndertekening" title="">Publicatie
+
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="daterange">
+            <div class="form__element">
+              <select name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Datumbereik" id="ZoekOp_Datumbereik"
+                title="Bereik" class="input--small">
+                <option selected="selected" value="1">voor</option>
+                <option value="2">na</option>
+                <option value="3">tussen</option>
+                <option value="4">op</option>
+
+              </select>
+
+              <label for="ZoekOp_Startdatum" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_Label1">
+                <span class="visually-hidden">Datum</span>
+                <div class="datepicker">
+                  <input type="date" class="datepicker__input" data-decorator="init-datepicker" id="input--1" placeholder="dd/mm/yyyy" />
+                </div>
+
+              </label>
+
+              <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+
+              <label style="display:none;" for="ZoekOp_Einddatum">
+                t/m
+                <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Einddatum" type="date" id="ZoekOp_Einddatum">
+                <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerEinddatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+              </label>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button--bar">
+        <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken" value="Zoeken" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+          id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnZoeken" class="button button--primary pull-right">
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+{{ render "@footer" }}
