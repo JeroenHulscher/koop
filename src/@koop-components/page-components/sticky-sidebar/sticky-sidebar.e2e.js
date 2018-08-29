@@ -6,7 +6,7 @@ describe('Input - file', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should show sidebar-trigger button when viewport mobile', function () {
+  it('should show sidebar-trigger button when viewport mobile', function () {
     browser.get('http://localhost:3000/components/preview/sticky-sidebar');
 
     var width = 1000;
@@ -26,7 +26,7 @@ describe('Input - file', function () {
     expect( input.isDisplayed() ).toBeTruthy();
   });
 
-  fit('should show sidebar when click on trigger', function () {
+  it('should show sidebar when click on trigger', function () {
     var input = element(by.css('[data-toggle-open="Open sidebar"]'));
     input.click();
 
@@ -35,7 +35,7 @@ describe('Input - file', function () {
     expect(sidebarContainer.isDisplayed()).toBeTruthy();
   });
 
-  fit('should close sidebar when click on trigger', function () {
+  it('should close sidebar when click on trigger', function () {
     var input = element(by.css('[data-toggle-open="Open sidebar"]'));
     input.click();
 
