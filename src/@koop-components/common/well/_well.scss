@@ -3,6 +3,7 @@
   background: $bgBlue;
   padding: 1em;
   margin: 0 0 2em 0;
+  @extend .group;
 
   &--pageblock {
     padding: 2.75em 10%;
