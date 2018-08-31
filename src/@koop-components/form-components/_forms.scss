@@ -57,6 +57,13 @@ select {
 .form {
   &__row {
     margin-bottom: em(8);
+
+    &--medium {
+      margin-bottom: em(16);
+    }
+    &--large {
+      margin-bottom: em(24);
+    }
   }
 }
 .form__element {

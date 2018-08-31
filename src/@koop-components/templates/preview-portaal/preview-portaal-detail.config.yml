@@ -1,0 +1,49 @@
+---
+title: PP Details
+label: PP Details
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: '#'
+        text: MijnOverheid.nl
+  breadcrumbContext:
+    breadcrumb:
+      last: NFP wijzigingspakket 2018-1
+      items:
+        - label: Home
+        - label: Overheidsinformatie
+        - label: Internetconsultatie
+  facelistContextActions:
+    modifier: list--facet
+    heading: Acties
+    items:
+      - text: <a href="#">Reageren op consultatie</a>
+      - text: <a href="#">Notificaties per email</a>
+      - text: <a href="#">Doorsturen</a>
+      - text: <a href="#">PDF-document openen</a>
+      - text: <a href="#">Afdrukken</a>
+  facelistContextShare:
+    modifier: list--facet
+    heading: Delen regeling
+    items:
+      - text: <a href="#">Twitter</a>
+      - text: <a href="#">Facebook</a>
+      - text: <a href="#">LinkedIn</a>
+      - text: <a href="#">Google+</a>
+      - text: <a href="#">Tumblr</a>
+  resultlistContextDownloads:
+      items:
+        - title: Concept regeling
+          downloads:
+            - ext: pdf
+              size: 142kb
+          text: Ontwerpbesluit NFP wijziging pakket 2018-1
+        - title: Concept regeling
+          downloads:
+            - ext: pdf
+              size: 142kb
+          text: Ontwerpbesluit NFP wijziging pakket 2018-1
+
+
+

@@ -23,6 +23,11 @@
         }
       }
     }
+
+    // fixme: remove, if margin-right is removed from main button component;
+    button {
+      margin-right: 0;
+    }
   }
 
   &--linkContainer {

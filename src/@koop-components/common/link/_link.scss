@@ -39,7 +39,6 @@ a {
 
   &.cta {
     text-decoration: none;
-    margin: 0 0 0 1em;
     padding: 0 2em 0 0;
     font-size: 1.25em;
     font-weight: 700;
@@ -48,6 +47,11 @@ a {
       image: $arrowCTAIcon;
       position: right 3px;
       size: 1em;
+    }
+
+    &--left {
+      padding: 0 0 0 2em;
+      background-position: left 3px;
     }
   }
 

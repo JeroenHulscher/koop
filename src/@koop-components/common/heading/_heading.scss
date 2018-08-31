@@ -42,6 +42,10 @@ h2,
   color: $darkBlue;
   margin: 1em 0;
 
+  &--large {
+    font-size: 1.5em;
+  }
+
   span,
   a.question-explanation-link,
   p {

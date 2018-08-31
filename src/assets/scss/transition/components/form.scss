@@ -1,0 +1,9 @@
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="password"],
+input[type="email"],
+textarea {
+  border: 2px solid $darkBlue;
+}

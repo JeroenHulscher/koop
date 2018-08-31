@@ -1,0 +1,27 @@
+input[type=text].input-text {
+  padding: 0.5em;
+  display: block;
+  width: 100%;
+
+  &--search,
+  &--searchmedium {
+    &::placeholder {
+    }
+  }
+  &--search {
+    padding-left: 3em;
+    background-position: .5em center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.5em;
+  }
+  &--searchmedium {
+    font-size: 1.15em;
+    // padding: 0.75em;
+    padding-left: 3em;
+    background-position: .5em center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.5em;
+  }
+}
