@@ -23,7 +23,6 @@
 
 <div class="container row ">
   <h1>Zoeken</h1>
-</div>
 
 <div class="form">
 
@@ -110,7 +109,7 @@
               data-decorator="hide-self" hidden="true">
 
               <p>
-                U kunt hier zoeken op woord(en) of zinsdeel zoals voorkomend in de tekst van de uitspraak. Wilt u alleen in de inhoudsindicatie
+                 U kunt hier zoeken op woord(en) of zinsdeel zoals voorkomend in de tekst van de uitspraak. Wilt u alleen in de inhoudsindicatie
                 (samenvatting) en niet de gehele tekst zoeken, klik dan hiernaast op "Inhoudsindicatie".
 
               </p>
@@ -121,12 +120,14 @@
           </div>
         </div>
         <div class="form__element__inputs">
-          <input name="" type="text" id="ZoekOp_Titel" class="input input--medium">
+          <input name="" type="text" id="ZoekOp_Titel"
+            class="input input--medium">
           <div class="form__element checkboxgroup inline-group">
             <ul class="list--unstyled">
               <li>
                 <label for="ZoekOp_TitelExact">
-                  <input id="ZoekOp_TitelExact" type="checkbox" name="" checked="checked">Tekst uitspraak
+                  <input id="ZoekOp_TitelExact" type="checkbox" name=""
+                    checked="checked">Tekst uitspraak
                 </label>
               </li>
               <li>
@@ -145,6 +146,34 @@
 
       <div class="form__element">
         <div class="form__element__label">
+          <label for="ZoekOp_Tekst">Onderwerp</label>
+        </div>
+        <div class="form__element__inputs">
+
+          <select>
+            <option>Geen</option>
+          </select>
+
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+      </div>
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Tekst">Beslissing</label>
+        </div>
+        <div class="form__element__inputs">
+
+          <select>
+            <option>Geen</option>
+          </select>
+
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+      </div>
+
+      <div class="form__element">
+        <div class="form__element__label">
           <label for="ZoekOp_Tekst">ECLI</label>
           <div class="question-explanation">
             <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_Inhoud"
@@ -158,8 +187,8 @@
 
               <p>
                 Elke uitspraak die wordt opgenomen in de collectie Tuchtrecht krijgt een uniek Europees Jurisprudentie Nummer, de European
-                Case Law Identifier (ECLI). U kunt dit nummer hier invullen en vervolgens op 'zoeken' klikken. Er zal nooit
-                meer dan één uitspraak gevonden worden.
+                Case Law Identifier (ECLI). U kunt dit nummer hier invullen en vervolgens op 'zoeken' klikken. Er zal nooit meer
+                dan één uitspraak gevonden worden.
               </p>
 
               <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00"
@@ -191,9 +220,9 @@
               data-decorator="hide-self" hidden="true">
 
 
-              <p>Alle uitspraken krijgen een zaaknummer mee van de instantie die de uitspraak doet. Dit nummer kan uit een combinatie
-                van letters en/of cijfers bestaan, al dan niet met - of / ertussen. U kunt hierop zoeken, maar het zaaknummer
-                dat u invult, moet dan wel precies overeenkomen met hetgeen in de uitspraak staat.
+              <p>Alle uitspraken krijgen een zaaknummer mee van de instantie die de uitspraak doet. Dit nummer kan uit een combinatie van
+              letters en/of cijfers bestaan, al dan niet met - of / ertussen. U kunt hierop zoeken, maar het zaaknummer dat u invult, moet
+              dan wel precies overeenkomen met hetgeen in de uitspraak staat.
               </p>
 
               <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTekst_ctl00"
@@ -203,8 +232,8 @@
         </div>
         <div class="form__element__inputs">
 
-          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst"
-            class="input input--medium">
+        <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst"
+          class="input input--medium">
 
         </div>
         <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
@@ -293,6 +322,8 @@
 
     </div>
   </div>
+
+</div>
 
 </div>
 
