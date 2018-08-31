@@ -1,0 +1,47 @@
+---
+title: Tr Search domain
+label: Tr Search domain
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: '#'
+        text: MijnOverheid.nl
+  actionblockContext:
+    title: 'Vrije beroepen'
+    intro: ''
+    items:
+      - link: '#'
+        text: Accountants (3)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Advocaten (70)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Diergeneeskundigen (0)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Gerechtsdeurwaarders (45)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Gezondheidszorg (0)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Notarissen (0)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Scheepvaart (0)
+        icon: icon-arrow-right.svg
+  actionblockContext2:
+    title: 'Producten'
+    intro: ''
+    items:
+      - link: '#'
+        text: Akkerbouw (3)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Pluimvee en eieren (70)
+        icon: icon-arrow-right.svg
+      - link: '#'
+        text: Vee en vlees (0)
+        icon: icon-arrow-right.svg

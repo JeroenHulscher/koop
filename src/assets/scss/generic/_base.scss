@@ -77,6 +77,10 @@ body {
   margin: 0;
 }
 
+.footer {
+  float: left;
+  width: 100%;
+}
 @media (min-width: 50em) {
   .footer {
     position: absolute;

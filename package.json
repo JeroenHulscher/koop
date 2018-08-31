@@ -1,12 +1,13 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "0.9.6",
+  "version": "1.0.0",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
     "test": "npm test",
     "start": "gulp dev",
-    "e2e": "protractor protractor.config.js"
+    "e2e": "protractor protractor.config.js",
+    "vrtest": "backstop reference & backstop test"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "dependencies": {
     "@frctl/fractal": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",
-    "@frctl/twig": "^1.0.0-beta.2",
+    "@frctl/twig": "^1.0.0-beta.3",
     "autoprefixer": "^6.4.1",
     "combobo": "1.0.2",
     "del": "^2.2.2",
@@ -37,7 +38,7 @@
   },
   "devDependencies": {
     "fastsearch": "^1.11.1",
-    "gulp-clean-css": "^3.9.4",
+    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.5",
     "gulp-uglify": "^3.0.1"

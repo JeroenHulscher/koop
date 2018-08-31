@@ -1,0 +1,33 @@
+.copydata {
+  border-radius: .5em;
+  background: $bgBlue;
+  display: block;
+  border: 1px solid $lighterGrey;
+  overflow: hidden;
+  padding: .5em 2em .5em .5em;
+  position: relative;
+  background-color: $lightGrey;
+
+  &__datafield {
+    font-family: Monospace;
+    margin: 0;
+    padding-right: 7em;
+  }
+
+  &__trigger {
+    position: absolute;
+    right: .5em;
+    top: .5em;
+    padding-right: 1.5em;
+    font-size: em(14);
+    cursor: pointer;
+
+    background: {
+      color: transparent;
+      image: $copyIcon;
+      position: 99% .25em;
+      size: 1em;
+      repeat: no-repeat;
+    }
+  }
+}

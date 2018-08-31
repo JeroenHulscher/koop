@@ -1,3 +1,6 @@
 ---
 title: Blockquote
 label: Blockquote
+context:
+  text: Yes, we can.
+  cite: Barack Obama
