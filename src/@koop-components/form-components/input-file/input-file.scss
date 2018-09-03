@@ -1,5 +1,40 @@
 .has-js {
+
+  .input-dragbox {
+    background: $lightBlue $uploadBlueIcon no-repeat 2em center;
+    background-size: em(32);
+    border: 2px dashed $mediumBlue;
+    padding: em(32) em(32) em(32) em(96);
+    font-size: 1.25em;
+
+    a {
+      font-weight: bold;
+    }
+
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    label {
+      display: inline-block;
+      font-weight: bold;
+      color: $darkBlue;
+      text-decoration: underline;
+    }
+
+    &.has-file .input-dragbox__prelabel {
+      display: none;
+    }
+  }
+
   .input-file {
+    position: relative;
     input {
       width: 0.1px;
       height: 0.1px;
@@ -19,9 +54,23 @@
       cursor: pointer;
       display: inline-block;
       overflow: hidden;
-      padding: 0.625rem 1rem;
       color: white;
-      background-color: #d3394c;
+      border-radius: 3px;
+      background: white;
+      border: 2px solid $darkBlue;
+      padding-left: 10em;
+      span {
+        background: $darkBlue;
+        display: inline-block;
+        position: relative;
+        // top: -1px;
+        padding: 4px 12px;
+      }
+    }
+    &__selectedfile {
+      position: absolute;
+      left: .325em;
+      top: .325em;
     }
   }
 }

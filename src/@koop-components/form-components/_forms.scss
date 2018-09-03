@@ -131,6 +131,10 @@ select {
     display: inline-block;
     font-weight: 700;
     line-height: 1;
+    &.label--large {
+      font-size: 1.25em;
+      margin-top: 0.5em;
+    }
   }
 
   input[type="text"],
