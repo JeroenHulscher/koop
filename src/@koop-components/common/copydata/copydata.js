@@ -26,7 +26,6 @@
 
   copydata.prototype.triggerCopy = function() {
     this.putValueInClipboard();
-    this.giveFeedbackToUser();
   };
 
   copydata.prototype.createAndPlaceTrigger = function() {
@@ -50,17 +49,19 @@
   };
 
   copydata.prototype.putValueInClipboard = function() {
-    var el = document.createElement( 'textarea' );
-
-    el.value = this.datafield.innerText;
-    el.setAttribute( 'readonly', '' );
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild( el );
-
-    el.select();
-    document.execCommand( 'copy' );
-    document.body.removeChild( el );
+    if ( document.selection ) {
+      var range = document.body.createTextRange( this.datafield );
+      range.moveToElementText();
+      range.select().createTextRange();
+      document.execCommand( "copy" );
+    } else if ( window.getSelection ) {
+      var range = document.createRange();
+      range.selectNode( this.datafield );
+      window.getSelection().removeAllRanges( range );
+      window.getSelection().addRange( range );
+      document.execCommand( "copy" );
+    }
+    this.giveFeedbackToUser();
   };
 
 })();
