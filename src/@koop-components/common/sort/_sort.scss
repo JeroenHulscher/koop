@@ -23,32 +23,29 @@
       content: '';
       margin: 0;
     }
-
-    a {
-      text-decoration: none;
-
-      &.sort--ascending {
-        font-weight: 700;
-        padding-right: 1em;
-        background: {
-          repeat: no-repeat;
-          position: right 50%;
-          image: $dartTopIcon;
-          size: 10px;
-        }
-      }
-
-      &.sort--descending {
-        font-weight: 700;
-        padding-right: 1em;
-        background: {
-          repeat: no-repeat;
-          position: right 50%;
-          image: $dartDownIcon;
-          size: 10px;
-        }
-
-      }
-    }
   }
 }
+
+.sort--ascending {
+  font-weight: 700;
+  padding-right: 1em;
+  background: {
+    repeat: no-repeat;
+    position: right 50%;
+    image: $dartTopIcon;
+    size: 10px;
+  }
+}
+
+.sort--descending {
+  font-weight: 700;
+  padding-right: 1em;
+  background: {
+    repeat: no-repeat;
+    position: right 50%;
+    image: $dartDownIcon;
+    size: 10px;
+  }
+
+}
+
