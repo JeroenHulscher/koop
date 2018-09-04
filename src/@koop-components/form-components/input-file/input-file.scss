@@ -1,10 +1,12 @@
 .has-js {
 
   .input-dragbox {
-    background: $lightBlue $uploadBlueIcon no-repeat 1.25em center;
+    background: $offWhite;
+    text-align: center;
     background-size: em(24);
-    border: 2px dashed $mediumBlue;
+    border: 3px dashed #869EB8;
     padding: em(16) em(16) em(16) em(64);
+    border-radius: 5px;
 
 
     @media (min-width: 50em) {
