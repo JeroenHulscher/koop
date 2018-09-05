@@ -12,15 +12,25 @@
   <p>Bekijk de publicatieberichten of upload een nieuw document</p>
 
   <h2>Upload nieuw document</h2>
+  <div class="well well-pageblock well--success align-center">
+    <p><i>Upload successvol!</i></p>
+    <h2 class="h1">Uw document wordt verwerkt.</h2>
+    <p>Dit kan tot 24 uur duren. Laat uw e-mail achter en we sturen u een bericht op het moment dat het document beschikbaar is.</p>
+  </div>
+  <div class="well well-pageblock well--failed align-center">
+    <p><i>Upload mislukt!</i></p>
+    <h2 class="h1">Er is een fout opgetreden.</h2>
+    <p>De reden van de foutmelding.</p>
+  </div>
   <div class="well well-pageblock">
     <div class="form__row">
-    <div class="input-dragbox" data-decorator="init-inputfile">
-      <span class="input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
-      <label for="file" tabindex="0">
-        <span>selecteren van uw computer</span>
-      </label>
-      <input type="file" tabindex="-1" id="file" />
-    </div>
+      <div class="input-dragbox" data-decorator="init-inputfile">
+        <span class="input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
+        <label for="file" tabindex="0">
+          <span>selecteren van uw computer</span>
+        </label>
+        <input type="file" tabindex="-1" id="file" />
+      </div>
     </div>
     <a href="/upload" class="button button--primary button--icon-upload">Bestand uploaden</a>
   </div>
@@ -37,6 +47,11 @@
         <input type="text" id="input-1" class="input input-text input-text--searchmedium" placeholder="Documentnaam..">
       </div>
     </div>
+  </div>
+
+  <div class="align-center">
+    <p><span class="label label--danger">Let op!</span></p>
+    <p><span class="h1 block-element">Wij kunnen geen documenten vinden met:</span> Plattegrond nieuwbouw</p>
   </div>
 
   <table class="table">

@@ -10,6 +10,13 @@
     margin-bottom: em(32);
   }
 
+  &--success {
+    background: $lightGreen;
+  }
+  &--failed {
+    background: $lighterRed;
+  }
+
   &--pageblock {
     padding: 2.75em 10%;
 
