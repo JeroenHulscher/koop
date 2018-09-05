@@ -1,4 +1,16 @@
-<div class="input-file" data-decorator="init-inputfile">
+{{!-- <div class="input-file" data-decorator="init-inputfile">
   <label for="file" tabindex="0"><span>{{ fieldLabel }}</span></label>
+  <span class="input-file__selectedfile">dithetbestand.xml</span>
   <input type="file" tabindex="-1" id="file" />
+</div> --}}
+
+<div class="input-dragbox" data-decorator="init-inputfile">
+  <div class="input-dragbox__content">
+    <span class="input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
+    <label for="file" tabindex="0">
+      <span>selecteren van uw computer</span>
+    </label>
+    <input type="file" tabindex="-1" id="file" />
+  </div>
 </div>
+

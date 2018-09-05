@@ -5,6 +5,18 @@
   margin: 0 0 2em 0;
   @extend .group;
 
+  &__intro {
+    margin-top: em(32);
+    margin-bottom: em(32);
+  }
+
+  &--success {
+    background: $lightGreen;
+  }
+  &--failed {
+    background: $lighterRed;
+  }
+
   &--pageblock {
     padding: 2.75em 10%;
 
@@ -23,6 +35,19 @@
         }
       }
     }
+
+    // fixme: remove, if margin is removed from main button component;
+    button,
+    a.button {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+  }
+
+  a.button {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   &--linkContainer {

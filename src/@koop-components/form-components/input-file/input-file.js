@@ -31,9 +31,11 @@
 
       if ( fileName ) {
         self.label.querySelector( 'span' ).innerHTML = fileName;
+        self.element.classList.add( 'has-file' );
       }
       else {
         self.label.innerHTML = labelVal;
+        self.element.classList.remove( 'has-file' );
       }
     });
 

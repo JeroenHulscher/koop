@@ -1,0 +1,23 @@
+---
+title: PP Homepage
+label: PP Homepage
+status: ready
+context:
+  id: 1
+  headerContext:
+    metaLinks:
+      - url: 'penis'
+        text: MijnOverheid.nl
+  breadcrumbContext:
+    breadcrumb:
+      last: Tuchtrecht
+      items:
+        - label: Home
+  inputtextContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldInstruction:
+    fieldPlaceholder: 'Wat zoek je precies?'
+
+

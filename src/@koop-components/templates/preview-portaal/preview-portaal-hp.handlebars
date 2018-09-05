@@ -1,0 +1,89 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div role="main">
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbContext }}
+  </div>
+</div>
+
+<div class="container container--centered row">
+
+
+<div class="well well--pageblock">
+
+  <div class="align-center">
+    <p><i>Omgevingswet</i></p>
+
+    <h1>Previewportaal voor publicaties</h1>
+
+    <p class="well__intro">
+      Wijziging van de Wet op de ondernemingsraden in verband met de bevoegdheden van de ondernemingsraad inzake de beloningen
+      van bestuurders.
+    </p>
+  </div>
+
+  <h2 class="h2 h2--large">Kies uw organisatie</h2>
+
+  <div class="form__row form__row--large">
+    {{ render "@input-text" inputtextContext }}
+  </div>
+
+  <div class="columns">
+    <div>
+      <a href="#" class="cta cta--left">Mijn organisatie staat er niet bij</a>
+    </div>
+    <div class="align-right">
+      <button class="button button--primary">Volgende stap</button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+<div class="container columns row transitional-size">
+  <div class="well well--pageblock">
+    <h2>Alle organisaties</h2>
+
+
+    <ul class="list--linked">
+      <li>
+        <a href="#">Gemeente Den Haag</a>
+      <li>
+        <a href="#">Gemeente Utrecht</a>
+      <li>
+        <a href="#">Gemeente Rotterdam</a>
+      </li>
+      <li>
+        <a href="#">Gemeente Amsterdam</a>
+      </li>
+    </ul>
+
+
+  </div>
+
+  <div class="well well--pageblock">
+    <h2>Informatie</h2>
+
+
+    <ul class="list--linked">
+      <li>
+        <a href="#">1e item</a>
+      </li>
+      <li>
+        <a href="#">2e item</a>
+      </li>
+      <li>
+        <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
+      </li>
+      <li>
+        <a href="#">4e item</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+{{ render "@footer" }}
