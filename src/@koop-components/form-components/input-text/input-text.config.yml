@@ -23,6 +23,7 @@ variants:
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Wat zoek je precies?'
+      remove: true
   - name: search medium
     label: search medium
     context:
@@ -31,3 +32,4 @@ variants:
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Wat zoek je precies?'
+      remove: true

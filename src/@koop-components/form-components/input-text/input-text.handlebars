@@ -1,1 +1,9 @@
+{{#if remove}}
+<div class="relative">
+{{/if}}
 <input type="text" id="input-{{ id }}" class="input input-text {{ modifier }}" placeholder="{{ fieldPlaceholder }}" />
+{{#if remove}}
+<a href="#" class="input-text__remove"><span class="visually-hidden">Wis waarde</span></a>
+</div>
+{{/if}}
+

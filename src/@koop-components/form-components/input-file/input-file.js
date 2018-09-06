@@ -11,7 +11,12 @@
   var inputfile = function( element ) {
     this.element = element;
     this.label = element.querySelector( 'label' );
+    this.prelabel = element.querySelector( '.js-input-dragbox__prelabel' );
+    this.orginalLabelValue = this.label.innerHTML;
+    this.orginalPreLabelValue = this.prelabel.innerHTML;
     this.input = element.querySelector( 'input' );
+    this.showbuttonClass = '.js-input-dragbox__button';
+    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     this.init();
   };
 
@@ -30,17 +35,32 @@
       }
 
       if ( fileName ) {
-        self.label.querySelector( 'span' ).innerHTML = fileName;
+        self.label.querySelector( 'span' ).innerHTML = "Selecteer ander document";
+        self.prelabel.innerHTML = fileName;
         self.element.classList.add( 'has-file' );
+        if ( self.config.showbuttonAfterChange ) {
+          self.showbuttonAfterChange();
+        }
       }
       else {
-        self.label.innerHTML = labelVal;
+        self.label.innerHTML = self.orginalLabelValue;
+        self.prelabel.innerHTML = this.orginalPreLabelValue;
         self.element.classList.remove( 'has-file' );
+        if ( self.config.showbuttonAfterChange ) {
+          self.hidebuttonAfterChange();
+        }
       }
     });
 
     this.eventListers();
 
+  };
+
+  inputfile.prototype.showbuttonAfterChange = function() {
+    document.querySelector( this.showbuttonClass ).hidden = false;
+  };
+  inputfile.prototype.hidebuttonAfterChange = function() {
+    document.querySelector( this.showbuttonClass ).hidden = true;
   };
 
   inputfile.prototype.eventListers = function() {

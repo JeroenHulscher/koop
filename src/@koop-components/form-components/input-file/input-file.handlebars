@@ -4,13 +4,15 @@
   <input type="file" tabindex="-1" id="file" />
 </div> --}}
 
-<div class="input-dragbox" data-decorator="init-inputfile">
+<div class="input-dragbox" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" }'>
   <div class="input-dragbox__content">
-    <span class="input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
+    <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
     <label for="file" tabindex="0">
       <span>selecteren van uw computer</span>
     </label>
     <input type="file" tabindex="-1" id="file" />
   </div>
 </div>
+
+<button class="js-input-dragbox__button" hidden>Appel</button>
 

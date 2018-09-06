@@ -1,0 +1,53 @@
+.select-custom {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 2px solid $darkBlue;
+  overflow: visible;
+  background-color: white;
+  border-radius: 5px;
+
+  &:after {
+    position: absolute;
+    right: em(8);
+    top: 0;
+    width: em(30);
+    bottom: 0;
+    background: $dartRightBlueIcon no-repeat center center;
+    background-size: 0.5em;
+    content: "";
+    pointer-events: none;
+    transform: rotate(90deg);
+  }
+  select {
+    padding: 0 em(8);
+    width: 100%;
+    color: #39394d;
+    border: none;
+    box-shadow: none;
+    display: block;
+    height: 34px;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+    border-radius: 0;
+
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      // TODO: determine the proper focus color
+      // outline:  auto 5px;
+      // box-shadow: 0 0 4px $darkBlue;
+    }
+    &:disabled {
+      // background-color: $nsi-color-black-10;
+    }
+  }
+
+  &--large select {
+    font-size: 1.15em;
+    padding: em(8) em(16);
+    height: 50px;
+  }
+}
