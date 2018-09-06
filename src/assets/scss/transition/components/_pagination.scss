@@ -1,10 +1,14 @@
 .pagination {
+  font-size: 1.25em;
+
   &__index {
     li {
       border-radius: 3px;
+      font-weight: bold;
 
       a {
         background: white;
+
         &:hover {
           background: none;
           text-decoration: underline;
@@ -13,6 +17,12 @@
 
       &.active {
         background-color: $darkBlue;
+        padding: em(8) 0;
+        display: inline-block;
+        width: 2.5em;
+        min-width: 2.5em;
+        position: relative;
+        top: em(-4);
       }
 
       &.next {

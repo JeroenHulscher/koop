@@ -82,6 +82,11 @@ p,
   &--large {
     font-size: 1.125em;
   }
+  &--accent {
+    font-style: italic;
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
 }
 
 .footer {
@@ -140,11 +145,30 @@ label {
     font-size: 2em;
   }
 
+  h3,
+  .h3 {
+    font-size: 1.385em;
+  }
+
   p,
   .p {
     font-size: 1.125em;
     &--large {
       font-size: 1.5em;
+    }
+    &--accent {
+      font-size: 1.5em;
+    }
+  }
+
+  .button {
+    font-size: 1.125em;
+  }
+
+  table {
+    // font-size already set in component
+    .button {
+      font-size: 1em;
     }
   }
 

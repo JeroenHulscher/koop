@@ -1,6 +1,6 @@
 .well {
   border-radius: .5em;
-  background: $bgBlue;
+  background: $lightBlue;
   padding: 1em;
   margin: 0 0 2em 0;
   @extend .group;
@@ -8,6 +8,7 @@
   &__intro {
     margin-top: em(32);
     margin-bottom: em(32);
+    color: #154273;
   }
 
   &--success {
@@ -17,6 +18,9 @@
     background: $lighterRed;
   }
 
+  &--pageheader {
+    padding: 2.75em 20%;
+  }
   &--pageblock {
     padding: 2.75em 10%;
 

@@ -5,15 +5,17 @@
     text-align: center;
     background-size: em(24);
     border: 3px dashed #869EB8;
-    padding: em(8) em(16);
+    padding: em(4) em(16);
     border-radius: 5px;
+    font-style: italic;
+    color: $darkBlue;
 
 
     @media (min-width: 50em) {
       background-position: 2em center;
       background-size: em(32);
       font-size: 1.5em;
-      padding: em(24);
+      padding: em(12) em(24);
     }
 
     a {
@@ -32,7 +34,6 @@
     }
     label {
       display: inline-block;
-      font-weight: bold;
       color: $darkBlue;
       text-decoration: underline;
     }
@@ -43,7 +44,10 @@
       background: none;
       text-align: left;
       margin-bottom: em(8);
-      // font-size: 1em;
+
+      label {
+        font-size: 0.7em;
+      }
     }
 
     &.has-file .input-dragbox__prelabel {

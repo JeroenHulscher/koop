@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="container row">
+<div class="container row k-future">
 
   <h1 class="h1 h1--large">Publicatieoverzicht <span class="h1__sub">Gemeente Den Haag</span></h1>
   <p>Bekijk de publicatieberichten of upload een nieuw document</p>
@@ -22,17 +22,17 @@
     <h2 class="h1">Er is een fout opgetreden.</h2>
     <p>De reden van de foutmelding.</p>
   </div>
-  <div class="well well-pageblock">
-    <div class="form__row">
-      <div class="input-dragbox" data-decorator="init-inputfile">
-        <span class="input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
+  <div class="well well--pageblock">
+
+      <div class="input-dragbox" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" }'>
+        <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
         <label for="file" tabindex="0">
           <span>selecteren van uw computer</span>
         </label>
         <input type="file" tabindex="-1" id="file" />
       </div>
-    </div>
-    <a href="/upload" class="button button--primary button--icon-upload">Bestand uploaden</a>
+
+    <a href="/upload" class="button button--primary button--icon-upload js-input-dragbox__button" hidden>Bestand uploaden</a>
   </div>
 
   <div class="columns">
