@@ -43,7 +43,7 @@
     }
 
 
-    &:last-child {
+    &.is-active {
       background: $mediumBlue;
       &:after {
         border-left: 18px solid $mediumBlue;
