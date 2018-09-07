@@ -19,7 +19,7 @@
   }
 
   &--pageheader {
-    padding: 2.75em 20%;
+    padding: 2.75em 23%;
   }
   &--pageblock {
     padding: 2.75em 10%;
@@ -52,6 +52,10 @@
   a.button {
     margin-right: 0;
     margin-bottom: 0;
+  }
+
+  .p--accent {
+    font-size: 2em;
   }
 
   &--linkContainer {
