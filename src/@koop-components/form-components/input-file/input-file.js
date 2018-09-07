@@ -22,7 +22,6 @@
 
   inputfile.prototype.init = function( ) {
     var self = this;
-    var labelVal = this.input.innerHTML;
 
     this.element.addEventListener( 'change', function( e ) {
       var fileName = '';
@@ -35,7 +34,7 @@
       }
 
       if ( fileName ) {
-        self.label.querySelector( 'span' ).innerHTML = "Selecteer ander document";
+        self.label.querySelector( 'span' ).innerHTML = 'Selecteer ander document';
         self.prelabel.innerHTML = fileName;
         self.element.classList.add( 'has-file' );
         if ( self.config.showbuttonAfterChange ) {
@@ -44,7 +43,7 @@
       }
       else {
         self.label.innerHTML = self.orginalLabelValue;
-        self.prelabel.innerHTML = this.orginalPreLabelValue;
+        self.prelabel.innerHTML = self.orginalPreLabelValue;
         self.element.classList.remove( 'has-file' );
         if ( self.config.showbuttonAfterChange ) {
           self.hidebuttonAfterChange();
