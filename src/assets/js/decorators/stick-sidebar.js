@@ -67,8 +67,8 @@
       button.setAttribute( 'data-toggle-close', labels.close );
 
       // set initial state
-      // button.setAttribute( 'aria-expanded', 'true' );
-      // button.textContent = labels.close;
+      button.setAttribute( 'aria-expanded', 'true' );
+      button.textContent = labels.close;
 
       el.before( button );
 
