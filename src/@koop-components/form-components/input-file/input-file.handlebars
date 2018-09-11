@@ -13,6 +13,7 @@
     <input type="file" tabindex="-1" name="files[]" id="file" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
   </div>
 </div>
-
-<button class="js-input-dragbox__button" hidden>Submit</button>
+{{#if showButtonOnSelection}}
+  <button class="js-input-dragbox__button" hidden>Submit</button>
+{{/if}}
 
