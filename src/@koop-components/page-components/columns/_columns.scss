@@ -24,7 +24,8 @@ $gutter: 1em;
     @media ( min-width: 50em ) {
       flex-wrap: wrap;
       > * {
-        flex: 0 1 calc((100% - #{$gutter*3}) / 4);
+        flex-grow: 1;
+        flex-basis: calc((100% - #{$gutter*3}) / 4);
 
         &:nth-child(4n+5) {
           margin-left: 0;
