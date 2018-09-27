@@ -4,12 +4,27 @@
     background: $offWhite;
     text-align: center;
     background-size: em(24);
-    border: 3px dashed #869EB8;
+    border: 1px solid transparent;
     padding: em(4) em(16);
     border-radius: 5px;
     font-style: italic;
     color: $darkBlue;
 
+    &:not(.has-file) {
+      outline: 2px dashed #92b0b3;
+      outline-offset: -2px;
+      transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    }
+
+    &.is-dragover {
+      outline-offset: -10px;
+      background: white;
+      border: 1px solid #92b0b3;
+    }
+
+    &.has-dragdrop .input-dragbox__prelabel {
+      display: inline-block;
+    }
 
     @media (min-width: 50em) {
       background-position: 2em center;

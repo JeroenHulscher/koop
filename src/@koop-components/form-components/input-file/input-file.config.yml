@@ -6,3 +6,4 @@ context:
   fieldLabel: Kies bestand
   fieldInstruction:
   fieldPlaceholder: 'placeholder'
+  showButtonOnSelection: true
