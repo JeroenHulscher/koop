@@ -26,17 +26,16 @@
 
   inputfile.prototype.init = function( ) {
     var self = this;
-    var droppedFiles = false;
+
+    if (onl.ui.hasDragDrop()) {
+      this.element.classList.add('has-dragdrop');
+    }
 
     function addListenerMulti(element, eventNames, listener) {
       var events = eventNames.split(' ');
       for (var i = 0, iLen = events.length; i < iLen; i++) {
         element.addEventListener(events[i], listener, false);
       }
-    }
-
-    if ( onl.ui.hasDragDrop() ) {
-      this.element.classList.add( 'has-dragdrop' );
     }
 
     addListenerMulti( this.element, 'drag dragstart dragend dragover dragenter dragleave drop', function ( e ) {
@@ -53,12 +52,8 @@
     });
 
     this.element.addEventListener( 'drop', function( e ) {
-
-      droppedFiles = e.dataTransfer.files;
       self.input.files = e.dataTransfer.files;
-      console.log('droppedFiles', droppedFiles);
-
-      self.showFiles( droppedFiles );
+      self.showFiles( self.input.files );
     });
 
     this.element.addEventListener( 'change', function( e ) {
@@ -89,7 +84,7 @@
       }
     });
 
-  //   this.eventListers();
+    this.eventListers();
 
   };
 
