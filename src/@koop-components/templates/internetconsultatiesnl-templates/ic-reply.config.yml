@@ -27,3 +27,4 @@ context:
       active: true
   fileContext:
     fieldLabel: Documenten
+    showButtonOnSelection: false
