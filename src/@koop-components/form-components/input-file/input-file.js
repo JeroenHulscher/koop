@@ -20,8 +20,46 @@
     this.init();
   };
 
+  inputfile.prototype.showFiles = function( files ) {
+    this.prelabel.textContent = files.length > 1 ? ( this.input.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', files.length ) : files[ 0 ].name;
+  }
+
   inputfile.prototype.init = function( ) {
     var self = this;
+    var droppedFiles = false;
+
+    function addListenerMulti(element, eventNames, listener) {
+      var events = eventNames.split(' ');
+      for (var i = 0, iLen = events.length; i < iLen; i++) {
+        element.addEventListener(events[i], listener, false);
+      }
+    }
+
+    if ( onl.ui.hasDragDrop() ) {
+      this.element.classList.add( 'has-dragdrop' );
+    }
+
+    addListenerMulti( this.element, 'drag dragstart dragend dragover dragenter dragleave drop', function ( e ) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    addListenerMulti( this.element, 'dragover dragenter', function () {
+      self.element.classList.add( 'is-dragover' );
+    });
+
+    addListenerMulti( this.element, 'dragleave dragend drop', function () {
+      self.element.classList.remove('is-dragover');
+    });
+
+    this.element.addEventListener( 'drop', function( e ) {
+
+      droppedFiles = e.dataTransfer.files;
+      self.input.files = e.dataTransfer.files;
+      console.log('droppedFiles', droppedFiles);
+
+      self.showFiles( droppedFiles );
+    });
 
     this.element.addEventListener( 'change', function( e ) {
       var fileName = '';
@@ -51,7 +89,7 @@
       }
     });
 
-    this.eventListers();
+  //   this.eventListers();
 
   };
 
@@ -76,4 +114,3 @@
   };
 
 })();
-

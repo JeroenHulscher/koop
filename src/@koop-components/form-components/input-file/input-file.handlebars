@@ -6,13 +6,13 @@
 
 <div class="input-dragbox" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" }'>
   <div class="input-dragbox__content">
-    <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of een document te</span>
+    <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
     <label for="file" tabindex="0">
-      <span>selecteren van uw computer</span>
+      <span>selecteer een bestand</span>
     </label>
-    <input type="file" tabindex="-1" id="file" />
+    <input type="file" tabindex="-1" name="files[]" id="file" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
   </div>
 </div>
 
-<button class="js-input-dragbox__button" hidden>Appel</button>
+<button class="js-input-dragbox__button" hidden>Submit</button>
 
