@@ -17,12 +17,21 @@ input[type=text].input-text {
     background-size: 1.5em;
   }
   &--searchmedium {
-    font-size: 1.125em;
-    padding: 0.750em .5em 0.750em em(48);
-    background-position: em(16) center;
+    font-size: 1.325em;
+    color: $darkBlue;
+    padding: .625em .5em .625em em(48);
+    background-position: em(12) center;
     background-repeat: no-repeat;
     background-image: $searchIconBlue;
-    background-size: 1.5em;
+    background-size: 1.25em;
+    ~ .combobox-clear-button ~ .combobox-suggestions > div {
+      top: 3.6em;
+      > div.combobox-suggestion {
+        font-size: 1.325em;
+        padding: .625em 1em .625em 3em;
+        color: $darkBlue;
+      }
+    }
   }
 }
 

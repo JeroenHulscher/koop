@@ -134,6 +134,7 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/vendor/jquery-ui.min.js', // 1.2
     paths.scripts + '/vendor/fastsearch.js',
     paths.scripts + '/vendor/fastselect.js',
+    paths.scripts + '/vendor/jquery-autocomplete.js',
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',
     paths.components + '/**/*.js',

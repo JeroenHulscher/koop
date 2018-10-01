@@ -438,6 +438,36 @@
           </div>
         </div>
       </div>
+
+      <div class="form__element">
+        <div class="form__element__label">
+          <label for="ZoekOp_Titel">In de titel</label>
+
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting zoeken in de titel
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+
+              <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren,
+                zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje
+                aan.</p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_InfZoekenInDeTitel_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+         {{ render "@input-autocomplete" }}
+        </div>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTitel" class="form__error" style="display:none;"></p>
+      </div>
       <div class="form__element">
         <div class="form__element__label">
           <label for="ZoekOp_Titel">In de titel</label>

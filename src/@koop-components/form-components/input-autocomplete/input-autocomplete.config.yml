@@ -1,0 +1,19 @@
+---
+label: Input Autocomplete
+status: prototype
+context:
+  id: 1
+  modifier: input-text
+  placeholder: Zoeken in verzamelingen
+  name: verzamelingen
+  hasHiddenField: true
+  visuallyHideLabel: false
+  fieldInstruction: ''
+  regularFormElement: true
+  items:
+    - item: Gemeente Vlaardingen
+      code: ABC
+    - item: Gemeente Schiedam
+      code: DEF
+    - item: Gemeente Rotterdam
+      code: XYZ
