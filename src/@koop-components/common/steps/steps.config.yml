@@ -5,5 +5,6 @@ context:
   steps:
     - title: Start
     - title: Tussen
+      active: true
     - title: Finish
 

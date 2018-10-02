@@ -3,4 +3,4 @@ status: wip
 context:
   triggerLabel: Kopieer link
   triggerLabelCopied: Gekopieerd
-  text: Aanbestedingswet 2012
+  text: Aanbestedingswet 2012 <a href="https://www.google.nl">Google Link</a>

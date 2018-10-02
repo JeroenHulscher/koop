@@ -1,6 +1,11 @@
 .document-search {
   text-align: center;
 
+  legend {
+    width: 100%;
+    text-align: center;
+  }
+
   fieldset {
     border: 0;
   }
@@ -10,6 +15,7 @@
     display: inline-block;
     vertical-align: middle;
     text-align: left;
+    border-radius: 0;
   }
 
   input,
