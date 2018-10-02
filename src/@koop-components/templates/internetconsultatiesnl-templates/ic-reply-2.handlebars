@@ -12,24 +12,24 @@
 
     <h2>Reageren op consultatie</h2>
 
-    {{ render "@steps" stepsContext }}
 
-    <p>
-       Hieronder staan één of meer vragen die horen bij de consultatie. U kunt uw reactie geven in de ruimte onder de vraag. Daarnaast
-      is het mogelijk om een document aan uw reactie toe te voegen, bijvoorbeeld als u achtergrondinformatie wilt bijvoegen.
-    </p>
-    <p>
-      <a href="#" class="link link--forward">Direct naar document toevoegen</a>
-    </p>
+    {{ render "@steps" stepsContext2 }}
+
+     <p>
+       Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier insturen.
+      Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet groter zijn
+      dan 3MB.
+     </p>
 
     <form>
       <fieldset class="form__element">
-        <label for="txtVraag">Vraag</label>
-        <p>
-           Geïnteresseerden kunnen een openbare reactie geven op alle onderdelen van het ontwerpbesluit en de bijbehorende nota van
-          toelichting.
-        </p>
-        <textarea id="txtVraag" rows="5" placeholder="Uw reactie"></textarea>
+        {{!-- <div class="form__element__label"> --}}
+          <h3>Document insturen</h3>
+        {{!-- </div> --}}
+        {{!-- <div class="form__element__inputs"> --}}
+          {{ render "@input-file" fileContext }}
+        {{!-- </div> --}}
+
       </fieldset>
       <div class="form__buttons">
         <button type="submit" class="button button--primary">Verder</button>

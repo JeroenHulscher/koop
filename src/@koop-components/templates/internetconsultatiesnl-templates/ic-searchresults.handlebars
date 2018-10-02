@@ -9,15 +9,26 @@
 
 <div class="container columns columns--sidebar-left row">
   <div>
-    <h1>Internetconsultatie</h1>
+    <h1>Zoekresultaat</h1>
     <p>
-       Op deze website krijgt u informatie over wet- en regelgeving die door het kabinet of het parlement wordt voorbereid en waarover
-      via internet wordt geconsulteerd. U kunt reageren op nieuwe voorstellen voor wet- en regelgeving, zodat uw reactie bijdraagt
-      aan een verbetering van de regelingen. Hieronder zijn alle consultaties over concept-regelingen vermeld waarop u nu kunt
-      reageren. Via de zoekfunctie kunt u ook afgeronde consultaties zoeken en bekijken.
+       1025 resultaten<br/>
+       Heeft gezocht op: Trefwoord
     </p>
 
-    <h2>Lopende consultaties</h2>
+    <div class="sort">
+      Sorteren op:
+      <ul class="sort__options">
+        <li>
+          <a href="?sortby=foo" class="sort--ascending">Naam</a>
+        </li>
+        <li>
+          <a href="?sortby=foo">Status</a>
+        </li>
+      </ul>
+    </div>
+
+     {{ render "@pagination" }}
+
     {{ render "@resultlist" resultlistContext }}
 
     {{ render "@pagination" }}
@@ -40,7 +51,9 @@
       <a href="#" class="link link--forward">Zoek uitgebreid</a>
     </div>
 
-    {{ render "@list" facelistContext }}
+     <p>
+      <a href="#" class="link link--back">Opnieuw zoeken</a>
+    </p>
 
   </div>
 
