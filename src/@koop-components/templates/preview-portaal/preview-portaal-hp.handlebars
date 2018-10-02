@@ -26,13 +26,7 @@
   <h2 class="h2 h2--large">Kies uw organisatie</h2>
 
   <div class="form__row form__row--large">
-    <div class="select-custom select-custom--large">
-      <select>
-        <option value="10">Gemeente Den Haag</option>
-        <option value="25">Gemeente Haarlem</option>
-        <option value="100">Gemeente Heerde</option>
-      </select>
-    </div>
+    {{ render "@input-autocomplete" comboboxContext }}
   </div>
 
   <div class="columns">
