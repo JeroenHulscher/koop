@@ -53,7 +53,7 @@ $(document).ready(function () {
         $combobox_button_title = typeof options.comboboxButtonTitle !== 'undefined' ? options.comboboxButtonTitle : button_clear_title,
         $combobox_button_text = typeof options.comboboxButtonText !== 'undefined' ? options.comboboxButtonText : button_clear_text,
         $combobox_case_sensitive = typeof options.comboboxCaseSensitive !== 'undefined' ? options.comboboxCaseSensitive : case_sensitive,
-        tablo_temp_suggestions = [];
+        tablo_temp_suggestions = [],
         tablo_temp_suggestions_label = [];
 
       // input
@@ -70,7 +70,6 @@ $(document).ready(function () {
       });
       // stock into tables
       $list_suggestions.find('option').each(function (index_option, index_element) {
-        // console.log('index_element', index_element, $(index_element).html());
         tablo_temp_suggestions.push(index_element.value);
         tablo_temp_suggestions_label.push($(index_element).html());
       });
@@ -102,10 +101,6 @@ $(document).ready(function () {
         tablo_suggestions[index_lisible] = tablo_temp_suggestions.sort();
         tablo_suggestions_label[index_lisible] = tablo_temp_suggestions_label.sort();
       }
-
-      console.log('tablo_suggestions', tablo_suggestions);
-      console.log('tablo_suggestions_label', tablo_suggestions_label);
-
 
       // wrap into a container
       $this.wrap('<div class="' + $combobox_prefix_class + 'container js-container" data-combobox-prefix-class="' + $combobox_prefix_class + '"></div>');

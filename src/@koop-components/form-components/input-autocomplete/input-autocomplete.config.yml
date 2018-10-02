@@ -6,7 +6,8 @@ context:
   modifier: input-text
   placeholder: Zoeken in verzamelingen
   name: verzamelingen
-  hasHiddenField: true
+  hasHiddenField: false
+  hiddenFieldClass: appel
   visuallyHideLabel: false
   fieldInstruction: ''
   regularFormElement: true
@@ -17,3 +18,23 @@ context:
       code: DEF
     - item: Gemeente Rotterdam
       code: XYZ
+variants:
+  - name: Input Search Autocomplete
+    label:
+    context:
+      id: 2
+      modifier: input-text input-text--searchmedium
+      placeholder: Zoeken in verzamelingen
+      name: verzamelingen
+      hasHiddenField: false
+      hiddenFieldClass: appel
+      visuallyHideLabel: false
+      fieldInstruction: ''
+      regularFormElement: true
+      items:
+        - item: Gemeente Vlaardingen
+          code: ABC
+        - item: Gemeente Schiedam
+          code: DEF
+        - item: Gemeente Rotterdam
+          code: XYZ
