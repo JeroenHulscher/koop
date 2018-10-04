@@ -4,7 +4,7 @@ status: prototype
 context:
   id: 1
   modifier: input-text
-  placeholder: Zoeken in verzamelingen
+  placeholder: Typ hier uw organisatie
   name: verzamelingen
   hasHiddenField: false
   hiddenFieldClass: appel
@@ -24,7 +24,7 @@ variants:
     context:
       id: 2
       modifier: input-text input-text--searchmedium
-      placeholder: Zoeken in verzamelingen
+      placeholder: Typ hier uw organisatie
       name: verzamelingen
       hasHiddenField: false
       hiddenFieldClass: appel
