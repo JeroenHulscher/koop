@@ -171,6 +171,12 @@
     background-image: $downloadIcon;
     padding-left: 3em;
   }
+  &--icon-download-white {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIconWhite;
+    padding-left: 3em;
+  }
 
   &--icon-hamburger {
     background-position: .75em 50%;
