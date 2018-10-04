@@ -243,8 +243,9 @@ ol {
   li {
     @media ( min-width: 50em ) {
       display: inline;
+      margin-right: 1em;
     }
-    margin-right: 1em;
+
     list-style: none;
 
     &:last-child {
