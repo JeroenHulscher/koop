@@ -76,32 +76,26 @@ $(document).ready(function () {
       });
       if ($combobox_case_sensitive === 'no') {
         // order case tablo_temp_suggestions
-        tablo_suggestions[index_lisible] = tablo_temp_suggestions.sort(function (a, b) {
-          a = a.toLowerCase();
-          b = b.toLowerCase();
-          if (a == b) {
-            return 0;
-          }
-          if (a > b) {
-            return 1;
-          }
-          return -1;
-        });
-        tablo_suggestions_label[index_lisible] = tablo_temp_suggestions_label.sort(function (a, b) {
-          a = a.toLowerCase();
-          b = b.toLowerCase();
-          if (a == b) {
-            return 0;
-          }
-          if (a > b) {
-            return 1;
-          }
-          return -1;
-        });
+        // tablo_suggestions[index_lisible] = tablo_temp_suggestions.sort(function (a, b) {
+        //   a = a.toLowerCase();
+        //   b = b.toLowerCase();
+        //   if (a == b) {
+        //     return 0;
+        //   }
+        //   if (a > b) {
+        //     return 1;
+        //   }
+        //   return -1;
+        // });
+        tablo_suggestions[index_lisible] = tablo_temp_suggestions;
+        tablo_suggestions_label[index_lisible] = tablo_temp_suggestions_label;
       } else {
-        tablo_suggestions[index_lisible] = tablo_temp_suggestions.sort();
-        tablo_suggestions_label[index_lisible] = tablo_temp_suggestions_label.sort();
+        // tablo_suggestions[index_lisible] = tablo_temp_suggestions.sort();
+        tablo_suggestions[index_lisible] = tablo_temp_suggestions;
+        tablo_suggestions_label[index_lisible] = tablo_temp_suggestions_label;
       }
+      console.log('tablo_suggestions', tablo_suggestions);
+      console.log('tablo_suggestions_label', tablo_suggestions_label);
 
       // wrap into a container
       $this.wrap('<div class="' + $combobox_prefix_class + 'container js-container" data-combobox-prefix-class="' + $combobox_prefix_class + '"></div>');
@@ -392,6 +386,8 @@ $(document).ready(function () {
           options_combo = $input_text.data(),
           $suggestions = $container.find('.js-suggest div'),
           $suggestions_text = $container.find('.js-suggestion-text');
+
+        console.log($this);
 
         fill_hidden_field(options_combo.comboboxHiddenField, $this.data('value'));
 
