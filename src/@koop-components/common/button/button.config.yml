@@ -1,4 +1,3 @@
----
 title: Button
 status: prototype
 default: Ghost button
@@ -43,13 +42,13 @@ variants:
       modifier: button--icon-top
   - name: icon down
     status: ready
-    label: icon down
+    label: Icon down
     context:
       text: Icoon down
       modifier: button--icon-down
   - name: Icon hamburger
     status: ready
-    label: icon hamburger
+    label: Icon hamburger
     context:
       text: Menu
       modifier: button--icon-hamburger
@@ -59,4 +58,3 @@ variants:
     context:
       text: Menu
       modifier: button--primary button--icon-download-white
-
