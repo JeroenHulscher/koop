@@ -15,23 +15,23 @@
 
     {{ render "@steps" stepsContext2 }}
 
-     <p>
-       Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier insturen.
-      Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet groter zijn
+    <p>
+      Als u uw reactie in een document heeft opgesteld of als u een document als bijlage heeft dan kunt u deze hier
+      insturen.
+      Alleen MS Word bestanden (doc en docx), OpenOffice Writer (odt) en PDF worden geaccepteerd. Het bestand mag niet
+      groter zijn
       dan 3MB.
-     </p>
+    </p>
 
     <form>
       <fieldset class="form__element">
-        {{!-- <div class="form__element__label"> --}}
-          <h3>Document insturen</h3>
-        {{!-- </div> --}}
-        {{!-- <div class="form__element__inputs"> --}}
+        <div>
           {{ render "@input-file" fileContext }}
-        {{!-- </div> --}}
+        </div>
 
       </fieldset>
       <div class="form__buttons">
+        <button type="submit" class="button button--primary">Vorige</button>
         <button type="submit" class="button button--primary">Verder</button>
       </div>
     </form>
@@ -56,9 +56,9 @@
       <a href="#" class="link link--back">Startpagina</a>
     </p>
     <ul class="list list--linked">
-        <li><a href="#">Consultatiegegevens</a></li>
-        <li><a href="#">Reacties op consultatie (0)</a></li>
-      </ul>
+      <li><a href="#">Consultatiegegevens</a></li>
+      <li><a href="#">Reacties op consultatie (0)</a></li>
+    </ul>
   </div>
 </div>
 
