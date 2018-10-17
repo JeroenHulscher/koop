@@ -1,30 +1,118 @@
-// .has-js {
-//   .input-file {
-//     input {
-//       width: 0.1px;
-//       height: 0.1px;
-//       opacity: 0;
-//       overflow: hidden;
-//       position: absolute;
-//       z-index: -1;
-//       left: 0;
-//       top: 0;
-//     }
-//     label {
-//       max-width: 80%;
-//       font-size: inherit;
-//       font-weight: 700;
-//       text-overflow: ellipsis;
-//       white-space: nowrap;
-//       cursor: pointer;
-//       display: inline-block;
-//       overflow: hidden;
-//       padding: 0.625rem 1rem;
-//       color: white;
-//       background-color: #d3394c;
-//     }
-//   }
-// }
+.has-js {
+
+  .input-dragbox {
+    background: $offWhite;
+    text-align: center;
+    background-size: em(24);
+    border: 1px solid transparent;
+    padding: em(4) em(16);
+    border-radius: 5px;
+    font-style: italic;
+    color: $darkBlue;
+
+    &:not(.has-file) {
+      outline: 2px dashed #92b0b3;
+      outline-offset: -2px;
+      transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    }
+
+    &.is-dragover {
+      outline-offset: -10px;
+      background: white;
+      border: 1px solid #92b0b3;
+    }
+
+    &.has-dragdrop .input-dragbox__prelabel {
+      display: inline-block;
+    }
+
+    @media (min-width: 50em) {
+      background-position: 2em center;
+      background-size: em(32);
+      font-size: 1.5em;
+      padding: em(12) em(24);
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    label {
+      display: inline-block;
+      color: $darkBlue;
+      text-decoration: underline;
+    }
+
+    &.has-file {
+      border: 0;
+      padding: 0;
+      background: none;
+      text-align: left;
+      margin-bottom: em(8);
+
+      label {
+        font-size: 0.7em;
+      }
+    }
+
+    &.has-file .input-dragbox__prelabel {
+      // display: none;
+      display: inline-block;
+      margin-right: em(16);
+    }
+  }
+
+  .input-file {
+    position: relative;
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    label {
+      max-width: 80%;
+      font-size: inherit;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      color: white;
+      border-radius: 3px;
+      background: white;
+      border: 2px solid $darkBlue;
+      padding-left: 10em;
+      span {
+        background: $darkBlue;
+        display: inline-block;
+        position: relative;
+        // top: -1px;
+        padding: 4px 12px;
+      }
+    }
+    &__selectedfile {
+      position: absolute;
+      left: .325em;
+      top: .325em;
+    }
+  }
+}
 
 .input-file {
   label {

@@ -1,5 +1,9 @@
-<div class="form__element">
-  <label for="input-{{ id }}">{{ fieldLabel }}</label>
-  <small>{{ fieldInstruction }}</small>
-  <input type="text" id="input-{{ id }}" class="input {{ modifier }}" placeholder="{{ fieldPlaceholder }}" />
+{{#if remove}}
+<div class="relative">
+{{/if}}
+<input type="text" id="input-{{ id }}" class="input input-text {{ modifier }}" placeholder="{{ fieldPlaceholder }}" />
+{{#if remove}}
+<a href="#" class="input-text__remove"><span class="visually-hidden">Wis waarde</span></a>
 </div>
+{{/if}}
+

@@ -26,11 +26,22 @@ h1,
   margin-top: .5em;
   margin-bottom: 0;
 
+  &--large {
+    font-size: 2.75em;
+  }
+
   &.centered--title {
     text-align: center;
     display: block;
     margin: 1em 0;
   }
+
+  &__sub {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.675em;
+  }
+
 }
 
 h2,
@@ -42,13 +53,24 @@ h2,
   color: $darkBlue;
   margin: 1em 0;
 
-  span,
+  .columns--sticky-sidebar__sidebar & span,
   a.question-explanation-link,
   p {
     color: $black;
     display: block;
     font-size: .8em;
     font-weight: 400;
+  }
+
+  &--large {
+    font-size: 1.5em;
+  }
+
+  &__sub {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.675em;
+    display: inline-block;
   }
 
   &.title--underlined {

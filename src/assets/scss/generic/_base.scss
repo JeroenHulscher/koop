@@ -77,6 +77,18 @@ body {
   margin: 0;
 }
 
+p,
+.p {
+  &--large {
+    font-size: 1.125em;
+  }
+  &--accent {
+    font-style: italic;
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+}
+
 .footer {
   float: left;
   width: 100%;
@@ -106,6 +118,10 @@ a img {
   border: 0;
 }
 
+label {
+  display: block;
+}
+
 .transitional-size {
 
   h2 {
@@ -117,6 +133,43 @@ a img {
   }
 }
 
-label {
-  display: block;
+.k-future {
+
+  h1,
+  .h1 {
+    font-size: 3em;
+  }
+
+  h2,
+  .h2 {
+    font-size: 2em;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.385em;
+  }
+
+  p,
+  .p {
+    font-size: 1.125em;
+    &--large {
+      font-size: 1.5em;
+    }
+    &--accent {
+      font-size: 1.5em;
+    }
+  }
+
+  .button {
+    font-size: 1.125em;
+  }
+
+  table {
+    // font-size already set in component
+    .button {
+      font-size: 1em;
+    }
+  }
+
 }

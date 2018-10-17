@@ -1,5 +1,13 @@
-{{!-- <div class="input-file" data-decorator="init-inputfile"> --}}
-<div class="input-file">
-  <label for="file" tabindex="0"><span>{{ fieldLabel }}</span></label>
-  <input type="file" tabindex="-1" id="file" />
+<div class="input-dragbox" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" }'>
+  <div class="input-dragbox__content">
+    <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
+    <label for="file" tabindex="0">
+      <span>selecteer een bestand</span>
+    </label>
+    <input type="file" tabindex="-1" name="files[]" id="file" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
+  </div>
 </div>
+{{#if showButtonOnSelection}}
+  <button class="js-input-dragbox__button" hidden>Submit</button>
+{{/if}}
+

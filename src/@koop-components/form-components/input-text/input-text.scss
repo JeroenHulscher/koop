@@ -1,0 +1,47 @@
+input[type=text].input-text {
+  padding: 0.5em;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  &--search,
+  &--searchmedium {
+    &::placeholder {
+    }
+  }
+  &--search {
+    padding-left: 3em;
+    background-position: em(24) center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.5em;
+  }
+  &--searchmedium {
+    font-size: 1.325em;
+    color: $darkBlue;
+    padding: .625em .5em .625em em(48);
+    background-position: em(12) center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.25em;
+    ~ .combobox-clear-button ~ .combobox-suggestions > div {
+      top: 3.6em;
+      > div.combobox-suggestion {
+        font-size: 1.325em;
+        padding: .625em 1em .625em 3em;
+        color: $darkBlue;
+      }
+    }
+  }
+}
+
+.input-text {
+  &__remove {
+    position: absolute;
+    right: .5em;
+    top: 0;
+    width: 2em;
+    bottom: 0;
+    background: $iconCross no-repeat center center;
+  }
+}

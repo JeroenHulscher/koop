@@ -3,6 +3,7 @@ title: Modal
 context:
   initClosed: true
   text: <h2>Voorbeeld</h2><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p><p>Dit is een voorbeeld van een modal.</p>
+  closeButton: sluiten
 variants:
   - name: Modal permalink
     context:

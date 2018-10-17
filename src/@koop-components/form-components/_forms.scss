@@ -10,7 +10,7 @@ select {
   border: 1px solid $mediumGrey;
   line-height: 1.5;
   font-family: inherit;
-  padding: 0 .5em;
+  padding: .409em .5em;
   font-size: .85em;
   border-radius: .5em;
 
@@ -66,6 +66,13 @@ fieldset {
 .form {
   &__row {
     margin-bottom: em(8);
+
+    &--medium {
+      margin-bottom: em(16);
+    }
+    &--large {
+      margin-bottom: em(24);
+    }
   }
 }
 .form__element {
@@ -133,6 +140,10 @@ fieldset {
     display: inline-block;
     font-weight: 700;
     line-height: 1;
+    &.label--large {
+      font-size: 1.5em;
+      margin-top: 0.5em;
+    }
   }
 
   input[type="text"],

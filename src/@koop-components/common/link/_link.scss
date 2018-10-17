@@ -39,7 +39,6 @@ a {
 
   &.cta {
     text-decoration: none;
-    margin: 0 0 0 1em;
     padding: 0 2em 0 0;
     font-size: 1.25em;
     font-weight: 700;
@@ -49,12 +48,17 @@ a {
       position: right 3px;
       size: 1em;
     }
+
+    &--left {
+      padding: 0 0 0 2em;
+      background-position: left 3px;
+    }
   }
 
   &.cta__backwards {
     text-decoration: none;
     padding: 0 0 0 2em;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 700;
     background: {
       repeat: no-repeat;

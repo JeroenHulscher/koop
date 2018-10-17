@@ -159,6 +159,25 @@
     padding-left: 1.5em;
   }
 
+  &--icon-upload {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $uploadIcon;
+    padding-left: 3em;
+  }
+  &--icon-download {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIcon;
+    padding-left: 3em;
+  }
+  &--icon-download-white {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIconWhite;
+    padding-left: 3em;
+  }
+
   &--icon-hamburger {
     background-position: .75em 50%;
     background-repeat: no-repeat;

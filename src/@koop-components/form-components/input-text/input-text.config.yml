@@ -15,3 +15,21 @@ variants:
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 2282LL'
+  - name: search
+    label: search
+    context:
+      modifier: input-text--search
+      id: 1
+      fieldLabel: Postcode
+      fieldInstruction:
+      fieldPlaceholder: 'Wat zoek je precies?'
+      remove: true
+  - name: search medium
+    label: search medium
+    context:
+      modifier: input-text--searchmedium
+      id: 1
+      fieldLabel: Postcode
+      fieldInstruction:
+      fieldPlaceholder: 'Wat zoek je precies?'
+      remove: true

@@ -1,4 +1,4 @@
-describe('Input - file', function () {
+describe('Sidebar sticky', function () {
 
   var path = require('path');
 
