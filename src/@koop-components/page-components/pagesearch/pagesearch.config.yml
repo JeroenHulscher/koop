@@ -1,1 +1,5 @@
 status: ready
+context:
+  label: Zoek
+  placeholder: "Bijvoorbeeld: verkiezingsuitslag 2018"
+  buttonText: Zoeken
