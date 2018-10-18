@@ -1,19 +1,13 @@
 {{#each items }}
-	{{#if checked }}
-		<div class="facet checked">
-			<label for="{{ id }}" >
+	<div class="facet {{ checked }}">
+		<label for="{{ id }}" >
+			{{#if checked}}
 				<input type="radio" id="{{ id }}" name="{{ group }}" checked />
-				{{ value }}
-			</label>
-			<span>{{ count }}</span>
-		</div>
-	{{else}}
-		<div class="facet">
-			<label for="{{ id }}" >
+			{{else}}
 				<input type="radio" id="{{ id }}" name="{{ group }}" />
-				{{ value }}
-			</label>
-			<span>{{ count }}</span>
-		</div>
-	{{/if}}
-{{/each}}
+			{{/if}}
+			{{ value }}
+		</label>
+		<span>{{ count }}</span>
+	</div>
+{{/each}} 
