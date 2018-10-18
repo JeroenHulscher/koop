@@ -1,7 +1,10 @@
-<div class="sort">
+<div class="sort {{ modifier }}">
   Sorteren op:
   <ul class="sort__options">
-    <li><a href="?sortby=foo" class="sort--ascending">titel</a></li>
-    <li><a href="?sortby=foo">Soort</a></li>
+    {{#each options}}
+      <li>
+        <a href="?sortby={{value}}" class="sort--ascending">{{label}}</a>
+      </li>
+    {{/each}}
   </ul>
 </div>
