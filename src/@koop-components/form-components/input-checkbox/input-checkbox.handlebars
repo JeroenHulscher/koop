@@ -2,11 +2,12 @@
   <legend>{{ fieldLabel }} </legend>
   <ul class="list--unstyled">
     {{#each options }}
-    <li>
-      <label for="option-{{ id  }}">
-        <input type="checkbox" id="option-{{ id }}" name="{{ ../name }}" />{{ text }}
-      </label>
-    </li>
+      <li>
+        <label for="option-{{ id  }}">
+          <input type="checkbox" id="option-{{ id }}" name="{{ ../name }}" />
+          {{ text }}
+        </label>
+      </li>
     {{/each}}
   </ul>
 </fieldset>

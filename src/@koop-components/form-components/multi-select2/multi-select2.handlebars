@@ -1,20 +1,16 @@
 <div class="form__element">
   <div class="form__element__label">
-    <label id="labelid">Kies iets</label>
+    <label id="labelId">{{ label }}</label>
   </div>
   <div class="form__element__label">
     <select aria-describedby="labelid" class="multipleSelect" multiple name="{{name}}" data-decorator="init-multiselect" data-decorator-placeholder="{{placeholder}}" data-multiselect-helptext="{{helptext}}">
-      {{!-- {{#each options }}
-        <option value="{{text}}">{{text}}</option>
-      {{/each}} --}}
-      <optgroup label="Swedish Cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-      </optgroup>
-      <optgroup label="German Cars">
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </optgroup>
+      {{#each categories}}
+        <optgroup label="{{ title }}">
+          {{#each options}}
+            <option value="{{ value }}">{{ label }}</option>
+          {{/each}}
+        </optgroup>
+      {{/each}}
     </select>
   </div>
 </div>
