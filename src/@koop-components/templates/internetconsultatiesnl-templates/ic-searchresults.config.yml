@@ -10,10 +10,14 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    breadcrumb:
-      last: Internet consultaties
-      items:
+      last: Zoekresultaat
+      breadcrumbs:
         - label: Home
+          path: "#"
+        - label: Overheidsinformatie
+          path: "#"
+        - label: Internetconsultatie
+          path: "#"
   resultlistContext:
     items:
       - title: NFP wijzigingspakket 2018-1

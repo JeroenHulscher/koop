@@ -10,13 +10,15 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    breadcrumb:
-      last: Internet consultaties
-      items:
-        - label: Home
+    last: Internetconsultatie
+    breadcrumbs:
+      - label: Home
+        path: "#"
+      - label: Overheidsinformatie
+        path: "#"
   rowLanding:
     - image: "../../images/temp/homepage-beleid.jpg"
-      title: Interneconsultaties
+      title: Interneconsultatie
       intro: De wegwijzer naar informatie en diensten van alle overheden.
   resultlistContext:
     items:
