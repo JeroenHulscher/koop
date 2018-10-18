@@ -2,7 +2,7 @@
 
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumbContext }}
   </div>
 </div>
 
@@ -41,7 +41,7 @@
       <div class="form__element__label">
         <strong>Datum</strong>
       </div>
-      <div class="form__element__inputs" style="margin-bottom: 1em;">
+      <div class="form__element__inputs">
         <div class="form__row">
           <label for="ZoekOp_Overheidsdomein">van</label>
           <div class="datepicker">
