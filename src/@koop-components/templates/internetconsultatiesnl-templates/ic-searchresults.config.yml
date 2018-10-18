@@ -18,6 +18,12 @@ context:
           path: "#"
         - label: Internetconsultatie
           path: "#"
+  sortContext:
+    options:
+      - label: Naam
+        value: foo
+      - label: Status
+        value: foo
   resultlistContext:
     items:
       - title: NFP wijzigingspakket 2018-1

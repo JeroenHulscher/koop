@@ -1,2 +1,8 @@
 title: sort
 label: Sort
+context:
+  options:
+    - label: Titel
+      value: value
+    - label: Soort
+      value: value

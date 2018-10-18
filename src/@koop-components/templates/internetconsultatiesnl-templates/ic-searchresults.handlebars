@@ -14,28 +14,11 @@
         1025 resultaten<br />
         Heeft gezocht op: Trefwoord
       </p>
-
-      <div class="sort">
-        Sorteren op:
-        <ul class="sort__options">
-          <li>
-            <a href="?sortby=foo" class="sort--ascending">Naam</a>
-          </li>
-          <li>
-            <a href="?sortby=foo">Status</a>
-          </li>
-        </ul>
-      </div>
-
+      {{ render "@sort" sortContext}}
       {{ render "@pagination" }}
-
       {{ render "@resultlist" resultlistContext }}
-
       {{ render "@pagination" }}
-
     </div>
-
-
     <div>
       <div class="well">
         <form>
@@ -50,13 +33,10 @@
         </form>
         <a href="#" class="link link--forward">Zoek uitgebreid</a>
       </div>
-
       <p>
         <a href="#" class="link link--back">Opnieuw zoeken</a>
       </p>
-
     </div>
-
   </div>
 </div>
 
