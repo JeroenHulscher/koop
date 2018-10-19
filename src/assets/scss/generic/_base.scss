@@ -4,54 +4,56 @@ $defaultFontStack: $defaultFontFamily, sans-serif;
 $defaultSerifFontFamily: 'Rijksoverheid Serif';
 $defaultHeadingFontStack: $defaultSerifFontFamily, serif;
 
+$fontPath: "../fonts" !default;
+
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '../fonts/ROsanswebtextregular.eot' );
-  src: url( '../fonts/ROsanswebtextregular.eot?#iefix' ) format( 'embedded-opentype' ),
-       url( '../fonts/ROsanswebtextregular.ttf' ) format( 'truetype' ),
-       url( '../fonts/ROsanswebtextregular.woff' ) format( 'woff' );
+  src: url( '#{$fontPath}/ROsanswebtextregular.eot' );
+  src: url( '#{$fontPath}/ROsanswebtextregular.eot?#iefix' ) format( 'embedded-opentype' ),
+       url( '#{$fontPath}/ROsanswebtextregular.ttf' ) format( 'truetype' ),
+       url( '#{$fontPath}/ROsanswebtextregular.woff' ) format( 'woff' );
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '../fonts/ROsanswebtextitalic.eot' );
-  src: url( '../fonts/ROsanswebtextitalic.eot?#iefix' ) format( 'embedded-opentype' ),
-       url( '../fonts/ROsanswebtextitalic.ttf' ) format( 'truetype' ),
-       url( '../fonts/ROsanswebtextitalic.woff' ) format( 'woff' );
+  src: url( '#{$fontPath}/ROsanswebtextitalic.eot' );
+  src: url( '#{$fontPath}/ROsanswebtextitalic.eot?#iefix' ) format( 'embedded-opentype' ),
+       url( '#{$fontPath}/ROsanswebtextitalic.ttf' ) format( 'truetype' ),
+       url( '#{$fontPath}/ROsanswebtextitalic.woff' ) format( 'woff' );
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '../fonts/ROsanswebtextbold.eot' );
-  src: url( '../fonts/ROsanswebtextbold.eot?#iefix' ) format( 'embedded-opentype' ),
-       url( '../fonts/ROsanswebtextbold.ttf' ) format( 'truetype' ),
-       url( '../fonts/ROsanswebtextbold.woff' ) format( 'woff' );
+  src: url( '#{$fontPath}/ROsanswebtextbold.eot' );
+  src: url( '#{$fontPath}/ROsanswebtextbold.eot?#iefix' ) format( 'embedded-opentype' ),
+       url( '#{$fontPath}/ROsanswebtextbold.ttf' ) format( 'truetype' ),
+       url( '#{$fontPath}/ROsanswebtextbold.woff' ) format( 'woff' );
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: $defaultSerifFontFamily;
-  src: url( '../fonts/ROserifwebregular.eot?' ) format( 'embedded-opentype' ),
-       url( '../fonts/ROserifwebregular.woff' ) format( 'opentype' );
+  src: url( '#{$fontPath}/ROserifwebregular.eot?' ) format( 'embedded-opentype' ),
+       url( '#{$fontPath}/ROserifwebregular.woff' ) format( 'opentype' );
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: $defaultSerifFontFamily;
-  src: url( '../fonts/ROserifwebitalic.eot?' ) format( 'embedded-opentype' ),
-       url( '../fonts/ROserifwebitalic.woff' ) format( 'opentype' );
+  src: url( '#{$fontPath}/ROserifwebitalic.eot?' ) format( 'embedded-opentype' ),
+       url( '#{$fontPath}/ROserifwebitalic.woff' ) format( 'opentype' );
   font-style: italic;
   font-weight: normal;
 }
 @font-face {
   font-family: $defaultSerifFontFamily;
-  src: url( '../fonts/ROserifwebbold.eot?' ) format( 'embedded-opentype' ),
-       url( '../fonts/ROserifwebbold.woff' ) format( 'opentype' );
+  src: url( '#{$fontPath}/ROserifwebbold.eot?' ) format( 'embedded-opentype' ),
+       url( '#{$fontPath}/ROserifwebbold.woff' ) format( 'opentype' );
   font-weight: bold;
   font-style: normal;
 }
