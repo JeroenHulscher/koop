@@ -13,7 +13,7 @@ input[type=text].input-text {
     padding-left: 3em;
     background-position: em(24) center;
     background-repeat: no-repeat;
-    background-image: $searchIconBlue;
+    background-image: $searchIcon;
     background-size: 1.5em;
   }
   &--searchmedium {
@@ -22,7 +22,7 @@ input[type=text].input-text {
     padding: .625em .5em .625em em(48);
     background-position: em(12) center;
     background-repeat: no-repeat;
-    background-image: $searchIconBlue;
+    background-image: $searchIcon;
     background-size: 1.25em;
     ~ .combobox-clear-button ~ .combobox-suggestions > div {
       top: 3.6em;
