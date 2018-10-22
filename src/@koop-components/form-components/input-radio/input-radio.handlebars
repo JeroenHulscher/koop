@@ -2,7 +2,9 @@
   <legend>{{ fieldLabel }} </legend>
   {{#each options }}
   <label for="option-{{ id  }}">
-    <input type="radio" id="option-{{ id }}" name="{{ ../name }}" />{{{ text }}}
+    <input type="radio" id="option-{{ id }}" name="{{ ../name }}" />
+    <span></span>
+    {{{ text }}}
   </label>
   {{/each}}
 </fieldset>
