@@ -1,10 +1,9 @@
 <div class="relevances">
   <a href="#">{{ description }} ({{ listItems.length }})</a>
   <fieldset class="form__element checkboxgroup">
-    <!-- @TODO: Use a handlebars helper function to start counting from 1 instead of 0. -->
     {{#each listItems}}
-      <label for="option-{{@index}}">
-        <input type="checkbox" id="option-{{@index}}"/>
+      <label for="option-{{increment @index 1}}">
+        <input type="checkbox" id="option-{{increment @index 1}}"/>
         {{ this }}
       </label>
     {{/each}}

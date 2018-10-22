@@ -4,6 +4,12 @@ default: Ghost button
 context:
   text: Knop
   action: http://www.google.nl
+  anchor: false
+  button: true
+  inputButton: false
+  inputSubmit: false
+  type: submit
+  disabled: ''
 variants:
   - name: standard
     status: ready
