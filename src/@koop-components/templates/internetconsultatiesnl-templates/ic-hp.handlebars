@@ -1,50 +1,61 @@
 {{ render "@header" headerContext merge="true" }}
 
 <div role="main">
-<div class="row row--page-opener">
-  <div class="container">
-    {{ render "@breadcrumb" breadcrumbContext }}
+  <div class="row row--page-opener">
+    <div class="container">
+      {{ render "@breadcrumb" breadcrumbContext }}
+    </div>
   </div>
-</div>
-
-<div class="container columns columns--sidebar-left row">
-  <div>
-    <h1>Internetconsultatie</h1>
-    <p>
-       Op deze website krijgt u informatie over wet- en regelgeving die door het kabinet of het parlement wordt voorbereid en waarover
-      via internet wordt geconsulteerd. U kunt reageren op nieuwe voorstellen voor wet- en regelgeving, zodat uw reactie bijdraagt
-      aan een verbetering van de regelingen. Hieronder zijn alle consultaties over concept-regelingen vermeld waarop u nu kunt
-      reageren. Via de zoekfunctie kunt u ook afgeronde consultaties zoeken en bekijken.
-    </p>
-
-    <h2>Lopende consultaties</h2>
-    {{ render "@resultlist" resultlistContext }}
-
-    {{ render "@pagination" }}
-
+  {{#each rowLanding }}
+  <div class="row row--image row--landing" style="background-image: url({{ image }});">
+    <div class="container">
+      <div class="content--onimage">
+        <h1>{{ title }}</h1>
+        <p class="intro--text">{{ intro }}</p>
+      </div>
+    </div>
   </div>
+  {{/each}}
 
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Internetconsultatie</h1>
+      <p>
+        Op deze website krijgt u informatie over wet- en regelgeving die door het kabinet of het parlement wordt
+        voorbereid en waarover
+        via internet wordt geconsulteerd. U kunt reageren op nieuwe voorstellen voor wet- en regelgeving, zodat uw
+        reactie bijdraagt
+        aan een verbetering van de regelingen. Hieronder zijn alle consultaties over concept-regelingen vermeld waarop
+        u nu kunt
+        reageren. Via de zoekfunctie kunt u ook afgeronde consultaties zoeken en bekijken.
+      </p>
 
-  <div>
-    <div class="well">
-      <form>
-        <fieldset class="form__element">
-          <legend class="form--intro">Zoeken</legend>
-          <div class="">
-            <label for="emailadres" class="visually-hidden">Zoeken op</label>
-            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
-          </div>
-        </fieldset>
-        <button type="submit" class="button button--primary">Zoeken</button>
-      </form>
-      <a href="#" class="link link--forward">Zoek uitgebreid</a>
+      <h2>Lopende consultaties</h2>
+      {{ render "@resultlist" resultlistContext }}
+
     </div>
 
-    {{ render "@list" facelistContext }}
+
+    <div>
+      <div class="well">
+        <form>
+          <fieldset class="form__element">
+            <legend class="form--intro">Zoeken</legend>
+            <div class="">
+              <label for="emailadres" class="visually-hidden">Zoeken op</label>
+              <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+            </div>
+          </fieldset>
+          <button type="submit" class="button button--primary">Zoeken</button>
+        </form>
+        <a href="#" class="link link--forward">Zoek uitgebreid</a>
+      </div>
+
+      {{ render "@list" facelistContext }}
+
+    </div>
 
   </div>
-
-</div>
 </div>
 
 {{ render "@footer" }}

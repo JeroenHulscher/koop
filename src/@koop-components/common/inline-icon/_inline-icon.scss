@@ -227,4 +227,15 @@
       position: right 50%;
     }
   }
+
+  &--arrow-right {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $iconArrowRight;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
 }

@@ -2,6 +2,7 @@
 /node_modules
 /component-library
 *.log
+yarn.lock
 package-lock.json
 *.json
 !/package.json
