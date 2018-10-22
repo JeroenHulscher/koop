@@ -1,4 +1,4 @@
-<p><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button">Open modal</button></p>
+<p><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button">{{ openButton }}</button></p>
 <div id="modal-1" class="modal {{#if initClosed }}modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
   <div class="modal__inner">
     <div class="modal__content">
