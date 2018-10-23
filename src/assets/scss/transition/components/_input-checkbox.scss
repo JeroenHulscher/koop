@@ -1,4 +1,4 @@
-.form__element.radiogroup {
+.form__element.checkboxgroup {
   label {
     display: block;
     position: relative;
@@ -9,7 +9,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    
+
     input {
       position: absolute;
       opacity: 0;
@@ -25,19 +25,18 @@
       height: 25px;
       width: 25px;
       background-color: #fff;
-      border-radius: 50%;
       border: 2px solid $darkBlue;
+      border-radius: 4px;
 
       &:after {
         content: "";
         position: absolute;
         display: none;
-        top: 2px;
-        left: 2px;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        background: $darkBlue;
+        left: 1px;
+        width: 20px;
+        height: 20px;
+        background: $darkBlue $iconCheckWhiteTransitional no-repeat center center;
+        background-size: .95em;
       }
     }
 
@@ -46,7 +45,7 @@
     }
 
     & input:checked ~ span {
-      background-color: #fff;
+      background-color: $darkBlue;
     }
 
     & input:checked ~ span:after {
