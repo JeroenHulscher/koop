@@ -17,7 +17,23 @@
     }
     padding-left: 0;
     padding-right: 1.5em;
+  }
 
+  &--remove-left {
+    background-image: $removeIcon;
+  }
+
+  &--remove-blue {
+    background: {
+      image: $removeBlueIcon;
+      position: right 50%;
+    }
+    padding-left: 0;
+    padding-right: 1.5em;
+  }
+
+  &--remove-blue-left {
+    background-image: $removeBlueIcon;
   }
 
   &--openall {
@@ -237,5 +253,9 @@
       repeat: no-repeat;
       position: right 50%;
     }
+  }
+
+  &--arrow-cta-left {
+    background-image: $arrowCTAIcon;
   }
 }
