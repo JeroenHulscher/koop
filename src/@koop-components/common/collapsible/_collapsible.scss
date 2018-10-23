@@ -3,14 +3,17 @@
 
   .collapsible__header {
     a {
-      display: block;
+      display: inline-block;
       padding: $standardPadding;
       text-decoration: none;
+      padding-left: 1em;
+      color: $black;
+
       font: {
         weight: 400;
         size: 110%;
       }
-      padding-left: 1em;
+
       background: {
         repeat: no-repeat;
         position: left 50%;
@@ -18,7 +21,6 @@
         color: transparent;
         image: $plusIcon;
       };
-      color: $black;
 
       &:hover {
         text-decoration: underline;
@@ -38,9 +40,11 @@
     .collapsible__header {
       a {
         padding: 0 0 0 1em;
+        
         font: {
           size: 100%;
         }
+
         background: {
           size: 10px;
           position: 0 50%;
