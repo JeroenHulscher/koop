@@ -4,7 +4,7 @@ De componentenbibliotheek voor KOOP.
 ## Requirements
 - Node.js
 - NPM
-- webdriver-manager: ```npm install webdriver-manager -g```
+- webdriver-manager: ```npm install webdriver-manager -g```, see [webdriver-manager on npm](https://www.npmjs.com/package/webdriver-manager).
 
 ## Development
 In order to start your development environment, run ```npm run start``` or ```yarn start``` from the root of the project.
