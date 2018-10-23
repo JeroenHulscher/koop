@@ -14,6 +14,7 @@ context:
 variants:
   - name: Many
     label: Uitgebreid
+    explanation: false
     context:
       modifier: checkboxgroup--many
       name: waterschappen

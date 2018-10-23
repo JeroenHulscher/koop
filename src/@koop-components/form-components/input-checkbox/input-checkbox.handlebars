@@ -1,5 +1,11 @@
 <fieldset class="form__element checkboxgroup {{ modifier }}">
-  <legend>{{ fieldLabel }} </legend>
+  <legend>
+    {{ fieldLabel }} 
+
+    {{#if explanation}}
+      {{ render "@question-explanation" }}
+    {{/if}}
+  </legend>
   <ul class="list--unstyled">
     {{#each options }}
       <li>
