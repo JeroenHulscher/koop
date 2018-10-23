@@ -15,13 +15,13 @@ context:
     youAreHere: false
   searchText: "Zeekant 105-7, 2586 JJ Den Haag met  een afstand 250 meter <u>Wijzigen</u>"
   areaContext:
-    modifier: icon--arrow-right
+    modifier: icon--arrow-cta-left
     text: Bekijk gebieden
   removeFilterContext:
-    modifier: icon--remove
+    modifier: icon--remove-blue-left
     text: 15 filters verwijderen
   publishDateContext:
-    fieldLabel: Publicatiedatum
+    fieldLabel: Publicatiedatum 
     name: publicatiedatum
     explanation: true
     options:
