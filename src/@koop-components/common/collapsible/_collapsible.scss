@@ -7,7 +7,6 @@
       padding: $standardPadding;
       text-decoration: none;
       font: {
-        family: $defaultSerifFontFamily;
         weight: 400;
         size: 110%;
       }
@@ -40,7 +39,6 @@
       a {
         padding: 0 0 0 1em;
         font: {
-          family: $defaultFontStack;
           size: 100%;
         }
         background: {
@@ -55,7 +53,6 @@
 .article__header--law  {
   .collapsible .collapsible__header a {
     padding: 0 0 0 15px;
-    font-family: $defaultFontStack;
     font-size: .95em;
     background-size: 12px;
   }
