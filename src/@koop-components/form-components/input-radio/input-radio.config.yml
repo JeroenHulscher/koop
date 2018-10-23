@@ -4,6 +4,7 @@ status: ready
 context:
   fieldLabel: Geldigheid
   name: geldigheid
+  explanation: false
   options:
     - id: 1
       text: Laatste versies
