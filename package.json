@@ -22,25 +22,24 @@
     "autoprefixer": "^6.4.1",
     "combobo": "1.0.2",
     "del": "^2.2.2",
-    "eslint": "^3.13.1",
     "fastselect": "^0.7.3",
     "growl": "^1.10.5",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-changed": "^2.0.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-postcss": "^6.1.1",
-    "gulp-sass": "^2.3.2",
     "jasmine-spec-reporter": "^4.2.1",
-    "npm": "^5.7.1",
     "protractor": "~5.1.0",
     "selenium-standalone-jar": "2.45.0"
   },
   "devDependencies": {
+    "eslint": "^3.13.1",
     "fastsearch": "^1.11.1",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-changed": "^2.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^3.0.1",
     "gulp-header": "^2.0.5",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
     "gulp-uglify": "^3.0.1"
   }
 }
