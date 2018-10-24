@@ -6,3 +6,5 @@ context:
   fieldLabel: Voornaam
   fieldInstruction:
   fieldPlaceholder: 'Bijv: Jan de Vries'
+  warningMessage: "Let op:"
+  errorMessage: U moet deze vraag beantwoorden
