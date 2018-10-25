@@ -1,5 +1,4 @@
 (function() {
-
   'use strict';
 
   onl.decorate({
@@ -20,13 +19,11 @@
     }
   };
 
-
   datepicker.prototype.initDatepicker = function( element ) {
-
     // datepicker config
     // todo: make customizable.
     $( element ).attr( 'type', 'text' ).datepicker({
-      showOn: 'button',
+      showOn: 'both',
       changeYear: true,
       buttonImage: '../../images/icon-calendar-white.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
@@ -51,6 +48,30 @@
   datepicker.prototype.activateTrigger = function() {
     var _this = this;
 
+    $( '.datepicker__input' ).click( function() {
+      setTimeout( function() {
+        // Hide the entire page (except the date picker)
+        // from screen readers to prevent document navigation
+        // (by headings, etc.) while the popup is open
+        $( 'main' ).attr( 'id', 'dp-container' );
+        $( '#dp-container' ).attr( 'aria-hidden', 'true' );
+        $( '#skipnav' ).attr( 'aria-hidden', 'true' );
+
+        // Hide the "today" button because it doesn't do what
+        // you think it supposed to do
+        $( '.ui-datepicker-current' ).hide();
+
+        // Only initialize again if the summary is not present.
+        if(!$('.ui-datepicker-summary').is(':visible')) {
+          _this.initiatePicker();
+        }
+
+        $( document ).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
+          _this.closeCalendar();
+        });
+      }, 100 );
+    });
+
     $( '.ui-datepicker-trigger' ).click( function() {
       setTimeout( function() {
         var today = $( '.ui-datepicker-today a' )[0];
@@ -59,8 +80,8 @@
           today = $( '.ui-state-active' )[0] ||
             $( '.ui-state-default' )[0];
         }
-        today.focus();
 
+        today.focus();
 
         // Hide the entire page (except the date picker)
         // from screen readers to prevent document navigation
@@ -91,14 +112,13 @@
     this.containerSummaryDate = $('.ui-datepicker-summary__date');
     var formattedDate = this.currentDate.getDate() + " " + this.config.months[this.currentDate.getMonth()];
     this.containerSummaryDate.text(formattedDate );
-
   },
   datepicker.prototype.initiatePicker = function() {
     var _this = this;
     var activeDate;
     var container = document.getElementById( 'ui-datepicker-div' );
 
-    this.currentDate = $(this.element).datepicker("getDate");
+    this.currentDate = $(this.element).datepicker('getDate');
 
     if ( !container || !this.element ) {
       return;
@@ -189,9 +209,7 @@
         } else if ( $( target ).hasClass( 'ui-datepicker-prev' ) ) {
           // lastSelectedIsPrev = $(target).attr('class');
           $( '.ui-datepicker-close' )[0].focus();
-
         }
-
       } else if ( which === 37 ) { // LEFT arrow key
         // if we're on a date link...
         if ( !$( target ).hasClass( 'ui-datepicker-close' ) && $( target ).hasClass( 'ui-state-default' ) ) {
@@ -344,14 +362,16 @@
     }
   },
   datepicker.prototype.handlePrevious = function(target) {
-    var container = document.getElementById('ui-datepicker-div');
     if (!target) {
       return;
     }
+
     var currentRow = $(target).closest('tr');
     if (!currentRow) {
       return;
     }
+
+    var container = document.getElementById('ui-datepicker-div');
     var previousRow = $(currentRow).prev();
 
     if (!previousRow || previousRow.length === 0) {
@@ -371,10 +391,11 @@
     }
   },
   datepicker.prototype.previousMonth = function() {
+    var _this = this;
     var prevLink = $('.ui-datepicker-prev')[0];
     var container = document.getElementById('ui-datepicker-div');
+
     prevLink.click();
-    var _this = this;
     // focus last day of new month
     setTimeout(function () {
       var trs = $('tr', container),
@@ -490,7 +511,6 @@
             _this.setHighlightState(linkCheck, cont);
             linkCheck.focus();
           }
-
         }
       }, 0);
     }
@@ -654,14 +674,13 @@
 
     var currentMonth = $('.ui-datepicker-title .ui-datepicker-month').text().toLowerCase();
     var monthIndex = $.inArray(currentMonth.toLowerCase(), months);
-    // var currentYear = $('.ui-datepicker-title .ui-datepicker-year').text().toLowerCase();
     var currentYear = $('.ui-datepicker-title .ui-datepicker-year').val().toLowerCase();
     var adjacentIndex = (isNext) ? monthIndex + 1 : monthIndex - 1;
 
     if (isNext && currentMonth === 'december') {
       currentYear = parseInt(currentYear, 10) + 1;
       adjacentIndex = 0;
-    } else if (!isNext && currentMonth === 'january') {
+    } else if (!isNext && currentMonth === 'januari') {
       currentYear = parseInt(currentYear, 10) - 1;
       adjacentIndex = months.length - 1;
     }
@@ -671,7 +690,6 @@
       : 'Vorige maand, ' + this.firstToCap(months[adjacentIndex]) + ' ' + currentYear;
 
     $(button).find('.ui-icon').html(buttonText);
-
   },
   datepicker.prototype.firstToCap = function(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);
