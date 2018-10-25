@@ -4,6 +4,10 @@ De componentenbibliotheek voor KOOP.
 
 ## E2E testing
 
+DEV MODE: gulp dev
+
+## E2E testing
+
 Make sure you webdriver-manager is up to date (terminal: webdriver-manager update)
 
 Run three terminals:
