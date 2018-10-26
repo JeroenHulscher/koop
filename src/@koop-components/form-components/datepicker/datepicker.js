@@ -2,12 +2,12 @@
   'use strict';
 
   onl.decorate({
-    'init-datepicker': function (element) {
+    'init-datepicker': function(element) {
       new datepicker(element);
     }
   });
 
-  var datepicker = function( element ) {
+  var datepicker = function(element) {
     this.element = element;
     this.config = [];
     // todo: make config extendable on component level.
@@ -19,28 +19,28 @@
     }
   };
 
-  datepicker.prototype.initDatepicker = function( element ) {
+  datepicker.prototype.initDatepicker = function(element) {
     // datepicker config
     // todo: make customizable.
-    $( element ).attr( 'type', 'text' ).datepicker({
-      showOn: 'both',
+    $(element).attr('type', 'text').datepicker({
+      showOn: 'button',
       changeYear: true,
       buttonImage: '../../images/icon-calendar-white.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
       monthNames: this.config.months,
-      dayNamesMin: [ "M", "D", "W", "D", "V", "Z", "Z" ],
-      dayNamesShort: [ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ],
+      dayNamesMin: ['M', 'D', 'W', 'D', 'V', 'Z', 'Z'],
+      dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       showButtonPanel: true,
       closeText: 'Sluiten',
       dateFormat: 'dd-mm-yy',
       onClose: this.removeAria,
-      beforeShow: function (input, inst) {
+      beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
       }
     });
 
-    $( '.ui-datepicker-trigger' ).attr( 'aria-describedby', 'datepickerLabel' );
+    $('.ui-datepicker-trigger').attr('aria-describedby', 'datepickerLabel');
 
     // let's go.
     this.activateTrigger();
@@ -48,32 +48,15 @@
   datepicker.prototype.activateTrigger = function() {
     var _this = this;
 
-    $( '.datepicker__input' ).click( function() {
-      setTimeout( function() {
-        // Hide the entire page (except the date picker)
-        // from screen readers to prevent document navigation
-        // (by headings, etc.) while the popup is open
-        $( 'main' ).attr( 'id', 'dp-container' );
-        $( '#dp-container' ).attr( 'aria-hidden', 'true' );
-        $( '#skipnav' ).attr( 'aria-hidden', 'true' );
+    // Unbinding the keyup event is required to work around the issue where the
+    // datepicker automatically opens after the last number has been entered. Eg. when
+    // entering 10-10-1965, as soon as the '5' is inserted, the datepicker opens without
+    // appropriate styling. This change does not prevent the datepicker from updating
+    // when typing inside the input box and thus remains accessible.
+    $('.datepicker__input').unbind('keyup');
 
-        // Hide the "today" button because it doesn't do what
-        // you think it supposed to do
-        $( '.ui-datepicker-current' ).hide();
-
-        // Only initialize again if the summary is not present.
-        if(!$('.ui-datepicker-summary').is(':visible')) {
-          _this.initiatePicker();
-        }
-
-        $( document ).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
-          _this.closeCalendar();
-        });
-      }, 100 );
-    });
-
-    $( '.ui-datepicker-trigger' ).click( function() {
-      setTimeout( function() {
+    $('.ui-datepicker-trigger').click(function() {
+      setTimeout(function() {
         var today = $( '.ui-datepicker-today a' )[0];
 
         if ( !today ) {
@@ -96,7 +79,7 @@
 
         _this.initiatePicker();
 
-        $( document ).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
+        $(document).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
           _this.closeCalendar();
         });
 
@@ -110,17 +93,17 @@
     this.containerSummaryYear = $('.ui-datepicker-summary__year');
     this.containerSummaryYear.text(this.currentDate.getFullYear());
     this.containerSummaryDate = $('.ui-datepicker-summary__date');
-    var formattedDate = this.currentDate.getDate() + " " + this.config.months[this.currentDate.getMonth()];
+    var formattedDate = this.currentDate.getDate() + ' ' + this.config.months[this.currentDate.getMonth()];
     this.containerSummaryDate.text(formattedDate );
   },
   datepicker.prototype.initiatePicker = function() {
     var _this = this;
     var activeDate;
-    var container = document.getElementById( 'ui-datepicker-div' );
+    var container = document.getElementById('ui-datepicker-div');
 
-    this.currentDate = $(this.element).datepicker('getDate');
+    this.currentDate = $(this.element).datepicker( 'getDate' );
 
-    if ( !container || !this.element ) {
+    if (!container || !this.element) {
       return;
     }
 
@@ -695,7 +678,7 @@
     return s.charAt(0).toUpperCase() + s.slice(1);
   },
   datepicker.prototype.removeAria = function() {
-  // make the rest of the page accessible again:
+    // make the rest of the page accessible again:
     $("#dp-container").removeAttr('aria-hidden');
     $("#skipnav").removeAttr('aria-hidden');
   }
