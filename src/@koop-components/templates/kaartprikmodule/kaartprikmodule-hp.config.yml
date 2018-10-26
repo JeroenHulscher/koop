@@ -1,0 +1,46 @@
+title: Kaartprikmodule Home
+label: Kaartprikmodule Home
+context:
+  headerContext:
+    youAreHere:
+    - text: Kaartprikmodule
+  breadcrumbContext:
+    last: Kaartprikmodule
+    breadcrumbs:
+      - label: Home
+        path: "#"
+  logoContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere: false
+  searchText: "Zeekant 105-7, 2586 JJ Den Haag met  een afstand 250 meter <u>Wijzigen</u>"
+  areaContext:
+    modifier: icon--arrow-right
+    text: Bekijk gebieden
+  removeFilterContext:
+    modifier: icon--remove
+    text: 15 filters verwijderen
+  publishDateContext:
+    fieldLabel: Publicatiedatum
+    name: publicatiedatum
+    options:
+      - id: 1
+        text: Vandaag<span></span>
+      - id: 2
+        text: Afgelopen week<span></span>
+      - id: 3
+        text: Afgelopen maand<span></span>
+      - id: 4
+        text: Afgelopen 3 maanden<span></span>
+      - id: 5
+        text: Zelf een periode kiezen<span></span>
+  themeContext:
+    fieldLabel: Thema
+    name: thema
+    options:
+      - id: 6
+        text: Bestuur
+      - id: 7
+        text: Cultuur en recreatie
+      - id: 8
+        text: Economie

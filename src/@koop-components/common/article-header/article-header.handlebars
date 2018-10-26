@@ -1,19 +1,18 @@
 <div class="article__header--law {{ modifier }}">
-  <h3>{{ counter }}</h3>
-
+  {{#if useTitle}}
+    <{{titleTag}}>{{ counter }}</{{titleTag}}>
+  {{ else }}
+    <p class="intro--text"> {{ activeFrom }}</p>
+  {{/if}}
   <ul>
-    <li class="action--relations">
-      128
-      <a href="#">
-        <div>Relaties</div> <span class="visually-hidden">{{ counter }}</span>
-      </a>
-    </li>
+    <li class="action--relations">{{ relationsAmount }}<a href="#"><div>Relaties</div> <span class="visually-hidden">{{ counter }}</span></a></li>
     <li class="action--permalink"><a href="#"><div>Permanente link</div><span class="visually-hidden">{{ counter }}</span></a></li>
     <li class="action--version"><a href="#"><div>Versie informatie</div> <span class="visually-hidden">{{ counter }}</span></a></li>
     <li class="action--compare"><a href="#"><div>Versie vergelijk</div> <span class="visually-hidden">{{ counter }}</span></a></li>
     <li class="action--print"><a href="#"><div>Print</div> <span class="visually-hidden">{{ counter }}</span></a></li>
     <li class="action--download"><a href="#"><div>Bewaar</div> <span class="visually-hidden">{{ counter }}</span></a></li>
   </ul>
-
-  <p>Versie geldend per 01-04-2012</p>
+  {{#if useTitle }}
+    <p>{{ activeFrom }}</p>
+  {{/if}}
 </div>

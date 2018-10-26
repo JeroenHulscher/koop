@@ -11,10 +11,40 @@ context:
     items:
       - text: <a href="#">Veelgestelde vragen</a>
   counter1:
+    useTitle: true
+    titleTag: h3
     counter: Hoofdstuk 1
     modifier: article__header--law--part
   counter2:
+    useTitle: true
+    titleTag: h3
     counter: Artikel 1
     modifier: article__header--law--chapter
   counter3:
+    useTitle: true
+    titleTag: h3
     counter: Artikel 1.1
+  counter4:
+    useTitle: true
+    titleTag: h4
+    counter: Artikel 1.2
+    activeFrom: Geldend vanaf 01-04-2012
+  counter5:
+    useTitle: true
+    titleTag: h4
+    counter: Artikel 1.3
+    activeFrom: Geldend vanaf 01-04-2012
+  counter6:
+    useTitle: true
+    titleTag: h4
+    counter: Artikel 1.4
+    activeFrom: "[Vervallen per 01-01-1995]"
+  counter7:
+    useTitle: true
+    titleTag: h4
+    counter: Artikel 1.5
+    activeFrom: "[Vervallen per 01-01-2001]"
+  counter8:
+    useTitle: true
+    titleTag: h4
+    counter: Artikel 1.6

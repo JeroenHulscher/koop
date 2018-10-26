@@ -5,6 +5,7 @@ context:
   id: 1
   placeholder: Zoeken in verzamelingen
   name: verzamelingen
+  label: Maak een keuze
   helptext: Use tabulation (or down) key to access and browse suggestions after input. Confirm your choice with enter key, or esc key.
   visuallyHideLabel: false
   fieldInstruction: ''
@@ -30,3 +31,16 @@ context:
     - text: Cultuur, sport, vrije tijd 2
     - text: Defensie 2
     - text: Economie en ondernemen 2
+  categories:
+    - title: Swedish Cars
+      options:
+        - label: Volvo
+          value: volvo
+        - label: Saab
+          value: Saab
+    - title: German Cars
+      options:
+        - label: Mercedes
+          value: mercedes
+        - label: Audi
+          value: audi

@@ -1,29 +1,22 @@
 <div class="pagination">
-
   <div class="pagination__index">
-
     <ul>
       <li class="prev"><a href="#"><span class="">&laquo;</span></a></li>
-      <li><a href="#">3</a></li>
-      <li class="active">4</li>
+      <li><a href="#">{{ previousPage }}</a></li>
+      <li class="active">{{ currentPage }}</li>
       <li>...</li>
-      <li><a href="#">102</a></li>
+      <li><a href="#">{{ lastPage }}</a></li>
       <li class="next"><a href="#"><span class="">&raquo;</span></a></li>
     </ul>
-
   </div>
-
   <div class="pagination__filter">
-
     <div class="form__element">
-      <label for="select--1">Aantal per pagina</label>
+      <label for="select--1">{{ filterLabel }}</label>
       <select id="select--1">
-        <option value="10">10</option>
-        <option value="25">25</option>
-        <option value="100">100</option>
+        {{#each filterOptions}}
+          <option value="{{this}}">{{this}}</option>
+        {{/each}}
       </select>
     </div>
-
   </div>
-
 </div>

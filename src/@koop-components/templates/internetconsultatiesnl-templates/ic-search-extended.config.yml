@@ -1,0 +1,13 @@
+context:
+  headerContext:
+    youAreHere:
+      - text: De wegwijzer naar informatie en diensten van alle overheden
+  breadcrumbContext:
+    last: Zoeken
+    breadcrumbs:
+      - label: Home
+        path: "#"
+      - label: Overheidsinformatie
+        path: "#"
+      - label: Internetconsultatie
+        path: "#"

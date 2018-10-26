@@ -1,63 +1,43 @@
 {{ render "@header" headerContext merge="true" }}
 
 <div role="main">
-<div class="row row--page-opener">
-  <div class="container">
-    {{ render "@breadcrumb" breadcrumbContext }}
-  </div>
-</div>
-
-<div class="container columns columns--sidebar-left row">
-  <div>
-    <h1>Zoekresultaat</h1>
-    <p>
-       1025 resultaten<br/>
-       Heeft gezocht op: Trefwoord
-    </p>
-
-    <div class="sort">
-      Sorteren op:
-      <ul class="sort__options">
-        <li>
-          <a href="?sortby=foo" class="sort--ascending">Naam</a>
-        </li>
-        <li>
-          <a href="?sortby=foo">Status</a>
-        </li>
-      </ul>
+  <div class="row row--page-opener">
+    <div class="container">
+      {{ render "@breadcrumb" breadcrumbContext }}
     </div>
-
-     {{ render "@pagination" }}
-
-    {{ render "@resultlist" resultlistContext }}
-
-    {{ render "@pagination" }}
-
   </div>
 
-
-  <div>
-    <div class="well">
-      <form>
-        <fieldset class="form__element">
-          <legend class="form--intro">Zoeken</legend>
-          <div class="">
-            <label for="emailadres" class="visually-hidden">Zoeken op</label>
-            <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
-          </div>
-        </fieldset>
-        <button type="submit" class="button button--primary">Zoeken</button>
-      </form>
-      <a href="#" class="link link--forward">Zoek uitgebreid</a>
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Zoekresultaat</h1>
+      <p>
+        1025 resultaten<br />
+        Heeft gezocht op: Trefwoord
+      </p>
+      {{ render "@sort" sortContext}}
+      {{ render "@pagination" }}
+      {{ render "@resultlist" resultlistContext }}
+      {{ render "@pagination" }}
     </div>
-
-     <p>
-      <a href="#" class="link link--back">Opnieuw zoeken</a>
-    </p>
-
+    <div>
+      <div class="well">
+        <form>
+          <fieldset class="form__element">
+            <legend class="form--intro">Zoeken</legend>
+            <div class="">
+              <label for="emailadres" class="visually-hidden">Zoeken op</label>
+              <input type="text" id="emailadres" placeholder="Zoekterm voor wet, amvb">
+            </div>
+          </fieldset>
+          <button type="submit" class="button button--primary">Zoeken</button>
+        </form>
+        <a href="#" class="link link--forward">Zoek uitgebreid</a>
+      </div>
+      <p>
+        <a href="#" class="link link--back">Opnieuw zoeken</a>
+      </p>
+    </div>
   </div>
-
-</div>
 </div>
 
 {{ render "@footer" }}

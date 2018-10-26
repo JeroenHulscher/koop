@@ -1,0 +1,1 @@
+Dit is een twee-kolom layout die vast staat op een, op grote schermen, 20-80 verdeling en op mobiele/tablet schermen zet hij de kolommen onder elkaar.
