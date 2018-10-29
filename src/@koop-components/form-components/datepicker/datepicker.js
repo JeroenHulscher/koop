@@ -175,15 +175,15 @@
 
           // If the shift key is pressed follow a different flow.
           if (keyVent.shiftKey) {
-            if ($(target).hasClass('ui-datepicker-close')) { // close button
+            if ($(target).hasClass('ui-datepicker-close')) { // Close button
               $('.ui-datepicker-prev')[0].focus();
-            } else if ($(target).hasClass('ui-state-default')) { // a date link
+            } else if ($(target).hasClass('ui-state-default')) { // Date link
               $('.ui-datepicker-close')[0].focus();
-            } else if ($(target).hasClass('ui-datepicker-prev')) {
+            } else if ($(target).hasClass('ui-datepicker-prev')) { // Previous month button
               $('.ui-datepicker-year')[0].focus();
-            } else if ($(target).hasClass('ui-datepicker-year')) { // the prev link
+            } else if ($(target).hasClass('ui-datepicker-year')) { // Year button
               $('.ui-datepicker-next')[0].focus();
-            } else if ($(target).hasClass('ui-datepicker-next')) { // the next link
+            } else if ($(target).hasClass('ui-datepicker-next')) { // Next month button
               activeDate = $('.ui-state-highlight') || $('.ui-state-active')[0];
 
               if ( activeDate ) {
@@ -198,15 +198,11 @@
               }
             } else if ($(target).hasClass('ui-state-default')) {
               $( '.ui-datepicker-next' )[0].focus();
-              // lastSelectedIsPrev = false;
             } else if ($( target).hasClass('ui-datepicker-next')) {
               $( '.ui-datepicker-year' )[0].focus();
-              // lastSelectedIsPrev = false;
             } else if ($(target).hasClass('ui-datepicker-year')) {
               $( '.ui-datepicker-prev' )[0].focus();
-              // lastSelectedIsPrev = false;
             } else if ($(target).hasClass( 'ui-datepicker-prev' ) ) {
-              // lastSelectedIsPrev = $(target).attr('class');
               $( '.ui-datepicker-close' )[0].focus();
             }
           }
@@ -376,8 +372,6 @@
     }, 0);
   },
   datepicker.prototype.previousDay = function(dateLink) {
-    var container = document.getElementById('ui-datepicker-div');
-
     if (!dateLink) {
       return;
     }
@@ -389,6 +383,8 @@
 
     var prevTd = $(td).prev(),
       prevDateLink = $('a.ui-state-default', prevTd)[0];
+
+    var container = document.getElementById('ui-datepicker-div');
 
     if (prevTd && prevDateLink) {
       this.setHighlightState(prevDateLink, container);
@@ -410,8 +406,8 @@
     var container = document.getElementById('ui-datepicker-div');
     var previousRow = $(currentRow).prev();
 
+    // There are no previous rows, so we go to the previous month.
     if (!previousRow || previousRow.length === 0) {
-      // There is not previous row, so we go to the previous month.
       this.previousMonth();
     } else {
       var prevRowDates = $('td a.ui-state-default', previousRow);
@@ -519,12 +515,12 @@
     var linkCheck = $('a.ui-state-default', parallel)[0];
 
     if (prevRow && parallel && linkCheck) {
-      // there is a previous row, a td at the same index
-      // of thetargetAND theres a link in that td
+      // There is a previous row, a td at the same index
+      // of the target AND theres a link in that td
       _this.setHighlightState(linkCheck, cont);
       linkCheck.focus();
     } else {
-      // we're either on the first row of a month, or we're on the
+      // We're either on the first row of a month, or we're on the
       // second and there is not a date link directly above the target
       prevLink.click();
       var _this = this;
@@ -543,7 +539,7 @@
           _this.setHighlightState(newCheck, cont);
           newCheck.focus();
         } else {
-          // theres no date link on the last week (row) of the new month
+          // There's no date link on the last week (row) of the new month
           // meaning its an empty cell, so we'll try the 2nd to last week
           var secondLastRow = newRows[newRows.length - 2];
           var secondTds = $('td', secondLastRow);
