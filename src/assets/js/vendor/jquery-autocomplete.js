@@ -94,8 +94,7 @@ $(document).ready(function () {
         tablo_suggestions[index_lisible] = tablo_temp_suggestions;
         tablo_suggestions_label[index_lisible] = tablo_temp_suggestions_label;
       }
-      console.log('tablo_suggestions', tablo_suggestions);
-      console.log('tablo_suggestions_label', tablo_suggestions_label);
+
 
       // wrap into a container
       $this.wrap('<div class="' + $combobox_prefix_class + 'container js-container" data-combobox-prefix-class="' + $combobox_prefix_class + '"></div>');
