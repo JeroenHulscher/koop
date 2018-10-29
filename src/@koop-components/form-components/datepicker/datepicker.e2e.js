@@ -27,32 +27,74 @@ describe('Datepicker', function() {
 
     datepickerButton = element(by.css('.ui-datepicker-trigger'));
     datepickerButton.click();
-    browser.sleep(1050);
+    browser.sleep(500);
 
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
 
-  fit('opens when clicking/focussing on the text input bar', function() {
-    var datepickerInput = element(by.css('.datepicker__input'));
+  fit('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
+    var datepickerInput;
     var datepicker;
 
+    datepickerInput = element(by.css('.datepicker__input'));
     datepickerInput.click();
+    datepickerInput.sendKeys('10-10-2010');
+
+    // Move the focus to the datepicker button and press space.
+    browser.actions().sendKeys(protractor.Key.TAB).perform();
+    browser.actions().sendKeys(protractor.Key.SPACE).perform();
+    browser.sleep(750);
 
     datepicker = element(by.css('#ui-datepicker-div'));
-
     expect(datepicker.isDisplayed()).toBeTruthy();
+
+    expect('10').toEqual(browser.driver.switchTo().activeElement().getText());
   });
 
-  fit('closes when pressing escape', function() {
-    var datepicker = element(by.css('#ui-datepicker-div'));
+  fit('allows you to switch months using the arrow keys', function() {
+    var datepicker;
+    var month;
+
+    datepicker = element(by.css('#ui-datepicker-div'));
+    expect(datepicker.isDisplayed()).toBeTruthy();
+
+    month = element(by.css('.ui-datepicker-month'));
+    month.getText().then(function(text) {
+      expect('oktober').toEqual(text);
+
+      month.click();
+
+      // Press TAB four times to end up inside the calendar again.
+      for(var i = 0; i < 4; i++) {
+        browser.actions().sendKeys(protractor.Key.TAB).perform();
+        browser.sleep(200);
+      }
+
+      browser.actions().sendKeys(protractor.Key.ARROW_UP).perform();
+      browser.sleep(200);
+
+      element(by.css('.ui-datepicker-month')).getText().then(function(newText) {
+        expect('september').toEqual(newText);
+      })
+    });
+  });
+
+  fit('closes when pressing escape after navigating using the keyboard', function() {
+    var datepicker;
+    var month;
 
     // Ensure the datepicker is currently open.
+    datepicker = element(by.css('#ui-datepicker-div'));
     expect(datepicker.isDisplayed()).toBeTruthy();
-    // Ensure the focus is on the datepicker.
-    datepicker.click();
 
-    browser.actions().sendKeys(protractor.Key.ESCAPE);
-    browser.sleep(500);
+    month = element(by.css('.ui-datepicker-month'));
+    month.click();
+
+    browser.actions().sendKeys(protractor.Key.TAB).perform();
+    browser.actions().sendKeys(protractor.Key.ARROW_UP).perform();
+    browser.sleep(200);
+    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
 
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
