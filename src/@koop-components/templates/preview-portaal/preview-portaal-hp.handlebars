@@ -25,18 +25,20 @@
 
   <h2 class="h2 h2--large">Kies uw organisatie</h2>
 
-  <div class="form__row form__row--large">
-    {{ render "@input-autocomplete" comboboxContext }}
-  </div>
+  <form data-decorator="submitlistener">
+    <div class="form__row form__row--large">
+      {{ render "@input-autocomplete" comboboxContext }}
+    </div>
 
-  <div class="columns">
-    <div>
-      <a href="#" class="cta cta--left">Mijn organisatie staat er niet bij</a>
+    <div class="columns">
+      <div>
+        <a href="#" class="cta cta--left">Mijn organisatie staat er niet bij</a>
+      </div>
+      <div class="align-right">
+        <button type="submit" class="button button--primary">Volgende stap</button>
+      </div>
     </div>
-    <div class="align-right">
-      <button class="button button--primary">Volgende stap</button>
-    </div>
-  </div>
+  </form>
 
 </div>
 
