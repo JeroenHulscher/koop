@@ -87,6 +87,7 @@
     });
   },
   datepicker.prototype.createHeaderSummary = function() {
+    // Fallback to ensure only one datepicker summary is created.
     var headerSummary = $('.ui-datepicker-summary');
     if(headerSummary.length > 0) {
       return;

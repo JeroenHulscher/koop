@@ -3,7 +3,7 @@ describe('Datepicker', function() {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('opens when clicking the datepicker button', function() {
+  it('opens when clicking the datepicker button', function() {
     var datepickerButton;
     var datepicker;
 
@@ -17,7 +17,7 @@ describe('Datepicker', function() {
     expect(datepicker.isDisplayed()).toBeTruthy();
   });
 
-  fit('closes when clicking the datepicker button while it is currently open', function() {
+  it('closes when clicking the datepicker button while it is currently open', function() {
     var datepicker;
     var datepickerButton;
 
@@ -32,7 +32,7 @@ describe('Datepicker', function() {
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
 
-  fit('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
+  it('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
     var datepickerInput;
     var datepicker;
 
@@ -51,7 +51,7 @@ describe('Datepicker', function() {
     expect('10').toEqual(browser.driver.switchTo().activeElement().getText());
   });
 
-  fit('allows you to switch months using the arrow keys', function() {
+  it('allows you to switch months using the arrow keys', function() {
     var datepicker;
     var month;
 
@@ -79,7 +79,7 @@ describe('Datepicker', function() {
     });
   });
 
-  fit('closes when pressing escape after navigating using the keyboard', function() {
+  it('closes when pressing escape after navigating using the keyboard', function() {
     var datepicker;
     var month;
 
