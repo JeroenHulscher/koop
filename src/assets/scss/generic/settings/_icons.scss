@@ -52,12 +52,16 @@ $relationsIcon: url( '#{$imagePath}/icon-relations.svg' ) !default;
 $permalinkIcon: url( '#{$imagePath}/icon-permalink.svg' ) !default;
 $compareIcon: url( '#{$imagePath}/icon-compare.svg' ) !default;
 
+$refreshDocument: url( '#{$imagePath}/icon-refresh-document.svg' ) !default;
+$refreshDocumentWhite: url( '#{$imagePath}/icon-refresh-document-white.svg' ) !default;
+
 $modalCloser: $iconCross !default;
 $modalCloserHover: url( '#{$imagePath}/icon-close-hover.svg' ) !default;
 
 $iconCheck: url( '#{$imagePath}/icon-check.svg' ) !default;
 $iconCheckWhite: url( '#{$imagePath}/icon-check-white.svg' ) !default;
 $loadingIcon: url( '#{$imagePath}/icon-loading.svg' ) !default;
+$loadingIconWhite: url( '#{$imagePath}/icon-loading-white.svg' ) !default;
 
 // theme blocks
 $governanceIcon: url( '#{$imagePath}/theme-icons/governance.svg' ) !default;

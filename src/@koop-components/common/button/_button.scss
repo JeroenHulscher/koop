@@ -186,5 +186,21 @@
     padding-left: 2em;
   }
 
+  &--icon-refreshdocuments {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $refreshDocument;
+    background-size: 1.5em;
+    padding-left: 3em;
+  }
+
+  &--icon-refreshdocuments-white {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $refreshDocumentWhite;
+    background-size: 1.75em;
+    padding-left: 3em;
+  }
+
 
 }

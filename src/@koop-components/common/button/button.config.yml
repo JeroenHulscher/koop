@@ -64,3 +64,9 @@ variants:
     context:
       text: Menu
       modifier: button--primary button--icon-download-white
+  - name: Icon Refresh documents
+    status: ready
+    label: icon refresh document
+    context:
+      text: Ververs documentenlijst
+      modifier: button--primary button--icon-refreshdocuments-white
