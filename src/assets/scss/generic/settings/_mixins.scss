@@ -23,4 +23,63 @@ $browser-context: 16; // Default
   }
 }
 
+@mixin fade-in-and-out($start, $end, $speed) {
+  &.show {
+    visibility: visible;
+    animation: fadein $speed;
+    -webkit-animation: fadein $speed;
+    -moz-animation: fadein $speed;
+    -o-animation: fadein $speed;
+  }
 
+  &.hide {
+    visibility: visible;
+    animation: fadeout $speed;
+    -webkit-animation: fadeout $speed;
+    -moz-animation: fadeout $speed;
+    -o-animation: fadeout $speed;
+  }
+
+  // Regular keyframes.
+  @keyframes fadein {
+    from {top: $start; opacity: 0;}
+    to {top: $end; opacity: 1;}
+  }
+
+  @keyframes fadeout {
+    from {top: $end; opacity: 1;}
+    to {top: $start; opacity: 0;}
+  }
+
+  // Webkit keyframes.
+  @-webkit-keyframes fadein {
+    from {top: $start; opacity: 0;} 
+    to {top: $end; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+    from {top: $end; opacity: 1;} 
+    to {top: $start; opacity: 0;}
+  }
+
+  // Moz keyframes.
+  @-moz-keyframes fadein {
+    from {top: $start; opacity: 0;}
+    to {top: $end; opacity: 1;}
+  }
+  
+  @-moz-keyframes fadeout {
+    from {top: $end; opacity: 1;}
+    to {top: $start; opacity: 0;}
+  }
+
+  @-o-keyframes fadein {
+    from {top: $start; opacity: 0;}
+    to {top: $end; opacity: 1;}
+  }
+
+  @-o-keyframes fadeout {
+    from {top: $end; opacity: 1;}
+    to {top: $start; opacity: 0;}
+  }
+}
