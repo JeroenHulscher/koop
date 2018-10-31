@@ -1,14 +1,13 @@
 (function() {
-
   'use strict';
 
   onl.decorate({
-    'init-datepicker': function (element) {
+    'init-datepicker': function(element) {
       new datepicker(element);
     }
   });
 
-  var datepicker = function( element ) {
+  var datepicker = function(element) {
     this.element = element;
     this.config = [];
     // todo: make config extendable on component level.
@@ -20,30 +19,28 @@
     }
   };
 
-
-  datepicker.prototype.initDatepicker = function( element ) {
-
+  datepicker.prototype.initDatepicker = function(element) {
     // datepicker config
     // todo: make customizable.
-    $( element ).attr( 'type', 'text' ).datepicker({
+    $(element).attr('type', 'text').datepicker({
       showOn: 'button',
       changeYear: true,
       buttonImage: '../../images/icon-calendar-white.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
       monthNames: this.config.months,
-      dayNamesMin: [ "M", "D", "W", "D", "V", "Z", "Z" ],
-      dayNamesShort: [ 'Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag' ],
+      dayNamesMin: ['M', 'D', 'W', 'D', 'V', 'Z', 'Z'],
+      dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       showButtonPanel: true,
       closeText: 'Sluiten',
       dateFormat: 'dd-mm-yy',
-      onClose: this.removeAria,
-      beforeShow: function (input, inst) {
+      onClose: this.removeAria.bind(this),
+      beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
       }
     });
 
-    $( '.ui-datepicker-trigger' ).attr( 'aria-describedby', 'datepickerLabel' );
+    $('.ui-datepicker-trigger').attr('aria-describedby', 'datepickerLabel');
 
     // let's go.
     this.activateTrigger();
@@ -51,16 +48,23 @@
   datepicker.prototype.activateTrigger = function() {
     var _this = this;
 
-    $( '.ui-datepicker-trigger' ).click( function() {
-      setTimeout( function() {
+    // Unbinding the keyup event is required to work around the issue where the
+    // datepicker automatically opens after the last number has been entered. Eg. when
+    // entering 10-10-1965, as soon as the '5' is inserted, the datepicker opens without
+    // appropriate styling. This change does not prevent the datepicker from updating
+    // when typing inside the input box and thus remains accessible.
+    $('.datepicker__input').unbind('keyup');
+
+    $('.ui-datepicker-trigger').click(function() {
+      setTimeout(function() {
         var today = $( '.ui-datepicker-today a' )[0];
 
         if ( !today ) {
           today = $( '.ui-state-active' )[0] ||
             $( '.ui-state-default' )[0];
         }
-        today.focus();
 
+        today.focus();
 
         // Hide the entire page (except the date picker)
         // from screen readers to prevent document navigation
@@ -75,7 +79,7 @@
 
         _this.initiatePicker();
 
-        $( document ).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
+        $(document).on( 'click', '#ui-datepicker-div .ui-datepicker-close', function() {
           _this.closeCalendar();
         });
 
@@ -83,38 +87,44 @@
     });
   },
   datepicker.prototype.createHeaderSummary = function() {
+    // Fallback to ensure only one datepicker summary is created.
+    var headerSummary = $('.ui-datepicker-summary');
+    if(headerSummary.length > 0) {
+      return;
+    }
+
     var container = document.getElementById('ui-datepicker-div');
     $(container).prepend('<div class="ui-datepicker-summary"><div class="ui-datepicker-summary__year"></div><div class="ui-datepicker-summary__date"></div></div>');
 
     this.containerSummaryYear = $('.ui-datepicker-summary__year');
     this.containerSummaryYear.text(this.currentDate.getFullYear());
     this.containerSummaryDate = $('.ui-datepicker-summary__date');
-    var formattedDate = this.currentDate.getDate() + " " + this.config.months[this.currentDate.getMonth()];
-    this.containerSummaryDate.text(formattedDate );
 
+    var formattedDate = this.currentDate.getDate() + ' ' + this.config.months[this.currentDate.getMonth()];
+    this.containerSummaryDate.text(formattedDate );
   },
   datepicker.prototype.initiatePicker = function() {
     var _this = this;
     var activeDate;
-    var container = document.getElementById( 'ui-datepicker-div' );
+    var container = document.getElementById('ui-datepicker-div');
 
-    this.currentDate = $(this.element).datepicker("getDate");
-
-    if ( !container || !this.element ) {
+    if (!container || !this.element) {
       return;
     }
 
-    if ( this.currentDate ) {
+    this.currentDate = $(this.element).datepicker( 'getDate' );
+
+    if (this.currentDate) {
       this.createHeaderSummary();
     }
 
     container.setAttribute( 'role', 'application' );
     container.setAttribute( 'aria-label', 'Calendar view date-picker' );
 
-    // the top controls;
-    var prev = $( '.ui-datepicker-prev', container )[0],
-        next = $( '.ui-datepicker-next', container )[0],
-        year = $( '.ui-datepicker-year', container )[0];
+    // The top controls
+    var prev = $( '.ui-datepicker-prev', container )[0];
+    var next = $( '.ui-datepicker-next', container )[0];
+    var year = $( '.ui-datepicker-year', container )[0];
 
     // This is the line that needs to be fixed for use on pages with base URL set in head
     next.href = 'javascript:void(0)';
@@ -132,123 +142,158 @@
     // delegation won't work here for whatever reason, so we are
     // forced to attach individual click listeners to the prev /
     // next month buttons each time they are added to the DOM
-    next.addEventListener( 'click', function( e ) { _this.handleNextClicks(e); }.bind( _this ), false );
-    prev.addEventListener( 'click', function( e ) { _this.handlePrevClicks(e); }.bind( _this ), false );
-    year.addEventListener( 'change', function( e ) { _this.handleYearChange(e); }.bind( _this ), false );
+    next.addEventListener( 'click', function( e ) {
+      _this.handleNextClicks(e);
+    }.bind( _this ), false );
+    prev.addEventListener( 'click', function( e ) {
+      _this.handlePrevClicks(e);
+    }.bind( _this ), false );
+    year.addEventListener( 'change', function( e ) {
+      _this.handleYearChange(e);
+    }.bind( _this ), false );
 
     // rewrite the text label from a 'day'.
     this.monthDayYearText();
 
-    $( container ).on( 'keydown', function calendarKeyboardListener( keyVent ) {
+    // Prevent keydown event listeners from being applied multiple times
+    // on initialization.
+    $(container).off('keydown'); 
+    $(container).on('keydown', function(keyVent) {
       var which = keyVent.which;
       var target = keyVent.target;
       var dateCurrent = _this.getCurrentDate( container );
 
-      if ( !dateCurrent ) {
-        dateCurrent = $( 'a.ui-state-default' )[0];
-        _this.setHighlightState( dateCurrent, container );
+      if (!dateCurrent) {
+        dateCurrent = $('a.ui-state-default')[0];
+        _this.setHighlightState(dateCurrent, container);
       }
 
-      if ( 27 === which ) {
-        keyVent.stopPropagation();
-        return _this.closeCalendar();
-      } else if (which === 9 && keyVent.shiftKey) { // SHIFT + TAB
-        keyVent.preventDefault();
-        if ( $(target).hasClass( 'ui-datepicker-close' )) { // close button
-          $('.ui-datepicker-prev')[0].focus();
-        } else if ($(target).hasClass('ui-state-default')) { // a date link
-          $('.ui-datepicker-close')[0].focus();
-        } else if ($(target).hasClass('ui-datepicker-prev')) {
-          $('.ui-datepicker-year')[0].focus();
-        } else if ($(target).hasClass('ui-datepicker-year')) { // the prev link
-          $('.ui-datepicker-next')[0].focus();
-        } else if ($(target).hasClass('ui-datepicker-next')) { // the next link
-          activeDate = $('.ui-state-highlight') ||
-            $('.ui-state-active')[0];
-          if ( activeDate ) {
-            activeDate.focus();
+      switch(which) {
+        // TAB
+        case 9:
+          keyVent.preventDefault();
+
+          // If the shift key is pressed follow a different flow.
+          if (keyVent.shiftKey) {
+            if ($(target).hasClass('ui-datepicker-close')) { // Close button
+              $('.ui-datepicker-prev')[0].focus();
+            } else if ($(target).hasClass('ui-state-default')) { // Date link
+              $('.ui-datepicker-close')[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-prev')) { // Previous month button
+              $('.ui-datepicker-year')[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-year')) { // Year button
+              $('.ui-datepicker-next')[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-next')) { // Next month button
+              activeDate = $('.ui-state-highlight') || $('.ui-state-active')[0];
+
+              if ( activeDate ) {
+                activeDate.focus();
+              }
+            }
+          } else {
+            if ($(target).hasClass('ui-datepicker-close')) { // close button
+              activeDate = $('.ui-state-highlight') || $('.ui-state-active')[0];
+              if ( activeDate ) {
+                activeDate.focus();
+              }
+            } else if ($(target).hasClass('ui-state-default')) {
+              $( '.ui-datepicker-next' )[0].focus();
+            } else if ($( target).hasClass('ui-datepicker-next')) {
+              $( '.ui-datepicker-year' )[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-year')) {
+              $( '.ui-datepicker-prev' )[0].focus();
+            } else if ($(target).hasClass( 'ui-datepicker-prev' ) ) {
+              $( '.ui-datepicker-close' )[0].focus();
+            }
           }
-        }
-      } else if ( which === 9 ) { // TAB
-        keyVent.preventDefault();
+          break;
 
-        if ( $( target ).hasClass( 'ui-datepicker-close' ) ) { // close button
-          activeDate = $('.ui-state-highlight') || $('.ui-state-active')[0];
-          if ( activeDate ) {
-            activeDate.focus();
+        // ENTER
+        case 13:
+          if ($(target).hasClass('ui-state-default')) {
+            setTimeout(function() {
+              _this.closeCalendar();
+            }, 100 );
+          } else if ($(target).hasClass('ui-datepicker-year')) {
+            _this.handleYearChange(target);
+          } else if ($(target).hasClass('ui-datepicker-prev')) {
+            _this.handlePrevClicks();
+          } else if ($(target).hasClass('ui-datepicker-next')) {
+            _this.handleNextClicks();
           }
-        } else if ( $( target ).hasClass( 'ui-state-default' ) ) {
-          $( '.ui-datepicker-next' )[0].focus();
-          // lastSelectedIsPrev = false;
-        } else if ( $( target ).hasClass( 'ui-datepicker-next' ) ) {
-          $( '.ui-datepicker-year' )[0].focus();
-          // lastSelectedIsPrev = false;
-        } else if ( $( target ).hasClass( 'ui-datepicker-year' ) ) {
-          $( '.ui-datepicker-prev' )[0].focus();
-          // lastSelectedIsPrev = false;
-        } else if ( $( target ).hasClass( 'ui-datepicker-prev' ) ) {
-          // lastSelectedIsPrev = $(target).attr('class');
-          $( '.ui-datepicker-close' )[0].focus();
+          break;
 
-        }
+        // ESCAPE
+        case 27:
+          keyVent.stopPropagation();
+          return _this.closeCalendar();
 
-      } else if ( which === 37 ) { // LEFT arrow key
-        // if we're on a date link...
-        if ( !$( target ).hasClass( 'ui-datepicker-close' ) && $( target ).hasClass( 'ui-state-default' ) ) {
-          keyVent.preventDefault();
-          _this.previousDay( target );
-        }
-      } else if ( which === 39 ) { // RIGHT arrow key
-        // if we're on a date link...
-        if ( !$( target ).hasClass( 'ui-datepicker-close' ) && $( target ).hasClass( 'ui-state-default' ) ) {
-          keyVent.preventDefault();
-          _this.nextDay( target );
-        }
-      } else if ( which === 38 ) { // UP arrow key
-        if ( !$( target ).hasClass( 'ui-datepicker-close' ) && $( target ).hasClass( 'ui-state-default' ) ) {
-          keyVent.preventDefault();
-          _this.upHandler( target, container, prev );
-        }
-      } else if ( which === 40 ) { // DOWN arrow key
-        if ( !$( target ).hasClass( 'ui-datepicker-close' ) && $( target ).hasClass( 'ui-state-default' ) ) {
-          keyVent.preventDefault();
-          _this.downHandler( target, container, next );
-        }
-      } else if ( which === 13 ) { // ENTER
-        if ( $( target ).hasClass( 'ui-state-default' ) ) {
-          setTimeout( function() {
-            _this.closeCalendar();
-          }, 100 );
-        } else if ( $( target ).hasClass( 'ui-datepicker-year' ) ) {
-          _this.handleYearChange( target );
-        } else if ( $( target ).hasClass( 'ui-datepicker-prev' ) ) {
-          _this.handlePrevClicks();
-        } else if ( $( target ).hasClass( 'ui-datepicker-next' ) ) {
-          _this.handleNextClicks();
-        }
-      } else if ( 32 === which ) {
-        if ( $( target ).hasClass( 'ui-datepicker-prev' ) || $( target ).hasClass( 'ui-datepicker-next' ) ) {
-          target.click();
-        }
-      } else if ( 33 === which ) { // PAGE UP
-        _this.moveOneMonth( target, 'prev' );
-      } else if ( 34 === which ) { // PAGE DOWN
-        _this.moveOneMonth( target, 'next' );
-      } else if ( 36 === which ) { // HOME
-        var firstOfMonth = $( target ).closest( 'tbody' ).find( '.ui-state-default' )[0];
-        if (firstOfMonth) {
-          firstOfMonth.focus();
-          _this.setHighlightState(firstOfMonth, $('#ui-datepicker-div')[0]);
-        }
-      } else if (35 === which) { // END
-        var $daysOfMonth = $(target).closest('tbody').find('.ui-state-default');
-        var lastDay = $daysOfMonth[$daysOfMonth.length - 1];
-        if (lastDay) {
-          lastDay.focus();
-          _this.setHighlightState(lastDay, $('#ui-datepicker-div')[0]);
-        }
+        // SPACEBAR
+        case 32:
+          if ($(target).hasClass( 'ui-datepicker-prev' )) {
+            _this.handlePrevClicks();
+          } else if ($(target).hasClass( 'ui-datepicker-next')) {
+            _this.handleNextClicks();
+          }
+          break;
+
+        // PAGE UP
+        case 33:
+          _this.moveOneMonth( target, 'prev' );
+          break;
+
+        // PAGE DOWN
+        case 34:
+          _this.moveOneMonth( target, 'next' );
+          break;
+
+        // END
+        case 35:
+          var $daysOfMonth = $(target).closest('tbody').find('.ui-state-default');
+          var lastDay = $daysOfMonth[$daysOfMonth.length - 1];
+          if (lastDay) {
+            lastDay.focus();
+            _this.setHighlightState(lastDay, $('#ui-datepicker-div')[0]);
+          }
+          break;
+
+        // LEFT ARROW
+        case 37:
+          if ( !$(target).hasClass( 'ui-datepicker-close' ) && $(target).hasClass( 'ui-state-default' ) ) {
+            keyVent.preventDefault();
+            _this.previousDay(target);
+          }
+          break;
+
+        // UP ARROW
+        case 38:
+          if ( !$(target).hasClass( 'ui-datepicker-close' ) && $(target).hasClass( 'ui-state-default' ) ) {
+            keyVent.preventDefault();
+            _this.upHandler( target, container, prev );
+          }
+          break;
+
+        // RIGHT ARROW
+        case 39:
+          if ( !$(target).hasClass( 'ui-datepicker-close' ) && $(target).hasClass( 'ui-state-default' ) ) {
+            keyVent.preventDefault();
+            _this.nextDay(target);
+          }
+          break;
+
+        // DOWN ARROW
+        case 40:
+          if ( !$(target).hasClass( 'ui-datepicker-close' ) && $(target).hasClass( 'ui-state-default' ) ) {
+            keyVent.preventDefault();
+            _this.downHandler( target, container, next );
+          }
+          break;
+
+        default:
+          return;
       }
-      $(".ui-datepicker-current").hide();
+
+      $('.ui-datepicker-current').hide();
     });
   },
   datepicker.prototype.closeCalendar = function() {
@@ -278,7 +323,7 @@
 
     button.click();
     var _this = this;
-    setTimeout(function () {
+    setTimeout(function() {
       _this.updateHeaderElements();
 
       var $newCells = $(ENABLED_SELECTOR);
@@ -298,7 +343,8 @@
   },
   datepicker.prototype.handleYearChange = function() {
     var _this = this;
-    setTimeout(function () {
+
+    setTimeout(function() {
       _this.updateHeaderElements();
       _this.prepHighlightState();
       $('.ui-datepicker-next').focus();
@@ -307,7 +353,8 @@
   },
   datepicker.prototype.handleNextClicks = function() {
     var _this = this;
-    setTimeout(function () {
+
+    setTimeout(function() {
       _this.updateHeaderElements();
       _this.prepHighlightState();
       $('.ui-datepicker-next').focus();
@@ -316,7 +363,8 @@
   },
   datepicker.prototype.handlePrevClicks = function() {
     var _this = this;
-    setTimeout(function () {
+
+    setTimeout(function() {
       _this.updateHeaderElements();
       _this.prepHighlightState();
       $('.ui-datepicker-prev').focus();
@@ -324,10 +372,10 @@
     }, 0);
   },
   datepicker.prototype.previousDay = function(dateLink) {
-    var container = document.getElementById('ui-datepicker-div');
     if (!dateLink) {
       return;
     }
+
     var td = $(dateLink).closest('td');
     if (!td) {
       return;
@@ -335,6 +383,8 @@
 
     var prevTd = $(td).prev(),
       prevDateLink = $('a.ui-state-default', prevTd)[0];
+
+    var container = document.getElementById('ui-datepicker-div');
 
     if (prevTd && prevDateLink) {
       this.setHighlightState(prevDateLink, container);
@@ -344,18 +394,20 @@
     }
   },
   datepicker.prototype.handlePrevious = function(target) {
-    var container = document.getElementById('ui-datepicker-div');
     if (!target) {
       return;
     }
+
     var currentRow = $(target).closest('tr');
     if (!currentRow) {
       return;
     }
+
+    var container = document.getElementById('ui-datepicker-div');
     var previousRow = $(currentRow).prev();
 
+    // There are no previous rows, so we go to the previous month.
     if (!previousRow || previousRow.length === 0) {
-      // there is not previous row, so we go to previous month...
       this.previousMonth();
     } else {
       var prevRowDates = $('td a.ui-state-default', previousRow);
@@ -363,7 +415,7 @@
 
       if (prevRowDate) {
         var _this = this;
-        setTimeout(function () {
+        setTimeout(function() {
           _this.setHighlightState(prevRowDate, container);
           prevRowDate.focus();
         }, 0);
@@ -371,22 +423,22 @@
     }
   },
   datepicker.prototype.previousMonth = function() {
+    var _this = this;
     var prevLink = $('.ui-datepicker-prev')[0];
     var container = document.getElementById('ui-datepicker-div');
-    prevLink.click();
-    var _this = this;
-    // focus last day of new month
-    setTimeout(function () {
-      var trs = $('tr', container),
-        lastRowTdLinks = $('td a.ui-state-default', trs[trs.length - 1]),
-        lastDate = lastRowTdLinks[lastRowTdLinks.length - 1];
 
-      // updating the cached header elements
+    prevLink.click();
+    // Focus last day of new month.
+    setTimeout(function() {
+      var trs = $('tr', container);
+      var lastRowTdLinks = $('td a.ui-state-default', trs[trs.length - 1]);
+      var lastDate = lastRowTdLinks[lastRowTdLinks.length - 1];
+
+      // Update the cached header elements.
       _this.updateHeaderElements();
 
       _this.setHighlightState(lastDate, container);
       lastDate.focus();
-
     }, 0);
   },
   datepicker.prototype.nextDay = function(dateLink) {
@@ -394,10 +446,12 @@
     if (!dateLink) {
       return;
     }
+
     var td = $(dateLink).closest('td');
     if (!td) {
       return;
     }
+
     var nextTd = $(td).next(),
       nextDateLink = $('a.ui-state-default', nextTd)[0];
 
@@ -409,17 +463,19 @@
     }
   },
   datepicker.prototype.handleNext = function(target) {
-    var container = document.getElementById('ui-datepicker-div');
     if (!target) {
       return;
     }
-    var currentRow = $(target).closest('tr'),
-      nextRow = $(currentRow).next();
+
+    var container = document.getElementById('ui-datepicker-div');
+    var currentRow = $(target).closest('tr');
+    var nextRow = $(currentRow).next();
 
     if (!nextRow || nextRow.length === 0) {
       this.nextMonth();
     } else {
       var nextRowFirstDate = $('a.ui-state-default', nextRow)[0];
+
       if (nextRowFirstDate) {
         this.setHighlightState(nextRowFirstDate, container);
         nextRowFirstDate.focus();
@@ -427,13 +483,13 @@
     }
   },
   datepicker.prototype.nextMonth = function() {
-    nextMon = $('.ui-datepicker-next')[0];
-    var container = document.getElementById('ui-datepicker-div');
-    nextMon.click();
     var _this = this;
-    // focus the first day of the new month
-    setTimeout(function () {
-      // updating the cached header elements
+    var container = document.getElementById('ui-datepicker-div');
+    var nextMon = $('.ui-datepicker-next')[0];
+    nextMon.click();
+    // Focus the first day of the new month.
+    setTimeout(function() {
+      // Update the cached header elements
       _this.updateHeaderElements();
 
       var firstDate = $('a.ui-state-default', container)[0];
@@ -442,83 +498,89 @@
     }, 0);
   },
   datepicker.prototype.upHandler = function(target, cont, prevLink) {
+    console.log('UP HANDLER EXECUTED');
     prevLink = $('.ui-datepicker-prev')[0];
     var rowContext = $(target).closest('tr');
     if (!rowContext) {
       return;
     }
-    var rowTds = $('td', rowContext),
-      rowLinks = $('a.ui-state-default', rowContext),
-      targetIndex = $.inArray(target, rowLinks),
-      prevRow = $(rowContext).prev(),
-      prevRowTds = $('td', prevRow),
-      parallel = prevRowTds[targetIndex],
-      linkCheck = $('a.ui-state-default', parallel)[0];
+
+    var _this = this;
+    var rowTds = $('td', rowContext);
+    var rowLinks = $('a.ui-state-default', rowContext);
+    var targetIndex = $.inArray(target, rowLinks);
+    var prevRow = $(rowContext).prev();
+    var prevRowTds = $('td', prevRow);
+    var parallel = prevRowTds[targetIndex];
+    var linkCheck = $('a.ui-state-default', parallel)[0];
 
     if (prevRow && parallel && linkCheck) {
-      // there is a previous row, a td at the same index
+      // There is a previous row, a td at the same index
       // of the target AND theres a link in that td
-      this.setHighlightState(linkCheck, cont);
+      _this.setHighlightState(linkCheck, cont);
       linkCheck.focus();
     } else {
-      // we're either on the first row of a month, or we're on the
+      // We're either on the first row of a month, or we're on the
       // second and there is not a date link directly above the target
       prevLink.click();
       var _this = this;
-      setTimeout(function () {
-        // updating the cached header elements
+      setTimeout(function() {
+        // Update the cached header elements
         _this.updateHeaderElements();
-        var newRows = $('tr', cont),
-          lastRow = newRows[newRows.length - 1],
-          lastRowTds = $('td', lastRow),
-          tdParallelIndex = $.inArray(target.parentNode, rowTds),
-          newParallel = lastRowTds[tdParallelIndex],
-          newCheck = $('a.ui-state-default', newParallel)[0];
+
+        var newRows = $('tr', cont);
+        var lastRow = newRows[newRows.length - 1];
+        var lastRowTds = $('td', lastRow);
+        var tdParallelIndex = $.inArray(target.parentNode, rowTds);
+        var newParallel = lastRowTds[tdParallelIndex];
+        var newCheck = $('a.ui-state-default', newParallel)[0];
 
         if (lastRow && newParallel && newCheck) {
           _this.setHighlightState(newCheck, cont);
           newCheck.focus();
         } else {
-          // theres no date link on the last week (row) of the new month
+          // There's no date link on the last week (row) of the new month
           // meaning its an empty cell, so we'll try the 2nd to last week
-          var secondLastRow = newRows[newRows.length - 2],
-            secondTds = $('td', secondLastRow),
-            targetTd = secondTds[tdParallelIndex],
-            linkCheck = $('a.ui-state-default', targetTd)[0];
+          var secondLastRow = newRows[newRows.length - 2];
+          var secondTds = $('td', secondLastRow);
+          var targetTd = secondTds[tdParallelIndex];
+          var linkCheck = $('a.ui-state-default', targetTd)[0];
 
           if (linkCheck) {
             _this.setHighlightState(linkCheck, cont);
             linkCheck.focus();
           }
-
         }
       }, 0);
     }
   },
   datepicker.prototype.downHandler = function(target, cont, nextLink) {
     nextLink = $('.ui-datepicker-next')[0];
+
     var targetRow = $(target).closest('tr');
     if (!targetRow) {
       return;
     }
-    var targetCells = $('td', targetRow),
-      cellIndex = $.inArray(target.parentNode, targetCells), // the td (parent of target) index
-      nextRow = $(targetRow).next(),
-      nextRowCells = $('td', nextRow),
-      nextWeekTd = nextRowCells[cellIndex],
-      nextWeekCheck = $('a.ui-state-default', nextWeekTd)[0];
+
+    var _this = this;
+    var targetCells = $('td', targetRow);
+    var cellIndex = $.inArray(target.parentNode, targetCells); // the td (parent of target) index
+    var nextRow = $(targetRow).next();
+    var nextRowCells = $('td', nextRow);
+    var nextWeekTd = nextRowCells[cellIndex];
+    var nextWeekCheck = $('a.ui-state-default', nextWeekTd)[0];
 
     if (nextRow && nextWeekTd && nextWeekCheck) {
       // theres a next row, a TD at the same index of `target`,
       // and theres an anchor within that td
-      this.setHighlightState(nextWeekCheck, cont);
+      _this.setHighlightState(nextWeekCheck, cont);
       nextWeekCheck.focus();
     } else {
       nextLink.click();
 
-      setTimeout(function () {
-        // updating the cached header elements
-        this.updateHeaderElements();
+      setTimeout(function() {
+        // Update the cached header elements.
+        _this.updateHeaderElements();
 
         var nextMonthTrs = $('tbody tr', cont),
           firstTds = $('td', nextMonthTrs[0]),
@@ -526,18 +588,17 @@
           firstCheck = $('a.ui-state-default', firstParallel)[0];
 
         if (firstParallel && firstCheck) {
-          this.setHighlightState(firstCheck, cont);
+          _this.setHighlightState(firstCheck, cont);
           firstCheck.focus();
         } else {
-          // lets try the second row b/c we didnt find a
-          // date link in the first row at the target's index
-          var secondRow = nextMonthTrs[1],
-            secondTds = $('td', secondRow),
-            secondRowTd = secondTds[cellIndex],
-            secondCheck = $('a.ui-state-default', secondRowTd)[0];
+          // If no date link was found in the first row, retry in the second row.
+          var secondRow = nextMonthTrs[1];
+          var secondTds = $('td', secondRow);
+          var secondRowTd = secondTds[cellIndex];
+          var secondCheck = $('a.ui-state-default', secondRowTd)[0];
 
           if (secondRow && secondCheck) {
-            this.setHighlightState(secondCheck, cont);
+            _this.setHighlightState(secondCheck, cont);
             secondCheck.focus();
           }
         }
@@ -548,40 +609,39 @@
     this.closeCalendar();
   },
   datepicker.prototype.monthDayYearText = function() {
+    var _this = this;
     var cleanUps = $('.amaze-date');
 
-    $(cleanUps).each(function (clean) {
-      // each(cleanUps, function (clean) {
+    $(cleanUps).each(function(clean) {
       clean.parentNode.removeChild(clean);
     });
 
     var datePickDiv = document.getElementById('ui-datepicker-div');
-    // in case we find no datepick div
     if (!datePickDiv) {
       return;
     }
 
     var dates = $('a.ui-state-default', datePickDiv);
-    $(dates).attr('role', 'button').on('keydown', function (e) {
-      if (e.which === 32) {
+    $(dates).attr('role', 'button').on('keydown', function(e) {
+      if (e.which=== 32) {
         e.preventDefault();
         e.target.click();
-        setTimeout(function () {
-          this.closeCalendar();
+        setTimeout(function() {
+          _this.closeCalendar();
         }, 100);
       }
     });
-    $(dates).each(function (index, date) {
+    $(dates).each(function(index, date) {
       var datePickDiv = document.getElementById('ui-datepicker-div');
-      var currentRow = $(date).closest('tr'),
-        currentTds = $('td', currentRow),
-        currentIndex = $.inArray(date.parentNode, currentTds),
-        headThs = $('thead tr th', datePickDiv),
-        dayIndex = headThs[currentIndex],
-        daySpan = $('span', dayIndex)[0],
-        monthName = $('.ui-datepicker-month', datePickDiv)[0].innerHTML,
-        year = $('.ui-datepicker-year', datePickDiv).val(),
-        number = date.innerHTML;
+      var currentRow = $(date).closest('tr');
+      var currentTds = $('td', currentRow);
+      var currentIndex = $.inArray(date.parentNode, currentTds);
+      var headThs = $('thead tr th', datePickDiv);
+      var dayIndex = headThs[currentIndex];
+      var daySpan = $('span', dayIndex)[0];
+      var monthName = $('.ui-datepicker-month', datePickDiv)[0].innerHTML;
+      var year = $('.ui-datepicker-year', datePickDiv).val();
+      var number = date.innerHTML;
 
       if (!daySpan || !monthName || !number || !year) {
         return;
@@ -602,7 +662,7 @@
       return;
     }
 
-    var currentDate = $(this.element).datepicker("getDate");
+    var currentDate = $(this.element).datepicker('getDate');
     if (currentDate) {
       this.createHeaderSummary();
     }
@@ -611,7 +671,7 @@
     var next = $('.ui-datepicker-next', context)[0];
     var year = $('.ui-datepicker-year', context)[0];
 
-    //make them click/focus - able
+    // Make them click/focus - able
     next.href = 'javascript:void(0)';
     prev.href = 'javascript:void(0)';
 
@@ -622,30 +682,29 @@
 
     next.addEventListener( 'click', function(e) { this.handleNextClicks(e); }.bind( this ), false );
     prev.addEventListener( 'click', function(e) { this.handlePrevClicks(e); }.bind( this ), false );
-    year.addEventListener( 'change', function (e) { this.handleYearChange(e); }.bind( this ), false );
+    year.addEventListener( 'change', function(e) { this.handleYearChange(e); }.bind( this ), false );
 
-    // add month day year text
+    // Add month day year text
     this.monthDayYearText();
   },
   datepicker.prototype.prepHighlightState = function() {
     var highlight;
     var cage = document.getElementById('ui-datepicker-div');
-    highlight = $('.ui-state-highlight', cage)[0] ||
-      $('.ui-state-default', cage)[0];
+
+    highlight = $('.ui-state-highlight', cage)[0] || $('.ui-state-default', cage)[0];
     if (highlight && cage) {
       this.setHighlightState(highlight, cage);
     }
   },
   datepicker.prototype.setHighlightState = function(newHighlight, container) {
     var prevHighlight = this.getCurrentDate(container);
-    // remove the highlight state from previously
+    // Remove the highlight state from previously
     // highlighted date and add it to our newly active date
     $(prevHighlight).removeClass('ui-state-highlight');
     $(newHighlight).addClass('ui-state-highlight');
   },
   datepicker.prototype.getCurrentDate = function(container) {
-    var currentDate = $('.ui-state-highlight', container)[0];
-    return currentDate;
+    return $('.ui-state-highlight', container)[0];
   },
   datepicker.prototype.appendOffscreenMonthText = function(button) {
     var buttonText;
@@ -654,14 +713,13 @@
 
     var currentMonth = $('.ui-datepicker-title .ui-datepicker-month').text().toLowerCase();
     var monthIndex = $.inArray(currentMonth.toLowerCase(), months);
-    // var currentYear = $('.ui-datepicker-title .ui-datepicker-year').text().toLowerCase();
     var currentYear = $('.ui-datepicker-title .ui-datepicker-year').val().toLowerCase();
     var adjacentIndex = (isNext) ? monthIndex + 1 : monthIndex - 1;
 
     if (isNext && currentMonth === 'december') {
       currentYear = parseInt(currentYear, 10) + 1;
       adjacentIndex = 0;
-    } else if (!isNext && currentMonth === 'january') {
+    } else if (!isNext && currentMonth === 'januari') {
       currentYear = parseInt(currentYear, 10) - 1;
       adjacentIndex = months.length - 1;
     }
@@ -671,15 +729,16 @@
       : 'Vorige maand, ' + this.firstToCap(months[adjacentIndex]) + ' ' + currentYear;
 
     $(button).find('.ui-icon').html(buttonText);
-
   },
   datepicker.prototype.firstToCap = function(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);
   },
   datepicker.prototype.removeAria = function() {
-  // make the rest of the page accessible again:
-    $("#dp-container").removeAttr('aria-hidden');
-    $("#skipnav").removeAttr('aria-hidden');
-  }
+    var _this = this;
 
+    _this.closeCalendar();
+    // Make the rest of the page accessible again:
+    $('#dp-container').removeAttr('aria-hidden');
+    $('#skipnav').removeAttr('aria-hidden');
+  };
 })();

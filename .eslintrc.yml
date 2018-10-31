@@ -86,12 +86,12 @@ rules:
   space-before-function-paren:
     - error
     - never
-  space-in-parens:
-    - error
-    - always
-    - exceptions:
-      - "{}"
-      - "[]"
+  # space-in-parens:
+  #   - error
+  #   - always
+  #   - exceptions:
+  #     - "{}"
+  #     - "[]"
   space-infix-ops:
     - error
   space-unary-ops:
