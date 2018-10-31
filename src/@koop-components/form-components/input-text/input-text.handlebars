@@ -1,8 +1,16 @@
 {{#if remove}}
 <div class="relative">
 {{/if}}
-<input type="text" id="input-text-{{ id }}" class="input input-text {{ modifier }}" placeholder="{{ fieldPlaceholder }}" />
+<input 
+  type="text" 
+  id="input-text-{{ id }}" 
+  class="input input-text {{ modifier }}" 
+  placeholder="{{ fieldPlaceholder }}" 
+  {{#if remove}}
+  {{!-- data-handler="toggle-remove-visibility" --}}
+  data-decorator="toggle-remove-visibility"
+  {{/if}}/>
 {{#if remove}}
-<a href="#" id="input-text-remove-{{ id }}" class="input-text__remove" data-handler="empty-input"><span class="visually-hidden">Wis waarde</span></a>
+<a href="#" class="input-text__remove invisible" data-handler="empty-input"><span class="visually-hidden">Wis waarde</span></a>
 </div>
 {{/if}}
