@@ -28,11 +28,7 @@ context:
     breadcrumbs:
       - label: Home
         path: "#"
-  logoContext:
-    file: logo.svg
-    alt: Overheid.nl logo
-    youAreHere: false
-  searchText: "Zeekant 105-7, 2586 JJ Den Haag met  een afstand 250 meter <u>Wijzigen</u>"
+  searchText: "Voer een adres in om geo informatie toe te voegen aan uw lijst."
   areaContext:
     modifier: icon--arrow-cta-left
     text: Bekijk gebieden

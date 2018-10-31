@@ -1,17 +1,23 @@
-{{ render "@header" headerContext merge="true" }}
-
-<div role="main">
-  <div class="row row--page-opener">
+<header class="header">
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
     <div class="container">
-      <h1>Zoek een adres</h1>
-      <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
-      <div class="columns">
-        <div>
-          {{ render "@input-autocomplete" inputAutocompleteContext }}
-        </div>
-        <div>
-          <p>Another section</p>
-        </div>
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#">Terug naar GVOP</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div role="main">
+  <div class="container">
+    <h1>Zoek een adres</h1>
+    <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+    <div class="columns">
+      <div>
+        {{ render "@input-autocomplete" inputAutocompleteContext }}
+      </div>
+      <div>
+        <p>Another section</p>
       </div>
     </div>
   </div>
@@ -21,22 +27,10 @@
       <div class="container">
         <h2 class="h2 h2--large">Geo informatie</h2>
         <p>{{{ searchText }}}</p>
-
-        <div class="well well--secondary">
-          Er zijn 5 publicaties die een groter gebied beslaan. <br> 
-          {{ render "@inline-icon" areaContext }}
-        </div>
-
-        <h2 class="h2 h2--large">Zoekfilter</h2>
-        {{ render "@inline-icon" removeFilterContext }}
-        {{ render "@input-radio" publishDateContext }}
-        {{ render "@input-checkbox" themeContext}}
-        {{ render "@input-checkbox" informationTypeContext }}
-        {{ render "@input-checkbox" organisationsContext }}
       </div>
     </div>
     <div class="main-column" style="background: #ccc">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.1474971175193796%2C51.97145073546783%2C4.5182856917381296%2C52.139703605357326&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=12/52.0557/4.3329">View Larger Map</a></small>
+      <iframe width="100%" height="1000px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.044342041015626%2C51.97155731422007%2C4.535293579101563%2C52.13959907316872&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=12/52.0557/4.2898">View Larger Map</a></small>
     </div>
   </div>
 </div>
