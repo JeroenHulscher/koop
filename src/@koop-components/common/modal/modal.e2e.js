@@ -64,9 +64,9 @@ describe('The Modal', function() {
 
     var modalContent = element(by.css('.modal__content'));
     expect(modalContent.isDisplayed()).toBeTruthy();
-  })
+  });
 
-  fit('closes using tab and spacebar on the close modal button', function() {
+  it('closes using tab and spacebar on the close modal button', function() {
     var modalContent = element(by.css('.modal__content'));
 
     browser.actions().sendKeys(protractor.Key.TAB).perform();

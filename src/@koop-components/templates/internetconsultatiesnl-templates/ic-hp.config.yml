@@ -1,4 +1,4 @@
-title: Ic Homepage
+title: I Homepage
 label: Ic Homepage
 status: ready
 context:
@@ -18,7 +18,7 @@ context:
         path: "#"
   rowLanding:
     - image: "../../images/temp/homepage-beleid.jpg"
-      title: Interneconsultatie
+      title: Internetconsultatie
       intro: De wegwijzer naar informatie en diensten van alle overheden.
   resultlistContext:
     items:

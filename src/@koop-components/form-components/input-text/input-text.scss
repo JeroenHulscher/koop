@@ -19,13 +19,14 @@ input[type=text].input-text {
   &--searchmedium {
     font-size: 1.325em;
     color: $darkBlue;
+    height: 60px; // needed to correct crossbrowser fields; :(
     padding: .625em .5em .625em em(48);
     background-position: em(12) center;
     background-repeat: no-repeat;
     background-image: $searchIconBlue;
     background-size: 1.25em;
     ~ .combobox-clear-button ~ .combobox-suggestions > div {
-      top: 3.6em;
+      top: 3.4em;
       > div.combobox-suggestion {
         font-size: 1.325em;
         padding: .625em 1em .625em 3em;
@@ -43,5 +44,10 @@ input[type=text].input-text {
     width: 2em;
     bottom: 0;
     background: $iconCross no-repeat center center;
+    z-index: 9999;
+
+    &.invisible {
+      display: none;
+    }
   }
 }

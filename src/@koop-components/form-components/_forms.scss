@@ -1,3 +1,22 @@
+form {
+  &.is-submitted {
+    button[type="submit"] {
+      &:before {
+        content: "";
+        width: em(20);
+        background: $loadingIconWhite;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        right: em(12);
+        top: 0;
+        bottom: 0;
+      }
+      padding-right: em(40);
+    }
+  }
+}
+
 input[type="text"],
 input[type="tel"],
 input[type="url"],
