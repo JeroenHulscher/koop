@@ -1,6 +1,10 @@
-<div class="alert {{ modifier }}">
+<div class="alert {{ modifier }} {{#if fixed }} show {{/if}}">
   {{{ heading }}}
   <div class="alert__inner">
     {{{ text }}}
+
+    {{#if fixed}}
+    <a href="#" class="alert__remove" data-handler="close-alert"><span class="visually-hidden">Sluiten</span></a>
+    {{/if}}
   </div>
 </div>
