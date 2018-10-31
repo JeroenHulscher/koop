@@ -1,8 +1,8 @@
 {{#if remove}}
 <div class="relative">
 {{/if}}
-<input type="text" id="input-{{ id }}" class="input input-text {{ modifier }}" placeholder="{{ fieldPlaceholder }}" />
+<input type="text" id="input-text-{{ id }}" class="input input-text {{ modifier }}" placeholder="{{ fieldPlaceholder }}" />
 {{#if remove}}
-<a href="#" class="input-text__remove" onclick="emptyInput({{id}})"><span class="visually-hidden">Wis waarde</span></a>
+<a href="#" id="input-text-remove-{{ id }}" class="input-text__remove" data-handler="empty-input"><span class="visually-hidden">Wis waarde</span></a>
 </div>
 {{/if}}

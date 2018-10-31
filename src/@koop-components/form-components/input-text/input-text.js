@@ -1,8 +1,10 @@
 /**
  * Empty input text if the remove text button is clicked.
- * @param {Number|String} id
+ * @param element
+ * @param event
  */
-function emptyInput(id) {
-  var input = document.getElementById('input-' + id);
-  input.value = '';
-}
+onl.handle({
+  'empty-input': function(element, event) {
+    element.previousElementSibling.value = '';
+  }
+});
