@@ -1,18 +1,28 @@
+{{ render "@header" headerContext merge="true" }}
+
 <div role="main">
   <div class="row row--page-opener">
     <div class="container">
-      
+      <h1>Zoek een adres</h1>
+      <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+      <div class="columns">
+        <div>
+          {{ render "@input-autocomplete" inputAutocompleteContext }}
+        </div>
+        <div>
+          <p>Another section</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="container columns-map">
     <div class="sidebar-column">
       <div class="container">
-        {{ render "@logo" logoContext }}
-        <h2 class="h2 h2--large">Zoekopdracht</h2>
+        <h2 class="h2 h2--large">Geo informatie</h2>
         <p>{{{ searchText }}}</p>
 
-        <div class="well transitional">
+        <div class="well well--secondary">
           Er zijn 5 publicaties die een groter gebied beslaan. <br> 
           {{ render "@inline-icon" areaContext }}
         </div>

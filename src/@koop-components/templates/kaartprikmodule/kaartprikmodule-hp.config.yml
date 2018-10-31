@@ -1,6 +1,25 @@
 title: Kaartprikmodule Home
 label: Kaartprikmodule Home
 context:
+  inputAutocompleteContext:
+    id: 2
+    modifier: input-text input-text--searchmedium
+    placeholder: Zoek een adres
+    name: verzamelingen
+    hasHiddenField: true
+    hiddenFieldClass: appel
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    items:
+      - item: Gemeente Vlaardingen
+        code: ABC
+      - item: Gemeente Schiedam
+        code: DEF
+      - item: Gemeente Rotterdam
+        code: XYZ
+      - item: Voorburg
+        code: 123
   headerContext:
     youAreHere:
     - text: Kaartprikmodule
