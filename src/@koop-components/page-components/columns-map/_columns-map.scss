@@ -3,18 +3,67 @@ $gutter: 1em;
 .columns-map {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 0 !important;
 
   @media (min-width: 50em) {
     flex-direction: row;
+
+    &.collapsed {
+      .sidebar-column {
+        left: -400px;
+        transition: left $fastEaseInOut;
+        -webkit-transition: left $fastEaseInOut;
+
+        .sidebar-column-content {
+          visibility: hidden;
+        }
+
+        .trigger-collapse {
+          background-image: $dartRightIcon;
+        }
+      }
+
+      .main-column {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
 
     .sidebar-column {
       min-width: 25em;
       max-width: 25em;
       background: #F2F8FC;
+      position: relative;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      transition: left $fastEaseInOut;
+      -webkit-transition: left $fastEaseInOut;
+
+      .sidebar-column-content {
+        visibility: visible;
+      }
+
+      .trigger-collapse {
+        background: #F2F8FC;
+        height: 40px;
+        width: 25px;
+        position: absolute;
+        top: calc(50% - 40px);
+        right: -25px;
+        border-radius: 0 6px 6px 0;
+        background-image: $dartLeftIcon;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: .75em;
+        cursor: pointer;
+      }
     }
 
     .main-column {
-      width: 75em;
+      width: 100%;
     }
   }
 }

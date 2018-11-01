@@ -1,13 +1,13 @@
-title: Kaartprikmodule Home
-label: Kaartprikmodule Home
+title: KPM Startscherm
+label: KPM Startscherm
 context:
   inputAutocompleteContext:
     id: 2
-    modifier: input-text input-text--searchmedium
+    modifier: input-text input-text--search
     placeholder: Zoek een adres
     name: verzamelingen
     hasHiddenField: true
-    hiddenFieldClass: appel
+    hiddenFieldClass: field-class
     visuallyHideLabel: false
     fieldInstruction: ''
     regularFormElement: true
@@ -28,7 +28,19 @@ context:
     breadcrumbs:
       - label: Home
         path: "#"
-  searchText: "Voer een adres in om geo informatie toe te voegen aan uw lijst."
+  button1Context:
+    modifier: button-icon--marker
+    iconButton: true
+    text: Marker
+  button2Context:
+    modifier: button-icon--download
+    iconButton: true
+    text: Download
+  button3Context:
+    modifier: button-icon--fullscreen
+    iconButton: true
+    text: Volledig scherm
+  searchText: Voer een adres in om geo informatie toe te voegen aan uw lijst.
   areaContext:
     modifier: icon--arrow-cta-left
     text: Bekijk gebieden

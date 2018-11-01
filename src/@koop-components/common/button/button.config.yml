@@ -6,6 +6,7 @@ context:
   action: http://www.google.nl
   anchor: false
   button: true
+  iconButton: false
   inputButton: false
   inputSubmit: false
   type: submit
