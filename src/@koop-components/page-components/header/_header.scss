@@ -106,6 +106,10 @@
       display: block;
       font-size: 112.5%;
 
+      &.button {
+        font-size: 1em;
+      }
+
       &:hover {
         color: $headerLinkCurrentColor;
         background-color: $headerBorderColor;

@@ -12,6 +12,7 @@ context:
       text: Ondersteuning
     - url: '#'
       text: Toepassingen
-    - url: '#'
+    - url: '#' 
       text: Dataset aanmelden
+      anchorLink: true
       modifier: button--primary

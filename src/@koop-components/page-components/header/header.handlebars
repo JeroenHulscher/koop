@@ -29,7 +29,9 @@
         <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
         {{#if navLinks }}
         {{#each navLinks }}
-          {{#if modifier }}
+          {{#if anchorLink}}
+            <li><a class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</a></li>
+          {{else if modifier }}
             <li><button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button></li>
           {{else}}
             <li><a href="{{ url }}" class="">{{ text }}</a></li>
