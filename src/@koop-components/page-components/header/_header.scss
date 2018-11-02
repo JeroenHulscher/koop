@@ -117,7 +117,8 @@
       }
     }
 
-    button.button--primary {
+    button.button--primary,
+    a.button--primary {
       position: absolute;
       right: .5em;
       top: .375em;
