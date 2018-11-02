@@ -14,6 +14,7 @@ context:
       text: Toepassingen
     - url: '#'
       text: Dataset aanmelden
+      anchorLink: true
       modifier: button--primary
   tabsContext:
     tabs:
