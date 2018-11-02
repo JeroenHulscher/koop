@@ -30,7 +30,7 @@
         {{#if navLinks }}
         {{#each navLinks }}
           {{#if modifier }}
-            <li><button class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</button></li>
+            <li><a class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</a></li>
           {{else}}
             <li><a href="{{ url }}" class="">{{ text }}</a></li>
           {{/if}}

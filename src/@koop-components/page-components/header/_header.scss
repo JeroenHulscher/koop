@@ -117,10 +117,11 @@
       }
     }
 
-    button.button--primary {
+    .button--primary {
       position: absolute;
       right: .5em;
       top: .375em;
+      font-size: 1em;
     }
 
     [data-handler="toggle-other-sites"] {
