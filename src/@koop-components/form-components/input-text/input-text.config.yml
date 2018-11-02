@@ -15,6 +15,12 @@ variants:
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 2282LL'
+  - name: Medium
+    label: medium
+    context:
+      modifier: input-text--medium
+      id: 1
+      fieldPlaceholder: 'Placeholder'
   - name: Search
     label: Search
     context:
