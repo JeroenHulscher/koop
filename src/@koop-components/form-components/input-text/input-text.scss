@@ -4,6 +4,13 @@ input[type=text].input-text {
   width: 100%;
   height: auto;
 
+  &--medium {
+    font-size: 1.325em;
+    color: $darkBlue;
+    height: 60px; // needed to correct crossbrowser fields; :(
+    padding: .625em;
+  }
+
   &--search,
   &--searchmedium {
     &::placeholder {
@@ -11,7 +18,7 @@ input[type=text].input-text {
   }
   &--search {
     padding-left: 3em;
-    background-position: em(24) center;
+    background-position: em(12) center;
     background-repeat: no-repeat;
     background-image: $searchIconBlue;
     background-size: 1.5em;
