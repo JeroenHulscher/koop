@@ -12,39 +12,53 @@ $gutter: 1em;
 
     &.collapsed {
       .sidebar-column {
-        left: -400px;
+        left: -432px;
         transition: left $fastEaseInOut;
         -webkit-transition: left $fastEaseInOut;
+        -moz-transition: left $fastEaseInOut;
+        -o-transition: left $fastEaseInOut;
 
         .sidebar-column-content {
           visibility: hidden;
-        }
-
-        .trigger-collapse {
-          background-image: $dartRightIcon;
         }
       }
 
       .main-column {
         min-width: 100%;
         max-width: 100%;
+
+        .trigger-collapse {
+          left: 0;
+          background-image: $dartRightIcon;
+          transition: left $fastEaseInOut;
+          -webkit-transition: left $fastEaseInOut;
+          -moz-transition: left $fastEaseInOut;
+          -o-transition: left $fastEaseInOut;
+        }
       }
     }
 
     .sidebar-column {
-      min-width: 25em;
-      max-width: 25em;
+      min-width: 27em;
+      max-width: 27em;
       background: #F2F8FC;
       position: relative;
       position: absolute;
       height: 100%;
       left: 0;
+      overflow: scroll;
       transition: left $fastEaseInOut;
       -webkit-transition: left $fastEaseInOut;
+      -moz-transition: left $fastEaseInOut;
+      -o-transition: left $fastEaseInOut;
 
       .sidebar-column-content {
         visibility: visible;
       }
+    }
+
+    .main-column {
+      width: 100%;
 
       .trigger-collapse {
         background: #F2F8FC;
@@ -52,18 +66,18 @@ $gutter: 1em;
         width: 25px;
         position: absolute;
         top: calc(50% - 40px);
-        right: -25px;
+        left: 432px;
         border-radius: 0 6px 6px 0;
         background-image: $dartLeftIcon;
         background-repeat: no-repeat;
         background-position: center;
         background-size: .75em;
         cursor: pointer;
+        transition: left $fastEaseInOut;
+        -webkit-transition: left $fastEaseInOut;
+        -moz-transition: left $fastEaseInOut;
+        -o-transition: left $fastEaseInOut;
       }
-    }
-
-    .main-column {
-      width: 100%;
     }
   }
 }

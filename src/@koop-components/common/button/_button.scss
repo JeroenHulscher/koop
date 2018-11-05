@@ -22,6 +22,7 @@
   vertical-align: middle;
   white-space: nowrap;
   font-size: 1em;
+  cursor: pointer;
 
   &[hidden] {
     display: none;
@@ -95,6 +96,10 @@
       background-color: $buttonBackgroundSecondaryActiveColor;
       color: $white;
     }
+  }
+
+  &--small {
+    font-size: 0.75em;
   }
 
   &--share {

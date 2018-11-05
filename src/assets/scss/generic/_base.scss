@@ -132,6 +132,10 @@ label {
 
   .button {
     font-size: 1.125em;
+
+    &--small {
+      font-size: 0.75em;
+    }
   }
 
   table {
