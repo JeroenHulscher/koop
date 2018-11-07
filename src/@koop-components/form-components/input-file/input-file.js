@@ -1,7 +1,5 @@
 (function () {
 
-  'use strict';
-
   onl.decorate({
     'init-inputfile': function( element ) {
       new inputfile( element );
@@ -19,11 +17,6 @@
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     this.init();
   };
-
-  inputfile.prototype.showFiles = function( files ) {
-    this.prelabel.textContent = files.length > 1 ? ( this.input.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', files.length ) : files[ 0 ].name;
-  }
-
   inputfile.prototype.init = function( ) {
     var self = this;
 
@@ -52,47 +45,52 @@
     });
 
     this.element.addEventListener( 'drop', function( e ) {
-      self.input.files = e.dataTransfer.files;
-      self.showFiles( self.input.files );
+      self.setAttributes(e.dataTransfer.files);
     });
 
     this.element.addEventListener( 'change', function( e ) {
-      var fileName = '';
-
-      if ( this.files && this.files.length > 1 ) {
-        fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-      }
-      else {
-        fileName = e.target.value.split( '\\' ).pop();
-      }
-
-      if ( fileName ) {
-        self.label.querySelector( 'span' ).innerHTML = 'Selecteer ander document';
-        self.prelabel.innerHTML = fileName;
-        self.element.classList.add( 'has-file' );
-        if ( self.config.showbuttonAfterChange ) {
-          self.showbuttonAfterChange();
-        }
-      }
-      else {
-        self.label.innerHTML = self.orginalLabelValue;
-        self.prelabel.innerHTML = self.orginalPreLabelValue;
-        self.element.classList.remove( 'has-file' );
-        if ( self.config.showbuttonAfterChange ) {
-          self.hidebuttonAfterChange();
-        }
-      }
+      self.setAttributes(e.target.files);
     });
 
     this.eventListers();
 
   };
 
+  inputfile.prototype.setAttributes = function(e) {
+    var fileName = '';
+
+    if (e[0] && e.length > 1) {
+      fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+    }
+    else if (e[0] && e.length === 1) {
+      fileName = e[0].name;
+    } else {
+      fileName = false;
+    }
+
+    if (fileName) {
+      this.label.querySelector('span').innerHTML = 'Selecteer ander document';
+      this.prelabel.innerHTML = fileName;
+      this.element.classList.add('has-file');
+      if (this.config.showbuttonAfterChange) {
+        this.showbuttonAfterChange();
+      }
+    }
+    else {
+      this.label.innerHTML = this.orginalLabelValue;
+      this.prelabel.innerHTML = this.orginalPreLabelValue;
+      this.element.classList.remove('has-file');
+      if (this.config.showbuttonAfterChange) {
+        this.hidebuttonAfterChange();
+      }
+    }
+  };
+
   inputfile.prototype.showbuttonAfterChange = function() {
-    document.querySelector( this.showbuttonClass ).hidden = false;
+    document.querySelector( this.showbuttonClass ).removeAttribute('hidden');
   };
   inputfile.prototype.hidebuttonAfterChange = function() {
-    document.querySelector( this.showbuttonClass ).hidden = true;
+    document.querySelector( this.showbuttonClass ).addAttribute('hidden');
   };
 
   inputfile.prototype.eventListers = function() {
