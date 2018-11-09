@@ -3,7 +3,7 @@
     <h2 class="visually-hidden">Primaire navigatie</h2>
     <div class="container">
       <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#">Terug naar GVOP</a></li>
+        <li class="hidden-mobile"><a href="#">Verlaat KPM</a></li>
       </ul>
     </div>
   </nav>
@@ -33,87 +33,21 @@
             <h2 class="h2 h2--large">Zoekresultaat</h2>
             <p>Gemeente 's-Gravenhage</p>
             <h3>Gemeente 's-Gravenhage</h3>
-            <table class="table-fixed">
+            <table class="table table--small">
               <tbody>
-                <tr>
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-                <tr>
-                  <th>Naam</th>
-                  <td>Gemeente 's-Gravenhage</td>
-                </tr>
                 <tr>
                   <th>Type</th>
                   <td>Gemeente</td>
                 </tr>
+                <tr>
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
               </tbody>
             </table>
-            {{render "@button" button4Context }}
-            {{render "@button" button5Context }}
-            {{render "@button" button6Context }}
-            <h2 class="h2 h2--large">Gerelateerde locaties</h2>
-
-            <div class="collapsible collapsible--primary" data-decorator="init-collapsible" id="collapsible1Context">
-              <div class="collapsible__header">
-                <a href="#collapsible1Context" aria-controls="collapsible-content-collapsible1Context" aria-expanded="true"
-                  data-handler="toggle-collapsible">
-                  HHS van Delfland
-                </a>
-              </div>
-              <div class="collapsible__content" id="collapsible-content-{{ id }}">
-                <table class="table-fixed">
-                  <tbody>
-                    <tr>
-                      <th>Bron</th>
-                      <td>Bestuurlijke Grenzen</td>
-                    </tr>
-                    <tr>
-                      <th>Naam</th>
-                      <td>Gemeente 's-Gravenhage</td>
-                    </tr>
-                    <tr>
-                      <th>Type</th>
-                      <td>Gemeente</td>
-                    </tr>
-                  </tbody>
-                </table> 
-                {{render "@button" button4Context }} 
-                {{render "@button" button5Context }} 
-                {{render "@button" button6Context }}
-              </div>
-            </div>
-
-            <div class="collapsible collapsible--primary" data-decorator="init-collapsible" id="collapsible2Context">
-              <div class="collapsible__header">
-                <a href="#collapsible2Context" aria-controls="collapsible-content-collapsible2Context" aria-expanded="true"
-                  data-handler="toggle-collapsible">
-                  Provincie Zuid-Holland
-                </a>
-              </div>
-              <div class="collapsible__content" id="collapsible-content-collapsible2Context">
-                <table class="table-fixed">
-                  <tbody>
-                    <tr>
-                      <th>Bron</th>
-                      <td>Bestuurlijke Grenzen</td>
-                    </tr>
-                    <tr>
-                      <th>Naam</th>
-                      <td>Gemeente 's-Gravenhage</td>
-                    </tr>
-                    <tr>
-                      <th>Type</th>
-                      <td>Gemeente</td>
-                    </tr>
-                  </tbody>
-                </table> 
-                {{render "@button" button4Context }} 
-                {{render "@button" button5Context }} 
-                {{render "@button" button6Context }}
-              </div>
-            </div>
-
+            {{render "@button-icon" button4Context }}
+            {{render "@button-icon" button5Context }}
+            {{render "@button-icon" button6Context }}
           </div>
         </div>
       </div>

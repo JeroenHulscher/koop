@@ -46,7 +46,7 @@ $gutter: 1em;
       position: absolute;
       height: 100%;
       left: 0;
-      overflow: scroll;
+      overflow-y: scroll;
       transition: left $fastEaseInOut;
       -webkit-transition: left $fastEaseInOut;
       -moz-transition: left $fastEaseInOut;
@@ -54,6 +54,33 @@ $gutter: 1em;
 
       .sidebar-column-content {
         visibility: visible;
+
+        .content-item {
+          margin: 0 -2em;
+          padding: 1em 2em;
+
+          &:hover {
+            cursor: pointer;
+            background: $lightBlue;
+          }
+
+          .button-icon {
+            display: none;
+          }
+
+          &.active {
+            background: $mediumBlue;
+
+            th,
+            td {
+              border-color: $primaryBlue;
+            }
+
+            .button-icon {
+              display: inline-block;
+            }
+          }
+        }
       }
     }
 

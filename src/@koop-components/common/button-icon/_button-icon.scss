@@ -2,7 +2,7 @@
   appearance: none;
   background-color: $primaryBlue;
   border-radius: $borderRadius;
-  border: 1px solid $buttonBorderColor;
+  border: none;
   color: $buttonTextColor;
   display: inline-block;
   font-family: inherit;
@@ -27,6 +27,7 @@
   background-image: $searchIcon;
   background-size: .8em;
   cursor: pointer;
+  margin-right: .5em;
 
   &[hidden] {
     display: none;

@@ -1,0 +1,54 @@
+title: KPM Lijst
+label: KPM Lijst
+context:
+  inputAutocompleteContext:
+    id: 2
+    modifier: input-text input-text--search
+    placeholder: Zoek een adres
+    name: verzamelingen
+    hasHiddenField: true
+    hiddenFieldClass: field-class
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    items:
+      - item: Gemeente Vlaardingen
+        code: ABC
+      - item: Gemeente Schiedam
+        code: DEF
+      - item: Gemeente Rotterdam
+        code: XYZ
+      - item: Voorburg
+        code: 123
+  headerContext:
+    youAreHere:
+    - text: Kaartprikmodule
+  breadcrumbContext:
+    last: Kaartprikmodule
+    breadcrumbs:
+      - label: Home
+        path: "#"
+  button1Context:
+    modifier: button-icon--marker
+    iconButton: true
+    text: Marker
+  button2Context:
+    modifier: button-icon--download
+    iconButton: true
+    text: Download
+  button3Context:
+    modifier: button-icon--fullscreen
+    iconButton: true
+    text: Volledig scherm
+  button4Context:
+    modifier: button--small
+    button: true
+    text: Meer details bekijken
+  button5Context:
+    modifier: button--small
+    button: true
+    text: Toevoegen aan lijst
+  button6Context:
+    modifier: button--small
+    button: true
+    text: Centreren
