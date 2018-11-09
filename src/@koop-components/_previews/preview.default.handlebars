@@ -27,8 +27,8 @@
         styles.push(links[i].title);
       }
 
-      const select = document.createElement('select');
-      let title = localStorage.getItem('title');
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
 
       function selectStyle(title) {
         for(var i = 0; i < links.length; i++) {
@@ -42,8 +42,8 @@
         selectStyle(title);
       }
       select.setAttribute('style', 'z-index:999; position: absolute; top: 1em; right: 1em; width: 150px;');
-      for (let i = 0; i < styles.length; i++) {
-        const option = document.createElement('option');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
         option.text = 'CSS: ' + styles[i];
         option.value = styles[i];
         option.selected = styles[i] === title;

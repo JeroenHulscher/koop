@@ -123,6 +123,17 @@ ol {
     left: -1.5em;
     width: 1.5em;
   }
+
+  // Different indentation if the list is more than once.
+  .list--law__unordered .list--law__unordered {
+    span:not(.highlight) {
+      left: -2.5em;
+    }
+
+    p {
+      margin-left: 2.5em;
+    }
+  }
 }
 
 .list--facet {

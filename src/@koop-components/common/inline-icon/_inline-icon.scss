@@ -90,7 +90,7 @@
     }
   }
 
-  &--default {
+  &--culture {
     display: inline-block;
     padding: 0 1.5em 0 0;
     background: {
@@ -221,7 +221,7 @@
       position: right 50%;
     }
   }
-
+  
   &--jobs {
     display: inline-block;
     padding: 0 1.5em 0 0;
@@ -238,6 +238,17 @@
     padding: 0 1.5em 0 0;
     background: {
       image: $healthcareIcon;
+      size: 16px;
+      repeat: no-repeat;
+      position: right 50%;
+    }
+  }
+
+  &--security {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $securityIcon;
       size: 16px;
       repeat: no-repeat;
       position: right 50%;
