@@ -1,19 +1,29 @@
 (function() {
-  onl.handle({
-    'toggle-active-item': function(element, event) {
-      var activeItem = document.getElementsByClassName('content-item active');
-      console.log(element);
+  onl.decorate({
+    'active-item-toggle': function(element, event) {
+      var contentItems = element.querySelectorAll('.content-item');
 
-      console.log(activeItem[0] === event.target);
+      contentItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          if(e.target.type === 'button') {
+            return;
+          }
 
-      if(activeItem[0] === event.target) {
-        event.target.classList.remove('active');
-        return;
-      } else if(activeItem.length > 0) {
-        activeItem[0].classList.remove('active');
-      }
+          var activeItem = document.getElementsByClassName('content-item active');
 
-      event.target.classList.add('active');
+          if(activeItem.length > 0) {
+            // If the current item clicked is the active item, remove class and return early.
+            if(activeItem[0] === item) {
+              activeItem[0].classList.remove('active');
+              return;
+            }
+
+            activeItem[0].classList.remove('active');
+          }
+
+          item.classList.add('active');
+        });
+      });
     }
   });
 })();
