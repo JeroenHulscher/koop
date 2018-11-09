@@ -59,6 +59,10 @@
     z-index: 1;
   }
 
+  &--small {
+    padding: 1em;
+  }
+
   &--marker {
     background-image: $markerIcon;
   }
@@ -69,5 +73,17 @@
 
   &--fullscreen {
     background-image: $fullscreenIcon;
+  }
+
+  &--dots {
+    background-image: $dotsIcon;
+  }
+
+  &--crosshair {
+    background-image: $crosshairIcon;
+  }
+
+  &--remove {
+    background-image: $removeWhiteIcon;
   }
 }

@@ -41,14 +41,10 @@ context:
     iconButton: true
     text: Volledig scherm
   button4Context:
-    modifier: button--small
+    modifier: button-icon--crosshair button-icon--small
     button: true
     text: Meer details bekijken
   button5Context:
-    modifier: button--small
+    modifier: button-icon--remove button-icon--small
     button: true
     text: Toevoegen aan lijst
-  button6Context:
-    modifier: button--small
-    button: true
-    text: Centreren

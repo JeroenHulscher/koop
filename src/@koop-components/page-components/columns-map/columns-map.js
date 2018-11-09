@@ -5,6 +5,7 @@
 
       contentItems.forEach(function(item) {
         item.addEventListener('click', function(e) {
+          // Prevent the flow from executing if the user clicks on one of the modal buttons.
           if(e.target.type === 'button') {
             return;
           }
