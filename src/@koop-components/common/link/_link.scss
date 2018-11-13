@@ -76,6 +76,15 @@ p a {
 
 .link {
 
+  &--down {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartDownIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
   &--forward {
     background: {
       position: 0 center;
