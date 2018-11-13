@@ -56,10 +56,14 @@ $gutter: 1em;
         visibility: visible;
 
         .content-item {
+          margin: 1em -1.5em;
+          padding: 1em 1.5em;
+          cursor: pointer;
 
           &:hover {
-            cursor: pointer;
-            background: $lightBlue;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid $primaryBlue;
           }
 
           .button-icon {
@@ -67,6 +71,9 @@ $gutter: 1em;
           }
 
           &.active {
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid $primaryBlue;
 
             th,
             td {
