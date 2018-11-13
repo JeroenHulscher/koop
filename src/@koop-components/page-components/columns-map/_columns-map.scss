@@ -56,8 +56,6 @@ $gutter: 1em;
         visibility: visible;
 
         .content-item {
-          margin: 0 -2em;
-          padding: 1em 2em;
 
           &:hover {
             cursor: pointer;
@@ -69,7 +67,6 @@ $gutter: 1em;
           }
 
           &.active {
-            background: $mediumBlue;
 
             th,
             td {

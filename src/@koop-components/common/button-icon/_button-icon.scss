@@ -61,6 +61,7 @@
 
   &--small {
     padding: 1em;
+    background-size: 1em;
   }
 
   &--marker {
@@ -85,5 +86,9 @@
 
   &--remove {
     background-image: $removeWhiteIcon;
+  }
+
+  &--plus {
+    background-image: $plusIconWhite;
   }
 }

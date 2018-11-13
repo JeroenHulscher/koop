@@ -273,4 +273,9 @@
   &--dart-left {
     background-image: $dartLeftIcon;
   }
+
+  &--cross-blue {
+    background-image: $iconCrossBlue;
+    background-position: right 50%;
+  }
 }

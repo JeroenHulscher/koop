@@ -20,6 +20,9 @@ context:
         code: XYZ
       - item: Voorburg
         code: 123
+  removeResultIconContext:
+    modifier: icon--cross-blue
+    text: ""
   button1Context:
     modifier: button-icon--marker
     iconButton: true
@@ -29,18 +32,18 @@ context:
     iconButton: true
     text: Download
   button3Context:
-    modifier: button-icon--fullscreenf
+    modifier: button-icon--fullscreen
     iconButton: true
     text: Volledig scherm
   button4Context:
-    modifier: button--small
+    modifier: button-icon--small button-icon--dots trigger-collapse table-trigger
     button: true
     text: Meer details bekijken
   button5Context:
-    modifier: button--small
+    modifier: button-icon--small button-icon--crosshair
     button: true
     text: Toevoegen aan lijst
   button6Context:
-    modifier: button--small
+    modifier: button-icon--small button-icon--plus
     button: true
     text: Centreren

@@ -40,7 +40,7 @@ context:
     modifier: button-icon--fullscreen
     iconButton: true
     text: Volledig scherm
-  searchText: Voer een adres in om geo informatie toe te voegen aan uw lijst.
+  searchText: Om een locatie toe te voegen aan uw lijst kunt u een adres invoeren of een locatie selecteren op de kaart.
   areaContext:
     modifier: icon--arrow-cta-left
     text: Bekijk gebieden
