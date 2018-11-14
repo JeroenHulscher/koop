@@ -15,14 +15,17 @@
     this.listitems = [].slice.call(this.element.querySelectorAll('li'));
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.config.amountVisible = this.config.amount || '5';
+    this.config.labelMore = this.config.labelmore || 'Toon meer';
+    this.config.labelLess = this.config.labelless || 'Toon minder';
+    this.allvisible = false;
     this.init();
   };
 
   showmoreless.prototype.init = function() {
-    this.hideElements();
+    this.hideItems(true);
   };
 
-  showmoreless.prototype.hideElements = function() {
+  showmoreless.prototype.hideItems = function(createTrigger) {
     var i;
 
     for ( i = 0; i < this.listitems.length; i++ ) {
@@ -30,7 +33,7 @@
         this.listitems[i].setAttribute('hidden', 'true');
       }
     }
-    if ( i > this.config.amountVisible) {
+    if ( createTrigger && i > this.config.amountVisible) {
       this.addTrigger();
     }
   };
@@ -43,16 +46,26 @@
 
     this.element.querySelector('ul').appendChild(this.trigger);
 
-    this.trigger.addEventListener('click', function(e) { this.showAll(e); }.bind(this), false);
+    this.trigger.addEventListener('click', function(e) { this.showHide(e); }.bind(this), false);
   };
 
-  showmoreless.prototype.showAll = function() {
+  showmoreless.prototype.showHide = function() {
     var i;
-
-    for ( i = 0; i < this.listitems.length; i++ ) {
-      this.listitems[i].removeAttribute('hidden', 'true');
+    if ( this.allvisible ) {
+      this.hideItems();
+      this.allvisible = false;
+      this.trigger.classList.remove('link--up');
+      this.trigger.classList.add('link--down');
+      this.trigger.innerHTML = this.config.labelMore;
+    } else {
+      for (i = 0; i < this.listitems.length; i++) {
+        this.listitems[i].removeAttribute('hidden', 'true');
+      }
+      this.allvisible = true;
+      this.trigger.classList.add('link--up');
+      this.trigger.classList.remove('link--down');
+      this.trigger.innerHTML = this.config.labelLess;
     }
-    this.removeTrigger();
   };
 
   showmoreless.prototype.removeTrigger = function() {

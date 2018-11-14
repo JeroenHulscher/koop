@@ -76,11 +76,25 @@ p a {
 
 .link {
 
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
   &--down {
     background: {
       position: 0 center;
       repeat: no-repeat;
       image: $dartDownIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
+  &--up {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartUpIcon;
       size: 9px;
     }
     padding-left: 1em;
