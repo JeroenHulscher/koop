@@ -12,6 +12,7 @@ context:
   filter1:
     modifier: list--facet
     heading: Vandaag gepubliceerd
+    maxItems: 3
     items:
       - text: <a href="#">Tractatenblad (0)</a>
       - text: <a href="#">Staatblad (0)</a>
@@ -29,6 +30,7 @@ context:
   filter3:
     modifier: list--facet
     heading: Rubriek
+    maxItems: 6
     items:
       - text: <a href="#">Defensie (4)</a>
       - text: <a href="#">Europese zaken (3)</a>

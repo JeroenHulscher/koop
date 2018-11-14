@@ -1,4 +1,6 @@
-<a href="{{ link }}" class="themeblock {{ modifier }}">
-  <h3>{{ theme-title }}</h3>
-  <p>{{ counter }}</p>
-</a>
+<li class="themeblock__item">
+  <a class="themeblock__link {{ modifier }}" href="{{ link }}">
+    <h3 class="themeblock__title">{{ theme-title }}</h3>
+    <p class="themeblock__counter">{{ counter }} <span class="visually-hidden">sets</span></p>
+  </a>
+</li>
