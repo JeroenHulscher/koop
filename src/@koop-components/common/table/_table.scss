@@ -171,27 +171,10 @@ table,
       padding-left: 0 !important;
     }
 
-    &.open {
-      tr {
-        th,
-        td {
-          border-bottom: 2px solid #B2D7EE;
-        }
-
-        &.detail-row {
-          display: table-row;
-        }
-      }
-    }
-
     tr {
       th, td {
         padding: 4px 0;
       }
-    }
-
-    tr.detail-row {
-      display: none;
     }
 
     tr:first-of-type {
@@ -199,14 +182,6 @@ table,
       td {
         padding-bottom: 4px;
         border-bottom: 2px solid #B2D7EE;
-      }
-    }
-
-    &:last-of-type {
-      th,
-      td {
-        border-bottom: 0;
-        padding-top: 4px;
       }
     }
   }
