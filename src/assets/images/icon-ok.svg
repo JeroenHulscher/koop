@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
-    <title>Production</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="A.-Data-[ALL-PAGES]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="B.-Data---Dataset---Desktop-[1366px]" transform="translate(-267.000000, -390.000000)" fill="#333333" fill-rule="nonzero">
-            <g id="Production" transform="translate(267.000000, 390.000000)">
-                <path d="M10.2231943,0.668324394 C9.89733948,0.4276132 9.44298988,0.474081428 9.17353188,0.775403354 L4.58997513,5.90353311 L1.83455351,3.51674019 C1.54310247,3.26477272 1.11299717,3.26136697 0.819294878,3.50888966 C0.524438096,3.756066 0.453436953,4.1805143 0.650739318,4.51029441 L3.98848576,10.0806516 C4.12939128,10.3157058 4.38309049,10.4600171 4.657051,10.4608829 C4.65820549,10.4608829 4.65872501,10.4608829 4.6598795,10.4608829 C4.93268552,10.4608829 5.18638473,10.3185343 5.32844474,10.0848655 L10.4255764,1.70326708 C10.6358091,1.35772818 10.5478947,0.908977864 10.2231943,0.668324394 Z" id="Shape"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg aria-hidden="true" focusable="false" role="img" width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M10.223.668a.783.783 0 0 0-1.05.107L4.59 5.904 1.835 3.517A.782.782 0 0 0 .65 4.51l3.337 5.57c.141.236.395.38.67.38h.002a.783.783 0 0 0 .668-.375l5.098-8.382a.782.782 0 0 0-.203-1.035z" fill="#333"/></svg>
