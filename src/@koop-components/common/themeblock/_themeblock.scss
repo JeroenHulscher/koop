@@ -1,63 +1,66 @@
 .themelist {
-width: calc(100% + 3em);
-position: relative;
-left: -1.5em;
+  margin: 0 -1.5em;
+
+  @media (min-width: 50em) {
+    column-count: 2;
+    column-fill: balance;
+  }
+
+  @media (min-width: 75em) {
+    column-count: 3;
+  }
 }
 
-.themeblock {
-  display: inline-block;
-  position: relative;
-  width: 33%;
-  padding: 1.5em 1.5em 1.5em 4em;
-  text-decoration: none;
-  color: $darkBlue;
+.themeblock__item {
+  list-style: none;
+}
+
+.themeblock__title {
+  color: inherit;
+  font-size: inherit;
   margin: 0;
+}
 
-  @media ( max-width: 50em ) {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-  }
+.themeblock__counter {
+  color: inherit;
+  font-style: italic;
+  margin: 0 0 0 auto;
+  z-index: 2;
+}
 
-  h3 {
-    color: inherit;
-    line-height: 1;
-    font-size: 1.25em;
-    margin: 0;
-  }
-
-  p {
-    color: inherit;
-    margin: 0;
-    position: absolute;
-    top: 1.2em;
-    right: 1.5em;
-    z-index: 2;
-    line-height: 2em;
-    font-style: italic;
-
-  }
+.themeblock__link {
+  align-items: flex-start;
+  color: $darkBlue;
+  display: inline-flex;
+  margin: 0;
+  min-height: 30px;
+  padding: 1em;
+  text-decoration: none;
+  width: 100%;
 
   &::before {
-    content: '';
-    z-index: 1;
-    width: 2em;
-    height: 2em;
-    position: absolute;
-    left: 1.5em;
-    top: 1.125em;
     background: {
       repeat: no-repeat;
       position: 50% 50%;
-      size: 1.75em;
+      size: 1.4em;
     }
+    content: '';
+    height: 2em;
+    margin-right: .5em;
+    margin-top: -.35em;
+    width: 2em;
+    z-index: 1;
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
   }
 
   &--governance {
 
     &:hover {
-      color: #4a1eea;
       background-color: rgba(74,30,234, 0.1);
+      color: #4a1eea;
     }
 
     &::before {
@@ -67,8 +70,8 @@ left: -1.5em;
 
   &--culture {
     &:hover {
-      color: #42145f;
       background-color: rgba(66,20,95, 0.1);
+      color: #42145f;
     }
 
     &::before {
@@ -78,8 +81,8 @@ left: -1.5em;
 
   &--economy {
     &:hover {
-      color: #a90061;
       background-color: rgba(169,0,97, 0.1);
+      color: #a90061;
     }
 
     &::before {
@@ -89,8 +92,8 @@ left: -1.5em;
 
   &--finance {
     &:hover {
-      color: #d52b1e;
       background-color: rgba(213,43,30, 0.1);
+      color: #d52b1e;
     }
 
     &::before {
@@ -100,8 +103,8 @@ left: -1.5em;
 
   &--housing {
     &:hover {
-      color: #94710a;
       background-color: rgba(148,113,10, 0.1);
+      color: #94710a;
     }
 
     &::before {
@@ -111,8 +114,8 @@ left: -1.5em;
 
   &--international {
     &:hover {
-      color: #777c00;
       background-color: rgba(119,124,0, 0.1);
+      color: #777c00;
     }
 
     &::before {
@@ -122,8 +125,8 @@ left: -1.5em;
 
   &--agriculture {
     &:hover {
-      color: #bf360c;
       background-color: rgba(191,54,12, 0.1);
+      color: #bf360c;
     }
 
     &::before {
@@ -133,8 +136,8 @@ left: -1.5em;
 
   &--migration {
     &:hover {
-      color: #673327;
       background-color: rgba(103,51,39, 0.1);
+      color: #673327;
     }
 
     &::before {
@@ -144,8 +147,8 @@ left: -1.5em;
 
   &--nature {
     &:hover {
-      color: #39870c;
       background-color: rgba(57,135,12, 0.1);
+      color: #39870c;
     }
 
     &::before {
@@ -155,8 +158,8 @@ left: -1.5em;
 
   &--education {
     &:hover {
-      color: #42145f;
       background-color: rgba(66,20,95, 0.1);
+      color: #42145f;
     }
 
     &::before {
@@ -166,8 +169,8 @@ left: -1.5em;
 
   &--security {
     &:hover {
-      color: #275937;
       background-color: rgba(39,89,55, 0.1);
+      color: #275937;
     }
 
     &::before {
@@ -177,8 +180,8 @@ left: -1.5em;
 
   &--law {
     &:hover {
-      color: #ca005d;
       background-color: rgba(202,0,93, 0.1);
+      color: #ca005d;
     }
 
     &::before {
@@ -188,8 +191,8 @@ left: -1.5em;
 
   &--infrastructure {
     &:hover {
-      color: #007bc7;
       background-color: rgba(0,123,199, 0.1);
+      color: #007bc7;
     }
 
     &::before {
@@ -199,8 +202,8 @@ left: -1.5em;
 
   &--social {
     &:hover {
-      color: #673327;
       background-color: rgba(103,51,39, 0.1);
+      color: #673327;
     }
 
     &::before {
@@ -210,8 +213,8 @@ left: -1.5em;
 
   &--traffic {
     &:hover {
-      color: #bf360c;
       background-color: rgba(191,54,12, 0.1);
+      color: #bf360c;
     }
 
     &::before {
@@ -221,8 +224,8 @@ left: -1.5em;
 
   &--jobs {
     &:hover {
-      color: #a90061;
       background-color: rgba(169,0,97, 0.1);
+      color: #a90061;
     }
 
     &::before {
@@ -232,20 +235,14 @@ left: -1.5em;
 
   &--healthcare {
     &:hover {
-      color: #d52b1e;
       background-color: rgba(213,43,30, 0.1);
+      color: #d52b1e;
     }
 
     &::before {
       background-image: $healthcareIcon;
     }
   }
-
-  &:hover, &:focus {
-    text-decoration: none;
-
-  }
-
 }
 
 
