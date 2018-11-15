@@ -2,11 +2,13 @@
 label: Input checkbox
 status: ready
 context:
+  modifier: inline-group
   fieldLabel: Welke landen vochten er mee met de geallieerden in de Tweede Wereldoorlog?
   name: alliedforces
   options:
     - id: checkbox-1
       text: Groot-Brittanië
+      status: disabled
     - id: checkbox-2
       text: Verenigde Staten
     - id: checkbox-3
