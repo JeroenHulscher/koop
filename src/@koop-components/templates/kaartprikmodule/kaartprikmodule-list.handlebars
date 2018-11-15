@@ -63,7 +63,15 @@
               </table>
               {{render "@button-icon" table1ExpandButtonContext }}
               {{render "@button-icon" button5Context }}
-              {{render "@button-icon" button6Context }}
+              <button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class=" button-icon button-icon--remove button-icon--small"></button>
+            </div>
+            <div id="modal-1" class="modal modal--off-screen" role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  {{{ modalContext }}}
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">{{ closeButton }}</button>
+              </div>
             </div>
 
             <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-two-trigger" }'>

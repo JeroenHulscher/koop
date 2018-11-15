@@ -71,6 +71,12 @@ $gutter: 1em;
           }
         }
 
+        .modal__content {
+          .table--small {
+            margin: 1em 0;
+          }
+        }
+
         .content-item {
           margin: 1em -1em;
           padding: 1em 1em;
