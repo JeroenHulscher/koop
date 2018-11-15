@@ -7,6 +7,7 @@ context:
   options:
     - id: checkbox-1
       text: Groot-Brittanië
+      status: disabled
     - id: checkbox-2
       text: Verenigde Staten
     - id: checkbox-3
