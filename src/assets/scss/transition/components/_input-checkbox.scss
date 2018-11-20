@@ -12,7 +12,7 @@
 
   &:checked + label:before {
     background: #f35429;
-    background: $darkBlue url(../../../images/icon-check-white_new.svg);
+    background: $darkBlue $iconCheckboxWhite;
   }
 
   &:disabled + label {
