@@ -1,6 +1,6 @@
 ---
 label: Show more-less
-status: prototype
+status: ready
 context:
   id: 1
   amount: 5

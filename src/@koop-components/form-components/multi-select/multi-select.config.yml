@@ -1,6 +1,6 @@
 ---
 label: Multi select
-status: prototype
+status: ready
 context:
   id: 1
   placeholder: Zoeken in verzamelingen
