@@ -57,6 +57,14 @@ $gutter: 1em;
 
         .table--small {
           table-layout: fixed;
+          margin-bottom: 1em;
+
+          tr:first-of-type {
+            th,
+            td {
+              border-bottom: 2px solid #B2D7EE;
+            }
+          }
 
           .source-row {
             th,
@@ -124,10 +132,6 @@ $gutter: 1em;
           }
 
           &.collapsed {
-            .detail-row {
-              display: none;
-            }
-
             .button-icon--dots {
               background-image: $dotsIcon;
             }
