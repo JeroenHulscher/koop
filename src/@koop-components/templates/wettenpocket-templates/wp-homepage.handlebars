@@ -1,0 +1,49 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Wettenpocket portaal</h1>
+      <p>
+        Welkom op het Wettenpocket portaal. U kunt op dit portaal wettenpockets zoeken en raadplegen. Een wettenpocket bundelt relevante regelgeving en aanvullende informatie op een specifiek rechtsgebied of onderwerp in handige “pockets”. In de bibliotheek zijn wettenpockets met nationale en decentrale wet- en regelgeving van <a href="#">www.overheid.nl</a> beschikbaar, soms aangevuld met links, notities en bijlagen.
+      </p>
+      <h2>Functies</h2>
+      <p>Dit wettenpocket portaal biedt:</p>
+      <ul>
+        <li>Toegang tot bibliotheek met meer dan 3000 wettenbundels en wettenpockets.</li>
+        <li>Zoekfunctie in de bibliotheek o.a. op uitgever of opgenomen regelingen.</li>
+        <li>Overzicht van recent gepubliceerde of meest gedownloade pockets.</li>
+        <li>Tonen van wettenpockets en opgenomen regelingen, inclusief gepubliceerde notities, documenten en links van auteurs.</li>
+        <li>Tonen van gerelateerde informatie bij regelingen uit Linked Data Overheid.</li>
+        <li>Toegang tot de auteursomgeving voor wettenpockets voor auteurs van overheidsorganisaties.</li>
+      </ul>
+      <h2>Algemene opmerkingen</h2>
+      <ul>
+        <li>De App is ALLEEN beschikbaar voor tablets, en niet voor devices met kleinere schermen zoals telefoons.</li>
+        <li>Loopt u tegen een probleem aan of heeft u verbetervoorstellen: laat het ons weten per email.</li>
+      </ul>
+      <h2>Bundels en pockets</h2>
+      <p>U kunt in de bibliotheek kiezen uit meer dan 3000 bundels met wet- en regelgeving. Er zijn bundels met alle centrale wet- en regelgeving, geordend rond wetsfamilies uit wetten.nl. Daarnaast zijn er bundels met alle decentrale regelgeving van provincies, waterschappen en gemeenten zoals te vinden op <a href="#">www.overheid.nl</a>. De bundels bevatten wetteksten zonder toevoegingen.</p>
+
+      <p>Naast de bundels zijn ook “pockets” beschikbaar. De pockets bevatten selecties van centrale en decentrale wet- en regelgeving. Een auteur van een overheidsorganisatie kan in een pocket een selectie maken van relevante wet- en regelgeving voor een specifiek werkterrein. De auteur kan specifieke regelingsonderdelen en annotaties, links en documenten toevoegen. De auteur publiceert de pocket in de bibliotheek van de wettenpocket. De pockets zijn zowel in de App als ook in dit portaal voor iedereen te raadplegen. De gepubliceerde informatie is rechtenvrij bruikbaar (CC0 of CC-BY licentie).</p>
+
+      <p>Alle bundels en pockets in dit portaal zijn ook in de wettenpocket App op de tablet beschikbaar.</p>
+
+      <h2>Wilt u zelf een wettenpocket maken?</h2>
+      <p>Werkt u bij een overheidsorganisatie? Dan is het mogelijk om een wettenpocket op maat te maken en te publiceren. In de wettenpocket kunt u precies alle relevante wet- en regelgeving opnemen voor uw werkterrein, aangevuld met notities, links en documenten. Dat is niet alleen handig voor gebruik in uw eigen werkomgeving. Uw wettenpocket komt ook direct beschikbaar voor publiek op dit portaal en in de wettenpocket App.</p>
+
+      <p>Om wettenpockets aan te kunnen maken en te publiceren dient u een overeenkomst af te sluiten met KOOP. De KOOP servicedesk geeft accounts uit aan geaccrediteerde auteurs, werkend bij of voor een overheidsorganisatie. Stuur uw aanvraag om auteur te worden naar servicedesk@koop.overheid.nl. Vermeld hierbij in ieder geval uw naam, de overheidsorganisatie waar u voor werkt en uw emailadres, eventueel aangevuld met informatie over de inhoud van de pocket(s) die u wilt beheren. Nadat u de overeenkomst heeft afgesloten ontvangt u een inlogaccount en alle informatie voor het aanmaken en publiceren van uw wettenpockets op maat.</p>
+    </div>
+
+
+    <div>
+      <h2>Subnavigatie</h2>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}

@@ -1,0 +1,16 @@
+title: Wettenpocket Overzichtspagina
+label: Wettenpocket Overview
+context:
+  headerContext:
+    navLinks:
+      - url: '/templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+  navlistContext:
+    modifier: list--linked
+    items:
+      - text: <a href="templates-wp-search">Zoek wettenpockets</a>
+      - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
+      - text: <a href="#">Veel gedownloade wettenpockets</a>
+      - text: <a href="#">Veelgestelde vragen</a>

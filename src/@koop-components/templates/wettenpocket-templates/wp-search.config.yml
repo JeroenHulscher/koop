@@ -1,0 +1,88 @@
+title: Wettenpocket Zoeken
+label: Wettenpocket Zoeken
+context:
+  headerContext:
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+  navContext:
+    modifier: list--linked list--unstyled
+    items:
+      - text: <a href="templates-wp-search">Zoek wettenpockets</a>
+        subitems:
+          - text: <a href="#">Algemeen</a>
+          - text: <a href="#">Regelgeving</a>
+          - text: <a href="#">Decentraal</a>
+          - text: <a href="#">Verdragen</a>
+      - text: <a href="template-wp-overview">Recent gepubliceerde wettenpockets</a>
+      - text: <a href="#">Veel gedownloade wettenpockets</a>
+      - text: <a href="#">Veelgestelde vragen</a>
+  firstInputContext:
+    id: trefwoord
+    fieldPlaceholder: Vul een trefwoord in
+  typeSelectContext:
+    id: type
+    fieldLabel: Type wettenpocket
+    values:
+      - value:
+        inputValue:
+        displayValue: Selecteer een type…
+      - value:
+        inputValue: geaccrediteerd
+        displayValue: Redactioneel samengesteld
+      - value:
+        inputValue: gegenereerd
+        displayValue: Automatisch gegenereerd
+  fieldSelectContext:
+    id: field
+    fieldLabel: Rechtsgebied
+    values:
+      - value:
+        inputValue:
+        displayValue: Selecteer een rechtsgebied…
+      - value:
+        inputValue: arbitrage
+        displayValue: Arbitrage
+      - value:
+        inputValue: belastingrecht
+        displayValue: Belastingrecht
+      - value:
+        inputValue: informatierecht
+        displayValue: Informatierecht
+      - value:
+        inputValue: Strafrecht
+        displayValue: Strafrecht
+      - value:
+        inputValue: overig
+        displayValue: Overig
+  publisherSelectContext:
+      id: publisher
+      fieldLabel: Uitgever
+      values:
+        - value:
+          inputValue:
+          displayValue: Selecteer een uitgever…
+        - value:
+          inputValue: KOOP
+          displayValue: KOOP
+        - value:
+          inputValue: minbz
+          displayValue: Ministerie van Buitenlandse Zaken
+        - value:
+          inputValue: raadvdrechtspraak
+          displayValue: Raad voor de Rechtspraak
+        - value:
+          inputValue: belastingdienst
+          displayValue: Belastingdienst
+        - value:
+          inputValue: minbzk
+          displayValue: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  authorInputContext:
+    id: auteur
+  buttonContext:
+    modifier: button--primary
+    inputSubmit: true
+    button: true
+    text: Zoeken

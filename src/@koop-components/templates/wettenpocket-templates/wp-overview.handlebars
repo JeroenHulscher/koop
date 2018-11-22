@@ -1,0 +1,22 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Recent gepubliceerde wettenpockets</h1>
+      <p>Overzicht van wettenpockets die recent gepubliceerd zijn.</p>
+
+    </div>
+
+
+    <div>
+      <h2>Subnavigatie</h2>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}
