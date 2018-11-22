@@ -1,6 +1,6 @@
 ---
 label: Input Autocomplete
-status: prototype
+status: ready
 context:
   id: 1
   modifier: input-text

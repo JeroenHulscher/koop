@@ -1,6 +1,6 @@
 ---
 label: Datepicker
-status: prototype
+status: ready
 context:
   id: 1
   fieldLabel: Datum
