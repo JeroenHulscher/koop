@@ -5,7 +5,7 @@ describe('Multi-select', function () {
   });
 
   it('should open autocomplete with typing', function () {
-    browser.get('http://localhost:3000/components/preview/multi-select2');
+    browser.get('http://localhost:3000/components/preview/multi-select');
 
     var input = element(by.css('.multiselect__controls input'));
     var expander = element(by.css('.multiselect__resultscontainer'));
@@ -31,7 +31,7 @@ describe('Multi-select', function () {
   });
 
   it('should add Volvo has selected choice', function () {
-    browser.get('http://localhost:3000/components/preview/multi-select2');
+    browser.get('http://localhost:3000/components/preview/multi-select');
 
     var input = element(by.css('.multiselect__controls input'));
 
@@ -56,7 +56,7 @@ describe('Multi-select', function () {
 
   });
   xit('should hide resultlist when ESC', function () {
-    browser.get('http://localhost:3000/components/preview/multi-select2');
+    browser.get('http://localhost:3000/components/preview/multi-select');
 
     var input = element(by.css('.multiselect__controls input'));
 

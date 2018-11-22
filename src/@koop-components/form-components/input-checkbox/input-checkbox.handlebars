@@ -9,9 +9,8 @@
   <ul class="list--unstyled">
     {{#each options }}
       <li>
-        <label for="option-{{ id  }}">
-          <input type="checkbox" id="option-{{ id }}" name="{{ ../name }}" />
-          <span></span>
+        <input class="checkbox__input" type="checkbox" id="option-{{ id }}" name="{{ ../name }}" {{ status }} value="{{ text }}"/>
+        <label class="checkbox__label" for="option-{{ id  }}">
           {{ text }}
         </label>
       </li>

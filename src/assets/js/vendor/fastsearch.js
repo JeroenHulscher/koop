@@ -399,7 +399,6 @@
         },
 
         handleItemSelect: function($item) {
-
             var selectOption = this.options.onItemSelect,
                 model = this.itemModels.length ? this.itemModels[this.$resultItems.index($item)] : {};
 
@@ -409,14 +408,14 @@
 
                 this.fillInput(model);
 
+
             } else if (selectOption === 'follow') {
 
                 window.location.href = $item.attr('href');
 
             } else if (typeof selectOption === 'function') {
-
-                selectOption.call(this, $item, model, this);
-
+              selectOption.call(this, $item, model, this);
+              this.$input.focus();
             }
 
         },
@@ -453,16 +452,11 @@
 
         hideResults: function() {
 
-          this.$input.focus();
-
-          // test
-          this.resultsOpened = true;
-
             if (this.resultsOpened) {
 
                 this.resultsOpened = false;
                 this.$el.removeClass(this.options.resultsOpenedClass);
-                this.$el.removeClass(this.options.activeClass);
+                // this.$el.removeClass(this.options.activeClass);
                 this.$input.trigger('closingResults');
                 this.documentCancelEvents('off');
 

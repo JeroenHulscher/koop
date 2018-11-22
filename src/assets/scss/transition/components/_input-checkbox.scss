@@ -1,57 +1,43 @@
-.form__element.checkboxgroup {
-  color: $darkBlue;
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
 
-  label {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  &:hover + label:before {
+    background: $lightBlue;
+  }
 
-    input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
+  &:focus + label {
+    outline: 2px solid $focus;
+  }
 
-    span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 25px;
-      width: 25px;
-      background-color: #fff;
-      border: 2px solid $darkBlue;
-      border-radius: 4px;
+  &:checked + label:before {
+    background: #f35429;
+    background: $darkBlue $iconCheckboxWhite;
+  }
 
-      &:after {
-        content: "";
-        position: absolute;
-        display: none;
-        left: 1px;
-        width: 20px;
-        height: 20px;
-        background: $darkBlue $iconCheckWhiteTransitional no-repeat center center;
-        background-size: .95em;
-      }
-    }
+  &:disabled + label {
+    color: $mediumGrey;
+    cursor: auto;
+  }
 
-    &:hover input ~ span {
-      background-color: $lightBlue;
-    }
+  &:disabled + label:before {
+    border-color: $mediumGrey;
+  }
+}
 
-    & input:checked ~ span {
-      background-color: $darkBlue;
-    }
+.checkbox__label {
+  position: relative;
+  padding: 0;
 
-    & input:checked ~ span:after {
-      display: block;
-    }
+  &::before {
+    background: white;
+    border-radius: 4px;
+    border: 2px solid $darkBlue;
+    content: '';
+    display: inline-block;
+    height: 1.5em;
+    margin-right: .5em;
+    vertical-align: middle;
+    width: 1.5em;
   }
 }

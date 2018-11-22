@@ -7,7 +7,7 @@ a {
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
-  &[href*="//"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl/"]):not([href*=".officielebekendmakingen.nl/"]),
+  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl/"]):not([href*=".officielebekendmakingen.nl/"]),
   &[rel="external"] {
     padding-right: 1.25em;
     margin-right: .25em;
@@ -76,6 +76,29 @@ p a {
 
 .link {
 
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &--down {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartDownIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
+  &--up {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartUpIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
   &--forward {
     background: {
       position: 0 center;
