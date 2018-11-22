@@ -26,11 +26,19 @@
   {{#each items }}
     {{#if subitems }}
     <li>{{{ text }}}
-      <ol>
-      {{#each subitems }}
-        <li>{{{ text }}}</li>
-      {{/each }}
-      </ol>
+      {{#if orderedList }}
+        <ol>
+        {{#each subitems }}
+          <li>{{{ text }}}</li>
+        {{/each }}
+        </ol>
+      {{else}}
+        <ul>
+          {{#each subitems }}
+            <li>{{{text}}}</li>
+          {{/each }}
+        </ul>
+      {{/if }}
     </li>
     {{else}}
       <li>{{{ text }}}</li>
