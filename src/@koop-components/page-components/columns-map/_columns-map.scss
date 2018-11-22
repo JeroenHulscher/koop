@@ -156,10 +156,6 @@ $gutter: 1em;
           }
 
           &.collapsed {
-            .detail-row {
-              display: none;
-            }
-
             .button-icon--dots {
               background-image: $dotsIcon;
             }
