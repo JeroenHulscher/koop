@@ -1,0 +1,146 @@
+title: Wettenpocket Detail Redactioneel
+label: Wettenpocket Detail Redactioneel
+context:
+  headerContext:
+    navLinks:
+      - url: '/templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+  navlistContext:
+    modifier: list--linked
+    items:
+      - text: <a href="templates-wp-search">Zoek wettenpockets</a>
+      - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
+      - text: <a href="#">Veel gedownloade wettenpockets</a>
+      - text: <a href="#">Veelgestelde vragen</a>
+
+  definitionContext:
+    modifier: 'columns--data'
+    divContainer: true
+    items:
+      - type: Onderwerp
+        value: Staats- en bestuursrecht
+      - type: Publicist
+        value: Berg en Dal
+      - type: Auteur
+        value: Berg en Dal
+      - type: Publicatiedatum
+        value: 11-7-2018
+      - type: Downloads
+        value: 92
+
+  tableLawContext:
+    caption: "Wet- en regelgeving"
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type:
+          value: Wet
+        - column:
+          type: Titel
+          value: Gemeentewet
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type:
+          value:
+        - column:
+          type: Titel
+          value: "Versie geldend vanaf: 01-02-2016"
+        - column:
+          type: Annotaties
+          value:
+
+  tableDecentralContext:
+    caption: "Decentrale regelingen"
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Uitgever
+          value: Berg en Dal
+        - column:
+          type: Titel
+          value: Instructie voor de griffier van de gemeente Groesbeek 2015
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type: Uitgever
+          value: Berg en Dal
+        - column:
+          type: Titel
+          value: Regelement van Orde voor de vergaderingen van de gemeenteraad van Groesbeek
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type: Uitgever
+          value: Berg en Dal
+        - column:
+          type: Titel
+          value: Verordening burgerinitiatief 2011
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type: Uitgever
+          value: Berg en Dal
+        - column:
+          type: Titel
+          value: Verordening op de Auditcommissie Groesbeek 2015
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type: Uitgever
+          value: Berg en Dal
+        - column:
+          type: Titel
+          value: Verordening op de uitgangspunten voor het financieel beleid, alsmede voor het financieel beheer en voor de inrichting van de financiële organisatie van de Modulaire Gemeenschappelijke Regeling Rijk van Nijmegen.
+        - column:
+          type: Annotaties
+          value:
+
+  tableDocsContext:
+    caption: "Documenten"
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Titel
+          value: Beslissingsmatrix voor elk raadsvoorstel
+        - column:
+          type: Type
+          value: pdf
+        - column:
+          type: Grootte
+          value: 282Kb
+      - item:
+        - column:
+          type: Titel
+          value: Voortschrijdend document werkwijzen presidium en raad
+        - column:
+          type: Type
+          value: pdf
+        - column:
+          type: Grootte
+          value: 296Kb
+      - item:
+        - column:
+          type: Titel
+          value: Principes hoe raad, college en organisatie in de praktijk te werk gaan.
+        - column:
+          type: Type
+          value: pdf
+        - column:
+          type: Grootte
+          value: 582Kb

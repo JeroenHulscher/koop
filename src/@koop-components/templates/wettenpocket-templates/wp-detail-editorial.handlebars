@@ -1,0 +1,37 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Bundel Raad Berg en Dal</h1>
+      <div class="well">
+        {{render "@definitionlist" definitionContext}}
+        {{render "@button"}}
+      </div>
+
+      <p>Deze bundel is bedoeld voor raadsleden, griffie alsmede overige functionarissen die direct betrokken zijn bij (besluitvorming door) de raad.</p>
+      <p>In de bundel kunnen worden opgenomen relevante wetten, decentrale regelgeving (verordeningen) alsmede andere documenten zoals beleidstukken en hyperlinks.</p>
+      <p>Dit op aangeven van de Griffier.</p>
+
+      {{render "@table" tableLawContext}}
+
+      {{render "@table" tableDecentralContext}}
+
+      {{render "@table" tableDocsContext}}
+
+      <h2>Links</h2>
+      <p><a href="https://nu.nl">Informatiesite Wettenpocket</a></p>
+    </div>
+
+
+    <div>
+      <h2>Subnavigatie</h2>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}
