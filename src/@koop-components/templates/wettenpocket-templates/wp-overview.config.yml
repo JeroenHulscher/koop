@@ -1,9 +1,10 @@
 title: Wettenpocket Overzichtspagina
 label: Wettenpocket Overview
+status: wip
 context:
   headerContext:
     navLinks:
-      - url: '/templates-wp-homepage'
+      - url: 'templates-wp-homepage'
         text: Home
       - url: '#'
         text: Wettenpockets aanmaken
@@ -14,3 +15,39 @@ context:
       - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
       - text: <a href="#">Veel gedownloade wettenpockets</a>
       - text: <a href="#">Veelgestelde vragen</a>
+  resultsContext:
+    items:
+    - title: Wettenpocket Wetboek van Strafrecht
+      text: Automatisch gegenereerde pocket van wet- en regelgeving rond Wetboek van Strafrecht
+      metadata:
+        - value: "Datum: 21-11-2018"
+        - value: "Onderwerp: Overig"
+        - value: "Gepubliceerd door: KOOP"
+    - title: Wettenpocket Warenwet
+      text: Automatisch gegenereerde pocket van wet- en regelgeving rond Warenwet
+      metadata:
+        - value: "Datum: 21-11-2018"
+        - value: "Onderwerp: Overig"
+        - value: "Gepubliceerd door: KOOP"
+    - title: Regelingenpocket Deventer
+      text: Automatisch gegenereerde pocket van wet- en regelgeving van de organisatie Deventer
+      metadata:
+        - value: "Datum: 9-11-2018"
+        - value: "Onderwerp: Overig"
+        - value: "Gepubliceerd door: KOOP"
+    - title: HAFIR Bestuurlijke regels
+      text: Dit overzicht bevat bestuurlijke regels zoals de begrotingsregels of Raamwerk uitvoering subsidies die voor het Rijk van toepassing zijn.
+      metadata:
+        - value: "Datum: 6-2-2018"
+        - value: "Onderwerp: Overig"
+        - value: "Gepubliceerd door: Ministerie van Financiën"
+    - title: Wettenpocket Warenwet
+      text: Automatisch gegenereerde pocket van wet- en regelgeving rond Warenwet
+      metadata:
+        - value: "Datum: 21-11-2018"
+        - value: "Onderwerp: Overig"
+        - value: "Gepubliceerd door: KOOP"
+  paginationContext:
+    previousPage: 1
+    currentPage: 2
+    lastPage: 5

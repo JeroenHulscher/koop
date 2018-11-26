@@ -16,7 +16,7 @@ context:
           - text: <a href="#">Regelgeving</a>
           - text: <a href="#">Decentraal</a>
           - text: <a href="#">Verdragen</a>
-      - text: <a href="template-wp-overview">Recent gepubliceerde wettenpockets</a>
+      - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
       - text: <a href="#">Veel gedownloade wettenpockets</a>
       - text: <a href="#">Veelgestelde vragen</a>
   firstInputContext:
