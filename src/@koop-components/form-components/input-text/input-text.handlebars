@@ -1,14 +1,16 @@
 {{#if remove}}
 <div class="relative">
 {{/if}}
-<input 
-  type="text" 
-  id="input-text-{{ id }}" 
-  class="input input-text {{ modifier }}" 
-  placeholder="{{ fieldPlaceholder }}" 
-  {{#if remove}}
-  data-decorator="toggle-remove-visibility"
-  {{/if}}/>
+  <label for="input-text-{{ id }}">{{ fieldLabel }}</label>
+  <input 
+    type="text" 
+    id="input-text-{{ id }}" 
+    class="input input-text {{ modifier }}" 
+    placeholder="{{ fieldPlaceholder }}" 
+    {{#if remove}}
+    data-decorator="toggle-remove-visibility"
+    {{/if}}/>
+  
 {{#if remove}}
 <a href="#" class="input-text__remove invisible" data-handler="empty-input" tabindex="-1"><span class="visually-hidden">Wis waarde</span></a>
 {{/if}}
