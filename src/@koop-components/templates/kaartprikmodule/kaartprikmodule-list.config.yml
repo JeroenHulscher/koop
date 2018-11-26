@@ -29,35 +29,35 @@ context:
       - label: Home
         path: "#"
   button1Context:
-    modifier: button-icon--marker
+    modifier: button--small
     iconButton: true
     text: Marker
   button2Context:
-    modifier: button-icon--download
+    modifier: button--small
     iconButton: true
     text: Download
   button4Context:
-    modifier: button-icon--dots button-icon--small trigger-collapse table-trigger
+    modifier: button--small
     button: true
-    text: Meer details bekijken
+    text: Meer details
   button5Context:
-    modifier: button-icon--crosshair button-icon--small
+    modifier: button--small
     button: true
-    text: Toevoegen aan lijst
+    text: Toevoegen
   button6Context:
     modifier: button-icon--remove button-icon--small
     button: true
     text: Toevoegen aan lijst
   table1ExpandButtonContext:
-    modifier: button-icon--dots button-icon--small trigger-collapse table-one-trigger
+    modifier: button--small trigger-collapse table-one-trigger
     button: true
-    text: Meer details bekijken
+    text: Meer details
   table2ExpandButtonContext:
-    modifier: button-icon--dots button-icon--small trigger-collapse table-two-trigger
+    modifier: button--small trigger-collapse table-two-trigger
     button: true
-    text: Meer details bekijken
+    text: Meer details
   table3ExpandButtonContext:
-    modifier: button-icon--dots button-icon--small trigger-collapse table-three-trigger
+    modifier: button--small trigger-collapse table-three-trigger
     button: true
-    text: Meer details bekijken
+    text: Meer details
   modalContext: "<h2 class='k-future h2--large'>Geselecteerde locatie verwijderen</h2><p>Weet u zeker dat u deze locatie wilt verwijderen?</p><h3>Gemeente 's-Gravenhage</h3><table class='table--small'><tbody><tr class='type-row'><th>Type</th><td>Gemeente</td></tr><tr class='source-row'><th>Bron</th><td>Bestuurlijke Grenzen</td></tr></tbody></table><button class='button button--inversed'>Annuleren</button><button class='button button--primary'>Verwijderen</button>" 

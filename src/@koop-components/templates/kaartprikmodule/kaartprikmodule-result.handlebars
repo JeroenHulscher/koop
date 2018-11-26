@@ -17,11 +17,6 @@
         <div class="form__row--large">
           {{ render "@input-autocomplete" inputAutocompleteContext }}
         </div>
-        <div>
-          {{render "@button-icon" button1Context}}
-          {{render "@button-icon" button2Context}}
-          {{render "@button-icon" button3Context}}
-        </div>
       </div>
     </div>
   </div>
@@ -33,44 +28,42 @@
        }'>
     <div class="sidebar-column">
       <div class="sidebar-column-content">
-        <div class="container">
-          <div class="container">
-            <h2 class="h2 h2--large">Zoekresultaat</h2>
-            <p>Gemeente 's-Gravenhage {{render "@inline-icon" removeResultIconContext }}</p>
-            <div class="result-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-trigger" }'>
-              <h3>Gemeente 's-Gravenhage</h3>
-              <table class="table table--small">
-                <tbody>
-                  <tr class="type-row">
-                    <th>Type</th>
-                    <td>Gemeente</td>
-                  </tr>
-                  <tr class="source-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                </tbody>
-              </table>
-              {{render "@button-icon" button4Context }}
-              {{render "@button-icon" button5Context }}
-              {{render "@button-icon" button6Context }}
-            </div>
+        <div class="container container--large">
+          <h2 class="h2 h2--large">Zoekresultaat</h2>
+          <p>{{render "@inline-icon" removeResultIconContext }} Gemeente 's-Gravenhage</p>
+          <div class="result-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-trigger" }'>
+            <h3>Gemeente 's-Gravenhage</h3>
+            <table class="table table--small">
+              <tbody>
+                <tr class="type-row">
+                  <th>Type</th>
+                  <td>Gemeente</td>
+                </tr>
+                <tr class="source-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+              </tbody>
+            </table>
+            {{render "@button" button4Context }}
+            {{render "@button" button5Context }}
+            {{render "@button" button6Context }}
           </div>
         </div>
       </div>

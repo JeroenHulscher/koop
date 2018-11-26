@@ -2,9 +2,12 @@
   max-width: 80em;
   margin: 0 auto;
   padding: 0 1em;
-  // position: relative;
 
   &--centered {
     max-width: 64em;
+  }
+
+  &--large {
+    padding: 0 2em;
   }
 }

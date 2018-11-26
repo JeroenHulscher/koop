@@ -14,9 +14,6 @@ $gutter: 1em;
       .sidebar-column {
         left: -432px;
         transition: left $fastEaseInOut;
-        -webkit-transition: left $fastEaseInOut;
-        -moz-transition: left $fastEaseInOut;
-        -o-transition: left $fastEaseInOut;
 
         .sidebar-column-content {
           visibility: hidden;
@@ -31,9 +28,6 @@ $gutter: 1em;
           left: 0;
           background-image: $dartRightIcon;
           transition: left $fastEaseInOut;
-          -webkit-transition: left $fastEaseInOut;
-          -moz-transition: left $fastEaseInOut;
-          -o-transition: left $fastEaseInOut;
         }
       }
     }
@@ -41,16 +35,13 @@ $gutter: 1em;
     .sidebar-column {
       min-width: 27em;
       max-width: 27em;
-      background: #F2F8FC;
+      background: #E5F1F9;
       position: relative;
       position: absolute;
       height: 100%;
       left: 0;
       overflow-y: scroll;
       transition: left $fastEaseInOut;
-      -webkit-transition: left $fastEaseInOut;
-      -moz-transition: left $fastEaseInOut;
-      -o-transition: left $fastEaseInOut;
 
       .sidebar-column-content {
         visibility: visible;
@@ -58,11 +49,12 @@ $gutter: 1em;
         .table--small {
           table-layout: fixed;
           margin-bottom: 1em;
+          color: #154273;
 
           tr:first-of-type {
             th,
             td {
-              border-bottom: 2px solid #B2D7EE;
+              border-bottom: 1px solid #F3F3F3;
             }
           }
 
@@ -86,31 +78,30 @@ $gutter: 1em;
         }
 
         .content-item {
-          margin: 1em -1em;
-          padding: 1em 1em;
+          margin: 1.5em 0;
+          padding: 1.5em;
           cursor: pointer;
-          border: 1px solid transparent;
+          border: 2px solid transparent;
+          background: #fff;
 
           &:hover {
-            border-radius: 6px;
-            border: 1px solid $primaryBlue;
+            border: 2px solid #154273;
           }
 
-          .button-icon {
+          .button {
             display: none;
           }
 
           &.active {
             background: #fff;
-            border-radius: 6px;
-            border: 1px solid $primaryBlue;
+            border: 2px solid #154273;
 
             th,
             td {
-              border-color: $primaryBlue !important;
+              border-color: #154273 !important;
             }
 
-            .button-icon {
+            .button {
               display: inline-block;
             }
           }
@@ -121,7 +112,7 @@ $gutter: 1em;
 
               th,
               td {
-                border-top: 2px solid #B2D7EE;
+                border-top: 1px solid #154273;
                 border-bottom: 0;
               }
             }
@@ -139,25 +130,26 @@ $gutter: 1em;
         }
 
         .result-item {
+          background: #FFF;
+          border: 2px solid #154273;
+          padding: 1.5em;
+
           .table--small {
+            tr:first-of-type {
+              th,
+              td {
+                border-color: 1px solid #154273;
+              }
+            }
+
             .detail-row {
               display: table-row;
 
               th,
               td {
-                border-top: 2px solid #B2D7EE;
+                border-top: 1px solid #154273;
                 border-bottom: 0;
               }
-            }
-          }
-
-          .button-icon--dots {
-            background-image: $iconCrossWhite;
-          }
-
-          &.collapsed {
-            .button-icon--dots {
-              background-image: $dotsIcon;
             }
           }
         }
@@ -168,7 +160,7 @@ $gutter: 1em;
       width: 100%;
 
       .trigger-collapse {
-        background: #F2F8FC;
+        background: #E5F1F9;
         height: 40px;
         width: 25px;
         position: absolute;
@@ -181,9 +173,6 @@ $gutter: 1em;
         background-size: .75em;
         cursor: pointer;
         transition: left $fastEaseInOut;
-        -webkit-transition: left $fastEaseInOut;
-        -moz-transition: left $fastEaseInOut;
-        -o-transition: left $fastEaseInOut;
       }
     }
   }

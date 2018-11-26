@@ -17,120 +17,111 @@
         <div class="form__row--large">
           {{ render "@input-autocomplete" inputAutocompleteContext }}
         </div>
-        <div>
-        {{render "@button-icon" button1Context}}
-        {{render "@button-icon" button2Context}}
-        {{render "@button-icon" button3Context}}
-        </div>
       </div>
     </div>
   </div>
   <div class="container columns-map k-future" data-decorator="handle-collapse" data-config='{ "trigger": "sidebar-trigger" }'>
     <div class="sidebar-column">
       <div class="sidebar-column-content" data-decorator="active-item-toggle">
-        <div class="container">
-          <div class="container">
-            <h2 class="h2 h2--large">Gekozen locaties</h2>
-            <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-one-trigger" }'>
-              <h3>Gemeente 's-Gravenhage</h3>
-              <table class="table table--small">
-                <tbody>
-                  <tr class="type-row">
-                    <th>Type</th>
-                    <td>Gemeente</td>
-                  </tr>
-                  <tr class="source-row">
-                    <th>Provinciecode</th>
-                    <td>PV28</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Provincienaam</th>
-                    <td>Zuid-Holland</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Gemeentecode</th>
-                    <td>0518</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Gemeentenaam</th>
-                    <td>'s-Gravenhage</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>ID</th>
-                    <td>gem-339aeade1bbb0005ba845b14d29d2c15</td>
-                  </tr>
-                </tbody>
-              </table>
-              {{render "@button-icon" table1ExpandButtonContext }}
-              {{render "@button-icon" button5Context }}
-              <button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class=" button-icon button-icon--remove button-icon--small"></button>
-            </div>
-            <div id="modal-1" class="modal modal--off-screen" role="alert">
-              <div class="modal__inner">
-                <div class="modal__content">
-                  {{{ modalContext }}}
-                </div>
-                <button type="button" data-handler="close-modal" class="modal__close">{{ closeButton }}</button>
+        <div class="container container--large">
+          <h2 class="h2 h2--large">Gekozen locaties</h2>
+          <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-one-trigger" }'>
+            <h3>Gemeente 's-Gravenhage</h3>
+            <table class="table table--small">
+              <tbody>
+                <tr class="type-row">
+                  <th>Type</th>
+                  <td>Gemeente</td>
+                </tr>
+                <tr class="source-row">
+                  <th>Provinciecode</th>
+                  <td>PV28</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Provincienaam</th>
+                  <td>Zuid-Holland</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Gemeentecode</th>
+                  <td>0518</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Gemeentenaam</th>
+                  <td>'s-Gravenhage</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>ID</th>
+                  <td>gem-339aeade1bbb0005ba845b14d29d2c15</td>
+                </tr>
+              </tbody>
+            </table>
+            {{render "@button" table1ExpandButtonContext }}
+            {{render "@button" button5Context }}
+            <button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button button--small">Verwijderen</button>
+          </div>
+          <div id="modal-1" class="modal modal--off-screen" role="alert">
+            <div class="modal__inner">
+              <div class="modal__content">
+                {{{ modalContext }}}
               </div>
+              <button type="button" data-handler="close-modal" class="modal__close">{{ closeButton }}</button>
             </div>
+          </div>
 
-            <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-two-trigger" }'>
-              <h3>Voorburg</h3>
-              <table class="table table--small">
-                <tbody>
-                  <tr class="type-row">
-                    <th>Type</th>
-                    <td>Gemeente</td>
-                  </tr>
-                  <tr class="source-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                </tbody>
-              </table>
-              {{render "@button-icon" table2ExpandButtonContext }}
-              {{render "@button-icon" button5Context }}
-              {{render "@button-icon" button6Context }}
-            </div>
+          <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-two-trigger" }'>
+            <h3>Voorburg</h3>
+            <table class="table table--small">
+              <tbody>
+                <tr class="type-row">
+                  <th>Type</th>
+                  <td>Gemeente</td>
+                </tr>
+                <tr class="source-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+              </tbody>
+            </table>
+            {{render "@button" table2ExpandButtonContext }}
+            {{render "@button" button5Context }}
+          </div>
 
-            <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-three-trigger" }'>
-              <h3>Rijswijk</h3>
-              <table class="table table--small">
-                <tbody>
-                  <tr class="type-row">
-                    <th>Type</th>
-                    <td>Gemeente</td>
-                  </tr>
-                  <tr class="source-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr class="detail-row">
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                </tbody>
-              </table>
-              {{render "@button-icon" table3ExpandButtonContext }}
-              {{render "@button-icon" button5Context }}
-              {{render "@button-icon" button6Context }}
-            </div>
+          <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-three-trigger" }'>
+            <h3>Rijswijk</h3>
+            <table class="table table--small">
+              <tbody>
+                <tr class="type-row">
+                  <th>Type</th>
+                  <td>Gemeente</td>
+                </tr>
+                <tr class="source-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+                <tr class="detail-row">
+                  <th>Bron</th>
+                  <td>Bestuurlijke Grenzen</td>
+                </tr>
+              </tbody>
+            </table>
+            {{render "@button" table3ExpandButtonContext }}
+            {{render "@button" button5Context }}
           </div>
         </div>
       </div>

@@ -36,14 +36,14 @@ context:
     iconButton: true
     text: Volledig scherm
   button4Context:
-    modifier: button-icon--small button-icon--dots trigger-collapse table-trigger
+    modifier: button--small trigger-collapse table-trigger
     button: true
-    text: Meer details bekijken
+    text: Meer details
   button5Context:
-    modifier: button-icon--small button-icon--crosshair
+    modifier: button--small
     button: true
-    text: Toevoegen aan lijst
+    text: Centereren
   button6Context:
-    modifier: button-icon--small button-icon--plus
+    modifier: button--small
     button: true
-    text: Centreren
+    text: Toevoegen

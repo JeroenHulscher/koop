@@ -10,7 +10,6 @@
 </header>
 <div role="main">
   <div class="container">
-    <div class="container">
       <h1>Zoek een locatie</h1>
       <p>Vul een term in om een locatie te zoeken.</p>
       <div class="columns">
@@ -23,7 +22,7 @@
         {{render "@button-icon" button3Context}}
         </div>
       </div>
-    </div>
+    </div>  
   </div>
   <div 
     class="container columns-map k-future" 
@@ -33,11 +32,9 @@
        }'>
     <div class="sidebar-column">
       <div class="sidebar-column-content">
-        <div class="container">
-          <div class="container">
-            <h2 class="h2 h2--large">Gekozen locaties</h2>
-            <p>{{{ searchText }}}</p>
-          </div>
+        <div class="container container--large">
+          <h2 class="h2 h2--large">Gekozen locaties</h2>
+          <p>{{{ searchText }}}</p>
         </div>
       </div>
     </div>
