@@ -3,10 +3,11 @@ label: Wettenpocket Detail Redactioneel
 context:
   headerContext:
     navLinks:
-      - url: '/templates-wp-homepage'
+      - url: 'templates-wp-homepage'
         text: Home
       - url: '#'
         text: Wettenpockets aanmaken
+
   navlistContext:
     modifier: list--linked
     items:
@@ -14,6 +15,12 @@ context:
       - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
       - text: <a href="#">Veel gedownloade wettenpockets</a>
       - text: <a href="#">Veelgestelde vragen</a>
+
+  navPocket:
+    modifier: list--linked
+    items:
+      - text: <a href="templates-wp-overview">Overzicht</a>
+      - text: <a href="#">Notities</a>
 
   definitionContext:
     modifier: 'columns--data'
