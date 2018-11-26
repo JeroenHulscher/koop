@@ -2,6 +2,8 @@ title: Wettenpocket Detail Redactioneel
 label: Wettenpocket Detail Redactioneel
 context:
   headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
     navLinks:
       - url: 'templates-wp-homepage'
         text: Home

@@ -1,8 +1,10 @@
 title: Wettenpocket Overzichtspagina
 label: Wettenpocket Overview
-status: wip
+status: ready
 context:
   headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
     navLinks:
       - url: 'templates-wp-homepage'
         text: Home
