@@ -58,7 +58,7 @@ context:
 
   tableLawContext:
     caption: "Wet- en regelgeving"
-    modifier: table--condensed
+    modifier: table--striped table--condensed
     items:
       - item:
         - column:
@@ -66,17 +66,7 @@ context:
           value: Rijkswet
         - column:
           type: Titel
-          value: Belastingregeling Nederland Sint Maarten
-        - column:
-          type: Annotaties
-          value:
-      - item:
-        - column:
-          type:
-          value:
-        - column:
-          type: Titel
-          value: "Versie geldend vanaf: 01-03-2016"
+          value: 'Belastingregeling Nederland Sint Maarten<br/><i>Datum in werkingtreding: 01-03-2016</i>'
         - column:
           type: Annotaties
           value:
@@ -86,17 +76,7 @@ context:
           value: Rijkswet
         - column:
           type: Titel
-          value: Belastingregeling voor het Koninkrijk
-        - column:
-          type: Annotaties
-          value:
-      - item:
-        - column:
-          type:
-          value:
-        - column:
-          type: Titel
-          value: "Versie geldend vanaf: 10-10-2010"
+          value: 'Belastingregeling voor het Koninkrijk<br/><i>Datum in werkingtreding: 10-10-2010</i>'
         - column:
           type: Annotaties
           value:
@@ -106,17 +86,7 @@ context:
           value: Rijkswet
         - column:
           type: Titel
-          value: Proclamatie houdende plechtige afkondiging van de nieuwe rechtsorde voor het Koninkrijk
-        - column:
-          type: Annotaties
-          value:
-      - item:
-        - column:
-          type:
-          value:
-        - column:
-          type: Titel
-          value: "Versie geldend vanaf: 29-12-1954"
+          value: 'Proclamatie houdende plechtige afkondiging van de nieuwe rechtsorde voor het Koninkrijk<br/><i>Datum in werkingtreding: 29-12-1954</i>'
         - column:
           type: Annotaties
           value:
