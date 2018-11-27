@@ -46,7 +46,7 @@ context:
         value: 92
 
   tableLawContext:
-    caption: "Wet- en regelgeving"
+    caption: ""
     modifier: table--striped table--condensed
     items:
       - item:
@@ -61,7 +61,7 @@ context:
           value:
 
   tableDecentralContext:
-    caption: "Decentrale regelingen"
+    caption: ""
     modifier: table--striped table--condensed
     items:
       - item:
@@ -116,7 +116,7 @@ context:
           value:
 
   tableDocsContext:
-    caption: "Documenten"
+    caption: ""
     modifier: table--striped table--condensed
     items:
       - item:
