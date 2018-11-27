@@ -11,7 +11,7 @@ context:
         text: Wettenpockets aanmaken
 
   navlistContext:
-    modifier: list--linked
+    modifier: 'list--linked list--unstyled'
     items:
       - text: <a href="templates-wp-search">Zoek wettenpockets</a>
       - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
@@ -19,7 +19,7 @@ context:
       - text: <a href="#">Veelgestelde vragen</a>
 
   navPocket:
-    modifier: list--linked
+    modifier: 'list--linked list--unstyled'
     items:
       - text: <a href="templates-wp-overview">Overzicht</a>
       - text: <a href="#">Notities</a>

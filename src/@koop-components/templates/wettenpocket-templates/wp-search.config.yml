@@ -10,7 +10,7 @@ context:
       - url: '#'
         text: Wettenpockets aanmaken
   navContext:
-    modifier: list--linked list--unstyled
+    modifier: 'list--linked list--unstyled'
     items:
       - text: <a href="templates-wp-search">Zoek wettenpockets</a>
         subitems:

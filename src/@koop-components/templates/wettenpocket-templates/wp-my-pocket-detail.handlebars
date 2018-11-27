@@ -10,33 +10,29 @@
 
       <p>Hier staat een korte omschrijving van deze pocket en welke informatie je erin kunt vinden.</p>
 
+      {{render "@table" tableLawContext}}
+
+      {{render "@table" tableDecentralContext}}
+
+      {{render "@table" tableDocsContext}}
+
       <h2>Links</h2>
       <p><a href="https://nu.nl">Informatiesite Wettenpocket</a></p>
     </div>
 
 
     <div>
-      <h4 class="facet--heading">Subnavigatie</h4>
+      <h3 class="facet--heading">Subnavigatie</h3>
       <nav class="secundairy-navigation">
         {{ render "@list" navlistContext }}
       </nav>
-      <h4 class="facet--heading">Wettenpocket</h4>
+      <h3 class="facet--heading">Wettenpocket</h3>
       <nav class="secundairy-navigation">
         {{ render "@list" navPocket }}
       </nav>
-      <h4 class="facet--heading">Acties</h4>
+      <h3 class="facet--heading">Acties</h3>
       {{render '@actionblock' actionContext}}
     </div>
-
-    <!-- <div>
-      <h2>Acties</h2>
-      <ul>
-        <li>Bewerken</li>
-        <li>Publiceren</li>
-        <li>Verwijderen</li>
-      </ul>
-    </div> -->
-
   </div><!-- /container -->
 </main>
 
