@@ -55,17 +55,7 @@ context:
           value: Wet
         - column:
           type: Titel
-          value: Gemeentewet
-        - column:
-          type: Annotaties
-          value:
-      - item:
-        - column:
-          type:
-          value:
-        - column:
-          type: Titel
-          value: "Versie geldend vanaf: 01-02-2016"
+          value: 'Gemeentewet<br>Versie geldend vanaf: 01-02-2016'
         - column:
           type: Annotaties
           value:
