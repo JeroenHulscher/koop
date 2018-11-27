@@ -18,11 +18,11 @@
   <tr>
     {{#each item }}
       {{#if cellType }}
-      <td data-before="{{ type }}" class="status {{ cellType }}"><span>{{ value }}</span></td>
+      <td data-before="{{ type }}" class="status {{ cellType }}"><span>{{{ value }}}</span></td>
       {{ else if download }}
-        <td data-before="{{ type }}" class="status"><a href="#">{{ value }}</a></td>
+        <td data-before="{{ type }}" class="status"><a href="#">{{{ value }}}</a></td>
       {{ else }}
-       <td data-before="{{ type }}">{{ value }}</td>
+       <td data-before="{{ type }}">{{{ value }}}</td>
       {{/if }}
     {{/each }}
   </tr>
