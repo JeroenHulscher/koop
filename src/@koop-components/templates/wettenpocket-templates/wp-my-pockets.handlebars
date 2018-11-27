@@ -1,0 +1,43 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Mijn Wettenpocket</h1>
+      <div class="well">
+        {{render "@definitionlist" definitionContext}}
+      </div>
+
+      <p>Hier staat een korte omschrijving van deze pocket en welke informatie je erin kunt vinden.</p>
+
+      <h2>Links</h2>
+      <p><a href="https://nu.nl">Informatiesite Wettenpocket</a></p>
+    </div>
+
+
+    <div>
+      <h4 class="facet--heading">Subnavigatie</h4>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+      <h4 class="facet--heading">Wettenpocket</h4>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navPocket }}
+      </nav>
+      <h4 class="facet--heading">Acties</h4>
+      {{render '@actionblock' actionContext}}
+    </div>
+
+    <!-- <div>
+      <h2>Acties</h2>
+      <ul>
+        <li>Bewerken</li>
+        <li>Publiceren</li>
+        <li>Verwijderen</li>
+      </ul>
+    </div> -->
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}

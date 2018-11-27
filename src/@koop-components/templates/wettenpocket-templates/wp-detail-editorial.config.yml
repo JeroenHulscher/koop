@@ -24,6 +24,12 @@ context:
       - text: <a href="templates-wp-overview">Overzicht</a>
       - text: <a href="#">Notities</a>
 
+  buttonContext:
+    text: Download ePub
+    anchor: true
+    action: "#"
+    modifier: button--primary
+
   definitionContext:
     modifier: 'columns--data'
     divContainer: true

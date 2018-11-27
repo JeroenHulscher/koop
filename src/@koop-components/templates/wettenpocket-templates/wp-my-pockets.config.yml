@@ -1,0 +1,57 @@
+title: Wettenpocket in bewerking
+label: Wettenpocket in bewerking
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+        className: 'is-active'
+
+  navlistContext:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Wettenpockets in bewerking</a>
+      - text: <a href="#">Gepubliceerde wettenpockets</a>
+
+  navPocket:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Overzicht</a>
+      - text: <a href="#">Notities</a>
+
+  definitionContext:
+    modifier: 'columns--data'
+    divContainer: true
+    items:
+      - type: Onderwerp
+        value: Intellectuele eigendom
+      - type: Publicist
+        value: KOOP
+      - type: Auteur
+        value: Jan de Vries
+      - type: Status
+        value: Niet Gepubliceerd
+      - type: Wijzigingsdatum
+        value: 26-11-2018
+      - type: Downloads
+        value: '0'
+
+  actionContext:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        icon: icon-bewerken.svg
+        text: Bewerken
+      - link: '#'
+        icon: icon-publicatie.svg
+        text: Publiceren
+      - link: '#'
+        icon: icon-remove.svg
+        text: Verwijderen
