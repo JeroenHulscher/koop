@@ -1,5 +1,5 @@
-title: Wettenpocket Mijn Pocket
-label: Wettenpocket Mijn Pocket
+title: Wettenpocket Mijn Pocket Bewerken
+label: Wettenpocket Mijn Pocket Bewerken
 status: ready
 context:
   headerContext:
@@ -47,21 +47,56 @@ context:
     modifier: browse--icons
     items:
       - link: '#'
-        icon: icon-bewerken.svg
-        text: Bewerken
-      - link: '#'
         icon: icon-publicatie.svg
-        text: Publiceren
+        text: Wettenpocket opslaan
       - link: '#'
-        icon: icon-remove.svg
-        text: Verwijderen
+        icon: icon-close.svg
+        text: Afsluiten
+      - link: '#'
+        icon: icon-download.svg
+        text: Tonen wettenpocket XML
+
+  regelingContext:
+    text: Regeling toevoegen
+    button: true
+
+  docContext:
+    text: Document toevoegen
+    button: true
+
+  linkContext:
+    text: Link toevoegen
+    button: true
+
+  inputContext:
+    id: title
+    fieldLabel: Titel
+
+  selectContext:
+    id: subject
+    fieldLabel: Onderwerp
+    values:
+      - value:
+        inputValue: Arbitrage
+        displayValue: Arbitrage
+      - value:
+        inputValue: Belastingrecht
+        displayValue: Belastingrecht
+      - value:
+        inputValue: Intellectuele eigendom
+        displayValue: Intellectuele eigendom
+
+  textContext:
+    id: description
+    fieldLabel: Korte beschrijving
+    rows: 3
 
   tableLawContext:
     modifier: table--striped table--condensed
     items:
       - item:
         - column:
-          type:
+          type: Type
           value: Rijkswet
         - column:
           type: Titel
@@ -69,9 +104,15 @@ context:
         - column:
           type: Annotaties
           value:
+        - column:
+          type: Notificeer
+          value:
+        - column:
+          type: Aktie
+          value: hier icoontjes
       - item:
         - column:
-          type:
+          type: Type
           value: Rijkswet
         - column:
           type: Titel
@@ -79,9 +120,15 @@ context:
         - column:
           type: Annotaties
           value:
+        - column:
+          type: Notificeer
+          value:
+        - column:
+          type: Aktie
+          value: hier icoontjes
       - item:
         - column:
-          type:
+          type: Type
           value: Rijkswet
         - column:
           type: Titel
@@ -89,6 +136,12 @@ context:
         - column:
           type: Annotaties
           value:
+        - column:
+          type: Notificeer
+          value:
+        - column:
+          type: Aktie
+          value: hier icoontjes
 
   tableDecentralContext:
     modifier: table--striped table--condensed
@@ -96,44 +149,48 @@ context:
       - item:
         - column:
           type: Uitgever
-          value: Tholen
+          value: Pijnacker
         - column:
           type: Titel
-          value: Regeling meding financiële belangen van ambtenaren bij de gemeente Tholen
+          value: 'Privacyregelement voor de basisadministratie Personen'
         - column:
           type: Annotaties
           value:
+        - column:
+          type: Notificeer
+          value:
+        - column:
+          type: Aktie
+          value: hier icoontjes
       - item:
         - column:
           type: Uitgever
-          value: Pijnacker-Nootdorp
+          value: Tholen
         - column:
           type: Titel
-          value: privacy-Regelement voor de basisregistratie Personen
+          value: 'Regeling meding financiële belangen van ambtenaren van de gemeente Tholen'
         - column:
           type: Annotaties
           value:
+        - column:
+          type: Notificeer
+          value:
+        - column:
+          type: Aktie
+          value: hier icoontjes
       - item:
         - column:
           type: Uitgever
           value: Oss
         - column:
           type: Titel
-          value: 17 Opleiding en ontwikkeling
+          value: 'Opleiding en ontwikkeling'
         - column:
           type: Annotaties
           value:
-
-  tableDocsContext:
-    modifier: table--striped table--condensed
-    items:
-      - item:
         - column:
-          type: Titel
-          value: Afbeelding voor deze pocket
+          type: Notificeer
+          value:
         - column:
-          type: Type
-          value: jpg
-        - column:
-          type: Grootte
-          value: 1Kb
+          type: Aktie
+          value: hier icoontjes

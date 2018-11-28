@@ -1,0 +1,51 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Mijn Wettenpocket</h1>
+      <form>
+        <div class="form__element">
+          {{render "@input-text" inputContext}}
+        </div>
+        {{render "@select" selectContext}}
+        {{render "@textarea" textContext}}
+
+        <h2>Inleiding</h2>
+        Hier uw favoriete WYSIWYG editor
+
+        <h2>Wet- en regelgeving</h2>
+        {{render "@table" tableLawContext}}
+        {{render "@button" regelingContext}}
+
+        <h2>Decentrale regelingen</h2>
+        {{render "@table" tableDecentralContext}}
+        {{render "@button" regelingContext}}
+
+        <h2>Documenten</h2>
+        {{render "@table" tableDocsContext}}
+        {{render "@button" docContext}}
+
+        <h2>Links</h2>
+        {{render "@table" tableDocsContext}}
+        {{render "@button" linkContext}}
+      </form>
+    </div>
+
+
+    <div>
+      <h3>Subnavigatie</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+      <h3>Wettenpocket</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navPocket }}
+      </nav>
+      <h3>Acties</h3>
+      {{render '@actionblock' actionContext}}
+    </div>
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}

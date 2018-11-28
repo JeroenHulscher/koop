@@ -9,6 +9,7 @@ context:
         text: Home
       - url: '#'
         text: Wettenpockets aanmaken
+
   navContext:
     modifier: 'list--linked list--unstyled'
     items:
@@ -21,10 +22,12 @@ context:
       - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
       - text: <a href="#">Veel gedownloade wettenpockets</a>
       - text: <a href="#">Veelgestelde vragen</a>
+
   firstInputContext:
     id: trefwoord
     fieldPlaceholder: Vul een trefwoord in
     fieldLabel: Trefwoord
+
   typeSelectContext:
     id: type
     fieldLabel: Type wettenpocket
@@ -38,6 +41,7 @@ context:
       - value:
         inputValue: gegenereerd
         displayValue: Automatisch gegenereerd
+
   fieldSelectContext:
     id: field
     fieldLabel: Rechtsgebied
@@ -60,6 +64,7 @@ context:
       - value:
         inputValue: overig
         displayValue: Overig
+
   publisherSelectContext:
       id: publisher
       fieldLabel: Uitgever
@@ -82,9 +87,11 @@ context:
         - value:
           inputValue: minbzk
           displayValue: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+
   authorInputContext:
     id: auteur
     fieldLabel: Auteur
+
   buttonContext:
     modifier: button--primary
     inputSubmit: true
