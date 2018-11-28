@@ -24,6 +24,7 @@ context:
   firstInputContext:
     id: trefwoord
     fieldPlaceholder: Vul een trefwoord in
+    fieldLabel: Trefwoord
   typeSelectContext:
     id: type
     fieldLabel: Type wettenpocket
@@ -83,6 +84,7 @@ context:
           displayValue: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
   authorInputContext:
     id: auteur
+    fieldLabel: Auteur
   buttonContext:
     modifier: button--primary
     inputSubmit: true
