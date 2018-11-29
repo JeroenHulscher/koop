@@ -5,7 +5,7 @@
   onl.decorate({
     'init-copydata': function( element ) {
       new copydata( element );
-    }
+    } 
   });
 
   var copydata = function( element ) {
@@ -17,10 +17,10 @@
 
   copydata.prototype.init = function( ) {
     this.createAndPlaceTrigger();
-    this.addEventListerners();
+    this.addEventListeners();
   };
 
-  copydata.prototype.addEventListerners = function() {
+  copydata.prototype.addEventListeners = function() {
     this.trigger.addEventListener( 'click', function( e ) { this.triggerCopy( e ); }.bind( this ), false );
   };
 
@@ -65,4 +65,3 @@
   };
 
 })();
-

@@ -5,10 +5,20 @@
   margin: 0 0 2em 0;
   @extend .group;
 
+  &.transitional {
+    background: #E4F0EF;
+    color: $darkBlue;
+  }
+
   &__intro {
     margin-top: em(32);
     margin-bottom: em(32);
     color: #154273;
+  }
+
+  &--secondary {
+    background: #E4F0EF;
+    color: $darkBlue;
   }
 
   &--success {

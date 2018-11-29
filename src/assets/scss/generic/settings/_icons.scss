@@ -4,6 +4,7 @@ $chevronRight:  url( '#{$imagePath}/icon-chevron-right.svg' ) !default;
 $chevronLeft:  url( '#{$imagePath}/icon-chevron-left.svg' ) !default;
 $iconCross: url( '#{$imagePath}/icon-close.svg' );
 $iconCrossWhite: url( '#{$imagePath}/icon-close-white.svg' );
+$iconCrossBlue: url( '#{$imagePath}/icon-cross-blue.svg' );
 
 $datepickerButtonNext: $chevronRight;
 $datepickerButtonPrev: $chevronLeft;
@@ -26,7 +27,10 @@ $doubleLeftIcon: url( '#{$imagePath}/icon-double-left.svg' ) !default;
 $doubleRightIcon: url( '#{$imagePath}/icon-double-right.svg' ) !default;
 
 $plusIcon: url( '#{$imagePath}/icon-plus.svg' ) !default;
+$plusIconWhite: url( '#{$imagePath}/icon-plus-white.svg' ) !default;
+$plusShapeIcon: url( '#{$imagePath}/icon-plus-shape.svg' ) !default;
 $minusIcon: url( '#{$imagePath}/icon-minus.svg' ) !default;
+$minusShapeIcon: url( '#{$imagePath}/icon-minus-shape.svg' ) !default;
 $copyIcon: url( '#{$imagePath}/icon-copy.svg' ) !default;
 
 $searchIcon: url( '#{$imagePath}/icon-search.svg' ) !default;
@@ -48,6 +52,8 @@ $downloadIconWhite: url( '#{$imagePath}/icon-download-white.svg' ) !default;
 $uploadIcon: url( '#{$imagePath}/icon-upload.svg' ) !default;
 $uploadBlueIcon: url( '#{$imagePath}/icon-upload-blue.svg' ) !default;
 $removeIcon: url( '#{$imagePath}/icon-remove.svg' ) !default;
+$removeWhiteIcon: url( '#{$imagePath}/icon-remove-white.svg' ) !default;
+$removeBlueIcon: url( '#{$imagePath}/icon-remove-blue.svg' ) !default;
 $printIcon: url( '#{$imagePath}/icon-print.svg' ) !default;
 $relationsIcon: url( '#{$imagePath}/icon-relations.svg' ) !default;
 $permalinkIcon: url( '#{$imagePath}/icon-permalink.svg' ) !default;
@@ -92,7 +98,8 @@ $basisIcon: url( '#{$imagePath}/icon-basis.svg' );
 $shareWhiteIcon: url( '#{$imagePath}/icon-share-white.svg' );
 $shareIcon: url( '#{$imagePath}/icon-share.svg' );
 
+$markerIcon: url( '#{$imagePath}/icon-marker.svg' ) !default;
+$fullscreenIcon: url( '#{$imagePath}/icon-fullscreen.svg' ) !default;
 
-
-
-
+$dotsIcon: url( '#{$imagePath}/icon-dots.svg' ) !default;
+$crosshairIcon: url( '#{$imagePath}/icon-crosshair.svg' ) !default;

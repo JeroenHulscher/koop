@@ -1,5 +1,11 @@
 <fieldset class="form__element radiogroup {{ modifier }}">
-  <legend>{{ fieldLabel }} </legend>
+  <legend>
+    {{ fieldLabel }} 
+
+    {{#if explanation}}
+      {{ render "@question-explanation" }}
+    {{/if}}
+  </legend>
   {{#each options }}
   <label for="option-{{ id  }}">
     <input type="radio" id="option-{{ id }}" name="{{ ../name }}" />
