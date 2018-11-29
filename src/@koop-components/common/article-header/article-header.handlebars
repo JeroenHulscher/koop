@@ -5,14 +5,147 @@
     <p class="intro--text"> {{ activeFrom }}</p>
   {{/if}}
   <ul>
-    <li class="action--relations">{{ relationsAmount }}<a href="#"><div>Relaties</div> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--permalink"><a href="#"><div>Permanente link</div><span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--version"><a href="#"><div>Versie informatie</div> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--compare"><a href="#"><div>Versie vergelijk</div> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--print"><a href="#"><div>Print</div> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--download"><a href="#"><div>Bewaar</div> <span class="visually-hidden">{{ counter }}</span></a></li>
+    <li class="action--relations"><a href="https://linkeddata.overheid.nl/embedded/portal/spiegel-lijstweergave?juriconnect=jci1.3%3ac%3aBWBR0032898%26z%3d2018-07-28%26g%3d2018-07-28" target="blank" aria-label="Toon {{ relationsAmount }} relaties, opent in een nieuw scherm"> <div class="visually-hidden">relaties</div></a></li>
+    <li class="action--permalink"><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="popuppermanentelink" class="button-text" aria-label="Toon permanente link, opent in een dialog"><div class="visually-hidden">Toon permanentelink</div></button></li>
+    <li class="action--version"><a href="https://wetten.overheid.nl/BWBR0032898/2018-07-28/0/informatie" aria-label="Toon versie informatie"><span class="visually-hidden">Toon versie informatie</span></a></li>
+    <li class="action--compare"><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="popupvergelijken" class="button-text" aria-label="vergelijk versie, opent in een dialog"><div class="visually-hidden">Vergelijk versie</div></button></li>
+    <li class="action--print"><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="popupafdrukken" class="button-text" aria-label="print artikel, opent in een dialog"><div class="visually-hidden">Print artikel</div></button></li>
+    <li class="action--download"><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="popupexporteren" class="button-text" aria-label="sla de regeling op, opent in een dialog"><div class="visually-hidden">Sla de regeling op</div></button></li>
   </ul>
   {{#if useTitle }}
     <p>{{ activeFrom }}</p>
   {{/if}}
 </div>
+
+<div id="popuppermanentelink" class="modal modal--off-screen" hidden>
+  <div class="modal__inner">
+    <div class="modal__content">
+      <h2 class="modal__heading">Permanente link</h2>
+
+      <p>Kopieer &eacute;&eacute;n van de onderstaande links of verfijn de link in de Linktool.</p>
+
+      <h3>Kopieer een link</h3>
+      <ol>
+        <li><span tabindex="0">link met citeertitel</span>
+          <div class="copydata" data-decorator="init-copydata" data-config='{ "triggerLabel": "Link kopiëren", "triggerCopiedlabel": "Link gekopieerd", "triggerClass": "copydata__trigger" }'>
+            <div class="copydata__datafield js-copydata__datafield" id="divCiteertitel">
+              http://www.google.nl
+            </div>
+          </div>
+        </li>
+        <li><span tabindex="0">url</span>
+          <div class="copydata" data-decorator="init-copydata" data-config='{ "triggerLabel": "Link kopiëren", "triggerCopiedlabel": "Link gekopieerd", "triggerClass": "copydata__trigger" }'>
+            <div class="copydata__datafield js-copydata__datafield" id="divUrl">http://www.google.nl</div>
+          </div>
+        </li>
+        <li><span tabindex="0">juriconnect-verwijzing</span>
+          <div class="copydata" data-decorator="init-copydata" data-config='{ "triggerLabel": "Link kopiëren", "triggerCopiedlabel": "Link gekopieerd", "triggerClass": "copydata__trigger" }'>
+            <div class="copydata__datafield js-copydata__datafield" id="divJuriconnectverwijzing">http://www.google.nl</div>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Verfijn in Linktool</h3>
+      <p>Met behulp van de Linktool van LiDO is het mogelijk om een meer gedetailleerde link te maken. Zo is het bijvoorbeeld
+        mogelijk om een link te maken naar een specifiek lid van een artikel.</p>
+      <p>Ga naar de
+        <a href="" id="aLinktoolurl" rel="external" target="_blank">Linktool</a>
+      </p>
+
+      <button type="button" data-handler="close-modal" class="modal__close">Sluit dialog</button>
+
+    </div>
+  </div>
+</div>
+
+<div id="popupvergelijken" class="modal modal--off-screen" hidden>
+  <div class="modal__inner">
+    <div class="modal__content">
+      <h2 class="modal__heading">Vergelijk versies</h2>
+
+      <input type="hidden" id="hfVergelijkRedirect" name="hfVergelijkRedirect" value="" />
+
+      <p id="pKiesVergelijking">
+        Selecteer een andere versie waarmee u de huidige geselecteerde versie, inwerkinggetreden op
+        <span id="ctl00_cphContent_Regeling_popupVergelijken_popupvergelijken_lblIWTHuidige">28-07-2018</span>, wilt vergelijken.
+      </p>
+
+      <div class="form__element">
+        <label for="ctl00_cphContent_Regeling_popupVergelijken_popupvergelijken_dlDatum" id="ctl00_cphContent_Regeling_popupVergelijken_popupvergelijken_lblDatum">Inwerkingtreding</label>
+
+
+        <select name="ctl00$cphContent$Regeling$popupVergelijken$popupvergelijken$dlDatum" id="ctl00_cphContent_Regeling_popupVergelijken_popupvergelijken_dlDatum"
+          class="dlDatum">
+          <option value="">Selecteer een datum...</option>
+          <option value="2018-05-25_1">25-05-2018</option>
+          <option value="2015-01-01_0">01-01-2015</option>
+          <option value="2014-08-01_0">01-08-2014</option>
+          <option value="2014-01-25_0">25-01-2014</option>
+          <option value="2013-04-01_0">01-04-2013</option>
+          <option value="2013-02-16_0">16-02-2013</option>
+
+        </select>
+      </div>
+
+      <input type="submit" name="ctl00$cphContent$Regeling$popupVergelijken$popupvergelijken$btnOK" value="Vergelijk" id="ctl00_cphContent_Regeling_popupVergelijken_popupvergelijken_btnOK"
+        class="button button--primary btn-vergelijk" />
+
+
+
+      <button type="button" data-handler="close-modal" class="modal__close">Sluit dialog</button>
+
+    </div>
+  </div>
+</div>
+
+
+<div id="popupafdrukken" class="modal modal--off-screen" hidden>
+  <div class="modal__inner">
+    <div class="modal__content">
+      <h2 class="modal__heading">Keuze afdrukken regeling</h2>
+
+      <input type="hidden" name="ctl00$cphContent$Regeling$popupAfdrukken$popupafdrukken$hfPrintOnderdeelID" id="hfPrintOnderdeelID"
+      />
+      <p>U kunt kiezen voor het toevoegen van de wetstechnische informatie aan de tekst.</p>
+
+      <fieldset role="radiogroup" aria-labelledby="gdesc1" class="form__element radiogroup">
+        <legend id="gdesc1" class="visually-hidden">Toevoegen van wetstechnische informatie</legend>
+        <label for="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_rbExclusief" id="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_lblExclusiefWTI">
+          <input role="radio" id="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_rbExclusief" type="radio" name="ctl00$cphContent$Regeling$popupAfdrukken$popupafdrukken$WetstechnischeInformatie"
+            value="rbExclusief" checked="checked" aria-checked="true" /> Exclusief wetstechnische informatie
+        </label>
+        <label for="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_rbInclusief" id="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_lblInclusief">
+          <input role="radio" id="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_rbInclusief" type="radio" name="ctl00$cphContent$Regeling$popupAfdrukken$popupafdrukken$WetstechnischeInformatie"
+            value="rbInclusief" aria-checked="false" /> Inclusief wetstechnische informatie
+        </label>
+      </fieldset>
+
+      <input type="submit" name="ctl00$cphContent$Regeling$popupAfdrukken$popupafdrukken$btnOK" value="Ok" id="ctl00_cphContent_Regeling_popupAfdrukken_popupafdrukken_btnOK"
+        class="button button--primary" data-handler="close-modal" />
+
+
+
+      <button type="button" data-handler="close-modal" class="modal__close">Sluit dialog</button>
+
+    </div>
+  </div>
+</div>
+
+<div id="popupexporteren" class="modal modal--off-screen" hidden>
+  <div class="modal__inner">
+    <div class="modal__content">
+      <h2 class="modal__heading">Exporteer regeling</h2>
+
+      <p>Dit is dummy tekst</p>
+
+      <input type="submit" name="ctl00$cphContent$Regeling$popupExporteren$popupexporteren$btnOK" value="Exporteer" id="ctl00_cphContent_Regeling_popupExporteren_popupexporteren_btnOK"
+        class="button button--primary" data-handler="close-modal" />
+
+
+
+      <button type="button" data-handler="close-modal" class="modal__close">Sluit dialog</button>
+
+    </div>
+  </div>
+</div>
+

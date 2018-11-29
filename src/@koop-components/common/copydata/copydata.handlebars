@@ -1,12 +1,14 @@
-<div class="copydata {{modifier}}" 
+<h2>Component Copylink</h2>
+<div class="copydata {{modifier}}"
      data-decorator="init-copydata"
-     data-config='{ 
-       "triggerLabel": "{{triggerLabel}}", 
-       "triggerCopiedlabel": "{{triggerLabelCopied}}", 
-       "triggerClass": "copydata__trigger {{ triggerClassModifier }}" 
+     data-config='{
+       "triggerLabel": "{{triggerLabel}}",
+       "triggerCopiedlabel": "{{triggerLabelCopied}}",
+       "triggerClass": "copydata__trigger{{ triggerClassModifier }}",
+       "linkAriaLabel": "{{linkAriaLabel}}"
        }'>
   <p class="copydata__datafield js-copydata__datafield">
      {{ description }}
-    <a href="{{url}}">{{ link }}</a>
+    {{!-- <a href="{{url}}" aria-label="feyenoord">{{ link }}</a> --}}
   </p>
 </div>

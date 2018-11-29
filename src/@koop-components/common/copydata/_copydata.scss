@@ -18,15 +18,18 @@
   &__trigger {
     position: absolute;
     right: .5em;
-    top: .5em;
-    padding-right: 1.5em;
+    top: .625em;
+    padding: 0 1.5em 0 0;
     font-size: em(14);
     cursor: pointer;
+    border: 0;
+    font-family: inherit;
+    font-size: em(14);
 
     background: {
       color: transparent;
       image: $copyIcon;
-      position: 99% .25em;
+      position: 100% center;
       size: 1em;
       repeat: no-repeat;
     }

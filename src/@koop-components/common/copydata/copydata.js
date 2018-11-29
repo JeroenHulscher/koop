@@ -29,9 +29,11 @@
   };
 
   copydata.prototype.createAndPlaceTrigger = function() {
-    this.trigger = document.createElement( 'a' );
+    this.trigger = document.createElement( 'button' );
     this.trigger.classList.add( this.config.triggerClass );
     this.trigger.innerText = this.config.triggerLabel;
+    this.trigger.setAttribute('tabindex', '0');
+    this.trigger.setAttribute('aria-label', this.config.linkAriaLabel || '');
     this.element.appendChild( this.trigger );
   };
 

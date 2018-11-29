@@ -8,6 +8,9 @@
 
   var modal = {
     open: function( modal ) {
+      var dialogContent = modal.querySelector('.modal__content');
+      var dialogTitle = dialogContent.querySelectorAll('.modal__heading') || dialogContent.querySelectorAll('h2');
+
       previouslyFocused = document.activeElement;
 
       // To facilitate animation, this show(), while it toggles the `hidden` attribute,
@@ -21,12 +24,22 @@
 
       onl.ui.focus( modal );
       onl.ui.bindFocusTrap( modal );
+
+      modal.setAttribute('aria-modal', true);
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-labelledby', modal.getAttribute('id') + '_label' );
+      if (dialogTitle[0]){
+        dialogTitle[0].setAttribute('id', modal.getAttribute('id') + '_label' );
+      }
+
     },
     close: function( modal ) {
       onl.ui.hide( modal );
       modal.classList.add( modalInvisibleClass );
 
       onl.ui.unbindFocusTrap( modal );
+
+      modal.removeAttribute('aria-modal');
 
       if ( previouslyFocused ) {
         onl.ui.focus( previouslyFocused );

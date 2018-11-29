@@ -54,15 +54,18 @@
       padding: 0;
     }
 
-    a {
+    a,button {
       display: inline-block;
       width: 1.25em;
       height: 1.25em;
       position: relative;
+      border: 0;
+      cursor: pointer;
       background: {
+        color: transparent;
         repeat: no-repeat;
         size: 1em;
-        position: 50% bottom;
+        position: center;
       }
 
       div {
@@ -70,8 +73,15 @@
         text-indent: -999em;
       }
     }
+    button {
+      font-family: inherit;
+      height: 2em;
+      width: 2em;
+      background-size: 1.5em;
+    }
 
     &:hover div {
+      font-family: inherit;
       display: block;
       position: absolute;
       top: 2.25em;
@@ -87,28 +97,39 @@
       text-align: center;
       font-size: 0.85em;
       z-index: 2;
+      clip: auto;
+      height: auto;
+      overflow: auto;
+      width: auto;
+    }
+    &:hover button div {
+      font-size: 1.25em;
     }
 
-    &.action--version a {
+    &.action--version a,
+    &.action--version button {
       background: {
         image: $infoIcon;
       }
     }
 
-    &.action--compare a {
+    &.action--compare a,
+    &.action--compare button {
       background: {
         image: $compareIcon;
       }
     }
 
-    &.action--relations a {
+    &.action--relations a,
+    &.action--relations button {
       background: {
         image: $relationsIcon;
         size: .85em;
       }
     }
 
-    &.action--permalink a {
+    &.action--permalink a,
+    &.action--permalink button {
       background: {
         image: $permalinkIcon;
       }
@@ -119,14 +140,15 @@
         min-width: 4em;
         left: -1.25em;
       }
-      a {
+      a,button {
         background: {
           image: $downloadIcon;
         }
       }
     }
 
-    &.action--print a {
+    &.action--print a,
+    &.action--print button {
       background: {
         image: $printIcon;
       }
