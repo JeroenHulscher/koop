@@ -194,3 +194,49 @@ context:
         - column:
           type: Aktie
           value: hier icoontjes
+  tableDocsContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Titel
+          value: Document 1.pdf
+        - column:
+          type: Type
+          value: pdf
+        - column:
+          type: Grootte
+          value: 1Kb
+        - column:
+          type: Actie
+          value: iconen
+      - item:
+        - column:
+          type: Titel
+          value: Afbeelding-1
+        - column:
+          type: Type
+          value: jpg
+        - column:
+          type: Grootte
+          value: 36Kb
+        - column:
+          type: Actie
+          value: "<a href='#'>Test</a>"
+  tableLinksContext:
+    modifier: table--condensed table--striped
+    items:
+      - item:
+        - column:
+          type: Link
+          value: overheid.nl
+        - column:
+          type: Actie
+          value: iconen
+      - item:
+        - column:
+          type: Link
+          value: wetten.nl
+        - column:
+          type: Actie
+          value: iconen
