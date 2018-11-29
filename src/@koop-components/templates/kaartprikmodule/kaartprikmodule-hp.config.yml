@@ -1,6 +1,25 @@
-title: Kaartprikmodule Home
-label: Kaartprikmodule Home
+title: KPM Startscherm
+label: KPM Startscherm
 context:
+  inputAutocompleteContext:
+    id: 2
+    modifier: input-text input-text--search
+    placeholder: Zoek een adres
+    name: verzamelingen
+    hasHiddenField: true
+    hiddenFieldClass: field-class
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    items:
+      - item: Gemeente Vlaardingen
+        code: ABC
+      - item: Gemeente Schiedam
+        code: DEF
+      - item: Gemeente Rotterdam
+        code: XYZ
+      - item: Voorburg
+        code: 123
   headerContext:
     youAreHere:
     - text: Kaartprikmodule
@@ -9,20 +28,29 @@ context:
     breadcrumbs:
       - label: Home
         path: "#"
-  logoContext:
-    file: logo.svg
-    alt: Overheid.nl logo
-    youAreHere: false
-  searchText: "Zeekant 105-7, 2586 JJ Den Haag met  een afstand 250 meter <u>Wijzigen</u>"
+  button1Context:
+    modifier: button-icon--marker
+    iconButton: true
+    text: Marker
+  button2Context:
+    modifier: button-icon--download
+    iconButton: true
+    text: Download
+  button3Context:
+    modifier: button-icon--fullscreen
+    iconButton: true
+    text: Volledig scherm
+  searchText: Om een locatie toe te voegen aan uw lijst kunt u een adres invoeren of een locatie selecteren op de kaart.
   areaContext:
-    modifier: icon--arrow-right
+    modifier: icon--arrow-cta-left
     text: Bekijk gebieden
   removeFilterContext:
-    modifier: icon--remove
+    modifier: icon--remove-blue-left
     text: 15 filters verwijderen
   publishDateContext:
-    fieldLabel: Publicatiedatum
+    fieldLabel: Publicatiedatum 
     name: publicatiedatum
+    explanation: true
     options:
       - id: 1
         text: Vandaag<span></span>
@@ -37,10 +65,58 @@ context:
   themeContext:
     fieldLabel: Thema
     name: thema
+    explanation: true
     options:
-      - id: 6
+      - id: thema-1
         text: Bestuur
-      - id: 7
+      - id: thema-2
         text: Cultuur en recreatie
-      - id: 8
+      - id: thema-3
         text: Economie
+      - id: thema-4
+        text: Financiën
+      - id: thema-5
+        text: Huisvesting
+      - id: thema-6
+        text: Internationaal
+      - id: thema-7
+        text: Landbouw
+      - id: thema-8
+        text: Migratie en integratie
+  informationTypeContext:
+    fieldLabel: Informatie type
+    name: informationType
+    explanation: true
+    options:
+      - id: information-type-1
+        text: Verordering
+      - id: information-type-2
+        text: Beleidsregel
+      - id: information-type-3
+        text: Plan
+      - id: information-type-4
+        text: Ruimtelijk plan
+      - id: information-type-5
+        text: Concretiserend besluit van a...
+      - id: information-type-6
+        text: Verkeersbesluit
+      - id: information-type-7
+        text: Overige mededelingen a...
+      - id: information-type-8
+        text: Drank- en horecavergunning
+  organisationsContext:
+    fieldLabel: Organisaties
+    name: orgainsations
+    explanation: true
+    options: 
+      - id: organisations-1
+        text: Provincies
+      - id: organisations-2
+        text: Gemeenten
+      - id: organisations-3
+        text: Diensten
+      - id: organisations-4
+        text: Waterschappen
+      - id: organisations-5
+        text: Regionale samenwerkings...
+          

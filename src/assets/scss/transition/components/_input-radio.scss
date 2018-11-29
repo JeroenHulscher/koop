@@ -1,9 +1,11 @@
 .form__element.radiogroup {
+  color: $darkBlue;
+
   label {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
