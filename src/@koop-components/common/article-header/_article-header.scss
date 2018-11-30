@@ -80,7 +80,8 @@
       background-size: 1.5em;
     }
 
-    &:hover div {
+    &:hover div,
+    &:focus div {
       font-family: inherit;
       display: block;
       position: absolute;
@@ -102,7 +103,8 @@
       overflow: auto;
       width: auto;
     }
-    &:hover button div {
+    &:hover button div,
+    &:focus button div {
       font-size: 1.25em;
     }
 
