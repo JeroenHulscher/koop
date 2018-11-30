@@ -57,7 +57,7 @@ ol {
     list-style: none;
     padding-left: 1em;
   }
-  
+
   .list--unstyled {
     padding-left: 0;
   }
@@ -262,5 +262,36 @@ ol {
     &:last-child {
       margin: 0;
     }
+  }
+}
+
+.list {
+  padding-left: 0;
+
+  &--legenda &__item {
+    border-bottom: 1px solid $lightGrey;
+    font-style: italic;
+    font-size: 1.125em;
+    padding: 0.75em 0 0.75em 4.5em;
+    list-style: none;
+    color: $darkBlue;
+    position: relative;
+    span {
+      position: absolute;
+      left: 0;
+      top: 1em;
+      width: 1em;
+      height: 1em;
+      border-radius: 100%;
+      background: $darkBlue;
+      &.color1 {
+        background: $lightBlue;
+      }
+      &.color2 {
+          background: $darkerGrey;
+      }
+    }
+
+
   }
 }

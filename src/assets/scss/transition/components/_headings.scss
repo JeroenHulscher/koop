@@ -1,8 +1,13 @@
-// h1,
-// .h1 {
-//   font-size: 3em;
-// }
-// h2,
-// .h2 {
-//   font-size: 2em;
-// }
+// much needed;
+h1,h2,h3,h4,p {
+  margin-top: 0;
+}
+
+h1,
+.h1 {
+  margin-bottom: em(12);
+}
+
+p {
+  margin-bottom: em(16);
+}
