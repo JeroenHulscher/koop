@@ -2,9 +2,10 @@
 
   'use strict';
 
-  var modalInvisibleClass = 'modal--off-screen'; /* we use this so that we can animate visibility */
+  // var modalInvisibleClass = 'modal--off-scree'; /* we use this so that we can animate visibility */
+  var modalVisibleClass = 'is-open'; /* we use this so that we can animate visibility */
   var previouslyFocused = null;
-  var SHOW_DELAY = 400;
+  // var SHOW_DELAY = 400;
 
   var modal = {
     open: function( modal ) {
@@ -17,13 +18,15 @@
       // does not actually make it visible just yet
       onl.ui.show( modal );
 
-      window.setTimeout( function() {
+      /*window.setTimeout( function() {
         // This makes the element actually visible on screen
         modal.classList.remove( modalInvisibleClass );
-      }, SHOW_DELAY );
+      }, SHOW_DELAY );*/
 
       onl.ui.focus( modal );
       onl.ui.bindFocusTrap( modal );
+
+      modal.classList.add(modalVisibleClass);
 
       modal.setAttribute('aria-modal', true);
       modal.setAttribute('role', 'dialog');
@@ -35,11 +38,16 @@
     },
     close: function( modal ) {
       onl.ui.hide( modal );
-      modal.classList.add( modalInvisibleClass );
+
+      // modal.classList.add( modalInvisibleClass );
+      modal.removeAttribute('aria-modal');
+
 
       onl.ui.unbindFocusTrap( modal );
 
-      modal.removeAttribute('aria-modal');
+      modal.classList.remove(modalVisibleClass);
+
+
 
       if ( previouslyFocused ) {
         onl.ui.focus( previouslyFocused );

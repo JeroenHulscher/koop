@@ -51,6 +51,7 @@
 
   showmoreless.prototype.showHide = function() {
     var i;
+
     if ( this.allvisible ) {
       this.hideItems();
       this.allvisible = false;
