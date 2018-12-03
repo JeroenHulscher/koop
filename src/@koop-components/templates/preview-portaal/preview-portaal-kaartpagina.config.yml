@@ -1,0 +1,40 @@
+---
+title: PP Kaartpagina
+label: PP Kaartpagina
+status: ready
+context:
+  id: 1
+  headerContext:
+    metaLinks:
+      - url: 'penis'
+        text: MijnOverheid.nl
+  breadcrumbContext:
+    breadcrumb:
+      last: Tuchtrecht
+      items:
+        - label: Home
+  inputtextContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldInstruction:
+    fieldPlaceholder: 'Wat zoek je precies?'
+  comboboxContext:
+    id: 1
+    modifier: input-text input-text--searchmedium
+    placeholder: Typ hier uw organisatie
+    name: verzamelingen
+    hasHiddenField: true,
+    hiddenFieldClass: appel
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    items:
+      - item: Gemeente Vlaardingen
+        code: ABC
+      - item: Gemeente Schiedam
+        code: DEF
+      - item: Gemeente Rotterdam
+        code: XYZ
+
+
