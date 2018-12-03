@@ -266,7 +266,10 @@ ol {
 }
 
 .list {
-  padding-left: 0;
+
+  &--legenda {
+    padding-left: 0;
+  }
 
   &--legenda &__item {
     border-bottom: 1px solid $lightGrey;
