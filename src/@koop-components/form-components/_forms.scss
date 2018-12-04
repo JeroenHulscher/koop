@@ -64,8 +64,12 @@ fieldset {
   border: 0;
 
   legend {
-    padding: 0;
+    border-bottom: 1px solid $darkBlue;
+    color: $darkBlue;
     font-weight: 700;
+    margin: .5em 0;
+    padding: 0;
+    width: 100%;
   }
 }
 
