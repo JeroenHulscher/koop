@@ -32,7 +32,7 @@
           {{#if modifier }}
             <li><a class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</a></li>
           {{else}}
-            <li><a href="{{ url }}" class="">{{ text }}</a></li>
+            <li><a href="{{ url }}" class="{{ className }}">{{ text }}</a></li>
           {{/if}}
         {{/each}}
         {{/if}}
