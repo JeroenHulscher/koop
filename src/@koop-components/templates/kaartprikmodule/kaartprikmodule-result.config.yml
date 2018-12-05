@@ -23,18 +23,6 @@ context:
   removeResultIconContext:
     modifier: icon--cross-blue
     text: ""
-  button1Context:
-    modifier: button-icon--marker
-    iconButton: true
-    text: Marker
-  button2Context:
-    modifier: button-icon--download
-    iconButton: true
-    text: Download
-  button3Context:
-    modifier: button-icon--fullscreen
-    iconButton: true
-    text: Volledig scherm
   button4Context:
     modifier: button--small trigger-collapse table-trigger
     button: true
