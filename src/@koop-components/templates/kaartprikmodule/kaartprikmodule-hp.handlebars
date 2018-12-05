@@ -10,20 +10,9 @@
 </header>
 <div role="main">
   <div class="container">
-      <h1>Zoek een locatie</h1>
-      <p>Vul een term in om een locatie te zoeken.</p>
-      <div class="columns">
-        <div class="form__row--large">
-          {{ render "@input-autocomplete" inputAutocompleteContext }}
-        </div>
-        <div>
-        {{render "@button-icon" button1Context}}
-        {{render "@button-icon" button2Context}}
-        {{render "@button-icon" button3Context}}
-        </div>
-      </div>
-    </div>  
+      
   </div>
+</div>  
   <div 
     class="container columns-map k-future" 
     data-decorator="handle-collapse" 
@@ -33,6 +22,11 @@
     <div class="sidebar-column">
       <div class="sidebar-column-content">
         <div class="container container--large">
+          <h1>Zoek een locatie</h1>
+          <p>Vul een term in om een locatie te zoeken.</p>
+          <div class="form__row--large">
+            {{ render "@input-autocomplete" inputAutocompleteContext }}
+          </div>
           <h2 class="h2 h2--large">Gekozen locaties</h2>
           <p>{{{ searchText }}}</p>
         </div>

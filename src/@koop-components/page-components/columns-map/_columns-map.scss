@@ -33,8 +33,7 @@
     .sidebar-column {
       min-width: 27em;
       max-width: 27em;
-      background: #E5F1F9;
-      position: relative;
+      background: #fff;
       position: absolute;
       height: 100%;
       left: 0;
@@ -46,27 +45,10 @@
 
         .table--small {
           table-layout: fixed;
-          margin-bottom: 1em;
-          color: #154273;
-
-          tr:first-of-type {
-            th,
-            td {
-              border-bottom: 1px solid #F3F3F3;
-              border-top: 0;
-            }
-          }
 
           th,
           td {
-            border-bottom: 0;
             word-break: break-all;
-          }
-        }
-
-        .modal__content {
-          .table--small {
-            margin: 1em 0;
           }
         }
 
@@ -76,68 +58,12 @@
           cursor: pointer;
           border: 2px solid transparent;
           background: #fff;
-
-          &:hover {
-            border: 2px solid #154273;
-          }
-
-          .button {
-            display: none;
-          }
-
-          &.active {
-            background: #fff;
-            border: 2px solid #154273;
-
-            th,
-            td {
-              border-color: #154273 !important;
-            }
-
-            .button {
-              display: inline-block;
-            }
-          }
-
-          .table--small {
-            th,
-            td {
-              border-top: 1px solid #154273;
-              border-bottom: 0;
-            }
-          }
-
-          .button-icon--dots {
-            background-image: $iconCrossWhite;
-          }
-
-          &.collapsed {
-            .button-icon--dots {
-              background-image: $dotsIcon;
-            }
-          }
         }
 
         .result-item {
           background: #FFF;
           border: 2px solid #154273;
           padding: 1.5em;
-
-          .table--small {
-            tr:first-of-type {
-              th,
-              td {
-                border-color: 1px solid #154273;
-                border-top: 0;
-              }
-            }
-
-            th,
-            td {
-              border-top: 1px solid #154273;
-              border-bottom: 0;
-            }
-          }
         }
       }
     }
