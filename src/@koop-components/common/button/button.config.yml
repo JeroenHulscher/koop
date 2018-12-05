@@ -9,6 +9,7 @@ context:
   iconButton: false
   inputButton: false
   inputSubmit: false
+  buttonWithDivider: false
   type: submit
   disabled: ''
 variants:
@@ -71,3 +72,11 @@ variants:
     context:
       text: Ververs documentenlijst
       modifier: button--primary button--icon-refreshdocuments-white
+  - name: Icon with divider
+    status: wip
+    label: Icon with divider
+    context: 
+      text: Button tekst
+      modifier: button--primary button--divider-icon
+      button: false
+      buttonWithDivider: true
