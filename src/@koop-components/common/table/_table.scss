@@ -163,16 +163,30 @@ table,
   }
 
   &--small {
-    margin-bottom: 0;
+    margin-bottom: 1em;
+    color: $darkBlue;
+
+    tr:first-of-type {
+      th,
+      td {
+        border-top: 0;
+        border-bottom: 1px solid #F3F3F3;
+      }
+    }
 
     th {
-      // Overwrite transitional styling.
       padding-left: 0 !important;
+    }
+
+    td {
+      font-style: italic;
     }
 
     tr {
       th, td {
-        padding: 4px 0;
+      padding: 4px 0;
+      border-top: 1px solid #F3F3F3;
+      border-bottom: 0;
       }
     }
   }
