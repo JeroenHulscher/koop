@@ -1,0 +1,43 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Zoeken naar wettenpockets</h1>
+      <div class="well">
+        <form>
+          <fieldset>
+            <legend>Titel of omschrijving</legend>
+            <div class="form__element">
+              {{render "@input-text" firstInputContext}}
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Wijze van samenstellen</legend>
+            {{render "@select" typeSelectContext}}
+            {{render "@select" fieldSelectContext}}
+          </fieldset>
+          <fieldset>
+            <legend>Gepubliceerd door</legend>
+            {{render "@select" publisherSelectContext}}
+            <div class="form__element">
+              {{render "@input-text" authorInputContext}}
+            </div>
+          </fieldset>
+          {{render "@button" buttonContext}}
+        </form>
+      </div>
+    </div>
+
+
+    <div>
+      <h3>Subnavigatie</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navContext }}
+      </nav>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}

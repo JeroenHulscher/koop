@@ -1,0 +1,139 @@
+title: Wettenpocket Mijn Pocket
+label: Wettenpocket Mijn Pocket
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+        className: 'is-active'
+
+  navlistContext:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Wettenpockets in bewerking</a>
+      - text: <a href="#">Gepubliceerde wettenpockets</a>
+
+  navPocket:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Overzicht</a>
+      - text: <a href="#">Notities</a>
+
+  definitionContext:
+    modifier: 'columns--data'
+    divContainer: true
+    items:
+      - type: Onderwerp
+        value: Intellectuele eigendom
+      - type: Publicist
+        value: KOOP
+      - type: Auteur
+        value: Jan de Vries
+      - type: Status
+        value: Niet Gepubliceerd
+      - type: Wijzigingsdatum
+        value: 26-11-2018
+      - type: Downloads
+        value: '0'
+
+  actionContext:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        icon: icon-bewerken.svg
+        text: Bewerken
+      - link: '#'
+        icon: icon-publicatie.svg
+        text: Publiceren
+      - link: '#'
+        icon: icon-remove.svg
+        text: Verwijderen
+
+  tableLawContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type:
+          value: Rijkswet
+        - column:
+          type: Titel
+          value: 'Belastingregeling Nederland Sint Maarten<br/><i>Datum in werkingtreding: 01-03-2016</i>'
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type:
+          value: Rijkswet
+        - column:
+          type: Titel
+          value: 'Belastingregeling voor het Koninkrijk<br/><i>Datum in werkingtreding: 10-10-2010</i>'
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type:
+          value: Rijkswet
+        - column:
+          type: Titel
+          value: 'Proclamatie houdende plechtige afkondiging van de nieuwe rechtsorde voor het Koninkrijk<br/><i>Datum in werkingtreding: 29-12-1954</i>'
+        - column:
+          type: Annotaties
+          value:
+
+  tableDecentralContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Uitgever
+          value: Tholen
+        - column:
+          type: Titel
+          value: Regeling meding financiële belangen van ambtenaren bij de gemeente Tholen
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type: Uitgever
+          value: Pijnacker-Nootdorp
+        - column:
+          type: Titel
+          value: privacy-Regelement voor de basisregistratie Personen
+        - column:
+          type: Annotaties
+          value:
+      - item:
+        - column:
+          type: Uitgever
+          value: Oss
+        - column:
+          type: Titel
+          value: 17 Opleiding en ontwikkeling
+        - column:
+          type: Annotaties
+          value:
+
+  tableDocsContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Titel
+          value: Afbeelding voor deze pocket
+        - column:
+          type: Type
+          value: jpg
+        - column:
+          type: Grootte
+          value: 1Kb

@@ -9,6 +9,7 @@
       <li class="next"><a href="#"><span class="">&raquo;</span></a></li>
     </ul>
   </div>
+  {{#if pageFilter}}
   <div class="pagination__filter">
     <div class="form__element">
       <label for="select--1">{{ filterLabel }}</label>
@@ -19,4 +20,5 @@
       </select>
     </div>
   </div>
+  {{/if}}
 </div>
