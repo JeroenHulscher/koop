@@ -1,0 +1,20 @@
+.result--list {
+
+  &__data {
+    > ul,
+    > ul:first-child {
+      background: $lightBlue;
+      padding: 1.25em 1.25em 1px; // 1px fix needed for padding-flow bug;
+      margin: 0 0 1.25em 0;
+
+      > li {
+        background: white;
+        list-style: none;
+        padding: 1.25em;
+        margin-bottom: 1.25em;
+        border: 0;
+      }
+
+    }
+  }
+}
