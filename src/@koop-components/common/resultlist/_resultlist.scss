@@ -3,6 +3,10 @@
   > ul:first-child {
     padding: 0;
 
+    >li:first-child {
+      margin-top: 0;
+    }
+
     > li {
       margin-bottom: .5em;
       padding-bottom: .5em;

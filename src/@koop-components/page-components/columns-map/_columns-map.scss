@@ -33,7 +33,7 @@
     .sidebar-column {
       min-width: 27em;
       max-width: 27em;
-      background: #fff;
+      background: $white;
       position: absolute;
       height: 100%;
       left: 0;
@@ -53,17 +53,10 @@
         }
 
         .content-item {
-          margin: 1.5em 0;
           padding: 1.5em;
           cursor: pointer;
           border: 2px solid transparent;
-          background: #fff;
-        }
-
-        .result-item {
-          background: #FFF;
-          border: 2px solid #154273;
-          padding: 1.5em;
+          background: $white;
         }
       }
     }
@@ -72,7 +65,7 @@
       width: 100%;
 
       .trigger-collapse {
-        background: #E5F1F9;
+        background: $white;
         height: 2.5em;
         width: 1.5em;
         position: absolute;

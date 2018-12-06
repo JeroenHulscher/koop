@@ -277,5 +277,12 @@
   &--cross-blue {
     background-image: $iconCrossBlue;
     background-position: left 50%;
+
+    &--small {
+      background-image: $iconCrossBlue;
+      background-position: left 50%;
+      background-size: .5em;
+      padding-left: 1em;
+    }
   }
 }

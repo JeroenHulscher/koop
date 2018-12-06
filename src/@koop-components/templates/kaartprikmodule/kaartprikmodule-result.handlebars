@@ -17,7 +17,7 @@
        }'>
     <div class="sidebar-column">
       <div class="sidebar-column-content">
-        <div class="container container--large">
+        <div class="container">
           <h1>Zoek een locatie</h1>
           <p>Vul een term in om een locatie te zoeken.</p>
           <div class="form__row--large">
@@ -25,42 +25,44 @@
           </div>
           <h2 class="h2 h2--large">Zoekresultaat</h2>
           <p>{{render "@inline-icon" removeResultIconContext }} Gemeente 's-Gravenhage</p>
-          <ul>
-            <li class="result-item collapsed">
-              <h3>Gemeente 's-Gravenhage</h3>
-              <table class="table table--small">
-                <tbody>
-                  <tr>
-                    <th>Type</th>
-                    <td>Gemeente</td>
-                  </tr>
-                  <tr>
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr>
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr>
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr>
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                  <tr>
-                    <th>Bron</th>
-                    <td>Bestuurlijke Grenzen</td>
-                  </tr>
-                </tbody>
-              </table>
-              {{render "@button" button4Context }}
-              {{render "@button" button5Context }}
-              {{render "@button" button6Context }}
-            </li>
-          </ul>
+          <div class="result--list">
+            <ul>
+              <li class="result-item collapsed">
+                <h3>Gemeente 's-Gravenhage</h3>
+                <table class="table table--small">
+                  <tbody>
+                    <tr>
+                      <th>Type</th>
+                      <td>Gemeente</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                  </tbody>
+                </table>
+                {{render "@button" button4Context }}
+                {{render "@button" button5Context }}
+                {{render "@button" button6Context }}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

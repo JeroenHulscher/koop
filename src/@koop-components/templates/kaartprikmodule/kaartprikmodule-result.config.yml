@@ -21,7 +21,7 @@ context:
       - item: Voorburg
         code: 123
   removeResultIconContext:
-    modifier: icon--cross-blue
+    modifier: icon--cross-blue--small
     text: ""
   button4Context:
     modifier: button--small trigger-collapse table-trigger
