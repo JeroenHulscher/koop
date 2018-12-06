@@ -2,3 +2,12 @@ title: Button icon
 status: prototype
 context:
   text: Knop icoon
+variants:
+  - name: default
+    status: prototype
+  - name: plain
+    status: prototype
+    notes: This variant is used for small icons in toolbars etc. It has a smaller padding than the default icon button and no background color.
+    context:
+      modifier: button-icon--plain button-icon--edit
+      text: Bewerken
