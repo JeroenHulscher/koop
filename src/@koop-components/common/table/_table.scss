@@ -16,6 +16,10 @@ table,
   margin: 1em 0;
   table-layout: fixed;
 
+  .table--container & {
+    table-layout: auto;
+  }
+
   caption {
     color: $darkerGrey;
     text-align: left;
