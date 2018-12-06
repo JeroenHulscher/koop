@@ -27,7 +27,7 @@
     "eslint": "^3.13.1",
     "fastsearch": "^1.11.1",
     "fastselect": "^0.7.3",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-changed": "^2.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
