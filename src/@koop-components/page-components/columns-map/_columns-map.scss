@@ -47,6 +47,7 @@
         .content-item,
         .result-item {
           cursor: pointer;
+          border: 2px solid transparent;
 
           &.active {
             border: 2px solid $darkBlue;
