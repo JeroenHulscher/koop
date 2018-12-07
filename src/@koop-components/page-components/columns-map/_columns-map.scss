@@ -15,11 +15,6 @@
 
         .sidebar-column-content {
           visibility: hidden;
-
-          .content-item,
-          .result-item {
-            cursor: pointer;
-          }
         }
       }
 
@@ -48,6 +43,11 @@
 
       .sidebar-column-content {
         visibility: visible;
+
+        .content-item,
+        .result-item {
+          cursor: pointer;
+        }
 
         .table--small {
           table-layout: fixed;
