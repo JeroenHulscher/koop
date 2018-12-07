@@ -47,6 +47,10 @@
         .content-item,
         .result-item {
           cursor: pointer;
+
+          &.active {
+            border: 2px solid $darkBlue;
+          }
         }
 
         .table--small {
