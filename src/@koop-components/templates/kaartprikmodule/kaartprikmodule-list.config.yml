@@ -61,3 +61,4 @@ context:
     button: true
     text: Meer details
   modalContext: "<h2 class='k-future h2--large'>Geselecteerde locatie verwijderen</h2><p>Weet u zeker dat u deze locatie wilt verwijderen?</p><h3>Gemeente 's-Gravenhage</h3><table class='table--small'><tbody><tr class='type-row'><th>Type</th><td>Gemeente</td></tr><tr class='source-row'><th>Bron</th><td>Bestuurlijke Grenzen</td></tr></tbody></table><button class='button button--inversed'>Annuleren</button><button class='button button--primary'>Verwijderen</button>" 
+  closeButton: Sluiten

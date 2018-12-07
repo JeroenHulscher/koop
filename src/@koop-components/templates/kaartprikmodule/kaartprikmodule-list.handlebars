@@ -1,132 +1,126 @@
-<header class="header">
-  <nav class="header__nav header__nav--closed" id="nav">
-    <h2 class="visually-hidden">Primaire navigatie</h2>
-    <div class="container">
-      <ul class="header__primary-nav list list--unstyled">
-        <li class="hidden-mobile"><a href="#">Verlaat KPM</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
 <div role="main">
-  <div class="container">
-    <div class="container">
-      <h1>Zoek een locatie</h1>
-      <p>Vul een term in om een locatie te zoeken.</p>
-      <div class="columns">
-        <div class="form__row--large">
-          {{ render "@input-autocomplete" inputAutocompleteContext }}
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="container columns-map k-future" data-decorator="handle-collapse" data-config='{ "trigger": "sidebar-trigger" }'>
     <div class="sidebar-column">
       <div class="sidebar-column-content" data-decorator="active-item-toggle">
-        <div class="container container--large">
+        <div class="container">
+          <h1>Zoek een locatie</h1>
+          <p>Vul een term in om een locatie te zoeken.</p>
+          <div class="form__row--large">
+            {{ render "@input-autocomplete" inputAutocompleteContext }}
+          </div>
           <h2 class="h2 h2--large">Gekozen locaties</h2>
-          <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-one-trigger" }'>
-            <h3>Gemeente 's-Gravenhage</h3>
-            <table class="table table--small">
-              <tbody>
-                <tr class="type-row">
-                  <th>Type</th>
-                  <td>Gemeente</td>
-                </tr>
-                <tr class="source-row">
-                  <th>Provinciecode</th>
-                  <td>PV28</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Provincienaam</th>
-                  <td>Zuid-Holland</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Gemeentecode</th>
-                  <td>0518</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Gemeentenaam</th>
-                  <td>'s-Gravenhage</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>ID</th>
-                  <td>gem-339aeade1bbb0005ba845b14d29d2c15</td>
-                </tr>
-              </tbody>
-            </table>
-            {{render "@button" table1ExpandButtonContext }}
-            {{render "@button" button5Context }}
-            <button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button button--small">Verwijderen</button>
-          </div>
-          <div id="modal-1" class="modal modal--off-screen" role="alert">
-            <div class="modal__inner">
-              <div class="modal__content">
-                {{{ modalContext }}}
-              </div>
-              <button type="button" data-handler="close-modal" class="modal__close">{{ closeButton }}</button>
-            </div>
-          </div>
+          <div class="result--list">
+            <ul>
+              <li>
+                <div>
+                  <h3>Gemeente 's-Gravenhage</h3>
+                  <table class="table table--small">
+                    <tbody>
+                      <tr>
+                        <th>Type</th>
+                        <td>Gemeente</td>
+                      </tr>
+                      <tr>
+                        <th>Provinciecode</th>
+                        <td>PV28</td>
+                      </tr>
+                      <tr>
+                        <th>Provincienaam</th>
+                        <td>Zuid-Holland</td>
+                      </tr>
+                      <tr>
+                        <th>Gemeentecode</th>
+                        <td>0518</td>
+                      </tr>
+                      <tr>
+                        <th>Gemeentenaam</th>
+                        <td>'s-Gravenhage</td>
+                      </tr>
+                      <tr>
+                        <th>ID</th>
+                        <td>gem-339aeade1bbb0005ba845b14d29d2c15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  {{render "@button" table1ExpandButtonContext }}
+                  {{render "@button" button5Context }}
+                  <button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button button--small">Verwijderen</button>
+                </div>
+                <div id="modal-1" class="modal modal--off-screen" role="alert">
+                  <div class="modal__inner">
+                    <div class="modal__content">
+                      {{{ modalContext }}}
+                    </div>
+                    <button type="button" data-handler="close-modal" class="modal__close">
+                      <span>{{ closeButton }}</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+          
+              <li>
+                <h3>Voorburg</h3>
+                <table class="table table--small">
+                  <tbody>
+                    <tr>
+                      <th>Type</th>
+                      <td>Gemeente</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                  </tbody>
+                </table>
+                {{render "@button" table2ExpandButtonContext }}
+                {{render "@button" button5Context }}
+              </li>
 
-          <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-two-trigger" }'>
-            <h3>Voorburg</h3>
-            <table class="table table--small">
-              <tbody>
-                <tr class="type-row">
-                  <th>Type</th>
-                  <td>Gemeente</td>
-                </tr>
-                <tr class="source-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-              </tbody>
-            </table>
-            {{render "@button" table2ExpandButtonContext }}
-            {{render "@button" button5Context }}
-          </div>
-
-          <div class="content-item collapsed" data-decorator="handle-collapse" data-config='{ "trigger": "table-three-trigger" }'>
-            <h3>Rijswijk</h3>
-            <table class="table table--small">
-              <tbody>
-                <tr class="type-row">
-                  <th>Type</th>
-                  <td>Gemeente</td>
-                </tr>
-                <tr class="source-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-                <tr class="detail-row">
-                  <th>Bron</th>
-                  <td>Bestuurlijke Grenzen</td>
-                </tr>
-              </tbody>
-            </table>
-            {{render "@button" table3ExpandButtonContext }}
-            {{render "@button" button5Context }}
+              <li>
+                <h3>Rijswijk</h3>
+                <table class="table table--small">
+                  <tbody>
+                    <tr>
+                      <th>Type</th>
+                      <td>Gemeente</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                    <tr>
+                      <th>Bron</th>
+                      <td>Bestuurlijke Grenzen</td>
+                    </tr>
+                  </tbody>
+                </table>
+                {{render "@button" table3ExpandButtonContext }}
+                {{render "@button" button5Context }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="main-column" style="background: #ccc">
+    <div class="main-column">
+      <button id="draw-button" class="button button--primary button--divider-icon-draw" type="button"><span class="divider">Object tekenen</span></button>
+      <button id="select-button" class="button button--primary button--divider-icon-map" type="button"><span class="divider">Object selecteren</span></button>
       <a href="#" class="trigger-collapse sidebar-trigger"><span class="visually-hidden">In- of uitklappen</span> </a>
       <iframe width="100%" height="800px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.044342041015626%2C51.97155731422007%2C4.535293579101563%2C52.13959907316872&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=12/52.0557/4.2898">View Larger Map</a></small>
     </div>

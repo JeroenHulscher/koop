@@ -175,12 +175,14 @@
     background-image: $uploadIcon;
     padding-left: 3em;
   }
+
   &--icon-download {
     background-position: 1em center;
     background-repeat: no-repeat;
     background-image: $downloadIcon;
     padding-left: 3em;
   }
+
   &--icon-download-white {
     background-position: 1em center;
     background-repeat: no-repeat;
@@ -210,5 +212,50 @@
     background-image: $refreshDocumentWhite;
     background-size: 1.75em;
     padding-left: 3em;
+  }
+  
+  &--divider-icon {
+    background-image: $refreshDocumentWhite;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.75em;
+    background-position: right .75em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid #fff;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+  
+  &--divider-icon-draw {
+    background-image: $drawIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid #fff;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+
+  &--divider-icon-map {
+    background-image: $mapIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid #fff;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
   }
 }

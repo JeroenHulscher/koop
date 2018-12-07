@@ -1,5 +1,3 @@
-$gutter: 1em;
-
 .columns-map {
   display: flex;
   flex-direction: column;
@@ -12,7 +10,7 @@ $gutter: 1em;
 
     &.collapsed {
       .sidebar-column {
-        left: -432px;
+        left: -33.6%;
         transition: left $fastEaseInOut;
 
         .sidebar-column-content {
@@ -35,8 +33,8 @@ $gutter: 1em;
     .sidebar-column {
       min-width: 27em;
       max-width: 27em;
-      background: #E5F1F9;
-      position: relative;
+      background: $white;
+      box-shadow: 1px 0px 15px 0px rgba(0,0,0,0.20);
       position: absolute;
       height: 100%;
       left: 0;
@@ -46,111 +44,21 @@ $gutter: 1em;
       .sidebar-column-content {
         visibility: visible;
 
+        .content-item {
+          cursor: pointer;
+          border: 2px solid transparent;
+
+          &.active {
+            border: 2px solid $darkBlue;
+          }
+        }
+
         .table--small {
           table-layout: fixed;
-          margin-bottom: 1em;
-          color: #154273;
-
-          tr:first-of-type {
-            th,
-            td {
-              border-bottom: 1px solid #F3F3F3;
-            }
-          }
-
-          .source-row {
-            th,
-            td {
-              border-bottom: 0;
-            }
-          }
 
           th,
           td {
             word-break: break-all;
-          }
-        }
-
-        .modal__content {
-          .table--small {
-            margin: 1em 0;
-          }
-        }
-
-        .content-item {
-          margin: 1.5em 0;
-          padding: 1.5em;
-          cursor: pointer;
-          border: 2px solid transparent;
-          background: #fff;
-
-          &:hover {
-            border: 2px solid #154273;
-          }
-
-          .button {
-            display: none;
-          }
-
-          &.active {
-            background: #fff;
-            border: 2px solid #154273;
-
-            th,
-            td {
-              border-color: #154273 !important;
-            }
-
-            .button {
-              display: inline-block;
-            }
-          }
-
-          .table--small {
-            .detail-row {
-              display: table-row;
-
-              th,
-              td {
-                border-top: 1px solid #154273;
-                border-bottom: 0;
-              }
-            }
-          }
-
-          .button-icon--dots {
-            background-image: $iconCrossWhite;
-          }
-
-          &.collapsed {
-            .button-icon--dots {
-              background-image: $dotsIcon;
-            }
-          }
-        }
-
-        .result-item {
-          background: #FFF;
-          border: 2px solid #154273;
-          padding: 1.5em;
-
-          .table--small {
-            tr:first-of-type {
-              th,
-              td {
-                border-color: 1px solid #154273;
-              }
-            }
-
-            .detail-row {
-              display: table-row;
-
-              th,
-              td {
-                border-top: 1px solid #154273;
-                border-bottom: 0;
-              }
-            }
           }
         }
       }
@@ -159,13 +67,25 @@ $gutter: 1em;
     .main-column {
       width: 100%;
 
+      #draw-button {
+        position: absolute;
+        top: 1em;
+        right: 14.5em;
+      }
+
+      #select-button {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
+
       .trigger-collapse {
-        background: #E5F1F9;
-        height: 40px;
-        width: 25px;
+        background: $white;
+        height: 2.5em;
+        width: 1.5em;
         position: absolute;
         top: calc(50% - 40px);
-        left: 432px;
+        left: 33.6%;
         border-radius: 0 6px 6px 0;
         background-image: $dartLeftIcon;
         background-repeat: no-repeat;
