@@ -58,6 +58,18 @@
     .main-column {
       width: 100%;
 
+      #draw-button {
+        position: absolute;
+        top: 1em;
+        right: 14.5em;
+      }
+
+      #select-button {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
+
       .trigger-collapse {
         background: $white;
         height: 2.5em;

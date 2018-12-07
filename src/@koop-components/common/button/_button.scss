@@ -228,4 +228,34 @@
       margin-right: .2em;
     }
   }
+  
+  &--divider-icon-draw {
+    background-image: $drawIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid #fff;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+
+  &--divider-icon-map {
+    background-image: $mapIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid #fff;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
 }
