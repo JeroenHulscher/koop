@@ -12,10 +12,20 @@
       margin-bottom: 1.25em;
       border: 0;
     }
+
   }
   .result--actions {
     right: 1em;
     top: 1em;
+  }
+
+  @media (min-width: 50em) {
+    &--wide {
+      > ul > li,
+      > ul:first-child > li {
+        padding: 1.25em 4em;
+      }
+    }
   }
 }
 

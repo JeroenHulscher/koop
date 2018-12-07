@@ -98,4 +98,21 @@ variants:
         color: color2
       - text: Borssele/Vlissingen
         color: color3
+  - name: Legenda columns
+    status: ready
+    context:
+      modifier: list--legenda list--columns-4
+      items:
+      - text: Eemshaven
+        color: color1
+      - text: Maasvlakte 1
+        color: color2
+      - text: Borssele/Vlissingen
+        color: color3
+      - text: Eemshaven
+        color: color1
+      - text: Maasvlakte 1
+        color: color2
+      - text: Borssele/Vlissingen
+        color: color3
 

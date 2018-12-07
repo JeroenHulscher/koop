@@ -147,3 +147,10 @@ label {
   }
 
 }
+
+.container {
+
+  &__row {
+    margin-bottom: 3em;
+  }
+}

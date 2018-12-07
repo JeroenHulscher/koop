@@ -6,7 +6,7 @@ context:
   id: 1
   headerContext:
     metaLinks:
-      - url: 'penis'
+      - url: ''
         text: MijnOverheid.nl
   breadcrumbContext:
     breadcrumb:

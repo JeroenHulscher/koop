@@ -269,6 +269,7 @@ ol {
 
   &--legenda {
     padding-left: 0;
+    margin-bottom: 1em;
   }
 
   &--legenda &__item {
@@ -279,6 +280,7 @@ ol {
     list-style: none;
     color: $darkBlue;
     position: relative;
+    word-break: break-all;
     span {
       position: absolute;
       left: 0;
@@ -295,4 +297,16 @@ ol {
       }
     }
   }
+
+  @media (min-width: 50em) {
+    &--columns-4 &__item {
+      width: 23%;
+      margin-right: 2%;
+      display: inline-block;
+    }
+    &--columns-4 &__item:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
 }
