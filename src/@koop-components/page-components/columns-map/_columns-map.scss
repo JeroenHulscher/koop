@@ -15,6 +15,11 @@
 
         .sidebar-column-content {
           visibility: hidden;
+
+          .content-item,
+          .result-item {
+            cursor: pointer;
+          }
         }
       }
 
