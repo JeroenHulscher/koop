@@ -109,7 +109,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: hier icoontjes
+          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omlaag</a>'
       - item:
         - column:
           type: Type
@@ -125,7 +125,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: hier icoontjes
+          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a><br><a href="#">Verplaats omlaag</a>'
       - item:
         - column:
           type: Type
@@ -141,7 +141,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: hier icoontjes
+          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a>'
 
   tableDecentralContext:
     modifier: table--striped table--condensed
@@ -161,7 +161,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: hier icoontjes
+          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omlaag</a>'
       - item:
         - column:
           type: Uitgever
@@ -177,7 +177,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: hier icoontjes
+          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a><br><a href="#">Verplaats omlaag</a>'
       - item:
         - column:
           type: Uitgever
@@ -193,7 +193,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: hier icoontjes
+          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a>'
   tableDocsContext:
     modifier: table--striped table--condensed
     items:
@@ -209,7 +209,7 @@ context:
           value: 1Kb
         - column:
           type: Actie
-          value: iconen
+          value: '<a href="#">Bewerken</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omlaag</a>'
       - item:
         - column:
           type: Titel
@@ -222,7 +222,7 @@ context:
           value: 36Kb
         - column:
           type: Actie
-          value: "<a href='#'>Test</a>"
+          value: '<a href="#">Bewerken</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a>'
   tableLinksContext:
     modifier: table--condensed table--striped
     items:
@@ -232,11 +232,11 @@ context:
           value: overheid.nl
         - column:
           type: Actie
-          value: iconen
+          value: '<a href="#">Bewerken</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omlaag</a>'
       - item:
         - column:
           type: Link
           value: wetten.nl
         - column:
           type: Actie
-          value: iconen
+          value: '<a href="#">Bewerken</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a>'
