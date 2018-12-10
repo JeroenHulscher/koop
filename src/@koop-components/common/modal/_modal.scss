@@ -71,8 +71,18 @@
   &--tooltip {
     background: none;
 
-    .modal__content {
-      background: $white;
+    .modal__inner {
+      border-radius: 6px;
+
+      .modal__content {
+        background: $white;
+        padding: 0;
+      }
+
+      .modal__close {
+        top: 1em;
+        right: 1em;
+      }
     }
   }
 }

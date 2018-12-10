@@ -121,7 +121,7 @@
     <div class="main-column">
       <button id="draw-button" class="button button--primary button--divider-icon-draw" type="button"><span class="divider">Object tekenen</span></button>
       <button id="select-button" class="button button--primary button--divider-icon-map" type="button"><span class="divider">Object selecteren</span></button>
-      <div class="modal modal--in-content">
+      <div class="modal modal--tooltip">
         <div class="modal__inner">
           <div class="modal__content">
             <h3>Object selecteren</h2>
@@ -130,17 +130,27 @@
               <label for="option-1">
                 <input type="radio" id="option-1" name="geldigheid">
                 <span></span>
-                Laatste versies
+                Gemeenten
               </label>
               <label for="option-2">
                 <input type="radio" id="option-2" name="geldigheid">
                 <span></span>
-                Geldig vandaag
+                Percelen
               </label>
               <label for="option-3">
                 <input type="radio" id="option-3" name="geldigheid">
                 <span></span>
-                Geldig op <input type="date" class="input input--date input--medium" id="input--12" placeholder="mm-dd-jj">
+                Provincies
+              </label>
+              <label for="option-3">
+                <input type="radio" id="option-3" name="geldigheid">
+                <span></span>
+                Waterschappen
+              </label>
+              <label for="option-3">
+                <input type="radio" id="option-3" name="geldigheid">
+                <span></span>
+                Wijken en buurten
               </label>
             </fieldset>
           </div>
