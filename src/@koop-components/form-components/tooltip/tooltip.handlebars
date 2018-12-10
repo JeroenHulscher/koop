@@ -1,9 +1,4 @@
 <div class="tooltip" data-decorator="tooltip">
-  <button  aria-label="Help?" aria-describedby="txt33" aria-expanded="false" class="tooltip__trigger">trigger</button>
-  <span role="tooltip" id="txt33" class="tooltip__content">this is tooltip content</span>
-</div>
-
-<div class="tooltip" data-decorator="tooltip" style="position: absolute; right: 40px; top: 40px;">
-  <button aria-label="Help?" aria-describedby="txt34" aria-expanded="false" class="tooltip__trigger">trigger</button>
-  <span role="tooltip" id="txt34" class="tooltip__content">this is tooltip content</span>
+  <button  aria-label="Help?" aria-describedby="tt{{id}}" aria-expanded="false" class="tooltip__trigger">{{label}}</button>
+  <span role="tooltip" id="tt{{id}}" class="tooltip__content">{{Helptext}}</span>
 </div>

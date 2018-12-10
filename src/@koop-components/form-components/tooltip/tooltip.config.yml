@@ -4,5 +4,6 @@ label: Tooltip
 status: wip
 context:
   id: 1
-  Helptext: <p>U moet dit volledig en naar waarheid invullen.</p>
-  Text: Voornaam
+  label: label
+  Helptext: U moet dit volledig en naar waarheid invullen
+
