@@ -15,7 +15,8 @@
   display: block;
 }
 
-[hidden] {
+[hidden],
+.is-hidden {
   display: none;
 }
 
