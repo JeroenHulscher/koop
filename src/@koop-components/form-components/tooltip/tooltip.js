@@ -27,8 +27,8 @@
       all[i].classList.add('is-hidden');
     }
     this.trigger.setAttribute('aria-expanded', 'true');
-    this.content.setAttribute('aria-hidden', 'false');
     this.trigger.classList.add('is-active');
+    this.content.setAttribute('aria-hidden', 'false');
     this.content.classList.remove('is-hidden');
     this.positionTooltip();
   };
@@ -53,11 +53,11 @@
   tooltip.prototype.hideTooltip = function () {
     this.element.setAttribute('aria-expanded', 'false');
     this.element.classList.remove('is-active');
-    this.content.classList.add('is-hidden');
-    this.content.setAttribute('aria-hidden', 'true');
-
     this.element.classList.remove('has-position--left');
     this.element.classList.remove('has-position--fixed');
+
+    this.content.classList.add('is-hidden');
+    this.content.setAttribute('aria-hidden', 'true');
   };
 
   tooltip.prototype.hideTooltipKeyboard = function (e) {

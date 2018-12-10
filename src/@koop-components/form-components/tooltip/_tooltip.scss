@@ -41,28 +41,27 @@
     border: 1px solid $tooltipContainerBorderColor;
     font-size: inherit;
     background-color: $white;
-    margin: 1.5em 0 1em;
-    padding: .5em 1.5em 1.5em;
-
+    padding: .5em 1em;
     position: fixed;
     left: 1em;
     right: 1em;
     top: 1em;
     bottom: auto;
+    outline: none;
+    color: $black;
+    z-index: 100;
+    border-radius: 5px;
 
 
     @media ( min-width: 400px ) {
       position: absolute;
-      top: 1.25em;
-      left: -1em;
+      top: 1.5em;
+      left: -.75em;
       max-width: 20em;
       min-width: 18em;
     }
 
-    outline: none;
-    color: $black;
-    z-index: 100;
-    border-radius: 7px;
+
 
     &.has-position--fixed {
       left: 1em;
@@ -78,46 +77,32 @@
       }
     }
 
-    a {
-      color: $darkBlue;
-    }
-
-    a:hover,
-    a:focus {
-      color: $primaryBlue;
-    }
-
     @media ( min-width: 400px ) {
       &::before {
         background-color: inherit;
         border: 1px solid $tooltipContainerBorderColor;
         border-right-color: transparent;
         border-bottom-color: transparent;
-        border-radius: 5px;
+        border-radius: 2px;
         content: ' ';
-        height: 1.5em;
+        height: .5em;
+        width: .5em;
         position: absolute;
         top: 0;
         left: 1.25em;
         transform: rotate( 45deg );
         transform-origin: 100% 0;
-        width: 1.5em;
       }
     }
 
     &.has-position--left {
       left: auto;
-      right: -1em;
+      right: -.4em;
 
       &::before {
         right: .75em;
         left: auto !important;
       }
     }
-
-    &[hidden="false"] {
-      display: block;
-    }
-
   }
 }
