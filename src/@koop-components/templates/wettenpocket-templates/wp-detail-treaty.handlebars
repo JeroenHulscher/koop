@@ -1,0 +1,33 @@
+{{ render "@header" headerContext }}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Verdragenpocket Wegverkeer</h1>
+      <div class="well">
+        {{render "@definitionlist" definitionContext}}
+      </div>
+
+      <p>Automatisch gegenereerde pocket met multi-/plurilaterale verdragen op het onderwerp Wegverkeer. Deze pocket bevat geen aanvullende notities, markeringen, links of documenten.</p>
+
+      <h2>Verdragen (9)</h2>
+      {{render "@table" tableTreatyContext}}
+
+    </div>
+
+
+    <div>
+      <h3>Subnavigatie</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+      <h3>Wettenpocket</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navPocket }}
+      </nav>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}
