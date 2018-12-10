@@ -67,4 +67,12 @@
       background-image: $modalCloserHover;
     }
   }
+
+  &--in-content {
+    background: none;
+
+    .modal__content {
+      background: $white;
+    }
+  }
 }

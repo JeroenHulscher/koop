@@ -121,6 +121,34 @@
     <div class="main-column">
       <button id="draw-button" class="button button--primary button--divider-icon-draw" type="button"><span class="divider">Object tekenen</span></button>
       <button id="select-button" class="button button--primary button--divider-icon-map" type="button"><span class="divider">Object selecteren</span></button>
+      <div class="modal modal--in-content">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <h3>Object selecteren</h2>
+            <p>Selecteer een onderwerp om een bestuurlijk gebied te kunnen selecteren</p>
+            <fieldset class="form__element radiogroup ">          
+              <label for="option-1">
+                <input type="radio" id="option-1" name="geldigheid">
+                <span></span>
+                Laatste versies
+              </label>
+              <label for="option-2">
+                <input type="radio" id="option-2" name="geldigheid">
+                <span></span>
+                Geldig vandaag
+              </label>
+              <label for="option-3">
+                <input type="radio" id="option-3" name="geldigheid">
+                <span></span>
+                Geldig op <input type="date" class="input input--date input--medium" id="input--12" placeholder="mm-dd-jj">
+              </label>
+            </fieldset>
+          </div>
+          <button type="button" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+      </div>
       <a href="#" class="trigger-collapse sidebar-trigger"><span class="visually-hidden">In- of uitklappen</span> </a>
       <iframe width="100%" height="800px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=4.044342041015626%2C51.97155731422007%2C4.535293579101563%2C52.13959907316872&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=12/52.0557/4.2898">View Larger Map</a></small>
     </div>
