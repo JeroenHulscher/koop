@@ -99,7 +99,6 @@ $shareWhiteIcon: url( '#{$imagePath}/icon-share-white.svg' );
 $shareIcon: url( '#{$imagePath}/icon-share.svg' );
 
 $markerIcon: url( '#{$imagePath}/icon-marker.svg' ) !default;
-$fullscreenIcon: url( '#{$imagePath}/icon-fullscreen.svg' ) !default;
 
 $dotsIcon: url( '#{$imagePath}/icon-dots.svg' ) !default;
 $crosshairIcon: url( '#{$imagePath}/icon-crosshair.svg' ) !default;
@@ -107,3 +106,7 @@ $crosshairIcon: url( '#{$imagePath}/icon-crosshair.svg' ) !default;
 $editIcon: url( '#{$imagePath}/icon-bewerken.svg' ) !default;
 $calendarIcon: url( '#{$imagePath}/icon-calendar.svg' ) !default;
 $removeIcon: url( '#{$imagePath}/icon-remove.svg' ) !default;
+
+
+$drawIcon: url( '#{$imagePath}/icon-draw.svg' ) !default;
+$mapIcon: url( '#{$imagePath}/icon-map.svg' ) !default;

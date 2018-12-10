@@ -7,14 +7,18 @@ context:
       - type: xls
       buttonContext:
         modifier: button--primary
-        button: true
+        button: false
+        anchor: true
+        action: http://www.google.nl
         text: download bestand
     - name: Score wijk 2016
       files:
       - type: xml
       buttonContext:
         modifier: button--primary
-        button: true
+        button: false
+        anchor: true
+        action: http://www.google.nl
         text: download bestand
       moreInfo: true
       title: Toegankslink
@@ -30,7 +34,9 @@ context:
       - type: xls
       buttonContext:
         modifier: button--primary
-        button: true
+        button: false
+        anchor: true
+        action: http://www.google.nl
         text: download bestand
         disabled: disabled
       remark: true
