@@ -71,12 +71,14 @@
         position: absolute;
         top: 1em;
         right: 14.5em;
+        z-index: 1;
       }
 
       #select-button {
         position: absolute;
         top: 1em;
         right: 1em;
+        z-index: 1;
       }
 
       .trigger-collapse {
