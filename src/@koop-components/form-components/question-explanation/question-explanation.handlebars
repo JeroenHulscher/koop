@@ -1,11 +1,11 @@
 <div class="question-explanation">
 
-  <a href="#question-explanation-{{ id }}" class="question-explanation__link" id="question-explanation-link-{{ id }}" data-handler="toggle-explanation">{{ Text }}</a>
-  <div class="question-explanation__content" id="question-explanation-{{ id }}" data-decorator="hide-self">
+  <a aria-label="Help?" aria-describedby="question-explanation-{{ id }}" aria-expanded="false" href="#question-explanation-{{ id }}" class="question-explanation__link" id="question-explanation-link-{{ id }}" data-handler="toggle-explanation">{{ Text }}</a>
+  <div data-decorator="explanation" role="tooltip" class="question-explanation__content" id="question-explanation-{{ id }}">
     {{{ Helptext }}}
-    <a href="#question-explanation-link-{{ id }}" class="question-explanation__close" data-handler="close-explanation">
+    {{!-- <a href="#question-explanation-link-{{ id }}" class="question-explanation__close" data-handler="close-explanation">
         Sluiten
-    </a>
+    </a> --}}
   </div>
 
 </div>

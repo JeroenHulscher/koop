@@ -1,17 +1,42 @@
 .tooltip {
   position: relative;
 
+  &__content {
+    display: none;
+  }
+
   &.is-active &__content {
     display: inline;
   }
 
-  &__content {
-    display: none;
-  }
-}
-/*
-.has-js .tooltip {
+  span[aria-hidden="true"] {display:none;}
+  span[aria-hidden="false"] {display:block;}
 
+}
+
+.has-js .tooltip {
+  &__trigger {
+    background: {
+      image: $explanationIcon;
+      repeat: no-repeat;
+      position: center center;
+      size: 14px;
+    };
+    border: 0;
+    width: 18px;
+    height: 18px;
+    text-indent: -9999em;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.25em;
+    position: relative;
+    top: -.0625em;
+
+    &:hover,
+    &:focus {
+      background-image: $explanationHoverIcon;
+    }
+  }
   &__content {
     border: 1px solid $tooltipContainerBorderColor;
     font-size: inherit;
@@ -39,7 +64,7 @@
     z-index: 100;
     border-radius: 7px;
 
-    &--fixed {
+    &.has-position--fixed {
       left: 1em;
       right: 1em;
       top: 1em;
@@ -65,7 +90,7 @@
     @media ( min-width: 400px ) {
       &::before {
         background-color: inherit;
-        border: 1px solid black;
+        border: 1px solid $tooltipContainerBorderColor;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-radius: 5px;
@@ -80,7 +105,7 @@
       }
     }
 
-    &--left {
+    &.has-position--left {
       left: auto;
       right: -1em;
 
@@ -96,4 +121,3 @@
 
   }
 }
-*/

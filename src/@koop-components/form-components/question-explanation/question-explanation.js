@@ -1,12 +1,13 @@
 onl.handle({
   'toggle-explanation': function( element, event ) {
     var explanation = onl.dom.getElementFromHref( element.href );
-    var tooltips = document.querySelectorAll( '.question-explanation__content .question-explanation__close' );
+    var tooltips = document.querySelectorAll( '.question-explanation__content' );
     var i;
 
     // close all open tooltips;
     for ( i = 0; i < tooltips.length; i++ ) {
-      tooltips[i].click();
+      tooltips[i].setAttribute('aria-hidden', 'true');
+      tooltips[i].classList.add('is-hidden');
     }
 
     event.preventDefault();
@@ -18,6 +19,11 @@ onl.handle({
       var windowWidth = window.innerWidth;
 
       onl.ui.show( explanation, explanation );
+
+      element.setAttribute('aria-expanded', 'true');
+      element.classList.add('is-active');
+      explanation.classList.remove('is-hidden');
+      console.log('-');
 
       var targetRect = explanation.getBoundingClientRect();
       var targetWidth = targetRect.width || ( targetRect.left - targetRect.right );
@@ -54,7 +60,7 @@ onl.handle({
 });
 
 onl.decorate({
-  'hide-self': function( element ) {
-    onl.ui.hide( element );
+  'explanation': function( element ) {
+    element.classList.add('is-hidden');
   }
 });

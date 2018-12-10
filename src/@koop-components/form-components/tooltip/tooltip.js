@@ -6,7 +6,7 @@
     this.element = element;
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     this.trigger = this.element.querySelector(this.config.trigger) || this.element.querySelector( '.tooltip__trigger' );
-    this.content = this.element.querySelector(this.config.content) || this.element.querySelector( '.tooltip__content' );
+    this.content = document.getElementById(this.trigger.getAttribute('aria-describedby'));
     this.init();
   };
 
@@ -20,22 +20,48 @@
 
   tooltip.prototype.showTooltip = function () {
     var all = document.querySelectorAll('.tooltip__content');
+    var i;
+
     for (i = 0; i < all.length; i++) {
       all[i].setAttribute('aria-hidden', 'true');
-      all[i].setAttribute('style', 'display:none');
-      // this.trigger.setAttribute('aria-expanded', 'true');
+      all[i].classList.add('is-hidden');
     }
     this.trigger.setAttribute('aria-expanded', 'true');
-    this.element.classList.add('is-active');
+    this.content.setAttribute('aria-hidden', 'false');
+    this.trigger.classList.add('is-active');
+    this.content.classList.remove('is-hidden');
+    this.positionTooltip();
+  };
+
+  tooltip.prototype.positionTooltip = function () {
+    var targetRect = this.content.getBoundingClientRect();
+    var targetWidth = targetRect.width || (targetRect.left - targetRect.right);
+    var windowWidth = window.innerWidth;
+
+    // IF tooltip position too big for placement on the right;
+    if (windowWidth <= targetRect.left + targetWidth) {
+      this.content.classList.add('has-position--left');
+      // recalculate its bounds;
+      targetRect = this.content.getBoundingClientRect();
+      if (window.pageXOffset > targetRect.left) {
+        this.content.classList.remove('has-position--left');
+        this.content.classList.add('has-position--fixed');
+      }
+    }
   };
 
   tooltip.prototype.hideTooltip = function () {
-    this.trigger.setAttribute('aria-expanded', 'false');
+    this.element.setAttribute('aria-expanded', 'false');
     this.element.classList.remove('is-active');
+    this.content.classList.add('is-hidden');
+    this.content.setAttribute('aria-hidden', 'true');
+
+    this.element.classList.remove('has-position--left');
+    this.element.classList.remove('has-position--fixed');
   };
 
   tooltip.prototype.hideTooltipKeyboard = function (e) {
-    if (e.keyCode == "27") {
+    if (e.keyCode === '27') {
       this.hideTooltip(e);
     }
   };
