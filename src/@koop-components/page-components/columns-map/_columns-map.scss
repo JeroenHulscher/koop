@@ -81,6 +81,24 @@
         z-index: 1;
       }
 
+      .modal--in-content {
+        height: auto;
+        width: auto;
+        max-width: 20em;
+        top: 5em;
+        right: 9em;
+        bottom: auto;
+        left: auto;
+
+        .modal__inner {
+          box-shadow: 0 0 14px 0 rgba(0,0,0,0.17);
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+
       .trigger-collapse {
         background: $white;
         height: 2.5em;
