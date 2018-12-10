@@ -44,17 +44,20 @@ context:
       - item:
         - column:
           type: Titel
-          value: 'Wijzigingen van Bijlage 10 van de Douaneovereenkomst inzake het internationaal vervoer van goederen onder dekking van carnets TIR (TIR-Overeenkomst)
-Plaats totstandkoming : Genève, 04-02-2005'
+          value: 'Wijzigingen van Bijlage 10 van de Douaneovereenkomst inzake het internationaal vervoer van goederen onder dekking van carnets TIR (TIR-Overeenkomst)<br><i>Plaats totstandkoming : Genève, 04-02-2005</i>'
       - item:
         - column:
           type: Titel
-          value: '<div class="collapsible " data-decorator="init-collapsible" id="1">
+          value: '<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="1">
                     <div class="collapsible__header">
                       <a href="#1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Verdrag betreffende een Europees voertuig- en rijbewijsinformatiesysteem (EUCARIS)
-                      Plaats totstandkoming : Luxemburg, 29-06-2000</a>
+                      <br><i>Plaats totstandkoming : Luxemburg, 29-06-2000</i></a>
                     </div>
                     <div class="collapsible__content" id="collapsible-content-1">
                       <a href="# ">Protocol tot wijziging van het Verdrag betreffende een Europees voertuig- en rijbewijsinformatiesysteem (EUCARIS) (Luxemburg, 08-06-2017)</a>
                     </div>
                   </div>'
+      - item:
+        - column:
+          type: Titel
+          value: 'Overeenkomst inzake samenwerking in procedures wegens inbreuken op de verkeerswetgeving en bij de tenuitvoerlegging van ter zake opgelegde geldelijke sancties<br><i>Plaats totstandkoming : Luxemburg, 28-04-1999</i>'
