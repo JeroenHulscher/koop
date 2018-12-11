@@ -1,0 +1,52 @@
+{{ render "@header" headerContext merge="true"}}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Mijn Wettenpocket</h1>
+      <div class="well">
+        {{render "@definitionlist" definitionContext}}
+      </div>
+
+      <p>Hier staat een korte omschrijving van deze pocket en welke informatie je erin kunt vinden.</p>
+      <p><a href="http://#">Open regeling in wetten.overheid.nl</a></p>
+      <p><a href="http://#">Raadpleeg wettechnische informatie</a></p>
+
+      <div class="container columns columns--sidebar-right">
+        <div>
+          <h2>Artikel 1.1</h2>
+          <p>In deze wet en de daarop berustende bepalingen wordt verstaan onder:</p>
+          <p>aanbestedende dienst: de staat, een provincie, een gemeente, een waterschap of een publiekrechtelijke instelling dan wel een samenwerkingsverband van deze overheden of publiekrechtelijke instellingen;</p>
+          <p>aanbestedingsstukken: alle stukken die door de aanbestedende dienst of het speciale-sectorbedrijf worden opgesteld of vermeld ter omschrijving of bepaling van onderdelen van de aanbesteding of de procedure;</p>
+          <p>aankoopcentrale: een aanbestedende dienst die of speciale-sectorbedrijf dat een gecentraliseerde aankoopactiviteit en eventueel een aanvullende aankoopactiviteit verricht;</p>
+          <p>aannemer: een ieder die de uitvoering van werken op de markt aanbiedt;</p>
+          <p>aanvullende aankoopactiviteit: een activiteit die bestaat uit het verlenen van ondersteuning aan een aankoopactiviteit, in het bijzonder op de volgende wijzen:</p>
+          <ol class="list list--letters">
+            <li>door het beschikbaar stellen van technische infrastructuur die aanbestedende diensten of speciale-sectorbedrijven in staat stelt overheidsopdrachten respectievelijk speciale-sectoropdrachten te plaatsen;</li>
+            <li>door advisering over het verloop of de opzet van aanbestedingsprocedures;</li>
+            <li>door voorbereiding en beheer van aanbestedingsprocedures namens en voor rekening van de betrokken aanbestedende dienst of het betrokken speciale-sectorbedrijf;</li>
+          </ol>
+          <p><i>Autoriteit Consument en Markt: de Autoriteit Consument en Markt, genoemd in artikel 2, eerste lid, van de Instellingswet Autoriteit Consument en Markt;</i></p>
+          </p>
+        </div>
+
+        <div>
+          {{render "@button"}}
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3>Subnavigatie</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+      <h3>Wettenpocket</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navPocket }}
+      </nav>
+    </div>
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}

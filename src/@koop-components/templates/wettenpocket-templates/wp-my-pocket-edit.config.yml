@@ -103,7 +103,7 @@ context:
           value: 'Belastingregeling Nederland Sint Maarten<br/><i>Datum in werkingtreding: 01-03-2016</i>'
         - column:
           type: Annotaties
-          value:
+          value: 2 markeringen
         - column:
           type: Notificeer
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
@@ -125,7 +125,7 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<a href="#">Bewerken</a><br><a href="#">Updaten verwijzing</a><br><a href="#">Verwijderen</a><br><a href="#">Verplaats omhoog</a><br><a href="#">Verplaats omlaag</a>'
+          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
       - item:
         - column:
           type: Type
@@ -135,7 +135,7 @@ context:
           value: 'Proclamatie houdende plechtige afkondiging van de nieuwe rechtsorde voor het Koninkrijk<br/><i>Datum in werkingtreding: 29-12-1954</i>'
         - column:
           type: Annotaties
-          value:
+          value: 1 markering
         - column:
           type: Notificeer
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
