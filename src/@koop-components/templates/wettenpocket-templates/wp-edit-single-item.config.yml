@@ -38,3 +38,6 @@ context:
         value: 1-7-2016
       - type: Geselecteerde elementen
         value: Volledig
+
+  addContext:
+    text: Notitie toevoegen

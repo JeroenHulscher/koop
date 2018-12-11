@@ -12,7 +12,7 @@
       <p><a href="http://#">Open regeling in wetten.overheid.nl</a></p>
       <p><a href="http://#">Raadpleeg wettechnische informatie</a></p>
 
-      <div class="container columns columns--sidebar-right">
+      <div class="columns columns--sidebar-right">
         <div>
           <h2>Artikel 1.1</h2>
           <p>In deze wet en de daarop berustende bepalingen wordt verstaan onder:</p>
@@ -21,7 +21,7 @@
           <p>aankoopcentrale: een aanbestedende dienst die of speciale-sectorbedrijf dat een gecentraliseerde aankoopactiviteit en eventueel een aanvullende aankoopactiviteit verricht;</p>
           <p>aannemer: een ieder die de uitvoering van werken op de markt aanbiedt;</p>
           <p>aanvullende aankoopactiviteit: een activiteit die bestaat uit het verlenen van ondersteuning aan een aankoopactiviteit, in het bijzonder op de volgende wijzen:</p>
-          <ol class="list list--letters">
+          <ol class="list list--alpha">
             <li>door het beschikbaar stellen van technische infrastructuur die aanbestedende diensten of speciale-sectorbedrijven in staat stelt overheidsopdrachten respectievelijk speciale-sectoropdrachten te plaatsen;</li>
             <li>door advisering over het verloop of de opzet van aanbestedingsprocedures;</li>
             <li>door voorbereiding en beheer van aanbestedingsprocedures namens en voor rekening van de betrokken aanbestedende dienst of het betrokken speciale-sectorbedrijf;</li>
@@ -31,7 +31,31 @@
         </div>
 
         <div>
-          {{render "@button"}}
+          {{render "@button" addContext merge="true"}}
+        </div>
+      </div>
+      <div class="columns columns--sidebar-right">
+        <div>
+          <h2 class="tooltip" data-decorator="tooltip">Artikel 1.2<button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">label</button>
+          <span role="tooltip" id="tt1" class="tooltip__content">Hier staat een notitie</span></h2>
+
+          <p>In deze wet en de daarop berustende bepalingen wordt verstaan onder:</p>
+          <p>aanbestedende dienst: de staat, een provincie, een gemeente, een waterschap of een publiekrechtelijke instelling dan wel een samenwerkingsverband van deze overheden of publiekrechtelijke instellingen;</p>
+          <p>aanbestedingsstukken: alle stukken die door de aanbestedende dienst of het speciale-sectorbedrijf worden opgesteld of vermeld ter omschrijving of bepaling van onderdelen van de aanbesteding of de procedure;</p>
+          <p>aankoopcentrale: een aanbestedende dienst die of speciale-sectorbedrijf dat een gecentraliseerde aankoopactiviteit en eventueel een aanvullende aankoopactiviteit verricht;</p>
+          <p>aannemer: een ieder die de uitvoering van werken op de markt aanbiedt;</p>
+          <p>aanvullende aankoopactiviteit: een activiteit die bestaat uit het verlenen van ondersteuning aan een aankoopactiviteit, in het bijzonder op de volgende wijzen:</p>
+          <ol class="list list--alpha">
+            <li>door het beschikbaar stellen van technische infrastructuur die aanbestedende diensten of speciale-sectorbedrijven in staat stelt overheidsopdrachten respectievelijk speciale-sectoropdrachten te plaatsen;</li>
+            <li>door advisering over het verloop of de opzet van aanbestedingsprocedures;</li>
+            <li>door voorbereiding en beheer van aanbestedingsprocedures namens en voor rekening van de betrokken aanbestedende dienst of het betrokken speciale-sectorbedrijf;</li>
+          </ol>
+          <p><i>Autoriteit Consument en Markt: de Autoriteit Consument en Markt, genoemd in artikel 2, eerste lid, van de Instellingswet Autoriteit Consument en Markt;</i></p>
+          </p>
+        </div>
+
+        <div>
+          {{render "@button" addContext merge="true"}}
         </div>
       </div>
     </div>
