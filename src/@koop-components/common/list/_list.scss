@@ -28,8 +28,6 @@ ol {
       list-style-type: lower-roman;
     }
   }
-
-
 }
 
 .facet--heading {
@@ -68,14 +66,14 @@ ol {
   padding-left: 0;
 
   li {
+    padding-left: 1em;
+    clear: both;
     background: {
       position: 0 .5em;
       repeat: no-repeat;
       image: $dartRightBlueIcon;
       size: 6px 9px;
     }
-    padding-left: 1em;
-    clear: both;
 
     a {
       text-decoration: none;
@@ -85,8 +83,6 @@ ol {
         text-decoration: underline;
       }
     }
-
-
   }
 }
 
@@ -149,7 +145,6 @@ ol {
     line-height: 1;
     padding: .25em 0;
 
-
     span {
       display: inline-block;
       white-space: nowrap;
@@ -193,7 +188,7 @@ ol {
     margin: 0 .5em 0 0;
     padding: 0 .5em 0 0;
 
-    &:after {
+    &::after {
       content: '|';
       left: .5em;
       position: relative;
@@ -230,7 +225,6 @@ ol {
       min-height: 3em;
     }
 
-
     @media ( min-width: 50em ) {
       width: 33%;
     }
@@ -248,16 +242,15 @@ ol {
 }
 
 .list--inline {
-
   text-align: right;
 
   li {
+    list-style: none;
+
     @media ( min-width: 50em ) {
       display: inline;
       margin-right: 1em;
     }
-
-    list-style: none;
 
     &:last-child {
       margin: 0;
@@ -281,6 +274,7 @@ ol {
     color: $darkBlue;
     position: relative;
     word-break: break-all;
+
     span {
       position: absolute;
       left: 0;
@@ -289,9 +283,11 @@ ol {
       height: 1em;
       border-radius: 100%;
       background: $darkBlue;
+
       &.color1 {
         background: $lightBlue;
       }
+
       &.color2 {
           background: $darkerGrey;
       }
@@ -304,9 +300,13 @@ ol {
       margin-right: 2%;
       display: inline-block;
     }
+
     &--columns-4 &__item:nth-child(4n) {
       margin-right: 0;
     }
   }
+}
 
+.list--alpha {
+  list-style-type: lower-alpha;
 }

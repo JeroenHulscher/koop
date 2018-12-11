@@ -25,6 +25,16 @@ variants:
         - text: Tiende item
         - text: Elfde item
         - text: Laatste item
+  - name: ordered lower alpha
+    context:
+      orderedList: true
+      modifier: list--alpha
+      items:
+        - text: Eerste item
+        - text: Tweede item
+        - text: Derde item
+        - text: Vierde item
+        - text: Vijfde item
   - name: unstyled
     context:
       modifier: list--unstyled
