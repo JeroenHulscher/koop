@@ -9,9 +9,13 @@
     display: inline;
   }
 
-  span[aria-hidden="true"] {display:none;}
-  span[aria-hidden="false"] {display:block;}
+  span[aria-hidden="true"] {
+    display:none;
+  }
 
+  span[aria-hidden="false"] {
+    display:block;
+  }
 }
 
 .has-js .tooltip {
@@ -37,6 +41,7 @@
       background-image: $explanationHoverIcon;
     }
   }
+
   &__content {
     border: 1px solid $tooltipContainerBorderColor;
     font-size: inherit;
@@ -53,7 +58,6 @@
     border-radius: 5px;
     line-height: 1em;
 
-
     @media ( min-width: 400px ) {
       position: absolute;
       top: 1.5em;
@@ -61,8 +65,6 @@
       max-width: 20em;
       min-width: 18em;
     }
-
-
 
     &.has-position--fixed {
       left: 1em;
@@ -104,6 +106,19 @@
         right: .75em;
         left: auto !important;
       }
+    }
+  }
+}
+
+.tooltip--info {
+
+  .tooltip__trigger {
+    background-image: $infoIcon;
+    background-size: 18px;
+
+    &:hover,
+    &:focus {
+      background-image: $infoIcon;
     }
   }
 }
