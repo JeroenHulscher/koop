@@ -52,7 +52,7 @@ context:
                     <a href="#">Verdrag betreffende een Europees voertuig- en rijbewijsinformatiesysteem (EUCARIS)</a>
                     <br><i>Plaats totstandkoming: Luxemburg, 29-06-2000</i>
                     <div class="collapsible__header">
-                      <a href="#1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Meer links</a>
+                      <a href="#1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Eerdere wijzigingen</a>
                     </div>
                     <div class="collapsible__content" id="collapsible-content-1">
                       <a href="#">Protocol tot wijziging van het Verdrag betreffende een Europees voertuig- en rijbewijsinformatiesysteem (EUCARIS) (Luxemburg, 08-06-2017)</a>
