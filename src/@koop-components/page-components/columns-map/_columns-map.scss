@@ -40,7 +40,6 @@
       left: 0;
       overflow-y: scroll;
       transition: left $fastEaseInOut;
-      z-index: 1;
 
       .sidebar-column-content {
         visibility: visible;
