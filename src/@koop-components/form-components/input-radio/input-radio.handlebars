@@ -7,10 +7,9 @@
     {{/if}}
   </legend>
   {{#each options }}
-  <label for="option-{{ id  }}">
-    <input type="radio" id="option-{{ id }}" name="{{ ../name }}" />
-    <span></span>
-    {{{ text }}}
-  </label>
+    <input class="radio__input" type="radio" id="option-{{ id }}" name="{{ ../name }}" />
+    <label class="radio__label" for="option-{{ id  }}">
+      {{{ text }}}
+    </label>
   {{/each}}
 </fieldset>

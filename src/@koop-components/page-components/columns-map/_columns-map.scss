@@ -66,6 +66,7 @@
 
     .main-column {
       width: 100%;
+      position: relative;
 
       #draw-button {
         position: absolute;
@@ -79,6 +80,25 @@
         top: 1em;
         right: 1em;
         z-index: 1;
+      }
+
+      .modal--tooltip {
+        height: auto;
+        width: auto;
+        max-width: 20em;
+        top: 5em;
+        right: .7em;
+        bottom: auto;
+        left: auto;
+        position: absolute;
+
+        .modal__inner {
+          box-shadow: 0 0 14px 0 rgba(0,0,0,0.17);
+        }
+
+        p {
+          font-size: 1em;
+        }
       }
 
       .trigger-collapse {
@@ -95,6 +115,7 @@
         background-size: .75em;
         cursor: pointer;
         transition: left $fastEaseInOut;
+        z-index: 2;
       }
     }
   }
