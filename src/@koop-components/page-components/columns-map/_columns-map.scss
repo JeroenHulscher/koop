@@ -4,6 +4,7 @@
   overflow: hidden;
   position: relative;
   padding: 0 !important;
+  height: 100vh;
 
   @media (min-width: 50em) {
     flex-direction: row;
