@@ -1,0 +1,7 @@
+<ul class="toolbar">
+  {{#each items }}
+  <li class="toolbar__item">
+    <a class="toolbar__link toolbar__link--{{ type }}" href="{{ link }}">{{#if counter }}{{ counter }}{{/if}} <span class="toolbar__label">{{ label }}</span></a>
+  </li>
+  {{/each}}
+</ul>

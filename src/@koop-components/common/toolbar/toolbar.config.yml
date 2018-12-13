@@ -1,0 +1,25 @@
+---
+title: Toolbar
+label: Toolbar
+status: prototype
+context:
+  items:
+    - type: relations
+      counter: 5
+      label: Toon relatie's
+      link: "#"
+    - type: permalink
+      label: Maak een permanente link
+      link: "#"
+    - type: version
+      label: Toon wettechnische informatie
+      link: "#"
+    - type: compare
+      label: Vergelijk met een eerdere versie
+      link: "#"
+    - type: print
+      label: Druk af
+      link: "#"
+    - type: download
+      label: Bewaar
+      link: "#"
