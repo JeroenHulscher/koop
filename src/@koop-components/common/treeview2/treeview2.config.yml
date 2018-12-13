@@ -1,0 +1,7 @@
+title: Treeview
+status: ready
+context:
+  modifier: treeview--foldable
+  foldability: true
+  heading: true
+  headingId: tree1
