@@ -2,9 +2,8 @@
   <a href="#">{{ description }} ({{ listItems.length }})</a>
   <fieldset class="form__element checkboxgroup">
     {{#each listItems}}
+      <input type="checkbox" id="option-{{increment @index 1}}"/>
       <label for="option-{{increment @index 1}}">
-        <input type="checkbox" id="option-{{increment @index 1}}"/>
-        <span></span>
         {{ this }}
       </label>
     {{/each}}

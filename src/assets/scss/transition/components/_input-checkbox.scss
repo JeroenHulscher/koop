@@ -2,8 +2,10 @@
   position: absolute;
   opacity: 0;
 
-  &:hover + label:before {
-    background: $lightBlue;
+  &:not(:disabled) {
+    &:hover + label:before {
+      background: $lightBlue;
+    }
   }
 
   &:focus + label {

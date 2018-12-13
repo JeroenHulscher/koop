@@ -4,6 +4,12 @@ label: Tooltip
 status: wip
 context:
   id: 1
-  label: label
+  label: Help?
   Helptext: U moet dit volledig en naar waarheid invullen
-
+variants:
+  - name: Tooltip Info
+    context:
+      id: 2
+      modifier: tooltip--info
+      label: Extra Info
+      Helptext: Dit is een notitie van de uitgever.
