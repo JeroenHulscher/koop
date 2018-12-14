@@ -17,6 +17,7 @@ input[type=password].input-text {
     &::placeholder {
     }
   }
+  
   &--search {
     padding-left: 3em;
     background-position: em(12) center;
@@ -24,6 +25,7 @@ input[type=password].input-text {
     background-image: $searchIconBlue;
     background-size: 1.5em;
   }
+
   &--searchmedium {
     font-size: 1.325em;
     color: $darkBlue;
