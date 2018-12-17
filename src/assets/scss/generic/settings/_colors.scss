@@ -5,7 +5,7 @@ $darkBlue: #154273;
 $primaryBlue: #007bc7;
 $mediumBlue: #b2d7ee;
 $lightBlue: #e5f1f9;
-$bgBlue: #E5F1F9;
+$bgBlue: $lightBlue;
 $white: #fff;
 $offWhite: #F8FBFD;
 
@@ -61,3 +61,22 @@ $multiSelectOptionHoverBGColor: $lightBlue;
 $multiSelectOptionSelectedBGColor: $lightBlue;
 $multiSelectOptionSelectedCrossBGColor: $mediumBlue;
 $multiSelectOptionSelectedCrossTextColor: black;
+
+/* THEME Colours */
+$governance: #4a1eea;
+$culture: #42145f;
+$economy: #a90061;
+$finance: #d52b1e;
+$housing: #94710a;
+$international: #777c00;
+$agriculture: #bf360c;
+$migration: #673327;
+$nature: #39870c;
+$education: $culture;
+$security: #275937;
+$law: #ca005d;
+$infrastructure: #007bc7;
+$social: $migration;
+$traffic: $agriculture;
+$jobs: #a90061;
+$healthcare: $finance;

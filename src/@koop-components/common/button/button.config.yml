@@ -28,6 +28,11 @@ variants:
     context:
       text: Kleine knop
       modifier: button--smaller
+  - name: inversed
+    status: ready
+    context:
+      text: Diapositieve knop
+      modifier: button--inversed
   - name: large
     status: ready
     context:
@@ -75,7 +80,7 @@ variants:
   - name: Icon with divider
     status: wip
     label: Icon with divider
-    context: 
+    context:
       text: Button tekst
       modifier: button--primary button--divider-icon
       button: false

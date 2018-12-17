@@ -99,8 +99,8 @@
   }
 
   &--inversed {
-    background-color: #333333;
-    color: #fff;
+    background-color: $darkGrey;
+    color: $white;
   }
 
   &--small {
@@ -213,7 +213,7 @@
     background-size: 1.75em;
     padding-left: 3em;
   }
-  
+
   &--divider-icon {
     background-image: $refreshDocumentWhite;
     background-repeat: no-repeat;
@@ -223,12 +223,12 @@
 
     span.divider::after {
       content: "";
-      border-right: 1px solid #fff;
+      border-right: 1px solid $white;
       padding-left: .75em;
       margin-right: .2em;
     }
   }
-  
+
   &--divider-icon-draw {
     background-image: $drawIcon;
     background-repeat: no-repeat;
@@ -238,7 +238,7 @@
 
     span.divider::after {
       content: "";
-      border-right: 1px solid #fff;
+      border-right: 1px solid $white;
       padding-left: .75em;
       margin-right: .2em;
     }
@@ -253,7 +253,7 @@
 
     span.divider::after {
       content: "";
-      border-right: 1px solid #fff;
+      border-right: 1px solid $white;
       padding-left: .75em;
       margin-right: .2em;
     }

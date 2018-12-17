@@ -22,7 +22,7 @@
   select {
     padding: 0 em(8);
     width: 100%;
-    color: #39394d;
+    color: $darkGrey;
     border: none;
     box-shadow: none;
     display: block;
@@ -36,9 +36,8 @@
       display: none;
     }
     &:focus {
-      // TODO: determine the proper focus color
-      // outline:  auto 5px;
-      // box-shadow: 0 0 4px $darkBlue;
+      outline: 2px solid $yellow;
+      outline-offset: 0;
     }
     &:disabled {
       // background-color: $nsi-color-black-10;

@@ -59,8 +59,8 @@
   &--governance {
 
     &:hover {
-      background-color: rgba(74,30,234, 0.1);
-      color: #4a1eea;
+      background-color: rgba($governance, 0.1);
+      color: $governance;
     }
 
     &::before {
@@ -70,8 +70,8 @@
 
   &--culture {
     &:hover {
-      background-color: rgba(66,20,95, 0.1);
-      color: #42145f;
+      background-color: rgba($culture, 0.1);
+      color: $culture;
     }
 
     &::before {
@@ -81,8 +81,8 @@
 
   &--economy {
     &:hover {
-      background-color: rgba(169,0,97, 0.1);
-      color: #a90061;
+      background-color: rgba($economy, 0.1);
+      color: $economy;
     }
 
     &::before {
@@ -92,8 +92,8 @@
 
   &--finance {
     &:hover {
-      background-color: rgba(213,43,30, 0.1);
-      color: #d52b1e;
+      background-color: rgba($finance, 0.1);
+      color: $finance;
     }
 
     &::before {
@@ -103,8 +103,8 @@
 
   &--housing {
     &:hover {
-      background-color: rgba(148,113,10, 0.1);
-      color: #94710a;
+      background-color: rgba($housing, 0.1);
+      color: $housing;
     }
 
     &::before {
@@ -114,8 +114,8 @@
 
   &--international {
     &:hover {
-      background-color: rgba(119,124,0, 0.1);
-      color: #777c00;
+      background-color: rgba($international, 0.1);
+      color: $international;
     }
 
     &::before {
@@ -125,8 +125,8 @@
 
   &--agriculture {
     &:hover {
-      background-color: rgba(191,54,12, 0.1);
-      color: #bf360c;
+      background-color: rgba($agriculture, 0.1);
+      color: $agriculture;
     }
 
     &::before {
@@ -136,8 +136,8 @@
 
   &--migration {
     &:hover {
-      background-color: rgba(103,51,39, 0.1);
-      color: #673327;
+      background-color: rgba($migration, 0.1);
+      color: $migration;
     }
 
     &::before {
@@ -147,8 +147,8 @@
 
   &--nature {
     &:hover {
-      background-color: rgba(57,135,12, 0.1);
-      color: #39870c;
+      background-color: rgba($nature, 0.1);
+      color: $nature;
     }
 
     &::before {
@@ -158,8 +158,8 @@
 
   &--education {
     &:hover {
-      background-color: rgba(66,20,95, 0.1);
-      color: #42145f;
+      background-color: rgba($education, 0.1);
+      color: $education;
     }
 
     &::before {
@@ -169,8 +169,8 @@
 
   &--security {
     &:hover {
-      background-color: rgba(39,89,55, 0.1);
-      color: #275937;
+      background-color: rgba($security, 0.1);
+      color: $security;
     }
 
     &::before {
@@ -180,8 +180,8 @@
 
   &--law {
     &:hover {
-      background-color: rgba(202,0,93, 0.1);
-      color: #ca005d;
+      background-color: rgba($law, 0.1);
+      color: $law;
     }
 
     &::before {
@@ -191,8 +191,8 @@
 
   &--infrastructure {
     &:hover {
-      background-color: rgba(0,123,199, 0.1);
-      color: #007bc7;
+      background-color: rgba($infrastructure, 0.1);
+      color: $infrastructure;
     }
 
     &::before {
@@ -202,8 +202,8 @@
 
   &--social {
     &:hover {
-      background-color: rgba(103,51,39, 0.1);
-      color: #673327;
+      background-color: rgba($social, 0.1);
+      color: $social;
     }
 
     &::before {
@@ -213,8 +213,8 @@
 
   &--traffic {
     &:hover {
-      background-color: rgba(191,54,12, 0.1);
-      color: #bf360c;
+      background-color: rgba($traffic, 0.1);
+      color: $traffic;
     }
 
     &::before {
@@ -224,8 +224,8 @@
 
   &--jobs {
     &:hover {
-      background-color: rgba(169,0,97, 0.1);
-      color: #a90061;
+      background-color: rgba($jobs, 0.1);
+      color: $jobs;
     }
 
     &::before {
@@ -235,8 +235,8 @@
 
   &--healthcare {
     &:hover {
-      background-color: rgba(213,43,30, 0.1);
-      color: #d52b1e;
+      background-color: rgba($healthcare, 0.1);
+      color: $healthcare;
     }
 
     &::before {
