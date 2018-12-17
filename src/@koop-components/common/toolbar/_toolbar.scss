@@ -1,7 +1,7 @@
 .toolbar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
 }
@@ -74,21 +74,21 @@
 }
 
 .toolbar__link--edit::before {
-  background-image: $relationsIcon;
+  background-image: $editIcon;
 }
 
 .toolbar__link--calendar::before {
-  background-image: $relationsIcon;
+  background-image: $calendarIcon;
 }
 
 .toolbar__link--remove::before {
-  background-image: $relationsIcon;
+  background-image: $removeIcon;
 }
 
 .toolbar__link--arrow-up::before {
-  background-image: $relationsIcon;
+  background-image: $iconArrowUp;
 }
 
 .toolbar__link--arrow-down::before {
-  background-image: $relationsIcon;
+  background-image: $iconArrowDown;
 }
