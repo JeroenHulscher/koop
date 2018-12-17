@@ -1,14 +1,12 @@
-{{ render "@header" headerContext }}
+{{ render "@header" headerContext merge="true"}}
 
 <main role="main">
   <div class="container columns columns--sidebar-left row">
     <div>
       <h1>Wettenpockets in bewerking</h1>
-      <p>Wettenpockets die door u gemaakt zijn</p>
 
       {{render "@resultlist" resultsContext}}
 
-      {{!-- {{render "@pagination" paginationContext}} --}}
     </div>
 
 

@@ -1,0 +1,45 @@
+title: Wettenpocket Regeling Bewerken
+label: Wettenpocket Regeling Bewerken
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+        className: 'is-active'
+
+  navlistContext:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Wettenpockets in bewerking</a>
+      - text: <a href="#">Gepubliceerde wettenpockets</a>
+
+  navPocket:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Overzicht</a>
+      - text: <a href="#">Notities</a>
+
+  definitionContext:
+    modifier: 'columns--data'
+    divContainer: true
+    items:
+      - type: Titel regeling
+        value: Aanbestedingswet 2012
+      - type: Type
+        value: Wet
+      - type: Wetsfamilie
+        value: Aanbestedingswet 2012
+      - type: Geldend vanaf
+        value: 1-7-2016
+      - type: Geselecteerde elementen
+        value: Volledig
+
+  addContext:
+    text: Notitie toevoegen
+  removeContext:
+    text: Notitie verwijderen

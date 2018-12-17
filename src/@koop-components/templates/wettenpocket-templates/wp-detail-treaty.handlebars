@@ -3,24 +3,16 @@
 <main role="main">
   <div class="container columns columns--sidebar-left row">
     <div>
-      <h1>Mijn Wettenpocket</h1>
+      <h1>Verdragenpocket Wegverkeer</h1>
       <div class="well">
         {{render "@definitionlist" definitionContext}}
       </div>
 
-      <p>Hier staat een korte omschrijving van deze pocket en welke informatie je erin kunt vinden.</p>
+      <p>Automatisch gegenereerde pocket met multi-/plurilaterale verdragen op het onderwerp Wegverkeer. Deze pocket bevat geen aanvullende notities, markeringen, links of documenten.</p>
 
-      <h2>Wet- en regelgeving</h2>
-      {{render "@table" tableLawContext}}
+      <h2>Verdragen (9)</h2>
+      {{render "@table" tableTreatyContext}}
 
-      <h2>Decentrale regelingen</h2>
-      {{render "@table" tableDecentralContext}}
-
-      <h2>Documenten</h2>
-      {{render "@table" tableDocsContext}}
-
-      <h2>Links</h2>
-      <p><a href="https://nu.nl">Informatiesite Wettenpocket</a></p>
     </div>
 
 
@@ -33,9 +25,8 @@
       <nav class="secundairy-navigation">
         {{ render "@list" navPocket }}
       </nav>
-      <h3>Acties</h3>
-      {{render '@actionblock' actionContext}}
     </div>
+
   </div><!-- /container -->
 </main>
 
