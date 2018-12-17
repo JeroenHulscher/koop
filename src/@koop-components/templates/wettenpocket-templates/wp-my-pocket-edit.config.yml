@@ -109,7 +109,20 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                </ul>'
       - item:
         - column:
           type: Type
@@ -125,7 +138,23 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
       - item:
         - column:
           type: Type
@@ -141,7 +170,20 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
 
   tableDecentralContext:
     modifier: table--striped table--condensed
@@ -161,7 +203,20 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                </ul>'
       - item:
         - column:
           type: Uitgever
@@ -177,7 +232,23 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
       - item:
         - column:
           type: Uitgever
@@ -193,7 +264,20 @@ context:
           value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
         - column:
           type: Aktie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--calendar" type="button"><span class="visually-hidden">Updaten verwijzing</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
   tableDocsContext:
     modifier: table--striped table--condensed
     items:
@@ -209,7 +293,17 @@ context:
           value: 1Kb
         - column:
           type: Actie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                  </ul>'
       - item:
         - column:
           type: Titel
@@ -222,7 +316,17 @@ context:
           value: 36Kb
         - column:
           type: Actie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
   tableLinksContext:
     modifier: table--condensed table--striped
     items:
@@ -232,11 +336,31 @@ context:
           value: overheid.nl
         - column:
           type: Actie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-down" type="button"><span class="visually-hidden">Omlaag verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                  </ul>'
       - item:
         - column:
           type: Link
           value: wetten.nl
         - column:
           type: Actie
-          value: '<button class="button-icon button-icon--plain button-icon--edit" type="button"><span class="visually-hidden">Bewerken</span></button><button class="button-icon button-icon--plain button-icon--remove" type="button"><span class="visually-hidden">Verwijderen</span></button><button class="button-icon button-icon--plain button-icon--arrow-up" type="button"><span class="visually-hidden">Omhoog verplaatsen</span></button>'
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'

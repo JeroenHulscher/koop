@@ -41,3 +41,5 @@ context:
 
   addContext:
     text: Notitie toevoegen
+  removeContext:
+    text: Notitie verwijderen
