@@ -5,7 +5,7 @@
   border-radius: 5px;
   box-sizing: border-box;
   color: $textColor;
-  background-color: #fff;
+  background-color: $white;
   background-image: $dartDownIcon;
   background-repeat: no-repeat;
   background-position: right 1em center;
@@ -17,27 +17,11 @@
   }
 
 	> select,
-	> input { position: absolute; left: -999em; display: none; }
+	> input { position: absolute;
+    left: -999em;
+    display: none;
+  }
 }
-
-// .multiselect__togglebutton {
-//   font-size: inherit;
-//   display: block;
-//   position: relative;
-//   box-sizing: border-box;
-//   min-width: 1em;
-// 	cursor: pointer;
-
-// 	&:after {
-//     position: absolute;
-//     content:"";
-//     right: em(10,14);
-//     top: 50%;
-//     margin-top: em(-5/2,14);
-//     border: em(5,14) solid transparent;
-//     border-top-color: darken($mediumGrey,5%);
-// 	}
-// }
 
 .multiselect__resultscontainer {
   position: absolute;
@@ -50,7 +34,7 @@
   -webkit-overflow-scrolling: touch;
   border: 1px solid $mediumGrey;
   border-top: 0;
-  background-color: #FFF;
+  background-color: $white;
   display: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -62,7 +46,7 @@
   padding: .2em .5em;
   margin: 0;
   cursor: pointer;
-  border-top: 1px solid #fff;
+  border-top: 1px solid $white;
   position: relative;
 
 	&.fstUserOption {
@@ -113,7 +97,7 @@
   display: block;
   padding: .2em .5em;
   margin: 0;
-	color: #999;
+	color: #999; //not in the color palette
 }
 
 .multiselect--singlemode {
@@ -124,7 +108,7 @@
     top: 100%;
     padding: 0.5em;
     border: 1px solid $mediumGrey;
-    background-color: #fff;
+    background-color: $white;
 		display: none;
 	}
 
@@ -133,9 +117,8 @@
     display: block;
     width: 100%;
     padding: em(7,14) em(5,14);
-    color: #999;
+    color: #999; //not in the color palette
     border: 1px solid $mediumGrey;
-
 	}
 
 	&.fstActive {
@@ -143,9 +126,17 @@
 
 		&.multiselect__container,
 		.multiselect__controls,
-		.multiselect__resultscontainer { box-shadow: 0 0.2em 0.2em rgba(#000, 0.1); }
-		.multiselect__controls { display: block; }
-		.multiselect__resultscontainer { display: block; z-index: 10; margin-top: -1px; }
+		.multiselect__resultscontainer {
+      box-shadow: 0 0.2em 0.2em rgba($black, 0.1);
+    }
+		.multiselect__controls {
+      display: block;
+    }
+		.multiselect__resultscontainer {
+      display: block;
+      z-index: 10;
+      margin-top: -1px;
+    }
 	}
 }
 
@@ -164,7 +155,7 @@
   top: -1px;
 
 	&.mod1 {
-    background-color: #F9F9F9;
+    background-color: #F9F9F9; //not in color palette
     border: 1px solid $mediumGrey;
 		color: $mediumGrey;
 
@@ -172,7 +163,6 @@
 			color: $multiSelectOptionSelectedCrossBGColor;
 		}
 	}
-
 }
 
 .multiselect__choiceremove {
@@ -185,7 +175,7 @@
   right: 0;
   top: 0;
   text-align: center;
-  color: #fff;
+  color: $white;
   width: 1.5em;
   bottom: 0;
   text-indent: -9999em;
@@ -193,7 +183,6 @@
   background-size: 0.5em;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-
 }
 
 .multiselect--multiplemode {
@@ -211,13 +200,12 @@
     margin: 0;
     width: 5em;
     padding: 0;
-    color: #999;
+    color: #999; //not in the color palette
     border: 0;
     outline: 0;
     background: transparent;
     font-size: .85em;
     font-family: inherit;
-    // cursor: pointer;
 
     &::placeholder {
       color: $darkerGrey;
@@ -226,7 +214,6 @@
     &.is-expanded {
       float: none;
       width: 100%;
-      // padding: .2em .5em;
     }
 	}
 
@@ -238,17 +225,16 @@
 
 		&,
 		.multiselect__resultscontainer {
-			box-shadow: 0 0.2em 0.2em rgba(#000, 0.1);
+			box-shadow: 0 0.2em 0.2em rgba($black, 0.1);
 		}
 
 		.multiselect__resultscontainer {
-			display: block; z-index: 10; border-top: 1px solid $mediumGrey;
+			display: block;
+      z-index: 10;
+      border-top: 1px solid $mediumGrey;
 		}
-
 	}
-
 }
-
 
 @-webkit-keyframes fstAnimationEnter {
   from {

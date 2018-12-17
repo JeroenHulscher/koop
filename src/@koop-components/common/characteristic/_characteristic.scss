@@ -7,7 +7,7 @@
 		margin: 0 1em .5em 0;
 		line-height: 1.5;
 		display: inline-block;
-		
+
 		&::before {
 			content: '';
 			width: 1.5em;
@@ -49,7 +49,7 @@
 
 		&--international {
 			&::before {
-				background-color: #F5E4E0;
+				background-color: $lightOrange;
 				background-image: $internationalIcon;
 			}
 		}
