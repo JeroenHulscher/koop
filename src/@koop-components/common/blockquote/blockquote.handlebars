@@ -1,5 +1,4 @@
-<blockquote {{#if modifier}}class="blockquote blockquote--{{modifier}}"{{/if}}>
-  <p lang="en">{{text}}</p>
-
+<blockquote>
+  <p {{#if lang}}lang="{{ lang }}"{{/if}}>{{text}}</p>
   {{#if cite}}<cite>{{cite}}</cite>{{/if}}
 </blockquote>
