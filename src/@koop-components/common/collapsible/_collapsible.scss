@@ -4,7 +4,7 @@
   .collapsible__header {
     a {
       display: inline-block;
-      padding: $standardPadding;
+      padding: .5em;
       text-decoration: none;
       padding-left: 1em;
       color: $black;
@@ -40,7 +40,7 @@
     .collapsible__header {
       a {
         padding: 0 0 0 1em;
-        
+
         font: {
           size: 100%;
         }

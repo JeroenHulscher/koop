@@ -46,7 +46,7 @@ table,
   tr td,
   tr th {
     border-bottom: 1px solid $lighterGrey;
-    padding: $standardPadding;
+    padding: .5em;
     vertical-align: top;
   }
 
@@ -245,7 +245,7 @@ table,
         left: -100%;
         top: 0;
         width: 100%;
-        padding: $standardPadding;
+        padding: .5em;
         height: 100%;
         font-weight: 700;
         content: attr(data-before);
