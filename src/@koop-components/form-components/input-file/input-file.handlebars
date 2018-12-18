@@ -1,13 +1,43 @@
-<div class="input-dragbox" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" }'>
-  <div class="input-dragbox__content">
-    <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
-    <label for="file" tabindex="0">
-      <span>selecteer een bestand</span>
-    </label>
-    <input type="file" tabindex="-1" name="files[]" id="file" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
+<form action="" method="POST" data-decorator="init-inputfile" data-config='{ "debug":"true", "showbuttonAfterChange": "true", "ajax": "/preview-portaal/upload" }'>
+  <div class="input-dragbox js-input-dragbox">
+    <div class="input-dragbox__content">
+      <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
+      <label for="file" tabindex="0">
+        <span>selecteer een bestand</span>
+      </label>
+      <input type="file" tabindex="-1" name="files[]" id="file" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
+      {{#if showButtonOnSelection}}
+        <div><button class="button button--primary js-input-dragbox__button" hidden>{{submitLabel}}</button></div>
+      {{/if}}
+    </div>
+    <div class="input-dragbox__uploading">
+      <p class="input-dragbox__uploading__msg">Document is bezig met uploaden <span></span>%</p>
+      <progress class="input-dragbox__uploading__progress" max="100" value="30"></progress>
+    </div>
+    <div class="input-dragbox__msg js-input-dragbox__msg"><span></span><p><a href='#' class='js-reset'>Upload een nieuw bestand</a></p></div>
   </div>
-</div>
-{{#if showButtonOnSelection}}
-  <button class="js-input-dragbox__button" hidden>Submit</button>
-{{/if}}
 
+</form>
+
+{{#if debug }}
+<h2>States:</h2>
+<p><span id="default" class="button">default</span>
+<span id="uploading" class="button">uploading..</span>
+<span id="success" class="button">success!</span></p>
+<script>
+  document.getElementById('default').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('is-success');
+    document.querySelector('.js-input-dragbox').classList.remove('is-uploading');
+  });
+  document.getElementById('uploading').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('is-success');
+    document.querySelector('.js-input-dragbox').classList.add('is-uploading');
+  });
+  document.getElementById('success').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('is-uploading');
+    document.querySelector('.js-input-dragbox').classList.add('is-success');
+    document.querySelector('.input-dragbox__msg span').innerHTML = "<h2>Uw bestand is geupload</h2>";
+  });
+</script>
+
+{{/if}}

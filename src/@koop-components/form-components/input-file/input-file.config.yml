@@ -7,3 +7,5 @@ context:
   fieldInstruction:
   fieldPlaceholder: 'placeholder'
   showButtonOnSelection: true
+  submitLabel: Uploaden
+  debug: true

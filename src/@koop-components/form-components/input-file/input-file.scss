@@ -7,8 +7,13 @@
     border: 1px solid transparent;
     padding: em(4) em(16);
     border-radius: 5px;
-    font-style: italic;
     color: $darkBlue;
+
+    @media (min-width: 50em) {
+      background-position: 2em center;
+      background-size: em(32);
+      padding: em(12) em(24);
+    }
 
     &:not(.has-file) {
       outline: 2px dashed #92b0b3;
@@ -16,25 +21,96 @@
       transition: outline-offset .15s ease-in-out, background-color .15s linear;
     }
 
+    &.is-uploading,
+    &.is-success {
+      background: $lightGreen;
+      font-size: em(20);
+    }
+    &.is-uploading .input-dragbox__uploading,
+    &.is-success .input-dragbox__msg {
+      display: block;
+    }
+    &.is-success .input-dragbox__content,
+    &.is-uploading .input-dragbox__content {
+      display: none;
+    }
+
+
+
     &.is-dragover {
       outline-offset: -10px;
       background: white;
       border: 1px solid #92b0b3;
     }
 
-    &.has-dragdrop .input-dragbox__prelabel {
+    &.has-dragdrop &__prelabel {
       display: inline-block;
     }
 
-    @media (min-width: 50em) {
-      background-position: 2em center;
-      background-size: em(32);
-      font-size: 1.5em;
-      padding: em(12) em(24);
+    &__content {
+      font-style: italic;
+
+      @media (min-width: 50em) {
+        font-size: 1.5em;
+      }
     }
 
+    &__msg {
+      display: none;
+
+      h2 {
+        // font-size: 2em;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        // font-size: 1.125em;
+      }
+    }
+
+    &.is-success &__msg {
+      display: block;
+    }
+
+    &__uploading {
+      display: none;
+      text-align: center;
+
+      &__msg {
+        font-style: italic;
+        margin: -.25em;
+      }
+      &__progress {
+        border: 1px solid $darkBlue;
+        margin: 0 5em;
+        height: 15px;
+        text-align: left;
+        border-radius: 5px;
+        background: white;
+        width: 80%;
+        color: blue;
+        padding: 1px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &::-webkit-progress-bar {
+          background-color: #fff;
+          border-radius: 2px;
+        }
+        &::-webkit-progress-value {
+
+          background-color: $darkBlue;
+            border-radius: 2px;
+            background-size: 35px 20px, 100% 100%, 100% 100%;
+        }
+
+      }
+  }
+
     a {
-      font-weight: bold;
+      // font-weight: bold;
     }
 
     input {
