@@ -21,16 +21,33 @@
       transition: outline-offset .15s ease-in-out, background-color .15s linear;
     }
 
+    &.is-success,
+    &.is-failed {
+      @media (min-width: 50em) {
+        font-size: 1.5em;
+      }
+    }
+
     &.is-uploading,
     &.is-success {
       background: $lightGreen;
+      outline: 2px dashed $green;
       font-size: em(20);
+      font-style: italic;
+    }
+    &.is-failed {
+      font-style: italic;
+      background: $lighterRed;
+      font-size: em(20);
+      outline: 2px dashed $red;
     }
     &.is-uploading .input-dragbox__uploading,
+    &.is-failed .input-dragbox__msg,
     &.is-success .input-dragbox__msg {
       display: block;
     }
     &.is-success .input-dragbox__content,
+    &.is-failed .input-dragbox__content,
     &.is-uploading .input-dragbox__content {
       display: none;
     }
@@ -57,13 +74,18 @@
 
     &__msg {
       display: none;
+      @media (min-width: 50em) {
+        font-size: 1.125em;
+      }
 
       h2 {
         // font-size: 2em;
-        margin: 0;
+        margin: 0 1em 0 0;
+        display: inline-block;
       }
       p {
-        margin: 0;
+        margin: 0 1em 0 0;
+        display: inline-block;
         // font-size: 1.125em;
       }
     }

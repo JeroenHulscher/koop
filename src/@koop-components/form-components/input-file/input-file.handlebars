@@ -1,4 +1,4 @@
-<form action="" method="POST" data-decorator="init-inputfile" data-config='{ "debug":"true", "showbuttonAfterChange": "true", "ajax": "/preview-portaal/upload" }'>
+<form action="" method="POST" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true", "ajax": "/preview-portaal/upload" }'>
   <div class="input-dragbox js-input-dragbox">
     <div class="input-dragbox__content">
       <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
@@ -23,20 +23,34 @@
 <h2>States:</h2>
 <p><span id="default" class="button">default</span>
 <span id="uploading" class="button">uploading..</span>
-<span id="success" class="button">success!</span></p>
+<span id="success" class="button">success!</span>
+<span id="failed" class="button">failed!</span></p>
 <script>
   document.getElementById('default').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('has-file');
     document.querySelector('.js-input-dragbox').classList.remove('is-success');
+    document.querySelector('.js-input-dragbox').classList.remove('is-failed');
     document.querySelector('.js-input-dragbox').classList.remove('is-uploading');
   });
   document.getElementById('uploading').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('has-file');
     document.querySelector('.js-input-dragbox').classList.remove('is-success');
+    document.querySelector('.js-input-dragbox').classList.remove('is-failed');
     document.querySelector('.js-input-dragbox').classList.add('is-uploading');
   });
-  document.getElementById('success').addEventListener('click', function (e) {
+  document.getElementById('failed').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('has-file');
+    document.querySelector('.js-input-dragbox').classList.remove('is-success');
     document.querySelector('.js-input-dragbox').classList.remove('is-uploading');
+    document.querySelector('.js-input-dragbox').classList.add('is-failed');
+    document.querySelector('.input-dragbox__msg span').innerHTML = "<p><strong>Er is een fout opgetreden.</strong></p>";
+  });
+  document.getElementById('success').addEventListener('click', function (e) {
+    document.querySelector('.js-input-dragbox').classList.remove('has-file');
+    document.querySelector('.js-input-dragbox').classList.remove('is-uploading');
+    document.querySelector('.js-input-dragbox').classList.remove('is-failed');
     document.querySelector('.js-input-dragbox').classList.add('is-success');
-    document.querySelector('.input-dragbox__msg span').innerHTML = "<h2>Uw bestand is geupload</h2>";
+    document.querySelector('.input-dragbox__msg span').innerHTML = "<p><strong>Uw bestand is geupload.</strong></p>";
   });
 </script>
 
