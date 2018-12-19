@@ -103,11 +103,20 @@
   &--remove {
     background-image: $removeIcon;
   }
+
+  &--arrow-up {
+    background-image: $iconArrowUp;
+  }
+
+  &--arrow-down {
+    background-image: $iconArrowDown;
+  }
 }
 
 .button-icon--plain {
-  padding: $standardPadding * 1.5;
   background-color: transparent;
-  color: $black;
   border-radius: none;
+  color: $black;
+  background-size: 1em;
+  padding: .75em;
 }

@@ -9,7 +9,7 @@
 
   var datepicker = function(element) {
     this.element = element;
-    this.config = [];
+    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];;
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
     this.config.months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
@@ -33,7 +33,7 @@
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       showButtonPanel: true,
       closeText: 'Sluiten',
-      dateFormat: 'dd-mm-yy',
+      dateFormat: this.config.dateformat || 'dd-mm-yy',
       onClose: this.removeAria.bind(this),
       beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });

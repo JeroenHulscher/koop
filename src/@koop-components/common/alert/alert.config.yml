@@ -16,3 +16,11 @@ variants:
     context:
       modifier: alert--fixed
       fixed: true
+  - name: update
+    context:
+      modifier: alert--update
+      heading: '<h3>Headertext</h3>'
+  - name: small
+    context:
+      modifier: alert--small
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

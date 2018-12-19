@@ -1,65 +1,67 @@
-.radio__input {
-  color: $darkBlue;
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.form__element.radiogroup {
+  input[type="radio"] {
+    color: $darkBlue;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 
-  &:not(:disabled) {
-    &:hover + label:before {
-      background-color: $lightBlue;
+    &:not(:disabled) {
+      &:hover + label:before {
+        background-color: $lightBlue;
+      }
+    }
+
+    &:checked + label:before {
+      background-color: $white;
+    }
+
+    &:checked + label:after {
+      display: block;
+    }
+
+    &:disabled + label {
+      color: $mediumGrey;
+      cursor: auto;
+    }
+
+    &:disabled + label:before {
+      border-color: $mediumGrey;
     }
   }
 
-  &:checked + label:before {
-    background-color: $white;
-  }
-
-  &:checked + label:after {
+  label {
+    color: $darkBlue;
     display: block;
-  }
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
 
-  &:disabled + label {
-    color: $mediumGrey;
-    cursor: auto;
-  }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 2px solid $darkBlue;
+    }
 
-  &:disabled + label:before {
-    border-color: $mediumGrey;
-  }
-}
-
-.radio__label {
-  color: $darkBlue;
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  user-select: none;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 2px solid $darkBlue;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 4px;
-    left: 4px;
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    background: $darkBlue;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 4px;
+      left: 4px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: $darkBlue;
+    }
   }
 }

@@ -2,5 +2,6 @@
 title: Blockquote
 label: Blockquote
 context:
+  lang: en
   text: Yes, we can.
   cite: Barack Obama
