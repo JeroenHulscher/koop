@@ -26,7 +26,7 @@
       showOn: 'button',
       changeYear: true,
       buttonImageOnly: false,
-      buttonText: 'Calendar View',
+      buttonText: 'Toon kalender',
       monthNames: this.config.months,
       dayNamesMin: ['M', 'D', 'W', 'D', 'V', 'Z', 'Z'],
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
