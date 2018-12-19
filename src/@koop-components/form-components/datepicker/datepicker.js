@@ -9,10 +9,10 @@
 
   var datepicker = function(element) {
     this.element = element;
-    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];;
+    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
-    this.config.months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+    this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
 
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
@@ -25,7 +25,6 @@
     $(element).attr('type', 'text').datepicker({
       showOn: 'button',
       changeYear: true,
-      buttonImage: '../../images/icon-calendar-white.svg', // File (and file path) for the calendar image
       buttonImageOnly: false,
       buttonText: 'Calendar View',
       monthNames: this.config.months,
@@ -33,7 +32,7 @@
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       showButtonPanel: true,
       closeText: 'Sluiten',
-      dateFormat: this.config.dateformat || 'dd-mm-yy',
+      dateFormat: this.config.dataFormat || 'dd-mm-yy',
       onClose: this.removeAria.bind(this),
       beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
@@ -157,7 +156,7 @@
 
     // Prevent keydown event listeners from being applied multiple times
     // on initialization.
-    $(container).off('keydown'); 
+    $(container).off('keydown');
     $(container).on('keydown', function(keyVent) {
       var which = keyVent.which;
       var target = keyVent.target;

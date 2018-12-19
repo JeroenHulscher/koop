@@ -222,6 +222,13 @@ fieldset {
       border-bottom: 1px solid $datepickerTriggerBackgroundColor;
       border-bottom-right-radius: 5px;
       border-top-right-radius: 5px;
+      font-size: 1px;
+      width: 38px;
+      color: white;
+      background-image: $calendarIconWhite;
+      background-size: 22px;
+      background-repeat: no-repeat;
+      background-position: center;
 
       img {
         width: 24px;
