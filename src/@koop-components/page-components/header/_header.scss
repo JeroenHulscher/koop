@@ -4,6 +4,7 @@
 
   .skiplinks {
     position: relative;
+
     a {
       position: absolute;
       left: -999em;
@@ -104,7 +105,7 @@
       text-decoration: none;
       padding: .75em 1em;
       display: block;
-      font-size: 112.5%;
+      font-size: 1.125rem;
 
       &:hover {
         color: $headerLinkCurrentColor;
@@ -121,7 +122,7 @@
       position: absolute;
       right: .5em;
       top: .375em;
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     [data-handler="toggle-other-sites"] {
@@ -192,13 +193,10 @@
       padding-top: 1em;
       padding-bottom: 1em;
 
-
       @media ( min-width: 50em ) {
         flex-direction: row;
         animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
       }
-
-
     }
 
     &[hidden="true"] .container {

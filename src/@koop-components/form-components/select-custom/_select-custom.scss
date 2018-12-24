@@ -9,9 +9,9 @@
 
   &:after {
     position: absolute;
-    right: em(8);
+    right: .5em;
     top: 0;
-    width: em(30);
+    width: 1.875em;
     bottom: 0;
     background: $dartRightBlueIcon no-repeat center center;
     background-size: 0.5em;
@@ -20,7 +20,7 @@
     transform: rotate(90deg);
   }
   select {
-    padding: 0 em(8);
+    padding: 0 .5em;
     width: 100%;
     color: $darkGrey;
     border: none;
@@ -45,8 +45,8 @@
   }
 
   &--large select {
-    font-size: 1.15em;
-    padding: em(14) em(16) em(15);
+    font-size: 1.125rem;
+    padding: .875em 1em .9375em;
     height: auto;
   }
 }

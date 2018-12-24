@@ -13,15 +13,17 @@ em {
 }
 
 .intro--text {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   max-width: 100%;
   margin: 0;
+
   @media ( min-width: 50em ) {
     max-width: 70%;
     margin: 1em 0;
   }
 }
 
-small, .small {
-  font-size: 85%;
+small,
+.small {
+  font-size: .875rem;
 }

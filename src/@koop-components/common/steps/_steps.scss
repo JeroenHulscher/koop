@@ -5,15 +5,15 @@
 
   &__step {
     display: inline-block;
-    padding: em(8) em(16) em(8) em(32);
+    padding: .5em 1em .5em 2em;
     position: relative;
     background: $lightBlue;
     font-weight: 700;
-    font-size: em(14);
-    margin-bottom: em(4);
+    font-size: .875rem;
+    margin-bottom: .25em;
 
     &:first-child {
-      padding-left: em(16);
+      padding-left: 1em;
     }
 
     &:after {

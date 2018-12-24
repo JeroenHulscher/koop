@@ -8,12 +8,8 @@
       text-decoration: none;
       padding-left: 1em;
       color: $black;
-
-      font: {
-        weight: 400;
-        size: 110%;
-      }
-
+      font-size: 1.125rem;
+      font-weight: 400;
       background: {
         repeat: no-repeat;
         position: left 50%;
@@ -40,11 +36,7 @@
     .collapsible__header {
       a {
         padding: 0 0 0 1em;
-
-        font: {
-          size: 100%;
-        }
-
+        font-size: 1rem;
         background: {
           size: 10px;
           position: 0 50%;
@@ -57,7 +49,7 @@
     .collapsible__header {
       a {
         color: $darkBlue;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         background-position: right 50%;
         background-size: 18px;
         background-image: $plusShapeIcon;
@@ -79,7 +71,7 @@
 .article__header--law  {
   .collapsible .collapsible__header a {
     padding: 0 0 0 15px;
-    font-size: .95em;
+    font-size: 1rem;
     background-size: 12px;
   }
 }
