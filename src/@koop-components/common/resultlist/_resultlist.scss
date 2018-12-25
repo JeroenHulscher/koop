@@ -24,10 +24,8 @@
   }
 
   .result--title {
-    font: {
-      size: 1em;
-      weight: 700;
-    }
+    font-size: 1rem;
+    font-weight: 700;
     color: $darkBlue;
     text-decoration: none;
     display: block;
@@ -41,7 +39,7 @@
 
     li {
       list-style: none;
-      font-size: 85%;
+      font-size: .875rem;
     }
 
     span {
@@ -62,7 +60,7 @@
     }
 
     .result--title {
-      font-size: 1.25em;
+      font-size: 1.25rem;
       margin: 0;
     }
 

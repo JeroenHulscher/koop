@@ -1,5 +1,5 @@
 .pagination {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 
   &__index {
     li {
@@ -17,12 +17,12 @@
 
       &.active {
         background-color: $darkBlue;
-        padding: em(8) 0;
+        padding: .5em 0;
         display: inline-block;
         width: 2.5em;
         min-width: 2.5em;
         position: relative;
-        top: em(-4);
+        top: -.25em;
       }
 
       &.next {
@@ -47,16 +47,7 @@
           @extend .visually-hidden;
         }
       }
-
-      &:first-child {
-      }
-
-      a {
-        &:hover {
-        }
-      }
     }
-
   }
 
   &__filter {

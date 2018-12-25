@@ -20,7 +20,7 @@
 
   input,
   .multi-select input {
-    font-size: 1em;
+    font-size: 1rem;
     padding: 1em;
     border: 1px solid $lighterGrey;
   }
@@ -53,7 +53,6 @@
     > input[type="text"],
     .multi-select {
       flex: 1;
-
 
       input {
         width: 100%;

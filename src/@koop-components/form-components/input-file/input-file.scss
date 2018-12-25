@@ -3,9 +3,9 @@
   .input-dragbox {
     background: $offWhite;
     text-align: center;
-    background-size: em(24);
+    background-size: 1.5em;
     border: 1px solid transparent;
-    padding: em(4) em(16);
+    padding: .25em 1em;
     border-radius: 5px;
     font-style: italic;
     color: $darkBlue;
@@ -28,9 +28,9 @@
 
     @media (min-width: 50em) {
       background-position: 2em center;
-      background-size: em(32);
+      background-size: 2em;
       font-size: 1.5em;
-      padding: em(12) em(24);
+      padding: .75em 1.5em;
     }
 
     a {
@@ -47,6 +47,7 @@
       left: 0;
       top: 0;
     }
+
     label {
       display: inline-block;
       color: $darkBlue;
@@ -58,22 +59,22 @@
       padding: 0;
       background: none;
       text-align: left;
-      margin-bottom: em(8);
+      margin-bottom: .5em;
 
       label {
-        font-size: 0.7em;
+        font-size: .75rem;
       }
     }
 
     &.has-file .input-dragbox__prelabel {
-      // display: none;
       display: inline-block;
-      margin-right: em(16);
+      margin-right: 1em;
     }
   }
 
   .input-file {
     position: relative;
+
     input {
       width: 0.1px;
       height: 0.1px;
@@ -84,6 +85,7 @@
       left: 0;
       top: 0;
     }
+
     label {
       max-width: 80%;
       font-size: inherit;
@@ -98,14 +100,15 @@
       background: white;
       border: 2px solid $darkBlue;
       padding-left: 10em;
+
       span {
         background: $darkBlue;
         display: inline-block;
         position: relative;
-        // top: -1px;
         padding: 4px 12px;
       }
     }
+
     &__selectedfile {
       position: absolute;
       left: .325em;
@@ -115,6 +118,7 @@
 }
 
 .input-file {
+
   label {
     display: block;
   }

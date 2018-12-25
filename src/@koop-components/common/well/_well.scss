@@ -11,8 +11,8 @@
   }
 
   &__intro {
-    margin-top: em(32);
-    margin-bottom: em(32);
+    margin-top: 2em;
+    margin-bottom: 2em;
     color: $darkBlue;
   }
 
@@ -65,7 +65,7 @@
   }
 
   .p--accent {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   &--linkContainer {

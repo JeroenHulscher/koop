@@ -10,7 +10,9 @@
   border: 1px solid $datepickerContainerBorderColor;
   border-radius: 5px;
 }
+
 .ui-datepicker {
+
   &-summary {
     background: $datepickerHeaderBackgroundColor;
     color: $datepickerHeaderTextColor;
@@ -21,12 +23,14 @@
     border-top-left-radius: 5px;
 
     &__date {
-      font-size: 2em;
+      font-size: 2rem;
     }
   }
+
   &-header {
     position: relative;
   }
+
   &-next,
   &-prev {
     background-image: $datepickerButtonNext;
@@ -43,6 +47,7 @@
       @extend .visually-hidden;
     }
   }
+
   &-prev {
     background-image: $datepickerButtonPrev;
     right: auto;
@@ -60,13 +65,13 @@
 
 table.ui-datepicker-calendar {
 
-
   thead tr th {
     border: 0;
     text-align: center;
     padding: 0.125em 0.333em;
     font-weight: normal;
   }
+
   tbody tr td {
     border: 0;
     text-align: center;

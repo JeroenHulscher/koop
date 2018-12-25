@@ -1,18 +1,21 @@
 form {
+
   &.is-submitted {
+
     button[type="submit"] {
+
       &:before {
         content: "";
-        width: em(20);
+        width: 1.25em;
         background: $loadingIconWhite;
         background-repeat: no-repeat;
         background-position: center center;
         position: absolute;
-        right: em(12);
+        right: .75em;
         top: 0;
         bottom: 0;
       }
-      padding-right: em(40);
+      padding-right: 2.5em;
     }
   }
 }
@@ -30,14 +33,12 @@ select {
   line-height: 1.5;
   font-family: inherit;
   padding: .409em .5em;
-  font-size: .85em;
+  font-size: .875rem;
   border-radius: .5em;
 
   &::placeholder {
     color: $darkGrey;
   }
-
-
 
   &.input--error {
     border: 1px solid $red;
@@ -78,7 +79,7 @@ fieldset {
     border-bottom: 1px solid $darkBlue;
     margin: 0.5em 0;
     h2, h3 {
-      font-size: 1.15em;
+      font-size: 1.125rem;
       position: relative;
       display: inline-block;
       margin: 0 0 0 0; // needed for IE11 (strange)
@@ -87,14 +88,16 @@ fieldset {
 }
 
 .form {
+
   &__row {
-    margin-bottom: em(8);
+    margin-bottom: .5em;
 
     &--medium {
-      margin-bottom: em(16);
+      margin-bottom: 1em;
     }
+
     &--large {
-      margin-bottom: em(24);
+      margin-bottom: 1.5em;
     }
   }
 }
@@ -116,21 +119,26 @@ fieldset {
 
   &--fixed-view &__label {
     flex: 1 0 40%;
+
     @media (max-width: 50em) {
       padding-top: 0;
     }
   }
+
   &--fixed-view &__inputs {
     flex: 2 0 60%;
   }
+
   &--fixed-view .radiogroup,
   &--fixed-view .inline-group {
+
     > label {
       display: block !important;
     }
   }
 
   &__label {
+
     @media (min-width: 50em) {
       float:left;
       width: 40%;
@@ -139,8 +147,9 @@ fieldset {
   }
 
   &__inputs {
+
     @media (min-width: 50em) {
-      float:right;
+      float: right;
       width: 60%;
     }
   }
@@ -154,7 +163,7 @@ fieldset {
     font-weight: 700;
 
     &.form__intro {
-      font-size: 1.25em;
+      font-size: 1.25rem;
       color: $darkBlue;
     }
   }
@@ -163,8 +172,9 @@ fieldset {
     display: inline-block;
     font-weight: 700;
     line-height: 1;
+
     &.label--large {
-      font-size: 1.5em;
+      font-size: 1.5rem;
       margin-top: 0.5em;
     }
   }
@@ -212,9 +222,7 @@ fieldset {
       border: 0;
       padding: 0.5em;
       background: $datepickerTriggerBackgroundColor;
-      // margin-left: -1em;
       position: absolute;
-      // top: 0.375em;
       top: 0;
       right: 0;
       bottom: 0;
@@ -233,7 +241,6 @@ fieldset {
       img {
         width: 24px;
         height: 20px;
-
       }
     }
   }
@@ -251,7 +258,6 @@ fieldset {
   input[type="date"],
   input.datepicker__input {
     width: 10.5em;
-    // margin: 0 .5em; // why do we need this?
     display: inline-block;
   }
 
@@ -272,7 +278,6 @@ fieldset {
 
     label {
       display: block;
-      // width: 100%; // todo: remove @ 16 aug
       font-weight: 400;
       line-height: 1.5;
     }
@@ -290,13 +295,13 @@ fieldset {
     }
 
     &--many {
-
       position: relative;
 
       ul {
         max-height: 10em;
         overflow-y: scroll;
         padding: 0 .5em;
+
         &::after {
           content: '';
           position: absolute;
@@ -359,7 +364,7 @@ fieldset {
 
     input[type="text"] {
       height: 2.6em;
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     @media ( min-width: 50em ) {
@@ -374,13 +379,9 @@ fieldset {
         width: calc(100% - 8em);
         margin-right: 1em;
       }
-
-
     }
   }
 }
-
-
 
 .daterange {
   div:not(.question-explanation) {
@@ -400,7 +401,6 @@ fieldset {
     list-style: none;
     display: inline-block;
     padding-right: .25em;
-
 
     &::after {
       content: '|';
@@ -432,7 +432,6 @@ fieldset {
 .checkboxgroup {
   label {
     display: block;
-    // width: 100%; // todo: remove @ 16 aug
     font-weight: 400;
     line-height: 1.5;
   }

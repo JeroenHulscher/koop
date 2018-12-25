@@ -37,6 +37,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
+
   @media (min-width: 50em) {
     padding-bottom: 12em;
   }
@@ -50,11 +51,11 @@ body {
 p,
 .p {
   &--large {
-    font-size: 1.125em;
+    font-size: 1.125rem;
   }
   &--accent {
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 0;
   }
 }
@@ -95,11 +96,11 @@ label {
 .transitional-size {
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   li {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 }
 
@@ -107,45 +108,44 @@ label {
 
   h1,
   .h1 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   h2,
   .h2 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h3,
   .h3 {
-    font-size: 1.385em;
+    font-size: 1.375rem;
   }
 
   p,
   .p {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     &--large {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
     &--accent {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
   }
 
   .button {
-    font-size: 1.125em;
+    font-size: 1.125rem;
 
     &--small {
-      font-size: 0.75em;
+      font-size: 0.75rem;
     }
   }
 
   table {
     // font-size already set in component
     .button {
-      font-size: 1em;
+      font-size: 1rem;
     }
   }
-
 }
 
 .container {
