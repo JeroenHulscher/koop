@@ -1,18 +1,77 @@
+.input-filebox {
+  border-radius: .5em;
+  background: $lightBlue;
+  padding: 1em;
+  margin: 0 0 2em 0;
+  @extend .group;
+
+  @media (min-width: 50em) {
+    font-size: 1.5em;
+
+    button {
+      font-size: 0.75em;
+    }
+  }
+
+  &.is-uploading {
+    p {
+      font-size: 85%;
+    }
+  }
+  &.is-uploading,
+  &.is-success {
+    background: $lightGreen;
+    font-style: italic;
+  }
+  &.is-failed {
+    font-style: italic;
+    background: $lighterRed;
+
+    p:first-child {
+      &:before {
+        content: attr(data-beforetext);
+        display: inline-block;
+        margin-right: 1em;
+        background: $lighterRed;
+        border-radius: 5px;
+        padding: 0 0.5em;
+        font-size: 90%;
+      }
+    }
+  }
+  &.is-uploading .input-dragbox__uploading,
+  &.is-failed .input-dragbox__msg,
+  &.is-success .input-dragbox__msg {
+    display: block;
+  }
+  &.is-success .input-dragbox__content,
+  &.is-failed .input-dragbox__content,
+  &.is-uploading .input-dragbox__content {
+    display: none;
+  }
+
+}
+
 .has-js {
 
   .input-dragbox {
-    background: $offWhite;
+    background: rgba(255,255,255,0.5);
     text-align: center;
     background-size: 1.5em;
     border: 1px solid transparent;
     padding: .25em 1em;
     border-radius: 5px;
-    font-style: italic;
     color: $darkBlue;
 
+    @media (min-width: 50em) {
+      background-position: 2em center;
+      background-size: em(32);
+      padding: em(12) em(24);
+    }
+
     &:not(.has-file) {
-      outline: 2px dashed #92b0b3;
-      outline-offset: -2px;
+      outline: 3px dashed #92b0b3;
+      outline-offset: -3px;
       transition: outline-offset .15s ease-in-out, background-color .15s linear;
     }
 
@@ -22,21 +81,67 @@
       border: 1px solid #92b0b3;
     }
 
-    &.has-dragdrop .input-dragbox__prelabel {
+    &.has-dragdrop &__prelabel {
       display: inline-block;
     }
 
-    @media (min-width: 50em) {
-      background-position: 2em center;
-      background-size: 2em;
-      font-size: 1.5em;
-      padding: .75em 1.5em;
+    &__content {
+      font-style: italic;
     }
 
-    a {
-      font-weight: bold;
+    &__msg {
+      display: none;
+
+      h2 {
+        margin: 0 1em 0 0;
+        display: inline-block;
+      }
+      p {
+        margin: 0 1em 0 0;
+        display: inline-block;
+      }
+
     }
 
+    &.is-success &__msg {
+      display: block;
+    }
+
+    &__uploading {
+      display: none;
+      text-align: center;
+
+      p {
+        font-style: italic;
+        margin: -.25em 0 0;
+      }
+      &__progress {
+        border: 2px solid $darkBlue;
+        margin: 0 5em;
+        height: 20px;
+        text-align: left;
+        border-radius: 5px;
+        background: white;
+        width: 80%;
+        color: $darkBlue;
+        padding: 1px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &::-webkit-progress-bar {
+          background-color: #fff;
+          border-radius: 2px;
+        }
+        &::-webkit-progress-value {
+
+          background-color: $darkBlue;
+            border-radius: 2px;
+            background-size: 35px 20px, 100% 100%, 100% 100%;
+        }
+      }
+    }
     input {
       width: 0.1px;
       height: 0.1px;
@@ -68,7 +173,8 @@
 
     &.has-file .input-dragbox__prelabel {
       display: inline-block;
-      margin-right: 1em;
+      margin-right: em(16);
+      margin-bottom: em(8);
     }
   }
 

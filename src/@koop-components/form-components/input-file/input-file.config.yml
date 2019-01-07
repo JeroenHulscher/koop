@@ -7,3 +7,10 @@ context:
   fieldInstruction:
   fieldPlaceholder: 'placeholder'
   showButtonOnSelection: true
+  submitLabel: Uploaden
+  debug: true
+variants:
+  - name: AJAX
+    status: wip
+    context:
+      ajax: true
