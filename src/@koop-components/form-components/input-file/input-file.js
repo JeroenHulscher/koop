@@ -8,6 +8,9 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
 (function () {
 
   onl.decorate({
+
+    // component works without AJAX support;
+    // AJAX functionality is WIP and needs to be tested properly first!
     'init-inputfile': function( element ) {
       new inputfile( element );
     }
@@ -16,7 +19,7 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
   var inputfile = function( element ) {
     this.element = element;
     this.area = this.element.querySelector( '.js-input-dragbox' );
-    this.label = this.element.querySelector( 'label' );
+    this.label = this.element.querySelector( '.js-input-dragbox__label' );
     this.prelabel = this.element.querySelector( '.js-input-dragbox__prelabel' );
     this.orginalLabelValue = this.label.innerHTML;
     this.orginalPreLabelValue = this.prelabel.innerHTML;
@@ -26,13 +29,14 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
     this.droppedFiles = false;
     this.debug = this.config.debug;
     this.responseMsg = this.element.querySelector( '.js-input-dragbox__msg' );
+    this.isAjaxHandling = this.config.ajax || false;
     this.init();
   };
   inputfile.prototype.init = function( ) {
     var self = this;
 
     if (onl.ui.hasDragDrop()) {
-      this.area.classList.add('has-dragdrop');
+      this.element.classList.add('has-dragdrop');
     }
 
     function addListenerMulti(element, eventNames, listener) {
@@ -67,11 +71,6 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
 
     this.eventListers();
 
-    // if ( this.config.ajax !== 'undefined' ) {
-      // console.log('this.submitbuttonClass', this.submitbuttonClass);
-      // this.submitbuttonClass.addEventListener('submit', function (e) { e.preventDefault(); e.stopPropagation(); this.submitHandler(e) }.bind(this), false);
-    // }
-
   };
 
   inputfile.prototype.setAttributes = function(e) {
@@ -87,8 +86,10 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
     }
 
     if (fileName) {
-      this.label.querySelector('span').innerHTML = 'Selecteer ander document';
+      this.label.innerHTML = 'Selecteer ander document';
       this.prelabel.innerHTML = fileName;
+      this.prelabel.setAttribute('tabindex','0');
+      this.prelabel.focus();
       this.area.classList.add('has-file');
       if (this.config.showbuttonAfterChange) {
         this.showbuttonAfterChange();
@@ -110,17 +111,17 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
 
     this.label.innerHTML = this.orginalLabelValue;
     this.prelabel.innerHTML = this.orginalPreLabelValue;
+    this.prelabel.setAttribute('tabindex', '-1');
     this.area.classList.remove('has-file');
     if (this.config.showbuttonAfterChange) {
       this.hidebuttonAfterChange();
     }
-    this.area.classList.remove('is-success');
-    this.area.classList.remove('is-uploading');
-    this.area.classList.remove('is-failed');
+    this.element.classList.remove('is-success', 'is-uploading', 'is-failed');
     this.area.classList.remove('has-file');
   };
 
   inputfile.prototype.eventListers = function() {
+
     this.label.addEventListener( 'keyup', function( event ) {
       event.preventDefault();
       if ( event.keyCode === 13 ) {
@@ -130,68 +131,68 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
 
     this.element.querySelector('.js-reset').addEventListener('click', function (e) { e.preventDefault(); this.resetElement(e); }.bind( this ), false );
 
-
     // Firefox bug fix
     this.area.addEventListener('focus', function ( e ) { this.area.classList.add('has-focus'); }.bind( this ), false );
     this.area.addEventListener('blur', function ( e ) { this.area.classList.remove('has-focus'); }.bind( this ), false );
 
-    this.element.addEventListener('submit', function (e) {
-      console.log('submit');
-      this.ajax = new XMLHttpRequest();
-      var errorMsg;
-      var ajaxData = new FormData( this.element );
+    if ( this.isAjaxHandling ) {
+      this.element.addEventListener('submit', function (e) {
+        this.ajax = new XMLHttpRequest();
+        var errorMsg;
+        var ajaxData = new FormData( this.element );
 
-      if (this.area.classList.contains('is-uploading')) return false;
+        if (this.area.classList.contains('is-uploading')) return false;
 
-      this.area.classList.add('is-uploading');
-      this.area.classList.remove('is-error');
+        this.element.classList.add('is-uploading');
+        this.element.classList.remove('is-error');
 
-      if ( onl.ui.hasDragDrop() ) {
-        e.preventDefault();
+        if ( onl.ui.hasDragDrop() ) {
+          e.preventDefault();
 
-        // gathering the form data
-        if( this.droppedFiles ) {
-          Array.prototype.forEach.call( this.droppedFiles, function( file ) {
-            ajaxData.append( this.input.getAttribute( 'name' ), file );
-          }.bind(this));
+          // gathering the form data
+          if( this.droppedFiles ) {
+            Array.prototype.forEach.call( this.droppedFiles, function( file ) {
+              ajaxData.append( this.input.getAttribute( 'name' ), file );
+            }.bind(this));
+          }
+
+          if (!this.debug) {
+            this.ajax.upload.addEventListener( 'progress', function (e) { this.progressHandler(e); }.bind(this), false );
+            this.ajax.upload.addEventListener( 'load', function (e) { this.loadHandler(e); }.bind(this), false );
+            this.ajax.upload.addEventListener( 'error', function (e) { this.errorHandler(e); }.bind(this), false );
+            this.ajax.open( this.element.getAttribute( 'method' ), this.element.getAttribute( 'action' ), true );
+            this.ajax.send( ajaxData );
+          } else {
+            this.ajax = new Array({
+              status: 300,
+              responseText: {
+                success: true,
+                message: 'Bestand is succesvol geupload'
+              }
+            });
+            this.ajax = this.ajax[0];
+            // this.ajax.status = 300;
+            // this.ajax.responseText.success = true;
+            this.loadHandler();
+          }
+
         }
 
-        if (!this.debug) {
-          this.ajax.upload.addEventListener( 'progress', function (e) { this.progressHandler(e); }.bind(this), false );
-          this.ajax.upload.addEventListener( 'load', function (e) { this.loadHandler(e); }.bind(this), false );
-          this.ajax.upload.addEventListener( 'error', function (e) { this.errorHandler(e); }.bind(this), false );
-          this.ajax.open( this.element.getAttribute( 'method' ), this.element.getAttribute( 'action' ), true );
-          this.ajax.send( ajaxData );
-        } else {
-          this.ajax = new Array({
-            status: 300,
-            responseText: {
-              success: true,
-              message: 'Bestand is succesvol geupload'
-            }
-          });
-          this.ajax = this.ajax[0];
-          // this.ajax.status = 300;
-          // this.ajax.responseText.success = true;
-          this.loadHandler();
-        }
-
-      }
-
-    }.bind(this), false);
+      }.bind(this), false);
+    }
 
   };
 
   inputfile.prototype.loadHandler = function (e) {
-    this.area.classList.remove( 'is-uploading' );
+    this.element.classList.remove( 'is-uploading' );
     if (this.ajax.status >= 200 && this.ajax.status < 400 )
     {
       if ( this.debug && this.ajax.responseText.success ) {
-        this.area.classList.add( this.ajax.responseText.success == true ? 'is-success' : 'is-error' );
+        this.element.classList.add( this.ajax.responseText.success == true ? 'is-success' : 'is-error' );
         this.responseMsg.innerHTML = this.ajax.message;
       } else {
         var data = JSON.parse( this.ajax.responseText );
-        this.area.classList.add( data.success == true ? 'is-success' : 'is-error' );
+        this.element.classList.add( data.success == true ? 'is-success' : 'is-error' );
         this.responseMsg.innerHTML = this.ajax.message;
       }
 

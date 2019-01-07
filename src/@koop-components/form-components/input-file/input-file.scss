@@ -1,7 +1,61 @@
+.input-filebox {
+  border-radius: .5em;
+  background: $lightBlue;
+  padding: 1em;
+  margin: 0 0 2em 0;
+  @extend .group;
+
+  @media (min-width: 50em) {
+    font-size: 1.5em;
+
+    button {
+      font-size: 0.75em;
+    }
+  }
+
+  &.is-uploading {
+    p {
+      font-size: 85%;
+    }
+  }
+  &.is-uploading,
+  &.is-success {
+    background: $lightGreen;
+    font-style: italic;
+  }
+  &.is-failed {
+    font-style: italic;
+    background: $lighterRed;
+
+    p:first-child {
+      &:before {
+        content: attr(data-beforetext);
+        display: inline-block;
+        margin-right: 1em;
+        background: $lighterRed;
+        border-radius: 5px;
+        padding: 0 0.5em;
+        font-size: 90%;
+      }
+    }
+  }
+  &.is-uploading .input-dragbox__uploading,
+  &.is-failed .input-dragbox__msg,
+  &.is-success .input-dragbox__msg {
+    display: block;
+  }
+  &.is-success .input-dragbox__content,
+  &.is-failed .input-dragbox__content,
+  &.is-uploading .input-dragbox__content {
+    display: none;
+  }
+
+}
+
 .has-js {
 
   .input-dragbox {
-    background: $offWhite;
+    background: rgba(255,255,255,0.5);
     text-align: center;
     background-size: em(24);
     border: 1px solid transparent;
@@ -16,43 +70,10 @@
     }
 
     &:not(.has-file) {
-      outline: 2px dashed #92b0b3;
-      outline-offset: -2px;
+      outline: 3px dashed #92b0b3;
+      outline-offset: -3px;
       transition: outline-offset .15s ease-in-out, background-color .15s linear;
     }
-
-    &.is-success,
-    &.is-failed {
-      @media (min-width: 50em) {
-        font-size: 1.5em;
-      }
-    }
-
-    &.is-uploading,
-    &.is-success {
-      background: $lightGreen;
-      outline: 2px dashed $green;
-      font-size: em(20);
-      font-style: italic;
-    }
-    &.is-failed {
-      font-style: italic;
-      background: $lighterRed;
-      font-size: em(20);
-      outline: 2px dashed $red;
-    }
-    &.is-uploading .input-dragbox__uploading,
-    &.is-failed .input-dragbox__msg,
-    &.is-success .input-dragbox__msg {
-      display: block;
-    }
-    &.is-success .input-dragbox__content,
-    &.is-failed .input-dragbox__content,
-    &.is-uploading .input-dragbox__content {
-      display: none;
-    }
-
-
 
     &.is-dragover {
       outline-offset: -10px;
@@ -66,20 +87,12 @@
 
     &__content {
       font-style: italic;
-
-      @media (min-width: 50em) {
-        font-size: 1.5em;
-      }
     }
 
     &__msg {
       display: none;
-      @media (min-width: 50em) {
-        font-size: 1.125em;
-      }
 
       h2 {
-        // font-size: 2em;
         margin: 0 1em 0 0;
         display: inline-block;
       }
@@ -98,14 +111,14 @@
       display: none;
       text-align: center;
 
-      &__msg {
+      p {
         font-style: italic;
-        margin: -.25em;
+        margin: -.25em 0 0;
       }
       &__progress {
-        border: 1px solid $darkBlue;
+        border: 2px solid $darkBlue;
         margin: 0 5em;
-        height: 15px;
+        height: 20px;
         text-align: left;
         border-radius: 5px;
         background: white;
@@ -167,6 +180,7 @@
       // display: none;
       display: inline-block;
       margin-right: em(16);
+      margin-bottom: em(8);
     }
   }
 
