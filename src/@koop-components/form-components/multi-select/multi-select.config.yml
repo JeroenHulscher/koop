@@ -6,7 +6,7 @@ context:
   placeholder: Zoeken in verzamelingen
   name: verzamelingen
   label: Maak een keuze
-  helptext: Use tabulation (or down) key to access and browse suggestions after input. Confirm your choice with enter key, or esc key.
+  helptext: Gebruik de TAB toets, of de pijl beneden toets om toegang te krijgen tot de suggesties. Druk om ENTER om uw keuze te bevestigen.
   visuallyHideLabel: false
   fieldInstruction: ''
   regularFormElement: true
