@@ -1,45 +1,27 @@
 $defaultFontFamily: 'Rijksoverheid Sans';
 $defaultFontStack: $defaultFontFamily, sans-serif;
-
-$defaultSerifFontFamily: 'Rijksoverheid Serif';
-$defaultHeadingFontStack: $defaultSerifFontFamily, serif;
+$fontPath: '../fonts' !default;
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '../fonts/ROsanswebtextregular.woff' ) format( 'woff' );
+  src: url( '#{$fontPath}/ROsanswebtextregular.ttf' ) format( 'truetype' ),
+       url( '#{$fontPath}/ROsanswebtextregular.woff' ) format( 'opentype' );
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '../fonts/ROsanswebtextitalic.woff' ) format( 'woff' );
+  src: url( '#{$fontPath}/ROsanswebtextitalic.ttf' ) format( 'truetype' ),
+       url( '#{$fontPath}/ROsanswebtextitalic.woff' ) format( 'opentype' );
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '../fonts/ROsanswebtextbold.woff' ) format( 'woff' );
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: $defaultSerifFontFamily;
-  src: url( '../fonts/ROserifwebregular.woff' ) format( 'woff' );
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: $defaultSerifFontFamily;
-  src: url( '../fonts/ROserifwebitalic.woff' ) format( 'woff' );
-  font-style: italic;
-  font-weight: normal;
-}
-@font-face {
-  font-family: $defaultSerifFontFamily;
-  src: url( '../fonts/ROserifwebbold.woff' ) format( 'woff' );
+  src: url( '#{$fontPath}/ROsanswebtextbold.ttf' ) format( 'truetype' ),
+       url( '#{$fontPath}/ROsanswebtextbold.woff' ) format( 'opentype' );
   font-weight: bold;
   font-style: normal;
 }
@@ -55,6 +37,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
+
   @media (min-width: 50em) {
     padding-bottom: 12em;
   }
@@ -63,6 +46,18 @@ html {
 body {
   min-height: 100%;
   margin: 0;
+}
+
+p,
+.p {
+  &--large {
+    font-size: 1.125rem;
+  }
+  &--accent {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
 }
 
 .footer {
@@ -94,17 +89,68 @@ a img {
   border: 0;
 }
 
+label {
+  display: block;
+}
+
 .transitional-size {
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   li {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 }
 
-label {
-  display: block;
+.k-future {
+
+  h1,
+  .h1 {
+    font-size: 3rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 2rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.375rem;
+  }
+
+  p,
+  .p {
+    font-size: 1.125rem;
+    &--large {
+      font-size: 1.5rem;
+    }
+    &--accent {
+      font-size: 1.5rem;
+    }
+  }
+
+  .button {
+    font-size: 1.125rem;
+
+    &--small {
+      font-size: 0.75rem;
+    }
+  }
+
+  table {
+    // font-size already set in component
+    .button {
+      font-size: 1rem;
+    }
+  }
+}
+
+.container {
+
+  &__row {
+    margin-bottom: 3em;
+  }
 }

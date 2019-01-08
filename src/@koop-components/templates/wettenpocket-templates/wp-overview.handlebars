@@ -1,0 +1,23 @@
+{{ render "@header" headerContext merge="true"}}
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Recent gepubliceerde wettenpockets</h1>
+      {{render "@resultlist" resultsContext}}
+
+      {{render "@pagination" paginationContext}}
+    </div>
+
+
+    <div>
+      <h3>Subnavigatie</h3>
+      <nav class="secundairy-navigation">
+        {{ render "@list" navlistContext }}
+      </nav>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+{{ render "@footer" }}

@@ -1,0 +1,60 @@
+input[type=text].input-text,
+input[type=password].input-text {
+  padding: 0.5em;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  &--medium {
+    font-size: 1.325rem;
+    color: $darkBlue;
+    height: 60px; // needed to correct crossbrowser fields; :(
+    padding: .625em;
+  }
+
+  &--search {
+    padding-left: 3em;
+    background-position: .75em center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.5em;
+  }
+
+  &--searchmedium {
+    font-size: 1.325rem;
+    color: $darkBlue;
+    height: 60px; // needed to correct crossbrowser fields; :(
+    padding: .625em 2em .625em 3em;
+    background-position: .75em center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.25em;
+
+    ~ .combobox-clear-button ~ .combobox-suggestions > div {
+      top: 3.4em;
+
+      > div.combobox-suggestion {
+        font-size: 1.325rem;
+        padding: .625em 1em .625em 3em;
+        color: $darkBlue;
+      }
+    }
+  }
+}
+
+.input-text {
+
+  &__remove {
+    position: absolute;
+    right: .5em;
+    top: 0;
+    width: 2em;
+    bottom: 0;
+    background: $iconCross no-repeat center center;
+    z-index: 9999;
+
+    &.invisible {
+      display: none;
+    }
+  }
+}

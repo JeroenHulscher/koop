@@ -7,9 +7,35 @@
   clear: both;
 }
 
+.vet {
+  font-weight: bold;
+}
+.cur {
+  font-style: italic;
+}
+.vetcur {
+  font-style: italic;
+  font-weight: bold;
+}
+.capitalize {
+  text-transform: capitalize;
+}
 
-[hidden] {
+.u-nomargin {
+  margin: 0 !important;
+}
+
+.block-element {
+  display: block;
+}
+
+[hidden],
+.is-hidden {
   display: none;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .align-center {
@@ -43,6 +69,10 @@
   }
 }
 
+.relative {
+  position: relative;
+}
+
 .visually-hidden {
   border: none;
   clip: rect( 1px, 1px, 1px, 1px );
@@ -56,6 +86,9 @@
 .no-scroll {
   overflow: hidden;
   position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 
 .no-scroll--mobile {

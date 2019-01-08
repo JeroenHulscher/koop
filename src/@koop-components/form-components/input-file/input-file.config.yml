@@ -3,6 +3,14 @@ label: Input file
 status: ready
 context:
   id: 1
-  fieldLabel: Choose file
+  fieldLabel: Kies bestand
   fieldInstruction:
   fieldPlaceholder: 'placeholder'
+  showButtonOnSelection: true
+  submitLabel: Uploaden
+  debug: true
+variants:
+  - name: AJAX
+    status: wip
+    context:
+      ajax: true

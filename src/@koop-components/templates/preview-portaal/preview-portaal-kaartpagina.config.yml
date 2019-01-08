@@ -1,0 +1,72 @@
+---
+title: PP Kaartpagina
+label: PP Kaartpagina
+status: ready
+context:
+  id: 1
+  legendaContext:
+    modifier: list--legenda list--columns-4
+    items:
+      - text: Eemshaven
+        color: color1
+      - text: Maasvlakte 1
+        color: color2
+      - text: Borssele/Vlissingen
+        color: color3
+      - text: Eemshaven
+        color: color1
+      - text: Maasvlakte 1
+        color: color2
+      - text: Borssele/Vlissingen
+        color: color3
+      - text: Eemshaven
+        color: color1
+      - text: Maasvlakte 1
+        color: color2
+      - text: Borssele/Vlissingen
+        color: color3
+  headerContext:
+    metaLinks:
+      - url: ''
+        text: MijnOverheid.nl
+    youAreHere:
+    - text:
+    hamburgerButtonText: Menu
+    navLinks:
+      - url: '#'
+        text: Zoeken
+  breadcrumbContext:
+    breadcrumb:
+      last: Tuchtrecht
+      items:
+        - label: Home
+  inputtextContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldInstruction:
+    fieldPlaceholder: 'Wat zoek je precies?'
+  comboboxContext:
+    id: 1
+    modifier: input-text input-text--searchmedium
+    placeholder: Typ hier uw organisatie
+    name: verzamelingen
+    hasHiddenField: true,
+    hiddenFieldClass: appel
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    items:
+      - item: Gemeente Vlaardingen
+        code: ABC
+      - item: Gemeente Schiedam
+        code: DEF
+      - item: Gemeente Rotterdam
+        code: XYZ
+  resultlistContext:
+    modifier: result--list--wide
+    items:
+      - title: Downloads
+        text: tekst
+
+

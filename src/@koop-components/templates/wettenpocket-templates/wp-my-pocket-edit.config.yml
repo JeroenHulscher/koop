@@ -1,0 +1,366 @@
+title: Wettenpocket Mijn Pocket Bewerken
+label: Wettenpocket Mijn Pocket Bewerken
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+        className: 'is-active'
+
+  navlistContext:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Wettenpockets in bewerking</a>
+      - text: <a href="#">Gepubliceerde wettenpockets</a>
+
+  navPocket:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="#">Overzicht</a>
+      - text: <a href="#">Notities</a>
+
+  definitionContext:
+    modifier: 'columns--data'
+    divContainer: true
+    items:
+      - type: Onderwerp
+        value: Intellectuele eigendom
+      - type: Publicist
+        value: KOOP
+      - type: Auteur
+        value: Jan de Vries
+      - type: Status
+        value: Niet Gepubliceerd
+      - type: Wijzigingsdatum
+        value: 26-11-2018
+      - type: Downloads
+        value: '0'
+
+  actionContext:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        icon: icon-publicatie.svg
+        text: Wettenpocket opslaan
+      - link: '#'
+        icon: icon-close.svg
+        text: Afsluiten
+      - link: '#'
+        icon: icon-download.svg
+        text: Tonen wettenpocket XML
+
+  regelingContext:
+    text: Regeling toevoegen
+    button: true
+
+  docContext:
+    text: Document toevoegen
+    button: true
+
+  linkContext:
+    text: Link toevoegen
+    button: true
+
+  inputContext:
+    id: title
+    fieldLabel: Titel
+
+  selectContext:
+    id: subject
+    fieldLabel: Onderwerp
+    values:
+      - value:
+        inputValue: Arbitrage
+        displayValue: Arbitrage
+      - value:
+        inputValue: Belastingrecht
+        displayValue: Belastingrecht
+      - value:
+        inputValue: Intellectuele eigendom
+        displayValue: Intellectuele eigendom
+
+  textContext:
+    id: description
+    fieldLabel: Korte beschrijving
+    rows: 3
+
+  tableLawContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Type
+          value: Rijkswet
+        - column:
+          type: Titel
+          value: 'Belastingregeling Nederland Sint Maarten<br/><i>Datum in werkingtreding: 01-03-2016</i>'
+        - column:
+          type: Annotaties
+          value: 2 markeringen
+        - column:
+          type: Notificeer
+          value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
+        - column:
+          type: Aktie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                </ul>'
+      - item:
+        - column:
+          type: Type
+          value: Rijkswet
+        - column:
+          type: Titel
+          value: 'Belastingregeling voor het Koninkrijk<br/><i>Datum in werkingtreding: 10-10-2010</i>'
+        - column:
+          type: Annotaties
+          value:
+        - column:
+          type: Notificeer
+          value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
+        - column:
+          type: Aktie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
+      - item:
+        - column:
+          type: Type
+          value: Rijkswet
+        - column:
+          type: Titel
+          value: 'Proclamatie houdende plechtige afkondiging van de nieuwe rechtsorde voor het Koninkrijk<br/><i>Datum in werkingtreding: 29-12-1954</i>'
+        - column:
+          type: Annotaties
+          value: 1 markering
+        - column:
+          type: Notificeer
+          value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
+        - column:
+          type: Aktie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
+
+  tableDecentralContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Uitgever
+          value: Pijnacker
+        - column:
+          type: Titel
+          value: 'Privacyregelement voor de basisadministratie Personen'
+        - column:
+          type: Annotaties
+          value:
+        - column:
+          type: Notificeer
+          value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
+        - column:
+          type: Aktie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                </ul>'
+      - item:
+        - column:
+          type: Uitgever
+          value: Tholen
+        - column:
+          type: Titel
+          value: 'Regeling meding financiële belangen van ambtenaren van de gemeente Tholen'
+        - column:
+          type: Annotaties
+          value:
+        - column:
+          type: Notificeer
+          value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
+        - column:
+          type: Aktie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
+      - item:
+        - column:
+          type: Uitgever
+          value: Oss
+        - column:
+          type: Titel
+          value: 'Opleiding en ontwikkeling'
+        - column:
+          type: Annotaties
+          value:
+        - column:
+          type: Notificeer
+          value: '<input class="checkbox__input" type="checkbox" value="Notificeer"/>'
+        - column:
+          type: Aktie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
+  tableDocsContext:
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Titel
+          value: Document 1.pdf
+        - column:
+          type: Type
+          value: pdf
+        - column:
+          type: Grootte
+          value: 1Kb
+        - column:
+          type: Actie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                  </ul>'
+      - item:
+        - column:
+          type: Titel
+          value: Afbeelding-1
+        - column:
+          type: Type
+          value: jpg
+        - column:
+          type: Grootte
+          value: 36Kb
+        - column:
+          type: Actie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'
+  tableLinksContext:
+    modifier: table--condensed table--striped
+    items:
+      - item:
+        - column:
+          type: Link
+          value: overheid.nl
+        - column:
+          type: Actie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a>
+                    </li>
+                  </ul>'
+      - item:
+        - column:
+          type: Link
+          value: wetten.nl
+        - column:
+          type: Actie
+          value: '<ul class="toolbar">
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a>
+                    </li>
+                  </ul>'

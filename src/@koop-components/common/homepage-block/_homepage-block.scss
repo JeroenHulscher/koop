@@ -12,7 +12,7 @@
     background: $white;
     margin: 0;
     display: inline-block;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     min-height: 2.5em;
 
     a {
@@ -28,7 +28,7 @@
   span {
     color: $white;
     display: block;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     padding: 0;
     line-height: 1;
   }
@@ -154,13 +154,13 @@
       h3 {
         background: transparent;
         color: $white;
-        padding: 0px;
-        font-size: 1.25em;
+        padding: 0;
+        font-size: 1.25rem;
         margin-bottom: .5em;
       }
 
       span {
-        font-size: 1.1em;
+        font-size: 1.125rem;
       }
 
       ul {

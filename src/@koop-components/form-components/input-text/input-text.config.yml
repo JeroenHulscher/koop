@@ -7,11 +7,35 @@ context:
   fieldInstruction:
   fieldPlaceholder: 'Bijv: BK001'
 variants:
-  - name: postal code
-    label: input postcode
+  - name: Postal code
+    label: Input postcode
     context:
       modifier: input--postalcode input--small
       id: 1
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 2282LL'
+  - name: Medium
+    label: medium
+    context:
+      modifier: input-text--medium
+      id: 1
+      fieldPlaceholder: 'Placeholder'
+  - name: Search
+    label: Search
+    context:
+      modifier: input-text--search
+      id: 1
+      fieldLabel: Postcode
+      fieldInstruction:
+      fieldPlaceholder: 'Wat zoek je precies?'
+      remove: true
+  - name: Search medium
+    label: Search medium
+    context:
+      modifier: input-text--searchmedium
+      id: 1
+      fieldLabel: Postcode
+      fieldInstruction:
+      fieldPlaceholder: 'Wat zoek je precies?'
+      remove: true

@@ -3,15 +3,13 @@
 
   .collapsible__header {
     a {
-      display: block;
-      padding: $standardPadding;
+      display: inline-block;
+      padding: .5em;
       text-decoration: none;
-      font: {
-        family: $defaultSerifFontFamily;
-        weight: 400;
-        size: 110%;
-      }
       padding-left: 1em;
+      color: $black;
+      font-size: 1.125rem;
+      font-weight: 400;
       background: {
         repeat: no-repeat;
         position: left 50%;
@@ -19,7 +17,6 @@
         color: transparent;
         image: $plusIcon;
       };
-      color: $black;
 
       &:hover {
         text-decoration: underline;
@@ -39,10 +36,7 @@
     .collapsible__header {
       a {
         padding: 0 0 0 1em;
-        font: {
-          family: $defaultFontStack;
-          size: 100%;
-        }
+        font-size: 1rem;
         background: {
           size: 10px;
           position: 0 50%;
@@ -50,13 +44,34 @@
       }
     }
   }
+
+  &--primary {
+    .collapsible__header {
+      a {
+        color: $darkBlue;
+        font-size: 1.5rem;
+        background-position: right 50%;
+        background-size: 18px;
+        background-image: $plusShapeIcon;
+        padding-left: 0;
+        width: 100%;
+
+        &[aria-expanded="true"] {
+          background-image: $minusShapeIcon;
+        }
+      }
+    }
+
+    .collapsible__content {
+      margin: 0;
+    }
+  }
 }
 
 .article__header--law  {
   .collapsible .collapsible__header a {
     padding: 0 0 0 15px;
-    font-family: $defaultFontStack;
-    font-size: .95em;
+    font-size: 1rem;
     background-size: 12px;
   }
 }

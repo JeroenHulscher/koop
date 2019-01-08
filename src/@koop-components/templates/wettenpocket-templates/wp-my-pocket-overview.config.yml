@@ -1,0 +1,41 @@
+title: Wettenpocket Mijn Pockets Overzichtspagina
+label: Wettenpocket Mijn Pockets Overview
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+  navlistContext:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="templates-wp-search">Wettenpockets in bewerking</a>
+      - text: <a href="templates-wp-overview">Gepubliceerde wettenpockets</a>
+  resultsContext:
+    items:
+    - title: Wettenpocket Wetboek van Strafrecht
+      text: Een wettenpocket door mij gemaakt
+      metadata:
+        - value: "Wijzigingsdatum: 21-11-2018"
+        - value: "Publicatiedatum: Niet gepubliceerd"
+        - value: "Onderwerp: Intellectuele eigendom"
+    - title: Wettenpocket Wetboek van Strafrecht
+      text: Een wettenpocket door mij gemaakt
+      metadata:
+        - value: "Wijzigingsdatum: 21-11-2018"
+        - value: "Publicatiedatum: Niet gepubliceerd"
+        - value: "Onderwerp: Intellectuele eigendom"
+    - title: Wettenpocket Wetboek van Strafrecht
+      text: Een wettenpocket door mij gemaakt
+      metadata:
+        - value: "Wijzigingsdatum: 21-11-2018"
+        - value: "Publicatiedatum: Niet gepubliceerd"
+        - value: "Onderwerp: Intellectuele eigendom"
+  paginationContext:
+    previousPage: 1
+    currentPage: 2
+    lastPage: 5

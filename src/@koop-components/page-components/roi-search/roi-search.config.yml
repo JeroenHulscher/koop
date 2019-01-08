@@ -2,6 +2,9 @@
 label: ROI search
 status: ready
 context:
+  inputLegend: Zoeken in alle documenten
+  inputLabel: Zoekterm of dossiernummer
+  inputPlaceholder: Vul een zoekterm in of gebruik &quot;&quot; als u een woordgroep zoekt
   id: 1
   searchScope:
     id: search-scope
@@ -29,3 +32,12 @@ context:
           - text: Staatscourant
           - text: Gemeenteblad
           - text: Provinciaal blad
+  radioGroupContext:
+    modifier: inline-group
+    fieldLabel: ""
+    name: geldigheid
+    options:
+    - id: 1
+      text: Zoek in alle teksten
+    - id: 2
+      text: Zoek alleen in titels en kenmerken

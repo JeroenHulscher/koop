@@ -1,0 +1,7 @@
+---
+label: Select custom
+status: ready
+context:
+  id: 1
+  fieldLabel: Aantal resultaten per pagina
+  fieldInstruction: verplicht veld

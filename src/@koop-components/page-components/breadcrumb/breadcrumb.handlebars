@@ -1,10 +1,9 @@
 <div class="breadcrumb">
-  <p>U bent hier:</p>
-
+  <p>{{ title }}</p>
   <ol>
-    <li><a href="#">Zoeken</a></li>
-    <li><a href="#">Zoekresultaten</a></li>
-    <li><a href="#">Regeling</a></li>
-    <li>Informatie</li>
+    {{#each breadcrumbs}}
+    <li><a href={{ this.path }}>{{ this.label }}</a></li>
+    {{/each}}
+    <li>{{ last }}</li>
   </ol>
 </div>

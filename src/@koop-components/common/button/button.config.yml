@@ -1,10 +1,17 @@
----
 title: Button
 status: prototype
 default: Ghost button
 context:
   text: Knop
   action: http://www.google.nl
+  anchor: false
+  button: true
+  iconButton: false
+  inputButton: false
+  inputSubmit: false
+  buttonWithDivider: false
+  type: submit
+  disabled: ''
 variants:
   - name: standard
     status: ready
@@ -21,6 +28,11 @@ variants:
     context:
       text: Kleine knop
       modifier: button--smaller
+  - name: inversed
+    status: ready
+    context:
+      text: Diapositieve knop
+      modifier: button--inversed
   - name: large
     status: ready
     context:
@@ -43,14 +55,33 @@ variants:
       modifier: button--icon-top
   - name: icon down
     status: ready
-    label: icon down
+    label: Icon down
     context:
       text: Icoon down
       modifier: button--icon-down
   - name: Icon hamburger
     status: ready
-    label: icon hamburger
+    label: Icon hamburger
     context:
       text: Menu
       modifier: button--icon-hamburger
-
+  - name: Icon download
+    status: ready
+    label: icon download
+    context:
+      text: Menu
+      modifier: button--primary button--icon-download-white
+  - name: Icon Refresh documents
+    status: ready
+    label: icon refresh document
+    context:
+      text: Ververs documentenlijst
+      modifier: button--primary button--icon-refreshdocuments-white
+  - name: Icon with divider
+    status: wip
+    label: Icon with divider
+    context:
+      text: Button tekst
+      modifier: button--primary button--divider-icon
+      button: false
+      buttonWithDivider: true

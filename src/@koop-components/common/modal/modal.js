@@ -69,12 +69,16 @@
   onl.handle({
     'open-modal': function( element ) {
       var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
+      var body = document.getElementsByTagName('body');
+      body[0].classList.add('no-scroll');
 
       modal.open( modalElement );
       modal.setHeight ( modalElement );
     },
     'close-modal': function( element ) {
       var modalElement;
+      var body = document.getElementsByTagName('body');
+      body[0].classList.remove('no-scroll');
 
       if ( element.getAttribute( 'data-modal' ) ) {
         modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
@@ -86,5 +90,4 @@
       modal.close( modalElement );
     }
   });
-
 })();

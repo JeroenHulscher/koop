@@ -11,6 +11,7 @@
   opacity: 1;
   transition: opacity .5s;
   z-index: 2;
+  cursor: default;
 
   &__inner {
     max-width: 32em;
@@ -23,7 +24,7 @@
 
   &__content {
     overflow: auto;
-    padding-right: 1em;
+    padding: 0 1em;
 
     ol {
       padding-left: 1em;
@@ -55,6 +56,7 @@
     border: none;
     background-color: transparent;
     text-indent: -9999em;
+    cursor: pointer;
     background: {
       image: $modalCloser;
       repeat: no-repeat;
@@ -63,6 +65,24 @@
 
     &:hover {
       background-image: $modalCloserHover;
+    }
+  }
+
+  &--tooltip {
+    background: none;
+
+    .modal__inner {
+      border-radius: 6px;
+
+      .modal__content {
+        background: $white;
+        padding: 0;
+      }
+
+      .modal__close {
+        top: 1em;
+        right: 1em;
+      }
     }
   }
 }

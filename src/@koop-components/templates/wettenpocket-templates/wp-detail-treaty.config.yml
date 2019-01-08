@@ -1,0 +1,64 @@
+title: Wettenpocket Detail Verdragen
+label: Wettenpocket Detail Verdragen
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: 'templates-wp-homepage'
+        text: Home
+      - url: '#'
+        text: Wettenpockets aanmaken
+
+  navlistContext:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="templates-wp-search">Zoek wettenpockets</a>
+      - text: <a href="templates-wp-overview">Recent gepubliceerde wettenpockets</a>
+      - text: <a href="#">Veel gedownloade wettenpockets</a>
+      - text: <a href="#">Veelgestelde vragen</a>
+
+  navPocket:
+    modifier: 'list--linked list--unstyled'
+    items:
+      - text: <a href="templates-wp-overview">Overzicht</a>
+      - text: <a href="#">Notities</a>
+
+  definitionContext:
+    modifier: 'columns--data'
+    divContainer: true
+    items:
+      - type: Onderwerp
+        value: Wegverkeer
+      - type: Publicist
+        value: Ministerie van Buitenlandse Zaken
+      - type: Publicatiedatum
+        value: 1-12-2018
+      - type: Downloads
+        value: 25
+
+  tableTreatyContext:
+    caption: ""
+    modifier: table--striped table--condensed
+    items:
+      - item:
+        - column:
+          type: Titel
+          value: '<a href="#">Wijzigingen van Bijlage 10 van de Douaneovereenkomst inzake het internationaal vervoer van goederen onder dekking van carnets TIR (TIR-Overeenkomst)</a><br><i>Plaats totstandkoming : Genève, 04-02-2005</i>'
+      - item:
+        - column:
+          type: Titel
+          value: '<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="1">
+                    <a href="#">Verdrag betreffende een Europees voertuig- en rijbewijsinformatiesysteem (EUCARIS)</a>
+                    <br><i>Plaats totstandkoming: Luxemburg, 29-06-2000</i>
+                    <div class="collapsible__header">
+                      <a href="#1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible">Eerdere wijzigingen</a>
+                    </div>
+                    <div class="collapsible__content" id="collapsible-content-1">
+                      <a href="#">Protocol tot wijziging van het Verdrag betreffende een Europees voertuig- en rijbewijsinformatiesysteem (EUCARIS) (Luxemburg, 08-06-2017)</a>
+                    </div>
+                  </div>'
+      - item:
+        - column:
+          type: Titel
+          value: '<a href="#">Overeenkomst inzake samenwerking in procedures wegens inbreuken op de verkeerswetgeving en bij de tenuitvoerlegging van ter zake opgelegde geldelijke sancties</a><br><i>Plaats totstandkoming : Luxemburg, 28-04-1999</i>'

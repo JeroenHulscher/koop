@@ -3,6 +3,10 @@
   > ul:first-child {
     padding: 0;
 
+    >li:first-child {
+      margin-top: 0;
+    }
+
     > li {
       margin-bottom: .5em;
       padding-bottom: .5em;
@@ -20,10 +24,8 @@
   }
 
   .result--title {
-    font: {
-      size: 1em;
-      weight: 700;
-    }
+    font-size: 1rem;
+    font-weight: 700;
     color: $darkBlue;
     text-decoration: none;
     display: block;
@@ -37,7 +39,7 @@
 
     li {
       list-style: none;
-      font-size: 85%;
+      font-size: .875rem;
     }
 
     span {
@@ -58,8 +60,8 @@
     }
 
     .result--title {
-      font-size: 1.25em;
-      margin: 0 0 -.5em 0;
+      font-size: 1.25rem;
+      margin: 0;
     }
 
 

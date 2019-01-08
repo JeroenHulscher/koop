@@ -5,7 +5,7 @@ ul {
 td ul {
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  list-style: none;
 
   li {
     margin: 0;
@@ -28,13 +28,9 @@ ol {
       list-style-type: lower-roman;
     }
   }
-
-
 }
 
 .facet--heading {
-  font-size: 1em;
-  font-family: $defaultHeadingFontStack;
   margin: 0;
   padding: 0 0 0 .75em;
   background: {
@@ -54,10 +50,12 @@ ol {
   padding-left: 0;
   margin-top: 0;
   margin-left: 0;
+
   ul {
     list-style: none;
     padding-left: 1em;
   }
+
   .list--unstyled {
     padding-left: 0;
   }
@@ -85,8 +83,6 @@ ol {
         text-decoration: underline;
       }
     }
-
-
   }
 }
 
@@ -125,6 +121,17 @@ ol {
     left: -1.5em;
     width: 1.5em;
   }
+
+  // Different indentation if the list is more than once.
+  .list--law__unordered .list--law__unordered {
+    span:not(.highlight) {
+      left: -2.5em;
+    }
+
+    p {
+      margin-left: 2.5em;
+    }
+  }
 }
 
 .list--facet {
@@ -136,8 +143,7 @@ ol {
     text-decoration: none;
     display: inline-block;
     line-height: 1;
-    padding: .25em;
-
+    padding: .25em 0;
 
     span {
       display: inline-block;
@@ -178,7 +184,7 @@ ol {
   li {
     display: inline-block;
     color: $darkerGrey;
-    font-size: 90%;
+    font-size: .875rem;
     margin: 0 .5em 0 0;
     padding: 0 .5em 0 0;
 
@@ -243,7 +249,62 @@ ol {
   li {
     @media ( min-width: 50em ) {
       display: inline;
+      margin-right: 1em;
     }
+
     list-style: none;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.list {
+
+  &--legenda {
+    padding-left: 0;
+    margin-bottom: 1em;
+  }
+
+  &--legenda &__item {
+    border-bottom: 1px solid $lightGrey;
+    font-style: italic;
+    font-size: 1.125rem;
+    padding: 0.75em 0 0.75em 4.5em;
+    list-style: none;
+    color: $darkBlue;
+    position: relative;
+    word-break: break-all;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 1em;
+      width: 1em;
+      height: 1em;
+      border-radius: 100%;
+      background: $darkBlue;
+
+      &.color1 {
+        background: $lightBlue;
+      }
+
+      &.color2 {
+          background: $darkerGrey;
+      }
+    }
+  }
+
+  @media (min-width: 50em) {
+    &--columns-4 &__item {
+      width: 23%;
+      margin-right: 2%;
+      display: inline-block;
+    }
+
+    &--columns-4 &__item:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }

@@ -102,6 +102,23 @@
 
   onl.decorate({
 
+    'submitlistener': function( element ) {
+
+      function addLoadingStateClassToForm(){
+        element.classList.add( 'is-submitted' );
+      }
+      if ( element.addEventListener ) {
+        element.addEventListener( 'submit', function( evt ) {
+          addLoadingStateClassToForm();
+        }, true );
+      } else if ( element.attachEvent ) {
+        element.attachEvent( 'onsubmit', function( evt ) {
+          addLoadingStateClassToForm();
+        });
+      }
+
+    },
+
     'check-all': function( element ) {
       var elements = element.getAttribute('data-for');
 

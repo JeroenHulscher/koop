@@ -1,0 +1,31 @@
+.result--list {
+  > ul,
+  > ul:first-child {
+    background: $lightBlue;
+    padding: 1.25em 1.25em 1px; // 1px fix needed for padding-flow bug;
+    margin: 0 0 1.25em 0;
+
+    > li {
+      background: white;
+      list-style: none;
+      padding: 1.25em;
+      margin-bottom: 1.25em;
+      border: 0;
+    }
+
+  }
+  .result--actions {
+    right: 1em;
+    top: 1em;
+  }
+
+  @media (min-width: 50em) {
+    &--wide {
+      > ul > li,
+      > ul:first-child > li {
+        padding: 1.25em 4em;
+      }
+    }
+  }
+}
+

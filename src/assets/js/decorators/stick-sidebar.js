@@ -66,16 +66,17 @@
       button.setAttribute( 'data-toggle-open', labels.open );
       button.setAttribute( 'data-toggle-close', labels.close );
 
+
       // set initial state
-      button.setAttribute( 'aria-expanded', 'true' );
+      button.setAttribute( 'aria-expanded', 'false' );
       button.textContent = labels.close;
 
       el.before( button );
 
       // apply first time
-      if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
-        toggle( button );
-      }
+      // if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
+      //   toggle( button );
+      // }
     },
     'stick-sidebar': function( el ) {
       footer = onl.dom.$( '.footer' )[0];
@@ -116,5 +117,4 @@
       toggle( el );
     }
   });
-
 })();

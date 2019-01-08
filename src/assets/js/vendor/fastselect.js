@@ -332,6 +332,9 @@
             text: $choice.attr('data-text')
           }, $choice);
 
+          // set focus on inputfield;
+          $(selectorFromClass(options.queryInputClass)).focus();
+
         });
 
       } else {

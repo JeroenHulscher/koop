@@ -6,7 +6,6 @@
   color: $buttonTextColor;
   display: inline-block;
   font-family: inherit;
-  font-size: inherit;
   font-weight: 700;
   line-height: 1;
   margin: 0 .5em .5em 0;
@@ -21,7 +20,8 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  font-size: 1em;
+  font-size: 1rem;
+  cursor: pointer;
 
   &[hidden] {
     display: none;
@@ -97,6 +97,15 @@
     }
   }
 
+  &--inversed {
+    background-color: $darkGrey;
+    color: $white;
+  }
+
+  &--small {
+    font-size: .75rem;
+  }
+
   &--share {
     background: {
       color: $darkBlue;
@@ -159,6 +168,27 @@
     padding-left: 1.5em;
   }
 
+  &--icon-upload {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $uploadIcon;
+    padding-left: 3em;
+  }
+
+  &--icon-download {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIcon;
+    padding-left: 3em;
+  }
+
+  &--icon-download-white {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIconWhite;
+    padding-left: 3em;
+  }
+
   &--icon-hamburger {
     background-position: .75em 50%;
     background-repeat: no-repeat;
@@ -167,5 +197,64 @@
     padding-left: 2em;
   }
 
+  &--icon-refreshdocuments {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $refreshDocument;
+    background-size: 1.5em;
+    padding-left: 3em;
+  }
 
+  &--icon-refreshdocuments-white {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $refreshDocumentWhite;
+    background-size: 1.75em;
+    padding-left: 3em;
+  }
+
+  &--divider-icon {
+    background-image: $refreshDocumentWhite;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.75em;
+    background-position: right .75em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid $white;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+
+  &--divider-icon-draw {
+    background-image: $drawIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid $white;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+
+  &--divider-icon-map {
+    background-image: $mapIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid $white;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
 }

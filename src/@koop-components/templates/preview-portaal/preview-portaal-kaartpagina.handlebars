@@ -1,0 +1,23 @@
+{{ render "@header" headerContext merge="true" }}
+
+<div class="container container--centered row k-future">
+  <h1>Informatiepagina van Informatie Object 'Grote Rivieren Bergend deel'</h1>
+  <div style="width:100%;height:600px;margin: 0 0 32px 0;background:#f1f1f1;border:1px solid #c2c2c2;"></div>
+
+  <h2 class="u-nomargin">Legenda</h2>
+  <div class="container__row">
+    {{ render "@list--legenda" legendaContext }}
+  </div>
+  {{ render "@resultlist" resultlistContext }}
+
+  {{!-- <p>De gegevens van dit informatie object kunnen gedownload worden met de volgende hyperlink:
+    <br>
+    <a href="https://officielebekendmakingen.nl/officielepublicaties/stcrt/2018/stcrt-2018-13949/1/html/stcrt-2018-13949_1.gml">https://officielebekendmakingen.nl/officielepublicaties/stcrt/2018/stcrt-2018-13949/1/html/stcrt-2018-13949_1.gml</a>
+  </p>
+  <p>De gegevens van dit informatie object kunnen bekeken met het programma QGis, zie
+    <a href="https://www.qgis.org">https://www.qgis.org</a>
+  </p> --}}
+
+</div>
+
+{{ render "@footer" }}

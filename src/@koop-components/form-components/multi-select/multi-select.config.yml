@@ -1,29 +1,46 @@
 ---
 label: Multi select
-status: prototype
+status: ready
 context:
   id: 1
-  fieldLabel: Zoeken in verzamelingen
+  placeholder: Zoeken in verzamelingen
+  name: verzamelingen
+  label: Maak een keuze
+  helptext: Gebruik de TAB toets, of de pijl beneden toets om toegang te krijgen tot de suggesties. Druk om ENTER om uw keuze te bevestigen.
   visuallyHideLabel: false
   fieldInstruction: ''
   regularFormElement: true
-  optionGroups:
-    - label: Overheidsthema's
-      groupId: optiongroup-1
+  options:
+    - text: Belastingen
+    - text: Bouwen, wonen en leefomgeving
+    - text: Cultuur, sport, vrije tijd
+    - text: Defensie
+    - text: Economie en ondernemen
+    - text: Belastingen 4
+    - text: Bouwen, wonen en leefomgeving 4
+    - text: Cultuur, sport, vrije tijd 4
+    - text: Defensie 4
+    - text: Economie en ondernemen 4
+    - text: Belastingen 3
+    - text: Bouwen, wonen en leefomgeving 3
+    - text: Cultuur, sport, vrije tijd 3
+    - text: Defensie 3
+    - text: Economie en ondernemen 3
+    - text: Belastingen 2
+    - text: Bouwen, wonen en leefomgeving 2
+    - text: Cultuur, sport, vrije tijd 2
+    - text: Defensie 2
+    - text: Economie en ondernemen 2
+  categories:
+    - title: Swedish Cars
       options:
-        - text: Belastingen
-        - text: Bouwen, wonen en leefomgeving
-        - text: Cultuur, sport, vrije tijd
-        - text: Defensie
-        - text: Economie en ondernemen
-    - label: Rechtsgebieden
-      groupId: optiongroup-2
+        - label: Volvo
+          value: volvo
+        - label: Saab
+          value: Saab
+    - title: German Cars
       options:
-        - text: Agrarisch recht
-        - text: Arbeidsrecht
-        - text: Pensioenrecht
-    - label: Soorten regelingen
-      groupId: optiongroup-3
-      options:
-          - text: Wetten
-          - text: Rijkswetten
+        - label: Mercedes
+          value: mercedes
+        - label: Audi
+          value: audi

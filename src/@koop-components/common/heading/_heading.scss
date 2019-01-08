@@ -17,42 +17,59 @@ h6,
 
 h1,
 .h1 {
-  font: {
-    size: 2em;
-    weight: 700;
-
-  }
   color: $darkBlue;
-  margin-top: .5em;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 0;
+  margin-top: .5em;
+
+  &--large {
+    font-size: 2.75rem;
+  }
 
   &.centered--title {
     text-align: center;
     display: block;
     margin: 1em 0;
   }
+
+  &__sub {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.675rem;
+  }
+
 }
 
 h2,
 .h2 {
-  font: {
-    size: 1.25em;
-    weight: 700;
-  }
   color: $darkBlue;
+  font-size: 1.25rem;
+  font-weight: 700;
   margin: 1em 0;
 
-  span,
+  .columns--sticky-sidebar__sidebar & span,
   a.question-explanation-link,
   p {
     color: $black;
     display: block;
-    font-size: .8em;
+    font-size: .8125rem;
+    font-weight: 400;
+  }
+
+  &--large {
+    font-size: 1.5rem;
+  }
+
+  &__sub {
+    display: inline-block;
+    font-size: 0.675rem;
+    font-style: italic;
     font-weight: 400;
   }
 
   &.title--underlined {
-    font-size: 1.15em;
+    font-size: 1.125em;
     border-bottom: 1px solid $darkBlue;
     margin: 0.5em 0;
     position: relative;
@@ -70,28 +87,20 @@ h2,
 
 h3,
 .h3 {
-  font: {
-    size: 1em;
-    weight: 700;
-  }
   color: $darkBlue;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 h4,
 .h4 {
-  font: {
-    size: 1em;
-    weight: 700;
-  }
-  color: $black;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 h5,
 .h5 {
-  font: {
-    size: 1em;
-    weight: 400;
-  }
-  color: $black;
+  font-size: 1rem;
+  font-weight: 400;
 }
 

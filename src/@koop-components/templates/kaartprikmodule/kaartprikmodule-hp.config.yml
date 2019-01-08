@@ -1,0 +1,44 @@
+title: KPM Startscherm
+label: KPM Startscherm
+context:
+  inputAutocompleteContext:
+    id: 2
+    modifier: input-text input-text--search
+    placeholder: Zoek een adres
+    name: verzamelingen
+    hasHiddenField: true
+    hiddenFieldClass: field-class
+    visuallyHideLabel: false
+    fieldInstruction: ''
+    regularFormElement: true
+    items:
+      - item: Gemeente Vlaardingen
+        code: ABC
+      - item: Gemeente Schiedam
+        code: DEF
+      - item: Gemeente Rotterdam
+        code: XYZ
+      - item: Voorburg
+        code: 123
+  headerContext:
+    youAreHere:
+    - text: Kaartprikmodule
+  breadcrumbContext:
+    last: Kaartprikmodule
+    breadcrumbs:
+      - label: Home
+        path: "#"
+  searchText: Om een locatie toe te voegen aan uw lijst kunt u een adres invoeren of een locatie selecteren op de kaart.
+  areaContext:
+    modifier: icon--arrow-cta-left
+    text: Bekijk gebieden
+  drawButton:
+    text: Object tekenen
+    modifier: button--primary button--divider-icon
+    button: false
+    buttonWithDivider: true
+  selectButton:
+    text: Object selecteren
+    modifier: button--primary button--divider-icon
+    button: false
+    buttonWithDivider: true

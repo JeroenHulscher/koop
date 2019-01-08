@@ -1,0 +1,13 @@
+.combobox {
+
+  &-suggestions > div:not(:empty) {
+    border-left: 2px solid $darkBlue;
+    border-right: 2px solid $darkBlue;
+    border-bottom: 2px solid $darkBlue;
+    top: 2.55em;
+  }
+  &-suggestion {
+    padding: .409em .5em;
+    font-size: 1rem;
+  }
+}

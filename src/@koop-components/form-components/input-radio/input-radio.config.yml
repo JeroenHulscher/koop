@@ -4,6 +4,7 @@ status: ready
 context:
   fieldLabel: Geldigheid
   name: geldigheid
+  explanation: false
   options:
     - id: 1
       text: Laatste versies
@@ -12,7 +13,7 @@ context:
     - id: 3
       text: Geldig op <input type="date" class="input input--date input--medium" id="input--12" placeholder="mm-dd-jj" />
 variants:
-  - name: inline radiogroup
-    label: inline radiogroup
+  - name: Inline radiogroup
+    label: Inline radiogroup
     context:
       modifier: inline-group

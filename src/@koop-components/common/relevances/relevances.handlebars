@@ -1,26 +1,16 @@
 <div class="relevances">
-
-  <a href="#">Toon relevante elementen (4)</a>
-
+  <a href="#">{{ description }} ({{ listItems.length }})</a>
   <fieldset class="form__element checkboxgroup">
-    <label for="option-1">
-      <input type="checkbox" id="option-1">Artikel 1.1
-    </label>
-    <label for="option-2">
-      <input type="checkbox" id="option-2">Artikel 1.2
-    </label>
-    <label for="option-3">
-      <input type="checkbox" id="option-3">Artikel 1.3
-    </label>
-    <label for="option-4">
-      <input type="checkbox" id="option-4">Artikel 1.4
-    </label>
+    {{#each listItems}}
+      <input type="checkbox" id="option-{{increment @index 1}}"/>
+      <label for="option-{{increment @index 1}}">
+        {{ this }}
+      </label>
+    {{/each}}
   </fieldset>
-
   <ul class="list--metadata">
-    <li>Wetten</li>
-    <li>Regelgeving</li>
-    <li>Beleid</li>
+    {{#each metadataItems}}
+    <li>{{ this }}</li>
+    {{/each}}
   </ul>
-
 </div>

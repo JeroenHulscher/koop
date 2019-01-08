@@ -7,7 +7,7 @@ a {
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
-  &[href*="//"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl/"]):not([href*=".officielebekendmakingen.nl/"]),
+  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl/"]):not([href*=".officielebekendmakingen.nl/"]),
   &[rel="external"] {
     padding-right: 1.25em;
     margin-right: .25em;
@@ -39,9 +39,8 @@ a {
 
   &.cta {
     text-decoration: none;
-    margin: 0 0 0 1em;
     padding: 0 2em 0 0;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 700;
     background: {
       repeat: no-repeat;
@@ -49,12 +48,17 @@ a {
       position: right 3px;
       size: 1em;
     }
+
+    &--left {
+      padding: 0 0 0 2em;
+      background-position: left 3px;
+    }
   }
 
   &.cta__backwards {
     text-decoration: none;
     padding: 0 0 0 2em;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 700;
     background: {
       repeat: no-repeat;
@@ -69,9 +73,31 @@ p a {
   text-decoration: underline;
 }
 
-
 .link {
 
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &--down {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartDownIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
+  &--up {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartUpIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
   &--forward {
     background: {
       position: 0 center;
@@ -90,5 +116,4 @@ p a {
     }
     padding-left: 1em;
   }
-
 }

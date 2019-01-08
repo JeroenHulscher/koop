@@ -1,0 +1,123 @@
+.columns-map {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 0 !important;
+  height: 100vh;
+
+  @media (min-width: 50em) {
+    flex-direction: row;
+
+    &.collapsed {
+      .sidebar-column {
+        left: -33.6%;
+        transition: left $fastEaseInOut;
+
+        .sidebar-column-content {
+          visibility: hidden;
+        }
+      }
+
+      .main-column {
+        min-width: 100%;
+        max-width: 100%;
+
+        .trigger-collapse {
+          left: 0;
+          background-image: $dartRightIcon;
+          transition: left $fastEaseInOut;
+        }
+      }
+    }
+
+    .sidebar-column {
+      min-width: 27em;
+      max-width: 27em;
+      background: $white;
+      box-shadow: 1px 0px 15px 0px rgba(0,0,0,0.20);
+      position: absolute;
+      height: 100%;
+      left: 0;
+      overflow-y: scroll;
+      transition: left $fastEaseInOut;
+
+      .sidebar-column-content {
+        visibility: visible;
+
+        .content-item {
+          cursor: pointer;
+          border: 2px solid transparent;
+
+          &.active {
+            border: 2px solid $darkBlue;
+          }
+        }
+
+        .table--small {
+          table-layout: fixed;
+
+          th,
+          td {
+            word-break: break-all;
+          }
+        }
+      }
+    }
+
+    .main-column {
+      width: 100%;
+      position: relative;
+
+      #draw-button {
+        position: absolute;
+        top: 1em;
+        right: 14.5em;
+        z-index: 1;
+      }
+
+      #select-button {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        z-index: 1;
+      }
+
+      .modal--tooltip {
+        height: auto;
+        width: auto;
+        max-width: 20em;
+        top: 5em;
+        right: .7em;
+        bottom: auto;
+        left: auto;
+        position: absolute;
+
+        .modal__inner {
+          box-shadow: 0 0 14px 0 rgba(0,0,0,0.17);
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .trigger-collapse {
+        background: $white;
+        height: 2.5em;
+        width: 1.5em;
+        position: absolute;
+        top: calc(50% - 40px);
+        left: 27em;
+        border-radius: 0 6px 6px 0;
+        background-image: $dartLeftIcon;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: .75em;
+        cursor: pointer;
+        transition: left $fastEaseInOut;
+        z-index: 2;
+      }
+    }
+  }
+}

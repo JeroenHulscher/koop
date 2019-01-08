@@ -1,10 +1,36 @@
 .well {
   border-radius: .5em;
-  background: $bgBlue;
+  background: $lightBlue;
   padding: 1em;
   margin: 0 0 2em 0;
   @extend .group;
 
+  &.transitional {
+    background: $lightGreen;
+    color: $darkBlue;
+  }
+
+  &__intro {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: $darkBlue;
+  }
+
+  &--secondary {
+    background: $lightGreen;
+    color: $darkBlue;
+  }
+
+  &--success {
+    background: $lightGreen;
+  }
+  &--failed {
+    background: $lighterRed;
+  }
+
+  &--pageheader {
+    padding: 2.75em 23%;
+  }
   &--pageblock {
     padding: 2.75em 10%;
 
@@ -23,6 +49,23 @@
         }
       }
     }
+
+    // fixme: remove, if margin is removed from main button component;
+    button,
+    a.button {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+  }
+
+  a.button {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .p--accent {
+    font-size: 2rem;
   }
 
   &--linkContainer {

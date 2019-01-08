@@ -9,7 +9,7 @@ context:
       value: In onderzoek
       count: 121
       group: status
-      checked: true
+      checked: checked
     - id: facet-03
       value: Niet beschikbaar
       count: 50
@@ -17,4 +17,4 @@ context:
     - id: facet-04
       value: Gepland
       count: 25
-      group: status
+      group: status 

@@ -18,41 +18,46 @@
   {{{ yield }}}
 
   <script>
+
     (function () {
-      const links = Array.from(document.querySelectorAll('link[title]'));
-      const styles = Array.from(new Set(links.map(link => link.title)));
-      const select = document.createElement('select');
-      let title = localStorage.getItem('title');
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
 
       function selectStyle(title) {
-        links.forEach(link => {
-          link.disabled = true;
-          link.disabled = link.title !== title;
-        });
-
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
         localStorage.setItem('title', title);
       }
 
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
 
-        if (title) {
-          selectStyle(title);
-        }
-        select.setAttribute('style', 'position: absolute; bottom: 1em; right: 1em; width: 150px;');
-        for (let i = 0; i < styles.length; i++) {
-          const option = document.createElement('option');
-          option.text = 'CSS: ' + styles[i];
-          option.value = styles[i];
-          option.selected = styles[i] === title;
-          select.add(option);
-        }
-        document.body.appendChild(select);
-
-        select.addEventListener('change', function (event) {
-          title = event.target.options[event.target.selectedIndex].value;
-          selectStyle(title);
-        });
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
 
     }());
+
   </script>
 
   <script src="{{~ path '/js/main.js' ~}}"></script>

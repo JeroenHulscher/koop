@@ -1,0 +1,11 @@
+.modal {
+  &__content {
+    padding: 1em;
+    background: $bgBlue;
+  }
+
+  &__close {
+    right: 2em;
+    top: 2em;
+  }
+}
