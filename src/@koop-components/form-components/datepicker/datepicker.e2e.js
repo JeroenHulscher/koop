@@ -31,8 +31,8 @@ describe('Datepicker', function() {
 
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
-
-  it('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
+/*
+  xit('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
     var datepickerInput;
     var datepicker;
 
@@ -51,7 +51,7 @@ describe('Datepicker', function() {
     expect('10').toEqual(browser.driver.switchTo().activeElement().getText());
   });
 
-  it('allows you to switch months using the arrow keys', function() {
+  xit('allows you to switch months using the arrow keys', function() {
     var datepicker;
     var month;
 
@@ -78,7 +78,7 @@ describe('Datepicker', function() {
       })
     });
   });
-
+*/
   it('closes when pressing escape after navigating using the keyboard', function() {
     var datepicker;
     var month;
