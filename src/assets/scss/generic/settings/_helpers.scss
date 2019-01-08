@@ -7,6 +7,17 @@
   clear: both;
 }
 
+.vet {
+  font-weight: bold;
+}
+.cur {
+  font-style: italic;
+}
+.vetcur {
+  font-style: italic;
+  font-weight: bold;
+}
+
 .u-nomargin {
   margin: 0 !important;
 }
