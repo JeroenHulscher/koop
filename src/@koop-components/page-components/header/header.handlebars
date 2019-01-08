@@ -2,9 +2,6 @@
 
   <div class="header__start">
     <div class="container">
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
-      {{> @logo }}
-
       {{#if skipLinks }}
       <div class="skiplinks">
         {{#each skipLinks }}
@@ -12,6 +9,11 @@
         {{/each}}
       </div>
       {{/if}}
+
+      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
+      {{> @logo }}
+
+
 
       {{#if metaLinks }}
       <div class="header__meta">
