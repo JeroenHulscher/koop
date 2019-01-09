@@ -15,9 +15,9 @@
     this.config = [];
 
     this.config.placeholder = this.element.getAttribute( 'data-decorator-placeholder' );
-    this.config.searchPlaceholder = 'Search options';
-    this.config.noResultsText = 'No results';
-    this.config.userOptionPrefix = 'Add ';
+    this.config.searchPlaceholder = 'Zoek opties';
+    this.config.noResultsText = 'Geen resultaten';
+    this.config.userOptionPrefix = 'Toevoegen ';
 
     this.init();
   };
