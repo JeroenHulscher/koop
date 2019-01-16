@@ -13,6 +13,8 @@
 
 .ui-datepicker {
 
+  max-width: 18em;
+
   &-summary {
     background: $datepickerHeaderBackgroundColor;
     color: $datepickerHeaderTextColor;
