@@ -16,13 +16,21 @@
 
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
+    } else {
+      $(element).on("change", function () {
+        this.setAttribute(
+          "data-date",
+          moment(this.value, "YYYY-MM-DD")
+            .format(this.getAttribute("data-date-format"))
+        )
+      }).trigger("change")
     }
   };
 
   datepicker.prototype.initDatepicker = function(element) {
     // datepicker config
-    // todo: make customizable.
     $(element).attr('type', 'text').datepicker({
+      dateFormat: this.config.dateFormat || 'dd-mm-yy',
       showOn: 'button',
       changeYear: true,
       buttonImageOnly: false,
@@ -32,12 +40,12 @@
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       showButtonPanel: true,
       closeText: 'Sluiten',
-      dateFormat: this.config.dataFormat || 'dd-mm-yy',
       onClose: this.removeAria.bind(this),
       beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
       }
     });
+    $(element).val($(element).data('date'));
 
     $('.ui-datepicker-trigger').attr('aria-describedby', 'datepickerLabel');
 
