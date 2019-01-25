@@ -1,4 +1,4 @@
-<form class="input-filebox" action="" method="POST" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" {{#if ajax}}, "ajax": "/preview-portaal/upload"{{/if}} }'>
+<form class="input-filebox" action="" method="POST" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" {{#if ajax}}, "ajax": "/preview-portaal/upload"{{/if}}, "messageModal": ".js-input-filebox__messagetrigger" }'>
   <div class="input-dragbox js-input-dragbox">
     <div class="input-dragbox__content">
       <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
@@ -17,8 +17,23 @@
     </div>
     <div class="input-dragbox__msg js-input-dragbox__msg"><span></span><p><a href='#' class='js-reset'>Upload een nieuw bestand</a></p></div>
   </div>
-
 </form>
+<p>
+  <button class="js-input-filebox__messagetrigger" type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1"
+    class="button" hidden>Open modal</button>
+</p>
+<div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
+  <div class="modal__inner">
+    <div class="modal__content align-center">
+      <p class="p p--accent"><i>Upload successvol</i></p>
+      <h2 class="h1">Uw document wordt verwerkt</h2>
+      <p>Let op: bij het uploaden van (zeer) grote bestanden kan de verwerking van het bestand enige tijd duren.</p>
+    </div>
+    <button type="button" data-handler="close-modal" class="modal__close">
+      <span class="visually-hidden">sluiten</span>
+    </button>
+  </div>
+</div>
 
 {{#if ajax }}
   <h2>States:</h2>
@@ -47,7 +62,7 @@
       document.querySelector('.input-dragbox__msg span').innerHTML = "<p data-beforetext='Let op:'>Documenten van het format .docx kunnen niet geupload worden.</p>";
     });
     document.getElementById('success').addEventListener('click', function (e) {
-
+      document.querySelector('.js-input-filebox__messagetrigger').click();
       document.querySelector('.input-filebox').classList.remove('is-uploading');
       document.querySelector('.input-filebox').classList.remove('is-failed');
       document.querySelector('.input-filebox').classList.add('is-success');

@@ -160,7 +160,8 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
             this.ajax.upload.addEventListener( 'progress', function (e) { this.progressHandler(e); }.bind(this), false );
             this.ajax.upload.addEventListener( 'load', function (e) { this.loadHandler(e); }.bind(this), false );
             this.ajax.upload.addEventListener( 'error', function (e) { this.errorHandler(e); }.bind(this), false );
-            this.ajax.open( this.element.getAttribute( 'method' ), this.element.getAttribute( 'action' ), true );
+            // this.ajax.open( this.element.getAttribute( 'method' ), this.element.getAttribute( 'action' ), true );
+            this.ajax.open( this.config.ajax, this.element.getAttribute( 'action' ), true );
             this.ajax.send( ajaxData );
           } else {
             this.ajax = new Array({
@@ -185,17 +186,21 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
 
   inputfile.prototype.loadHandler = function (e) {
     this.element.classList.remove( 'is-uploading' );
+    var isSuccess;
+    if ( this.debug && this.ajax.responseText.success ) {
+      isSuccess = this.ajax.responseText.success;
+    } else {
+      var data = JSON.parse( this.ajax.responseText );
+      isSuccess = data.success;
+    }
     if (this.ajax.status >= 200 && this.ajax.status < 400 )
     {
-      if ( this.debug && this.ajax.responseText.success ) {
-        this.element.classList.add( this.ajax.responseText.success == true ? 'is-success' : 'is-error' );
-        this.responseMsg.innerHTML = this.ajax.message;
-      } else {
-        var data = JSON.parse( this.ajax.responseText );
-        this.element.classList.add( data.success == true ? 'is-success' : 'is-error' );
-        this.responseMsg.innerHTML = this.ajax.message;
+      this.element.classList.add( isSuccess == true ? 'is-success' : 'is-error' );
+      this.responseMsg.innerHTML = this.ajax.message;
+      if( isSuccess == true && this.config.messageModal ) {
+        // show modal;
+        document.querySelector(this.config.messageModal).click();
       }
-
     }
 
   };

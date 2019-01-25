@@ -2,6 +2,14 @@
   &__content {
     padding: 1em;
     background: $bgBlue;
+    color: $darkBlue;
+  }
+
+  &--wide &__inner {
+    max-width: 53em;
+  }
+  &--wide &__content {
+    padding-top: em(32);
   }
 
   &__close {

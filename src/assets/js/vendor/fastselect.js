@@ -794,10 +794,10 @@
     onItemCreate: null,
     onMaxItemsReached: null,
 
-    placeholder: 'Choose option',
-    searchPlaceholder: 'Search options',
-    noResultsText: 'No results',
-    userOptionPrefix: 'Add '
+    placeholder: 'Kies een optie',
+    searchPlaceholder: 'Zoek opties',
+    noResultsText: 'Geen resultaten',
+    userOptionPrefix: 'Toevoegen '
 
   };
 

@@ -5,7 +5,7 @@
   onl.decorate({
     'init-copydata': function( element ) {
       new copydata( element );
-    } 
+    }
   });
 
   var copydata = function( element ) {
@@ -24,13 +24,15 @@
     this.trigger.addEventListener( 'click', function( e ) { this.triggerCopy( e ); }.bind( this ), false );
   };
 
-  copydata.prototype.triggerCopy = function() {
+  copydata.prototype.triggerCopy = function(e) {
+    e.preventDefault();
     this.putValueInClipboard();
   };
 
   copydata.prototype.createAndPlaceTrigger = function() {
     this.trigger = document.createElement( 'a' );
     this.trigger.classList.add( this.config.triggerClass );
+    this.trigger.setAttribute('href', '#');
     this.trigger.innerText = this.config.triggerLabel;
     this.element.appendChild( this.trigger );
   };

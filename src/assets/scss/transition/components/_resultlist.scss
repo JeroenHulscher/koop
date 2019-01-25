@@ -8,7 +8,7 @@
     > li {
       background: white;
       list-style: none;
-      padding: 1.25em;
+      padding: 1.25em 1.25em 1px 1.25em;
       margin-bottom: 1.25em;
       border: 0;
     }
@@ -19,11 +19,16 @@
     top: 1em;
   }
 
+  .list--metadata {
+    padding-bottom: 1em;
+  }
+
   @media (min-width: 50em) {
     &--wide {
       > ul > li,
       > ul:first-child > li {
-        padding: 1.25em 4em;
+        padding-left: 4em;
+        padding-right: 4em;
       }
     }
   }
