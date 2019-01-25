@@ -88,6 +88,7 @@ fieldset {
 }
 
 .form {
+  text-align: left;
 
   &__row {
     margin-bottom: .5em;
@@ -103,6 +104,34 @@ fieldset {
 
   &--intro {
     border-bottom: 0;
+  }
+
+  &__label {
+    font-weight: bold;
+
+    .mandatory {
+      font-size: 0.8em;
+      font-weight: normal;
+      float: right;
+      position: relative;
+      top: 0.2em;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1.8rem;
+    color: $darkBlue;
+  }
+  &__button {
+    margin: 0;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    @media (min-width: 50em) {
+      width: auto;
+      display: inline-block;
+    }
   }
 }
 .form__element {

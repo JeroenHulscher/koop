@@ -1,0 +1,42 @@
+.jumbotron {
+  border-radius: .5em;
+  background: $lightBlue;
+  padding: 2.5em 1em;
+  margin: 0 0 2em 0;
+  text-align: center;
+  color: $darkBlue;
+  @extend .group;
+
+  @media (min-width: 50em) {
+    padding: 4.2em;
+  }
+
+  &__content {
+    max-width: em(620);
+    margin: 0 auto;
+  }
+
+  &__subheader {
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 0.2em;
+    @media (min-width: 50em) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__header {
+    margin-bottom: 0.25em;
+  }
+
+  &__intro {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 2em;
+    text-align: left;
+    @media (min-width: 50em) {
+      font-size: 1.4rem;
+    }
+  }
+
+}

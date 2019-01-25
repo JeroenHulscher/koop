@@ -1,0 +1,69 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+
+  <div class="jumbotron">
+
+    <div class="jumbotron__content">
+
+      <p class="jumbotron__subheader">Berichten over uw buurt</p>
+
+      <h1 class="jumbotron__header">Wat speelt er in úw buurt</h1>
+
+      <p class="jumbotron__intro">
+          Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
+      </p>
+
+      <form class="form">
+        <fieldset>
+          <legend class="visually-hidden">Zoek berichten</legend>
+          <div class="form__row form__row--large">
+            <div class="columns">
+              <div class="form__row form__row--medium">
+                <label class="form__label" for="">Postcode <span class="mandatory">Verplicht veld</span></label>
+                <input class="form__input" type="text" />
+              </div>
+              <div class="form__row form__row--medium">
+                <label class="form__label" for="">Huisnummer + toev.
+                </label>
+                <input class="form__input"type="text" />
+              </div>
+              <div class="form__row form__row--medium">
+                <label class="form__label" for="">Straal
+                  <span class="mandatory">Verplicht veld</span>
+                </label>
+                <div class="select-custom">
+                <select>
+                  <option>250m</option>
+                  <option>1km</option>
+                  <option>2km</option>
+                </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__row form__row--large">
+            <div class="columns">
+              <div class="u-order--m2">
+                <a href="#" class="cta cta--left">Zoek berichten op de kaart</a>
+              </div>
+              <div class="u-order--m1 align-right form__row form__row--medium">
+                <button type="submit" class="form__button button button--primary">Zoek berichten</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
