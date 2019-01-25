@@ -100,6 +100,10 @@ fieldset {
       margin-bottom: 1.5em;
     }
   }
+
+  &--intro {
+    border-bottom: 0;
+  }
 }
 .form__element {
   border: none;
