@@ -104,13 +104,14 @@
   }
 }
 
-// @media (max-width: 50em) {
+@media (min-width: 30em) {
   .u-order {
-    &--m1 {
+    &--d1 {
       order: 1;
     }
-    &--m2 {
+    &--d2 {
       order: 2;
     }
   }
-// }
+}
+

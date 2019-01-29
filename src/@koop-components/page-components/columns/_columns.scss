@@ -2,6 +2,15 @@ $gutter: 1em;
 
 .columns {
 
+  &--flex {
+    flex-direction: row;
+    display: flex;
+    > * {
+      flex: 0 0 100%;
+      margin-left: $gutter;
+    }
+  }
+
   @media ( min-width: 50em ) {
     flex-direction: row;
     display: flex;

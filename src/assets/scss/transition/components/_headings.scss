@@ -9,6 +9,16 @@ h1,
   font-size: 3rem;
 }
 
+h2,
+.h2 {
+  font-size: 2rem;
+}
+
 p {
   margin-bottom: em(16);
+
+  &.pre-h {
+    margin-bottom: 0.5em;
+    font-size: 1.25rem;
+  }
 }
