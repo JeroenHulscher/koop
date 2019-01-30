@@ -1,0 +1,45 @@
+---
+label: BodB - Searchresults
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  onderwerpContext:
+    options:
+    - id: checkbox-20
+      text: Aanlegvergunning
+      name: onderwerp
+    - id: checkbox-21
+      text: Apv vergunning
+      name: onderwerp
+    - id: checkbox-22
+      text: Bodembeschermingsvergunning
+      name: onderwerp
+    - id: checkbox-23
+      text: Bouwvergunning
+      name: onderwerp
+    - id: checkbox-24
+      text: Drank- en horecavergunning
+      name: onderwerp
+    - id: checkbox-25
+      text: Evenementenvergunning
+      name: onderwerp
+  publicatiedatumContext:
+    options:
+    - id: checkbox-1
+      text: Vandaag (1)
+      name: publicatie
+    - id: checkbox-2
+      text: Afgelopen week (21)
+      name: publicatie
+    - id: checkbox-3
+      text: Afgelopen maand (54)
+      name: publicatie
+    - id: checkbox-4
+      text: Afgelopen 2 maanden (98)
+      name: publicatie
+    - id: checkbox-5
+      text: Zelf een periode kiezen
+      name: publicatie
+

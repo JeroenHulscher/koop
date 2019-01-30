@@ -1,0 +1,7 @@
+---
+label: Input InputSearch
+status: ready
+context:
+  label: Uw e-mailadres
+  placeholder: Uw e-mailadres
+  button: Aanmelden

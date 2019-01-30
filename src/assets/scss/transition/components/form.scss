@@ -26,3 +26,14 @@ select {
     top: -1px;
   }
 }
+
+
+fieldset {
+  legend {
+    border-bottom: 0;
+    font-size: 1.5em;
+    width: auto;
+    display: inline-block;
+  }
+}
+

@@ -8,7 +8,19 @@
     padding: 2.5em 1em;
     text-align: center;
     @media (min-width: 50em) {
-      padding: 4.2em;
+      padding: 4.5em 2em;
+    }
+  }
+  &--highlight &__header {
+    margin-bottom: 0;
+    @media (min-width: 50em) {
+      // margin-bottom: .5em;
+    }
+  }
+  &--highlight &__intro {
+    text-align: center;
+    @media (min-width: 50em) {
+      text-align: left;
     }
   }
 
@@ -29,26 +41,44 @@
   }
 
   &__subheader {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-style: italic;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    line-height: 1.125em;
     @media (min-width: 50em) {
       font-size: 1.5rem;
+      line-height: 1.5em;
+      margin-bottom: 0.2em;
     }
   }
 
   &__header {
-    margin-bottom: 0.25em;
+    margin-bottom: .5em;
+
+    @at-root h2#{&} {
+      margin-bottom: 1em;
+      font-size: 1.75em;
+      line-height: 1.25em;
+
+      @media (min-width: 50em) {
+        font-size: 2em;
+        margin-bottom: .5em;
+      }
+    }
   }
 
   &__intro {
     font-size: 1rem;
-    line-height: 1.8rem;
-    // margin-bottom: 2em;
+    line-height: 1.3rem;
     text-align: left;
     @media (min-width: 50em) {
       font-size: 1.3rem;
+      line-height: 1.8rem;
     }
+  }
+
+  .button {
+    font-size: 1.25em;
   }
 
 }

@@ -33,6 +33,14 @@ variants:
         - text: 2e item
         - text: 3e item
         - text: 4e item
+  - name: Inline
+    context:
+      modifier: list--inline
+      items:
+        - text: 1e item
+        - text: 2e item
+        - text: 3e item
+        - text: 4e item
   - name: linklist
     context:
       modifier: list--linked

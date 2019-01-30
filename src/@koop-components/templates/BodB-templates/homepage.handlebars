@@ -15,7 +15,7 @@
 
         <h1 class="jumbotron__header">Wat speelt er in úw buurt</h1>
 
-        <div class="row row--medium">
+        <div class="row">
           <p class="jumbotron__intro">
               Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
           </p>
@@ -29,7 +29,7 @@
               <div class="columns">
                 <div class="form__row form__row--medium">
                   <label class="form__label" for="">Postcode <span class="mandatory">Verplicht veld</span></label>
-                  <input class="form__input" type="text" />
+                  <input class="form__input" type="text" placeholder="Bijv. 1337AA" />
                 </div>
                 <div class="form__row form__row--medium">
                   <label class="form__label" for="">Huisnummer + toev.
@@ -67,7 +67,7 @@
 
     </div>
   </div>
-  <div class="row row--small">
+  <div class="row">
     <div class="columns">
       <div class="column">
         <div class="column__content column__content--padded">
@@ -87,13 +87,12 @@
           </div>
         </div>
       </div>
-      <div style="background-color:#E4F0EF;"></div>
+      <div class="u-order--d2" style="background-color:#E4F0EF;">IMG</div>
     </div>
   </div>
-  <div class="row row--large">
+  <div class="row">
     <div class="columns">
-      <div style="background-color:#FFF8E1;"></div>
-      <div class="column">
+      <div class="column u-order--d1">
         <div class="column__content column__content--padded">
           <div class="jumbotron">
             <div class="jumbotron__content">
@@ -112,7 +111,7 @@
           </div>
         </div>
       </div>
-
+      <div style="background-color:#FFF8E1;">IMG</div>
     </div>
   </div>
 
@@ -127,18 +126,9 @@
 
         <form class="form">
           <fieldset>
-             {{ render "@pagesearch" }}
-          </fieldset>
-          <fieldset>
-            <legend class="visually-hidden">Zoek berichten</legend>
-            <div class="form__row ">
-              <label class="form__label" for="">Emailadres
-                <span class="mandatory">Verplicht veld</span>
-              </label>
-              <input class="form__input" type="text" />
-            </div>
-            <div class="form__row form__row--large">
-              <button type="submit" class="form__button button button--primary">Aanmelden</button>
+            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+            <div class="form__row">
+              {{ render "@input-inputsubmit" }}
             </div>
           </fieldset>
         </form>

@@ -1,0 +1,42 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">1</div>
+    <div class="column column--sidebar">
+      <div class="row--spacer">
+        <h2>Zoekfilter</h2>
+        <address>
+          Gouwestraat 26<br>
+          3522 CJ Utrecht<br>
+          Afstand: 250 meter
+        </address>
+        <ul class="list list--inline">
+          <li><a href="#">Wijzigen</a></li>
+          <li><a href="#">Bewaar deze zoekopdracht</a></li>
+        </ul>
+      </div>
+
+      <div class="form__row form__row--large">
+        <fieldset>
+          <legend>Publicatiedatum
+          {{render "@tooltip"}}
+          </legend>
+          {{render "@input-radio" publicatiedatumContext }}
+        </fieldset>
+      </div>
+
+      <fieldset>
+        <legend>Onderwerpen</legend>
+        {{render "@input-checkbox" onderwerpContext }}
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

@@ -30,6 +30,7 @@ ol {
   }
 }
 
+
 .facet--heading {
   margin: 0;
   padding: 0 0 0 .75em;
@@ -243,8 +244,9 @@ ol {
 }
 
 .list--inline {
-
-  text-align: right;
+  margin-left: 0;
+  padding-left: 0;
+  // text-align: right;
 
   li {
     @media ( min-width: 50em ) {

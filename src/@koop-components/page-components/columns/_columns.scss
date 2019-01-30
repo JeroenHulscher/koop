@@ -1,6 +1,8 @@
 $gutter: 1em;
 
 .row {
+  margin-bottom: 0.5em;
+
   &--medium {
     margin-bottom: 1em;
   }
@@ -45,9 +47,11 @@ $gutter: 1em;
   .column {
     &__content {
       &--padded {
-        padding-top: em(25);
-        padding-left: em(50);
-        padding-right: em(50);
+        @media ( min-width: 50em ) {
+          padding-top: em(25);
+          padding-left: em(50);
+          padding-right: em(50);
+        }
       }
     }
   }
@@ -88,7 +92,6 @@ $gutter: 1em;
 
       >*:last-child {
         padding-top: 1.65em;
-
       }
 
     }
@@ -96,6 +99,14 @@ $gutter: 1em;
     @media print {
       >*:last-child {
         display: none;
+      }
+    }
+  }
+
+  .column {
+    &--sidebar {
+      h2 {
+        margin-bottom: 0;
       }
     }
   }

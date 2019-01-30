@@ -6,7 +6,12 @@ h1,h2,h3,h4,p {
 h1,
 .h1 {
   margin-bottom: em(12);
-  font-size: 3rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  @media (min-width: 50em) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 h2,

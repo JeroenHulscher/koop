@@ -1,6 +1,6 @@
 ---
 label: BodB - Homepage
-status: WIP
+status: Ready
 context:
   header:
     file: logo.svg

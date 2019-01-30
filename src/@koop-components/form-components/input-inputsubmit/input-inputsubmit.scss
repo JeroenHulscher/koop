@@ -1,0 +1,31 @@
+.input-inputsubmit {
+  @media (min-width: 50em) {
+    display: flex;
+  }
+  .input {
+    height: 3em;
+    width: 100%;
+    margin-bottom: 1em;
+
+    @media (min-width: 50em) {
+      width: auto;
+      margin: 0;
+      flex: 1 0 8em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-right: 1em;
+    }
+  }
+  button,
+  .button {
+    width: 100%;
+    font-size: 1.125em;
+
+    @media (min-width: 50em) {
+      flex: 0 0 auto;
+      margin: 0;
+      width: auto;
+    }
+  }
+}
