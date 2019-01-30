@@ -1,5 +1,18 @@
 $gutter: 1em;
 
+.row {
+  &--medium {
+    margin-bottom: 1em;
+  }
+
+  &--large {
+    margin-bottom: 1.5em;
+  }
+  &--spacer {
+    margin-bottom: 2em;
+  }
+}
+
 .columns {
 
   &--flex {
@@ -27,6 +40,16 @@ $gutter: 1em;
 
   > *:only-child {
     max-width: 40em;
+  }
+
+  .column {
+    &__content {
+      &--padded {
+        padding-top: em(25);
+        padding-left: em(50);
+        padding-right: em(50);
+      }
+    }
   }
 
   &--fixed {

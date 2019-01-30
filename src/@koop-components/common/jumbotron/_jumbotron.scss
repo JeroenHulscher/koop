@@ -1,6 +1,6 @@
 .jumbotron {
   border-radius: .5em;
-  margin: 0 0 2em 0;
+  // margin: 0 0 2em 0;
   @extend .group;
 
   &--highlight {
@@ -9,6 +9,15 @@
     text-align: center;
     @media (min-width: 50em) {
       padding: 4.2em;
+    }
+  }
+
+  &--promo {
+    background: $lightBlue;
+    padding: 2em 1em;
+    text-align: center;
+    @media (min-width: 50em) {
+      padding: 2.2em;
     }
   }
 
@@ -35,7 +44,7 @@
   &__intro {
     font-size: 1rem;
     line-height: 1.8rem;
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
     text-align: left;
     @media (min-width: 50em) {
       font-size: 1.3rem;

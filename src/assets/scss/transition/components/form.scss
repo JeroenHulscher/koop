@@ -9,7 +9,20 @@ textarea {
   border-radius: .25em;
   padding: .625em;
   font-size: 1.25rem;
+  height: auto;
 }
 select {
   font-size: 1.25rem;
+}
+
+.form__element--pagesearch {
+  input[type=text] {
+    display: inline-block;
+    height: auto;
+    font-size: 1.25rem;
+  }
+  button {
+    position: relative;
+    top: -1px;
+  }
 }
