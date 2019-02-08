@@ -262,6 +262,13 @@ ol {
   }
 }
 
+.list--narrow {
+  > li,
+  .list__item {
+    margin-right: .5em;
+  }
+}
+
 .list {
 
   &--legenda {

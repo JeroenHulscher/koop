@@ -3,6 +3,7 @@ label: Resultlist
 context:
   items:
     - title: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
       downloads:
         - type: pdf
           size: 22kb
@@ -139,4 +140,4 @@ variants:
               last: true
 
 
-          
+

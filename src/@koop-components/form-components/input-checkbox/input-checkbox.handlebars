@@ -17,12 +17,33 @@
     {{/each}}
   </ul>
 </fieldset> --}}
+{{#if moreless}}
+<div data-decorator="showmoreless" data-config='{"amount": "4"}'>
+  <ul class="list list--unstyled">
+{{/if}}
+
 {{#each options }}
-<div class="input-checkbox">
-  <input class="checkbox__input" type="checkbox" id="option-{{ id }}" name="{{ name }}" {{ status }} value="{{ text }}"
-  />
-  <label class="checkbox__label" for="option-{{ id  }}">
-    {{ text }}
-  </label>
+
+{{#if ../moreless}}
+<li>
+{{/if}}
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input" type="checkbox" id="option-{{ id }}" name="{{ name }}" {{ status }} value="{{ text }}"
+    />
+    <label class="checkbox__label" for="option-{{ id  }}">
+      {{ text }}
+    </label>
+  </div>
+  {{/each}}
+
+{{#if moreless}}
+</li>
+{{/if}}
+
+{{#if moreless}}
+  </ul>
 </div>
-{{/each}}
+{{/if}}
+

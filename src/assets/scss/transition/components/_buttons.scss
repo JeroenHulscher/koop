@@ -2,4 +2,12 @@
   font-size: 1.125em;
   padding-top: 1em;
   padding-bottom: 1em;
+  margin-right: 0;
+  border-radius: .2em;
+
+  &--secendary {
+    border-color: $darkBlue;
+    color: $darkBlue;
+  }
 }
+

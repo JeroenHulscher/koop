@@ -1,0 +1,20 @@
+title: buttonswitch
+context:
+  text: Default
+  buttons:
+    - label: Button 1
+      active: true
+    - label: Button 2
+      active: false
+    - label: Button 3
+      active: false
+variants:
+  - name: with Icons
+    context:
+      buttons:
+        - label: Button 1
+          active: true
+          icon: marker
+        - label: Button 2
+          active: false
+          icon: hamburger

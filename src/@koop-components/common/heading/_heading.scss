@@ -37,6 +37,10 @@ h1,
     font-weight: 400;
     font-style: italic;
     font-size: 0.675rem;
+    display: block;
+    @media (min-width: 50em) {
+      display: inline-block;
+    }
   }
 
 }

@@ -1,4 +1,12 @@
 .result--list {
+  margin-left: -1em;
+  margin-right: -1em;
+
+  @media (min-width: 50em) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   > ul,
   > ul:first-child {
     background: $lightBlue;
@@ -8,12 +16,34 @@
     > li {
       background: white;
       list-style: none;
-      padding: 1.25em 1.25em 1px 1.25em;
+      padding: 2.25em 1.25em 1.25em 1.25em;
       margin-bottom: 1.25em;
       border: 0;
+
+      p {
+        padding-right: 0;
+      }
     }
 
   }
+
+  p {
+    margin-bottom: 1.325em;
+    font-size: 1.125em;
+    line-height: 1.325em;
+  }
+
+  .result--title {
+    max-width: 100%;
+  }
+
+  .result--label {
+    margin: 0 0 0.5em;
+    .label {
+      font-size: 1em;
+    }
+  }
+
   .result--actions {
     right: 1em;
     top: 1em;
