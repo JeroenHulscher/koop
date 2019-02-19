@@ -65,13 +65,13 @@
         position: 50% bottom;
       }
 
-      div {
+      span:first-of-type {
         display: none;
         text-indent: -999em;
       }
     }
 
-    &:hover div {
+    &:hover a span:first-of-type {
       display: block;
       position: absolute;
       top: 2.25em;
