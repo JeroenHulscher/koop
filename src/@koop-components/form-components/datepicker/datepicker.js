@@ -17,13 +17,9 @@
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
     } else {
-      $(element).on("change", function () {
-        this.setAttribute(
-          "data-date",
-          moment(this.value, "YYYY-MM-DD")
-            .format(this.getAttribute("data-date-format"))
-        )
-      }).trigger("change")
+      $(element).on('change', function () {
+        this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
+      }).trigger('change');
     }
   };
 

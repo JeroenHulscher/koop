@@ -6,4 +6,4 @@ context:
   fieldLabel: Datum
   fieldInstruction:
   fieldPlaceholder: 'Bijv: 06-10-1960'
-  debug: true
+  debug: false

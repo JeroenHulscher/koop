@@ -4,16 +4,14 @@
     <small>{{ fieldInstruction }}</small>
   {{/if }}
   <div class="datepicker">
-    <input type="date" value="2015-02-14" data-date="14-02-2015" class="datepicker__input" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+    <input type="date" value="2015-02-14" data-date="14-02-2015" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
   </div>
 </div>
 
 {{#if debug}}
 <script>
   document.getElementById('input--1').addEventListener('blur', function (e) {
-    alert(document.getElementById('input--1').value);
+    alert(document.getElementById('input--1').getAttribute('data-date'));
   });
-
-
 </script>
 {{/if}}
