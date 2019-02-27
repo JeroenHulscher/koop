@@ -13,6 +13,7 @@
       // To facilitate animation, this show(), while it toggles the `hidden` attribute,
       // does not actually make it visible just yet
       onl.ui.show( modal );
+      modal.classList.add('is-open');
 
       window.setTimeout( function() {
         // This makes the element actually visible on screen
@@ -25,6 +26,7 @@
     close: function( modal ) {
       onl.ui.hide( modal );
       modal.classList.add( modalInvisibleClass );
+      modal.classList.remove('is-open');
 
       onl.ui.unbindFocusTrap( modal );
 
@@ -67,10 +69,12 @@
   });
 
   onl.handle({
-    'open-modal': function( element ) {
+    'open-modal': function( element, event ) {
+      event.preventDefault();
       var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
       var body = document.getElementsByTagName('body');
       body[0].classList.add('no-scroll');
+      body[0].classList.add('is-modal-open');
 
       modal.open( modalElement );
       modal.setHeight ( modalElement );
@@ -79,6 +83,7 @@
       var modalElement;
       var body = document.getElementsByTagName('body');
       body[0].classList.remove('no-scroll');
+      body[0].classList.remove('is-modal-open');
 
       if ( element.getAttribute( 'data-modal' ) ) {
         modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );

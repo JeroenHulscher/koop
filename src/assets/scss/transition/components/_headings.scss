@@ -25,13 +25,21 @@ h1,
 h2,
 .h2 {
   font-size: 2rem;
+  &--slim {
+    margin-bottom: 0.25em;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.3rem;
 }
 
 p {
   margin-bottom: em(16);
 
   &.pre-h {
-    margin-bottom: 0.5em;
+    margin-top: -1em;
     font-size: 1.25rem;
   }
 }

@@ -1,0 +1,8 @@
+---
+label: Form selectedfilter
+status: ready
+context:
+  id: 1
+  items:
+    - label: Aanlegvergunning
+    - label: Bouwvergunning

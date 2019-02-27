@@ -13,8 +13,8 @@ variants:
     context:
       buttons:
         - label: Button 1
-          active: true
+          active: false
           icon: marker
         - label: Button 2
-          active: false
+          active: true
           icon: hamburger

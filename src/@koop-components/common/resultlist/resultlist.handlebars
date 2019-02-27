@@ -2,6 +2,11 @@
   <ul>
   {{#each items }}
     <li>
+
+      {{#if headerimg }}
+        <p><img src="{{headerimg}}" /></p>
+      {{/if}}
+
       {{#if label }}
         <p class="result--label"><i><span class="label">{{ label }}</span></i></p>
       {{/if}}
@@ -58,10 +63,14 @@
       {{#if buttons }}
         <ul class="list list--inline list--narrow">
           {{#each buttons }}
-            <li class="list__item"><a href="#" class="button button--{{type}}">{{button}}</a></li>
+            <li class="list__item"><a href="#" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
           {{/each}}
+           {{#if share}}
+            <li class="list__item pull-right"><a href="#" class="button button--share">Delen</a></li>
+            {{/if}}
         </ul>
       {{/if}}
+
     </li>
   {{/each}}
   </ul>

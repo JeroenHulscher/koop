@@ -29,7 +29,8 @@
 }
 
 .block-element {
-  display: block;
+  display: block !important;
+  width: 100%;
 }
 
 [hidden],
@@ -42,7 +43,7 @@
 }
 
 .align-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .align-right {
@@ -107,10 +108,10 @@
 @media (min-width: 30em) {
   .u-order {
     &--d1 {
-      order: 1;
+      order: 0;
     }
     &--d2 {
-      order: 2;
+      order: 1;
     }
   }
 }

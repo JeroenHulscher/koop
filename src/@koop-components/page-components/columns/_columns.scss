@@ -1,5 +1,12 @@
 $gutter: 1em;
+$gutter--dominant: 3em;
 
+.column-count {
+  column-count:2; column-gap: 20px;
+}
+.column-count--half {
+  column-count:2;
+}
 .row {
   margin-bottom: 0.5em;
 
@@ -26,6 +33,11 @@ $gutter: 1em;
     }
   }
 
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+
   @media ( min-width: 50em ) {
     flex-direction: row;
     display: flex;
@@ -35,9 +47,24 @@ $gutter: 1em;
     }
   }
 
+  &--dominant {
+    @media ( min-width: 50em ) {
+      > * {
+        margin-left: $gutter--dominant;
+      }
+    }
+  }
+
   > *:first-child,
-  > *:only-child {
+  > *:only-child, {
     margin-left: 0;
+  }
+
+  @media ( min-width: 50em ) {
+    .u-order--d1 {
+      margin-left: 0;
+      margin-right: $gutter;
+    }
   }
 
   > *:only-child {

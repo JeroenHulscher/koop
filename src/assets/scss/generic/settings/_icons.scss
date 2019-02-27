@@ -6,6 +6,7 @@ $iconCross: url( '#{$imagePath}/icon-close.svg' );
 $iconCrossWhite: url( '#{$imagePath}/icon-close-white.svg' );
 $iconCrossBlue: url( '#{$imagePath}/icon-cross-blue.svg' );
 $iconCrossFilled: url( '#{$imagePath}/icon-cross-filled.svg' );
+$iconFilter: url( '#{$imagePath}/icon-filter.svg' );
 
 $datepickerButtonNext: $chevronRight;
 $datepickerButtonPrev: $chevronLeft;
@@ -43,6 +44,7 @@ $externalLinkIcon: url( '#{$imagePath}/icon-link-external.svg' ) !default;
 $externalLinkWhiteIcon: url( '#{$imagePath}/icon-link-external-white-standard.svg' ) !default;
 
 $hamburgerIcon: url( '#{$imagePath}/icon-hamburger.svg' ) !default;
+$hamburgerWhiteIcon: url( '#{$imagePath}/icon-hamburger-white.svg' ) !default;
 
 $explanationIcon: url( '#{$imagePath}/icon-explanation.svg' ) !default;
 $explanationHoverIcon: url( '#{$imagePath}/icon-explanation.svg' ) !default;
@@ -56,7 +58,6 @@ $uploadIcon: url( '#{$imagePath}/icon-upload.svg' ) !default;
 $uploadBlueIcon: url( '#{$imagePath}/icon-upload-blue.svg' ) !default;
 $removeIcon: url( '#{$imagePath}/icon-remove.svg' ) !default;
 $removeWhiteIcon: url( '#{$imagePath}/icon-remove-white.svg' ) !default;
-$removeBlueIcon: url( '#{$imagePath}/icon-remove-blue.svg' ) !default;
 $printIcon: url( '#{$imagePath}/icon-print.svg' ) !default;
 $relationsIcon: url( '#{$imagePath}/icon-relations.svg' ) !default;
 $permalinkIcon: url( '#{$imagePath}/icon-permalink.svg' ) !default;
@@ -102,6 +103,7 @@ $shareWhiteIcon: url( '#{$imagePath}/icon-share-white.svg' );
 $shareIcon: url( '#{$imagePath}/icon-share.svg' );
 
 $markerIcon: url( '#{$imagePath}/icon-marker.svg' ) !default;
+$markerBlueIcon: url( '#{$imagePath}/icon-marker-blue.svg' ) !default;
 
 $dotsIcon: url( '#{$imagePath}/icon-dots.svg' ) !default;
 $crosshairIcon: url( '#{$imagePath}/icon-crosshair.svg' ) !default;
@@ -110,6 +112,7 @@ $editIcon: url( '#{$imagePath}/icon-bewerken.svg' ) !default;
 $calendarIcon: url( '#{$imagePath}/icon-calendar.svg' ) !default;
 $calendarIconWhite: url( '#{$imagePath}/icon-calendar-white.svg' ) !default;
 $removeIcon: url( '#{$imagePath}/icon-remove.svg' ) !default;
+$removeBlueIcon: url( '#{$imagePath}/icon-remove-blue.svg' ) !default;
 
 
 $drawIcon: url( '#{$imagePath}/icon-draw.svg' ) !default;

@@ -19,27 +19,6 @@ input[type=password].input-text {
     background-image: $searchIconBlue;
     background-size: 1.5em;
   }
-
-  &--searchmedium {
-    font-size: 1.325rem;
-    color: $darkBlue;
-    height: 60px; // needed to correct crossbrowser fields; :(
-    padding: .625em 2em .625em 3em;
-    background-position: .75em center;
-    background-repeat: no-repeat;
-    background-image: $searchIconBlue;
-    background-size: 1.25em;
-
-    ~ .combobox-clear-button ~ .combobox-suggestions > div {
-      top: 3.4em;
-
-      > div.combobox-suggestion {
-        font-size: 1.325rem;
-        padding: .625em 1em .625em 3em;
-        color: $darkBlue;
-      }
-    }
-  }
 }
 
 .input-text {
@@ -57,4 +36,33 @@ input[type=password].input-text {
       display: none;
     }
   }
+
+  &__container--prefix {
+    display: flex;
+  }
+
+  &__container--prefix &__prefix {
+    flex: 0 0 auto;
+    margin: 0;
+    width: auto;
+    padding: .75em 1em .75em .75em;
+    margin-right: -5px;
+    font-weight: bold;
+    border: 2px solid $darkBlue;
+    background: $lightBlue;
+    border-radius: 3px;
+  }
+  &__container--prefix & {
+    width: auto;
+    margin: 0;
+    flex: 1 0 8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+
 }

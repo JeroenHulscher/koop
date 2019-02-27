@@ -3,6 +3,7 @@
   border-radius: 0.35em;
   display: inline-block;
   padding: 1px;
+  background: white;
 
   &__button {
     text-decoration: none;
@@ -16,10 +17,16 @@
       &--hamburger {
         background: $hamburgerIcon no-repeat center top 0.75em;
         background-size: 1em;
+        &.is-active {
+          background-image: $hamburgerWhiteIcon;
+        }
       }
       &--marker {
-        background: $markerIcon no-repeat center top 0.5em;
+        background: $markerBlueIcon no-repeat center top 0.5em;
         background-size: .7em;
+        &.is-active {
+          background-image: $markerIcon;
+        }
       }
     }
 

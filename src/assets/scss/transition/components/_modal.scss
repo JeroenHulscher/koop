@@ -10,14 +10,10 @@
     @media ( min-width: 50em ) {
       padding: 1em 4em;
     }
-  }
 
-  &--wide &__inner {
-    max-width: 53em;
-  }
-  &--wide &__content {
-    padding-top: em(56);
-    padding-bottom: em(56);
+    &--clean {
+      background: white;
+    }
   }
 
   &__close {

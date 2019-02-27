@@ -37,8 +37,9 @@ a {
     color: $mediumBlue;
   }
 
+
   &.cta {
-    text-decoration: none;
+    // text-decoration: none;
     padding: 0 2em 0 0;
     font-size: 1.125rem;
     font-weight: 700;
@@ -78,6 +79,17 @@ p a {
   &:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  &--delete {
+    font-size: 90%;
+    background: {
+      repeat: no-repeat;
+      image: $removeIcon;
+      position: left center;
+      size: 1em;
+    }
+    padding-left: 1.5em;
   }
 
   &--down {

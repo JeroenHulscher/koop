@@ -1,7 +1,17 @@
 {{#if remove}}
 <div class="relative">
 {{/if}}
+
+{{#if prefix}}
+<div class="input-text__container input-text__container--prefix">
+{{/if}}
+
   <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="input-text-{{ id }}">{{ fieldLabel }}</label>
+
+  {{#if prefix}}
+    <span class="input-text__prefix">{{prefixLabel}}</span>
+  {{/if}}
+
   <input
     type="text"
     id="input-text-{{ id }}"
@@ -13,5 +23,9 @@
 
 {{#if remove}}
   <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+{{/if}}
+
+{{#if prefix}}
 </div>
 {{/if}}

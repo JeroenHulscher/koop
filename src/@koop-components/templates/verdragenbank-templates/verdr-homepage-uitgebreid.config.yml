@@ -1,0 +1,34 @@
+---
+label: Verdr. - Homepage uitgebreid
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputsubmitContext:
+    button: Zoek verdagen
+    placeholder: Vul hier uw zoekwoord(en) in
+  typeverdagContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Bilateraal
+      name: onderwerp
+    - id: checkbox-21
+      text: Multilateraal
+      name: onderwerp
+    - id: checkbox-22
+      text: Plurilateraal
+      name: onderwerp
+  depositarisContext:
+    moreless: true
+    options:
+    - id: checkbox-30
+      text: Enkel deze verdragen tonen
+      name: onderwerp
+  geldendContext:
+    moreless: true
+    options:
+    - id: checkbox-40
+      text: Enkel deze verdragen tonen
+      name: onderwerp

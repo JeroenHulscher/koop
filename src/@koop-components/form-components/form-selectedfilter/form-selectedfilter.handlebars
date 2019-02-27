@@ -1,0 +1,8 @@
+{{#each items}}
+<div class="form__selectedfilter {{#if modifier}}form__selectedfilter--{{modifier}}{{/if}}">
+  {{label}}
+  <a href="#" class="form__selectedfilter__remove">
+    <span class="visually-hidden">verwijder</span>
+  </a>
+</div>
+{{/each}}
