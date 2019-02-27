@@ -9,7 +9,7 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   rowLanding:
-    - image: "../../images/temp/homepage-beleid.jpg"
+    - image: "../../images/temp/tweedekamer.jpg"
       title: Wetgevingskalender
       intro: Op deze website vindt u informatie over de totstandkoming en inwerkingtreding van nationale wetgeving.
   linkSetGroup:

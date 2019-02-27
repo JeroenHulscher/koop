@@ -465,6 +465,10 @@
           </div>
         </div>
         <div class="form__element__inputs">
+          <div class="datepicker">
+            <input type="date" value="2015-02-14" data-date="14-02-2015" class="datepicker__input" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy" }'
+              id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+          </div>
           <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$ZoekOp_Titel" type="text" id="ZoekOp_Titel"
             class="input input--medium" placeholder="Bijv: Omgevingswet">
           <div class="form__element checkboxgroup inline-group">
@@ -873,19 +877,7 @@
 
                 <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
 
-              <div class="question-explanation">
-                <a class="question-explanation__link" href="#question-explanation-121" id="question-explanation-link-121" data-handler="toggle-explanation">Toelichting regelingen BES</a>
 
-                <div class="question-explanation__content" id="question-explanation-121" data-decorator="hide-self">
-                <p>Door dit aan te vinken, zoekt u alleen binnen de voormalige Antilliaanse regelgeving die is overgenomen door Nederland.
-                </p>
-                <a href="#question-explanation-link-121" class="question-explanation__close" data-handler="close-explanation">
-
-                    Sluiten
-
-                </a>
-              </div>
-              </div>
 
               <label style="display:none;" for="ZoekOp_Einddatum">
                 t/m

@@ -41,7 +41,7 @@
     background-color: $white;
     padding: .5em;
     position: relative;
-    z-index: 2;
+    // z-index: 2; why was this set?
 
     @media ( min-width: 50em ) {
       padding: 1em;
