@@ -45,12 +45,17 @@ input[type=password].input-text {
     flex: 0 0 auto;
     margin: 0;
     width: auto;
-    padding: .75em 1em .75em .75em;
+    padding: 1.7em 1em .75em .75em;
     margin-right: -5px;
     font-weight: bold;
     border: 2px solid $darkBlue;
     background: $lightBlue;
     border-radius: 3px;
+    font-size: 0.6em;
+    @media ( min-width: 50em ) {
+      font-size: 1em;
+      padding-top: .75em;
+    }
   }
   &__container--prefix & {
     width: auto;
