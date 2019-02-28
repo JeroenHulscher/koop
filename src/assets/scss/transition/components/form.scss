@@ -11,12 +11,17 @@ textarea {
   font-size: 1.25rem;
   height: auto;
 }
+
 select {
   font-size: 1.25rem;
 }
 input[type=text].input-text,
 input[type=password].input-text {
   padding: .4em .5em;
+
+  &--accent {
+    padding: .625em;
+  }
 
   &--searchmedium {
     font-size: 1.325rem;
