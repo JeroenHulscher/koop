@@ -39,3 +39,13 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Wat zoek je precies?'
       remove: true
+  - name: Prefix
+    label: Prefix
+    context:
+      modifier:
+      id: 1
+      fieldLabel: Postcode
+      fieldInstruction:
+      fieldPlaceholder:
+      prefix: true
+      prefixLabel: https://www.overheid.nl/

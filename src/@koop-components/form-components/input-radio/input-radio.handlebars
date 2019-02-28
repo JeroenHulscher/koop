@@ -1,6 +1,6 @@
-<fieldset class="form__element radiogroup {{ modifier }}">
+{{!-- <fieldset class="form__element radiogroup {{ modifier }}">
   <legend>
-    {{ fieldLabel }} 
+    {{ fieldLabel }}
 
     {{#if explanation}}
       {{ render "@question-explanation" }}
@@ -12,4 +12,12 @@
       {{{ text }}}
     </label>
   {{/each}}
-</fieldset>
+</fieldset> --}}
+{{#each options }}
+  <div class="input-radio">
+    <input class="radio__input" {{disabled}} type="radio" id="option-{{ id }}" name="{{ name }}" />
+    <label class="radio__label" for="option-{{ id  }}">
+      {{{ text }}}
+    </label>
+  </div>
+{{/each}}

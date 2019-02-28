@@ -1,15 +1,19 @@
 .modal {
+  &__inner {
+    padding: 1em;
+  }
+
   &__content {
     padding: 1em;
     background: $bgBlue;
     color: $darkBlue;
-  }
+    @media ( min-width: 50em ) {
+      padding: 1em 4em;
+    }
 
-  &--wide &__inner {
-    max-width: 53em;
-  }
-  &--wide &__content {
-    padding-top: em(32);
+    &--clean {
+      background: white;
+    }
   }
 
   &__close {

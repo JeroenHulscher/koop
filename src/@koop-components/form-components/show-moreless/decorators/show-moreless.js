@@ -31,6 +31,7 @@
     for ( i = 0; i < this.listitems.length; i++ ) {
       if ( i > this.config.amountVisible - 1 ) {
         this.listitems[i].setAttribute('hidden', 'true');
+        this.totalHidden = i;
       }
     }
     if ( createTrigger && i > this.config.amountVisible) {
@@ -42,7 +43,7 @@
     this.trigger = document.createElement('li');
     this.trigger.classList.add('link');
     this.trigger.classList.add('link--down');
-    this.trigger.innerHTML = 'Toon meer';
+    this.trigger.innerHTML = 'Toon meer' + ' (' + this.totalHidden + ')';
 
     this.element.querySelector('ul').appendChild(this.trigger);
 
@@ -56,7 +57,7 @@
       this.allvisible = false;
       this.trigger.classList.remove('link--up');
       this.trigger.classList.add('link--down');
-      this.trigger.innerHTML = this.config.labelMore;
+      this.trigger.innerHTML = this.config.labelMore + ' (' + this.totalHidden + ')';
     } else {
       for (i = 0; i < this.listitems.length; i++) {
         this.listitems[i].removeAttribute('hidden', 'true');

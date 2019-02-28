@@ -7,6 +7,73 @@ input[type="email"],
 textarea {
   border: 2px solid $darkBlue;
   border-radius: .25em;
-  padding: .625em;
-  font-size: 1rem;
+  padding: .4em;
+  font-size: 1.25rem;
+  height: auto;
+}
+
+select {
+  font-size: 1.25rem;
+}
+input[type=text].input-text,
+input[type=password].input-text {
+  padding: .4em .5em;
+
+  &--accent {
+    padding: .625em;
+  }
+
+  &--searchmedium {
+    font-size: 1.325rem;
+    color: $darkBlue;
+    height: 60px; // needed to correct crossbrowser fields; :(
+    padding: .625em 2em .625em 3em;
+    background-position: .75em center;
+    background-repeat: no-repeat;
+    background-image: $searchIconBlue;
+    background-size: 1.25em;
+
+    ~ .combobox-clear-button ~ .combobox-suggestions > div {
+      top: 3.4em;
+
+      > div.combobox-suggestion {
+        font-size: 1.325rem;
+        padding: .625em 1em .625em 3em;
+        color: $darkBlue;
+      }
+    }
+  }
+}
+
+.form__element--pagesearch {
+  input[type=text] {
+    display: inline-block;
+    height: auto;
+    font-size: 1.25rem;
+  }
+  button {
+    position: relative;
+    top: -1px;
+  }
+}
+
+
+fieldset {
+  legend {
+    border-bottom: 0;
+    font-size: 1.5em;
+    width: auto;
+    display: inline-block;
+    line-height: 1.2;
+  }
+}
+
+input[type=date].datepicker__input~.ui-datepicker-trigger,
+input[type=text].datepicker__input~.ui-datepicker-trigger {
+  background-color: white;
+  border: 2px solid $darkBlue;
+  border-left: 0;
+  background-image: $calendarIcon;
+  background-size: 22px;
+  width: 53px;
 }

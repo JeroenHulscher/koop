@@ -1,0 +1,78 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--centered">
+        <div class="align-center">
+          <p class="jumbotron__subheader">Identifier resolver</p>
+          <h1 class="jumbotron__header">Genereer een URI</h1>
+        </div>
+        <div class="row">
+          <p class="jumbotron__intro">
+              Een inleidende tekst over deze pagina en de functionaliteit. Altijd handig om iets meer context te krijgen.
+          </p>
+        </div>
+
+
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Zoek berichten</legend>
+            <div class="form__row form__row--large">
+              <label class="form__label" for="" class="visually-hidden"></label>
+              {{render "@input-text--prefix" }}
+            </div>
+            <div class="form__row form__row--large">
+              <div class="columns">
+                <div class="u-order--d2 align-right form__row form__row--medium">
+                  <button type="submit" class="form__button button button--primary">Genereer URI</button>
+                </div>
+                <div class="u-order--d1 u-nomargin">
+                  <a href="#" class="cta cta--left">Hoe maak ik een URI?</a>
+                </div>
+              </div>
+            </div>
+            {{!-- <div class="form__row form__row--large align-right">
+              <button type="submit" class="form__button button button--primary">Genereer URI</button>
+            </div> --}}
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row row--large">
+    <div class="columns">
+      <div class="column">
+        <div class="column__content column__content--padded">
+          <div class="jumbotron">
+            <div class="jumbotron__content">
+              <p class="jumbotron__subheader"><i>Hoe bouw ik de URI?</i></p>
+              <h2 class="jumbotron__header">Documentatie</h2>
+              <p class="jumbotron__intro">
+                Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals: vergunningen, bouwplannen en plaatselijke regelgeving.
+                De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden
+                gepubliceerd.
+              </p>
+              <p>
+                <a href="#" class="button button--primary">Bekijk documentatie</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-order--d2" style="background-color:#E4F0EF;">IMG</div>
+    </div>
+  </div>
+
+
+</div>
+
+{{ render "@footer" }}

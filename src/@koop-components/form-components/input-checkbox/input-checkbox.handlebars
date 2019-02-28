@@ -1,6 +1,6 @@
-<fieldset class="form__element checkboxgroup {{ modifier }}">
+{{!-- <fieldset class="form__element checkboxgroup {{ modifier }}">
   <legend>
-    {{ fieldLabel }} 
+    {{ fieldLabel }}
 
     {{#if explanation}}
       {{ render "@question-explanation" }}
@@ -16,4 +16,34 @@
       </li>
     {{/each}}
   </ul>
-</fieldset>
+</fieldset> --}}
+{{#if moreless}}
+<div data-decorator="showmoreless" data-config='{"amount": "4"}'>
+  <ul class="list list--unstyled">
+{{/if}}
+
+{{#each options }}
+
+{{#if ../moreless}}
+<li>
+{{/if}}
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input" {{disabled}} type="checkbox" id="option-{{ id }}" name="{{ name }}" {{ status }} value="{{ text }}"
+    />
+    <label class="checkbox__label" for="option-{{ id  }}">
+      {{ text }}
+    </label>
+  </div>
+  {{/each}}
+
+{{#if moreless}}
+</li>
+{{/if}}
+
+{{#if moreless}}
+  </ul>
+</div>
+{{/if}}
+

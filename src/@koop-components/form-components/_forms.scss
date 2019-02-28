@@ -88,23 +88,100 @@ fieldset {
 }
 
 .form {
+  text-align: left;
 
   &__row {
     margin-bottom: .5em;
 
     &--medium {
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
     }
 
     &--large {
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
+    }
+
+    &--xlarge {
+      margin-bottom: 3em;
     }
   }
 
   &--intro {
     border-bottom: 0;
   }
+
+  &__label {
+    font-weight: bold;
+
+    .mandatory {
+      font-size: 0.8em;
+      font-weight: normal;
+      float: right;
+      position: relative;
+      top: 0.2em;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1.8rem;
+    color: $darkBlue;
+  }
+  &__button {
+    margin: 0;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    @media (min-width: 50em) {
+      width: auto;
+      display: inline-block;
+    }
+  }
+
+  &__selectedfilter {
+    border: 1px solid $darkBlue;
+    background: white;
+    padding: 0.125em 1.75em 0.125em 0.75em;
+    display: inline-block;
+    border-radius: 3px;
+    font-style: italic;
+    position: relative;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+
+    &__remove {
+      background: $iconCrossBlue;
+      background-size: 0.5em;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 0.5em;
+      top: 0.68em;
+      display: inline-block;
+    }
+  }
+
+  &__active-filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h2,h3 {
+      font-size: em(20);
+      margin-bottom: .25em;
+      margin-right: 2em;
+    }
+  }
+
+  &__header {
+    margin-bottom: 2em;
+    border-bottom: 1px solid $darkBlue;
+    h1, h2,h3 {
+      margin-bottom: .5em;
+    }
+  }
 }
+
 .form__element {
   border: none;
   margin: 0 0 .5em 0;
@@ -223,35 +300,7 @@ fieldset {
     min-height: 7em;
   }
 
-  input[type="text"].datepicker__input {
-    margin: 0;
 
-    & ~ .ui-datepicker-trigger {
-      border: 0;
-      padding: 0.5em;
-      background: $datepickerTriggerBackgroundColor;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 4em;
-      border-bottom: 1px solid $datepickerTriggerBackgroundColor;
-      border-bottom-right-radius: 5px;
-      border-top-right-radius: 5px;
-      font-size: 1px;
-      width: 38px;
-      color: white;
-      background-image: $calendarIconWhite;
-      background-size: 22px;
-      background-repeat: no-repeat;
-      background-position: center;
-
-      img {
-        width: 24px;
-        height: 20px;
-      }
-    }
-  }
 
   input[type="text"],
   input[type="tel"],
@@ -263,8 +312,7 @@ fieldset {
     height: 2.5em;
   }
 
-  input[type="date"],
-  input.datepicker__input {
+  input[type="date"] {
     width: 10.5em;
     display: inline-block;
   }
@@ -323,6 +371,8 @@ fieldset {
       }
     }
   }
+
+
 
   .radiogroup,
   .checkboxgroup {
@@ -390,6 +440,42 @@ fieldset {
     }
   }
 }
+
+
+input[type=text].datepicker__input,
+input[type=date].datepicker__input {
+  margin: 0;
+  width: 100%;
+  padding: .4em .625em;
+  display: inline-block;
+
+  & ~ .ui-datepicker-trigger {
+    border: 0;
+    padding: 0.5em;
+    background: $datepickerTriggerBackgroundColor;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4em;
+    border-bottom: 1px solid $datepickerTriggerBackgroundColor;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1px;
+    width: 38px;
+    color: white;
+    background-image: $calendarIconWhite;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+      width: 24px;
+      height: 20px;
+    }
+  }
+}
+
 
 .daterange {
   div:not(.question-explanation) {

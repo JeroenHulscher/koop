@@ -1,3 +1,7 @@
+.input-checkbox {
+  margin-bottom: .5em;
+}
+
 .checkbox__input {
   position: absolute;
   opacity: 0;
@@ -13,7 +17,7 @@
   }
 
   &:checked + label:before {
-    background-color: $darkBlue;
+    background-color: $darkBlue !important;
     background-image: $iconCheckboxWhite;
   }
 
@@ -33,7 +37,7 @@
 
   &::before {
     background: $white;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 2px solid $darkBlue;
     content: '';
     display: inline-block;

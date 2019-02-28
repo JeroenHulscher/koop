@@ -2,11 +2,24 @@
   <ul>
   {{#each items }}
     <li>
+
+      {{#if headerimg }}
+        <p><img src="{{headerimg}}" /></p>
+      {{/if}}
+
+      {{#if label }}
+        <p class="result--label"><i><span class="label">{{ label }}</span></i></p>
+      {{/if}}
+
       {{#if theme }}
       <span class="icon icon--{{theme}}">{{ theme-name }}</span>
       {{/if}}
 
-      <a href="#" class="result--title">{{ title }}</a>
+      {{#if titleHeader }}
+        <{{ titleHeader }} class="result--title">{{ title }}</{{ titleHeader }}>
+      {{else}}
+        <a href="#" class="result--title">{{ title }}</a>
+      {{/if}}
 
       <p>{{ text }}</p>
 
@@ -16,7 +29,7 @@
 
       {{#if metadata }}
         {{#if theme }}
-          Onderwerpen: 
+          Onderwerpen:
           {{#each metadata }}
             {{#if last }}
               <a href="{{link}}">{{value }}</a>
@@ -47,6 +60,17 @@
           </ul>
         {{/if}}
       {{/if}}
+      {{#if buttons }}
+        <ul class="list list--inline list--narrow">
+          {{#each buttons }}
+            <li class="list__item"><a href="#" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
+          {{/each}}
+           {{#if share}}
+            <li class="list__item pull-right"><a href="#" class="button button--share">Delen</a></li>
+            {{/if}}
+        </ul>
+      {{/if}}
+
     </li>
   {{/each}}
   </ul>

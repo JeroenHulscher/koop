@@ -1,0 +1,167 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--side">
+        <div class="row">
+          <p class="jumbotron__subheader">Verdragenbank</p>
+          <h1 class="jumbotron__header h2">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+        </div>
+
+        <form class="form">
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+              <div class="form__row">
+                 {{!-- {{render "@input-text"  }} --}}
+                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+              </div>
+            </fieldset>
+          </div>
+          <div class="columns columns--dominant">
+            <div class="column">
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Totstandkoming</legend>
+                  <div class="form__row">
+                    <label>Startdatum</label>
+                    {{render "@datepicker" }}
+                  </div>
+                  <div class="form__row">
+                    <label>Einddatum</label>
+                    {{render "@datepicker" }}
+                  </div>
+                  <div class="form__row">
+                    <label>Plaats</label>
+                    {{render "@input-text" }}
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Onderwerp</legend>
+                  {{!-- <a href="#">Maak een selectie</a> --}}
+                  <div class="select-custom">
+                    <select>
+                      <option>Energie</option>
+                      <option>Belasting</option>
+                      <option>Arbeid</option>
+                    </select>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Partij</legend>
+                  {{!-- <a href="#">Maak een selectie</a> --}}
+                  <div class="select-custom">
+                    <select>
+                      <option>Nederland</option>
+                      <option>Belgie</option>
+                      <option>Duitsland</option>
+                    </select>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="column">
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Tractatenblad/Staatsblad</legend>
+                  <div class="form__row">
+                  <label>Jaar</label>
+                  <div class="select-custom">
+                    <select>
+                      <option>1999</option>
+                      <option>2000</option>
+                      <option>2001</option>
+                    </select>
+                  </div>
+                  </div>
+                  <div class="form__row">
+                  <label>Nummer</label>
+                  <div class="select-custom">
+                    <select>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                  </div>
+                  </div>
+
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Type verdrag</legend>
+                  {{render "@input-checkbox" typeverdagContext }}
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Nederland depositaris</legend>
+                  {{render "@input-checkbox" depositarisContext }}
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Nu geldend voor Nederland</legend>
+                  {{render "@input-checkbox" geldendContext }}
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="align-right">
+            <ul class="list list--inline">
+              <li><button type="submit" class="button button--erase">Leegmaken</button></li>
+              <li><button type="submit" class="button button--primary">Zoeken</button></li>
+            </ul>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--promo jumbotron--green">
+
+      <div class="jumbotron__content">
+        <div class="columns columns--center">
+          <div class="column">
+        <p class="jumbotron__subheader">Meld je aan voor de mail service</p>
+
+        <h2 class="jumbotron__header h2">En blijf automatisch op de hoogte van al het nieuws over depositaire verdragen</h2>
+
+        </div>
+        <div class="column">
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+            <div class="form__row">
+              {{ render "@input-inputsubmit" }}
+            </div>
+          </fieldset>
+        </form>
+
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}

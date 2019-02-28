@@ -5,10 +5,47 @@ h1,h2,h3,h4,p {
 
 h1,
 .h1 {
-  margin-bottom: em(12);
-  font-size: 3rem;
+  margin-bottom: em(6);
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  @media (min-width: 50em) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  &--slim {
+    margin-bottom: 0.25em;
+  }
+
+  &__sub {
+    font-size: 1.5rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  &--slim {
+    margin-bottom: 0.25em;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.3rem;
 }
 
 p {
   margin-bottom: em(16);
+
+  &.pre-h {
+    margin-top: -1em;
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  &__intro {
+    font-size: 1.125em;
+  }
 }

@@ -5,16 +5,18 @@ onl.handle({
    * @param event
    */
   'empty-input': function(element, event) {
+    event.preventDefault();
     element.previousElementSibling.value = '';
     element.classList.add('invisible');
+    element.previousElementSibling.focus();
   }
 });
 
 onl.decorate({
   /**
    * Toggle visibility of the remove button based on text input.
-   * @param element 
-   * @param event 
+   * @param element
+   * @param event
    */
   'toggle-remove-visibility': function(element, event) {
     var removeButton = element.nextElementSibling;

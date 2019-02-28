@@ -29,12 +29,13 @@
 }
 
 .block-element {
-  display: block;
+  display: block !important;
+  width: 100%;
 }
 
 [hidden],
 .is-hidden {
-  display: none;
+  display: none !important;
 }
 
 .inline-block {
@@ -42,7 +43,7 @@
 }
 
 .align-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .align-right {
@@ -103,3 +104,15 @@
     position: static;
   }
 }
+
+@media (min-width: 30em) {
+  .u-order {
+    &--d1 {
+      order: 0;
+    }
+    &--d2 {
+      order: 1;
+    }
+  }
+}
+

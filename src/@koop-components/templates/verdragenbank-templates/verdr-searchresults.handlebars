@@ -1,0 +1,204 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+      <div class="row row--spacer hidden-mobile">
+        <div class="columns">
+          <div class="column">
+            {{render "@input-text" inputSearchContext }}
+          </div>
+          <div class="column align-right">
+            <div class="columns columns--center">
+              <div class="column">
+                <label for="sorteer" class=""><strong>Sorteer op:</strong></label>
+              </div>
+              <div class="column">
+                <div class="select-custom">
+                  <select id="sorteer">
+                    <option>Datum</option>
+                    <option>Titel</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105 verdagen</span></h1>
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+      </div>
+
+      {{render "@resultlist" resultsContext }}
+
+
+      <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            {{!-- {{render "@resultlist" resultmodalContext }} --}}
+            <p><img src="https://via.placeholder.com/720x280.png?text=Kaart+met+marker"></p>
+            <h2>Aangevraagde evenementenvergunningen 2018</h2>
+            <p class="pre-h">4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow">
+
+              <li class="list__item">
+                <a href="#" class="button button--primary">Bekijk publicatie</a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="button button--secendary">Open interactieve kaart</a>
+              </li>
+
+            </ul>
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+      </div>
+
+      {{!-- <div class="pull-right"> --}}
+        {{render "@pagination" }}
+      {{!-- </div> --}}
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
+
+          <div class="modal-sidebar__content">
+
+
+            <div class="row--spacer">
+              <h2>Zoekfilter</h2>
+            </div>
+
+            <div class="form__row form__row--large">
+              <h3>Geselecteerde filters (2)</h3>
+              {{render "@form-selectedfilter" selectedfilterContext }}
+              <p><a href="#" class="link link--delete">Verwijder alle filters</a></p>
+            </div>
+
+
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Totstandkoming</legend>
+                    <div class="form__row form__row--medium">
+                      <label>Startdatum</label>
+                      {{render "@datepicker" }}
+                    </div>
+                    <div class="form__row form__row--medium">
+                      <label>Einddatum</label>
+                      {{render "@datepicker" }}
+                    </div>
+                    <div class="form__row">
+                      <label>Plaats</label>
+                      {{render "@input-text" }}
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Onderwerp</legend>
+                    {{!--
+                    <a href="#">Maak een selectie</a> --}}
+                    <div class="select-custom">
+                      <select>
+                        <option>Energie</option>
+                        <option>Belasting</option>
+                        <option>Arbeid</option>
+                      </select>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Partij</legend>
+                    {{!--
+                    <a href="#">Maak een selectie</a> --}}
+                    <div class="select-custom">
+                      <select>
+                        <option>Nederland</option>
+                        <option>Belgie</option>
+                        <option>Duitsland</option>
+                      </select>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Tractatenblad/Staatsblad</legend>
+                    <div class="form__row">
+                      <label>Jaar</label>
+                      <div class="select-custom">
+                        <select>
+                          <option>1999</option>
+                          <option>2000</option>
+                          <option>2001</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <label>Nummer</label>
+                      <div class="select-custom">
+                        <select>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Type verdrag</legend>
+                    {{render "@input-checkbox" typeverdagContext }}
+                  </fieldset>
+                </div>
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Nederland depositaris</legend>
+                    {{render "@input-checkbox" depositarisContext }}
+                  </fieldset>
+                </div>
+                <div class="form__row form__row--xlarge">
+                  <fieldset>
+                    <legend>Nu geldend voor Nederland</legend>
+                    {{render "@input-checkbox" geldendContext }}
+                  </fieldset>
+                </div>
+
+                <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky"
+                  data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+
+
+
+
+            </div>
+            {{!-- <a href="#" class="modal-sidebar__submit button button--primary">Opnieuw zoeken</a> --}}
+
+            <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+              <span class="visually-hidden">Sluiten</span>
+            </button>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

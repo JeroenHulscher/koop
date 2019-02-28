@@ -33,6 +33,14 @@ variants:
         - text: 2e item
         - text: 3e item
         - text: 4e item
+  - name: Inline
+    context:
+      modifier: list--inline
+      items:
+        - text: 1e item
+        - text: 2e item
+        - text: 3e item
+        - text: 4e item
   - name: linklist
     context:
       modifier: list--linked
@@ -54,6 +62,36 @@ variants:
         - text: <a href="#"><span>Wet</span> <span>(3)</span></a>
         - text: <a href="#"><span>zbo</span> <span>(19)</span></a>
         - text: <a href="#"><span>Wet-BES</span> <span>(104)</span></a>
+  - name: alphabet
+    context:
+      modifier: list--alphabet
+      items:
+        - text: <a href="#" class="list__link"><span>A</span></a>
+        - text: <a href="#" class="list__link"><span>B</span></a>
+        - text: <a href="#" class="list__link"><span>C</span></a>
+        - text: <a href="#" class="list__link"><span>D</span></a>
+        - text: <a href="#" class="list__link"><span>E</span></a>
+        - text: <a href="#" class="list__link"><span>F</span></a>
+        - text: <a href="#" class="list__link"><span>G</span></a>
+        - text: <a href="#" class="list__link is-active"><span>H</span></a>
+        - text: <a href="#" class="list__link"><span>I</span></a>
+        - text: <a href="#" class="list__link"><span>J</span></a>
+        - text: <a href="#" class="list__link"><span>K</span></a>
+        - text: <a href="#" class="list__link"><span>L</span></a>
+        - text: <a href="#" class="list__link"><span>M</span></a>
+        - text: <a href="#" class="list__link"><span>N</span></a>
+        - text: <a href="#" class="list__link"><span>O</span></a>
+        - text: <a href="#" class="list__link"><span>P</span></a>
+        - text: <a href="#" class="list__link"><span>Q</span></a>
+        - text: <a href="#" class="list__link"><span>R</span></a>
+        - text: <a href="#" class="list__link"><span>S</span></a>
+        - text: <a href="#" class="list__link"><span>T</span></a>
+        - text: <a href="#" class="list__link"><span>U</span></a>
+        - text: <a href="#" class="list__link"><span>V</span></a>
+        - text: <a href="#" class="list__link"><span>W</span></a>
+        - text: <a href="#" class="list__link"><span>X</span></a>
+        - text: <a href="#" class="list__link"><span>Y</span></a>
+        - text: <a href="#" class="list__link"><span>Z</span></a>
   - name: relationlist
     status: prototype
     context:

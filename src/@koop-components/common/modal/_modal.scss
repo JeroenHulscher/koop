@@ -22,6 +22,34 @@
     position: relative;
   }
 
+  &--filter {
+    position: relative;
+    display: block;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+  }
+  &.is-open {
+    position: fixed;
+    display: block !important;
+  }
+  // &--filter &__inner {
+  //   max-width: 100%;
+  //   position: fixed;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  // }
+
+  &--wide &__inner {
+    max-width: 53em;
+  }
+  &--wide &__content {
+    padding-top: em(56);
+    padding-bottom: em(56);
+  }
+
   &__content {
     overflow: auto;
     padding: 0 1em;
