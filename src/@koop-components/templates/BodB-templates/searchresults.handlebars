@@ -220,6 +220,14 @@
 
           <div class="form__row form__row--large">
             <fieldset>
+              <legend>Gebied {{render "@tooltip"}}
+              </legend>
+              {{render "@input-radio" gebiedContext }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
               <legend>Publicatiedatum
               {{render "@tooltip"}}
               </legend>
@@ -229,28 +237,28 @@
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Onderwerpen</legend>
+              <legend>Onderwerpen {{render "@tooltip"}}</legend>
               {{render "@input-checkbox" onderwerpContext }}
             </fieldset>
           </div>
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Voorlichting</legend>
+              <legend>Voorlichting {{render "@tooltip"}}</legend>
               {{render "@input-checkbox" voorlichtingContext }}
             </fieldset>
           </div>
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Bestemming</legend>
+              <legend>Bestemming {{render "@tooltip"}}</legend>
               {{render "@input-checkbox" bestemmingContext }}
             </fieldset>
           </div>
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Voorschriften</legend>
+              <legend>Voorschriften {{render "@tooltip"}}</legend>
               {{render "@input-checkbox" voorschriftenContext }}
             </fieldset>
           </div>

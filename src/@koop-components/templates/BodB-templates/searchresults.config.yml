@@ -263,6 +263,15 @@ context:
     - id: radio-5
       text: Zelf een periode kiezen
       name: publicatie
+  gebiedContext:
+    moreless: true
+    options:
+    - id: radio-1
+      text: Berichten rond mijn adres
+      name: publicatie
+    - id: radio-2
+      text: Berichten in mijn gemeente
+      name: publicatie
   resultmodalContext:
     modifier: result--list--wide
     items:
