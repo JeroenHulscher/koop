@@ -1,0 +1,7 @@
+---
+label: BodB - Homepage
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo

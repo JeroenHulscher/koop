@@ -1,0 +1,153 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Pagina navigatie</button>
+      </div>
+
+      <h1 class="h1">Wijziging van bijlagen V en VII bij het Protocol van 1998 inzake persistente organische verontreinigende stoffen</h1>
+
+      <h2>Algemeen</h2>
+
+      <table class="table__data-overview">
+        <tbody>
+          <tr>
+          <th>Verdragsnummer</th>
+          <td>012477</td>
+          </tr>
+          <tr>
+          <th>Datum totstandkoming</th>
+          <td>18-12-2009</td>
+          </tr>
+          <tr>
+          <th>Plaats totstandkoming</th>
+          <td>Genève</td>
+          </tr>
+          <tr><th>Voorlopige toestand</th>
+          <td></td>
+          </tr>
+          <tr>
+          <th>In werking</th>
+          <td>13-12-2010</td>
+          </tr>
+          <tr>
+          <th>Tractatenblad</th>
+          <td>
+            <a href="www.overheid.nl" rel="external">2010, 258</a>
+            <a href="www.overheid.nl" rel="external">2011, 142</a>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Konkrijk der Nederlanden</h2>
+
+      <table class="table__data-overview">
+        <thead>
+          <th>Voorlopige toepassing</th>
+          <th>In werking</th>
+          <th>Terugwerkende kracht</th>
+          <th>Buiten werking</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Nederland (in Europa)</th>
+            <td></td>
+            <td>26-03-1925</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Nederland (Bonaire)</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Nederland (Sint Eustatius)</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Nederland (Saba)</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Aruba</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Curaçao</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Sint Maarten</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Kinderverdrag(en)</h2>
+
+      <table class="table__data-overview">
+        <thead>
+          <th>Titel</th>
+          <th>Datum totstandkoming</th>
+          <th>Plaats totstandkoming</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th><a href="#">Verdrag tot vaststelling van de minimumleeftijd van toelating van kinderen tot arbeid op zee (herzien)</a></th>
+            <td>24-10-1936</td>
+            <td>Genève</td>
+          </tr>
+          <tr>
+            <th><a href="#">Maritiem arbeidsverdrag, 2006</a></th>
+            <td>23-02-2006</td>
+            <td>Genève</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
+
+          <div class="modal-sidebar__content">
+            <div >
+              {{render "@nav" }}
+            </div>
+
+            <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+              <span class="visually-hidden">Sluiten</span>
+            </button>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

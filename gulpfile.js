@@ -135,6 +135,7 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/vendor/fastsearch.js',
     paths.scripts + '/vendor/fastselect.js',
     paths.scripts + '/vendor/moment.js',
+    paths.scripts + '/vendor/stickybit.min.js',
     paths.scripts + '/vendor/jquery-autocomplete.js',
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',

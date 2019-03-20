@@ -1,0 +1,10 @@
+---
+label: Verdr. - Homepage
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputsubmitContext:
+    button: Zoek verdagen
+    placeholder: Vul hier uw zoekwoord(en) in

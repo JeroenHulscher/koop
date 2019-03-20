@@ -30,6 +30,7 @@ ol {
   }
 }
 
+
 .facet--heading {
   margin: 0;
   padding: 0 0 0 .75em;
@@ -243,8 +244,9 @@ ol {
 }
 
 .list--inline {
-
-  text-align: right;
+  margin-left: 0;
+  padding-left: 0;
+  // text-align: right;
 
   li {
     @media ( min-width: 50em ) {
@@ -257,6 +259,40 @@ ol {
     &:last-child {
       margin: 0;
     }
+  }
+}
+
+.list {
+  &--alphabet {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  &--alphabet &__item {
+    display: inline-block;
+  }
+  &--alphabet &__link {
+    display: inline-block;
+    border: 2px solid $darkBlue;
+    border-radius: 5px;
+    padding: em(3) 0;
+    width: 2em;
+    text-align: center;
+    font-size: em(24);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 em(4) em(4) 0;
+
+    &.is-active {
+      background: $darkBlue;
+      color: white;
+    }
+  }
+}
+
+.list--narrow {
+  > li,
+  .list__item {
+    margin-right: .5em;
   }
 }
 

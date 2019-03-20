@@ -1,0 +1,124 @@
+.jumbotron {
+  // border-radius: .5em;
+  // margin: 0 0 2em 0;
+  @extend .group;
+
+  &--highlight {
+    background: $lightBlue;
+    padding: 2.5em 1em;
+    @media (min-width: 50em) {
+      padding: 4.5em 2em;
+    }
+  }
+  &--highlight &__header {
+    margin-bottom: 0;
+    @media (min-width: 50em) {
+      // margin-bottom: .5em;
+    }
+  }
+  &--highlight &__intro {
+    text-align: center;
+    @media (min-width: 50em) {
+      text-align: left;
+    }
+  }
+
+  &--promo {
+    background: $lightBlue;
+    padding: 2em 1em;
+    @media (min-width: 50em) {
+      padding: 2.2em;
+    }
+  }
+
+  &--green {
+    background-color: $lightGreen;
+  }
+
+
+
+  &__content {
+    padding: 0 1em;
+    @media (min-width: 50em) {
+      padding: 0 3em;
+    }
+
+    &--side {
+      max-width: em(620);
+      @media (min-width: 50em) {
+        max-width: 70%;
+      }
+    }
+    &--centered {
+      max-width: em(620);
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__subheader {
+    font-size: 1.125rem;
+    font-style: italic;
+    margin-bottom: 0.5em;
+    line-height: 1.125em;
+    @media (min-width: 50em) {
+      font-size: 1.5rem;
+      line-height: 1em;
+      margin-bottom: 0.2em;
+    }
+
+    &--subtle {
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 0.5em;
+      line-height: 1.125em;
+      @media (min-width: 50em) {
+        font-size: 1.125rem;
+        line-height: 1em;
+        margin-bottom: 0.2em;
+      }
+    }
+  }
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: .5em;
+
+    @at-root .h1#{&} {
+      margin-bottom: 1em;
+      font-size: 2em;
+      line-height: 1.25em;
+
+      @media (min-width: 50em) {
+        font-size: 3em;
+        line-height: 1em;
+        margin-bottom: .5em;
+      }
+    }
+    @at-root h2#{&} {
+      margin-bottom: 1em;
+      font-size: 1.75em;
+      line-height: 1.25em;
+
+      @media (min-width: 50em) {
+        font-size: 2em;
+        margin-bottom: .5em;
+      }
+    }
+  }
+
+  &__intro {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-align: left;
+    @media (min-width: 50em) {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  .button {
+    font-size: 1.25em;
+  }
+
+}

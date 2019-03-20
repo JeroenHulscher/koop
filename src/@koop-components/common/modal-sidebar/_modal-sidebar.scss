@@ -1,0 +1,105 @@
+.modal-sidebar {
+  display: none;
+  @media ( min-width: 50em ) {
+    display: block;
+  }
+
+  &.is-open {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba( $black, .5 );
+    display: block;
+    align-items: center;
+    padding: 1em;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    transition: opacity .5s;
+    z-index: 2;
+    cursor: default;
+  }
+
+  &.is-open &__content {
+    width: 100%;
+    background: $white;
+    border: 1px solid $lightGrey;
+    padding: 1.5em 1.5em 5em;
+    position: relative;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+
+  }
+
+  &__content {
+
+    padding: 0 1em;
+
+
+    ol {
+      padding-left: 1em;
+    }
+  }
+
+  &__submit {
+    position: fixed;
+    margin-left: 1.5em;
+    margin-bottom: 0;
+    margin-right: 1.5em;
+
+    @media ( min-width: 50em ) {
+      position: relative;
+      margin: 0;
+      bottom: .5em !important;
+      width: 100%;
+    }
+  }
+  &.is-open &__submit {
+    display: block !important;
+    position: fixed !important;
+    bottom: .5em;
+    left: 0;
+    right: 2em;
+  }
+
+  &--hidden {
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: .5em;
+    right: 2em;
+    width: 4em;
+    height: 4em;
+    border: none;
+    background-color: transparent;
+    text-indent: -9999em;
+    cursor: pointer;
+    background: {
+      image: $modalCloser;
+      repeat: no-repeat;
+      position: center center;
+    };
+
+    &:hover {
+      background-image: $modalCloserHover;
+    }
+  }
+
+
+  &.is-open &__close {
+    display: block;
+  }
+
+}

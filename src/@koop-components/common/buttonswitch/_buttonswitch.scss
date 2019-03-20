@@ -1,0 +1,47 @@
+.buttonswitch {
+  border: 2px solid $darkBlue;
+  border-radius: 0.35em;
+  display: inline-block;
+  padding: 1px;
+  background: white;
+
+  &__button {
+    text-decoration: none;
+    padding: .95em 1em;
+    display: inline-block;
+
+    &.icon {
+      padding-top: 1.75em;
+      padding-bottom: .125em;
+
+      &--hamburger {
+        background: $hamburgerIcon no-repeat center top 0.75em;
+        background-size: 1em;
+        &.is-active {
+          background-image: $hamburgerWhiteIcon;
+        }
+      }
+      &--marker {
+        background: $markerBlueIcon no-repeat center top 0.5em;
+        background-size: .7em;
+        &.is-active {
+          background-image: $markerIcon;
+        }
+      }
+    }
+
+    &:first-child {
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 0.3em;
+      border-top-right-radius: 0.3em;
+    }
+
+    &.is-active {
+      background-color: $darkBlue;
+      color: white;
+    }
+  }
+}

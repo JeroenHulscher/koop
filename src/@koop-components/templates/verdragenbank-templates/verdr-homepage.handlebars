@@ -1,0 +1,136 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--side">
+        <div class="row">
+          <p class="jumbotron__subheader">Verdragenbank</p>
+          <h1 class="jumbotron__header h2">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+        </div>
+
+        <form class="form form__row form__row--medium">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+            <div class="form__row">
+              {{ render "@input-inputsubmit" inputsubmitContext }}
+            </div>
+          </fieldset>
+        </form>
+        <p>
+          <a href="#" class="cta cta--left">Uitgebreid zoeken</a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+
+
+    <h2>Over de verdragenbank</h2>
+    <div class="column-count column-count--half">
+      <p>
+        De Verdragenbank bevat de gegevens van de verdragen, waarbij het Koninkrijk der Nederlanden partij is. Verdragsgegevens
+        zijn onder andere de datum en de plaats van de totstandkoming, de datum van inwerkingtreding, de vindplaats van de verdragstekst,
+        de partijen (landen, gebiedsdelen en internationale organisaties) en de
+      </p>
+      <p>
+        datum van bekrachtiging, de gelding voor Europees Nederland, Aruba, Curaçao, Sint Maarten en/of het Caribische deel van
+        Nederland (Bonaire, Sint Eustatius, Saba), eventuele voorbehouden, verklaringen en bezwaren en de verbanden tussen verdragen.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="column">
+        <div class="jumbotron jumbotron--highlight">
+          <div class="jumbotron__content">
+              <p class="jumbotron__subheader jumbotron__subheader--subtle">Nieuw toegevoegd</p>
+              <h2 class="jumbotron__header h1">Recente verdragen</h2>
+            <a href="#" class="cta">Bekijken</a>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="jumbotron jumbotron--highlight">
+          <div class="jumbotron__content">
+            <p class="jumbotron__subheader jumbotron__subheader--subtle">Depositaire verdragen</p>
+            <h2 class="jumbotron__header h1">Recente notificaties</h2>
+            <a href="#" class="cta">Bekijken</a>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="jumbotron jumbotron--highlight">
+          <div class="jumbotron__content">
+            <p class="jumbotron__subheader jumbotron__subheader--subtle">Verdragen Internationaal Privaatrecht</p>
+            <h2 class="jumbotron__header h1">Haagse Conferentie</h2>
+            <a href="#" class="cta">Bekijken</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns">
+      <div class="column u-order--d2">
+
+        <h2>Depositaire verdragen</h2>
+        <p>
+           Het Koninkrijk der Nederlanden is depositaris van ongeveer 100 verdragen. De taak van een depositaris is het bijhouden van
+          de administratie van een verdrag. De tekst van een verdrag bepaalt welke staat of internationale organisatie de depositaris
+          is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
+          het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.
+
+        </p>
+        <ul class="list list--inline">
+          <li><a href="#" class="button button--primary">Bekijk alle depositaire verdragen</a></li>
+          <li><a href="#" class="cta cta-left">Lees meer</a></li>
+        </ul>
+
+      </div>
+      <div class="column u-order--d1" style="background-color:#FFF8E1;">IMG</div>
+    </div>
+  </div>
+
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--promo jumbotron--green">
+
+      <div class="jumbotron__content">
+        <div class="columns columns--center">
+          <div class="column">
+        <p class="jumbotron__subheader">Meld je aan voor de mail service</p>
+
+        <h2 class="jumbotron__header h2">En blijf automatisch op de hoogte van al het nieuws over depositaire verdragen</h2>
+
+        </div>
+        <div class="column">
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+            <div class="form__row">
+              {{ render "@input-inputsubmit" }}
+            </div>
+          </fieldset>
+        </form>
+
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}
