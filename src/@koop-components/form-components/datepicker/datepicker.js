@@ -8,17 +8,26 @@
   });
 
   var datepicker = function(element) {
+    var self = this;
+
     this.element = element;
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
     this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
 
+    this.createHiddenField();
+
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
+      $(element).on('change', function () {
+        this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
+        self.hiddenfield.setAttribute('value', this.value);
+      }).trigger('change');
     } else {
       $(element).on('change', function () {
         this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
+        self.hiddenfield.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
       }).trigger('change');
     }
   };
@@ -47,6 +56,13 @@
 
     // let's go.
     this.activateTrigger();
+  },
+  datepicker.prototype.createHiddenField = function() {
+    this.hiddenfield = document.createElement("input");
+    this.hiddenfield.setAttribute('type', 'hidden');
+    this.hiddenfield.setAttribute('name', 'datepicker_hidden');
+    this.hiddenfield.setAttribute('value', '');
+    this.element.parentNode.appendChild(this.hiddenfield);
   },
   datepicker.prototype.activateTrigger = function() {
     var _this = this;
@@ -501,7 +517,6 @@
     }, 0);
   },
   datepicker.prototype.upHandler = function(target, cont, prevLink) {
-    console.log('UP HANDLER EXECUTED');
     prevLink = $('.ui-datepicker-prev')[0];
     var rowContext = $(target).closest('tr');
     if (!rowContext) {
