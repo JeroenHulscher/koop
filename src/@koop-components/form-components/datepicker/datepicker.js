@@ -63,6 +63,7 @@
     this.hiddenfield.setAttribute('type', 'hidden');
     this.hiddenfield.setAttribute('name', 'datepicker-hidden__' + this.elementId);
     this.hiddenfield.setAttribute('value', '');
+    this.hiddenfield.setAttribute('class', 'datepicker__hiddenfield');
     this.element.parentNode.appendChild(this.hiddenfield);
   },
   datepicker.prototype.activateTrigger = function() {
