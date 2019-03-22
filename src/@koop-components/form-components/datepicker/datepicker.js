@@ -11,6 +11,7 @@
     var self = this;
 
     this.element = element;
+    this.elementId = this.element.getAttribute('id');
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
@@ -60,7 +61,7 @@
   datepicker.prototype.createHiddenField = function() {
     this.hiddenfield = document.createElement("input");
     this.hiddenfield.setAttribute('type', 'hidden');
-    this.hiddenfield.setAttribute('name', 'datepicker_hidden');
+    this.hiddenfield.setAttribute('name', 'datepicker-hidden__' + this.elementId);
     this.hiddenfield.setAttribute('value', '');
     this.element.parentNode.appendChild(this.hiddenfield);
   },
