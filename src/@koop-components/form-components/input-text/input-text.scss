@@ -53,7 +53,7 @@ input[type=password].input-text {
     border-radius: 3px;
     font-size: 0.6em;
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       font-size: 1.125em;
       padding-top: .75em;
     }
@@ -61,7 +61,7 @@ input[type=password].input-text {
       padding-top: 2.45em;
       padding-bottom: .5em;
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         padding-top: 0.85em;
       }
     }

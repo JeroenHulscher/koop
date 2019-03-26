@@ -6,7 +6,7 @@
     max-width: 150px;
     margin: .5em 0;
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       width: 200px;
       max-width: 200px;
       margin: 0;

@@ -6,7 +6,7 @@
     left: -999em;
   }
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
 
     padding: 0;
 

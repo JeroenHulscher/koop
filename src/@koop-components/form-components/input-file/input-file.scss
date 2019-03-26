@@ -5,7 +5,7 @@
   margin: 0 0 2em 0;
   @extend .group;
 
-  @media (min-width: 50em) {
+  @media (min-width: $breakpointDesktop) {
     font-size: 1.5em;
 
     button {
@@ -63,7 +63,7 @@
     border-radius: 5px;
     color: $darkBlue;
 
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       background-position: 2em center;
       background-size: em(32);
       padding: em(12) em(24);

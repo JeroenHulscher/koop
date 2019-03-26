@@ -54,9 +54,9 @@
     @media print {
       display: none;
     }
-    
 
-    @media ( max-width: 50em ) {
+
+    @media ( max-width: $breakpointDesktop ) {
       border: none;
       padding: 0;
 

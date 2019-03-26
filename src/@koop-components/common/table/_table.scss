@@ -78,7 +78,7 @@ table,
   }
 
   td.status {
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       text-align: center;
 
       span {
@@ -146,7 +146,7 @@ table,
     }
   }
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
     &.table--striped {
       tbody tr:nth-child(odd) td,
       tbody tr:nth-child(odd) th {
@@ -198,7 +198,7 @@ table,
 }
 
 
-@media ( max-width: 50em ) {
+@media ( max-width: $breakpointDesktop ) {
   table:not(.table__data-overview):not(.table__regulation),
   &.table--condensed,
   &.table--striped,

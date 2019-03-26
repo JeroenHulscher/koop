@@ -132,7 +132,7 @@ fieldset {
     font-size: 1.125rem;
     width: 100%;
     display: block;
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       width: auto;
       display: inline-block;
     }
@@ -201,7 +201,7 @@ fieldset {
   &--fixed-view &__label {
     flex: 1 0 40%;
 
-    @media (max-width: 50em) {
+    @media (max-width: $breakpointDesktop) {
       padding-top: 0;
     }
   }
@@ -220,7 +220,7 @@ fieldset {
 
   &__label {
 
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       float:left;
       width: 40%;
     }
@@ -229,7 +229,7 @@ fieldset {
 
   &__inputs {
 
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       float: right;
       width: 60%;
     }
@@ -324,7 +324,7 @@ fieldset {
 
   label + small {
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       float: right;
     }
   }
@@ -425,7 +425,7 @@ fieldset {
       font-size: 1rem;
     }
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       input[type="text"],
       button.button {
         display: inline;
