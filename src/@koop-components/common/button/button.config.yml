@@ -1,8 +1,8 @@
 title: Button
 status: prototype
-default: Ghost button
+default: Default
 context:
-  text: Knop
+  text: Verzenden
   action: http://www.google.nl
   anchor: false
   button: true
@@ -13,16 +13,22 @@ context:
   type: submit
   disabled: ''
 variants:
-  - name: standard
+  - name: Primary
     status: ready
     context:
       text: primaire knop
       modifier: button--primary
-  - name: call to action
+  - name: Secundary
     status: ready
     context:
       text: Secundaire knop
       modifier: button--secondary
+  - name: Doubleline
+    status: ready
+    context:
+      text: Bekijk publicatie
+      text2: Opent in een nieuw scherm
+      modifier: button--doubleline button--icon-external
   - name: small
     status: prototype
     context:

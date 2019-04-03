@@ -1,4 +1,19 @@
 <div class="jumbotron {{ modifier }}">
-  {{> "@text" }}
+  <div class="jumbotron__content {{#if centered}}jumbotron__content--centered{{/if}}">
+    {{#if centered}}<div class="align-center">{{/if}}
+      <p class="jumbotron__subheader">Berichten over uw buurt</p>
+      <{{h}} class="jumbotron__header">Wat speelt er in úw buurt</{{h}}>
+    {{#if centered}}</div>{{/if}}
+    {{#if intro}}
+      <p class="jumbotron__intro">
+        Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
+      </p>
+    {{/if}}
+    {{#if button}}
+      <p>
+        <a href="#" class="button button--primary">Button</a>
+      </p>
+    {{/if}}
+  </div>
 </div>
 

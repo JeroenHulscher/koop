@@ -1,14 +1,44 @@
 .button {
   font-size: 1.125em;
-  padding-top: 1em;
-  padding-bottom: 1em;
   margin-right: 0;
-  border-radius: .2em;
+  border-radius: .125em;
+  border-color: $darkBlue;
+  color: $darkBlue;
+  transition: none;
+
+  // padding: .75em .675em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+
+  &:not(.button--share, .button--icon-refreshdocuments-white, .button--icon-download-white, .button--icon-hamburger, .button--icon-down, .button--icon-top, .button--icon-left, .button--icon-right) {
+    padding-left: .675em;
+    padding-right: .675em;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0.75em rgba(21,66,115,0.4);
+    background-color: white;
+    color: $darkBlue;
+  }
+
+  &--primary {
+    color: white;
+
+    &:hover {
+      background-color: $darkerBlue;
+      color: white;
+    }
+  }
 
   &--secondary,
   &--secendary {
-    border-color: $darkBlue;
+    border-color: transparent !important;
     color: $darkBlue;
+    background-color: $lightBlue;
+
+    &:hover {
+      background-color: $lightBlue;
+    }
   }
 }
 
