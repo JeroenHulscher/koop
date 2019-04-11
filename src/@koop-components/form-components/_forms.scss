@@ -91,7 +91,18 @@ fieldset {
   text-align: left;
 
   &__row {
-    margin-bottom: .5em;
+    margin-bottom: .75em;
+    position: relative;
+
+    label {
+      margin-bottom: .25em;
+    }
+
+    a.reset {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
 
     &--medium {
       margin-bottom: 1.5em;

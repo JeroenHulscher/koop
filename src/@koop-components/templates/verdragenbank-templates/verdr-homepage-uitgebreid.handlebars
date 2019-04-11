@@ -33,10 +33,12 @@
                   <div class="form__row">
                     <label>Startdatum</label>
                     {{render "@datepicker" }}
+                    <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
                     <label>Einddatum</label>
                     {{render "@datepicker" }}
+                    <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
                     <label>Plaats</label>
@@ -59,7 +61,7 @@
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Partij</legend>
+                  <legend>Partij {{render "@tooltip" }}</legend>
                   {{!-- <a href="#">Maak een selectie</a> --}}
                   <div class="select-custom">
                     <select>
