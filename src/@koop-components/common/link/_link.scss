@@ -53,6 +53,14 @@ a {
       padding: 0 0 0 2em;
       background-position: left 3px;
     }
+    &--external {
+      background: {
+      repeat: no-repeat;
+      image: $externalLinkIcon;
+      position: right 3px top 1px;
+      size: 1em;
+    }
+    }
   }
 
   &.cta__backwards {

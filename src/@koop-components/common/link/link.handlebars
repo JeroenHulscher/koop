@@ -8,3 +8,7 @@
   <li>Dit is een <a href="{{ action }}">{{ text }}</a> in een li-item</li>
   <li><a href="{{ action }}">{{ text }} als volledige li-item</a></li>
 </ul>
+
+{{#if mode }}
+<a href="www.google.nl" class="cta cta--external" rel="external">{{text}}</a>
+{{/if}}
