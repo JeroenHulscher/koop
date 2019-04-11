@@ -45,8 +45,12 @@ a {
     background: {
       repeat: no-repeat;
       image: $arrowCTAIcon;
-      position: right 3px;
+      position: right 1px top 3px;
       size: 1em;
+    }
+
+    &:hover {
+      background-position: right 0 top 3px;
     }
 
     &--left {
@@ -55,11 +59,11 @@ a {
     }
     &--external {
       background: {
-      repeat: no-repeat;
-      image: $externalLinkIcon;
-      position: right 3px top 1px;
-      size: 1em;
-    }
+        repeat: no-repeat;
+        image: $externalLinkIcon;
+        position: right 3px top 1px;
+        size: 1em;
+      }
     }
   }
 
