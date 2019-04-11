@@ -1,20 +1,22 @@
-<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "abbr" }'>
-  <span class="subselection__summary"></span>
+<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}" }'>
+  <div class="subselection__summary"></div>
   <div id="modal-{{id}}" class="modal modal--off-screen modal--hidden" hidden role="alert">
-    <div class="modal__content">
-      <h2>{{modalTitle}}</h2>
-      <ul class="list--unstyled">
-        {{#each Options }}
-          <li>
-            <label for="input{{id}}">
-              <input id="input{{id}}" value="{{short}}" type="checkbox" name="name">{{title}}
-            </label>
-          </li>
-        {{/each}}
-      </ul>
-      <div class="modal__buttonpane">
-        <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
-        <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>{{modalTitle}}</h2>
+        <ul class="list--unstyled">
+          {{#each Options }}
+            <li>
+              <label for="input{{id}}">
+                <input id="input{{id}}" value="{{short}}" type="checkbox" name="name">{{title}}
+              </label>
+            </li>
+          {{/each}}
+        </ul>
+        <div class="modal__buttonpane">
+          <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+          <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+        </div>
       </div>
     </div>
   </div>

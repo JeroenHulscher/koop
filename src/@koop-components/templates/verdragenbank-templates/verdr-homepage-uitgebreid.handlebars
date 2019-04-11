@@ -60,14 +60,7 @@
               <div class="form__row form__row--large">
                 <fieldset>
                   <legend>Partij</legend>
-                  {{!-- <a href="#">Maak een selectie</a> --}}
-                  <div class="select-custom">
-                    <select>
-                      <option>Nederland</option>
-                      <option>Belgie</option>
-                      <option>Duitsland</option>
-                    </select>
-                  </div>
+                  {{render "@subselection" subselectionContext }}
                 </fieldset>
               </div>
             </div>
