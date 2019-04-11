@@ -7,7 +7,7 @@
     background: $lightBlue;
     padding: 2.5em 1em;
     @media (min-width: 50em) {
-      padding: 4.5em 2em;
+      padding: 2.5em 2em;
     }
   }
   &--highlight &__header {
@@ -67,6 +67,10 @@
       margin-bottom: 0.2em;
     }
 
+    small {
+      font-size: 0.8em;
+    }
+
     &--subtle {
       font-size: 1rem;
       font-style: italic;
@@ -105,6 +109,7 @@
         margin-bottom: .5em;
       }
     }
+
   }
 
   &__intro {
