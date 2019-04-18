@@ -22,6 +22,11 @@
         {{/each}}
       </div>
       {{/if}}
+      {{#if language }}
+      <div class="header__meta">
+        {{render "@select-custom" }}
+      </div>
+      {{/if}}
     </div>
   </div>
   <nav class="header__nav header__nav--closed" id="nav">

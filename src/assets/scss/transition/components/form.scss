@@ -10,6 +10,11 @@ textarea {
   padding: .4em 1em;
   font-size: 1.25rem;
   height: auto;
+
+  &:focus {
+    outline: none;
+    box-shadow: $inputFocus;
+  }
 }
 
 select {

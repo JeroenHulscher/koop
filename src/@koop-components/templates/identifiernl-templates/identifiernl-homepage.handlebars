@@ -16,7 +16,7 @@
         </div>
 
 
-        <form class="form">
+        <form class="form" data-decorator="form-redirect">
           <fieldset>
             <legend class="visually-hidden">Zoek een URI</legend>
             <div class="form__row form__row--large">
@@ -26,9 +26,9 @@
               <label class="form__label" for="" class="visually-hidden"></label>
               {{render "@input-text--prefix" prefixContext }}
             </div>
-            <div class="form__row form__row--large">
+            <div class="form__row">
               <div class="columns">
-                <div class="u-order--d2 align-right form__row form__row--medium">
+                <div class="u-order--d2 align-right form__row">
                   <button type="submit" class="form__button button button--primary">URI zoeken</button>
                 </div>
                 <div class="u-order--d1 u-nomargin">
@@ -48,9 +48,9 @@
   </div>
 </div>
 <div class="container container--medium">
-  <div class="row row--large">
+  <div class="row row--spacer">
     <div class="jumbotron">
-      <div class="jumbotron__content ">
+      <div class="jumbotron__content">
         <p class="jumbotron__subheader"><i>De beschikbaarheid van informatieobjecten</i></p>
         <h2 class="jumbotron__header">Het gebruik van een URI</h2>
         <p class="jumbotron__intro">

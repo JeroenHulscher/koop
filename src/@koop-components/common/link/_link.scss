@@ -56,6 +56,9 @@ a {
     &--left {
       padding: 0 0 0 2em;
       background-position: left 3px;
+      &:hover {
+        background-position: left 1px top 3px;
+      }
     }
     &--external {
       background: {
