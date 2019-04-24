@@ -39,18 +39,19 @@
 
   &__start {
     background-color: $white;
-    padding: .5em;
+    padding: .25em 0 .5em;
     position: relative;
     // z-index: 2; why was this set?
 
     @media ( min-width: $breakpointDesktop ) {
-      padding: 1em;
+      padding: .75em 0;
     }
 
     button {
       float: right;
       position: relative;
       z-index: 1;
+      margin-top: 0.25em;
     }
 
     .container {
@@ -103,7 +104,7 @@
     a {
       color: $headerLinkColor;
       text-decoration: none;
-      padding: .75em 1em;
+      padding: .625em 1em;
       display: block;
       font-size: 1.125rem;
 
@@ -140,7 +141,7 @@
 
       @media ( min-width: $breakpointDesktop ) {
         margin: 0;
-        padding: .75em 2em .75em 1em;
+        padding: .625em 2em .625em 1em;
       }
 
       &::before {

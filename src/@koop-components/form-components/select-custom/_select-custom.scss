@@ -44,6 +44,8 @@
     }
   }
   &--large {
+    border-width: 2px;
+
     &:after {
       background-size: 1.1em;
     }

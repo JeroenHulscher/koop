@@ -10,16 +10,16 @@
     <div class="column">
       <div class="row row--spacer hidden-mobile">
         <div class="columns">
-          <div class="column">
+          <div class="column column-d-7">
             {{render "@input-text" inputSearchContext }}
           </div>
-          <div class="column align-right">
+          <div class="column column-d-5 align-right">
             <div class="columns columns--center">
               <div class="column">
                 <label for="sorteer" class=""><strong>Sorteer op:</strong></label>
               </div>
               <div class="column">
-                <div class="select-custom">
+                <div class="select-custom select-custom--large">
                   <select id="sorteer">
                     <option>Datum</option>
                     <option>Titel</option>
@@ -80,12 +80,13 @@
 
             <div class="row--spacer">
               <h2>Zoekfilter</h2>
+              <p><a href="#">Alle filters herstellen</a></p>
             </div>
 
             <div class="form__row form__row--large">
               <h3>Geselecteerde filters (2)</h3>
               {{render "@form-selectedfilter" selectedfilterContext }}
-              <p><a href="#" class="link link--delete">Verwijder alle filters</a></p>
+
             </div>
 
 

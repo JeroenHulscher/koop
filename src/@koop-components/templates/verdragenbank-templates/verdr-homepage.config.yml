@@ -9,3 +9,37 @@ context:
   inputsubmitContext:
     button: Zoek verdagen
     placeholder: Vul hier uw zoekwoord(en) in
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Zoekwoord
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Vul hier uw zoekwoord(en) in
+    remove: true
+  doubleline1Context:
+    text: Overzicht verdragen in voorbereiding
+    text2: officielebekendmakingen.nl
+    modifier: button--doubleline button--icon-external
+    action: http://www.google.nl
+    anchor: false
+    button: true
+    iconButton: false
+    inputButton: false
+    inputSubmit: false
+    buttonWithDivider: false
+    type: submit
+    disabled: ''
+  doubleline2Context:
+    text: Tractatenbladen en maandberichten
+    text2: officielebekendmakingen.nl
+    modifier: button--doubleline button--icon-external
+    action: http://www.google.nl
+    anchor: false
+    button: true
+    iconButton: false
+    inputButton: false
+    inputSubmit: false
+    buttonWithDivider: false
+    type: submit
+    disabled: ''

@@ -4,8 +4,9 @@
   &--highlight {
     background: $lightBlue;
     padding: 2.5em 1em;
+
     @media (min-width: $breakpointDesktop) {
-      padding: 4.5em 2em;
+      padding: 2.5em 2em;
     }
   }
   &--highlight &__header {
@@ -60,6 +61,10 @@
       line-height: 1em;
     }
 
+    small {
+      font-size: 0.8em;
+    }
+
     &--subtle {
       font-size: 1rem;
       font-style: italic;
@@ -98,6 +103,7 @@
         margin-bottom: .5em;
       }
     }
+
   }
 
   &__intro {

@@ -18,6 +18,8 @@
   };
 
   formSubselection.prototype.init = function() {
+    this.trigger = onl.dom.$( '.subselection__trigger', this.element )[0];
+    this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox]', this.element );
@@ -66,6 +68,16 @@
       summary += '<' + this.config.type + ' title="' + this.items[y][1] + '">' + this.items[y][0] + '</' + this.config.type +'> ';
     }
     this.containerSummary.innerHTML = summary;
+
+    this.updateTriggerLabel(this.items.length);
+  };
+
+  formSubselection.prototype.parseSelectedOptions = function (length) {
+    if ( length > 0 ) {
+      this.trigger.innerText = 'Aanpassen';
+    } else {
+      this.trigger.innerText = this.triggerOnLoadText;
+    }
   };
 
 })();

@@ -32,3 +32,25 @@ context:
     - id: checkbox-40
       text: Enkel deze verdragen tonen
       name: onderwerp
+  subselectionContext:
+    linkText: Selecteer partij(en)
+    id: 1
+    modalTitle: Selecteer partijen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3
+        title: Nederland
+        short: Nederland
+

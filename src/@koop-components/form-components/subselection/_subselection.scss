@@ -1,5 +1,4 @@
 .subselection {
-    font-size: .875rem;
     min-width: 120px;
     display: inline-block;
 
@@ -9,5 +8,9 @@
 
     &__summary {
       display: block;
+
+      span {
+        @extend .form__selectedfilter;
+      }
     }
   }
