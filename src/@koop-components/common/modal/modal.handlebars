@@ -1,4 +1,4 @@
-<p><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button">{{ openButton }}</button></p>
+<p><button type="button" data-decorator="init-modal" data-config='{"function":"kpm", "action":"push", "data":"data"}' data-handler="open-modal" data-modal="modal-1" class="button">{{ openButton }}</button></p>
 <div id="modal-1" class="modal {{#if initClosed }}modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
   <div class="modal__inner">
     <div class="modal__content">
@@ -9,3 +9,10 @@
     </button>
   </div>
 </div>
+
+<script id="data" type="application/json">
+{
+  "org": 10,
+  "items": ["one","two"]
+}
+</script>
