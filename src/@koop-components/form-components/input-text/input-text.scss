@@ -45,18 +45,31 @@ input[type=password].input-text {
     flex: 0 0 auto;
     margin: 0;
     width: auto;
-    padding: 1.7em 1em .75em .75em;
+    padding: 1.7em 1.5em .75em 1.25em;
     margin-right: -5px;
-    font-weight: bold;
+    font-style: italic;
     border: 2px solid $darkBlue;
     background: $lightBlue;
     border-radius: 3px;
     font-size: 0.6em;
+
     @media ( min-width: 50em ) {
-      font-size: 1em;
+      font-size: 1.125em;
       padding-top: .75em;
     }
+    &--medium {
+      padding-top: 2.45em;
+      padding-bottom: .5em;
+
+      @media ( min-width: 50em ) {
+        padding-top: 0.85em;
+      }
+    }
   }
+
+
+
+
   &__container--prefix & {
     width: auto;
     margin: 0;
@@ -64,7 +77,6 @@ input[type=password].input-text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }

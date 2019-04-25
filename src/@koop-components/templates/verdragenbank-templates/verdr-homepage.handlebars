@@ -6,26 +6,33 @@
 </div>
 
 <div class="container row">
-  <div class="row row--spacer">
+  <div class="row">
     <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--side">
-        <div class="row">
+      <div class="jumbotron__content jumbotron__content--centered">
+        <div class="row align-center">
           <p class="jumbotron__subheader">Verdragenbank</p>
-          <h1 class="jumbotron__header h2">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+          <h1 class="jumbotron__header">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
         </div>
 
         <form class="form form__row form__row--medium">
           <fieldset>
             <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
             <div class="form__row">
-              {{ render "@input-inputsubmit" inputsubmitContext }}
+               {{render "@input-text" inputSearchContext }}
             </div>
           </fieldset>
         </form>
-        <p>
-          <a href="#" class="cta cta--left">Uitgebreid zoeken</a>
-        </p>
+        <div class="form__row">
+          <div class="columns">
+            <div class="u-order--d2 align-right form__row form__row--medium">
+              <button type="submit" class="form__button button button--primary">Zoek berichten</button>
+            </div>
+            <div class="u-order--d1 u-nomargin">
+              <a href="#" class="cta">Uitgebreid zoeken</a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -47,7 +54,7 @@
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row row--large">
     <div class="columns">
       <div class="column">
         <div class="jumbotron jumbotron--highlight">
@@ -82,19 +89,30 @@
   <div class="row">
     <div class="columns">
       <div class="column u-order--d2">
+        <div class="column__content column__content--padded">
+        <div class="jumbotron">
+          <div class="jumbotron__content">
+            <h2>Depositaire verdragen</h2>
+            <p>
+              Het Koninkrijk der Nederlanden is depositaris van ongeveer 100 verdragen. De taak van een depositaris is het bijhouden van
+              de administratie van een verdrag. De tekst van een verdrag bepaalt welke staat of internationale organisatie de depositaris
+              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
+              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.
 
-        <h2>Depositaire verdragen</h2>
-        <p>
-           Het Koninkrijk der Nederlanden is depositaris van ongeveer 100 verdragen. De taak van een depositaris is het bijhouden van
-          de administratie van een verdrag. De tekst van een verdrag bepaalt welke staat of internationale organisatie de depositaris
-          is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-          het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.
+            </p>
 
-        </p>
-        <ul class="list list--inline">
-          <li><a href="#" class="button button--primary">Bekijk alle depositaire verdragen</a></li>
-          <li><a href="#" class="cta cta-left">Lees meer</a></li>
-        </ul>
+            <ul class="list list--inline">
+              <li>
+                <a href="#" class="button button--primary">Bekijk alle depositaire verdragen</a>
+              </li>
+              <li>
+                <a href="#" class="cta cta-left">Lees meer</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
 
       </div>
       <div class="column u-order--d1" style="background-color:#FFF8E1;">IMG</div>
@@ -102,15 +120,15 @@
   </div>
 
 
-  <div class="row row--spacer">
+  <div class="row row--medium">
     <div class="jumbotron jumbotron--promo jumbotron--green">
 
       <div class="jumbotron__content">
-        <div class="columns columns--center">
+        <div class="columns columns--dominant columns--center">
           <div class="column">
-        <p class="jumbotron__subheader">Meld je aan voor de mail service</p>
+        <p class="jumbotron__subheader"><small>Meld je aan voor de mail service</small></p>
 
-        <h2 class="jumbotron__header h2">En blijf automatisch op de hoogte van al het nieuws over depositaire verdragen</h2>
+        <h3 class="jumbotron__header u-nomargin">En blijf automatisch op de hoogte van al het nieuws over depositaire verdragen</h3>
 
         </div>
         <div class="column">
@@ -130,6 +148,18 @@
 
     </div>
   </div>
+
+  {{!-- <div class="row row--large">
+    <div class="columns columns--dominant columns--center">
+      <div class="column column-d-3">
+        <h2 class="h1">Bekijk ook</h2>
+      </div>
+      <div class="column column-d-9 align-right">
+        {{render "@button--doubleline" doubleline1Context }}
+        {{render "@button--doubleline" doubleline2Context }}
+      </div>
+    </div>
+  </div> --}}
 
 </div>
 

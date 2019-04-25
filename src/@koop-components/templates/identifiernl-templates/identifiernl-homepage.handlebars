@@ -1,9 +1,4 @@
 {{ render "@header" header merge=true }}
-<div class="row row--page-opener">
-  <div class="container">
-    {{ render "@breadcrumb" }}
-  </div>
-</div>
 
 <div class="container row">
   <div class="row row--spacer">
@@ -25,8 +20,11 @@
           <fieldset>
             <legend class="visually-hidden">Zoek een URI</legend>
             <div class="form__row form__row--large">
+              {{render "@alert" formalertContext }}
+            </div>
+            <div class="form__row form__row--large">
               <label class="form__label" for="" class="visually-hidden"></label>
-              {{render "@input-text--prefix" }}
+              {{render "@input-text--prefix" prefixContext }}
             </div>
             <div class="form__row form__row--large">
               <div class="columns">
@@ -48,28 +46,23 @@
 
     </div>
   </div>
+</div>
+<div class="container container--medium">
   <div class="row row--large">
-    <div class="columns">
-      <div class="column">
-        <div class="column__content column__content--padded">
-          <div class="jumbotron">
-            <div class="jumbotron__content">
-              <p class="jumbotron__subheader"><i>De beschikbaarheid van informatieobjecten</i></p>
-              <h2 class="jumbotron__header">Het gebruik van een URI</h2>
-              <p class="jumbotron__intro">
-                 Om de informatie op Overheid.nl zo optimaal mogelijk te kunnen (her)gebruiken, is het van groot belang dat onze informatieobjecten
-                voorzien zijn van een machineleesbare en persistente identificatiecode in de vorm van een Uniform Resource Identifier (URI).
-                Een URI lijkt op een Uniform Resource Locator (URL) – het adres van een website of een document op een website – maar terwijl
-                een URL kan veranderen, is een URI onveranderlijk en scherp gedefinieerd.
-              </p>
-              <p>
-                <a href="#" class="button button--primary">Meer informatie over URI</a>
-              </p>
-            </div>
-          </div>
-        </div>
+    <div class="jumbotron">
+      <div class="jumbotron__content ">
+        <p class="jumbotron__subheader"><i>De beschikbaarheid van informatieobjecten</i></p>
+        <h2 class="jumbotron__header">Het gebruik van een URI</h2>
+        <p class="jumbotron__intro">
+            Om de informatie op Overheid.nl zo optimaal mogelijk te kunnen (her)gebruiken, is het van groot belang dat onze informatieobjecten
+          voorzien zijn van een machineleesbare en persistente identificatiecode in de vorm van een Uniform Resource Identifier (URI).
+          Een URI lijkt op een Uniform Resource Locator (URL) – het adres van een website of een document op een website – maar terwijl
+          een URL kan veranderen, is een URI onveranderlijk en scherp gedefinieerd.
+        </p>
+        <p>
+          <a href="#" class="button button--primary">Meer informatie over URI</a>
+        </p>
       </div>
-      <div class="u-order--d2" style="background-color:#E4F0EF;">IMG</div>
     </div>
   </div>
 

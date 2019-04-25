@@ -5,3 +5,11 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  prefixContext:
+    modifier: input-text--medium
+    modifier2: input-text__prefix--medium
+    prefix: true
+    prefixLabel: https://www.overheid.nl
+  formalertContext:
+    modifier: alert--warning
+    text: De opgegeven URI is ongeldig.
