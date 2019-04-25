@@ -1,24 +1,17 @@
 
 
-var kpm = function (element) {
-  console.log('kpm object');
-  // this.element = element;
-  // this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-  // this.data = JSON.parse(document.querySelector(this.config.config).innerHTML);
-  // console.log('initted', this.data);
+var kpmService = function (action, data) {
+  this.data = data;
+
+  if ( action === 'push') {
+    this.push( data );
+  }
 };
 
-// kpm.prototype.init = function() {
-
-// };
-
-kpm.prototype.push = function( data ) {
-  // window.kaartprikmodule = window.kaartprikmodule || [];
-  // window.kaartprikmodule.push( [ 'bootstrapKpm', this.data ] );
+kpmService.prototype.push = function( data ) {
+  window.kaartprikmodule = window.kaartprikmodule || [];
+  window.kaartprikmodule.push( [ 'bootstrapKpm', data ] );
   console.log('pussssht', data);
 };
 
-var kpmService = new kpm();
-
-
-
+new kpmService();

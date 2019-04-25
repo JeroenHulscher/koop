@@ -63,7 +63,7 @@
       {{#if buttons }}
         <ul class="list list--inline list--narrow">
           {{#each buttons }}
-            <li class="list__item"><a href="#" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
+            <li class="list__item"><a href="#" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
           {{/each}}
            {{#if share}}
             <li class="list__item pull-right"><a href="#" class="button button--share">Delen</a></li>

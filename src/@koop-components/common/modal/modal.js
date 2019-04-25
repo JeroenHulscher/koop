@@ -9,10 +9,6 @@
   var modal = {
     open: function (modal, element ) {
 
-      console.log('modal',modal);
-      var config = JSON.parse(element.getAttribute('data-config')) || [];
-      console.log('config', config);
-
       previouslyFocused = document.activeElement;
 
       // To facilitate animation, this show(), while it toggles the `hidden` attribute,
@@ -28,11 +24,17 @@
       onl.ui.focus( modal );
       onl.ui.bindFocusTrap( modal );
 
-      if ( config.function === 'kpm' ) {
-        if ( config.action === 'push' ) {
-          kpmService.push( JSON.parse(document.getElementById(config.data).innerHTML ) );
-        }
+      var config = JSON.parse(element.getAttribute('data-config')) || [];
+      if (typeof window[config.function] === 'function') {
+        var functionToCall = window[config.function];
+        new functionToCall(config.action, JSON.parse(document.getElementById(config.data).innerHTML));
       }
+
+      // if ( config.function === 'kpm' ) {
+      //   if ( config.action === 'push' ) {
+      //     kpmService.push( JSON.parse(document.getElementById(config.data).innerHTML ) );
+      //   }
+      // }
 
     },
     close: function( modal ) {
@@ -77,7 +79,9 @@
   };
 
   onl.decorate({
-    'init-modal': function( ) { }
+    'init-modal': function( element ) {
+
+    }
   });
 
   onl.handle({
