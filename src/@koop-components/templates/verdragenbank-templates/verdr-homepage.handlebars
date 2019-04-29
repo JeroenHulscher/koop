@@ -10,9 +10,10 @@
     <div class="jumbotron jumbotron--highlight">
 
       <div class="jumbotron__content jumbotron__content--centered">
-        <div class="row align-center">
+        <div class="jumbotron__heading">
           <p class="jumbotron__subheader">Verdragenbank</p>
           <h1 class="jumbotron__header">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+          <p class="jumbotron__intro">intro</p>
         </div>
 
         <form class="form form__row form__row--medium">
@@ -23,10 +24,10 @@
             </div>
           </fieldset>
         </form>
-        <div class="form__row">
+        <div class="">
           <div class="columns">
-            <div class="u-order--d2 align-right form__row form__row--medium">
-              <button type="submit" class="form__button button button--primary">Zoek berichten</button>
+            <div class="u-order--d2 align-right form__row">
+              <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
             </div>
             <div class="u-order--d1 u-nomargin">
               <a href="#" class="cta">Uitgebreid zoeken</a>
@@ -101,14 +102,8 @@
 
             </p>
 
-            <ul class="list list--inline">
-              <li>
-                <a href="#" class="button button--primary">Bekijk alle depositaire verdragen</a>
-              </li>
-              <li>
-                <a href="#" class="cta cta-left">Lees meer</a>
-              </li>
-            </ul>
+            <a href="#" class="button button--primary button--arrowed">Bekijk alle depositaire verdragen</a>
+
           </div>
         </div>
         </div>
@@ -135,9 +130,9 @@
         <form class="form">
           <fieldset>
             <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-            <div class="form__row">
+
               {{ render "@input-inputsubmit" }}
-            </div>
+
           </fieldset>
         </form>
 

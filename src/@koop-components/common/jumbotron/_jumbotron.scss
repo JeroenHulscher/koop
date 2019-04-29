@@ -6,27 +6,18 @@
     padding: 2.5em 1em;
 
     @media (min-width: $breakpointDesktop) {
-      padding: 2.5em 2em;
+      padding: 3.5em 2em;
     }
   }
   &--highlight &__header {
-    margin-bottom: 0;
-    @media (min-width: $breakpointDesktop) {
-      margin-bottom: .5em;
-    }
-  }
-  &--highlight &__intro {
-    text-align: center;
-    @media (min-width: $breakpointDesktop) {
-      text-align: left;
-    }
+    margin-bottom: .25em;
   }
 
   &--promo {
     background: $lightBlue;
     padding: 2em 1em;
     @media (min-width: $breakpointDesktop) {
-      padding: 2.2em;
+      padding: 2.2em 5em;
     }
   }
 
@@ -34,9 +25,13 @@
     background-color: $lightGreen;
   }
 
-
+  &__heading {
+    text-align: center;
+    margin: 0 0 2em;
+  }
 
   &__content {
+
 
     &--side {
       max-width: em(620);
@@ -107,7 +102,6 @@
   }
 
   &__intro {
-    text-align: left;
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;

@@ -21,6 +21,11 @@
     color: $darkBlue;
   }
 
+  &--large {
+    padding-top: .95em;
+    padding-bottom: .95em;
+  }
+
   &--primary {
     color: white;
 
@@ -32,6 +37,10 @@
 
   &--secondary,
   &--secendary {
+
+  }
+
+  &--tertiary {
     border-color: transparent !important;
     color: $darkBlue;
     background-color: $lightBlue;
@@ -40,5 +49,28 @@
       background-color: $lightBlue;
     }
   }
+
+  &--share {
+    border: none;
+  }
+
+  &--arrowed {
+    background-image: $arrowCTAWhiteIcon;
+    background-repeat: no-repeat;
+    background-position: right .625em center;
+    padding-right: 3em !important;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 60%;
+      top: 20%;
+      right: 2.25em;
+      background: white;
+    }
+  }
+
 }
 
