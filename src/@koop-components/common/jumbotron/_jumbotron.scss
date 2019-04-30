@@ -26,8 +26,11 @@
   }
 
   &__heading {
-    text-align: center;
     margin: 0 0 2em;
+
+    &--centered {
+      text-align: center;
+    }
   }
 
   &__content {

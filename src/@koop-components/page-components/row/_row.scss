@@ -15,7 +15,7 @@ $thinBorder: .5em;
   &--page-opener {
     background-color: $lightBlue;
     padding: .325em 0;
-    margin-bottom: 0;
+    margin-bottom: .5em;
 
     @media ( min-width: $breakpointDesktop ) {
       padding: .75em 0;

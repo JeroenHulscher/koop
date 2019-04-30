@@ -1,0 +1,13 @@
+.row {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &--page-opener {
+    padding-top: .325em;
+    margin-bottom: 1.5em;
+
+    @media ( min-width: $breakpointDesktop ) {
+      padding: .75em 0;
+    }
+  }
+}

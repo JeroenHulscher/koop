@@ -1,3 +1,8 @@
+html {
+  @media (min-width: 50em) {
+    padding-bottom: 13.5em;
+  }
+}
 body {
   color: $darkBlue;
   font-size: $fontsizeBody;

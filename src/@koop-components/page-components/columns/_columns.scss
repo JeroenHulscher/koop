@@ -8,17 +8,17 @@ $gutter--dominant: 3em;
   column-count:2;
 }
 .row {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 
   &--medium {
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
   }
 
   &--large {
     margin-bottom: 1.5em;
   }
   &--spacer {
-    margin-bottom: 2em;
+    margin-bottom: 2.25em;
   }
 }
 
