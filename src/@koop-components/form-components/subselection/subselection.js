@@ -23,6 +23,7 @@
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox]', this.element );
+    console.log('this.options', this.options);
     this.items = [];
 
     this.attachListeners();
@@ -54,7 +55,12 @@
       option = [];
       if ( this.options[y].checked ) {
         value = this.options[y].getAttribute( 'data-value' ) || this.options[y].value;
-        option.push( value, this.options[y].closest( 'label' ).innerText );
+        if (this.options[y].closest('label') !== null) {
+          option.push(value, this.options[y].closest('label').innerText);
+        } else {
+          option.push(value, this.options[y].closest('.input-checkbox').querySelector('label').innerText);
+        }
+
         this.items.push( option );
       }
     }
