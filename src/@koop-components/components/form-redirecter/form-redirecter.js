@@ -17,7 +17,10 @@
     this.element.addEventListener('submit', function (e) {
       e.preventDefault();
       this.formValue = this.element.querySelector(this.element.field).value;
-      window.location = this.root + '/' + this.formValue;
+      if ( this.formValue.charAt(0) !== '/') {
+        this.formValue = '/' + this.formValue;
+      }
+      window.location = this.root + this.formValue;
     }.bind(this), false);
   };
 
