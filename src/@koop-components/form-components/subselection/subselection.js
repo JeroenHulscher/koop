@@ -72,7 +72,7 @@
     this.updateTriggerLabel(this.items.length);
   };
 
-  formSubselection.prototype.parseSelectedOptions = function (length) {
+  formSubselection.prototype.updateTriggerLabel = function (length) {
     if ( length > 0 ) {
       this.trigger.innerText = 'Aanpassen';
     } else {
