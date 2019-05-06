@@ -7,9 +7,14 @@
         <ul class="list--unstyled">
           {{#each Options }}
             <li>
-              <label for="input{{id}}">
-                <input id="input{{id}}" value="{{short}}" type="checkbox" name="name">{{title}}
-              </label>
+
+              <div class="input-checkbox">
+                <input class="checkbox__input" {{disabled}} type="checkbox" id="option-{{ id }}" name="name" {{ status }} value="{{ short }}"
+                />
+                <label class="checkbox__label" for="option-{{ id  }}">
+                  {{ title }}
+                </label>
+              </div>
             </li>
           {{/each}}
         </ul>
@@ -22,3 +27,9 @@
   </div>
   <a href="#" id="id123" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger">{{linkText}}</a>
 </div>
+
+<!--
+<label for="input{{id}}">
+  <input id="input{{id}}" value="{{short}}" type="checkbox" name="name">{{title}}
+</label>
+-->
