@@ -13,3 +13,16 @@
     right: 1em;
   }
 }
+
+.modal {
+  .kpm {
+    .map {
+      min-height: 0;
+      height: 200px !important;
+    }
+    .columns-map {
+      height: auto;
+      width: auto;
+    }
+  }
+}

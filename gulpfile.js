@@ -128,6 +128,11 @@ gulp.task( 'js:clean', function( done ) {
   return del([paths.drop + '/js'], done );
 });
 
+gulp.task( 'js:copy', function() {
+  return gulp.src( paths.scripts + '/vendor/kpm.js' )
+    .pipe( gulp.dest( paths.drop + '/js/vendor/' ) );
+});
+
 gulp.task( 'js:build', function() {
   return gulp.src([
     paths.scripts + '/vendor/jquery.js', // 3.3.1
@@ -137,7 +142,6 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/vendor/moment.js',
     paths.scripts + '/vendor/stickybit.min.js',
     paths.scripts + '/vendor/jquery-autocomplete.js',
-    paths.scripts + '/vendor/kpm.js',
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',
     paths.components + '/**/*.js',
@@ -151,7 +155,7 @@ gulp.task( 'js:build', function() {
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
 
-gulp.task( 'js', gulp.series( 'js:clean', 'js:build' ) );
+gulp.task( 'js', gulp.series( 'js:clean', 'js:build', 'js:copy' ) );
 
 gulp.task( 'js:watch', function() {
   gulp.watch( paths.allSrc + '/**/*.js', gulp.parallel( 'js' ) );
