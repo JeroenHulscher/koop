@@ -3,7 +3,7 @@
   padding: .5em 1em .5em .5em;
   margin: .25em 0;
   position: relative;
-  @media (min-width: 50em) {
+  @media (min-width: $breakpointDesktop) {
     display: table;
   }
   width: 100%;
@@ -28,7 +28,7 @@
   p {
     padding: 0;
     margin: 0;
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       display: table-row;
     }
   }
@@ -36,7 +36,7 @@
   ul {
     padding: 0;
     margin: 0;
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       display: table-cell;
       width: 14em;
       text-align: right;

@@ -4,7 +4,7 @@
   width: 17em;
   margin: 0.5em 1em 1em;
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
     margin: 0;
   }
 
@@ -20,7 +20,7 @@
     outline-offset: .5em;
     transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       position: absolute;
       right: 40px;
       top: .5em;
@@ -30,7 +30,7 @@
 
     &--hidden {
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         width: 0;
         border: 0;
         padding: 0;
@@ -38,7 +38,7 @@
 
       + button {
 
-        @media ( min-width: 50em ) {
+        @media ( min-width: $breakpointDesktop ) {
           background-color: $headerBackgroundColor;
         }
       }
@@ -77,7 +77,7 @@
     }
     cursor: pointer;
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       top: .6em;
     }
 

@@ -1,4 +1,5 @@
-.input-text {
+.input-text,
+input[type=text] {
 
   &__remove {
     position: absolute;
@@ -8,5 +9,6 @@
     bottom: 0;
     background: $iconCrossFilled no-repeat center center;
   }
+
 
 }

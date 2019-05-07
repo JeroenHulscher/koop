@@ -5,3 +5,10 @@ context:
   id: 1
   fieldLabel: Aantal resultaten per pagina
   fieldInstruction: verplicht veld
+variants:
+  - name: large
+    context:
+      modifier: select-custom--large
+  - name: small
+    context:
+      modifier: select-custom--small

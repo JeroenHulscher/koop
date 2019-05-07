@@ -1,0 +1,345 @@
+---
+label: PLOOI - Pages
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  voorschriftenContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Aanwijzingsbesluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Agenda en notulen
+      name: onderwerp
+    - id: checkbox-20
+      text: Belastingbesluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Besluitenlijst
+      name: onderwerp
+    - id: checkbox-20
+      text: Collectevergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Delegatiebesluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Gemeenschappelijke regelingen
+      name: onderwerp
+    - id: checkbox-20
+      text: Kansspelvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Loterijvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Milieu-informatie
+      name: onderwerp
+    - id: checkbox-20
+      text: Milieuverordening
+      name: onderwerp
+    - id: checkbox-20
+      text: Optochtvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Peilbesluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Register kinderopvang
+      name: onderwerp
+    - id: checkbox-20
+      text: Stedelijk waterplan
+      name: onderwerp
+    - id: checkbox-20
+      text: Streekplan
+      name: onderwerp
+    - id: checkbox-20
+      text: Stroomgebiedsvisie
+      name: onderwerp
+    - id: checkbox-20
+      text: Structuurvisie
+      name: onderwerp
+    - id: checkbox-20
+      text: Vaarvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Ventvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Vervoer gevaarlijke stoffen vergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Verordeningen en reglementen
+      name: onderwerp
+    - id: checkbox-20
+      text: Waterbeheersplan
+  bestemmingContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Bestemmingsplan
+      name: onderwerp
+    - id: checkbox-20
+      text: Voorbereidingsbesluit
+      name: onderwerp
+  voorlichtingContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Aankondiging
+      name: onderwerp
+    - id: checkbox-20
+      text: Huisafval
+      name: onderwerp
+    - id: checkbox-20
+      text: Inspraak
+      name: onderwerp
+    - id: checkbox-20
+      text: Mededelingen
+      name: onderwerp
+    - id: checkbox-20
+      text: Meldingen
+      name: onderwerp
+    - id: checkbox-20
+      text: Openingstijden
+      name: onderwerp
+    - id: checkbox-20
+      text: Overig
+      name: onderwerp
+    - id: checkbox-20
+      text: Rectificatie
+      name: onderwerp
+    - id: checkbox-20
+      text: Verkiezingen
+      name: onderwerp
+  onderwerpContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Aanlegvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Aanlegvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Apv vergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Bodembeschermingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Bouwvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Drank- en horecavergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Evenementenvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Exploitatievergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Gebruiksvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Gedoogbesluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Gehandicaptenparkeervergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Geluidvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Grondwateronttrekkingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Grondwatervergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: In- en uitritvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Kapvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Keurvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Ligplaatsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Lozingsmelding
+      name: onderwerp
+    - id: checkbox-20
+      text: Lozingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Marktvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Milieueffectrapportage besluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Milieuvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Monumentenvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Natuurbeschermingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Omgevingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Ontgrondingenvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Ontheffing flora en faunawet
+      name: onderwerp
+    - id: checkbox-20
+      text: Ontheffing ligplaatsverbod
+      name: onderwerp
+    - id: checkbox-20
+      text: Ontheffing stortverbod
+      name: onderwerp
+    - id: checkbox-20
+      text: Onttrekkingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Reclamevergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Sloopvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Speelautomatenvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Splitsingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text:  Standplaatsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Stookvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Terrasvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Uitstallingvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Verkeersbesluit
+      name: onderwerp
+    - id: checkbox-20
+      text: Vestigingsvergunning
+      name: onderwerp
+    - id: checkbox-20
+      text: Vuurwerkvergunning
+      name: onderwerp
+  publicatiedatumContext:
+    moreless: true
+    options:
+    - id: radio-1
+      text: Vandaag
+      name: publicatie
+    - id: radio-2
+      text: Afgelopen week
+      name: publicatie
+    - id: radio-3
+      text: Afgelopen maand
+      name: publicatie
+    - id: radio-4
+      text: Afgelopen 2 maanden
+      name: publicatie
+      disabled: disabled
+    - id: radio-5
+      text: Zelf een periode kiezen
+      name: publicatie
+  resultmodalContext:
+    modifier: result--list--wide
+    items:
+    - title: Aangevraagde evenementenvergunningen 2018
+      headerimg: https://via.placeholder.com/720x280.png?text=Kaart+met+marker
+      titleHeader: h2
+      text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
+      buttons:
+        - button: Bekijk publicatie
+          type: primary
+        - button: Bekijk op kaart
+          type: secendary
+          action: modal-4
+          modal: true
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      share: true
+      buttons:
+        - button: Bekijk publicatie
+          type: primary
+        - button: Bekijk op kaart
+          type: secendary
+          action: modal-4
+          modal: true
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      share: true
+      buttons:
+        - button: Bekijk publicatie
+          type: primary
+        - button: Bekijk op kaart
+          type: secendary
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      share: true
+      buttons:
+        - button: Bekijk publicatie
+          type: primary
+        - button: Bekijk op kaart
+          type: secendary
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  selectedfilterContext:
+    items:
+      - label: Gezocht op "leveringen"
+      - label: Bouwvergunning
+      - label: APV vergunning
+
+
+

@@ -5,11 +5,16 @@ input[type="date"],
 input[type="password"],
 input[type="email"],
 textarea {
-  border: 2px solid $darkBlue;
+  border: 1px solid $darkBlue;
   border-radius: .25em;
-  padding: .4em;
+  padding: .4em 1em;
   font-size: 1.25rem;
   height: auto;
+
+  &:focus {
+    outline: none;
+    box-shadow: $inputFocus;
+  }
 }
 
 select {
@@ -21,11 +26,13 @@ input[type=password].input-text {
 
   &--accent {
     padding: .625em;
+    border-width: 2px;
   }
 
   &--searchmedium {
     font-size: 1.325rem;
     color: $darkBlue;
+    border-width: 2px;
     height: 60px; // needed to correct crossbrowser fields; :(
     padding: .625em 2em .625em 3em;
     background-position: .75em center;
@@ -71,7 +78,7 @@ fieldset {
 input[type=date].datepicker__input~.ui-datepicker-trigger,
 input[type=text].datepicker__input~.ui-datepicker-trigger {
   background-color: white;
-  border: 2px solid $darkBlue;
+  border: 1px solid $darkBlue;
   border-left: 0;
   background-image: $calendarIcon;
   background-size: 22px;

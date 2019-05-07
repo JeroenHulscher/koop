@@ -41,7 +41,7 @@
     .link--forward {
       margin: 0 .75em 0 0;
 
-      @media ( max-width: 50em ) {
+      @media ( max-width: $breakpointDesktop ) {
         &.pull-right {
           float: none;
           margin: 0 0 1em 0;
@@ -106,7 +106,7 @@
     margin-bottom: 1.25em;
     border: 0;
 
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       padding-left: 4em;
       padding-right: 4em;
     }

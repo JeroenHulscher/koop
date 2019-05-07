@@ -1,33 +1,23 @@
 .jumbotron {
-  // border-radius: .5em;
-  // margin: 0 0 2em 0;
   @extend .group;
 
   &--highlight {
     background: $lightBlue;
     padding: 2.5em 1em;
-    @media (min-width: 50em) {
-      padding: 2.5em 2em;
+
+    @media (min-width: $breakpointDesktop) {
+      padding: 3.5em 2em;
     }
   }
   &--highlight &__header {
-    margin-bottom: 0;
-    @media (min-width: 50em) {
-      // margin-bottom: .5em;
-    }
-  }
-  &--highlight &__intro {
-    text-align: center;
-    @media (min-width: 50em) {
-      text-align: left;
-    }
+    margin-bottom: .25em;
   }
 
   &--promo {
     background: $lightBlue;
     padding: 2em 1em;
-    @media (min-width: 50em) {
-      padding: 2.2em;
+    @media (min-width: $breakpointDesktop) {
+      padding: 2.2em 5em;
     }
   }
 
@@ -35,17 +25,20 @@
     background-color: $lightGreen;
   }
 
+  &__heading {
+    margin: 0 0 2em;
 
+    &--centered {
+      text-align: center;
+    }
+  }
 
   &__content {
-    // padding: 0 1em;
-    @media (min-width: 50em) {
-      // padding: 0 3em;
-    }
+
 
     &--side {
       max-width: em(620);
-      @media (min-width: 50em) {
+      @media (min-width: $breakpointDesktop) {
         max-width: 70%;
       }
     }
@@ -64,10 +57,9 @@
     font-style: italic;
     margin-bottom: 0.5em;
     line-height: 1.125em;
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       font-size: 1.5rem;
       line-height: 1em;
-      margin-bottom: 0.2em;
     }
 
     small {
@@ -79,7 +71,7 @@
       font-style: italic;
       margin-bottom: 0.5em;
       line-height: 1.125em;
-      @media (min-width: 50em) {
+      @media (min-width: $breakpointDesktop) {
         font-size: 1.125rem;
         line-height: 1em;
         margin-bottom: 0.2em;
@@ -96,7 +88,7 @@
       font-size: 2em;
       line-height: 1.25em;
 
-      @media (min-width: 50em) {
+      @media (min-width: $breakpointDesktop) {
         font-size: 3em;
         line-height: 1em;
         margin-bottom: .5em;
@@ -104,11 +96,11 @@
     }
     @at-root h2#{&} {
       margin-bottom: 1em;
-      font-size: 1.75em;
+      font-size: 1.5em;
       line-height: 1.25em;
 
-      @media (min-width: 50em) {
-        font-size: 2em;
+      @media (min-width: $breakpointDesktop) {
+        font-size: 1.8em;
         margin-bottom: .5em;
       }
     }
@@ -116,17 +108,10 @@
   }
 
   &__intro {
-    font-size: 1rem;
-    line-height: 1.3rem;
-    text-align: left;
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
     }
-  }
-
-  .button {
-    font-size: 1.25em;
   }
 
 }

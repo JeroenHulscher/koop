@@ -10,9 +10,10 @@
     <div class="jumbotron jumbotron--highlight">
 
       <div class="jumbotron__content jumbotron__content--centered">
-        <div class="row align-center">
+        <div class="jumbotron__heading jumbotron__heading--centered">
           <p class="jumbotron__subheader">Verdragenbank</p>
           <h1 class="jumbotron__header">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+          <p class="jumbotron__intro">intro</p>
         </div>
 
         <form class="form form__row form__row--medium">
@@ -23,10 +24,10 @@
             </div>
           </fieldset>
         </form>
-        <div class="form__row">
+        <div class="">
           <div class="columns">
-            <div class="u-order--d2 align-right form__row form__row--medium">
-              <button type="submit" class="form__button button button--primary">Zoek berichten</button>
+            <div class="u-order--d2 align-right form__row">
+              <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
             </div>
             <div class="u-order--d1 u-nomargin">
               <a href="#" class="cta">Uitgebreid zoeken</a>
@@ -38,7 +39,7 @@
 
     </div>
   </div>
-  <div class="row">
+  <div class="row row--medium">
 
 
     <h2>Over de verdragenbank</h2>
@@ -86,7 +87,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row row--large">
     <div class="columns">
       <div class="column u-order--d2">
         <div class="column__content column__content--padded">
@@ -98,17 +99,10 @@
               de administratie van een verdrag. De tekst van een verdrag bepaalt welke staat of internationale organisatie de depositaris
               is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
               het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.
-
             </p>
-
-            <ul class="list list--inline">
-              <li>
-                <a href="#" class="button button--primary">Bekijk alle depositaire verdragen</a>
-              </li>
-              <li>
-                <a href="#" class="cta cta-left">Lees meer</a>
-              </li>
-            </ul>
+            <p>
+              <a href="#" class="button button--primary button--arrowed">Bekijk alle depositaire verdragen</a>
+            </p>
           </div>
         </div>
         </div>
@@ -120,7 +114,7 @@
   </div>
 
 
-  <div class="row row--medium">
+  <div class="row row--large">
     <div class="jumbotron jumbotron--promo jumbotron--green">
 
       <div class="jumbotron__content">
@@ -135,9 +129,9 @@
         <form class="form">
           <fieldset>
             <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-            <div class="form__row">
+
               {{ render "@input-inputsubmit" }}
-            </div>
+
           </fieldset>
         </form>
 
@@ -149,7 +143,7 @@
     </div>
   </div>
 
-  {{!-- <div class="row row--large">
+  <div class="row row--large">
     <div class="columns columns--dominant columns--center">
       <div class="column column-d-3">
         <h2 class="h1">Bekijk ook</h2>
@@ -159,7 +153,7 @@
         {{render "@button--doubleline" doubleline2Context }}
       </div>
     </div>
-  </div> --}}
+  </div>
 
 </div>
 

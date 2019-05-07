@@ -38,7 +38,7 @@ h1,
     font-style: italic;
     font-size: 0.675rem;
     display: block;
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       display: inline-block;
     }
   }
