@@ -2,25 +2,25 @@
   position: relative;
   padding: 0;
   margin: 0;
-  border: 2px solid $darkBlue;
+  border: 1px solid $darkBlue;
   overflow: visible;
   background-color: white;
   border-radius: 5px;
 
   &:after {
     position: absolute;
-    right: .5em;
+    right: .25em;
     top: 0;
     width: 1.875em;
     bottom: 0;
-    background: $dartRightBlueIcon no-repeat center center;
-    background-size: 0.5em;
+    background: $iconArrowDown no-repeat center center;
+    background-size: .9em;
     content: "";
     pointer-events: none;
-    transform: rotate(90deg);
   }
   select {
-    padding: 0 .5em;
+    font-size: 1em;
+    padding: 0 2.25em 0 .75em;
     width: 100%;
     color: $darkGrey;
     border: none;
@@ -36,15 +36,28 @@
       display: none;
     }
     &:focus {
-      outline: 2px solid $yellow;
-      outline-offset: 0;
+      outline: none;
+      box-shadow: $inputFocus;
     }
     &:disabled {
       // background-color: $nsi-color-black-10;
     }
   }
+  &--large {
+    border-width: 2px;
 
+    &:after {
+      background-size: 1.1em;
+    }
+  }
   &--large select {
     height: 55px;
+    font-size: 1.2em;
   }
+
+  &--small select {
+    height: 35px;
+    font-size: 0.8em;
+  }
+
 }

@@ -31,7 +31,7 @@
 
   li {
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       display: inline-block;
       vertical-align: bottom;
     }
@@ -39,18 +39,19 @@
 
   &__start {
     background-color: $white;
-    padding: .5em;
+    padding: .25em 0 .5em;
     position: relative;
     // z-index: 2; why was this set?
 
-    @media ( min-width: 50em ) {
-      padding: 1em;
+    @media ( min-width: $breakpointDesktop ) {
+      padding: .75em 0;
     }
 
     button {
       float: right;
       position: relative;
       z-index: 1;
+      margin-top: 0.25em;
     }
 
     .container {
@@ -59,7 +60,7 @@
 
     .header__meta {
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         position: absolute;
         right: 1em;
         top: .5em;
@@ -86,7 +87,7 @@
       flex-direction: column;
       position: relative;
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         flex-direction: row;
       }
     }
@@ -95,7 +96,7 @@
       display: flex;
       flex-direction: column;
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         flex-direction: row;
       }
     }
@@ -103,7 +104,7 @@
     a {
       color: $headerLinkColor;
       text-decoration: none;
-      padding: .75em 1em;
+      padding: .625em 1em;
       display: block;
       font-size: 1.125rem;
 
@@ -138,9 +139,9 @@
         position: right .75em center;
       };
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         margin: 0;
-        padding: .75em 2em .75em 1em;
+        padding: .625em 2em .625em 1em;
       }
 
       &::before {
@@ -180,7 +181,7 @@
     display: none;
     z-index: -1;
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       display: block;
       z-index: auto;
     }
@@ -193,7 +194,7 @@
       padding-top: 1em;
       padding-bottom: 1em;
 
-      @media ( min-width: 50em ) {
+      @media ( min-width: $breakpointDesktop ) {
         flex-direction: row;
         animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
       }

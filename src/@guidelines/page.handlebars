@@ -1,0 +1,42 @@
+{{render "@header" }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="row row--spacer">
+  Between the rows we use <code>'row--spacer'</code>
+  <div class="row">
+    Usually the page starts with a Jumbrotron
+  </div>
+</div>
+
+<div class="row row--spacer">
+  Between the rows we use <code>'row--spacer'</code>
+  <div class="row">
+    <div class="columns">
+      <div class="column">1</div>
+      <div class="column">2</div>
+      <div class="column">3</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  The last row is a regular <code>'row'</code>
+</div>
+
+{{render "@footer" }}
+
+<style>
+  .row:not(.row--page-opener) {
+    border: 1px solid red;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .column {
+    background: #f1f1f1;
+  }
+</style>

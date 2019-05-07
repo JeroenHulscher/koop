@@ -6,7 +6,7 @@
   padding: 0 !important;
   height: 100vh;
 
-  @media (min-width: 50em) {
+  @media (min-width: $breakpointDesktop) {
     flex-direction: row;
 
     &.collapsed {

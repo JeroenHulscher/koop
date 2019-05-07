@@ -40,19 +40,33 @@ a {
 
   &.cta {
     // text-decoration: none;
-    padding: 0 2em 0 0;
+    padding: 0 2.5em 0 0;
     font-size: 1.125rem;
-    font-weight: 700;
     background: {
       repeat: no-repeat;
       image: $arrowCTAIcon;
-      position: right 3px;
+      position: right 1px top 3px;
       size: 1em;
+    }
+
+    &:hover {
+      background-position: right 0 top 3px;
     }
 
     &--left {
       padding: 0 0 0 2em;
       background-position: left 3px;
+      &:hover {
+        background-position: left 1px top 3px;
+      }
+    }
+    &--external {
+      background: {
+        repeat: no-repeat;
+        image: $externalLinkIcon;
+        position: right 3px top 1px;
+        size: 1em;
+      }
     }
   }
 

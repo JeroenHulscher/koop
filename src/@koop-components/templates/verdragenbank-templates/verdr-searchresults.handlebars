@@ -10,16 +10,16 @@
     <div class="column">
       <div class="row row--spacer hidden-mobile">
         <div class="columns">
-          <div class="column">
+          <div class="column column-d-7">
             {{render "@input-text" inputSearchContext }}
           </div>
-          <div class="column align-right">
+          <div class="column column-d-5 align-right">
             <div class="columns columns--center">
               <div class="column">
                 <label for="sorteer" class=""><strong>Sorteer op:</strong></label>
               </div>
               <div class="column">
-                <div class="select-custom">
+                <div class="select-custom select-custom--large">
                   <select id="sorteer">
                     <option>Datum</option>
                     <option>Titel</option>
@@ -96,10 +96,12 @@
                     <div class="form__row form__row--medium">
                       <label>Startdatum</label>
                       {{render "@datepicker" }}
+                      <a href="#" class="reset"><small>Herstel</small></a>
                     </div>
                     <div class="form__row form__row--medium">
                       <label>Einddatum</label>
                       {{render "@datepicker" }}
+                      <a href="#" class="reset"><small>Herstel</small></a>
                     </div>
                     <div class="form__row">
                       <label>Plaats</label>

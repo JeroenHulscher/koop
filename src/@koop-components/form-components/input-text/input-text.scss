@@ -10,6 +10,7 @@ input[type=password].input-text {
     color: $darkBlue;
     height: 60px; // needed to correct crossbrowser fields; :(
     padding: .625em;
+    border-width: 2px;
   }
 
   &--search {
@@ -53,16 +54,16 @@ input[type=password].input-text {
     border-radius: 3px;
     font-size: 0.6em;
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       font-size: 1.125em;
       padding-top: .75em;
     }
     &--medium {
-      padding-top: 2.45em;
+      padding-top: 2em;
       padding-bottom: .5em;
 
-      @media ( min-width: 50em ) {
-        padding-top: 0.85em;
+      @media ( min-width: $breakpointDesktop ) {
+        padding-top: .73em;
       }
     }
   }

@@ -283,7 +283,7 @@ context:
         - button: Bekijk publicatie
           type: primary
         - button: Bekijk op kaart
-          type: secendary
+          type: primary
           action: modal-4
           modal: true
   resultsContext:

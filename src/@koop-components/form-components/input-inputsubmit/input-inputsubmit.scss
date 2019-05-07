@@ -8,7 +8,7 @@
   }
 
   &__grid {
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       display: flex;
     }
   }
@@ -17,8 +17,9 @@
     height: 3em;
     width: 100%;
     margin-bottom: 1em;
+    border-width: 2px;
 
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       width: auto;
       margin: 0;
       flex: 1 0 8em;
@@ -35,7 +36,7 @@
     padding-right: 2em;
     padding-left: 2em;
 
-    @media (min-width: 50em) {
+    @media (min-width: $breakpointDesktop) {
       flex: 0 0 auto;
       margin: 0;
       width: auto;
