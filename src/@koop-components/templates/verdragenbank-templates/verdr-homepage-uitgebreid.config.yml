@@ -20,6 +20,26 @@ context:
     - id: checkbox-22
       text: Plurilateraal
       name: onderwerp
+  geldvoorContext:
+    options:
+    - id: checkbox-20
+      text: Nederland (in Europa)
+      name: onderwerp
+    - id: checkbox-21
+      text: Nederland (Bonaire)
+      name: onderwerp
+    - id: checkbox-22
+      text: Nederland (Sint Eustatius)
+      name: onderwerp
+    - id: checkbox-22
+      text: Aruba
+      name: onderwerp
+    - id: checkbox-22
+      text: Curacao
+      name: onderwerp
+    - id: checkbox-22
+      text: Sint Maarten
+      name: onderwerp
   depositarisContext:
     moreless: true
     options:
@@ -53,4 +73,26 @@ context:
         id: 3
         title: Nederland
         short: Nederland
+  subselectionOnderwerpContext:
+    linkText: Selecteer onderwerp(en)
+    id: 23
+    modalTitle: Selecteer onderwerp(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3
+        title: Nederland
+        short: Nederland
+
 

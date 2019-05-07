@@ -1,7 +1,7 @@
 ---
 label: Subselection
-status: prototype
 context:
+  name: Default
   id: 1
   type: abbr
   linkText: Selecteer
@@ -22,3 +22,27 @@ context:
       id: 3
       title: Sociale Zaken en Werkgelegenheid (szw)
       short: szw
+variants:
+  - name: Filter selection
+    context:
+      id: 1
+      type: span
+      linkText: Kies 'iets'
+      linkTextActive: Pas opties aan
+      modalTitle: Selecteer ministeries
+      fieldLabel: fieldLabel
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 0612345678'
+      Options:
+        - Option: 1
+          id: 1
+          title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+          short: lnv
+        - Option: 2
+          id: 2
+          title: Onderwijs, Cultuur en Wetenschap (ocw)
+          short: ocw
+        - Option: 3
+          id: 3
+          title: Sociale Zaken en Werkgelegenheid (szw)
+          short: szw
