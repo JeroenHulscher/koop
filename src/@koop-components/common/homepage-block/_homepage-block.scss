@@ -146,7 +146,7 @@
       padding: 1em 1em 3em 1em;
       position: relative;
 
-       @media ( max-width: 50em ) {
+       @media ( max-width: $breakpointDesktop ) {
         margin: 0;
        }
 

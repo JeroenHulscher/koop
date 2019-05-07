@@ -1,22 +1,23 @@
 // Colors
 
 $black: #000;
-$darkBlue: #154273;
-$primaryBlue: #007bc7;
-$mediumBlue: #b2d7ee;
-$lightBlue: #e5f1f9;
-$bgBlue: #f2f8fc;
+$darkBlue: #154273; // 'Donkerblauw'
+$primaryBlue: #007bc7; // -- used?
+// $primaryBlue: $darkBlue; // -- used?
+$mediumBlue: #b2d7ee; // -- used?
+$lightBlue: #E5F1F9; // 'Licht blauw'
+$bgBlue: #f2f8fc; // 'Wolken'
 $white: #fff;
 
 $darkGrey: #333;
 $darkerGrey: #555;
 $mediumGrey: #b4b4b4;
-$lighterGrey: #ccc;
-$lightGrey: #f3f3f3;
+$lighterGrey: #E6E6E6; // 'Midden grijs'
+$lightGrey: #F5F5F5; // 'Licht grijs'
 
 $green: #39870c;
 $darkGreen: #015F58;
-$lightGreen: #E4F0EF;
+$lightGreen: #E4F0EF; // 'Mint'
 $yellow: #ffb612;
 $darkYellow: #F9D358;
 $lightYellow: #FFF8E1;
@@ -32,7 +33,7 @@ $textColor: $darkGrey;
 
 $buttonBackgroundColor: $white;
 $buttonBackgroundActiveColor: $mediumGrey;
-$buttonPrimaryBackgroundColor: $primaryBlue;
+$buttonPrimaryBackgroundColor: $darkBlue;
 $buttonPrimaryBackgroundActiveColor: $darkBlue;
 $buttonBackgroundSecondaryColor: $orange;
 $buttonBackgroundSecondaryActiveColor: darken($orange, 10%);

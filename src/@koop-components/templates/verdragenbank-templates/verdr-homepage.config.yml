@@ -5,6 +5,10 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    language: true
+  inputsubmitContext:
+    button: Zoek verdagen
+    placeholder: Vul hier uw zoekwoord(en) in
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1

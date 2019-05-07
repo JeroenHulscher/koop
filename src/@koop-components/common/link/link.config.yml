@@ -4,9 +4,15 @@ context:
   text: link
   action: /link/intern/
 variants:
-  - name: extern
-    label: External
+  - name: extern (auto)
+    label: External (auto)
     context:
       text: externe link
       action: http://www.google.nl
+  - name: extern (manual)
+    label: External (manual)
+    context:
+      text: externe link (manual)
+      action: http://www.google.nl
+      mode: manual
 

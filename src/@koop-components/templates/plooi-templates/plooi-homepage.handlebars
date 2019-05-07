@@ -1,0 +1,67 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--centered">
+
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">Overheidsdocumenten</p>
+          <h1 class="jumbotron__header">Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden</h1>
+          <p class="jumbotron__intro">
+              ## omschrijving
+          </p>
+        </div>
+
+        <form class="form form__row form__row--medium">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+            <div class="form__row">
+              {{render "@input-text" inputSearchContext }}
+            </div>
+          </fieldset>
+        </form>
+        <div class="">
+          <div class="columns">
+            <div class="u-order--d2 align-right form__row">
+              <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
+            </div>
+            <div class="u-order--d1 u-nomargin">
+              <a href="#" class="cta">Uitgebreid zoeken</a><br>
+              <a href="#" class="cta">Wat is actief openbaar?</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="row row--large">
+      <h2>Zoek documenten op thema</h2>
+    </div>
+
+    <ul class="list list--themas list--columns-4">
+      {{#each themaItems}}
+        <li class="list__item">
+          <h3 class="list__heading"><a href="#">{{title}}</a></h3>
+          <p>{{descr}}</p>
+        </li>
+      {{/each}}
+    </ul>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

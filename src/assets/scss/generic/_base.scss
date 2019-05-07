@@ -38,7 +38,7 @@ html {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
 
-  @media (min-width: 50em) {
+  @media (min-width: $breakpointDesktop) {
     padding-bottom: 12em;
   }
 }
@@ -64,7 +64,7 @@ p,
   float: left;
   width: 100%;
 }
-@media (min-width: 50em) {
+@media (min-width: $breakpointDesktop) {
   .footer {
     position: absolute;
     left: 0;

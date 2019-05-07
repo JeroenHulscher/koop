@@ -61,14 +61,14 @@
 .hidden-mobile {
   display: none !important;
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
     display: block !important;
   }
 }
 
 .hidden-desktop {
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
     display: none !important;
   }
 }
@@ -99,13 +99,13 @@
   overflow: hidden;
   position: fixed;
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
     overflow: visible;
     position: static;
   }
 }
 
-@media (min-width: 30em) {
+@media (min-width: $breakpointDesktop ) {
   .u-order {
     &--d1 {
       order: 0;

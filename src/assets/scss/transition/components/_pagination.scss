@@ -60,7 +60,7 @@
       margin: 0.5em 0;
     }
 
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       float: right;
       clear: none;
       margin: 0;

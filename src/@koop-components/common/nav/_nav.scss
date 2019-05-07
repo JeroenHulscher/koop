@@ -8,31 +8,50 @@
   margin: 0 0 2em 0;
   padding: 0;
 
-  @media (min-width: 50em) {
+  @media (min-width: $breakpointDesktop) {
     border-right: 1px solid #f1f1f1;
   }
 
   &__item {
+    &.is-active {
+      border-right: 3px solid $darkBlue;
+    }
+  }
+
+  &__item,
+  &__sub-item {
     list-style: none;
     display: block;
   }
 
   &__link {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     padding: .2em 0;
     text-decoration: none;
     display: block;
-    margin-bottom: .5em;
-
-    @media (min-width: 50em) {
-    }
 
     &.is-active {
       background: $lightBlue;
       padding-left: .5em;
-      text-decoration: underline;
-      border-right: 4px solid $darkBlue;
+      border-right: 3px solid $darkBlue;
+    }
+  }
+
+  &__sub {
+    padding-left: 0;
+    margin-bottom: 1em;
+  }
+
+  &__sub-link {
+    font-size: .9em;
+    padding: .2em 0;
+    text-decoration: none;
+    display: block;
+
+    &.is-active {
+      background: $lightBlue;
+      padding-left: .5em;
     }
   }
 }

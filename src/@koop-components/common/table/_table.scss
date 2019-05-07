@@ -16,6 +16,8 @@ table,
   margin: 1em 0;
   table-layout: fixed;
 
+
+
   .table--container & {
     table-layout: auto;
   }
@@ -45,9 +47,9 @@ table,
 
   tr td,
   tr th {
-    border-bottom: 1px solid $lighterGrey;
     padding: .5em;
     vertical-align: top;
+    border-bottom: 1px solid $lighterGrey;
   }
 
   th {
@@ -78,7 +80,7 @@ table,
   }
 
   td.status {
-    @media ( min-width: 50em ) {
+    @media ( min-width: $breakpointDesktop ) {
       text-align: center;
 
       span {
@@ -146,7 +148,7 @@ table,
     }
   }
 
-  @media ( min-width: 50em ) {
+  @media ( min-width: $breakpointDesktop ) {
     &.table--striped {
       tbody tr:nth-child(odd) td,
       tbody tr:nth-child(odd) th {
@@ -198,7 +200,7 @@ table,
 }
 
 
-@media ( max-width: 50em ) {
+@media ( max-width: $breakpointDesktop ) {
   table:not(.table__data-overview):not(.table__regulation),
   &.table--condensed,
   &.table--striped,

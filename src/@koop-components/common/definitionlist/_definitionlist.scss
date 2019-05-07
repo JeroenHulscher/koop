@@ -26,8 +26,8 @@ dl {
 
     div {
       width: 50%;
-      
-      @media ( min-width: 50em ) {
+
+      @media ( min-width: $breakpointDesktop ) {
         width: 33%;
       }
     }
