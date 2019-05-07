@@ -1,0 +1,72 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+
+  <div class="jumbotron jumbotron--highlight">
+    <div class="jumbotron__content jumbotron__content--centered">
+      <div class="align-center">
+        <h1 class="">Afmelden voor de berichtenservice</h1>
+        <p>
+          Gebruik de knop 'afmelden' om u definitief af te melden voor het abbonement op de e-mailaservice 'Berichten over de buurt'.
+        </p>
+        <p>
+          <button class="button button--primary">Afmelden</button>
+          <button class="button">Annuleren</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+<br>
+
+    <div class="jumbotron jumbotron--highlight">
+      <div class="jumbotron__content jumbotron__content--centered">
+        <div class="align-center">
+
+  <h1>Wachtwoord wijzigen</h1>
+  <p>
+     Voer het e-mailadres en wachtwoord in waarmee u zich heeft geabonneerd op de e-mailservice. Voer vervolgens tweemaal uw nieuwe wachtwoord in.
+  </p>
+  </div>
+  <form>
+    <fieldset>
+      <legend class="visually-hidden">Wijzig wachtwoord</legend>
+      <div class="form__row">
+        <label for="">E-mailadres</label>
+        <input type="text" class="input-text" />
+      </div>
+      <div class="form__row">
+        <label for="">Huidig wachtwoord</label>
+        <input type="text" class="input-text"/>
+      </div>
+      <div class="form__row">
+        <label for="">Nieuw wachtwoord</label>
+        <input type="text" class="input-text"/>
+      </div>
+      <div class="form__row form__row--large">
+        <label for="">Herhaal het nieuw wachtwoord</label>
+        <input type="text" class="input-text" />
+      </div>
+    </fieldset>
+
+  </form>
+
+  <p>
+    <button class="button button--primary">Bevestigen</button>
+    <button class="button">Annuleren</button>
+  </p>
+
+  </div>
+  </div>
+  </div>
+
+
+
+</div>
+
+{{ render "@footer" }}

@@ -336,13 +336,45 @@ ol {
 
   @media (min-width: $breakpointDesktop) {
     &--columns-4 &__item {
-      width: 23%;
+      flex: 1 1 23%;
+      // width: 23%;
       margin-right: 2%;
-      display: inline-block;
+      // display: inline-block;
     }
 
     &--columns-4 &__item:nth-child(4n) {
       margin-right: 0;
+    }
+  }
+}
+
+.list {
+  &--themas {
+    margin: 0 1em 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &--themas &__item {
+    line-height: 1.2em;
+    margin-bottom: 1.5em;
+  }
+
+  &--themas &__heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+
+    a {
+      // text-decoration: none;
+      margin-left: -.25em;
+      padding: .125em .25em;
+
+      &:hover {
+        background: $lightBlue;
+        color: $darkBlue;
+        // text-decoration: underline;
+      }
     }
   }
 }
