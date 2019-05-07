@@ -21,6 +21,10 @@
     color: $darkBlue;
   }
 
+  & + .button {
+    margin-left: .75em;
+  }
+
   &--large {
     padding-top: .95em;
     padding-bottom: .95em;

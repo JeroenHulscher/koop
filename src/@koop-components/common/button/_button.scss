@@ -12,7 +12,7 @@
   max-width: 100%;
   outline: 2px solid transparent;
   outline-offset: .5em;
-  transition: all $fastEaseInOut, outline-offset $fastEaseInOut;
+  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
   padding: $standardButtonPadding; // 40px total height
   position: relative;
   text-align: center;
@@ -22,10 +22,6 @@
   white-space: nowrap;
   font-size: 1rem;
   cursor: pointer;
-
-  & + .button {
-    margin-left: .75em;
-  }
 
   &[hidden] {
     display: none;
