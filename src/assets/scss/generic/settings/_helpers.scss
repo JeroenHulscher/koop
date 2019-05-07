@@ -6,7 +6,11 @@
 .group:after {
   clear: both;
 }
-
+.u-fontw {
+  &--default {
+    font-weight: normal;
+  }
+}
 .vet {
   font-weight: bold;
 }
