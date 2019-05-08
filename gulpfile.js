@@ -128,6 +128,11 @@ gulp.task( 'js:clean', function( done ) {
   return del([paths.drop + '/js'], done );
 });
 
+gulp.task( 'js:copy', function() {
+  return gulp.src( paths.scripts + '/vendor/kpm.js' )
+    .pipe( gulp.dest( paths.drop + '/js/vendor/' ) );
+});
+
 gulp.task( 'js:build', function() {
   return gulp.src([
     paths.scripts + '/vendor/jquery.js', // 3.3.1
@@ -150,7 +155,7 @@ gulp.task( 'js:build', function() {
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
 
-gulp.task( 'js', gulp.series( 'js:clean', 'js:build' ) );
+gulp.task( 'js', gulp.series( 'js:clean', 'js:build', 'js:copy' ) );
 
 gulp.task( 'js:watch', function() {
   gulp.watch( paths.allSrc + '/**/*.js', gulp.parallel( 'js' ) );
@@ -158,6 +163,7 @@ gulp.task( 'js:watch', function() {
 
 gulp.task( 'default', gulp.parallel( 'css', 'images', 'fonts', 'js' ) );
 gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'fractal:build' ) );
-gulp.task( 'watch', gulp.parallel( 'lint:watch', 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
+// gulp.task( 'watch', gulp.parallel( 'lint:watch', 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
+gulp.task( 'watch', gulp.parallel( 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'clean', gulp.parallel( 'css:clean', 'images:clean', 'fonts:clean', 'js:clean' ) );
 gulp.task( 'dev', gulp.series( 'default', 'fractal:start', 'watch' ) );
