@@ -5,6 +5,7 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    language: true
   onderwerpContext:
     moreless: true
     options:

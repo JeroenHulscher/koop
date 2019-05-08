@@ -5,20 +5,41 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    language: true
   inputsubmitContext:
     button: Zoek verdagen
     placeholder: Vul hier uw zoekwoord(en) in
   typeverdagContext:
     moreless: true
     options:
-    - id: checkbox-20
+    - id: checkbox-220
       text: Bilateraal
       name: onderwerp
-    - id: checkbox-21
+    - id: checkbox-221
       text: Multilateraal
       name: onderwerp
-    - id: checkbox-22
+    - id: checkbox-222
       text: Plurilateraal
+      name: onderwerp
+  geldvoorContext:
+    options:
+    - id: checkbox-40
+      text: Nederland (in Europa)
+      name: onderwerp
+    - id: checkbox-41
+      text: Nederland (Bonaire)
+      name: onderwerp
+    - id: checkbox-422
+      text: Nederland (Sint Eustatius)
+      name: onderwerp
+    - id: checkbox-422
+      text: Aruba
+      name: onderwerp
+    - id: checkbox-422
+      text: Curacao
+      name: onderwerp
+    - id: checkbox-422
+      text: Sint Maarten
       name: onderwerp
   depositarisContext:
     moreless: true
@@ -41,6 +62,27 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     type: span
     Options:
+      - Option: 122
+        id: 122
+        title: Spanje
+        short: Spanje
+      - Option: 222
+        id: 222
+        title: Griekenland
+        short: Griekenland
+      - Option: 322
+        id: 322
+        title: Nederland
+        short: Nederland
+  subselectionOnderwerpContext:
+    linkText: Selecteer onderwerp(en)
+    id: 23
+    modalTitle: Selecteer onderwerp(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
       - Option: 1
         id: 1
         title: Spanje
@@ -53,4 +95,5 @@ context:
         id: 3
         title: Nederland
         short: Nederland
+
 

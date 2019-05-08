@@ -19,7 +19,7 @@
 
       <h2>Algemeen</h2>
 
-      <table class="table__data-overview">
+      <table class="table__data-overview table--striped">
         <tbody>
           <tr>
           <th>Verdragsnummer</th>
@@ -52,7 +52,7 @@
 
       <h2>Konkrijk der Nederlanden</h2>
 
-      <table class="table__data-overview">
+      <table class="table__data-overview table--striped">
         <thead>
           <th>Voorlopige toepassing</th>
           <th>In werking</th>
@@ -128,14 +128,24 @@
         </tbody>
       </table>
 
+      <h2>Gewaarmerkt afschrift</h2>
+
+       {{ render "@sources-list" }}
+
     </div>
     <div class="column column--sidebar">
 
       <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
 
           <div class="modal-sidebar__content">
-            <div >
-              {{render "@nav" }}
+            <h3 class="u-fontw--default"><i>Verdrag</i></h3>
+            <div>
+              {{render "@nav" navVerdragContext }}
+            </div>
+
+            <h3 class="u-fontw--default"><i>Depositair</i></h3>
+            <div>
+              {{render "@nav"  navDepositairContext }}
             </div>
 
             <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">

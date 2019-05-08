@@ -5,6 +5,26 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    language: true
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Basisgegevens
+      active: true
+      sub: true
+      subItems:
+        - stitle: Algemeen
+        - stitle: Koninkrijk
+          sactive: true
+        - stitle: Partijen
+        - stitle: Uitbreidingen
+    - title: Voorbehouden, verklaringen en bezwaren
+    - title: Wijzigingen
+  navDepositairContext:
+    id: 3
+    items:
+    - title: Depositaire mededelingen
+    - title: Notificaties
   onderwerpContext:
     moreless: true
     options:
@@ -87,7 +107,6 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
@@ -106,6 +125,3 @@ context:
     items:
       - label: Bouwvergunning
       - label: APV vergunning
-
-
-

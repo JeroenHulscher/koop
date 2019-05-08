@@ -23,7 +23,7 @@
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox]', this.element );
-    console.log('this.options', this.options);
+
     this.items = [];
 
     this.attachListeners();
@@ -80,7 +80,7 @@
 
   formSubselection.prototype.updateTriggerLabel = function (length) {
     if ( length > 0 ) {
-      this.trigger.innerText = 'Aanpassen';
+      this.trigger.innerText = this.config.triggerOnChangeText || 'Aanpassen';
     } else {
       this.trigger.innerText = this.triggerOnLoadText;
     }
