@@ -49,21 +49,12 @@
               <div class="form__row form__row--large">
                 <fieldset>
                   <legend>Onderwerp</legend>
-                  {{!-- <a href="#">Maak een selectie</a> --}}
-                  <div class="select-custom">
-                    <select>
-                      <option>Energie</option>
-                      <option>Belasting</option>
-                      <option>Arbeid</option>
-                    </select>
-                  </div>
-                </fieldset>
+                  {{render "@subselection" subselectionOnderwerpContext }}
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Partij {{render "@tooltip"}}</legend>
-                  {{render "@subselection" subselectionContext }}
-                </fieldset>
+                  <legend>Nu geldend voor</legend>
+                  {{render "@input-checkbox" geldvoorContext }}
               </div>
             </div>
             <div class="column">
@@ -107,8 +98,8 @@
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nu geldend voor Nederland</legend>
-                  {{render "@input-checkbox" geldendContext }}
+                  <legend>Partij {{render "@tooltip"}}</legend>
+                  {{render "@subselection" subselectionContext }}
                 </fieldset>
               </div>
             </div>

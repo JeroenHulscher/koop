@@ -13,6 +13,8 @@
   }
 
   &__item {
+    margin-bottom: .5em;
+
     &.is-active {
       border-right: 3px solid $darkBlue;
     }

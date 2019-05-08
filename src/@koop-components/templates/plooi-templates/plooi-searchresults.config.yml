@@ -119,130 +119,22 @@ context:
     moreless: true
     options:
     - id: checkbox-20
-      text: Aanlegvergunning
+      text: Alle
       name: onderwerp
     - id: checkbox-20
-      text: Aanlegvergunning
+      text: Vandaag
       name: onderwerp
     - id: checkbox-20
-      text: Apv vergunning
+      text: Afgelopen week
       name: onderwerp
     - id: checkbox-20
-      text: Bodembeschermingsvergunning
+      text: Afgelopen maand
       name: onderwerp
     - id: checkbox-20
-      text: Bouwvergunning
+      text: Afgelopen 3 maanden
       name: onderwerp
     - id: checkbox-20
-      text: Drank- en horecavergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Evenementenvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Exploitatievergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Gebruiksvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Gedoogbesluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Gehandicaptenparkeervergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Geluidvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Grondwateronttrekkingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Grondwatervergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: In- en uitritvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Kapvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Keurvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Ligplaatsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Lozingsmelding
-      name: onderwerp
-    - id: checkbox-20
-      text: Lozingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Marktvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Milieueffectrapportage besluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Milieuvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Monumentenvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Natuurbeschermingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Omgevingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Ontgrondingenvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Ontheffing flora en faunawet
-      name: onderwerp
-    - id: checkbox-20
-      text: Ontheffing ligplaatsverbod
-      name: onderwerp
-    - id: checkbox-20
-      text: Ontheffing stortverbod
-      name: onderwerp
-    - id: checkbox-20
-      text: Onttrekkingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Reclamevergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Sloopvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Speelautomatenvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Splitsingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text:  Standplaatsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Stookvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Terrasvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Uitstallingvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Verkeersbesluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Vestigingsvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Vuurwerkvergunning
+      text: Zelf een periode kiezen
       name: onderwerp
   publicatiedatumContext:
     moreless: true
@@ -349,6 +241,48 @@ context:
       - label: Gezocht op "leveringen"
       - label: Bouwvergunning
       - label: APV vergunning
+  subselectionContext:
+    linkText: Selecteer organisatie(s)
+    id: 1
+    modalTitle: Selecteer organisatie(s)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3
+        title: Nederland
+        short: Nederland
+  subselectionThemaContext:
+    linkText: Selecteer thema(s)
+    id: 12
+    modalTitle: Selecteer thema(s)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 4
+        id: 4
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6
+        title: Nederland
+        short: Nederland
 
 
 

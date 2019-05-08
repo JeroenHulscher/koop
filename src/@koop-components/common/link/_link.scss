@@ -143,3 +143,23 @@ p a {
     padding-left: 1em;
   }
 }
+
+.link-iconed {
+  padding-right: 1.5em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  &--print {
+    background-image: $printIcon;
+    background-size: 1em;
+  }
+  &--download {
+    background-image: $downloadIcon;
+    background-size: .8em;
+  }
+  &--mail {
+    background-image: $iconMail;
+    background-size: .8em;
+  }
+}

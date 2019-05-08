@@ -11,6 +11,7 @@
 
       span {
         @extend .form__selectedfilter;
+        @extend .group;
         padding-right: .75em;
       }
     }

@@ -1,93 +1,18 @@
-title: Button
+title: Nav
 status: prototype
-default: Ghost button
+default: Nav
 context:
-  text: Knop
-  action: http://www.google.nl
-  anchor: false
-  button: true
-  iconButton: false
-  inputButton: false
-  inputSubmit: false
-  buttonWithDivider: false
-  type: submit
-  disabled: ''
-variants:
-  - name: standard
-    status: ready
-    context:
-      text: primaire knop
-      modifier: button--primary
-  - name: call to action
-    status: ready
-    context:
-      text: Secundaire knop
-      modifier: button--secondary
-  - name: small
-    status: prototype
-    context:
-      text: Kleine knop
-      modifier: button--smaller
-  - name: inversed
-    status: ready
-    context:
-      text: Diapositieve knop
-      modifier: button--inversed
-  - name: large
-    status: ready
-    context:
-      text: Grote knop
-      modifier: button--larger
-  - name: icon right
-    status: ready
-    context:
-      text: Icoon rechts
-      modifier: button--icon-right
-  - name: icon left
-    status: ready
-    context:
-      text: Icoon links
-      modifier: button--icon-left
-  - name: icon top
-    status: ready
-    context:
-      text: Icoon top
-      modifier: button--icon-top
-  - name: icon down
-    status: ready
-    label: Icon down
-    context:
-      text: Icoon down
-      modifier: button--icon-down
-  - name: Icon hamburger
-    status: ready
-    label: Icon hamburger
-    context:
-      text: Menu
-      modifier: button--icon-hamburger
-  - name: Icon Filter
-    status: ready
-    label: Icon filter
-    context:
-      text: Menu
-      modifier: button--icon-filter
-  - name: Icon download
-    status: ready
-    label: icon download
-    context:
-      text: Menu
-      modifier: button--primary button--icon-download-white
-  - name: Icon Refresh documents
-    status: ready
-    label: icon refresh document
-    context:
-      text: Ververs documentenlijst
-      modifier: button--primary button--icon-refreshdocuments-white
-  - name: Icon with divider
-    status: wip
-    label: Icon with divider
-    context:
-      text: Button tekst
-      modifier: button--primary button--divider-icon
-      button: false
-      buttonWithDivider: true
+  id: 1
+  items:
+    - title: Basisgegevens
+      active: true
+      sub: true
+      subItems:
+        - stitle: Algemeen
+        - stitle: Koninkrijk
+          sactive: true
+        - stitle: Partijen
+        - stitle: Uitbreidingen
+    - title: Voorbehouden, verklaringen en bezwaren
+    - title: Wijzigingen
+
