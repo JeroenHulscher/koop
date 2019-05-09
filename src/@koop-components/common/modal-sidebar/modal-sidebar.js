@@ -39,7 +39,6 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.allInputs = onl.dom.$( 'input, select', element );
     this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0];
-    console.log('this.button', this.button);
     this.init();
   };
 
