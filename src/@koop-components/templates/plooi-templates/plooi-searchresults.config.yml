@@ -181,18 +181,21 @@ context:
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
       titleHeader: h2
       label: Nieuw vandaag
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
       buttons:
         - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
           type: secendary
-          action: modal-4
-          modal: true
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
       label: Nieuw vandaag
@@ -283,6 +286,29 @@ context:
         id: 6
         title: Nederland
         short: Nederland
+  subselectionInfoContext:
+    linkText: Selecteer informatiesoort(en)
+    id: 12
+    modalTitle: Selecteer informatiesoort(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 4
+        id: 4
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6
+        title: Nederland
+        short: Nederland
+
+
 
 
 
