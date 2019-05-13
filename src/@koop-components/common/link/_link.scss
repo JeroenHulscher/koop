@@ -108,19 +108,19 @@ p a {
 
   &--down {
     background: {
-      position: 0 center;
+      position: 0 center !important;
       repeat: no-repeat;
-      image: $dartDownIcon;
-      size: 9px;
+      image: $dartDownIcon !important;
+      size: 9px !important;
     }
     padding-left: 1em;
   }
   &--up {
     background: {
-      position: 0 center;
+      position: 0 center !important;
       repeat: no-repeat;
-      image: $dartUpIcon;
-      size: 9px;
+      image: $dartUpIcon !important;
+      size: 9px !important;
     }
     padding-left: 1em;
   }

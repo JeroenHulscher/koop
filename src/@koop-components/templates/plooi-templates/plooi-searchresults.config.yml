@@ -196,6 +196,8 @@ context:
           txt: (gepubliceerd op 07-07-2016 | XML)
         - link: Overheid.nl
           txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
       label: Nieuw vandaag

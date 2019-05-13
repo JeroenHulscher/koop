@@ -27,6 +27,9 @@
     this.items = [];
 
     this.attachListeners();
+
+    this.collectValues();
+    this.parseSelectedOptions();
   };
 
   formSubselection.prototype.attachListeners = function() {

@@ -1,9 +1,9 @@
 
 <div data-decorator="showmoreless">
-  <ul>
+  <ul class="{{listmodifier}}">
     {{#each items}}
       <li>
-        <a href="#">{{item}}</a>
+        <a href="#">{{item}}</a> {{descr}}
       </li>
     {{/each}}
   </ul>
