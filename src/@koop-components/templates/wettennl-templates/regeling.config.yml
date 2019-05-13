@@ -1,6 +1,7 @@
 ---
 title: Regeling B
 status: ready
+preview: "@preview.default"
 context:
   header:
     file: logo.svg

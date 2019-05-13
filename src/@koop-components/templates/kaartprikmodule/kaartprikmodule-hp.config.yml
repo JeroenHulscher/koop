@@ -1,5 +1,6 @@
 title: KPM Startscherm
 label: KPM Startscherm
+preview: "@preview.default"
 context:
   inputAutocompleteContext:
     id: 2

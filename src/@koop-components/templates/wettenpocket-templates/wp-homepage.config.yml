@@ -1,5 +1,6 @@
 title: Wettenpocket Homepage
 label: Wettenpocket Homepage
+preview: "@preview.default"
 context:
   headerContext:
     file: logo.svg

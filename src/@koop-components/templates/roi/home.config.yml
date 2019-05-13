@@ -1,5 +1,6 @@
 name: home ROI
 label: home ROI
+preview: "@preview.default"
 context:
   filter1:
     heading: Soort organisatie

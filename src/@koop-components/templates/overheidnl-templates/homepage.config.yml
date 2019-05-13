@@ -1,6 +1,7 @@
 ---
 name: homepage A-variant
 label: Homepage A-variant
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

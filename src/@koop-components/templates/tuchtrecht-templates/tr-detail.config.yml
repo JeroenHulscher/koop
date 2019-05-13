@@ -1,6 +1,7 @@
 ---
 title: Tr Details
 label: Tr Details
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

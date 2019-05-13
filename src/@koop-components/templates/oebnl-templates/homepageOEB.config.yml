@@ -1,6 +1,7 @@
 ---
 title: Homepage
 label: Homepage OEP
+preview: "@preview.default"
 status: ready
 context:
   header:

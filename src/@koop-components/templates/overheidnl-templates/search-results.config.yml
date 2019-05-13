@@ -1,6 +1,7 @@
 ---
 title: Zoekresultaten
 label: Zoekresultaten
+preview: "@preview.default"
 status: ready
 context:
   header:

@@ -1,5 +1,6 @@
 title: Ic Details
 label: Ic Details
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

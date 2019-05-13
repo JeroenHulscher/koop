@@ -1,6 +1,7 @@
 ---
 title: Tr - Search extended
 label: Tr - Search extended
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

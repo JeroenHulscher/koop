@@ -1,6 +1,7 @@
 ---
 name: Dienstverlening
 label: Dienstverlening
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

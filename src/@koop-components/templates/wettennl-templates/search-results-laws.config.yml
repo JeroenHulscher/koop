@@ -1,6 +1,7 @@
 ---
 title: Zoekresultaten wetten.nl
 label: Zoekresultaten wetten.nl
+preview: "@preview.default"
 status: wip
 context:
   header:

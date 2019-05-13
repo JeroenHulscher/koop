@@ -1,5 +1,6 @@
 ---
 label: Geavanceerd zoeken
+preview: "@preview.default"
 status: ready
 context:
   header:

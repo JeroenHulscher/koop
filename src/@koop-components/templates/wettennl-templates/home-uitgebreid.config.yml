@@ -2,6 +2,7 @@
 name: search laws complex
 label: Zoeken uitgebreid (homepage)
 status: ready
+preview: "@preview.default"
 context:
   dataWoord:
     title: Woord(en) of zinsdeel

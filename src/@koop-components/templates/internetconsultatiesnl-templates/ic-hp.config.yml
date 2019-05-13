@@ -1,5 +1,6 @@
 title: I Homepage
 label: Ic Homepage
+preview: "@preview.default"
 status: ready
 context:
   id: 1

@@ -1,5 +1,6 @@
 title: KPM Zoekresultaat
 label: KPM Zoekresultaat
+preview: "@preview.default"
 context:
   inputAutocompleteContext:
     id: 2

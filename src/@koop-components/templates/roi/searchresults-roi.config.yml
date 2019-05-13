@@ -1,6 +1,7 @@
 ---
 title: Zoekresultaten ROI
 label: Zoekresultaten ROI
+preview: "@preview.default"
 status: ready
 context:
   header:

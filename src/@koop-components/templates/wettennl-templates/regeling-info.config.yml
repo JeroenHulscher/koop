@@ -1,6 +1,7 @@
 ---
 title: Regeling info
 label: Regeling - info
+preview: "@preview.default"
 status: ready
 context:
   header:

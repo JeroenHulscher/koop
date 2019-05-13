@@ -1,5 +1,6 @@
 title: Wk Homepage
 label: Wk Homepage
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

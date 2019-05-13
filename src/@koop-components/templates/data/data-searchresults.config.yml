@@ -1,4 +1,5 @@
 name: data searchresults
+preview: "@preview.default"
 context:
   headerContext:
     youAreHere:

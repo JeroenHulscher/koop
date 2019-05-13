@@ -1,4 +1,5 @@
 title: Dataset
+preview: "@preview.default"
 context:
   headerContext:
     youAreHere:
@@ -37,7 +38,7 @@ context:
     tabs:
       - id: 5
         label: Databronnen
-        content: test 
+        content: test
       - id: 6
         label: Documentatie
         content: <h2>TBD</h2>
@@ -58,4 +59,4 @@ context:
         value: CC-0
       - type: Taal
         value: Nederlands
-      
+

@@ -1,5 +1,6 @@
 title: Wettenpocket Mijn Pocket Bewerken
 label: Wettenpocket Mijn Pocket Bewerken
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

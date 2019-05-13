@@ -1,4 +1,5 @@
 title: Data home
+preview: "@preview.default"
 context:
   headerContext:
     youAreHere:

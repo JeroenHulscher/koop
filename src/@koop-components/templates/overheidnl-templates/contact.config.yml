@@ -1,6 +1,7 @@
 ---
 title: Contact
 label: Contact
+preview: "@preview.default"
 status: ready
 context:
   header:

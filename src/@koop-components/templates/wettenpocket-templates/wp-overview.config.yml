@@ -1,5 +1,6 @@
 title: Wettenpocket Overzichtspagina
 label: Wettenpocket Overview
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

@@ -24,7 +24,7 @@ const myCustomisedTheme = mandelbrot({
 
 fractal.set( 'project.title', 'KOOP componentenbibliotheek' );
 fractal.components.set( 'path', `${__dirname}/src` );
-fractal.components.set( 'default.preview', '@preview.default' );
+fractal.components.set( 'default.preview', '@preview.2' );
 fractal.web.set( 'builder.dest', `${__dirname}/component-library` );
 fractal.web.set( 'static.path', `${__dirname}/public` );
 fractal.web.theme(myCustomisedTheme);

@@ -1,5 +1,6 @@
 title: Wettenpocket Detail Redactioneel
 label: Wettenpocket Detail Redactioneel
+preview: "@preview.default"
 context:
   headerContext:
     file: logo.svg

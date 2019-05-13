@@ -1,3 +1,4 @@
+preview: "@preview.default"
 context:
   headerContext:
     youAreHere:

@@ -1,4 +1,5 @@
 label: Data.overheid.nl
+preview: "@preview.default"
 context:
   youAreHere:
     - text: Open data van de Overheid

@@ -1,5 +1,6 @@
 title: Wettenpocket Regeling Bewerken
 label: Wettenpocket Regeling Bewerken
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

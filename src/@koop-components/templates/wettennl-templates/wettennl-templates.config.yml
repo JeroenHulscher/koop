@@ -1,4 +1,5 @@
 label: Wetten.nl
+preview: "@preview.default"
 context:
   headerContext:
     navLinks:

@@ -1,6 +1,7 @@
 ---
 title: Tr Search domain
 label: Tr Search domain
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

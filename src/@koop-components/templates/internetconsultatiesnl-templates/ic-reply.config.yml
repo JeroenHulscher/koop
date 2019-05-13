@@ -1,5 +1,6 @@
 title: Ic Reply
 label: Ic Reply
+preview: "@preview.default"
 status: ready
 context:
   headerContext:

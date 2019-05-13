@@ -1,5 +1,6 @@
 title: Ic Searchresults
 label: Ic Searchresults
+preview: "@preview.default"
 status: ready
 context:
   id: 1

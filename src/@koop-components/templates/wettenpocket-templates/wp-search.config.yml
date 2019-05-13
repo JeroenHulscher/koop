@@ -1,5 +1,6 @@
 title: Wettenpocket Zoeken
 label: Wettenpocket Zoeken
+preview: "@preview.default"
 context:
   headerContext:
     file: logo.svg

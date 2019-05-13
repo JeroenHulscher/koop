@@ -1,5 +1,6 @@
 title: Wk Search extended
 label: Wk Search extended
+preview: "@preview.default"
 status: ready
 context:
   headerContext:
