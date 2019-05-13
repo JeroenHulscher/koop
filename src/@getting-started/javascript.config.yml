@@ -1,0 +1,9 @@
+---
+label: JavaScript
+status: ready
+context:
+  id: 1
+  fieldLabel: Datum
+  fieldInstruction:
+  fieldPlaceholder: 'Bijv: 06-10-1960'
+  debug: false
