@@ -135,7 +135,7 @@ gulp.task( 'js:copy', function() {
 
 gulp.task( 'js:build', function() {
   return gulp.src([
-    paths.scripts + '/vendor/jquery.js', // 3.3.1
+    paths.scripts + '/vendor/jquery-3.4.1.min.js',
     paths.scripts + '/vendor/jquery-ui.min.js', // 1.2
     paths.scripts + '/vendor/fastsearch.js',
     paths.scripts + '/vendor/fastselect.js',
@@ -155,7 +155,24 @@ gulp.task( 'js:build', function() {
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
 
-gulp.task( 'js', gulp.series( 'js:clean', 'js:build', 'js:copy' ) );
+gulp.task( 'js:buildwjq', function() {
+  return gulp.src([
+    paths.scripts + '/vendor/moment.js',
+    paths.scripts + '/vendor/stickybit.min.js',
+    paths.scripts + '/polyfills.js',
+    paths.scripts + '/main.js',
+    paths.components + '/**/*.js',
+    '!' + paths.components + '/**/*.e2e.js',
+    paths.scripts + '/decorators/*.js',
+    paths.scripts + '/run.js'
+  ])
+  .pipe( concat( 'main.wjq.js' ) )
+  .pipe( uglify() )
+  .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
+  .pipe( gulp.dest( paths.drop + '/js' ) );
+});
+
+gulp.task('js', gulp.series('js:clean', 'js:build', 'js:buildwjq', 'js:copy' ) );
 
 gulp.task( 'js:watch', function() {
   gulp.watch( paths.allSrc + '/**/*.js', gulp.parallel( 'js' ) );
