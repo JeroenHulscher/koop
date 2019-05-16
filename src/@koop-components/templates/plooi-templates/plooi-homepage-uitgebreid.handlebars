@@ -1,0 +1,121 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--side">
+        <div class="row">
+          <p class="jumbotron__subheader">Verdragenbank</p>
+          <h1 class="jumbotron__header h2">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+        </div>
+
+        <form class="form">
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+              <div class="form__row form__row--medium">
+                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+              </div>
+              <div class="form__row">
+                <ul class="list list--inline">
+                  <li class="list__item">
+                    {{ render "@input-radio"  radioContext1 }}
+                  </li>
+                  <li class="list__item">
+                    {{ render "@input-radio" radioContext2 }}
+                  </li>
+                </ul>
+              </div>
+
+            </fieldset>
+          </div>
+          <div class="columns columns--dominant">
+            <div class="column">
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Informatiesoort {{render "@tooltip"}}
+                  </legend>
+                  {{render "@subselection" subselectionInfoContext }}
+                </fieldset>
+              </div>
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
+                  <div class="form__row form__row--medium">
+                    {{render "@input-radio" onderwerpContext }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="column">
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Thema {{render "@tooltip"}}
+                  </legend>
+                  {{render "@subselection" subselectionThemaContext }}
+                </fieldset>
+              </div>
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Organisatie {{render "@tooltip"}}
+                  </legend>
+                  {{render "@subselection" subselectionContext }}
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="align-right">
+            <ul class="list list--inline">
+              <li><button type="submit" class="button button--erase">Leegmaken</button></li>
+              <li><button type="submit" class="button button--primary">Zoeken</button></li>
+            </ul>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--promo jumbotron--green">
+
+      <div class="jumbotron__content">
+        <div class="columns columns--center">
+          <div class="column">
+        <p class="jumbotron__subheader">Meld je aan voor de mail service</p>
+
+        <h2 class="jumbotron__header h2">En blijf automatisch op de hoogte van al het nieuws over depositaire verdragen</h2>
+
+        </div>
+        <div class="column">
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+            <div class="form__row">
+              {{ render "@input-inputsubmit" }}
+            </div>
+          </fieldset>
+        </form>
+
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}

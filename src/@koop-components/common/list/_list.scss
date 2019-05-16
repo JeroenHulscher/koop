@@ -250,7 +250,7 @@ ol {
 
   li {
     @media ( min-width: $breakpointDesktop ) {
-      display: inline;
+      display: inline-block;
       margin-right: 1em;
     }
 
