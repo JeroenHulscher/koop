@@ -32,6 +32,7 @@
     for ( i = 0; i < this.listitems.length; i++ ) {
       if ( i > this.config.amountVisible - 1 ) {
         this.listitems[i].setAttribute('hidden', 'true');
+        this.listitems[i].setAttribute('aria-hidden', 'true');
         y++;
       }
     }
@@ -45,11 +46,19 @@
     this.trigger = document.createElement('li');
     this.trigger.classList.add('link');
     this.trigger.classList.add('link--down');
-    this.trigger.innerHTML = 'Toon meer' + ' (' + this.totalHidden + ')';
+
+    this.triggerA = document.createElement('a');
+    this.triggerA.setAttribute('href', '#');
+    this.triggerA.setAttribute('tabindex', '0');
+    this.triggerA.setAttribute('aria-expanded', false);
+    this.triggerA.innerHTML = 'Toon meer' + ' (' + this.totalHidden + ')';
+
+    this.trigger.appendChild(this.triggerA);
+
 
     this.element.querySelector('ul').appendChild(this.trigger);
 
-    this.trigger.addEventListener('click', function(e) { this.showHide(e); }.bind(this), false);
+    this.triggerA.addEventListener('click', function(e) { e.preventDefault(); this.showHide(e); }.bind(this), false);
   };
 
   showmoreless.prototype.showHide = function() {
@@ -59,15 +68,18 @@
       this.allvisible = false;
       this.trigger.classList.remove('link--up');
       this.trigger.classList.add('link--down');
-      this.trigger.innerHTML = this.config.labelMore + ' (' + this.totalHidden + ')';
+      this.triggerA.innerHTML = this.config.labelMore + ' (' + this.totalHidden + ')';
+      this.triggerA.setAttribute('aria-expanded', false);
     } else {
       for (i = 0; i < this.listitems.length; i++) {
         this.listitems[i].removeAttribute('hidden', 'true');
+        this.listitems[i].removeAttribute('aria-hidden', 'true');
       }
       this.allvisible = true;
       this.trigger.classList.add('link--up');
       this.trigger.classList.remove('link--down');
-      this.trigger.innerHTML = this.config.labelLess;
+      this.triggerA.innerHTML = this.config.labelLess;
+      this.triggerA.setAttribute('aria-expanded', true);
     }
   };
 
