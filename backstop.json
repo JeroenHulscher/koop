@@ -16,128 +16,137 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
+      "label": "bodb - homepage",
+      "url": "http://localhost:3000/components/preview/templates-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-homepage"
+    },
+    {
+      "label": "bodb - searchresults",
+      "url": "http://localhost:3000/components/preview/templates-searchresults",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults"
+    },
+    {
+      "label": "bodb - searchresults",
+      "url": "http://localhost:3000/components/preview/templates-newsletter",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-newsletter"
+    },
+    {
+      "label": "identifier - homepage",
+      "url": "http://localhost:3000/components/preview/templates-identifiernl-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-identifiernl-homepage"
+    },
+    {
+      "label": "plooi - homepage",
+      "url": "http://localhost:3000/components/preview/templates-plooi-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage"
+    },
+    {
+      "label": "plooi - searchresults",
+      "url": "http://localhost:3000/components/preview/templates-plooi-searchresults",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-searchresults"
+    },
+    {
       "label": "wetten.nl uitgebreid zoeken",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-search-laws-complex",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-search-laws-complex.html"
     },
     {
       "label": "wetten.nl regeling wti",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-regeling-wti",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-regeling-wti.html"
     },
     {
       "label": "wetten.nl regeling info",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-regeling-info",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-regeling-info.html"
     },
     {
       "label": "wetten.nl regeling",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-regeling",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-regeling.html"
     },
     {
       "label": "Wetgevingskalender homepage",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-wk-hp",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-hp.html"
     },
     {
       "label": "Wetgevingskalender results",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-wk-results",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-results.html"
     },
     {
       "label": "Wetgevingskalender detail",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-wk-detail",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-detail.html"
     },
     {
       "label": "Wetgevingskalender search",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-wk-search-extended",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-search-extended.html"
     },
     {
       "label": "Internetconsultatie homepage",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-ic-hp",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-hp.html"
     },
     {
       "label": "Internetconsultatie detail",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-ic-detail",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-detail.html"
     },
     {
       "label": "Internetconsultatie reply",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-ic-reply",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-reply.html"
     },
     {
       "label": "Internetconsultatie search-extended",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-ic-search-extended",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-search-extended.html"
     },
     {
       "label": "Data homepage",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-data-home",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-home.html"
     },
     {
       "label": "Data dataset",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-data-dataset",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-dataset.html"
     },
     {
       "label": "Data kalender",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-data-kalender",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-kalender.html"
     },
     {
       "label": "Data searchresults",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-data-searchresults",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-searchresults.html"
     },
     {
       "label": "Data searchresults",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-data-searchresults",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-searchresults.html"
     },
     {
       "label": "Previewportaal Homepage",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-hp",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-hp"
     },
     {
       "label": "Previewportaal Detail",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-detail",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-detail"
     },
     {
       "label": "Previewportaal Overview",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-overview",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-overview"
     },
     {
       "label": "Previewportaal Kaartpagina",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-kaartpagina",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-kaartpagina"
     }
