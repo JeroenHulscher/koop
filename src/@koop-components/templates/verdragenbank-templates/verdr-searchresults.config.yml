@@ -112,7 +112,6 @@ context:
       text: Enkel deze verdragen tonen
       name: onderwerp
   geldendContext:
-    moreless: true
     options:
     - id: checkbox-40
       text: Nederland (in Europa)

@@ -125,3 +125,9 @@ context:
     items:
       - label: Bouwvergunning
       - label: APV vergunning
+  detailsContent:
+    buttons:
+        - label: Toon details
+          active: true
+        - label: Verberg details
+          active: false
