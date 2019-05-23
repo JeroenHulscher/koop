@@ -63,6 +63,9 @@ context:
       titleHeader: h2
       label: Nieuw vandaag
       text: 12 september 1986, Brussel
+      metadata:
+        - value: Datum totstandkoming 17 december 2018
+        - value: Plaats totstandkoming Brussel
       buttons:
         - button: Bekijken
           type: primary
