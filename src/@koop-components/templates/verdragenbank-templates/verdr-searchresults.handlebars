@@ -107,34 +107,30 @@
                       <label>Plaats</label>
                       {{render "@input-text" }}
                     </div>
+                    <div class="form__row">
+                      <div class="columns">
+                        <div class="column">
+                          <label>Huisnummer</label>
+                          {{render "@input-text" }}
+                        </div>
+                        <div class="column">
+                          <label>Toevoeging</label>
+                          {{render "@input-text" }}
+                        </div>
+                      </div>
+                    </div>
                   </fieldset>
                 </div>
                 <div class="form__row form__row--xlarge">
                   <fieldset>
                     <legend>Onderwerp</legend>
-                    {{!--
-                    <a href="#">Maak een selectie</a> --}}
-                    <div class="select-custom">
-                      <select>
-                        <option>Energie</option>
-                        <option>Belasting</option>
-                        <option>Arbeid</option>
-                      </select>
-                    </div>
+                    {{render "@subselection" subselectionOnderwerpContext }}
                   </fieldset>
                 </div>
                 <div class="form__row form__row--xlarge">
                   <fieldset>
                     <legend>Partij</legend>
-                    {{!--
-                    <a href="#">Maak een selectie</a> --}}
-                    <div class="select-custom">
-                      <select>
-                        <option>Nederland</option>
-                        <option>Belgie</option>
-                        <option>Duitsland</option>
-                      </select>
-                    </div>
+                    {{render "@subselection" subselectionContext }}
                   </fieldset>
                 </div>
 
@@ -143,23 +139,13 @@
                     <legend>Tractatenblad/Staatsblad</legend>
                     <div class="form__row">
                       <label>Jaar</label>
-                      <div class="select-custom">
-                        <select>
-                          <option>1999</option>
-                          <option>2000</option>
-                          <option>2001</option>
-                        </select>
-                      </div>
+                      <input type="number" class="input-text" />
+                      <a href="#" class="reset"><small>Herstel</small></a>
                     </div>
                     <div class="form__row">
                       <label>Nummer</label>
-                      <div class="select-custom">
-                        <select>
-                          <option>8</option>
-                          <option>9</option>
-                          <option>10</option>
-                        </select>
-                      </div>
+                      <input type="number" class="input-text" />
+                      <a href="#" class="reset"><small>Herstel</small></a>
                     </div>
 
                   </fieldset>
