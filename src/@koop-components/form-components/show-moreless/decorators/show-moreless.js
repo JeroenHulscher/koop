@@ -27,13 +27,15 @@
 
   showmoreless.prototype.hideItems = function(createTrigger) {
     var i;
+    var y = 0;
 
     for ( i = 0; i < this.listitems.length; i++ ) {
       if ( i > this.config.amountVisible - 1 ) {
         this.listitems[i].setAttribute('hidden', 'true');
-        this.totalHidden = i;
+        y++;
       }
     }
+    this.totalHidden = y;
     if ( createTrigger && i > this.config.amountVisible) {
       this.addTrigger();
     }
