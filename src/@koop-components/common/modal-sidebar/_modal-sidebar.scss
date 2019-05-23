@@ -59,6 +59,12 @@
       margin: 0;
       bottom: .5em !important;
       width: 100%;
+      &.js-is-sticky {
+        width: auto;
+      }
+      &.js-is-stuck {
+        position: relative !important;
+      }
     }
   }
   &.is-open &__submit {
