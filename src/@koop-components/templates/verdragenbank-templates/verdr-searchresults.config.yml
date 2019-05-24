@@ -62,7 +62,9 @@ context:
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
       label: Nieuw vandaag
-      text: 12 september 1986, Brussel
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
       buttons:
         - button: Bekijken
           type: secendary

@@ -21,7 +21,9 @@
         <a href="#" class="result--title">{{ title }}</a>
       {{/if}}
 
-      <p>{{ text }}</p>
+      {{#if text }}
+       <p>{{ text }}</p>
+      {{/if}}
 
       {{#if owner }}
         <p>Organisatie: {{ owner }}<br />

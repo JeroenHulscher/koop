@@ -29,7 +29,6 @@
 
   p {
     margin-bottom: 1.325em;
-    font-size: 1.125em;
     line-height: 1.325em;
   }
 
@@ -52,6 +51,9 @@
 
   .list--metadata {
     padding-bottom: 1em;
+    li {
+      font-size: 1em;
+    }
   }
 
   @media (min-width: $breakpointDesktop) {
