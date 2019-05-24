@@ -39,6 +39,7 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.allInputs = onl.dom.$( 'input, select', element );
     this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0];
+    this.button.setAttribute('hidden', 'hidden');
     this.init();
   };
 
@@ -49,7 +50,6 @@
     var i;
 
     for (i = 0; i < this.allInputs.length; i++) {
-      //this.buttonClose[i].addEventListener('click', function (e) { this.parseSelectedOptions(e); }.bind(this), false);
       this.allInputs[i].addEventListener('change', function (e) { this.doChangeAction(e); }.bind(this), false);
     }
   };
