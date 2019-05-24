@@ -79,7 +79,7 @@
 
 
             <div class="row--spacer">
-              <h2>Zoekfilter</h2>
+              <h2 class="u-nomargin">Zoekfilter</h2>
               <p><a href="#">Alle filters herstellen</a></p>
             </div>
 
@@ -90,7 +90,7 @@
             </div>
 
 
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Totstandkoming</legend>
                     <div class="form__row form__row--medium">
@@ -121,20 +121,20 @@
                     </div>
                   </fieldset>
                 </div>
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Onderwerp</legend>
                     {{render "@subselection" subselectionOnderwerpContext }}
                   </fieldset>
                 </div>
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Partij</legend>
                     {{render "@subselection" subselectionContext }}
                   </fieldset>
                 </div>
 
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Tractatenblad/Staatsblad</legend>
                     <div class="form__row">
@@ -150,27 +150,28 @@
 
                   </fieldset>
                 </div>
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Type verdrag</legend>
                     {{render "@input-checkbox" typeverdagContext }}
                   </fieldset>
                 </div>
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Nederland depositaris</legend>
                     {{render "@input-checkbox" depositarisContext }}
                   </fieldset>
                 </div>
-                <div class="form__row form__row--xlarge">
+                <div class="form__row form__row--large">
                   <fieldset>
                     <legend>Nu geldend voor Nederland</legend>
                     {{render "@input-checkbox" geldendContext }}
                   </fieldset>
                 </div>
-
-                <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky"
+                <p>
+                <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky"
                   data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+                </p>
 
 
 
