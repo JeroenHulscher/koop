@@ -5,6 +5,9 @@
     size: 1em;
     repeat: no-repeat;
   }
+  &--large {
+    background-size: 1.125em !important;
+  }
 
   &--download {
     background-image: $downloadIcon;
@@ -65,6 +68,17 @@
       size: 16px;
       repeat: no-repeat;
       position: left .25em;
+    }
+  }
+
+  &--publication {
+    display: inline-block;
+    padding: 0 1.5em 0 0;
+    background: {
+      image: $iconPublicatie;
+      size: 16px;
+      repeat: no-repeat;
+      position: left -3px center;
     }
   }
 
@@ -221,7 +235,7 @@
       position: right 50%;
     }
   }
-  
+
   &--jobs {
     display: inline-block;
     padding: 0 1.5em 0 0;

@@ -1,11 +1,11 @@
 <ul class="nav-sub">
   {{#each items}}
     <li class="nav-sub__item {{#if active}}is-active{{/if}}">
-      <a href="#" class="nav-sub__link">{{title}}</a>
+      <a href="{{href}}" class="nav-sub__link">{{title}}</a>
       {{#if sub}}
         <ul class="nav-sub__sub">
           {{#each subItems}}
-            <li class="nav-sub__sub-item"><a href="#" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a></li>
+            <li class="nav-sub__sub-item"><a href="{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a></li>
           {{/each}}
         </ul>
       {{/if}}

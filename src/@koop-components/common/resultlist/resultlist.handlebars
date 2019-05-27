@@ -16,7 +16,7 @@
       {{/if}}
 
       {{#if titleHeader }}
-        <{{ titleHeader }} class="result--title">{{ title }}</{{ titleHeader }}>
+        <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{ title }}</{{ titleHeader }}>
       {{else}}
         <a href="#" class="result--title">{{ title }}</a>
       {{/if}}
