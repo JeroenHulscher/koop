@@ -386,8 +386,6 @@ $(document).ready(function () {
           $suggestions = $container.find('.js-suggest div'),
           $suggestions_text = $container.find('.js-suggestion-text');
 
-        console.log($this);
-
         fill_hidden_field(options_combo.comboboxHiddenField, $this.data('value'));
 
         if ($this.hasClass('js-seemore')) {

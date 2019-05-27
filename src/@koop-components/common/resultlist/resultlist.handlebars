@@ -16,12 +16,14 @@
       {{/if}}
 
       {{#if titleHeader }}
-        <{{ titleHeader }} class="result--title">{{ title }}</{{ titleHeader }}>
+        <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{ title }}</{{ titleHeader }}>
       {{else}}
         <a href="#" class="result--title">{{ title }}</a>
       {{/if}}
 
-      <p>{{ text }}</p>
+      {{#if text }}
+       <p>{{ text }}</p>
+      {{/if}}
 
       {{#if owner }}
         <p>Organisatie: {{ owner }}<br />
@@ -66,9 +68,20 @@
             <li class="list__item"><a href="#" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
           {{/each}}
            {{#if share}}
-            <li class="list__item pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
+            <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
             {{/if}}
         </ul>
+      {{/if}}
+
+      {{#if linklist}}
+        <h3 class="h4">Bekijk document direct via</h3>
+        <div data-decorator="showmoreless" data-config='{"amount":"2"}'>
+          <ul class="list list--linked">
+            {{#each linklistItems}}
+            <li><a href="http://www.google.nl">{{link}}</a> {{txt}}</li>
+            {{/each}}
+          </ul>
+        </div>
       {{/if}}
 
     </li>

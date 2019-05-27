@@ -14,6 +14,7 @@ context:
       id: 1
       title: Landbouw, Natuur en Voedselkwaliteit (lnv)
       short: lnv
+      checked: checked
     - Option: 2
       id: 2
       title: Onderwijs, Cultuur en Wetenschap (ocw)
@@ -38,6 +39,7 @@ variants:
           id: 1
           title: Landbouw, Natuur en Voedselkwaliteit (lnv)
           short: lnv
+          checked: checked
         - Option: 2
           id: 2
           title: Onderwijs, Cultuur en Wetenschap (ocw)

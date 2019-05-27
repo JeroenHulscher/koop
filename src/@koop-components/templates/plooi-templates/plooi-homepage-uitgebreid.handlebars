@@ -19,86 +19,54 @@
           <div class="form__row form__row--large">
             <fieldset>
               <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
-              <div class="form__row">
-                 {{!-- {{render "@input-text"  }} --}}
+              <div class="form__row form__row--medium">
                  <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
               </div>
+              <div class="form__row">
+                <ul class="list list--inline">
+                  <li class="list__item">
+                    {{ render "@input-radio"  radioContext1 }}
+                  </li>
+                  <li class="list__item">
+                    {{ render "@input-radio" radioContext2 }}
+                  </li>
+                </ul>
+              </div>
+
             </fieldset>
           </div>
           <div class="columns columns--dominant">
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Totstandkoming</legend>
-                  <div class="form__row">
-                    <label>Startdatum</label>
-                    {{render "@datepicker" }}
-                    <a href="#" class="reset"><small>Herstel</small></a>
-                  </div>
-                  <div class="form__row">
-                    <label>Einddatum</label>
-                    {{render "@datepicker" }}
-                    <a href="#" class="reset"><small>Herstel</small></a>
-                  </div>
-                  <div class="form__row">
-                    <label>Plaats</label>
-                    {{render "@input-text" }}
-                  </div>
-                  <div class="form__row">
-                    <div class="columns">
-                      <div class="column">
-                        <label>Huisnummer</label>
-                        {{render "@input-text" }}
-                      </div>
-                      <div class="column">
-                        <label>Toevoeging</label>
-                        {{render "@input-text" }}
-                      </div>
-                    </div>
-                  </div>
+                  <legend>Informatiesoort {{render "@tooltip"}}
+                  </legend>
+                  {{render "@subselection" subselectionInfoContext }}
                 </fieldset>
               </div>
+
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Onderwerp</legend>
-                  {{render "@subselection" subselectionOnderwerpContext }}
-              </div>
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Nu geldend voor</legend>
-                  {{render "@input-checkbox" geldvoorContext }}
+                  <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
+                  <div class="form__row form__row--medium">
+                    {{render "@input-radio" onderwerpContext }}
+                  </div>
+                </fieldset>
               </div>
             </div>
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Tractatenblad/Staatsblad</legend>
-                  <div class="form__row">
-                    <label>Jaar</label>
-                    <input type="number" class="input-text" placeholder="Bijv. 2018"/>
-                  </div>
-                  <div class="form__row">
-                    <label>Nummer</label>
-                    <input type="number" class="input-text" placeholder="Bijv. 2018" />
-                  </div>
+                  <legend>Thema {{render "@tooltip"}}
+                  </legend>
+                  {{render "@subselection" subselectionThemaContext }}
+                </fieldset>
+              </div>
 
-                </fieldset>
-              </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Type verdrag</legend>
-                  {{render "@input-checkbox" typeverdagContext }}
-                </fieldset>
-              </div>
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Nederland depositaris</legend>
-                  {{render "@input-checkbox" depositarisContext }}
-                </fieldset>
-              </div>
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Partij {{render "@tooltip"}}</legend>
+                  <legend>Organisatie {{render "@tooltip"}}
+                  </legend>
                   {{render "@subselection" subselectionContext }}
                 </fieldset>
               </div>

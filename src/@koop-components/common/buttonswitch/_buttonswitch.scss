@@ -7,12 +7,11 @@
 
   &__button {
     text-decoration: none;
-    padding: .95em 1em;
+    padding: .5em .75em;
     display: inline-block;
 
     &.icon {
-      padding-top: 1.75em;
-      padding-bottom: .125em;
+      padding: 1.75em 1em .125em 1em;
 
       &--hamburger {
         background: $hamburgerIcon no-repeat center top 0.75em;

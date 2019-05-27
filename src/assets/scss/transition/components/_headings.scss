@@ -40,6 +40,12 @@ h3,
   margin-bottom: 0.75em;
 }
 
+h4,
+.h4 {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
 h5,
 .h5 {
   font-style: italic;
@@ -59,13 +65,21 @@ p {
 
   &.pre-h {
     margin-top: -1em;
+    margin-bottom: .5em;
     font-size: 1.25rem;
+    font-style: italic;
   }
 }
 
-p ~ h2,
-p ~ h3,
-p ~ h4 {
+p+h2,
+ul+h2,
+ol+h2,
+p+h3,
+ul+h3,
+ol+h3,
+p+h4,
+ul+h4,
+ol+h4 {
   margin-top: 1.5em;
 }
 

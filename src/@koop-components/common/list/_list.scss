@@ -77,7 +77,7 @@ ol {
     clear: both;
 
     a {
-      text-decoration: none;
+      // text-decoration: none;
       background-position: right 50%;
 
       &:hover {
@@ -250,7 +250,7 @@ ol {
 
   li {
     @media ( min-width: $breakpointDesktop ) {
-      display: inline;
+      display: inline-block;
       margin-right: 1em;
     }
 

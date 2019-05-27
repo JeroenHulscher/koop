@@ -69,11 +69,18 @@
       a {
         text-decoration: none;
         font-weight: 700;
+        font-size: .8em;
 
         &:hover {
           text-decoration: underline;
         }
+
+        &.link-iconed {
+          padding-right: 1.25em;
+          font-weight: 400;
+        }
       }
+
     }
   }
 

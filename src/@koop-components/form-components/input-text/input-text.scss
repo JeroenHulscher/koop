@@ -1,6 +1,8 @@
 input[type=text].input-text,
-input[type=password].input-text {
-  padding: 0.5em;
+input[type=password].input-text,
+input[type=number].input-text,
+.input-text {
+  // padding: 0.5em;
   display: block;
   width: 100%;
   height: auto;
@@ -14,7 +16,7 @@ input[type=password].input-text {
   }
 
   &--search {
-    padding-left: 3em;
+    padding-left: 3em !important;
     background-position: .75em center;
     background-repeat: no-repeat;
     background-image: $searchIconBlue;

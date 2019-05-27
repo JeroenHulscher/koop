@@ -58,6 +58,12 @@
   float: right;
 }
 
+@media ( min-width: $breakpointDesktop ) {
+  .d-pull-right {
+    float: right;
+  }
+}
+
 .pull-left {
   float: left;
 }
