@@ -145,6 +145,21 @@ context:
     - id: checkbox-22
       text: Plurilateraal
       name: onderwerp
+  laatstContext:
+    options:
+    - id: checkbox-20111
+      text: Afgelopen maand
+      name: onderwerp
+    - id: checkbox-21111
+      text: Afgelopen 3 maanden
+      name: onderwerp
+    - id: checkbox-22111
+      text: Afgelopen 12 maanden
+      name: onderwerp
+    - id: checkbox-221112
+      text: Alle resultaten
+      name: onderwerp
+      checked: checked
   subselectionContext:
     linkText: Selecteer partij(en)
     id: 1
