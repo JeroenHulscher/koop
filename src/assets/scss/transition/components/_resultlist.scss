@@ -10,15 +10,23 @@
   > ul,
   > ul:first-child {
     background: $lightBlue;
-    padding: 1.25em 1.25em 1px; // 1px fix needed for padding-flow bug;
+    padding: .5em .5em 1px; // 1px fix needed for padding-flow bug;
     margin: 0 0 2.25em 0;
+
+    @media (min-width: $breakpointDesktop) {
+      padding: 1.25em 1.25em 1px;
+    }
 
     > li {
       background: white;
       list-style: none;
-      padding: .5em 1.25em .5em 2em;
+      padding: 1em .5em .5em 1em;
       margin-bottom: 1.25em;
       border: 0;
+
+      @media (min-width: $breakpointDesktop) {
+        padding: .5em 1.25em .5em 2em;
+      }
 
       p {
         padding-right: 0;
