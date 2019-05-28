@@ -189,6 +189,10 @@ context:
       buttons:
         - button: Bekijk publicatie
           type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
       linklist: true
       linklistLimit: true
       linklistItems:

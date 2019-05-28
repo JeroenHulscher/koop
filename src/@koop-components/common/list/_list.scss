@@ -378,3 +378,56 @@ ol {
     }
   }
 }
+
+.list-options {
+  margin: 0 0 1em 0;
+  padding: 0;
+  list-style: none;
+
+  &__heading {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    line-height: 2rem;
+    display: inline-block;
+    @media (min-width: $breakpointDesktop) {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__subheading {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    display: inline-block;
+  }
+
+  &__item {
+    background-color: transparent;
+    margin: 0;
+    position: relative;
+
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+
+      & > li {
+        background: white;
+        margin: 0 0 .5em 0;
+        padding: 1.7em 1em 0.125em;
+        position: relative;
+        @media (min-width: $breakpointDesktop) {
+          padding: 2.25em 2em 1.5em;
+        }
+      }
+    }
+    &__cta {
+      @media (min-width: $breakpointDesktop) {
+        margin-top: -.75em;
+        float: right;
+      }
+    }
+  }
+}
