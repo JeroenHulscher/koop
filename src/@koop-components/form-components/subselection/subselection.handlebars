@@ -4,20 +4,32 @@
     <div class="modal__inner">
       <div class="modal__content">
         <h2>{{modalTitle}}</h2>
-        <ul class="list--unstyled">
-          {{#each Options }}
-            <li>
+        {{#if searchFilter}}
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="id_mysuper_field" class="js-filterresults__input input-text input-text--searchmedium"
+            />
+            </div>
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-{{id}}" aria-live="polite">
+        {{/if}}
+              <ul class="list--unstyled">
+               {{#each Options }}
+                <li class=" js-filterresults__result">
+                  <div class="input-checkbox">
+                    <input class="checkbox__input" {{disabled}} {{checked}} type="checkbox" id="option-{{ id }}" name="name" {{ status }} value="{{ short }}"
+                    />
+                    <label class="checkbox__label" for="option-{{ id  }}">
+                      {{ title }}
+                    </label>
+                  </div>
+                </li>
+              {{/each}}
+              </ul>
+        {{#if searchFilter}}
+            </fieldset>
+          </div>
+        {{/if}}
 
-              <div class="input-checkbox">
-                <input class="checkbox__input" {{disabled}} {{checked}} type="checkbox" id="option-{{ id }}" name="name" {{ status }} value="{{ short }}"
-                />
-                <label class="checkbox__label" for="option-{{ id  }}">
-                  {{ title }}
-                </label>
-              </div>
-            </li>
-          {{/each}}
-        </ul>
         <div class="modal__buttonpane">
           <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
           <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
