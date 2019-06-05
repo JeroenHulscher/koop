@@ -1,5 +1,10 @@
 .jumbotron {
   @extend .group;
+  padding: 0 1em;
+
+  @media (min-width: $breakpointDesktop) {
+    padding: 0 4em;
+  }
 
   &--highlight {
     background: $lightBlue;
