@@ -1,0 +1,175 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content">
+
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">KOOP</p>
+          <h1 class="jumbotron__header">Design system</h1>
+          <p class="jumbotron__intro">
+              ## omschrijving
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <article class="row">
+
+      <div class="columns">
+        <div>
+          <h2>Content</h2>
+          <p>omschrijving</p>
+          <p><a href="#">View content guidelines</a></p>
+        </div>
+        <div>
+          <h2>Design</h2>
+          <p>omschrijving</p>
+          <p><a href="#">View content guidelines</a></p>
+        </div>
+        <div>
+          <h2>Components</h2>
+          <p>omschrijving</p>
+          <p><a href="#">View content guidelines</a></p>
+        </div>
+        <div>
+          <h2>Patterns</h2>
+          <p>omschrijving</p>
+          <p><a href="#">View content guidelines</a></p>
+        </div>
+
+      </div>
+
+    </article>
+
+</div>
+
+
+<div class="container">
+
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+    <div class="row row--spacer">
+      <div class="jumbotron jumbotron--highlight">
+
+        <div class="jumbotron__content">
+
+          <div class="jumbotron__heading jumbotron__heading--centered">
+            <p class="jumbotron__subheader">KOOP</p>
+            <h1 class="jumbotron__header">Design system</h1>
+            <p class="jumbotron__intro">
+                ## omschrijving
+            </p>
+          </div>
+
+          <div class="columns">
+            <div class="column">
+              <h2>A. Basiselementen</h2>
+              <ol>
+                <li><a href="#">Logo</a></li>
+                <li><a href="#">Kleuren</a></li>
+                <li><a href="#">Typografie</a></li>
+                <li><a href="#">Grids</a></li>
+              </ol>
+            </div>
+            <div class="column">
+              <h2>B. Componenten</h2>
+              <ol>
+                <li><a href="#">Navigatie</a></li>
+                <li><a href="#">Buttons</a></li>
+                <li><a href="#">Links</a></li>
+                <li><a href="#">Formulier</a></li>
+                <li><a href="#">Datumprikker</a></li>
+                <li><a href="#">Filter</a></li>
+                <li><a href="#">Zoekfunctie</a></li>
+                <li><a href="#">Zoekresultaat</a></li>
+                <li><a href="#">Meldingen</a></li>
+                <li><a href="#">Lijsten</a></li>
+                <li><a href="#">Progress bar (upload)</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Maps</a></li>
+              </ol>
+            </div>
+            <div class="column">
+              <h2>C. Responsive</h2>
+              <p>Schermformaat specifieke toepassingen</p>
+            </div>
+            <div class="column">
+              <h2>Guidelines?</h2>
+              <p>Ofzo?</p>
+              <h2>What's news?</h2>
+              <p>Ofzo?</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <article class="row">
+
+
+
+          <div class="row row--large">
+            <h1>Buttons</h1>
+            <p>Omschrijving</p>
+          </div>
+
+      <div class="columns">
+          <div class="column">
+            <h2>Primary</h2>
+            <h3>Regular button</h3>
+            <p>{{render "@button" }}</p>
+            <h3>Icon button</h3>
+            {{render "@button" }}
+            <h3>Double-line button</h3>
+            {{render "@button" }}
+          </div>
+          <div class="column">
+
+            <h2>Secondary</h2>
+            {{render "@button" }}
+            <h2>Tertiery</h2>
+            {{render "@button" }}
+          </div>
+        </div>
+
+
+
+    </article>
+
+
+
+  </div>
+
+  <div class="column column--sidebar">
+
+    <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
+
+      <div class="modal-sidebar__content">
+        {{render "@nav" navVerdragContext }}
+
+        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+      </div>
+
+    </div>
+
+</div>
+
+{{ render "@footer" }}
