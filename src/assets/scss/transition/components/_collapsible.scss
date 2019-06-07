@@ -1,9 +1,22 @@
 .collapsible {
+  margin: 0 0 1em 0;
 
   .collapsible__header {
 
     a {
-      padding: 1em;
+      padding: 0 0 0 2em;
+      color: #154273;
+      text-decoration: underline;
+      background: $plusShapeIcon no-repeat left top .2em;
+
+      &[aria-expanded=true] {
+        background: $minusShapeIcon no-repeat left top .625em;
+      }
     }
+  }
+
+  .collapsible__content {
+    margin: 0 0 .5em;
+    padding-top: .75em;
   }
 }
