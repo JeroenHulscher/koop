@@ -1,1 +1,19 @@
 name: DS - Components
+context:
+  navComponentsContext:
+    items:
+    - title: Components
+      active: false
+      sub: true
+      subItems:
+        - stitle: Navigatie
+        - stitle: Buttons
+        - stitle: Links
+        - stitle: Formulier
+        - stitle: Datumprikker
+        - stitle: Filter
+        - stitle: Zoekfunctie
+        - stitle: Zoekresultaat
+        - stitle: Meldingen
+        - stitle: Tags
+        - stitle: Maps

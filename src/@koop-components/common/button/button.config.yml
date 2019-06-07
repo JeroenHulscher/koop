@@ -29,6 +29,11 @@ variants:
       text: Bekijk publicatie
       text2: Opent in een nieuw scherm
       modifier: button--doubleline button--icon-external
+  - name: Arrowed
+    status: ready
+    context:
+      text: Button text
+      modifier: button--primary button--arrowed
   - name: small
     status: prototype
     context:
