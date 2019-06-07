@@ -7,6 +7,8 @@
 </div>
 <div class="container">
 
+<article>
+
   <h1>Regeling van de Minister van Binnenlandse Zaken en Koninkrijksrelaties, van [datum], houdende regels over het beschermen
   en benutten van de fysieke leefomgeving (Omgevingsregeling)</h1>
 
@@ -31,32 +33,85 @@
     Besluit:
   </p>
 
-  <h2 class="u-font u-font--uppercase">Hoofdstuk 1 algemene bepalingen</h2>
-  <h3 class="u-font u-font--uppercase">Afdeling 1.1 algemeen</h3>
+  <section>
+    <h2>[2] Hoofdstuk 1 algemene bepalingen</h2>
+    <h3>[3] Afdeling 1.1 algemeen</h3>
+    <p>Text</p>
+  </section>
+  <section>
+    <h2>[2] Hoofdstuk 2 aanwijzing en geometrische begrenzing van locaties</h2>
 
-  <h2 class="u-font u-font--uppercase">Hoofdstuk 2 aanwijzing en geometrische begrenzing van locaties</h2>
-  <h3 class="u-font u-font--uppercase">Afdeling 2.1 algemene bepalingen</h3>
-  <h4>Artikel 2.1 (toepassingsbereik)</h4>
-  <p>
-     Dit hoofdstuk is van toepassing op de aanwijzing of geometrische begrenzing van locaties voor de toepassing van de wet.
-  </p>
-  <h3 class="u-font u-font--uppercase">Artikel 2.2 Water</h3>
-  <h4>2.2.1 Oppervlaktewateren en rijkswateren</h4>
+      <h3>[3] Afdeling 2.1 algemene bepalingen</h3>
+      {{!-- <article> --}}
+        <h4>[4] Artikel 2.1 (toepassingsbereik)</h4>
+        <p>
+          Dit hoofdstuk is van toepassing op de aanwijzing of geometrische begrenzing van locaties voor de toepassing van de wet.
+        </p>
+      {{!-- </article> --}}
 
-  <h5>Artikel 2.2 (geometrische begrenzing oppervlaktewaterlichamen)</h5>
+      <h3>[3] Afdeling 2.2 Water</h3>
+      <h4>[4] 2.2.1 Oppervlaktewateren en rijkswateren</h4>
+      {{!-- <article> --}}
+        <h5>[5] Artikel 2.2 (geometrische begrenzing oppervlaktewaterlichamen)</h5>
+        <ol>
+          <li>
+            De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij het Omgevingsbesluit en waarvan het beheer van de waterkwaliteit bij het Rijk berust, is vastgelegd in bijlage III.
+          </li>
+          <li>
+            De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij het Omgevingsbesluit en waarvan het beheer van de waterkwantiteit bij het Rijk berust, is vastgelegd in bijlage III.
+          </li>
+          <li>
+            De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij Omgevingsbesluit en waarvan het waterstaatkundig beheer bij het Rijk berust, is vastgelegd in bijlage III.
+          </li>
+        </ul>
+      {{!-- </article> --}}
+      {{!-- <article> --}}
+        <h5>[5] Artikel 2.3 </h5>
+        <ol>
+          <li>
+            De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij het Omgevingsbesluit en waarvan
+            het beheer van de waterkwaliteit bij het Rijk berust, is vastgelegd in bijlage III.
+          </li>
+          <li>
+            De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij het Omgevingsbesluit en waarvan
+            het beheer van de waterkwantiteit bij het Rijk berust, is vastgelegd in bijlage III.
+          </li>
+          <li>
+            De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij Omgevingsbesluit en waarvan
+            het waterstaatkundig beheer bij het Rijk berust, is vastgelegd in bijlage III.
+          </li>
+          </ul>
+      {{!-- </article> --}}
 
-  <ol>
-    <li>
-      De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij het Omgevingsbesluit en waarvan het beheer van de waterkwaliteit bij het Rijk berust, is vastgelegd in bijlage III.
-    </li>
-    <li>
-      De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij het Omgevingsbesluit en waarvan het beheer van de waterkwantiteit bij het Rijk berust, is vastgelegd in bijlage III.
-    </li>
-    <li>
-      De geometrische begrenzing van de oppervlaktewaterlichamen, bedoeld in bijlage II, onder 1, bij Omgevingsbesluit en waarvan het waterstaatkundig beheer bij het Rijk berust, is vastgelegd in bijlage III.
-    </li>
-  </ul>
+
+  </section>
+
+</article>
 
 </div>
+
+<style>
+  article,
+  section {
+    border: 1px solid red;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  article:after,
+  section:after {
+    content: "Article";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+  }
+  section:after {
+    content: "Section";
+    background: grey;
+  }
+</style>
 
 {{ render "@footer" }}
