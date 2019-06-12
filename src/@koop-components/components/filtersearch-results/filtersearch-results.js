@@ -18,7 +18,7 @@
 
   filterResults.prototype.init = function() {
     this.input = onl.dom.$( '.js-filterresults__input', this.element )[0];
-    this.results = onl.dom.$( '.js-filterresults__results > *', this.element );
+    this.results = onl.dom.$( '.js-filterresults__result', this.element );
 
     this.addEventListeners();
   };

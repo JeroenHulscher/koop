@@ -14,7 +14,10 @@
   cursor: default;
 
   &__inner {
-    max-width: 32em;
+    max-width: 48em;
+    @media ( min-width: $breakpointDesktop ) {
+      min-width: 42em;
+    }
     background: $white;
     border: 1px solid $lightGrey;
     padding: 1.5em;

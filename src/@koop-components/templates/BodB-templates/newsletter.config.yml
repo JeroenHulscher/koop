@@ -16,4 +16,4 @@ context:
   filter1:
     heading: Meer voorkeursinstellingen
     id: 1
-    text: <div class="row row--large"><p>Geen idee wat hier moet komen?</p></div>
+    text: <p>Geen idee wat hier moet komen?</p>

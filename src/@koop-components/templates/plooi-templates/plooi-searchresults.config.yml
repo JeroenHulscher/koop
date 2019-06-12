@@ -189,6 +189,10 @@ context:
       buttons:
         - button: Bekijk publicatie
           type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
       linklist: true
       linklistLimit: true
       linklistItems:
@@ -253,6 +257,7 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
     type: span
     Options:
       - Option: 1
@@ -274,6 +279,7 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
     type: span
     Options:
       - Option: 4
@@ -295,6 +301,7 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
     type: span
     Options:
       - Option: 4

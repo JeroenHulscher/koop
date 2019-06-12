@@ -1,5 +1,5 @@
 ---
-label: PLOOI - Homepage uitgebreid
+label: PLOOI - Homepage TXT
 status: Ready
 context:
   header:
@@ -16,7 +16,6 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
     type: span
     Options:
       - Option: 1
@@ -48,7 +47,6 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
     type: span
     Options:
       - Option: 1
@@ -65,12 +63,11 @@ context:
         short: Nederland
   subselectionThemaContext:
     linkText: Selecteer thema(s)
-    id: 16
+    id: 12
     modalTitle: Selecteer thema(s)
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
     type: span
     Options:
       - Option: 4
@@ -87,12 +84,11 @@ context:
         short: Nederland
   subselectionInfoContext:
     linkText: Selecteer informatiesoort(en)
-    id: 122
+    id: 12
     modalTitle: Selecteer informatiesoort(en)
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
     type: span
     Options:
       - Option: 4
@@ -109,7 +105,6 @@ context:
         short: Nederland
   onderwerpContext:
     moreless: true
-    searchFilter: true
     options:
     - id: checkbox-20
       text: Alle

@@ -58,9 +58,13 @@
   }
 
   .list--metadata {
-    padding-bottom: 1em;
+    margin-bottom: 1.325em;
+    color: $darkBlue;
+
     li {
       font-size: 1em;
+      font-style: italic;
+      color: $darkBlue;
     }
   }
 

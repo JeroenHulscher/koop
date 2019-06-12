@@ -50,6 +50,8 @@ body {
 
 p,
 .p {
+  word-wrap: break-word;
+
   &--large {
     font-size: 1.125rem;
   }

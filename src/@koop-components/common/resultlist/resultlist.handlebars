@@ -49,6 +49,10 @@
         {{/if}}
       {{/if}}
 
+      {{#if hasCollapsable}}
+        {{render "@collapsible" collapsContext }}
+      {{/if}}
+
       {{#if downloads }}
         {{#if theme }}
           {{#each downloads }}

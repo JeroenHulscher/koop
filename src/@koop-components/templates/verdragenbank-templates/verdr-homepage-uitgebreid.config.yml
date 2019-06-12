@@ -60,6 +60,7 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
     type: span
     Options:
       - Option: 122

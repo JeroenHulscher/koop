@@ -1,0 +1,26 @@
+.ol-popup {
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 1em;
+  max-width: 400px;
+  border: .5em solid #F3F8FC;
+  color: $textColor;
+  text-decoration: none;
+  font-size: .75em;
+
+  h2 {
+    margin: 0;
+    font-size: 1.125em;
+  }
+  p {
+    margin: 0;
+  }
+}
+.ol-popup--fixed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 7px;
+  z-index: 1;
+}

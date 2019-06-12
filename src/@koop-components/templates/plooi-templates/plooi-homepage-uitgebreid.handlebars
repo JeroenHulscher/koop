@@ -11,14 +11,14 @@
 
       <div class="jumbotron__content jumbotron__content--side">
         <div class="row">
-          <p class="jumbotron__subheader">Verdragenbank</p>
-          <h1 class="jumbotron__header h2">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
+          <p class="jumbotron__subheader">Overheidsdocumenten</p>
+          <h1 class="jumbotron__header h2">Wegwijzer naar 2635121 actief openbaar gemaakte documenten van alle overheden</h1>
         </div>
 
         <form class="form">
           <div class="form__row form__row--large">
             <fieldset>
-              <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+              <legend class="visually-hidden">Doorzoek overheidsdocumenten</legend>
               <div class="form__row form__row--medium">
                  <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
               </div>
@@ -37,6 +37,32 @@
           </div>
           <div class="columns columns--dominant">
             <div class="column">
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
+                  <div class="form__row form__row--medium">
+                    {{render "@input-radio" onderwerpContext }}
+                  </div>
+                  <div class="form__row">
+                    <label>Startdatum</label>
+                    {{render "@datepicker" }}
+                    <a href="#" class="reset">
+                      <small>Herstel</small>
+                    </a>
+                  </div>
+                  <div class="form__row">
+                    <label>Einddatum</label>
+                    {{render "@datepicker" }}
+                    <a href="#" class="reset">
+                      <small>Herstel</small>
+                    </a>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="column">
+
               <div class="form__row form__row--large">
                 <fieldset>
                   <legend>Informatiesoort {{render "@tooltip"}}
@@ -45,16 +71,6 @@
                 </fieldset>
               </div>
 
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
-                  <div class="form__row form__row--medium">
-                    {{render "@input-radio" onderwerpContext }}
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-            <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
                   <legend>Thema {{render "@tooltip"}}
