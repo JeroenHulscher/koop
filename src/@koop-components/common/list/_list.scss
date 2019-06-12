@@ -30,7 +30,6 @@ ol {
   }
 }
 
-
 .facet--heading {
   margin: 0;
   padding: 0 0 0 .75em;
@@ -44,6 +43,10 @@ ol {
 
 .list {
   margin-bottom: .5em;
+
+  &--nummeric {
+    list-style-type: lower-alpha;
+  }
 }
 
 .list--unstyled {
