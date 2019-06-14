@@ -180,6 +180,16 @@
               <label>Search</label>
               {{ render "@input-text--search" }}
             </div>
+            <div class="form__row">
+              <label>Search + autocomplete</label>
+              {{ render "@input-autocomplete--input-search-autocomplete" }}
+              <small>(typ: "gem")</small>
+            </div>
+            <div class="form__row">
+              <label>Input + submit</label>
+              {{ render "@input-inputsubmit" }}
+              <small>(Works with flexbox; button is able to grow)</small>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Texteara</legend>
@@ -216,7 +226,22 @@
               {{ render "@subselection--filter-selection" subSel2 }}
             </div>
           </fieldset>
+          <fieldset>
+            <legend>Geselecteerde filter(s)</legend>
+            <div class="form__row">
+              {{ render "@form-selectedfilter" }}
+            </div>
+          </fieldset>
         </div>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="row row--large">
+        <h1 id="buttons">Jumbotron</h1>
+        <p>Omschrijving</p>
+
+        {{render "@jumbotron--highlight" }}
       </div>
     </article>
 
