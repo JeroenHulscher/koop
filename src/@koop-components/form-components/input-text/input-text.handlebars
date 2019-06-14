@@ -13,7 +13,7 @@
   {{/if}}
 
   <input
-    type="text"
+    {{#if type}}type="{{type}}"{{else}}type="text"{{/if}}
     id="input-text-{{ id }}"
     class="input input-text {{ modifier }}"
     placeholder="{{ fieldPlaceholder }}"

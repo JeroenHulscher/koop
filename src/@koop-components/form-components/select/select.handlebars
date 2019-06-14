@@ -1,11 +1,11 @@
-<div class="form__element">
-  <label for="select--{{ id }}">{{ fieldLabel }}</label>
-  {{#if fieldInstruction }}
-    <small>{{ fieldInstruction }}</small>
-  {{/if }}
+{{!-- <div class="form__element"> --}}
+  {{!-- <label for="select--{{ id }}">{{ fieldLabel }}</label> --}}
+  {{!-- {{#if fieldInstruction }} --}}
+    {{!-- <small>{{ fieldInstruction }}</small> --}}
+  {{!-- {{/if }} --}}
   <select id="select--{{ id }}">
     {{#each values}}
     <option value="{{inputValue}}">{{displayValue}}</option>
     {{/each}}
   </select>
-</div>
+{{!-- </div> --}}

@@ -17,3 +17,48 @@ context:
         - stitle: Meldingen
         - stitle: Tags
         - stitle: Maps
+  subSel1:
+    name: Default
+    id: 11
+    type: abbr
+    linkText: Selecteer
+    modalTitle: Selecteer ministeries
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: 11123
+        id: 1123
+        title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+        short: lnv
+        checked: checked
+      - Option: 2123
+        id: 2123
+        title: Onderwijs, Cultuur en Wetenschap (ocw)
+        short: ocw
+      - Option: 3123
+        id: 3123
+        title: Sociale Zaken en Werkgelegenheid (szw)
+        short: szw
+  subSel2:
+    name: Default
+    id: 113
+    type: span
+    linkText: Selecteer onderwerp(en)
+    modalTitle: Selecteer ministeries
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: 1112323
+        id: 112323
+        title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+        short: lnv
+      - Option: 212323
+        id: 212323
+        title: Onderwijs, Cultuur en Wetenschap (ocw)
+        short: ocw
+      - Option: 312323
+        id: 312323
+        title: Sociale Zaken en Werkgelegenheid (szw)
+        short: szw

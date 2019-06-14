@@ -18,6 +18,10 @@ textarea {
   }
 }
 
+textarea {
+  width: 100%;
+}
+
 select {
   font-size: 1.25rem;
 }
@@ -67,6 +71,8 @@ input[type=password].input-text {
 
 
 fieldset {
+  margin: 0 0 1em 0;
+
   legend {
     border-bottom: 0;
     font-size: 1.5em;

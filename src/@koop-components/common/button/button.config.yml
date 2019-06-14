@@ -18,11 +18,16 @@ variants:
     context:
       text: primaire knop
       modifier: button--primary
-  - name: Secundary
+  - name: Secondary
     status: ready
     context:
       text: Secundaire knop
       modifier: button--secondary
+  - name: Tertiary
+    status: ready
+    context:
+      text: Tertiary knop
+      modifier: button--tertiary
   - name: Doubleline
     status: ready
     context:

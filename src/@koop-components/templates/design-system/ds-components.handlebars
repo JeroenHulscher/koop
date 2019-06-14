@@ -42,22 +42,180 @@
           <p>{{render "@button--primary" }}</p>
           <h3 class="h5">Icon button</h3>
           <p>{{render "@button--arrowed" }}</p>
-          <h3 class="h5">Double-line button</h3>
-          <p>{{render "@button--doubleline" }}</p>
         </div>
         <div class="column">
           <h2>Secondary</h2>
           <h3 class="h5">Regular button</h3>
-          <p>{{ render "@button" modifier="appel" merge=true }}</p>
-          <h3 class="h5">Icon button</h3>
-          <p>{{render "@button" }}</p>
+          <p>{{ render "@button--secondary" }}</p>
           <h3 class="h5">Double-line button</h3>
-          <p>{{render "@button" }}</p>
+          <p>{{render "@button--doubleline" }}</p>
         </div>
         <div class="column">
           <h2>Tertiery</h2>
           <h3 class="h5">Regular button</h3>
-          <p>{{render "@button" }}</p>
+          <p>{{render "@button--tertiary" }}</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="row row--large">
+        <h1 id="buttons">Lists</h1>
+        <p>Omschrijving</p>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <h2 class="h5">Default list</h2>
+          {{ render "@list" }}
+        </div>
+        <div class="column">
+          <h2 class="h5">Ordered list</h2>
+          {{ render "@list--ordered" }}
+        </div>
+        <div class="column">
+          <h2 class="h5">Unstyled</h2>
+          {{ render "@list--unstyled" }}
+          <h2 class="h5">Inline</h2>
+          {{ render "@list--inline" }}
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <h2 class="h5">Facetlist</h2>
+          {{ render "@list--facetlist" }}
+        </div>
+        <div class="column">
+          <h2 class="h5">Relationlist</h2>
+          {{ render "@list--relationlist" }}
+        </div>
+        <div class="column">
+          <h2 class="h5">Law list</h2>
+          {{ render "@list--law-list" }}
+        </div>
+      </div>
+      <div class="row">
+        <h2 class="h5">Law list unordered</h2>
+        {{ render "@list--law-list-unordered" }}
+      </div>
+      <div class="row">
+        <h2 class="h5">Legenda</h2>
+        {{ render "@list--legenda" }}
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="row row--large">
+        <h1 id="buttons">Grid &amp; containers</h1>
+        <p>Omschrijving</p>
+      </div>
+      <h2>Grid systeem</h2>
+      <div class="columns">
+        <div class="column">
+          <p>Column (auto)</p>
+        </div>
+        <div class="column">
+          <p>Column (auto)</p>
+        </div>
+        <div class="column">
+          <p>Column (auto)</p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column column-d-3">
+          <p>Column (3-12)</p>
+        </div>
+        <div class="column column-d-7">
+          <p>Column (7-12)</p>
+        </div>
+        <div class="column column-d-2">
+          <p>Column (2-12)</p>
+        </div>
+      </div>
+      <h2>Containers</h2>
+      <h3 class="h5">Rows</h3>
+      <div class="row">row</div>
+      <div class="row row--large">row large</div>
+    </article>
+
+    <article class="row">
+      <div class="row row--large">
+        <h1 id="buttons">Forms</h1>
+        <p>Omschrijving</p>
+      </div>
+      <h2>Inputs</h2>
+      <div class="columns">
+        <div class="column">
+          <fieldset>
+            <legend>Input text variants</legend>
+
+            <div class="form__row">
+              <label>Input text</label>
+              {{ render "@input-text" }}
+            </div>
+            <div class="form__row">
+              <label>Input password</label>
+              {{ render "@input-text--password" }}
+            </div>
+            <div class="form__row">
+              <label>Input number</label>
+              {{ render "@input-text--number" }}
+            </div>
+            <div class="form__row">
+              <label>Datepicker</label>
+              {{ render "@datepicker" }}
+            </div>
+            <div class="form__row">
+              <label>Prefix</label>
+              {{ render "@input-text--prefix" }}
+            </div>
+            <div class="form__row">
+              <label>Bolder</label>
+              {{ render "@input-text--medium" }}
+            </div>
+            <div class="form__row">
+              <label>Bolder Search</label>
+              {{ render "@input-text--search-medium" }}
+            </div>
+            <div class="form__row">
+              <label>Search</label>
+              {{ render "@input-text--search" }}
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Texteara</legend>
+            <div class="form__row">
+              <label>Opmerkingen</label>
+              {{ render "@textarea" }}
+            </div>
+          </fieldset>
+        </div>
+        <div class="column">
+          <fieldset>
+            <legend>Input Checkbox</legend>
+            {{ render "@input-checkbox" }}
+          </fieldset>
+          <fieldset>
+            <legend>Input Radio</legend>
+            {{ render "@input-radio" }}
+          </fieldset>
+          <fieldset>
+            <legend>Select</legend>
+            <div class="form__row">
+              <label>Uw voorkeur</label>
+              {{ render "@select-custom" }}
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Subselecties</legend>
+            <div class="form__row">
+              <label>Kies uw onderwerpen</label>
+              {{ render "@subselection" subSel1 }}
+            </div>
+            <div class="form__row">
+              <label>Kies uw onderwerpen</label>
+              {{ render "@subselection--filter-selection" subSel2 }}
+            </div>
+          </fieldset>
         </div>
       </div>
     </article>

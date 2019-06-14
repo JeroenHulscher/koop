@@ -99,6 +99,8 @@
 
   &--doubleline {
     text-align: left;
+    color: $darkBlue !important;
+    background-color: white !important;
   }
   &--doubleline &__sub {
     display: block;
