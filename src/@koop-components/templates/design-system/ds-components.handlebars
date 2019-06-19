@@ -2,7 +2,7 @@
 
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumb }}
   </div>
 </div>
 
@@ -10,77 +10,77 @@
 <div class="container">
 
   <div class="columns columns--sidebar-left">
-    <div class="column">
+    <div class="column ds-content">
 
-    <div class="row row--spacer">
-      <div class="jumbotron jumbotron--highlight">
+      <div class="row row--spacer">
+        <div class="jumbotron jumbotron--highlight">
 
-        <div class="jumbotron__content">
+          <div class="jumbotron__content">
 
-          <div class="jumbotron__heading">
-            <p class="jumbotron__subheader">Design system</p>
-            <h1 class="jumbotron__header">Componenten</h1>
-            <p class="jumbotron__intro">
-                ## omschrijving
-            </p>
+            <div class="jumbotron__heading">
+              <p class="jumbotron__subheader">Design system</p>
+              <h1 class="jumbotron__header">Componenten</h1>
+              <p class="jumbotron__intro">
+                  ## omschrijving
+              </p>
+            </div>
+
           </div>
 
         </div>
-
       </div>
-    </div>
 
-    <article class="row">
-      <div class="row row--large">
-        <h1 id="buttons">Buttons</h1>
-        <p>Omschrijving</p>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <h2>Primary</h2>
-          <h3 class="h5">Regular button</h3>
-          <p>{{render "@button--primary" }}</p>
-          <h3 class="h5">Icon button</h3>
-          <p>{{render "@button--arrowed" }}</p>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="buttons">Buttons</h1>
+          <p>Omschrijving</p>
         </div>
-        <div class="column">
-          <h2>Secondary</h2>
-          <h3 class="h5">Regular button</h3>
-          <p>{{ render "@button--secondary" }}</p>
-          <h3 class="h5">Double-line button</h3>
-          <p>{{render "@button--doubleline" }}</p>
+        <div class="columns">
+          <div class="column">
+            <h2>Primary</h2>
+            <h3 class="h5">Regular button</h3>
+            <p>{{render "@button--primary" }}</p>
+            <h3 class="h5">Icon button</h3>
+            <p>{{render "@button--arrowed" }}</p>
+          </div>
+          <div class="column">
+            <h2>Secondary</h2>
+            <h3 class="h5">Regular button</h3>
+            <p>{{ render "@button--secondary" }}</p>
+            <h3 class="h5">Double-line button</h3>
+            <p>{{render "@button--doubleline" }}</p>
+          </div>
+          <div class="column">
+            <h2>Tertiery</h2>
+            <h3 class="h5">Regular button</h3>
+            <p>{{render "@button--tertiary" }}</p>
+          </div>
         </div>
-        <div class="column">
-          <h2>Tertiery</h2>
-          <h3 class="h5">Regular button</h3>
-          <p>{{render "@button--tertiary" }}</p>
-        </div>
-      </div>
-    </article>
+      </article>
 
-    <article class="row">
-      <div class="row row--large">
-        <h1 id="buttons">Button group</h1>
-        <p>Omschrijving</p>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="buttons">Button group</h1>
+          <p>Omschrijving</p>
 
-        <div class="row">
-          <h2 class="h5">Default</h2>
-          <div>{{render "@buttonswitch" }}</div>
+          <div class="row">
+            <h2 class="h5">Default</h2>
+            <div>{{render "@buttonswitch" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">With icons</h2>
+            <div>{{render "@buttonswitch--with-icons" }}</div>
+          </div>
+
         </div>
-        <div class="row">
-          <h2 class="h5">With icons</h2>
-          <div>{{render "@buttonswitch--with-icons" }}</div>
-        </div>
+      </article>
 
-      </div>
-    </article>
-
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Lists</h1>
         <p>Omschrijving</p>
       </div>
-      <div class="columns">
+      <div class="columns row row--xxlarge">
         <div class="column">
           <h2 class="h5">Default list</h2>
           {{ render "@list" }}
@@ -89,18 +89,18 @@
           <h2 class="h5">Ordered list</h2>
           {{ render "@list--ordered" }}
         </div>
+      </div>
+      <div class="columns row row--xxlarge">
         <div class="column">
           <h2 class="h5">Unstyled</h2>
           {{ render "@list--unstyled" }}
+        </div>
+        <div class="column">
           <h2 class="h5">Inline</h2>
           {{ render "@list--inline" }}
         </div>
       </div>
-      <div class="columns">
-        <div class="column">
-          <h2 class="h5">Facetlist</h2>
-          {{ render "@list--facetlist" }}
-        </div>
+      <div class="columns row row--xxlarge">
         <div class="column">
           <h2 class="h5">Relationlist</h2>
           {{ render "@list--relationlist" }}
@@ -110,150 +110,169 @@
           {{ render "@list--law-list" }}
         </div>
       </div>
-      <div class="row">
-        <h2 class="h5">Law list unordered</h2>
-        {{ render "@list--law-list-unordered" }}
-      </div>
-      <div class="row">
-        <h2 class="h5">Legenda</h2>
-        {{ render "@list--legenda" }}
-      </div>
+      <div class="columns row row--xxlarge">
+        <div class="column">
+            <h2 class="h5">Facetlist</h2>
+            {{ render "@list--facetlist" }}
+        </div>
+        <div class="column">
+            <h2 class="h5">Legenda</h2>
+            {{ render "@list--legenda" }}
+          </div>
+        </div>
+        <div class="">
+          <h2 class="h5">Law list unordered</h2>
+          {{ render "@list--law-list-unordered" }}
+        </div>
+      </article>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Grid &amp; containers</h1>
         <p>Omschrijving</p>
       </div>
-      <h2>Grid systeem</h2>
-      <div class="columns">
-        <div class="column">
-          <p>Column (auto)</p>
+      <div class="row row--xxlarge">
+        <h2>Grid systeem</h2>
+        <div class="columns row">
+          <div class="column u-bg--grey">
+            <p>Column (auto)</p>
+          </div>
+          <div class="column u-bg--grey">
+            <p>Column (auto)</p>
+          </div>
+          <div class="column u-bg--grey">
+            <p>Column (auto)</p>
+          </div>
         </div>
-        <div class="column">
-          <p>Column (auto)</p>
-        </div>
-        <div class="column">
-          <p>Column (auto)</p>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column column-d-3">
-          <p>Column (3-12)</p>
-        </div>
-        <div class="column column-d-7">
-          <p>Column (7-12)</p>
-        </div>
-        <div class="column column-d-2">
-          <p>Column (2-12)</p>
+        <div class="columns">
+          <div class="column column-d-3 u-bg--grey">
+            <p>Column (3-12)</p>
+          </div>
+          <div class="column column-d-7 u-bg--grey">
+            <p>Column (7-12)</p>
+          </div>
+          <div class="column column-d-2 u-bg--grey">
+            <p>Column (2-12)</p>
+          </div>
         </div>
       </div>
       <h2>Containers</h2>
-      <h3 class="h5">Rows</h3>
-      <div class="row">row</div>
-      <div class="row row--large">row large</div>
+      <div class="row u-bg--grey">row</div>
+      <div class="row row--large u-bg--grey">row large</div>
+      <div class="form__row u-bg--grey">Form row</div>
+      <div class="form__row form__row--large u-bg--grey">Form row large</div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Forms</h1>
         <p>Omschrijving</p>
       </div>
       <h2>Inputs</h2>
-      <div class="columns">
+      <div class="columns row">
         <div class="column">
-          <fieldset>
-            <legend>Input text variants</legend>
-
-            <div class="form__row">
-              <label>Input text</label>
-              {{ render "@input-text" }}
-            </div>
-            <div class="form__row">
-              <label>Input password</label>
-              {{ render "@input-text--password" }}
-            </div>
-            <div class="form__row">
-              <label>Input number</label>
-              {{ render "@input-text--number" }}
-            </div>
-            <div class="form__row">
+            <label>Input text</label>
+            {{ render "@input-text" }}
+          </div>
+          <div class="column">
+            <label>Input password</label>
+            {{ render "@input-text--password" }}
+          </div>
+          <div class="column">
+            <label>Input number</label>
+            {{ render "@input-text--number" }}
+          </div>
+        </div>
+        <div class="columns row">
+          <div class="column">
               <label>Datepicker</label>
               {{ render "@datepicker" }}
-            </div>
-            <div class="form__row">
-              <label>Prefix</label>
-              {{ render "@input-text--prefix" }}
-            </div>
-            <div class="form__row">
+          </div>
+          <div class="column">
+            <label>Search</label>
+            {{ render "@input-text--search" }}
+          </div>
+          <div class="column">
+            <label>Select (dropdown)</label>
+            {{ render "@select-custom" }}
+          </div>
+        </div>
+        <div class="columns row">
+            <div class="column">
               <label>Bolder</label>
               {{ render "@input-text--medium" }}
             </div>
-            <div class="form__row">
+            <div class="column">
+              <label>Prefix</label>
+              {{ render "@input-text--prefix" }}
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column">
               <label>Bolder Search</label>
               {{ render "@input-text--search-medium" }}
             </div>
-            <div class="form__row">
-              <label>Search</label>
-              {{ render "@input-text--search" }}
-            </div>
-            <div class="form__row">
+            <div class="column">
               <label>Search + autocomplete</label>
               {{ render "@input-autocomplete--input-search-autocomplete" }}
               <small>(typ: "gem")</small>
             </div>
-            <div class="form__row">
+          </div>
+          <div class="columns row">
+            <div class="column">
               <label>Input + submit</label>
               {{ render "@input-inputsubmit" }}
               <small>(Works with flexbox; button is able to grow)</small>
             </div>
-          </fieldset>
-          <fieldset>
-            <legend>Texteara</legend>
-            <div class="form__row">
+            <div class="column">
               <label>Opmerkingen</label>
               {{ render "@textarea" }}
             </div>
-          </fieldset>
-        </div>
-        <div class="column">
-          <fieldset>
-            <legend>Input Checkbox</legend>
-            {{ render "@input-checkbox" }}
-          </fieldset>
-          <fieldset>
-            <legend>Input Radio</legend>
-            {{ render "@input-radio" }}
-          </fieldset>
-          <fieldset>
-            <legend>Select</legend>
-            <div class="form__row">
-              <label>Uw voorkeur</label>
-              {{ render "@select-custom" }}
+          </div>
+          <h2>Checkbox &amp; Radio</h2>
+          <div class="columns row">
+            <div class="column">
+              <h3 class="h5">Checkbox</h3>
+              {{ render "@input-checkbox" }}
             </div>
-          </fieldset>
-          <fieldset>
-            <legend>Subselecties</legend>
-            <div class="form__row">
-              <label>Kies uw onderwerpen</label>
-              {{ render "@subselection" subSel1 }}
+            <div class="column">
+              <h3 class="h5">Radio</h3>
+              {{ render "@input-radio" }}
             </div>
-            <div class="form__row">
-              <label>Kies uw onderwerpen</label>
-              {{ render "@subselection--filter-selection" subSel2 }}
+          </div>
+          <h2>Subselection</h2>
+          <div class="columns row">
+            <div class="column">
+              <div class="form__row form__row--large">
+                <h3 class="h5">Empty state</h3>
+                {{ render "@subselection--filter-selection" subSel2 }}
+              </div>
+              <div class="form__row">
+                <h3 class="h5">Filter selected</h3>
+                {{ render "@subselection" subSel1 }}
+              </div>
             </div>
-          </fieldset>
-          <fieldset>
-            <legend>Geselecteerde filter(s)</legend>
-            <div class="form__row">
+            <div class="column">
+              <h3 class="h5">Selected filters</h3>
               {{ render "@form-selectedfilter" }}
             </div>
-          </fieldset>
-        </div>
-      </div>
+          </div>
+          <div class="row">
+            <fieldset>
+              <legend>Formulier voorbeeld</legend>
+              <div class="form__row">
+                <label>Input text</label>
+                {{ render "@input-text" }}
+              </div>
+              <div class="form__row">
+                {{ render "@button" }}
+              </div>
+            </fieldset>
+          </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Jumbotron</h1>
         <p>Omschrijving</p>
@@ -262,7 +281,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Tooltip</h1>
         <p>Omschrijving</p>
@@ -271,7 +290,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Copydata</h1>
         <p>Omschrijving</p>
@@ -280,7 +299,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Actionblock</h1>
         <p>Omschrijving</p>
@@ -289,7 +308,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Alert</h1>
         <p>Omschrijving</p>
@@ -313,7 +332,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Article header</h1>
         <p>Omschrijving</p>
@@ -322,7 +341,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Characteristic</h1>
         <p>Omschrijving</p>
@@ -330,7 +349,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Collapsible</h1>
         <p>Omschrijving</p>
@@ -346,7 +365,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Labels</h1>
         <p>Omschrijving</p>
@@ -383,7 +402,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Modal</h1>
         <p>Omschrijving</p>
@@ -391,7 +410,7 @@
       </div>
     </article>
 
-    <article class="row">
+    <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="buttons">Navigation</h1>
         <p>Omschrijving</p>
@@ -399,8 +418,6 @@
         {{render "@nav" }}
       </div>
     </article>
-
-
 
   </div>
 

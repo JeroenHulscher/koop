@@ -29,6 +29,7 @@
       {{/if}}
     </div>
   </div>
+  {{#if nav}}
   <nav class="header__nav header__nav--closed" id="nav">
     <h2 class="visually-hidden">Primaire navigatie</h2>
     <div class="container">
@@ -49,23 +50,26 @@
       {{/if}}
     </div>
   </nav>
+  {{/if}}
 </header>
-{{#if headerMore }}
-<div class="header__more" id="other-sites">
-  <div class="container columns">
-    {{#each headerMore }}
-    <div>
-      <h2>{{ title }}</h2>
-      <p>{{ description }}</p>
-      {{#if links }}
-      <ul class="list list--linked">
-        {{#each links }}
-        <li><a href="{{ url }}">{{ text}}</a></li>
-        {{/each}}
-      </ul>
-      {{/if}}
+{{#if nav}}
+  {{#if headerMore }}
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      {{#each headerMore }}
+      <div>
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        {{#if links }}
+        <ul class="list list--linked">
+          {{#each links }}
+          <li><a href="{{ url }}">{{ text }}</a></li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
+  {{/if}}
 {{/if}}

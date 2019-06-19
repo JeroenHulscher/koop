@@ -1,5 +1,14 @@
 name: DS - Components
 context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Componenten
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
   navComponentsContext:
     items:
     - title: Components
@@ -20,7 +29,7 @@ context:
   subSel1:
     name: Default
     id: 11
-    type: abbr
+    type: span
     linkText: Selecteer
     modalTitle: Selecteer ministeries
     fieldLabel: fieldLabel
