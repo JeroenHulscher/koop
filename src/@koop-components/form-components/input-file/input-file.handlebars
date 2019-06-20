@@ -1,9 +1,9 @@
 <form class="input-filebox" action="" method="POST" data-decorator="init-inputfile" data-config='{ "showbuttonAfterChange": "true" {{#if ajax}}, "ajax": "/preview-portaal/upload"{{/if}}, "messageModal": ".js-input-filebox__messagetrigger" }'>
   <div class="input-dragbox js-input-dragbox">
     <div class="input-dragbox__content">
-      <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document door te slepen, of </span>
+      <span class="input-dragbox__prelabel js-input-dragbox__prelabel">Upload document: </span>
       <label for="file">
-        <span class="js-input-dragbox__label" role="button" aria-controls="filename" tabindex="0">selecteer een bestand</span>
+        <span class="js-input-dragbox__label" role="button" aria-controls="filename" tabindex="0">Selecteer een bestand</span>
       </label>
       <input type="file" tabindex="-1" name="files[]" id="file" class="box__file" data-multiple-caption="{count} bestanden geselecteerd" />
       {{#if showButtonOnSelection}}
