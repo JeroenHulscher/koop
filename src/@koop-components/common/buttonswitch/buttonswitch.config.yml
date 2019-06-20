@@ -18,3 +18,11 @@ variants:
         - label: Button 2
           active: true
           icon: hamburger
+  - name: Disabled
+    context:
+      buttons:
+        - label: Button 1
+          active: false
+          disabled: true
+        - label: Button 2
+          active: true

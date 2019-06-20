@@ -1,5 +1,5 @@
 <div class="buttonswitch{{#if modifier}} buttonswitch--{{modifier}}{{/if}}">
   {{#each buttons}}
-    <a href="#" class="buttonswitch__button {{#if active}}is-active{{/if}} {{#if icon}}icon icon--{{icon}}{{/if}}">{{label}}</a>
+    <a href="#" class="buttonswitch__button{{#if disabled}} is-disabled{{/if}}{{#if active}} is-active{{/if}}{{#if icon}} icon icon--{{icon}}{{/if}}">{{label}}</a>
   {{/each}}
 </div>
