@@ -2,20 +2,32 @@
   background-color: $lightGrey;
   padding: 1em;
   margin: 1em 0;
+  font-weight: bold;
+
+  &--headless {
+    background: none;
+    padding: 0;
+  }
 
   &__options {
     font-weight: normal;
     display: inline;
-    padding-left: .5em;
+    padding-left: 1em;
 
     li {
       list-style: none;
       display: inline;
       color: $darkBlue;
+
+      a {
+        &.is-active {
+          font-style: italic;
+        }
+      }
     }
 
     li::after {
-      content: ' / ';
+      content: ' | ';
       margin: 0 .5em;
     }
 
@@ -27,7 +39,6 @@
 }
 
 .sort--ascending {
-  font-weight: 700;
   padding-right: 1em;
   background: {
     repeat: no-repeat;
@@ -38,7 +49,6 @@
 }
 
 .sort--descending {
-  font-weight: 700;
   padding-right: 1em;
   background: {
     repeat: no-repeat;
