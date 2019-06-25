@@ -1,0 +1,35 @@
+// .to-top {
+//   position: fixed;
+//   z-index: 1;
+//   bottom: -2.25em;
+//   left: calc(50% - 1em);
+//   width: 4em;
+//   height: 4em;
+//   border-radius: 100%;
+//   background: $primaryBlue $dartTopWhiteIcon no-repeat 50% 0.5em;
+//   background-size: 1.5em;
+//   color: $white;
+//   text-indent: -999em;
+//   transition: .2s ease-out;
+//   &.irrelevant {
+//     transform: translateY(100%);
+//   }
+// }
+
+.to-top {
+  left: 2em;
+  text-indent: 0;
+  @extend .button;
+  @extend .button--secondary;
+  width: auto;
+  height: auto;
+  bottom: 1em;
+
+  @media (min-width: 87em) {
+    left: calc(50% - 37em);
+
+    &.irrelevant {
+      display: none;
+    }
+  }
+}

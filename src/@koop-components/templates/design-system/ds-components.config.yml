@@ -15,17 +15,34 @@ context:
       active: false
       sub: true
       subItems:
-        - stitle: Navigatie
+        - stitle: Alert
+          href: alert
+        - stitle: Article header
+          href: articleheader
         - stitle: Buttons
-        - stitle: Links
-        - stitle: Formulier
-        - stitle: Datumprikker
-        - stitle: Filter
-        - stitle: Zoekfunctie
-        - stitle: Zoekresultaat
-        - stitle: Meldingen
-        - stitle: Tags
-        - stitle: Maps
+          href: buttons
+        - stitle: CopyURL
+          href: copyurl
+        - stitle: Characteristics
+          href: characteristics
+        - stitle: Collapsible
+          href: collapsible
+        - stitle: Grid & containers
+          href: gridcontainers
+        - stitle: Forms
+          href: forms
+        - stitle: Jumbotron
+          href: jumbotron
+        - stitle: Labels
+          href: labels
+        - stitle: Lists
+          href: lists
+        - stitle: Modal
+          href: modal
+        - stitle: Navigation
+          href: navigation
+        - stitle: Tooltip
+          href: tooltip
   subSel1:
     name: Default
     id: 11
