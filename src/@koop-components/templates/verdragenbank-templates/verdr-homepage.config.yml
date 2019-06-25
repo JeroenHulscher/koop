@@ -43,3 +43,7 @@ context:
     buttonWithDivider: false
     type: submit
     disabled: ''
+  newsletterCheckbox:
+    options:
+    - id: checkbox-112312312
+      text: Ik begrijp dat ...
