@@ -17,7 +17,10 @@ table,
   table-layout: fixed;
   word-wrap: break-word;
 
-
+  [scope=colgroup] {
+    background: $darkBlue !important;
+    color: white !important;
+  }
 
   .table--container & {
     table-layout: auto;
