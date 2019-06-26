@@ -31,6 +31,15 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
+          <h1 id="address">Address</h1>
+          <p>Omschrijving</p>
+
+          {{render "@address" }}
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
           <h1 id="alert">Alert</h1>
           <p>Omschrijving</p>
 
@@ -62,6 +71,35 @@
         </div>
       </article>
 
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="banner">Banner</h1>
+          <p>Omschrijving</p>
+
+          {{render "@banner" }}
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="blockquote">Blockquote</h1>
+          <p>Omschrijving</p>
+
+          {{render "@blockquote" }}
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="browse">Browse</h1>
+          <p>Omschrijving</p>
+          <h2 class="h5">Default</h2>
+          {{render "@browse" }}
+          <h2 class="h5">With icons</h2>
+          {{render "@browse--icons" }}
+        </div>
+      </article>
+
 
 
       <article class="row row--xxxlarge">
@@ -90,6 +128,14 @@
             <p>{{render "@button--tertiary" }}</p>
           </div>
         </div>
+        <h3 class="h5">Variants</h3>
+        <p>
+          {{ render "@button--icon-down" }} {{ render "@button--icon-top" }} {{ render "@button--icon-left" }} {{ render "@button--icon-right" }} {{ render "@button--icon-download" }} {{ render "@button--icon-refresh-documents" }}
+        </p>
+        <h3 class="h5">Icon only</h3>
+        <p>
+          {{ render "@button-icon" }}
+        </p>
         <h2>Buttongroup</h2>
         <div class="row">
           <h3 class="h5">Default</h2>
@@ -134,6 +180,22 @@
         </div>
       </article>
 
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="definitionlist">Definitionlist</h1>
+          <p>Omschrijving</p>
+          {{render "@definitionlist" }}
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="delins">Del / Ins</h1>
+          <p>Omschrijving</p>
+          {{render "@del-ins" }}
+        </div>
+      </article>
+
 
 
 
@@ -174,7 +236,23 @@
       <div class="form__row form__row--large u-bg--grey">Form row large</div>
     </article>
 
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="figure">Figure</h1>
+        <p>Omschrijving</p>
 
+        {{render "@figure" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="footnote">Footnote</h1>
+        <p>Omschrijving</p>
+
+        {{render "@footnote" }}
+      </div>
+    </article>
 
     <article class="row row--xxxlarge">
       <div class="row row--large">
@@ -321,6 +399,15 @@
 
     <article class="row row--xxxlarge">
       <div class="row row--large">
+        <h1 id="highlight">Highlight</h1>
+        <p>Omschrijving</p>
+
+        {{render "@highlight" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
         <h1 id="jumbotron">Jumbotron</h1>
         <p>Omschrijving</p>
 
@@ -381,6 +468,17 @@
           <div>{{render "@label--danger" }}</div>
         </div>
 
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="link">Link</h1>
+        <p>Omschrijving</p>
+        <h2 class="h5">Internal</h2>
+        <p><a href="/appel">Interne link</a></p>
+        <h2 class="h5">External</h2>
+        <p><a href="https://www.google.nl">Externe link</a></p>
       </div>
     </article>
 
@@ -448,8 +546,51 @@
       <div class="row row--large">
         <h1 id="navigation">Navigation</h1>
         <p>Omschrijving</p>
-        <h2 class="h5">Sub navigation</h2>
+        <h2 class="h5">Sub-navigation</h2>
         {{render "@nav" }}
+        <h2 class="h5">Login</h2>
+        {{render "@profile--logged-in" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="pageactions">Pageactions</h1>
+        <p>Omschrijving</p>
+        {{render "@pageactions" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="pre">Pre</h1>
+        <p>Omschrijving</p>
+        {{render "@pre" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="resultlist">Resultlist</h1>
+        <p>Omschrijving</p>
+        {{render "@resultlist" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="sort">Sort</h1>
+        <p>Omschrijving</p>
+        {{render "@sort" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="table">Table</h1>
+        <p>Omschrijving</p>
+
+        {{render "@data-overview" }}
       </div>
     </article>
 

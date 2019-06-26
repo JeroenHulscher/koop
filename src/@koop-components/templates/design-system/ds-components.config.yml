@@ -15,10 +15,18 @@ context:
       active: false
       sub: true
       subItems:
+        - stitle: Address
+          href: address
         - stitle: Alert
           href: alert
         - stitle: Article header
           href: articleheader
+        - stitle: Banner
+          href: banner
+        - stitle: Blockquote
+          href: blockquote
+        - stitle: Browse
+          href: browse
         - stitle: Buttons
           href: buttons
         - stitle: CopyURL
@@ -27,20 +35,42 @@ context:
           href: characteristics
         - stitle: Collapsible
           href: collapsible
+        - stitle: Definitionlist
+          href: definitionlist
+        - stitle: Del / Ins
+          href: delins
         - stitle: Grid & containers
           href: gridcontainers
+        - stitle: Figure
+          href: figure
+        - stitle: Footnote
+          href: footnote
         - stitle: Forms
           href: forms
+        - stitle: Highlight
+          href: highlight
         - stitle: Jumbotron
           href: jumbotron
         - stitle: Labels
           href: labels
+        - stitle: Link
+          href: link
         - stitle: Lists
           href: lists
         - stitle: Modal
           href: modal
         - stitle: Navigation
           href: navigation
+        - stitle: Pageactions
+          href: pageactions
+        - stitle: Pre
+          href: pre
+        - stitle: Resultlist
+          href: resultlist
+        - stitle: Sort
+          href: sort
+        - stitle: Table
+          href: table
         - stitle: Tooltip
           href: tooltip
   subSel1:

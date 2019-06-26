@@ -91,7 +91,7 @@ variants:
     status: ready
     label: icon download
     context:
-      text: Menu
+      text: Download
       modifier: button--primary button--icon-download-white
   - name: Icon Refresh documents
     status: ready
