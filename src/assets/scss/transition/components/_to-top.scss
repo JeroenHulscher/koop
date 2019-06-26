@@ -25,11 +25,13 @@
   height: auto;
   bottom: 1em;
 
-  @media (min-width: 87em) {
+  &.irrelevant {
+      display: none !important;
+    }
+
+  @media (min-width: 99em) {
     left: calc(50% - 37em);
 
-    &.irrelevant {
-      display: none;
-    }
+
   }
 }

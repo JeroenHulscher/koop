@@ -69,10 +69,18 @@ context:
           href: resultlist
         - stitle: Sort
           href: sort
+        - stitle: Steps
+          href: steps
         - stitle: Table
           href: table
+        - stitle: Tabs
+          href: tabs
+        - stitle: Themeblock
+          href: themeblock
         - stitle: Tooltip
           href: tooltip
+        - stitle: Treeview
+          href: treeview
   subSel1:
     name: Default
     id: 11

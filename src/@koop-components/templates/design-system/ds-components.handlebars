@@ -587,10 +587,63 @@
 
     <article class="row row--xxxlarge">
       <div class="row row--large">
+        <h1 id="steps">Steps</h1>
+        <p>Omschrijving</p>
+        {{render "@steps" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="tabs">Tabs</h1>
+        <p>Omschrijving</p>
+        <h2 class="h5">Default</h2>
+        {{render "@tabs" }}
+        <h2 class="h5">Justified</h2>
+        {{render "@tabs--justified" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
         <h1 id="table">Table</h1>
         <p>Omschrijving</p>
+        <h2 class="h5">Default</h2>
+        {{render "@table" }}
+        <h2 class="h5">Striped</h2>
+        {{render "@table--striped" }}
+        <h2 class="h5">Condensed</h2>
+        {{render "@table--condensed" }}
+        <h2 class="h5">Hover</h2>
+        {{render "@table--hover" }}
+      </div>
+    </article>
 
-        {{render "@data-overview" }}
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="themeblock">Themeblock</h1>
+        <p>Omschrijving</p>
+        <ul class="themelist list--unstyled">
+
+          {{ render "@themeblock" }}
+          {{ render "@themeblock--cultuur" }}
+          {{ render "@themeblock--economie" }}
+          {{ render "@themeblock--financien" }}
+          {{ render "@themeblock--huisvesting" }}
+          {{ render "@themeblock--internationaal" }}
+          {{ render "@themeblock--landbouw" }}
+          {{ render "@themeblock--migratie" }}
+          {{ render "@themeblock--natuur" }}
+          {{ render "@themeblock--onderwijs" }}
+          {{ render "@themeblock--veiligheid" }}
+          {{ render "@themeblock--recht" }}
+          {{ render "@themeblock--infrastructuur" }}
+          {{ render "@themeblock--socialezekerheid" }}
+          {{ render "@themeblock--verkeer" }}
+          {{ render "@themeblock--werk" }}
+          {{ render "@themeblock--zorg" }}
+
+        </ul>
       </div>
     </article>
 
@@ -600,6 +653,15 @@
         <p>Omschrijving</p>
 
         <p>Een titel{{render "@tooltip" }}</p>
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="treeview">Treeview</h1>
+        <p>Omschrijving</p>
+
+        {{render "@treeview" }}
       </div>
     </article>
 
