@@ -2,7 +2,8 @@ title: sort
 label: Sort
 context:
   options:
-    - label: Titel
+    - label: Datum
       value: value
-    - label: Soort
+      active: is-active
+    - label: Titel
       value: value
