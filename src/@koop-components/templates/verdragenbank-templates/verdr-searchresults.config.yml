@@ -91,6 +91,8 @@ context:
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
+  inputsearchMobContext:
+    fieldPlaceholder: Verfijn uw zoekopdracht
   sortContext:
     modifier: sort--headless
     options:
