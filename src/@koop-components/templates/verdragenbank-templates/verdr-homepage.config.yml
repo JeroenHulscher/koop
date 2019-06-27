@@ -47,3 +47,7 @@ context:
     options:
     - id: checkbox-112312312
       text: Ik begrijp dat ...
+  newslCollap:
+    heading: Lees meer over uw privacy
+    id: 11231231
+    text: Meer informatie over privacy en andere zaken
