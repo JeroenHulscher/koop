@@ -1,13 +1,10 @@
-
-
-
 <div class="container">
 
   <div class="columns columns--sidebar-left">
     <div class="column ds-content">
 
       <div class="hidden-desktop align-right">
-        <a href="#subnav" class="button button--primary">Navigatie</a>
+        <a href="#subnav" class="button button--primary" role="button">Navigatie</a>
       </div>
 
       <div class="row row--spacer">
@@ -19,7 +16,7 @@
               <p class="jumbotron__subheader">Design system</p>
               <h1 class="jumbotron__header">Componenten</h1>
               <p class="jumbotron__intro">
-                  ## omschrijving
+                ## omschrijving
               </p>
             </div>
 
@@ -31,7 +28,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="address">Address</h1>
-          <p>Omschrijving</p>
+          <p>Gebruik altijd een <code>address</code> element bij het uitschrijven van een adres.</p>
 
           {{render "@address" }}
         </div>
@@ -40,7 +37,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="alert">Alert</h1>
-          <p>Omschrijving</p>
+          <p>Speciale meldingen (alerts) kunnen gebruikt zowel buiten als binnen een formulier. De class <code>.alert</code> geeft de standaard styling.</p>
 
           <div class="row">
             <h2 class="h5">Default</h2>
@@ -99,8 +96,6 @@
         </div>
       </article>
 
-
-
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="buttons">Buttons</h1>
@@ -129,7 +124,8 @@
         </div>
         <h3 class="h5">Variants</h3>
         <p>
-          {{ render "@button--icon-down" }} {{ render "@button--icon-top" }} {{ render "@button--icon-left" }} {{ render "@button--icon-right" }} {{ render "@button--icon-download" }} {{ render "@button--icon-refresh-documents" }}
+          {{ render "@button--icon-down" }} {{ render "@button--icon-top" }} {{ render "@button--icon-left" }} {{ render "@button--icon-right"
+          }} {{ render "@button--icon-download" }} {{ render "@button--icon-refresh-documents" }}
         </p>
         <h3 class="h5">Icon only</h3>
         <p>
@@ -138,11 +134,11 @@
         <h2>Buttongroup</h2>
         <div class="row">
           <h3 class="h5">Default</h2>
-          <div>{{render "@buttonswitch" }}</div>
+            <div>{{render "@buttonswitch" }}</div>
         </div>
         <div class="row">
           <h3 class="h5">With icons</h2>
-          <div>{{render "@buttonswitch--with-icons" }}</div>
+            <div>{{render "@buttonswitch--with-icons" }}</div>
         </div>
       </article>
 
@@ -195,72 +191,69 @@
         </div>
       </article>
 
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="gridcontainers">Grid &amp; containers</h1>
+          <p>Omschrijving</p>
+        </div>
+        <div class="row row--xxlarge">
+          <h2>Grid systeem</h2>
+          <div class="columns row">
+            <div class="column u-bg--grey">
+              <p>Column (auto)</p>
+            </div>
+            <div class="column u-bg--grey">
+              <p>Column (auto)</p>
+            </div>
+            <div class="column u-bg--grey">
+              <p>Column (auto)</p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column column-d-3 u-bg--grey">
+              <p>Column (3-12)</p>
+            </div>
+            <div class="column column-d-7 u-bg--grey">
+              <p>Column (7-12)</p>
+            </div>
+            <div class="column column-d-2 u-bg--grey">
+              <p>Column (2-12)</p>
+            </div>
+          </div>
+        </div>
+        <h2>Containers</h2>
+        <div class="row u-bg--grey">row</div>
+        <div class="row row--large u-bg--grey">row large</div>
+        <div class="form__row u-bg--grey">Form row</div>
+        <div class="form__row form__row--large u-bg--grey">Form row large</div>
+      </article>
 
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="figure">Figure</h1>
+          <p>Omschrijving</p>
 
+          {{render "@figure" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="gridcontainers">Grid &amp; containers</h1>
-        <p>Omschrijving</p>
-      </div>
-      <div class="row row--xxlarge">
-        <h2>Grid systeem</h2>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="footnote">Footnote</h1>
+          <p>Omschrijving</p>
+
+          {{render "@footnote" }}
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="forms">Forms</h1>
+          <p>Omschrijving</p>
+        </div>
+        <h2>Inputs</h2>
         <div class="columns row">
-          <div class="column u-bg--grey">
-            <p>Column (auto)</p>
-          </div>
-          <div class="column u-bg--grey">
-            <p>Column (auto)</p>
-          </div>
-          <div class="column u-bg--grey">
-            <p>Column (auto)</p>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column column-d-3 u-bg--grey">
-            <p>Column (3-12)</p>
-          </div>
-          <div class="column column-d-7 u-bg--grey">
-            <p>Column (7-12)</p>
-          </div>
-          <div class="column column-d-2 u-bg--grey">
-            <p>Column (2-12)</p>
-          </div>
-        </div>
-      </div>
-      <h2>Containers</h2>
-      <div class="row u-bg--grey">row</div>
-      <div class="row row--large u-bg--grey">row large</div>
-      <div class="form__row u-bg--grey">Form row</div>
-      <div class="form__row form__row--large u-bg--grey">Form row large</div>
-    </article>
-
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="figure">Figure</h1>
-        <p>Omschrijving</p>
-
-        {{render "@figure" }}
-      </div>
-    </article>
-
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="footnote">Footnote</h1>
-        <p>Omschrijving</p>
-
-        {{render "@footnote" }}
-      </div>
-    </article>
-
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="forms">Forms</h1>
-        <p>Omschrijving</p>
-      </div>
-      <h2>Inputs</h2>
-      <div class="columns row">
-        <div class="column">
+          <div class="column">
             <label>Input text</label>
             {{ render "@input-text" }}
           </div>
@@ -275,8 +268,8 @@
         </div>
         <div class="columns row">
           <div class="column">
-              <label>Datepicker</label>
-              {{ render "@datepicker" }}
+            <label>Datepicker</label>
+            {{ render "@datepicker" }}
           </div>
           <div class="column">
             <label>Search</label>
@@ -394,134 +387,119 @@
             </div>
           </fieldset>
         </div>
-    </article>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="highlight">Highlight</h1>
-        <p>Omschrijving</p>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="highlight">Highlight</h1>
+          <p>Omschrijving</p>
 
-        {{render "@highlight" }}
-      </div>
-    </article>
-
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="jumbotron">Jumbotron</h1>
-        <p>Omschrijving</p>
-
-        {{render "@jumbotron--highlight" }}
-      </div>
-    </article>
-
-
-
-
-
-    {{!-- <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="buttons">Actionblock</h1>
-        <p>Omschrijving</p>
-
-        {{render "@actionblock" }}
-      </div>
-    </article> --}}
-
-
-
-
-
-
-
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="labels">Labels</h1>
-        <p>Omschrijving</p>
-
-        <div class="row">
-          <h2 class="h5">Default</h2>
-          <div>{{render "@label" }}</div>
+          {{render "@highlight" }}
         </div>
-        <div class="row">
-          <h2 class="h5">Blue</h2>
-          <div>{{render "@label--blue" }}</div>
-        </div>
-        <div class="row">
-          <h2 class="h5">Primary</h2>
-          <div>{{render "@label--primary" }}</div>
-        </div>
-        <div class="row">
-          <h2 class="h5">Orange</h2>
-          <div>{{render "@label--orange" }}</div>
-        </div>
-        <div class="row">
-          <h2 class="h5">Success</h2>
-          <div>{{render "@label--success" }}</div>
-        </div>
-        <div class="row">
-          <h2 class="h5">Warning</h2>
-          <div>{{render "@label--warning" }}</div>
-        </div>
-        <div class="row">
-          <h2 class="h5">Danger</h2>
-          <div>{{render "@label--danger" }}</div>
-        </div>
+      </article>
 
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="jumbotron">Jumbotron</h1>
+          <p>Omschrijving</p>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="link">Link</h1>
-        <p>Omschrijving</p>
-        <h2 class="h5">Internal</h2>
-        <p><a href="/appel">Interne link</a></p>
-        <h2 class="h5">External</h2>
-        <p><a href="https://www.google.nl">Externe link</a></p>
-      </div>
-    </article>
+          {{render "@jumbotron--highlight" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="lists">Lists</h1>
-        <p>Omschrijving</p>
-      </div>
-      <div class="columns row row--xxlarge">
-        <div class="column">
-          <h2 class="h5">Default list</h2>
-          {{ render "@list" }}
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="labels">Labels</h1>
+          <p>Omschrijving</p>
+
+          <div class="row">
+            <h2 class="h5">Default</h2>
+            <div>{{render "@label" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Blue</h2>
+            <div>{{render "@label--blue" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Primary</h2>
+            <div>{{render "@label--primary" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Orange</h2>
+            <div>{{render "@label--orange" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Success</h2>
+            <div>{{render "@label--success" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Warning</h2>
+            <div>{{render "@label--warning" }}</div>
+          </div>
+          <div class="row">
+            <h2 class="h5">Danger</h2>
+            <div>{{render "@label--danger" }}</div>
+          </div>
+
         </div>
-        <div class="column">
-          <h2 class="h5">Ordered list</h2>
-          {{ render "@list--ordered" }}
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="link">Link</h1>
+          <p>Een hyperlink komt mee met een standaard style. Het icoon wordt automagisch geplaatst op basis van de <code>href</code>.</p>
+          <h2 class="h5">Internal</h2>
+          <p>
+            <a href="/appel">Interne link</a>
+          </p>
+          <h2 class="h5">External</h2>
+          <p>
+            <a href="https://www.google.nl">Externe link</a>
+          </p>
         </div>
-      </div>
-      <div class="columns row row--xxlarge">
-        <div class="column">
-          <h2 class="h5">Unstyled</h2>
-          {{ render "@list--unstyled" }}
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="lists">Lists</h1>
+          <p>Omschrijving</p>
         </div>
-        <div class="column">
-          <h2 class="h5">Inline</h2>
-          {{ render "@list--inline" }}
+        <div class="columns row row--xxlarge">
+          <div class="column">
+            <h2 class="h5">Default list</h2>
+            {{ render "@list" }}
+          </div>
+          <div class="column">
+            <h2 class="h5">Ordered list</h2>
+            {{ render "@list--ordered" }}
+          </div>
         </div>
-      </div>
-      <div class="columns row row--xxlarge">
-        <div class="column">
-          <h2 class="h5">Relationlist</h2>
-          {{ render "@list--relationlist" }}
+        <div class="columns row row--xxlarge">
+          <div class="column">
+            <h2 class="h5">Unstyled</h2>
+            {{ render "@list--unstyled" }}
+          </div>
+          <div class="column">
+            <h2 class="h5">Inline</h2>
+            {{ render "@list--inline" }}
+          </div>
         </div>
-        <div class="column">
-          <h2 class="h5">Law list</h2>
-          {{ render "@list--law-list" }}
+        <div class="columns row row--xxlarge">
+          <div class="column">
+            <h2 class="h5">Relationlist</h2>
+            {{ render "@list--relationlist" }}
+          </div>
+          <div class="column">
+            <h2 class="h5">Law list</h2>
+            {{ render "@list--law-list" }}
+          </div>
         </div>
-      </div>
-      <div class="columns row row--xxlarge">
-        <div class="column">
+        <div class="columns row row--xxlarge">
+          <div class="column">
             <h2 class="h5">Facetlist</h2>
             {{ render "@list--facetlist" }}
-        </div>
-        <div class="column">
+          </div>
+          <div class="column">
             <h2 class="h5">Legenda</h2>
             {{ render "@list--legenda" }}
           </div>
@@ -531,159 +509,168 @@
           {{ render "@list--law-list-unordered" }}
         </div>
       </article>
-    </article>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="modal">Modal</h1>
-        <p>Omschrijving</p>
-        {{render "@modal" }}
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="modal">Modal</h1>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="navigation">Navigation</h1>
-        <p>Omschrijving</p>
-        <h2 class="h5">Sub-navigation</h2>
-        {{render "@nav" }}
-        <h2 class="h5">Login</h2>
-        {{render "@profile--logged-in" }}
-      </div>
-    </article>
+          Het modal component kan informatie tonen in een vlak dat over de rest van de pagina heenligt, en waarbij de rest van de pagina
+          ontoegankelijk is gemaakt.
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="pageactions">Pageactions</h1>
-        <p>Omschrijving</p>
-        {{render "@pageactions" }}
-      </div>
-    </article>
+          <p>
+            {{render "@modal" }}
+          </p>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="pre">Pre</h1>
-        <p>Omschrijving</p>
-        {{render "@pre" }}
-      </div>
-    </article>
+          <p>
+            De code voor een model moet toegevoegd worden net voor de body-tag. Als je het toevoegt is het standaard niet-zichtbaar.
+          </p>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="resultlist">Resultlist</h1>
-        <p>Omschrijving</p>
-        {{render "@resultlist" }}
-      </div>
-    </article>
+          <p>
+            Let op, het bevat altijd:
+          </p>
+          <ul>
+            <li>een id, wat wordt gebruikt om het modal te kunnen aanroepen vanuit een knop</li>
+            <li>een classname, die wordt gebruikt voor de opmaak van het modal en het verbergen van het modal.</li>
+            <li>een hidden-attribuut, om het attribuut default te verbergen</li>
+            <li>een <code>role="alert"</code> zodat screenreaders het netjes oplezen zodra het wordt getoond.</li>
+            <li>
+              <code>.modal</code> element als buitenste elementen, en <code>.model__content</code> element voor de inhoud</li>
+            <li>Een 'close'-button, wat elke opmaak kan bevatten zolang het maar <code>data-handler="close-modal"</code> bevat.</li>
+          </ul>
+          <p>
+            Let op: het <code>data-modal</code> attribuut bevat het ID van het gekoppelde modal, en moet gelijk zijn aan het <code>id</code> attribute in het bijbehorende modal.
+          </p>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="sort">Sort</h1>
-        <p>Omschrijving</p>
-        {{render "@sort" }}
-      </div>
-    </article>
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="steps">Steps</h1>
-        <p>Omschrijving</p>
-        {{render "@steps" }}
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="navigation">Navigation</h1>
+          <p>Omschrijving</p>
+          <h2 class="h5">Sub-navigation</h2>
+          {{render "@nav" }}
+          <h2 class="h5">Login</h2>
+          {{render "@profile--logged-in" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="tabs">Tabs</h1>
-        <p>Omschrijving</p>
-        <h2 class="h5">Default</h2>
-        {{render "@tabs" }}
-        <h2 class="h5">Justified</h2>
-        {{render "@tabs--justified" }}
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="pageactions">Pageactions</h1>
+          <p>Omschrijving</p>
+          {{render "@pageactions" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="table">Table</h1>
-        <p>Omschrijving</p>
-        <h2 class="h5">Default</h2>
-        {{render "@table" }}
-        <h2 class="h5">Striped</h2>
-        {{render "@table--striped" }}
-        <h2 class="h5">Condensed</h2>
-        {{render "@table--condensed" }}
-        <h2 class="h5">Hover</h2>
-        {{render "@table--hover" }}
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="pre">Pre</h1>
+          <p>Omschrijving</p>
+          {{render "@pre" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="themeblock">Themeblock</h1>
-        <p>Omschrijving</p>
-        <ul class="themelist list--unstyled">
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="resultlist">Resultlist</h1>
+          <p>Omschrijving</p>
+          {{render "@resultlist" }}
+        </div>
+      </article>
 
-          {{ render "@themeblock" }}
-          {{ render "@themeblock--cultuur" }}
-          {{ render "@themeblock--economie" }}
-          {{ render "@themeblock--financien" }}
-          {{ render "@themeblock--huisvesting" }}
-          {{ render "@themeblock--internationaal" }}
-          {{ render "@themeblock--landbouw" }}
-          {{ render "@themeblock--migratie" }}
-          {{ render "@themeblock--natuur" }}
-          {{ render "@themeblock--onderwijs" }}
-          {{ render "@themeblock--veiligheid" }}
-          {{ render "@themeblock--recht" }}
-          {{ render "@themeblock--infrastructuur" }}
-          {{ render "@themeblock--socialezekerheid" }}
-          {{ render "@themeblock--verkeer" }}
-          {{ render "@themeblock--werk" }}
-          {{ render "@themeblock--zorg" }}
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="sort">Sort</h1>
+          <p>Omschrijving</p>
+          {{render "@sort" }}
+        </div>
+      </article>
 
-        </ul>
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="steps">Steps</h1>
+          <p>Omschrijving</p>
+          {{render "@steps" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="tooltip">Tooltip</h1>
-        <p>Omschrijving</p>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="tabs">Tabs</h1>
+          <p>Omschrijving</p>
+          <h2 class="h5">Default</h2>
+          {{render "@tabs" }}
+          <h2 class="h5">Justified</h2>
+          {{render "@tabs--justified" }}
+        </div>
+      </article>
 
-        <p>Een titel{{render "@tooltip" }}</p>
-      </div>
-    </article>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="table">Table</h1>
+          <p>Omschrijving</p>
+          <h2 class="h5">Default</h2>
+          {{render "@table" }}
+          <h2 class="h5">Striped</h2>
+          {{render "@table--striped" }}
+          <h2 class="h5">Condensed</h2>
+          {{render "@table--condensed" }}
+          <h2 class="h5">Hover</h2>
+          {{render "@table--hover" }}
+        </div>
+      </article>
 
-    <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="treeview">Treeview</h1>
-        <p>Omschrijving</p>
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="themeblock">Themeblock</h1>
+          <p>Omschrijving</p>
+          <ul class="themelist list--unstyled">
 
-        {{render "@treeview" }}
-      </div>
-    </article>
+            {{ render "@themeblock" }} {{ render "@themeblock--cultuur" }} {{ render "@themeblock--economie" }} {{ render "@themeblock--financien"
+            }} {{ render "@themeblock--huisvesting" }} {{ render "@themeblock--internationaal" }} {{ render "@themeblock--landbouw"
+            }} {{ render "@themeblock--migratie" }} {{ render "@themeblock--natuur" }} {{ render "@themeblock--onderwijs"
+            }} {{ render "@themeblock--veiligheid" }} {{ render "@themeblock--recht" }} {{ render "@themeblock--infrastructuur"
+            }} {{ render "@themeblock--socialezekerheid" }} {{ render "@themeblock--verkeer" }} {{ render "@themeblock--werk"
+            }} {{ render "@themeblock--zorg" }}
+
+          </ul>
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="tooltip">Tooltip</h1>
+          <p>Omschrijving</p>
+
+          <p>Een titel{{render "@tooltip" }}</p>
+        </div>
+      </article>
+
+      <article class="row row--xxxlarge">
+        <div class="row row--large">
+          <h1 id="treeview">Treeview</h1>
+          <p>Omschrijving</p>
+
+          {{render "@treeview" }}
+        </div>
+      </article>
+
+    </div>
+
+    <div class="column column--sidebar" id="subnav">
+
+      {{render "@nav" navMenuContext }} {{render "@nav" navComponentsContext }}
+
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+        <span class="visually-hidden">Sluiten</span>
+      </button>
+
+      <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
+
+    </div>
 
   </div>
 
-  <div class="column column--sidebar" id="subnav">
-
-    {{!-- <div id="modal-filter" class="modal-sidebar" role="alert"> --}}
-
-      {{!-- <div class="modal-sidebar__content"> --}}
-        {{render "@nav" navMenuContext }}
-
-        {{render "@nav" navComponentsContext }}
-
-        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-          <span class="visually-hidden">Sluiten</span>
-        </button>
-      {{!-- </div> --}}
-
-    {{!-- </div> --}}
-
-    <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
-
-</div>
-
-{{ render "@footer" }}
+  {{ render "@footer" }}
