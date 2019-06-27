@@ -96,5 +96,9 @@ context:
         id: 3
         title: Nederland
         short: Nederland
+  newsletterCheckbox:
+    options:
+    - id: checkbox-112312312
+      text: Ik begrijp dat ...
 
 

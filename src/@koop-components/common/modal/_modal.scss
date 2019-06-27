@@ -52,6 +52,9 @@
     padding-top: em(56);
     padding-bottom: em(56);
   }
+  &--full &__inner {
+    max-width: 80em;
+  }
 
   &__content {
     overflow: auto;

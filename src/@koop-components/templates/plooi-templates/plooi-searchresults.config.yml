@@ -178,6 +178,20 @@ context:
           type: primary
           action: modal-4
           modal: true
+  sortContext:
+    modifier: sort--headless
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
+  inputsubmitContext:
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Verfijn uw zoekopdracht
+    button: Zoek
+    modifier: input-text--search
   resultsContext:
     modifier: result--list--wide
     items:

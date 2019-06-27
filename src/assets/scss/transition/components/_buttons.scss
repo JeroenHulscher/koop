@@ -21,6 +21,11 @@
     color: $darkBlue;
   }
 
+  &.block-element {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
   & + .button {
     margin-left: .75em;
   }

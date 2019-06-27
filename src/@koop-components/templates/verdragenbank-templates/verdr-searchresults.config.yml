@@ -80,20 +80,27 @@ context:
       buttons:
         - button: Bekijken
           type: secendary
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Verfijn op zoekwoord
-    remove: true
-
+  inputsubmitContext:
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Verfijn uw zoekopdracht
+    button: Zoek
+    modifier: input-text--search
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
+  inputsearchMobContext:
+    fieldPlaceholder: Verfijn uw zoekopdracht
+  sortContext:
+    modifier: sort--headless
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
   buttonswitchContext:
     text: banner
     buttons:

@@ -46,27 +46,30 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
       }
     }
 
-    addListenerMulti( this.area, 'drag dragstart dragend dragover dragenter dragleave drop', function ( e ) {
-      e.preventDefault();
-      e.stopPropagation();
-    });
+    // addListenerMulti( this.area, 'drag dragstart dragend dragover dragenter dragleave drop', function ( e ) {
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    // });
 
-    addListenerMulti( this.area, 'dragover dragenter', function () {
-      self.area.classList.add( 'is-dragover' );
-    });
+    // addListenerMulti( this.area, 'dragover dragenter', function () {
+    //   self.area.classList.add( 'is-dragover' );
+    // });
 
-    addListenerMulti( this.area, 'dragleave dragend drop', function () {
-      self.area.classList.remove('is-dragover');
-    });
+    // addListenerMulti( this.area, 'dragleave dragend drop', function () {
+    //   self.area.classList.remove('is-dragover');
+    // });
 
-    this.area.addEventListener( 'drop', function( e ) {
-      self.droppedFiles = e.dataTransfer.files;
-      self.setAttributes(e.dataTransfer.files);
-    });
+    // this.area.addEventListener( 'drop', function( e ) {
+    //   self.droppedFiles = e.dataTransfer.files;
+    //   console.log('DROP e.target.files', e.dataTransfer.files);
+    //   this.input.prop("files", e.dataTransfer.files);
+    //   self.setAttributes(e.dataTransfer.files);
+    // });
 
     this.area.addEventListener( 'change', function( e ) {
       self.droppedFiles = e.target.files;
       self.setAttributes(e.target.files);
+
     });
 
     this.eventListers();
@@ -77,7 +80,7 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
     var fileName = '';
 
     if (e[0] && e.length > 1) {
-      fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+      // fileName = (this.input.getAttribute('data-multiple-caption') || '').replace('{count}', e.length);
     }
     else if (e[0] && e.length === 1) {
       fileName = e[0].name;

@@ -11,22 +11,10 @@
       <div class="row row--spacer hidden-mobile">
         <div class="columns">
           <div class="column column-d-7">
-            {{render "@input-text" inputSearchContext }}
+            {{render "@input-inputsubmit" inputsubmitContext }}
           </div>
           <div class="column column-d-5 align-right">
-            <div class="columns columns--center">
-              <div class="column">
-                <label for="sorteer" class=""><strong>Sorteer op:</strong></label>
-              </div>
-              <div class="column">
-                <div class="select-custom select-custom--large">
-                  <select id="sorteer">
-                    <option>Datum</option>
-                    <option>Titel</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+             {{ render "@sort" sortContext }}
           </div>
         </div>
       </div>
@@ -36,7 +24,10 @@
       <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105 verdagen</span></h1>
 
       <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+        <button class="button block-element button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+      </div>
+      <div class="hidden-desktop">
+        {{ render "@sort" }}
       </div>
 
       {{render "@resultlist" resultsContext }}
@@ -88,106 +79,109 @@
               {{render "@form-selectedfilter" selectedfilterContext }}
 
             </div>
-
-
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Totstandkoming</legend>
-                    <div class="form__row form__row--medium">
-                      <label>Startdatum</label>
-                      {{render "@datepicker" }}
-                      <a href="#" class="reset"><small>Herstel</small></a>
-                    </div>
-                    <div class="form__row form__row--medium">
-                      <label>Einddatum</label>
-                      {{render "@datepicker" }}
-                      <a href="#" class="reset"><small>Herstel</small></a>
-                    </div>
-                    <div class="form__row">
-                      <label>Plaats</label>
+            <form id="formid">
+            <div class="form__row form__row--large hidden-desktop">
+              <label for="">Filter op trefwoord</label>
+              {{ render "@input-text" inputsearchMobContext }}
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Totstandkoming</legend>
+                <div class="form__row form__row--medium">
+                  <label>Startdatum</label>
+                  {{render "@datepicker" }}
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+                <div class="form__row form__row--medium">
+                  <label>Einddatum</label>
+                  {{render "@datepicker" }}
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+                <div class="form__row">
+                  <label>Plaats</label>
+                  {{render "@input-text" }}
+                </div>
+                <div class="form__row">
+                  <div class="columns">
+                    <div class="column">
+                      <label>Huisnummer</label>
                       {{render "@input-text" }}
                     </div>
-                    <div class="form__row">
-                      <div class="columns">
-                        <div class="column">
-                          <label>Huisnummer</label>
-                          {{render "@input-text" }}
-                        </div>
-                        <div class="column">
-                          <label>Toevoeging</label>
-                          {{render "@input-text" }}
-                        </div>
-                      </div>
+                    <div class="column">
+                      <label>Toevoeging</label>
+                      {{render "@input-text" }}
                     </div>
-                  </fieldset>
+                  </div>
                 </div>
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Datum beschikbaar</legend>
-                    {{render "@input-radio" laatstContext }}
-                  </fieldset>
-                </div>
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Onderwerp</legend>
-                    {{render "@subselection" subselectionOnderwerpContext }}
-                  </fieldset>
-                </div>
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Partij</legend>
-                    {{render "@subselection" subselectionContext }}
-                  </fieldset>
-                </div>
-
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Tractatenblad/Staatsblad</legend>
-                    <div class="form__row">
-                      <label>Jaar</label>
-                      <input type="number" class="input-text" />
-                      <a href="#" class="reset"><small>Herstel</small></a>
-                    </div>
-                    <div class="form__row">
-                      <label>Nummer</label>
-                      <input type="number" class="input-text" />
-                      <a href="#" class="reset"><small>Herstel</small></a>
-                    </div>
-
-                  </fieldset>
-                </div>
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Type verdrag</legend>
-                    {{render "@input-checkbox" typeverdagContext }}
-                  </fieldset>
-                </div>
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Nederland depositaris</legend>
-                    {{render "@input-checkbox" depositarisContext }}
-                  </fieldset>
-                </div>
-                <div class="form__row form__row--large">
-                  <fieldset>
-                    <legend>Nu geldend voor Nederland</legend>
-                    {{render "@input-checkbox" geldendContext }}
-                  </fieldset>
-                </div>
-
-                <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky"
-                  data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
-
-
-
-
-
+              </fieldset>
             </div>
-            {{!-- <a href="#" class="modal-sidebar__submit button button--primary">Opnieuw zoeken</a> --}}
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Datum beschikbaar</legend>
+                {{render "@input-radio" laatstContext }}
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Onderwerp</legend>
+                {{render "@subselection" subselectionOnderwerpContext }}
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Partij</legend>
+                {{render "@subselection" subselectionContext }}
+              </fieldset>
+            </div>
 
-            <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-              <span class="visually-hidden">Sluiten</span>
-            </button>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Tractatenblad/Staatsblad</legend>
+                <div class="form__row">
+                  <label>Jaar</label>
+                  <input type="number" class="input-text" />
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+                <div class="form__row">
+                  <label>Nummer</label>
+                  <input type="number" class="input-text" />
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Type verdrag</legend>
+                {{render "@input-checkbox" typeverdagContext }}
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Nederland depositaris</legend>
+                {{render "@input-checkbox" depositarisContext }}
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Nu geldend voor Nederland</legend>
+                {{render "@input-checkbox" geldendContext }}
+              </fieldset>
+            </div>
+
+            <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky"
+              data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+
+
+            </form>
+
+
+          </div>
+          {{!-- <a href="#" class="modal-sidebar__submit button button--primary">Opnieuw zoeken</a> --}}
+
+          <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
 
 
 

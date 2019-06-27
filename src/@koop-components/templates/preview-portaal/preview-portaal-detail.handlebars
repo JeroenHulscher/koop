@@ -1,88 +1,345 @@
 {{ render "@header" headerContext merge="true" }}
 
-<div class="row row--page-opener">
+{{!-- <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" breadcrumbContext }}
   </div>
-</div>
+</div> --}}
 
-<div class="container row">
 
-  <div class="well well--pageblock">
+<main role="main" class="">
+  <div class="container row">
 
-    <div class="align-center">
-      <p>
-        <i>Omgevingsverodening</i>
-      </p>
-
-      <h1>Score gemeente 2018</h1>
-
-      <p class="well__intro">
-        Laatste verslag van: 07-08-2018 | 12:18:22
-      </p>
-
-      <h2>Statusbericht</h2>
-      <p>Bekendmaking</p>
-
-      <h2>Notitie</h2>
-      <p>Bekendmaking</p>
-
-      <p><a href="#" class="button">Bekijk voorbeeld</a> <a href="#" class="button button--primary">Publiceren</a></p>
-
+    <div class="row row--thick">
+      <a href="/preview-portaal/overview" class="link cta__backwards">Terug naar documentenoverzicht Gemeente Den Haag</a>
     </div>
 
-  </div>
-
-  <h2 class="h1">Verslagen <span class="h1__sub">(3)</span></h2>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Datum</th>
-        <th scope="col">Statusbericht</th>
-        <th scope="col">Notitie</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-        <td data-before="Documentnaam">
-           <strong>06-08-2018 | 09:37:11</strong>
-        </td>
-        <td>Wacht op publicatie</td>
-        <td>Wacht op publicatie consedorlatie, dit woord bestaat niet.</td>
-        <td class="align-right">
-          <a href="#" class="button button--primary">Bekijk XML</a>
-          <a href="#" class="button button--primary button--icon-download-white">Download publicatie</a>
-        </td>
-      </tr>
-      <tr>
-        <td data-before="Documentnaam">
-          <strong>06-08-2018 | 09:37:11</strong>
-        </td>
-        <td>Wacht op publicatie</td>
-        <td>Wacht op publicatie consedorlatie, dit woord bestaat niet.</td>
-        <td class="align-right">
-          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button button--primary" id="c1" aria-controls="collapsible-content-1" aria-expanded="false" data-handler="toggle-collapsible" data-text="show/hide">Bekijk XML</a>
-          <a href="#" class="button button--primary">Bekijk publicatie</a>
-          <div id="modal-1" class="modal modal--off-screen" hidden role="alert">
-            <div class="modal__inner">
-              <div class="modal__content">
-                xml
-              </div>
-              <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
-            </div>
+    <div class="row row--large">
+      <div class="jumbotron jumbotron--highlight">
+        <div class="jumbotron__content jumbotron__content--centered">
+          <div class="jumbotron__heading jumbotron__heading--centered">
+            <p class="jumbotron__subheader">Omgevingsplan</p>
+            <h1 class="jumbotron__header">Omgevingsplan Den Haag</h1>
+            <p class="jumbotron__intro">
+              Geüpload als ZIP-bestand – Laatste verslag van: 2019-06-11 | 17:20:12 – Status:
+              <strong>Wacht op publicatie bekendmaking</strong>
+            </p>
           </div>
-        </td>
-      </tr>
-      <tr class="collapsible__content" id="collapsible-content-1" hidden=true>
-        <td>appelsap</td>
-      </tr>
+        </div>
+      </div>
+    </div>
 
-    </tbody>
-  </table>
+    <div class="columns">
+      <div>
+        <h2 class="h2 u-nomargin">Verslagen
+          <span class="h2__sub">(4)</span>
+        </h2>
+      </div>
+      <div class="align-right">
+        <a class="button" href="./update?conversationId=66352725-ef42-44f2-bc53-8ec2f15b3175" role="button">Haal nieuwe verslagen op</a>
+      </div>
+    </div>
 
-</div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="column-date">
+            <a href="#" class="sort--ascending">Datum</a>
+          </th>
+          <th scope="col">
+            <a href="#">Statusbericht</a>
+          </th>
+          <th scope="col">
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            2019-06-11 | 17:20:12
+          </th>
+          <td>
+            (Technisch)
+          </td>
+          <td>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-0">Bekijk meldingen</button>
+            <div id="modal-0" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <div class="">
+                    <h1>publicatieVerzoekResultaat</h1>
+                    <dl>
+                      <dt>uitkomst</dt>
+                      <dd>succes</dd>
+                    </dl>
+                    <h2>Verslag</h2>
+                    <dl>
+                      <dt>idLevering</dt>
+                      <dd>37731922-16bb-47a7-b7e0-a43d9cf53cec</dd>
+                    </dl>
+                    <dl>
+                      <dt>tijdstipVerslag</dt>
+                      <dd>2019-06-11T15:20:11Z</dd>
+                    </dl>
+                    <dl>
+                      <dt>voortgang</dt>
+                      <dd>registratie-voltooid</dd>
+                    </dl>
+                    <div class="row">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Ernst</th>
+                            <th scope="col">Soort</th>
+                            <th scope="col">Categorie</th>
+                            <th scope="col">Omschrijving</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PUB-0001</td>
+                            <td>informatie</td>
+                            <td>technisch</td>
+                            <td>inhoudelijk</td>
+                            <td>betreft publicatie id CVDR810399_1</td>
+                          </tr>
+                          <tr>
+                            <td class="metadata">OVERHEIDop.identifier FRBRuri</td>
+                            <td></td>
+                            <td>
+                              metadata
+                            </td>
+                            <td></td>
+                            <td>CVDR810399_1/akn/nl/act/gemeente/2018/CVDR810399/nld@2018-10-01</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+          </td>
+          <td class="align-right">
+
+            <div id="modal-xml-0" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <pre lang="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;publicatieVerzoekResultaat xmlns=&quot;http://www.overheid.nl/2017/lvbb&quot; xmlns:stop=&quot;http://www.overheid.nl/2017/stop&quot;&gt;&lt;uitkomst&gt;succes&lt;/uitkomst&gt;&lt;verslag&gt;&lt;idLevering&gt;37731922-16bb-47a7-b7e0-a43d9cf53cec&lt;/idLevering&gt;&lt;tijdstipVerslag&gt;2019-06-11T15:20:11Z&lt;/tijdstipVerslag&gt;&lt;meldingen&gt;&lt;melding&gt;&lt;stop:code&gt;PUB-0001&lt;/stop:code&gt;&lt;stop:ernst&gt;informatie&lt;/stop:ernst&gt;&lt;stop:soort&gt;technisch&lt;/stop:soort&gt;&lt;stop:categorie&gt;inhoudelijk&lt;/stop:categorie&gt;&lt;stop:beschrijving&gt;betreft publicatie id CVDR810399_1&lt;/stop:beschrijving&gt;&lt;stop:metadata&gt;&lt;stop:uitspraak property=&quot;OVERHEIDop.identifier&quot;&gt;CVDR810399_1&lt;/stop:uitspraak&gt;&lt;stop:uitspraak property=&quot;FRBRuri&quot;&gt;/akn/nl/act/gemeente/2018/CVDR810399/nld@2018-10-01&lt;/stop:uitspraak&gt;&lt;/stop:metadata&gt;&lt;/melding&gt;&lt;/meldingen&gt;&lt;voortgang&gt;registratie-voltooid&lt;/voortgang&gt;&lt;/verslag&gt;&lt;/publicatieVerzoekResultaat&gt;</pre>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-xml-0">Bekijk XML bericht</button>
+
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            2019-06-11 | 17:19:42
+          </th>
+          <td>
+            (Technisch)
+          </td>
+          <td>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1">Bekijk meldingen</button>
+            <div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <div class="">
+                    <h1>publicatieVerzoekResultaat</h1>
+                    <dl>
+                      <dt>uitkomst</dt>
+                      <dd>succes</dd>
+                    </dl>
+                    <h2>Verslag</h2>
+                    <dl>
+                      <dt>idLevering</dt>
+                      <dd>37731922-16bb-47a7-b7e0-a43d9cf53cec</dd>
+                    </dl>
+                    <dl>
+                      <dt>tijdstipVerslag</dt>
+                      <dd>2019-06-11T15:19:37Z</dd>
+                    </dl>
+                    <dl>
+                      <dt>voortgang</dt>
+                      <dd>registratie-voltooid</dd>
+                    </dl>
+                    <div class="row">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Ernst</th>
+                            <th scope="col">Soort</th>
+                            <th scope="col">Categorie</th>
+                            <th scope="col">Omschrijving</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>PUB-0001</td>
+                            <td>informatie</td>
+                            <td>technisch</td>
+                            <td>inhoudelijk</td>
+                            <td>betreft publicatie id gmb-2019-16679</td>
+                          </tr>
+                          <tr>
+                            <td class="metadata">OVERHEIDop.identifier FRBRuri</td>
+                            <td></td>
+                            <td>
+                              metadata
+                            </td>
+                            <td></td>
+                            <td>gmb-2019-16679/akn/nl/officialGazette/gmb/2019/16679/nld@2019-08-01</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+          </td>
+          <td class="align-right">
+
+            <div id="modal-xml-1" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <pre lang="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;publicatieVerzoekResultaat xmlns=&quot;http://www.overheid.nl/2017/lvbb&quot; xmlns:stop=&quot;http://www.overheid.nl/2017/stop&quot;&gt;&lt;uitkomst&gt;succes&lt;/uitkomst&gt;&lt;verslag&gt;&lt;idLevering&gt;37731922-16bb-47a7-b7e0-a43d9cf53cec&lt;/idLevering&gt;&lt;tijdstipVerslag&gt;2019-06-11T15:19:37Z&lt;/tijdstipVerslag&gt;&lt;meldingen&gt;&lt;melding&gt;&lt;stop:code&gt;PUB-0001&lt;/stop:code&gt;&lt;stop:ernst&gt;informatie&lt;/stop:ernst&gt;&lt;stop:soort&gt;technisch&lt;/stop:soort&gt;&lt;stop:categorie&gt;inhoudelijk&lt;/stop:categorie&gt;&lt;stop:beschrijving&gt;betreft publicatie id gmb-2019-16679&lt;/stop:beschrijving&gt;&lt;stop:metadata&gt;&lt;stop:uitspraak property=&quot;OVERHEIDop.identifier&quot;&gt;gmb-2019-16679&lt;/stop:uitspraak&gt;&lt;stop:uitspraak property=&quot;FRBRuri&quot;&gt;/akn/nl/officialGazette/gmb/2019/16679/nld@2019-08-01&lt;/stop:uitspraak&gt;&lt;/stop:metadata&gt;&lt;/melding&gt;&lt;/meldingen&gt;&lt;voortgang&gt;registratie-voltooid&lt;/voortgang&gt;&lt;/verslag&gt;&lt;/publicatieVerzoekResultaat&gt;</pre>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-xml-1">Bekijk XML bericht</button>
+
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            2019-06-11 | 17:19:23
+          </th>
+          <td>
+            (Technisch)
+          </td>
+          <td>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bekijk meldingen</button>
+            <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <div class="">
+                    <h1>publicatieVerzoekResultaat</h1>
+                    <dl>
+                      <dt>uitkomst</dt>
+                      <dd>succes</dd>
+                    </dl>
+                    <h2>Verslag</h2>
+                    <dl>
+                      <dt>idLevering</dt>
+                      <dd>37731922-16bb-47a7-b7e0-a43d9cf53cec</dd>
+                    </dl>
+                    <dl>
+                      <dt>tijdstipVerslag</dt>
+                      <dd>2019-06-11T17:19:23.611+02:00</dd>
+                    </dl>
+                    <dl>
+                      <dt>voortgang</dt>
+                      <dd>registratie-voltooid</dd>
+                    </dl>
+                  </div>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+          </td>
+          <td class="align-right">
+
+            <div id="modal-xml-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <pre lang="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lvbb:publicatieVerzoekResultaat xmlns:lvbb=&quot;http://www.overheid.nl/2017/lvbb&quot;&gt;&lt;lvbb:uitkomst&gt;succes&lt;/lvbb:uitkomst&gt;&lt;lvbb:verslag&gt;&lt;lvbb:idLevering&gt;37731922-16bb-47a7-b7e0-a43d9cf53cec&lt;/lvbb:idLevering&gt;&lt;lvbb:tijdstipVerslag&gt;2019-06-11T17:19:23.611+02:00&lt;/lvbb:tijdstipVerslag&gt;&lt;lvbb:voortgang&gt;registratie-voltooid&lt;/lvbb:voortgang&gt;&lt;/lvbb:verslag&gt;&lt;/lvbb:publicatieVerzoekResultaat&gt;</pre>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-xml-2">Bekijk XML bericht</button>
+
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            2019-06-11 | 17:19:16
+          </th>
+          <td>
+            (Technisch)
+          </td>
+          <td>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-3">Bekijk meldingen</button>
+            <div id="modal-3" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <div class="">
+                    <h1>publicatieVerzoekResultaat</h1>
+                    <dl>
+                      <dt>uitkomst</dt>
+                      <dd>succes</dd>
+                    </dl>
+                    <h2>Verslag</h2>
+                    <dl>
+                      <dt>idLevering</dt>
+                      <dd>37731922-16bb-47a7-b7e0-a43d9cf53cec</dd>
+                    </dl>
+                    <dl>
+                      <dt>tijdstipVerslag</dt>
+                      <dd>2019-06-11T17:19:16.413+02:00</dd>
+                    </dl>
+                    <dl>
+                      <dt>voortgang</dt>
+                      <dd>validatie-voltooid</dd>
+                    </dl>
+                  </div>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+          </td>
+          <td class="align-right">
+
+            <div id="modal-xml-3" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <pre lang="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lvbb:publicatieVerzoekResultaat xmlns:lvbb=&quot;http://www.overheid.nl/2017/lvbb&quot;&gt;&lt;lvbb:uitkomst&gt;succes&lt;/lvbb:uitkomst&gt;&lt;lvbb:verslag&gt;&lt;lvbb:idLevering&gt;37731922-16bb-47a7-b7e0-a43d9cf53cec&lt;/lvbb:idLevering&gt;&lt;lvbb:tijdstipVerslag&gt;2019-06-11T17:19:16.413+02:00&lt;/lvbb:tijdstipVerslag&gt;&lt;lvbb:voortgang&gt;validatie-voltooid&lt;/lvbb:voortgang&gt;&lt;/lvbb:verslag&gt;&lt;/lvbb:publicatieVerzoekResultaat&gt;</pre>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+              </div>
+            </div>
+            <button class="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-xml-3">Bekijk XML bericht</button>
+
+
+            <a href="./download?conversationId=66352725-ef42-44f2-bc53-8ec2f15b3175&action=PUBLICATIE" class="button button--primary button--icon-download-white"
+              type="submit">Download</a>
+
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</main>
 
 {{ render "@footer" }}

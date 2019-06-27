@@ -130,7 +130,11 @@
           <fieldset>
             <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
 
-              {{ render "@input-inputsubmit" }}
+              <div class="form__row">
+                {{ render "@input-inputsubmit" }}
+              </div>
+              {{ render "@collapsible" newslCollap }}
+              {{ render "@input-checkbox" newsletterCheckbox }}
 
           </fieldset>
         </form>

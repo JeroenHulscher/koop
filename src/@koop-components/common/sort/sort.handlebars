@@ -1,9 +1,9 @@
 <div class="sort {{ modifier }}">
-  Sorteren op:
+  Sorteer op:
   <ul class="sort__options">
     {{#each options}}
       <li>
-        <a href="?sortby={{value}}" class="sort--ascending">{{label}}</a>
+        <a href="?sortby={{value}}" class="sort--ascending {{active}}">{{label}}</a>
       </li>
     {{/each}}
   </ul>
