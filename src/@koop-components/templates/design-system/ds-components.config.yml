@@ -9,6 +9,19 @@ context:
       path: 'test'
     - label: Design system
       path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      sub: true
+      subItems:
+        - stitle: Content
+          href: address
+        - stitle: Design
+          href: alert
+        - stitle: Components
+          href: articleheader
+          sactive: true
   navComponentsContext:
     items:
     - title: Components

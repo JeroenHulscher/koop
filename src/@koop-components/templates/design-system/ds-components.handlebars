@@ -7,8 +7,7 @@
     <div class="column ds-content">
 
       <div class="hidden-desktop align-right">
-        <button class="button button--primary" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Navigatie</button>
+        <a href="#subnav" class="button button--primary">Navigatie</a>
       </div>
 
       <div class="row row--spacer">
@@ -667,19 +666,21 @@
 
   </div>
 
-  <div class="column column--sidebar">
+  <div class="column column--sidebar" id="subnav">
 
-    <div id="modal-filter" class="modal-sidebar" role="alert">
+    {{!-- <div id="modal-filter" class="modal-sidebar" role="alert"> --}}
 
-      <div class="modal-sidebar__content">
+      {{!-- <div class="modal-sidebar__content"> --}}
+        {{render "@nav" navMenuContext }}
+
         {{render "@nav" navComponentsContext }}
 
         <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
           <span class="visually-hidden">Sluiten</span>
         </button>
-      </div>
+      {{!-- </div> --}}
 
-    </div>
+    {{!-- </div> --}}
 
     <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
 
