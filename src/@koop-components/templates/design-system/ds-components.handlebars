@@ -16,7 +16,8 @@
               <p class="jumbotron__subheader">Design system</p>
               <h1 class="jumbotron__header">Componenten</h1>
               <p class="jumbotron__intro">
-                ## omschrijving
+
+                  Op deze pagina's vind je een overzicht van de beschikbare componenten waarmee websites kunnen worden opgebouwd.  
               </p>
             </div>
 
@@ -28,7 +29,11 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="address">Address</h1>
+
           <p>Gebruik altijd een <code>address</code> element bij het uitschrijven van een adres.</p>
+
+
+          <p>Het address component wordt gebruikt voor het weergeven van een adres.</p>
 
           {{render "@address" }}
         </div>
@@ -37,7 +42,21 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="alert">Alert</h1>
+
+          <p>Alerts worden gebruikt voor het weergeven van tussentijdse informatie op een pagina. Dit kan inline, dus tussen twee blokken op de pagina, of ze kunnen sticky aan de bovenzijde worden weergegeven.</p>
+          
           <p>Speciale meldingen (alerts) kunnen gebruikt zowel buiten als binnen een formulier. De class <code>.alert</code> geeft de standaard styling.</p>
+
+          <code>
+            &lt;div class="alert alert--fixed  show "&gt;<br />
+
+                &lt;div class="alert__inner"&gt;<br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ac lectus ac maximus. &lt;a href="#"&gt;Bekijk hier de toelichting&lt;/a&gt;<br />
+                    
+                    &lt;button class="alert__remove" data-handler="close-alert"&gt;&lt;span class="visually-hidden"&gt;Sluiten&lt;/span&gt;&lt;/button&gt;<br />
+                &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
 
           <div class="row">
             <h2 class="h5">Default</h2>
@@ -387,7 +406,43 @@
             </div>
           </fieldset>
         </div>
+<<<<<<< HEAD
       </article>
+=======
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="highlight">Highlight</h1>
+        <p>Omschrijving</p>
+
+        {{render "@highlight" }}
+      </div>
+    </article>
+
+    <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="jumbotron">Jumbotron</h1>
+        <p>De jumbotron is ontworpen als paginaintroductie, en bevat altijd een Heading 1-element.</p>
+
+        {{render "@jumbotron--highlight" }}
+      </div>
+    </article>
+
+
+
+
+
+    {{!-- <article class="row row--xxxlarge">
+      <div class="row row--large">
+        <h1 id="buttons">Actionblock</h1>
+        <p>Omschrijving</p>
+
+        {{render "@actionblock" }}
+      </div>
+    </article> --}}
+
+>>>>>>> update component-page, added content-page
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
