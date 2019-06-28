@@ -61,7 +61,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="articleheader">Article header</h1>
-          <p>Omschrijving</p>
+          <p>De article header wordt gebruikt boven wetgevingen en geeft de gebruiker functionaliteiten gerelateerd aan de wetgeving en of artikel.</p>
 
           {{render "@article-header" }}
         </div>
@@ -70,7 +70,6 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="banner">Banner</h1>
-          <p>Omschrijving</p>
 
           {{render "@banner" }}
         </div>
@@ -79,7 +78,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="blockquote">Blockquote</h1>
-          <p>Omschrijving</p>
+          <p>Een citaat wordt weergegeven in een <code>blockquote</code> element. Geef in de <code>cite</code> de bron aan van de citaat.</p>
 
           {{render "@blockquote" }}
         </div>
@@ -88,7 +87,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="browse">Browse</h1>
-          <p>Omschrijving</p>
+          <p>Het browse-component toont een lijst van items, inclusief het aantal per item. Beschikbaar in een versie mét en zónder iconen.</p>
           <h2 class="h5">Default</h2>
           {{render "@browse" }}
           <h2 class="h5">With icons</h2>
@@ -99,7 +98,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="buttons">Buttons</h1>
-          <p>Omschrijving</p>
+          <p>Buttons worden opgemaakt middels de <code>.button</code> class. Gebruik bij voorkeur altijd het <code>button</code> element. Een hyperlink (a) als button krijgt <code>role="button"</code> ten behoeve van de toegankelijkheid</p>
         </div>
         <div class="columns row row--xxlarge">
           <div class="column">
@@ -132,6 +131,7 @@
           {{ render "@button-icon" }}
         </p>
         <h2>Buttongroup</h2>
+        <p>Verbonden knoppen. Wanneer slechts één van de opties beschikbaar is, is dit component niet van toepassen en wordt deze ook niet weergegeven.</p>
         <div class="row">
           <h3 class="h5">Default</h2>
             <div>{{render "@buttonswitch" }}</div>
@@ -154,7 +154,6 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="characteristics">Characteristics</h1>
-          <p>Omschrijving</p>
           {{render "@characteristic" }}
         </div>
       </article>
@@ -162,7 +161,18 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="collapsible">Collapsible</h1>
-          <p>Omschrijving</p>
+          <p>
+             Collapsibles gebruikt men als informatie initieel verborgen moet zijn. De informatie wordt zichtbaar bij muis/toetsenbord-klik.
+          </p>
+          <ul>
+            <li>
+              We gebruiken <code>aria-expanded</code> om aan te geven dat de collapsible is uitgeklapt. Het is verbonden met de <code>a</code> in de header, gezien het feit dat de gebruiker daarmee interacteert.
+
+            </li>
+            <li>
+              We gebruiken <code>aria-controls</code> om aan te geven welk element is getoggled.
+            </li>
+          </ul>
 
           <div class="row">
             <h2 class="h5">Default</h2>
@@ -178,7 +188,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="definitionlist">Definitionlist</h1>
-          <p>Omschrijving</p>
+          <p>Een lijst met definities; titel en omschrijving.</p>
           {{render "@definitionlist" }}
         </div>
       </article>
@@ -186,7 +196,6 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="delins">Del / Ins</h1>
-          <p>Omschrijving</p>
           {{render "@del-ins" }}
         </div>
       </article>
@@ -194,10 +203,14 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="gridcontainers">Grid &amp; containers</h1>
-          <p>Omschrijving</p>
+          <p>Zonder toevoegingen werkt het grid percentueel in een gelijke verdeling. De meer kolommen, de smaller deze worden. Naar wens kan er een handmatige percentuele verdeling gemaakt worden, middels het toevoegen van een class op de column zelf.</p>
+          <p>
+
+          </p>
         </div>
         <div class="row row--xxlarge">
           <h2>Grid systeem</h2>
+          <h3 class="h5">Gelijkmatige percentuele verdeling</h3>
           <div class="columns row">
             <div class="column u-bg--grey">
               <p>Column (auto)</p>
@@ -209,9 +222,98 @@
               <p>Column (auto)</p>
             </div>
           </div>
-          <div class="columns">
+          <h3 class="h5">Handmatige percentuele verdeling</h3>
+          <div class="columns row">
+            <div class="column column-d-1 u-bg--grey">
+              <p>Column (1-12)</p>
+            </div>
+            <div class="column column-d-11 u-bg--grey">
+              <p>Column (11-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-2 u-bg--grey">
+              <p>Column (2-12)</p>
+            </div>
+            <div class="column column-d-10 u-bg--grey">
+              <p>Column (10-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
             <div class="column column-d-3 u-bg--grey">
               <p>Column (3-12)</p>
+            </div>
+            <div class="column column-d-9 u-bg--grey">
+              <p>Column (9-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-4 u-bg--grey">
+              <p>Column (4-12)</p>
+            </div>
+            <div class="column column-d-8 u-bg--grey">
+              <p>Column (8-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-5 u-bg--grey">
+              <p>Column (5-12)</p>
+            </div>
+            <div class="column column-d-7 u-bg--grey">
+              <p>Column (7-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-6 u-bg--grey">
+              <p>Column (6-12)</p>
+            </div>
+            <div class="column column-d-6 u-bg--grey">
+              <p>Column (6-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-7 u-bg--grey">
+              <p>Column (7-12)</p>
+            </div>
+            <div class="column column-d-5 u-bg--grey">
+              <p>Column (5-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-8 u-bg--grey">
+              <p>Column (8-12)</p>
+            </div>
+            <div class="column column-d-4 u-bg--grey">
+              <p>Column (4-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-9 u-bg--grey">
+              <p>Column (9-12)</p>
+            </div>
+            <div class="column column-d-3 u-bg--grey">
+              <p>Column (3-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-10 u-bg--grey">
+              <p>Column (10-12)</p>
+            </div>
+            <div class="column column-d-2 u-bg--grey">
+              <p>Column (2-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-11 u-bg--grey">
+              <p>Column (11-12)</p>
+            </div>
+            <div class="column column-d-1 u-bg--grey">
+              <p>Column (1-12)</p>
+            </div>
+          </div>
+          <div class="columns row">
+            <div class="column column-d-3 u-bg--grey">
+              <p>Column (6-12)</p>
             </div>
             <div class="column column-d-7 u-bg--grey">
               <p>Column (7-12)</p>
@@ -222,8 +324,10 @@
           </div>
         </div>
         <h2>Containers</h2>
+        <p>Gebruik de <code>.row</code> als rij en houder in de template. Deze zorgt voor en gelijke afstand naar het volgende element.</p>
         <div class="row u-bg--grey">row</div>
         <div class="row row--large u-bg--grey">row large</div>
+        <p>Gebruik de <code>.form__row</code> als rij en houder in een formulier. Deze zorgt voor en gelijke afstand naar het volgende element/row. Uiteraard altijd netjes in een <code>form</code> met de class <code>.form</code></p>
         <div class="form__row u-bg--grey">Form row</div>
         <div class="form__row form__row--large u-bg--grey">Form row large</div>
       </article>
@@ -231,8 +335,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="figure">Figure</h1>
-          <p>Omschrijving</p>
-
+          <p>Voeg <strong>altijd</strong> een passende <code>alt</code>-tekst toe aan de afbeelding.</p>
           {{render "@figure" }}
         </div>
       </article>
@@ -240,7 +343,7 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="footnote">Footnote</h1>
-          <p>Omschrijving</p>
+          <p>Voetnoten staan standaard onderaan de pagina. De verwijziging naar een voetnote werkt met een simpele anker-link. </p>
 
           {{render "@footnote" }}
         </div>
@@ -249,9 +352,33 @@
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h1 id="forms">Forms</h1>
-          <p>Omschrijving</p>
+          <p>Een formulier wordt altijd opgebouwd met de class <code>.form</code> op de <code>form</code> tag. Elke rij is voorzien van de <code>.form__row</code> class voor consistende overgangen van elementen.</p>
         </div>
-        <h2>Inputs</h2>
+        <div class="row row--xxlarge">
+          <h2>Statussen</h2>
+          <div class="columns row">
+            <div class="column">
+              <div class="form">
+                <div class="form__row">
+                  <label>Default</label>
+                  {{ render "@input-text" }}
+                </div>
+                <div class="form__row">
+                  <label>Foutief ingevoerd</label>
+                  {{ render "@input-text" }}
+                </div>
+                <div class="form__row">
+                  <label>Disabled</label>
+                  {{ render "@input-text" }}
+                </div>
+              </div>
+              <div class="column">
+                Wanneer een veld onjuist is ingevuld, krijgt deze de class <code>.input__error</code>. Daarbij komt er een extra paragraaf (<code>.form__error</code>) die beschrijft wat precies de fout is. Optioneel is het tonen van een hint (<code>.form__hint</code></code>). Let op: voeg ARIA <code>described-by</code> toe aan de input die verwijst naar deze hint (middels ID)
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Varianten</h2>
         <div class="columns row">
           <div class="column">
             <label>Input text</label>
@@ -379,7 +506,7 @@
           <fieldset>
             <legend>Formulier voorbeeld</legend>
             <div class="form__row">
-              <label>Input text</label>
+              <label>Uw naam</label>
               {{ render "@input-text" }}
             </div>
             <div class="form__row">
