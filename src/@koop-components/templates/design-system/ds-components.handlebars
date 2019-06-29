@@ -17,7 +17,7 @@
               <h1 class="jumbotron__header">Componenten</h1>
               <p class="jumbotron__intro">
 
-                  Op deze pagina's vind je een overzicht van de beschikbare componenten waarmee websites kunnen worden opgebouwd.  
+                  Op deze pagina's vind je een overzicht van de beschikbare componenten waarmee websites kunnen worden opgebouwd.
               </p>
             </div>
 
@@ -32,9 +32,6 @@
 
           <p>Gebruik altijd een <code>address</code> element bij het uitschrijven van een adres.</p>
 
-
-          <p>Het address component wordt gebruikt voor het weergeven van een adres.</p>
-
           {{render "@address" }}
         </div>
       </article>
@@ -44,19 +41,8 @@
           <h1 id="alert">Alert</h1>
 
           <p>Alerts worden gebruikt voor het weergeven van tussentijdse informatie op een pagina. Dit kan inline, dus tussen twee blokken op de pagina, of ze kunnen sticky aan de bovenzijde worden weergegeven.</p>
-          
+
           <p>Speciale meldingen (alerts) kunnen gebruikt zowel buiten als binnen een formulier. De class <code>.alert</code> geeft de standaard styling.</p>
-
-          <code>
-            &lt;div class="alert alert--fixed  show "&gt;<br />
-
-                &lt;div class="alert__inner"&gt;<br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ac lectus ac maximus. &lt;a href="#"&gt;Bekijk hier de toelichting&lt;/a&gt;<br />
-                    
-                    &lt;button class="alert__remove" data-handler="close-alert"&gt;&lt;span class="visually-hidden"&gt;Sluiten&lt;/span&gt;&lt;/button&gt;<br />
-                &lt;/div&gt;
-            &lt;/div&gt;
-          </code>
 
           <div class="row">
             <h2 class="h5">Default</h2>
@@ -378,22 +364,28 @@
           <div class="columns row">
             <div class="column">
               <div class="form">
-                <div class="form__row">
-                  <label>Default</label>
-                  {{ render "@input-text" }}
+                <div class="form__row form__row--large">
+                  <h3 class="h5">Default</h3>
+                  <label>E-mailadres</label>
+                  {{ render "@input-text" inputDefault }}
+                </div>
+                <div class="form__row form__row--large">
+                  <h3 class="h5">Foutief</h3>
+                  <label>E-mailadres</label>
+                  <p class="form__hint" id="12341242">Bijvoorbeeld info@koop.overheid.nl</p>
+                  {{ render "@input-text" inputHasError }}
+                  <p class="form__error">Dit is de foutmelding van het veld.</p>
+
                 </div>
                 <div class="form__row">
-                  <label>Foutief ingevoerd</label>
-                  {{ render "@input-text" }}
-                </div>
-                <div class="form__row">
-                  <label>Disabled</label>
-                  {{ render "@input-text" }}
+                  <h3 class="h5">Disabled</h3>
+                  <label>E-mailadres</label>
+                  {{ render "@input-text" inputIsDisabled merge=true }}
                 </div>
               </div>
-              <div class="column">
-                Wanneer een veld onjuist is ingevuld, krijgt deze de class <code>.input__error</code>. Daarbij komt er een extra paragraaf (<code>.form__error</code>) die beschrijft wat precies de fout is. Optioneel is het tonen van een hint (<code>.form__hint</code></code>). Let op: voeg ARIA <code>described-by</code> toe aan de input die verwijst naar deze hint (middels ID)
-              </div>
+            </div>
+            <div class="column">
+              Wanneer een veld onjuist is ingevuld, krijgt deze de class <code>.input__error</code>. Daarbij komt er een extra paragraaf (<code>.form__error</code>) die beschrijft wat precies de fout is. Optioneel is het tonen van een hint (<code>.form__hint</code></code>). Let op: voeg ARIA <code>described-by</code> toe aan de input die verwijst naar deze hint (middels ID)
             </div>
           </div>
         </div>
@@ -533,16 +525,12 @@
             </div>
           </fieldset>
         </div>
-<<<<<<< HEAD
       </article>
-=======
-    </article>
 
     <article class="row row--xxxlarge">
       <div class="row row--large">
         <h1 id="highlight">Highlight</h1>
         <p>Omschrijving</p>
-
         {{render "@highlight" }}
       </div>
     </article>
@@ -558,18 +546,6 @@
 
 
 
-
-
-    {{!-- <article class="row row--xxxlarge">
-      <div class="row row--large">
-        <h1 id="buttons">Actionblock</h1>
-        <p>Omschrijving</p>
-
-        {{render "@actionblock" }}
-      </div>
-    </article> --}}
-
->>>>>>> update component-page, added content-page
 
       <article class="row row--xxxlarge">
         <div class="row row--large">

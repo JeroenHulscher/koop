@@ -134,6 +134,17 @@ fieldset {
     }
   }
 
+  &__error {
+    font-weight: bold;
+    color: red;
+  }
+
+  &__hint {
+    font-size: 90%;
+    font-style: italic;
+    margin: 0;
+  }
+
   &__input {
     width: 100%;
     font-size: 1.8rem;

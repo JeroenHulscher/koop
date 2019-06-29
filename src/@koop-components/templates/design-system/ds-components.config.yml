@@ -22,6 +22,17 @@ context:
         - stitle: Components
           href: articleheader
           sactive: true
+  inputDefault:
+    type: email
+  inputHasError:
+    type: email
+    haserror: true
+    describedby: 12341242
+    value: koopkoop.overheid.nl
+  inputIsDisabled:
+    type: email
+    disabled: true
+    fieldPlaceholder: Ingevulde waarde
   navComponentsContext:
     items:
     - title: Components
