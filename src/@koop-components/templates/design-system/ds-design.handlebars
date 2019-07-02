@@ -6,8 +6,7 @@
     <div class="column ds-content">
 
       <div class="hidden-desktop align-right">
-        <button class="button button--primary" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Navigatie</button>
+        <button class="button button--primary" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Navigatie</button>
       </div>
 
       <div class="row row--spacer">
@@ -19,7 +18,7 @@
               <p class="jumbotron__subheader">Design system</p>
               <h1 class="jumbotron__header">Design</h1>
               <p class="jumbotron__intro">
-                  Op deze pagina vind je meer informatie over redactierichtlijnen binnen KOOP.
+                Op deze pagina vind je meer informatie over designlijnen binnen KOOP.
               </p>
             </div>
 
@@ -29,41 +28,41 @@
       </div>
 
       <article class="row row--xxxlarge">
-        <div class="row row--large">
-          <h1 id="lettertype">Lettertype</h1>
-          <p>
-            Binnen KOOP, net als elk overheidsorgaan, gebruiken wij het lettertype "Rijksoverheid Sans". De standaard kopsgrootte is
-          </p>
 
-          <section>
-            <h1>Dit is een heading 1</h1>
-            <h2>Dit is een heading 2</h2>
-            <h3>Dit is een heading 3</h3>
-            <h4>Dit is een heading 4</h4>
-          </section>
-        </div>
+        <h1 id="lettertype">Lettertype</h1>
+        <p>
+          Binnen KOOP gebruiken wij het lettertype "Rijksoverheid Sans". De standaard kopsgrootte is 18px.
+        </p>
+        <h2 class="h5">Voorbeeld headings:</h2>
+
+        <section class="banner">
+          <h1>Dit is een heading 1</h1>
+          <h2>Dit is een heading 2</h2>
+          <h3>Dit is een heading 3</h3>
+          <h4>Dit is een heading 4</h4>
+          <h5>Dit is een heading 5</h5>
+          <h6>Dit is een heading 6</h6>
+        </section>
+
+      </article>
+
+      <article class="row row--xxxlarge">
+        <h1 id="kleuren">Kleuren</h1>
+        {{render "@colors"}}
       </article>
 
 
-  </div>
-
-  <div class="column column--sidebar">
-
-    <div id="modal-filter" class="modal-sidebar" role="alert">
-
-      <div class="modal-sidebar__content">
-        {{render "@nav" navMenuContext }}
-        {{render "@nav" navContentContext }}
-
-        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-          <span class="visually-hidden">Sluiten</span>
-        </button>
-      </div>
-
     </div>
 
-    <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
+    <div class="column column--sidebar">
 
-</div>
+      {{render "@nav" navMenuContext }} {{render "@nav" navContentContext }}
 
-{{ render "@footer" }}
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+        <span class="visually-hidden">Sluiten</span>
+      </button>
+      <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
+    </div>
+  </div>
+
+  {{ render "@footer" }}

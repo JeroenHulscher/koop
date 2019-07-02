@@ -24,11 +24,13 @@ context:
           href: /components/preview/templates-ds---components
   navContentContext:
     items:
-    - title: Content
+    - title: Design
       active: false
       sub: true
       anker: true
       subItems:
-        - stitle: Schrijfwijzer
-          href: schrijfwijzer
+        - stitle: Lettertype
+          href: lettertype
+        - stitle: Kleuren
+          href: Kleuren
 

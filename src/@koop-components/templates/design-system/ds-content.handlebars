@@ -242,21 +242,16 @@ let op de webrichtlijnen voor toegankelijk schrijven: http://www.webrichtlijnen.
 
   <div class="column column--sidebar">
 
-    <div id="modal-filter" class="modal-sidebar" role="alert">
 
-      <div class="modal-sidebar__content">
-        {{render "@nav" navMenuContext }}
-        {{render "@nav" navContentContext }}
+    {{render "@nav" navMenuContext }}
+    {{render "@nav" navContentContext }}
 
-        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-          <span class="visually-hidden">Sluiten</span>
-        </button>
-      </div>
-
-    </div>
+    <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+      <span class="visually-hidden">Sluiten</span>
+    </button>
 
     <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
-
+  </div>
 </div>
 
 {{ render "@footer" }}
