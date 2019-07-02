@@ -1,7 +1,7 @@
 name: DS - Content
 context:
   header:
-    navLinks:
+    nav: false
   breadcrumb:
     last: Content
     breadcrumbs:
@@ -9,14 +9,26 @@ context:
       path: 'test'
     - label: Design system
       path: 'test'
-  navComponentsContext:
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      sub: true
+      subItems:
+        - stitle: Content
+          href: /components/preview/templates-ds---content
+          sactive: true
+        - stitle: Design
+          href: /components/preview/templates-ds---design
+        - stitle: Components
+          href: /components/preview/templates-ds---components
+  navContentContext:
     items:
     - title: Content
       active: false
       sub: true
+      anker: true
       subItems:
         - stitle: Schrijfwijzer
           href: schrijfwijzer
-        - 
 
-  

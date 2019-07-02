@@ -1,7 +1,7 @@
 name: DS - Components
 context:
   header:
-    navLinks:
+    nav: false
   breadcrumb:
     last: Componenten
     breadcrumbs:
@@ -16,11 +16,11 @@ context:
       sub: true
       subItems:
         - stitle: Content
-          href: address
+          href: /components/preview/templates-ds---content
         - stitle: Design
-          href: alert
+          href: /components/preview/templates-ds---design
         - stitle: Components
-          href: articleheader
+          href: /components/preview/templates-ds---components
           sactive: true
   inputDefault:
     type: email
@@ -38,6 +38,7 @@ context:
     - title: Components
       active: false
       sub: true
+      anker: true
       subItems:
         - stitle: Address
           href: address

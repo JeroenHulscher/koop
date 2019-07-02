@@ -15,9 +15,7 @@
   },
   "author": "Hidde de Vries, Jeroen Hulscher",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.12.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@frctl/fractal": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",

@@ -1,5 +1,4 @@
-
-
+{{ render "@header" header merge=true }}
 
 <div class="container">
 
@@ -246,7 +245,8 @@ let op de webrichtlijnen voor toegankelijk schrijven: http://www.webrichtlijnen.
     <div id="modal-filter" class="modal-sidebar" role="alert">
 
       <div class="modal-sidebar__content">
-        {{render "@nav" navComponentsContext }}
+        {{render "@nav" navMenuContext }}
+        {{render "@nav" navContentContext }}
 
         <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
           <span class="visually-hidden">Sluiten</span>

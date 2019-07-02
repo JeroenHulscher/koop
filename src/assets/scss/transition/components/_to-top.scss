@@ -17,7 +17,7 @@
 // }
 
 .to-top {
-  left: 2em;
+  left: 1em;
   text-indent: 0;
   @extend .button;
   @extend .button--secondary;
@@ -30,7 +30,7 @@
     }
 
   @media (min-width: 99em) {
-    left: calc(50% - 37em);
+    left: calc(50% - 37.8em);
 
 
   }
