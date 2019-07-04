@@ -10,7 +10,9 @@
       </div>
       {{/if}}
 
-      <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
+      {{#if nav}}
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
+      {{/if}}
       {{> @logo }}
 
 

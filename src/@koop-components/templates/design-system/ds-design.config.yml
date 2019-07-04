@@ -12,16 +12,17 @@ context:
   navMenuContext:
     items:
     - title: Design system
+      href: templates-ds---homepage
       active: true
       sub: true
       subItems:
         - stitle: Content
-          href: /components/preview/templates-ds---content
+          href: templates-ds---content
         - stitle: Design
-          href: /components/preview/templates-ds---design
+          href: templates-ds---design
           sactive: true
         - stitle: Components
-          href: /components/preview/templates-ds---components
+          href: templates-ds---components
   navContentContext:
     items:
     - title: Design
@@ -32,5 +33,5 @@ context:
         - stitle: Lettertype
           href: lettertype
         - stitle: Kleuren
-          href: Kleuren
+          href: kleuren
 

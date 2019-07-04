@@ -13,14 +13,15 @@ context:
     items:
     - title: Design system
       active: true
+      href: templates-ds---homepage
       sub: true
       subItems:
         - stitle: Content
-          href: /components/preview/templates-ds---content
+          href: templates-ds---content
         - stitle: Design
-          href: /components/preview/templates-ds---design
+          href: templates-ds---design
         - stitle: Components
-          href: /components/preview/templates-ds---components
+          href: templates-ds---components
           sactive: true
   inputDefault:
     type: email
