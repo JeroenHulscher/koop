@@ -47,7 +47,7 @@ input[type=number].input-text,
   &__container--prefix &__prefix {
     flex: 0 0 auto;
     margin: 0;
-    width: auto;
+    width: auto !important;
     padding: 1.7em 1.5em .75em 1.25em;
     margin-right: -5px;
     font-style: italic;

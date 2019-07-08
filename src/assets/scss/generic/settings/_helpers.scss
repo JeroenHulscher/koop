@@ -46,6 +46,10 @@
   display: inline-block;
 }
 
+.valign--middle {
+  vertical-align: middle;
+}
+
 .align-center {
   text-align: center !important;
 }
@@ -124,6 +128,10 @@
       order: 1;
     }
   }
+}
+
+.u-fontsize--s {
+  font-size: 0.9em;
 }
 
 .u-amount {

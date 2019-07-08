@@ -18,32 +18,32 @@
     {
       "label": "bodb - homepage",
       "url": "http://localhost:3000/components/preview/templates-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-homepage"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-homepage.html"
     },
     {
       "label": "bodb - searchresults",
       "url": "http://localhost:3000/components/preview/templates-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults.html"
     },
     {
       "label": "bodb - searchresults",
       "url": "http://localhost:3000/components/preview/templates-newsletter",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-newsletter"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-newsletter.html"
     },
     {
       "label": "identifier - homepage",
       "url": "http://localhost:3000/components/preview/templates-identifiernl-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-identifiernl-homepage"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-identifiernl-homepage.html"
     },
     {
       "label": "plooi - homepage",
       "url": "http://localhost:3000/components/preview/templates-plooi-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage.html"
     },
     {
       "label": "plooi - searchresults",
       "url": "http://localhost:3000/components/preview/templates-plooi-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-searchresults"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-searchresults.html"
     },
     {
       "label": "wetten.nl uitgebreid zoeken",
@@ -133,22 +133,27 @@
     {
       "label": "Previewportaal Homepage",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-hp",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-hp"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-hp.html"
     },
     {
       "label": "Previewportaal Detail",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-detail",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-detail"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-detail.html"
     },
     {
       "label": "Previewportaal Overview",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-overview",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-overview"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-overview.html"
     },
     {
       "label": "Previewportaal Kaartpagina",
       "url": "http://localhost:3000/components/preview/templates-preview-portaal-kaartpagina",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-kaartpagina"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-kaartpagina.html"
+    },
+    {
+      "label": "STOP XML",
+      "url": "http://localhost:3000/components/preview/templates-stop-xml",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-stop-xml.html"
     }
   ],
   "paths": {
