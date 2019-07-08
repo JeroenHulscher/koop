@@ -15,7 +15,9 @@
   },
   "author": "Hidde de Vries, Jeroen Hulscher",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "webdriver-manager": "^12.1.5"
+  },
   "devDependencies": {
     "@frctl/fractal": "^1.1.4",
     "@frctl/mandelbrot": "^1.1.0",
@@ -39,6 +41,6 @@
     "gulp-uglify": "^3.0.1",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "~5.1.0",
-    "selenium-standalone-jar": "2.45.0"
+    "selenium-standalone-jar": "^3.141.59"
   }
 }
