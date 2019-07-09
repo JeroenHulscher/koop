@@ -13,16 +13,16 @@ context:
     items:
     - title: Design system
       active: true
-      href: templates-ds---homepage
+      href: /
       sub: true
       subItems:
         - stitle: Content
-          href: templates-ds---content
+          href: content.html
           sactive: true
         - stitle: Design
-          href: templates-ds---design
+          href: ontwerpprincipes.html
         - stitle: Components
-          href: templates-ds---components
+          href: componenten.html
   navContentContext:
     items:
     - title: Content

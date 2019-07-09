@@ -12,17 +12,17 @@ context:
   navMenuContext:
     items:
     - title: Design system
-      href: templates-ds---homepage
+      href: /
       active: true
       sub: true
       subItems:
         - stitle: Content
-          href: templates-ds---content
+          href: content.html
         - stitle: Design
-          href: templates-ds---design
+          href: ontwerpprincipes.html
           sactive: true
         - stitle: Components
-          href: templates-ds---components
+          href: componenten.html
   navContentContext:
     items:
     - title: Design
