@@ -114,6 +114,7 @@
       padding: .625em 1em;
       display: block;
       font-size: 1.125rem;
+      word-break: normal;
 
       &:hover {
         color: $headerLinkCurrentColor;
