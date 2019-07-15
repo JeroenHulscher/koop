@@ -33,7 +33,7 @@
 
 .checkbox__label {
   position: relative;
-  padding: 0;
+  padding: 0 0 0 2.5em;
 
   &::before {
     background: $white;
@@ -45,5 +45,8 @@
     margin-right: .5em;
     vertical-align: middle;
     width: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
