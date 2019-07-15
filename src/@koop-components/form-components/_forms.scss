@@ -91,6 +91,17 @@ fieldset {
 .form {
   text-align: left;
 
+  &__errors {
+    @extend .alert;
+    @extend .alert--warning;
+
+    ul {
+      margin: 0;
+      @extend .list;
+      @extend .list--linked;
+    }
+  }
+
   &__row {
     margin-bottom: .75em;
     position: relative;
