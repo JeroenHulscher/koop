@@ -11,7 +11,6 @@
   var footnote = function (element) {
     this.element = element;
     this.footnote = document.querySelector(this.element.getAttribute('href'));
-    console.log('this.footnote', this.footnote);
     this.referenceClass = '.reference';
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.init();
