@@ -1,0 +1,52 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Pagina navigatie</button>
+      </div>
+
+      <h1>Aanmelden e-mailservice nieuwe notificaties</h1>
+
+
+       {{ render "@steps" stepsContext }}
+
+      <form id="formid" class="jumbotron jumbotron--highlight">
+        <fieldset>
+          <legend>Verdragen selecteren</legend>
+          <p>
+             Selecteer hier onder van welke depositaire verdragen u nog meer notificaties wilt ontvangen.
+          </p>
+          {{render "@alert--warning" formerror merge=true }}
+          <fieldset class="form__row form__row--large">
+            <legend class="h4">Selecteer verdragen 'Haagse Conferentie voor Internationaal Privaatrecht'</legend>
+            {{render "@subselection" verdrHaags }}
+          </fieldset>
+          <fieldset class="form__row form__row--large">
+            <legend class="h4">Alle overige depositaire verdragen</legend>
+            {{render "@subselection" verdrOverig }}
+          </fieldset>
+          <button type="submit" class="button button--primary">Naar stap 3</button>
+        </fieldset>
+      </form>
+
+
+    </div>
+    <div class="column column--sidebar">
+
+      <a href="#" class="link link--back">Terug naar het overzicht</a>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

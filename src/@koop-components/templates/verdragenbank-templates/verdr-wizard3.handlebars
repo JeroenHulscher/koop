@@ -1,0 +1,57 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Pagina navigatie</button>
+      </div>
+
+      <h1>Aanmelden e-mailservice nieuwe notificaties</h1>
+
+      {{ render "@steps" stepsContext }}
+
+      <form id="formid" class="">
+        <fieldset>
+          <legend>Samenvatting</legend>
+
+          <table class="table__data-overview u-margin--m">
+            <tbody>
+              <tr>
+                <th>E-mailadres</th>
+                <td>appel@sap.nl</td>
+              </tr>
+              <tr>
+                <th>Verdragen</th>
+                <td>
+                   Verdrag over de status en werkzaamheden van de Internationale Commissie voor Vermiste Personen; Brussel, 15 december 2014<Br>
+                   Verdrag betreffende de bevoegdheid van autoriteiten, de toepasselijke wet en de erkenning van beslissingen inzake adoptie;
+                  's-Gravenhage, 15 november 1965
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button type="submit" class="button button--primary">Abonneren</button>
+        </fieldset>
+      </form>
+
+
+    </div>
+    <div class="column column--sidebar">
+
+      <a href="#" class="link link--back">Terug naar het overzicht</a>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

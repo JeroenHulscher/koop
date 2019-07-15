@@ -1,0 +1,34 @@
+---
+label: Verdr. - Wizard 1
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Basisgegevens
+      active: true
+      sub: true
+      subItems:
+        - stitle: Algemeen
+        - stitle: Koninkrijk
+          sactive: true
+        - stitle: Partijen
+        - stitle: Uitbreidingen
+    - title: Voorbehouden, verklaringen en bezwaren
+    - title: Wijzigingen
+  stepsContext:
+    steps:
+      - title: 1. Emailadres
+        active: true
+      - title: 2. Verdragen selecteren
+      - title: 3. Samenvatting
+  inputEmail:
+    fieldPlaceholder: Uw emailadres
+    fieldLabelVisible: true
+    fieldLabel: E-mailadres
+    error: true
+    errorMessage: Foutief emailadres

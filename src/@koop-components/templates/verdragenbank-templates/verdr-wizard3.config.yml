@@ -1,0 +1,109 @@
+---
+label: Verdr. - Wizard 3
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Basisgegevens
+      active: true
+      sub: true
+      subItems:
+        - stitle: Algemeen
+        - stitle: Koninkrijk
+          sactive: true
+        - stitle: Partijen
+        - stitle: Uitbreidingen
+    - title: Voorbehouden, verklaringen en bezwaren
+    - title: Wijzigingen
+  stepsContext:
+    steps:
+      - title: 1. Emailadres
+      - title: 2. Verdragen selecteren
+        active: true
+      - title: 3. Samenvatting
+  inputEmail:
+    fieldPlaceholder: Uw emailadres
+  verdrHaags:
+    linkText: Selecteer verdragen 'Haagse Conferentie voor Internationaal Privaatrecht'
+    id: 222
+    modalTitle: Verdragen 'Haagse Conferentie voor Internationaal Privaatrecht'
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Verdrag betreffende de erkenning en de tenuitvoerlegging van buitenlandse vonnissen in burgerlijke of handelszaken; 's-Gravenhage, 2 juli 2019
+        short: Verdrag betreffende de erkenning en de tenuitvoerlegging van buitenlandse vonnissen in burgerlijke of handelszaken; 's-Gravenhage, 2 juli 2019
+      - Option: 2
+        id: 2
+        title: Verdrag betreffende de burgerrechtelijke aspecten van internationale ontvoering van kinderen; 's-Gravenhage, 25 oktober 1980
+        short: Verdrag betreffende de burgerrechtelijke aspecten van internationale ontvoering van kinderen; 's-Gravenhage, 25 oktober 1980
+      - Option: 3
+        id: 3
+        title: Verdrag inzake de verkrijging van bewijs in het buitenland in burgerlijke en in handelszaken; 's-Gravenhage, 18 maart 1970
+        short: Verdrag inzake de verkrijging van bewijs in het buitenland in burgerlijke en in handelszaken; 's-Gravenhage, 18 maart 1970
+      - Option: 4
+        id: 4
+        title: Verdrag betreffende de burgerlijke rechtsvordering; 's-Gravenhage, 17 juli 1905
+        short: Verdrag betreffende de burgerlijke rechtsvordering; 's-Gravenhage, 17 juli 1905
+      - Option: 5
+        id: 5
+        title: Verdrag inzake de betekening en de kennisgeving in het buitenland van gerechtelijke en buitengerechtelijke stukken in burgerlijke en in handelszaken; 's-Gravenhage, 15 november 1965
+        short: Verdrag inzake de betekening en de kennisgeving in het buitenland van gerechtelijke en buitengerechtelijke stukken in burgerlijke en in handelszaken; 's-Gravenhage, 15 november 1965
+      - Option: 6
+        id: 6
+        title: Verdrag nopens de erkenning en de tenuitvoerlegging van beslissingen over onderhoudsverplichtingen jegens kinderen; 's-Gravenhage, 15 april 1958
+        short: Verdrag nopens de erkenning en de tenuitvoerlegging van beslissingen over onderhoudsverplichtingen jegens kinderen; 's-Gravenhage, 15 april 1958
+      - Option: 7
+        id: 7
+        title: Verdrag inzake de internationale inning van levensonderhoud voor kinderen en andere familieleden; 's-Gravenhage, 23 november 2007
+        short: Verdrag inzake de internationale inning van levensonderhoud voor kinderen en andere familieleden; 's-Gravenhage, 23 november 2007
+      - Option: 8
+        id: 8
+        title: Protocol inzake het recht dat van toepassing is op onderhoudsverplichtingen; 's-Gravenhage, 23 november 2007
+        short: Protocol inzake het recht dat van toepassing is op onderhoudsverplichtingen; 's-Gravenhage, 23 november 2007
+      - Option: 9
+        id: 9
+        title: Verdrag betreffende de curatele en soortgelijke maatregelen van bescherming; 's-Gravenhage, 17 juli 1905
+        short: Verdrag betreffende de curatele en soortgelijke maatregelen van bescherming; 's-Gravenhage, 17 juli 1905
+      - Option: 10
+        id: 10
+        title: Verdrag betreffende de bevoegdheid van autoriteiten, de toepasselijke wet en de erkenning van beslissingen inzake adoptie; 's-Gravenhage, 15 november 1965
+        short: Verdrag betreffende de bevoegdheid van autoriteiten, de toepasselijke wet en de erkenning van beslissingen inzake adoptie; 's-Gravenhage, 15 november 1965
+      - Option: 11
+        id: 11
+        title: Verdrag inzake de bescherming van kinderen en de samenwerking op het gebied van de interlandelijke adoptie; 's-Gravenhage, 29 mei 1993
+        short: Verdrag inzake de bescherming van kinderen en de samenwerking op het gebied van de interlandelijke adoptie; 's-Gravenhage, 29 mei 1993
+  verdrOverig:
+    linkText: Selecteer alle overige depositaire verdragen
+    id: 23
+    modalTitle: Alle overige depositaire verdragen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 91
+        id: 91
+        title: Besluit tot wijziging van Bijlagen 2 en 3 en Tabel 1 bij de Overeenkomst inzake de bescherming van Afrikaans-Euraziatische trekkende watervogels; Bonn, 14 november 2015
+        short: Besluit tot wijziging van Bijlagen 2 en 3 en Tabel 1 bij de Overeenkomst inzake de bescherming van Afrikaans-Euraziatische trekkende watervogels; Bonn, 14 november 2015
+      - Option: 92
+        id: 92
+        title: Besluit tot wijziging van Bijlagen 2 en 3 en Tabel 1 bij de Overeenkomst inzake de bescherming van Afrikaans-Euraziatische trekkende watervogels; Durban, 8 december 2018
+        short: Besluit tot wijziging van Bijlagen 2 en 3 en Tabel 1 bij de Overeenkomst inzake de bescherming van Afrikaans-Euraziatische trekkende watervogels; Durban, 8 december 2018
+      - Option: 93
+        id: 93
+        title: Verdrag tussen het Koninkrijk België, het Koninkrijk der Nederlanden en het Groothertogdom Luxemburg inzake de integratie van de luchtruimbewaking tegen dreigingen die uitgaan van niet-militaire luchtvaartuigen (renegades); 's-Gravenhage, 4 maart 2015
+        short: Verdrag tussen het Koninkrijk België, het Koninkrijk der Nederlanden en het Groothertogdom Luxemburg inzake de integratie van de luchtruimbewaking tegen dreigingen die uitgaan van niet-militaire luchtvaartuigen (renegades); 's-Gravenhage, 4 maart 2015
+
+
+
+
+
