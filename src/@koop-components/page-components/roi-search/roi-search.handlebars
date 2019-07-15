@@ -1,10 +1,12 @@
 <form class="roi-search" id="search">
-  <fieldset class="form__element">
+  <fieldset class="form__row">
     <legend class="visually-hidden">{{ inputLegend }}</legend>
     <div class="document-search__fields">
       <label for="search-term" class="visually-hidden">{{ inputLabel }}</label>
       <input type="text" id="search-term" placeholder="{{ inputPlaceholder }}">
     </div>
   </fieldset>
-  {{ render "@input-radio" radioGroupContext }}
+  <div class="">
+    {{ render "@input-radio" radioGroupContext }}
+  </div>
 </form>
