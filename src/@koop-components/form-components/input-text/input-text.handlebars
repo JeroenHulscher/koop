@@ -15,11 +15,16 @@
   <input
     type="text"
     id="input-text-{{ id }}"
-    class="input input-text {{ modifier }}"
+    class="input input-text {{ modifier }} {{#if error}}has-error{{/if}}"
     placeholder="{{ fieldPlaceholder }}"
+    {{#if error}}aria-describedby="input-text-1__error"{{/if}}
     {{#if remove}}
     data-decorator="toggle-remove-visibility"
     {{/if}}/>
+
+    {{#if error}}
+      <p id="input-text-{{id}}__description" class="form__error">{{errorMessage}}</p>
+    {{/if}}
 
 {{#if remove}}
   <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
