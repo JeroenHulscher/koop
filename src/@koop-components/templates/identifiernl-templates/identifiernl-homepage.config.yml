@@ -9,6 +9,7 @@ context:
     modifier: input-text--medium
     modifier2: input-text__prefix--medium
     prefix: true
+    type: text
     prefixLabel: https://www.overheid.nl
   formalertContext:
     modifier: alert--warning

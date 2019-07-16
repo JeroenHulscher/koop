@@ -1,6 +1,10 @@
 <div class="" data-decorator="init-filter-results">
-  <input type="text" placeholder="Typ hier uw organisatie" name="mysuper_field" id="id_mysuper_field" class="js-filterresults__input input-text input-text--searchmedium" />
-  <fieldset class="js-filterresults__results">
-     {{render "@input-checkbox" }}
-  </fieldset>
+  <div class="form__row">
+    <input type="text" placeholder="Typ hier uw organisatie" name="mysuper_field" id="id_mysuper_field" class="js-filterresults__input input-text input-text--searchmedium" />
+  </div>
+  <div class="form__row">
+    <fieldset class="js-filterresults__results">
+      {{render "@input-checkbox" }}
+    </fieldset>
+  </div>
 </div>

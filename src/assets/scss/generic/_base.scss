@@ -46,11 +46,12 @@ html {
 body {
   min-height: 100%;
   margin: 0;
+  padding-top: 2em;
 }
 
 p,
 .p {
-  word-wrap: break-word;
+  word-break: break-word;
 
   &--large {
     font-size: 1.125rem;
@@ -155,4 +156,10 @@ label {
   &__row {
     margin-bottom: 3em;
   }
+}
+
+code {
+  border: 1px solid $mediumGrey;
+  display: inline-block;
+  padding: 0.1em 0.5em;
 }

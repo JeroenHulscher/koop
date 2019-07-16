@@ -4,28 +4,28 @@
 {{/if }}
 
 {{#if orderedList }}
-  <ol class="list {{ modifier }}">
+  <ol class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
 {{else}}
-  <ul class="list {{ modifier }}">
+  <ul class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
 {{/if }}
 {{#if orderedList }}
   {{#each items }}
     {{#if subitems }}
-    <li class="list__item">{{{ text }}}
+    <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ text }}}
       <ol>
       {{#each subitems }}
-        <li class="list__item">{{{ text }}}</li>
+        <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ text }}}</li>
       {{/each }}
       </ol>
     </li>
     {{else}}
-      <li class="list__item">{{{ text }}}</li>
+      <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ text }}}</li>
     {{/if }}
   {{/each }}
 {{else}}
   {{#each items }}
     {{#if subitems }}
-    <li class="list__item">{{{ text }}}
+    <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ text }}}
       {{#if orderedList }}
         <ol>
         {{#each subitems }}
@@ -39,9 +39,9 @@
           {{/each }}
         </ul>
       {{/if }}
-    </li class="list__item">
+    </li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">
     {{else}}
-      <li class="list__item">{{#if color}}<span class="{{color}}"></span>{{/if}}{{{ text }}}</li>
+      <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{#if color}}<span class="{{color}}"></span>{{/if}}{{{ text }}}</li>
     {{/if }}
   {{/each }}
 {{/if}}

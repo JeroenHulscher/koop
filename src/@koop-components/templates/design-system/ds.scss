@@ -1,0 +1,19 @@
+.ds-content {
+  > article.row {
+    // margin-bottom: 8em;
+
+  }
+
+  .row {
+    &--xxxlarge {
+      border-bottom: 1px solid $lightGrey;
+      margin-bottom: 6em;
+      padding-bottom: 4em;
+    }
+  }
+}
+
+.u-bg--grey {
+  background: $lightGrey;
+}
+

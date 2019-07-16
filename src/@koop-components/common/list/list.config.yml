@@ -153,4 +153,33 @@ variants:
         color: color2
       - text: Borssele/Vlissingen
         color: color3
+  - name: Lower alpha
+    status: ready
+    context:
+      modifier: list--loweralpha
+  - name: Lower roman
+    status: ready
+    context:
+      modifier: list--lowerroman
+  - name: Upper alpha
+    status: ready
+    context:
+      modifier: list--upperalpha
+  - name: Upper roman
+    status: ready
+    context:
+      modifier: list--upperroman
+  - name: Custom
+    status: ready
+    context:
+      modifier: list-custom--size-l
+      custom: true
+      items:
+      - text: <p><span class="list-custom__itemtype">1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius mauris vel urna sagittis, ac placerat arcu dignissim. Nunc tincidunt est sem, eu viverra nisl tincidunt commodo. Nulla ullamcorper, nulla vitae sagittis finibus, justo velit pretium lectus, eget luctus erat orci quis dui. Etiam vestibulum vulputate lacus, sed dignissim lacus ultrices non. Sed congue vulputate dignissim. Suspendisse non elit nibh. Aenean mollis justo eget sem accumsan egestas. Vivamus a ligula ac lectus venenatis interdum ut vitae leo. Vivamus laoreet at orci lacinia semper. Maecenas a metus vulputate, faucibus nisl non, posuere ligula. </p><p>Vestibulum volutpat odio quis odio eleifend volutpat. Etiam vel euismod lacus, ut venenatis arcu. Nullam et nisi consectetur, lobortis ligula id, commodo lectus. In venenatis massa et leo dapibus dignissim sit amet sit amet metus. Nullam cursus tincidunt tortor, ac interdum nunc maximus non. Nulla bibendum tortor ut erat varius, non volutpat erat posuere. Vestibulum sed orci vitae mi blandit lacinia. In pharetra accumsan pellentesque. Curabitur a blandit quam.</p>
+      - text: <p><span class="list-custom__itemtype">2</span>2e item</p>
+      - text: <p><span class="list-custom__itemtype">3</span>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
+        subitems:
+          - text: <p><span class="list-custom__itemtype">a.</span>1e subitem</p>
+          - text: <p><span class="list-custom__itemtype">b.</span>2e subitem</p>
+      - text: <p><span class="list-custom__itemtype">4</span>4e item</p>
 

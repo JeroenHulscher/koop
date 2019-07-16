@@ -96,9 +96,8 @@ fieldset {
     @extend .alert--warning;
 
     ul {
-      margin: 0;
-      @extend .list;
       @extend .list--linked;
+      margin: 0;
     }
   }
 
@@ -143,6 +142,17 @@ fieldset {
       position: relative;
       top: 0.2em;
     }
+  }
+
+  &__error {
+    font-weight: bold;
+    color: red;
+  }
+
+  &__hint {
+    font-size: 90%;
+    font-style: italic;
+    margin: 0;
   }
 
   &__input {

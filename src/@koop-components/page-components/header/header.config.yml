@@ -3,6 +3,7 @@ status: ready
 context:
   file: logo.svg
   alt: Overheid.nl logo
+  nav: true
   youAreHere:
     - text: Register voor overheidsinstanties
   hamburgerButtonText: Menu

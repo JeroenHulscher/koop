@@ -1,0 +1,37 @@
+name: DS - Design
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Design
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      href: /
+      active: true
+      sub: true
+      subItems:
+        - stitle: Content
+          href: content.html
+        - stitle: Design
+          href: ontwerpprincipes.html
+          sactive: true
+        - stitle: Components
+          href: componenten.html
+  navContentContext:
+    items:
+    - title: Design
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Lettertype
+          href: lettertype
+        - stitle: Kleuren
+          href: kleuren
+
