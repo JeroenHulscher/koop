@@ -6,7 +6,7 @@
 <div class="input-text__container input-text__container--prefix">
 {{/if}}
 
-  <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="input-text-{{ id }}">{{ fieldLabel }}</label>
+  <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="{{#if pageSearch}}search{{else}}input-text-{{ id }}{{/if}}">{{ fieldLabel }}</label>
 
   {{#if prefix}}
     <span class="input-text__prefix {{modifier2}}">{{prefixLabel}}</span>
@@ -14,7 +14,7 @@
 
   <input
     {{#if type}}type="{{type}}"{{else}}type="text"{{/if}}
-    id="input-text-{{ id }}"
+    id="{{#if pageSearch}}search{{else}}input-text-{{ id }}{{/if}}"
     class="input input-text {{ modifier }} {{#if error}}has-error{{/if}}"
     placeholder="{{ fieldPlaceholder }}"
     {{#if error}}aria-describedby="input-text-1__error"{{/if}}

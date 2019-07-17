@@ -11,7 +11,8 @@ context:
     placeholder: Vul hier uw zoekwoord(en) in
   inputSearchContext:
     modifier: input-text--searchmedium
-    id: 1
+    id: 2
+    pageSearch: true
     fieldLabel: Zoekwoord
     fieldLabelVisible: false
     fieldInstruction:

@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container row">
+<div id="content" class="container row">
   <div class="row row--spacer">
     <div class="jumbotron jumbotron--highlight">
 
@@ -21,7 +21,7 @@
               <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
               <div class="form__row">
                  {{!-- {{render "@input-text"  }} --}}
-                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+                 <input type="text" id="search" aria-label="Zoek op zoekwoord" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
               </div>
             </fieldset>
           </div>
@@ -31,13 +31,13 @@
                 <fieldset>
                   <legend>Totstandkoming</legend>
                   <div class="form__row">
-                    <label>Startdatum</label>
-                    {{render "@datepicker" }}
+                    <label for="datestart">Startdatum</label>
+                    {{render "@datepicker" dateStart merge=true }}
                     <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
-                    <label>Einddatum</label>
-                    {{render "@datepicker" }}
+                    <label for="dateend">Einddatum</label>
+                    {{render "@datepicker" dateEnd merge=true }}
                     <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">

@@ -37,8 +37,8 @@
       {{ render "@steps" stepsContext }}
 
       <form id="formid" class="form jumbotron jumbotron--highlight">
-        <fieldset>
-          <legend>Inschrijven op e-mailadres</legend>
+        <fieldset role="group" aria-labelledby="form-email-label">
+          <legend id="form-email-label">Inschrijven op e-mailadres</legend>
           <div class="form__errors">
             <ul>
               <li><a href="#input-text-1" id="input-text-1__error">Ongelding e-mailadres ingevoerd. Een e-mail moet altijd van aan x en y.</a></li>
