@@ -31,28 +31,25 @@
                 <fieldset>
                   <legend>Totstandkoming</legend>
                   <div class="form__row">
-                    <label for="datestart">Startdatum</label>
+                    <label for="input--datestart">Startdatum</label>
                     {{render "@datepicker" dateStart merge=true }}
                     <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
-                    <label for="dateend">Einddatum</label>
+                    <label for="input--dateend">Einddatum</label>
                     {{render "@datepicker" dateEnd merge=true }}
                     <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
-                    <label>Plaats</label>
-                    {{render "@input-text" }}
+                    {{render "@input-text" inputPlaats merge=true }}
                   </div>
                   <div class="form__row">
                     <div class="columns">
                       <div class="column">
-                        <label>Huisnummer</label>
-                        {{render "@input-text" }}
+                        {{render "@input-text" inputHuisnummer merge=true }}
                       </div>
                       <div class="column">
-                        <label>Toevoeging</label>
-                        {{render "@input-text" }}
+                        {{render "@input-text" inputToevoeging merge=true }}
                       </div>
                     </div>
                   </div>

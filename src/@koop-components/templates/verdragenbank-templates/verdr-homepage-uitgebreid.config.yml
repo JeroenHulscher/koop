@@ -32,13 +32,13 @@ context:
     - id: checkbox-422
       text: Nederland (Sint Eustatius)
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-423
       text: Aruba
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-424
       text: Curacao
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-425
       text: Sint Maarten
       name: onderwerp
   depositarisContext:
@@ -100,5 +100,25 @@ context:
     options:
     - id: checkbox-112312312
       text: Ik begrijp dat ...
+  dateStart:
+    id: datestart
+    fieldLabel: Startdatum
+    fieldLabelVisible: true
+  dateEnd:
+    id: dateend
+    fieldLabel: Einddatum
+    fieldLabelVisible: true
+  inputPlaats:
+    id: iplaats
+    fieldLabel: Plaats
+    fieldLabelVisible: true
+  inputHuisnummer:
+    id: ihuisnummer
+    fieldLabel: Huisnummer
+    fieldLabelVisible: true
+  inputToevoeging:
+    id: itoevoeging
+    fieldLabel: Toevoeging
+    fieldLabelVisible: true
 
 
