@@ -4,12 +4,18 @@ const fractal = require( '@frctl/fractal' ).create();
 
 // Handlebars
 fractal.components.engine(require('@frctl/handlebars')({
-    helpers: {
-        increment: function(number, amount) {
-            // Parsing the number to ensure it was not provided as string.
-            return parseInt(number) + amount;
-        }
+  helpers: {
+    increment: function(number, amount) {
+      // Parsing the number to ensure it was not provided as string.
+      return parseInt(number) + amount;
+    },
+    ifEquals: function (v1, v2, options) {
+      if (v1 === v2) {
+        return options.fn(this);
+      }
+      return options.inverse(this);
     }
+  }
 }));
 fractal.components.set( 'ext', '.handlebars' );
 
