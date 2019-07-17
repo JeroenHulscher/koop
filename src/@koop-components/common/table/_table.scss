@@ -16,11 +16,9 @@
 
 table,
 .table {
-  // width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
   table-layout: fixed;
-  // word-wrap: break-word;
 
   [scope=colgroup] {
     background: $darkBlue !important;
@@ -32,7 +30,8 @@ table,
   }
 
   caption {
-    color: $darkerGrey;
+    color: $darkGrey;
+    font-style: italic;
     text-align: left;
     padding: .5em 0;
   }
