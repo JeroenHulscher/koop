@@ -19,6 +19,7 @@ table,
   border-collapse: collapse;
   margin: 1em 0;
   table-layout: fixed;
+  min-width: 100%;
 
   [scope=colgroup] {
     background: $darkBlue !important;
