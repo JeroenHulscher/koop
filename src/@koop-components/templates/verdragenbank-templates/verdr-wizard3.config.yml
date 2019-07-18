@@ -24,8 +24,8 @@ context:
     steps:
       - title: 1. Emailadres
       - title: 2. Verdragen selecteren
-        active: true
       - title: 3. Samenvatting
+        active: true
   inputEmail:
     fieldPlaceholder: Uw emailadres
   verdrHaags:
