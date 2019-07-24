@@ -36,6 +36,8 @@ context:
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
     type: span
+    selectAll: true
+    maxShow: 3
     Options:
       - Option: 1
         id: 1
@@ -89,6 +91,7 @@ context:
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
     type: span
+    maxShow: 3
     Options:
       - Option: 91
         id: 91

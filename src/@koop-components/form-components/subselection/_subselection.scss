@@ -1,19 +1,23 @@
 .subselection {
 
-    &--fixed {
-      float: right;
+  &--fixed {
+    float: right;
+  }
+
+  &__summary {
+    display: block;
+
+    &:not(:empty) {
+      margin-bottom: .5em;
     }
 
-    &__summary {
-      display: block;
-
-      span {
-        @extend .form__selectedfilter;
-        @extend .group;
-        padding-right: .75em;
-      }
+    span {
+      @extend .form__selectedfilter;
+      @extend .group;
+      padding-right: .75em;
     }
   }
+}
 
 /* exception */
 .listbreaker .subselection {

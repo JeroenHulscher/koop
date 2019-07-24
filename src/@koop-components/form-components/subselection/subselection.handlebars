@@ -1,9 +1,10 @@
-<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}", "triggerOnChangeText": "{{linkTextActive}}" }'>
+<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}", "triggerOnChangeText": "{{linkTextActive}}", "maxShow": "{{maxShow}}" }'>
   <div class="subselection__summary"></div>
   <div id="modal-{{id}}" class="modal modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
         <h2>{{modalTitle}}</h2>
+        <p><button type="button" data-handler="close-modal" class="button button--primary">Toepassen</button></p>
         {{#if searchFilter}}
           <div class="" data-decorator="init-filter-results">
             <div class="form__row form__row--medium">
@@ -11,6 +12,15 @@
             />
             </div>
             <fieldset class="js-filterresults__results" role="region" id="resultfilter-{{id}}" aria-live="polite">
+        {{/if}}
+        {{#if selectAll}}
+        <div data-decorator="init-selectall">
+          <div class="input-checkbox u-margin--m">
+            <input class="checkbox__input js-checkbox-master" type="checkbox" id="appel" name="selectAll" value="Alle iets" />
+            <label class="checkbox__label" for="appel">
+              <strong>Alle verdragen</strong>
+            </label>
+          </div>
         {{/if}}
               <ul class="list--unstyled">
                {{#each Options }}
@@ -25,13 +35,16 @@
                 </li>
               {{/each}}
               </ul>
+        {{#if selectAll}}
+         </div>
+        {{/if}}
         {{#if searchFilter}}
             </fieldset>
           </div>
         {{/if}}
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+
           <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
         </div>
       </div>
