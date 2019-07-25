@@ -55,24 +55,25 @@ describe('The Modal', function() {
     expect(modalContent.isDisplayed()).toBeFalsy();
   });
 
-  it('opens using spacebar on the open modal button', function() {
-    // Ensure the element focussed is the open modal button.
-    expect('Open modal').toEqual(browser.driver.switchTo().activeElement().getText());
+  // xit('opens using spacebar on the open modal button', function() {
+  //   // Ensure the element focussed is the open modal button.
+  //   expect('Open modal').toEqual(browser.driver.switchTo().activeElement().getText());
 
-    browser.actions().sendKeys(protractor.Key.SPACE).perform();
-    browser.driver.sleep(750);
+  //   browser.actions().sendKeys(protractor.Key.SPACE).perform();
+  //   browser.driver.sleep(750);
 
-    var modalContent = element(by.css('.modal__content'));
-    expect(modalContent.isDisplayed()).toBeTruthy();
-  });
+  //   var modalContent = element(by.css('.modal__content'));
+  //   expect(modalContent.isDisplayed()).toBeTruthy();
+  // });
 
-  it('closes using tab and spacebar on the close modal button', function() {
-    var modalContent = element(by.css('.modal__content'));
+  // xit('closes using tab and spacebar on the close modal button', function() {
+  //   var modalContent = element(by.css('.modal__content'));
 
-    browser.actions().sendKeys(protractor.Key.TAB).perform();
-    browser.actions().sendKeys(protractor.Key.SPACE).perform();
-    browser.driver.sleep(250);
+  //   browser.actions().sendKeys(protractor.Key.TAB).perform();
+  //   browser.actions().sendKeys(protractor.Key.SPACE).perform();
+  //   browser.driver.sleep(250);
 
-    expect(modalContent.isDisplayed()).toBeFalsy();
-  });
+  //   expect(modalContent.isDisplayed()).toBeFalsy();
+  // });
+
 });

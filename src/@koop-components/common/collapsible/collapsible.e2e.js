@@ -1,4 +1,4 @@
-describe('Sidebar sticky', function () {
+describe('Collapsable', function () {
 
   var path = require('path');
 

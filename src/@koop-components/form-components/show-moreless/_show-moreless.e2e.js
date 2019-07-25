@@ -34,7 +34,7 @@ describe('Show more-hide', function () {
 
   it('when clicked on trigger open, show 21 items', function () {
 
-    var trigger = element(by.css('.link--down'));
+    var trigger = element(by.css('.link--down a'));
     var list = element(by.css('ul'));
     trigger.click();
 
@@ -55,9 +55,10 @@ describe('Show more-hide', function () {
 
   it('when clicked on trigger close, show 5 items', function () {
 
-    var trigger = element(by.css('.link--up'));
+    var trigger = element(by.css('.link--up a'));
     var list = element(by.css('ul'));
     trigger.click();
+
 
     function getVisibleDivs(driver) {
       var links = driver.findElements(by.css("li"));
