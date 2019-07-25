@@ -38,6 +38,8 @@ context:
     type: span
     selectAll: true
     maxShow: 3
+    itemsCount: 11
+    selectAllID: 8765
     Options:
       - Option: 1
         id: 1
@@ -91,7 +93,10 @@ context:
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
     type: span
+    selectAll: true
     maxShow: 3
+    itemsCount: 3
+    selectAllID: 9876
     Options:
       - Option: 91
         id: 91
