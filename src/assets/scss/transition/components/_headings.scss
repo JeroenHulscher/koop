@@ -91,3 +91,38 @@ p {
     font-size: 1.125em;
   }
 }
+
+.docRegelingOpschrift {
+  @extend .h1;
+}
+.docHoofdstuk {
+  @extend .h2;
+}
+.docTitel {
+  @extend .h3;
+}
+.docAfdeling {
+  @extend .h4;
+}
+.docParagraaf {
+  @extend .h5;
+}
+.docSubparagraaf {
+  @extend .h5;
+}
+.docSubsubparagraaf {
+  @extend .h5;
+}
+.docArtikel {
+  font-weight: bold;
+}
+
+.docFormeleInhoud {
+  font-weight: bold;
+}
+.docFormeleDivisie {
+  font-weight: bold;
+}
+.docDivisie {
+  font-weight: bold;
+}
