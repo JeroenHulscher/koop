@@ -9,8 +9,17 @@
   > table {
     margin: 0;
   }
+  > table ~ p {
+    margin-top: .5em;
+  }
+
   p {
     margin: 0;
+  }
+  .table__caption {
+    margin-bottom: .5em;
+    color: $darkGrey;
+    font-style: italic;
   }
 }
 
@@ -25,6 +34,13 @@ table,
     background: $darkBlue !important;
     color: white !important;
   }
+  tbody tr th[scope=col] {
+    font-style: italic;
+    font-weight: 400;
+    border-bottom: 2px solid $lighterGrey;
+  }
+
+
 
   .table--container & {
     table-layout: auto;
@@ -216,7 +232,7 @@ table,
   &.table--hover:not(.table__data-overview):not(.table__regulation):not(.table--untouched) {
     position: relative;
     width: 100%;
-    word-break: break-word;
+    // word-break: break-word;
 
     thead {
       display: none;
