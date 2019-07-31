@@ -4,7 +4,7 @@ describe('Subselection', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should display 3 results, when 4 checkboxes are selected', function () {
+  it('should display 3 results, when 4 checkboxes are selected', function () {
     browser.get('http://localhost:3000/components/preview/templates-verdr-wizard2');
 
     var width = 1200;
@@ -33,7 +33,7 @@ describe('Subselection', function () {
       }
     );
   });
-  fit('should toggle the invisble results', function () {
+  it('should toggle the invisble results', function () {
 
     var moreTrigger = element(by.css('.link--down a'));
     moreTrigger.click();
@@ -45,7 +45,7 @@ describe('Subselection', function () {
 
   });
 
-  fit('should reset the element', function () {
+  it('should reset the element', function () {
 
     var subTrigger = element(by.css('#id123'));
     subTrigger.click();
