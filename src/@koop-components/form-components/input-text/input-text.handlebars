@@ -13,13 +13,23 @@
   {{/if}}
 
   <input
-    type="text"
+    {{#if type}}type="{{type}}"{{else}}type="text"{{/if}}
     id="input-text-{{ id }}"
-    class="input input-text {{ modifier }}"
+    class="input input-text {{ modifier }} {{#if error}}has-error{{/if}}"
     placeholder="{{ fieldPlaceholder }}"
+    {{#if error}}aria-describedby="input-text-1__error"{{/if}}
+    aria-invalid="{{#if error}}true{{else}}false{{/if}}"
+    placeholder="{{ fieldPlaceholder }}"
+    {{#if disabled}}disabled{{/if}}
+    {{#if value}}value="{{value}}"{{/if}}
+
     {{#if remove}}
     data-decorator="toggle-remove-visibility"
     {{/if}}/>
+
+    {{#if error}}
+      <p role="alert" id="input-text-{{id}}__description" class="form__error">{{errorMessage}}</p>
+    {{/if}}
 
 {{#if remove}}
   <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>

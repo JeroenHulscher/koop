@@ -11,6 +11,7 @@ context:
       status: disabled
     - id: checkbox-2
       text: Verenigde Staten
+      checked: checked
     - id: checkbox-3
       text: Canada
 variants:

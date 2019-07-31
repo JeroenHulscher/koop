@@ -48,3 +48,36 @@ variants:
           id: 3
           title: Sociale Zaken en Werkgelegenheid (szw)
           short: szw
+  - name: Filter selection - Limit (3)
+    context:
+      id: 1
+      type: span
+      linkText: Kies 'iets'
+      linkTextActive: Pas opties aan
+      modalTitle: Selecteer ministeries
+      fieldLabel: fieldLabel
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 0612345678'
+      maxShow: 3
+      Options:
+        - Option: 1
+          id: 1
+          title: Nederland
+          short: Nederland
+          checked: checked
+        - Option: 2
+          id: 2
+          title: Frankrijk
+          short: Frankrijk
+        - Option: 3
+          id: 3
+          title: Griekenland
+          short: Griekenland
+        - Option: 4
+          id: 4
+          title: Spanje
+          short: Spanje
+        - Option: 5
+          id: 5
+          title: Spanje
+          short: Spanje

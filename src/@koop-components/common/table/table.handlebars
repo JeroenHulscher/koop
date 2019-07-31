@@ -1,4 +1,4 @@
-<table class="{{ modifier }}">
+<table class="{{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
 {{#if caption }}
   <caption>{{ caption }} </caption>
 {{/if}}

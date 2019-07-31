@@ -3,13 +3,33 @@ label: Input text
 status: ready
 context:
   id: 1
+  type: text
   fieldLabel: Op nummer zoeken
   fieldInstruction:
   fieldPlaceholder: 'Bijv: BK001'
 variants:
+  - name: Password
+    label: Input password
+    context:
+      modifier: input--postalcode input--small
+      id: 1
+      type: password
+      fieldLabel: password
+      fieldInstruction:
+      fieldPlaceholder: 'Password'
+  - name: Number
+    label: Input number
+    context:
+      modifier: input--postalcode input--small
+      id: 1
+      type: number
+      fieldLabel: number
+      fieldInstruction:
+      fieldPlaceholder: 'number'
   - name: Postal code
     label: Input postcode
     context:
+      type: text
       modifier: input--postalcode input--small
       id: 1
       fieldLabel: Postcode
@@ -18,6 +38,7 @@ variants:
   - name: Medium
     label: medium
     context:
+      type: text
       modifier: input-text--medium
       id: 1
       fieldPlaceholder: 'Placeholder'
@@ -26,6 +47,7 @@ variants:
     context:
       modifier: input-text--search
       id: 1
+      type: text
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Wat zoek je precies?'
@@ -33,6 +55,7 @@ variants:
   - name: Search medium
     label: Search medium
     context:
+      type: text
       modifier: input-text--searchmedium
       id: 1
       fieldLabel: Postcode
@@ -43,6 +66,7 @@ variants:
     label: Prefix
     context:
       modifier:
+      type: text
       id: 1
       fieldLabel: Postcode
       fieldInstruction:

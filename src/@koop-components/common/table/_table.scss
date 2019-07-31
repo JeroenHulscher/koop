@@ -1,33 +1,54 @@
-.table--container {
+.table--container,
+.table__container {
   max-width: 100%;
   overflow-x: scroll;
   border: 1px solid $lightBlue;
   padding: .5em;
+  margin-bottom: 2em;
+
+  > table {
+    margin: 0;
+  }
+  > table ~ p {
+    margin-top: .5em;
+  }
 
   p {
     margin: 0;
+  }
+  .table__caption {
+    margin-bottom: .5em;
+    color: $darkGrey;
+    font-style: italic;
   }
 }
 
 table,
 .table {
-  width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
   table-layout: fixed;
-  word-wrap: break-word;
+  min-width: 100%;
 
   [scope=colgroup] {
     background: $darkBlue !important;
     color: white !important;
   }
+  tbody tr th[scope=col] {
+    font-style: italic;
+    font-weight: 400;
+    border-bottom: 2px solid $lighterGrey;
+  }
+
+
 
   .table--container & {
     table-layout: auto;
   }
 
   caption {
-    color: $darkerGrey;
+    color: $darkGrey;
+    font-style: italic;
     text-align: left;
     padding: .5em 0;
   }
@@ -205,11 +226,13 @@ table,
 
 
 @media ( max-width: $breakpointDesktop ) {
-  table:not(.table__data-overview):not(.table__regulation),
-  &.table--condensed,
-  &.table--striped,
-  &.table--hover {
+  table:not(.table__data-overview):not(.table__regulation):not(.table--untouched),
+  &.table--condensed:not(.table__data-overview):not(.table__regulation):not(.table--untouched),
+  &.table--striped:not(.table__data-overview):not(.table__regulation):not(.table--untouched),
+  &.table--hover:not(.table__data-overview):not(.table__regulation):not(.table--untouched) {
     position: relative;
+    width: 100%;
+    // word-break: break-word;
 
     thead {
       display: none;

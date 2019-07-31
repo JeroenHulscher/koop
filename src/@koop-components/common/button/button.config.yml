@@ -18,17 +18,27 @@ variants:
     context:
       text: primaire knop
       modifier: button--primary
-  - name: Secundary
+  - name: Secondary
     status: ready
     context:
       text: Secundaire knop
       modifier: button--secondary
+  - name: Tertiary
+    status: ready
+    context:
+      text: Tertiary knop
+      modifier: button--tertiary
   - name: Doubleline
     status: ready
     context:
       text: Bekijk publicatie
       text2: Opent in een nieuw scherm
       modifier: button--doubleline button--icon-external
+  - name: Arrowed
+    status: ready
+    context:
+      text: Button text
+      modifier: button--primary button--arrowed
   - name: small
     status: prototype
     context:
@@ -81,7 +91,7 @@ variants:
     status: ready
     label: icon download
     context:
-      text: Menu
+      text: Download
       modifier: button--primary button--icon-download-white
   - name: Icon Refresh documents
     status: ready

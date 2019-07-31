@@ -1,8 +1,6 @@
 ---
 title: browse
 context:
-  title: Bladeren
-  intro: Blader door de collecties van overheid.nl.
   items:
     - link: '#'
       text: Wetten

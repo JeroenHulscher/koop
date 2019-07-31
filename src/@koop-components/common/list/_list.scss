@@ -117,13 +117,14 @@ ol {
     margin: 0 0 1em 3.5em;
     position: relative;
   }
-
-  span:not(.highlight) {
-    font-weight: 700;
-    display: inline-block;
-    position: absolute;
-    left: -3.5em;
-    width: 3.5em;
+  p:first-child {
+    > span:not(.highlight) {
+      font-weight: 700;
+      display: inline-block;
+      position: absolute;
+      left: -3.5em;
+      width: 3.5em;
+    }
   }
 
   // Different indentation if the list is more than once.
@@ -135,6 +136,59 @@ ol {
     p {
       margin-left: 2.5em;
     }
+  }
+
+
+}
+
+.list-custom {
+
+  > li,
+  > li li {
+    list-style: none;
+  }
+
+  p {
+    display: block;
+    margin: 0 0 1em 3.5em;
+    position: relative;
+  }
+
+  &__itemtype {
+    font-weight: 700;
+    display: inline-block;
+    position: absolute;
+    left: -3.5em;
+    width: 3.5em;
+  }
+
+  &--size-xs p {
+    margin-left: 2em;
+  }
+  &--size-xs p:first-child > span:first-child {
+    left: -2em;
+    width: -2em;
+  }
+  &--size-s p {
+    margin-left: 2.5em;
+  }
+  &--size-s p:first-child > span:first-child {
+    left: -2.5em;
+    width: -2.5em;
+  }
+  &--size-m p {
+    margin-left: 3em;
+  }
+  &--size-m p:first-child > span:first-child {
+    left: -3em;
+    width: -3em;
+  }
+  &--size-l p {
+    margin-left: 4em;
+  }
+  &--size-l p:first-child > span:first-child {
+    left: -4em;
+    width: -4em;
   }
 }
 
@@ -432,5 +486,20 @@ ol {
         float: right;
       }
     }
+  }
+}
+
+.list {
+  &--loweralpha {
+    list-style-type: lower-alpha;
+  }
+  &--upperalpha {
+    list-style-type: upper-alpha;
+  }
+  &--lowerroman {
+    list-style-type: lower-roman;
+  }
+  &--upperroman {
+    list-style-type: upper-roman;
   }
 }

@@ -1,0 +1,72 @@
+{{ render "@header" header merge=true }}
+
+<div class="container">
+
+  <div class="columns columns--sidebar-left">
+    <div class="column ds-content">
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Navigatie</button>
+      </div>
+
+      <div class="row row--spacer">
+        <div class="jumbotron jumbotron--highlight">
+
+          <div class="jumbotron__content">
+
+            <div class="jumbotron__heading">
+              <p class="jumbotron__subheader">Design system</p>
+              <h1 class="jumbotron__header">Design</h1>
+              <p class="jumbotron__intro">
+                Op deze pagina vind je meer informatie over designlijnen binnen KOOP.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <article class="row row--xxxlarge">
+
+        <h1 id="lettertype">Lettertype</h1>
+        <p>
+          Binnen KOOP gebruiken wij het lettertype "Rijksoverheid Sans". De standaard kopsgrootte is 18px.
+        </p>
+        <section class="banner">
+          <h1>Dit is een heading 1</h1>
+          <p>Rijksoverheid Sans - Size: 48px - line-height: 48px - Bold</p>
+          <h2>Dit is een heading 2</h2>
+          <p>Rijksoverheid Sans - Size: 32px - line-height: 40px - Bold</p>
+          <h3>Dit is een heading 3</h3>
+          <p>Rijksoverheid Sans - Size: 24px - line-height: 24px - Bold</p>
+          <h4>Dit is een heading 4</h4>
+          <p>Rijksoverheid Sans - Size: 18px - line-height: 24px - Bold</p>
+          <h5>Dit is een heading 5</h5>
+          <p>Rijksoverheid Sans - Size: 18px - line-height: 24px - Italic</p>
+          <h6>Dit is een heading 6</h6>
+          <p>Rijksoverheid Sans - Size: 18px - line-height: 24px</p>
+        </section>
+
+      </article>
+
+      <article class="row row--xxxlarge">
+        <h1 id="kleuren">Kleuren</h1>
+        {{render "@colors"}}
+      </article>
+
+
+    </div>
+
+    <div class="column column--sidebar">
+
+      {{render "@nav" navMenuContext }} {{render "@nav" navContentContext }}
+
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+        <span class="visually-hidden">Sluiten</span>
+      </button>
+      <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
+    </div>
+  </div>
+
+

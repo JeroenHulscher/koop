@@ -1,0 +1,154 @@
+name: DS - Components
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Componenten
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      href: /
+      sub: true
+      subItems:
+        - stitle: Content
+          href: content.html
+        - stitle: Design
+          href: ontwerpprincipes.html
+        - stitle: Components
+          href: componenten.html
+          sactive: true
+  inputDefault:
+    type: email
+  inputHasError:
+    type: email
+    haserror: true
+    describedby: 12341242
+    value: koopkoop.overheid.nl
+  inputIsDisabled:
+    type: email
+    disabled: true
+    fieldPlaceholder: Ingevulde waarde
+  navComponentsContext:
+    items:
+    - title: Components
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Address
+          href: address
+        - stitle: Alert
+          href: alert
+        - stitle: Article header
+          href: articleheader
+        - stitle: Banner
+          href: banner
+        - stitle: Blockquote
+          href: blockquote
+        - stitle: Browse
+          href: browse
+        - stitle: Buttons
+          href: buttons
+        - stitle: CopyURL
+          href: copyurl
+        - stitle: Characteristics
+          href: characteristics
+        - stitle: Collapsible
+          href: collapsible
+        - stitle: Definitionlist
+          href: definitionlist
+        - stitle: Del / Ins
+          href: delins
+        - stitle: Grid & containers
+          href: gridcontainers
+        - stitle: Figure
+          href: figure
+        - stitle: Footnote
+          href: footnote
+        - stitle: Forms
+          href: forms
+        - stitle: Highlight
+          href: highlight
+        - stitle: Jumbotron
+          href: jumbotron
+        - stitle: Labels
+          href: labels
+        - stitle: Link
+          href: link
+        - stitle: Lists
+          href: lists
+        - stitle: Modal
+          href: modal
+        - stitle: Navigation
+          href: navigation
+        - stitle: Pageactions
+          href: pageactions
+        - stitle: Pre
+          href: pre
+        - stitle: Resultlist
+          href: resultlist
+        - stitle: Sort
+          href: sort
+        - stitle: Steps
+          href: steps
+        - stitle: Table
+          href: table
+        - stitle: Tabs
+          href: tabs
+        - stitle: Themeblock
+          href: themeblock
+        - stitle: Tooltip
+          href: tooltip
+        - stitle: Treeview
+          href: treeview
+  subSel1:
+    name: Default
+    id: 1131312
+    type: span
+    linkText: Selecteer
+    modalTitle: Selecteer ministeries
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: 11123
+        id: 1123
+        title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+        short: lnv
+        checked: checked
+      - Option: 2123
+        id: 2123
+        title: Onderwijs, Cultuur en Wetenschap (ocw)
+        short: ocw
+      - Option: 3123
+        id: 3123
+        title: Sociale Zaken en Werkgelegenheid (szw)
+        short: szw
+  subSel2:
+    name: Default
+    id: 113
+    type: span
+    linkText: Selecteer onderwerp(en)
+    modalTitle: Selecteer ministeries
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: 1112323
+        id: 112323
+        title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+        short: lnv
+      - Option: 212323
+        id: 212323
+        title: Onderwijs, Cultuur en Wetenschap (ocw)
+        short: ocw
+      - Option: 312323
+        id: 312323
+        title: Sociale Zaken en Werkgelegenheid (szw)
+        short: szw

@@ -1,6 +1,7 @@
 .header {
   border-bottom: .5em solid $headerBorderColor;
   position: relative;
+  margin-top: -2em;
 
   .skiplinks {
     position: relative;
@@ -114,6 +115,7 @@
       padding: .625em 1em;
       display: block;
       font-size: 1.125rem;
+      word-break: normal;
 
       &:hover {
         color: $headerLinkCurrentColor;

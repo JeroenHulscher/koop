@@ -32,6 +32,12 @@
   margin: 0 !important;
 }
 
+.u-margin {
+  &--m {
+    margin-bottom: 1em !important;
+  }
+}
+
 .block-element {
   display: block !important;
   width: 100%;
@@ -131,7 +137,7 @@
 }
 
 .u-fontsize--s {
-  font-size: 0.9em;
+  font-size: 0.9em !important;
 }
 
 .u-amount {

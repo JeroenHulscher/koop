@@ -1,0 +1,28 @@
+---
+label: Checkbox Select all
+status: prototype
+context:
+  id: 1
+  checkboxes:
+    options:
+    - id: checkbox-20
+      text: Haarlem
+      name: onderwerp
+    - id: checkbox-21
+      text: Haarlemmermeerdam
+      name: onderwerp
+    - id: checkbox-22
+      text: Utrecht
+      name: onderwerp
+    - id: checkbox-23
+      text: Groningendam
+      name: onderwerp
+    - id: checkbox-24
+      text: Hattem
+      name: onderwerp
+    - id: checkbox-25
+      text: Amsterdam
+      name: onderwerp
+    - id: checkbox-26
+      text: Rotterdam
+      name: onderwerp

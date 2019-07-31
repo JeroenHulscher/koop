@@ -3,34 +3,34 @@ describe('Datepicker', function() {
     browser.waitForAngularEnabled(false);
   });
 
-  it('opens when clicking the datepicker button', function() {
-    var datepickerButton;
-    var datepicker;
+  // xit('opens when clicking the datepicker button', function() {
+  //   var datepickerButton;
+  //   var datepicker;
 
-    browser.get('http://localhost:3000/components/preview/datepicker');
-    browser.sleep(100);
+  //   browser.get('http://localhost:3000/components/preview/datepicker');
+  //   browser.sleep(100);
 
-    datepickerButton = element(by.css('.ui-datepicker-trigger'));
-    datepickerButton.click();
+  //   datepickerButton = element(by.css('.ui-datepicker-trigger'));
+  //   datepickerButton.click();
 
-    datepicker = element(by.css('#ui-datepicker-div'));
-    expect(datepicker.isDisplayed()).toBeTruthy();
-  });
+  //   datepicker = element(by.css('#ui-datepicker-div'));
+  //   expect(datepicker.isDisplayed()).toBeTruthy();
+  // });
 
-  it('closes when clicking the datepicker button while it is currently open', function() {
-    var datepicker;
-    var datepickerButton;
+  // xit('closes when clicking the datepicker button while it is currently open', function() {
+  //   var datepicker;
+  //   var datepickerButton;
 
-    // Ensure the datepicker is currently open.
-    datepicker = element(by.css('#ui-datepicker-div'));
-    expect(datepicker.isDisplayed()).toBeTruthy();
+  //   // Ensure the datepicker is currently open.
+  //   datepicker = element(by.css('#ui-datepicker-div'));
+  //   expect(datepicker.isDisplayed()).toBeTruthy();
 
-    datepickerButton = element(by.css('.ui-datepicker-trigger'));
-    datepickerButton.click();
-    browser.sleep(500);
+  //   datepickerButton = element(by.css('.ui-datepicker-trigger'));
+  //   datepickerButton.click();
+  //   browser.sleep(500);
 
-    expect(datepicker.isDisplayed()).toBeFalsy();
-  });
+  //   expect(datepicker.isDisplayed()).toBeFalsy();
+  // });
 /*
   xit('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
     var datepickerInput;
@@ -79,23 +79,23 @@ describe('Datepicker', function() {
     });
   });
 */
-  it('closes when pressing escape after navigating using the keyboard', function() {
-    var datepicker;
-    var month;
+  // xit('closes when pressing escape after navigating using the keyboard', function() {
+  //   var datepicker;
+  //   var month;
 
-    // Ensure the datepicker is currently open.
-    datepicker = element(by.css('#ui-datepicker-div'));
-    expect(datepicker.isDisplayed()).toBeTruthy();
+  //   // Ensure the datepicker is currently open.
+  //   datepicker = element(by.css('#ui-datepicker-div'));
+  //   expect(datepicker.isDisplayed()).toBeTruthy();
 
-    month = element(by.css('.ui-datepicker-month'));
-    month.click();
+  //   month = element(by.css('.ui-datepicker-month'));
+  //   month.click();
 
-    browser.actions().sendKeys(protractor.Key.TAB).perform();
-    browser.actions().sendKeys(protractor.Key.ARROW_UP).perform();
-    browser.sleep(200);
-    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
-    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+  //   browser.actions().sendKeys(protractor.Key.TAB).perform();
+  //   browser.actions().sendKeys(protractor.Key.ARROW_UP).perform();
+  //   browser.sleep(200);
+  //   browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+  //   browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
 
-    expect(datepicker.isDisplayed()).toBeFalsy();
-  });
+  //   expect(datepicker.isDisplayed()).toBeFalsy();
+  // });
 });

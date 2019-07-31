@@ -91,6 +91,16 @@ fieldset {
 .form {
   text-align: left;
 
+  &__errors {
+    @extend .alert;
+    @extend .alert--warning;
+
+    ul {
+      @extend .list--linked;
+      margin: 0;
+    }
+  }
+
   &__row {
     margin-bottom: .75em;
     position: relative;
@@ -132,6 +142,17 @@ fieldset {
       position: relative;
       top: 0.2em;
     }
+  }
+
+  &__error {
+    font-weight: bold;
+    color: red;
+  }
+
+  &__hint {
+    font-size: 90%;
+    font-style: italic;
+    margin: 0;
   }
 
   &__input {
