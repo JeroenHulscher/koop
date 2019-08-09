@@ -1,5 +1,6 @@
 .input-checkbox {
   margin-bottom: .5em;
+
 }
 
 .checkbox__input {
@@ -12,8 +13,10 @@
     }
   }
 
+
   &:focus + label {
-    outline: 2px solid $focus;
+    outline-color: $focus;
+    outline-offset: 0;
   }
 
   &:checked + label:before {
@@ -34,6 +37,9 @@
 .checkbox__label {
   position: relative;
   padding: 0 0 0 2.5em;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: outline-offset $fastEaseInOut;
 
   &::before {
     background: $white;
