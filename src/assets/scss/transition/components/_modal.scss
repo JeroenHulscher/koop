@@ -16,9 +16,17 @@
     }
   }
 
-  &__close {
+  &__close,
+  &__close:hover {
     right: 3em;
     top: 2.5em;
+    background: {
+      image: $iconCrossBlue;
+      position: center center;
+    };
+  }
+  &__close:hover {
+    opacity: 0.8;
   }
 
   @media ( min-width: $breakpointDesktop ) {
