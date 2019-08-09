@@ -1,6 +1,8 @@
 .jumbotron {
   @extend .group;
   padding: 0 1em;
+  margin-bottom: 1em;
+  position: relative;
 
   @media (min-width: $breakpointDesktop) {
     padding: 0 4em;
@@ -110,12 +112,24 @@
       }
     }
 
+
   }
 
   &__intro {
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
+    }
+  }
+
+  @media (min-width: $breakpointDesktop) {
+    &--flexed &__content {
+      padding-bottom: 2em;
+    }
+    &--flexed .cta {
+      position: absolute;
+      bottom: 3.5em;
+      left: 4em;
     }
   }
 
