@@ -1,8 +1,15 @@
+$icons: (
+  bin: $removeBlueIcon,
+  edit: $editIconBlue,
+  list: $iconList,
+  refresh: $refreshIcon
+);
+
 .icon {
-  padding-left: 1.5em;
+  padding-left: 1.75em;
   background: {
     position: left 50%;
-    size: 1em;
+    size: 1.25em;
     repeat: no-repeat;
   }
   &--large {
@@ -298,5 +305,12 @@
       background-size: .5em;
       padding-left: 1em;
     }
+  }
+}
+
+@each $name,
+$value in $icons {
+  .icon--#{$name} {
+    background-image: $value;
   }
 }
