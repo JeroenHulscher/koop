@@ -1,0 +1,204 @@
+---
+label: CVDR - Homepage uitgebreid
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  inputsubmitContext:
+    button: Zoek verdagen
+    placeholder: Vul hier uw zoekwoord(en) in
+  postcodeInput:
+    fieldLabelVisible: true
+    fieldPlaceholder: Bijv. 1234 AB
+    fieldLabel: Postcode
+  wordintitelInput:
+    fieldLabelVisible: true
+    fieldPlaceholder: Zoekwoord
+    fieldLabel: Zoekwoord in titel
+  wordintextInput:
+    fieldLabelVisible: true
+    fieldPlaceholder: Zoekwoord
+    fieldLabel: Woord in tekst
+  wetgegevensInput:
+    fieldLabelVisible: true
+    fieldPlaceholder: Zoekwoord
+    fieldLabel: Wetstechnische gegevens
+  subselectionGemContext:
+    linkText: Selecteer gemeenten
+    id: 20
+    modalTitle: Selecteer Gemeenten
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2237
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3237
+        title: Nederland
+        short: Nederland
+  subselectionProContext:
+    linkText: Selecteer provincies
+    id: 21
+    modalTitle: Selecteer provincies
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 1
+        id: 1346
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2346
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3346
+        title: Nederland
+        short: Nederland
+  subselectionWatContext:
+    linkText: Selecteer waterschappen
+    id: 1900
+    modalTitle: Selecteer waterschappen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 4
+        id: 4455
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5455
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6455
+        title: Nederland
+        short: Nederland
+  subselectionRegContext:
+    linkText: Selecteer regionale samenwerkingsorganen
+    id: 119
+    modalTitle: Selecteer regionale samenwerkingsorganen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 42
+        id: 4564
+        title: Spanje
+        short: Spanje
+      - Option: 52
+        id: 5564
+        title: Griekenland
+        short: Griekenland
+      - Option: 62
+        id: 6564
+        title: Nederland
+        short: Nederland
+  subselectionDeeContext:
+    linkText: Selecteer deelgemeenten / stadsdelen
+    id: 122
+    modalTitle: Selecteer deelgemeenten / stadsdelen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 41
+        id: 4563
+        title: Spanje
+        short: Spanje
+      - Option: 51
+        id: 5563
+        title: Griekenland
+        short: Griekenland
+      - Option: 61
+        id: 6563
+        title: Nederland
+        short: Nederland
+  subselectionBesContext:
+    linkText: Selecteer BES eilanden
+    id: 125
+    modalTitle: Selecteer BES eilanden
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 44
+        id: 4562
+        title: Spanje
+        short: Spanje
+      - Option: 55
+        id: 5562
+        title: Griekenland
+        short: Griekenland
+      - Option: 66
+        id: 6562
+        title: Nederland
+        short: Nederland
+  subselectionOndContext:
+    linkText: Selecteer onderwerpen
+    id: 1288
+    modalTitle: Selecteer onderwerpen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 444
+        id: 4561
+        title: Spanje
+        short: Spanje
+      - Option: 555
+        id: 5561
+        title: Griekenland
+        short: Griekenland
+      - Option: 666
+        id: 6561
+        title: Nederland
+        short: Nederland
+  onderwerpContext:
+    moreless: true
+    searchFilter: true
+    options:
+    - id: checkbox-20
+      text: Alle
+      name: onderwerp
+    - id: checkbox-20
+      text: Vandaag
+      name: onderwerp
+    - id: checkbox-20
+      text: Afgelopen week
+      name: onderwerp
+    - id: checkbox-20
+      text: Afgelopen maand
+      name: onderwerp
+    - id: checkbox-20
+      text: Afgelopen 3 maanden
+      name: onderwerp
+    - id: checkbox-20
+      text: Zelf een periode kiezen
+      name: onderwerp
+

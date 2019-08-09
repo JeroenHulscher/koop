@@ -1,0 +1,118 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered-medium">
+        <div class="row">
+          <p class="jumbotron__subheader">Lokake wet- en regelgeving</p>
+          <h1 class="jumbotron__header h2">Raadpleeg 4567876 regelingen van decentrale overheden</h1>
+        </div>
+
+        <form class="form">
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+              <div class="form__row form__row--medium">
+                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoorden in" />
+              </div>
+            </fieldset>
+          </div>
+          <div class="columns columns--dominant">
+            <div class="column">
+              <fieldset>
+                <legend>Locatie</legend>
+                <div class="form__row">
+                  {{ render "@input-text" postcodeInput }}
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Woord of zinsdeel</legend>
+                <div class="form__row">
+                  {{ render "@input-text" wordintitelInput }}
+                </div>
+                <div class="form__row">
+                  {{ render "@input-text" wordintextInput }}
+                </div>
+                <div class="form__row">
+                  {{ render "@input-text" wetgegevensInput }}
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Geldigheidsperiode</legend>
+                <div class="form__row">
+                  <label>Van</label>
+                  {{ render "@datepicker"  }}
+                </div>
+                <div class="form__row">
+                  <label>Tot</label>
+                  {{ render "@datepicker"  }}
+                </div>
+              </fieldset>
+            </div>
+            <div class="column">
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Organisaties</legend>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Gemeenten</h3>
+                    {{render "@subselection" subselectionGemContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Provincies</h3>
+                    {{render "@subselection" subselectionProContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Waterschappen</h3>
+                    {{render "@subselection" subselectionWatContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
+                    {{render "@subselection" subselectionRegContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
+                    {{render "@subselection" subselectionDeeContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">BES eiland</h3>
+                    {{render "@subselection" subselectionBesContext }}
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Onderwerpen</legend>
+                  <div class="form__row">
+                    {{render "@subselection" subselectionOndContext }}
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="columns columns--vcenter">
+            <div class="column">
+              <a href="#" class="icon icon--bin">Alle filters herstellen</a>
+            </div>
+            <div class="column align-right">
+              <button type="submit" class="button button--primary">Zoeken</button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}

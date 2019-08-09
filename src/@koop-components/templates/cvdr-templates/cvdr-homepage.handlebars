@@ -1,0 +1,103 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--centered">
+
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">Zoek een lokale wet- en regelgeving</p>
+          <h1 class="jumbotron__header">Lokale wet- en regelgevingen</h1>
+          <p class="jumbotron__intro">
+               Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+          </p>
+        </div>
+
+        <form class="form form__row form__row--medium">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+            <div class="columns">
+              <div class="column form__row column-d-3">
+                {{ render "@input-text--medium" inputPostcode merge=true }}
+              </div>
+              <div class="column form__row column-d-9">
+                {{ render "@input-text--medium" inputZoekwoord merge=true }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="">
+          <div class="columns">
+            <div class="u-order--d2 align-right form__row">
+              <button type="submit" class="form__button button button--primary button--large">Zoeken</button>
+            </div>
+            <div class="u-order--d1 u-nomargin">
+              <a href="#" class="cta">Uitgebreid zoeken</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row row--large">
+
+    <h2>Over de verdragenbank</h2>
+    <div class="column-count column-count--half">
+      <p>
+        De Verdragenbank bevat de gegevens van de verdragen, waarbij het Koninkrijk der Nederlanden partij is. Verdragsgegevens zijn
+        onder andere de datum en de plaats van de totstandkoming, de datum van inwerkingtreding, de vindplaats van de verdragstekst,
+        de partijen (landen, gebiedsdelen en internationale organisaties) en de
+      </p>
+      <p>
+        datum van bekrachtiging, de gelding voor Europees Nederland, Aruba, Curaçao, Sint Maarten en/of het Caribische deel van Nederland
+        (Bonaire, Sint Eustatius, Saba), eventuele voorbehouden, verklaringen en bezwaren en de verbanden tussen verdragen.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="row row--large">
+    <div class="columns">
+      {{!-- <div class="column"> --}}
+        <div class="jumbotron jumbotron--highlight jumbotron--flexed">
+          <div class="jumbotron__content">
+            <p class="jumbotron__subheader jumbotron__subheader--subtle">Inhoud</p>
+            <h3 class="jumbotron__header">Wat kunt u hier vinden?</h3>
+            <a href="#" class="cta">Lees meer <span class="visually-hidden">over wat u kunt vinden op deze website</span></a>
+          </div>
+        </div>
+      {{!-- </div> --}}
+      {{!-- <div class="column"> --}}
+        <div class="jumbotron jumbotron--highlight jumbotron--flexed">
+          <div class="jumbotron__content">
+            <p class="jumbotron__subheader jumbotron__subheader--subtle">Inhoud</p>
+            <h3 class="jumbotron__header">Welke organisaties voldoen nog niet?</h3>
+            <a href="#" class="cta">Lees meer <span class="visually-hidden">over welke organisaties niet voldoen</span></a>
+          </div>
+        </div>
+      {{!-- </div> --}}
+      {{!-- <div class="column"> --}}
+        <div class="jumbotron jumbotron--highlight jumbotron--flexed">
+          <div class="jumbotron__content">
+            <p class="jumbotron__subheader jumbotron__subheader--subtle">Inhoud</p>
+            <h3 class="jumbotron__header">Neem contact op</h3>
+            <a href="#" class="cta">Neem contact op</a>
+          </div>
+        </div>
+      {{!-- </div> --}}
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}
