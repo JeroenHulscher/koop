@@ -15,11 +15,14 @@
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     this.config.type = this.config.type || 'span';
     this.config.maxShow = this.config.maxShow || false;
+    this.triggerClassDefault = 'icon--list';
+    this.triggerClassActive = 'icon--edit';
     this.init();
   };
 
   formSubselection.prototype.init = function() {
     this.trigger = onl.dom.$( '.subselection__trigger', this.element )[0];
+    this.trigger.classList.add(this.triggerClassDefault);
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
@@ -159,8 +162,12 @@
 
     if ( length > 0 ) {
       this.trigger.innerText = this.config.triggerOnChangeText || 'Aanpassen';
+      this.trigger.classList.remove(this.triggerClassDefault);
+      this.trigger.classList.add(this.triggerClassActive);
     } else {
       this.trigger.innerText = this.triggerOnLoadText;
+      this.trigger.classList.remove(this.triggerClassActive);
+      this.trigger.classList.add(this.triggerClassDefault);
     }
   };
 
