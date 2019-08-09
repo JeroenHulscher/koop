@@ -1,12 +1,15 @@
 $gutter: 1em;
-$gutter--dominant: 3em;
+$gutter--dominant: 4em;
 
-.column-count {
-  column-count:2; column-gap: 4em;
+@media ( min-width: $breakpointDesktop ) {
+  .column-count {
+    column-count:2; column-gap: 4em;
+  }
+  .column-count--half {
+    column-count:2;
+  }
 }
-.column-count--half {
-  column-count:2;
-}
+
 .row {
   margin-bottom: 1.5em;
 
@@ -46,7 +49,8 @@ $gutter--dominant: 3em;
     }
   }
 
-  &--center {
+  &--center,
+  &--vcenter {
     align-items: center;
     justify-content: center;
   }
