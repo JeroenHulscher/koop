@@ -76,46 +76,59 @@
     </li>
   </ol>
   <div class="table__container">
-    <table class="table table--untouched table--striped table__data-overview">
-      <caption>Dit is de caption van de tabel, met een [caption]</caption>
+    <table class="table table--untouched table--striped table__data-overview" aria-describedby="tableDes2">
+      <caption>Zebra1 en pgwide 0 (titel van de tabel)</caption>
       <col>
       <colgroup span="2"></colgroup>
-      <tr>
-        <th colspan="2" scope="colgroup">Ontwerplevensduur</th>
-        <th colspan="1" scope="colgroup">Toepassing</th>
-      </tr>
-      <tr>
-        <th scope="col">Klasse</th>
-        <th scope="col">Jaren</th>
-        <th scope="col"></th>
-      </tr>
-      <tr>
-        <td>1A</td>
-        <td>5</td>
-        <td>Tijdelijke bouwwerken, anders dan een woonfunctie: waarbij de termijn genoemd in de omgevingsvergunning als bedoeld in PM
-        niet langer is dan 5 jaar of die vergunningsvrij zijn voor de activiteit bouwen als bedoeld in PM. Voor bouwwerken in gevolgklasse
-        CC2 of CC3: binnen deze klasse moeten de in rekening te brengen belastingen zijn gebaseerd op een referentieperiode van 15
-        jaar. Voor CC1 is dit 5 jaar.</td>
-      </tr>
-      <tr>
-        <td>1B</td>
-        <td>15</td>
-        <td>Tijdelijke bouwwerken, anders dan de bouwwerken die vallen in klasse 1A.</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>15</td>
-        <td>Constructies en bouwwerken voor landbouw en tuinbouw en soortgelijke toepassingen, alleen voor productiedoeleinden, waarbij
-        het aantal personen dat in het gebouw aanwezig is, beperkt is; 2 15 Industriebouwwerken, wel of niet tijdelijk, met 1 of
-        2 bouwlagen.</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>50</td>
-        <td>Bouwwerken anders dan bedoeld onder 1A, 1B en 2.</td>
-      </tr>
+      <thead>
+        <tr>
+          <th colspan="2" scope="colgroup">Ontwerplevensduur</th>
+          <th colspan="1" scope="colgroup">Toepassing</th>
+        </tr>
+      </thead>
+      <body>
+        <tr>
+          <th scope="col">Klasse</th>
+          <th scope="col">Jaren</th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <td>1A</td>
+          <td>5</td>
+          <td>Tijdelijke bouwwerken, anders dan een woonfunctie: waarbij de termijn genoemd in de omgevingsvergunning als bedoeld in PM
+          niet langer is dan 5 jaar of die vergunningsvrij zijn voor de activiteit bouwen als bedoeld in PM. Voor bouwwerken in gevolgklasse
+          CC2 of CC3: binnen deze klasse moeten de in rekening te brengen belastingen zijn gebaseerd op een referentieperiode van 15
+          jaar. Voor CC1 is dit 5 jaar.</td>
+        </tr>
+        <tr>
+          <td>1B</td>
+          <td>15</td>
+          <td>Tijdelijke bouwwerken, anders dan de bouwwerken die vallen in klasse 1A.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>15</td>
+          <td>Constructies en bouwwerken voor landbouw en tuinbouw en soortgelijke toepassingen, alleen voor productiedoeleinden, waarbij
+          het aantal personen dat in het gebouw aanwezig is, beperkt is; 2 15 Industriebouwwerken, wel of niet tijdelijk, met 1 of
+          2 bouwlagen.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>50</td>
+          <td>Bouwwerken anders dan bedoeld onder 1A, 1B en 2.</td>
+        </tr>
+      </body>
+      <tfoot>
+        <tr>
+          <td colspan="3">Dit is de voetnote</td>
+        </tr>
+      </tfoot>
     </table>
+    <div id="tableDes2">
+      Dit is een tabel bron
+    </div>
   </div>
+
 
   <div class="table__container">
     <table class="table table--untouched" aria-describedby="table2Summary">
