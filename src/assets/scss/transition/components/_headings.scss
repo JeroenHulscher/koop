@@ -102,7 +102,7 @@ p {
   @extend .h3;
 }
 .docAfdeling {
-  @extend .h4;
+  @extend .h3;
 }
 .docParagraaf {
   @extend .h5;
@@ -115,6 +115,7 @@ p {
 }
 .docArtikel {
   font-weight: bold;
+  font-style: normal;
 }
 
 .docFormeleInhoud {
@@ -123,6 +124,8 @@ p {
 .docFormeleDivisie {
   font-weight: bold;
 }
-.docDivisie {
-  font-weight: bold;
+
+.docTussenkop {
+  font-style: italic;
+  font-weight: normal;
 }
