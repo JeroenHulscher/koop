@@ -6,11 +6,11 @@ h1,h2,h3,h4,p {
 h1,
 .h1 {
   margin-bottom: em(6);
-  font-size: 2.25rem;
-  line-height: 2.25rem;
+  font-size: 1.85em;
+  line-height: 1em;
   @media (min-width: $breakpointDesktop) {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 2.7em;
+    line-height: 1em;
     margin-bottom: .5em;
   }
 
@@ -19,14 +19,15 @@ h1,
   }
 
   &__sub {
-    font-size: 1.5rem;
+    font-size: 0.45em;
   }
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: em(29);
   margin-bottom: 0.625em;
+  line-height: 1em;
   &--slim {
     margin-bottom: 0.25em;
     margin-top: 0;
@@ -35,8 +36,8 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: em(22);
+  line-height: 1.25em;
   margin-bottom: 0.75em;
 }
 
@@ -106,26 +107,33 @@ p {
 }
 .docParagraaf {
   @extend .h5;
+  font-weight: bold;
 }
 .docSubparagraaf {
   @extend .h5;
+  font-weight: bold;
 }
 .docSubsubparagraaf {
   @extend .h5;
+  font-weight: bold;
 }
 .docArtikel {
+  @extend .h4;
   font-weight: bold;
   font-style: normal;
 }
 
 .docFormeleInhoud {
+  @extend .h4;
   font-weight: bold;
 }
 .docFormeleDivisie {
+  @extend .h4;
   font-weight: bold;
 }
 
 .docTussenkop {
+  @extend .h4;
   font-style: italic;
   font-weight: normal;
 }
