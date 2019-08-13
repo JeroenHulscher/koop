@@ -172,14 +172,14 @@ variants:
   - name: Custom
     status: ready
     context:
-      modifier: list-custom--size-l
+      modifier: list-custom--size-xs
       custom: true
       items:
-      - text: <p><span class="list-custom__itemtype">1</span>Met de volgende classnamen is de afstand zelf te bepalen tussen het nummer en de omschrijving .list-custom--size-xs, .list-custom--size-s, .list-custom--size-m, .list-custom--size-l. </p>
-      - text: <p><span class="list-custom__itemtype">2</span>2 item</p>
-      - text: <p><span class="list-custom__itemtype">3</span>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
+      - text: <span class="list-custom__itembullet">1</span><p>Met de volgende classnamen is de afstand zelf te bepalen tussen het nummer en de omschrijving .list-custom--size-xs, .list-custom--size-s, .list-custom--size-m, .list-custom--size-l. </p>
+      - text: <span class="list-custom__itembullet">2</span><p>2 item</p>
+      - text: <span class="list-custom__itembullet">4</span><p>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
         subitems:
-          - text: <p><span class="list-custom__itemtype">a.</span>1e subitem</p>
-          - text: <p><span class="list-custom__itemtype">b.</span>2e subitem</p>
-      - text: <p><span class="list-custom__itemtype">4</span>4e item</p>
+          - text: <span class="list-custom__itembullet">4.1</span><p>1e subitem</p>
+          - text: <span class="list-custom__itembullet">4.3</span><p>2e subitem</p>
+      - text: <span class="list-custom__itembullet">7</span><p>4e item</p>
 
