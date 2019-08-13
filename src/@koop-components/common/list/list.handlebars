@@ -33,13 +33,13 @@
         {{/each }}
         </ol>
       {{else}}
-        <ul>
+         {{#if ../custom}}<ul class="list-custom">{{else}}<ul>{{/if}}
           {{#each subitems }}
             <li>{{{text}}}</li>
           {{/each }}
         </ul>
       {{/if }}
-    </li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">
+    </li>
     {{else}}
       <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{#if color}}<span class="{{color}}"></span>{{/if}}{{{ text }}}</li>
     {{/if }}
