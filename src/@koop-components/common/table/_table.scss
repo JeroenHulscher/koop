@@ -83,6 +83,11 @@ table,
     vertical-align: top;
   }
 
+  .rotated {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+  }
+
   &__container {
     overflow: auto;
   }
@@ -221,6 +226,15 @@ table,
       border-bottom: 0;
       }
     }
+  }
+}
+
+table.table--borderless {
+  border: 0;
+  thead th,td,
+  tbody th td,
+  tbody tr td {
+    border: 0;
   }
 }
 
