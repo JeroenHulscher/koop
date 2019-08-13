@@ -13,6 +13,10 @@
     padding: 2.5em 1em;
 
     @media (min-width: $breakpointDesktop) {
+      padding: 3.5em 2em;
+    }
+
+    @media (min-width: $breakpointDesktopL) {
       padding: 3.5em 4em;
     }
   }
@@ -122,6 +126,7 @@
     }
   }
 
+
   @media (min-width: $breakpointDesktop) {
     &--flexed &__content {
       padding-bottom: 2em;
@@ -129,6 +134,11 @@
     &--flexed .cta {
       position: absolute;
       bottom: 3.5em;
+      left: 2em;
+    }
+  }
+  @media (min-width: $breakpointDesktopL) {
+    &--flexed .cta {
       left: 4em;
     }
   }
