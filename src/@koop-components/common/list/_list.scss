@@ -142,6 +142,7 @@ ol {
 }
 
 .list-custom {
+  padding-left: 0;
 
   li {
     list-style: none;
@@ -154,7 +155,7 @@ ol {
     font-weight: 700;
     display: inline-block;
     position: absolute;
-    left: -1em;
+    left: 0;
     width: 3.5em;
   }
 
@@ -162,28 +163,26 @@ ol {
     padding-left: 2em;
   }
   &--size-xs &__itemtype {
-    left: -2em;
-    width: -2em;
+    left: 0;
+    width: 2em;
   }
   &--size-s li {
     padding-left: 3.5em;
   }
   &--size-s &__itemtype {
-    left: -2.5em;
+    left: 0;
     width: 2.5em;
   }
   &--size-m li {
     padding-left: 4em;
   }
   &--size-m &__itemtype {
-    left: -3em;
     width: 3em;
   }
   &--size-l li {
     padding-left: 5em;
   }
   &--size-l &__itemtype {
-    left: -4em;
     width: 4em;
   }
 }
