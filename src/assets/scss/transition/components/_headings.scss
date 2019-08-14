@@ -1,12 +1,16 @@
 // much needed;
-h1,h2,h3,h4,p {
+h1,h2,h3,h4,h5,h6 {
+  color: $darkBlue;
+}
+
+h1,h2,h3,h4,h5,h6,p {
   margin-top: 0;
 }
 
 h1,
 .h1 {
   margin-bottom: em(6);
-  font-size: 1.85em;
+  font-size: 1.7em;
   line-height: 1em;
   @media (min-width: $breakpointDesktop) {
     font-size: 2.7em;
