@@ -2,9 +2,23 @@
 label: Definitionlist
 context:
   items:
-    - type: Status
-      value: Compleet
+        - type: Thema
+          value: Huisvesting
+          modifier: icon--housing
+        - type: Status
+          value: Beschikbaar
+        - type: Toegang
+          value: Publiek
+        - type: Update
+          value: 8-1-2018
+        - type: Licentie
+          value: CC-0
+        - type: Taal
+          value: Nederlands
 variants:
+  - name: horizontal
+    context:
+      modifier: "dl--horizontal"
   - name: data
     context:
       modifier: "columns--data"
