@@ -1,5 +1,7 @@
 $gutter: 1em;
-$gutter--dominant: 4em;
+$gutter-sm: 2em;
+$gutter--med: 4em;
+$gutter--lg: 6em;
 
 @media ( min-width: $breakpointDesktop ) {
   .column-count {
@@ -64,10 +66,11 @@ $gutter--dominant: 4em;
     }
   }
 
-  &--dominant {
+  &--dominant,
+  &--gutter-med {
     @media ( min-width: $breakpointDesktop ) {
       > * {
-        margin-left: $gutter--dominant;
+        margin-left: $gutter--med;
       }
     }
   }
@@ -89,8 +92,8 @@ $gutter--dominant: 4em;
   }
 
   .column {
-    &__content {
-      &--padded {
+    &--padded {
+      &-med {
         @media ( min-width: $breakpointDesktop ) {
           padding-top: em(25);
           padding-left: em(50);
