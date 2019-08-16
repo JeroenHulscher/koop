@@ -1,0 +1,125 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" role="main" id="content">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Pagina navigatie</button>
+      </div>
+
+      <div class="align-right">
+        <ul class="list list--inline">
+          <li><a href="#" class="link-iconed link-iconed--print">Printen</a></li>
+          <li><a href="#" class="link-iconed link-iconed--download">Downloaden</a></li>
+          <li><a href="#" class="link-iconed link-iconed--mail">Abonneren</a></li>
+        </ul>
+      </div>
+
+      <p><span class="label label--danger">Regeling vervallen per: 01-01-2019</span></p>
+
+      <h1>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot
+      vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016</h1>
+
+      <h2 id="wet">Gegevens van de regeling</h2>
+
+      <table class="table__data-overview">
+        <tbody>
+          <tr>
+            <th>Organisatie</th>
+            <td>Zuid-Holland</td>
+          </tr>
+          <tr>
+            <th>Organisatietype</th>
+            <td>Provincie</td>
+          </tr>
+          <tr>
+            <th>Officiële naam regeling</th>
+            <td>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot
+            vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016</td>
+          </tr>
+          <tr>
+            <td colspan="2">Etc.</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2 id="tekst">Opmerkingen met betrekking tot de regeling</h2>
+
+      <p>
+         Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+        voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+        inwerking treedt.
+      </p>
+
+      <h2>Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd</h2>
+
+      <p>
+        <a href="#">http://decentrale.regelgeving.overheid.nl/cvdr/XHTMLoutput/Historie/Zuid-Holland/468224/CVDR468224_1.html</a>
+      </p>
+
+      <h2>Regelgeving die op deze regeling is gebaseerd (gedelegeerde regelgeving)</h2>
+
+      <p>Geen.</p>
+
+      <h2>Overzicht van in de tekst verwerkte wijzigingen</h2>
+
+      <div class="table__container">
+        <table class="table__data-overview">
+          <thead>
+            <tr>
+              <th>Datum inwerkingtreding</th>
+              <th>Terugwerkende kracht tot en met</th>
+              <th>Datum uitwerkingtreding</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>07-03-2019</td>
+              <td>07-03-2019</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>07-03-2019</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row row--large">
+        {{ render "@alert" alertFoutief }}
+      </div>
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
+
+        <div class="modal-sidebar__content">
+          <p>
+            <a href="#" class="icon icon--arrow-cta-right">Terug naar zoekresultaten</a>
+          </p>
+          {{render "@nav" navVerdragContext }}
+
+          <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

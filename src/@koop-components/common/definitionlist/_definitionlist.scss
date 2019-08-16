@@ -55,4 +55,10 @@ dl,
     }
   }
 
+  &--condensed {
+    dt, dd {
+      margin-bottom: 0;
+    }
+  }
+
 }

@@ -8,7 +8,7 @@
       {{/if}}
 
       {{#if label }}
-        <p class="result--label"><i><span class="label">{{ label }}</span></i></p>
+        <p class="result--label"><i><span class="label {{#if labelType}}label--{{labelType}}{{/if}}">{{ label }}</span></i></p>
       {{/if}}
 
       {{#if theme }}
@@ -27,6 +27,15 @@
 
       {{#if owner }}
         <p>Organisatie: {{ owner }}<br />
+      {{/if}}
+
+      {{#if definitionlist }}
+        <dl class="dl dl--horizontal dl--{{definitionlistModifier}}">
+          {{#each definitionlistItems }}
+            <dt>{{ title }}</dt>
+            <dd>{{ description}}</dd>
+          {{/each}}
+        </dl>
       {{/if}}
 
       {{#if metadata }}

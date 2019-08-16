@@ -1,0 +1,38 @@
+.block-content {
+  margin: 0 0 1em 0;
+  position: relative;
+
+  &__heading {
+    margin-top: 0;
+  }
+  &__subheading {
+    margin-bottom: em(4);
+    font-size: em(22);
+    font-style: italic;
+  }
+
+  &--highlight {
+    background-color: $lightBlue;
+    padding: 1.5em 2em;
+    @media (min-width: $breakpointDesktopL) {
+      padding: 3.5em 4em;
+    }
+  }
+
+  @media (min-width: $breakpointDesktopL) {
+    &--flexed {
+      padding-bottom: 6em;
+    }
+    &--flexed &__cta {
+      position: absolute;
+      bottom: 3.5em;
+      left: 4em;
+    }
+  }
+  // @media (min-width: $breakpointDesktopL) {
+  //   &--flexed &__cta {
+  //     left: 4em;
+  //   }
+  // }
+}
+

@@ -42,6 +42,11 @@
         localStorage.setItem('title', title);
       }
 
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
       if (title) {
         selectStyle(title);
       }
@@ -59,6 +64,9 @@
         title = event.target.options[event.target.selectedIndex].value;
         selectStyle(title);
       });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
 
     }());
 

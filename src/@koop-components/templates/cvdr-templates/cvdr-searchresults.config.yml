@@ -239,25 +239,27 @@ context:
           txt: (gepubliceerd op 06-07-2016 | PDF)
         - link: Rijksoverheid.nl
           txt: (gepubliceerd op 07-07-2016 | XML)
+      definitionlist: true
+      definitionlistModifier: condensed
+      definitionlistItems:
+          - title: Geldendheidsperiode
+            description: 01-01-2019 t/m heden
+          - title: Uitgegeven door
+            description: Samenwerkingsverband vastgoedinformatie
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
-      label: Nieuw vandaag
+      label: Regeling vervallen per 01-01-2019
+      labelType: danger
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
       buttons:
-        - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
+        - button: Bekijken
           type: secendary
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
       buttons:
-        - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
+        - button: Bekijken
           type: secendary
   inputSearchContext:
     modifier: input-text--searchmedium

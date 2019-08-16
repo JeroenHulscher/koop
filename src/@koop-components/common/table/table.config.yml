@@ -44,6 +44,21 @@ context:
         type: Woonplaats
         value: Alkmaar
 variants:
+  - name: with Caption
+    label: with Caption
+    context:
+      modifier:
+      caption: Deze tabel bevat teamleden van KOOP Overheid.nl
+  - name: with Description
+    label: with Description
+    context:
+      modifier:
+      describedby: described123
+      tableDescription: Deze tabel bevat een extra uitleg onder de tabel.
+  - name: borderless
+    label: borderless
+    context:
+      modifier: table--borderless
   - name: striped
     label: striped
     context:

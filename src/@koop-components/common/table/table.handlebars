@@ -1,4 +1,4 @@
-<table class="{{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
+<table class="table {{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
 {{#if caption }}
   <caption>{{ caption }} </caption>
 {{/if}}
@@ -28,4 +28,12 @@
   </tr>
   {{/each }}
 </tbody>
+{{#if tableDescription }}
+<tfoot class="{{describedby}}">
+  <tr>
+    <td colspan="4">{{ tableDescription }}</td>
+  </tr>
+  </tfoot>
+{{/if}}
 </table>
+

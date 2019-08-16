@@ -29,9 +29,12 @@ h1,
 
 h2,
 .h2 {
-  font-size: em(29);
+  font-size: em(22);
   margin-bottom: 0.625em;
   line-height: 1em;
+  @media (min-width: $breakpointDesktop) {
+    font-size: em(29);
+  }
   &--slim {
     margin-bottom: 0.25em;
     margin-top: 0;

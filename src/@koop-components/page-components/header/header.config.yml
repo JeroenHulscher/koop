@@ -15,8 +15,6 @@ context:
   skipLinks:
     - url: '#content'
       text: Direct naar content
-    - url: '#search'
-      text: Direct zoeken
   headerMore:
     - title: Aankondigingen over uw buurt
       description: Zoals bouwplannen en verkeersmaatregelen.

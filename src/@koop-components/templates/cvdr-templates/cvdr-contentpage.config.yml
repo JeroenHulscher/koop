@@ -1,0 +1,23 @@
+---
+label: CVDR - Contentpage
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Wettechnische gegevens
+      href: "#wet"
+    - title: Tekst van de regeling
+      href: "#tekst"
+      sactive: true
+  alertFoutief:
+    heading: Ziet u een fout in deze regeling?
+    text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
+    modifier: alert--success alert--lg icon--document

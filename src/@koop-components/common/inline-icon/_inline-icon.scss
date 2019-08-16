@@ -2,7 +2,8 @@ $icons: (
   bin: $removeBlueIcon,
   edit: $editIconBlue,
   list: $iconList,
-  refresh: $refreshIcon
+  refresh: $refreshIcon,
+  document: $iconDocument
 );
 
 .icon {
@@ -289,6 +290,9 @@ $icons: (
 
   &--arrow-cta-left {
     background-image: $arrowCTAIcon;
+  }
+  &--arrow-cta-right {
+    background-image: $arrowCTABackwardsIcon;
   }
 
   &--dart-left {
