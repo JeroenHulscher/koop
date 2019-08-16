@@ -97,4 +97,23 @@
     border: none;
     display: table;
   }
+
+  &--lg {
+    font-size: em(14);
+    padding: 1.5em 3em 1.325em 4em;
+    background-size: em(32);
+    background-position: 1em center;
+
+    @media ( min-width: $breakpointDesktop ) {
+      font-size: 1em;
+      padding: 2em 3em 2em 7.5em;
+      background-size: em(56);
+      background-position: 2em center;
+    }
+  }
+  &--lg &__heading {
+    font-size: em(22);
+    font-weight: bold;
+    margin: 0;
+  }
 }
