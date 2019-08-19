@@ -9,13 +9,11 @@ h1,h2,h3,h4,h5,h6,p {
 
 h1,
 .h1 {
-  margin-bottom: em(6);
-  font-size: 1.7em;
+  font-size: em(24);
+  margin-bottom: 0.625em;
   line-height: 1em;
   @media (min-width: $breakpointDesktop) {
-    font-size: 2.7em;
-    line-height: 1em;
-    margin-bottom: .5em;
+    font-size: em(29);
   }
 
   &--slim {
@@ -29,11 +27,11 @@ h1,
 
 h2,
 .h2 {
-  font-size: em(22);
+  font-size: em(20);
   margin-bottom: 0.625em;
   line-height: 1em;
   @media (min-width: $breakpointDesktop) {
-    font-size: em(29);
+    font-size: em(24);
   }
   &--slim {
     margin-bottom: 0.25em;
@@ -43,9 +41,12 @@ h2,
 
 h3,
 .h3 {
-  font-size: em(22);
+  font-size: em(18);
   line-height: 1.25em;
   margin-bottom: 0.75em;
+  @media (min-width: $breakpointDesktop) {
+    font-size: em(18);
+  }
 }
 
 h4,
