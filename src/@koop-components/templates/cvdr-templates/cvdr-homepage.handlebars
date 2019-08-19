@@ -19,15 +19,17 @@
           </p>
         </div>
 
-        <form class="form form__row form__row--medium">
-          <fieldset>
+        <form class="form form__row form__row--medium u-nomargin">
+          <fieldset class="u-nomargin">
             <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
-            <div class="columns">
-              <div class="column form__row column-d-3">
-                {{ render "@input-text--medium" inputPostcode merge=true }}
-              </div>
-              <div class="column form__row column-d-9">
-                {{ render "@input-text--medium" inputZoekwoord merge=true }}
+            <div class="form__row">
+              <div class="columns">
+                <div class="column form__row column-d-3">
+                  {{ render "@input-text--medium" inputPostcode merge=true }}
+                </div>
+                <div class="column form__row column-d-9">
+                  {{ render "@input-text--medium" inputZoekwoord merge=true }}
+                </div>
               </div>
             </div>
 
