@@ -34,10 +34,47 @@ table,
     background: $darkBlue !important;
     color: white !important;
   }
-  tbody tr th[scope=col] {
-    font-style: italic;
-    font-weight: 400;
-    border-bottom: 2px solid $lighterGrey;
+
+  &__rowheading {
+
+    th,
+    th[scope=col] {
+      font-weight: bold;
+    }
+
+    &--lvl2 {
+      th {
+        background: $primaryBlue;
+        color: white;
+      }
+    }
+    &--lvl3 {
+      th {
+        background: $mediumBlue;
+        color: $darkBlue;
+      }
+    }
+    &--lvl4 {
+      th {
+        background: $lightBlue;
+        color: $darkBlue;
+      }
+    }
+    &--lvl5 {
+      th {
+        background: $bgBlue;
+        color: $darkBlue;
+      }
+    }
+    &--lvl6 {
+      th,
+      th[scope=col] {
+        background: white;
+        font-style: italic;
+        font-weight: 400;
+        border-bottom: 2px solid $lighterGrey;
+      }
+    }
   }
 
 
@@ -61,7 +98,7 @@ table,
 
   thead tr th,
   thead tr td {
-    border-bottom: 2px solid $lighterGrey;
+    border-bottom: 1px solid $lighterGrey;
   }
 
   tr {
@@ -181,7 +218,7 @@ table,
   @media ( min-width: $breakpointDesktop ) {
     &.table--striped {
       tbody tr:nth-child(odd) td,
-      tbody tr:nth-child(odd) th {
+      tbody tr:nth-child(odd):not(.table__rowheading) th {
         background: $lightGrey;
       }
     }
