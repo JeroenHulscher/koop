@@ -14,6 +14,14 @@
   {{/each }}
 </thead>
 <tbody>
+  {{#if multilevel}}
+    {{#each multilevels }}
+      <tr class="table__rowheading table__rowheading--lvl{{title}}">
+        <th colspan="4">Row {{title}}</th>
+      </tr>
+    {{/each}}
+  {{/if}}
+
   {{#each items }}
   <tr>
     {{#each item }}
