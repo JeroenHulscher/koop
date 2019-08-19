@@ -93,19 +93,28 @@
   &__header {
     margin-top: 0;
     margin-bottom: .5em;
+    font-size: 2em;
+    line-height: 1.25em;
 
-    @at-root .h1#{&} {
-      margin-bottom: 1em;
-      font-size: 2em;
-      line-height: 1.25em;
-
-      @media (min-width: $breakpointDesktop) {
-        font-size: 3em;
-        line-height: 1em;
-        margin-bottom: .5em;
-      }
+    @media (min-width: $breakpointDesktop) {
+      font-size: em(43);
+      line-height: 1em;
+      margin-bottom: .5em;
     }
-    @at-root h2#{&} {
+  }
+  // h1.jumbotron__header {
+  //   margin-bottom: 1em;
+  //   font-size: 2em;
+  //   line-height: 1.25em;
+
+  //   @media (min-width: $breakpointDesktop) {
+  //     font-size: em(43);
+  //     line-height: 1em;
+  //     margin-bottom: .5em;
+  //   }
+  // }
+
+  .h2.jumbotron__header {
       margin-bottom: 1em;
       font-size: 1.5em;
       line-height: 1.25em;
@@ -116,9 +125,6 @@
       }
     }
 
-
-  }
-
   &__intro {
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
@@ -127,7 +133,7 @@
     }
   }
 
-
+  // don't use; use component ".block-content"
   @media (min-width: $breakpointDesktop) {
     &--flexed &__content {
       padding-bottom: 2em;
