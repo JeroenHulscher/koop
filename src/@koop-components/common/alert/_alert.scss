@@ -7,6 +7,8 @@
   border-radius: $borderRadius;
   padding: 1em;
   margin: 1em 0;
+  padding-left: 3em;
+  background-image: $infoIcon;
 
   &--update {
     background-color: lighten($orange, 50%);
@@ -50,10 +52,10 @@
   }
 
   &--success {
-    background-color: lighten($green, 60%);
-    background-image: $successIcon;
     border-color: $green;
     padding-left: 2.5em;
+    background-color: $lightGreen;
+    background-image: $okIconGreen;
   }
 
   &--fixed {

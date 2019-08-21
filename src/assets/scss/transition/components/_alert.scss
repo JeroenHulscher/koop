@@ -2,7 +2,13 @@
   border: 0;
   border-radius: 0;
 
-  &--success {
-    background-color: $lightGreen;
+  &--info {
+    background-color: $lightBlue;
+    background-image: $infoIconBlue;
+  }
+
+  &--warning {
+    background-color: lighten($lightRed,7);
+    background-image: $iconCrossRed;
   }
 }
