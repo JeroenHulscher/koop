@@ -59,7 +59,8 @@
   vertical-align: middle;
 }
 
-.align-center {
+.align-center,
+.d-align-center {
   text-align: center !important;
 }
 
@@ -74,6 +75,9 @@
 @media ( min-width: $breakpointDesktop ) {
   .d-pull-right {
     float: right;
+  }
+  .d-align-right {
+    text-align: right;
   }
 }
 
