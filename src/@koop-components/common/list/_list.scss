@@ -487,14 +487,30 @@ ol {
 .list {
   &--loweralpha {
     list-style-type: lower-alpha;
+    > li {
+      padding-left: 1em;
+      margin-bottom: .5em;
+    }
   }
   &--upperalpha {
     list-style-type: upper-alpha;
+    > li {
+      padding-left: 1em;
+      margin-bottom: .5em;
+    }
   }
   &--lowerroman {
     list-style-type: lower-roman;
+    > li {
+      padding-left: 1em;
+      margin-bottom: .5em;
+    }
   }
   &--upperroman {
     list-style-type: upper-roman;
+    > li {
+      padding-left: 1em;
+      margin-bottom: .5em;
+    }
   }
 }
