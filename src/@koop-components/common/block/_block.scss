@@ -22,24 +22,19 @@
     background-color: $lightBlue;
     padding: 1.5em 2em;
     @media (min-width: $breakpointDesktopL) {
-      padding: 3.5em 4em;
+      padding: 2em 4em;
     }
   }
 
   @media (min-width: $breakpointDesktopL) {
     &--flexed {
-      padding-bottom: 6em;
+      padding-bottom: 3em;
     }
     &--flexed &__cta {
       position: absolute;
-      bottom: 3.5em;
+      bottom: 2em;
       left: 4em;
     }
   }
-  // @media (min-width: $breakpointDesktopL) {
-  //   &--flexed &__cta {
-  //     left: 4em;
-  //   }
-  // }
 }
 
