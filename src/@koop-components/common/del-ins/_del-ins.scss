@@ -2,6 +2,25 @@ del {
   background: $lightRed;
   padding: .1em;
   color: $black;
+
+	&::before, 
+	&::after {
+		clip-path: inset(100%);
+		clip: rect(1px, 1px, 1px, 1px);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	&::before {
+  		content: " [start van verwijderde tekst] ";
+	}
+
+	&::after {
+  		content: " [einde van verwijderde tekst] ";
+	}
 }
 
 ins {
