@@ -9,14 +9,27 @@ context:
     skipLinks:
       - url: '#content'
         text: Direct naar content
-  navVerdragContext:
+  navWetContext:
     id: 2
     items:
     - title: Wettechnische gegevens
       href: "#wet"
-    - title: Tekst van de regeling
-      href: "#tekst"
-      sactive: true
+      sub: true
+      subItems:
+        - stitle: Gegevens van de regeling
+        - stitle: Opmerkingen
+        - stitle: Regelgeving
+        - stitle: Wijzigingen
+  navToeContext:
+    id: 3
+    items:
+    - title: Toelichting
+      href: "#wet"
+      sub: true
+      subItems:
+      - stitle: Intitulé
+        href: "#tekst"
+      - stitle: Besluiten
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
     text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>

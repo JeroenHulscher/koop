@@ -11,8 +11,8 @@
 
       <div class="columns">
         <div class="column column-d-8">
-          <div class=" hidden-mobile">
-            <fieldset>
+          <div class="hidden-mobile">
+            <fieldset class="u-nomargin">
               <legend class="visually-hidden">Legendje</legend>
               {{render "@input-inputsubmit" inputsubmitContext }}
             </fieldset>
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="row row--large">
+      <div class="row row--large hidden-mobile">
          {{ render "@sort" sortContext }}
       </div>
 
@@ -32,12 +32,14 @@
       </div>
 
       <div class="hidden-desktop">
-        {{ render "@sort" }}
+        {{ render "@sort" sortContext }}
       </div>
 
       {{render "@resultlist" resultsContext }}
 
-      {{render "@pagination" }}
+      <div class="pull-right">
+        {{render "@pagination" }}
+      </div>
 
     </div>
     <div class="column column--sidebar">
@@ -95,7 +97,7 @@
                 </div>
               </fieldset>
 
-              <div class="form__row form__row--large">
+              {{!-- <div class="form__row form__row--large"> --}}
                 <fieldset>
                   <legend>Organisaties</legend>
                   <div class="form__row">
@@ -123,15 +125,15 @@
                     {{render "@subselection" subselectionBesContext }}
                   </div>
                 </fieldset>
-              </div>
-              <div class="form__row form__row--large">
+              {{!-- </div> --}}
+              {{!-- <div class="form__row form__row--large"> --}}
                 <fieldset>
                   <legend>Onderwerpen</legend>
                   <div class="form__row">
                     {{render "@subselection" subselectionOndContext }}
                   </div>
                 </fieldset>
-              </div>
+              {{!-- </div> --}}
 
           <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
           </form>
