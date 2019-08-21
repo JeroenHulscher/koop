@@ -108,8 +108,8 @@ h5,
   font-weight: 400;
 }
 
-h2[id],
-h3[id] {
+h2.ankered,
+h3.ankered {
   position: relative;
   display: block;
   &:before {
@@ -118,14 +118,14 @@ h3[id] {
     @media (min-width: $breakpointDesktop) {
       position: absolute;
       left: -30px;
-      top: 11px;
+      top: 4px;
       display: inline-block;
     }
     width: 40px;
     height: 19px;
     background: $permalinkIcon;
     background-repeat: no-repeat;
-    background-size: .5em;
+    background-size: 16px;
 
   }
 }
