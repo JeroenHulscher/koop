@@ -1,5 +1,13 @@
 .label {
-  // background: $lightGreen;
-  // color: $darkBlue;
   font-size: .85rem;
+
+  &--lg {
+    font-size: 1em;
+  }
+
+  &--danger, &--pdf {
+    background: $lightRed;
+    color: $darkBlue;
+  }
+
 }
