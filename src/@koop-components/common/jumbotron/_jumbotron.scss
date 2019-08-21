@@ -94,7 +94,7 @@
     margin-top: 0;
     margin-bottom: .5em;
     font-size: 2em;
-    line-height: 1.25em;
+    line-height: 1em;
 
     @media (min-width: $breakpointDesktop) {
       font-size: em(43);
@@ -102,22 +102,12 @@
       margin-bottom: .5em;
     }
   }
-  // h1.jumbotron__header {
-  //   margin-bottom: 1em;
-  //   font-size: 2em;
-  //   line-height: 1.25em;
 
-  //   @media (min-width: $breakpointDesktop) {
-  //     font-size: em(43);
-  //     line-height: 1em;
-  //     margin-bottom: .5em;
-  //   }
-  // }
-
+  h2.jumbotron__header,
   .h2.jumbotron__header {
       margin-bottom: 1em;
       font-size: 1.5em;
-      line-height: 1.25em;
+      line-height: 1em;
 
       @media (min-width: $breakpointDesktop) {
         font-size: 1.8em;
@@ -130,6 +120,7 @@
       font-size: 1.3rem;
       line-height: 1.8rem;
       margin-top: 1em;
+      margin-bottom: 1.5em;
     }
   }
 
