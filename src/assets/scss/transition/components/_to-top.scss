@@ -1,37 +1,36 @@
-// .to-top {
-//   position: fixed;
-//   z-index: 1;
-//   bottom: -2.25em;
-//   left: calc(50% - 1em);
-//   width: 4em;
-//   height: 4em;
-//   border-radius: 100%;
-//   background: $primaryBlue $dartTopWhiteIcon no-repeat 50% 0.5em;
-//   background-size: 1.5em;
-//   color: $white;
-//   text-indent: -999em;
-//   transition: .2s ease-out;
-//   &.irrelevant {
-//     transform: translateY(100%);
-//   }
-// }
-
 .to-top {
-  left: 1em;
+  left: 1.325em;
+  @media ( min-width: $breakpointDesktop ) {
+    left: 1.85em;
+  }
+
   text-indent: 0;
   @extend .button;
-  @extend .button--secondary;
+  @extend .button--tertiary;
+  background-image: $iconArrowUpBlue;
+  background-repeat: no-repeat;
+  background-position: right .5em top .5em;
+  background-size: 1.5em;
   width: auto;
   height: auto;
   bottom: 1em;
+  padding-right: 3.5em;
+
+  &:after {
+    content: "";
+    width: 1px;
+    height: 25px;
+    background: $darkBlue;
+    right: 2.5em;
+    top: .625em;
+    position: absolute;
+  }
 
   &.irrelevant {
-      display: none !important;
-    }
+    display: none !important;
+  }
 
   @media (min-width: 99em) {
-    left: calc(50% - 37.8em);
-
-
+    left: calc(50% - 37em);
   }
 }
