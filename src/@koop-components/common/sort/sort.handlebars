@@ -1,6 +1,8 @@
 <div class="sort {{ modifier }}">
+  {{#if amountPerPageFilter}}
   <div class="columns">
     <div class="column">
+  {{/if}}
       Sorteer op:
       <ul class="sort__options">
         {{#each options}}
@@ -9,9 +11,11 @@
           </li>
         {{/each}}
       </ul>
-    </div>
     {{#if amountPerPageFilter}}
-      <div class="column align-right">
+    </div>
+    {{/if}}
+    {{#if amountPerPageFilter}}
+      <div class="column d-align-right">
         Aantal:
         <ul class="sort__options">
           <li>
@@ -26,5 +30,7 @@
         </ul>
       </div>
     {{/if}}
+  {{#if amountPerPageFilter}}
   </div>
+  {{/if}}
 </div>
