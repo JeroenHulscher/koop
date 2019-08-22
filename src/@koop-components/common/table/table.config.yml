@@ -70,6 +70,11 @@ variants:
     label: borderless
     context:
       modifier: table--borderless
+  - name: Rotated headers
+    label: Rotated headers
+    context:
+      rotated: true
+      caption: Deze tabel bevat headers die verticaal staan
   - name: striped
     label: striped
     context:
