@@ -11,8 +11,8 @@
   var footnote = function (element) {
     this.element = element;
     this.footnote = document.querySelector(this.element.getAttribute('href'));
-    this.referenceClass = '.reference';
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.referenceClass = this.config.referenceClass || '.reference';
     this.init();
   };
 
@@ -25,7 +25,7 @@
     this.element.addEventListener('click', function (e) { this.setReferenceAnker(e); }.bind(this), false);
   };
 
-  footnote.prototype.setReferenceAnker = function (e) {
+  footnote.prototype.setReferenceAnker = function () {
     this.footnote.querySelector('.reference').setAttribute('href', '#' + this.element.getAttribute('id'));
   };
 

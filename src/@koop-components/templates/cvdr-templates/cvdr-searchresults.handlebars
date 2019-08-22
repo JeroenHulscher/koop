@@ -1,0 +1,167 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div id="content" role="main" class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+      <div class="columns">
+        <div class="column column-d-8">
+          <div class="hidden-mobile">
+            <fieldset class="u-nomargin">
+              <legend class="visually-hidden">Legendje</legend>
+              {{render "@input-inputsubmit" inputsubmitContext }}
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row--large hidden-mobile">
+         {{ render "@sort" sortContext }}
+      </div>
+
+      <h1 class="h1">Zoekresultaten <span class="h1__sub">1-10 van de 105 resultaten</span></h1>
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary block-element button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Filter opties</button>
+      </div>
+
+      <div class="hidden-desktop">
+        {{ render "@sort" sortContext }}
+      </div>
+
+      {{render "@resultlist" resultsContext }}
+
+      <div class="pull-right">
+        {{render "@pagination" }}
+      </div>
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
+
+        <div class="modal-sidebar__content" >
+
+
+          <div class="row--spacer">
+            <h2>Zoekfilter</h2>
+            <div class="row">
+              <p><a href="#" class="icon icon--refresh">Alle filters verwijderen</a></p>
+            </div>
+
+
+          <div class="form__row form__row--large">
+            <h3 class="h4">Geselecteerde filters (2)</h3>
+            {{render "@form-selectedfilter" selectedfilterContext }}
+          </div>
+
+          <form id="formid">
+            <div class="form__row form__row--large hidden-desktop">
+              <label for="">Filter op trefwoord</label>
+              {{ render "@input-text" inputsearchMobContext }}
+            </div>
+
+              <fieldset>
+                <legend>Locatie</legend>
+                <div class="form__row">
+                  {{ render "@input-text" postcodeInput }}
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Woord of zinsdeel</legend>
+                <div class="form__row">
+                  {{ render "@input-text" wordintitelInput }}
+                </div>
+                <div class="form__row">
+                  {{ render "@input-text" wordintextInput }}
+                </div>
+                <div class="form__row">
+                  {{ render "@input-text" wetgegevensInput }}
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Geldigheidsperiode</legend>
+                <div class="form__row">
+                  <label>Van</label>
+                  {{ render "@datepicker" }}
+                </div>
+                <div class="form__row">
+                  <label>Tot</label>
+                  {{ render "@datepicker" }}
+                </div>
+              </fieldset>
+
+              {{!-- <div class="form__row form__row--large"> --}}
+                <fieldset>
+                  <legend>Organisaties</legend>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Gemeenten</h3>
+                    {{render "@subselection" subselectionGemContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Provincies</h3>
+                    {{render "@subselection" subselectionProContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Waterschappen</h3>
+                    {{render "@subselection" subselectionWatContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
+                    {{render "@subselection" subselectionRegContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
+                    {{render "@subselection" subselectionDeeContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__sublegend">BES eiland</h3>
+                    {{render "@subselection" subselectionBesContext }}
+                  </div>
+                </fieldset>
+              {{!-- </div> --}}
+              {{!-- <div class="form__row form__row--large"> --}}
+                <fieldset>
+                  <legend>Onderwerpen</legend>
+                  <div class="form__row">
+                    {{render "@subselection" subselectionOndContext }}
+                  </div>
+                </fieldset>
+              {{!-- </div> --}}
+
+          <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+          </form>
+        </div>
+
+
+        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div id="modal-5" class="modal modal--wide modal--off-screen" hidden role="alert">
+  <div class="modal__inner">
+    <div class="modal__content modal__content--clean">
+      {{render "@filter-organisation" }}
+    </div>
+    <button type="button" data-handler="close-modal" class="modal__close">
+      <span class="visually-hidden">Sluiten</span>
+    </button>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

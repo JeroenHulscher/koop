@@ -8,13 +8,16 @@ input[type="email"],
 textarea {
   border: 1px solid $darkBlue;
   border-radius: .25em;
-  padding: .4em .5em;
+  padding: .4em .75em;
   font-size: 1.25rem;
   height: auto;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: outline-offset $fastEaseInOut;
 
   &:focus {
-    outline: none;
-    box-shadow: $inputFocus;
+    outline: 2px solid #ffb612;
+    outline-offset: 0;
   }
 
   &.has-error {
@@ -35,7 +38,7 @@ select {
 }
 input[type=text].input-text,
 input[type=password].input-text {
-  padding: .4em .5em;
+  padding: .4em .75em;
 
   &--accent {
     padding: .625em;
@@ -79,7 +82,11 @@ input[type=password].input-text {
 
 
 fieldset {
-  margin: 0 0 1em 0;
+  margin: 0;
+
+  & + fieldset {
+    margin-top: 2em;
+  }
 
   legend {
     border-bottom: 0;

@@ -39,6 +39,7 @@ select {
 
   &::placeholder {
     color: $darkGrey;
+    font-style: italic;
   }
 
   &.input--error {
@@ -133,7 +134,11 @@ fieldset {
   }
 
   &__label {
-    font-weight: bold;
+
+    &--medium,
+    &--accent {
+      font-weight: bold;
+    }
 
     .mandatory {
       font-size: 0.8em;
@@ -175,11 +180,11 @@ fieldset {
     border: 1px solid $darkBlue;
     padding: 0.125em 1.75em 0.125em 0.75em;
     display: inline-block;
-    border-radius: 3px;
+    border-radius: 5px;
     font-style: italic;
     position: relative;
-    margin-right: 1em;
-    margin-bottom: 0.5em;
+    margin-right: .5em;
+    margin-bottom: .5em;
 
     &__remove {
       background: $iconCrossBlue;
@@ -211,6 +216,11 @@ fieldset {
     h1, h2,h3 {
       margin-bottom: .5em;
     }
+  }
+
+  &__sublegend {
+    font-size: em(16);
+    margin: 0 0 em(2) 0;
   }
 }
 

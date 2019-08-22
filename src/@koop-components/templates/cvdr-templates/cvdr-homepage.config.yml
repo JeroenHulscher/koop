@@ -1,0 +1,28 @@
+---
+label: CVDR - Homepage
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  inputPostcode:
+    id: search
+    cleanID: true
+    fieldPlaceholder: 0000 AA
+    fieldLabel: Postcode
+    fieldLabelVisible: true
+    labelmodifier: medium
+  inputZoekwoord:
+    fieldPlaceholder: Zoekwoord
+    fieldLabel: Zoekwoord
+    fieldLabelVisible: true
+    labelmodifier: medium
+

@@ -19,7 +19,8 @@
   text-shadow: none;
   user-select: none;
   vertical-align: middle;
-  white-space: nowrap;
+  // white-space: nowrap;
+  word-break: break-word;
   font-size: 1rem;
   cursor: pointer;
 

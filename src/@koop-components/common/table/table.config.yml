@@ -44,6 +44,37 @@ context:
         type: Woonplaats
         value: Alkmaar
 variants:
+  - name: Multilevel
+    label: Multilevel
+    context:
+      modifier:
+      caption: Deze tabel bevat teamleden van KOOP Overheid.nl
+      multilevel: true
+      multilevels:
+        - title: 2
+        - title: 3
+        - title: 4
+        - title: 5
+  - name: with Caption
+    label: with Caption
+    context:
+      modifier:
+      caption: Deze tabel bevat teamleden van KOOP Overheid.nl
+  - name: with Description
+    label: with Description
+    context:
+      modifier:
+      describedby: described123
+      tableDescription: Deze tabel bevat een extra uitleg onder de tabel.
+  - name: borderless
+    label: borderless
+    context:
+      modifier: table--borderless
+  - name: Rotated headers
+    label: Rotated headers
+    context:
+      rotated: true
+      caption: Deze tabel bevat headers die verticaal staan
   - name: striped
     label: striped
     context:

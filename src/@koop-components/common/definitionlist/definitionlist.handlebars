@@ -4,7 +4,7 @@
       <div>
         <dt>{{ type }}</dt>
         {{#if modifier }}
-          <dd class="icon {{ modifier }}">{{ value }}</dd>
+          <dd><span class="icon {{ modifier }}">{{ value }}</span></dd>
         {{else}}
         <dd>{{ value }}</dd>
         {{/if}}
@@ -16,5 +16,5 @@
       <dd>{{ value }}</dd>
     {{/each}}
   {{/if}}
-  
+
 </dl>

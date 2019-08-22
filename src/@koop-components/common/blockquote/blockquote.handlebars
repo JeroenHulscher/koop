@@ -1,4 +1,8 @@
+{{#if q}}
+<q {{#if cite}}cite="{{cite}}"{{/if}}>{{text}}</q>
+{{else}}
 <blockquote>
   <p {{#if lang}}lang="{{ lang }}"{{/if}}>{{text}}</p>
   {{#if cite}}<cite>{{cite}}</cite>{{/if}}
 </blockquote>
+{{/if}}

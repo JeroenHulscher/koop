@@ -1,5 +1,5 @@
-<div class="alert {{ modifier }} {{#if fixed }} show {{/if}}">
-  {{{ heading }}}
+<div class="alert {{ modifier }} {{#if fixed }} show {{/if}}" role="alert">
+  {{#if heading}}<h2 class="alert__heading">{{{ heading }}}</h2>{{/if}}
   <div class="alert__inner">
     {{{ text }}}
 

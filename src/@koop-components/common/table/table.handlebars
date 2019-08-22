@@ -1,4 +1,4 @@
-<table class="{{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
+<table class="table {{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
 {{#if caption }}
   <caption>{{ caption }} </caption>
 {{/if}}
@@ -7,13 +7,21 @@
   {{#if @first}}
   <tr>
     {{#each item }}
-    <th scope="col">{{ type }}</th>
+    <th scope="col">{{#if ../../rotated}}<span class="rotated">{{/if}}{{ type }}{{#if ../../rotated}}</span>{{/if}}</th>
     {{/each}}
   </tr>
   {{/if}}
   {{/each }}
 </thead>
 <tbody>
+  {{#if multilevel}}
+    {{#each multilevels }}
+      <tr class="table__rowheading table__rowheading--lvl{{title}}">
+        <th colspan="4">Row {{title}}</th>
+      </tr>
+    {{/each}}
+  {{/if}}
+
   {{#each items }}
   <tr>
     {{#each item }}
@@ -28,4 +36,12 @@
   </tr>
   {{/each }}
 </tbody>
+{{#if tableDescription }}
+<tfoot class="{{describedby}}">
+  <tr>
+    <td colspan="4">{{ tableDescription }}</td>
+  </tr>
+  </tfoot>
+{{/if}}
 </table>
+

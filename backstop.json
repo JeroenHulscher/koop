@@ -154,6 +154,31 @@
       "label": "STOP XML",
       "url": "http://localhost:3000/components/preview/templates-stop-xml",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-stop-xml.html"
+    },
+    {
+      "label": "Verdragenbank - homepage",
+      "url": "http://localhost:3000/components/preview/templates-verdr-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-homepage"
+    },
+    {
+      "label": "Verdragenbank - searchresults",
+      "url": "http://localhost:3000/components/preview/templates-verdr-searchresults",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-searchresults"
+    },
+    {
+      "label": "Verdragenbank - wizard",
+      "url": "http://localhost:3000/components/preview/templates-verdr-wizard",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard"
+    },
+    {
+      "label": "Verdragenbank - wizard2",
+      "url": "http://localhost:3000/components/preview/templates-verdr-wizard2",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard2"
+    },
+    {
+      "label": "Verdragenbank - wizard3",
+      "url": "http://localhost:3000/components/preview/templates-verdr-wizard3",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard3"
     }
   ],
   "paths": {

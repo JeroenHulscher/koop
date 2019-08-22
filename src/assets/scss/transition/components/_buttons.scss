@@ -1,13 +1,13 @@
 .button {
   font-size: 1.125em;
   margin-right: 0;
-  border-radius: .125em;
+  border-radius: .25em;
   border-color: $darkBlue;
 
   color: $darkBlue;
   // background-color: $darkBlue;
 
-  transition: none;
+  // transition: none;
 
   // padding: .75em .675em;
   padding-top: .75em;
@@ -73,6 +73,7 @@
     background-position: right .625em center;
     padding-right: 3em !important;
     position: relative;
+    text-align: left;
 
     &:after {
       content: "";

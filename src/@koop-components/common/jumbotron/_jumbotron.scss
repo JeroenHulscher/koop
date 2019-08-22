@@ -1,6 +1,8 @@
 .jumbotron {
   @extend .group;
-  padding: 0 1em;
+  // padding: 0 1em;
+  margin-bottom: 1em;
+  position: relative;
 
   @media (min-width: $breakpointDesktop) {
     padding: 0 4em;
@@ -11,6 +13,10 @@
     padding: 2.5em 1em;
 
     @media (min-width: $breakpointDesktop) {
+      padding: 3.5em 2em;
+    }
+
+    @media (min-width: $breakpointDesktopL) {
       padding: 3.5em 4em;
     }
   }
@@ -87,22 +93,23 @@
   &__header {
     margin-top: 0;
     margin-bottom: .5em;
+    font-size: 2em;
+    line-height: 1em;
 
-    @at-root .h1#{&} {
-      margin-bottom: 1em;
-      font-size: 2em;
-      line-height: 1.25em;
-
-      @media (min-width: $breakpointDesktop) {
-        font-size: 3em;
-        line-height: 1em;
-        margin-bottom: .5em;
-      }
+    @media (min-width: $breakpointDesktop) {
+      font-size: em(43);
+      line-height: 1em;
+      margin-bottom: .5em;
     }
-    @at-root h2#{&} {
+  }
+
+  h2.jumbotron__header,
+  .h2.jumbotron__header,
+  h3.jumbotron__header,
+  .h3.jumbotron__header {
       margin-bottom: 1em;
       font-size: 1.5em;
-      line-height: 1.25em;
+      line-height: 1em;
 
       @media (min-width: $breakpointDesktop) {
         font-size: 1.8em;
@@ -110,12 +117,29 @@
       }
     }
 
-  }
-
   &__intro {
     @media (min-width: $breakpointDesktop) {
       font-size: 1.3rem;
       line-height: 1.8rem;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  // don't use; use component ".block-content"
+  @media (min-width: $breakpointDesktop) {
+    &--flexed &__content {
+      padding-bottom: 2em;
+    }
+    &--flexed .cta {
+      position: absolute;
+      bottom: 3.5em;
+      left: 2em;
+    }
+  }
+  @media (min-width: $breakpointDesktopL) {
+    &--flexed .cta {
+      left: 4em;
     }
   }
 
