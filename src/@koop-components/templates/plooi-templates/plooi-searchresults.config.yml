@@ -179,7 +179,8 @@ context:
           action: modal-4
           modal: true
   sortContext:
-    modifier: sort--headless
+    modifier:
+    amountPerPageFilter: true
     options:
     - label: Datum
       value: value
