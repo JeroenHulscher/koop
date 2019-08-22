@@ -7,7 +7,7 @@
     "test": "npm test",
     "start": "gulp dev",
     "e2e": "protractor protractor.config.js",
-    "vrtest": "backstop reference & backstop test",
+    "vrtest": "backstop reference && backstop test",
     "atest": "pa11y-ci --threshold 10 --config pa11yci.json"
   },
   "repository": {
