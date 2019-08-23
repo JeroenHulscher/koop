@@ -5,19 +5,30 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  vanDatepicker:
+    id: 786
+    haslabel: true
+    label: Van
+  totDatepicker:
+    id: 7836
+    haslabel: true
+    label: Tot
   postcodeInput:
     fieldLabelVisible: true
     fieldPlaceholder: Bijv. 1234 AB
     fieldLabel: Postcode
   wordintitelInput:
+    id: 543
     fieldLabelVisible: true
     fieldPlaceholder: Zoekwoord
     fieldLabel: Zoekwoord in titel
   wordintextInput:
+    id: 432
     fieldLabelVisible: true
     fieldPlaceholder: Zoekwoord
     fieldLabel: Woord in tekst
   wetgegevensInput:
+    id: 321
     fieldLabelVisible: true
     fieldPlaceholder: Zoekwoord
     fieldLabel: Wetstechnische gegevens

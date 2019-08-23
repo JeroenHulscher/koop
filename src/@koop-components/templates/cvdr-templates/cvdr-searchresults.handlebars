@@ -88,12 +88,10 @@
               <fieldset>
                 <legend>Geldigheidsperiode</legend>
                 <div class="form__row">
-                  <label>Van</label>
-                  {{ render "@datepicker" }}
+                  {{ render "@datepicker" vanDatepicker }}
                 </div>
                 <div class="form__row">
-                  <label>Tot</label>
-                  {{ render "@datepicker" }}
+                  {{ render "@datepicker" totDatepicker }}
                 </div>
               </fieldset>
 
@@ -135,7 +133,7 @@
                 </fieldset>
               {{!-- </div> --}}
 
-          <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+            <button class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
           </form>
         </div>
 
@@ -147,18 +145,6 @@
       </div>
 
     </div>
-  </div>
-</div>
-
-
-<div id="modal-5" class="modal modal--wide modal--off-screen" hidden role="alert">
-  <div class="modal__inner">
-    <div class="modal__content modal__content--clean">
-      {{render "@filter-organisation" }}
-    </div>
-    <button type="button" data-handler="close-modal" class="modal__close">
-      <span class="visually-hidden">Sluiten</span>
-    </button>
   </div>
 </div>
 

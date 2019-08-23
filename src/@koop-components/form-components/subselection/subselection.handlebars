@@ -7,10 +7,12 @@
         {{#if searchFilter}}
           <div class="" data-decorator="init-filter-results">
             <div class="form__row form__row--medium">
-              <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="id_mysuper_field" class="js-filterresults__input input-text input-text--searchmedium"
+              <label class="visually-hidden" for="filter-id--{{id}}">{{label}}</label>
+              <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium"
             />
             </div>
             <fieldset class="js-filterresults__results" role="region" id="resultfilter-{{id}}" aria-live="polite">
+              <legend class="visually-hidden">{{modalTitle}}</legend>
         {{/if}}
         {{#if selectAll}}
         <div data-decorator="init-selectall">
@@ -49,7 +51,7 @@
       </div>
     </div>
   </div>
-  <a href="#" id="id123" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger icon">{{linkText}}</a>
+  <a href="#" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger icon">{{linkText}}</a>
 </div>
 
 <!--

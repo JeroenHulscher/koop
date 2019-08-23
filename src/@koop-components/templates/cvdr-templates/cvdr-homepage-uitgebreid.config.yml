@@ -6,6 +6,14 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
+  vanDatepicker:
+    id: 786
+    haslabel: true
+    label: Van
+  totDatepicker:
+    id: 7836
+    haslabel: true
+    label: Tot
   inputsubmitContext:
     button: Zoek verdagen
     placeholder: Vul hier uw zoekwoord(en) in
@@ -14,14 +22,17 @@ context:
     fieldPlaceholder: Bijv. 1234 AB
     fieldLabel: Postcode
   wordintitelInput:
+    id: 765
     fieldLabelVisible: true
     fieldPlaceholder: Zoekwoord
     fieldLabel: Zoekwoord in titel
   wordintextInput:
+    id: 654
     fieldLabelVisible: true
     fieldPlaceholder: Zoekwoord
     fieldLabel: Woord in tekst
   wetgegevensInput:
+    id: 498
     fieldLabelVisible: true
     fieldPlaceholder: Zoekwoord
     fieldLabel: Wetstechnische gegevens
