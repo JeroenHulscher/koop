@@ -143,6 +143,11 @@
   }
 }
 
+.u-nobreak {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .u-fontsize--s {
   font-size: 0.9em !important;
 }
@@ -151,4 +156,19 @@
   font-style: italic;
   font-size: 0.7em;
   font-weight: normal;
+}
+
+.u-tableborder {
+  &--top {
+    border-top: 1px solid $lighterGrey !important;
+  }
+  &--right {
+    border-right: 1px solid $lighterGrey !important;
+  }
+  &--left {
+    border-left: 1px solid $lighterGrey !important;
+  }
+  &--bottom {
+    border-bottom: 1px solid $lighterGrey !important;
+  }
 }
