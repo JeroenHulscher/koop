@@ -1,3 +1,7 @@
 name: Figure
 context:
   id: 1
+  figcaption: true
+  figcaptionText: Voorbeeld van een plaatje.
+  source: true
+  sourceText: Bron www.google.nl
