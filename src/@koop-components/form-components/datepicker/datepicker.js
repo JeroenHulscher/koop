@@ -16,19 +16,33 @@
     // todo: make config extendable on component level.
     this.config.isTouch = onl.ui.isTouch();
     this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
+    this.round = 0;
 
     this.createHiddenField();
 
     if ( !this.config.isTouch ) {
       this.initDatepicker( element );
+
       $(element).on('change', function () {
         this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
         self.hiddenfield.setAttribute('value', this.value);
+        if ( self.round > 0 ) {
+          if ($('.js-fixedbottom-button__button')){
+            $('.js-fixedbottom-button__button').removeAttr('hidden');
+          }
+        }
+        self.round++;
       }).trigger('change');
     } else {
       $(element).on('change', function () {
         this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
         self.hiddenfield.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
+        if (self.round > 0) {
+          if ($('.js-fixedbottom-button__button')) {
+            $('.js-fixedbottom-button__button').removeAttr('hidden');
+          }
+        }
+        self.round++;
       }).trigger('change');
     }
   };
