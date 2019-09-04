@@ -1,1 +1,21 @@
-<p>Pellentesque sed justo interdum, porta purus sed, congue magna. Cras nisl est, scelerisque ac elementum dapibus, sodales et odio. Integer felis elit, lacinia et ligula ut, aliquam rutrum dolor. Duis non diam in sapien scelerisque mattis sit amet quis est. <del>Suspendisse lectus magna, aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus varius fermentum posuere</del> <ins>aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus varius fermentum posuere</ins>. Proin et mi in nisl euismod pulvinar. Curabitur malesuada lorem bibendum tellus dapibus fermentum. Maecenas porttitor enim in sapien hendrerit eleifend. Duis non tortor rutrum, sagittis nulla vitae, tincidunt ligula. Etiam quis dignissim felis. Suspendisse at erat a tortor tristique scelerisque. Donec efficitur augue eros.</p>
+{{#if blocklevel}}
+  <del class="del del--block">
+    <p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p>
+    {{ render "@figure" }}
+    <p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p>
+  </del>
+  <ins class="ins ins--block">
+    <p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p>
+    <p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p>
+  </ins>
+{{else}}
+  <p>Pellentesque sed justo interdum, porta purus sed, congue magna. Cras nisl est, scelerisque ac elementum dapibus, sodales
+    et odio. Integer felis elit, lacinia et ligula ut, aliquam rutrum dolor. Duis non diam in sapien scelerisque mattis sit
+    amet quis est.
+    <del>Suspendisse lectus magna, aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus
+      varius fermentum posuere</del>
+    <ins>aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus varius fermentum posuere</ins>.
+    Proin et mi in nisl euismod pulvinar. Curabitur malesuada lorem bibendum tellus dapibus fermentum. Maecenas porttitor enim
+    in sapien hendrerit eleifend. Duis non tortor rutrum, sagittis nulla vitae, tincidunt ligula. Etiam quis dignissim felis.
+    Suspendisse at erat a tortor tristique scelerisque. Donec efficitur augue eros.</p>
+{{/if}}
