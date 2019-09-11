@@ -2,20 +2,10 @@
 'use strict';
 const fractal = require( '@frctl/fractal' ).create();
 
-// Handlebars
-fractal.components.engine(require('@frctl/handlebars')({
-    helpers: {
-        increment: function(number, amount) {
-            // Parsing the number to ensure it was not provided as string.
-            return parseInt(number) + amount;
-        }
-    }
-}));
-fractal.components.set( 'ext', '.handlebars' );
-
-// Twig
-// fractal.components.engine(require('@frctl/twig')({handlePrefix: '#DONTUSE', importContext: true}));
-// fractal.components.set( 'ext', '.twig' );
+// Twig adapter
+const twigAdapter = require('@frctl/twig')();
+fractal.components.engine(twigAdapter);
+fractal.components.set('ext', '.twig');
 
 const mandelbrot = require('@frctl/mandelbrot');
 const myCustomisedTheme = mandelbrot({
