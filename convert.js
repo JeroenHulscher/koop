@@ -7,7 +7,7 @@ const glob = require('glob-all');
 const sourceExtension = '.handlebars';
 const targetExtension = '.twig';
 const sourceFiles = [
-    'src/@koop-components/**/*' + sourceExtension,
+    'src/**/*' + sourceExtension,
 ];
 
 // Execute.
