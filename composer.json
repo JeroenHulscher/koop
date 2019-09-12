@@ -1,5 +1,5 @@
 {
-  "name": "koop-componentenbibliotheek",
+  "name": "koop/componentenbibliotheek",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "type": "twig-component-library",
   "license": "ISC",
