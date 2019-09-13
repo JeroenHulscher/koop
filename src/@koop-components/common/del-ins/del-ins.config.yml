@@ -1,1 +1,8 @@
-name: del-ins
+---
+label: del-ins
+context:
+  name: inline
+variants:
+  - name: block level
+    context:
+      blocklevel: true

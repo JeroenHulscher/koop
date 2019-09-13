@@ -49,6 +49,19 @@ ol {
   }
 }
 
+.list--underlined {
+  margin: 0 !important;
+
+  li {
+    border-bottom: 1px solid $lighterGrey;
+    padding: 1em;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
 .list--unstyled {
   list-style: none;
   padding-left: 0;
@@ -126,6 +139,9 @@ ol {
       width: 3.5em;
     }
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
 
   // Different indentation if the list is more than once.
   .list--law__unordered .list--law__unordered {
@@ -184,6 +200,18 @@ ol {
   }
   &--size-l &__itemtype {
     width: 4em;
+  }
+  &--size-xl li {
+    padding-left: 7em;
+  }
+  &--size-xl &__itemtype {
+    width: 6em;
+  }
+  &--size-xxl li {
+    padding-left: 9em;
+  }
+  &--size-xxl &__itemtype {
+    width: 8em;
   }
 }
 

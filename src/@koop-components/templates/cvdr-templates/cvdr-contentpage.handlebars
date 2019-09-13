@@ -9,12 +9,27 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-      <div class="align-right">
-        <ul class="list list--inline">
-          <li><a href="#" class="link-iconed link-iconed--print">Printen</a></li>
-          <li><a href="#" class="link-iconed link-iconed--download">Downloaden</a></li>
-          <li><a href="#" class="link-iconed link-iconed--mail">Abonneren</a></li>
-        </ul>
+      {{ render "@pageactions" pageactions }}
+
+      <div id="modal-1" class="modal modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <h2>Permanente link</h2>
+
+            <h3>Kopieer de regeling naar uw clipboard </h3>
+            <div class="row">
+                {{render "@copydata" }}
+            </div>
+            <h3>Verfijn in Linktool </h3>
+            <p>Ga naar de
+              <a href="http://linkeddata-acc.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2016-07-01%2f0%2fDeel1&amp;geldigheidsdatum=2016-07-01&amp;zichtdatum=2016-07-01"
+                id="aLinktoolurl" rel="external" target="_blank">Linktool</a>
+            </p>
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">sluiten</span>
+          </button>
+        </div>
       </div>
 
       <p class=""><span class="label label--danger label--lg"><em>Regeling vervallen per: 01-01-2019</em></span></p>

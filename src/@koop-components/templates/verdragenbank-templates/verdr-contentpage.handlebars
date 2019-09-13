@@ -29,7 +29,7 @@
 
       <table class="table__data-overview table--striped">
         <thead>
-          <th>Partij</th>
+          <th>Partij {{render "@tooltip" }}</th>
           <th>Ondertekening</th>
           <th>Voorlopige toepassing</th>
           <th>Ratificatie</th>
@@ -144,10 +144,33 @@
           </tr>
           <tr>
           <th>Tractatenblad</th>
-          <td>
-            <a href="http://localhost:3000">2010, 258</a>
-            <a href="http://www.overheid.nl">2011, 142</a>
-            <a href="https://zoek.officielebekendmakingen.nl/trb-1980-145.html">2011, 142</a>
+          <td class="u-nopadding">
+            <div data-decorator="showmoreless">
+              <ul class="list list--underlined">
+                <li>
+                  <a href="http://localhost:3000">2010, 258</a>
+                </li>
+                <li>
+                  <a href="http://www.overheid.nl">2011, 142</a>
+                </li>
+                <li>
+                  <a href="https://zoek.officielebekendmakingen.nl/trb-1980-145.html">2011, 142</a>
+                </li>
+                <li>
+                  <a href="http://localhost:3000">2010, 258</a>
+                </li>
+                <li>
+                  <a href="http://www.overheid.nl">2011, 142</a>
+                </li>
+                <li>
+                  <a href="https://zoek.officielebekendmakingen.nl/trb-1980-145.html">2011, 142</a>
+                </li>
+              </ul>
+            </div>
+
+
+
+
           </td>
           </tr>
         </tbody>
@@ -234,6 +257,8 @@
       <h2>Gewaarmerkt afschrift</h2>
 
        {{ render "@sources-list" }}
+
+       {{render "@to-top"}}
 
     </div>
     <div class="column column--sidebar">

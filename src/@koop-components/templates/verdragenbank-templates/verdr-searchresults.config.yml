@@ -94,7 +94,10 @@ context:
   inputsearchMobContext:
     fieldPlaceholder: Verfijn uw zoekopdracht
   sortContext:
-    modifier: sort--headless
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
     options:
     - label: Datum
       value: value

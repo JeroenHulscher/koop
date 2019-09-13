@@ -3,7 +3,7 @@ del {
   padding: .1em;
   color: $black;
 
-	&::before, 
+	&::before,
 	&::after {
 		clip-path: inset(100%);
 		clip: rect(1px, 1px, 1px, 1px);
@@ -15,11 +15,11 @@ del {
 	}
 
 	&::before {
-  		content: " [start van verwijderde tekst] ";
+  	content: " [start van verwijderde tekst] ";
 	}
 
 	&::after {
-  		content: " [einde van verwijderde tekst] ";
+  	content: " [einde van verwijderde tekst] ";
 	}
 }
 
@@ -28,4 +28,33 @@ ins {
   padding: .1em;
   color: $black;
   text-decoration: none;
+}
+
+.ins,
+.del {
+  margin: 0 0 1.5em 0;
+  background: $lightGreen;
+
+  &--block {
+    display: block;
+    border-left: 0.5em solid $green;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    p {
+      margin: 0;
+    }
+    p + * {
+      margin-top: .5em;
+    }
+  }
+}
+
+.del {
+  background: $lightRed;
+  color: $black;
+
+  &--block {
+    border-left: 0.5em solid $red;
+  }
 }

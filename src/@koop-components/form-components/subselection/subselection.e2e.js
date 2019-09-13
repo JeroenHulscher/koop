@@ -14,7 +14,7 @@ describe('Subselection', function () {
 
     browser.driver.sleep(500);
 
-    var subTrigger = element(by.css('#id123'));
+    var subTrigger = element(by.css('#id222'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
@@ -47,7 +47,7 @@ describe('Subselection', function () {
 
   it('should reset the element', function () {
 
-    var subTrigger = element(by.css('#id123'));
+    var subTrigger = element(by.css('#id222'));
     subTrigger.click();
 
     browser.driver.sleep(1500);

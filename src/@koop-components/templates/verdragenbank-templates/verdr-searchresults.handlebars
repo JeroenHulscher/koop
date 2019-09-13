@@ -8,35 +8,41 @@
 <div class="container row">
   <div class="columns columns--sidebar-left">
     <div class="column">
-      <div class="row row--spacer hidden-mobile">
+
+
+
+      <div class="row row--medium hidden-mobile">
         <div class="columns">
           <div class="column column-d-7">
             {{render "@input-inputsubmit" inputsubmitContext }}
           </div>
-          <div class="column column-d-5 align-right">
-             {{ render "@sort" sortContext }}
+        </div>
+        <div class="">
+          {{ render "@sort" sortContext }}
+          <div class="align-right">
+            <a href="#" class="icon icon--download">Download</a>
           </div>
         </div>
       </div>
 
-
-
       <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105 verdagen</span></h1>
 
-      <div class="hidden-desktop align-right">
-        <button class="button block-element button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+      <div class=" hidden-desktop align-right">
+        <button class="button block-element button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Filter opties</button>
       </div>
-      <div class="hidden-desktop">
-        {{ render "@sort" }}
+      <div class="row hidden-desktop">
+        {{ render "@sort" sortContext }}
+        <div class="align-right">
+          <a href="#" class="icon icon--download">Download</a>
+        </div>
       </div>
 
       {{render "@resultlist" resultsContext }}
 
-
       <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
         <div class="modal__inner">
           <div class="modal__content">
-            {{!-- {{render "@resultlist" resultmodalContext }} --}}
             <p><img src="https://via.placeholder.com/720x280.png?text=Kaart+met+marker"></p>
             <h2>Aangevraagde evenementenvergunningen 2018</h2>
             <p class="pre-h">4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>

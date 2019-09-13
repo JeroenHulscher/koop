@@ -17,6 +17,7 @@
     margin: 0;
   }
   .table__caption {
+    margin-top: .5em;
     margin-bottom: .5em;
     color: $darkGrey;
     font-style: italic;
@@ -42,33 +43,41 @@ table,
       font-weight: bold;
     }
 
+    &--lvl1 {
+      th,td {
+        background: $darkBlue;
+        color: white;
+      }
+    }
     &--lvl2 {
-      th {
+      th,
+      td{
         background: $primaryBlue;
         color: white;
       }
     }
     &--lvl3 {
-      th {
+      th,td {
         background: $mediumBlue;
         color: $darkBlue;
       }
     }
     &--lvl4 {
-      th {
+      th,td {
         background: $lightBlue;
         color: $darkBlue;
       }
     }
     &--lvl5 {
-      th {
+      th,td {
         background: $bgBlue;
         color: $darkBlue;
       }
     }
     &--lvl6 {
-      th,
-      th[scope=col] {
+      th,td,
+      th[scope=col],
+      td[scope=col] {
         background: white;
         font-style: italic;
         font-weight: 400;
@@ -268,11 +277,16 @@ table,
 
 table.table--borderless {
   border: 0;
+  thead tr td,
+  thead tr th,
+  thead tr td,
+  thead tr th
   thead th,td,
   tbody th td,
   tbody tr td {
     border: 0;
   }
+
 }
 
 

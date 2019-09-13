@@ -1,8 +1,7 @@
 figure,
 .figure {
-  margin: 0 0 1.5em 0;
   position: relative;
-
+  margin: 0;
 
   cite {
     font-size: .9em;
@@ -13,6 +12,7 @@ figure,
     padding-left: .5em;
     color: $darkGrey;
     font-style: italic;
+    margin: 0 0 1.5em 0;
   }
 
   &__source {
