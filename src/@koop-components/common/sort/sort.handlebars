@@ -1,5 +1,5 @@
 <div class="sort {{ modifier }}">
-  {{#if amountPerPageFilter}}
+  {{#if columns}}
   <div class="columns">
     <div class="column">
   {{/if}}
@@ -11,26 +11,32 @@
           </li>
         {{/each}}
       </ul>
-    {{#if amountPerPageFilter}}
+    {{#if columns}}
     </div>
     {{/if}}
-    {{#if amountPerPageFilter}}
+     {{#if columns}}
       <div class="column d-align-right">
-        Aantal:
-        <ul class="sort__options">
-          <li>
-            <a href="?sortby={{value}}" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
-          </li>
-          <li>
-            <a href="?sortby={{value}}" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
-          </li>
-          <li>
-            <a href="?sortby={{value}}" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
-          </li>
-        </ul>
+      {{#if buttonDownload}}
+        <a href="#" class="icon icon--download">Download</a>
+      {{/if}}
+      {{#if amountPerPageFilter}}
+          Aantal:
+          <ul class="sort__options">
+            <li>
+              <a href="?sortby={{value}}" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+            <li>
+              <a href="?sortby={{value}}" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+            <li>
+              <a href="?sortby={{value}}" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+          </ul>
+
+      {{/if}}
       </div>
     {{/if}}
-  {{#if amountPerPageFilter}}
+  {{#if columns}}
   </div>
   {{/if}}
 </div>
