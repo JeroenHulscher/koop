@@ -7,6 +7,7 @@
       padding: 0 !important;
       page-break-after: avoid;
       page-break-before: avoid;
+      font-size: 14px !important;
 
   }
 
@@ -19,10 +20,12 @@
 
   .header {
     border: none;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #c2c2c2;
 
     .logo {
       position: relative;
-      left: -12px;
+      margin-top: 20px;
     }
 
     .header__nav,
@@ -40,6 +43,10 @@
     h3 a {
       padding: 0 0 .5em 0 !important;
       background: none;
+    }
+    h3 {
+      margin-bottom: 1em;
+      display: block;
     }
 
     ul {

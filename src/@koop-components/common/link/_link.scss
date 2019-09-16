@@ -89,6 +89,48 @@ p a {
   text-decoration: underline;
 }
 
+// double declaration needed for showmore correction. (link--down/up should have been on the a, now on li)
+a.link {
+   &--down {
+    background: {
+      position: 0 center !important;
+      repeat: no-repeat;
+      image: $dartDownIcon !important;
+      size: 9px !important;
+    }
+    padding-left: 1em;
+  }
+  &--up {
+    background: {
+      position: 0 center !important;
+      repeat: no-repeat;
+      image: $dartUpIcon !important;
+      size: 9px !important;
+    }
+    padding-left: 1em;
+  }
+}
+li.link {
+   &--down a {
+    background: {
+      position: 0 center !important;
+      repeat: no-repeat;
+      image: $dartDownIcon !important;
+      size: 9px !important;
+    }
+    padding-left: 1em;
+  }
+  &--up a {
+    background: {
+      position: 0 center !important;
+      repeat: no-repeat;
+      image: $dartUpIcon !important;
+      size: 9px !important;
+    }
+    padding-left: 1em;
+  }
+}
+
 .link {
 
   &:hover {
@@ -107,24 +149,6 @@ p a {
     padding-left: 1.5em;
   }
 
-  &--down {
-    background: {
-      position: 0 center !important;
-      repeat: no-repeat;
-      image: $dartDownIcon !important;
-      size: 9px !important;
-    }
-    padding-left: 1em;
-  }
-  &--up {
-    background: {
-      position: 0 center !important;
-      repeat: no-repeat;
-      image: $dartUpIcon !important;
-      size: 9px !important;
-    }
-    padding-left: 1em;
-  }
   &--forward {
     background: {
       position: 0 center;

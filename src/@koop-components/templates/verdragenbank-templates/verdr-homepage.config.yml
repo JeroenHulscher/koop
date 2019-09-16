@@ -51,3 +51,5 @@ context:
     heading: Lees meer over uw privacy
     id: 11231231
     text: Meer informatie over privacy en andere zaken
+  figure:
+    figcaption: false

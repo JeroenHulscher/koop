@@ -29,7 +29,7 @@
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Totstandkoming</legend>
+                  <legend>Totstandkoming {{render "@tooltip"}}</legend>
                   <div class="form__row">
                     <label>Startdatum</label>
                     {{render "@datepicker" }}
@@ -60,19 +60,19 @@
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Onderwerp</legend>
+                  <legend>Onderwerp {{render "@tooltip"}}</legend>
                   {{render "@subselection" subselectionOnderwerpContext }}
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nu geldend voor</legend>
+                  <legend>Nu geldend voor {{render "@tooltip"}}</legend>
                   {{render "@input-checkbox" geldvoorContext }}
               </div>
             </div>
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Tractatenblad/Staatsblad</legend>
+                  <legend>Tractatenblad/Staatsblad {{render "@tooltip"}}</legend>
                   <div class="form__row">
                     <label>Jaar</label>
                     <input type="number" class="input-text" placeholder="Bijv. 2018"/>
@@ -86,13 +86,13 @@
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Type verdrag</legend>
+                  <legend>Type verdrag {{render "@tooltip"}}</legend>
                   {{render "@input-checkbox" typeverdagContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nederland depositaris</legend>
+                  <legend>Nederland depositaris {{render "@tooltip"}}</legend>
                   {{render "@input-checkbox" depositarisContext }}
                 </fieldset>
               </div>

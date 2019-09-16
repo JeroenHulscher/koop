@@ -181,6 +181,7 @@ context:
   sortContext:
     modifier:
     amountPerPageFilter: true
+    columns: true
     options:
     - label: Datum
       value: value

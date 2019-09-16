@@ -75,6 +75,45 @@
       De geometrische begrenzing van de oppervlaktewaterlichamen (<a href="#voetnoot2" data-decorator="init-footnote">voetnoot 2</a>), bedoeld in bijlage II, onder 1, bij Omgevingsbesluit en waarvan het waterstaatkundig beheer bij het Rijk berust, is vastgelegd in bijlage III.
     </li>
   </ol>
+
+  <div class="table__container">
+    <table class="table" aria-describedby="described123">
+      <caption>Hier de tabeltitel.</caption>
+      <thead>
+        <tr>
+          <th>Header kolom 1</th>
+          <th>Header kolom 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1
+            <sup>
+              <a href="#tabelnoot1" id="referentie1" data-decorator="init-footnote">1</a>
+            </sup>
+          </td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <ul class="list-custom footnotes footnotes--clean">
+              <li class=" list-custom__item " id="tabelnoot1">
+                <span class="list-custom__itembullet">1</span>Dit is een tabelnoot.
+                <a href="#referentie1" class="reference">Terug naar referentie 1.</a>
+              </li>
+            </ul>
+            </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="table__caption" id="described123">
+      Dit is de tabelbron.
+    </div>
+  </div>
+
+
   <div class="table__container">
     <table class="table table--untouched table--striped table__data-overview" aria-describedby="tableDes2">
       <caption>Zebra1 en pgwide 0 (titel van de tabel)</caption>
