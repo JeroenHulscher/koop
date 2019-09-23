@@ -1,5 +1,4 @@
 (function() {
-  'use strict';
 
   onl.decorate({
     'init-datepicker': function(element) {
@@ -17,6 +16,8 @@
     this.config.isTouch = onl.ui.isTouch();
     this.config.months = [ 'januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december' ];
     this.round = 0;
+
+
 
     this.createHiddenField();
 
@@ -48,6 +49,8 @@
   };
 
   datepicker.prototype.initDatepicker = function(element) {
+    var self = this;
+
     // datepicker config
     $(element).attr('type', 'text').datepicker({
       dateFormat: this.config.dateFormat || 'dd-mm-yy',
@@ -63,6 +66,17 @@
       onClose: this.removeAria.bind(this),
       beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
+      },
+      onSelect: function(dateText) {
+        var date = dateText;
+
+        if (self.config.range) {
+          if (self.config.rangePosition === 'from') {
+            $(self.config.rangeRelation).datepicker('option', 'minDate', date);
+          } else {
+            $(self.config.rangeRelation).datepicker('option', 'maxDate', date);
+          }
+        }
       }
     });
     $(element).val($(element).data('date'));
@@ -691,6 +705,7 @@
     });
   },
   datepicker.prototype.updateHeaderElements = function() {
+    console.log('func');
     var context = document.getElementById('ui-datepicker-div');
     if (!context) {
       return;
