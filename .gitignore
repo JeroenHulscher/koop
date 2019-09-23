@@ -1,13 +1,13 @@
 .DS_Store
 .idea
 /node_modules
-/component-library
 *.log
 yarn.lock
 package-lock.json
 *.json
 !/package.json
 /package-lock.json
+/public/
 backstop_data/html_report/
 backstop_data/bitmaps_test/
 backstop_data/bitmaps_reference/
