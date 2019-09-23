@@ -10,7 +10,6 @@
   var selectall = function (element) {
     this.element = element;
     this.mastercheckbox = this.element.querySelector('.js-checkbox-master');
-    console.log('-', this.mastercheckbox);
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]');
 
