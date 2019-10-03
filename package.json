@@ -1,6 +1,6 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "1.9.11",
+  "version": "1.9.12",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   "author": "Hidde de Vries, Jeroen Hulscher",
   "license": "ISC",
   "dependencies": {
-    "webdriver-manager": "^12.1.5"
+    "chromedriver": "^77.0.0",
+    "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.1.4",
@@ -41,7 +42,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^3.0.1",
     "jasmine-spec-reporter": "^4.2.1",
-    "protractor": "~5.1.0",
+    "protractor": "^5.4.2",
     "selenium-standalone-jar": "^3.141.59"
   }
 }

@@ -51,7 +51,7 @@
     this.triggerA.setAttribute('href', '#');
     this.triggerA.setAttribute('tabindex', '0');
     this.triggerA.setAttribute('aria-expanded', false);
-    this.triggerA.innerHTML = 'Toon meer' + ' (' + this.totalHidden + ')';
+    this.triggerA.innerHTML = this.config.labelMore + ' (' + this.totalHidden + ')';
 
     this.trigger.appendChild(this.triggerA);
 

@@ -16,10 +16,10 @@
   p {
     margin: 0;
   }
-  .table__caption {
+  .table__caption,
+  .table__description {
     margin-top: .5em;
     margin-bottom: .5em;
-    color: $darkGrey;
     font-style: italic;
   }
 }
@@ -93,7 +93,6 @@ table,
   }
 
   caption {
-    color: $darkGrey;
     font-style: italic;
     text-align: left;
     padding: .5em 0;

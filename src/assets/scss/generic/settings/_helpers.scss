@@ -58,8 +58,13 @@
   display: inline-block;
 }
 
-.valign--middle {
-  vertical-align: middle;
+.valign {
+  &--middle {
+    vertical-align: middle !important;
+  }
+  &--bottom {
+    vertical-align: bottom !important;
+  }
 }
 
 .align-center,
