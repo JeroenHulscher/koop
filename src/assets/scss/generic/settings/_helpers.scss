@@ -155,6 +155,9 @@
   white-space: nowrap;
   word-break: keep-all;
 }
+.u-breakall {
+  word-break: break-all;
+}
 
 .u-fontsize--s {
   font-size: 0.9em !important;

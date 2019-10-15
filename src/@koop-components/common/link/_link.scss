@@ -167,6 +167,14 @@ li.link {
     }
     padding-left: 1em;
   }
+  &--map {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $iconMap;
+    }
+    padding-left: 2em;
+  }
 }
 
 .link-iconed {

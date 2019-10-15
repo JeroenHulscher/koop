@@ -1,11 +1,48 @@
-<ul class="nav-sub">
+<ul class="nav-sub {{#if modifier}}nav-sub--{{modifier}}{{/if}}">
   {{#each items}}
     <li class="nav-sub__item {{#if active}}is-active{{/if}}">
       <a href="{{href}}" class="nav-sub__link {{#if sactive}}is-active{{/if}}">{{title}}</a>
       {{#if sub}}
         <ul class="nav-sub__sub">
           {{#each subItems}}
-            <li class="nav-sub__sub-item"><a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a></li>
+            <li class="nav-sub__sub-item"><a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a>
+              {{#if sub}}
+              <ul class="nav-sub__sub">
+                {{#each subItems}}
+                <li class="nav-sub__sub-item">
+                  <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a>
+                  {{#if sub}}
+                  <ul class="nav-sub__sub">
+                    {{#each subItems}}
+                    <li class="nav-sub__sub-item">
+                      <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a>
+                       {{#if sub}}
+                      <ul class="nav-sub__sub">
+                        {{#each subItems}}
+                        <li class="nav-sub__sub-item">
+                          <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a>
+                           {{#if sub}}
+                          <ul class="nav-sub__sub">
+                            {{#each subItems}}
+                            <li class="nav-sub__sub-item">
+                              <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}">{{stitle}}</a>
+                            </li>
+                            {{/each}}
+                          </ul>
+                          {{/if}}
+                        </li>
+                        {{/each}}
+                      </ul>
+                      {{/if}}
+                    </li>
+                    {{/each}}
+                  </ul>
+                  {{/if}}
+                </li>
+                {{/each}}
+              </ul>
+              {{/if}}
+            </li>
           {{/each}}
         </ul>
       {{/if}}

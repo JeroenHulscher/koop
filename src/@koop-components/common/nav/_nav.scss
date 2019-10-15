@@ -1,8 +1,4 @@
-.nav {
-
-
-
-}
+.nav { }
 
 .nav-sub {
   margin: 0 0 2em 0;
@@ -54,6 +50,62 @@
     &.is-active {
       background: $lightBlue;
       padding-left: .5em;
+    }
+  }
+
+  &__sub &__sub &__sub-link {
+    border-left: .75em solid transparent;
+  }
+  &__sub &__sub &__sub-link.is-active {
+    border-left: .75em solid $lightBlue;
+  }
+  &__sub &__sub &__sub &__sub-link {
+    border-left: 1.5em solid transparent;
+  }
+  &__sub &__sub &__sub &__sub-link.is-active {
+    border-left: 1.5em solid $lightBlue;
+  }
+  &__sub &__sub &__sub &__sub &__sub-link {
+    border-left: 2.25em solid transparent;
+  }
+  &__sub &__sub &__sub &__sub &__sub-link.is-active {
+    border-left: 2.25em solid $lightBlue;
+  }
+  &__sub &__sub &__sub &__sub &__sub &__sub-link {
+    border-left: 3em solid transparent;
+  }
+  &__sub &__sub &__sub &__sub &__sub &__sub-link.is-active {
+    border-left: 3em solid $lightBlue;
+  }
+  &__sub &__sub &__sub &__sub &__sub &__sub &__sub-link {
+    border-left: 3em solid transparent;
+  }
+  &__sub &__sub &__sub &__sub &__sub &__sub &__sub-link.is-active {
+    border-left: 3em solid $lightBlue;
+  }
+  &__sub &__sub &__sub &__sub &__sub &__sub &__sub &__sub-link {
+    border-left: 3em solid transparent;
+  }
+  &__sub &__sub &__sub &__sub &__sub &__sub &__sub &__sub-link.is-active {
+    border-left: 3em solid $lightBlue;
+  }
+
+  &--folders &__sub-link {
+    padding: .5em .5em .5em 2.5em;
+    background-image: $dartDownIcon;
+    background-repeat: no-repeat;
+    background-position: center left 1em;
+    &:before {
+      content: "";
+      width: 22px;
+      height: 15px;
+      display: inline-block;
+      background-image: $iconMap;
+      background-repeat: no-repeat;
+      background-position: center left;
+      position: relative;
+      top: 1px;
+      margin-right: 1em;
     }
   }
 }

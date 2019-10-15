@@ -130,6 +130,9 @@ p {
   font-weight: bold;
   font-style: normal;
 }
+.docDivisie {
+  font-style: italic;
+}
 
 .docFormeleInhoud {
   @extend .h4;

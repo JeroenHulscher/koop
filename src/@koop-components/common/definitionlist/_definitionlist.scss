@@ -1,6 +1,6 @@
 dl,
 .dl {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 2em 0;
 
   dt {
     color: $darkBlue;
@@ -10,7 +10,7 @@ dl,
 
   dd {
     padding: 0;
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
 
     &:after {
       content: '\A';
