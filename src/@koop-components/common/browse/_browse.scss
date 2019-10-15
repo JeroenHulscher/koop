@@ -17,7 +17,7 @@
     a {
       display: block;
       border-bottom: 2px solid $lightGrey;
-      padding: 1em 2em 1em 1em;
+      padding: .95em 2em .95em 1em;
       background-color: $white;
       text-decoration: none;
       overflow: hidden; // hold floats
@@ -46,7 +46,7 @@
 
   &--icons {
 
-    .browse__list a {
+    .browse__list .browse__item:not(.browse__item--arrowed) a {
       background-image: none;
     }
 
@@ -59,7 +59,7 @@
         width: 1.25em;
         height: 1.25em;
         left: .25em;
-        top: 1.125em;
+        top: 1.05em;
       }
 
       svg {
