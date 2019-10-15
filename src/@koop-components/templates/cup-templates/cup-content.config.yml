@@ -1,0 +1,12 @@
+---
+label: CUP - Content
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+
