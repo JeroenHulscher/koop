@@ -3,6 +3,7 @@
 		<li>
 			<div class="list--source__information">
 				{{ name }}
+        <span class="list--sources__item__filesize">{{ filesize }}</span>
 				{{#if files }}
 					{{#each files }}
 						<span class="label label--{{ type }}">{{ type}}</span>
@@ -10,7 +11,8 @@
 				{{/if}}
 			</div>
 
-			{{ render "@button" buttonContext }}
+			{{!-- {{ render "@button" buttonContext }} --}}
+      <a href="#" class="button button--primary">{{buttonContext/text}} <span class="visually-hidden">bestand: {{name}}</span></a>
 
 			{{#if moreInfo }}
 				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
