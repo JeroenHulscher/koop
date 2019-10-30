@@ -56,6 +56,7 @@
       dateFormat: this.config.dateFormat || 'dd-mm-yy',
       showOn: 'button',
       changeYear: true,
+      yearRange: this.config.yearrange || 'c-10:c+10',
       buttonImageOnly: false,
       buttonText: 'Toon kalender',
       monthNames: this.config.months,
