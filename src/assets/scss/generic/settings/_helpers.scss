@@ -58,8 +58,13 @@
   display: inline-block;
 }
 
-.valign--middle {
-  vertical-align: middle;
+.valign {
+  &--middle {
+    vertical-align: middle !important;
+  }
+  &--bottom {
+    vertical-align: bottom !important;
+  }
 }
 
 .align-center,
@@ -149,6 +154,9 @@
 .u-nobreak {
   white-space: nowrap;
   word-break: keep-all;
+}
+.u-breakall {
+  word-break: break-all;
 }
 
 .u-fontsize--s {

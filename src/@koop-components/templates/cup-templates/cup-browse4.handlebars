@@ -1,0 +1,62 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" role="main" id="content">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+      <div class="row row--large">
+
+        <div class="sort {{ modifier }}">
+          <div class="columns">
+            <div class="column">
+              <a href="#" class="link link--map">Terug naar Expression</a>
+            </div>
+            <div class="column d-align-right">
+              {{render "@pageactions" pageactions }}
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <h1>Manifestation <span class="h1__sub">24 resultaten</span></h1>
+
+      <p>
+        Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond.
+      </p>
+
+      <h2>Coordinaten</h2>
+       {{ render "@sources-list" sourcesContext }}
+      <h2>JPG</h2>
+       {{ render "@sources-list" sourcesContext2 }}
+      <h2>PDF</h2>
+       {{ render "@sources-list" sourcesContext3 }}
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
+
+        <div class="modal-sidebar__content">
+          {{render "@nav" navWetContext }}
+
+          <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

@@ -1,0 +1,42 @@
+.browse {
+
+  &__list {
+
+    a {
+
+      font-weight: bold;
+      border-bottom: 1px solid $mediumGrey;
+      background: {
+        image: $chevronRight;
+        repeat: no-repeat;
+        position: right .5em center;
+        size: .325em;
+      };
+
+      img {
+        margin-left: .5em;
+      }
+    }
+    li:nth-child(even) a {
+      background-color: $lightGrey;
+      &:hover {
+        background-color: $lightBlue;
+        color: $darkBlue;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  &__count {
+    float: none;
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  &--icons &__list a {
+    padding-left: 2.75em;
+  }
+
+}

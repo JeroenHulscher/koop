@@ -4,13 +4,27 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     // seleniumAddress: './node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
     specs: ['src/**/*.e2e.js'],
-    // chromeDriver: './node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver',
+    // chromeDriver: '/usr/local/bin/chromedriver',
 
-    onPrepare: function() {
-        jasmine.getEnv().addReporter(new SpecReporter({
-            spec: {
-                displayStacktrace: true
-            }
-        }));
-    }
-}
+    capabilities: {
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        w3c: false
+      }
+    },
+  // maxInstances: 4,
+  // shardTestFiles: true,
+    // chromeOptions: {
+      //your path to Chromium
+      // binary: '/Applications/Chromium.app/Contents/MacOS/Chromium'
+    // },
+    // chromeDriver:'../node_modules/chromedriver/bin/chromedriver',
+
+  onPrepare: function() {
+      jasmine.getEnv().addReporter(new SpecReporter({
+          spec: {
+              displayStacktrace: true
+          }
+      }));
+  }
+};

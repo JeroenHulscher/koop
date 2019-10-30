@@ -1,0 +1,58 @@
+---
+label: CUP - Browse 1
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  navWetContext:
+    id: 2
+    modifier: folders
+    items:
+    - title: Repository
+      sub: true
+      subItems:
+        - stitle: frbr
+          sactive: true
+  alertFoutief:
+    heading: Ziet u een fout in deze regeling?
+    text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
+    modifier: alert--success alert--lg icon--document
+  pageactions:
+    items:
+    - link: '#'
+      text: Permalink
+      icon: icon-permalink.svg
+      modal: true
+    - link: '#'
+      text: Fout in deze regeling
+      icon: icon-info-blue.svg
+    - link: '#'
+      text: Download
+      icon: icon-download.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print.svg
+  repoContext:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        text: ...
+        icon: icon-map-blue.svg
+        aria-label: Terug naar vorige map
+      - link: '#'
+        text: cga
+        icon: icon-map-blue.svg
+        count: 110
+        mother: true
+      - link: '#'
+        text: sgd
+        icon: icon-map-blue.svg
+        count: 5
+        mother: true

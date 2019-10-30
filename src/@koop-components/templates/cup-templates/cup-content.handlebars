@@ -1,0 +1,99 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" role="main" id="content">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+      <h1>Gebruik repository</h1>
+      <p>Via deze service is het mogelijk om de repository te benaderen. Via verschillende manieren is het mogelijk om items op te
+      vragen/in te zien. De mogelijkheden worden hieronder beschreven per niveau. In het algemeen gelden de volgende mogelijkheden.
+      </p><p>
+      Bij bepaalde area’s wordt gebruik gemaakt van subarea’s. Bijvoorbeeld heeft officiele publicaties staatscourant en jaartal
+      als subarea: “/officielepublicaties/stcrt/2015/stcrt-2015-123”. De mogelijkheid bestaat om een directory gezipt geretourneerd
+      te krijgen. Achter het request wordt dan de toevoeging ?format=zip gedaan, voorbeeld <span class="u-breakall">https://repository.overheid.nl/frbr/sgd/1840/0000448441/?format=zip</span>.
+      </p><p>
+      Per niveau is beschreven welke format-mogelijkheden er zijn.
+      </p>
+      <h2>(Sub)area-niveau</h2>
+      <dl>
+        <dt>Uitleg</dt>
+        <dd>Geef de naam van de area op om een uitleg te krijgen van het gebruik van de service.</dd>
+        <dt>Request</dt>
+        <dd>/[area]</dd>
+        <dt>Voorbeeld</dt>
+        <dd><span class="u-breakall">https://repository.overheid.nl/frbr/sgd/</span></dd>
+        <dt>Response</dt>
+        <dd>Deze uitleg plus de listing van de area met alle eventuele subarea’s of alle works</dd>
+      </dl>
+      <h2>Work-niveau</h2>
+      <dl>
+        <dt>Uitleg</dt>
+        <dd>Geef de naam van de area op om een uitleg te krijgen van het gebruik van de service.</dd>
+        <dt>Request</dt>
+        <dd>/[area]/[subarea]/[work]/</dd>
+        <dt>Voorbeeld</dt>
+        <dd><span class="u-breakall">https://repository.overheid.nl/frbr/sgd/1840/0000448441/</span></dd>
+        <dt>Response</dt>
+        <dd>Listing van de work met alle expressions</dd>
+        <dt>Format mogelijkheden</dt>
+        <dd>xml: niveau in xml formaat. html: niveau in html formaat. zip: zip-bestand van de gevraagde work inclusief alle subdirectories
+        en bestanden.</dd>
+      </dl>
+
+      <h2>Expression-niveau</h2>
+      <dl>
+        <dt>Uitleg</dt>
+        <dd>Geef de naam van de area op om een uitleg te krijgen van het gebruik van de service.</dd>
+        <dt>Request</dt>
+        <dd>/[area]/[work]/[expression]</dd>
+        <dt>Voorbeeld</dt>
+        <dd><span class="u-breakall">https://repository.overheid.nl/frbr/sgd/1840/0000448441/1/</span></dd>
+        <dt>Response</dt>
+        <dd>Listing van de expression met alle manifestations</dd>
+        <dt>Format mogelijkheden</dt>
+        <dd>xml: niveau in xml formaat. html: niveau in html formaat. zip: zip-bestand van de gevraagde expression inclusief alle subdirectories
+        en bestanden.</dd>
+      </dl>
+
+      <h2>Manifestation-niveau</h2>
+      <dl>
+        <dt>Uitleg</dt>
+        <dd>Geef de naam van de area, een work, een expression en een manifestation op om de inhoud op dit niveau te verkrijgen.</dd>
+        <dt>Request</dt>
+        <dd>/[area]/[work]/[expression]/[manifestation]</dd>
+        <dt>Voorbeeld</dt>
+        <dd><span class="u-breakall">https://repository.overheid.nl/frbr/sgd/1840/0000448441/1/pdf/</span></dd>
+        <dt>Response</dt>
+        <dd>Listing van de manifestation met alle items</dd>
+        <dt>Format mogelijkheden</dt>
+        <dd>xml: niveau in xml formaat. html: niveau in html formaat. zip: zip-bestand van de gevraagde manifestation.</dd>
+      </dl>
+
+      <h2>Item-niveau</h2>
+      <dl>
+        <dt>Uitleg</dt>
+        <dd>Geef de naam van een specifiek item om de item te downloaden of weer te geven.</dd>
+        <dt>Request</dt>
+        <dd>/[area]/[work]/[expression]/[manifestation]/[item]</dd>
+        <dt>Voorbeeld</dt>
+        <dd><span class="u-breakall">https://repository.overheid.nl/frbr/sgd/1840/0000448441/1/pdf/SGD_1840_0000002.pdf</span></dd>
+        <dt>Response</dt>
+        <dd>Het gevraagde [item]</dd>
+        <dt>Format mogelijkheden</dt>
+        <dd>Het output format van het gevraagde item. Er is geen mogelijkheid om een format op te geven.</dd>
+      </dl>
+
+    </div>
+    <div class="column column--sidebar">
+      <p><a href="#" class="icon icon--searchBlue">Zoeken in repository</a></p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}
