@@ -9,10 +9,9 @@ context:
       - url: ''
         text: MijnOverheid.nl
   breadcrumbContext:
-    breadcrumb:
-      last: Tuchtrecht
-      items:
-        - label: Home
+    breadcrumbs:
+      - content: <a href="#">Home</a>
+      - content: Tuchtrecht
   inputtextContext:
     modifier: input-text--searchmedium
     id: 1

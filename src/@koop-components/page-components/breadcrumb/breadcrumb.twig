@@ -1,0 +1,8 @@
+<div class="breadcrumb">
+  <p>{{ title }}</p>
+  <ol>
+    {% for breadcrumbs_i in breadcrumbs %}
+    <li>{{ breadcrumbs_i.content }}</li>
+    {% endfor %}
+  </ol>
+</div>

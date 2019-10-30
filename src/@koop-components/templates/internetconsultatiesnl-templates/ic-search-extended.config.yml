@@ -3,11 +3,8 @@ context:
     youAreHere:
       - text: De wegwijzer naar informatie en diensten van alle overheden
   breadcrumbContext:
-    last: Zoeken
     breadcrumbs:
-      - label: Home
-        path: "#"
-      - label: Overheidsinformatie
-        path: "#"
-      - label: Internetconsultatie
-        path: "#"
+      - content: '<a href="#">Home</a>'
+      - content: '<a href="#">Overheidsinformatie</a>'
+      - content: '<a href="#">Internetconsultatie</a>'
+      - content: 'Zoeken'

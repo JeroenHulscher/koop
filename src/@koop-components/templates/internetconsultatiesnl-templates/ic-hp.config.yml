@@ -10,12 +10,10 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    last: Internetconsultatie
     breadcrumbs:
-      - label: Home
-        path: "#"
-      - label: Overheidsinformatie
-        path: "#"
+      - content: '<a href="#">Home</a>'
+      - content: '<a href="#">Overheidsinformatie</a>'
+      - content: 'Internetconsultatie'
   rowLanding:
     - image: "../../images/temp/homepage-beleid.jpg"
       title: Internetconsultatie
@@ -47,8 +45,8 @@ context:
     heading: Meer informatie
     headingType: h3
     items:
-      - text: <a href="#">Gesloten consultaties</a>
-      - text: <a href="#">Abonneren nieuwe consultaties</a>
-      - text: <a href="#">Veelgestelde vragen</a>
-      - text: <a href="#">Wet- en regelgeving</a>
-      - text: <a href="#">RSS nieuwe consultaties</a>
+      - content: <a href="#">Gesloten consultaties</a>
+      - content: <a href="#">Abonneren nieuwe consultaties</a>
+      - content: <a href="#">Veelgestelde vragen</a>
+      - content: <a href="#">Wet- en regelgeving</a>
+      - content: <a href="#">RSS nieuwe consultaties</a>

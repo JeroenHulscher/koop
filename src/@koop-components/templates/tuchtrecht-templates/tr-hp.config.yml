@@ -8,10 +8,9 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    breadcrumb:
-      last: Tuchtrecht
-      items:
-        - label: Home
+    breadcrumbs:
+      - content: <a href="#">Home</a>
+      - content: Tuchtrecht
   facelistContext:
     modifier: list--facet
     heading: Meer informatie
