@@ -3,8 +3,11 @@ context:
     youAreHere:
       - text: De wegwijzer naar informatie en diensten van alle overheden
   breadcrumbContext:
-    breadcrumbs:
-      - content: '<a href="#">Home</a>'
-      - content: '<a href="#">Overheidsinformatie</a>'
-      - content: '<a href="#">Internetconsultatie</a>'
-      - content: 'Zoeken'
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: Internetconsultatie
+        url: '#'
+      - text: Zoeken

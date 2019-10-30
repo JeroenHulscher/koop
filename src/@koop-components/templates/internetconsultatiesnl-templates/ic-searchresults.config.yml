@@ -10,11 +10,14 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-      breadcrumbs:
-        - content: '<a href="#">Home</a>'
-        - content: '<a href="#">Overheidsinformatie</a>'
-        - content: '<a href="#">Internetconsultatie</a>'
-        - content: 'Zoekresultaat'
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: Internetconsultatie
+        url: '#'
+      - text: Zoekresultaat
   sortContext:
     options:
       - label: Naam

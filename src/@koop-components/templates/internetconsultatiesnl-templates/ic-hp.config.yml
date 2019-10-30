@@ -10,10 +10,12 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    breadcrumbs:
-      - content: '<a href="#">Home</a>'
-      - content: '<a href="#">Overheidsinformatie</a>'
-      - content: 'Internetconsultatie'
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: Internetconsultatie
   rowLanding:
     - image: "../../images/temp/homepage-beleid.jpg"
       title: Internetconsultatie

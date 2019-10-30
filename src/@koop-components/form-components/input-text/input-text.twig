@@ -1,0 +1,42 @@
+{% if remove %}
+<div class="relative">
+{% endif %}
+
+{% if prefix %}
+<div class="input-text__container input-text__container--prefix">
+{% endif %}
+
+  <label {% if fieldLabelVisible %}{% else %}class="visually-hidden"{% endif %}for="{% if cleanID %}{{ id }}{% else %}input-text-{{ id }}{% endif %}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
+
+  {% if prefix %}
+    <span class="input-text__prefix {{ modifier2 }}">{{ prefixLabel }}</span>
+  {% endif %}
+
+  <input
+    {% if type %}type="{{ type }}"{% else %}type="text"{% endif %}
+    id="{% if cleanID %}{{ id }}{% else %}input-text-{{ id }}{% endif %}"
+    name="{{ id }}"
+    class="input input-text {{ modifier }} {% if error %}has-error{% endif %}"
+    placeholder="{{ fieldPlaceholder }}"
+    {% if error %}aria-describedby="input-text-1__error"{% endif %}
+    aria-invalid="{% if error %}true{% else %}false{% endif %}"
+    placeholder="{{ fieldPlaceholder }}"
+    {% if disabled %}disabled{% endif %}
+    {% if value %}value="{{ value }}"{% endif %}
+
+    {% if remove %}
+    data-decorator="toggle-remove-visibility"
+    {% endif %}/>
+
+    {% if error %}
+      <p role="alert" id="input-text-{{ id }}__description" class="form__error">{{ errorMessage }}</p>
+    {% endif %}
+
+{% if remove %}
+  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+{% endif %}
+
+{% if prefix %}
+</div>
+{% endif %}

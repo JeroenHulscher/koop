@@ -36,9 +36,10 @@ context:
       - url: '#'
         text: Zoeken
   breadcrumbContext:
-    breadcrumbs:
-      - content: <a href="#">Home</a>
-      - content: Tuchtrecht
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Tuchtrecht
   inputtextContext:
     modifier: input-text--searchmedium
     id: 1

@@ -37,14 +37,21 @@ gulp.task( 'fractal:start', function(){
 });
 
 gulp.task( 'fractal:start-twig', function(){
-  const fractal = require( './fractal.js' );
-  
+
   // Twig adapter
-  fractal.components.engine(require('@frctl/twig')());
+  const twigAdapter = require('@frctl/twig')({
+    importContext: true
+  });
+
+  // Fractal
+  const fractal = require( './fractal.js' );
+  fractal.components.engine(twigAdapter);
   fractal.components.set('ext', '.twig');
-  
   const logger = fractal.cli.console;
-  const server = fractal.web.server({ sync: true });
+  const server = fractal.web.server({
+    sync: true,
+    port: 4000
+  });
 
   server.on( 'error', err => logger.error( err.message ) );
   return server.start().then( () => {
