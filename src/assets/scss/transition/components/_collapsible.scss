@@ -8,6 +8,7 @@
       color: #154273;
       text-decoration: underline;
       background: $plusShapeIcon no-repeat left top .2em;
+      margin-left: 1em;
 
       &[aria-expanded=true] {
         background: $minusShapeIcon no-repeat left top .625em;
@@ -16,7 +17,7 @@
   }
 
   .collapsible__content {
-    margin: 0 0 .5em;
+    margin: 0 0 .5em 1em;
     padding-top: .75em;
   }
 }
