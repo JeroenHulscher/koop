@@ -12,15 +12,10 @@
 
 
       <div class="row row--medium hidden-mobile">
-        <div class="columns">
-          <div class="column column-d-7">
-            {{render "@input-inputsubmit" inputsubmitContext }}
-          </div>
-        </div>
         <div class="">
           {{ render "@sort" sortContext }}
           <div class="align-right">
-            <a href="#" class="icon icon--download">Download</a>
+            <a href="#" class="icon icon--download">Download {{render "@tooltip" }}</a>
           </div>
         </div>
       </div>
@@ -86,9 +81,15 @@
 
             </div>
             <form id="formid">
-            <div class="form__row form__row--large hidden-desktop">
+            {{!-- <div class="form__row form__row--large hidden-desktop">
               <label for="">Filter op trefwoord</label>
               {{ render "@input-text" inputsearchMobContext }}
+            </div> --}}
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Zoekwoord(en)</legend>
+                {{render "@input-inputsubmit" inputsubmitContext }}
+              </fieldset>
             </div>
             <div class="form__row form__row--large">
               <fieldset>
