@@ -46,13 +46,9 @@ variants:
       modifier: list--linked
       items:
         - content: <a href="#">1e item</a>
-          attributes: class="list__item"
         - content: <a href="#">2e item</a>
-          attributes: class="list__item"
         - content: <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
-          attributes: class="list__item"
         - content: <a href="#">4e item</a>
-          attributes: class="list__item"
   - name: facetlist
     context:
       modifier: list--facet
@@ -180,16 +176,9 @@ variants:
       custom: true
       items:
       - content: <span class="list-custom__itembullet">1</span><p>Met de volgende classnamen is de afstand zelf te bepalen tussen het nummer en de omschrijving .list-custom--size-xs, .list-custom--size-s, .list-custom--size-m, .list-custom--size-l. </p>
-        attributes: class="list-custom__item"
       - content: <span class="list-custom__itembullet">2</span><p>2 item</p>
-        attributes: class="list-custom__item"
       - content: <span class="list-custom__itembullet">4</span><p>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
-        attributes: class="list-custom__item"
         subitems:
           - content: <span class="list-custom__itembullet">4.1</span><p>1e subitem</p>
-            attributes: class="list-custom__item"
           - content: <span class="list-custom__itembullet">4.3</span><p>2e subitem</p>
-            attributes: class="list-custom__item"
       - content: <span class="list-custom__itembullet">7</span><p>4e item</p>
-        attributes: class="list-custom__item"
-

@@ -25,7 +25,7 @@
 {% else %}
   {% for items_i in items %}
     {% if items_i.subitems %}
-    <li {{ items_i.attributes }}>{{ items_i.content }}
+    <li class="{% if custom %}list-custom__item{% else %}list__item{% endif %}">{{ items_i.content }}
       {% if items_i.orderedList %}
         <ol>
         {% for subitems_i in items_i.subitems %}
@@ -41,7 +41,7 @@
       {% endif %}
     </li>
     {% else %}
-      <li {{ items_i.attributes }}>{% if items_i.color %}<span class="{{ items_i.color }}"></span>{% endif %}{{ items_i.content }}</li>
+      <li class="{% if custom %}list-custom__item{% else %}list__item{% endif %}">{% if items_i.color %}<span class="{{ items_i.color }}"></span>{% endif %}{{ items_i.content }}</li>
     {% endif %}
   {% endfor %}
 {% endif %}
