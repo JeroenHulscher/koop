@@ -36,6 +36,22 @@ gulp.task( 'fractal:start', function(){
   });
 });
 
+gulp.task( 'fractal:start-twig', function(){
+  const fractal = require( './fractal.js' );
+  
+  // Twig adapter
+  fractal.components.engine(require('@frctl/twig')());
+  fractal.components.set('ext', '.twig');
+  
+  const logger = fractal.cli.console;
+  const server = fractal.web.server({ sync: true });
+
+  server.on( 'error', err => logger.error( err.message ) );
+  return server.start().then( () => {
+    logger.success( `Fractal server is now running at ${server.urls.sync.local}` );
+  });
+});
+
 gulp.task( 'fractal:build', function(){
   const fractal = require( './fractal.js' );
   const logger = fractal.cli.console;
@@ -167,3 +183,4 @@ gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'fracta
 gulp.task( 'watch', gulp.parallel( 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'clean', gulp.parallel( 'css:clean', 'images:clean', 'fonts:clean', 'js:clean' ) );
 gulp.task( 'dev', gulp.series( 'default', 'fractal:start', 'watch' ) );
+gulp.task( 'dev-twig', gulp.series( 'default', 'fractal:start-twig', 'watch' ) );
