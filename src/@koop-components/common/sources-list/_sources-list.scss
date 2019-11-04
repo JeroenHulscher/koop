@@ -13,7 +13,7 @@
       font-weight: bold;
       background-image: $iconDocument;
       background-size: 1.325em;
-      background-position: .75em center;
+      background-position: .75em 0.1em;
       background-repeat: no-repeat;
       padding-left: 2.75em;
 
@@ -61,12 +61,12 @@
   }
 
   .collapsible {
-    margin: 0;
+    margin: 0 0 0 1em;
   }
 
 	.collapsible__content {
     clear: both;
-    margin: 0;
+    margin: 0 0 .5em 0 !important;
 
 		@media ( min-width: $breakpointDesktop ) {
 			padding: 2em 0 0 0;

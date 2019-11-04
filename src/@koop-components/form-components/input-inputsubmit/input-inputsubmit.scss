@@ -42,4 +42,34 @@
       width: auto;
     }
   }
+
+
+  &--s &__grid {
+      display: flex;
+  }
+  &--s .input {
+    border-width: 1px;
+    height: auto;
+    width: auto;
+    margin: 0 .5em 0 0;
+    flex: 1 0 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--s .input ~ .button {
+    background-image: $searchIcon;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-right: .75em;
+    flex: 0 0 auto;
+    margin: 0;
+    width: auto;
+
+    span {
+      @extend .visually-hidden;
+    }
+
+  }
 }

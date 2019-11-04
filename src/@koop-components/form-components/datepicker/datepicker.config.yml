@@ -15,3 +15,10 @@ variants:
       fieldLabel: Datum
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 06-10-1960'
+  - name: Custom years
+    context:
+      id: 3
+      fieldLabel: Datum
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 06-10-1960'
+      yearrange: "c-50:c+5"

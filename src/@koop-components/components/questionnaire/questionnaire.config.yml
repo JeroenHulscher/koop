@@ -1,0 +1,82 @@
+---
+label: Questionnaire
+status: prototype
+context:
+  id: 1
+  submitLabel: Verzenden
+  questions:
+    - id: 1
+      question: What do you want on your icecream?
+      checkbox: true
+      nextButton: true
+      link: 2
+      answers:
+      - id: 51
+        answer: Nada!
+      - id: 52
+        answer: Sprinkles
+      - id: 53
+        answer: Whipped cream
+    - id: 2
+      question: What is your favorite color?
+      radio: true
+      answers:
+        - id: 11
+          answer: red
+          value: red
+          link: 3
+        - id: 12
+          answer: blue
+          value: blue
+    - id: 3
+      question: Are you a human?
+      select: true
+      answers:
+        - id: 21
+          answer: Please tell us
+          value:
+          link: 3
+        - id: 22
+          answer: Yes, i'm a human
+          link: 4
+          value: next
+        - id: 23
+          answer: Doh
+          link: 4
+          value: next
+    - id: 4
+      question: Are you sure your favorite color is red?
+      radio: true
+      answers:
+        - id: 31
+          answer: 'yes, i love red!'
+          link:
+        - id: 32
+          answer: 'nah, just kidding'
+          link: 5
+    - id: 5
+      question: What about blue?
+      radio: true
+      answers:
+        - id: 41
+          answer: 'yes, i love blue!'
+          link:
+        - id: 42
+          answer: 'eh? blue? No way.'
+          link:
+variants:
+  - name: Feedback
+    status: ready
+    context:
+      id: 1
+      submitLabel: Verstuur feedback
+      questions:
+        - id: 1
+          question: Deel uw feedback
+          paragraph: Wat dit de informatie die u zocht?
+          radio: true
+          answers:
+          - id: 51
+            answer: Ja
+          - id: 52
+            answer: Nee
