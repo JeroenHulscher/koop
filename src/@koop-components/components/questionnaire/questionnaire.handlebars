@@ -1,0 +1,62 @@
+<div class="questionnaire" data-decorator="init-questionnaire">
+  {{#each questions}}
+    <fieldset arial-label="{{question}}" id="question-{{id}}" class="questionnaire__question js-questionnaire__question">
+      <legend>{{question}}</legend>
+      <p>{{paragraph}}</p>
+      {{#if radio}}
+        <div>
+          {{#each answers}}
+            <div class="input-radio">
+              <input type="radio" class="radio__input" id="option-{{id}}" name="name{{../id}}" data-linkedto="{{link}}" />
+              <label class="radio__label" for="option-{{id}}">
+                 {{answer}}
+              </label>
+            </div>
+            {{!-- <label>{{answer}}<input type="radio"  /></label> --}}
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if checkbox}}
+        <div>
+          {{#each answers}}
+            <div class="input-checkbo">
+              <input type="checkbox" class="checkbo__input" id="option-{{id}}" name="name{{../id}}" />
+              <label class="checkbo__label" for="option-{{id}}">
+                {{answer}}
+              </label>
+            </div>
+            <label>{{answer}}<input type="checkbox" name="name{{../id}}" /></label>
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if select}}
+        <div>
+          <select name="name{{id}}" >
+            {{#each answers}}
+              <option {{#if value}}value="{{value}}"{{/if}} data-linkedto="{{link}}">{{answer}}</option>
+            {{/each}}
+          </select>
+        </div>
+      {{/if}}
+      {{#if nextButton}}
+        <button class="button button--primary js-button-next" data-linkedto="{{link}}" hidden>Volgende</button>
+      {{/if}}
+    </fieldset>
+  {{/each}}
+  <div class="js-questionnaire__submitcontainer" hidden>
+    <button type="submit" class="button button--primary">{{submitLabel}}</button>
+  </div>
+</div>
+
+<style>
+  body {
+    padding: 40px;
+  }
+  fieldset {
+    border: 1px solid black;
+    margin: 0 0 24px 0;
+  }
+  fieldset:focus {
+    border: 1px solid red;
+  }
+</style>
