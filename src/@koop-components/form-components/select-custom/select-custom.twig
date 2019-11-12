@@ -1,4 +1,4 @@
-<div id="{{ id }}" class="select-custom {{ modifier }}">
+<div{% if id %} id="select--{{ id }}"{% endif %} class="select-custom {{ modifier }}">
   <select{{ attributes }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}

@@ -1,4 +1,4 @@
-<select id="select--{{ id }}" {{ attributes }}>
+<select{% if id %} id="select--{{ id }}"{% endif %} {{ attributes }}>
   {% for option in options %}
     {% if option.type == 'optgroup' %}
       <optgroup label="{{ option.label }}">
