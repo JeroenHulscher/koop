@@ -3,8 +3,16 @@ label: Select custom
 status: ready
 context:
   id: 1
-  fieldLabel: Aantal resultaten per pagina
-  fieldInstruction: verplicht veld
+  options:
+    - label: Gemeente Den Haag
+      value: 10
+      selected: true
+    - label: 20
+      value: 20
+    - label: 50
+      value: 50
+    - label: 100
+      value: 100
 variants:
   - name: large
     context:
