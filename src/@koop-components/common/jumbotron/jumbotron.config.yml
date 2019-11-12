@@ -5,8 +5,8 @@ context:
   h: h2
   heading: Welke informatie kunt u vinden in 'Berichten over uw Buurt'?
   subheading: Berichten die voor u belangrijk zijn
-  text: Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals vergunningen, bouwplannen en plaatselijke regelgeving. De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden gepubliceerd.
-  button: true
+  content: Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals vergunningen, bouwplannen en plaatselijke regelgeving. De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden gepubliceerd.
+  button: Klik mij
   centered: false
   intro: Dit is de intro van de Jumbotron
 variants:
