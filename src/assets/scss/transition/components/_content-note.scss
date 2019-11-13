@@ -1,0 +1,18 @@
+.content-note {
+  border-radius: .5em;
+  background: $lightBlue;
+  padding: 1.5em 2em;
+  margin: 0 0 2em 2em;
+  @extend .group;
+  font-size: em(14);
+
+  &__heading {
+    font-size: em(18);
+    line-height: 1em;
+    font-weight: normal;
+    font-style: italic;
+  }
+  p,li {
+    margin: 0;
+  }
+}
