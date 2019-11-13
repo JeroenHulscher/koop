@@ -78,6 +78,9 @@
             $(self.config.rangeRelation).datepicker('option', 'maxDate', date);
           }
         }
+        if ($('.js-fixedbottom-button__button')) {
+          $('.js-fixedbottom-button__button').removeAttr('hidden');
+        }
       }
     });
     $(element).val($(element).data('date'));
