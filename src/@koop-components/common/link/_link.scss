@@ -5,7 +5,7 @@ a {
   outline: 2px solid transparent;
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
-  word-break: break-all;
+  word-break: break-word;
 
   &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]),
   &[rel="external"] {
