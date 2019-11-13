@@ -37,7 +37,6 @@
   questionnaire.prototype.initEventListeners = function(e) {
     var y;
     var i;
-    console.log('this.inputs', this.inputs);
 
     for (y = 0; y < this.inputs.length; y++) {
       this.inputs[y].addEventListener('change', function(e) { this.actOnChange(e); }.bind(this), false);
@@ -56,9 +55,7 @@
     var linkedToQuestionId;
     var currentQuestionContainer = obj.closest('fieldset');
     var automaticProceed = true;
-
-    console.log('change', e);
-    console.log('change', e.path[0].type);
+    console.log('inputType', inputType);
 
     switch (inputType) {
     case 'radio':
@@ -67,7 +64,8 @@
     case 'submit':
       linkedToQuestionId = obj.dataset.linkedto;
       break;
-    case 'select':
+    case 'select-one':
+      console.log('select');
       linkedToQuestionId = obj.options[obj.selectedIndex].getAttribute('data-linkedto');
       break;
     case 'checkbox':
@@ -95,16 +93,14 @@
 
   questionnaire.prototype.amountCheckedInFamily = function(obj, parent) {
     var list, index, item, checkedCount;
-    console.log('parent', parent);
 
     checkedCount = 0;
     list = parent.getElementsByTagName('input');
-    console.log('list', list);
     for (index = 0; index < list.length; ++index) {
       item = list[index];
       if (item.getAttribute('type') === "checkbox"
         && item.checked
-        && item.name === obj.attributes[1].value) {
+        && item.name === obj.name) {
         ++checkedCount;
       }
     }
@@ -152,11 +148,13 @@
     }
   };
 
-  questionnaire.prototype.showFormSubmit = function(e) {
+  questionnaire.prototype.showFormSubmit = function() {
     this.submitContainer.removeAttribute('hidden');
+    this.submitContainer.querySelector('button').setAttribute('role', 'alert');
   };
-  questionnaire.prototype.hideFormSubmit = function(e) {
+  questionnaire.prototype.hideFormSubmit = function() {
     this.submitContainer.setAttribute('hidden', 'hidden');
+    this.submitContainer.querySelector('button').removeAttribute('role');
   };
 
 })();

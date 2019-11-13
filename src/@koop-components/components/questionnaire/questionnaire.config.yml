@@ -42,8 +42,6 @@ context:
           value: next
         - id: 23
           answer: Doh
-          link: 4
-          value: next
     - id: 4
       question: Are you sure your favorite color is red?
       radio: true
