@@ -63,6 +63,11 @@
       margin-left: 1em;
     }
   }
+  &-close {
+    @extend .button;
+    margin-top: em(8);
+    font-size: em(13) !important;
+  }
 }
 
 table.ui-datepicker-calendar {
