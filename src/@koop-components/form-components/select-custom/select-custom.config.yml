@@ -5,6 +5,16 @@ context:
   id: 1
   fieldLabel: Aantal resultaten per pagina
   fieldInstruction: verplicht veld
+  items:
+    - id: 1
+      value: 10
+      label: Item 1
+    - id: 2
+      value: 20
+      label: Item 2
+    - id: 3
+      value: 30
+      label: Item 3
 variants:
   - name: large
     context:
