@@ -1,0 +1,21 @@
+{{#if radio}}
+  <div role="radiogroup">
+{{/if}}
+  {{#if label}}<label class="form__label {{#if labelsize}}form__label--{{labelsize}}{{/if}}" for="{{id}}">{{label}}</label>{{/if}}
+  <div class="input-group {{#if size}}input-group--{{size}}{{/if}} {{#if flex}}input-group--flex{{/if}}">
+    {{#if radio}}
+      {{#each options }}
+        <div class="input-group__item">
+          <input class="input-group__input" {{checked}} {{disabled}} type="radio" id="option-{{ id }}" name="{{ name }}" />
+          <label class="input-group__label" for="option-{{ id  }}">
+            {{{ text }}}
+          </label>
+        </div>
+      {{/each}}
+    {{/if}}
+  </div>
+{{#if radio}}
+  </div>
+{{/if}}
+
+

@@ -13,6 +13,9 @@
     </label>
   {{/each}}
 </fieldset> --}}
+{{#if group}}
+<div class="input-radio-group">
+{{/if}}
 {{#each options }}
   <div class="input-radio">
     <input class="radio__input" {{checked}} {{disabled}} type="radio" id="option-{{ id }}" name="{{ name }}" />

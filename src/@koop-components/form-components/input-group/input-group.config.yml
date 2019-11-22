@@ -1,0 +1,16 @@
+---
+label: Input group
+status: ready
+context:
+  name: geldigheid
+  label: Label placeholder
+  radio: true
+  id: 1
+  options:
+    - id: 1112321312312
+      name: subject
+      checked: checked
+      text: First
+    - id: 2123123121
+      text: Last
+      name: subject
