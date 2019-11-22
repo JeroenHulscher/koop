@@ -1,0 +1,126 @@
+.button-icon {
+  background-color: white;
+  border: 1px solid $darkBlue;
+  color: $darkBlue;
+  max-width: 100%;
+  border-radius: .25em;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+  padding: .8em 3.5em .7em 0.825em;
+  font-size: 1em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 60%;
+    top: 20%;
+    right: 2.75em;
+    background: $darkBlue;
+  }
+
+  &--thumb-up {
+    background-position: right .75em center;
+    background-repeat: no-repeat;
+    background-image: $iconThumbUp;
+    background-size: 1.325em;
+  }
+  &--thumb-down {
+    background-position: right .75em center;
+    background-repeat: no-repeat;
+    background-image: $iconThumbDown;
+    background-size: 1.325em;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+
+  &[href] {
+    text-decoration: none;
+  }
+
+  &:hover {
+    outline: none;
+    background-color: $mediumBlue;
+    color: $black;
+  }
+
+  &:active {
+    transition: none;
+    background-color: $buttonBackgroundActiveColor;
+  }
+
+  &:focus {
+    outline: 2px solid $yellow;
+    outline-offset: 0;
+    z-index: 1;
+  }
+
+  &--small {
+    padding: 1em;
+    background-size: 1em;
+  }
+
+  &--marker {
+    background-image: $markerIcon;
+  }
+
+  &--download {
+    background-image: $downloadIconWhite;
+  }
+
+  &--dots {
+    background-image: $dotsIcon;
+  }
+
+  &--crosshair {
+    background-image: $crosshairIcon;
+  }
+
+  &--remove {
+    background-image: $removeWhiteIcon;
+  }
+
+  &--plus {
+    background-image: $plusIconWhite;
+  }
+
+  &--cross {
+    background-image: $iconCrossWhite;
+  }
+
+  &--edit {
+    background-image: $editIcon;
+  }
+
+  &--calendar {
+    background-image: $calendarIcon;
+  }
+
+  &--remove {
+    background-image: $removeIcon;
+  }
+
+  &--arrow-up {
+    background-image: $iconArrowUp;
+  }
+
+  &--arrow-down {
+    background-image: $iconArrowDown;
+  }
+}
+
+.button-icon--plain {
+  background-color: transparent;
+  border-radius: none;
+  color: $black;
+  background-size: 1em;
+  padding: .75em;
+}
