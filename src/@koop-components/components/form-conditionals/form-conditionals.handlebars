@@ -1,15 +1,15 @@
-<div class="questionnaire" data-decorator="init-questionnaire">
+<div class="form-conditionals" data-decorator="init-form-conditionals">
   {{#each questions}}
-    <fieldset arial-label="{{question}}" id="question-{{id}}" class="questionnaire__question js-questionnaire__question">
+    <fieldset arial-label="{{question}}" id="citem-{{id}}" class="form-conditionals__citem form-conditionals__citem js-form-conditionals__citem">
       <legend>{{question}}</legend>
-      {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
-      {{#if radio}}
+        {{#if radio}}
+        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
         <div class="form__row">
           {{#each answers}}
             <div class="input-radio">
               <input type="radio" class="radio__input" id="option-{{id}}" name="name{{../id}}" data-linkedto="{{link}}" />
               <label class="radio__label" for="option-{{id}}">
-                 {{answer}}
+                {{answer}}
               </label>
             </div>
             {{!-- <label>{{answer}}<input type="radio"  /></label> --}}
@@ -17,6 +17,7 @@
         </div>
       {{/if}}
       {{#if checkbox}}
+        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
         <div class="form__row">
           {{#each answers}}
             <div class="input-checkbox">
@@ -30,12 +31,29 @@
         </div>
       {{/if}}
       {{#if select}}
+        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
         <div class="form__row">
           <select name="name{{id}}" >
             {{#each answers}}
-              <option {{#if value}}value="{{value}}"{{/if}} data-linkedto="{{link}}">{{answer}}</option>
+              <option {{#if value}}value="{{value}}"{{/if}} data-linkedto="{{link}}" {{selected}}>{{answer}}</option>
             {{/each}}
           </select>
+        </div>
+      {{/if}}
+      {{#if textarea}}
+        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
+        <div class="form__row">
+          <textarea placeholder="{{placeholder}}"></textarea>
+        </div>
+      {{/if}}
+      {{#if submit}}
+        <div class="form-conditionals__container form-conditionals__container--flex">
+          {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
+          <div class="form__row">
+            {{#each answers}}
+              <button class="button-icon button-icon--{{icon}} js-button-next" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
+            {{/each}}
+          </div>
         </div>
       {{/if}}
       {{#if nextButton}}
@@ -43,8 +61,12 @@
       {{/if}}
     </fieldset>
   {{/each}}
-  <div class="js-questionnaire__submitcontainer" hidden>
+  <div class="js-form-conditionals__submitcontainer" hidden>
     <button type="submit" class="button button--primary">{{submitLabel}}</button>
+  </div>
+  <div class="form-conditionals__responds js-form-conditionals__responds" hidden>
+    <h2 class="form-conditionals__heading">Bedankt voor uw reactie</h2>
+    <p>We gebruiken uw feedback ter verbetering van onze dienstverlening.</p>
   </div>
 </div>
 

@@ -1,0 +1,53 @@
+.form-conditionals {
+
+  &__citem,
+  &__responds {
+    background: $bgBlue;
+    border: 0;
+    padding: 1.5em;
+    position: relative;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__citem {
+    padding-top: 3em;
+
+    legend {
+      position: absolute;
+      left: 1em;
+      top: 0.5em;
+      font-size: em(22);
+    }
+    .form__row {
+      margin: 1em 0 0 0;
+    }
+  }
+
+  &__container--flex {
+    @media (min-width: $breakpointDesktop) {
+      display: flex;
+    }
+    p {
+      @media (min-width: $breakpointDesktop) {
+        flex: 0 0 auto;
+        margin: 0;
+        width: auto;
+      }
+    }
+    .form__row {
+      @media (min-width: $breakpointDesktop) {
+        flex: 0 0 auto;
+        margin: -1.325em 0 0 2em;
+        width: auto;
+      }
+    }
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+}
