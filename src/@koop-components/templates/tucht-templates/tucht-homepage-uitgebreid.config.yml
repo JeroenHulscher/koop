@@ -1,0 +1,100 @@
+---
+label: TUCHT - Homepage uitgebreid
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  vrijeberoepenContext:
+    moreless: true
+    searchFilter: true
+    options:
+    - id: checkbox-2087654345
+      text: Accountants
+      name: onderwerp
+      checked: checked
+    - id: checkbox-20765456
+      text: Advocaten
+      name: onderwerp
+    - id: checkbox-2020765456
+      text: Diergeneeskunde
+      name: onderwerp
+    - id: checkbox-20207654562
+      text: Gerechtsdeurwaarders
+      name: onderwerp
+    - id: checkbox-20207654563
+      text: Gezondheidszorg
+      name: onderwerp
+    - id: checkbox-20207654566
+      text: Notarissen
+      name: onderwerp
+    - id: checkbox-20207654568
+      text: Scheepvaart
+      name: onderwerp
+  producentenContext:
+    moreless: true
+    searchFilter: true
+    options:
+    - id: checkbox-2020765
+      text: Pluimvee en eieren
+      name: onderwerp
+    - id: checkbox-207651
+      text: Akkerbouw
+      name: onderwerp
+    - id: checkbox-207654
+      text: Vee en vlees
+      name: onderwerp
+  zoekopContext:
+    options:
+    - id: checkbox-30
+      text: Uitspraak
+      name: onderwerp3
+    - id: checkbox-302
+      text: Inhoudsindicatie
+      name: onderwerp3
+  zoekeninContext:
+    label: zoekwoord(en) in
+    radio: true
+    size: large
+    labelsize: accent
+    flex: true
+    options:
+    - id: checkbox-4012312312312
+      text: Uitspraak
+      name: onderwerp45
+    - id: checkbox-4023232131321
+      text: Inhoudsindicatie
+      name: onderwerp45
+  datumvanContext:
+    label: Datum van
+    radio: true
+    id: 7654
+    options:
+    - id: checkbox-40123123123125
+      text: Uitspraak
+      name: onderwerp455
+    - id: checkbox-40232321313215
+      text: Publicatie
+      name: onderwerp455
+  selectCustomContext:
+    items:
+    - id: 1
+      value:
+      label: Alle
+      linkedto: 1
+    - id: 1
+      value: 10
+      label: Op
+      linkedto: 2
+    - id: 2
+      value: 20
+      label: Tot
+      linkedto: 3
+    - id: 3
+      value: 30
+      label: Tussen
+      linkedto: 4
+      selected: selected
+
+
