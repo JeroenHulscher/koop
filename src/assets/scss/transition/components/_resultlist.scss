@@ -43,6 +43,28 @@
   .result--title {
     max-width: 100%;
     margin-top: 0;
+
+    ~ .list--metadata {
+      line-height: 1.25em;
+      margin-bottom: 1em;
+
+      li {
+        font-style: normal;
+
+      }
+    }
+  }
+  h2.result--title {
+    ~ .list--metadata {
+      margin-top: -.8em;
+      line-height: 1.25em;
+      margin-bottom: 1em;
+
+      li {
+        font-style: normal;
+
+      }
+    }
   }
 
   .result--label {
@@ -62,11 +84,13 @@
     color: $darkBlue;
 
     li {
-      font-size: 1em;
+      font-size: .85em;
       font-style: italic;
       color: $darkBlue;
     }
   }
+
+
 
   @media (min-width: $breakpointDesktop) {
     &--wide {

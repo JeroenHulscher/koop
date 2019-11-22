@@ -81,6 +81,8 @@ $refreshDocumentWhite: url( '#{$imagePath}/icon-refresh-document-white.svg' ) !d
 $modalCloser: $iconCross !default;
 $modalCloserHover: url( '#{$imagePath}/icon-close-hover.svg' ) !default;
 
+$iconCheck2Blue: url( '#{$imagePath}/icon-check2-blue.svg' ) !default;
+$iconCheck2White: url( '#{$imagePath}/icon-check2-white.svg' ) !default;
 $iconCheck: url( '#{$imagePath}/icon-check.svg' ) !default;
 $iconCheckWhite: url( '#{$imagePath}/icon-check-white.svg' ) !default;
 $iconCheckboxWhite: url( '#{$imagePath}/icon-checkbox-white.svg' ) !default;
@@ -118,6 +120,9 @@ $shareIcon: url( '#{$imagePath}/icon-share.svg' );
 $markerIcon: url( '#{$imagePath}/icon-marker.svg' ) !default;
 $markerBlueIcon: url( '#{$imagePath}/icon-marker-blue.svg' ) !default;
 
+$iconThumbUp: url( '#{$imagePath}/icon-thumb-up.svg' ) !default;
+$iconThumbDown: url( '#{$imagePath}/icon-thumb-down.svg' ) !default;
+
 $dotsIcon: url( '#{$imagePath}/icon-dots.svg' ) !default;
 $crosshairIcon: url( '#{$imagePath}/icon-crosshair.svg' ) !default;
 
@@ -125,6 +130,7 @@ $editIcon: url( '#{$imagePath}/icon-bewerken.svg' ) !default;
 $editIconBlue: url( '#{$imagePath}/icon-bewerken-blue.svg' ) !default;
 $calendarIcon: url( '#{$imagePath}/icon-calendar.svg' ) !default;
 $calendarIconWhite: url( '#{$imagePath}/icon-calendar-white.svg' ) !default;
+$calendarIconBlue: url( '#{$imagePath}/icon-calendar-blue.svg' ) !default;
 $removeIcon: url( '#{$imagePath}/icon-remove.svg' ) !default;
 $removeBlueIcon: url( '#{$imagePath}/icon-remove-blue.svg' ) !default;
 

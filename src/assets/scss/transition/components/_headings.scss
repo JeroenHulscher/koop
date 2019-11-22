@@ -21,7 +21,11 @@ h1,
   }
 
   &__sub {
-    font-size: 0.55em;
+    // font-size: 0.55em;
+  }
+
+  &--large {
+    font-size: em(40);
   }
 }
 
