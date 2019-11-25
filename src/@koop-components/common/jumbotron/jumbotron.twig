@@ -11,7 +11,7 @@
     </div>
     {% if button %}
       <p>
-        <a href="#" class="button button--primary">{{ button }}</a>
+        <a href="{{ link ?: '#'}}" class="button button--primary">{{ button }}</a>
       </p>
     {% endif %}
     {{ content }}

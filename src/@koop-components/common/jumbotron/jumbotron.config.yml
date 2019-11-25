@@ -7,6 +7,7 @@ context:
   subheading: Berichten die voor u belangrijk zijn
   content: Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals vergunningen, bouwplannen en plaatselijke regelgeving. De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden gepubliceerd.
   button: Klik mij
+  link: '#'
   centered: false
   intro: Dit is de intro van de Jumbotron
 variants:
