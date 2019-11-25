@@ -1,0 +1,173 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+      <div class="row row--spacer">
+          {{ render "@sort" sortContext }}
+      </div>
+
+      <h1 class="h1 h1--large">Zoekresultaten
+        <span class="h1__sub">1-10 van de 105 resultaten</span>
+      </h1>
+
+      <div class="hidden-desktop align-right">
+        <button class="button button--primary block-element button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Filter opties (3)</button>
+      </div>
+
+
+  <div class="row row--large">
+     {{render "@resultlist" resultsContext }}
+     {{render "@pagination" }}
+  </div>
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
+
+        <div class="modal-sidebar__content" >
+
+          <div class="row--spacer">
+            <h2>Zoekfilter</h2>
+            <div class="row">
+              <p><a href="#" class="icon icon--refresh">Alle filters verwijderen</a></p>
+            </div>
+
+          <div class="form__row form__row--large">
+            <h3 class="h4">Geselecteerde filters (2)</h3>
+            {{render "@form-selectedfilter" selectedfilterContext }}
+          </div>
+
+          <form id="formid">
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Zoekwoord(en)</legend>
+                <a href="#" class="reset">
+                  <small>Herstel <span class="visually-hidden">zoekwoord(en)</span></small>
+                </a>
+                <div class="form__row">
+                  {{render "@input-inputsubmit" inputsubmitContext }}
+                </div>
+                <div class="form__row">
+                  {{ render "@input-group" zoekeninContext merge=true }}
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Domein {{render "@tooltip"}}</legend>
+                <a href="#" class="reset">
+                  <small>Herstel <span class="visually-hidden">het domein</span></small>
+                </a>
+                <div class="form__row">
+                  {{render "@subselection" subselectionInfoContext }}
+                </div>
+              </fieldset>
+            </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Gezondheidszorg
+              </legend>
+              <div class="form__row">
+                <h3 class="form__label">Instanties</h3>
+                {{render "@subselection" subselectionThemaContext }}
+              </div>
+              <div class="form__row">
+                <h3 class="form__label">Beroepsgroep</h3>
+                {{render "@subselection" subselectionBeroepsgroepContext }}
+              </div>
+              <div class="form__row">
+                <h3 class="form__label">Onderwerp</h3>
+                {{render "@subselection" subselectionOnderwerpContext }}
+              </div>
+              <div class="form__row">
+                <h3 class="form__label">Beslissing</h3>
+                {{render "@subselection" subselectionBeslissingContext }}
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoek op</legend>
+              <a href="#" class="reset">
+                <small>Herstel <span class="visually-hidden">alle filters van 'ECLI' en 'Zoeknummer'</span></small>
+              </a>
+              <div class="form__row">
+                <label class="form__label">ECLI</label>
+                {{ render "@input-text" wordintextInput }}
+              </div>
+              <div class="form__row">
+                <label class="form__label">Zoeknummer</label>
+                {{ render "@input-text" wetgegevensInput }}
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Zoek op datum</legend>
+              <a href="#" class="reset">
+                <small>Herstel <span class="visually-hidden">alle filters van 'zoek op datum'</span></small>
+              </a>
+              <div class="form__row">
+                {{ render "@input-group" datumvanContext merge=true }}
+              </div>
+              <div class="form__row">
+                <h3 class="form__label">Periode</h3>
+                <div data-decorator="init-form-conditionals">
+                  <div id="citem-1" class="js-form-conditionals__citem">
+                    <div class="form__row">
+                      {{ render "@select-custom" selectCustomContext merge=true }}
+                    </div>
+                  </div>
+
+                  <div id="citem-2" class="js-form-conditionals__citem">
+                    {{ render "@datepicker" opDatepicker }}
+                  </div>
+                  <div id="citem-3" class="js-form-conditionals__citem">
+                    {{ render "@datepicker" totDatepicker }}
+                  </div>
+                  <div id="citem-4" class="js-form-conditionals__citem">
+                    <div class="form__row">
+                      <label for="" class="visually-hidden">Startdatum</label>
+                      {{ render "@datepicker" vanDatepicker }}
+                    </div>
+                    <div class="form__row">
+                      <label for="">en
+                        <span class="visually-hidde">einddatum</span>:</label>
+                      {{ render "@datepicker" totDatepicker }}
+                    </div>
+                  </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+          </form>
+        </div>
+
+
+        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

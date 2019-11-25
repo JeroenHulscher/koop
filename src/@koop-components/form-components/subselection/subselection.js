@@ -26,7 +26,7 @@
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
-    this.options = onl.dom.$( 'input[type=checkbox]', this.element );
+    this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
 
     this.items = [];
 
@@ -64,7 +64,12 @@
         if (this.options[y].closest('label') !== null) {
           option.push(value, this.options[y].closest('label').innerText);
         } else {
-          option.push(value, this.options[y].closest('.input-checkbox').querySelector('label').innerText);
+          if (this.options[y].closest('.input-checkbox')) {
+            option.push(value, this.options[y].closest('.input-checkbox').querySelector('label').innerText);
+          } else {
+            option.push(value, this.options[y].closest('.input-radio').querySelector('label').innerText);
+          }
+
         }
         if (!this.options[y].classList.contains('js-checkbox-master')) {
           this.items.push(option);

@@ -36,7 +36,7 @@ h1,
   &__sub {
     font-weight: 400;
     font-style: italic;
-    font-size: 0.675rem;
+    font-size: 0.75em;
     display: block;
     @media (min-width: $breakpointDesktop) {
       display: inline-block;
@@ -82,7 +82,7 @@ h2,
 
 .columns--sidebar-left div:last-child h2,
 .columns--sidebar-right div:last-child h2 {
-    display: inline-block;
+    // display: inline-block;
 }
 
 .tabs__panels h2 {

@@ -65,6 +65,7 @@ select {
 fieldset {
   padding: 0;
   border: 0;
+  position: relative;
 
   legend {
     border-bottom: 1px solid $darkBlue;
@@ -103,11 +104,12 @@ fieldset {
   }
 
   &__row {
-    margin-bottom: .75em;
+    margin-bottom: 1em;
     position: relative;
+    clear: both;
 
     label {
-      margin-bottom: .25em;
+      // margin-bottom: .25em;
     }
 
     a.reset {
@@ -134,10 +136,15 @@ fieldset {
   }
 
   &__label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.125em;
+    line-height: 1.25em;
 
     &--medium,
     &--accent {
       font-weight: bold;
+      margin-bottom: .75em;
     }
 
     .mandatory {
@@ -220,7 +227,7 @@ fieldset {
 
   &__sublegend {
     font-size: em(16);
-    margin: 0 0 em(2) 0;
+    margin: 0 0 em(6) 0;
   }
 }
 
@@ -505,7 +512,7 @@ input[type=date].datepicker__input {
     font-size: 1px;
     width: 38px;
     color: white;
-    background-image: $calendarIconWhite;
+    background-image: $calendarIconBlue;
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;

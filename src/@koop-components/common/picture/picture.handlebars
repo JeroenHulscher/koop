@@ -1,0 +1,6 @@
+<picture>
+  {{#each sources}}
+    <source srcset="{{srcset}}{{media}}" media="{{media}}">
+  {{/each}}
+  <img src="{{src}}" alt="{{alt}}" />
+</picture>

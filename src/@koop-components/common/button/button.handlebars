@@ -1,5 +1,5 @@
 {{#if anchor }}
-  <a class="button {{ modifier }}" href="{{ action }}" role="button" {{ disabled }}>{{ text }}</a>
+  <a class="button {{ modifier }}" href="{{ action }}" role="button" {{ disabled }}>{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</a>
 {{else if button }}
   <button class="button {{ modifier }}" type="submit" {{ disabled }}>{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</button>
 {{else if buttonWithDivider}}

@@ -21,6 +21,14 @@
         <a href="#" class="result--title">{{ title }}</a>
       {{/if}}
 
+      {{#if metadataDates}}
+        <ul class="list--metadata">
+          {{#each metadataDates }}
+            <li>{{ value }}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+
       {{#if text }}
        <p>{{ text }}</p>
       {{/if}}

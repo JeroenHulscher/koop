@@ -1,0 +1,13 @@
+name: Picture
+context:
+  id: 1
+  src: https://dummyimage.com/600x400/000/fff&text=default
+  alt: alt text
+  sources:
+    - id: 2
+      srcset: https://dummyimage.com/1200x400/000/fff&text=
+      media: "(min-width:1000px)"
+    - id: 3
+      srcset: https://dummyimage.com/800x400/000/fff&text=
+      media: "(min-width:700px)"
+
