@@ -1,6 +1,6 @@
 ---
-label: TUCHT - Searchresults
-status: prototype
+label: Tuchtrecht - Searchresults
+status: ready
 context:
   header:
     file: logo.svg

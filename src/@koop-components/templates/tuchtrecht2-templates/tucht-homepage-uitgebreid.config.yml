@@ -1,6 +1,6 @@
 ---
-label: TUCHT - Homepage uitgebreid
-status: Ready
+label: Tuchtrecht - Homepage uitgebreid
+status: ready
 context:
   header:
     file: logo.svg
