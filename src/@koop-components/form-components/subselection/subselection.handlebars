@@ -23,19 +23,38 @@
             </label>
           </div>
         {{/if}}
-              <ul class="list--unstyled">
-               {{#each Options }}
-                <li class=" js-filterresults__result">
-                  <div class="input-checkbox">
-                    <input class="checkbox__input" {{disabled}} {{checked}} type="checkbox" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
-                    />
-                    <label class="checkbox__label" for="option-{{ id  }}">
-                      {{ title }}
-                    </label>
-                  </div>
-                </li>
-              {{/each}}
-              </ul>
+              <p class="form__label">{{#if OptionsLabel}}{{OptionsLabel}}{{/if}}</p>
+              {{#if Options}}
+               <ul class="list--unstyled">
+                {{#each Options }}
+                  <li class=" js-filterresults__result">
+                    <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                      <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
+                      />
+                      <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                        {{ title }}
+                      </label>
+                    </div>
+                  </li>
+                {{/each}}
+                </ul>
+               {{/if}}
+                <p class="form__label">{{#if Options2Label}}{{Options2Label}}{{/if}}</p>
+                  {{#if Options2}}
+                  <ul class="list--unstyled">
+                    {{#each Options2 }}
+                      <li class=" js-filterresults__result">
+                        <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
+                          />
+                          <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                            {{ title }}
+                          </label>
+                        </div>
+                      </li>
+                    {{/each}}
+                    </ul>
+                  {{/if}}
         {{#if selectAll}}
          </div>
         {{/if}}
@@ -45,9 +64,9 @@
         {{/if}}
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Sluiten</button>
+          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
-        <button type="button" data-handler="close-modal" class="modal__close">Sluit</button>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
     </div>
   </div>

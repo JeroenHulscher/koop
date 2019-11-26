@@ -1,15 +1,28 @@
 ---
-label: Questionnaire
+label: Form conditionals
 status: prototype
 context:
   id: 1
   submitLabel: Verzenden
   questions:
     - id: 1
+      question: Do you want to start?
+      select: true
+      answers:
+        - id: 212
+          answer: No comment
+          link: 1
+        - id: 223
+          answer: Yes, start!
+          link: 2
+          selected: selected
+        - id: 234
+          answer: Don't want to.
+    - id: 2
       question: What do you want on your icecream?
       checkbox: true
       nextButton: true
-      link: 2
+      link: 3
       answers:
       - id: 51
         answer: Nada!
@@ -17,34 +30,31 @@ context:
         answer: Sprinkles
       - id: 53
         answer: Whipped cream
-    - id: 2
+    - id: 3
       question: What is your favorite color?
       radio: true
       answers:
         - id: 11
           answer: red
           value: red
-          link: 3
+          link: 4
         - id: 12
           answer: blue
           value: blue
-    - id: 3
+    - id: 4
       question: Are you a human?
       select: true
       answers:
         - id: 21
           answer: Please tell us
           value:
-          link: 3
         - id: 22
           answer: Yes, i'm a human
-          link: 4
+          link: 5
           value: next
         - id: 23
           answer: Doh
-          link: 4
-          value: next
-    - id: 4
+    - id: 5
       question: Are you sure your favorite color is red?
       radio: true
       answers:
@@ -53,8 +63,8 @@ context:
           link:
         - id: 32
           answer: 'nah, just kidding'
-          link: 5
-    - id: 5
+          link: 6
+    - id: 6
       question: What about blue?
       radio: true
       answers:
@@ -74,9 +84,20 @@ variants:
         - id: 1
           question: Deel uw feedback
           paragraph: Wat dit de informatie die u zocht?
-          radio: true
+          submit: true
           answers:
           - id: 51
             answer: Ja
+            icon: thumb-up
+            triggerReponds: true
           - id: 52
             answer: Nee
+            link: 2
+            icon: thumb-down
+            triggerLastStep: true
+        - id: 2
+          question: Waar ben je precies naar opzoek?
+          paragraph: Wat kunnen wij verbeteren?
+          textarea: true
+          placeholder: Placeholder
+          required: false

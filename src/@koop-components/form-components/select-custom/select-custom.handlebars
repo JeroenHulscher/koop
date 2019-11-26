@@ -1,7 +1,7 @@
 <div id="{{id}}" class="select-custom {{modifier}}">
   <select>
-    <option value="10">Gemeente Den Haag</option>
-    <option value="25">25</option>
-    <option value="100">100</option>
+    {{#each items}}
+      <option value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} {{selected}}>{{label}}</option>
+    {{/each}}
   </select>
 </div>

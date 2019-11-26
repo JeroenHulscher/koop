@@ -1,0 +1,66 @@
+---
+label: Tuchtrecht - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Label
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Woord(en) of zinsdeel
+    remove: true
+  themaItems:
+    - title: Accountants (0)
+      id: 1
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - title: Economie (8)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 2
+    - title: Advocaten (2)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 3
+    - title: Diergeneeskundigen (1)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 4
+    - title: Gerechtsdeurwaarders (12)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 5
+    - title: Gezondheidszorg (5)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 6
+    - title: Notarissen (0)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 7
+    - title: Scheepvaart (3)
+      descr: Subtitel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      id: 8
+  doubleline1Context:
+    text: Instanties tuchtrecht
+    text2: tuchtrechturl.nl
+    modifier: button--doubleline button--icon-external
+    action: http://www.google.nl
+    anchor: true
+    button: false
+    iconButton: false
+    inputButton: false
+    inputSubmit: false
+    buttonWithDivider: false
+    type: submit
+    disabled: ''
+  doubleline2Context:
+    text: Tuchtrecht banken
+    text2: tuchtrechtbanken.nl
+    modifier: button--doubleline button--icon-external
+    action: http://www.google.nl
+    anchor: true
+    button: false
+    iconButton: false
+    inputButton: false
+    inputSubmit: false
+    buttonWithDivider: false
+    type: submit
+    disabled: ''

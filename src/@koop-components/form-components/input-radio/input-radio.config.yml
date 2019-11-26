@@ -16,8 +16,3 @@ context:
     - id: 3
       text: Afgelopen 12 maanden
       name: subject
-variants:
-  - name: Inline radiogroup
-    label: Inline radiogroup
-    context:
-      modifier: inline-group

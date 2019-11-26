@@ -2,42 +2,60 @@
   'use strict';
 
   onl.decorate({
-    'init-questionnaire': function (element) {
-      new questionnaire(element);
+    'init-form-conditionals': function (element) {
+      new formConditionals(element);
     }
   });
 
-  var questionnaire = function (element) {
+  var formConditionals = function (element) {
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
 
-    this.questionIdTag = this.config.questionIdTag || '#question-';
-    this.questionContainer = this.config.questionContainer || '.js-questionnaire__question';
-    this.submitContainer = this.config.submitContainer || this.element.querySelector('.js-questionnaire__submitcontainer');
+    this.questionIdTag = this.config.questionIdTag || '#citem-';
+    this.questionContainer = this.config.questionContainer || '.js-form-conditionals__citem';
+    this.submitContainer = this.config.submitContainer || this.element.querySelector('.js-form-conditionals__submitcontainer');
+    this.respondsContainer = this.config.respondsContainer || this.element.querySelector('.js-form-conditionals__responds');
     this.buttonNextSelector = '.js-button-next';
 
     this.questions = this.element.querySelectorAll(this.questionContainer);
     this.inputs = this.element.querySelectorAll('input,select');
     this.buttonNexts = this.element.querySelectorAll(this.buttonNextSelector);
 
-    this.setInitialState();
     this.initEventListeners();
+    this.setInitialState();
+
   };
 
-  questionnaire.prototype.setInitialState = function() {
+  formConditionals.prototype.setInitialState = function() {
     var y;
+    var firstInput;
 
     for (y = 0; y < this.questions.length; y++) {
       if (y !== 0) {
         this.questions[y].setAttribute('hidden', 'hidden');
       }
+      if (y === 0) {
+        firstInput = true;
+      }
+    }
+    if (firstInput) {
+      firstInput = this.questions[0].querySelectorAll('input,select');
+      if (firstInput[0].tagName === 'SELECT') {
+        if ("createEvent" in document) {
+          var evt = document.createEvent("HTMLEvents");
+          evt.initEvent("change", false, true);
+          firstInput[0].dispatchEvent(evt);
+        }
+        else {
+          firstInput[0].fireEvent("onchange");
+        }
+      }
     }
   };
 
-  questionnaire.prototype.initEventListeners = function(e) {
+  formConditionals.prototype.initEventListeners = function(e) {
     var y;
     var i;
-    console.log('this.inputs', this.inputs);
 
     for (y = 0; y < this.inputs.length; y++) {
       this.inputs[y].addEventListener('change', function(e) { this.actOnChange(e); }.bind(this), false);
@@ -46,19 +64,17 @@
       this.buttonNexts[i].addEventListener('click', function (e) { this.actOnChange(e); }.bind(this), false);
     }
 
-
-
   };
 
-  questionnaire.prototype.actOnChange = function(e) {
+  formConditionals.prototype.actOnChange = function(e) {
+
     var obj = e.path[0];
     var inputType = obj.type;
     var linkedToQuestionId;
-    var currentQuestionContainer = obj.closest('fieldset');
+    var currentQuestionContainer = obj.closest(this.questionContainer);
     var automaticProceed = true;
-
-    console.log('change', e);
-    console.log('change', e.path[0].type);
+    var showLast = obj.getAttribute('data-triggerlaststep');
+    var showResponds = obj.getAttribute('data-triggeresponds');
 
     switch (inputType) {
     case 'radio':
@@ -67,7 +83,7 @@
     case 'submit':
       linkedToQuestionId = obj.dataset.linkedto;
       break;
-    case 'select':
+    case 'select-one':
       linkedToQuestionId = obj.options[obj.selectedIndex].getAttribute('data-linkedto');
       break;
     case 'checkbox':
@@ -91,27 +107,34 @@
         this.showFormSubmit();
       }
     }
+
+    if (showResponds) {
+      this.showResponds();
+      this.hideForm();
+    } else {
+      if (showLast) {
+        this.showFormSubmit();
+      }
+    }
   };
 
-  questionnaire.prototype.amountCheckedInFamily = function(obj, parent) {
+  formConditionals.prototype.amountCheckedInFamily = function(obj, parent) {
     var list, index, item, checkedCount;
-    console.log('parent', parent);
 
     checkedCount = 0;
     list = parent.getElementsByTagName('input');
-    console.log('list', list);
     for (index = 0; index < list.length; ++index) {
       item = list[index];
       if (item.getAttribute('type') === "checkbox"
         && item.checked
-        && item.name === obj.attributes[1].value) {
+        && item.name === obj.name) {
         ++checkedCount;
       }
     }
     return checkedCount;
   };
 
-  questionnaire.prototype.resetFutureQuestions = function(currentQuestionContainer) {
+  formConditionals.prototype.resetFutureQuestions = function(currentQuestionContainer) {
     var i;
     var y;
     var allInputsInQuestion;
@@ -142,20 +165,37 @@
 
   };
 
-  questionnaire.prototype.activateLinkedQuestion = function(questionId) {
+  formConditionals.prototype.activateLinkedQuestion = function(questionId) {
     var self = this;
     var nextQuestion = this.element.querySelector(self.questionIdTag + questionId);
-
     if (nextQuestion){
       nextQuestion.removeAttribute('hidden');
       nextQuestion.setAttribute('role', 'alert');
     }
   };
 
-  questionnaire.prototype.showFormSubmit = function(e) {
-    this.submitContainer.removeAttribute('hidden');
+  formConditionals.prototype.showFormSubmit = function() {
+    if (this.submitContainer){
+      this.submitContainer.removeAttribute('hidden');
+      this.submitContainer.querySelector('button').setAttribute('role', 'alert');
+    }
   };
-  questionnaire.prototype.hideFormSubmit = function(e) {
+  formConditionals.prototype.hideFormSubmit = function() {
+    if (this.submitContainer){
+      this.submitContainer.setAttribute('hidden', 'hidden');
+      this.submitContainer.querySelector('button').removeAttribute('role');
+    }
+  };
+
+  formConditionals.prototype.showResponds = function() {
+    this.respondsContainer.removeAttribute('hidden');
+  };
+  formConditionals.prototype.hideForm = function () {
+    var y;
+
+    for (y = 0; y < this.questions.length; y++) {
+      this.questions[y].setAttribute('hidden', 'hidden');
+    }
     this.submitContainer.setAttribute('hidden', 'hidden');
   };
 

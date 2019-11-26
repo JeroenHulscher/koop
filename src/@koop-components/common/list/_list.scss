@@ -119,6 +119,7 @@ ol {
 
 .list--law__unordered {
   list-style: none;
+  padding-left: 0;
 
   > li,
   > li li {
@@ -265,9 +266,13 @@ ol {
   li {
     display: inline-block;
     color: $darkerGrey;
-    font-size: .875rem;
+    font-size: .875em;
     margin: 0 .5em 0 0;
     padding: 0 .5em 0 0;
+
+    @media (min-width: $breakpointDesktop) {
+      font-size: .875em;
+    }
 
     &:after {
       content: '|';
