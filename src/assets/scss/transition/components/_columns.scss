@@ -1,0 +1,18 @@
+.columns {
+
+
+  &--sticky-sidebar {
+
+
+    > .columns--sticky-sidebar__sidebar {
+
+      @media ( min-width: $breakpointDesktop ) {
+        border: 1px solid transparent;
+        &.is-sticky {
+          border-color: $lighterGrey;
+        }
+      }
+
+    }
+  }
+}
