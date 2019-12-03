@@ -1,3 +1,17 @@
 <div class="map{{#if modifier}} map--{{modifier}}{{/if}}">
-
+  <div class="map__map"></div>
+  <div class="map__controls">
+    <div class="row row--spacer">
+      <div class="columns">
+        <div class="column">
+          <div class="form__row">
+            {{render "@input-text" inputsubmit }}
+          </div>
+        </div>
+        <div class="column align-right">
+          {{render "@buttonswitch" buttonswitchContext }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

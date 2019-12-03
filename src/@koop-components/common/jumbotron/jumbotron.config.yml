@@ -8,7 +8,7 @@ context:
   text: Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals vergunningen, bouwplannen en plaatselijke regelgeving. De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden gepubliceerd.
   button: true
   centered: false
-  intro: Dit is de intro van de Jumbotron
+  intro: Dit is de intro text van de Jumbotron
 variants:
   - name: Promo
     label: Promo

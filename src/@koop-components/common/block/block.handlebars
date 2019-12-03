@@ -1,0 +1,16 @@
+<div class="block-content">
+  {{#if subheading}}
+    <p class="block-content__subheading">
+      <i>{{subheading}}</i>
+    </p>
+  {{/if}}
+  <h2 class="block-content__heading">{{heading}}</h2>
+  {{#if text}}
+    {{{text}}}
+  {{/if}}
+  {{#if buttonText}}
+    <p>
+      <a href="#" class="button button--{{#if buttonModifier}}{{buttonModifier}}{{else}}primary{{/if}}">{{buttonText}}</a>
+    </p>
+  {{/if}}
+</div>

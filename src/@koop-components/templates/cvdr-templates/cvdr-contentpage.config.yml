@@ -13,23 +13,22 @@ context:
     id: 2
     items:
     - title: Wettechnische gegevens
-      href: "#wet"
-      sub: true
-      subItems:
-        - stitle: Gegevens van de regeling
-        - stitle: Opmerkingen
-        - stitle: Regelgeving
-        - stitle: Wijzigingen
+      href: "#"
+      sub: false
   navToeContext:
     id: 3
     items:
-    - title: Toelichting
+    - title: Regeling
       href: "#wet"
       sub: true
       subItems:
       - stitle: Intitulé
         href: "#tekst"
       - stitle: Besluiten
+      - stitle: Artikel 1
+        href: "#tekst"
+      - stitle: Artikel 2
+        href: "#tekst"
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
     text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
