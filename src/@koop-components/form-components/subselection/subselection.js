@@ -21,12 +21,24 @@
   };
 
   formSubselection.prototype.init = function() {
+    var self = this;
+
     this.trigger = onl.dom.$( '.subselection__trigger', this.element )[0];
     this.trigger.classList.add(this.triggerClassDefault);
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
+    this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
+
+    // temporary solution.
+    // TODO: improve!!
+    setTimeout(function(){
+      self.resetLink = self.element.querySelector('.' + self.resetLinkClass);
+      if (self.resetLink) {
+        self.resetLink.addEventListener('click', function (e) { self.collectValues(e); }.bind(self), false);
+      }
+    }, 1000);
 
     this.items = [];
 
@@ -46,6 +58,8 @@
     for ( y = 0; y < this.options.length; y++ ) {
       this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
     }
+
+
   };
 
   formSubselection.prototype.collectValues = function() {
