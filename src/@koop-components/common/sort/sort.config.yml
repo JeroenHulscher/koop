@@ -3,7 +3,7 @@ label: Sort
 context:
   options:
     - label: Datum
-      value: value
+      href: '#'
       active: is-active
     - label: Titel
-      value: value
+      href: '#'

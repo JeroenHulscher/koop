@@ -9,9 +9,12 @@
       </p>
       {{/if}}
     </div>
+    {{#if content}}
+      {{{content}}}
+    {{/if}}
     {{#if button}}
       <p>
-        <a href="#" class="button button--primary">Button</a>
+        <a href="{{link}}" class="button button--primary">{{button}}</a>
       </p>
     {{/if}}
   </div>

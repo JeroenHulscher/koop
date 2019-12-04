@@ -5,12 +5,13 @@
     </p>
   {{/if}}
   <h2 class="block-content__heading">{{heading}}</h2>
-  {{#if text}}
-    {{{text}}}
+  {{#if content}}
+    {{{content}}}
   {{/if}}
   {{#if buttonText}}
     <p>
-      <a href="#" class="button button--{{#if buttonModifier}}{{buttonModifier}}{{else}}primary{{/if}}">{{buttonText}}</a>
+      <a href="{{href}}" class="button {{#if buttonModifier}}button--{{buttonModifier}}{{/if}}">{{buttonText}}</a>
+      {{!-- {{render "@button" }} --}}
     </p>
   {{/if}}
 </div>
