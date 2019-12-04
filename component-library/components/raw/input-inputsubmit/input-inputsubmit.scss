@@ -1,0 +1,75 @@
+.input-inputsubmit {
+
+  label {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    flex: 1 0 0;
+  }
+
+  &__grid {
+    @media (min-width: $breakpointDesktop) {
+      display: flex;
+    }
+  }
+
+  .input {
+    height: 3em;
+    width: 100%;
+    margin-bottom: 1em;
+    border-width: 2px;
+
+    @media (min-width: $breakpointDesktop) {
+      width: auto;
+      margin: 0;
+      flex: 1 0 8em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-right: 1em;
+    }
+  }
+  button,
+  .button {
+    width: 100%;
+    font-size: 1.125em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+
+    @media (min-width: $breakpointDesktop) {
+      flex: 0 0 auto;
+      margin: 0;
+      width: auto;
+    }
+  }
+
+
+  &--s &__grid {
+      display: flex;
+  }
+  &--s .input {
+    border-width: 1px;
+    height: auto;
+    width: auto;
+    margin: 0 .5em 0 0;
+    flex: 1 0 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--s .input ~ .button {
+    background-image: $searchIcon;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-right: .75em;
+    flex: 0 0 auto;
+    margin: 0;
+    width: auto;
+
+    span {
+      @extend .visually-hidden;
+    }
+
+  }
+}

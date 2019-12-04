@@ -60,49 +60,18 @@
   </div>
   <div class="row">
     <div class="columns">
-      <div class="column">
-        <div class="column__content column__content--padded">
-          <div class="jumbotron">
-            <div class="jumbotron__content">
-              <p class="jumbotron__subheader"><i>Berichten die voor u belangrijk zijn</i></p>
-              <h2 class="jumbotron__header">Welke informatie kunt u vinden in 'Berichten over uw Buurt'?</h2>
-              <p class="jumbotron__intro">
-                Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals: vergunningen, bouwplannen en plaatselijke regelgeving.
-                De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden
-                gepubliceerd.
-              </p>
-              <p>
-                <a href="#" class="button button--primary">Zoek berichten</a>
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="column column--padded-med">
+         {{render "@block"}}
       </div>
-      <div class="u-order--d2" style="background-color:#E4F0EF;">IMG</div>
+      <div class="column u-order--d2">{{render "@picture" }}</div>
     </div>
   </div>
   <div class="row">
     <div class="columns">
-      <div class="column u-order--d2">
-        <div class="column__content column__content--padded">
-          <div class="jumbotron">
-            <div class="jumbotron__content">
-              <p class="jumbotron__subheader">
-                <i>Berichten blijven 2 maanden staan</i>
-              </p>
-              <h2 class="jumbotron__header">Zoek je informatie die ouder is?</h2>
-              <p class="jumbotron__intro">
-                Berichten op ‘berichten over uw buurt’ blijven 2 maanden staan. Daarna worden ze in het archief geplaatst. Deze oudere berichten
-                kunt u nog wel terugvinden op het platform 'Officiële bekendmakingen'.
-              </p>
-              <p>
-                <a href="#" class="button button--primary button--arrowed">Naar officiële bekendmakingen</a>
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="column u-order--d2 column--padded-med">
+        {{render "@block" officieleContext }}
       </div>
-      <div class="column u-order--d1" style="background-color:#FFF8E1;">IMG</div>
+      <div class="column u-order--d1">{{render "@picture" }}</div>
     </div>
   </div>
 

@@ -1,0 +1,249 @@
+
+
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Register voor overheidsinstanties</span>
+          </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+            <li><a href="#" class="">Zoeken</a></li>
+            <li><a href="#" class="">uitgebreid zoeken</a></li>
+      </ul>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      <div>
+        <h2>Aankondigingen over uw buurt</h2>
+        <p>Zoals bouwplannen en verkeersmaatregelen.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt">Naar aankondigingen over uw buurt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dienstverlening</h2>
+        <p>Zoals belastingen, uitkeringen en subsidies.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/dienstverlening">Naar dienstverlening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Beleid &amp; regelgeving</h2>
+        <p>Officiële publicaties van de overheid.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/beleid-en-regelgeving">Naar beleid &amp; regelgeving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contactgegevens overheden</h2>
+        <p>Adressen en contactpersonen van overheidsorganisaties.</p>
+        <ul class="list list--linked">
+          <li><a href="https://almanak.overheid.nl/onl">Naar overheidsorganisaties</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="row row--page-opener">
+  <div class="container">
+    <div class="breadcrumb">
+  <p>U bent hier:</p>
+  <ol>
+    <li><a href=test>Zoeken</a></li>
+    <li><a href=test>Zoekresultaten</a></li>
+    <li><a href=test>Regeling</a></li>
+    <li>Informatie</li>
+  </ol>
+</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content jumbotron__content--centered">
+
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">Berichten over uw buurt</p>
+          <h1 class="jumbotron__header">Wat speelt er in úw buurt</h1>
+          <p class="jumbotron__intro">
+              Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
+          </p>
+        </div>
+
+
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Zoek berichten</legend>
+            <div class="form__row ">
+              <div class="columns">
+                <div class="form__row form__row--medium">
+                  <label class="form__label form__label--accent" for="">Postcode <span class="mandatory">Verplicht veld</span></label>
+                  <input class="form__input input-text input-text--accent" type="text" placeholder="Bijv. 1337AA" />
+                </div>
+                <div class="form__row form__row--medium">
+                  <label class="form__label form__label--accent" for="">Huisnummer + toev.
+                  </label>
+                  <input class="form__input text-input input-text--accent" type="text" />
+                </div>
+                <div class="form__row form__row--medium">
+                  <label class="form__label form__label--accent" for="">Straal
+                    <span class="mandatory">Verplicht veld</span>
+                  </label>
+                  <div class="select-custom select-custom--large">
+                  <select>
+                    <option>250m</option>
+                    <option>1km</option>
+                    <option>2km</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row align-right">
+              <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="column">
+        <div class="column__content column__content--padded">
+          <div class="jumbotron">
+            <div class="jumbotron__content">
+              <p class="jumbotron__subheader"><i>Berichten die voor u belangrijk zijn</i></p>
+              <h2 class="jumbotron__header">Welke informatie kunt u vinden in 'Berichten over uw Buurt'?</h2>
+              <p class="jumbotron__intro">
+                Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals: vergunningen, bouwplannen en plaatselijke regelgeving.
+                De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden
+                gepubliceerd.
+              </p>
+              <p>
+                <a href="#" class="button button--primary">Zoek berichten</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-order--d2" style="background-color:#E4F0EF;">IMG</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="column u-order--d2">
+        <div class="column__content column__content--padded">
+          <div class="jumbotron">
+            <div class="jumbotron__content">
+              <p class="jumbotron__subheader">
+                <i>Berichten blijven 2 maanden staan</i>
+              </p>
+              <h2 class="jumbotron__header">Zoek je informatie die ouder is?</h2>
+              <p class="jumbotron__intro">
+                Berichten op ‘berichten over uw buurt’ blijven 2 maanden staan. Daarna worden ze in het archief geplaatst. Deze oudere berichten
+                kunt u nog wel terugvinden op het platform 'Officiële bekendmakingen'.
+              </p>
+              <p>
+                <a href="#" class="button button--primary button--arrowed">Naar officiële bekendmakingen</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column u-order--d1" style="background-color:#FFF8E1;">IMG</div>
+    </div>
+  </div>
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--promo">
+
+      <div class="jumbotron__content jumbotron__content--centered">
+        <div class="align-center">
+          <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
+          <h2 class="jumbotron__header">Meld je aan voor de mail service</h2>
+        </div>
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+            <div class="form__row">
+              <div class="input-inputsubmit ">
+  <label class="visually-hidden" for="">Uw e-mailadres</label>
+  <div class="input-inputsubmit__grid">
+    <input id="" type="text" class="input " placeholder="Uw e-mailadres" />
+    <button class="button button--primary"><span>Aanmelden</span></button>
+  </div>
+</div>
+
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="footer row--footer" role="contentinfo">
+  <div class="container columns">
+    <ul class="list list--linked">
+
+      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li><a href="/sitemap">Sitemap</a></li>
+    </ul>
+
+     <ul class="list list--linked">
+        <li><a href="https://data.overheid.nl">Open data</a></li>
+        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+    </ul>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,121 @@
+.button-icon {
+  appearance: none;
+  background-color: $primaryBlue;
+  border-radius: $borderRadius;
+  border: none;
+  color: $buttonTextColor;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1;
+  max-width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+  padding: $standardButtonPadding; // 40px total height
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 1rem;
+  padding: 1.3em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: $searchIcon;
+  background-size: .8em;
+  cursor: pointer;
+  margin-right: .5em;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+
+  &[href] {
+    text-decoration: none;
+  }
+
+  &:hover {
+    outline: none;
+    background-color: $mediumBlue;
+    color: $black;
+  }
+
+  &:active {
+    transition: none;
+    background-color: $buttonBackgroundActiveColor;
+  }
+
+  &:focus {
+    outline: 2px solid $yellow;
+    outline-offset: 0;
+    z-index: 1;
+  }
+
+  &--small {
+    padding: 1em;
+    background-size: 1em;
+  }
+
+  &--marker {
+    background-image: $markerIcon;
+  }
+
+  &--download {
+    background-image: $downloadIconWhite;
+  }
+
+  &--dots {
+    background-image: $dotsIcon;
+  }
+
+  &--crosshair {
+    background-image: $crosshairIcon;
+  }
+
+  &--remove {
+    background-image: $removeWhiteIcon;
+  }
+
+  &--plus {
+    background-image: $plusIconWhite;
+  }
+
+  &--cross {
+    background-image: $iconCrossWhite;
+  }
+
+  &--edit {
+    background-image: $editIcon;
+  }
+
+  &--calendar {
+    background-image: $calendarIcon;
+  }
+
+  &--remove {
+    background-image: $removeIcon;
+  }
+
+  &--arrow-up {
+    background-image: $iconArrowUp;
+  }
+
+  &--arrow-down {
+    background-image: $iconArrowDown;
+  }
+}
+
+.button-icon--plain {
+  background-color: transparent;
+  border-radius: none;
+  color: $black;
+  background-size: 1em;
+  padding: .75em;
+}

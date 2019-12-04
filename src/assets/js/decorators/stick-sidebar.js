@@ -3,10 +3,12 @@
   'use strict';
 
   var referenceTop;
+  var h1ReferenceTop;
   var element;
   var footer;
   var resizeTimeout;
   var left;
+  var detailsInSidebar = false;
   var getScrollY = function() {
     return window.pageYOffset || document.documentElement.scrollTop;
   };
@@ -38,6 +40,7 @@
     var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
 
     if ( scrollY > referenceTop && onDesktop ) {
+      element.classList.add('is-sticky');
       element.style.position = 'fixed';
       element.style.top = '1em';
       element.style.left = left + 'px';
@@ -45,9 +48,19 @@
     }
     else {
       element.removeAttribute( 'style' );
+      element.classList.remove('is-sticky');
     }
 
-    window.requestAnimationFrame(updateStickability);
+    if (onl.dom.$('.holder')[0]){
+      if ((scrollY > h1ReferenceTop && onDesktop)) {
+        detailsInSidebar = true;
+        var h1Text = onl.dom.$('h1')[0].innerHTML;
+        onl.dom.$('.holder')[0].innerHTML = h1Text;
+      } else {
+        onl.dom.$('.holder')[0].innerHTML = '';
+        detailsInSidebar = false;
+      }
+    }
   };
 
   onl.decorate({
@@ -59,7 +72,7 @@
       };
 
       // set data to button
-      button.classList.add( 'hidden-desktop' );
+      // button.classList.add( 'hidden-desktop' );
       button.type = 'button';
       button.setAttribute( 'data-handler', 'toggle-sidebar' );
       button.setAttribute( 'aria-controls', el.id );
@@ -79,16 +92,20 @@
       // }
     },
     'stick-sidebar': function( el ) {
+      var timer;
+
       footer = onl.dom.$( '.footer' )[0];
       element = el;
       var calculate = function() {
         referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + getScrollY() + 16;
         left = onl.dom.$( '.breadcrumb' )[0].getBoundingClientRect().left;
+        h1ReferenceTop = onl.dom.$('h1')[0].getBoundingClientRect().bottom;
       };
 
       calculate();
 
-      window.requestAnimationFrame(updateStickability);
+      // window.requestAnimationFrame(updateStickability);
+      // updateStickability();
 
       window.addEventListener( 'othersites:open', function() {
         window.setTimeout( function() {
@@ -98,6 +115,17 @@
 
       window.addEventListener( 'othersites:close', function() {
         calculate();
+      });
+
+      window.addEventListener( 'scroll', function() {
+        if (timer) {
+          window.clearTimeout(timer);
+        }
+
+        timer = window.setTimeout(function () {
+          // window.requestAnimationFrame(updateStickability);
+          updateStickability();
+        }, 10);
       });
 
       window.addEventListener( 'resize', function() {

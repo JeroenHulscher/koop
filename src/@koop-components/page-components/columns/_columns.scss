@@ -173,7 +173,7 @@ $gutter--lg: 6em;
       > * {
         flex: 1;
         margin-left: 0;
-        padding-top: 1.65em;
+        // padding-top: 1.65em;
       }
 
     }
@@ -331,6 +331,9 @@ $gutter--lg: 6em;
       left: 0;
       box-shadow: 0 0 4px -1px $black;
       border-radius: 0 $borderRadius $borderRadius 0;
+      @media ( min-width: $breakpointDesktop ) {
+        display: none;
+      }
     }
 
     [data-handler="toggle-sidebar"][aria-expanded="true"] {

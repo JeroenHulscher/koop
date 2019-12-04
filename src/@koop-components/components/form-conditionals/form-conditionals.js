@@ -40,14 +40,16 @@
     }
     if (firstInput) {
       firstInput = this.questions[0].querySelectorAll('input,select');
-      if (firstInput[0].tagName === 'SELECT') {
-        if ("createEvent" in document) {
-          var evt = document.createEvent("HTMLEvents");
-          evt.initEvent("change", false, true);
-          firstInput[0].dispatchEvent(evt);
-        }
-        else {
-          firstInput[0].fireEvent("onchange");
+      if (firstInput[0]) {
+        if (firstInput[0].tagName === 'SELECT') {
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            firstInput[0].dispatchEvent(evt);
+          }
+          else {
+            firstInput[0].fireEvent("onchange");
+          }
         }
       }
     }
@@ -67,8 +69,7 @@
   };
 
   formConditionals.prototype.actOnChange = function(e) {
-
-    var obj = e.path[0];
+    var obj = e.target;
     var inputType = obj.type;
     var linkedToQuestionId;
     var currentQuestionContainer = obj.closest(this.questionContainer);
@@ -78,13 +79,19 @@
 
     switch (inputType) {
     case 'radio':
-      linkedToQuestionId = obj.dataset.linkedto;
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
       break;
     case 'submit':
-      linkedToQuestionId = obj.dataset.linkedto;
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
+      break;
+    case 'button':
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
+      break;
+    case 'input':
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
       break;
     case 'select-one':
-      linkedToQuestionId = obj.options[obj.selectedIndex].getAttribute('data-linkedto');
+      linkedToQuestionId = obj[obj.selectedIndex].getAttribute('data-linkedto');
       break;
     case 'checkbox':
       if (this.amountCheckedInFamily(obj, currentQuestionContainer) > 0) {

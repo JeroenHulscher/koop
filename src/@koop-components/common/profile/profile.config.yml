@@ -5,6 +5,8 @@ default: Logged in
 context:
   id: 1
   loggedIn: true
+  textLoggedIn: Mijn account
+  textLoggedOut: U bent uitgelogd
   options:
     - text: Mijn abonnementen
       url: '#'

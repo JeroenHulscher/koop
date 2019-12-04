@@ -9,7 +9,7 @@ context:
   button: Klik mij
   link: '#'
   centered: false
-  intro: Dit is de intro van de Jumbotron
+  intro: Dit is de intro text van de Jumbotron
 variants:
   - name: Promo
     label: Promo

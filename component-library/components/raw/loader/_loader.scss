@@ -1,0 +1,17 @@
+.loader {
+  display: block;
+  margin: auto;
+  clear: both;
+  width: 3em;
+  height: 3em;
+  background: {
+    image: $loadingIcon;
+    size: cover;
+    repeat: no-repeat;
+  }
+
+  span {
+    position: absolute;
+    left: -999em;
+  }
+}

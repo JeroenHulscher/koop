@@ -1,0 +1,27 @@
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+.text--muted {
+  color: $darkerGrey;
+}
+
+.intro--text {
+  font-size: 1.25rem;
+  max-width: 100%;
+  margin: 0;
+
+  @media ( min-width: $breakpointDesktop ) {
+    max-width: 70%;
+    margin: 1em 0;
+  }
+}
+
+small,
+.small {
+  font-size: .875rem;
+}

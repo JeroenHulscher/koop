@@ -1,0 +1,114 @@
+.well {
+  border-radius: .5em;
+  background: $lightBlue;
+  padding: 1em;
+  margin: 0 0 2em 0;
+  @extend .group;
+
+  &.transitional {
+    background: $lightGreen;
+    color: $darkBlue;
+  }
+
+  &__intro {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: $darkBlue;
+  }
+
+  &--secondary {
+    background: $lightGreen;
+    color: $darkBlue;
+  }
+
+  &--success {
+    background: $lightGreen;
+  }
+  &--failed {
+    background: $lighterRed;
+  }
+
+  &--pageheader {
+    padding: 2.75em 23%;
+  }
+  &--pageblock {
+    padding: 2.75em 10%;
+
+    h2 {
+      margin: 0 0 .5em 0;
+    }
+
+    .link--forward {
+      margin: 0 .75em 0 0;
+
+      @media ( max-width: $breakpointDesktop ) {
+        &.pull-right {
+          float: none;
+          margin: 0 0 1em 0;
+          display: block;
+        }
+      }
+    }
+
+    // fixme: remove, if margin is removed from main button component;
+    button,
+    a.button {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+  }
+
+  a.button {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .p--accent {
+    font-size: 2rem;
+  }
+
+  &--linkContainer {
+    border-radius: 0;
+    display: block;
+    border: 1px solid $lighterGrey;
+    overflow: hidden;
+    padding: .5em 2em .5em .5em;
+    background: {
+      color: $white;
+      image: $copyIcon;
+      position: 99% .25em;
+      size: 1em;
+      repeat: no-repeat;
+    }
+
+    &.well--lawLink {
+      font-family: Monospace;
+      background-color: $lightGrey;
+      min-height: 3em;
+    }
+  }
+}
+
+.columns--sidebar-left .well {
+  margin: 0 0 1em 0;
+}
+
+.well-content {
+  background: $lightBlue;
+  padding: 1.25em 1.25em 1px; // 1px fix needed for padding-flow bug;
+  margin: 0 0 1.25em 0;
+
+  &__content {
+    background: white;
+    list-style: none;
+    padding: 1.25em 1.25em 1px 1.25em;
+    margin-bottom: 1.25em;
+    border: 0;
+
+    @media (min-width: $breakpointDesktop) {
+      padding-left: 4em;
+      padding-right: 4em;
+    }
+  }
+}

@@ -23,6 +23,10 @@
             </label>
           </div>
         {{/if}}
+         {{#if radio}}
+          <div class="" data-decorator="init-formreset">
+            <p><a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
+         {{/if}}
               <p class="form__label">{{#if OptionsLabel}}{{OptionsLabel}}{{/if}}</p>
               {{#if Options}}
                <ul class="list--unstyled">
@@ -40,7 +44,7 @@
                 </ul>
                {{/if}}
                 <p class="form__label">{{#if Options2Label}}{{Options2Label}}{{/if}}</p>
-                  {{#if Options2}}
+                {{#if Options2}}
                   <ul class="list--unstyled">
                     {{#each Options2 }}
                       <li class=" js-filterresults__result">
@@ -54,7 +58,10 @@
                       </li>
                     {{/each}}
                     </ul>
-                  {{/if}}
+                {{/if}}
+             {{#if radio}}
+             </div>
+             {{/if}}
         {{#if selectAll}}
          </div>
         {{/if}}

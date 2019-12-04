@@ -1,0 +1,21 @@
+.container {
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  &--centered {
+    max-width: 64em;
+  }
+
+  &--large {
+    padding: 0 2em;
+  }
+
+  &--medium {
+    max-width: 40.75em;
+  }
+
+  &--small {
+    max-width: 30em;
+  }
+}
