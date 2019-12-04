@@ -7,10 +7,9 @@
 
 <div class="container">
   <div class="row row--spacer">
+
     <div class="jumbotron jumbotron--highlight">
-
       <div class="jumbotron__content jumbotron__content--centered">
-
         <div class="jumbotron__heading jumbotron__heading--centered">
           <p class="jumbotron__subheader">Berichten over uw buurt</p>
           <h1 class="jumbotron__header">Wat speelt er in úw buurt</h1>
@@ -18,8 +17,6 @@
               Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
           </p>
         </div>
-
-
         <form class="form">
           <fieldset>
             <legend class="visually-hidden">Zoek berichten</legend>
@@ -53,25 +50,25 @@
             </div>
           </fieldset>
         </form>
-
       </div>
+    </div>
 
+  </div>
+  <div class="row">
+    <div class="columns">
+      <div class="column column-d-5 u-order--d2">{{render "@picture" }}</div>
+      <div class="column column-d-7 column--padded-large">
+        {{render "@block"}}
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="columns">
-      <div class="column column--padded-med">
-         {{render "@block"}}
-      </div>
-      <div class="column u-order--d2">{{render "@picture" }}</div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="columns">
-      <div class="column u-order--d2 column--padded-med">
+      <div class="column column-d-5">{{render "@picture" }}</div>
+      <div class="column column-d-7 column--padded-large">
         {{render "@block" officieleContext }}
       </div>
-      <div class="column u-order--d1">{{render "@picture" }}</div>
+
     </div>
   </div>
 
