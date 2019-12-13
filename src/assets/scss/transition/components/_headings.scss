@@ -11,7 +11,7 @@ h1,
 .h1 {
   font-size: em(24);
   margin-bottom: 0.625em;
-  line-height: 1em;
+  line-height: 1.2em;
   @media (min-width: $breakpointDesktop) {
     font-size: em(29);
   }
