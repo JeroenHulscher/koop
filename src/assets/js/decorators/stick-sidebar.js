@@ -32,12 +32,14 @@
     }
   };
 
-  var updateStickability = function() {
+  var updateStickability = function (scrollContentElement) {
     var footerOffset = footer.getBoundingClientRect();
     var scrollY = getScrollY();
     var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
     var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
+    var elements;
+    var i;
 
     if ( scrollY > referenceTop && onDesktop ) {
       element.classList.add('is-sticky');
@@ -51,14 +53,18 @@
       element.classList.remove('is-sticky');
     }
 
-    if (onl.dom.$('.holder')[0]){
+    if (onl.dom.$('.scrollContentReceiver')[0]){
+      elements = document.querySelector(scrollContentElement).childNodes;
+
+      onl.dom.$('.scrollContentReceiver')[0].innerHTML = '';
+
       if ((scrollY > h1ReferenceTop && onDesktop)) {
-        detailsInSidebar = true;
-        var h1Text = onl.dom.$('h1')[0].innerHTML;
-        onl.dom.$('.holder')[0].innerHTML = h1Text;
+        for (i = 0; i < elements.length; i++){
+          var cln = elements[i].cloneNode(true);
+          document.querySelector('.scrollContentReceiver').appendChild(cln);
+        }
       } else {
-        onl.dom.$('.holder')[0].innerHTML = '';
-        detailsInSidebar = false;
+        onl.dom.$('.scrollContentReceiver')[0].innerHTML = '';
       }
     }
   };
@@ -93,6 +99,13 @@
     },
     'stick-sidebar': function( el ) {
       var timer;
+      var config;
+      var scrollContentElement;
+
+      config = JSON.parse(el.getAttribute('data-config')) || [];
+      scrollContentElement = config.scrollContentElement || '.js-scrollContentElement';
+
+      console.log('config', config);
 
       footer = onl.dom.$( '.footer' )[0];
       element = el;
@@ -124,7 +137,7 @@
 
         timer = window.setTimeout(function () {
           // window.requestAnimationFrame(updateStickability);
-          updateStickability();
+          updateStickability(config.scrollContentElement);
         }, 10);
       });
 
@@ -134,6 +147,7 @@
         }
         resizeTimeout = window.setTimeout( function() {
           calculate();
+          updateStickability(config.scrollContentElement);
         }, 50);
       });
     }
