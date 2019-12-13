@@ -102,7 +102,7 @@ $gutter--lg: 6em;
       }
       &-large {
         @media ( min-width: $breakpointDesktop ) {
-          padding: em(25) em(100);
+          padding: em(25) em(75);
         }
       }
     }
@@ -316,6 +316,15 @@ $gutter--lg: 6em;
 
       .icon--backlink {
         border-bottom: 1px solid $lighterGrey;
+      }
+
+      .scrollContentReceiver {
+        margin-bottom: 1.5em;
+
+        h1 {
+          font-size: em(16);
+          line-height: 1.325em;
+        }
       }
     }
 
