@@ -244,25 +244,28 @@ context:
     - id: checkbox-20
       text: Vuurwerkvergunning
       name: onderwerp
+  publicatieCustomRange:
+    range: true
   publicatiedatumContext:
     moreless: true
     options:
-    - id: radio-1
+    - id: radio-1112312312
       text: Vandaag
       name: publicatie
-    - id: radio-2
+    - id: radio-21231232
       text: Afgelopen week
       name: publicatie
-    - id: radio-3
+    - id: radio-3312312312
       text: Afgelopen maand
       name: publicatie
-    - id: radio-4
+    - id: radio-412312313
       text: Afgelopen 2 maanden
       name: publicatie
       disabled: disabled
-    - id: radio-5
+    - id: radio-51222
       text: Zelf een periode kiezen
       name: publicatie
+      linkedto: 1
   gebiedContext:
     moreless: true
     options:

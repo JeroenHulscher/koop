@@ -63,41 +63,51 @@
               </fieldset>
             </div>
 
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Domein {{render "@tooltip"}}</legend>
-                <a href="#" class="reset">
-                  <small>Herstel <span class="visually-hidden">het domein</span></small>
-                </a>
-                <div class="form__row">
-                  {{render "@subselection" subselectionInfoContext }}
+            <div data-decorator="init-form-conditionals">
+
+              <div id="citem-0" class="form__row form__row--large js-form-conditionals__citem">
+                <fieldset>
+                  <legend>Domein {{render "@tooltip"}}</legend>
+                  <a href="#" class="reset">
+                    <small>Herstel <span class="visually-hidden">het domein</span></small>
+                  </a>
+                  <div class="form__row">
+                    {{render "@subselection" subselectionInfoContext }}
+                  </div>
+                </fieldset>
+              </div>
+
+              <div id="citem-1" class="form__row form__row--large js-form-conditionals__citem">
+                <fieldset>
+                  <legend>Accountants</legend>
+                  <div class="form__row">
+                    <h3 class="form__label">Instanties</h3>
+                    {{render "@subselection" subselectionThemaContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__label">Beroepsgroep</h3>
+                    {{render "@subselection" subselectionBeroepsgroepContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__label">Onderwerp</h3>
+                    {{render "@subselection" subselectionOnderwerpContext }}
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__label">Beslissing</h3>
+                    {{render "@subselection" subselectionBeslissingContext }}
+                  </div>
+                </fieldset>
+              </div>
+
+              <div id="citem-2" class="form__row form__row--large js-form-conditionals__citem">
+                {{!-- {{render "@alert--info" domainAlert}} --}}
+                <div class="alert alert--info">
+                  U heeft een (ander) domein gekozen. Zoek opnieuw om te filteren binnen dit domein.<br/>
+                  {{render "@button--text" buttonText merge=true}}
                 </div>
-              </fieldset>
+              </div>
+
             </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Gezondheidszorg
-              </legend>
-              <div class="form__row">
-                <h3 class="form__label">Instanties</h3>
-                {{render "@subselection" subselectionThemaContext }}
-              </div>
-              <div class="form__row">
-                <h3 class="form__label">Beroepsgroep</h3>
-                {{render "@subselection" subselectionBeroepsgroepContext }}
-              </div>
-              <div class="form__row">
-                <h3 class="form__label">Onderwerp</h3>
-                {{render "@subselection" subselectionOnderwerpContext }}
-              </div>
-              <div class="form__row">
-                <h3 class="form__label">Beslissing</h3>
-                {{render "@subselection" subselectionBeslissingContext }}
-              </div>
-
-            </fieldset>
-          </div>
 
           <div class="form__row form__row--large">
             <fieldset>

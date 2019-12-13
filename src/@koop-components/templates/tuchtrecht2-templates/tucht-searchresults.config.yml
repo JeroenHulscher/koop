@@ -242,6 +242,8 @@ context:
         id: 65761
         title: beslissing 3
         short: beslissing 3
+  buttonText:
+    text: Opnieuw zoeken
   subselectionInfoContext:
     linkText: Selecteer domein
     id: 13131232
@@ -252,36 +254,45 @@ context:
     type: span
     radio: true
     OptionsLabel: Vrije beroepen
+    buttonSubmit: true
+    hideClose: true
     Options:
       - Option: 4
         id: 4
         title: Accountants
         short: Accountants
+        checked: checked
+        linkedto: 1
       - Option: 5
         id: 5
         title: Advocaten
         short: Advocaten
-        checked: checked
+        linkedto: 2
       - Option: 6
         id: 6
         title: Diergeneeskunde
         short: Diergeneeskunde
+        linkedto: 2
       - Option: 6
         id: 634322
         title: Gerechtsdeurwaarders
         short: Gerechtsdeurwaarders
+        linkedto: 2
       - Option: 6
         id: 643433333
         title: Gezondheidszorg
         short: Gezondheidszorg
+        linkedto: 2
       - Option: 6
         id: 6233433
         title: Notarissen
         short: Notarissen
+        linkedto: 2
       - Option: 6
         id: 6234324234
         title: Scheepvaart
         short: Scheepvaart
+        linkedto: 2
     Options2Label: Producenten
     Options2:
       - Option: 7
