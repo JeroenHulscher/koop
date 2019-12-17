@@ -22,4 +22,15 @@ context:
     labelmodifier: medium
   selectCustomContext:
     modifier: select-custom--large
+    id: 1
+    options:
+      - label: Gemeente Den Haag
+        value: 10
+        selected: true
+      - label: 20
+        value: 20
+      - label: 50
+        value: 50
+      - label: 100
+        value: 100
 

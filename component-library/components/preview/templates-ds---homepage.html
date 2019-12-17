@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Preview</title>
+
+  <script>
+    document.documentElement.className = 'has-js';
+  </script>
+
+  <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script src="../../js/vendor/kpm.js"></script>
+
+  <link rel="stylesheet" title="2" href="../../css/transition.css">
+  <link rel="alternate stylesheet" title="1" href="../../css/generic.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+</head>
+<body class="preview">
+  <header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+      <div class="logo ">
+        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Register voor overheidsinstanties</span>
+          </p>
+      </div>
+
+
+
+    </div>
+  </div>
+</header>
+
+
+<div class="container">
+
+  <div class="row row--spacer">
+    <div class="jumbotron jumbotron--highlight">
+
+      <div class="jumbotron__content">
+
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">KOOP</p>
+          <h1 class="jumbotron__header">Design system</h1>
+          <p class="jumbotron__intro">
+              Het KOOP design system geeft richtlijnen over het gebruik van copy, design en componenten binnen haar domein.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <article class="row">
+
+      <div class="columns">
+        <div>
+          <h2>Richtlijnen voor content</h2>
+          <p>Bij het schrijven en ontwikkelen van inhoud van onze websites zijn dit onze uitgangspunten.</p>
+          <p><a href="content.html">Bekijk onze richtlijnen voor content</a></p>
+        </div>
+        <div>
+          <h2>Ontwerpprincipes</h2>
+          <p>Onze ontwerpprincipes staan centraal bij het maken van alle keuzes, en die maken we altijd in het belang van de gebruiker.</p>
+          <p><a href="ontwerpprincipes.html">Bekijk onze richtlijnen voor design</a></p>
+        </div>
+        <div>
+          <h2>Componenten</h2>
+          <p>Alle componenten in HTML, CSS en JS, voorzien van toelichting over het gebruik van het component.</p>
+          <p><a href="componenten.html">Bekijk de componenten</a></p>
+        </div>
+        <div>
+          <h2>Patronen</h2>
+          <p>Volgen ASAP.</p>
+        </div>
+
+      </div>
+
+    </article>
+
+</div>
+
+
+  <script>
+
+    (function () {
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
+        localStorage.setItem('title', title);
+      }
+
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
+
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
+
+    }());
+
+  </script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+</html>
+

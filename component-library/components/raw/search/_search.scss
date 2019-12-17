@@ -1,0 +1,90 @@
+.search {
+  overflow: hidden;
+  position: relative;
+  width: 17em;
+  margin: 0.5em 1em 1em;
+
+  @media ( min-width: $breakpointDesktop ) {
+    margin: 0;
+  }
+
+  .search__term {
+    -webkit-appearance: none;
+    border: none;
+    font-family: inherit;
+    padding: 0 .5em;
+    font-size: .85em;
+    height: 40px;
+    width: 100%;
+    outline: 2px solid transparent;
+    outline-offset: .5em;
+    transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+
+    @media ( min-width: $breakpointDesktop ) {
+      position: absolute;
+      right: 40px;
+      top: .5em;
+      width: 15em;
+      left: -999em;
+    }
+
+    &--hidden {
+
+      @media ( min-width: $breakpointDesktop ) {
+        width: 0;
+        border: 0;
+        padding: 0;
+      }
+
+      + button {
+
+        @media ( min-width: $breakpointDesktop ) {
+          background-color: $headerBackgroundColor;
+        }
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: -2px;
+    }
+  }
+
+  .search__term--animating {
+    transition: width 0.4s ease-in-out;
+    left: auto;
+  }
+
+  .search__submit {
+    transition: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-indent: -999em;
+    outline: 2px solid transparent;
+    outline-offset: .5em;
+    transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+    border: none;
+    appearance: none;
+    background: {
+      color: $black;
+      image: $searchIcon;
+      repeat: no-repeat;
+      position: 50% 50%;
+      size: 30px;
+    }
+    cursor: pointer;
+
+    @media ( min-width: $breakpointDesktop ) {
+      top: .6em;
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: -2px;
+    }
+  }
+}
+

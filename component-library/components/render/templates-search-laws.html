@@ -1,0 +1,581 @@
+
+
+<header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Register voor overheidsinstanties</span>
+          </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+            <li><a href="#" class="">Eenvoudig zoeken</a></li>
+            <li><a href="#" class="">uitgebreid zoeken</a></li>
+            <li><a href="#" class="">zoeken in EU-richtlijnen</a></li>
+      </ul>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      <div>
+        <h2>Aankondigingen over uw buurt</h2>
+        <p>Zoals bouwplannen en verkeersmaatregelen.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt">Naar aankondigingen over uw buurt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dienstverlening</h2>
+        <p>Zoals belastingen, uitkeringen en subsidies.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/dienstverlening">Naar dienstverlening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Beleid &amp; regelgeving</h2>
+        <p>Officiële publicaties van de overheid.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/beleid-en-regelgeving">Naar beleid &amp; regelgeving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contactgegevens overheden</h2>
+        <p>Adressen en contactpersonen van overheidsorganisaties.</p>
+        <ul class="list list--linked">
+          <li><a href="https://almanak.overheid.nl/onl">Naar overheidsorganisaties</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="row row--page-opener">
+  <div class="container">
+    <div class="breadcrumb">
+  <p>U bent hier:</p>
+  <ol>
+    <li><a href=test>Zoeken</a></li>
+    <li><a href=test>Zoekresultaten</a></li>
+    <li><a href=test>Regeling</a></li>
+    <li>Informatie</li>
+  </ol>
+</div>
+  </div>
+</div>
+
+<div class="container row row--heading">
+  <h1>Wet- en regelgeving</h1>
+</div>
+
+<form action="test.html">
+
+  <div class="container columns row">
+    <div>
+      <h2 class="title--underlined">Kies een soort regeling
+        <a class="question-explanation-link" href="#question-explanation-111" id="question-explanation-link-111" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
+      </h2>
+      <div class="question-explanation" id="question-explanation-111" data-decorator="hide-self">
+        <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+        <a href="#question-explanation-link-111" class="question-explanation__close" data-handler="close-explanation">
+          <span class="visually-hidden">
+            Sluiten
+          </span>
+        </a>
+      </div>
+
+      <fieldset class="form__element checkboxgroup">
+        <legend class="visually-hidden">Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
+        <ul class="list--unstyled">
+          <li>
+            <label for="option-checkbox-011">
+              <input type="checkbox" id="option-checkbox-011" name="regelingen" data-decorator="check-all" data-for="which-types" />Alle soorten regelingen of:
+            </label>
+            <ul class="list--unstyled">
+              <li>
+                <label for="option-checkbox-11">
+                  <input type="checkbox" id="option-checkbox-11" name="regelingen" data-set="which-types" />Verdragen
+                </label>
+              </li>
+              <li class="separator">
+                <label for="option-checkbox-12">
+                  <input type="checkbox" id="option-checkbox-12" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Wetten
+                </label>
+              </li>
+              <li>
+                <label for="option-checkbox-13">
+                  <input type="checkbox" id="option-checkbox-13" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />AMvB's en andere Koninklijke besluiten
+                </label>
+              </li>
+              <li>
+                <label for="option-checkbox-14">
+                  <input type="checkbox" id="option-checkbox-14" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Ministriële regelingen
+                  <a class="question-explanation-link" href="#question-explanation-11" id="question-explanation-link-11" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
+                </label>
+                <div class="question-explanation" id="question-explanation-11" data-decorator="hide-self">
+                  <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+                  <a href="#question-explanation-link-11" class="question-explanation__close" data-handler="close-explanation">
+                    <span class="visually-hidden">
+                      Sluiten
+                    </span>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <label for="option-checkbox-15">
+                  <input type="checkbox" id="option-checkbox-15" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Beleidsregels rijksdienst
+                </label>
+              </li>
+              <li>
+                <label for="option-checkbox-16">
+                  <input type="checkbox" id="option-checkbox-16" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="ministerie-options" />Circulaire rijksdienst
+                </label>
+                <fieldset class="form__element checkboxgroup" id="ministerie-options" data-decorator="hide-self">
+                  <legend>Van de ministeries</legend>
+                  <ul class="list--unstyled">
+                    <li><label><input type="checkbox"> Algemene Zaken (az)</label></li>
+                    <li><label><input type="checkbox"> Binnenlandse Zaken en Koninkrijksrelaties (bzk)</label></li>
+                    <li><label><input type="checkbox"> Buitenlandse Zaken (buza)</label></li>
+                    <li><label><input type="checkbox"> Defensie (def)</label></li>
+                    <li><label><input type="checkbox"> Economische Zaken (ez)</label></li>
+                    <li><label><input type="checkbox"> Economische Zaken en Klimaat (ezk)</label></li>
+                    <li><label><input type="checkbox"> Financiën (fin)</label></li>
+                    <li><label><input type="checkbox"> Infrastructuur en Milieu (im)</label></li>
+                    <li><label><input type="checkbox"> Infrastructuur en Waterstaat (iw)</label></li>
+                    <li><label><input type="checkbox"> Justitie en Veiligheid (jv)</label></li>
+                    <li><label><input type="checkbox"> Landbouw, Natuur en Voedselkwaliteit (lnv)</label></li>
+                    <li><label><input type="checkbox"> Onderwijs, Cultuur en Wetenschap (ocw)</label></li>
+                    <li><label><input type="checkbox"> Sociale Zaken en Werkgelegenheid (szw)</label></li>
+                    <li><label><input type="checkbox"> Veiligheid en Justitie (vj)</label></li>
+                    <li><label><input type="checkbox"> Volksgezondheid, Welzijn en Sport (vws)</label></li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="separator">
+                <fieldset class="form__element checkboxgroup checkboxgroup--many">
+                  <legend>
+                    <label for="option-checkbox-17">
+                      <input type="checkbox" id="option-checkbox-17" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="zbo-options" />Regelingen zelfstandige bestuursorganen (ZBO's)
+                    </label>
+                  </legend>
+                  <ul class="list--unstyled" data-decorator="hide-self" id="zbo-options">
+                    <li><label><input type="checkbox"> Autoriteit Consument en Markt (acm)</label></li>
+                    <li><label><input type="checkbox"> Autoriteit Financiële Markten (afm)</label></li>
+                    <li><label><input type="checkbox"> Autoriteit Persoonsgegevens (ap)</label></li>
+                    <li><label><input type="checkbox"> Bureau Architectenregister (bar)</label></li>
+                    <li><label><input type="checkbox"> Bureau Financieel Toezicht (bft)</label></li>
+                    <li><label><input type="checkbox"> CAK (cak)</label></li>
+                    <li><label><input type="checkbox"> CEVO (cevo)</label></li>
+                    <li><label><input type="checkbox"> Centraal Bureau Rijvaardigheidsbewijzen (cbr)</label></li>
+                    <li><label><input type="checkbox"> Centraal Bureau voor de Statistiek - Directeur-Generaal van de Statistiek (cbs)</label></li>
+                    <li><label><input type="checkbox"> Centraal Orgaan opvang Asielzoekers (coa)</label></li>
+                    <li><label><input type="checkbox"> Centrale Commissie Dierproeven (ccd)</label></li>
+                    <li><label><input type="checkbox"> Centrale Commissie Mensgebonden Onderzoek (ccmo)</label></li>
+                    <li><label><input type="checkbox"> Centrale Organisatie Werk en Inkomen (cwi)</label></li>
+                    <li><label><input type="checkbox"> Centrum Indicatiestelling Zorg (ciz)</label></li>
+                    <li><label><input type="checkbox"> College Gerechtelijk deskundigen (cgd)</label></li>
+                    <li><label><input type="checkbox"> College Sanering Ziekenhuisvoorzieningen (cszi)</label></li>
+                    <li><label><input type="checkbox"> College sanering zorginstellingen (cszo)</label></li>
+                    <li><label><input type="checkbox"> College ter Beoordeling van Geneesmiddelen (cbg)</label></li>
+                    <li><label><input type="checkbox"> College van toezicht op de zorgverzekeringen (ctz)</label></li>
+                    <li><label><input type="checkbox">College voor Examens (cve)</label></li>
+                    <li><label><input type="checkbox">College voor Toetsen en Examens (cte)</label></li>
+                    <li><label><input type="checkbox">College voor de toelating van gewasbeschermingmiddelen en biociden (ctgb)</label></li>
+                    <li><label><input type="checkbox">Commissariaat voor de Media (cvdm)</label></li>
+                    <li><label><input type="checkbox">Commissie Eindtermen Accountantsopleiding (cea)</label></li>
+                    <li><label><input type="checkbox">Commissie schadefonds geweldsmisdrijven (csgm)</label></li>
+                    <li><label><input type="checkbox">De Nederlandsche Bank N.V. (dnb)</label></li>
+                    <li><label><input type="checkbox">Dienst Uitvoering Onderwijs (duo)</label></li>
+                    <li><label><input type="checkbox">Dienst Wegverkeer (rdw)</label></li>
+                    <li><label><input type="checkbox">Faunafonds (ff)</label></li>
+                    <li><label><input type="checkbox">Fonds Podiumkunsten (fp)</label></li>
+                    <li><label><input type="checkbox">Fundeon KBBI (kbbi)</label></li>
+                    <li><label><input type="checkbox">Huurcommissie (hc)</label></li>
+                    <li><label><input type="checkbox">Innovam (inno)</label></li>
+                    <li><label><input type="checkbox">Kadaster (kds)</label></li>
+                    <li><label><input type="checkbox">Kamer van Koophandel (kvk)</label></li>
+                    <li><label><input type="checkbox">Kamer voor de Binnenvisserij (kvb)</label></li>
+                    <li><label><input type="checkbox">Kansspelautoriteit (ksa)</label></li>
+                    <li><label><input type="checkbox">Kenniscentrum Handel (kch)</label></li>
+                    <li><label><input type="checkbox">Landelijk Orgaan Economische & Administratieve Beroepscategorieën (ecabo)</label></li>
+                    <li><label><input type="checkbox">Luchtverkeersleiding Nederland (lvnl)</label></li>
+                    <li><label><input type="checkbox">Mondriaan Fonds (mf)</label></li>
+                    <li><label><input type="checkbox">Nederlands-Vlaamse Accreditatieorganisatie hoger onderwijs (nvao)</label></li>
+                    <li><label><input type="checkbox">Nederlandse Organisatie voor Wetenschappelijk Onderzoek (nwo)</label></li>
+                    <li><label><input type="checkbox">Nederlandse Publieke Omroep (npo)</label></li>
+                    <li><label><input type="checkbox">Nederlandse Zorgautoriteit (nza)</label></li>
+                    <li><label><input type="checkbox">Nederlandse emissieautoriteit (nea)</label></li>
+                    <li><label><input type="checkbox">Raad van bestuur UWV (ruwv)</label></li>
+                    <li><label><input type="checkbox">Raad voor Accreditatie (ra)</label></li>
+                    <li><label><input type="checkbox">Raad voor Rechtsbijstand (rvr)</label></li>
+                    <li><label><input type="checkbox">Raad voor Rechtsbijstand ’s-Hertogenbosch (rrh)</label></li>
+                    <li><label><input type="checkbox">Raad voor plantenrassen (rp)</label></li>
+                    <li><label><input type="checkbox">Referendumcommissie (rc)</label></li>
+                    <li><label><input type="checkbox">Registratiecommissies KNMG, KNMP, KNMT, FGzPt en VenVN (rgs)</label></li>
+                    <li><label><input type="checkbox">Sociale Verzekeringsbank (svb)</label></li>
+                    <li><label><input type="checkbox">Staten-Generaal (sg)</label></li>
+                    <li><label><input type="checkbox">Stichting Bloembollenkeuringsdienst (bkd)</label></li>
+                    <li><label><input type="checkbox">Stichting Centraal Orgaan voor Kwaliteitsaangelegenheden in de Zuivel (cokz)</label></li>
+                    <li><label><input type="checkbox">Stichting Controlebureau voor Pluimvee, Eieren en Eiproducten (cpe)</label></li>
+                    <li><label><input type="checkbox">Stichting Donorgegevens Kunstmatige Bevruchting (sdkb)</label></li>
+                    <li><label><input type="checkbox">Stichting Fonds voor Cultuurparticipatie (sfc)</label></li>
+                    <li><label><input type="checkbox">Stichting Fonds voor beeldende kunsten, vormgeving en bouwkunst (bkvb)</label></li>
+                    <li><label><input type="checkbox">Stichting Fonds voor de Letteren (sfl)</label></li>
+                    <li><label><input type="checkbox">Stichting Fonds voor de Scheppende Toonkunst (fst)</label></li>
+                    <li><label><input type="checkbox">Stichting Hout & Meubel (shm)</label></li>
+                    <li><label><input type="checkbox">Stichting Kenniscentrum Beroepsonderwijs Bedrijfsleven PMLF (kbb)</label></li>
+                    <li><label><input type="checkbox">Stichting Kwaliteits-Controle-Bureau (kcb)</label></li>
+                    <li><label><input type="checkbox">Stichting Nationale en Internationale Wegvervoer Organisatie (niwo)</label></li>
+                    <li><label><input type="checkbox">Stichting Nederlands Fonds voor de Film (nff)</label></li>
+                    <li><label><input type="checkbox">Stichting Nederlands Letterenfonds (snl)</label></li>
+                    <li><label><input type="checkbox">Stichting Nederlands Literair Productie- en Vertalingenfonds (snlpv)</label></li>
+                    <li><label><input type="checkbox">Stichting Nederlandse Algemene Keuringsdienst voor zaaizaad en pootgoed van landbouwgewassen (nakz)</label></li>
+                    <li><label><input type="checkbox">Stichting Nederlandse Algemene Kwaliteitsdienst voor de Tuinbouw (nakt)</label></li>
+                    <li><label><input type="checkbox">Stichting Participatiefonds voor het Onderwijs (spo)</label></li>
+                    <li><label><input type="checkbox">Stichting Pensioen- & Verzekeringskamer (pvk)</label></li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="separator">
+                <fieldset class="form__element checkboxgroup">
+                  <legend>
+                    <label for="option-checkbox-18">
+                      <input type="checkbox" id="option-checkbox-18" name="regelingen" data-set="which-types" data-handler="toggle-extra-options" data-options="organisaties-options" />Regelingen publieke organisatie voor beroep en bedrijf
+                    </label>
+                  </legend>
+                  <ul class="list--unstyled" data-decorator="hide-self" id="organisaties-options">
+                    <li><label><input type="checkbox"> Bedrijfschap Afbouw (ba)</label></li>
+                    <li><label><input type="checkbox"> Bedrijfschap Horeca en Catering (hor)</label></li>
+                    <li><label><input type="checkbox"> Bedrijfschap voor het Natuursteenbedrijf (Opgeheven) (bnb)</label></li>
+                    <li><label><input type="checkbox"> Bedrijfschap voor het Slagersbedrijf (Opgeheven) (bsb)</label></li>
+                    <li><label><input type="checkbox"> Bosschap (bos)</label></li>
+                    <li><label><input type="checkbox"> Hoofdbedrijfschap Agrarische Groothandel (hbag)</label></li>
+                    <li><label><input type="checkbox"> Hoofdbedrijfschap Ambachten (hba)</label></li>
+                    <li><label><input type="checkbox"> Hoofdbedrijfschap Detailhandel (hbd)</label></li>
+                    <li><label><input type="checkbox"> Hoofdproductschap Akkerbouw (hpa)</label></li>
+                    <li><label><input type="checkbox"> Kenniscentra beroepsonderwijs bedrijfsleven (kbob)</label></li>
+                    <li><label><input type="checkbox"> Koninklijk Nederlands Instituut van Registeraccountants (nivra)</label></li>
+                    <li><label><input type="checkbox"> Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders (kbvg)</label></li>
+                    <li><label><input type="checkbox"> Koninklijke Notariële Beroepsorganisatie (knb)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse Loodsencorporatie (nlc)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse Orde van Accountants-Administratieconsulenten (novaa)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse Orde van Advocaten (nova)</label></li>
+                    <li><label><input type="checkbox"> Nederlandse beroepsorganisatie van accountants (nba)</label></li>
+                    <li><label><input type="checkbox"> Productschap Akkerbouw (pa)</label></li>
+                    <li><label><input type="checkbox"> Productschap Diervoeder (pdv)</label></li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="separator">
+                <label for="option-checkbox-19">
+                  <input type="checkbox" id="option-checkbox-19" name="regelingen" data-set="which-types" />Reglementen van de Staten-Generaal
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__element checkboxgroup">
+        <legend class="visually-hidden">Specifieker zoeken</legend>
+        <label for="option-checkbox-111">
+          <input type="checkbox" id="option-checkbox-111" name="bes" />Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
+        </label>
+        <label for="option-checkbox-121">
+          <input type="checkbox" id="option-checkbox-121" name="bes" />Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
+          <a class="question-explanation-link" href="#question-explanation-121" id="question-explanation-link-121" data-handler="toggle-explanation">Toelichting regelingen BES</a>
+        </label>
+        <div class="question-explanation" id="question-explanation-121" data-decorator="hide-self">
+          <p>Door dit aan te vinken, zoekt u alleen binnen de voormalige Antilliaanse regelgeving die is overgenomen door Nederland.</p>
+          <a href="#question-explanation-link-121" class="question-explanation__close" data-handler="close-explanation">
+            <span class="visually-hidden">
+              Sluiten
+            </span>
+          </a>
+        </div>
+        <ul>
+          <li><a href="#" rel="external">Europese regelingen (EUR-Lex)</a></li>
+          <li><a href="#" rel="external">Regelingen van provincies, gemeenten, <abbr title="Bonaire, Sint Eustatius en Sint Maarten">BES</abbr>, waterschappen en voormalige Nederlandse Antillen</a></li>
+        </ul>
+      </fieldset>
+    </div>
+
+      <div>
+        <h2 class="title--underlined">Zoek op woord of zinsdeel
+          <a class="question-explanation-link" href="#question-explanation-112" id="question-explanation-link-112" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
+        </h2>
+        <div class="question-explanation" id="question-explanation-112" data-decorator="hide-self">
+          <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+          <a href="#question-explanation-link-112" class="question-explanation__close" data-handler="close-explanation">
+            <span class="visually-hidden">
+              Sluiten
+            </span>
+          </a>
+        </div>
+
+        <div class="form__element">
+          <label for="input-1">In de titel</label>
+          <a class="question-explanation-link" href="#question-explanation-1" id="question-explanation-link-1" data-handler="toggle-explanation">Toelichting zoeken in de titel</a>
+          <div class="question-explanation" id="question-explanation-1" data-decorator="hide-self">
+            <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>
+            <a href="#question-explanation-link-1" class="question-explanation__close" data-handler="close-explanation">
+              <span class="visually-hidden">
+                Sluiten
+              </span>
+            </a>
+          </div>
+          <input type="text" id="input-1" class="input " placeholder="Bijv: Omgevingswet" />
+        </div>
+
+        <div class="form__element checkboxgroup inline-group">
+
+          <label for="option-checkbox-1">
+            <input type="checkbox" id="option-checkbox-1" name="alliedforces" data-handler="toggle-option" data-for="option-checkbox-2" checked />Exact zoeken
+          </label>
+
+          <label for="option-checkbox-2">
+            <input type="checkbox" id="option-checkbox-2" name="alliedforces" />Afkorting of volledige titel
+          </label>
+
+        </div>
+
+        <div class="form__element">
+          <label for="input-3">In de tekst</label>
+          <a class="question-explanation-link" href="#question-explanation-2" id="question-explanation-link-2" data-handler="toggle-explanation">Toelichting zoeken in de tekst</a>
+          <div class="question-explanation" id="question-explanation-2" data-decorator="hide-self">
+            <p>U zoekt hier op woord(en) in de volledige tekst van de regelingen.</p>
+            <a href="#question-explanation-link-2" class="question-explanation__close" data-handler="close-explanation">
+              <span class="visually-hidden">
+                Sluiten
+              </span>
+            </a>
+          </div>
+          <input type="text" id="input-3" class="input " placeholder="Bijv: geluidsnorm" />
+        </div>
+
+        <div class="form__element checkboxgroup">
+          <label for="option-checkbox-4">
+            <input type="checkbox" id="option-checkbox-4" name="alliedforces" checked />Exact zoeken
+          </label>
+        </div>
+
+        <fieldset class="form__element radiogroup">
+          <legend>Zoek in onderdelen</legend>
+          <ul class="list--unstyled">
+            <li>
+              <label>
+                <input type="radio" name="zoek-in-onderdelen" checked data-handler="hide-extra-options" data-options="wetstechnische-information-options">Alle wetstechnische informatie
+              </label>
+            </li>
+            <li>
+              <fieldset class="form__element checkboxgroup">
+                <legend>
+                  <label>
+                    <input type="radio" name="zoek-in-onderdelen" data-handler="show-extra-options" data-options="wetstechnische-information-options">Specifieke onderdelen
+                  </label>
+                </legend>
+                <ul class="list--unstyled" data-decorator="hide-self" id="wetstechnische-information-options">
+                  <li><label><input type="checkbox">Opschrift en aanhef</label></li>
+                  <li><label><input type="checkbox">Opschriften binnen het lichaam van de regeling</label></li>
+                  <li><label><input type="checkbox">Artikelen of daarmee vergelijkbare tekst</label></li>
+                  <li><label><input type="checkbox">Ondertekening en slotformulier</label></li>
+                  <li><label><input type="checkbox">Bijlagen</label></li>
+                  <li><label><input type="checkbox">Officiële inhoudsopgave</label></li>
+                </ul>
+              </fieldset>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="form__element">
+          <label for="input-5">Artikelnummer</label>
+          <input type="text" id="input-5" class="input input--small" placeholder="Bijv: 3.7a" />
+        </div>
+
+        <fieldset class="form__element radiogroup inline-group">
+          <legend>Hoe wilt u zoeken </legend>
+          <label for="option-6">
+            <input type="radio" id="option-6" name="presidents" />Artikel
+          </label>
+          <label for="option-7">
+            <input type="radio" id="option-7" name="presidents" />Bijlage (niet voor verdragen)
+          </label>
+        </fieldset>
+
+        <h2 class="title--underlined">Zoek op datum
+          <a class="question-explanation-link" href="#question-explanation-113" id="question-explanation-link-113" data-handler="toggle-explanation">Toelichting ministriële regelingen</a>
+        </h2>
+        <div class="question-explanation" id="question-explanation-113" data-decorator="hide-self">
+          <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+          <a href="#question-explanation-link-113" class="question-explanation__close" data-handler="close-explanation">
+            <span class="visually-hidden">
+              Sluiten
+            </span>
+          </a>
+        </div>
+
+        <div class="form__element">
+          <label for="input--8">Regeling geldig op</label>
+          <input type="date" class="input " id="input--8" />
+          <small><a href="#" data-handler="select-today" data-for="input--8">Vandaag</a></small>
+        </div>
+
+        <div class="form__element checkboxgroup">
+          <label for="option-checkbox-5">
+            <input type="checkbox" id="option-checkbox-5" name="alliedforces" />Ook materieel uitgewerkte regelingen
+            <a class="question-explanation-link" href="#question-explanation-5" id="question-explanation-link-5" data-handler="toggle-explanation">Toelichting uitgewerkte regellingen</a>
+          </label>
+          <div class="question-explanation" id="question-explanation-5" data-decorator="hide-self">
+            <p>Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.</p>
+            <a href="#question-explanation-link-5" class="question-explanation__close" data-handler="close-explanation">
+              <span class="visually-hidden">
+                Sluiten
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <fieldset class="form__element radiogroup">
+          <legend>Datum van</legend>
+            <label>
+              <input type="radio" name="datum-van" value="Inwerkingtreding" checked>Inwerkingtreding
+            </label>
+            <label>
+              <input type="radio" name="datum-van" value="Ondertekeninginfo">Ondertekening
+              <a class="question-explanation-link" href="#question-explanation-Ondertekening" id="question-explanation-link-Ondertekening" data-handler="toggle-explanation">Toelichting Ondertekening</a>
+            </label>
+            <div class="question-explanation" id="question-explanation-Ondertekening" data-decorator="hide-self">
+              <p>Zoeken op datum ondertekening is niet mogelijk bij verdragen.</p>
+              <a href="#question-explanation-link-Ondertekening" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+            <label>
+              <input type="radio" name="datum-van" value="Totstandkominginfo">Totstandkoming
+              <a class="question-explanation-link" href="#question-explanation-Totstandkoming" id="question-explanation-link-Totstandkoming" data-handler="toggle-explanation">Toelichting Totstandkoming</a>
+            </label>
+            <div class="question-explanation" id="question-explanation-Totstandkoming" data-decorator="hide-self">
+              <p>Zoeken op datum totstandkoming is alleen mogelijk bij verdragen.</p>
+              <a href="#question-explanation-link-Totstandkoming" class="question-explanation__close" data-handler="close-explanation">
+                <span class="visually-hidden">
+                  Sluiten
+                </span>
+              </a>
+            </div>
+        </fieldset>
+
+        <input type="submit" class="button button--primary" value="Zoeken" >
+
+      </div>
+    </div>
+
+    <div class="container row">
+      <p>De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen heeft een officieel karakter.</p>
+    </div>
+
+</form>
+
+<div class="row row--browse row--before-footer">
+  <div class="container columns">
+    <div>
+      <h2>Welke informatie vindt u op deze website?</h2>
+      <p>Op zoek.officielebekendmakingen.nl vindt u de Officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de Gemeentebladen, <a href="#">Provinciale bladen</a>, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle publicaties van het parlement.</p>
+      <h2>Direct uitgebreid zoeken</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Parlementaire documenten</p>
+    </div>
+    <div>
+      <div class="browse ">
+  
+  
+  <ul class="browse__list">
+    <li class="browse__item ">
+      <a href="#" >
+      Wetten
+      <span class="browse__count">(25)<span class="visually-hidden"> gepubliceerd</span></span>
+      </a>
+    </li>
+    <li class="browse__item ">
+      <a href="#" >
+      Ruimtelijke plannen
+      <span class="browse__count">(3)<span class="visually-hidden"> gepubliceerd</span></span>
+      </a>
+    </li>
+    <li class="browse__item ">
+      <a href="#" >
+      Officiële bekendmakingen
+      <span class="browse__count">(14)<span class="visually-hidden"> bekend gemaakt</span></span>
+      </a>
+    </li>
+    <li class="browse__item ">
+      <a href="#" >
+      Staatsblad
+      <span class="browse__count">(5)<span class="visually-hidden"> gepubliceerd</span></span>
+      </a>
+    </li>
+    <li class="browse__item ">
+      <a href="#" >
+      Internetconsultatie
+      <span class="browse__count">(3)<span class="visually-hidden"> gepubliceerd</span></span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer row--footer" role="contentinfo">
+  <div class="container columns">
+    <ul class="list list--linked">
+
+      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li><a href="/sitemap">Sitemap</a></li>
+    </ul>
+
+     <ul class="list list--linked">
+        <li><a href="https://data.overheid.nl">Open data</a></li>
+        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+    </ul>
+
+  </div>
+</div>
+
+

@@ -53,6 +53,12 @@
     }
   }
 
+  .is-currentchapter {
+    // font-weight: bold !important;
+    background: $lightBlue;
+    padding-left: .5em;
+  }
+
   &__sub &__sub &__sub-link {
     border-left: .75em solid transparent;
   }
@@ -108,4 +114,8 @@
       margin-right: 1em;
     }
   }
+}
+
+.section-chapter {
+  padding: 1em 0;
 }

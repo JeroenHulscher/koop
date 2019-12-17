@@ -1,6 +1,6 @@
 <div class="profile {{ modifier }}" data-decorator="init-profile-toggle">
   {{#if loggedIn }}
-  <p data-toggler>U bent ingelogd</p>
+  <p data-toggler>{{textLoggedIn}}</p>
   <div class="profile__options" data-toggled id="profile-options-{{ id }}">
     <h3 class="visually-hidden">Opties:</h3>
     {{#if options }}
@@ -12,6 +12,6 @@
     {{/if}}
   </div>
   {{else}}
-  U bent uitgelogd
+   {{textLoggedOut}}
   {{/if}}
 </div>

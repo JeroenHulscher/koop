@@ -1,0 +1,22 @@
+<div class="wrapper">
+
+  {% include "@header" with headerContext %}
+
+  <div class="row row--page-opener">
+    <div class="container">
+      {% include "@breadcrumb" %}
+    </div>
+  </div>
+
+  <div class="container row">
+    <div class="columns columns--homepage-tiles">
+      {% include "@homepage-block--related" with homepageBlock1 %}
+      {% include "@homepage-block--related" with homepageBlock2 %}
+      {% include "@homepage-block--related" with homepageBlock3 %}
+      {% include "@homepage-block--related" with homepageBlock4 %}
+    </div>
+  </div>
+
+</div>
+
+{% include "@footer" %}

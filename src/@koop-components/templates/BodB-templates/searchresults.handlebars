@@ -13,7 +13,7 @@
 
 
       <div class="map">
-        <div class="map__map"></div>
+        <div id="demo7" class="map__map"></div>
         <div class="map__controls">
           <div class="row row--spacer">
             <div class="columns">
@@ -27,6 +27,25 @@
           </div>
         </div>
       </div>
+
+      <script id="data" type="application/json">
+      {
+        "debug": false,
+        "mount_element": "#demo7",
+        "locations": [{
+            "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
+            "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"
+        }, {
+            "type": "punt",
+            "geometry": "POINT(83388.72001447542 454483.4858568841)",
+            "geometry_type": "WKT",
+            "title": "Punt 1"
+        }],
+        "options": {
+            "mode": "geoview"
+        }
+      }
+      </script>
 
 
 
@@ -90,25 +109,6 @@
           </button>
         </div>
       </div>
-
-      <script id="data" type="application/json">
-      {
-        "debug": false,
-        "mount_element": "#demo7",
-        "locations": [{
-            "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
-            "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"
-        }, {
-            "type": "punt",
-            "geometry": "POINT(83388.72001447542 454483.4858568841)",
-            "geometry_type": "WKT",
-            "title": "Punt 1"
-        }],
-        "options": {
-            "mode": "geoview"
-        }
-      }
-      </script>
 
       {{!-- <div class="pull-right"> --}}
         {{render "@pagination" }}
@@ -186,13 +186,7 @@
                             <label class="form__label" for="">Straal
                               <span class="mandatory">Verplicht veld</span>
                             </label>
-                            <div class="select-custom">
-                              <select>
-                                <option>250m</option>
-                                <option>1km</option>
-                                <option>2km</option>
-                              </select>
-                            </div>
+                            {{ render "@select-custom" selectStraalContext }}
                           </div>
                         </div>
                       </div>
@@ -247,14 +241,21 @@
             </fieldset>
           </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Publicatiedatum
-              {{render "@tooltip"}}
-              </legend>
-              {{render "@input-radio" publicatiedatumContext }}
-            </fieldset>
-          </div>
+          <div data-decorator="init-form-conditionals">
+
+
+            <div id="citem-0" class="form__row form__row--large js-form-conditionals__citem">
+              <fieldset>
+                <legend>Publicatiedatum
+                {{render "@tooltip"}}
+                </legend>
+                {{render "@input-radio" publicatiedatumContext }}
+              </fieldset>
+            </div>
+
+            <div id="citem-1" class="form__row form__row--large js-form-conditionals__citem u-margin-top--24">
+              {{render "@datepicker" publicatieCustomRange merge=true }}
+            </div>
 
           <div class="form__row form__row--large">
             <fieldset>

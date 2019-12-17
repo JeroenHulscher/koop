@@ -2,6 +2,7 @@ label: Inline icon
 context:
     text: icon text
     modifier: icon--overheid
+    href: '#'
 variants:
   - name: download icon
     label: download icon

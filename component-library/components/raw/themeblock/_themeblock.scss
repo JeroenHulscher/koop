@@ -1,0 +1,248 @@
+.themelist {
+  margin: 0;
+
+  @media (min-width: $breakpointDesktop) {
+    column-count: 2;
+    column-fill: balance;
+  }
+
+  @media (min-width: 75em) {
+    column-count: 3;
+  }
+}
+
+.themeblock__item {
+  list-style: none;
+}
+
+.themeblock__title {
+  color: inherit;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.themeblock__counter {
+  color: inherit;
+  font-style: italic;
+  margin: 0 0 0 auto;
+  z-index: 2;
+}
+
+.themeblock__link {
+  align-items: flex-start;
+  color: $darkBlue;
+  display: inline-flex;
+  margin: 0;
+  min-height: 30px;
+  padding: 1em;
+  text-decoration: none;
+  width: 100%;
+
+  &::before {
+    background: {
+      repeat: no-repeat;
+      position: 50% 50%;
+      size: 1.4em;
+    }
+    content: '';
+    height: 2em;
+    margin-right: .5em;
+    margin-top: -.35em;
+    width: 2em;
+    z-index: 1;
+  }
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &--governance {
+
+    &:hover {
+      background-color: rgba($governance, 0.1);
+      color: $governance;
+    }
+
+    &::before {
+      background-image: $governanceIcon;
+    }
+  }
+
+  &--culture {
+    &:hover {
+      background-color: rgba($culture, 0.1);
+      color: $culture;
+    }
+
+    &::before {
+      background-image: $cultureIcon;
+    }
+  }
+
+  &--economy {
+    &:hover {
+      background-color: rgba($economy, 0.1);
+      color: $economy;
+    }
+
+    &::before {
+      background-image: $economyIcon;
+    }
+  }
+
+  &--finance {
+    &:hover {
+      background-color: rgba($finance, 0.1);
+      color: $finance;
+    }
+
+    &::before {
+      background-image: $financeIcon;
+    }
+  }
+
+  &--housing {
+    &:hover {
+      background-color: rgba($housing, 0.1);
+      color: $housing;
+    }
+
+    &::before {
+      background-image: $housingIcon;
+    }
+  }
+
+  &--international {
+    &:hover {
+      background-color: rgba($international, 0.1);
+      color: $international;
+    }
+
+    &::before {
+      background-image: $internationalIcon;
+    }
+  }
+
+  &--agriculture {
+    &:hover {
+      background-color: rgba($agriculture, 0.1);
+      color: $agriculture;
+    }
+
+    &::before {
+      background-image: $agricultureIcon;
+    }
+  }
+
+  &--migration {
+    &:hover {
+      background-color: rgba($migration, 0.1);
+      color: $migration;
+    }
+
+    &::before {
+      background-image: $migrationIcon;
+    }
+  }
+
+  &--nature {
+    &:hover {
+      background-color: rgba($nature, 0.1);
+      color: $nature;
+    }
+
+    &::before {
+      background-image: $natureIcon;
+    }
+  }
+
+  &--education {
+    &:hover {
+      background-color: rgba($education, 0.1);
+      color: $education;
+    }
+
+    &::before {
+      background-image: $educationIcon;
+    }
+  }
+
+  &--security {
+    &:hover {
+      background-color: rgba($security, 0.1);
+      color: $security;
+    }
+
+    &::before {
+      background-image: $securityIcon;
+    }
+  }
+
+  &--law {
+    &:hover {
+      background-color: rgba($law, 0.1);
+      color: $law;
+    }
+
+    &::before {
+      background-image: $lawIcon;
+    }
+  }
+
+  &--infrastructure {
+    &:hover {
+      background-color: rgba($infrastructure, 0.1);
+      color: $infrastructure;
+    }
+
+    &::before {
+      background-image: $infrastructureIcon;
+    }
+  }
+
+  &--social {
+    &:hover {
+      background-color: rgba($social, 0.1);
+      color: $social;
+    }
+
+    &::before {
+      background-image: $socialIcon;
+    }
+  }
+
+  &--traffic {
+    &:hover {
+      background-color: rgba($traffic, 0.1);
+      color: $traffic;
+    }
+
+    &::before {
+      background-image: $trafficIcon;
+    }
+  }
+
+  &--jobs {
+    &:hover {
+      background-color: rgba($jobs, 0.1);
+      color: $jobs;
+    }
+
+    &::before {
+      background-image: $jobsIcon;
+    }
+  }
+
+  &--healthcare {
+    &:hover {
+      background-color: rgba($healthcare, 0.1);
+      color: $healthcare;
+    }
+
+    &::before {
+      background-image: $healthcareIcon;
+    }
+  }
+}
+
+

@@ -244,25 +244,28 @@ context:
     - id: checkbox-20
       text: Vuurwerkvergunning
       name: onderwerp
+  publicatieCustomRange:
+    range: true
   publicatiedatumContext:
     moreless: true
     options:
-    - id: radio-1
+    - id: radio-1112312312
       text: Vandaag
       name: publicatie
-    - id: radio-2
+    - id: radio-21231232
       text: Afgelopen week
       name: publicatie
-    - id: radio-3
+    - id: radio-3312312312
       text: Afgelopen maand
       name: publicatie
-    - id: radio-4
+    - id: radio-412312313
       text: Afgelopen 2 maanden
       name: publicatie
       disabled: disabled
-    - id: radio-5
+    - id: radio-51222
       text: Zelf een periode kiezen
       name: publicatie
+      linkedto: 1
   gebiedContext:
     moreless: true
     options:
@@ -349,6 +352,20 @@ context:
       - label: Gezocht op "leveringen"
       - label: Bouwvergunning
       - label: APV vergunning
-
+  selectStraalContext:
+    modifier: select-custom
+    id: 1
+    options:
+      - label: 250 meter
+        value: 250
+        selected: true
+      - label: 500 meter
+        value: 500
+      - label: 1000 meter
+        value: 1000
+      - label: 2000 meter
+        value: 2000
+      - label: Hele gemeente
+        value: 9000
 
 

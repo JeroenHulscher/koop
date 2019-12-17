@@ -1,0 +1,28 @@
+.columns {
+
+  &--sticky-sidebar {
+
+    > .columns--sticky-sidebar__sidebar {
+      > div {
+        // padding-top: 1em;
+      }
+
+      @media ( min-width: $breakpointDesktop ) {
+        border: 1px solid transparent;
+        border-right: 1px solid $lighterGrey;
+        top: 1.8em;
+
+
+        &.is-sticky {
+
+        }
+
+        .nav-sub {
+          margin-right: -1em;
+          border-right: 0;
+        }
+      }
+
+    }
+  }
+}

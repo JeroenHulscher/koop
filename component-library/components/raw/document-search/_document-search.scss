@@ -1,0 +1,62 @@
+.document-search {
+  text-align: center;
+
+  legend {
+    width: 100%;
+    text-align: center;
+  }
+
+  fieldset {
+    border: 0;
+  }
+
+  input,
+  .multi-select {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    border-radius: 0;
+  }
+
+  input,
+  .multi-select input {
+    font-size: 1rem;
+    padding: 1em;
+    border: 1px solid $lighterGrey;
+  }
+
+  .multi-select input {
+    background: {
+      image: $dartDownIcon;
+      repeat: no-repeat;
+      position: right 1em center;
+    };
+  }
+
+  input[type=submit] {
+    border-radius: 0;
+    margin: 0;
+    padding: 1em 2em;
+    text-align: center;
+    border-color: transparent;
+  }
+
+  &__fields {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media ( min-width: $breakpointDesktop ) {
+      flex-direction: row;
+    }
+
+    > input[type="text"],
+    .multi-select {
+      flex: 1;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

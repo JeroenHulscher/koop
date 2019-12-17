@@ -23,13 +23,17 @@
             </label>
           </div>
         {{/if}}
+         {{#if radio}}
+          <div class="" data-decorator="init-formreset">
+            <p><a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
+         {{/if}}
               <p class="form__label">{{#if OptionsLabel}}{{OptionsLabel}}{{/if}}</p>
               {{#if Options}}
                <ul class="list--unstyled">
                 {{#each Options }}
                   <li class=" js-filterresults__result">
                     <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-                      <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
+                      <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
                       />
                       <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
                         {{ title }}
@@ -40,7 +44,7 @@
                 </ul>
                {{/if}}
                 <p class="form__label">{{#if Options2Label}}{{Options2Label}}{{/if}}</p>
-                  {{#if Options2}}
+                {{#if Options2}}
                   <ul class="list--unstyled">
                     {{#each Options2 }}
                       <li class=" js-filterresults__result">
@@ -54,7 +58,10 @@
                       </li>
                     {{/each}}
                     </ul>
-                  {{/if}}
+                {{/if}}
+             {{#if radio}}
+             </div>
+             {{/if}}
         {{#if selectAll}}
          </div>
         {{/if}}
@@ -64,17 +71,15 @@
         {{/if}}
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+          {{#if buttonSubmit}}
+            <button type="submit" class="button button--primary">Opnieuw zoeken</button>
+          {{else}}
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+          {{/if}}
         </div>
-        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+        {{#if hideClose}}{{else}}<button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>{{/if}}
       </div>
     </div>
   </div>
   <a href="#" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger icon">{{linkText}}</a>
 </div>
-
-<!--
-<label for="input{{id}}">
-  <input id="input{{id}}" value="{{short}}" type="checkbox" name="name">{{title}}
-</label>
--->

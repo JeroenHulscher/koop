@@ -9,7 +9,7 @@ context:
     modifier: list--facet
     heading: Officiële bekendmakingen
     items:
-      - text: <a href="#">Veelgestelde vragen</a>
+      - content: <a href="#">Veelgestelde vragen</a>
   counter:
     modifier: article__header--main
     counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten

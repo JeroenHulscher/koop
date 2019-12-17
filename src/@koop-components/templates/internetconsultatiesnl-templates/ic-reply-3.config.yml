@@ -9,16 +9,16 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    last: Reageren
-    breadcrumbs:
-      - label: Home
-        path: "#"
-      - label: Overheidsinformatie
-        path: "#"
-      - label: Internetconsultatie
-        path: "#"
-      - label: NFP wijzigingspakket 2018-1
-        path: "#"
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: Internetconsultatie
+        url: '#'
+      - text: NFP wijzigingspakket 2018-1
+        url: '#'
+      - text: Reageren
   stepsContext:
     steps:
       - title: Stap 1

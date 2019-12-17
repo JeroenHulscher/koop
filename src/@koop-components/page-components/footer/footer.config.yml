@@ -1,0 +1,30 @@
+title: Footer
+context:
+  listContext1:
+    modifier: list--linked
+    items:
+      - content: <a href="https://beta.overheid.nl/over-deze-site">Over deze website</a>
+      - content: <a href="https://beta.overheid.nl/contact">Contact</a>
+      - content: <a href="https://beta.overheid.nl/english" lang="en">English</a>
+      - content: <a href="https://beta.overheid.nl/help">Help</a>
+      - content: <a href="https://beta.overheid.nl/help/zoeken">Zoeken</a>
+  listContext2:
+    modifier: list--linked
+    items:
+      - content: <a href="/informatie-hergebruiken">Informatie hergebruiken</a>
+      - content: <a href="/privacy-statement">Privacy en cookies</a>
+      - content: <a href="/toegankelijkheid">Toegankelijkheid</a>
+      - content: <a href="/sitemap">Sitemap</a>
+  listContext3:
+    modifier: list--linked
+    items:
+      - content: <a href="https://data.overheid.nl">Open data</a>
+      - content: <a href="http://linkeddata.overheid.nl">Linked Data Overheid</a>
+      - content: <a href="https://puc.overheid.nl">PUC Open Data</a>
+  listContext4:
+    modifier: list--linked
+    items:
+      - content: <a href="https://mijn.overheid.nl">MijnOverheid.nl</a>
+      - content: <a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a>
+      - content: <a href="https://ondernemersplein.nl">Ondernemersplein.nl</a>
+      - content: <a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a>

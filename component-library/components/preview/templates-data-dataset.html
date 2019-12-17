@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Preview</title>
+
+  <script>
+    document.documentElement.className = 'has-js';
+  </script>
+
+  <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script src="../../js/vendor/kpm.js"></script>
+
+  <link rel="stylesheet" title="2" href="../../css/transition.css">
+  <link rel="alternate stylesheet" title="1" href="../../css/generic.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+</head>
+<body class="preview">
+  <header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Open data van de Overheid</span>
+          </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+            <li><a href="#" class="">Datasets</a></li>
+            <li><a href="#" class="">Statistieken</a></li>
+            <li><a href="#" class="">Ondersteuning</a></li>
+            <li><a href="#" class="">Toepassingen</a></li>
+            <li><a class="button button--primary" href="" role="button">Dataset aanmelden</a></li>
+      </ul>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      <div>
+        <h2>Aankondigingen over uw buurt</h2>
+        <p>Zoals bouwplannen en verkeersmaatregelen.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt">Naar aankondigingen over uw buurt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dienstverlening</h2>
+        <p>Zoals belastingen, uitkeringen en subsidies.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/dienstverlening">Naar dienstverlening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Beleid &amp; regelgeving</h2>
+        <p>Officiële publicaties van de overheid.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/beleid-en-regelgeving">Naar beleid &amp; regelgeving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contactgegevens overheden</h2>
+        <p>Adressen en contactpersonen van overheidsorganisaties.</p>
+        <ul class="list list--linked">
+          <li><a href="https://almanak.overheid.nl/onl">Naar overheidsorganisaties</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="row row--page-opener">
+  <div class="container">
+    <div class="breadcrumb">
+  <p>U bent hier:</p>
+  <ol>
+    <li><a href=test>Zoeken</a></li>
+    <li><a href=test>Zoekresultaten</a></li>
+    <li><a href=test>Regeling</a></li>
+    <li>Informatie</li>
+  </ol>
+</div>
+  </div>
+</div>
+
+<div class="container row">
+  <a href="#" class="link cta__backwards">Terug naar alle datasets</a>
+</div>
+
+<div class="container row container--centered">
+	<p>Dataset</p>
+	<h1>Leefbaarometer 2.0 = meting 2016</h1>
+
+	<div class="characteristics">
+		<div class="characteristic characteristic--ok">
+			<a href="#question-explanation-1" id="question-explanation-link-1" data-explanation-opener="question-explanation-1" data-handler="toggle-explanation">ok</a>
+			<div class="question-explanation__content" id="question-explanation-1" data-decorator="hide-self">
+		        <p>Betekenis: De wettelijke grondslag van de dataset is bekend.</p>
+		        <a href="#question-explanation-link-1" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+		<div class="characteristic ">
+			<a href="#question-explanation-2" id="question-explanation-link-2" data-explanation-opener="question-explanation-2" data-handler="toggle-explanation">high value</a>
+			<div class="question-explanation__content" id="question-explanation-2" data-decorator="hide-self">
+		        <p>Betekenis: </p>
+		        <a href="#question-explanation-link-2" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+		<div class="characteristic ">
+			<a href="#question-explanation-3" id="question-explanation-link-3" data-explanation-opener="question-explanation-3" data-handler="toggle-explanation">referentieset</a>
+			<div class="question-explanation__content" id="question-explanation-3" data-decorator="hide-self">
+		        <p>Betekenis: </p>
+		        <a href="#question-explanation-link-3" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+		<div class="characteristic ">
+			<a href="#question-explanation-4" id="question-explanation-link-4" data-explanation-opener="question-explanation-4" data-handler="toggle-explanation">basisregister</a>
+			<div class="question-explanation__content" id="question-explanation-4" data-decorator="hide-self">
+		        <p>Betekenis: </p>
+		        <a href="#question-explanation-link-4" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+		<div class="characteristic characteristic--international">
+			<a href="#question-explanation-5" id="question-explanation-link-5" data-explanation-opener="question-explanation-5" data-handler="toggle-explanation">standaard</a>
+			<div class="question-explanation__content" id="question-explanation-5" data-decorator="hide-self">
+		        <p>Betekenis: </p>
+		        <a href="#question-explanation-link-5" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+		<div class="characteristic characteristic--basis">
+			<a href="#question-explanation-6" id="question-explanation-link-6" data-explanation-opener="question-explanation-6" data-handler="toggle-explanation">grondslag bekend</a>
+			<div class="question-explanation__content" id="question-explanation-6" data-decorator="hide-self">
+		        <p>Betekenis: </p>
+		        <a href="#question-explanation-link-6" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+		<div class="characteristic characteristic--share">
+			<a href="#question-explanation-7" id="question-explanation-link-7" data-explanation-opener="question-explanation-7" data-handler="toggle-explanation">delen</a>
+			<div class="question-explanation__content" id="question-explanation-7" data-decorator="hide-self">
+		        <p>Betekenis: </p>
+		        <a href="#question-explanation-link-7" class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+		    </div>
+		</div>
+</div>
+
+	<div class="well well--pageblock">
+		<h2>Data-eigenaar</h2>
+		<p><a href="#">Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</a> | Uit catalogus: <a href="#">Data.overheid.nl</a></p>
+
+		<p><a href="#" class="link link--forward">Alle datasets van deze eigenaar</a></p>
+
+		<dl class="dl columns--data">
+      <div>
+        <dt>Thema</dt>
+          <dd><span class="icon icon--housing">Huisvesting</span></dd>
+      </div>
+      <div>
+        <dt>Status</dt>
+        <dd>Beschikbaar</dd>
+      </div>
+      <div>
+        <dt>Toegang</dt>
+        <dd>Publiek</dd>
+      </div>
+      <div>
+        <dt>Update</dt>
+        <dd>8-1-2018</dd>
+      </div>
+      <div>
+        <dt>Licentie</dt>
+        <dd>CC-0</dd>
+      </div>
+      <div>
+        <dt>Taal</dt>
+        <dd>Nederlands</dd>
+      </div>
+
+</dl>
+
+	</div> 
+
+	<div class="tabs " data-decorator="init-tabs">
+  <ul class="tabs__list">
+        <li role="presentation">
+          <a href="#panel-1" data-handler="open-panel" role="tab" id="tab-1" aria-controls="panel-1">Omschrijving</a>
+        </li>
+        <li role="presentation">
+          <a href="#panel-2" data-handler="open-panel" role="tab" id="tab-2" aria-controls="panel-2">Gekoppelde groepen</a>
+        </li>
+        <li role="presentation">
+          <a href="#panel-3" data-handler="open-panel" role="tab" id="tab-3" aria-controls="panel-3">Activiteitenstroom</a>
+        </li>
+        <li role="presentation">
+          <a href="#panel-4" data-handler="open-panel" role="tab" id="tab-4" aria-controls="panel-4">Metadata</a>
+        </li>
+        <li><button class="button button--share" href="" role="button">dataset delen</button></li>
+  </ul>
+  <div class="tabs__panels">
+    <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <p>Met behulp van de Leefbaarometer kan leefbaarheid in alle bewoonde wijken, buurten en straten in Nederland gemonitord worden. Op basis van een honderdtal objectieve indicatoren geeft de Leefbaarometer een schatting hoe de Leefbaarheid er is en hoe deze zich in de afgelopen jaren ontwikkeld heeft. Hiermee biedt de Leefbaarometer basismateriaal voor beleidsvoorbereiding, -bijsturing en –evaluatie voor verschillende partijen.</p><p>Het model van de Leefbaarometer is in 2015 geheel herzien, waarna in 2016 de resultaten tot en met meetjaar 2014 zijn gepubliceerd. Iedere twee jaar vindt een nieuwe meting plaats met behulp van dit model.Deze dataset bevat - naast de resultaten ven voorgaande jaren - de resultaten met de data over 2016. Het gegevensbestand bevat de leefbaarheidsklassen en de ontwikkelingsklassen per gemeente/wijk/buurt/4ppc voor de jaren 2002, 2008, 2012, 2014 en 2016, plus de afwijkingen van het landelijk gemiddelde per dimensie voor de jaren 2012, 2014 en 2016. Daarnaast zijn de shapefiles voor de gebruikte topografische indelingen beschikbaar.</p><p><a href="#">Meer informatie over deze dataset</a></p>
+
+    </div>
+    <div id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+      <h2>TBD</h2>
+
+    </div>
+    <div id="panel-3" role="tabpanel" aria-labelledby="tab-3">
+      <h2>Activiteitenstroom</h2>
+
+    </div>
+    <div id="panel-4" role="tabpanel" aria-labelledby="tab-4">
+      <h2>Metadata</h2>
+
+    </div>
+    <div id="panel-" role="tabpanel" aria-labelledby="tab-">
+      
+
+    </div>
+  </div>
+</div>
+
+
+	<div class="container--labels">
+		<h3>Tags</h3>
+		<span class="label">BZK</span>
+		<span class="label">bewoners</span>
+		<span class="label">buurten</span>
+		<span class="label">leefbaarheid</span>
+		<span class="label">leefbarometer</span>
+		<span class="label">veiligheid</span>
+		<span class="label">wijken</span>
+	</div>
+
+</div>
+
+<div class="container row container--centered">
+
+	<div class="tabs " data-decorator="init-tabs">
+	    <ul class="tabs__list">
+	        <li role="presentation">
+	            <a href="#panel-5" data-handler="open-panel" role="tab" id="tab-5" aria-controls="panel-5">Databronnen</a>
+	        </li>
+	        <li role="presentation">
+	            <a href="#panel-6" data-handler="open-panel" role="tab" id="tab-6" aria-controls="panel-6">Documentatie</a>
+	        </li>
+	    </ul>
+	    <div class="tabs__panels">
+	        <div id="panel-5" role="tabpanel" aria-labelledby="tab-5">
+	            <ul class="list--sources">
+		<li>
+			<div class="list--source__information">
+				Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente Score Gemeente 2016 Score Gemeente 2016 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016
+        <span class="list--sources__item__filesize"></span>
+						<span class="label label--xml">xml</span>
+						<span class="label label--xls">xls</span>
+			</div>
+
+      <a href="#" class="button button--primary">download bestand <span class="visually-hidden">bestand: Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente Score Gemeente 2016 Score Gemeente 2016 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016</span></a>
+
+		</li>
+		<li>
+			<div class="list--source__information">
+				Score wijk 2016
+        <span class="list--sources__item__filesize"></span>
+						<span class="label label--xml">xml</span>
+			</div>
+
+      <a href="#" class="button button--primary">download bestand <span class="visually-hidden">bestand: Score wijk 2016</span></a>
+
+				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
+				  <div class="collapsible__header">
+				    <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible" data-text="show/hide">toon informatie</a>
+				  </div>
+				  <div class="collapsible__content" id="collapsible-content-1">
+				  	<div>
+					  	<h3>Toegankslink</h3>
+					  	<div class="well well--linkContainer">https://data.overheid.nl/data/dataset/af2b6af6-7ffe-40f1-851c-0d114b5ebf2b/resource/6bb787c2-7826-499e-86e6-43cd88ee476a/download/stembureausdelfzijl.csv</div>
+								<table>
+										<tr>
+											<th>Score wijk 2016</th>
+											<td data-before="Score wijk 2016"><a href="#">Locatie stembureaus Delfzijl 2016</a></td>
+										</tr>
+										<tr>
+											<th>Laatst gewijzigd</th>
+											<td data-before="Laatst gewijzigd">9 maart 2017</td>
+										</tr>
+								</table>
+						</div>
+				  </div>
+				</div>
+		</li>
+		<li>
+			<div class="list--source__information">
+				Score PC4 2016
+        <span class="list--sources__item__filesize"></span>
+						<span class="label label--xml">xml</span>
+						<span class="label label--xls">xls</span>
+			</div>
+
+      <a href="#" class="button button--primary">download bestand <span class="visually-hidden">bestand: Score PC4 2016</span></a>
+
+		</li>
+</ul>
+
+	        </div>
+	        <div id="panel-6" role="tabpanel" aria-labelledby="tab-6">
+	            <h2>Documentatie</h2>
+	            <p>
+	                <p>Volgt</p>
+
+	        </div>
+	        
+	    </div>
+	</div>
+
+</div>
+
+<div class="container row container--centered">
+  <div class="well well--pageblock">
+    <h2>Is dit niet de dataset die u zoekt?</h2>
+
+    <div >
+
+  <ul class="list list--linked">
+      <li class="list__item"><a href="#">1e item</a></li>
+      <li class="list__item"><a href="#">2e item</a></li>
+      <li class="list__item"><a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a></li>
+      <li class="list__item"><a href="#">4e item</a></li>
+  </ul>
+</div>
+
+
+  </div>
+
+</div>
+
+
+
+<div class="footer row--footer" role="contentinfo">
+  <div class="container columns">
+    <ul class="list list--linked">
+
+      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li><a href="/sitemap">Sitemap</a></li>
+    </ul>
+
+     <ul class="list list--linked">
+        <li><a href="https://data.overheid.nl">Open data</a></li>
+        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+  <script>
+
+    (function () {
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
+        localStorage.setItem('title', title);
+      }
+
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
+
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
+
+    }());
+
+  </script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+</html>
+

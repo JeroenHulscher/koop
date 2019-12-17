@@ -7,23 +7,23 @@ context:
   legendaContext:
     modifier: list--legenda list--columns-4
     items:
-      - text: Eemshaven
+      - content: Eemshaven
         color: color1
-      - text: Maasvlakte 1
+      - content: Maasvlakte 1
         color: color2
-      - text: Borssele/Vlissingen
+      - content: Borssele/Vlissingen
         color: color3
-      - text: Eemshaven
+      - content: Eemshaven
         color: color1
-      - text: Maasvlakte 1
+      - content: Maasvlakte 1
         color: color2
-      - text: Borssele/Vlissingen
+      - content: Borssele/Vlissingen
         color: color3
-      - text: Eemshaven
+      - content: Eemshaven
         color: color1
-      - text: Maasvlakte 1
+      - content: Maasvlakte 1
         color: color2
-      - text: Borssele/Vlissingen
+      - content: Borssele/Vlissingen
         color: color3
   headerContext:
     metaLinks:
@@ -37,9 +37,9 @@ context:
         text: Zoeken
   breadcrumbContext:
     breadcrumb:
-      last: Tuchtrecht
-      items:
-        - label: Home
+      - text: Home
+        url: '#'
+      - text: Tuchtrecht
   inputtextContext:
     modifier: input-text--searchmedium
     id: 1

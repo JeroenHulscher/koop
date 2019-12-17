@@ -107,3 +107,10 @@ variants:
       modifier: button--primary button--divider-icon
       button: false
       buttonWithDivider: true
+  - name: Text
+    status: ready
+    label: Text
+    context:
+      text: Button tekst
+      modifier: button--text
+      button: true

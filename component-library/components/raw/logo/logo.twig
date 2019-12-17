@@ -1,0 +1,10 @@
+<div class="logo {{ modifier }}">
+  <a href="#"><img src="../../images/{{ file }}" alt="{{ alt }}" /></a>
+  {% if youAreHere is defined %}
+    <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+    {% for here in youAreHere %}
+      <span>{{ here.text }}</span>
+    {% endfor %}
+    </p>
+  {% endif %}
+</div>

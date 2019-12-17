@@ -1,0 +1,873 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Preview</title>
+
+  <script>
+    document.documentElement.className = 'has-js';
+  </script>
+
+  <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script src="../../js/vendor/kpm.js"></script>
+
+  <link rel="stylesheet" title="2" href="../../css/transition.css">
+  <link rel="alternate stylesheet" title="1" href="../../css/generic.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+</head>
+<body class="preview">
+  <header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Register voor overheidsinstanties</span>
+          </p>
+      </div>
+
+
+
+      <div class="header__meta">
+        <a href="#" class="link-iconed link-iconed--publication">English</a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+            <li><a href="#" class="">Zoeken</a></li>
+            <li><a href="#" class="">uitgebreid zoeken</a></li>
+      </ul>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      <div>
+        <h2>Aankondigingen over uw buurt</h2>
+        <p>Zoals bouwplannen en verkeersmaatregelen.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt">Naar aankondigingen over uw buurt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dienstverlening</h2>
+        <p>Zoals belastingen, uitkeringen en subsidies.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/dienstverlening">Naar dienstverlening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Beleid &amp; regelgeving</h2>
+        <p>Officiële publicaties van de overheid.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/beleid-en-regelgeving">Naar beleid &amp; regelgeving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contactgegevens overheden</h2>
+        <p>Adressen en contactpersonen van overheidsorganisaties.</p>
+        <ul class="list list--linked">
+          <li><a href="https://almanak.overheid.nl/onl">Naar overheidsorganisaties</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="row row--page-opener">
+  <div class="container">
+    <div class="breadcrumb">
+  <p>U bent hier:</p>
+  <ol>
+    <li><a href=test>Zoeken</a></li>
+    <li><a href=test>Zoekresultaten</a></li>
+    <li><a href=test>Regeling</a></li>
+    <li>Informatie</li>
+  </ol>
+</div>
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+
+
+      <div class="row row--medium hidden-mobile">
+        <div class="">
+          <div class="sort ">
+  <div class="columns">
+    <div class="column">
+      Sorteer op:
+      <ul class="sort__options">
+          <li>
+            <a href="?sortby=value" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
+          </li>
+          <li>
+            <a href="?sortby=value" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
+          </li>
+      </ul>
+    </div>
+      <div class="column d-align-right">
+          Aantal:
+          <ul class="sort__options">
+            <li>
+              <a href="?sortby=" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+            <li>
+              <a href="?sortby=" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+            <li>
+              <a href="?sortby=" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+          </ul>
+
+      </div>
+  </div>
+</div>
+
+          <div class="align-right">
+            <a href="#" class="icon icon--download">Download <span class="tooltip " data-decorator="tooltip">
+  <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
+  <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
+</span>
+</a>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="h1 h1--large">Zoekresultaten <span class="h1__sub">1-10 van de 105 verdagen</span></h1>
+
+      <div class=" hidden-desktop align-right">
+        <button class="button block-element button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Filter opties</button>
+      </div>
+      <div class="row hidden-desktop">
+        <div class="sort ">
+  <div class="columns">
+    <div class="column">
+      Sorteer op:
+      <ul class="sort__options">
+          <li>
+            <a href="?sortby=value" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
+          </li>
+          <li>
+            <a href="?sortby=value" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
+          </li>
+      </ul>
+    </div>
+      <div class="column d-align-right">
+          Aantal:
+          <ul class="sort__options">
+            <li>
+              <a href="?sortby=" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+            <li>
+              <a href="?sortby=" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+            <li>
+              <a href="?sortby=" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+            </li>
+          </ul>
+
+      </div>
+  </div>
+</div>
+
+        <div class="align-right">
+          <a href="#" class="icon icon--download">Download</a>
+        </div>
+      </div>
+
+      <div class="result--list result--list--wide">
+  <ul>
+    <li>
+
+
+        <p class="result--label"><i><span class="label ">Nieuw vandaag</span></i></p>
+
+
+        <h2 class="result--title ">AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent</h2>
+
+
+
+
+
+          <ul class="list--metadata">
+              <li>12 september 1986</li>
+              <li>Brussel</li>
+          </ul>
+
+
+        <ul class="list list--inline list--narrow">
+            <li class="list__item"><a href="#"  class="button button--secendary">Bekijken</a></li>
+        </ul>
+
+
+    </li>
+    <li>
+
+
+
+
+        <h2 class="result--title ">AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent</h2>
+
+
+       <p>12 september 1986, Brussel</p>
+
+
+
+
+
+        <ul class="list list--inline list--narrow">
+            <li class="list__item"><a href="#"  class="button button--secendary">Bekijken</a></li>
+        </ul>
+
+
+    </li>
+    <li>
+
+
+
+
+        <h2 class="result--title ">AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent</h2>
+
+
+       <p>12 september 1986, Brussel</p>
+
+
+
+
+
+        <ul class="list list--inline list--narrow">
+            <li class="list__item"><a href="#"  class="button button--secendary">Bekijken</a></li>
+        </ul>
+
+
+    </li>
+  </ul>
+</div>
+
+
+      <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <p><img src="https://via.placeholder.com/720x280.png?text=Kaart+met+marker"></p>
+            <h2>Aangevraagde evenementenvergunningen 2018</h2>
+            <p class="pre-h">4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow">
+
+              <li class="list__item">
+                <a href="#" class="button button--primary">Bekijk publicatie</a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="button button--secendary">Open interactieve kaart</a>
+              </li>
+
+            </ul>
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+      </div>
+
+        <div class="pagination">
+  <div class="pagination__index">
+    <ul>
+      <li class="prev"><a href="#"><span class="">&laquo;</span></a></li>
+      <li><a href="#">3</a></li>
+      <li class="active">4</li>
+      <li>...</li>
+      <li><a href="#">102</a></li>
+      <li class="next"><a href="#"><span class="">&raquo;</span></a></li>
+    </ul>
+  </div>
+</div>
+
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
+
+          <div class="modal-sidebar__content">
+
+
+            <div class="form__row">
+              <h2 class="u-nomargin">Zoekfilter</h2>
+              <p><a href="#">Alle filters herstellen</a></p>
+            </div>
+
+            <div class="form__row form__row--large">
+              <h3 class="h4">Geselecteerde filters (2)</h3>
+              <div class="form__selectedfilter ">
+  Bouwvergunning
+  <a href="#" class="form__selectedfilter__remove">
+    <span class="visually-hidden">verwijder</span>
+  </a>
+</div>
+<div class="form__selectedfilter ">
+  APV vergunning
+  <a href="#" class="form__selectedfilter__remove">
+    <span class="visually-hidden">verwijder</span>
+  </a>
+</div>
+
+
+            </div>
+            <form id="formid">
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Zoekwoord(en)</legend>
+                <div class="input-inputsubmit input-inputsubmit--s">
+  <label class="visually-hidden" for="">Verfijn uw zoekopdracht</label>
+  <div class="input-inputsubmit__grid">
+    <input id="" type="text" class="input " placeholder="Verfijn uw zoekopdracht" />
+    <button class="button button--primary"><span>Zoek</span></button>
+  </div>
+</div>
+
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Totstandkoming</legend>
+                <div class="form__row form__row--medium">
+                  <label>Startdatum</label>
+                    <div class="datepicker">
+    <input type="date" value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" />
+  </div>
+
+
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+                <div class="form__row form__row--medium">
+                  <label>Einddatum</label>
+                    <div class="datepicker">
+    <input type="date" value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" />
+  </div>
+
+
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+                <div class="form__row">
+                  <label>Plaats</label>
+                  
+
+  <label class="visually-hidden"for="input-text-1" class="form__label form__label--">Op nummer zoeken</label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text  "
+    placeholder="Bijv: BK001"
+    
+    aria-invalid="false"
+    placeholder="Bijv: BK001"
+    
+    
+
+/>
+
+
+
+
+                </div>
+                <div class="form__row">
+                  <div class="columns">
+                    <div class="column">
+                      <label>Huisnummer</label>
+                      
+
+  <label class="visually-hidden"for="input-text-1" class="form__label form__label--">Op nummer zoeken</label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text  "
+    placeholder="Bijv: BK001"
+    
+    aria-invalid="false"
+    placeholder="Bijv: BK001"
+    
+    
+
+/>
+
+
+
+
+                    </div>
+                    <div class="column">
+                      <label>Toevoeging</label>
+                      
+
+  <label class="visually-hidden"for="input-text-1" class="form__label form__label--">Op nummer zoeken</label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text  "
+    placeholder="Bijv: BK001"
+    
+    aria-invalid="false"
+    placeholder="Bijv: BK001"
+    
+    
+
+/>
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Datum beschikbaar</legend>
+                  <div class="input-radio">
+    <input class="radio__input"   type="radio" id="option-checkbox-20111" name="onderwerp" />
+    <label class="radio__label" for="option-checkbox-20111">
+      Afgelopen maand
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input"   type="radio" id="option-checkbox-21111" name="onderwerp" />
+    <label class="radio__label" for="option-checkbox-21111">
+      Afgelopen 3 maanden
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input"   type="radio" id="option-checkbox-22111" name="onderwerp" />
+    <label class="radio__label" for="option-checkbox-22111">
+      Afgelopen 12 maanden
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" checked  type="radio" id="option-checkbox-221112" name="onderwerp" />
+    <label class="radio__label" for="option-checkbox-221112">
+      Alle resultaten
+    </label>
+  </div>
+
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Onderwerp</legend>
+                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+  <div class="subselection__summary"></div>
+  <div id="modal-23" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>Selecteer onderwerp(en)</h2>
+              <p class="form__label"></p>
+               <ul class="list--unstyled">
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"   type="checkbox" id="option-1" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1">
+                        Spanje
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"   type="checkbox" id="option-2" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-2">
+                        Griekenland
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"   type="checkbox" id="option-3" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-3">
+                        Nederland
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <p class="form__label"></p>
+
+        <div class="modal__buttonpane">
+          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id23" data-handler="open-modal" data-modal="modal-23" class="subselection__trigger icon">Selecteer onderwerp(en)</a>
+</div>
+
+<!--
+<label for="input23">
+  <input id="input23" value="" type="checkbox" name="name">
+</label>
+-->
+
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Partij</legend>
+                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+  <div class="subselection__summary"></div>
+  <div id="modal-1" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>Selecteer partijen</h2>
+              <p class="form__label"></p>
+               <ul class="list--unstyled">
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"   type="checkbox" id="option-122" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-122">
+                        Spanje
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"   type="checkbox" id="option-222" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-222">
+                        Griekenland
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"   type="checkbox" id="option-322" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-322">
+                        Nederland
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <p class="form__label"></p>
+
+        <div class="modal__buttonpane">
+          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id1" data-handler="open-modal" data-modal="modal-1" class="subselection__trigger icon">Selecteer partij(en)</a>
+</div>
+
+<!--
+<label for="input1">
+  <input id="input1" value="" type="checkbox" name="name">
+</label>
+-->
+
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Tractatenblad/Staatsblad</legend>
+                <div class="form__row">
+                  <label>Jaar</label>
+                  <input type="number" class="input-text" />
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+                <div class="form__row">
+                  <label>Nummer</label>
+                  <input type="number" class="input-text" />
+                  <a href="#" class="reset"><small>Herstel</small></a>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Type verdrag</legend>
+                <div data-decorator="showmoreless" data-config='{"amount": "4"}'>
+  <ul class="list list--unstyled">
+
+
+<li>
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-20" name="onderwerp"  value="Bilateraal"
+    />
+    <label class="checkbox__label" for="option-checkbox-20">
+      Bilateraal
+    </label>
+  </div>
+
+<li>
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-21" name="onderwerp"  value="Multilateraal"
+    />
+    <label class="checkbox__label" for="option-checkbox-21">
+      Multilateraal
+    </label>
+  </div>
+
+<li>
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-22" name="onderwerp"  value="Plurilateraal"
+    />
+    <label class="checkbox__label" for="option-checkbox-22">
+      Plurilateraal
+    </label>
+  </div>
+
+</li>
+
+  </ul>
+</div>
+
+
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Nederland depositaris</legend>
+                <div data-decorator="showmoreless" data-config='{"amount": "4"}'>
+  <ul class="list list--unstyled">
+
+
+<li>
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-30" name="onderwerp"  value="Enkel deze verdragen tonen"
+    />
+    <label class="checkbox__label" for="option-checkbox-30">
+      Enkel deze verdragen tonen
+    </label>
+  </div>
+
+</li>
+
+  </ul>
+</div>
+
+
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Nu geldend voor Nederland</legend>
+                
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-40" name="onderwerp"  value="Nederland (in Europa)"
+    />
+    <label class="checkbox__label" for="option-checkbox-40">
+      Nederland (in Europa)
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-41" name="onderwerp"  value="Nederland (Bonaire)"
+    />
+    <label class="checkbox__label" for="option-checkbox-41">
+      Nederland (Bonaire)
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-422" name="onderwerp"  value="Nederland (Sint Eustatius)"
+    />
+    <label class="checkbox__label" for="option-checkbox-422">
+      Nederland (Sint Eustatius)
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-422" name="onderwerp"  value="Aruba"
+    />
+    <label class="checkbox__label" for="option-checkbox-422">
+      Aruba
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-422" name="onderwerp"  value="Curacao"
+    />
+    <label class="checkbox__label" for="option-checkbox-422">
+      Curacao
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-422" name="onderwerp"  value="Sint Maarten"
+    />
+    <label class="checkbox__label" for="option-checkbox-422">
+      Sint Maarten
+    </label>
+  </div>
+
+
+
+
+              </fieldset>
+            </div>
+            <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky"
+              data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+            </form>
+
+
+          </div>
+
+          <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer row--footer" role="contentinfo">
+  <div class="container columns">
+    <ul class="list list--linked">
+
+      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li><a href="/sitemap">Sitemap</a></li>
+    </ul>
+
+     <ul class="list list--linked">
+        <li><a href="https://data.overheid.nl">Open data</a></li>
+        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+  <script>
+
+    (function () {
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
+        localStorage.setItem('title', title);
+      }
+
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
+
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
+
+    }());
+
+  </script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+{% if type|default('submit') == 'submit' %}
+<button class="button {{ modifier }}" type="submit">{{ text }}</button>
+{% elseif type == 'button' %}
+<button class="button {{ modifier }}" type="button">{{ text }}</button>
+{% elseif type == 'link' %}
+<a class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</a>
+{% elseif type == 'input' %}
+<input class="button {{ modifier }}" type="button" value="{{ text }}">
+{% endif %}

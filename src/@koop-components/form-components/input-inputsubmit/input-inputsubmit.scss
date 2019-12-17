@@ -4,12 +4,16 @@
     display: block;
     font-size: 1.5em;
     font-weight: bold;
-    flex: 1 0 0;
+
+    // @media (min-width: $breakpointDesktop) {
+      width: 100%;
+    // }
   }
 
   &__grid {
     @media (min-width: $breakpointDesktop) {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 

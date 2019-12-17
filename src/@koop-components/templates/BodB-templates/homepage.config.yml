@@ -5,3 +5,8 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  officieleContext:
+    subheading: Berichten blijven 2 maanden staan
+    heading: Zoek je informatie die ouder is?
+    content: <p>Berichten op ‘berichten over uw buurt’ blijven 2 maanden staan. Daarna worden ze in het archief geplaatst. Deze oudere berichten kunt u nog wel terugvinden op het platform 'Officiële bekendmakingen'.</p>
+    buttonText: Naar officiële bekendmakingen

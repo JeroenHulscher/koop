@@ -1,0 +1,26 @@
+.subselection {
+
+  &--fixed {
+    float: right;
+  }
+
+  &__summary {
+    display: block;
+
+    &:not(:empty) {
+      padding-top: .5em;
+    }
+
+    span {
+      @extend .form__selectedfilter;
+      @extend .group;
+      padding-right: .75em;
+    }
+  }
+}
+
+/* exception */
+.listbreaker .subselection {
+  font-size: 0.9em;
+  min-width: 130px;
+}

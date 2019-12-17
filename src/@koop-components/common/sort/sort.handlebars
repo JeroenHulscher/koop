@@ -1,21 +1,17 @@
 <div class="sort {{ modifier }}">
-  {{#if columns}}
   <div class="columns">
     <div class="column">
-  {{/if}}
       {{#if options}}
       Sorteer op:
       <ul class="sort__options">
         {{#each options}}
           <li>
-            <a href="?sortby={{value}}" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
+            <a href="{{href}}" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
           </li>
         {{/each}}
       </ul>
       {{/if}}
-    {{#if columns}}
     </div>
-    {{/if}}
     {{#if columns}}
       <div class="column d-align-right">
       {{#if buttonDownload}}
@@ -25,20 +21,18 @@
           Aantal:
           <ul class="sort__options">
             <li>
-              <a href="?sortby={{value}}" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="{{href}}" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="?sortby={{value}}" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="{{href}}" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="?sortby={{value}}" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="{{href}}" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
           </ul>
 
       {{/if}}
       </div>
     {{/if}}
-  {{#if columns}}
   </div>
-  {{/if}}
 </div>

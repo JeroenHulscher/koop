@@ -9,32 +9,32 @@ context:
       - url: "#"
         text: MijnOverheid.nl
   breadcrumbContext:
-    last: NFP wijzigingspakket 2018-1
-    breadcrumbs:
-      - label: Home
-        path: "#"
-      - label: Overheidsinformatie
-        path: "#"
-      - label: Internetconsultatie
-        path: "#"
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: 'Internetconsultatie
+        url: '#'
+      - text: NFP wijzigingspakket 2018-1
   facelistContextActions:
     modifier: list--facet
     heading: Acties
     items:
-      - text: <a href="#">Reageren op consultatie</a>
-      - text: <a href="#">Notificaties per email</a>
-      - text: <a href="#">Doorsturen</a>
-      - text: <a href="#">PDF-document openen</a>
-      - text: <a href="#">Afdrukken</a>
+      - content: <a href="#">Reageren op consultatie</a>
+      - content: <a href="#">Notificaties per email</a>
+      - content: <a href="#">Doorsturen</a>
+      - content: <a href="#">PDF-document openen</a>
+      - content: <a href="#">Afdrukken</a>
   facelistContextShare:
     modifier: list--facet
     heading: Delen regeling
     items:
-      - text: <a href="#">Twitter</a>
-      - text: <a href="#">Facebook</a>
-      - text: <a href="#">LinkedIn</a>
-      - text: <a href="#">Google+</a>
-      - text: <a href="#">Tumblr</a>
+      - content: <a href="#">Twitter</a>
+      - content: <a href="#">Facebook</a>
+      - content: <a href="#">LinkedIn</a>
+      - content: <a href="#">Google+</a>
+      - content: <a href="#">Tumblr</a>
   resultlistContextDownloads:
     items:
       - title: Concept regeling

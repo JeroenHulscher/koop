@@ -1,2 +1,9 @@
 ---
 label: Block
+context:
+  id: 1
+  heading: Vindt uw weg in lokale wet- en regelgeving
+  subheading: Wat is lokale wet- en regelgeving?
+  content: <p>Berichten op ‘berichten over uw buurt’ blijven 2 maanden staan. Daarna worden ze in het archief geplaatst. Deze oudere berichten kunt u nog wel terugvinden op het platform 'Officiële bekendmakingen'.</p>
+  buttonText: Lees meer over de wet
+  href: '#'

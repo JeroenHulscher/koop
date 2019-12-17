@@ -13,10 +13,6 @@ fractal.components.engine(require('@frctl/handlebars')({
 }));
 fractal.components.set( 'ext', '.handlebars' );
 
-// Twig
-// fractal.components.engine(require('@frctl/twig')({handlePrefix: '#DONTUSE', importContext: true}));
-// fractal.components.set( 'ext', '.twig' );
-
 const mandelbrot = require('@frctl/mandelbrot');
 const myCustomisedTheme = mandelbrot({
     skin: "olive"

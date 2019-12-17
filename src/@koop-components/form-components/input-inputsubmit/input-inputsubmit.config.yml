@@ -3,6 +3,6 @@ label: Input InputSearch
 status: ready
 context:
   label: Uw e-mailadres
-  showLabel: false
+  showLabel: true
   placeholder: Uw e-mailadres
   button: Aanmelden

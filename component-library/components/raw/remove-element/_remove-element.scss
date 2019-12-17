@@ -1,0 +1,24 @@
+.remove-element {
+  appearance: none;
+  border: none;
+  height: 1.45em;
+  width: 1.45em;
+  padding: 3px;
+  background: {
+    color: transparent;
+    position: left top;
+    size: cover;
+    repeat: no-repeat;
+    image: $removeIcon;
+  }
+  display: inline-block;
+  transition: background-color $fastEaseInOut, outline-offset $fastEaseInOut;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: 0;
+    z-index: 1;
+  }
+}
