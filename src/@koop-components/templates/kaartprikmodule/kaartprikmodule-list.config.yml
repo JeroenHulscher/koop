@@ -24,10 +24,10 @@ context:
     youAreHere:
     - text: Kaartprikmodule
   breadcrumbContext:
-    last: Kaartprikmodule
-    breadcrumbs:
-      - label: Home
-        path: "#"
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Kaartprikmodule
   button1Context:
     modifier: button--small
     iconButton: true

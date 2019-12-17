@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Preview</title>
+
+  <script>
+    document.documentElement.className = 'has-js';
+  </script>
+
+  <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script src="../../js/vendor/kpm.js"></script>
+
+  <link rel="stylesheet" title="2" href="../../css/transition.css">
+  <link rel="alternate stylesheet" title="1" href="../../css/generic.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+</head>
+<body class="preview">
+  <header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Register voor overheidsinstanties</span>
+          </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+            <li><a href="templates-wp-homepage" class="">Home</a></li>
+            <li><a href="#" class="is-active">Wettenpockets aanmaken</a></li>
+      </ul>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      <div>
+        <h2>Aankondigingen over uw buurt</h2>
+        <p>Zoals bouwplannen en verkeersmaatregelen.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt">Naar aankondigingen over uw buurt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dienstverlening</h2>
+        <p>Zoals belastingen, uitkeringen en subsidies.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/dienstverlening">Naar dienstverlening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Beleid &amp; regelgeving</h2>
+        <p>Officiële publicaties van de overheid.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/beleid-en-regelgeving">Naar beleid &amp; regelgeving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contactgegevens overheden</h2>
+        <p>Adressen en contactpersonen van overheidsorganisaties.</p>
+        <ul class="list list--linked">
+          <li><a href="https://almanak.overheid.nl/onl">Naar overheidsorganisaties</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<main role="main">
+  <div class="container columns columns--sidebar-left row">
+    <div>
+      <h1>Mijn Wettenpocket</h1>
+      <form>
+        <div class="form__element">
+          
+
+  <label class="visually-hidden"for="input-text-title" class="form__label form__label--">Titel</label>
+
+
+  <input
+    type="text"
+    id="input-text-title"
+    name="title"
+    class="input input-text  "
+    placeholder=""
+    
+    aria-invalid="false"
+    placeholder=""
+    
+    
+
+/>
+
+
+
+
+        </div>
+          <select id="select--subject">
+    <option value="Arbitrage">Arbitrage</option>
+    <option value="Belastingrecht">Belastingrecht</option>
+    <option value="Intellectuele eigendom">Intellectuele eigendom</option>
+  </select>
+
+          <textarea id="textarea--description" placeholder="" rows="3"></textarea>
+
+
+        <h2>Inleiding</h2>
+        Hier uw favoriete WYSIWYG editor
+
+        <h2>Wet- en regelgeving</h2>
+        <table class="table table--striped table--condensed" >
+<thead>
+  <tr>
+    <th scope="col">Type</th>
+    <th scope="col">Titel</th>
+    <th scope="col">Annotaties</th>
+    <th scope="col">Notificeer</th>
+    <th scope="col">Aktie</th>
+  </tr>
+   
+</thead>
+<tbody>
+
+
+  <tr>
+       <td data-before="Type">Rijkswet</td>
+             <td data-before="Titel">Belastingregeling Nederland Sint Maarten<br/><i>Datum in werkingtreding: 01-03-2016</i></td>
+             <td data-before="Annotaties">2 markeringen</td>
+             <td data-before="Notificeer"><input class="checkbox__input" type="checkbox" value="Notificeer"/></td>
+             <td data-before="Aktie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a> </li> </ul></td>
+        </tr>
+  <tr>
+       <td data-before="Type">Rijkswet</td>
+             <td data-before="Titel">Belastingregeling voor het Koninkrijk<br/><i>Datum in werkingtreding: 10-10-2010</i></td>
+             <td data-before="Annotaties"></td>
+             <td data-before="Notificeer"><input class="checkbox__input" type="checkbox" value="Notificeer"/></td>
+             <td data-before="Aktie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a> </li> </ul></td>
+        </tr>
+  <tr>
+       <td data-before="Type">Rijkswet</td>
+             <td data-before="Titel">Proclamatie houdende plechtige afkondiging van de nieuwe rechtsorde voor het Koninkrijk<br/><i>Datum in werkingtreding: 29-12-1954</i></td>
+             <td data-before="Annotaties">1 markering</td>
+             <td data-before="Notificeer"><input class="checkbox__input" type="checkbox" value="Notificeer"/></td>
+             <td data-before="Aktie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a> </li> </ul></td>
+        </tr>
+</tbody>
+</table>
+
+
+          <button class="button " type="submit" >Regeling toevoegen</button>
+
+
+        <h2>Decentrale regelingen</h2>
+        <table class="table table--striped table--condensed" >
+<thead>
+  <tr>
+    <th scope="col">Uitgever</th>
+    <th scope="col">Titel</th>
+    <th scope="col">Annotaties</th>
+    <th scope="col">Notificeer</th>
+    <th scope="col">Aktie</th>
+  </tr>
+   
+</thead>
+<tbody>
+
+
+  <tr>
+       <td data-before="Uitgever">Pijnacker</td>
+             <td data-before="Titel">Privacyregelement voor de basisadministratie Personen</td>
+             <td data-before="Annotaties"></td>
+             <td data-before="Notificeer"><input class="checkbox__input" type="checkbox" value="Notificeer"/></td>
+             <td data-before="Aktie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a> </li> </ul></td>
+        </tr>
+  <tr>
+       <td data-before="Uitgever">Tholen</td>
+             <td data-before="Titel">Regeling meding financiële belangen van ambtenaren van de gemeente Tholen</td>
+             <td data-before="Annotaties"></td>
+             <td data-before="Notificeer"><input class="checkbox__input" type="checkbox" value="Notificeer"/></td>
+             <td data-before="Aktie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a> </li> </ul></td>
+        </tr>
+  <tr>
+       <td data-before="Uitgever">Oss</td>
+             <td data-before="Titel">Opleiding en ontwikkeling</td>
+             <td data-before="Annotaties"></td>
+             <td data-before="Notificeer"><input class="checkbox__input" type="checkbox" value="Notificeer"/></td>
+             <td data-before="Aktie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--calendar" href="#"> <span class="toolbar__label">Regeling updaten</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a> </li> </ul></td>
+        </tr>
+</tbody>
+</table>
+
+
+          <button class="button " type="submit" >Regeling toevoegen</button>
+
+
+        <h2>Documenten</h2>
+        <table class="table table--striped table--condensed" >
+<thead>
+  <tr>
+    <th scope="col">Titel</th>
+    <th scope="col">Type</th>
+    <th scope="col">Grootte</th>
+    <th scope="col">Actie</th>
+  </tr>
+   
+</thead>
+<tbody>
+
+
+  <tr>
+       <td data-before="Titel">Document 1.pdf</td>
+             <td data-before="Type">pdf</td>
+             <td data-before="Grootte">1Kb</td>
+             <td data-before="Actie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a> </li> </ul></td>
+        </tr>
+  <tr>
+       <td data-before="Titel">Afbeelding-1</td>
+             <td data-before="Type">jpg</td>
+             <td data-before="Grootte">36Kb</td>
+             <td data-before="Actie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a> </li> </ul></td>
+        </tr>
+</tbody>
+</table>
+
+
+          <button class="button " type="submit" >Document toevoegen</button>
+
+
+        <h2>Links</h2>
+        <table class="table table--condensed table--striped" >
+<thead>
+  <tr>
+    <th scope="col">Link</th>
+    <th scope="col">Actie</th>
+  </tr>
+   
+</thead>
+<tbody>
+
+
+  <tr>
+       <td data-before="Link">overheid.nl</td>
+             <td data-before="Actie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-down" href="#"> <span class="toolbar__label">Verplaats omlaag</span></a> </li> </ul></td>
+        </tr>
+  <tr>
+       <td data-before="Link">wetten.nl</td>
+             <td data-before="Actie"><ul class="toolbar"> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--edit" href="#"><span class="toolbar__label">Bewerken</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--remove" href="#"> <span class="toolbar__label">Verwijderen</span></a> </li> <li class="toolbar__item"> <a class="toolbar__link toolbar__link--arrow-up" href="#"> <span class="toolbar__label">Verplaats omhoog</span></a> </li> </ul></td>
+        </tr>
+</tbody>
+</table>
+
+
+          <button class="button " type="submit" >Link toevoegen</button>
+
+      </form>
+    </div>
+
+
+    <div>
+      <h3>Subnavigatie</h3>
+      <nav class="secundairy-navigation">
+        <div >
+
+  <ul class="list list--linked list--unstyled">
+      <li class="list__item"><a href="#">Wettenpockets in bewerking</a></li>
+      <li class="list__item"><a href="#">Gepubliceerde wettenpockets</a></li>
+  </ul>
+</div>
+
+      </nav>
+      <h3>Wettenpocket</h3>
+      <nav class="secundairy-navigation">
+        <div >
+
+  <ul class="list list--linked list--unstyled">
+      <li class="list__item"><a href="#">Overzicht</a></li>
+      <li class="list__item"><a href="#">Notities</a></li>
+  </ul>
+</div>
+
+      </nav>
+      <h3>Acties</h3>
+      <div class="actionblock">
+  
+  
+  <ul class="actionblock__list">
+    <li>
+      <a href="#">
+      <img src="../../images/icon-publicatie.svg" alt="" role="presentation" />
+      Wettenpocket opslaan
+      </a>
+    </li>
+    <li>
+      <a href="#">
+      <img src="../../images/icon-close.svg" alt="" role="presentation" />
+      Afsluiten
+      </a>
+    </li>
+    <li>
+      <a href="#">
+      <img src="../../images/icon-download.svg" alt="" role="presentation" />
+      Tonen wettenpocket XML
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+  </div><!-- /container -->
+</main>
+
+<div class="footer row--footer" role="contentinfo">
+  <div class="container columns">
+    <ul class="list list--linked">
+
+      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li><a href="/sitemap">Sitemap</a></li>
+    </ul>
+
+     <ul class="list list--linked">
+        <li><a href="https://data.overheid.nl">Open data</a></li>
+        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+    </ul>
+
+    <ul class="list list--linked">
+      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+  <script>
+
+    (function () {
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
+        localStorage.setItem('title', title);
+      }
+
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
+
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
+
+    }());
+
+  </script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+</html>
+

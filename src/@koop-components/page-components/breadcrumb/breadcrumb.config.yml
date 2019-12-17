@@ -1,12 +1,12 @@
 title: Breadcrumb
 context:
   title: "U bent hier:"
-  last: Informatie
-  breadcrumbs: 
-    - label: Zoeken
-      path: 'test'
-    - label: Zoekresultaten
-      path: 'test'
-    - label: Regeling
-      path: 'test'
+  breadcrumb:
+    - text: Zoeken
+      url: '#'
+    - text: Zoekresultaten
+      url: '#'
+    - text: Regeling
+      url: '#'
+    - text: Informatie
     

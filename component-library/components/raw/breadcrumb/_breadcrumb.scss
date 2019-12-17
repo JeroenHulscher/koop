@@ -1,0 +1,54 @@
+.breadcrumb {
+  padding: .125em 0;
+
+
+  p {
+    position: absolute;
+    left: -999em;
+  }
+
+  @media ( min-width: $breakpointDesktop ) {
+
+    padding: 0;
+
+    p {
+      position: relative;
+      left: auto;
+      margin: 0 .5em 0 0;
+      display: inline-block;
+    }
+
+  }
+
+  ol {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+   li {
+      padding: 0 .5em 0 0;
+      display: inline;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &::after {
+        position: relative;
+        content: '/';
+        margin-left: .5em;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+
+}
+

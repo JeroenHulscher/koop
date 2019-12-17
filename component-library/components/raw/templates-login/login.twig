@@ -1,0 +1,20 @@
+{% macro attr(arr, merge) %}
+ {% set arr = arr|merge(merge) %}
+ {% for key in arr|keys %}
+  {{ key }}="{{ arr[key] }}"
+ {% endfor %}
+{% endmacro %}
+
+{% import _self as helpers %}
+
+{% include "@koop-components/page-components/header/header.twig" %}
+
+{% include "@koop-components/forms/login/login.twig" with {
+  attributes: {method: 'post', action: '#'},
+  vars: [
+    {type: 'text', id: 'username', name: 'username', label: 'Gebruikersnaam'},
+    {type: 'password', id: 'password', name: 'password', label: 'Wachtwoord'}
+  ],
+} %}
+
+{% include "@koop-components/page-components/footer/footer.twig" %}

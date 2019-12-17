@@ -1,0 +1,32 @@
+.footnotes {
+  border-top: 1px solid $mediumGrey;
+  padding-top: 1em;
+  font-size: .875em;
+
+  &--clean {
+    border: 0;
+    padding-top: 0;
+  }
+
+  > li:target {
+    background-color: lighten($lightBlue,3);
+  }
+}
+
+.reference {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  text-decoration: none;
+
+  &::after {
+    content: '↵';
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    font-size: .875rem;
+    color: $darkBlue;
+  }
+}

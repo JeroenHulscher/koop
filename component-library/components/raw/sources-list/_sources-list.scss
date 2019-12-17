@@ -1,0 +1,89 @@
+.list--sources {
+	margin: 0 0 1em 0;
+  padding: 0;
+  border-top: 1px solid $mediumGrey;
+
+	li {
+		list-style: none;
+		border-bottom: 1px solid $mediumGrey;
+		position: relative;
+		padding: 1em 1em .8em 0;
+
+		.list--source__information {
+      font-weight: bold;
+      background-image: $iconDocument;
+      background-size: 1.325em;
+      background-position: .75em 0.1em;
+      background-repeat: no-repeat;
+      padding-left: 2.75em;
+
+      @media ( min-width: $breakpointDesktop ) {
+        padding-right: 13em;
+      }
+
+      .label {
+        margin-left: 1em;
+        font-style: italic;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $lightGrey;
+    }
+  }
+
+  &__item {
+    &__filesize {
+      font-weight: normal;
+      display: inline-block;
+      margin-left: .75em;
+    }
+  }
+
+  .button {
+    order: 3;
+		width: 100%;
+    margin: 1em 0;
+    font-weight: normal;
+    padding-right: .75em;
+    padding-left: .75em;
+    font-size: 1em;
+
+		@media ( min-width: $breakpointDesktop ) {
+			position: absolute;
+			right: 0em;
+			top: .6em;
+			margin: 0;
+      width: auto;
+      padding-top: .55em;
+      padding-bottom: .55em;
+		}
+  }
+
+  .collapsible {
+    margin: 0 0 0 1em;
+  }
+
+	.collapsible__content {
+    clear: both;
+    margin: 0 0 .5em 0 !important;
+
+		@media ( min-width: $breakpointDesktop ) {
+			padding: 2em 0 0 0;
+    }
+
+		> div {
+			position: relative;
+			margin: 0;
+			background: $bgBlue;
+			padding: 1em;
+
+			@media ( min-width: $breakpointDesktop ) {
+				button {
+					right: 2em;
+					top: 3.5em;
+				}
+			}
+		}
+	}
+}

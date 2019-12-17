@@ -9,7 +9,7 @@ context:
     modifier: list--facet
     heading: Officiële bekendmakingen
     items:
-      - text: <a href="#">Veelgestelde vragen</a>
+      - content: <a href="#">Veelgestelde vragen</a>
   counter1:
     useTitle: true
     titleTag: h3

@@ -1,20 +1,25 @@
-{% macro attr(arr, merge) %}
- {% set arr = arr|merge(merge) %}
- {% for key in arr|keys %}
-  {{ key }}="{{ arr[key] }}"
- {% endfor %}
-{% endmacro %}
+<div class="well">
 
-{% import _self as helpers %}
+  <form class="form">
 
-{% include "@koop-components/page-components/header/header.twig" %}
+    <fieldset class="form__element">
 
-{% include "@koop-components/forms/login/login.twig" with {
-  attributes: {method: 'post', action: '#'},
-  vars: [
-    {type: 'text', id: 'username', name: 'username', label: 'Gebruikersnaam'},
-    {type: 'password', id: 'password', name: 'password', label: 'Wachtwoord'}
-  ],
-} %}
+      <legend class="form__intro">Inloggen</legend>
 
-{% include "@koop-components/page-components/footer/footer.twig" %}
+      {% include "@input-text" with loginField %}
+
+      {% include "@input-text" with passwordField %}
+
+    </fieldset>
+
+      {% include "@button--secondary" with submitButton %}
+
+    <ul class="form__options pull-right">
+      <li><a href="/berichten_over_uw_buurt_registreren">Registreer bij Naam service</a></li>
+      <li><a href="/berichten_over_uw_buurt_ww_vergeten">Wachtwoord vergeten</a></li>
+    </ul>
+
+  </form>
+
+</div>
+

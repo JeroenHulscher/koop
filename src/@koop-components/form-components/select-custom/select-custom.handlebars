@@ -1,6 +1,6 @@
 <div id="{{id}}" class="select-custom {{modifier}}">
   <select>
-    {{#each items}}
+    {{#each options}}
       <option value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} {{selected}}>{{label}}</option>
     {{/each}}
   </select>

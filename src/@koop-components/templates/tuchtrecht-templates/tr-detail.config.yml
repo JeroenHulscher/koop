@@ -9,22 +9,24 @@ context:
         text: MijnOverheid.nl
   breadcrumbContext:
     breadcrumb:
-      last: NFP wijzigingspakket 2018-1
-      items:
-        - label: Home
-        - label: Overheidsinformatie
-        - label: Internetconsultatie
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: Internetconsultatie
+        url: '#'
+      - text: NFP wijzigingspakket 2018-1
   facelistContextActions:
     modifier: list--facet
     heading: Acties
     items:
-      - text: <a href="#">Download PDF</a>
-      - text: <a href="#">Afdrukken</a>
+      - content: <a href="#">Download PDF</a>
+      - content: <a href="#">Afdrukken</a>
   facelistContextShare:
     modifier: list--facet
     heading: Meer informatie
     items:
-      - text: <a href="#">Instanties Tuchtrecht</a>
+      - content: <a href="#">Instanties Tuchtrecht</a>
 
 
 

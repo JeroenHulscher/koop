@@ -1,0 +1,22 @@
+.documentbanner {
+  display: flex;
+  flex-direction: column;
+
+  @media ( min-width: $breakpointDesktop ) {
+    flex-direction: row;
+  }
+
+  &__logo {
+    order: 1;
+    padding: 2em;
+    text-align: center;
+  }
+
+  &__content {
+    order: 2;
+
+    h1 {
+      margin-bottom: 1em;
+    }
+  }
+}

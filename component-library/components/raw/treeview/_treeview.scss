@@ -1,0 +1,71 @@
+.treeview {
+
+  padding-left: 0;
+
+  li {
+
+    list-style: none;
+
+    a {
+      padding: .25em 1em .25em .25em;
+      display: block;
+      text-decoration: none;
+      background: {
+        image: $dartRightIcon;
+        repeat: no-repeat;
+        position: 98% .75em;
+      }
+      position: relative;
+
+      &:hover {
+        background-color: $lightGrey;
+      }
+
+      small {
+        display: block;
+        color: $darkGrey;
+      }
+
+      button[data-handler="toggle-fold"] {
+        background: {
+          repeat: no-repeat;
+          position: left top;
+          size: 11px;
+          color: transparent;
+          image: $minusIcon;
+        };
+        width: 1em;
+        height: 1em;
+        border: 0;
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        text-indent: -9999em;
+      }
+
+      button[aria-expanded="false"] {
+        background-image: $plusIcon;
+      }
+    }
+
+    span {
+      display: block;
+      color: #154273;
+      font-style: italic;
+    }
+
+    a ~ span {
+      padding-left: 1.2em;
+    }
+
+  }
+
+  &.treeview--foldable {
+    li {
+      a {
+        padding-left: 1.5em;
+      }
+    }
+  }
+
+}

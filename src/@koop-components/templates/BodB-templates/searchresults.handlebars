@@ -186,13 +186,7 @@
                             <label class="form__label" for="">Straal
                               <span class="mandatory">Verplicht veld</span>
                             </label>
-                            <div class="select-custom">
-                              <select>
-                                <option>250m</option>
-                                <option>1km</option>
-                                <option>2km</option>
-                              </select>
-                            </div>
+                            {{ render "@select-custom" selectStraalContext }}
                           </div>
                         </div>
                       </div>

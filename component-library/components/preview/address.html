@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Preview</title>
+
+  <script>
+    document.documentElement.className = 'has-js';
+  </script>
+
+  <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script src="../../js/vendor/kpm.js"></script>
+
+  <link rel="stylesheet" title="2" href="../../css/transition.css">
+  <link rel="alternate stylesheet" title="1" href="../../css/generic.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+</head>
+<body class="preview">
+  <address>
+  <strong> KOOP </strong>
+    Rijkskantoor Beatrixpark <br />
+    Wilhelmina van Pruisenweg 52 <br />
+    2595 AN Den Haag <br />
+</address>
+
+  <script>
+
+    (function () {
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
+        localStorage.setItem('title', title);
+      }
+
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
+
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
+
+    }());
+
+  </script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+</html>
+

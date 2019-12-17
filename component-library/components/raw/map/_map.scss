@@ -1,0 +1,28 @@
+.map {
+  position: relative;
+  min-height: 400px;
+  background: #f1f1f1;
+
+  &__map {
+    position: relative;
+  }
+  &__controls {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    right: 1em;
+  }
+}
+
+.modal {
+  .kpm {
+    .map {
+      min-height: 0;
+      height: 200px !important;
+    }
+    .columns-map {
+      height: auto;
+      width: auto;
+    }
+  }
+}

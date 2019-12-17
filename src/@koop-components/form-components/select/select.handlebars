@@ -4,8 +4,8 @@
     {{!-- <small>{{ fieldInstruction }}</small> --}}
   {{!-- {{/if }} --}}
   <select id="select--{{ id }}">
-    {{#each values}}
-    <option value="{{inputValue}}">{{displayValue}}</option>
+    {{#each options}}
+    <option value="{{value}}">{{label}}</option>
     {{/each}}
   </select>
 {{!-- </div> --}}

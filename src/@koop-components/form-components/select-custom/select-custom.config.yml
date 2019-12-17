@@ -3,18 +3,18 @@ label: Select custom
 status: ready
 context:
   id: 1
+  options:
+    - label: Item 1
+      value: 10
+      selected: true
+    - label: Item 2
+      value: 20
+    - label: Item 3
+      value: 50
+    - label: Item 4
+      value: 100
   fieldLabel: Aantal resultaten per pagina
   fieldInstruction: verplicht veld
-  items:
-    - id: 1
-      value: 10
-      label: Item 1
-    - id: 2
-      value: 20
-      label: Item 2
-    - id: 3
-      value: 30
-      label: Item 3
 variants:
   - name: large
     context:

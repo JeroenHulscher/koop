@@ -24,10 +24,13 @@ context:
     youAreHere:
     - text: Kaartprikmodule
   breadcrumbContext:
-    last: Kaartprikmodule
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Kaartprikmodule
     breadcrumbs:
-      - label: Home
-        path: "#"
+      - content: <a href="#">Home</a>
+      - content: Kaartprikmodule
   searchText: Om een locatie toe te voegen aan uw lijst kunt u een adres invoeren of een locatie selecteren op de kaart.
   areaContext:
     modifier: icon--arrow-cta-left

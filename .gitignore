@@ -1,7 +1,6 @@
 .DS_Store
 .idea
 /node_modules
-/component-library
 *.log
 yarn.lock
 package-lock.json

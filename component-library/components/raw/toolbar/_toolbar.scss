@@ -1,0 +1,98 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+}
+
+.toolbar__item {
+  padding: 0 .5em;
+}
+
+.toolbar__link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    vertical-align: -.25rem;
+    width: 1rem;
+  }
+}
+
+.toolbar__label {
+  background: $white;
+  border: 1px solid $mediumGrey;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,.5);
+  color: $black;
+  display: block;
+  font-size: 0.875rem;
+  left: -2em;
+  min-width: 6em;
+  opacity: 0;
+  padding: .4em;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  top: 2.25em;
+  white-space: nowrap;
+  z-index: 2;
+
+  .toolbar__link:hover & {
+    opacity: 1;
+  }
+}
+
+.toolbar__link--relations::before {
+  background-image: $relationsIcon;
+}
+
+.toolbar__link--permalink::before {
+  background-image: $permalinkIcon;
+}
+
+.toolbar__link--version::before {
+  background-image: $infoIcon;
+}
+
+.toolbar__link--compare::before {
+  background-image: $compareIcon;
+}
+
+.toolbar__link--print::before {
+  background-image: $printIcon;
+}
+
+.toolbar__link--download::before {
+  background-image: $downloadIcon;
+}
+
+.toolbar__link--edit::before {
+  background-image: $editIcon;
+}
+
+.toolbar__link--calendar::before {
+  background-image: $calendarIcon;
+}
+
+.toolbar__link--remove::before {
+  background-image: $removeIcon;
+}
+
+.toolbar__link--arrow-up::before {
+  background-image: $iconArrowUp;
+}
+
+.toolbar__link--arrow-down::before {
+  background-image: $iconArrowDown;
+}

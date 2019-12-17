@@ -1,0 +1,320 @@
+.button {
+  appearance: none;
+  background-color: $buttonBackgroundColor;
+  border-radius: $borderRadius;
+  border: 1px solid $buttonBorderColor;
+  color: $buttonTextColor;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 .5em .5em 0;
+  max-width: 100%;
+  outline: 2px solid transparent;
+  outline-offset: .5em;
+  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+  padding: $standardButtonPadding; // 40px total height
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  user-select: none;
+  vertical-align: middle;
+  // white-space: nowrap;
+  word-break: break-word;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+
+  &[href] {
+    text-decoration: none;
+  }
+
+  &[href]:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid $yellow;
+    outline-offset: 0;
+    z-index: 1;
+  }
+
+  &:hover {
+    outline: none;
+    background-color: $lighterGrey;
+    color: $black;
+  }
+
+  &:active {
+    transition: none;
+    background-color: $buttonBackgroundActiveColor;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: $lightGrey;
+    color: $mediumGrey;
+  }
+
+  &--primary {
+    background-color: $buttonPrimaryBackgroundColor;
+    color: $white;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $black;
+      background-color: $mediumBlue;
+    }
+
+    &:active {
+      color: $black;
+      background-color: $lightBlue;
+    }
+  }
+
+  &--secondary {
+    background-color: $buttonBackgroundSecondaryColor;
+    color: $black;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $black;
+      background-color: lighten($orange, 10%);
+    }
+
+    &:active {
+      background-color: $buttonBackgroundSecondaryActiveColor;
+      color: $white;
+    }
+  }
+
+  &--doubleline {
+    text-align: left;
+    color: $darkBlue !important;
+    background-color: white !important;
+  }
+  &--doubleline &__sub {
+    display: block;
+    font-weight: 400;
+    font-size: 90%;
+    margin-top: .25em;
+  }
+
+  &--erase {
+    background: $white $removeBlueIcon no-repeat right 1em center;
+    background-size: 0.75em;
+    background-color: $white;
+    color: $darkBlue;
+    padding-right: 3em;
+    border: 1px solid $darkBlue;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:active {
+      background-color: $buttonBackgroundSecondaryActiveColor;
+      color: $white;
+    }
+  }
+
+  &--inversed {
+    background-color: $darkGrey;
+    color: $white;
+  }
+
+  &--small {
+    font-size: .75rem;
+  }
+
+
+
+  &--share {
+    background: {
+      color: $lightBlue;
+      image: $shareIcon;
+      position: right 1em center;
+      repeat: no-repeat;
+      size: 1.1em;
+    }
+    color: $darkBlue;
+    border: 1px solid transparent;
+    padding-right: 2.5em;
+
+    &:hover {
+      color: $black;
+      background-color: $mediumBlue;
+    }
+
+    &:active {
+      color: $black;
+      background-color: $lightBlue;
+    }
+  }
+
+  &--icon-external {
+    background-position: right .75em center;
+    background-repeat: no-repeat;
+    background-image: $externalLinkv2Icon;
+    background-size: 0.9em;
+    padding-right: 3.125em;
+    position: relative;
+    &:after {
+      position: absolute;
+      right: 2.325em;
+      width: 1px;
+      top: 20%;
+      bottom: 20%;
+      background: $darkBlue;
+      content: "";
+    }
+  }
+
+  &--search {
+    padding-right: 2em;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-image: $searchIcon;
+    background-size: 1.25em;
+  }
+
+  &--icon-right {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartRightIcon;
+    background-size: 5px 10px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-left {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartLeftIcon;
+    background-size: 5px 10px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-top {
+    background-position: .5em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartTopIcon;
+    background-size: 10px 5px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-down {
+    background-position: .5em 50%;
+    background-repeat: no-repeat;
+    background-image: $dartDownIcon;
+    background-size: 10px 5px;
+    padding-left: 1.5em;
+  }
+
+  &--icon-upload {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $uploadIcon;
+    padding-left: 3em;
+  }
+
+  &--icon-download {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIcon;
+    padding-left: 3em;
+  }
+
+  &--icon-filter {
+    background-position: 1em center;
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-image: $iconFilter;
+    padding-left: 2.75em;
+  }
+
+  &--icon-download-white {
+    background-position: 1em center;
+    background-repeat: no-repeat;
+    background-image: $downloadIconWhite;
+    padding-left: 3em;
+  }
+
+  &--icon-hamburger {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $hamburgerIcon;
+    background-size: 1em;
+    padding-left: 2em;
+  }
+
+  &--icon-refreshdocuments {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $refreshDocument;
+    background-size: 1.5em;
+    padding-left: 3em;
+  }
+
+  &--icon-refreshdocuments-white {
+    background-position: .75em 50%;
+    background-repeat: no-repeat;
+    background-image: $refreshDocumentWhite;
+    background-size: 1.75em;
+    padding-left: 3em;
+  }
+
+  &--divider-icon {
+    background-image: $refreshDocumentWhite;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.75em;
+    background-position: right .75em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid $white;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+
+  &--divider-icon-draw {
+    background-image: $drawIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid $white;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+
+  &--divider-icon-map {
+    background-image: $mapIcon;
+    background-repeat: no-repeat;
+    padding-right: 3em;
+    background-size: 1.25em;
+    background-position: right 1em center;
+
+    span.divider::after {
+      content: "";
+      border-right: 1px solid $white;
+      padding-left: .75em;
+      margin-right: .2em;
+    }
+  }
+}
