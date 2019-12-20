@@ -1,0 +1,19 @@
+<div class="jumbotron {{ modifier }}">
+  <div class="jumbotron__content {% if centered %}jumbotron__content--centered{% endif %}">
+    <div class="jumbotron__heading {% if centered %}jumbotron__heading--centered{% endif %}">
+      <p class="jumbotron__subheader">{{ subheading }}</p>
+      <{{ h }} class="jumbotron__header">{{ heading }}</{{ h }}>
+      {% if intro %}
+      <p class="jumbotron__intro">
+        {{ intro }}
+      </p>
+      {% endif %}
+    </div>
+    {% if button %}
+      <p>
+        <a href="{{ link ?: '#'}}" class="button button--primary">{{ button }}</a>
+      </p>
+    {% endif %}
+    {{ content }}
+  </div>
+</div>

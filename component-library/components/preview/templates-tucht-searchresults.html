@@ -32,7 +32,7 @@
 
         <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
       <div class="logo ">
-        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+        <a href=""><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
           <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
             <span>Register voor overheidsinstanties</span>
           </p>
@@ -92,10 +92,18 @@
     <div class="breadcrumb">
   <p>U bent hier:</p>
   <ol>
-    <li><a href=test>Zoeken</a></li>
-    <li><a href=test>Zoekresultaten</a></li>
-    <li><a href=test>Regeling</a></li>
-    <li>Informatie</li>
+    <li>
+        <a href=#>Zoeken</a></li>
+    </li>
+    <li>
+        <a href=#>Zoekresultaten</a></li>
+    </li>
+    <li>
+        <a href=#>Regeling</a></li>
+    </li>
+    <li>
+        Informatie
+    </li>
   </ol>
 </div>
   </div>
@@ -112,10 +120,10 @@
       Sorteer op:
       <ul class="sort__options">
           <li>
-            <a href="?sortby=value" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
+            <a href="" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
           </li>
           <li>
-            <a href="?sortby=value" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
+            <a href="" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
           </li>
       </ul>
     </div>
@@ -123,13 +131,13 @@
           Aantal:
           <ul class="sort__options">
             <li>
-              <a href="?sortby=" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="?sortby=" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="?sortby=" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
           </ul>
 
@@ -294,8 +302,9 @@
                 </a>
                 <div class="form__row">
                   <div class="input-inputsubmit input-inputsubmit--s">
-  <label class="visually-hidden" for="">Verfijn uw zoekopdracht</label>
+
   <div class="input-inputsubmit__grid">
+    <label class="visually-hidden"  for="">Verfijn uw zoekopdracht</label>
     <input id="" type="text" class="input " placeholder="Woord(en) of zinsdeel" />
     <button class="button button--primary"><span>Zoek</span></button>
   </div>
@@ -327,18 +336,20 @@
               </fieldset>
             </div>
 
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Domein <span class="tooltip " data-decorator="tooltip">
+            <div data-decorator="init-form-conditionals">
+
+              <div id="citem-0" class="form__row form__row--large js-form-conditionals__citem">
+                <fieldset>
+                  <legend>Domein <span class="tooltip " data-decorator="tooltip">
   <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
   <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
 </span>
 </legend>
-                <a href="#" class="reset">
-                  <small>Herstel <span class="visually-hidden">het domein</span></small>
-                </a>
-                <div class="form__row">
-                  <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                  <a href="#" class="reset">
+                    <small>Herstel <span class="visually-hidden">het domein</span></small>
+                  </a>
+                  <div class="form__row">
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
   <div class="subselection__summary"></div>
   <div id="modal-13131232" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -350,7 +361,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-4" name="name"  data-value="Accountants" value="2"
+                      <input class="radio__input"  checked data-linkedto="1" type="radio" id="option-4" name="name"  data-value="Accountants" value="2"
                       />
                       <label class="radio__label" for="option-4">
                         Accountants
@@ -359,7 +370,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"  checked type="radio" id="option-5" name="name"  data-value="Advocaten" value="2"
+                      <input class="radio__input"   data-linkedto="2" type="radio" id="option-5" name="name"  data-value="Advocaten" value="2"
                       />
                       <label class="radio__label" for="option-5">
                         Advocaten
@@ -368,7 +379,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-6" name="name"  data-value="Diergeneeskunde" value="2"
+                      <input class="radio__input"   data-linkedto="2" type="radio" id="option-6" name="name"  data-value="Diergeneeskunde" value="2"
                       />
                       <label class="radio__label" for="option-6">
                         Diergeneeskunde
@@ -377,7 +388,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-634322" name="name"  data-value="Gerechtsdeurwaarders" value="2"
+                      <input class="radio__input"   data-linkedto="2" type="radio" id="option-634322" name="name"  data-value="Gerechtsdeurwaarders" value="2"
                       />
                       <label class="radio__label" for="option-634322">
                         Gerechtsdeurwaarders
@@ -386,7 +397,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-643433333" name="name"  data-value="Gezondheidszorg" value="2"
+                      <input class="radio__input"   data-linkedto="2" type="radio" id="option-643433333" name="name"  data-value="Gezondheidszorg" value="2"
                       />
                       <label class="radio__label" for="option-643433333">
                         Gezondheidszorg
@@ -395,7 +406,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-6233433" name="name"  data-value="Notarissen" value="2"
+                      <input class="radio__input"   data-linkedto="2" type="radio" id="option-6233433" name="name"  data-value="Notarissen" value="2"
                       />
                       <label class="radio__label" for="option-6233433">
                         Notarissen
@@ -404,7 +415,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-6234324234" name="name"  data-value="Scheepvaart" value="2"
+                      <input class="radio__input"   data-linkedto="2" type="radio" id="option-6234324234" name="name"  data-value="Scheepvaart" value="2"
                       />
                       <label class="radio__label" for="option-6234324234">
                         Scheepvaart
@@ -445,32 +456,25 @@
              </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="submit" class="button button--primary">Opnieuw zoeken</button>
         </div>
-        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+        
       </div>
     </div>
   </div>
   <a href="#" id="id13131232" data-handler="open-modal" data-modal="modal-13131232" class="subselection__trigger icon">Selecteer domein</a>
 </div>
 
-<!--
-<label for="input13131232">
-  <input id="input13131232" value="" type="checkbox" name="name">
-</label>
--->
+                  </div>
+                </fieldset>
+              </div>
 
-                </div>
-              </fieldset>
-            </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Gezondheidszorg
-              </legend>
-              <div class="form__row">
-                <h3 class="form__label">Instanties</h3>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+              <div id="citem-1" class="form__row form__row--large js-form-conditionals__citem">
+                <fieldset>
+                  <legend>Accountants</legend>
+                  <div class="form__row">
+                    <h3 class="form__label">Instanties</h3>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
   <div class="subselection__summary"></div>
   <div id="modal-13" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -488,7 +492,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-4443" name="name"  data-value="Instantie 1" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-4443" name="name"  data-value="Instantie 1" value="2"
                       />
                       <label class="checkbox__label" for="option-4443">
                         Instantie 1
@@ -497,7 +501,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-5443" name="name"  data-value="Instantie 2" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-5443" name="name"  data-value="Instantie 2" value="2"
                       />
                       <label class="checkbox__label" for="option-5443">
                         Instantie 2
@@ -506,7 +510,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-6443" name="name"  data-value="Instantie 3" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-6443" name="name"  data-value="Instantie 3" value="2"
                       />
                       <label class="checkbox__label" for="option-6443">
                         Instantie 3
@@ -519,7 +523,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -528,16 +532,10 @@
   <a href="#" id="id13" data-handler="open-modal" data-modal="modal-13" class="subselection__trigger icon">Selecteer instantie(s)</a>
 </div>
 
-<!--
-<label for="input13">
-  <input id="input13" value="" type="checkbox" name="name">
-</label>
--->
-
-              </div>
-              <div class="form__row">
-                <h3 class="form__label">Beroepsgroep</h3>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__label">Beroepsgroep</h3>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
   <div class="subselection__summary"></div>
   <div id="modal-1313123222" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -549,7 +547,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-41234214123" name="name"  data-value="Beroepsgroep 1" value="2"
+                      <input class="radio__input"    type="radio" id="option-41234214123" name="name"  data-value="Beroepsgroep 1" value="2"
                       />
                       <label class="radio__label" for="option-41234214123">
                         Beroepsgroep 1
@@ -558,7 +556,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-57789762" name="name"  data-value="Beroepsgroep 2" value="2"
+                      <input class="radio__input"    type="radio" id="option-57789762" name="name"  data-value="Beroepsgroep 2" value="2"
                       />
                       <label class="radio__label" for="option-57789762">
                         Beroepsgroep 2
@@ -567,7 +565,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-6576" name="name"  data-value="Beroepsgroep 3" value="2"
+                      <input class="radio__input"    type="radio" id="option-6576" name="name"  data-value="Beroepsgroep 3" value="2"
                       />
                       <label class="radio__label" for="option-6576">
                         Beroepsgroep 3
@@ -576,7 +574,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-634322676" name="name"  data-value="Beroepsgroep 4" value="2"
+                      <input class="radio__input"    type="radio" id="option-634322676" name="name"  data-value="Beroepsgroep 4" value="2"
                       />
                       <label class="radio__label" for="option-634322676">
                         Beroepsgroep 4
@@ -585,7 +583,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-643433333676767" name="name"  data-value="Beroepsgroep 5" value="2"
+                      <input class="radio__input"    type="radio" id="option-643433333676767" name="name"  data-value="Beroepsgroep 5" value="2"
                       />
                       <label class="radio__label" for="option-643433333676767">
                         Beroepsgroep 5
@@ -594,7 +592,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-6233433676565" name="name"  data-value="Beroepsgroep 6" value="2"
+                      <input class="radio__input"    type="radio" id="option-6233433676565" name="name"  data-value="Beroepsgroep 6" value="2"
                       />
                       <label class="radio__label" for="option-6233433676565">
                         Beroepsgroep 6
@@ -603,7 +601,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-62343242344367" name="name"  data-value="Beroepsgroep 7" value="2"
+                      <input class="radio__input"    type="radio" id="option-62343242344367" name="name"  data-value="Beroepsgroep 7" value="2"
                       />
                       <label class="radio__label" for="option-62343242344367">
                         Beroepsgroep 7
@@ -615,7 +613,7 @@
              </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -624,16 +622,10 @@
   <a href="#" id="id1313123222" data-handler="open-modal" data-modal="modal-1313123222" class="subselection__trigger icon">Selecteer beroepsgroep</a>
 </div>
 
-<!--
-<label for="input1313123222">
-  <input id="input1313123222" value="" type="checkbox" name="name">
-</label>
--->
-
-              </div>
-              <div class="form__row">
-                <h3 class="form__label">Onderwerp</h3>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__label">Onderwerp</h3>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
   <div class="subselection__summary"></div>
   <div id="modal-1313123222126" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -645,7 +637,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-4123421412312222" name="name"  data-value="Onderwerp 1" value="2"
+                      <input class="radio__input"    type="radio" id="option-4123421412312222" name="name"  data-value="Onderwerp 1" value="2"
                       />
                       <label class="radio__label" for="option-4123421412312222">
                         Onderwerp 1
@@ -654,7 +646,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-57789762212" name="name"  data-value="Onderwerp 2" value="2"
+                      <input class="radio__input"    type="radio" id="option-57789762212" name="name"  data-value="Onderwerp 2" value="2"
                       />
                       <label class="radio__label" for="option-57789762212">
                         Onderwerp 2
@@ -663,7 +655,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-657622222" name="name"  data-value="Onderwerp 3" value="2"
+                      <input class="radio__input"    type="radio" id="option-657622222" name="name"  data-value="Onderwerp 3" value="2"
                       />
                       <label class="radio__label" for="option-657622222">
                         Onderwerp 3
@@ -675,7 +667,7 @@
              </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -684,16 +676,10 @@
   <a href="#" id="id1313123222126" data-handler="open-modal" data-modal="modal-1313123222126" class="subselection__trigger icon">Selecteer onderwerp</a>
 </div>
 
-<!--
-<label for="input1313123222126">
-  <input id="input1313123222126" value="" type="checkbox" name="name">
-</label>
--->
-
-              </div>
-              <div class="form__row">
-                <h3 class="form__label">Beslissing</h3>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                  </div>
+                  <div class="form__row">
+                    <h3 class="form__label">Beslissing</h3>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
   <div class="subselection__summary"></div>
   <div id="modal-131312322212232" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -705,7 +691,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-412342141231" name="name"  data-value="beslissing 1" value="2"
+                      <input class="radio__input"    type="radio" id="option-412342141231" name="name"  data-value="beslissing 1" value="2"
                       />
                       <label class="radio__label" for="option-412342141231">
                         beslissing 1
@@ -714,7 +700,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-577897621" name="name"  data-value="beslissing 2" value="2"
+                      <input class="radio__input"    type="radio" id="option-577897621" name="name"  data-value="beslissing 2" value="2"
                       />
                       <label class="radio__label" for="option-577897621">
                         beslissing 2
@@ -723,7 +709,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-radio">
-                      <input class="radio__input"   type="radio" id="option-65761" name="name"  data-value="beslissing 3" value="2"
+                      <input class="radio__input"    type="radio" id="option-65761" name="name"  data-value="beslissing 3" value="2"
                       />
                       <label class="radio__label" for="option-65761">
                         beslissing 3
@@ -735,7 +721,7 @@
              </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -744,16 +730,19 @@
   <a href="#" id="id131312322212232" data-handler="open-modal" data-modal="modal-131312322212232" class="subselection__trigger icon">Selecteer beslissing</a>
 </div>
 
-<!--
-<label for="input131312322212232">
-  <input id="input131312322212232" value="" type="checkbox" name="name">
-</label>
--->
-
+                  </div>
+                </fieldset>
               </div>
 
-            </fieldset>
-          </div>
+              <div id="citem-2" class="form__row form__row--large js-form-conditionals__citem">
+                <div class="alert alert--info">
+                  U heeft een (ander) domein gekozen. Zoek opnieuw om te filteren binnen dit domein.<br/>
+                    <button class="button button--text" type="submit" >Opnieuw zoeken</button>
+
+                </div>
+              </div>
+
+            </div>
 
           <div class="form__row form__row--large">
             <fieldset>
@@ -846,7 +835,7 @@
                     <div class="form__row">
                       <div id="1" class="select-custom ">
   <select>
-      <option value="" data-linkedto="1" >Alle</option>
+      <option value="" data-linkedto="1" true>Alle</option>
       <option value="10" data-linkedto="2" selected>Op</option>
       <option value="20" data-linkedto="3" >Tot</option>
       <option value="30" data-linkedto="4" >Tussen</option>
@@ -917,36 +906,42 @@
 
 <div class="footer row--footer" role="contentinfo">
   <div class="container columns">
-    <ul class="list list--linked">
+    <div >
 
-      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
-      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
-      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
-      <li><a href="https://beta.overheid.nl/help">Help</a></li>
-      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  </ul>
+</div>
+    <div >
 
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li class="list__item"><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li class="list__item"><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li class="list__item"><a href="/sitemap">Sitemap</a></li>
+  </ul>
+</div>
+    <div >
 
-    <ul class="list list--linked">
-      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
-      <li><a href="/privacy-statement">Privacy en cookies</a></li>
-      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
-      <li><a href="/sitemap">Sitemap</a></li>
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://data.overheid.nl">Open data</a></li>
+      <li class="list__item"><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+      <li class="list__item"><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+  </ul>
+</div>
+    <div >
 
-     <ul class="list list--linked">
-        <li><a href="https://data.overheid.nl">Open data</a></li>
-        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
-        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
-    </ul>
-
-    <ul class="list list--linked">
-      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
-      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
-      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
-      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
-    </ul>
-
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li class="list__item"><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li class="list__item"><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li class="list__item"><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+  </ul>
+</div>
   </div>
 </div>
 

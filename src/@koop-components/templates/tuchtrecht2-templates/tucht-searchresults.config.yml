@@ -131,7 +131,7 @@ context:
         title: Instantie 3
         short: Instantie 3
   selectCustomContext:
-    items:
+    options:
     - id: 1
       value:
       label: Alle

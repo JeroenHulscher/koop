@@ -119,6 +119,7 @@ ol {
 
 .list--law__unordered {
   list-style: none;
+  padding-left: 0;
 
   > li,
   > li li {
@@ -176,7 +177,7 @@ ol {
   }
 
   &--size-xs li {
-    padding-left: 2em;
+    padding-left: 2.5em;
   }
   &--size-xs &__itemtype {
     left: 0;
@@ -187,31 +188,31 @@ ol {
   }
   &--size-s &__itemtype {
     left: 0;
-    width: 2.5em;
+    width: 3em;
   }
   &--size-m li {
     padding-left: 4em;
   }
   &--size-m &__itemtype {
-    width: 3em;
+    width: 3.5em;
   }
   &--size-l li {
     padding-left: 5em;
   }
   &--size-l &__itemtype {
-    width: 4em;
+    width: 4.5em;
   }
   &--size-xl li {
     padding-left: 7em;
   }
   &--size-xl &__itemtype {
-    width: 6em;
+    width: 6.5em;
   }
   &--size-xxl li {
     padding-left: 9em;
   }
   &--size-xxl &__itemtype {
-    width: 8em;
+    width: 8.5em;
   }
 }
 
@@ -265,9 +266,13 @@ ol {
   li {
     display: inline-block;
     color: $darkerGrey;
-    font-size: .875rem;
+    font-size: .875em;
     margin: 0 .5em 0 0;
     padding: 0 .5em 0 0;
+
+    @media (min-width: $breakpointDesktop) {
+      font-size: .875em;
+    }
 
     &:after {
       content: '|';

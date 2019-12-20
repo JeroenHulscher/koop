@@ -1,6 +1,49 @@
 
 
 <div class="map">
+  <div class="map__map"></div>
+  <div class="map__controls">
+    <div class="row row--spacer">
+      <div class="columns">
+        <div class="column">
+          <div class="form__row">
+            <div class="relative">
 
+
+  <label class="visually-hidden"for="input-text-1" class="form__label form__label--">Postcode</label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text input-text--searchmedium "
+    placeholder="Verfijn op zoekwoord"
+    
+    aria-invalid="false"
+    placeholder="Verfijn op zoekwoord"
+    
+    
+
+    data-decorator="toggle-remove-visibility"
+    />
+
+
+  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+
+
+          </div>
+        </div>
+        <div class="column align-right">
+          <div role="group" class="buttonswitch">
+    <a href="#" class="buttonswitch__button is-active icon icon--marker" aria-pressed="true">Kaart</a>
+    <a href="#" class="buttonswitch__button icon icon--hamburger" aria-pressed="false">Lijst</a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

@@ -1,0 +1,9 @@
+<div class="alert {{ modifier }} {% if fixed %} show {% endif %}" role="alert">
+  {% if heading %}<h2 class="alert__heading">{{ heading }}</h2>{% endif %}
+  <div class="alert__inner">
+    {{ text }}
+    {% if fixed %}
+    <button class="alert__remove" data-handler="close-alert"><span class="visually-hidden">Sluiten</span></button>
+    {% endif %}
+  </div>
+</div>

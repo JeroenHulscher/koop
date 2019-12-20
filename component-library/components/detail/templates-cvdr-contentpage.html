@@ -11,7 +11,7 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.1" type="text/css">
 
 
 <title>CVDR - Contentpage | KOOP componentenbibliotheek</title>
@@ -87,7 +87,7 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/templates-cvdr-contentpage.html"
-                sandbox="allow-same-origin allow-scripts allow-forms"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -163,7 +163,7 @@
 
             <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-desktop button button--icon-hamburger"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"toggle-nav"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"nav"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"logo "</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.overheid.nl"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/logo.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Overheid.nl logo"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/logo.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Overheid.nl logo"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"logo__you-are-here"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>U bent nu hier: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Register voor overheidsinstanties<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -224,150 +224,122 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>U bent hier:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">test</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">test</span>&gt;</span>Zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">test</span>&gt;</span>Regeling<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Informatie<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">#</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">#</span>&gt;</span>Zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">#</span>&gt;</span>Regeling<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    Informatie
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container row"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"content"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns columns--sidebar-left"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container columns columns--sticky-sidebar row"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-scroll-chapter"</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pageactions"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-modal"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"open-modal"</span> <span class="hljs-attr">data-modal</span>=<span class="hljs-string">"modal-1"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-permalink.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
-    Permalink
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-info-blue.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
-    Fout in deze regeling
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-download.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
-    Download
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-print.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
-    Printen
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns--sticky-sidebar__sidebar"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"stick-sidebar add-mobile-foldability"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"scrollContentElement":".js-scrollContentElement"}'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggleable-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--arrow-cta-right"</span>&gt;</span>Terug naar zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"scrollContentReceiver"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub "</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__item is-active"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__link "</span>&gt;</span>Regeling<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Intitulé<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Besluiten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#artikel-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Artikel 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#artikel-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Artikel 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--off-screen"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Permanente link<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub "</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__item "</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__link "</span>&gt;</span>Wettechnische gegevens<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Kopieer de regeling naar uw clipboard <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-copydata"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pageactions"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-modal"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"open-modal"</span> <span class="hljs-attr">data-modal</span>=<span class="hljs-string">"modal-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-permalink.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
+    Permalink
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-info-blue.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
+    Fout in deze regeling
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-download.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
+    Download
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/icon-print.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
+    Printen
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--off-screen"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Permanente link<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Kopieer de regeling naar uw clipboard <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-copydata"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{
        "triggerLabel": "Kopieer link",
        "triggerCopiedlabel": "Gekopieerd",
        "triggerClass": "copydata__trigger"
        }'</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata__datafield js-copydata__datafield"</span>&gt;</span>
-                                    https://www.google.nl
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
+                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata__datafield js-copydata__datafield"</span>&gt;</span>
+                                https://www.google.nl
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Verfijn in Linktool <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ga naar de
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata-acc.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2016-07-01%2f0%2fDeel1&amp;amp;geldigheidsdatum=2016-07-01&amp;amp;zichtdatum=2016-07-01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"aLinktoolurl"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"external"</span>
-                                <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Linktool<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Verfijn in Linktool <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ga naar de
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata-acc.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2016-07-01%2f0%2fDeel1&amp;amp;geldigheidsdatum=2016-07-01&amp;amp;zichtdatum=2016-07-01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"aLinktoolurl"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"external"</span>
+                            <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Linktool<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label label--danger label--lg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Regeling vervallen per: 01-01-2019<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-scrollContentElement"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label label--info label--lg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Geldend van 01-01-2019 t/m heden<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"wet"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Wettechnische gegevens<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Gegevens van de regeling<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table__data-overview"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Organisatie<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Zuid-Holland<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Organisatietype<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Provincie<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Officiële naam regeling<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">"2"</span>&gt;</span>Etc.<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Opmerkingen met betrekking tot de regeling<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking
-                treedt.
-            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking
-                treedt.
-            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Regelgeving die op deze regeling is gebaseerd (gedelegeerde regelgeving)<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking
-                treedt.
-            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Overzicht van in de tekst verwerkte wijzigingen<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table__container"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table__data-overview"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Datum inwerkingtreding<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Terugwerkende kracht tot en met<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Datum uitwerkingtreding<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>07-03-2019<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>07-03-2019<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>07-03-2019<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tekst"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Toelichting<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Intitulé<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section-1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Intitulé<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                 Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking
                 treedt.
@@ -375,8 +347,9 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                 Gelet op artikel 5, tweede lid.
             <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Besluiten<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section-2"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Besluiten<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                 De volgende deelplafonds voor § 2.11 Kwaliteitsverbetering van bestaande groengebieden en het recreatieve routenetwerk van de Subsidieregeling groen Zuid-Holland 2016 voor 2019 vast te stellen:
@@ -399,114 +372,91 @@
                 <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor beheer en onderhoud van ruiter- en menpaden als bedoeld in artikel 2.11.2 onderdeel c: € 0,00.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--large"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"artikel-1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Artikel 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Inwerktreding<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                    Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019 voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking
-                    treedt.
-                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"artikel-2"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Artikel 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"author"</span>&gt;</span>
-                    Den Haag, 2 oktober 2018 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>drs. H.H.M. Koek, secretaris <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>drs. J. Smit, voorzitter
-                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--large"</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Inwerktreding<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond voor het jaar 2019 voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019, inwerking
+                treedt.
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--large"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--success alert--lg icon--document "</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__heading"</span>&gt;</span>Ziet u een fout in deze regeling?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__inner"</span>&gt;</span>
-                        Meld het ons op <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:regelgeving@overheid.nl"</span>&gt;</span>regelgeving@overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"author"</span>&gt;</span>
+                Den Haag, 2 oktober 2018 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>drs. H.H.M. Koek, secretaris <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>drs. J. Smit, voorzitter
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--large"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert--success alert--lg icon--document "</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__heading"</span>&gt;</span>Ziet u een fout in deze regeling?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert__inner"</span>&gt;</span>
+                    Meld het ons op <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:regelgeving@overheid.nl"</span>&gt;</span>regelgeving@overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column column--sidebar"</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-filter"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-sticky"</span>&gt;</span>
-
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar__content"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--arrow-cta-right"</span>&gt;</span>Terug naar zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub "</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__item "</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#wet"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__link "</span>&gt;</span>Wettechnische gegevens<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub"</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Gegevens van de regeling<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Opmerkingen<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Regelgeving<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Wijzigingen<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub "</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__item "</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#wet"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__link "</span>&gt;</span>Toelichting<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub"</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#tekst"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Intitulé<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-sub__sub-link "</span>&gt;</span>Besluiten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-
-                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modalsidebar"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar__close"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer row--footer"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container columns"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/over-deze-site"</span>&gt;</span>Over deze website<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/contact"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/english"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/help"</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">A</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/help/zoeken"</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/over-deze-site"</span>&gt;</span>Over deze website<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/contact"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/english"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/help"</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/help/zoeken"</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/informatie-hergebruiken"</span>&gt;</span>Informatie hergebruiken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/privacy-statement"</span>&gt;</span>Privacy en cookies<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/toegankelijkheid"</span>&gt;</span>Toegankelijkheid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/sitemap"</span>&gt;</span>Sitemap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/informatie-hergebruiken"</span>&gt;</span>Informatie hergebruiken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/privacy-statement"</span>&gt;</span>Privacy en cookies<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/toegankelijkheid"</span>&gt;</span>Toegankelijkheid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/sitemap"</span>&gt;</span>Sitemap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://data.overheid.nl"</span>&gt;</span>Open data<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata.overheid.nl"</span>&gt;</span>Linked Data Overheid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://puc.overheid.nl"</span>&gt;</span>PUC Open Data<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://data.overheid.nl"</span>&gt;</span>Open data<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata.overheid.nl"</span>&gt;</span>Linked Data Overheid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://puc.overheid.nl"</span>&gt;</span>PUC Open Data<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mijn.overheid.nl"</span>&gt;</span>MijnOverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.rijksoverheid.nl"</span>&gt;</span>Rijksoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ondernemersplein.nl"</span>&gt;</span>Ondernemersplein.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.werkenbijdeoverheid.nl"</span>&gt;</span>Werkenbijdeoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mijn.overheid.nl"</span>&gt;</span>MijnOverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.rijksoverheid.nl"</span>&gt;</span>Rijksoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ondernemersplein.nl"</span>&gt;</span>Ondernemersplein.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.werkenbijdeoverheid.nl"</span>&gt;</span>Werkenbijdeoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
@@ -516,155 +466,189 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7c15c59b048ea81fecdfce06b964645a-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"></span><span class="hljs-template-variable">{{ render "<a href="header.html">@header</a>" header merge=true }}</span><span class="xml">
+        <pre><span class="hljs-template-variable">{{ render "<a href="header.html">@header</a>" header merge=true }}</span><span class="xml">
+
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--page-opener"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ render "<a href="breadcrumb.html">@breadcrumb</a>" }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container row"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"content"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns columns--sidebar-left"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container columns columns--sticky-sidebar row"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-scroll-chapter"</span>&gt;</span>
 
-      </span><span class="hljs-template-variable">{{ render "<a href="pageactions.html">@pageactions</a>" pageactions }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns--sticky-sidebar__sidebar"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"stick-sidebar add-mobile-foldability"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"scrollContentElement":".js-scrollContentElement"}'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggleable-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--arrow-cta-right"</span>&gt;</span>Terug naar zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"scrollContentReceiver"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{render "<a href="nav.html">@nav</a>" navToeContext }}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{render "<a href="nav.html">@nav</a>" navWetContext }}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--off-screen"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Permanente link<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Kopieer de regeling naar uw clipboard <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="copydata.html">@copydata</a>" }}</span><span class="xml">
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Verfijn in Linktool <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ga naar de
-              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata-acc.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2016-07-01%2f0%2fDeel1&amp;amp;geldigheidsdatum=2016-07-01&amp;amp;zichtdatum=2016-07-01"</span>
-                <span class="hljs-attr">id</span>=<span class="hljs-string">"aLinktoolurl"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"external"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Linktool<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ render "<a href="pageactions.html">@pageactions</a>" pageactions }}</span><span class="xml">
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--off-screen"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Permanente link<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Kopieer de regeling naar uw clipboard <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+              </span><span class="hljs-template-variable">{{render "<a href="copydata.html">@copydata</a>" }}</span><span class="xml">
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Verfijn in Linktool <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ga naar de
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata-acc.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2016-07-01%2f0%2fDeel1&amp;amp;geldigheidsdatum=2016-07-01&amp;amp;zichtdatum=2016-07-01"</span>
+              <span class="hljs-attr">id</span>=<span class="hljs-string">"aLinktoolurl"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"external"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Linktool<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label label--danger label--lg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Regeling vervallen per: 01-01-2019<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot
-      vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"wet"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Wettechnische gegevens<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Gegevens van de regeling<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table__data-overview"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Organisatie<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Zuid-Holland<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Organisatietype<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Provincie<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Officiële naam regeling<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot
-            vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">"2"</span>&gt;</span>Etc.<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Opmerkingen met betrekking tot de regeling<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-        voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-        inwerking treedt.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-        voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-        inwerking treedt.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Regelgeving die op deze regeling is gebaseerd (gedelegeerde regelgeving)<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-        voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-        inwerking treedt.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Overzicht van in de tekst verwerkte wijzigingen<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table__container"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table__data-overview"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Datum inwerkingtreding<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Terugwerkende kracht tot en met<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Datum uitwerkingtreding<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>07-03-2019<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>07-03-2019<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>07-03-2019<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-scrollContentElement"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label label--info label--lg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Geldend van 01-01-2019 t/m heden<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 
+    </span><span class="hljs-comment">{{!-- &lt;h2 id="wet"&gt;Wettechnische gegevens&lt;/h2&gt; --}}</span><span class="xml">
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tekst"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Toelichting<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    </span><span class="hljs-comment">{{!-- &lt;h3&gt;Gegevens van de regeling&lt;/h3&gt;
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Intitulé<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-         Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
-        voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
-        inwerking treedt.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        Gelet op artikel 5, tweede lid.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    &lt;table class="table__data-overview"&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Organisatie&lt;/th&gt;
+          &lt;td&gt;Zuid-Holland&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Organisatietype&lt;/th&gt;
+          &lt;td&gt;Provincie&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Officiële naam regeling&lt;/th&gt;
+          &lt;td&gt;Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot
+          vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td colspan="2"&gt;Etc.&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ankered"</span>&gt;</span>Besluiten<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    &lt;h3 class=""&gt;Opmerkingen met betrekking tot de regeling&lt;/h3&gt;
+    &lt;p&gt;
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+      inwerking treedt.
+    &lt;/p&gt;
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        De volgende deelplafonds voor § 2.11 Kwaliteitsverbetering van bestaande groengebieden en het recreatieve routenetwerk van de Subsidieregeling groen Zuid-Holland 2016 voor 2019 vast te stellen:
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--loweralpha"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor herstel- of inrichtingsmaatregelen als bedoeld in artikel 2.11.2 onderdeel a, op de plaatsen aangegeven op de kaart in bijlage 6 behorende bij § 2.11 Subsidieregeling
-        groen Zuid-Holland 2016: € 800.000,00.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor herstel- of inrichtingsmaatregelen als bedoeld in artikel 2.11.2
-        onderdeel b, van het recreatieve routenetwerk voor:
-          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--lowerroman"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>langeafstand fietsroute (LF): € 100.000,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>fietsknooppunten netwerk: € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>stad-landverbindingen: € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>langeafstand wandelroute (LAW): € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>wandelroutenetwerk Zuid-Holland 2010-2020: € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>toeristisch overstappunten (TOP): € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>ruiter- en menpaden: € 2.332.500,00; <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>recreatieve vaarwegen: € 105.000,00.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>ruiter- en menpaden in het Bentwoud: € 200.000,-.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor beheer en onderhoud van ruiter- en menpaden als bedoeld in artikel 2.11.2 onderdeel c: € 0,00.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    &lt;h3 class=""&gt;Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd&lt;/h3&gt;
+    &lt;p&gt;
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+      inwerking treedt.
+    &lt;/p&gt;
+
+    &lt;h3 class=""&gt;Regelgeving die op deze regeling is gebaseerd (gedelegeerde regelgeving)&lt;/h3&gt;
+    &lt;p&gt;
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+      inwerking treedt.
+    &lt;/p&gt;
+
+      &lt;h3 class=""&gt;Overzicht van in de tekst verwerkte wijzigingen&lt;/h3&gt;
+      &lt;div class="table__container"&gt;
+        &lt;table class="table__data-overview"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Datum inwerkingtreding&lt;/th&gt;
+              &lt;th&gt;Terugwerkende kracht tot en met&lt;/th&gt;
+              &lt;th&gt;Datum uitwerkingtreding&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;07-03-2019&lt;/td&gt;
+              &lt;td&gt;07-03-2019&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;07-03-2019&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;h2 id="tekst" class=""&gt;Toelichting&lt;/h2&gt; --}}</span><span class="xml">
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Intitulé<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+          Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+          voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+          inwerking treedt.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+          Gelet op artikel 5, tweede lid.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section-2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Besluiten<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+          De volgende deelplafonds voor § 2.11 Kwaliteitsverbetering van bestaande groengebieden en het recreatieve routenetwerk van de Subsidieregeling groen Zuid-Holland 2016 voor 2019 vast te stellen:
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--loweralpha"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor herstel- of inrichtingsmaatregelen als bedoeld in artikel 2.11.2 onderdeel a, op de plaatsen aangegeven op de kaart in bijlage 6 behorende bij § 2.11 Subsidieregeling
+          groen Zuid-Holland 2016: € 800.000,00.
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor herstel- of inrichtingsmaatregelen als bedoeld in artikel 2.11.2
+          onderdeel b, van het recreatieve routenetwerk voor:
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--lowerroman"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>langeafstand fietsroute (LF): € 100.000,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>fietsknooppunten netwerk: € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>stad-landverbindingen: € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>langeafstand wandelroute (LAW): € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>wandelroutenetwerk Zuid-Holland 2010-2020: € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>toeristisch overstappunten (TOP): € 0,00;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>ruiter- en menpaden: € 2.332.500,00; <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>recreatieve vaarwegen: € 105.000,00.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>ruiter- en menpaden in het Bentwoud: € 200.000,-.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Deelplafond voor beheer en onderhoud van ruiter- en menpaden als bedoeld in artikel 2.11.2 onderdeel c: € 0,00.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"artikel-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Artikel 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage
+          is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus
+          Bonorum et Malorum for use in a type specimen book.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-chapter js-scrollSection"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"artikel-2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Artikel 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage
+          is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus
+          Bonorum et Malorum for use in a type specimen book.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--large"</span>&gt;</span>
 
@@ -686,30 +670,12 @@
         </span><span class="hljs-template-variable">{{ render "<a href="alert.html">@alert</a>" alertFoutief }}</span><span class="xml">
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column column--sidebar"</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-filter"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-sticky"</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar__content"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--arrow-cta-right"</span>&gt;</span>Terug naar zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          </span><span class="hljs-template-variable">{{render "<a href="nav.html">@nav</a>" navWetContext }}</span><span class="xml">
-          </span><span class="hljs-template-variable">{{render "<a href="nav.html">@nav</a>" navToeContext }}</span><span class="xml">
-
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modalsidebar"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar__close"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-</span><span class="hljs-template-variable">{{ render "<a href="footer.html">@footer</a>" }}</span><span class="xml"></span></pre>
+</span><span class="hljs-template-variable">{{ render "<a href="footer.html">@footer</a>" }}</span></pre>
     </code>
 </div>
 
@@ -735,22 +701,8 @@
     <span class="hljs-attr">"items"</span>: [
       {
         <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Wettechnische gegevens"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#wet"</span>,
-        <span class="hljs-attr">"sub"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-attr">"subItems"</span>: [
-          {
-            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Gegevens van de regeling"</span>
-          },
-          {
-            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Opmerkingen"</span>
-          },
-          {
-            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Regelgeving"</span>
-          },
-          {
-            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Wijzigingen"</span>
-          }
-        ]
+        <span class="hljs-attr">"href"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"sub"</span>: <span class="hljs-literal">false</span>
       }
     ]
   },
@@ -758,16 +710,25 @@
     <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>,
     <span class="hljs-attr">"items"</span>: [
       {
-        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Toelichting"</span>,
-        <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#wet"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Regeling"</span>,
         <span class="hljs-attr">"sub"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"subItems"</span>: [
           {
             <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Intitulé"</span>,
-            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#tekst"</span>
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#section-1"</span>
           },
           {
-            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Besluiten"</span>
+            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Besluiten"</span>,
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#section-2"</span>
+          },
+          {
+            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Artikel 1"</span>,
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#artikel-1"</span>
+          },
+          {
+            <span class="hljs-attr">"stitle"</span>: <span class="hljs-string">"Artikel 2"</span>,
+            <span class="hljs-attr">"href"</span>: <span class="hljs-string">"#artikel-2"</span>
           }
         ]
       }
@@ -857,13 +818,13 @@
             
                 <a href="breadcrumb.html">@<span>breadcrumb</span></a>, 
             
+                <a href="nav.html">@<span>nav</span></a>, 
+            
                 <a href="pageactions.html">@<span>pageactions</span></a>, 
             
                 <a href="copydata.html">@<span>copydata</span></a>, 
             
                 <a href="alert.html">@<span>alert</span></a>, 
-            
-                <a href="nav.html">@<span>nav</span></a>, 
             
                 <a href="footer.html">@<span>footer</span></a>
             
@@ -1872,6 +1833,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--text.html" data-pjax>
+                <span>Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2414,10 +2399,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-footnote">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Footnote</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="footnote.html" data-pjax>
-                <span>Footnote</span>
+            <a class="Tree-entityLink" href="footnote--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2434,6 +2430,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footnote--customlist.html" data-pjax>
+                <span>Customlist</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -5170,6 +5195,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="results-alphabetical.html" data-pjax>
                 <span>Results alphabetical</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scrollchapter.html" data-pjax>
+                <span>Scroll Chapter</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -9446,7 +9495,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
 
 
 
