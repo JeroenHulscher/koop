@@ -328,6 +328,23 @@ ol {
   }
 }
 
+.list--checked {
+  list-style: none;
+  padding: 0;
+
+  li {
+    background: $iconCrossRed;
+    background-repeat: no-repeat;
+    background-position: .325em;
+    padding-left: 2em;
+
+    &.is-active {
+      font-weight: bold;
+      background: $iconCheck2Green no-repeat;
+    }
+  }
+}
+
 .list--inline {
   margin-left: 0;
   padding-left: 0;

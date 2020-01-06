@@ -578,3 +578,11 @@ input[type=date].datepicker__input {
     line-height: 1.5;
   }
 }
+
+input[type=text] {
+  &.is-valid {
+    border-color: $green;
+    background: $iconCheck2Green no-repeat right .5em center;
+    padding-right: 1em;
+  }
+}
