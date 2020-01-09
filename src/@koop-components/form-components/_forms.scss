@@ -579,10 +579,9 @@ input[type=date].datepicker__input {
   }
 }
 
-input[type=text] {
+input[type=text],
+input[type=password] {
   &.is-valid {
-    border-color: $green;
     background: $iconCheck2Green no-repeat right .5em center;
-    padding-right: 1em;
   }
 }

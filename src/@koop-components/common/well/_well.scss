@@ -5,6 +5,10 @@
   margin: 0 0 2em 0;
   @extend .group;
 
+  *:last-child {
+    margin-bottom: 0;
+  }
+
   &.transitional {
     background: $lightGreen;
     color: $darkBlue;

@@ -41,7 +41,8 @@
     }
 
     for (i = 0; i < this.regexs.length; i++) {
-      regexFormula = new RegExp('^' + this.regexs[i].dataset.regex);
+      regexFormula = new RegExp(this.regexs[i].dataset.regex);
+
       if (regexFormula.test(this.fieldPassword.value)){
         this.regexs[i].classList.add('is-active');
         totalCorrect++;
@@ -51,6 +52,8 @@
 
     if (totalCorrect === this.regexs.length) {
       this.fieldPassword.classList.add('is-valid');
+    } else {
+      this.fieldPassword.classList.remove('is-valid');
     }
 
     if (this.fieldPasswordRepeat) {
