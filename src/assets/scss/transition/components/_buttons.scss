@@ -47,6 +47,10 @@
     }
   }
 
+  &--inversed {
+    color: $white;
+  }
+
   &--secondary,
   &--secendary {
     color: $darkBlue;
