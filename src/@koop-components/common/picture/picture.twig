@@ -1,0 +1,6 @@
+<picture>
+  {% for sources_i in sources %}
+    <source srcset="{{ sources_i.srcset }}{{ sources_i.media }}" media="{{ sources_i.media }}">
+  {% endfor %}
+  <img src="{{ src }}" alt="{{ alt }}" />
+</picture>
