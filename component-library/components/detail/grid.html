@@ -11,7 +11,7 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.1" type="text/css">
 
 
 <title>Grid | KOOP componentenbibliotheek</title>
@@ -87,7 +87,7 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/grid.html"
-                sandbox="allow-same-origin allow-scripts allow-forms"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -304,295 +304,7 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
-                                <pre><span class="hljs-comment">/*.button {
-  appearance: none;
-  background-color: $buttonBackgroundColor;
-  border-radius: $borderRadius;
-  border: 1px solid $buttonBorderColor;
-  color: $buttonTextColor;
-  display: inline-block;
-  font-family: inherit;
-  font-weight: 700;
-  line-height: 1;
-  margin: 0 .5em .5em 0;
-  max-width: 100%;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
-  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
-  padding: $standardButtonPadding; // 40px total height
-  position: relative;
-  text-align: center;
-  text-shadow: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-size: 1rem;
-  cursor: pointer;
-
-  &amp;[hidden] {
-    display: none;
-  }
-
-  &amp;::-moz-focus-inner {
-    border: none;
-    padding: 0;
-  }
-
-  &amp;[href] {
-    text-decoration: none;
-  }
-
-  &amp;[href]:hover {
-    text-decoration: none;
-  }
-
-  &amp;:focus {
-    outline: 2px solid $yellow;
-    outline-offset: 0;
-    z-index: 1;
-  }
-
-  &amp;:hover {
-    outline: none;
-    background-color: $lighterGrey;
-    color: $black;
-  }
-
-  &amp;:active {
-    transition: none;
-    background-color: $buttonBackgroundActiveColor;
-  }
-
-  &amp;:disabled,
-  &amp;[aria-disabled="true"] {
-    cursor: not-allowed;
-    pointer-events: none;
-    background-color: $lightGrey;
-    color: $mediumGrey;
-  }
-
-  &amp;--primary {
-    background-color: $darkBlue;
-    color: $white;
-    border: 1px solid transparent;
-
-    &amp;:hover {
-      color: $black;
-      background-color: $mediumBlue;
-    }
-
-    &amp;:active {
-      color: $black;
-      background-color: $lightBlue;
-    }
-  }
-
-  &amp;--secondary {
-    background-color: $buttonBackgroundSecondaryColor;
-    color: $black;
-    border: 1px solid transparent;
-
-    &amp;:hover {
-      color: $black;
-      background-color: lighten($orange, 10%);
-    }
-
-    &amp;:active {
-      background-color: $buttonBackgroundSecondaryActiveColor;
-      color: $white;
-    }
-  }
-
-  &amp;--erase {
-    background: $white $removeBlueIcon no-repeat right 1em center;
-    background-size: 0.75em;
-    background-color: $white;
-    color: $darkBlue;
-    padding-right: 3em;
-    border: 1px solid $darkBlue;
-
-    &amp;:hover {
-      color: $black;
-    }
-
-    &amp;:active {
-      background-color: $buttonBackgroundSecondaryActiveColor;
-      color: $white;
-    }
-  }
-
-  &amp;--inversed {
-    background-color: $darkGrey;
-    color: $white;
-  }
-
-  &amp;--small {
-    font-size: .75rem;
-  }
-
-  &amp;--share {
-    background: {
-      color: $lightBlue;
-      image: $shareIcon;
-      position: right 1em center;
-      repeat: no-repeat;
-      size: 1.1em;
-    }
-    color: $darkBlue;
-    border: 1px solid transparent;
-    padding-right: 2.5em;
-
-    &amp;:hover {
-      color: $black;
-      background-color: $mediumBlue;
-    }
-
-    &amp;:active {
-      color: $black;
-      background-color: $lightBlue;
-    }
-  }
-
-  &amp;--search {
-    padding-right: 2em;
-    background-position: 90% 50%;
-    background-repeat: no-repeat;
-    background-image: $searchIcon;
-    background-size: 1.25em;
-  }
-
-  &amp;--icon-right {
-    background-position: .75em 50%;
-    background-repeat: no-repeat;
-    background-image: $dartRightIcon;
-    background-size: 5px 10px;
-    padding-left: 1.5em;
-  }
-
-  &amp;--icon-left {
-    background-position: .75em 50%;
-    background-repeat: no-repeat;
-    background-image: $dartLeftIcon;
-    background-size: 5px 10px;
-    padding-left: 1.5em;
-  }
-
-  &amp;--icon-top {
-    background-position: .5em 50%;
-    background-repeat: no-repeat;
-    background-image: $dartTopIcon;
-    background-size: 10px 5px;
-    padding-left: 1.5em;
-  }
-
-  &amp;--icon-down {
-    background-position: .5em 50%;
-    background-repeat: no-repeat;
-    background-image: $dartDownIcon;
-    background-size: 10px 5px;
-    padding-left: 1.5em;
-  }
-
-  &amp;--icon-upload {
-    background-position: 1em center;
-    background-repeat: no-repeat;
-    background-image: $uploadIcon;
-    padding-left: 3em;
-  }
-
-  &amp;--icon-download {
-    background-position: 1em center;
-    background-repeat: no-repeat;
-    background-image: $downloadIcon;
-    padding-left: 3em;
-  }
-
-  &amp;--icon-filter {
-    background-position: 1em center;
-    background-size: 1em;
-    background-repeat: no-repeat;
-    background-image: $iconFilter;
-    padding-left: 2.75em;
-  }
-
-  &amp;--icon-download-white {
-    background-position: 1em center;
-    background-repeat: no-repeat;
-    background-image: $downloadIconWhite;
-    padding-left: 3em;
-  }
-
-  &amp;--icon-hamburger {
-    background-position: .75em 50%;
-    background-repeat: no-repeat;
-    background-image: $hamburgerIcon;
-    background-size: 1em;
-    padding-left: 2em;
-  }
-
-  &amp;--icon-refreshdocuments {
-    background-position: .75em 50%;
-    background-repeat: no-repeat;
-    background-image: $refreshDocument;
-    background-size: 1.5em;
-    padding-left: 3em;
-  }
-
-  &amp;--icon-refreshdocuments-white {
-    background-position: .75em 50%;
-    background-repeat: no-repeat;
-    background-image: $refreshDocumentWhite;
-    background-size: 1.75em;
-    padding-left: 3em;
-  }
-
-  &amp;--divider-icon {
-    background-image: $refreshDocumentWhite;
-    background-repeat: no-repeat;
-    padding-right: 3em;
-    background-size: 1.75em;
-    background-position: right .75em center;
-
-    span.divider::after {
-      content: "";
-      border-right: 1px solid $white;
-      padding-left: .75em;
-      margin-right: .2em;
-    }
-  }
-
-  &amp;--divider-icon-draw {
-    background-image: $drawIcon;
-    background-repeat: no-repeat;
-    padding-right: 3em;
-    background-size: 1.25em;
-    background-position: right 1em center;
-
-    span.divider::after {
-      content: "";
-      border-right: 1px solid $white;
-      padding-left: .75em;
-      margin-right: .2em;
-    }
-  }
-
-  &amp;--divider-icon-map {
-    background-image: $mapIcon;
-    background-repeat: no-repeat;
-    padding-right: 3em;
-    background-size: 1.25em;
-    background-position: right 1em center;
-
-    span.divider::after {
-      content: "";
-      border-right: 1px solid $white;
-      padding-left: .75em;
-      margin-right: .2em;
-    }
-  }
-}
-*/</span>
-</pre>
+                                <pre></pre>
                             </code>
                             
                         </div>
@@ -608,7 +320,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.9 KB</span>
+                    <span class="Meta-value">0 Byte</span>
                 </li>
             </ul>
         </div>
@@ -1654,6 +1366,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--text.html" data-pjax>
+                <span>Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2196,10 +1932,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-footnote">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Footnote</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="footnote.html" data-pjax>
-                <span>Footnote</span>
+            <a class="Tree-entityLink" href="footnote--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2216,6 +1963,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footnote--customlist.html" data-pjax>
+                <span>Customlist</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -3203,6 +2979,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--custom.html" data-pjax>
                 <span>Custom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
+                <span>Ol Container</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4971,6 +4771,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scrollchapter.html" data-pjax>
+                <span>Scroll Chapter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -6619,6 +6443,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-result-almanak.html" data-pjax>
                 <span>Result Almanak</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-attenderingsservice-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Attenderingsservice Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-homepage.html" data-pjax>
+                <span>Att - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-stap1.html" data-pjax>
+                <span>Att - Stap 1</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -9228,7 +9116,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
 
 
 

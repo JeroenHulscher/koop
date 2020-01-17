@@ -1,0 +1,53 @@
+<div {% if maxItems %}data-decorator="showmoreless" data-config='{"amount": "{{ maxItems }}" }'{% endif %}>
+{% if heading %}
+  <{% if headingType %}{{ headingType }}{% else %}h4{% endif %} class="facet--heading">{{ heading }}</{% if headingType %}{{ headingType }}{% else %}h4{% endif %}>
+{% endif %}
+
+{% if orderedList %}
+  <ol class="{% if custom %}list-custom{% else %}list{% endif %} {{ modifier }}">
+{% else %}
+  <ul class="{% if custom %}list-custom{% else %}list{% endif %} {{ modifier }}">
+{% endif %}
+{% if orderedList %}
+  {% for items_i in items %}
+    {% if items_i.subitems %}
+    <li class="{% if custom %}list-custom__item{% else %}list__item{% endif %}">{{ items_i.content }}
+      <ol>
+      {% for subitems_i in items_i.subitems %}
+        <li class="{% if items_i.custom %}list-custom__item{% else %}list__item{% endif %}">{{ subitems_i.content }}</li>
+      {% endfor %}
+      </ol>
+    </li>
+    {% else %}
+      <li class="{% if custom %}list-custom__item{% else %}list__item{% endif %}">{{ items_i.content }}</li>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% for items_i in items %}
+    {% if items_i.subitems %}
+    <li class="{% if custom %}list-custom__item{% else %}list__item{% endif %}">{{ items_i.content }}
+      {% if items_i.orderedList %}
+        <ol>
+        {% for subitems_i in items_i.subitems %}
+          <li>{{ subitems_i.content }}</li>
+        {% endfor %}
+        </ol>
+      {% else %}
+         {% if custom %}<ul class="list-custom">{% else %}<ul>{% endif %}
+          {% for subitems_i in items_i.subitems %}
+            <li>{{ subitems_i.content }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+    {% else %}
+      <li class="{% if custom %}list-custom__item{% else %}list__item{% endif %}">{% if items_i.color %}<span class="{{ items_i.color }}"></span>{% endif %}{{ items_i.content }}</li>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if orderedList %}
+  </ol>
+{% else %}
+  </ul>
+{% endif %}
+</div>

@@ -10,7 +10,7 @@
 
         <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
       <div class="logo ">
-        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+        <a href=""><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
           <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
             <span>Register voor overheidsinstanties</span>
           </p>
@@ -70,10 +70,18 @@
     <div class="breadcrumb">
   <p>U bent hier:</p>
   <ol>
-    <li><a href=test>Zoeken</a></li>
-    <li><a href=test>Zoekresultaten</a></li>
-    <li><a href=test>Regeling</a></li>
-    <li>Informatie</li>
+    <li>
+        <a href=#>Zoeken</a></li>
+    </li>
+    <li>
+        <a href=#>Zoekresultaten</a></li>
+    </li>
+    <li>
+        <a href=#>Regeling</a></li>
+    </li>
+    <li>
+        Informatie
+    </li>
   </ol>
 </div>
   </div>
@@ -87,7 +95,7 @@
 
 
       <div class="map">
-        <div class="map__map"></div>
+        <div id="demo7" class="map__map"></div>
         <div class="map__controls">
           <div class="row row--spacer">
             <div class="columns">
@@ -130,6 +138,25 @@
           </div>
         </div>
       </div>
+
+      <script id="data" type="application/json">
+      {
+        "debug": false,
+        "mount_element": "#demo7",
+        "locations": [{
+            "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
+            "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"
+        }, {
+            "type": "punt",
+            "geometry": "POINT(83388.72001447542 454483.4858568841)",
+            "geometry_type": "WKT",
+            "title": "Punt 1"
+        }],
+        "options": {
+            "mode": "geoview"
+        }
+      }
+      </script>
 
 
 
@@ -295,25 +322,6 @@
         </div>
       </div>
 
-      <script id="data" type="application/json">
-      {
-        "debug": false,
-        "mount_element": "#demo7",
-        "locations": [{
-            "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
-            "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"
-        }, {
-            "type": "punt",
-            "geometry": "POINT(83388.72001447542 454483.4858568841)",
-            "geometry_type": "WKT",
-            "title": "Punt 1"
-        }],
-        "options": {
-            "mode": "geoview"
-        }
-      }
-      </script>
-
         <div class="pagination">
   <div class="pagination__index">
     <ul>
@@ -342,8 +350,9 @@
                 <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
                 <div class="form__row">
                   <div class="input-inputsubmit ">
-  <label class="visually-hidden" for="">Uw e-mailadres</label>
+
   <div class="input-inputsubmit__grid">
+    <label  for="">Uw e-mailadres</label>
     <input id="" type="text" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Aanmelden</span></button>
   </div>
@@ -407,13 +416,16 @@
                             <label class="form__label" for="">Straal
                               <span class="mandatory">Verplicht veld</span>
                             </label>
-                            <div class="select-custom">
-                              <select>
-                                <option>250m</option>
-                                <option>1km</option>
-                                <option>2km</option>
-                              </select>
-                            </div>
+                            <div id="1" class="select-custom select-custom">
+  <select>
+      <option value="250"  true>250 meter</option>
+      <option value="500"  >500 meter</option>
+      <option value="1000"  >1000 meter</option>
+      <option value="2000"  >2000 meter</option>
+      <option value="9000"  >Hele gemeente</option>
+  </select>
+</div>
+
                           </div>
                         </div>
                       </div>
@@ -443,8 +455,9 @@
                       <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
                       <div class="form__row">
                         <div class="input-inputsubmit ">
-  <label  for="">Uw e-mailadres</label>
+
   <div class="input-inputsubmit__grid">
+    <label  for="">Uw e-mailadres</label>
     <input id="" type="text" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Bevestigen</span></button>
   </div>
@@ -494,13 +507,13 @@
 
               </legend>
                 <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-radio-1" name="publicatie" />
+    <input class="radio__input" value=""   type="radio"  id="option-radio-1" name="publicatie" />
     <label class="radio__label" for="option-radio-1">
       Berichten rond mijn adres
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-radio-2" name="publicatie" />
+    <input class="radio__input" value=""   type="radio"  id="option-radio-2" name="publicatie" />
     <label class="radio__label" for="option-radio-2">
       Berichten in mijn gemeente
     </label>
@@ -509,48 +522,68 @@
             </fieldset>
           </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Publicatiedatum
-              <span class="tooltip " data-decorator="tooltip">
+          <div data-decorator="init-form-conditionals">
+
+
+            <div id="citem-0" class="form__row form__row--large js-form-conditionals__citem">
+              <fieldset>
+                <legend>Publicatiedatum
+                <span class="tooltip " data-decorator="tooltip">
   <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
   <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
 </span>
 
-              </legend>
-                <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-radio-1" name="publicatie" />
-    <label class="radio__label" for="option-radio-1">
+                </legend>
+                  <div class="input-radio">
+    <input class="radio__input" value=""   type="radio"  id="option-radio-1112312312" name="publicatie" />
+    <label class="radio__label" for="option-radio-1112312312">
       Vandaag
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-radio-2" name="publicatie" />
-    <label class="radio__label" for="option-radio-2">
+    <input class="radio__input" value=""   type="radio"  id="option-radio-21231232" name="publicatie" />
+    <label class="radio__label" for="option-radio-21231232">
       Afgelopen week
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-radio-3" name="publicatie" />
-    <label class="radio__label" for="option-radio-3">
+    <input class="radio__input" value=""   type="radio"  id="option-radio-3312312312" name="publicatie" />
+    <label class="radio__label" for="option-radio-3312312312">
       Afgelopen maand
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"  disabled type="radio" id="option-radio-4" name="publicatie" />
-    <label class="radio__label" for="option-radio-4">
+    <input class="radio__input" value=""  disabled type="radio"  id="option-radio-412312313" name="publicatie" />
+    <label class="radio__label" for="option-radio-412312313">
       Afgelopen 2 maanden
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-radio-5" name="publicatie" />
-    <label class="radio__label" for="option-radio-5">
+    <input class="radio__input" value=""   type="radio" data-linkedto="1" id="option-radio-51222" name="publicatie" />
+    <label class="radio__label" for="option-radio-51222">
       Zelf een periode kiezen
     </label>
   </div>
 
-            </fieldset>
-          </div>
+              </fieldset>
+            </div>
+
+            <div id="citem-1" class="form__row form__row--large js-form-conditionals__citem u-margin-top--24">
+              
+  <label for="input--1">Van</label>
+  <div class="datepicker">
+    <input type="date" value="2015-02-14" data-date="14-02-2015" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "dd-mm-yy", "range" : "true", "rangePosition": "from", "rangeRelation":"#input--2" }' id="input--1" placeholder="Bijv: 06-10-1960" />
+  </div>
+
+  <label for="input--2">Tot</label>
+  <div class="datepicker">
+    <input type="date" value="2015-02-14" data-date="14-02-2015" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "dd-mm-yy", "range" : "true", "rangePosition": "to", "rangeRelation":"#input--1" }' id="input--2" placeholder="" />
+  </div>
+
+
+            </div>
 
           <div class="form__row form__row--large">
             <fieldset>
@@ -1487,36 +1520,42 @@
 
 <div class="footer row--footer" role="contentinfo">
   <div class="container columns">
-    <ul class="list list--linked">
+    <div >
 
-      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
-      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
-      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
-      <li><a href="https://beta.overheid.nl/help">Help</a></li>
-      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  </ul>
+</div>
+    <div >
 
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li class="list__item"><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li class="list__item"><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li class="list__item"><a href="/sitemap">Sitemap</a></li>
+  </ul>
+</div>
+    <div >
 
-    <ul class="list list--linked">
-      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
-      <li><a href="/privacy-statement">Privacy en cookies</a></li>
-      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
-      <li><a href="/sitemap">Sitemap</a></li>
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://data.overheid.nl">Open data</a></li>
+      <li class="list__item"><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+      <li class="list__item"><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+  </ul>
+</div>
+    <div >
 
-     <ul class="list list--linked">
-        <li><a href="https://data.overheid.nl">Open data</a></li>
-        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
-        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
-    </ul>
-
-    <ul class="list list--linked">
-      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
-      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
-      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
-      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
-    </ul>
-
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li class="list__item"><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li class="list__item"><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li class="list__item"><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+  </ul>
+</div>
   </div>
 </div>
 

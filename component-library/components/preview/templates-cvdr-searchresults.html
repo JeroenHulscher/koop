@@ -32,7 +32,7 @@
 
         <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
       <div class="logo ">
-        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+        <a href=""><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
           <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
             <span>Register voor overheidsinstanties</span>
           </p>
@@ -92,10 +92,18 @@
     <div class="breadcrumb">
   <p>U bent hier:</p>
   <ol>
-    <li><a href=test>Zoeken</a></li>
-    <li><a href=test>Zoekresultaten</a></li>
-    <li><a href=test>Regeling</a></li>
-    <li>Informatie</li>
+    <li>
+        <a href=#>Zoeken</a></li>
+    </li>
+    <li>
+        <a href=#>Zoekresultaten</a></li>
+    </li>
+    <li>
+        <a href=#>Regeling</a></li>
+    </li>
+    <li>
+        Informatie
+    </li>
   </ol>
 </div>
   </div>
@@ -111,8 +119,9 @@
             <fieldset class="u-nomargin">
               <legend class="visually-hidden">Legendje</legend>
               <div class="input-inputsubmit ">
-  <label class="visually-hidden" for="search">Verfijn uw zoekopdracht</label>
+
   <div class="input-inputsubmit__grid">
+    <label class="visually-hidden"  for="search">Verfijn uw zoekopdracht</label>
     <input id="search" type="text" class="input input-text--search" placeholder="Verfijn uw zoekopdracht" />
     <button class="button button--primary"><span>Zoek</span></button>
   </div>
@@ -125,15 +134,19 @@
 
       <div class="row row--large hidden-mobile">
          <div class="sort ">
+  <div class="columns">
+    <div class="column">
       Sorteer op:
       <ul class="sort__options">
           <li>
-            <a href="?sortby=value" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
+            <a href="" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
           </li>
           <li>
-            <a href="?sortby=value" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
+            <a href="" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
           </li>
       </ul>
+    </div>
+  </div>
 </div>
 
       </div>
@@ -147,15 +160,19 @@
 
       <div class="hidden-desktop">
         <div class="sort ">
+  <div class="columns">
+    <div class="column">
       Sorteer op:
       <ul class="sort__options">
           <li>
-            <a href="?sortby=value" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
+            <a href="" class="sort--ascending is-active" aria-pressed="true"><span class="visually-hidden">Sorteer op: </span>Datum</a>
           </li>
           <li>
-            <a href="?sortby=value" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
+            <a href="" class="sort--ascending " aria-pressed="false"><span class="visually-hidden">Sorteer op: </span>Titel</a>
           </li>
       </ul>
+    </div>
+  </div>
 </div>
 
       </div>
@@ -520,7 +537,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-1237" name="name"  data-value="Spanje" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje" value="2"
                       />
                       <label class="checkbox__label" for="option-1237">
                         Spanje
@@ -529,7 +546,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-2237" name="name"  data-value="Griekenland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-2237" name="name"  data-value="Griekenland" value="2"
                       />
                       <label class="checkbox__label" for="option-2237">
                         Griekenland
@@ -538,7 +555,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-3237" name="name"  data-value="Nederland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-3237" name="name"  data-value="Nederland" value="2"
                       />
                       <label class="checkbox__label" for="option-3237">
                         Nederland
@@ -551,7 +568,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -559,12 +576,6 @@
   </div>
   <a href="#" id="id20" data-handler="open-modal" data-modal="modal-20" class="subselection__trigger icon">Selecteer gemeenten</a>
 </div>
-
-<!--
-<label for="input20">
-  <input id="input20" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                   <div class="form__row">
@@ -587,7 +598,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-1346" name="name"  data-value="Zuid-Holland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-1346" name="name"  data-value="Zuid-Holland" value="2"
                       />
                       <label class="checkbox__label" for="option-1346">
                         Zuid-Holland
@@ -596,7 +607,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"  checked type="checkbox" id="option-2346" name="name"  data-value="Noord-Holland" value="2"
+                      <input class="checkbox__input"  checked  type="checkbox" id="option-2346" name="name"  data-value="Noord-Holland" value="2"
                       />
                       <label class="checkbox__label" for="option-2346">
                         Noord-Holland
@@ -605,7 +616,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"  checked type="checkbox" id="option-3346" name="name"  data-value="Zeeland" value="2"
+                      <input class="checkbox__input"  checked  type="checkbox" id="option-3346" name="name"  data-value="Zeeland" value="2"
                       />
                       <label class="checkbox__label" for="option-3346">
                         Zeeland
@@ -618,7 +629,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -626,12 +637,6 @@
   </div>
   <a href="#" id="id21" data-handler="open-modal" data-modal="modal-21" class="subselection__trigger icon">Selecteer provincies</a>
 </div>
-
-<!--
-<label for="input21">
-  <input id="input21" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                   <div class="form__row">
@@ -654,7 +659,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-4455" name="name"  data-value="Spanje" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-4455" name="name"  data-value="Spanje" value="2"
                       />
                       <label class="checkbox__label" for="option-4455">
                         Spanje
@@ -663,7 +668,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-5455" name="name"  data-value="Griekenland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-5455" name="name"  data-value="Griekenland" value="2"
                       />
                       <label class="checkbox__label" for="option-5455">
                         Griekenland
@@ -672,7 +677,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-6455" name="name"  data-value="Nederland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-6455" name="name"  data-value="Nederland" value="2"
                       />
                       <label class="checkbox__label" for="option-6455">
                         Nederland
@@ -685,7 +690,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -693,12 +698,6 @@
   </div>
   <a href="#" id="id1900" data-handler="open-modal" data-modal="modal-1900" class="subselection__trigger icon">Selecteer waterschappen</a>
 </div>
-
-<!--
-<label for="input1900">
-  <input id="input1900" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                   <div class="form__row">
@@ -721,7 +720,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-4564" name="name"  data-value="Spanje" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-4564" name="name"  data-value="Spanje" value="2"
                       />
                       <label class="checkbox__label" for="option-4564">
                         Spanje
@@ -730,7 +729,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-5564" name="name"  data-value="Griekenland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-5564" name="name"  data-value="Griekenland" value="2"
                       />
                       <label class="checkbox__label" for="option-5564">
                         Griekenland
@@ -739,7 +738,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-6564" name="name"  data-value="Nederland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-6564" name="name"  data-value="Nederland" value="2"
                       />
                       <label class="checkbox__label" for="option-6564">
                         Nederland
@@ -752,7 +751,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -760,12 +759,6 @@
   </div>
   <a href="#" id="id119" data-handler="open-modal" data-modal="modal-119" class="subselection__trigger icon">Selecteer regionale samenwerkingsorganen</a>
 </div>
-
-<!--
-<label for="input119">
-  <input id="input119" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                   <div class="form__row">
@@ -788,7 +781,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-4563" name="name"  data-value="Spanje" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-4563" name="name"  data-value="Spanje" value="2"
                       />
                       <label class="checkbox__label" for="option-4563">
                         Spanje
@@ -797,7 +790,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-5563" name="name"  data-value="Griekenland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-5563" name="name"  data-value="Griekenland" value="2"
                       />
                       <label class="checkbox__label" for="option-5563">
                         Griekenland
@@ -806,7 +799,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-6563" name="name"  data-value="Nederland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-6563" name="name"  data-value="Nederland" value="2"
                       />
                       <label class="checkbox__label" for="option-6563">
                         Nederland
@@ -819,7 +812,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -827,12 +820,6 @@
   </div>
   <a href="#" id="id122" data-handler="open-modal" data-modal="modal-122" class="subselection__trigger icon">Selecteer deelgemeenten / stadsdelen</a>
 </div>
-
-<!--
-<label for="input122">
-  <input id="input122" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                   <div class="form__row">
@@ -855,7 +842,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-4562" name="name"  data-value="Spanje" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-4562" name="name"  data-value="Spanje" value="2"
                       />
                       <label class="checkbox__label" for="option-4562">
                         Spanje
@@ -864,7 +851,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-5562" name="name"  data-value="Griekenland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-5562" name="name"  data-value="Griekenland" value="2"
                       />
                       <label class="checkbox__label" for="option-5562">
                         Griekenland
@@ -873,7 +860,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-6562" name="name"  data-value="Nederland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-6562" name="name"  data-value="Nederland" value="2"
                       />
                       <label class="checkbox__label" for="option-6562">
                         Nederland
@@ -886,7 +873,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -894,12 +881,6 @@
   </div>
   <a href="#" id="id125" data-handler="open-modal" data-modal="modal-125" class="subselection__trigger icon">Selecteer BES eilanden</a>
 </div>
-
-<!--
-<label for="input125">
-  <input id="input125" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                 </fieldset>
@@ -924,7 +905,7 @@
                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-4561" name="name"  data-value="Spanje" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-4561" name="name"  data-value="Spanje" value="2"
                       />
                       <label class="checkbox__label" for="option-4561">
                         Spanje
@@ -933,7 +914,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-5561" name="name"  data-value="Griekenland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-5561" name="name"  data-value="Griekenland" value="2"
                       />
                       <label class="checkbox__label" for="option-5561">
                         Griekenland
@@ -942,7 +923,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"   type="checkbox" id="option-6561" name="name"  data-value="Nederland" value="2"
+                      <input class="checkbox__input"    type="checkbox" id="option-6561" name="name"  data-value="Nederland" value="2"
                       />
                       <label class="checkbox__label" for="option-6561">
                         Nederland
@@ -955,7 +936,7 @@
           </div>
 
         <div class="modal__buttonpane">
-          <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
         </div>
         <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
       </div>
@@ -963,12 +944,6 @@
   </div>
   <a href="#" id="id1288" data-handler="open-modal" data-modal="modal-1288" class="subselection__trigger icon">Selecteer onderwerpen</a>
 </div>
-
-<!--
-<label for="input1288">
-  <input id="input1288" value="" type="checkbox" name="name">
-</label>
--->
 
                   </div>
                 </fieldset>
@@ -992,36 +967,42 @@
 
 <div class="footer row--footer" role="contentinfo">
   <div class="container columns">
-    <ul class="list list--linked">
+    <div >
 
-      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
-      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
-      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
-      <li><a href="https://beta.overheid.nl/help">Help</a></li>
-      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  </ul>
+</div>
+    <div >
 
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li class="list__item"><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li class="list__item"><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li class="list__item"><a href="/sitemap">Sitemap</a></li>
+  </ul>
+</div>
+    <div >
 
-    <ul class="list list--linked">
-      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
-      <li><a href="/privacy-statement">Privacy en cookies</a></li>
-      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
-      <li><a href="/sitemap">Sitemap</a></li>
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://data.overheid.nl">Open data</a></li>
+      <li class="list__item"><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+      <li class="list__item"><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+  </ul>
+</div>
+    <div >
 
-     <ul class="list list--linked">
-        <li><a href="https://data.overheid.nl">Open data</a></li>
-        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
-        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
-    </ul>
-
-    <ul class="list list--linked">
-      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
-      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
-      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
-      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
-    </ul>
-
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li class="list__item"><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li class="list__item"><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li class="list__item"><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+  </ul>
+</div>
   </div>
 </div>
 

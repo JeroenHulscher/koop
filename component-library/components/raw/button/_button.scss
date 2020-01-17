@@ -66,6 +66,22 @@
     color: $mediumGrey;
   }
 
+  &--text {
+    border: 0;
+    text-decoration: underline;
+    padding: 0 !important;
+    background: transparent;
+    font-weight: normal;
+    font-size: em(16) !important;
+    margin: 0;
+
+    &:hover {
+      background: transparent !important;
+      box-shadow: none !important;
+      text-decoration: none;
+    }
+  }
+
   &--primary {
     background-color: $buttonPrimaryBackgroundColor;
     color: $white;

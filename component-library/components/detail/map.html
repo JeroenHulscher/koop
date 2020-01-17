@@ -11,7 +11,7 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.1" type="text/css">
 
 
 <title>map | KOOP componentenbibliotheek</title>
@@ -87,7 +87,7 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/map.html"
-                sandbox="allow-same-origin allow-scripts allow-forms"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -158,7 +158,38 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map__map"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-kpm"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map__kpm"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"kpmMap"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"config":"#config3", "range":".js-kpm-editstraal" }'</span>&gt;</span>
 
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map__controls"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--spacer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"relative"</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Postcode<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text input-text--searchmedium "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Verfijn op zoekwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Verfijn op zoekwoord"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"toggle-remove-visibility"</span> /&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-text__remove invisible"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"empty-input"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Wis waarde<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column align-right"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"buttonswitch"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"buttonswitch__button is-active icon icon--marker"</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"true"</span>&gt;</span>Kaart<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"buttonswitch__button icon icon--hamburger"</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span>Lijst<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -168,7 +199,25 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-aee8b6fd237aa490e22ea7d5a1e9c910-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> modifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> map--</span></span></span><span class="hljs-template-variable">{{modifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map__map"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{render "<a href="kpm.html">@kpm</a>" kpmContext}}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> controls}}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map__controls"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--spacer"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
+            </span><span class="hljs-template-variable">{{render "<a href="input-text.html">@input-text</a>" inputsubmit }}</span><span class="xml">
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column align-right"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{render "<a href="buttonswitch.html">@buttonswitch</a>" buttonswitchContext }}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -179,7 +228,35 @@
         
             
             <pre>{
-  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"map"</span>
+  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"map"</span>,
+  <span class="hljs-attr">"controls"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"inputsubmit"</span>: {
+    <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--searchmedium"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"Postcode"</span>,
+    <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Verfijn op zoekwoord"</span>,
+    <span class="hljs-attr">"remove"</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-attr">"buttonswitchContext"</span>: {
+    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"banner"</span>,
+    <span class="hljs-attr">"buttons"</span>: [
+      {
+        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Kaart"</span>,
+        <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"marker"</span>
+      },
+      {
+        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Lijst"</span>,
+        <span class="hljs-attr">"active"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"hamburger"</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">"kpmContext"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>
+  }
 }</pre>
             
         
@@ -219,6 +296,21 @@
   &amp;__map {
     <span class="hljs-attribute">position</span>: relative;
   }
+  &amp;__kpm {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">500px</span>;
+
+    <span class="hljs-selector-class">.ol-overlaycontainer-stopevent</span> {
+      <span class="hljs-attribute">display</span>: none;
+    }
+
+    <span class="hljs-selector-class">.map-buttons</span> {
+      <span class="hljs-attribute">position</span>: absolute;
+      <span class="hljs-attribute">right</span>: .<span class="hljs-number">5em</span>;
+      <span class="hljs-attribute">top</span>: .<span class="hljs-number">5em</span>;
+    }
+  }
   &amp;__controls {
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">1em</span>;
@@ -255,7 +347,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">363 Bytes</span>
+                    <span class="Meta-value">589 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -299,6 +391,28 @@
             <span class="Meta-value">src/@koop-components/common/map/map.handlebars</span>
         </li>
         
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="kpm.html">@<span>kpm</span></a>, 
+            
+                <a href="input-text.html">@<span>input-text</span></a>, 
+            
+                <a href="buttonswitch.html">@<span>buttonswitch</span></a>
+            
+            </span>
+        </li class="Meta-item">
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="templates-att-stap1.html">@<span>templates-att-stap1</span></a>
+            
+            </span>
+        </li>
         
     </ul>
 </div>
@@ -1301,6 +1415,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--text.html" data-pjax>
+                <span>Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -1843,10 +1981,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-footnote">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Footnote</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="footnote.html" data-pjax>
-                <span>Footnote</span>
+            <a class="Tree-entityLink" href="footnote--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1863,6 +2012,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footnote--customlist.html" data-pjax>
+                <span>Customlist</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2850,6 +3028,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--custom.html" data-pjax>
                 <span>Custom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
+                <span>Ol Container</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4618,6 +4820,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scrollchapter.html" data-pjax>
+                <span>Scroll Chapter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -6266,6 +6492,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-result-almanak.html" data-pjax>
                 <span>Result Almanak</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-attenderingsservice-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Attenderingsservice Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-homepage.html" data-pjax>
+                <span>Att - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-stap1.html" data-pjax>
+                <span>Att - Stap 1</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -8875,7 +9165,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
 
 
 

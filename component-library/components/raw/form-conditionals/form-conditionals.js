@@ -28,7 +28,9 @@
 
   formConditionals.prototype.setInitialState = function() {
     var y;
+    var i;
     var firstInput;
+    var evt;
 
     for (y = 0; y < this.questions.length; y++) {
       if (y !== 0) {
@@ -40,17 +42,24 @@
     }
     if (firstInput) {
       firstInput = this.questions[0].querySelectorAll('input,select');
-      console.log('this.questions[0]', this.questions[0]);
-      console.log('firstInput[0]', firstInput[0]);
       if (firstInput[0]) {
+
         if (firstInput[0].tagName === 'SELECT') {
-          if ("createEvent" in document) {
-            var evt = document.createEvent("HTMLEvents");
-            evt.initEvent("change", false, true);
+          if ('createEvent' in document) {
+            evt = document.createEvent('HTMLEvents');
+            evt.initEvent('change', false, true);
             firstInput[0].dispatchEvent(evt);
           }
           else {
-            firstInput[0].fireEvent("onchange");
+            firstInput[0].fireEvent('onchange');
+          }
+        }
+        if (firstInput[0].tagName === 'INPUT') {
+
+          for (i = 0; i < firstInput.length; i++) {
+            if (firstInput[i].checked) {
+              this.actOnChange(firstInput[i]);
+            }
           }
         }
       }
@@ -65,23 +74,33 @@
       this.inputs[y].addEventListener('change', function(e) { this.actOnChange(e); }.bind(this), false);
     }
     for (i = 0; i < this.buttonNexts.length; i++) {
-      this.buttonNexts[i].addEventListener('click', function (e) { this.actOnChange(e); }.bind(this), false);
+      this.buttonNexts[i].addEventListener('click', function(e) { this.actOnChange(e); }.bind(this), false);
     }
 
   };
 
   formConditionals.prototype.actOnChange = function(e) {
-    console.log('path', e);
-    // console.log('path', e.path);
-    var obj = e.target;
-    var inputType = obj.type;
+    var obj;
+    var inputType;
     var linkedToQuestionId;
-    var currentQuestionContainer = obj.closest(this.questionContainer);
-    var automaticProceed = true;
-    var showLast = obj.getAttribute('data-triggerlaststep');
-    var showResponds = obj.getAttribute('data-triggeresponds');
+    var currentQuestionContainer;
+    var automaticProceed;
+    var showLast;
+    var showResponds;
 
-    console.log('inputType', inputType);
+    if (e.target !== undefined) {
+      obj = e.target;
+    } else {
+      obj = e;
+    }
+
+    inputType = obj.type;
+    linkedToQuestionId;
+    currentQuestionContainer = obj.closest(this.questionContainer);
+    automaticProceed = true;
+    showLast = obj.getAttribute('data-triggerlaststep');
+    showResponds = obj.getAttribute('data-triggeresponds');
+
     switch (inputType) {
     case 'radio':
       linkedToQuestionId = obj.getAttribute('data-linkedto');
@@ -90,16 +109,13 @@
       linkedToQuestionId = obj.getAttribute('data-linkedto');
       break;
     case 'button':
-      // linkedToQuestionId = obj.dataset.linkedto;
       linkedToQuestionId = obj.getAttribute('data-linkedto');
       break;
     case 'input':
-      console.log('in input');
       linkedToQuestionId = obj.getAttribute('data-linkedto');
       break;
     case 'select-one':
       linkedToQuestionId = obj[obj.selectedIndex].getAttribute('data-linkedto');
-        console.log('obj[obj.selectedIndex]', obj[obj.selectedIndex]);
       break;
     case 'checkbox':
       if (this.amountCheckedInFamily(obj, currentQuestionContainer) > 0) {
@@ -183,6 +199,7 @@
   formConditionals.prototype.activateLinkedQuestion = function(questionId) {
     var self = this;
     var nextQuestion = this.element.querySelector(self.questionIdTag + questionId);
+
     if (nextQuestion){
       nextQuestion.removeAttribute('hidden');
       nextQuestion.setAttribute('role', 'alert');
@@ -205,7 +222,8 @@
   formConditionals.prototype.showResponds = function() {
     this.respondsContainer.removeAttribute('hidden');
   };
-  formConditionals.prototype.hideForm = function () {
+
+  formConditionals.prototype.hideForm = function() {
     var y;
 
     for (y = 0; y < this.questions.length; y++) {

@@ -100,6 +100,11 @@ $gutter--lg: 6em;
           padding-right: em(50);
         }
       }
+      &-large {
+        @media ( min-width: $breakpointDesktop ) {
+          padding: em(25) em(75);
+        }
+      }
     }
 
     @media ( min-width: 50em ) {
@@ -173,7 +178,7 @@ $gutter--lg: 6em;
       > * {
         flex: 1;
         margin-left: 0;
-        padding-top: 1.65em;
+        // padding-top: 1.65em;
       }
 
     }
@@ -312,6 +317,15 @@ $gutter--lg: 6em;
       .icon--backlink {
         border-bottom: 1px solid $lighterGrey;
       }
+
+      .scrollContentReceiver {
+        margin-bottom: 1.5em;
+
+        h1 {
+          font-size: em(16);
+          line-height: 1.325em;
+        }
+      }
     }
 
     [data-handler="toggle-sidebar"] {
@@ -331,6 +345,9 @@ $gutter--lg: 6em;
       left: 0;
       box-shadow: 0 0 4px -1px $black;
       border-radius: 0 $borderRadius $borderRadius 0;
+      @media ( min-width: $breakpointDesktop ) {
+        display: none;
+      }
     }
 
     [data-handler="toggle-sidebar"][aria-expanded="true"] {

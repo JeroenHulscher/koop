@@ -11,7 +11,7 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.1" type="text/css">
 
 
 <title>Modal: Modal Permalink | KOOP componentenbibliotheek</title>
@@ -87,7 +87,7 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/modal--modal-permalink.html"
-                sandbox="allow-same-origin allow-scripts allow-forms"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -195,7 +195,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> initClosed }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">modal--off-screen</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> initClosed }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">hidden</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
-      </span><span class="hljs-template-variable">{{{ text }}</span><span class="xml">}
+      </span><span class="hljs-template-variable">{{{ text }}}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ closeButton }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -510,8 +510,8 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-<span class="hljs-meta">
-  'use strict'</span>;
+
+  <span class="hljs-string">'use strict'</span>;
 
   <span class="hljs-keyword">var</span> modalInvisibleClass = <span class="hljs-string">'modal--off-screen'</span>; <span class="hljs-comment">/* we use this so that we can animate visibility */</span>
   <span class="hljs-keyword">var</span> previouslyFocused = <span class="hljs-literal">null</span>;
@@ -536,12 +536,12 @@
       onl.ui.bindFocusTrap( modal );
 
       <span class="hljs-keyword">var</span> config = <span class="hljs-built_in">JSON</span>.parse(element.getAttribute(<span class="hljs-string">'data-config'</span>)) || [];
-      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>[config.function] === <span class="hljs-string">'function'</span>) {
-        <span class="hljs-keyword">var</span> functionToCall = <span class="hljs-built_in">window</span>[config.function];
-        <span class="hljs-keyword">new</span> functionToCall(config.action, <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">document</span>.getElementById(config.data).innerHTML));
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>[config<span class="hljs-function">.<span class="hljs-keyword">function</span>] === '<span class="hljs-title">function</span>') </span>{
+        <span class="hljs-keyword">var</span> functionToCall = <span class="hljs-built_in">window</span>[config<span class="hljs-function">.<span class="hljs-keyword">function</span>];
+        <span class="hljs-title">new</span> <span class="hljs-title">functionToCall</span>(<span class="hljs-params">config.action, JSON.parse(document.getElementById(config.data</span>).<span class="hljs-title">innerHTML</span>));
       }
 
-      <span class="hljs-comment">// if ( config.function === 'kpm' ) {</span>
+      // <span class="hljs-title">if</span> (<span class="hljs-params"> config.function === <span class="hljs-string">'kpm'</span> </span>) </span>{
       <span class="hljs-comment">//   if ( config.action === 'push' ) {</span>
       <span class="hljs-comment">//     kpmService.push( JSON.parse(document.getElementById(config.data).innerHTML ) );</span>
       <span class="hljs-comment">//   }</span>
@@ -712,13 +712,13 @@
 <h1 id="implementatie">Implementatie</h1>
 <h2 id="voeg-een-modal-toe-aan-de-pagina">Voeg een modal toe aan de pagina</h2>
 <p>De code voor een model moet toegevoegd worden net voor voor de <code>&lt;body&gt;</code>-tag. Als je het toevoegt is het standaard niet-zichtbaar. Een voorbeeld van de broncode:</p>
-<code class="lang-markup"><pre>&lt;div id=<span class="hljs-string">"modal-1"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"modal modal--off-screen"</span> hidden role=<span class="hljs-string">"alert"</span>&gt;
+<pre><code class="language-markup">&lt;div id=<span class="hljs-string">"modal-1"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"modal modal--off-screen"</span> hidden role=<span class="hljs-string">"alert"</span>&gt;
     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Voorbeeld<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Dit is een voorbeeld van een modal.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>Sluit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-&lt;<span class="hljs-regexp">/div&gt;</span></pre></code><p>Let op, het bevat altijd:</p>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre><p>Let op, het bevat altijd:</p>
 <ul>
 <li>een id, wat wordt gebruikt om het modal te kunnen aanroepen vanuit een knop</li>
 <li>een classname, die wordt gebruikt voor de opmaak van het modal en het verbergen van het modal.</li>
@@ -727,9 +727,9 @@
 <li><code>.modal</code> element als buitenste elementen, en <code>.model__content</code> element voor de inhoud</li>
 <li>Een ‘close’-button, wat elke opmaak kan bevatten zolang het maar <code>data-handler=&quot;close-modal&quot;</code> bevat.</li>
 </ul>
-<h2 id="openen-triggeren-met-een-button">Openen/triggeren met een button</h2>
+<h2 id="openentriggeren-met-een-button">Openen/triggeren met een button</h2>
 <p>Dit kan iedere knop zijn met in ieder geval deze attributen:</p>
-<code class="lang-markup"><pre>&lt;button <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"button"</span> data-handler=<span class="hljs-string">"open-modal"</span> data-modal=<span class="hljs-string">"modal-1"</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"button"</span>&gt;<span class="hljs-type">Open</span> modal&lt;/button&gt;</pre></code><p><strong>Let op</strong>: het <code>data-modal</code> attribuut bevat het ID van het gekoppelde modal, en moet gelijk zijn aan het <code>id</code> attribute in het bijbehorende modal.</p>
+<pre><code class="language-markup">&lt;button <span class="hljs-keyword">type</span>="button" data-<span class="hljs-keyword">handler</span>="open-modal" data-modal="modal-1" <span class="hljs-keyword">class</span>="button"&gt;<span class="hljs-keyword">Open</span> modal&lt;/button&gt;</code></pre><p><strong>Let op</strong>: het <code>data-modal</code> attribuut bevat het ID van het gekoppelde modal, en moet gelijk zijn aan het <code>id</code> attribute in het bijbehorende modal.</p>
 
         
     </div>
@@ -1724,6 +1724,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--text.html" data-pjax>
+                <span>Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2266,10 +2290,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-footnote">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Footnote</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="footnote.html" data-pjax>
-                <span>Footnote</span>
+            <a class="Tree-entityLink" href="footnote--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2286,6 +2321,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footnote--customlist.html" data-pjax>
+                <span>Customlist</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -3273,6 +3337,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--custom.html" data-pjax>
                 <span>Custom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
+                <span>Ol Container</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -5041,6 +5129,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scrollchapter.html" data-pjax>
+                <span>Scroll Chapter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -6689,6 +6801,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-result-almanak.html" data-pjax>
                 <span>Result Almanak</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-attenderingsservice-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Attenderingsservice Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-homepage.html" data-pjax>
+                <span>Att - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-stap1.html" data-pjax>
+                <span>Att - Stap 1</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -9298,7 +9474,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
 
 
 

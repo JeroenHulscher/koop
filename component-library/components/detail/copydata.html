@@ -11,7 +11,7 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/olive.css?cachebust=1.2.1" type="text/css">
 
 
 <title>Copydata | KOOP componentenbibliotheek</title>
@@ -87,7 +87,7 @@
                 class="Preview-iframe"
                 data-role="window"
                 src="../preview/copydata.html"
-                sandbox="allow-same-origin allow-scripts allow-forms"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -159,7 +159,7 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-copydata"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{
        "triggerLabel": "Kopieer link",
-       "triggerCopiedlabel": "Gekopieerd",
+       "triggerCopiedlabel": "Gekopieerd naar clipboard",
        "triggerClass": "copydata__trigger"
        }'</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata__datafield js-copydata__datafield"</span>&gt;</span>
@@ -182,7 +182,7 @@
        }'</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copydata__datafield js-copydata__datafield"</span>&gt;</span>
      </span><span class="hljs-template-variable">{{ url }}</span><span class="xml">
-    </span><span class="hljs-comment">{{!-- &lt;a href="{{url}}</span><span class="xml">"&gt;</span><span class="hljs-template-variable">{{ link }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> --}}
+    </span><span class="hljs-comment">{{!-- &lt;a href="{{url}}"&gt;{{ link }}&lt;/a&gt; --}}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -195,7 +195,7 @@
             
             <pre>{
   <span class="hljs-attr">"triggerLabel"</span>: <span class="hljs-string">"Kopieer link"</span>,
-  <span class="hljs-attr">"triggerLabelCopied"</span>: <span class="hljs-string">"Gekopieerd"</span>,
+  <span class="hljs-attr">"triggerLabelCopied"</span>: <span class="hljs-string">"Gekopieerd naar clipboard"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Aanbestedingswet 2012"</span>,
   <span class="hljs-attr">"link"</span>: <span class="hljs-string">"Google Link"</span>,
   <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://www.google.nl"</span>
@@ -242,6 +242,8 @@
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$lightGrey</span>;
 
+
+
   &amp;__datafield {
     <span class="hljs-attribute">font-family</span>: Monospace;
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
@@ -256,14 +258,8 @@
     <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.5em</span>;
     <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">75rem</span>;
     <span class="hljs-attribute">cursor</span>: pointer;
-
-    <span class="hljs-attribute">background</span>: {
-      color: transparent;
-      image: <span class="hljs-variable">$copyIcon</span>;
-      <span class="hljs-attribute">position</span>: <span class="hljs-number">99%</span> .<span class="hljs-number">25em</span>;
-      size: <span class="hljs-number">1em</span>;
-      repeat: no-repeat;
-    }
+    <span class="hljs-attribute">background</span>: transparent <span class="hljs-variable">$copyIcon</span> no-repeat <span class="hljs-number">99%</span> .<span class="hljs-number">25em</span>;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">1em</span>;
   }
 }
 </pre>
@@ -282,7 +278,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">623 Bytes</span>
+                    <span class="Meta-value">566 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -296,8 +292,8 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-<span class="hljs-meta">
-  'use strict'</span>;
+
+  <span class="hljs-string">'use strict'</span>;
 
   onl.decorate({
     <span class="hljs-string">'init-copydata'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> element </span>) </span>{
@@ -327,10 +323,13 @@
   };
 
   copydata.prototype.createAndPlaceTrigger = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">this</span>.trigger = <span class="hljs-built_in">document</span>.createElement( <span class="hljs-string">'a'</span> );
+    <span class="hljs-keyword">this</span>.trigger = <span class="hljs-built_in">document</span>.createElement( <span class="hljs-string">'span'</span> );
+    <span class="hljs-keyword">this</span>.triggerSpan = <span class="hljs-built_in">document</span>.createElement( <span class="hljs-string">'span'</span> );
     <span class="hljs-keyword">this</span>.trigger.classList.add( <span class="hljs-keyword">this</span>.config.triggerClass );
-    <span class="hljs-keyword">this</span>.trigger.setAttribute(<span class="hljs-string">'href'</span>, <span class="hljs-string">'#'</span>);
-    <span class="hljs-keyword">this</span>.trigger.innerText = <span class="hljs-keyword">this</span>.config.triggerLabel;
+    <span class="hljs-keyword">this</span>.trigger.setAttribute(<span class="hljs-string">'tabindex'</span>, <span class="hljs-string">'0'</span>);
+    <span class="hljs-keyword">this</span>.trigger.setAttribute(<span class="hljs-string">'aria-label'</span>, <span class="hljs-keyword">this</span>.config.triggerLabel + <span class="hljs-string">':'</span> + <span class="hljs-keyword">this</span>.datafield.innerHTML);
+    <span class="hljs-keyword">this</span>.triggerSpan.innerText = <span class="hljs-keyword">this</span>.config.triggerLabel;
+    <span class="hljs-keyword">this</span>.trigger.appendChild(<span class="hljs-keyword">this</span>.triggerSpan);
     <span class="hljs-keyword">this</span>.element.appendChild( <span class="hljs-keyword">this</span>.trigger );
   };
 
@@ -339,11 +338,13 @@
     <span class="hljs-keyword">var</span> originalLabel = <span class="hljs-keyword">this</span>.trigger.innerText;
     <span class="hljs-keyword">var</span> tempLabel = <span class="hljs-keyword">this</span>.config.triggerCopiedlabel || <span class="hljs-string">'Gekopiëerd'</span>;
 
-    <span class="hljs-keyword">this</span>.trigger.innerHTML = tempLabel;
+    <span class="hljs-keyword">this</span>.trigger.classList.add(<span class="hljs-string">"is-active"</span>);
+    <span class="hljs-keyword">this</span>.triggerSpan.innerHTML = tempLabel;
 
     setTimeout( <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-      self.trigger.innerHTML = originalLabel;
-    }, <span class="hljs-number">3000</span> );
+      self.triggerSpan.innerHTML = originalLabel;
+      self.trigger.classList.remove(<span class="hljs-string">"is-active"</span>);
+    }, <span class="hljs-number">5000</span> );
 
   };
 
@@ -380,7 +381,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">2.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1439,6 +1440,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button--text.html" data-pjax>
+                <span>Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -1981,10 +2006,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-footnote">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Footnote</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="footnote.html" data-pjax>
-                <span>Footnote</span>
+            <a class="Tree-entityLink" href="footnote--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2001,6 +2037,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footnote--customlist.html" data-pjax>
+                <span>Customlist</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2988,6 +3053,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--custom.html" data-pjax>
                 <span>Custom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
+                <span>Ol Container</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4756,6 +4845,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scrollchapter.html" data-pjax>
+                <span>Scroll Chapter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -6404,6 +6517,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-result-almanak.html" data-pjax>
                 <span>Result Almanak</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-attenderingsservice-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Attenderingsservice Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-homepage.html" data-pjax>
+                <span>Att - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-stap1.html" data-pjax>
+                <span>Att - Stap 1</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -9013,7 +9190,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
 
 
 

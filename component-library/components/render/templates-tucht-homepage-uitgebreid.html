@@ -10,7 +10,7 @@
 
         <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
       <div class="logo ">
-        <a href="https://www.overheid.nl"><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+        <a href=""><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
           <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
             <span>Register voor overheidsinstanties</span>
           </p>
@@ -73,10 +73,18 @@
     <div class="breadcrumb">
   <p>U bent hier:</p>
   <ol>
-    <li><a href=test>Zoeken</a></li>
-    <li><a href=test>Zoekresultaten</a></li>
-    <li><a href=test>Regeling</a></li>
-    <li>Informatie</li>
+    <li>
+        <a href=#>Zoeken</a></li>
+    </li>
+    <li>
+        <a href=#>Zoekresultaten</a></li>
+    </li>
+    <li>
+        <a href=#>Regeling</a></li>
+    </li>
+    <li>
+        Informatie
+    </li>
   </ol>
 </div>
   </div>
@@ -139,43 +147,43 @@
                 <div class="form__row form__row--medium">
                   <div class="form__row"><h3 class="form__label">Vrije beroepen</h3></div>
                      <div class="input-radio">
-    <input class="radio__input" checked  type="radio" id="option-checkbox-2087654345" name="onderwerp" />
+    <input class="radio__input" value="" checked  type="radio"  id="option-checkbox-2087654345" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-2087654345">
       Accountants
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-20765456" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-20765456" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-20765456">
       Advocaten
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-2020765456" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-2020765456" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-2020765456">
       Diergeneeskunde
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-20207654562" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-20207654562" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-20207654562">
       Gerechtsdeurwaarders
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-20207654563" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-20207654563" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-20207654563">
       Gezondheidszorg
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-20207654566" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-20207654566" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-20207654566">
       Notarissen
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-20207654568" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-20207654568" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-20207654568">
       Scheepvaart
     </label>
@@ -187,19 +195,19 @@
                     <h3 class="form__label">Producenten</h3>
                   </div>
                     <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-2020765" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-2020765" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-2020765">
       Pluimvee en eieren
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-207651" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-207651" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-207651">
       Akkerbouw
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input"   type="radio" id="option-checkbox-207654" name="onderwerp" />
+    <input class="radio__input" value=""   type="radio"  id="option-checkbox-207654" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-207654">
       Vee en vlees
     </label>
@@ -297,10 +305,10 @@
                           <div class="form__row">
                             <div id="1" class="select-custom ">
   <select>
-      <option value="" data-linkedto="1" >Alle</option>
-      <option value="10" data-linkedto="2" >Op</option>
-      <option value="20" data-linkedto="3" >Tot</option>
-      <option value="30" data-linkedto="4" selected>Tussen</option>
+      <option value="10"  true>Item 1</option>
+      <option value="20"  >Item 2</option>
+      <option value="50"  >Item 3</option>
+      <option value="100"  >Item 4</option>
   </select>
 </div>
 
@@ -372,36 +380,42 @@
 
 <div class="footer row--footer" role="contentinfo">
   <div class="container columns">
-    <ul class="list list--linked">
+    <div >
 
-      <li><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
-      <li><a href="https://beta.overheid.nl/contact">Contact</a></li>
-      <li><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
-      <li><a href="https://beta.overheid.nl/help">Help</a></li>
-      <li><A href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  </ul>
+</div>
+    <div >
 
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li class="list__item"><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li class="list__item"><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li class="list__item"><a href="/sitemap">Sitemap</a></li>
+  </ul>
+</div>
+    <div >
 
-    <ul class="list list--linked">
-      <li><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
-      <li><a href="/privacy-statement">Privacy en cookies</a></li>
-      <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
-      <li><a href="/sitemap">Sitemap</a></li>
-    </ul>
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://data.overheid.nl">Open data</a></li>
+      <li class="list__item"><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+      <li class="list__item"><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+  </ul>
+</div>
+    <div >
 
-     <ul class="list list--linked">
-        <li><a href="https://data.overheid.nl">Open data</a></li>
-        <li><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
-        <li><a href="https://puc.overheid.nl">PUC Open Data</a></li>
-    </ul>
-
-    <ul class="list list--linked">
-      <li><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
-      <li><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
-      <li><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
-      <li><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
-    </ul>
-
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li class="list__item"><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li class="list__item"><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li class="list__item"><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+  </ul>
+</div>
   </div>
 </div>
 

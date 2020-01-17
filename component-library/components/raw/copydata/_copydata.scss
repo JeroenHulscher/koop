@@ -8,6 +8,8 @@
   position: relative;
   background-color: $lightGrey;
 
+
+
   &__datafield {
     font-family: Monospace;
     margin: 0;
@@ -22,13 +24,7 @@
     padding-right: 1.5em;
     font-size: .75rem;
     cursor: pointer;
-
-    background: {
-      color: transparent;
-      image: $copyIcon;
-      position: 99% .25em;
-      size: 1em;
-      repeat: no-repeat;
-    }
+    background: transparent $copyIcon no-repeat 99% .25em;
+    background-size: 1em;
   }
 }
