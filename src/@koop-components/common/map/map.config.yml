@@ -2,6 +2,7 @@
 title: map
 context:
   text: map
+  controls: true
   inputsubmit:
     modifier: input-text--searchmedium
     id: 1
@@ -19,3 +20,5 @@ context:
       - label: Lijst
         active: false
         icon: hamburger
+  kpmContext:
+    id: 3

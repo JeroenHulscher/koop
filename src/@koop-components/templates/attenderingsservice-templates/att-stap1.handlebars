@@ -1,0 +1,163 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row row--spacer">
+
+    <div class="jumbotron jumbotron--highlight">
+      <div class="jumbotron__content jumbotron__content--centered">
+        <div class="jumbotron__heading">
+          <p class="jumbotron__subheader">Kies uw meldingen</p>
+          <h1 class="jumbotron__header h2">Over welke betrekkingen wilt u meldingen ontvangen?</h1>
+          <p class="jumbotron__intro">
+            Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op <em>mail@koop.overheid.nl</em>
+          </p>
+        </div>
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">E-mailadres</legend>
+            <div class="form__row form__row--medium">
+              <div class="columns">
+                <div class="column">
+                  {{render "@input-text" inputPostcodeContext }}
+                </div>
+                <div class="column">
+                  {{render "@input-text" inputHuisnummerContext }}
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="">
+            <div class="columns">
+              <div class="u-order--d2 align-right form__row">
+                <button type="submit" class="form__button button button--primary button--large">Adres ophalen</button>
+              </div>
+              <div class="u-order--d1 u-nomargin">
+                <a href="#" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="container container--centered">
+
+  <div class="row">
+    <ul class="list list--stepcontainer">
+      <li class="list__item">
+        <div class="columns">
+          <div class="column">
+            <h2>Selecteer een gebied</h2>
+            <h3 class="h4 u-nomargin">Uw adres</h3>
+            <p>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag</p>
+            <h3 class="h4 u-nomargin">Straal</h3>
+            <p>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente</p>
+            <form class="form">
+              <div class="form__row">
+                {{render "@input-radio" straalContext }}
+              </div>
+              {{!-- <div class="form__row">
+                <button class="button button--primary js-kpm-editstraal">Straal aanpassen</button>
+              </div> --}}
+            </form>
+          </div>
+          <div class="column">
+            {{render "@map" mapContext }}
+            <script id="config1" type="application/json">
+            {
+              "locations": [
+                {
+                  "type": "adres",
+                  "geometry": "POINT(4.34015737 52.07846659)",
+                  "geometry_type": "WKT",
+                  "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+                  "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+                }
+              ],
+              "options": {
+                "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                "class": "kaartprikmodule-overlay",
+                "mode": "geoview",
+                "center": {
+                  "highlight": true,
+                  "type": "circle",
+                  "circle": {
+                    "radius": 200,
+                    "x": 83224,
+                    "y": 454983
+                  }
+                },
+                "controls": ["base-layer", "center", "fullscreen", "zoom"],
+                "layers": {
+                  "bgtachtergrondkaart": {
+                    "enabled": true
+                  }
+                }
+              }
+            }
+            </script>
+          </div>
+        </div>
+      </li>
+      <li class="list__item">
+        <h2>Selecteer uw voorkeursinstellingen</h2>
+        <p>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.</p>
+        <fieldset>
+          <legend class="visually-hidden">Voorkeursinstellingen</legend>
+          <div class="columns">
+            <div class="column">
+              <div class="form__row u-margin-top-32">
+                <h3 class="form__sublegend">Rondom een adres</h3>
+                <p class="">Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.</p>
+                {{render "@subselection" rondomadresContext }}
+              </div>
+              <div class="form__row u-margin-top-48">
+                <h3 class="form__sublegend">Bestemmingsplannen</h3>
+                <p class="">Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.</p>
+                {{render "@subselection" bestemmingsplannenContext }}
+              </div>
+            </div>
+            <div class="column">
+              <div class="form__row u-margin-top-32">
+                <h3 class="form__sublegend">Voorlichting</h3>
+                <p class="">Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.</p>
+                {{render "@subselection" voorlichtingContext }}
+              </div>
+              <div class="form__row u-margin-top-48">
+                <h3 class="form__sublegend">Voorschriften &amp; beleid</h3>
+                <p class="">Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.</p>
+                {{render "@subselection" voorschriftenContext }}
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </li>
+      <li class="list__item">
+        <h2>Selecteer overheidsorganisaties</h2>
+        <p>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.</p>
+        {{ render "@checkbox-selectall" checkallOverheidsorganisatiesContext}}
+      </li>
+    </ul>
+    <div class="columns">
+      <div class="column">
+        <p>U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <a href="#">privacystatement</a>.</p>
+      </div>
+      <div class="column align-right">
+        <button type="submit" class="button button--primary">Meld mij aan voor de nieuwsbrief</button>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- why? -->
+</div>
+
+{{ render "@footer" }}

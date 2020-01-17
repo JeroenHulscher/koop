@@ -1,9 +1,60 @@
+var getClosest = function (elem, selector) {
+
+  // Element.matches() polyfill
+  if (!Element.prototype.matches) {
+    Element.prototype.matches =
+      Element.prototype.matchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector ||
+      Element.prototype.oMatchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      function (s) {
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+          i = matches.length;
+        while (--i >= 0 && matches.item(i) !== this) { }
+        return i > -1;
+      };
+  }
+
+  // Get the closest matching element
+  for (; elem && elem !== document; elem = elem.parentNode) {
+    if (elem.matches(selector)) return elem;
+  }
+  return null;
+
+};
+
 ( function() {
 
   // String.prototype.trim
   if ( !String.prototype.trim ) {
     String.prototype.trim = function() {
       return this.replace( /^\s+|\s+$/g, '' );
+    };
+  }
+
+
+
+  // Oject.assign support for IE
+  if (typeof Object.assign != 'function') {
+    Object.assign = function (target) {
+      'use strict';
+      if (target == null) {
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+
+      target = Object(target);
+      for (var index = 1; index < arguments.length; index++) {
+        var source = arguments[index];
+        if (source != null) {
+          for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+      }
+      return target;
     };
   }
 

@@ -1,6 +1,5 @@
 .input-checkbox {
   margin-bottom: .5em;
-
 }
 
 .checkbox__input {
@@ -12,7 +11,6 @@
       background-color: $lightBlue;
     }
   }
-
 
   &:focus + label {
     outline-color: $focus;
@@ -31,6 +29,13 @@
 
   &:disabled + label:before {
     border-color: $mediumGrey;
+  }
+
+  &[name="selectAll"] {
+    & ~ label {
+      font-weight: bold;
+      margin-bottom: em(24);
+    }
   }
 }
 

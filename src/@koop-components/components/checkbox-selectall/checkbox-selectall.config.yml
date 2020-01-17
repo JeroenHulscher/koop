@@ -3,6 +3,7 @@ label: Checkbox Select all
 status: prototype
 context:
   id: 1
+  label: verdragen
   checkboxes:
     options:
     - id: checkbox-20
