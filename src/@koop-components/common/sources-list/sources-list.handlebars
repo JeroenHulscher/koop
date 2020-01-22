@@ -1,7 +1,7 @@
-<ul class="list--sources">
+<ul id="{{id}}" class="list--sources">
 	{{#each items }}
 		<li>
-			<div class="list--source__information">
+			<div class="list--source__information {{icon}}">
 				{{ name }}
         <span class="list--sources__item__filesize">{{ filesize }}</span>
 				{{#if files }}
@@ -11,8 +11,46 @@
 				{{/if}}
 			</div>
 
+      {{#if buttonContext/action}}
+      <a href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}
+        <span class="visually-hidden">van abonnement: {{name}}</span>
+      </a>
+      {{/if}}
+
 			{{!-- {{ render "@button" buttonContext }} --}}
-      <a href="#" class="button button--primary">{{buttonContext/text}} <span class="visually-hidden">bestand: {{name}}</span></a>
+      {{#if actionsOne}}
+        <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{idprefix}}"}'>
+          <div arial-label="een mooie label 1" id="{{idprefix}}1" class="js-form-conditionals__citem">
+            {{actionsOneLabel}}
+            {{#each actionsOne }}
+              {{#if iconOnly}}
+                <button class="button-icon button-icon--plain button-icon--bin js-button-next" data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"><span class="visually-hidden">{{label}}</span></button>
+              {{else}}
+                <button class="button {{buttonContext/modifier}} js-button-next" data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}">{{label}}</button>
+              {{/if}}
+            {{/each}}
+          </div>
+          <div arial-label="een mooie label 2" id="{{idprefix}}2" class="js-form-conditionals__citem">
+            <em>{{actionsTwoLabel}}</em>
+            {{#each actionsTwo }}
+              {{#if iconOnly}}
+                <button class="button {{buttonContext/modifier}} js-button-next" data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"><span class="visually-hidden">{{label}}</span></button>
+              {{else}}
+                <button class="button {{buttonContext/modifier}} js-button-next" data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}">{{label}}</button>
+              {{/if}}
+            {{/each}}
+          </div>
+          <div arial-label="een mooie label 3" id="{{idprefix}}3" class="js-form-conditionals__citem">
+            {{actionsThreeLabel}}
+            {{#each alternativeActions }}
+              <button class="button {{buttonContext/modifier}} js-button-next" data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}">{{label}}</button>
+            {{/each}}
+          </div>
+        </div>
+      {{else}}
+
+      {{/if}}
+
 
 			{{#if moreInfo }}
 				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">

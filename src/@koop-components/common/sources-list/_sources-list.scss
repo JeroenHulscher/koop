@@ -15,7 +15,7 @@
       background-size: 1.325em;
       background-position: .75em 0.1em;
       background-repeat: no-repeat;
-      padding-left: 2.75em;
+      padding-left: 3.25em;
 
       @media ( min-width: $breakpointDesktop ) {
         padding-right: 13em;
@@ -28,8 +28,59 @@
     }
 
     &:nth-child(even) {
-      background-color: $lightGrey;
+      background-color: lighten($lightGrey, 2);
     }
+
+    > .button {
+      order: 3;
+      @media ( min-width: $breakpointDesktop ) {
+        position: absolute;
+        right: 1em;
+        top: .6em;
+        margin: 0;
+        padding-right: .75em;
+        padding-left: .75em;
+        padding-top: .55em;
+        padding-bottom: .55em;
+        font-weight: normal;
+      }
+    }
+
+  }
+
+  &__actions {
+    order: 3;
+    display: none;
+
+    @media ( min-width: $breakpointDesktop ) {
+      position: absolute;
+      right: 1em;
+      top: .6em;
+      margin: 0;
+      width: auto;
+    }
+
+    .button {
+      width: 100%;
+      margin: 1em 0;
+      font-weight: normal;
+      padding-right: .75em;
+      padding-left: .75em;
+      font-size: 1em;
+
+      @media ( min-width: $breakpointDesktop ) {
+        width: auto;
+        padding-top: .55em;
+        padding-bottom: .55em;
+        margin: 0;
+      }
+    }
+
+    .button,
+    .button-icon {
+      margin-left: 0.25em !important;
+    }
+
   }
 
   &__item {
@@ -40,25 +91,9 @@
     }
   }
 
-  .button {
-    order: 3;
-		width: 100%;
-    margin: 1em 0;
-    font-weight: normal;
-    padding-right: .75em;
-    padding-left: .75em;
-    font-size: 1em;
 
-		@media ( min-width: $breakpointDesktop ) {
-			position: absolute;
-			right: 0em;
-			top: .6em;
-			margin: 0;
-      width: auto;
-      padding-top: .55em;
-      padding-bottom: .55em;
-		}
-  }
+
+
 
   .collapsible {
     margin: 0 0 0 1em;
@@ -85,5 +120,13 @@
 				}
 			}
 		}
-	}
+  }
+
+  // decorator: init-sourceslist;
+  &.is-state-actions &__actions {
+    display: block;
+  }
+  &.is-state-actions li > .button {
+    display: none;
+  }
 }
