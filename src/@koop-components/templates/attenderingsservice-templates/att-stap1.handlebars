@@ -38,7 +38,7 @@
                 <button type="submit" class="form__button button button--primary button--large">Adres ophalen</button>
               </div>
               <div class="u-order--d1 u-nomargin">
-                <a href="#" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
+                <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
               </div>
             </div>
           </div>
@@ -63,13 +63,13 @@
               <div class="form__row">
                 {{render "@input-radio" straalContext }}
               </div>
-              {{!-- <div class="form__row">
-                <button class="button button--primary js-kpm-editstraal">Straal aanpassen</button>
-              </div> --}}
             </form>
           </div>
           <div class="column">
             {{render "@map" mapContext }}
+
+             {{!-- { "locatieserver_id":"wpl-9f875146c5008a6cacded0af3bfd9e5d", "title":"Woonplaats Duiven" } --}}
+
             <script id="config1" type="application/json">
             {
               "locations": [

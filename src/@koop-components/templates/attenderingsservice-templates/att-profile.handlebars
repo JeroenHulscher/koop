@@ -1,0 +1,35 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container container--centered">
+
+  <div class="row row--spacer">
+
+    <div class="columns">
+      <div class="column">
+        <h1>Gegevens wijzigen</h1>
+        <p>
+           Voer het e-mailadres in waarmee u zich heeft geabonneerd op de e-mailservice en uw oude wachtwoord in. Voer vervolgens tweemaal
+          uw nieuwe wachtwoord in.
+        </p>
+        <form class="form">
+          <div class="form__row">
+            {{render "@input-text" emailInput }}
+          </div>
+          <div class="form__row">
+            {{render "@input-text" currentPWInput }}
+          </div>
+        </form>
+      </div>
+      <div class="column"></div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

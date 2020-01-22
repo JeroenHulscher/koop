@@ -1,0 +1,21 @@
+---
+label: Att - Profiel
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  emailInput:
+    modifier:
+    id: 1
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+  currentPWInput:
+    modifier:
+    id: 1
+    fieldLabel: Huidig wachtwoord
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl

@@ -46,7 +46,7 @@ context:
       name: kpm-straal
       value: 3000
     - id: radio-6
-      text: Hele gemeente
+      text: Hele gemeente 'Den Haag'
       name: kpm-straal
       value: hideMap
   mapContext:
