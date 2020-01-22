@@ -328,6 +328,158 @@ ol {
   }
 }
 
+// @keyframes fadeinCheck {
+//     from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+// @keyframes slideinCheck {
+//     from {
+//         left: -1em;
+//     }
+//     to {
+//         left: -.25em;
+//     }
+// }
+
+
+@keyframes slideIn {
+  0% {
+    padding-left: 0;
+  }
+  100% {
+    padding-left: 2em;
+  }
+}
+
+@-moz-keyframes slideIn {
+  0% {
+    padding-left: 0;
+  }
+  100% {
+    padding-left: 2em;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    padding-left: 0;
+  }
+  100% {
+    padding-left: 2em;
+  }
+}
+
+@-o-keyframes slideIn {
+  0% {
+    padding-left: 0;
+  }
+  100% {
+    padding-left: 2em;
+  }
+}
+
+@-ms-keyframes slideIn {
+  0% {
+    padding-left: 0;
+  }
+  100% {
+    padding-left: 2em;
+  }
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.list--checked {
+  list-style: none;
+  padding: 0;
+
+  li {
+    // background: $iconCrossRed;
+    // background-repeat: no-repeat;
+    // background-position: .325em;
+    // padding-left: 2em;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.25em;
+      height: 1.25em;
+      background: $iconCheck2Green no-repeat;
+      opacity: 0;
+      // transform: translate(-1em, .25em);
+    }
+
+    &.is-active {
+      // padding-left: 2em;
+      font-weight: bold;
+      animation: slideIn ease .45s forwards;
+      -webkit-animation: slideIn ease .45s forwards;
+      -moz-animation: slideIn ease .45s forwards;
+      -o-animation: slideIn ease .45s forwards;
+      -ms-animation: slideIn ease .45s forwards;
+
+      &:before {
+        // opacity: 1;
+        animation: fadeIn ease .5s .5s forwards;
+        -webkit-animation: fadeIn ease .5s .5s forwards;
+        -moz-animation: fadeIn ease .5s .5s forwards;
+        -o-animation: fadeIn ease .5s .5s forwards;
+        -ms-animation: fadeIn ease .5s .5s forwards;
+      }
+    }
+  }
+}
+
 .list--inline {
   margin-left: 0;
   padding-left: 0;

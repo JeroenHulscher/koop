@@ -578,3 +578,10 @@ input[type=date].datepicker__input {
     line-height: 1.5;
   }
 }
+
+input[type=text],
+input[type=password] {
+  &.is-valid {
+    background: $iconCheck2Green no-repeat right .5em center;
+  }
+}
