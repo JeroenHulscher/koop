@@ -9,7 +9,10 @@ $icons: (
   map: $iconMap,
   house: $iconHouse,
   search: $searchIcon,
-  searchBlue: $searchIconBlue
+  searchBlue: $searchIconBlue,
+  news: $iconNews,
+  plus: $plusIcon,
+  plus-white: $plusIconWhite
 );
 
 .icon {
@@ -19,6 +22,18 @@ $icons: (
     size: 1.25em;
     repeat: no-repeat;
   }
+
+  &--right {
+    padding-right: 1.75em;
+    padding-left: auto;
+    background: {
+      position: right 50%;
+      size: 1.25em;
+      repeat: no-repeat;
+    }
+  }
+
+
   &--large {
     background-size: 1.125em !important;
   }
@@ -323,5 +338,11 @@ $icons: (
 $value in $icons {
   .icon--#{$name} {
     background-image: $value;
+  }
+}
+@each $name,
+$value in $icons {
+  .icon-bg--#{$name} {
+    background-image: $value !important;
   }
 }
