@@ -26,6 +26,18 @@ textarea {
     border-color: red;
     color: red;
   }
+
+  &:disabled,
+  &[disabled],
+  &[read-only] {
+    background-color: $lightGrey;
+    border-color: $mediumGrey;
+    color: $darkGrey;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 
