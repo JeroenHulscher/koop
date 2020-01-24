@@ -460,21 +460,21 @@ ol {
     }
 
     &.is-active {
-      // padding-left: 2em;
+      padding-left: 2em;
       font-weight: bold;
-      animation: slideIn ease .45s forwards;
-      -webkit-animation: slideIn ease .45s forwards;
-      -moz-animation: slideIn ease .45s forwards;
-      -o-animation: slideIn ease .45s forwards;
-      -ms-animation: slideIn ease .45s forwards;
+      // animation: slideIn ease .45s forwards;
+      // -webkit-animation: slideIn ease .45s forwards;
+      // -moz-animation: slideIn ease .45s forwards;
+      // -o-animation: slideIn ease .45s forwards;
+      // -ms-animation: slideIn ease .45s forwards;
 
       &:before {
-        // opacity: 1;
-        animation: fadeIn ease .5s .5s forwards;
-        -webkit-animation: fadeIn ease .5s .5s forwards;
-        -moz-animation: fadeIn ease .5s .5s forwards;
-        -o-animation: fadeIn ease .5s .5s forwards;
-        -ms-animation: fadeIn ease .5s .5s forwards;
+        opacity: 1;
+        // animation: fadeIn ease .5s .5s forwards;
+        // -webkit-animation: fadeIn ease .5s .5s forwards;
+        // -moz-animation: fadeIn ease .5s .5s forwards;
+        // -o-animation: fadeIn ease .5s .5s forwards;
+        // -ms-animation: fadeIn ease .5s .5s forwards;
       }
     }
   }
