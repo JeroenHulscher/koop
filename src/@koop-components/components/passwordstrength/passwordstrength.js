@@ -13,10 +13,14 @@
     this.fieldPassword = this.config.fieldPassword || '.js-passwordstrength__input';
     this.fieldPassword = this.element.querySelector(this.fieldPassword);
     this.fieldPasswordRepeat = this.config.fieldPasswordRepeat || '.js-passwordstrength__inputrepeat';
-    this.fieldPasswordRepeat = this.element.querySelector(this.fieldPasswordRepeat);
+    this.fieldPasswordRepeat = document.querySelector(this.fieldPasswordRepeat);
+    this.regexContainer = this.element.querySelector('.js-passwordstrength__regexcontainer > div');
+    this.regexs = this.regexContainer.querySelectorAll('[data-regex]');
 
-    this.regexContainer = document.querySelector('.js-passwordstrength__regexcontainer');
-    this.regexs = document.querySelectorAll('[data-regex]');
+    this.duplicateRegexContainer = document.querySelector('.js-passwordstrength__duplicateregexcontainer');
+    if (this.duplicateRegexContainer){
+      this.makeDuplicateRegexContainer();
+    }
     this.initEventListeners();
   };
 
@@ -29,10 +33,17 @@
     }
   };
 
+  passwordstrength.prototype.makeDuplicateRegexContainer = function() {
+    this.duplicateRegexContainer.innerHTML = '';
+    var duplicate = this.regexContainer.cloneNode(true);
+    this.duplicateRegexContainer.appendChild(duplicate);
+  }
+
   passwordstrength.prototype.validateField = function() {
     var i;
     var regexFormula;
     var totalCorrect = 0;
+    var self = this;
 
     // reset actives;
     for (i = 0; i < this.regexs.length; i++) {
@@ -62,6 +73,8 @@
       }
     }
 
+    this.makeDuplicateRegexContainer();
+
   };
 
   passwordstrength.prototype.validateFieldRepeat = function() {
@@ -70,6 +83,7 @@
 
     if (field !== fieldRepeat) {
       this.showError(this.fieldPasswordRepeat);
+      this.fieldPasswordRepeat.classList.remove('is-valid');
     } else {
       this.removeError(this.fieldPasswordRepeat);
       if (this.fieldPassword.classList.contains('is-valid')){
@@ -79,10 +93,14 @@
   };
 
   passwordstrength.prototype.showError = function (field) {
-    field.nextElementSibling.removeAttribute('hidden');
+    if (field.nextElementSibling){
+      field.nextElementSibling.removeAttribute('hidden');
+    }
   }
   passwordstrength.prototype.removeError = function (field) {
-    field.nextElementSibling.setAttribute('hidden', 'hidden');
+    if (field.nextElementSibling) {
+      field.nextElementSibling.setAttribute('hidden', 'hidden');
+    }
   }
 
 
