@@ -2,6 +2,7 @@ $icons: (
   bin: $removeBlueIcon,
   check2Blue: $iconCheck2Blue,
   check2White: $iconCheck2White,
+  check2Green: $iconCheck2Green,
   edit: $editIconBlue,
   list: $iconList,
   refresh: $refreshIcon,
@@ -9,7 +10,11 @@ $icons: (
   map: $iconMap,
   house: $iconHouse,
   search: $searchIcon,
-  searchBlue: $searchIconBlue
+  searchBlue: $searchIconBlue,
+  news: $iconNews,
+  plus: $plusIcon,
+  plus-white: $plusIconWhite,
+  mail: $iconMail
 );
 
 .icon {
@@ -19,6 +24,18 @@ $icons: (
     size: 1.25em;
     repeat: no-repeat;
   }
+
+  &--right {
+    padding-right: 1.75em;
+    padding-left: 0;
+    background: {
+      position: right 50%;
+      size: 1.25em;
+      repeat: no-repeat;
+    }
+  }
+
+
   &--large {
     background-size: 1.125em !important;
   }
@@ -323,5 +340,11 @@ $icons: (
 $value in $icons {
   .icon--#{$name} {
     background-image: $value;
+  }
+}
+@each $name,
+$value in $icons {
+  .icon-bg--#{$name} {
+    background-image: $value !important;
   }
 }

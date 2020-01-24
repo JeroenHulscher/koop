@@ -38,7 +38,7 @@
 
     // create default object;
     this.data = {
-      debug: true,
+      debug: false,
       on_cancel: function () {
         console.log("The user has closed the map without saving");
       },

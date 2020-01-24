@@ -87,6 +87,9 @@
     var automaticProceed;
     var showLast;
     var showResponds;
+    var hideself;
+
+    console.log('klik');
 
     if (e.target !== undefined) {
       obj = e.target;
@@ -100,6 +103,7 @@
     automaticProceed = true;
     showLast = obj.getAttribute('data-triggerlaststep');
     showResponds = obj.getAttribute('data-triggeresponds');
+    hideself = obj.getAttribute('data-hideself');
 
     switch (inputType) {
     case 'radio':
@@ -147,7 +151,16 @@
         this.showFormSubmit();
       }
     }
+
+    if (hideself) {
+      this.hideCurrentQuestion(currentQuestionContainer);
+    }
   };
+
+  formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {
+    currentQuestionContainer.setAttribute('hidden', 'hidden');
+  }
+
 
   formConditionals.prototype.amountCheckedInFamily = function(obj, parent) {
     var list, index, item, checkedCount;
@@ -204,6 +217,7 @@
       nextQuestion.removeAttribute('hidden');
       nextQuestion.setAttribute('role', 'alert');
     }
+
   };
 
   formConditionals.prototype.showFormSubmit = function() {
