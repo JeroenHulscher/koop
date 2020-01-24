@@ -61,6 +61,11 @@
     &--centered-medium {
       max-width: em(860);
     }
+    &--centered-s {
+      max-width: em(560);
+      padding: 0;
+      margin: 0 auto;
+    }
   }
 
   &__subheader {
