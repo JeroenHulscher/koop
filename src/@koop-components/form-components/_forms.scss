@@ -53,8 +53,8 @@ select {
   &:disabled,
   &[disabled],
   &[read-only] {
-    background-color: $mediumGrey;
-    color: $mediumGrey;
+    background-color: $lighterGrey;
+    color: $lightGrey;
 
     &:focus {
       outline: none;
@@ -137,14 +137,13 @@ fieldset {
 
   &__label {
     font-size: 1em;
-    font-weight: bold;
+    // font-weight: bold;
     margin-bottom: 0.125em;
     line-height: 1.25em;
 
     &--medium,
     &--accent {
       font-weight: bold;
-      margin-bottom: .75em;
     }
 
     .mandatory {
@@ -576,5 +575,12 @@ input[type=date].datepicker__input {
     display: block;
     font-weight: 400;
     line-height: 1.5;
+  }
+}
+
+input[type=text],
+input[type=password] {
+  &.is-valid {
+    background: $iconCheck2Green no-repeat right .5em center;
   }
 }

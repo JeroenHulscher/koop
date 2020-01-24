@@ -1,0 +1,16 @@
+<div class="block-content">
+  {% if subheading %}
+    <p class="block-content__subheading">
+      <i>{{ subheading }}</i>
+    </p>
+  {% endif %}
+  <h2 class="block-content__heading">{{ heading }}</h2>
+  {% if content %}
+    {{ content }}
+  {% endif %}
+  {% if buttonText %}
+    <p>
+      <a href="{{ href }}" class="button {% if buttonModifier %}button--{{ buttonModifier }}{% endif %}">{{ buttonText }}</a>
+    </p>
+  {% endif %}
+</div>

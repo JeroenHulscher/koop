@@ -54,12 +54,17 @@
       }
     }
     &--centered {
-      max-width: em(620);
+      max-width: em(750);
       padding: 0;
       margin: 0 auto;
     }
     &--centered-medium {
       max-width: em(860);
+    }
+    &--centered-s {
+      max-width: em(560);
+      padding: 0;
+      margin: 0 auto;
     }
   }
 

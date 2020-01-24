@@ -17,3 +17,7 @@ variants:
       blocklevel: true
       del: '<p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p><p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p>'
       ins: <p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p><p>Pellentesque sed justo interdum, porta purus sed, congue magna.</p>
+      startdel: [begin verwijderde tekst]
+      enddel: [einde verwijderde tekst]
+      startins: [begin toegevoegde tekst]
+      endins: [einde toegevoegde tekst]

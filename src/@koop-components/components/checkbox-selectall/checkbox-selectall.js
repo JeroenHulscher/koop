@@ -13,6 +13,11 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]');
 
+    this.amountLabel = this.element.querySelector('.js-amount-checkboxes');
+    if(this.amountLabel){
+      this.amountLabel.innerHTML = this.checkboxes.length - 1;
+    }
+
     this.initEventListeners();
   };
 

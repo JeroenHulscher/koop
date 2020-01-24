@@ -9,6 +9,11 @@
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
   padding: .8em 3.5em .7em 0.825em;
   font-size: 1em;
+  margin: 0;
+
+  & ~ .button-icon {
+    margin-right: .5em;
+  }
 
   &:after {
     content: "";
@@ -48,8 +53,9 @@
 
   &:hover {
     outline: none;
-    background-color: $mediumBlue;
-    color: $black;
+    background-color: white;
+    // color: $black;
+    box-shadow: 0 0 0.75em rgba(21,66,115,0.4);
   }
 
   &:active {
@@ -70,6 +76,10 @@
 
   &--marker {
     background-image: $markerIcon;
+  }
+
+  &--bin {
+    background-image: $removeBlueIcon;
   }
 
   &--download {
@@ -118,9 +128,13 @@
 }
 
 .button-icon--plain {
-  background-color: transparent;
+  background-color: white;
   border-radius: none;
   color: $black;
   background-size: 1em;
-  padding: .75em;
+  padding: 1.05em;
+
+  &:after {
+    display: none;
+  }
 }

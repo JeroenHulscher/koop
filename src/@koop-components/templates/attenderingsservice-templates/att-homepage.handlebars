@@ -1,0 +1,39 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="jumbotron jumbotron--highlight">
+      <div class="jumbotron__content jumbotron__content--centered-s">
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">Aanmelden voor de attenderingsservice</p>
+          <h1 class="jumbotron__header">Altijd op de hoogte van betrekkingen in uw woonomgeving</h1>
+          <p class="jumbotron__intro">
+               Ontvang automatisch updates in uw e-mail inbox over alles wat er in uw buurt gebeurt.
+          </p>
+        </div>
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">E-mailadres</legend>
+            <div class="form__row form__row--medium">
+              {{render "@input-text" inputEmailContext }}
+            </div>
+          </fieldset>
+          <div class="align-right form__row">
+            <button type="submit" class="form__button button button--primary">Verzenden</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

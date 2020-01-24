@@ -182,3 +182,11 @@ variants:
           - content: <span class="list-custom__itembullet">4.1</span><p>1e subitem</p>
           - content: <span class="list-custom__itembullet">4.3</span><p>2e subitem</p>
       - content: <span class="list-custom__itembullet">7</span><p>4e item</p>
+  - name: OL Container
+    status: ready
+    context:
+      modifier: list--stepcontainer
+      items:
+      - content: <p>1 item</p>
+      - content: <p>2 item</p>
+      - content: <p>3 item</p>

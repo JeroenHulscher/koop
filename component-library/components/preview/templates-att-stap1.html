@@ -1,0 +1,889 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Preview</title>
+
+  <script>
+    document.documentElement.className = 'has-js';
+  </script>
+
+  <!-- only include this file if you would like to use the KPM module (kaartprikmodule) -->
+  <script src="../../js/vendor/kpm.js"></script>
+
+  <link rel="stylesheet" title="2" href="../../css/transition.css">
+  <link rel="alternate stylesheet" title="1" href="../../css/generic.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+</head>
+<body class="preview">
+  <header class="header">
+
+  <div class="header__start">
+    <div class="container">
+      <div class="skiplinks">
+        <a href="#content">Direct naar content</a>
+      </div>
+
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">Menu</button>
+      <div class="logo ">
+        <a href=""><img src="../../images/logo.svg" alt="Overheid.nl logo" /></a>
+          <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
+            <span>Register voor overheidsinstanties</span>
+          </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+            <li><a href="#" class="">Zoeken</a></li>
+            <li><a href="#" class="">uitgebreid zoeken</a></li>
+      </ul>
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+    </div>
+  </nav>
+</header>
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      <div>
+        <h2>Aankondigingen over uw buurt</h2>
+        <p>Zoals bouwplannen en verkeersmaatregelen.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt">Naar aankondigingen over uw buurt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dienstverlening</h2>
+        <p>Zoals belastingen, uitkeringen en subsidies.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/dienstverlening">Naar dienstverlening</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Beleid &amp; regelgeving</h2>
+        <p>Officiële publicaties van de overheid.</p>
+        <ul class="list list--linked">
+          <li><a href="https://beta.overheid.nl/beleid-en-regelgeving">Naar beleid &amp; regelgeving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contactgegevens overheden</h2>
+        <p>Adressen en contactpersonen van overheidsorganisaties.</p>
+        <ul class="list list--linked">
+          <li><a href="https://almanak.overheid.nl/onl">Naar overheidsorganisaties</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="row row--page-opener">
+  <div class="container">
+    <div class="breadcrumb">
+  <p>U bent hier:</p>
+  <ol>
+    <li>
+        <a href=#>Zoeken</a></li>
+    </li>
+    <li>
+        <a href=#>Zoekresultaten</a></li>
+    </li>
+    <li>
+        <a href=#>Regeling</a></li>
+    </li>
+    <li>
+        Informatie
+    </li>
+  </ol>
+</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row row--spacer">
+
+    <div class="jumbotron jumbotron--highlight">
+      <div class="jumbotron__content jumbotron__content--centered">
+        <div class="jumbotron__heading">
+          <p class="jumbotron__subheader">Kies uw meldingen</p>
+          <h1 class="jumbotron__header h2">Over welke betrekkingen wilt u meldingen ontvangen?</h1>
+          <p class="jumbotron__intro">
+            Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op <em>mail@koop.overheid.nl</em>
+          </p>
+        </div>
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">E-mailadres</legend>
+            <div class="form__row form__row--medium">
+              <div class="columns">
+                <div class="column">
+                  <div class="relative">
+
+
+  <label for="input-text-1" class="form__label form__label--accent">Postcode<span class="mandatory">Verplicht</span></label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text input-text--medium  "
+    placeholder="Bijv. 2453EH"
+    
+    aria-invalid="false"
+    placeholder="Bijv. 2453EH"
+    
+    
+
+    data-decorator="toggle-remove-visibility"
+    />
+
+
+  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+
+
+                </div>
+                <div class="column">
+                  <div class="relative">
+
+
+  <label for="input-text-2" class="form__label form__label--accent">Huisnummer</label>
+
+
+  <input
+    type="text"
+    id="input-text-2"
+    name="2"
+    class="input input-text input-text--medium  "
+    placeholder="52"
+    
+    aria-invalid="false"
+    placeholder="52"
+    
+    
+
+    data-decorator="toggle-remove-visibility"
+    />
+
+
+  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="">
+            <div class="columns">
+              <div class="u-order--d2 align-right form__row">
+                <button type="submit" class="form__button button button--primary button--large">Adres ophalen</button>
+              </div>
+              <div class="u-order--d1 u-nomargin">
+                <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="container container--centered">
+
+  <div class="row">
+    <ul class="list list--stepcontainer">
+      <li class="list__item">
+        <div class="columns">
+          <div class="column">
+            <h2>Selecteer een gebied</h2>
+            <h3 class="h4 u-nomargin">Uw adres</h3>
+            <p>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag</p>
+            <h3 class="h4 u-nomargin">Straal</h3>
+            <p>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente</p>
+            <form class="form">
+              <div class="form__row">
+                  <div class="input-radio">
+    <input class="radio__input" value="250" checked  type="radio"  id="option-radio-1" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-1">
+      250 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="500"   type="radio"  id="option-radio-2" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-2">
+      500 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="1000"   type="radio"  id="option-radio-3" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-3">
+      1000 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="1500"   type="radio"  id="option-radio-4" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-4">
+      1500 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="3000"   type="radio"  id="option-radio-5" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-5">
+      3000 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="hideMap"   type="radio"  id="option-radio-6" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-6">
+      Hele gemeente 'Den Haag'
+    </label>
+  </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="column">
+            <div class="map">
+  <div class="map__map">
+    <div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config1", "range":".js-kpm-editstraal" }'>
+
+</div>
+
+  </div>
+</div>
+
+
+
+            <script id="config1" type="application/json">
+            {
+              "locations": [
+                {
+                  "type": "adres",
+                  "geometry": "POINT(4.34015737 52.07846659)",
+                  "geometry_type": "WKT",
+                  "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+                  "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+                }
+              ],
+              "options": {
+                "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                "class": "kaartprikmodule-overlay",
+                "mode": "geoview",
+                "center": {
+                  "highlight": true,
+                  "type": "circle",
+                  "circle": {
+                    "radius": 200,
+                    "x": 83224,
+                    "y": 454983
+                  }
+                },
+                "controls": ["base-layer", "center", "fullscreen", "zoom"],
+                "layers": {
+                  "bgtachtergrondkaart": {
+                    "enabled": true
+                  }
+                }
+              }
+            }
+            </script>
+          </div>
+        </div>
+      </li>
+      <li class="list__item">
+        <h2>Selecteer uw voorkeursinstellingen</h2>
+        <p>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.</p>
+        <fieldset>
+          <legend class="visually-hidden">Voorkeursinstellingen</legend>
+          <div class="columns">
+            <div class="column">
+              <div class="form__row u-margin-top-32">
+                <h3 class="form__sublegend">Rondom een adres</h3>
+                <p class="">Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.</p>
+                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary"></div>
+  <div id="modal-20" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>Selecteer opties rondom een adres</h2>
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <label class="visually-hidden" for="filter-id--20"></label>
+              <input type="text" aria-controls="resultfilter-20" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--20" class="js-filterresults__input input-text input-text--searchmedium"
+            />
+            </div>
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-20" aria-live="polite">
+              <legend class="visually-hidden">Selecteer opties rondom een adres</legend>
+        <div data-decorator="init-selectall">
+          <div class="input-checkbox u-margin--m">
+            <input class="checkbox__input js-checkbox-master" type="checkbox" id="9876" name="selectAll" value="Alle iets" />
+            <label class="checkbox__label" for="9876">
+              <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+            </label>
+          </div>
+              <p class="form__label"></p>
+               <ul class="list--unstyled">
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1237">
+                        Rotterdam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-22372312321312" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-22372312321312">
+                        Schiedam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-323723" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-323723">
+                        Vlaardingen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-1237232" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1237232">
+                        Den Haag
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-223712312312" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-223712312312">
+                        Scheveningen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-3237123123" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-3237123123">
+                        Voorburg
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <p class="form__label"></p>
+         </div>
+            </fieldset>
+          </div>
+
+        <div class="modal__buttonpane">
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id20" data-handler="open-modal" data-modal="modal-20" class="subselection__trigger icon">Selecteer opties rondom een adres</a>
+</div>
+
+              </div>
+              <div class="form__row u-margin-top-48">
+                <h3 class="form__sublegend">Bestemmingsplannen</h3>
+                <p class="">Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.</p>
+                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary"></div>
+  <div id="modal-22" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>Selecteer opties over bestemmingsplannen</h2>
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <label class="visually-hidden" for="filter-id--22"></label>
+              <input type="text" aria-controls="resultfilter-22" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--22" class="js-filterresults__input input-text input-text--searchmedium"
+            />
+            </div>
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-22" aria-live="polite">
+              <legend class="visually-hidden">Selecteer opties over bestemmingsplannen</legend>
+        <div data-decorator="init-selectall">
+          <div class="input-checkbox u-margin--m">
+            <input class="checkbox__input js-checkbox-master" type="checkbox" id="9879" name="selectAll" value="Alle iets" />
+            <label class="checkbox__label" for="9879">
+              <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+            </label>
+          </div>
+              <p class="form__label"></p>
+               <ul class="list--unstyled">
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1237">
+                        Rotterdam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-223723123312" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-223723123312">
+                        Schiedam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-3223" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-3223">
+                        Vlaardingen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-12332" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-12332">
+                        Den Haag
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-2237312312" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-2237312312">
+                        Scheveningen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-32373123" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-32373123">
+                        Voorburg
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <p class="form__label"></p>
+         </div>
+            </fieldset>
+          </div>
+
+        <div class="modal__buttonpane">
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id22" data-handler="open-modal" data-modal="modal-22" class="subselection__trigger icon">Selecteer opties over bestemmingsplannen</a>
+</div>
+
+              </div>
+            </div>
+            <div class="column">
+              <div class="form__row u-margin-top-32">
+                <h3 class="form__sublegend">Voorlichting</h3>
+                <p class="">Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.</p>
+                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary"></div>
+  <div id="modal-21" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>Selecteer opties over voorlichting</h2>
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <label class="visually-hidden" for="filter-id--21"></label>
+              <input type="text" aria-controls="resultfilter-21" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--21" class="js-filterresults__input input-text input-text--searchmedium"
+            />
+            </div>
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-21" aria-live="polite">
+              <legend class="visually-hidden">Selecteer opties over voorlichting</legend>
+        <div data-decorator="init-selectall">
+          <div class="input-checkbox u-margin--m">
+            <input class="checkbox__input js-checkbox-master" type="checkbox" id="9877" name="selectAll" value="Alle iets" />
+            <label class="checkbox__label" for="9877">
+              <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+            </label>
+          </div>
+              <p class="form__label"></p>
+               <ul class="list--unstyled">
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1237">
+                        Rotterdam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-2237231232131" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-2237231232131">
+                        Schiedam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-3237" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-3237">
+                        Vlaardingen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-1237232" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1237232">
+                        Den Haag
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-22371231231" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-22371231231">
+                        Scheveningen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-323712123" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-323712123">
+                        Voorburg
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <p class="form__label"></p>
+         </div>
+            </fieldset>
+          </div>
+
+        <div class="modal__buttonpane">
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id21" data-handler="open-modal" data-modal="modal-21" class="subselection__trigger icon">Selecteer opties over voorlichting</a>
+</div>
+
+              </div>
+              <div class="form__row u-margin-top-48">
+                <h3 class="form__sublegend">Voorschriften &amp; beleid</h3>
+                <p class="">Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.</p>
+                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary"></div>
+  <div id="modal-23" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>Selecteer opties over voorschriften &amp; beleid</h2>
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <label class="visually-hidden" for="filter-id--23"></label>
+              <input type="text" aria-controls="resultfilter-23" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--23" class="js-filterresults__input input-text input-text--searchmedium"
+            />
+            </div>
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-23" aria-live="polite">
+              <legend class="visually-hidden">Selecteer opties over voorschriften &amp; beleid</legend>
+        <div data-decorator="init-selectall">
+          <div class="input-checkbox u-margin--m">
+            <input class="checkbox__input js-checkbox-master" type="checkbox" id="9880" name="selectAll" value="Alle iets" />
+            <label class="checkbox__label" for="9880">
+              <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+            </label>
+          </div>
+              <p class="form__label"></p>
+               <ul class="list--unstyled">
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-1237">
+                        Rotterdam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-223723321312" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-223723321312">
+                        Schiedam
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-3223" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-3223">
+                        Vlaardingen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-12372" name="name"  data-value="Spanje" value="2"
+                      />
+                      <label class="checkbox__label" for="option-12372">
+                        Den Haag
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-2237122312" name="name"  data-value="Griekenland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-2237122312">
+                        Scheveningen
+                      </label>
+                    </div>
+                  </li>
+                  <li class=" js-filterresults__result">
+                    <div class="input-checkbox">
+                      <input class="checkbox__input"    type="checkbox" id="option-32373123" name="name"  data-value="Nederland" value="2"
+                      />
+                      <label class="checkbox__label" for="option-32373123">
+                        Voorburg
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+                <p class="form__label"></p>
+         </div>
+            </fieldset>
+          </div>
+
+        <div class="modal__buttonpane">
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id23" data-handler="open-modal" data-modal="modal-23" class="subselection__trigger icon">Selecteer opties over voorschriften &amp; beleid</a>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </li>
+      <li class="list__item">
+        <h2>Selecteer overheidsorganisaties</h2>
+        <p>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.</p>
+        <div data-decorator="init-selectall">
+  <div class="input-checkbox">
+    <input class="checkbox__input js-checkbox-master" type="checkbox" id="appel" name="selectAll" value="veel" />
+    <label class="checkbox__label" for="appel">
+      Selecteer alle <span class="js-amount-checkboxes"></span> overheidsorganisaties
+    </label>
+  </div>
+  
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-20" name="onderwerp"  value="Gemeente"
+    />
+    <label class="checkbox__label" for="option-checkbox-20">
+      Gemeente
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-21" name="onderwerp"  value="Provincie"
+    />
+    <label class="checkbox__label" for="option-checkbox-21">
+      Provincie
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-22" name="onderwerp"  value="Regionaal Samenwerkingsorgaan"
+    />
+    <label class="checkbox__label" for="option-checkbox-22">
+      Regionaal Samenwerkingsorgaan
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-23" name="onderwerp"  value="Rijkswaterstaat"
+    />
+    <label class="checkbox__label" for="option-checkbox-23">
+      Rijkswaterstaat
+    </label>
+  </div>
+
+
+
+  <div class="input-checkbox">
+    <input class="checkbox__input"   type="checkbox" id="option-checkbox-24" name="onderwerp"  value="Waterschap"
+    />
+    <label class="checkbox__label" for="option-checkbox-24">
+      Waterschap
+    </label>
+  </div>
+
+
+
+
+</div>
+
+      </li>
+    </ul>
+    <div class="columns">
+      <div class="column">
+        <p class="p p--med">U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <a href="#">privacystatement</a>.</p>
+      </div>
+      <div class="column align-right">
+        <button type="submit" class="button button--primary">Meld mij aan voor de nieuwsbrief</button>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- why? -->
+</div>
+
+<div class="footer row--footer" role="contentinfo">
+  <div class="container columns">
+    <div >
+
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://beta.overheid.nl/over-deze-site">Over deze website</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/contact">Contact</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/english" lang="en">English</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help">Help</a></li>
+      <li class="list__item"><a href="https://beta.overheid.nl/help/zoeken">Zoeken</a></li>
+  </ul>
+</div>
+    <div >
+
+  <ul class="list list--linked">
+      <li class="list__item"><a href="/informatie-hergebruiken">Informatie hergebruiken</a></li>
+      <li class="list__item"><a href="/privacy-statement">Privacy en cookies</a></li>
+      <li class="list__item"><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+      <li class="list__item"><a href="/sitemap">Sitemap</a></li>
+  </ul>
+</div>
+    <div >
+
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://data.overheid.nl">Open data</a></li>
+      <li class="list__item"><a href="http://linkeddata.overheid.nl">Linked Data Overheid</a></li>
+      <li class="list__item"><a href="https://puc.overheid.nl">PUC Open Data</a></li>
+  </ul>
+</div>
+    <div >
+
+  <ul class="list list--linked">
+      <li class="list__item"><a href="https://mijn.overheid.nl">MijnOverheid.nl</a></li>
+      <li class="list__item"><a href="https://www.rijksoverheid.nl">Rijksoverheid.nl</a></li>
+      <li class="list__item"><a href="https://ondernemersplein.nl">Ondernemersplein.nl</a></li>
+      <li class="list__item"><a href="https://www.werkenbijdeoverheid.nl">Werkenbijdeoverheid.nl</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+
+
+  <script>
+
+    (function () {
+
+      var links = document.querySelectorAll('link[title]');
+      var styles = new Array();
+      for(var i = 0; i < links.length; i++) {
+        styles.push(links[i].title);
+      }
+
+      var select = document.createElement('select');
+      var title = localStorage.getItem('title');
+
+      function selectStyle(title) {
+        for(var i = 0; i < links.length; i++) {
+          links[i].disabled = true;
+          links[i].disabled = links[i].title !== title;
+        }
+        localStorage.setItem('title', title);
+      }
+
+
+
+
+    var myListener = function () {
+      document.removeEventListener('mousemove', myListener, false);
+      if (title) {
+        selectStyle(title);
+      }
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      for (var i = 0; i < styles.length; i++) {
+        var option = document.createElement('option');
+        option.text = 'CSS: ' + styles[i];
+        option.value = styles[i];
+        option.selected = styles[i] === title;
+        select.add(option);
+      }
+      document.body.appendChild(select);
+
+      select.addEventListener('change', function (event) {
+        title = event.target.options[event.target.selectedIndex].value;
+        selectStyle(title);
+      });
+    };
+
+    document.addEventListener('mousemove', myListener, false);
+
+    }());
+
+  </script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+</html>
+

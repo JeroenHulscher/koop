@@ -1,0 +1,44 @@
+---
+label: Att - Profiel
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  emailInput:
+    modifier:
+    id: 1
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+    disabled: true
+    value: uwnaam@koop.overheid.nl
+  currentPWInput:
+    modifier:
+    id: 4
+    fieldLabel: Huidig wachtwoord
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder:
+    required: true
+  newPWInput:
+    modifier:
+    id: 2
+    type: password
+    class: js-passwordstrength__input
+    fieldLabel: Nieuw wachtwoord
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Nieuw wachtwoord
+    required: true
+  repeatPWInput:
+    modifier:
+    id: 3
+    type: password
+    class: js-passwordstrength__inputrepeat
+    fieldLabel: Herhaal wachtwoord
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Herhaal uw wachtwoord
+    required: true

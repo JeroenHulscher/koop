@@ -1,5 +1,8 @@
 <div class="map{{#if modifier}} map--{{modifier}}{{/if}}">
-  <div class="map__map"></div>
+  <div class="map__map">
+    {{render "@kpm" kpmContext}}
+  </div>
+  {{#if controls}}
   <div class="map__controls">
     <div class="row row--spacer">
       <div class="columns">
@@ -14,4 +17,5 @@
       </div>
     </div>
   </div>
+  {{/if}}
 </div>

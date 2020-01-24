@@ -1,0 +1,16 @@
+---
+label: Att - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputEmailContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Uw e-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: E-mailadres
+    remove: true

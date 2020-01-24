@@ -9,6 +9,8 @@ $iconCrossRed: url( '#{$imagePath}/icon-cross-red.svg' );
 $iconCrossFilled: url( '#{$imagePath}/icon-cross-filled.svg' );
 $iconFilter: url( '#{$imagePath}/icon-filter.svg' );
 
+$iconNews: url( '#{$imagePath}/icon-news.svg' );
+
 $datepickerButtonNext: $chevronRight;
 $datepickerButtonPrev: $chevronLeft;
 
@@ -83,6 +85,7 @@ $modalCloserHover: url( '#{$imagePath}/icon-close-hover.svg' ) !default;
 
 $iconCheck2Blue: url( '#{$imagePath}/icon-check2-blue.svg' ) !default;
 $iconCheck2White: url( '#{$imagePath}/icon-check2-white.svg' ) !default;
+$iconCheck2Green: url( '#{$imagePath}/icon-check2-green.svg' ) !default;
 $iconCheck: url( '#{$imagePath}/icon-check.svg' ) !default;
 $iconCheckWhite: url( '#{$imagePath}/icon-check-white.svg' ) !default;
 $iconCheckboxWhite: url( '#{$imagePath}/icon-checkbox-white.svg' ) !default;
@@ -139,3 +142,11 @@ $drawIcon: url( '#{$imagePath}/icon-draw.svg' ) !default;
 $mapIcon: url( '#{$imagePath}/icon-map.svg' ) !default;
 
 $iconList: url( '#{$imagePath}/icon-list.svg' ) !default;
+
+// KPM
+$iconFocus: url( '#{$imagePath}/kpm/Focus.svg' ) !default;
+$iconFullscreen: url( '#{$imagePath}/kpm/FullScreen.svg' ) !default;
+$iconKaartlagen: url( '#{$imagePath}/kpm/Kaartlagen.svg' ) !default;
+$iconMin: url( '#{$imagePath}/kpm/Min.svg' ) !default;
+$iconPlus: url( '#{$imagePath}/kpm/Plus.svg' ) !default;
+$iconPointer: url( '#{$imagePath}/kpm/Pointer.svg' ) !default;

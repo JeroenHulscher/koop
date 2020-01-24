@@ -51,8 +51,11 @@ body {
 
 p,
 .p {
-  // word-break: break-word;
 
+  &--med {
+    font-size: .9em;
+    line-height: 1.25em;
+  }
   &--large {
     font-size: 1.125rem;
   }
@@ -127,6 +130,7 @@ label {
   p,
   .p {
     font-size: 1.125rem;
+
     &--large {
       font-size: 1.5rem;
     }

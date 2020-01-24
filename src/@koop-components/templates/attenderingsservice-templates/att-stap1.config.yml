@@ -1,0 +1,224 @@
+---
+label: Att - Stap 1
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputPostcodeContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 2453EH
+    remove: true
+    required: true
+  inputHuisnummerContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 2
+    fieldLabel: Huisnummer
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: 52
+    remove: true
+  straalContext:
+    options:
+    - id: radio-1
+      text: 250 meter
+      name: kpm-straal
+      checked: checked
+      value: 250
+    - id: radio-2
+      text: 500 meter
+      name: kpm-straal
+      value: 500
+    - id: radio-3
+      text: 1000 meter
+      name: kpm-straal
+      value: 1000
+    - id: radio-4
+      text: 1500 meter
+      name: kpm-straal
+      value: 1500
+    - id: radio-5
+      text: 3000 meter
+      name: kpm-straal
+      value: 3000
+    - id: radio-6
+      text: Hele gemeente 'Den Haag'
+      name: kpm-straal
+      value: hideMap
+  mapContext:
+    controls: false
+    buttonEditStraal: js-kpm-editstraal
+  rondomadresContext:
+    linkText: Selecteer opties rondom een adres
+    id: 20
+    modalTitle: Selecteer opties rondom een adres
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    selectAll: true
+    selectAllID: 9876
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 22372312321312
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 323723
+        title: Vlaardingen
+        short: Nederland
+      - Option: 1222222222
+        id: 1237232
+        title: Den Haag
+        short: Spanje
+      - Option: 2222222222222
+        id: 223712312312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 322222222
+        id: 3237123123
+        title: Voorburg
+        short: Nederland
+  voorlichtingContext:
+    linkText: Selecteer opties over voorlichting
+    id: 21
+    modalTitle: Selecteer opties over voorlichting
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    selectAll: true
+    selectAllID: 9877
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 2237231232131
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 3237
+        title: Vlaardingen
+        short: Nederland
+      - Option: 122222222
+        id: 1237232
+        title: Den Haag
+        short: Spanje
+      - Option: 222222222222
+        id: 22371231231
+        title: Scheveningen
+        short: Griekenland
+      - Option: 32222222
+        id: 323712123
+        title: Voorburg
+        short: Nederland
+  bestemmingsplannenContext:
+    linkText: Selecteer opties over bestemmingsplannen
+    id: 22
+    modalTitle: Selecteer opties over bestemmingsplannen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    selectAll: true
+    selectAllID: 9879
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 223723123312
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 3223
+        title: Vlaardingen
+        short: Nederland
+      - Option: 12222222
+        id: 12332
+        title: Den Haag
+        short: Spanje
+      - Option: 22222222222
+        id: 2237312312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 3222222
+        id: 32373123
+        title: Voorburg
+        short: Nederland
+  voorschriftenContext:
+    linkText: Selecteer opties over voorschriften & beleid
+    id: 23
+    modalTitle: Selecteer opties over voorschriften & beleid
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    selectAll: true
+    selectAllID: 9880
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 223723321312
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 3223
+        title: Vlaardingen
+        short: Nederland
+      - Option: 12222222
+        id: 12372
+        title: Den Haag
+        short: Spanje
+      - Option: 22222222222
+        id: 2237122312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 3222222
+        id: 32373123
+        title: Voorburg
+        short: Nederland
+  checkallOverheidsorganisatiesContext:
+    id: 1
+    label: overheidsorganisaties
+    checkboxes:
+      options:
+      - id: checkbox-20
+        text: Gemeente
+        name: onderwerp
+      - id: checkbox-21
+        text: Provincie
+        name: onderwerp
+      - id: checkbox-22
+        text: Regionaal Samenwerkingsorgaan
+        name: onderwerp
+      - id: checkbox-23
+        text: Rijkswaterstaat
+        name: onderwerp
+      - id: checkbox-24
+        text: Waterschap
+        name: onderwerp

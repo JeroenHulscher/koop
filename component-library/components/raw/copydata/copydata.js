@@ -30,10 +30,13 @@
   };
 
   copydata.prototype.createAndPlaceTrigger = function() {
-    this.trigger = document.createElement( 'a' );
+    this.trigger = document.createElement( 'span' );
+    this.triggerSpan = document.createElement( 'span' );
     this.trigger.classList.add( this.config.triggerClass );
-    this.trigger.setAttribute('href', '#');
-    this.trigger.innerText = this.config.triggerLabel;
+    this.trigger.setAttribute('tabindex', '0');
+    this.trigger.setAttribute('aria-label', this.config.triggerLabel + ':' + this.datafield.innerHTML);
+    this.triggerSpan.innerText = this.config.triggerLabel;
+    this.trigger.appendChild(this.triggerSpan);
     this.element.appendChild( this.trigger );
   };
 
@@ -42,11 +45,13 @@
     var originalLabel = this.trigger.innerText;
     var tempLabel = this.config.triggerCopiedlabel || 'Gekopiëerd';
 
-    this.trigger.innerHTML = tempLabel;
+    this.trigger.classList.add("is-active");
+    this.triggerSpan.innerHTML = tempLabel;
 
     setTimeout( function(){
-      self.trigger.innerHTML = originalLabel;
-    }, 3000 );
+      self.triggerSpan.innerHTML = originalLabel;
+      self.trigger.classList.remove("is-active");
+    }, 5000 );
 
   };
 

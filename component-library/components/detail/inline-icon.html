@@ -213,6 +213,7 @@
   bin: <span class="hljs-variable">$removeBlueIcon</span>,
   check2Blue: <span class="hljs-variable">$iconCheck2Blue</span>,
   check2White: <span class="hljs-variable">$iconCheck2White</span>,
+  check2Green: <span class="hljs-variable">$iconCheck2Green</span>,
   edit: <span class="hljs-variable">$editIconBlue</span>,
   list: <span class="hljs-variable">$iconList</span>,
   refresh: <span class="hljs-variable">$refreshIcon</span>,
@@ -220,7 +221,11 @@
   map: <span class="hljs-variable">$iconMap</span>,
   house: <span class="hljs-variable">$iconHouse</span>,
   search: <span class="hljs-variable">$searchIcon</span>,
-  searchBlue: <span class="hljs-variable">$searchIconBlue</span>
+  searchBlue: <span class="hljs-variable">$searchIconBlue</span>,
+  news: <span class="hljs-variable">$iconNews</span>,
+  plus: <span class="hljs-variable">$plusIcon</span>,
+  plus-white: <span class="hljs-variable">$plusIconWhite</span>,
+  mail: <span class="hljs-variable">$iconMail</span>
 );
 
 <span class="hljs-selector-class">.icon</span> {
@@ -230,6 +235,18 @@
     size: <span class="hljs-number">1.25em</span>;
     repeat: no-repeat;
   }
+
+  &amp;--<span class="hljs-attribute">right</span> {
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.75em</span>;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">background</span>: {
+      position: right <span class="hljs-number">50%</span>;
+      size: <span class="hljs-number">1.25em</span>;
+      repeat: no-repeat;
+    }
+  }
+
+
   &amp;--large {
     <span class="hljs-attribute">background-size</span>: <span class="hljs-number">1.125em</span> <span class="hljs-meta">!important</span>;
   }
@@ -238,7 +255,7 @@
     <span class="hljs-attribute">background-image</span>: <span class="hljs-variable">$downloadIcon</span>;
   }
 
-  &amp;--remove {
+  &amp;--remove-<span class="hljs-attribute">right</span> {
     <span class="hljs-attribute">background</span>: {
       image: <span class="hljs-variable">$removeIcon</span>;
       <span class="hljs-attribute">position</span>: right <span class="hljs-number">50%</span>;
@@ -247,7 +264,7 @@
     <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.5em</span>;
   }
 
-  &amp;--remove-<span class="hljs-attribute">left</span> {
+  &amp;--remove {
     <span class="hljs-attribute">background-image</span>: <span class="hljs-variable">$removeIcon</span>;
   }
 
@@ -536,6 +553,12 @@
     <span class="hljs-attribute">background-image</span>: <span class="hljs-variable">$value</span>;
   }
 }
+@<span class="hljs-keyword">each</span> <span class="hljs-variable">$name</span>,
+<span class="hljs-variable">$value</span> in <span class="hljs-variable">$icons</span> {
+  <span class="hljs-selector-class">.icon-bg--</span>#{<span class="hljs-variable">$name</span>} {
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-variable">$value</span> <span class="hljs-meta">!important</span>;
+  }
+}
 </pre>
                             </code>
                             
@@ -552,7 +575,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.8 KB</span>
+                    <span class="Meta-value">6.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -575,19 +598,23 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="inline-icon--default.html">
                     <span>Default</span>
                 </a>, 
             
-                <a href="inline-icon--download-icon.html">
+                <a href="inline-icon--download.html">
                     <span>download icon</span>
                 </a>, 
             
-                <a href="inline-icon--remove-icon.html">
+                <a href="inline-icon--remove.html">
                     <span>remove icon</span>
+                </a>, 
+            
+                <a href="inline-icon--bin.html">
+                    <span>bin icon</span>
                 </a>
             
             </span>
@@ -2429,7 +2456,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="inline-icon--download-icon.html" data-pjax>
+            <a class="Tree-entityLink" href="inline-icon--download.html" data-pjax>
                 <span>download icon</span>
                 
 
@@ -2453,8 +2480,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="inline-icon--remove-icon.html" data-pjax>
+            <a class="Tree-entityLink" href="inline-icon--remove.html" data-pjax>
                 <span>remove icon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="inline-icon--bin.html" data-pjax>
+                <span>bin icon</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3239,6 +3290,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--custom.html" data-pjax>
                 <span>Custom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
+                <span>Ol Container</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4986,6 +5061,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="passwordstrength.html" data-pjax>
+                <span>Password strength</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="results-alphabetical.html" data-pjax>
                 <span>Results alphabetical</span>
                 
@@ -6045,8 +6144,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="subselection--filter-selection.html" data-pjax>
-                <span>Filter Selection</span>
+            <a class="Tree-entityLink" href="subselection--default-(span).html" data-pjax>
+                <span>Default Span</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6069,8 +6168,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="subselection--filter-selection---limit-(3).html" data-pjax>
-                <span>Filter Selection Limit 3</span>
+            <a class="Tree-entityLink" href="subselection--default-(span)-limit-(3).html" data-pjax>
+                <span>Default Span Limit 3</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="subselection--default-(span)-inputfilter.html" data-pjax>
+                <span>Default Span Inputfilter</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6679,6 +6802,142 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-result-almanak.html" data-pjax>
                 <span>Result Almanak</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-attenderingsservice-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Attenderingsservice Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-beheer.html" data-pjax>
+                <span>Att - Beheer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-homepage.html" data-pjax>
+                <span>Att - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-login.html" data-pjax>
+                <span>Att - Login</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-profile.html" data-pjax>
+                <span>Att - Profiel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-att-stap1.html" data-pjax>
+                <span>Att - Stap 1</span>
                 
 
 <div class="Status Status--unlabelled">

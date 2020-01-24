@@ -18,7 +18,7 @@
 {{/if}}
 {{#each options }}
   <div class="input-radio">
-    <input class="radio__input" {{checked}} {{disabled}} type="radio" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} id="option-{{ id }}" name="{{ name }}" />
+    <input class="radio__input" value="{{value}}" {{checked}} {{disabled}} type="radio" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} id="option-{{ id }}" name="{{ name }}" />
     <label class="radio__label" for="option-{{ id  }}">
       {{{ text }}}
     </label>
