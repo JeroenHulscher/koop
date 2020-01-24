@@ -53,8 +53,8 @@ select {
   &:disabled,
   &[disabled],
   &[read-only] {
-    background-color: $mediumGrey;
-    color: $mediumGrey;
+    background-color: $lighterGrey;
+    color: $lightGrey;
 
     &:focus {
       outline: none;
@@ -144,7 +144,6 @@ fieldset {
     &--medium,
     &--accent {
       font-weight: bold;
-      margin-bottom: .75em;
     }
 
     .mandatory {
