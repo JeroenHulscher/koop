@@ -7,6 +7,7 @@ context:
     alt: Overheid.nl logo
   inputPostcodeContext:
     modifier: input-text--medium
+    labelmodifier: accent
     id: 1
     fieldLabel: Postcode
     fieldLabelVisible: true
@@ -16,6 +17,7 @@ context:
     required: true
   inputHuisnummerContext:
     modifier: input-text--medium
+    labelmodifier: accent
     id: 2
     fieldLabel: Huisnummer
     fieldLabelVisible: true
@@ -107,23 +109,23 @@ context:
         title: Rotterdam
         short: Spanje
       - Option: 2
-        id: 22372312321312
+        id: 2237231232131
         title: Schiedam
         short: Griekenland
       - Option: 3
-        id: 323723
+        id: 3237
         title: Vlaardingen
         short: Nederland
-      - Option: 1222222222
+      - Option: 122222222
         id: 1237232
         title: Den Haag
         short: Spanje
-      - Option: 2222222222222
-        id: 223712312312
+      - Option: 222222222222
+        id: 22371231231
         title: Scheveningen
         short: Griekenland
-      - Option: 322222222
-        id: 3237123123
+      - Option: 32222222
+        id: 323712123
         title: Voorburg
         short: Nederland
   bestemmingsplannenContext:
@@ -144,23 +146,23 @@ context:
         title: Rotterdam
         short: Spanje
       - Option: 2
-        id: 22372312321312
+        id: 223723123312
         title: Schiedam
         short: Griekenland
       - Option: 3
-        id: 323723
+        id: 3223
         title: Vlaardingen
         short: Nederland
-      - Option: 1222222222
-        id: 1237232
+      - Option: 12222222
+        id: 12332
         title: Den Haag
         short: Spanje
-      - Option: 2222222222222
-        id: 223712312312
+      - Option: 22222222222
+        id: 2237312312
         title: Scheveningen
         short: Griekenland
-      - Option: 322222222
-        id: 3237123123
+      - Option: 3222222
+        id: 32373123
         title: Voorburg
         short: Nederland
   voorschriftenContext:
@@ -181,23 +183,23 @@ context:
         title: Rotterdam
         short: Spanje
       - Option: 2
-        id: 22372312321312
+        id: 223723321312
         title: Schiedam
         short: Griekenland
       - Option: 3
-        id: 323723
+        id: 3223
         title: Vlaardingen
         short: Nederland
-      - Option: 1222222222
-        id: 1237232
+      - Option: 12222222
+        id: 12372
         title: Den Haag
         short: Spanje
-      - Option: 2222222222222
-        id: 223712312312
+      - Option: 22222222222
+        id: 2237122312
         title: Scheveningen
         short: Griekenland
-      - Option: 322222222
-        id: 3237123123
+      - Option: 3222222
+        id: 32373123
         title: Voorburg
         short: Nederland
   checkallOverheidsorganisatiesContext:

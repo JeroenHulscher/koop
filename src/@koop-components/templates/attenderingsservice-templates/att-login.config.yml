@@ -1,0 +1,24 @@
+---
+label: Att - Login
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  inputEmailContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Uw e-mailadres
+  inputPWContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    type: password
+    fieldLabel: Wachtwoord
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Uw wachtwoord

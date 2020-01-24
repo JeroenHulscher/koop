@@ -7,6 +7,7 @@ context:
     alt: Overheid.nl logo
   inputEmailContext:
     modifier: input-text--medium
+    labelmodifier: accent
     id: 1
     fieldLabel: Uw e-mailadres
     fieldLabelVisible: true

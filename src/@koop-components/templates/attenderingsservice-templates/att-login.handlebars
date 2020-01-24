@@ -1,0 +1,55 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="jumbotron jumbotron--highlight">
+      <div class="jumbotron__content jumbotron__content--centered-s">
+        <div class="jumbotron__heading jumbotron__heading--centered">
+          <p class="jumbotron__subheader">Wijzigen e-mailservice Berichten over uw buurt</p>
+          <h1 class="jumbotron__header">E-mailservice Berichten over uw buurt</h1>
+          <p class="jumbotron__intro">
+               Log in om uw e-mailservice te wijzigen.
+          </p>
+        </div>
+        <form class="form">
+          <fieldset>
+            <legend class="visually-hidden">E-mailadres</legend>
+            <div class="columns">
+              <div class="column">
+                <div class="form__row form__row--medium">
+                  {{render "@input-text" inputEmailContext }}
+                </div>
+              </div>
+              <div class="column">
+                <div class="form__row form__row--medium">
+                  {{render "@input-text" inputPWContext }}
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="">
+            <div class="columns">
+              <div class="u-order--d2 align-right form__row">
+                <button type="submit" class="form__button button button--primary button--large">Inloggen</button>
+              </div>
+              <div class="u-order--d1 u-nomargin">
+                <a href="/components/preview/templates-att-homepage" class="icon icon--right icon--mail">Wachtwoord vergeten</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
