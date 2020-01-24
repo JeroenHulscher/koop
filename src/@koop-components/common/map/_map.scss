@@ -18,7 +18,51 @@
     .map-buttons {
       position: absolute;
       right: .5em;
-      top: .5em;
+      bottom: .5em;
+      text-align: right;
+
+      button {
+        border: 1px solid $darkBlue;
+        border-radius: .5em;
+        width: em(58);
+        height: em(58);
+        margin-left: .5em;
+        background: {
+          image: $iconPlus;
+          repeat: no-repeat;
+          size: 2.5em;
+          position: center;
+        }
+      }
+
+      .map-button {
+
+
+        &--base-layer-selector {
+          button {
+            background-image: $iconKaartlagen;
+          }
+        }
+        &--center-basket-button {
+          button {
+            background-image: $iconFocus;
+          }
+        }
+        &--full-screen {
+          button {
+            background-image: $iconFullscreen;
+          }
+        }
+        &--zoom {
+          &-in {
+            background-size: 1.75em;
+          }
+          &-out {
+            background-size: 1.75em;
+            background-image: $iconMin;
+          }
+        }
+      }
     }
   }
   &__controls {

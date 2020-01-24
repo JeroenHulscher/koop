@@ -13,7 +13,8 @@ $icons: (
   searchBlue: $searchIconBlue,
   news: $iconNews,
   plus: $plusIcon,
-  plus-white: $plusIconWhite
+  plus-white: $plusIconWhite,
+  mail: $iconMail
 );
 
 .icon {
@@ -26,7 +27,7 @@ $icons: (
 
   &--right {
     padding-right: 1.75em;
-    padding-left: auto;
+    padding-left: 0;
     background: {
       position: right 50%;
       size: 1.25em;
