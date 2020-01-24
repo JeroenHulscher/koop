@@ -8,6 +8,7 @@ package-lock.json
 !/package.json
 /package-lock.json
 /public/
+component-library/
 backstop_data/html_report/
 backstop_data/bitmaps_test/
 backstop_data/bitmaps_reference/
