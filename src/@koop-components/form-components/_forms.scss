@@ -508,10 +508,10 @@ input[type=date].datepicker__input {
     border-bottom: 1px solid $datepickerTriggerBackgroundColor;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    font-size: 1px;
+    font-size: 0;
     width: 38px;
     color: white;
-    background-image: $calendarIconBlue;
+    background-image: $calendarIconWhite;
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;
