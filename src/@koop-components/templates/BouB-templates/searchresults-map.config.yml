@@ -1,10 +1,30 @@
 ---
-label: BodB - Searchresults
-status: prototype
+label: BodB - Zoekres. Kaart
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  mapContext:
+    controls: true
+    buttonEditStraal: js-kpm-editstraal
+    inputsubmit:
+      modifier: input-text--searchmedium
+      id: 1
+      fieldLabel: Postcode
+      fieldLabelVisible: false
+      fieldInstruction:
+      fieldPlaceholder: Verfijn op zoekwoord
+      remove: true
+    buttonswitchContext:
+      text: banner
+      buttons:
+        - label: Kaart
+          active: true
+          icon: marker
+        - label: Lijst
+          active: false
+          icon: hamburger
   voorschriftenContext:
     moreless: true
     options:
@@ -324,29 +344,12 @@ context:
           type: primary
         - button: Bekijk op kaart
           type: secendary
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Verfijn op zoekwoord
-    remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
-  buttonswitchContext:
-    text: banner
-    buttons:
-      - label: Kaart
-        active: true
-        icon: marker
-      - label: Lijst
-        active: false
-        icon: hamburger
+
   selectedfilterContext:
     items:
       - label: Gezocht op "leveringen"

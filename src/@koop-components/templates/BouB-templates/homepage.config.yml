@@ -1,6 +1,6 @@
 ---
-label: BodB - Homepage
-status: Ready
+label: BouB - Homepage
+status: ready
 context:
   header:
     file: logo.svg
