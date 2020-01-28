@@ -1,0 +1,7 @@
+{% if label %}
+    <label for="input--{{ id }}">{{ label }}</label>
+{% endif %}
+<div class="datepicker">
+  <input type="date" value="{{ value }}" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "dd-mm-yy"{% if yearrange %}, "yearrange": "{{ yearrange }}"{% endif %} }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+</div>

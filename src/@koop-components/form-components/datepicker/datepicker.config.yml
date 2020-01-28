@@ -6,6 +6,7 @@ context:
   fieldLabel: Datum
   fieldInstruction:
   fieldPlaceholder: 'Bijv: 06-10-1960'
+  value: "31-12-2019"
   debug: false
 variants:
   - name: Range
