@@ -6,25 +6,42 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
   mapContext:
-    controls: true
+    modifier: h-600
+    controls: false
     buttonEditStraal: js-kpm-editstraal
-    inputsubmit:
-      modifier: input-text--searchmedium
-      id: 1
-      fieldLabel: Postcode
-      fieldLabelVisible: false
-      fieldInstruction:
-      fieldPlaceholder: Verfijn op zoekwoord
-      remove: true
-    buttonswitchContext:
-      text: banner
-      buttons:
-        - label: Kaart
-          active: true
-          icon: marker
-        - label: Lijst
-          active: false
-          icon: hamburger
+  inputsubmitContext:
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Verfijn uw zoekopdracht
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
+  huisnrContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  postcodeContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Lijst
+        active: false
+        icon: hamburger
+      - label: Kaart
+        active: true
+        icon: marker
   voorschriftenContext:
     moreless: true
     options:
@@ -356,7 +373,7 @@ context:
       - label: Bouwvergunning
       - label: APV vergunning
   selectStraalContext:
-    modifier: select-custom
+    modifier: select-custom--large
     id: 1
     options:
       - label: 250 meter

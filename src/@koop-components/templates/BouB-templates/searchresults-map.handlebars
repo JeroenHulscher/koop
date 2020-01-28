@@ -11,6 +11,43 @@
 
 
 
+      <div class="row columns">
+        <div class="column">
+          <h1 class="h1 h1--slim">Zoekresultaten
+            <span class="h1__sub">105</span>
+          </h1>
+        </div>
+        <div class="column align-right hidden-mobile">
+          {{render "@buttonswitch" buttonswitchContext }}
+        </div>
+      </div>
+
+      <div class="row hidden-desktop">
+        <address>
+          Gouwestraat 26
+          <br> 3522 CJ Utrecht
+          <br> Afstand: 250 meter
+        </address>
+        <p>
+          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1">Wijzigen</a>&nbsp;
+          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bewaar deze zoekopdracht</a>
+        </p>
+
+      </div>
+
+
+      <div class="row hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Filter opties</button>
+      </div>
+      <div class="row hidden-desktop">
+        <div class="align-right">
+          {{render "@buttonswitch" buttonswitchContext }}
+        </div>
+      </div>
+
+
+
       <div class="row">
         {{render "@map" mapContext }}
         <script id="config1" type="application/json">
@@ -97,18 +134,13 @@
                       <div class="form__row ">
                         <div class="columns">
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Postcode
-                              <span class="mandatory">Verplicht veld</span>
-                            </label>
-                            <input class="form__input" type="text" value="3522 CJ" placeholder="Bijv. 1337AA" />
+                            {{render "@input-text" postcodeContext }}
                           </div>
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Huisnummer + toev.
-                            </label>
-                            <input class="form__input" value="26" type="text" />
+                            {{render "@input-text" huisnrContext }}
                           </div>
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Straal
+                            <label class="form__label form__label--accent" for="">Straal
                               <span class="mandatory">Verplicht veld</span>
                             </label>
                             {{ render "@select-custom" selectStraalContext }}
@@ -156,6 +188,13 @@
           <div class="form__row form__row--large">
             <h3>Geselecteerde filters (2)</h3>
             {{render "@form-selectedfilter" selectedfilterContext }}
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoekwoord(en)</legend>
+              {{render "@input-inputsubmit" inputsubmitContext }}
+            </fieldset>
           </div>
 
           <div class="form__row form__row--large">

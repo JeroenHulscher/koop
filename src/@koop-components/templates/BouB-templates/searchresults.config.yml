@@ -324,6 +324,24 @@ context:
           type: primary
         - button: Bekijk op kaart
           type: secendary
+  huisnrContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  postcodeContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1
@@ -332,7 +350,6 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
@@ -341,12 +358,11 @@ context:
   buttonswitchContext:
     text: banner
     buttons:
-      - label: Kaart
-        active: true
-        icon: marker
       - label: Lijst
-        active: false
+        active: true
         icon: hamburger
+      - label: Kaart
+        icon: marker
   selectedfilterContext:
     items:
       - label: Gezocht op "leveringen"
