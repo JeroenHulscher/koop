@@ -60,9 +60,6 @@
               <li class="list__item">
                 <a href="#" class="button button--primary">Bekijk publicatie</a>
               </li>
-              <li class="list__item">
-                <a href="#" class="button button--secendary">Open interactieve kaart</a>
-              </li>
 
             </ul>
           </div>
@@ -188,6 +185,13 @@
           <div class="form__row form__row--large">
             <h3>Geselecteerde filters (2)</h3>
             {{render "@form-selectedfilter" selectedfilterContext }}
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoekwoord(en)</legend>
+              {{render "@input-inputsubmit" inputsubmitContext }}
+            </fieldset>
           </div>
 
           <div class="form__row form__row--large">

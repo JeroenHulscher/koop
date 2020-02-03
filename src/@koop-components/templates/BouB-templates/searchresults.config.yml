@@ -342,13 +342,12 @@ context:
     fieldInstruction:
     fieldPlaceholder: Bijv. 12A
     remove: true
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Verfijn op zoekwoord
+  inputsubmitContext:
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Verfijn uw zoekopdracht
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
     remove: true
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres

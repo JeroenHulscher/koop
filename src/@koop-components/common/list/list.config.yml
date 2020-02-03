@@ -1,0 +1,192 @@
+label: List
+context:
+  items:
+    - content: 1e item
+    - content: 2e item
+    - content: Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt.
+      subitems:
+        - content: 1e subitem
+        - content: 2e subitem
+    - content: 4e item
+variants:
+  - name: ordered
+    context:
+      orderedList: true
+      items:
+        - content: Eerste item
+        - content: Tweede item
+        - content: Derde item
+        - content: Vierde item
+        - content: Vijfde item
+        - content: Zesde item
+        - content: Zevende item
+        - content: Achtste item
+        - content: Negende item
+        - content: Tiende item
+        - content: Elfde item
+        - content: Laatste item
+  - name: unstyled
+    context:
+      modifier: list--unstyled
+      items:
+        - content: 1e item
+        - content: 2e item
+        - content: 3e item
+        - content: 4e item
+  - name: Inline
+    context:
+      modifier: list--inline
+      items:
+        - content: 1e item
+        - content: 2e item
+        - content: 3e item
+        - content: 4e item
+  - name: linklist
+    context:
+      modifier: list--linked
+      items:
+        - content: <a href="#">1e item</a>
+        - content: <a href="#">2e item</a>
+        - content: <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
+        - content: <a href="#">4e item</a>
+  - name: facetlist
+    context:
+      modifier: list--facet
+      heading: Eerste categorie
+      items:
+        - content: <a href="#"><span>AMvB</span> <span>(107)</span></a>
+        - content: <a href="#" class="is-active"><span>AMvB-BES</span> <span>(3)</span></a>
+        - content: <a href="#"><span>Ministeriele Regeling Archiefstukken</span> <span>(1)</span></a>
+        - content: <a href="#"><span>Rijkswet</span> <span>(817)</span></a>
+        - content: <a href="#"><span>Verdrag</span> <span>(12)</span></a>
+        - content: <a href="#"><span>Wet</span> <span>(3)</span></a>
+        - content: <a href="#"><span>zbo</span> <span>(19)</span></a>
+        - content: <a href="#"><span>Wet-BES</span> <span>(104)</span></a>
+  - name: alphabet
+    context:
+      modifier: list--alphabet
+      items:
+        - content: <a href="#" class="list__link"><span>A</span></a>
+        - content: <a href="#" class="list__link"><span>B</span></a>
+        - content: <a href="#" class="list__link"><span>C</span></a>
+        - content: <a href="#" class="list__link"><span>D</span></a>
+        - content: <a href="#" class="list__link"><span>E</span></a>
+        - content: <a href="#" class="list__link"><span>F</span></a>
+        - content: <a href="#" class="list__link"><span>G</span></a>
+        - content: <a href="#" class="list__link is-active"><span>H</span></a>
+        - content: <a href="#" class="list__link"><span>I</span></a>
+        - content: <a href="#" class="list__link"><span>J</span></a>
+        - content: <a href="#" class="list__link"><span>K</span></a>
+        - content: <a href="#" class="list__link"><span>L</span></a>
+        - content: <a href="#" class="list__link"><span>M</span></a>
+        - content: <a href="#" class="list__link"><span>N</span></a>
+        - content: <a href="#" class="list__link"><span>O</span></a>
+        - content: <a href="#" class="list__link"><span>P</span></a>
+        - content: <a href="#" class="list__link"><span>Q</span></a>
+        - content: <a href="#" class="list__link"><span>R</span></a>
+        - content: <a href="#" class="list__link"><span>S</span></a>
+        - content: <a href="#" class="list__link"><span>T</span></a>
+        - content: <a href="#" class="list__link"><span>U</span></a>
+        - content: <a href="#" class="list__link"><span>V</span></a>
+        - content: <a href="#" class="list__link"><span>W</span></a>
+        - content: <a href="#" class="list__link"><span>X</span></a>
+        - content: <a href="#" class="list__link"><span>Y</span></a>
+        - content: <a href="#" class="list__link"><span>Z</span></a>
+  - name: relationlist
+    status: prototype
+    context:
+      modifier: list--relations
+      items:
+        - content: <a href="#">1e item over belangrijke zaken</a><small>Item omschrijving</small>
+        - content: <a href="#" rel="external">2e item over minder belangrijke zaken</a>
+        - content: <a href="#">3e item</a><small>Item omschrijving met iets meer context</small>
+  - name: Law list
+    status: prototype
+    context:
+      orderedList: true
+      modifier: list--law
+      items:
+      - content: <p>1e item</p>
+      - content: <p>2e item</p>
+      - content: <p>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
+        subitems:
+          - content: <p>1e subitem</p>
+          - content: <p>2e subitem</p>
+      - content: <p>4e item</p>
+  - name: Law list unordered
+    status: ready
+    context:
+      modifier: list--law__unordered
+      items:
+      - content: <p><span>1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius mauris vel urna sagittis, ac placerat arcu dignissim. Nunc tincidunt est sem, eu viverra nisl tincidunt commodo. Nulla ullamcorper, nulla vitae sagittis finibus, justo velit pretium lectus, eget luctus erat orci quis dui. Etiam vestibulum vulputate lacus, sed dignissim lacus ultrices non. Sed congue vulputate dignissim. Suspendisse non elit nibh. Aenean mollis justo eget sem accumsan egestas. Vivamus a ligula ac lectus venenatis interdum ut vitae leo. Vivamus laoreet at orci lacinia semper. Maecenas a metus vulputate, faucibus nisl non, posuere ligula. </p><p>Vestibulum volutpat odio quis odio eleifend volutpat. Etiam vel euismod lacus, ut venenatis arcu. Nullam et nisi consectetur, lobortis ligula id, commodo lectus. In venenatis massa et leo dapibus dignissim sit amet sit amet metus. Nullam cursus tincidunt tortor, ac interdum nunc maximus non. Nulla bibendum tortor ut erat varius, non volutpat erat posuere. Vestibulum sed orci vitae mi blandit lacinia. In pharetra accumsan pellentesque. Curabitur a blandit quam.</p>
+      - content: <p><span>2</span>2e item</p>
+      - content: <p><span>3</span>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
+        subitems:
+          - content: <p><span>a.</span>1e subitem</p>
+          - content: <p><span>b.</span>2e subitem</p>
+      - content: <p><span>4</span>4e item</p>
+  - name: Legenda
+    status: ready
+    context:
+      modifier: list--legenda
+      items:
+      - content: Eemshaven
+        color: color1
+      - content: Maasvlakte 1
+        color: color2
+      - content: Borssele/Vlissingen
+        color: color3
+  - name: Legenda columns
+    status: ready
+    context:
+      modifier: list--legenda list--columns-4
+      items:
+      - content: Eemshaven
+        color: color1
+      - content: Maasvlakte 1
+        color: color2
+      - content: Borssele/Vlissingen
+        color: color3
+      - content: Eemshaven
+        color: color1
+      - content: Maasvlakte 1
+        color: color2
+      - content: Borssele/Vlissingen
+        color: color3
+  - name: Lower alpha
+    status: ready
+    context:
+      modifier: list--loweralpha
+  - name: Lower roman
+    status: ready
+    context:
+      modifier: list--lowerroman
+  - name: Upper alpha
+    status: ready
+    context:
+      modifier: list--upperalpha
+  - name: Upper roman
+    status: ready
+    context:
+      modifier: list--upperroman
+  - name: Custom
+    status: ready
+    context:
+      modifier: list-custom--size-xs
+      custom: true
+      items:
+      - content: <span class="list-custom__itembullet">1</span><p>Met de volgende classnamen is de afstand zelf te bepalen tussen het nummer en de omschrijving .list-custom--size-xs, .list-custom--size-s, .list-custom--size-m, .list-custom--size-l. </p>
+      - content: <span class="list-custom__itembullet">2</span><p>2 item</p>
+      - content: <span class="list-custom__itembullet">4</span><p>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
+        subitems:
+          - content: <span class="list-custom__itembullet">4.1</span><p>1e subitem</p>
+          - content: <span class="list-custom__itembullet">4.3</span><p>2e subitem</p>
+      - content: <span class="list-custom__itembullet">7</span><p>4e item</p>
+  - name: OL Container
+    status: ready
+    context:
+      modifier: list--stepcontainer
+      items:
+      - content: <p>1 item</p>
+      - content: <p>2 item</p>
+      - content: <p>3 item</p>
