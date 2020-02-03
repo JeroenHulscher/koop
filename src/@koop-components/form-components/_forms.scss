@@ -184,13 +184,13 @@ fieldset {
 
   &__selectedfilter {
     border: 1px solid $darkBlue;
-    padding: 0.125em 1.75em 0.125em 0.75em;
+    padding: 0em 1.75em 0 .5em;
     display: inline-block;
     border-radius: 5px;
     font-style: italic;
     position: relative;
-    margin-right: .5em;
-    margin-bottom: .5em;
+    margin-right: .25em;
+    margin-bottom: .25em;
 
     &__remove {
       background: $iconCrossBlue;

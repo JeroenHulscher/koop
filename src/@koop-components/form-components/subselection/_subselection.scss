@@ -11,10 +11,29 @@
       padding-top: .5em;
     }
 
-    span {
+    > span {
       @extend .form__selectedfilter;
       @extend .group;
-      padding-right: .75em;
+      padding-right: 1.75em;
+      position: relative;
+
+      .subselection__summaryitem__remove {
+        position: absolute;
+        background: $iconCrossBlue no-repeat center;
+        background-size: 0.35em;
+        width: 30px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+          // background-size: 0.6em;
+        }
+      }
     }
   }
 }
