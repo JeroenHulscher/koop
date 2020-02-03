@@ -1,0 +1,7 @@
+name: Video
+context:
+  id: 1
+  placeholderSrc: ../../images/temp/Landing-OverBOUB.jpg
+  placeholderalt: alt text
+
+

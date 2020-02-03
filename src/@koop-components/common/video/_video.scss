@@ -1,0 +1,51 @@
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+
+.video {
+  position: relative;
+
+  &__placeholder {}
+
+  &__play {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__trigger {
+      background: $darkBlue $iconPlay no-repeat center;
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      border-radius: 100%;
+      border: 0;
+      animation: shadow-pulse 3s infinite;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken($darkBlue, 5);
+      }
+      &:active {
+        scale: 0.95;
+      }
+
+      &:focus {
+        animation: 0;
+        outline: 0;
+        border-radius: 100%;
+        border: 3px solid $yellow;
+      }
+    }
+  }
+}
