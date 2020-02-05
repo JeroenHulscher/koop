@@ -1,13 +1,9 @@
 {{#if blocklevel}}
   <del class="del del--block">
-  	<span class="visually-hidden">{{ startdel }}</span>
     {{{del}}}
-    <span class="visually-hidden">{{ enddel }}</span>
   </del>
   <ins class="ins ins--block">
-  	<span class="visually-hidden">{{ startins }}</span>
     {{{ins}}}
-    <span class="visually-hidden">{{ endins }}</span>
   </ins>
 {{else}}
   {{{delins}}}
