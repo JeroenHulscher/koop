@@ -11,7 +11,17 @@
 .video {
   position: relative;
 
+  &__video {
+    display: none;
+  }
   &__placeholder {}
+
+  &.is-video &__video {
+    display: block;
+  }
+  &.is-video &__placeholder {
+    display: none;
+  }
 
   &__play {
     position: absolute;
