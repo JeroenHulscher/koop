@@ -8,7 +8,7 @@
           <div class="" data-decorator="init-filter-results">
             <div class="form__row form__row--medium">
               <label class="visually-hidden" for="filter-id--{{id}}">{{label}}</label>
-              <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium"
+              <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if searchFilterPlaceholder}}{{searchFilterPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium"
             />
             </div>
             <fieldset class="js-filterresults__results" role="region" id="resultfilter-{{id}}" aria-live="polite">
@@ -27,7 +27,18 @@
           <div class="" data-decorator="init-formreset">
             <p><a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
          {{/if}}
-              <p class="form__label">{{#if OptionsLabel}}{{OptionsLabel}}{{/if}}</p>
+              {{#if OptionsIsCheckAll}}
+                <div data-decorator="init-selectall">
+                  <div class="input-checkbox">
+                    <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{OptionsIsCheckAllID}}" name="selectAll" value="Alle iets"
+                    />
+                    <label class="checkbox__label u-nomargin" for="{{OptionsIsCheckAllID}}">
+                      <strong>{{ OptionsLabel }}</strong>
+                    </label>
+                  </div>
+              {{else}}
+                <p class="form__label">{{#if OptionsLabel}}{{OptionsLabel}}{{/if}}</p>
+              {{/if}}
               {{#if Options}}
                <ul class="list--unstyled">
                 {{#each Options }}
@@ -42,8 +53,22 @@
                   </li>
                 {{/each}}
                 </ul>
+               {{#if OptionsIsCheckAll}}
+               </div>
                {{/if}}
-                <p class="form__label">{{#if Options2Label}}{{Options2Label}}{{/if}}</p>
+               {{/if}}
+                 {{#if Options2IsCheckAll}}
+                <div data-decorator="init-selectall">
+                  <div class="input-checkbox">
+                    <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{Options2IsCheckAllID}}" name="selectAll" value="Alle iets"
+                    />
+                    <label class="checkbox__label u-nomargin" for="{{Options2IsCheckAllID}}">
+                      <strong>{{ Options2Label }}</strong>
+                    </label>
+                  </div>
+                  {{else}}
+                  <p class="form__label">{{#if Options2Label}}{{Options2Label}}{{/if}}</p>
+                  {{/if}}
                 {{#if Options2}}
                   <ul class="list--unstyled">
                     {{#each Options2 }}
@@ -58,6 +83,9 @@
                       </li>
                     {{/each}}
                     </ul>
+                     {{#if Options2IsCheckAll}}
+                    </div>
+                    {{/if}}
                 {{/if}}
              {{#if radio}}
              </div>

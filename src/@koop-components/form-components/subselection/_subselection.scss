@@ -16,11 +16,16 @@
       @extend .group;
       padding-right: 1.75em;
       position: relative;
+      pointer-events: none;
+
+      &:hover {
+        box-shadow: 0 0 13px rgba(0,0,0,0.3);
+      }
 
       .subselection__summaryitem__remove {
         position: absolute;
         background: $iconCrossBlue no-repeat center;
-        background-size: 0.35em;
+        background-size: 0.625em;
         width: 30px;
         right: 0;
         top: 0;
@@ -29,11 +34,24 @@
         padding: 0;
         border: 0;
         cursor: pointer;
+        pointer-events: auto;
+        display: inline-block;
+        outline: 2px solid transparent;
+        outline-offset: .5em;
+        transition: outline-offset $fastEaseInOut;
 
-        &:hover {
-          // background-size: 0.6em;
+        &::-moz-focus-inner {
+          border: none;
+          padding: 0;
+        }
+
+        &:focus {
+          outline: 2px solid $yellow;
+          outline-offset: 0;
+          z-index: 1;
         }
       }
+
     }
   }
 }

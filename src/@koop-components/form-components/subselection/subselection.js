@@ -50,6 +50,13 @@
 
   formSubselection.prototype.attachListeners = function() {
     var y;
+
+    for ( y = 0; y < this.options.length; y++ ) {
+      this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
+    }
+  };
+
+  formSubselection.prototype.attachRemoveListeners = function() {
     var i;
 
     this.summaryItemRemovers = this.containerSummary.querySelectorAll('.subselection__summaryitem__remove');
@@ -57,12 +64,6 @@
     for (i = 0; i < this.summaryItemRemovers.length; i++ ) {
       this.summaryItemRemovers[i].addEventListener( 'click', function (e) { this.removeSummaryItem(e); }.bind(this), false);
     }
-
-    for ( y = 0; y < this.options.length; y++ ) {
-      this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
-    }
-
-
   };
 
   formSubselection.prototype.collectValues = function() {
@@ -109,7 +110,8 @@
       value = this.items[y][0];
       title = this.items[y][1];
       id = this.items[y][2];
-      summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<span class="subselection__summaryitem__remove"></span></' + this.config.type +'> ';
+
+      summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<button class="subselection__summaryitem__remove"></button></' + this.config.type +'> ';
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
@@ -118,7 +120,7 @@
     if (this.config.maxShow) {
       this.initHideUnwantedResults();
     }
-    this.attachListeners();
+    this.attachRemoveListeners();
   };
 
   formSubselection.prototype.initHideUnwantedResults = function () {

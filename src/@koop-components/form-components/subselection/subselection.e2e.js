@@ -23,16 +23,33 @@ describe('Subselection', function () {
     element(by.css('#modal-222 #option-2 ~ label')).click();
     element(by.css('#modal-222 #option-3 ~ label')).click();
     element(by.css('#modal-222 #option-4 ~ label')).click();
+    element(by.css('#modal-222 #option-5 ~ label')).click();
 
     var modalButton = element(by.css('.modal .button.button--primary'));
     modalButton.click();
 
     browser.driver.findElements(by.css('.subselection__summary span')).
       then(function (elems) {
-        expect(elems.length).toEqual(4);
+        expect(elems.length).toEqual(5);
       }
     );
   });
+
+  it('should remove item when clicked on X', function () {
+
+    var itemRemoveTrigger = element(by.css('.subselection__summary span:first-child button'));
+    itemRemoveTrigger.click();
+
+    browser.driver.sleep(1500);
+
+    browser.driver.findElements(by.css('.subselection__summary span')).
+      then(function (elems) {
+        expect(elems.length).toEqual(4);
+      }
+      );
+  });
+
+
   it('should toggle the invisble results', function () {
 
     var moreTrigger = element(by.css('.link--down a'));
@@ -52,10 +69,11 @@ describe('Subselection', function () {
 
     browser.driver.sleep(1500);
 
-    element(by.css('#modal-222 #option-1 ~ label')).click();
+    // element(by.css('#modal-222 #option-1 ~ label')).click();
     element(by.css('#modal-222 #option-2 ~ label')).click();
     element(by.css('#modal-222 #option-3 ~ label')).click();
     element(by.css('#modal-222 #option-4 ~ label')).click();
+    element(by.css('#modal-222 #option-5 ~ label')).click();
 
     var modalButton = element(by.css('.modal .button.button--primary'));
     modalButton.click();
