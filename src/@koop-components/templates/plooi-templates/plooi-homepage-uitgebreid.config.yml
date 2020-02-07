@@ -70,21 +70,41 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
     type: span
+    searchFilter: true
+    searchFilterPlaceholder: Typ hier uw thema
+    OptionsLabel: Thema 1
+    OptionsIsCheckAll: true
+    OptionsIsCheckAllID: 1
     Options:
       - Option: 4
-        id: 445
-        title: Spanje
-        short: Spanje
+        id: 4
+        title: Thema 1 Sub 1
+        short: Thema 1 Sub 1
       - Option: 5
-        id: 545
-        title: Griekenland
-        short: Griekenland
+        id: 5
+        title: Thema 1 Sub 2
+        short: Thema 1 Sub 2
       - Option: 6
-        id: 645
-        title: Nederland
-        short: Nederland
+        id: 6
+        title: Thema 1 Sub 3
+        short: Thema 1 Sub 3
+      - Option: 6
+        id: 634322
+        title: Thema 1 Sub 4
+        short: Thema 1 Sub 4
+    Options2Label: Thema 2
+    Options2IsCheckAll: true
+    Options2IsCheckAllID: 2
+    Options2:
+      - Option: 7
+        id: 7
+        title: Thema 2 Sub 1
+        short: Thema 2 Sub 1
+      - Option: 8
+        id: 8
+        title: Thema 2 Sub 2
+        short: Thema 2 Sub 2
   subselectionInfoContext:
     linkText: Selecteer informatiesoort(en)
     id: 122
@@ -111,22 +131,22 @@ context:
     moreless: true
     searchFilter: true
     options:
-    - id: checkbox-20
+    - id: checkbox-2220
       text: Alle
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-220
       text: Vandaag
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-201
       text: Afgelopen week
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-202
       text: Afgelopen maand
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-203
       text: Afgelopen 3 maanden
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-204
       text: Zelf een periode kiezen
       name: onderwerp
 
