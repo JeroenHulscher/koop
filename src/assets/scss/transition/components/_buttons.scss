@@ -4,8 +4,8 @@
   border-radius: .25em;
   border-color: $darkBlue;
   color: $darkBlue;
-  padding-top: .75em;
-  padding-bottom: .75em;
+  padding-top: .9em;
+  padding-bottom: .8em;
 
   &:hover {
     box-shadow: 0 0 0.75em rgba(21,66,115,0.4);
@@ -28,7 +28,7 @@
       top: .6em;
       bottom: .6em;
       width: 1px;
-      background: white;
+      background: $darkBlue;
     }
   }
 
@@ -44,8 +44,8 @@
   }
 
   &--large {
-    padding-top: .95em;
-    padding-bottom: .95em;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   &--primary {
@@ -54,6 +54,13 @@
     &:hover {
       background-color: $darkerBlue;
       color: white;
+    }
+  }
+  &--primary {
+    &.icon-bg {
+      &:after {
+        background: white;
+      }
     }
   }
 
