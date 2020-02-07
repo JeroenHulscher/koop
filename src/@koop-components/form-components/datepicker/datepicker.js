@@ -111,13 +111,19 @@
     $('.ui-datepicker-trigger').click(function() {
       setTimeout(function() {
         var today = $( '.ui-datepicker-today a' )[0];
+        // var prevMonth = $( '.ui-datepicker-prev' )[0];
+        var prevMonth = document.querySelector('.ui-datepicker-prev');
 
         if ( !today ) {
-          today = $( '.ui-state-active' )[0] ||
-            $( '.ui-state-default' )[0];
+          today = $( '.ui-state-active' )[0] || $( '.ui-state-default' )[0];
         }
 
-        today.focus();
+        window.setTimeout(function () {
+          prevMonth.focus();
+        }, 0);
+
+
+        // today.focus();
 
         // Hide the entire page (except the date picker)
         // from screen readers to prevent document navigation
@@ -229,34 +235,33 @@
           // If the shift key is pressed follow a different flow.
           if (keyVent.shiftKey) {
             if ($(target).hasClass('ui-datepicker-close')) { // Close button
-              $('.ui-datepicker-prev')[0].focus();
-            } else if ($(target).hasClass('ui-state-default')) { // Date link
-              $('.ui-datepicker-close')[0].focus();
-            } else if ($(target).hasClass('ui-datepicker-prev')) { // Previous month button
-              $('.ui-datepicker-year')[0].focus();
-            } else if ($(target).hasClass('ui-datepicker-year')) { // Year button
-              $('.ui-datepicker-next')[0].focus();
-            } else if ($(target).hasClass('ui-datepicker-next')) { // Next month button
               activeDate = $('.ui-state-highlight') || $('.ui-state-active')[0];
-
-              if ( activeDate ) {
+              if (activeDate) {
                 activeDate.focus();
               }
+            } else if ($(target).hasClass('ui-state-default')) { // Date link
+              $('.ui-datepicker-next')[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-prev')) { // Previous month button
+              $('.ui-datepicker-close')[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-year')) { // Year button
+              $('.ui-datepicker-prev')[0].focus();
+            } else if ($(target).hasClass('ui-datepicker-next')) { // Next month button
+              $('.ui-datepicker-year')[0].focus();
             }
           } else {
             if ($(target).hasClass('ui-datepicker-close')) { // close button
+              $('.ui-datepicker-prev')[0].focus();
+            } else if ($(target).hasClass('ui-state-default')) {
+              $('.ui-datepicker-close')[0].focus();
+            } else if ($( target).hasClass('ui-datepicker-next')) {
               activeDate = $('.ui-state-highlight') || $('.ui-state-active')[0];
-              if ( activeDate ) {
+              if (activeDate) {
                 activeDate.focus();
               }
-            } else if ($(target).hasClass('ui-state-default')) {
-              $( '.ui-datepicker-next' )[0].focus();
-            } else if ($( target).hasClass('ui-datepicker-next')) {
-              $( '.ui-datepicker-year' )[0].focus();
             } else if ($(target).hasClass('ui-datepicker-year')) {
-              $( '.ui-datepicker-prev' )[0].focus();
+              $('.ui-datepicker-next')[0].focus();
             } else if ($(target).hasClass( 'ui-datepicker-prev' ) ) {
-              $( '.ui-datepicker-close' )[0].focus();
+              $('.ui-datepicker-year')[0].focus();
             }
           }
           break;
@@ -709,7 +714,6 @@
     });
   },
   datepicker.prototype.updateHeaderElements = function() {
-    console.log('func');
     var context = document.getElementById('ui-datepicker-div');
     if (!context) {
       return;

@@ -158,14 +158,10 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">del</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"del del--block"</span>&gt;</span>
-  	<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>begin verwijderde tekst<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Pellentesque sed justo interdum, porta purus sed, congue magna.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Pellentesque sed justo interdum, porta purus sed, congue magna.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>einde verwijderde tekst<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ins</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ins ins--block"</span>&gt;</span>
-  	<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>begin toegevoegde tekst<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Pellentesque sed justo interdum, porta purus sed, congue magna.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Pellentesque sed justo interdum, porta purus sed, congue magna.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>einde toegevoegde tekst<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span></pre>
         
     </code>
@@ -176,14 +172,10 @@
     <code class="Code Code--lang-handlebars">
         <pre><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> blocklevel}}</span><span class="xml">
   <span class="hljs-tag">&lt;<span class="hljs-name">del</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"del del--block"</span>&gt;</span>
-  	<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ startdel }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     </span><span class="hljs-template-variable">{{{del}}}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ enddel }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ins</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ins ins--block"</span>&gt;</span>
-  	<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ startins }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     </span><span class="hljs-template-variable">{{{ins}}}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ endins }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span>
 </span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
   </span><span class="hljs-template-variable">{{{delins}}}</span><span class="xml">
@@ -201,19 +193,7 @@
   <span class="hljs-attr">"delins"</span>: <span class="hljs-string">"&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna. Cras nisl est, scelerisque ac elementum dapibus, sodales et odio. Integer felis elit, lacinia et ligula ut, aliquam rutrum dolor. Duis non diam in sapien scelerisque mattis sit amet quis est. &lt;del&gt;Suspendisse lectus magna, aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus varius fermentum posuere&lt;/del&gt; &lt;ins&gt;aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus varius fermentum posuere&lt;/ins&gt;. Proin et mi in nisl euismod pulvinar. Curabitur malesuada lorem bibendum tellus dapibus fermentum. Maecenas porttitor enim in sapien hendrerit eleifend. Duis non tortor rutrum, sagittis nulla vitae, tincidunt ligula. Etiam quis dignissim felis. Suspendisse at erat a tortor tristique scelerisque. Donec efficitur augue eros.&lt;/p&gt;"</span>,
   <span class="hljs-attr">"blocklevel"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"del"</span>: <span class="hljs-string">"&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna.&lt;/p&gt;&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna.&lt;/p&gt;"</span>,
-  <span class="hljs-attr">"ins"</span>: <span class="hljs-string">"&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna.&lt;/p&gt;&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna.&lt;/p&gt;"</span>,
-  <span class="hljs-attr">"startdel"</span>: [
-    <span class="hljs-string">"begin verwijderde tekst"</span>
-  ],
-  <span class="hljs-attr">"enddel"</span>: [
-    <span class="hljs-string">"einde verwijderde tekst"</span>
-  ],
-  <span class="hljs-attr">"startins"</span>: [
-    <span class="hljs-string">"begin toegevoegde tekst"</span>
-  ],
-  <span class="hljs-attr">"endins"</span>: [
-    <span class="hljs-string">"einde toegevoegde tekst"</span>
-  ]
+  <span class="hljs-attr">"ins"</span>: <span class="hljs-string">"&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna.&lt;/p&gt;&lt;p&gt;Pellentesque sed justo interdum, porta purus sed, congue magna.&lt;/p&gt;"</span>
 }</pre>
             
         
@@ -4542,6 +4522,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="video.html" data-pjax>
+                <span>Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="well.html" data-pjax>
                 <span>Well</span>
                 
@@ -6692,9 +6696,9 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-bodb-templates">
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-boub-templates">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Bodb Templates</span>
+                <span>Boub Templates</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -6706,7 +6710,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepage.html" data-pjax>
-                <span>BodB - Homepage</span>
+                <span>BouB - Homepage</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6730,31 +6734,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-newsletter.html" data-pjax>
-                <span>BodB - Nieuwsbrief</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="templates-pages.html" data-pjax>
-                <span>BodB - Pages</span>
+                <span>BouB - Nieuwsbrief</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6778,7 +6758,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-searchresults.html" data-pjax>
-                <span>BodB - Searchresults</span>
+                <span>BodB - Zoekres. Lijst</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6786,7 +6766,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-searchresults-map.html" data-pjax>
+                <span>BodB - Zoekres. Kaart</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

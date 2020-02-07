@@ -1,0 +1,32 @@
+---
+label: BouB - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  officieleContext:
+    subheading: Berichten ouder dan 8 weken
+    heading: Op zoek naar een ouder besluit?
+    content: <p>Berichtgeving over een besluit blijft 8 weken beschikbaar via berichten over uw buurt. Na deze periode vindt u deze besluiten op ‘Officiële bekendmakingen’. In deze originele bron kunt u zoeken naar alle publicaties die betrekking hebben op uw omgeving.</p>
+    buttonText: Zoek in oudere besluiten
+  huisnrContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  postcodeContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  picture1:
+    src: ../../images/temp/Landing-Archief.jpg

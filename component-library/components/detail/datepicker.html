@@ -443,7 +443,7 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
 
-  it(<span class="hljs-string">'allows you to type in a date and opens using the keyboard on the datepicker button'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  xit(<span class="hljs-string">'allows you to type in a date and opens using the keyboard on the datepicker button'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">var</span> datepickerInput;
     <span class="hljs-keyword">var</span> datepicker;
 
@@ -729,13 +729,19 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
     $(<span class="hljs-string">'.ui-datepicker-trigger'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
       setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-keyword">var</span> today = $( <span class="hljs-string">'.ui-datepicker-today a'</span> )[<span class="hljs-number">0</span>];
+        <span class="hljs-comment">// var prevMonth = $( '.ui-datepicker-prev' )[0];</span>
+        <span class="hljs-keyword">var</span> prevMonth = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.ui-datepicker-prev'</span>);
 
         <span class="hljs-keyword">if</span> ( !today ) {
-          today = $( <span class="hljs-string">'.ui-state-active'</span> )[<span class="hljs-number">0</span>] ||
-            $( <span class="hljs-string">'.ui-state-default'</span> )[<span class="hljs-number">0</span>];
+          today = $( <span class="hljs-string">'.ui-state-active'</span> )[<span class="hljs-number">0</span>] || $( <span class="hljs-string">'.ui-state-default'</span> )[<span class="hljs-number">0</span>];
         }
 
-        today.focus();
+        <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+          prevMonth.focus();
+        }, <span class="hljs-number">0</span>);
+
+
+        <span class="hljs-comment">// today.focus();</span>
 
         <span class="hljs-comment">// Hide the entire page (except the date picker)</span>
         <span class="hljs-comment">// from screen readers to prevent document navigation</span>
@@ -847,34 +853,33 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
           <span class="hljs-comment">// If the shift key is pressed follow a different flow.</span>
           <span class="hljs-keyword">if</span> (keyVent.shiftKey) {
             <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-close'</span>)) { <span class="hljs-comment">// Close button</span>
-              $(<span class="hljs-string">'.ui-datepicker-prev'</span>)[<span class="hljs-number">0</span>].focus();
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-state-default'</span>)) { <span class="hljs-comment">// Date link</span>
-              $(<span class="hljs-string">'.ui-datepicker-close'</span>)[<span class="hljs-number">0</span>].focus();
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-prev'</span>)) { <span class="hljs-comment">// Previous month button</span>
-              $(<span class="hljs-string">'.ui-datepicker-year'</span>)[<span class="hljs-number">0</span>].focus();
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-year'</span>)) { <span class="hljs-comment">// Year button</span>
-              $(<span class="hljs-string">'.ui-datepicker-next'</span>)[<span class="hljs-number">0</span>].focus();
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-next'</span>)) { <span class="hljs-comment">// Next month button</span>
               activeDate = $(<span class="hljs-string">'.ui-state-highlight'</span>) || $(<span class="hljs-string">'.ui-state-active'</span>)[<span class="hljs-number">0</span>];
-
-              <span class="hljs-keyword">if</span> ( activeDate ) {
+              <span class="hljs-keyword">if</span> (activeDate) {
                 activeDate.focus();
               }
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-state-default'</span>)) { <span class="hljs-comment">// Date link</span>
+              $(<span class="hljs-string">'.ui-datepicker-next'</span>)[<span class="hljs-number">0</span>].focus();
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-prev'</span>)) { <span class="hljs-comment">// Previous month button</span>
+              $(<span class="hljs-string">'.ui-datepicker-close'</span>)[<span class="hljs-number">0</span>].focus();
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-year'</span>)) { <span class="hljs-comment">// Year button</span>
+              $(<span class="hljs-string">'.ui-datepicker-prev'</span>)[<span class="hljs-number">0</span>].focus();
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-next'</span>)) { <span class="hljs-comment">// Next month button</span>
+              $(<span class="hljs-string">'.ui-datepicker-year'</span>)[<span class="hljs-number">0</span>].focus();
             }
           } <span class="hljs-keyword">else</span> {
             <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-close'</span>)) { <span class="hljs-comment">// close button</span>
+              $(<span class="hljs-string">'.ui-datepicker-prev'</span>)[<span class="hljs-number">0</span>].focus();
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-state-default'</span>)) {
+              $(<span class="hljs-string">'.ui-datepicker-close'</span>)[<span class="hljs-number">0</span>].focus();
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($( target).hasClass(<span class="hljs-string">'ui-datepicker-next'</span>)) {
               activeDate = $(<span class="hljs-string">'.ui-state-highlight'</span>) || $(<span class="hljs-string">'.ui-state-active'</span>)[<span class="hljs-number">0</span>];
-              <span class="hljs-keyword">if</span> ( activeDate ) {
+              <span class="hljs-keyword">if</span> (activeDate) {
                 activeDate.focus();
               }
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-state-default'</span>)) {
-              $( <span class="hljs-string">'.ui-datepicker-next'</span> )[<span class="hljs-number">0</span>].focus();
-            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($( target).hasClass(<span class="hljs-string">'ui-datepicker-next'</span>)) {
-              $( <span class="hljs-string">'.ui-datepicker-year'</span> )[<span class="hljs-number">0</span>].focus();
             } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass(<span class="hljs-string">'ui-datepicker-year'</span>)) {
-              $( <span class="hljs-string">'.ui-datepicker-prev'</span> )[<span class="hljs-number">0</span>].focus();
+              $(<span class="hljs-string">'.ui-datepicker-next'</span>)[<span class="hljs-number">0</span>].focus();
             } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($(target).hasClass( <span class="hljs-string">'ui-datepicker-prev'</span> ) ) {
-              $( <span class="hljs-string">'.ui-datepicker-close'</span> )[<span class="hljs-number">0</span>].focus();
+              $(<span class="hljs-string">'.ui-datepicker-year'</span>)[<span class="hljs-number">0</span>].focus();
             }
           }
           <span class="hljs-keyword">break</span>;
@@ -1327,7 +1332,6 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
     });
   },
   datepicker.prototype.updateHeaderElements = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'func'</span>);
     <span class="hljs-keyword">var</span> context = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'ui-datepicker-div'</span>);
     <span class="hljs-keyword">if</span> (!context) {
       <span class="hljs-keyword">return</span>;
@@ -1429,7 +1433,7 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">27.1 KB</span>
+                    <span class="Meta-value">27.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1494,10 +1498,12 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(10)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(11)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="templates-searchresults.html">@<span>templates-searchresults</span></a>, 
+            
+                <a href="templates-searchresults-map.html">@<span>templates-searchresults-map</span></a>, 
             
                 <a href="templates-cvdr-homepage-uitgebreid.html">@<span>templates-cvdr-homepage-uitgebreid</span></a>, 
             
@@ -5681,6 +5687,30 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="video.html" data-pjax>
+                <span>Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="well.html" data-pjax>
                 <span>Well</span>
                 
@@ -7831,9 +7861,9 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-bodb-templates">
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-boub-templates">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Bodb Templates</span>
+                <span>Boub Templates</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -7845,7 +7875,7 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepage.html" data-pjax>
-                <span>BodB - Homepage</span>
+                <span>BouB - Homepage</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7869,31 +7899,7 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-newsletter.html" data-pjax>
-                <span>BodB - Nieuwsbrief</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="templates-pages.html" data-pjax>
-                <span>BodB - Pages</span>
+                <span>BouB - Nieuwsbrief</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7917,7 +7923,7 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-searchresults.html" data-pjax>
-                <span>BodB - Searchresults</span>
+                <span>BodB - Zoekres. Lijst</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7925,7 +7931,31 @@ describe(<span class="hljs-string">'Datepicker'</span>, <span class="hljs-functi
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-searchresults-map.html" data-pjax>
+                <span>BodB - Zoekres. Kaart</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

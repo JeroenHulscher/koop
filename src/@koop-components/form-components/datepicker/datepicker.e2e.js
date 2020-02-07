@@ -36,7 +36,7 @@ describe('Datepicker', function() {
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
 
-  it('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
+  xit('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
     var datepickerInput;
     var datepicker;
 

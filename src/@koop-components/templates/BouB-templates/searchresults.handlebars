@@ -9,62 +9,17 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-
-
-
-      <div class="map">
-        <div id="demo7" class="map__map"></div>
-        <div class="map__controls">
-          <div class="row row--spacer">
-            <div class="columns">
-              <div class="column">
-                {{render "@input-text" inputSearchContext }}
-              </div>
-              <div class="column align-right">
-                {{render "@buttonswitch" buttonswitchContext }}
-              </div>
-            </div>
-          </div>
+      <div class="row columns">
+        <div class="column">
+          <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105</span></h1>
         </div>
-      </div>
-
-      <script id="data" type="application/json">
-      {
-        "debug": false,
-        "mount_element": "#demo7",
-        "locations": [{
-            "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
-            "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"
-        }, {
-            "type": "punt",
-            "geometry": "POINT(83388.72001447542 454483.4858568841)",
-            "geometry_type": "WKT",
-            "title": "Punt 1"
-        }],
-        "options": {
-            "mode": "geoview"
-        }
-      }
-      </script>
-
-
-
-      <div class="row row--spacer hidden-mobile">
-        <div class="columns">
-          <div class="column column-d-8">
-            {{render "@input-text" inputSearchContext }}
-          </div>
-          <div class="column column-d-4 align-right">
-             {{render "@buttonswitch" buttonswitchContext }}
-          </div>
+        <div class="column align-right hidden-mobile">
+           {{render "@buttonswitch" buttonswitchContext }}
         </div>
       </div>
 
 
-
-      <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105</span></h1>
-
-      <div class="hidden-desktop">
+      <div class="row hidden-desktop">
         <address>
           Gouwestraat 26<br>
           3522 CJ Utrecht<br>
@@ -77,9 +32,16 @@
 
       </div>
 
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+      <div class="row hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
       </div>
+      <div class="row hidden-desktop">
+        <div class="align-right">
+          {{render "@buttonswitch" buttonswitchContext }}
+        </div>
+      </div>
+
+
 
       {{render "@resultlist" resultsContext }}
 
@@ -97,9 +59,6 @@
 
               <li class="list__item">
                 <a href="#" class="button button--primary">Bekijk publicatie</a>
-              </li>
-              <li class="list__item">
-                <a href="#" class="button button--secendary">Open interactieve kaart</a>
               </li>
 
             </ul>
@@ -172,15 +131,10 @@
                       <div class="form__row ">
                         <div class="columns">
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Postcode
-                              <span class="mandatory">Verplicht veld</span>
-                            </label>
-                            <input class="form__input" type="text" value="3522 CJ" placeholder="Bijv. 1337AA" />
+                            {{render "@input-text" postcodeContext }}
                           </div>
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Huisnummer + toev.
-                            </label>
-                            <input class="form__input" value="26" type="text" />
+                            {{render "@input-text" huisnrContext }}
                           </div>
                           <div class="form__row form__row--medium">
                             <label class="form__label" for="">Straal
@@ -231,6 +185,13 @@
           <div class="form__row form__row--large">
             <h3>Geselecteerde filters (2)</h3>
             {{render "@form-selectedfilter" selectedfilterContext }}
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoekwoord(en)</legend>
+              {{render "@input-inputsubmit" inputsubmitContext }}
+            </fieldset>
           </div>
 
           <div class="form__row form__row--large">

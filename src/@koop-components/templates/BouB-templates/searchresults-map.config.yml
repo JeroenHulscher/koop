@@ -1,10 +1,47 @@
 ---
-label: BodB - Searchresults
-status: prototype
+label: BodB - Zoekres. Kaart
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  mapContext:
+    modifier: h-600
+    controls: false
+    buttonEditStraal: js-kpm-editstraal
+  inputsubmitContext:
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Verfijn uw zoekopdracht
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
+  huisnrContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  postcodeContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    fieldLabel: Huisnummer + toev.
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. 12A
+    remove: true
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Lijst
+        active: false
+        icon: hamburger
+      - label: Kaart
+        active: true
+        icon: marker
   voorschriftenContext:
     moreless: true
     options:
@@ -324,36 +361,19 @@ context:
           type: primary
         - button: Bekijk op kaart
           type: secendary
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Verfijn op zoekwoord
-    remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
-  buttonswitchContext:
-    text: banner
-    buttons:
-      - label: Kaart
-        active: true
-        icon: marker
-      - label: Lijst
-        active: false
-        icon: hamburger
+
   selectedfilterContext:
     items:
       - label: Gezocht op "leveringen"
       - label: Bouwvergunning
       - label: APV vergunning
   selectStraalContext:
-    modifier: select-custom
+    modifier: select-custom--large
     id: 1
     options:
       - label: 250 meter

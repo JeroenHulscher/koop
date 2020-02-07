@@ -42,30 +42,35 @@
 
     this.items = [];
 
-    this.attachListeners();
-
     this.collectValues();
     this.parseSelectedOptions();
+
+    this.attachListeners();
   };
 
   formSubselection.prototype.attachListeners = function() {
     var y;
 
-    // for ( i = 0; i < this.buttonClose.length; i++ ) {
-    //   this.buttonClose[i].addEventListener( 'click', function (e) { this.parseSelectedOptions(e); }.bind(this), false);
-    // }
-
     for ( y = 0; y < this.options.length; y++ ) {
       this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
     }
+  };
 
+  formSubselection.prototype.attachRemoveListeners = function() {
+    var i;
 
+    this.summaryItemRemovers = this.containerSummary.querySelectorAll('.subselection__summaryitem__remove');
+
+    for (i = 0; i < this.summaryItemRemovers.length; i++ ) {
+      this.summaryItemRemovers[i].addEventListener( 'click', function (e) { this.removeSummaryItem(e); }.bind(this), false);
+    }
   };
 
   formSubselection.prototype.collectValues = function() {
     var y;
     var option;
     var value;
+    var id;
 
     // reset items;
     this.items = [];
@@ -75,13 +80,14 @@
       option = [];
       if ( this.options[y].checked ) {
         value = this.options[y].getAttribute( 'data-value' ) || this.options[y].value;
+        id = this.options[y].getAttribute( 'id' );
         if (this.options[y].closest('label') !== null) {
-          option.push(value, this.options[y].closest('label').innerText);
+          option.push(value, this.options[y].closest('label').innerText, id);
         } else {
           if (this.options[y].closest('.input-checkbox')) {
-            option.push(value, this.options[y].closest('.input-checkbox').querySelector('label').innerText);
+            option.push(value, this.options[y].closest('.input-checkbox').querySelector('label').innerText, id);
           } else {
-            option.push(value, this.options[y].closest('.input-radio').querySelector('label').innerText);
+            option.push(value, this.options[y].closest('.input-radio').querySelector('label').innerText, id);
           }
 
         }
@@ -96,9 +102,16 @@
   formSubselection.prototype.parseSelectedOptions = function() {
     var y;
     var summary = '';
+    var value;
+    var title;
+    var id;
 
     for ( y = 0; y < this.items.length; y++ ) {
-      summary += '<' + this.config.type + ' title="' + this.items[y][1] + '">' + this.items[y][0] + '</' + this.config.type +'> ';
+      value = this.items[y][0];
+      title = this.items[y][1];
+      id = this.items[y][2];
+
+      summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<button class="subselection__summaryitem__remove"></button></' + this.config.type +'> ';
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
@@ -107,6 +120,7 @@
     if (this.config.maxShow) {
       this.initHideUnwantedResults();
     }
+    this.attachRemoveListeners();
   };
 
   formSubselection.prototype.initHideUnwantedResults = function () {
@@ -189,5 +203,14 @@
       this.trigger.classList.add(this.triggerClassDefault);
     }
   };
+
+  formSubselection.prototype.removeSummaryItem = function (e) {
+    var item = e.target.parentNode;
+    var itemLinkedId = item.getAttribute('data-linkedid');
+    var target = document.getElementById(itemLinkedId);
+    target.checked = false;
+    this.collectValues();
+  };
+
 
 })();

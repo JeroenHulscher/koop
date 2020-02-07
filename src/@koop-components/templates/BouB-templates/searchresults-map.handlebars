@@ -1,0 +1,269 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+
+
+      <div class="row columns">
+        <div class="column">
+          <h1 class="h1 h1--slim">Zoekresultaten
+            <span class="h1__sub">105</span>
+          </h1>
+        </div>
+        <div class="column align-right hidden-mobile">
+          {{render "@buttonswitch" buttonswitchContext }}
+        </div>
+      </div>
+
+      <div class="row hidden-desktop">
+        <address>
+          Gouwestraat 26
+          <br> 3522 CJ Utrecht
+          <br> Afstand: 250 meter
+        </address>
+        <p>
+          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1">Wijzigen</a>&nbsp;
+          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bewaar deze zoekopdracht</a>
+        </p>
+
+      </div>
+
+
+      <div class="row hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
+          data-modal="modal-filter">Filter opties</button>
+      </div>
+      <div class="row hidden-desktop">
+        <div class="align-right">
+          {{render "@buttonswitch" buttonswitchContext }}
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        {{render "@map" mapContext }}
+        <script id="config1" type="application/json">
+
+          {
+            "debug":false,
+            "locations":[
+            {
+              "type":"punt",
+              "geometry":"POINT(83388.72001447542 454483.4858568841)",
+              "geometry_type":"WKT","title":"Punt 1",
+              "url":"https://google.com"
+            },
+            {
+              "type":"punt",
+              "geometry":"POINT(83388.72001447542 454483.4858568841)",
+              "geometry_type":"WKT","title":"Punt 2",
+              "omschrijving":"Nunc sed turpis ac lorem molestie sagittis vel vel ligula. Maecenas elementum lobortis pretium. Mauris ullamcorper tortor at dolor imperdiet, scelerisque convallis nisl fringilla.",
+              "url":"https://google.com"
+              },
+              {"type":"punt","geometry":"POINT(83388.72001447542 454483.4858568841)","geometry_type":"WKT",
+              "omschrijving":"Morbi tincidunt interdum nisi.","title":"Punt 3"},{"type":"punt",
+              "geometry":"POINT(84488.72001447542 455583.4858568841)","geometry_type":"WKT",
+              "omschrijving":"Phasellus vulputate sapien quis est faucibus suscipit. Donec tempus mattis orci, mattis cursus risus congue mattis. Nulla aliquet tempus ipsum sed porttitor. Morbi ex elit, suscipit at metus in, feugiat volutpat augue. Vivamus pulvinar urna sem, id dignissim tellus interdum id. Quisque ligula enim, tincidunt vel neque in, rhoncus faucibus turpis. Integer id condimentum urna, sit amet dapibus neque. Aenean lacinia porta porttitor. Nam a odio porttitor lacus consequat lobortis et nec massa. Sed erat tortor, rutrum feugiat libero ut, dictum vestibulum mauris. Vestibulum hendrerit, dui sed volutpat tempor, dui nulla tristique ligula, vel ultricies justo arcu sit amet augue. Duis tincidunt vitae ex at tincidunt. Pellentesque ipsum lorem, hendrerit ut faucibus nec, malesuada aliquam tellus. Fusce ut suscipit est. Etiam condimentum nunc quam. Aenean a felis dapibus, placerat lacus eget, porta leo.","title":"Punt 4"},{"type":"punt","geometry":"POINT(84488.72001447542 454583.4858568841)","geometry_type":"WKT","title":"Punt 5","url":"https://google.com"}],
+              "options":{"mode":"geoview"}}
+
+        </script>
+
+      </div>
+
+      <div class="row row--spacer">
+        <div class="jumbotron jumbotron--promo">
+
+          <div class="jumbotron__content">
+
+            <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
+
+            <h2 class="jumbotron__header">Meld je aan voor de mail service</h2>
+
+            <form class="form">
+              <fieldset>
+                <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+                <div class="form__row">
+                  {{ render "@input-inputsubmit" }}
+                </div>
+              </fieldset>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
+
+        <div class="modal-sidebar__content" >
+
+
+          <div class="row--spacer">
+            <h2>Zoekfilter</h2>
+            <address>
+              Gouwestraat 26<br>
+              3522 CJ Utrecht<br>
+              Afstand: 250 meter
+            </address>
+            <ul class="list list--inline">
+              <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1">Wijzigen</a></li>
+              <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bewaar deze zoekopdracht</a></li>
+            </ul>
+
+            <div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <div class="align-center">
+                    <p class="jumbotron__subheader">Wijzig uw zoekopdracht</p>
+                    <h1 class="jumbotron__header">Welke buurt zoekt u?</h1>
+                  </div>
+                  <form class="form">
+                    <fieldset>
+                      <legend class="visually-hidden">Zoek berichten</legend>
+                      <div class="form__row ">
+                        <div class="columns">
+                          <div class="form__row form__row--medium">
+                            {{render "@input-text" postcodeContext }}
+                          </div>
+                          <div class="form__row form__row--medium">
+                            {{render "@input-text" huisnrContext }}
+                          </div>
+                          <div class="form__row form__row--medium">
+                            <label class="form__label form__label--accent" for="">Straal
+                              <span class="mandatory">Verplicht veld</span>
+                            </label>
+                            {{ render "@select-custom" selectStraalContext }}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row align-right">
+                        <button type="submit" class="form__button button button--primary">Zoek opnieuw</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+
+                <button type="button" data-handler="close-modal" class="modal__close">
+                  <span class="visually-hidden">Sluiten</span>
+                </button>
+              </div>
+            </div>
+
+            <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+              <div class="modal__inner">
+                <div class="modal__content">
+                  <div class="align-center">
+                    <p class="jumbotron__subheader">Deze zoekopdracht bewaren</p>
+                    <h1 class="jumbotron__header">Meld je aan voor de mail</h1>
+                    <p class="jumbotron__intro">Schrijf u in en ontvang dagelijks een update in uw inbox over alles wat er bij u in de buurt gebeurt.</p>
+                  </div>
+                  <form class="form">
+                    <fieldset>
+                      <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+                      <div class="form__row">
+                        {{ render "@input-inputsubmit" inputsubmitSearchSaveContext }}
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <button type="button" data-handler="close-modal" class="modal__close">
+                  <span class="visually-hidden">Sluiten</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form__row form__row--large">
+            <h3>Geselecteerde filters (2)</h3>
+            {{render "@form-selectedfilter" selectedfilterContext }}
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoekwoord(en)</legend>
+              {{render "@input-inputsubmit" inputsubmitContext }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Gebied {{render "@tooltip"}}
+              </legend>
+              {{render "@input-radio" gebiedContext }}
+            </fieldset>
+          </div>
+
+          <div data-decorator="init-form-conditionals">
+
+
+            <div id="citem-0" class="form__row form__row--large js-form-conditionals__citem">
+              <fieldset>
+                <legend>Publicatiedatum
+                {{render "@tooltip"}}
+                </legend>
+                {{render "@input-radio" publicatiedatumContext }}
+              </fieldset>
+            </div>
+
+            <div id="citem-1" class="form__row form__row--large js-form-conditionals__citem u-margin-top--24">
+              {{render "@datepicker" publicatieCustomRange merge=true }}
+            </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Onderwerpen {{render "@tooltip"}}</legend>
+              {{render "@input-checkbox" onderwerpContext }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Voorlichting {{render "@tooltip"}}</legend>
+              {{render "@input-checkbox" voorlichtingContext }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Bestemming {{render "@tooltip"}}</legend>
+              {{render "@input-checkbox" bestemmingContext }}
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Voorschriften {{render "@tooltip"}}</legend>
+              {{render "@input-checkbox" voorschriftenContext }}
+            </fieldset>
+          </div>
+
+          <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+
+        </div>
+
+
+
+
+        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

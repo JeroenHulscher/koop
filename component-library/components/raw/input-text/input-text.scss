@@ -8,9 +8,9 @@ input[type=number].input-text,
   height: auto;
 
   &--medium {
-    font-size: 1.325rem;
+    font-size: 1.125rem;
     color: $darkBlue;
-    height: 60px; // needed to correct crossbrowser fields; :(
+    height: 56px; // needed to correct crossbrowser fields; :(
     padding: .625em;
     border-width: 2px;
   }
@@ -69,7 +69,8 @@ input[type=number].input-text,
       padding-bottom: .5em;
 
       @media ( min-width: $breakpointDesktop ) {
-        padding-top: .73em;
+        padding-top: .6em;
+        padding-bottom: .45em;
       }
     }
   }
