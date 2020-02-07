@@ -14,17 +14,22 @@
   ],
   "scenarios": [
     {
-      "label": "bodb - homepage",
+      "label": "boub - homepage",
       "url": "http://localhost:3000/components/preview/templates-homepage",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-homepage.html"
     },
     {
-      "label": "bodb - searchresults",
+      "label": "boub - searchresults list",
       "url": "http://localhost:3000/components/preview/templates-searchresults",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults.html"
     },
     {
-      "label": "bodb - searchresults",
+      "label": "boub - searchresults map",
+      "url": "http://localhost:3000/components/preview/templates-searchresults-map",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults-map.html"
+    },
+    {
+      "label": "boub - newsletter",
       "url": "http://localhost:3000/components/preview/templates-newsletter",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-newsletter.html"
     },
@@ -39,9 +44,19 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage.html"
     },
     {
+      "label": "plooi - homepage uitgebreid",
+      "url": "http://localhost:3000/components/preview/templates-plooi-homepage-uitgebreid",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage-uitgebreid.html"
+    },
+    {
       "label": "plooi - searchresults",
       "url": "http://localhost:3000/components/preview/templates-plooi-searchresults",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-searchresults.html"
+    },
+    {
+      "label": "plooi - contentpage",
+      "url": "http://localhost:3000/components/preview/templates-plooi-contentpage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-contentpage.html"
     },
     {
       "label": "wetten.nl uitgebreid zoeken",
@@ -177,7 +192,103 @@
       "label": "Verdragenbank - wizard3",
       "url": "http://localhost:3000/components/preview/templates-verdr-wizard3",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard3.html"
+    },
+    {
+      "label": "Attenderingsservice - homepage",
+      "url": "http://localhost:3000/components/preview/templates-att-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-homepage.html"
+    },
+    {
+      "label": "Attenderingsservice - Stap 1",
+      "url": "http://localhost:3000/components/preview/templates-att-stap1",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-stap1.html"
+    },
+    {
+      "label": "Attenderingsservice - Profiel",
+      "url": "http://localhost:3000/components/preview/templates-att-profile",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-profile.html"
+    },
+    {
+      "label": "Attenderingsservice - Beheer",
+      "url": "http://localhost:3000/components/preview/templates-att-beheer",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-beheer.html"
+    },
+    {
+      "label": "Attenderingsservice - Login",
+      "url": "http://localhost:3000/components/preview/templates-att-login",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-login.html"
+    },
+    {
+      "label": "CUP - Homepage",
+      "url": "http://localhost:3000/components/preview/templates-cup-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-homepage.html"
+    },
+    {
+      "label": "CUP - Content",
+      "url": "http://localhost:3000/components/preview/templates-cup-content",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-content.html"
+    },
+    {
+      "label": "CUP - Browse 1",
+      "url": "http://localhost:3000/components/preview/templates-cup-browse1",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse1.html"
+    },
+    {
+      "label": "CUP - Browse 2",
+      "url": "http://localhost:3000/components/preview/templates-cup-browse2",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse2.html"
+    },
+    {
+      "label": "CUP - Browse 3",
+      "url": "http://localhost:3000/components/preview/templates-cup-browse3",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse3.html"
+    },
+    {
+      "label": "CUP - Browse 4",
+      "url": "http://localhost:3000/components/preview/templates-cup-browse4",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse4.html"
+    },
+    {
+      "label": "CVDR - Homepage",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage.html"
+    },
+    {
+      "label": "CVDR - Homepage uitgebreid",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage-uitgebreid",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage-uitgebreid.html"
+    },
+    {
+      "label": "CVDR - Content",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-contentpage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-contentpage.html"
+    },
+    {
+      "label": "CVDR - searchresults",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-searchresults",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-searchresults.html"
+    },
+    {
+      "label": "tucht - Homepage",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage.html"
+    },
+    {
+      "label": "tucht - Homepage uitgebreid",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage-uitgebreid",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage-uitgebreid.html"
+    },
+    {
+      "label": "tucht - Content",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-contentpage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-contentpage.html"
+    },
+    {
+      "label": "tucht - searchresults",
+      "url": "http://localhost:3000/components/preview/templates-cvdr-searchresults",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-searchresults.html"
     }
+
   ],
   "paths": {
     "bitmaps_reference": "backstop_data/bitmaps_reference",
