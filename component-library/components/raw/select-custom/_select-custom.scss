@@ -56,12 +56,13 @@
     }
   }
   &--large select {
-    height: 50px;
+    height: 2.6em;
     font-size: 1.2em;
+    padding-top: .1em;
   }
 
   &--small select {
-    height: 35px;
+    height: 40px;
     font-size: 0.8em;
   }
 

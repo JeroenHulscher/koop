@@ -91,120 +91,21 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-
-
-
-      <div class="map">
-        <div id="demo7" class="map__map"></div>
-        <div class="map__controls">
-          <div class="row row--spacer">
-            <div class="columns">
-              <div class="column">
-                <div class="relative">
-
-
-  <label class="visually-hidden"for="input-text-1" class="form__label form__label--">Postcode</label>
-
-
-  <input
-    type="text"
-    id="input-text-1"
-    name="1"
-    class="input input-text input-text--searchmedium  "
-    placeholder="Verfijn op zoekwoord"
-    
-    aria-invalid="false"
-    placeholder="Verfijn op zoekwoord"
-    
-    
-
-    data-decorator="toggle-remove-visibility"
-    />
-
-
-  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
-</div>
-
-
-              </div>
-              <div class="column align-right">
-                <div role="group" class="buttonswitch">
-    <a href="#" class="buttonswitch__button is-active icon icon--marker" aria-pressed="true">Kaart</a>
-    <a href="#" class="buttonswitch__button icon icon--hamburger" aria-pressed="false">Lijst</a>
-</div>
-
-              </div>
-            </div>
-          </div>
+      <div class="row columns">
+        <div class="column">
+          <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105</span></h1>
         </div>
-      </div>
-
-      <script id="data" type="application/json">
-      {
-        "debug": false,
-        "mount_element": "#demo7",
-        "locations": [{
-            "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
-            "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"
-        }, {
-            "type": "punt",
-            "geometry": "POINT(83388.72001447542 454483.4858568841)",
-            "geometry_type": "WKT",
-            "title": "Punt 1"
-        }],
-        "options": {
-            "mode": "geoview"
-        }
-      }
-      </script>
-
-
-
-      <div class="row row--spacer hidden-mobile">
-        <div class="columns">
-          <div class="column column-d-8">
-            <div class="relative">
-
-
-  <label class="visually-hidden"for="input-text-1" class="form__label form__label--">Postcode</label>
-
-
-  <input
-    type="text"
-    id="input-text-1"
-    name="1"
-    class="input input-text input-text--searchmedium  "
-    placeholder="Verfijn op zoekwoord"
-    
-    aria-invalid="false"
-    placeholder="Verfijn op zoekwoord"
-    
-    
-
-    data-decorator="toggle-remove-visibility"
-    />
-
-
-  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+        <div class="column align-right hidden-mobile">
+           <div role="group" class="buttonswitch">
+    <a href="#" class="buttonswitch__button is-active icon icon--hamburger" aria-pressed="true">Lijst</a>
+    <a href="#" class="buttonswitch__button icon icon--marker" aria-pressed="false">Kaart</a>
 </div>
 
-
-          </div>
-          <div class="column column-d-4 align-right">
-             <div role="group" class="buttonswitch">
-    <a href="#" class="buttonswitch__button is-active icon icon--marker" aria-pressed="true">Kaart</a>
-    <a href="#" class="buttonswitch__button icon icon--hamburger" aria-pressed="false">Lijst</a>
-</div>
-
-          </div>
         </div>
       </div>
 
 
-
-      <h1 class="h1 h1--slim">Zoekresultaten <span class="h1__sub">1-10 van de 105</span></h1>
-
-      <div class="hidden-desktop">
+      <div class="row hidden-desktop">
         <address>
           Gouwestraat 26<br>
           3522 CJ Utrecht<br>
@@ -217,9 +118,20 @@
 
       </div>
 
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+      <div class="row hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
       </div>
+      <div class="row hidden-desktop">
+        <div class="align-right">
+          <div role="group" class="buttonswitch">
+    <a href="#" class="buttonswitch__button is-active icon icon--hamburger" aria-pressed="true">Lijst</a>
+    <a href="#" class="buttonswitch__button icon icon--marker" aria-pressed="false">Kaart</a>
+</div>
+
+        </div>
+      </div>
+
+
 
       <div class="result--list result--list--wide">
   <ul>
@@ -310,9 +222,6 @@
               <li class="list__item">
                 <a href="#" class="button button--primary">Bekijk publicatie</a>
               </li>
-              <li class="list__item">
-                <a href="#" class="button button--secendary">Open interactieve kaart</a>
-              </li>
 
             </ul>
           </div>
@@ -352,7 +261,7 @@
                   <div class="input-inputsubmit ">
 
   <div class="input-inputsubmit__grid">
-    <label  for="">Uw e-mailadres</label>
+    <label class="visually-hidden"  for="">Uw e-mailadres</label>
     <input id="" type="text" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Aanmelden</span></button>
   </div>
@@ -402,15 +311,60 @@
                       <div class="form__row ">
                         <div class="columns">
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Postcode
-                              <span class="mandatory">Verplicht veld</span>
-                            </label>
-                            <input class="form__input" type="text" value="3522 CJ" placeholder="Bijv. 1337AA" />
+                            <div class="relative">
+
+
+  <label for="input-text-1" class="form__label form__label--accent">Huisnummer + toev.</label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text input-text--medium  "
+    placeholder="Bijv. 12A"
+    
+    aria-invalid="false"
+    placeholder="Bijv. 12A"
+    
+    
+
+    data-decorator="toggle-remove-visibility"
+    />
+
+
+  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+
+
                           </div>
                           <div class="form__row form__row--medium">
-                            <label class="form__label" for="">Huisnummer + toev.
-                            </label>
-                            <input class="form__input" value="26" type="text" />
+                            <div class="relative">
+
+
+  <label for="input-text-1" class="form__label form__label--accent">Huisnummer + toev.</label>
+
+
+  <input
+    type="text"
+    id="input-text-1"
+    name="1"
+    class="input input-text input-text--medium  "
+    placeholder="Bijv. 12A"
+    
+    aria-invalid="false"
+    placeholder="Bijv. 12A"
+    
+    
+
+    data-decorator="toggle-remove-visibility"
+    />
+
+
+  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
+</div>
+
+
                           </div>
                           <div class="form__row form__row--medium">
                             <label class="form__label" for="">Straal
@@ -496,6 +450,21 @@
   </a>
 </div>
 
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoekwoord(en)</legend>
+              <div class="input-inputsubmit input-inputsubmit--s">
+
+  <div class="input-inputsubmit__grid">
+    <label class="visually-hidden"  for="">Verfijn uw zoekopdracht</label>
+    <input id="" type="text" class="input " placeholder="Verfijn uw zoekopdracht" />
+    <button class="button button--primary"><span>Zoek</span></button>
+  </div>
+</div>
+
+            </fieldset>
           </div>
 
           <div class="form__row form__row--large">

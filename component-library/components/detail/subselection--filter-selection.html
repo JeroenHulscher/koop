@@ -218,7 +218,7 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-filter-results"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"filter-id--</span></span></span><span class="hljs-template-variable">{{id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{label}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"resultfilter-</span></span></span><span class="hljs-template-variable">{{id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Typ hier uw organisatie"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mysuper_field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"filter-id--</span></span></span><span class="hljs-template-variable">{{id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__input input-text input-text--searchmedium"</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"resultfilter-</span></span></span><span class="hljs-template-variable">{{id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> searchFilterPlaceholder}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{searchFilterPlaceholder}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">Typ hier uw organisatie</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mysuper_field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"filter-id--</span></span></span><span class="hljs-template-variable">{{id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__input input-text input-text--searchmedium"</span>
             /&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__results"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"resultfilter-</span></span></span><span class="hljs-template-variable">{{id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"polite"</span>&gt;</span>
@@ -237,7 +237,18 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-formreset"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--refresh formreset-resetlink"</span>&gt;</span>Reset keuze<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
          </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> OptionsLabel}}</span><span class="hljs-template-variable">{{OptionsLabel}}</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> OptionsIsCheckAll}}</span><span class="xml">
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-selectall"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input js-checkbox-master"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{OptionsIsCheckAllID}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"selectAll"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Alle iets"</span>
+                    /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label u-nomargin"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{OptionsIsCheckAllID}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span></span><span class="hljs-template-variable">{{ OptionsLabel }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              </span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> OptionsLabel}}</span><span class="hljs-template-variable">{{OptionsLabel}}</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
               </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> Options}}</span><span class="xml">
                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
                 </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> Options }}</span><span class="xml">
@@ -252,8 +263,22 @@
                   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                 </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+               </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> OptionsIsCheckAll}}</span><span class="xml">
+               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> Options2Label}}</span><span class="hljs-template-variable">{{Options2Label}}</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+               </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+                 </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> Options2IsCheckAll}}</span><span class="xml">
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-selectall"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input js-checkbox-master"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{Options2IsCheckAllID}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"selectAll"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Alle iets"</span>
+                    /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label u-nomargin"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{Options2IsCheckAllID}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span></span><span class="hljs-template-variable">{{ Options2Label }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  </span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml">
+                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> Options2Label}}</span><span class="hljs-template-variable">{{Options2Label}}</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
                 </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> Options2}}</span><span class="xml">
                   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
                     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> Options2 }}</span><span class="xml">
@@ -268,6 +293,9 @@
                       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
                     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> Options2IsCheckAll}}</span><span class="xml">
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
                 </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
              </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> radio}}</span><span class="xml">
              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -380,10 +408,47 @@
       <span class="hljs-attribute">padding-top</span>: .<span class="hljs-number">5em</span>;
     }
 
-    <span class="hljs-selector-tag">span</span> {
+    &gt; <span class="hljs-selector-tag">span</span> {
       @<span class="hljs-keyword">extend</span> .form__selectedfilter;
       @<span class="hljs-keyword">extend</span> .group;
-      <span class="hljs-attribute">padding-right</span>: .<span class="hljs-number">75em</span>;
+      <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.75em</span>;
+      <span class="hljs-attribute">position</span>: relative;
+      <span class="hljs-attribute">pointer-events</span>: none;
+
+      &amp;:hover {
+        <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">13px</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.3</span>);
+      }
+
+      <span class="hljs-selector-class">.subselection__summaryitem__remove</span> {
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">background</span>: <span class="hljs-variable">$iconCrossBlue</span> no-repeat center;
+        <span class="hljs-attribute">background-size</span>: <span class="hljs-number">0.625em</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">30px</span>;
+        <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">cursor</span>: pointer;
+        <span class="hljs-attribute">pointer-events</span>: auto;
+        <span class="hljs-attribute">display</span>: inline-block;
+        <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid transparent;
+        <span class="hljs-attribute">outline-offset</span>: .<span class="hljs-number">5em</span>;
+        <span class="hljs-attribute">transition</span>: outline-offset <span class="hljs-variable">$fastEaseInOut</span>;
+
+        &amp;::-moz-focus-inner {
+          border: none;
+          <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        }
+
+        &amp;:focus {
+          <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$yellow</span>;
+          <span class="hljs-attribute">outline-offset</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+        }
+      }
+
     }
   }
 }
@@ -409,7 +474,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">339 Bytes</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -447,16 +512,33 @@
     element(by.css(<span class="hljs-string">'#modal-222 #option-2 ~ label'</span>)).click();
     element(by.css(<span class="hljs-string">'#modal-222 #option-3 ~ label'</span>)).click();
     element(by.css(<span class="hljs-string">'#modal-222 #option-4 ~ label'</span>)).click();
+    element(by.css(<span class="hljs-string">'#modal-222 #option-5 ~ label'</span>)).click();
 
     <span class="hljs-keyword">var</span> modalButton = element(by.css(<span class="hljs-string">'.modal .button.button--primary'</span>));
     modalButton.click();
 
     browser.driver.findElements(by.css(<span class="hljs-string">'.subselection__summary span'</span>)).
       then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">elems</span>) </span>{
-        expect(elems.length).toEqual(<span class="hljs-number">4</span>);
+        expect(elems.length).toEqual(<span class="hljs-number">5</span>);
       }
     );
   });
+
+  it(<span class="hljs-string">'should remove item when clicked on X'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">var</span> itemRemoveTrigger = element(by.css(<span class="hljs-string">'.subselection__summary span:first-child button'</span>));
+    itemRemoveTrigger.click();
+
+    browser.driver.sleep(<span class="hljs-number">1500</span>);
+
+    browser.driver.findElements(by.css(<span class="hljs-string">'.subselection__summary span'</span>)).
+      then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">elems</span>) </span>{
+        expect(elems.length).toEqual(<span class="hljs-number">4</span>);
+      }
+      );
+  });
+
+
   it(<span class="hljs-string">'should toggle the invisble results'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
 
     <span class="hljs-keyword">var</span> moreTrigger = element(by.css(<span class="hljs-string">'.link--down a'</span>));
@@ -476,10 +558,11 @@
 
     browser.driver.sleep(<span class="hljs-number">1500</span>);
 
-    element(by.css(<span class="hljs-string">'#modal-222 #option-1 ~ label'</span>)).click();
+    <span class="hljs-comment">// element(by.css('#modal-222 #option-1 ~ label')).click();</span>
     element(by.css(<span class="hljs-string">'#modal-222 #option-2 ~ label'</span>)).click();
     element(by.css(<span class="hljs-string">'#modal-222 #option-3 ~ label'</span>)).click();
     element(by.css(<span class="hljs-string">'#modal-222 #option-4 ~ label'</span>)).click();
+    element(by.css(<span class="hljs-string">'#modal-222 #option-5 ~ label'</span>)).click();
 
     <span class="hljs-keyword">var</span> modalButton = element(by.css(<span class="hljs-string">'.modal .button.button--primary'</span>));
     modalButton.click();
@@ -507,7 +590,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">2.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -564,30 +647,35 @@
 
     <span class="hljs-keyword">this</span>.items = [];
 
-    <span class="hljs-keyword">this</span>.attachListeners();
-
     <span class="hljs-keyword">this</span>.collectValues();
     <span class="hljs-keyword">this</span>.parseSelectedOptions();
+
+    <span class="hljs-keyword">this</span>.attachListeners();
   };
 
   formSubselection.prototype.attachListeners = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">var</span> y;
 
-    <span class="hljs-comment">// for ( i = 0; i &lt; this.buttonClose.length; i++ ) {</span>
-    <span class="hljs-comment">//   this.buttonClose[i].addEventListener( 'click', function (e) { this.parseSelectedOptions(e); }.bind(this), false);</span>
-    <span class="hljs-comment">// }</span>
-
     <span class="hljs-keyword">for</span> ( y = <span class="hljs-number">0</span>; y &lt; <span class="hljs-keyword">this</span>.options.length; y++ ) {
       <span class="hljs-keyword">this</span>.options[y].addEventListener( <span class="hljs-string">'change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{ <span class="hljs-keyword">this</span>.collectValues(e); }.bind(<span class="hljs-keyword">this</span>), <span class="hljs-literal">false</span>);
     }
+  };
 
+  formSubselection.prototype.attachRemoveListeners = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> i;
 
+    <span class="hljs-keyword">this</span>.summaryItemRemovers = <span class="hljs-keyword">this</span>.containerSummary.querySelectorAll(<span class="hljs-string">'.subselection__summaryitem__remove'</span>);
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.summaryItemRemovers.length; i++ ) {
+      <span class="hljs-keyword">this</span>.summaryItemRemovers[i].addEventListener( <span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{ <span class="hljs-keyword">this</span>.removeSummaryItem(e); }.bind(<span class="hljs-keyword">this</span>), <span class="hljs-literal">false</span>);
+    }
   };
 
   formSubselection.prototype.collectValues = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">var</span> y;
     <span class="hljs-keyword">var</span> option;
     <span class="hljs-keyword">var</span> value;
+    <span class="hljs-keyword">var</span> id;
 
     <span class="hljs-comment">// reset items;</span>
     <span class="hljs-keyword">this</span>.items = [];
@@ -597,13 +685,14 @@
       option = [];
       <span class="hljs-keyword">if</span> ( <span class="hljs-keyword">this</span>.options[y].checked ) {
         value = <span class="hljs-keyword">this</span>.options[y].getAttribute( <span class="hljs-string">'data-value'</span> ) || <span class="hljs-keyword">this</span>.options[y].value;
+        id = <span class="hljs-keyword">this</span>.options[y].getAttribute( <span class="hljs-string">'id'</span> );
         <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'label'</span>) !== <span class="hljs-literal">null</span>) {
-          option.push(value, <span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'label'</span>).innerText);
+          option.push(value, <span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'label'</span>).innerText, id);
         } <span class="hljs-keyword">else</span> {
           <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'.input-checkbox'</span>)) {
-            option.push(value, <span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'.input-checkbox'</span>).querySelector(<span class="hljs-string">'label'</span>).innerText);
+            option.push(value, <span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'.input-checkbox'</span>).querySelector(<span class="hljs-string">'label'</span>).innerText, id);
           } <span class="hljs-keyword">else</span> {
-            option.push(value, <span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'.input-radio'</span>).querySelector(<span class="hljs-string">'label'</span>).innerText);
+            option.push(value, <span class="hljs-keyword">this</span>.options[y].closest(<span class="hljs-string">'.input-radio'</span>).querySelector(<span class="hljs-string">'label'</span>).innerText, id);
           }
 
         }
@@ -618,9 +707,16 @@
   formSubselection.prototype.parseSelectedOptions = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">var</span> y;
     <span class="hljs-keyword">var</span> summary = <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">var</span> value;
+    <span class="hljs-keyword">var</span> title;
+    <span class="hljs-keyword">var</span> id;
 
     <span class="hljs-keyword">for</span> ( y = <span class="hljs-number">0</span>; y &lt; <span class="hljs-keyword">this</span>.items.length; y++ ) {
-      summary += <span class="hljs-string">'&lt;'</span> + <span class="hljs-keyword">this</span>.config.type + <span class="hljs-string">' title="'</span> + <span class="hljs-keyword">this</span>.items[y][<span class="hljs-number">1</span>] + <span class="hljs-string">'"&gt;'</span> + <span class="hljs-keyword">this</span>.items[y][<span class="hljs-number">0</span>] + <span class="hljs-string">'&lt;/'</span> + <span class="hljs-keyword">this</span>.config.type +<span class="hljs-string">'&gt; '</span>;
+      value = <span class="hljs-keyword">this</span>.items[y][<span class="hljs-number">0</span>];
+      title = <span class="hljs-keyword">this</span>.items[y][<span class="hljs-number">1</span>];
+      id = <span class="hljs-keyword">this</span>.items[y][<span class="hljs-number">2</span>];
+
+      summary += <span class="hljs-string">'&lt;'</span> + <span class="hljs-keyword">this</span>.config.type + <span class="hljs-string">' title="'</span> + title + <span class="hljs-string">'" data-linkedid="'</span>+id+<span class="hljs-string">'"&gt;'</span> + value + <span class="hljs-string">'&lt;button class="subselection__summaryitem__remove"&gt;&lt;/button&gt;&lt;/'</span> + <span class="hljs-keyword">this</span>.config.type +<span class="hljs-string">'&gt; '</span>;
     }
     <span class="hljs-keyword">this</span>.containerSummary.innerHTML = summary;
     <span class="hljs-keyword">this</span>.containerSummary.setAttribute(<span class="hljs-string">'aria-live'</span>, <span class="hljs-string">'polite'</span>);
@@ -629,6 +725,7 @@
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.maxShow) {
       <span class="hljs-keyword">this</span>.initHideUnwantedResults();
     }
+    <span class="hljs-keyword">this</span>.attachRemoveListeners();
   };
 
   formSubselection.prototype.initHideUnwantedResults = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -712,6 +809,15 @@
     }
   };
 
+  formSubselection.prototype.removeSummaryItem = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">var</span> item = e.target.parentNode;
+    <span class="hljs-keyword">var</span> itemLinkedId = item.getAttribute(<span class="hljs-string">'data-linkedid'</span>);
+    <span class="hljs-keyword">var</span> target = <span class="hljs-built_in">document</span>.getElementById(itemLinkedId);
+    target.checked = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">this</span>.collectValues();
+  };
+
+
 })();
 </pre>
                             </code>
@@ -729,7 +835,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">6.6 KB</span>
+                    <span class="Meta-value">7.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -4939,6 +5045,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="video.html" data-pjax>
+                <span>Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="well.html" data-pjax>
                 <span>Well</span>
                 
@@ -7065,9 +7195,9 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-bodb-templates">
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-boub-templates">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Bodb Templates</span>
+                <span>Boub Templates</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -7079,7 +7209,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepage.html" data-pjax>
-                <span>BodB - Homepage</span>
+                <span>BouB - Homepage</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7103,31 +7233,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-newsletter.html" data-pjax>
-                <span>BodB - Nieuwsbrief</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="templates-pages.html" data-pjax>
-                <span>BodB - Pages</span>
+                <span>BouB - Nieuwsbrief</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7151,7 +7257,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-searchresults.html" data-pjax>
-                <span>BodB - Searchresults</span>
+                <span>BodB - Zoekres. Lijst</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7159,7 +7265,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-searchresults-map.html" data-pjax>
+                <span>BodB - Zoekres. Kaart</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
