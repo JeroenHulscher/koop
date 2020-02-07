@@ -9,7 +9,7 @@ textarea {
   border: 1px solid $darkBlue;
   color: $darkBlue;
   border-radius: .25em;
-  padding: .4em .75em;
+  padding: .6em .8em;
   font-size: 1em;
   height: auto;
   outline: 2px solid transparent;
@@ -51,7 +51,8 @@ select {
 }
 input[type=text].input-text,
 input[type=password].input-text {
-  padding: .4em .75em;
+  // padding: .4em .75em;
+  padding: .6em .8em;
 
   &--accent {
     padding: .625em;
