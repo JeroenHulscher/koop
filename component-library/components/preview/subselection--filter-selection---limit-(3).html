@@ -28,12 +28,19 @@
     <div class="modal__inner">
       <div class="modal__content">
         <h2>Selecteer ministeries</h2>
-                <p class="form__label"></p>
-               <ul class="list--unstyled">
+              <div data-decorator="init-selectall">
+                <div class="input-checkbox u-margin--m">
+                  <input class="checkbox__input js-checkbox-master" type="checkbox" id="123211" name="selectAll" value="Alle iets" />
+                  <label class="checkbox__label" for="123211">
+                    <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+                  </label>
+                </div>
+
+                <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"  checked  type="checkbox" id="option-1" name="name"  data-value="Nederland" value="2"
-                      />
+                      <input class="checkbox__input"  checked  type="checkbox" id="option-1" name="name"  data-value="Nederland"
+                        value="2" />
                       <label class="checkbox__label" for="option-1">
                         Nederland
                       </label>
@@ -41,8 +48,8 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-2" name="name"  data-value="Frankrijk" value="2"
-                      />
+                      <input class="checkbox__input"    type="checkbox" id="option-2" name="name"  data-value="Frankrijk"
+                        value="2" />
                       <label class="checkbox__label" for="option-2">
                         Frankrijk
                       </label>
@@ -50,8 +57,8 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-3" name="name"  data-value="Griekenland" value="2"
-                      />
+                      <input class="checkbox__input"    type="checkbox" id="option-3" name="name"  data-value="Griekenland"
+                        value="2" />
                       <label class="checkbox__label" for="option-3">
                         Griekenland
                       </label>
@@ -59,8 +66,8 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-4" name="name"  data-value="Spanje" value="2"
-                      />
+                      <input class="checkbox__input"    type="checkbox" id="option-4" name="name"  data-value="Spanje"
+                        value="2" />
                       <label class="checkbox__label" for="option-4">
                         Spanje
                       </label>
@@ -68,15 +75,16 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-5" name="name"  data-value="Spanje" value="2"
-                      />
+                      <input class="checkbox__input"    type="checkbox" id="option-5" name="name"  data-value="Spanje"
+                        value="2" />
                       <label class="checkbox__label" for="option-5">
                         Spanje
                       </label>
                     </div>
                   </li>
                 </ul>
-                  <p class="form__label"></p>
+
+          </div>
 
         <div class="modal__buttonpane">
             <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
