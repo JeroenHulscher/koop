@@ -369,9 +369,13 @@ context:
 
   selectedfilterContext:
     items:
-      - label: Gezocht op "leveringen"
+      - label: Gezocht op
+        value: leveringen
+        url: "#"
       - label: Bouwvergunning
+        url: "#"
       - label: APV vergunning
+        url: "#"
   selectStraalContext:
     modifier: select-custom--large
     id: 1

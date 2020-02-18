@@ -192,6 +192,15 @@ fieldset {
     margin-right: .25em;
     margin-bottom: .25em;
 
+    > span {
+      &::before {
+        content: "\0022";
+      }
+      &::after {
+        content: "\0022";
+      }
+    }
+
     &__remove {
       background: $iconCrossBlue;
       background-size: 0.5em;
