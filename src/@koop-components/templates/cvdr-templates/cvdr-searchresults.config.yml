@@ -322,8 +322,11 @@ context:
   selectedfilterContext:
     items:
       - label: Gezocht op "leveringen"
+        url: "#"
       - label: Bouwvergunning
+          url: "#"
       - label: APV vergunning
+          url: "#"
   subselectionContext:
     linkText: Selecteer organisatie(s)
     id: 1

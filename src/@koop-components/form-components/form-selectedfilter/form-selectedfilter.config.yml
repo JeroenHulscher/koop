@@ -4,5 +4,11 @@ status: ready
 context:
   id: 1
   items:
+    - label: Gezocht op
+      value: zoekterm
+      url: "#"
     - label: Aanlegvergunning
-    - label: Bouwvergunning
+      url: "#"
+    - label:
+      value: Bouwvergunning
+      url: "#"
