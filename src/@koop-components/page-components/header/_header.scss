@@ -82,6 +82,15 @@
         }
       }
 
+      .button {
+        margin-top: 0.5em;
+        @media ( min-width: $breakpointDesktop ) {
+        font-size: 1em;
+        position: relative;
+        margin-top: -0.5em;
+        }
+      }
+
     }
   }
 

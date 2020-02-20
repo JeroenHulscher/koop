@@ -5,6 +5,10 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    metaLinks:
+      - url: "#"
+        text: Profiel
+        class: button icon-bg icon-bg--profile
   abonnementenContext:
     id: sl2
     items:
