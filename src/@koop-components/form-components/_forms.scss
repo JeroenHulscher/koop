@@ -94,8 +94,9 @@ fieldset {
   text-align: left;
 
   &__errors {
-    @extend .alert;
-    @extend .alert--warning;
+    background: lighten($lightRed,7) $infoIconRed no-repeat top 1.2em left 1em;
+    background-size: 1em;
+    padding: 1em 1em 1em 3em;
 
     ul {
       @extend .list--linked;
@@ -157,7 +158,11 @@ fieldset {
 
   &__error {
     font-weight: bold;
-    color: red;
+    color: $red;
+    background: $infoIconRed top 0.2em left;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    padding-left: 1.5em;
   }
 
   &__hint {
