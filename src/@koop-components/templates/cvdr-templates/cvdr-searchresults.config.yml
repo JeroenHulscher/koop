@@ -324,9 +324,9 @@ context:
       - label: Gezocht op "leveringen"
         url: "#"
       - label: Bouwvergunning
-          url: "#"
+        url: "#"
       - label: APV vergunning
-          url: "#"
+        url: "#"
   subselectionContext:
     linkText: Selecteer organisatie(s)
     id: 1
