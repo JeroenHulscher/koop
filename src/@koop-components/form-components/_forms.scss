@@ -97,6 +97,7 @@ fieldset {
     background: lighten($lightRed,7) $infoIconRed no-repeat top 1.2em left 1em;
     background-size: 1em;
     padding: 1em 1em 1em 3em;
+    margin-bottom: 1em;
 
     ul {
       @extend .list--linked;
