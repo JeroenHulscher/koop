@@ -421,7 +421,7 @@
                         &lt;div class="form__row form__row--large"&gt;
                             &lt;h3&gt;Geselecteerde filters (2)&lt;/h3&gt;
                             &lt;div class="form__selectedfilter "&gt;
-                                Gezocht op &amp;quot;leveringen&amp;quot;
+                                Gezocht op &lt;span&gt;leveringen&lt;/span&gt;
                                 &lt;a href="#" class="form__selectedfilter__remove"&gt;
     &lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;
   &lt;/a&gt;
@@ -473,7 +473,7 @@
                                                         &lt;/div&gt;
                                                         &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-12" aria-live="polite"&gt;
                                                             &lt;legend class="visually-hidden"&gt;Selecteer informatiesoort(en)&lt;/legend&gt;
-                                                            &lt;p class="form__label"&gt;&lt;/p&gt;
+
                                                             &lt;ul class="list--unstyled"&gt;
                                                                 &lt;li class=" js-filterresults__result"&gt;
                                                                     &lt;div class="input-checkbox"&gt;
@@ -500,7 +500,7 @@
                                                                     &lt;/div&gt;
                                                                 &lt;/li&gt;
                                                             &lt;/ul&gt;
-                                                            &lt;p class="form__label"&gt;&lt;/p&gt;
+
                                                         &lt;/fieldset&gt;
                                                     &lt;/div&gt;
 
@@ -539,7 +539,7 @@
                                                         &lt;/div&gt;
                                                         &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-12" aria-live="polite"&gt;
                                                             &lt;legend class="visually-hidden"&gt;Selecteer thema(s)&lt;/legend&gt;
-                                                            &lt;p class="form__label"&gt;&lt;/p&gt;
+
                                                             &lt;ul class="list--unstyled"&gt;
                                                                 &lt;li class=" js-filterresults__result"&gt;
                                                                     &lt;div class="input-checkbox"&gt;
@@ -566,7 +566,7 @@
                                                                     &lt;/div&gt;
                                                                 &lt;/li&gt;
                                                             &lt;/ul&gt;
-                                                            &lt;p class="form__label"&gt;&lt;/p&gt;
+
                                                         &lt;/fieldset&gt;
                                                     &lt;/div&gt;
 
@@ -606,7 +606,7 @@
                                                         &lt;/div&gt;
                                                         &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-1" aria-live="polite"&gt;
                                                             &lt;legend class="visually-hidden"&gt;Selecteer organisatie(s)&lt;/legend&gt;
-                                                            &lt;p class="form__label"&gt;&lt;/p&gt;
+
                                                             &lt;ul class="list--unstyled"&gt;
                                                                 &lt;li class=" js-filterresults__result"&gt;
                                                                     &lt;div class="input-checkbox"&gt;
@@ -633,7 +633,7 @@
                                                                     &lt;/div&gt;
                                                                 &lt;/li&gt;
                                                             &lt;/ul&gt;
-                                                            &lt;p class="form__label"&gt;&lt;/p&gt;
+
                                                         &lt;/fieldset&gt;
                                                     &lt;/div&gt;
 
@@ -1342,13 +1342,17 @@
   <span class="hljs-attr">"selectedfilterContext"</span>: {
     <span class="hljs-attr">"items"</span>: [
       {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Gezocht op \"leveringen\""</span>
+        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Gezocht op"</span>,
+        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"leveringen"</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
       },
       {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Bouwvergunning"</span>
+        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Bouwvergunning"</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
       },
       {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"APV vergunning"</span>
+        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"APV vergunning"</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
       }
     ]
   },
@@ -5931,6 +5935,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form-validation.html" data-pjax>
+                <span>Form validation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="kpm.html" data-pjax>
                 <span>KPM Module</span>
                 
@@ -7001,21 +7029,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-subselection">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="subselection.html" data-pjax>
                 <span>Subselection</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="subselection--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -7032,83 +7049,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="subselection--default-(span).html" data-pjax>
-                <span>Default Span</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="subselection--default-(span)-limit-(3).html" data-pjax>
-                <span>Default Span Limit 3</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="subselection--default-(span)-inputfilter.html" data-pjax>
-                <span>Default Span Inputfilter</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -8928,6 +8868,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepageoeb.html" data-pjax>
                 <span>Homepage OEP</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl-live-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl Live Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-dienstverlening.html" data-pjax>
+                <span>Dienstverlening</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-lokalewetregelgeving.html" data-pjax>
+                <span>lokalewetregelgeving</span>
                 
 
 <div class="Status Status--unlabelled">

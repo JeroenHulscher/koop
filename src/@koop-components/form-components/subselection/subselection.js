@@ -15,15 +15,22 @@
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     this.config.type = this.config.type || 'span';
     this.config.maxShow = this.config.maxShow || false;
-    this.triggerClassDefault = 'icon--list';
-    this.triggerClassActive = 'icon--edit';
+    if (onl.dom.$('.selection_popup', this.element)[0]) {
+      this.triggerClassDefault = 'icon--';
+      this.triggerClassActive = 'icon--';
+    } else {
+      this.triggerClassDefault = 'icon--list';
+      this.triggerClassActive = 'icon--edit';
+    }
     this.init();
   };
 
   formSubselection.prototype.init = function() {
     var self = this;
-
-    this.trigger = onl.dom.$( '.subselection__trigger', this.element )[0];
+    this.trigger = onl.dom.$('.subselection__trigger', this.element)[0] || onl.dom.$('.selection_popup', this.element)[0];
+    if (!onl.dom.$('.selection_popup', this.element)[0]) {
+      this.trigger.classList.add('icon');
+    }
     this.trigger.classList.add(this.triggerClassDefault);
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
@@ -31,8 +38,7 @@
     this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
 
-    // temporary solution.
-    // TODO: improve!!
+    // TODO: improve
     setTimeout(function(){
       self.resetLink = self.element.querySelector('.' + self.resetLinkClass);
       if (self.resetLink) {
@@ -110,8 +116,11 @@
       value = this.items[y][0];
       title = this.items[y][1];
       id = this.items[y][2];
-
-      summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<button class="subselection__summaryitem__remove"></button></' + this.config.type +'> ';
+      if (this.config.type !== 'abbr') {
+        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<button class="subselection__summaryitem__remove"></button></' + this.config.type +'> ';
+      } else {
+        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
+      }
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
@@ -191,7 +200,7 @@
 
   formSubselection.prototype.updateTriggerLabel = function (length) {
     // no idea why, but re-init is needed for this var;
-    this.trigger = onl.dom.$( '.subselection__trigger', this.element )[0];
+    this.trigger = onl.dom.$('.subselection__trigger', this.element)[0] || onl.dom.$('.selection_popup', this.element)[0];
 
     if ( length > 0 ) {
       this.trigger.innerText = this.config.triggerOnChangeText || 'Aanpassen';

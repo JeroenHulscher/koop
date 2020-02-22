@@ -59,6 +59,8 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 0612345678'
       maxShow: 3
+      selectAll: true
+      selectAllID: 123211
       Options:
         - Option: 1
           id: 1
@@ -81,6 +83,7 @@ variants:
           id: 5
           title: Spanje
           short: Spanje
+<<<<<<< HEAD
   - name: Default (span) inputfilter
     context:
       linkText: Selecteer land(en)
@@ -105,3 +108,47 @@ variants:
           id: 656
           title: Nederland
           short: Nederland
+=======
+  - name: Filter selection - Multilevel
+    context:
+      id: 1
+      type: span
+      linkText: Kies 'iets anders'
+      linkTextActive: Pas opties aan
+      modalTitle: Selecteer uit deze themas
+      fieldLabel: fieldLabel
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 0612345678'
+      maxShow: 3
+      multilevel: true
+      Options:
+        - Option: 1
+          id: 1
+          title: Nederland
+          short: Nederland
+          checkAll: true
+          OptionsSubs:
+            - OptionsSub: 11
+              id: 11
+              title: NederlandSub1
+              short: NederlandSub1
+              checked: checked
+            - OptionsSub: 12
+              id: 12
+              title: NederlandSub2
+              short: NederlandSub2
+        - Option: 2
+          id: 2
+          title: Frankrijk
+          short: Frankrijk
+          checkAll: true
+          OptionsSubs:
+            - OptionSub: 21
+              id: 21
+              title: FrankrijkSub1
+              short: FrankrijkSub1
+            - OptionSub: 22
+              id: 22
+              title: FrankrijkSub2
+              short: FrankrijkSub2
+>>>>>>> release/1.9.20

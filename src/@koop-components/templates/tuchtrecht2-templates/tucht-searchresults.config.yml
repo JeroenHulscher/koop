@@ -83,9 +83,13 @@ context:
     button: Bevestigen
   selectedfilterContext:
     items:
-      - label: Gezocht op "leveringen"
+      - label: Gezocht op
+        value: leveringen
+        url: "#"
       - label: Bouwvergunning
+        url: "#"
       - label: APV vergunning
+        url: "#"
   subselectionContext:
     linkText: Selecteer beroepsgroep(en)
     id: 1

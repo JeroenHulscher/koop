@@ -29,4 +29,6 @@ context:
   selectedfilterContext:
     items:
       - label: "Gemeenten: Den Haag"
+        url: "#"
       - label: "Ministeries: Ministerie van Binnenlandse Zaken"
+        url: "#"

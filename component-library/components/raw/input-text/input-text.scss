@@ -10,7 +10,7 @@ input[type=number].input-text,
   &--medium {
     font-size: 1.125rem;
     color: $darkBlue;
-    height: 56px; // needed to correct crossbrowser fields; :(
+    height: 60px; // needed to correct crossbrowser fields; :(
     padding: .625em;
     border-width: 2px;
   }
