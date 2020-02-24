@@ -15,7 +15,8 @@ $icons: (
   plus: $plusIcon,
   plus-white: $plusIconWhite,
   mail: $iconMail,
-  play: $iconPlay
+  play: $iconPlay,
+  profile: $iconProfile
 );
 
 .icon {
@@ -348,4 +349,8 @@ $value in $icons {
   .icon-bg--#{$name} {
     background-image: $value !important;
   }
+}
+
+.icon-bg--profile {
+  background-position: right .8em center !important;
 }
