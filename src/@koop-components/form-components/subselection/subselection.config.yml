@@ -83,7 +83,6 @@ variants:
           id: 5
           title: Spanje
           short: Spanje
-<<<<<<< HEAD
   - name: Default (span) inputfilter
     context:
       linkText: Selecteer land(en)
@@ -108,7 +107,6 @@ variants:
           id: 656
           title: Nederland
           short: Nederland
-=======
   - name: Filter selection - Multilevel
     context:
       id: 1
@@ -151,4 +149,3 @@ variants:
               id: 22
               title: FrankrijkSub2
               short: FrankrijkSub2
->>>>>>> release/1.9.20
