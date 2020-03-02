@@ -148,6 +148,11 @@ fieldset {
       font-weight: bold;
     }
 
+    & ~ .input-radio,
+    & ~ .input-checkbox {
+      margin-top: .5em;
+    }
+
     .mandatory {
       font-size: 0.9em;
       font-weight: normal;
@@ -176,6 +181,10 @@ fieldset {
     width: 100%;
     font-size: 1.8rem;
     color: $darkBlue;
+    &-helptext {
+      font-size: 0.8em;
+      color: $darkGrey;
+    }
   }
   &__button {
     margin: 0;

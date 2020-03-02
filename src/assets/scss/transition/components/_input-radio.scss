@@ -70,3 +70,9 @@
     background: $darkBlue;
   }
 }
+
+.radio__input.has-error ~ .radio__label {
+  &:before {
+    border-color: $red;
+  }
+}
