@@ -603,7 +603,9 @@ input[type=date].datepicker__input {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=email],
+input[type=number] {
   &.is-valid {
     background: $iconCheck2Green no-repeat right .5em center;
   }
