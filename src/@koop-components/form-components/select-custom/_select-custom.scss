@@ -7,6 +7,9 @@
   background-color: white;
   border-radius: 5px;
 
+  &.has-error {
+    border: 2px solid $red;
+  }
 
   &:after {
     position: absolute;
