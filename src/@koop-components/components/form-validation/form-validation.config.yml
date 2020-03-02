@@ -2,3 +2,31 @@
 label: Form validation
 status: prototype
 context:
+  subselectionContext:
+    radio: true
+    type: span
+    linkText: Kies 'iets'
+    linkTextActive: Pas opties aan
+    modalTitle: Selecteer ministeries
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: 4
+        id: 4
+        title: Engeland
+        short: Engeland
+        required: required
+        name: subname
+      - Option: 2
+        id: 2
+        title: Frankrijk
+        short: Frankrijk
+        required: required
+        name: subname
+      - Option: 3
+        id: 3
+        title: Griekenland
+        short: Griekenland
+        required: required
+        name: subname

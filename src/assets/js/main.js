@@ -148,6 +148,13 @@ window.onl = {
     unbindFocusTrap: function( element ) {
       element.removeEventListener( 'keydown', onl.ui.trapFocus );
     },
+    uniqBy: function(a, key) {
+      var seen = {};
+      return a.filter(function (item) {
+        var k = key(item);
+        return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+      })
+    },
     // prevent (shift) tabbing away from an element
     trapFocus: function( event ) {
       var element = event.currentTarget;

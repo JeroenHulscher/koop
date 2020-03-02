@@ -1,63 +1,80 @@
 <form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'>
+  <fieldset>
+    <legend>Example form with validation</legend>
 
-  <div class="form__row">
-    <label for="month1">Month
-    </label>
-    <input type="text" name="month1" id="month1" value="" pattern="[-+]?[0-9]" required>
-  </div>
+    <div class="form__row">
+      {{render "@subselection" subselectionContext}}
+    </div>
 
-  <div class="form__row" data-radiogroup-title="Radius zoekgeschiedenis">
-    <div class="input-radio">
-      <input class="radio__input" value="" type="radio" id="option-3" name="goor" required>
-      <label class="radio__label" for="option-3">
-        Afgelopen 6 maanden
+    <div class="form__row">
+      <label for="tf1">Text field 1</label>
+      <p class="form__input-helptext">(manual pattern - only number(s))</p>
+      <input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required>
+    </div>
+
+
+    <div class="form__row">
+      <label for="tf2">Text field 2</label>
+      <p class="form__input-helptext">(preset pattern: number)</p>
+      <input type="text" name="tf2" id="tf2" data-pattern-type="number" required>
+    </div>
+
+    <div class="form__row">
+      <label for="nf2">Number field</label>
+      <input type="number" name="nf2" id="nf2" required>
+    </div>
+
+    <div class="form__row">
+      <label for="ef1">Email field
       </label>
+      <input type="email" name="ef1" id="ef1" data-pattern-type="email" required>
     </div>
-    <div class="input-radio">
-      <input class="radio__input" value="" type="radio" id="option-4" name="goor" required>
-      <label class="radio__label" for="option-4">
-        Afgelopen 12 maanden
-      </label>
+
+    <div class="form__row">
+      <label for="appel1">Zipcode (dutch)</label>
+      <p class="form__input-helptext">(preset pattern: zipcode. '1234AB')</p>
+      <input type="text" name="appel3" id="appel3" value="" data-pattern-type="zipcode" title="wel goed 1234AB doen he" required>
     </div>
-  </div>
 
-  <div class="form__row">
-    <div class="input-checkbox">
-      <input class="checkbox__input"type="checkbox" id="option-checkbox-2" name="geer" value="akkoord" required>
-      <label class="checkbox__label" for="option-checkbox-2">
-        Gaat u hiermee akkoord?
-      </label>
+
+    <div class="form__row" data-radiogroup-title="Radius zoekgeschiedenis">
+      <p class="form__label">Radio group</p>
+      <div class="input-radio">
+        <input class="radio__input" value="" type="radio" id="option-3" name="goor" required>
+        <label class="radio__label" for="option-3">Group item 1</label>
+      </div>
+      <div class="input-radio">
+        <input class="radio__input" value="" type="radio" id="option-4" name="goor" required>
+        <label class="radio__label" for="option-4">Group item 2</label>
+      </div>
+      <div class="input-radio">
+        <input class="radio__input" value="" type="radio" id="option-5" name="goor" required>
+        <label class="radio__label" for="option-5">Group item 3</label>
+      </div>
     </div>
-  </div>
 
-  <div class="form__row">
-    <div id="1" class="select-custom">
-      <label class="select-custom__label" for="select1"></label>
-      <select id="select1" name="selecter1" required>
-        <option value="">Kies iets</option>
-        <option value="10">Item 1</option>
-        <option value="20">Item 2</option>
-        <option value="50">Item 3</option>
-        <option value="100">Item 4</option>
-      </select>
+    <div class="form__row">
+      <label class="select-custom__label" for="select1">City of birth</label>
+      <div id="1" class="select-custom">
+        <select id="select1" name="selecter1" required>
+          <option value="">Choose COB</option>
+          <option value="10">Amsterdam</option>
+          <option value="20">London</option>
+          <option value="50">Barcelona</option>
+          <option value="100">New York</option>
+        </select>
+      </div>
     </div>
-  </div>
 
-  <div class="form__row">
-    <label for="appel1">Different month
-    </label>
-    <input type="text" name="appel1" id="appel1" value="" data-pattern-type="number" required>
-  </div>
-  <div class="form__row">
-    <label for="appel1">Email
-    </label>
-    <input type="text" name="appel2" id="appel2" value="" data-pattern-type="email" required>
-  </div>
-  <div class="form__row">
-    <label for="appel1">Postcode
-    </label>
-    <input type="text" name="appel3" id="appel3" value="" data-pattern-type="zipcode" title="wel goed 1234AB doen he" required>
-  </div>
+    <div class="form__row">
+      <div class="input-checkbox">
+        <input class="checkbox__input" type="checkbox" id="option-checkbox-2" name="geer" value="akkoord" required>
+        <label class="checkbox__label" for="option-checkbox-2">
+          Gaat u hiermee akkoord?
+        </label>
+      </div>
+    </div>
 
-  <input type="submit" class="button" value="Submit">
+    <input type="submit" class="button" value="Submit">
+  </fieldset>
 </form>
