@@ -66,8 +66,8 @@
                   {{#each Options }}
                   <li class=" js-filterresults__result">
                     <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-                      <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"
-                        {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}"
+                      <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{required}} {{#if linkedto}}data-linkedto="{{linkedto}}"
+                        {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}"
                         value="2" />
                       <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
                         {{ title }}
