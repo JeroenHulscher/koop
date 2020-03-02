@@ -85,9 +85,6 @@ var supports = function () {
 
     // Get validity
     var validity = field.validity;
-    // console.log('validity', validity);
-
-    console.log('hasErrors field', field.type, field);
 
     // in case of use of default patterns (number, email, dutch zipcode)
     if (field.getAttribute('data-pattern-type')) {
@@ -165,18 +162,21 @@ var supports = function () {
   };
 
   formvalidation.prototype.showError = function (field, error, options) {
-
-    console.log('showError field', field);
-
     var firstOptionId;
+
     // Add error class to field
-    field.classList.add(this.config.classField);
+    if (field.type === 'select-one'){
+      field.parentNode.classList.add(this.config.classField);
+    } else {
+      field.classList.add(this.config.classField);
+    }
+
+    console.log('showError field type', field.type);
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
     if (field.type === 'radio' && field.name) {
       var group = document.getElementsByName(field.name);
       if (group.length > 0) {
-        console.log('lets do it', field);
         for (var i = 0; i < group.length; i++) {
           if (group[i].form !== field.form) continue; // Only check fields in current form
           group[i].classList.add(this.config.classField);
@@ -187,7 +187,6 @@ var supports = function () {
           }
         }
         field = group[group.length - 1];
-        console.log('lets do it', field);
       }
     }
 
@@ -202,7 +201,6 @@ var supports = function () {
 
     // Check if error message field already exists
     // If not, create one
-    // console.log('field', field);
     var message = field.form.querySelector('.' + this.config.errorContainer + '#error-for-' + id);
     var labelText;
     var motherLabel;
@@ -218,18 +216,17 @@ var supports = function () {
         if (this.getClosest(field, '.subselection')) {
           var sub = this.getClosest(field, '.subselection');
           label = sub.querySelector('.subselection__trigger');
+          firstOptionId = label.getAttribute('id');
         } else {
           label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
         }
-        console.log('label', label);
+
         if (label) {
           label.parentNode.insertBefore(message, label.nextSibling);
           motherLabel = this.getClosest(field, '[data-radiogroup-title]');
-          console.log('item', field);
           if (motherLabel) {
             labelText = motherLabel.getAttribute('data-radiogroup-title');
           } else {
-            console.log('else motherLabel');
             labelText = label.textContent;
           }
         }
@@ -254,6 +251,7 @@ var supports = function () {
         if (this.getClosest(field, '.subselection')) {
           var sub = this.getClosest(field, '.subselection');
           label = sub.querySelector('.subselection__trigger');
+          firstOptionId = label.getAttribute('id');
         } else {
           label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
         }
@@ -276,14 +274,10 @@ var supports = function () {
     }
 
     if (firstOptionId){
-      console.log('if firstOptionId');
       this.errors.push({ "id": firstOptionId, "label": labelText, "error": error });
     } else {
-      console.log('else firstOptionId');
       this.errors.push({ "id": field.getAttribute('id'), "label": labelText, "error": error });
     }
-    console.log('this.errors', this.errors);
-
 
     // Add ARIA role to the field
     field.setAttribute('aria-describedby', 'error-for-' + id);
@@ -300,6 +294,34 @@ var supports = function () {
 
   };
 
+  formvalidation.prototype.markFieldValidInSummary = function (field, options) {
+    var fieldId;
+
+    if(field.type === "button" && this.getClosest(field, '.subselection')){
+      // is subselection
+      var sub = this.getClosest(field, '.subselection');
+      var subTrigger = sub.querySelector('.subselection__trigger');
+      fieldId = subTrigger.getAttribute('id');
+    } else {
+      if (field.type === 'radio' && field.name) {
+        var group = document.getElementsByName(field.name);
+        if (group.length > 0) {
+          for (var i = 0; i < group.length; i++) {
+            if (group[i].form !== field.form) continue; // Only check fields in current form
+            group[i].classList.remove(this.config.classField);
+          }
+          field = group[0];
+        }
+      }
+      fieldId = field.getAttribute('id')
+    }
+    var errorsContainerListItems = this.element.querySelectorAll('.' + this.config.errorsContainer + '> ul li');
+    for (var i = 0; i < errorsContainerListItems.length; i++){
+      if (errorsContainerListItems[i].getAttribute('data-id') === fieldId) {
+        errorsContainerListItems[i].classList.add('line-through');
+      }
+    }
+  }
   formvalidation.prototype.markFieldValid = function (field, options) {
     field.classList.add('is-valid');
   }
@@ -310,7 +332,12 @@ var supports = function () {
     field.removeAttribute('aria-describedby');
 
     // Remove error class to field
-    field.classList.remove(this.config.classField);
+    if (field.type === 'select-one') {
+      field.parentNode.classList.remove(this.config.classField);
+    } else {
+      field.classList.remove(this.config.classField);
+    }
+
 
     // If the field is a radio button and part of a group, remove error from all and get the last item in the group
     if (field.type === 'radio' && field.name) {
@@ -329,7 +356,6 @@ var supports = function () {
     if (!id) return;
 
     // Check if an error message is in the DOM
-    // console.log('remove; field', field);
     var message = field.form.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
     if (!message) return;
 
@@ -345,30 +371,22 @@ var supports = function () {
   };
 
   formvalidation.prototype.blurHandler = function (event) {
-    console.log('blurHandler');
-
-    var type = event.target.getAttribute('type');
-    if ((type === null || type === 'a')) return;
+    var type = event.target.nodeName;
+    if ((type === 'DIV' || type === 'A')) return;
 
     // Validate the field
     var error = this.hasError(event.target);
 
     // If there's an error, show it
     if (error) {
-
       this.showError(event.target, error);
-      // this.addErrorToErrors(event.target, error);
-      // this.showErrorSummary();
-      // this.appendErrorToErrorsList(event.target);
       return;
     }
 
     // Otherwise, remove any errors that exist
     this.removeError(event.target);
-    // this.removeErrorFromErrors(event.target.getAttribute('id'));
-    // this.showErrorSummary();
     this.markFieldValid(event.target);
-
+    this.markFieldValidInSummary(event.target);
   };
 
   formvalidation.prototype.clickHandler = function (event) {
@@ -376,7 +394,7 @@ var supports = function () {
     // Only run if the field is a checkbox or radio
     var type = event.target.getAttribute('type');
     if (!(type === 'checkbox' || type === 'radio')) return;
-    console.log('klik');
+
     // Validate the field
     var error = this.hasError(event.target);
 
@@ -388,6 +406,7 @@ var supports = function () {
 
     // Otherwise, remove any errors that exist
     this.removeError(event.target);
+    this.markFieldValidInSummary(event.target);
 
   };
 
@@ -397,14 +416,6 @@ var supports = function () {
     this.errors = this.errors.filter(function (obj) {
       return obj.id !== id;
     });
-
-    // console.log('errors', this.errors);
-
-    // var error = this.element.querySelector('[data-id="'+el.getAttribute('id')+'"]');
-    // console.log(error);
-    // if(error){
-    //   error.parentNode.removeChild(error);
-    // }
   }
   formvalidation.prototype.pushErrorToErrors = function (el, error) {
     var id = el.getAttribute('id');
@@ -420,18 +431,7 @@ var supports = function () {
     var id = id;
 
     this.pushErrorToErrors(el, error);
-
-
-
-    // console.log('errors', this.errors);
-
     this.showErrorSummary();
-
-    // var error = this.element.querySelector('[data-id="'+el.getAttribute('id')+'"]');
-    // console.log(error);
-    // if(error){
-    //   error.parentNode.removeChild(error);
-    // }
   }
 
   formvalidation.prototype.showErrorSummary = function () {
@@ -457,7 +457,6 @@ var supports = function () {
 
     // clean up errors; remove duplicates.
     this.errors = onl.ui.uniqBy(this.errors, JSON.stringify);
-
     for(var i = 0; i < this.errors.length; i++){
       this.appendErrorToErrorsList(this.errors[i]);
     }
@@ -500,7 +499,6 @@ var supports = function () {
           hasErrors = fields[i];
         }
       }
-      console.log('--');
     }
     if(hasErrors){
       this.showErrorSummary(this.errors);
