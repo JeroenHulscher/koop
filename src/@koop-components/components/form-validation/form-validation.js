@@ -177,6 +177,13 @@ var supports = function () {
 
   };
 
+  formvalidation.prototype.showErrorSubselection = function (el) {
+    var subselectionSummary = el;
+    var subselection = this.getClosest(subselectionSummary, '.subselection');
+    var subselectionTrigger = subselection.querySelector('.subselection__trigger');
+    this.showError(subselectionTrigger, this.config.messageValueMissingCheckbox, 'subselection');
+  }
+
   formvalidation.prototype.showError = function (field, error, options) {
     var firstOptionId;
 
@@ -206,9 +213,7 @@ var supports = function () {
       }
     }
 
-    if (this.getClosest(field, '.subselection')) {
-
-    }
+    // if (this.getClosest(field, '.subselection')) {}
 
     console.log('showerror: field id: ', field.id, field.name);
     // Get field id or name
@@ -217,7 +222,7 @@ var supports = function () {
 
     // Check if error message field already exists
     // If not, create one
-    var message = field.form.querySelector('.' + this.config.errorContainer + '#error-for-' + id);
+    var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id);
     var labelText;
     var motherLabel;
 
@@ -260,7 +265,12 @@ var supports = function () {
       // Otherwise, insert it after the field
       if (!label) {
         field.parentNode.insertBefore(message, field.nextSibling);
-        labelText = field.parentNode.querySelector('label').textContent;
+
+        if(options === 'subselection'){
+          labelText = field.textContent;
+        } else {
+          labelText = field.parentNode.querySelector('label').textContent;
+        }
       }
     } else {
       if (field.type === 'radio' || field.type === 'checkbox') {
@@ -285,7 +295,12 @@ var supports = function () {
           labelText = label.textContent;
         }
       } else {
-        labelText = field.parentNode.querySelector('label').textContent;
+        if (options === 'subselection') {
+          labelText = field.textContent;
+        } else {
+          labelText = field.parentNode.querySelector('label').textContent;
+        }
+        // labelText = field.parentNode.querySelector('label').textContent;
       }
     }
 
@@ -549,10 +564,32 @@ var supports = function () {
     // Get all of the form elements
     var fields = event.target.elements;
     console.log('fields', fields);
-    // var subselections = this.element.
+    var subselections = this.element.querySelectorAll('.subselection__summary.required');
+    console.log('subselections', subselections);
+
+    // Validate each subselection field
+    var hasErrors;
+    for (var y = 0; y < subselections.length; y++) {
+      if (subselections[y].innerHTML === ''){
+        console.log('subselections[y] empty', subselections[y]);
+        console.log('SHOW ERROR');
+        this.showErrorSubselection(subselections[y]);
+        if (!hasErrors) {
+          hasErrors = subselections[y];
+        }
+      }
+      // var error = this.hasError(subselections[y]);
+      // if (error) {
+      //   this.showError(subselections[y], error);
+      //   if (!hasErrors) {
+      //     hasErrors = subselections[y];
+      //   }
+      // }
+    }
+
     // Validate each field
     // Store the first field with an error to a variable so we can bring it into focus later
-    var hasErrors;
+    // var hasErrors;
     for (var i = 0; i < fields.length; i++) {
 
       var error = this.hasError(fields[i]);
@@ -581,10 +618,10 @@ var supports = function () {
 
     // Otherwise, submit the form
     if (this.config.doSubmit){
-      console.log('SUBMIT!');
+      console.log('Success. SUBMIT!');
     } else {
       event.preventDefault();
-      console.log('SUBMIT! (not)');
+      console.log('Success. SUBMIT! (idle)');
     }
 
   };
