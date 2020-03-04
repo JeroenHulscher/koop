@@ -21,8 +21,11 @@
     {{#if error}}aria-describedby="input-text-1__error"{{/if}}
     aria-invalid="{{#if error}}true{{else}}false{{/if}}"
     placeholder="{{ fieldPlaceholder }}"
+    {{#if required}}required{{/if}}
     {{#if disabled}}disabled{{/if}}
     {{#if value}}value="{{value}}"{{/if}}
+    {{#if patterntype}}data-pattern-type="{{patterntype}}"{{/if}}
+    {{#if title}}title="{{title}}"{{/if}}
 
     {{#if remove}}
     data-decorator="toggle-remove-visibility"

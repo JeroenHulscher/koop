@@ -79,6 +79,22 @@ var supports = function () {
     return null;
   };
 
+  formvalidation.prototype.hasErrorInSubselection = function (field, options) {
+    var subselection = this.getClosest(field, '.subselection');
+    var subselectionSummary = subselection.querySelector('.subselection__summary');
+    var subselectionSummaryItems = subselectionSummary.childNodes;
+    console.log('subselectionSummaryItems', subselectionSummaryItems);
+    console.log('subselectionSummaryItems.length', subselectionSummaryItems.length);
+    if (subselectionSummaryItems.length > 0){
+      return false;
+    } else {
+      return this.config.messageValueMissing;
+    }
+    // for (var i = 0; i < subselectionSummaryItems.length; i++){
+    //   console.log('subselectionSummaryItems[i]', subselectionSummaryItems[i]);
+    // }
+  }
+
   formvalidation.prototype.hasError = function (field, options) {
     // Don't validate submits, buttons, file and reset inputs, and disabled fields
     if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === undefined || field.type === 'fieldset' || field.type === 'a' || field.type === '') return;
@@ -194,7 +210,7 @@ var supports = function () {
 
     }
 
-
+    console.log('showerror: field id: ', field.id, field.name);
     // Get field id or name
     var id = field.id || field.name;
     if (!id) return;
@@ -356,7 +372,17 @@ var supports = function () {
     if (!id) return;
 
     // Check if an error message is in the DOM
-    var message = field.form.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
+    console.log('remove error: field:', field);
+    if(this.getClosest(field, '.subselection')) {
+      console.log('remove error: is sub.');
+      var sub = this.getClosest(field, '.subselection');
+      var message = sub.querySelector('.' + this.config.errorContainer);
+      console.log('remove error: message', message);
+    } else {
+      var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
+    }
+
+
     if (!message) return;
 
     // If so, hide it
@@ -367,46 +393,6 @@ var supports = function () {
 
     // After remove error callback
     // this.config.afterRemoveError(field);
-
-  };
-
-  formvalidation.prototype.blurHandler = function (event) {
-    var type = event.target.nodeName;
-    if ((type === 'DIV' || type === 'A')) return;
-
-    // Validate the field
-    var error = this.hasError(event.target);
-
-    // If there's an error, show it
-    if (error) {
-      this.showError(event.target, error);
-      return;
-    }
-
-    // Otherwise, remove any errors that exist
-    this.removeError(event.target);
-    this.markFieldValid(event.target);
-    this.markFieldValidInSummary(event.target);
-  };
-
-  formvalidation.prototype.clickHandler = function (event) {
-
-    // Only run if the field is a checkbox or radio
-    var type = event.target.getAttribute('type');
-    if (!(type === 'checkbox' || type === 'radio')) return;
-
-    // Validate the field
-    var error = this.hasError(event.target);
-
-    // If there's an error, show it
-    if (error) {
-      this.showError(event.target, error);
-      return;
-    }
-
-    // Otherwise, remove any errors that exist
-    this.removeError(event.target);
-    this.markFieldValidInSummary(event.target);
 
   };
 
@@ -457,13 +443,89 @@ var supports = function () {
 
     // clean up errors; remove duplicates.
     this.errors = onl.ui.uniqBy(this.errors, JSON.stringify);
-    for(var i = 0; i < this.errors.length; i++){
+    for (var i = 0; i < this.errors.length; i++) {
       this.appendErrorToErrorsList(this.errors[i]);
     }
   }
 
+  formvalidation.prototype.blurHandler = function (event) {
+    console.log('blurHandler -----------');
+    var type = event.target.nodeName;
+    console.log('type', type);
+    if ((type === 'DIV')) return;
+
+    if(type === 'A'){
+      console.log('a', event.target);
+      if (event.target.classList.contains('subselection__trigger')){
+        console.log('is subselection');
+        var error = this.hasErrorInSubselection(event.target);
+        // console.log('is subselection', error);
+        if (error) {
+          // console.log('is subselection: if error:', error)
+          // this.showError(event.target, error);
+          // return;
+        } else {
+          // Otherwise, remove any errors that exist
+          this.removeError(event.target);
+          this.markFieldValid(event.target);
+          this.markFieldValidInSummary(event.target);
+
+        }
+      } else {
+        return;
+      }
+    } else {
+      // Validate the field
+      var error = this.hasError(event.target);
+
+      // If there's an error, show it
+      if (error) {
+        this.showError(event.target, error);
+        return;
+      }
+
+      // Otherwise, remove any errors that exist
+      this.removeError(event.target);
+      this.markFieldValid(event.target);
+      this.markFieldValidInSummary(event.target);
+    }
+
+
+
+
+
+  };
+
+  formvalidation.prototype.clickHandler = function (event) {
+    console.log('clickHandler  -----------');
+
+    // Only run if the field is a checkbox or radio
+    var type = event.target.getAttribute('type');
+    if (!(type === 'checkbox' || type === 'radio')) return;
+
+    // Validate the field
+    var error = this.hasError(event.target);
+
+    // If there's an error, show it
+    if (error) {
+      this.showError(event.target, error);
+      return;
+    }
+
+    // Otherwise, remove any errors that exist
+    this.removeError(event.target);
+    this.markFieldValidInSummary(event.target);
+
+  };
+
+
+
   formvalidation.prototype.appendErrorToErrorsList = function (error) {
     var errorsContainerList = this.element.querySelector('.' + this.config.errorsContainer + '> ul');
+    var errorMsg = error.label;
+
+    errorMsg = errorMsg.replace('Verplicht', '');
+
     if (errorsContainerList){
       var item = document.createElement('li');
       var id = error.id || error.getAttribute('id');
@@ -471,7 +533,7 @@ var supports = function () {
 
       var link = document.createElement('a');
       link.setAttribute('href', '#'+id);
-      link.innerHTML = '<span class="visually-hidden">Spring naar veld: </span>' + error.label;
+      link.innerHTML = '<span class="visually-hidden">Spring naar veld: </span>' + errorMsg;
 
       item.appendChild(link);
       errorsContainerList.appendChild(item);
@@ -486,7 +548,8 @@ var supports = function () {
 
     // Get all of the form elements
     var fields = event.target.elements;
-
+    console.log('fields', fields);
+    // var subselections = this.element.
     // Validate each field
     // Store the first field with an error to a variable so we can bring it into focus later
     var hasErrors;

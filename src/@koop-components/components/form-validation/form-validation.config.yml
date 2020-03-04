@@ -30,3 +30,41 @@ context:
         short: Griekenland
         required: required
         name: subname
+  rondomadresContext:
+    linkText: Selecteer opties rondom een adres
+    id: 20
+    modalTitle: Selecteer opties rondom een adres
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    required: true
+    selectAll: true
+    selectAllID: 9876
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Rotterdam
+        short: Rotterdam
+      - Option: 2
+        id: 22372312321312
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 323723
+        title: Vlaardingen
+        short: Nederland
+      - Option: 1222222222
+        id: 1237232
+        title: Den Haag
+        short: Spanje
+      - Option: 2222222222222
+        id: 223712312312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 322222222
+        id: 3237123123
+        title: Voorburg
+        short: Nederland

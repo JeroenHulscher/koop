@@ -13,8 +13,9 @@ context:
     fieldLabelVisible: true
     fieldInstruction:
     fieldPlaceholder: Bijv. 2453EH
-    remove: true
     required: true
+    patterntype: zipcode
+    title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
   inputHuisnummerContext:
     modifier: input-text--medium
     labelmodifier: accent
@@ -71,6 +72,7 @@ context:
         id: 1237
         title: Rotterdam
         short: Spanje
+        required: required
       - Option: 2
         id: 22372312321312
         title: Schiedam
