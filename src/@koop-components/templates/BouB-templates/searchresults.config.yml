@@ -362,15 +362,6 @@ context:
         icon: hamburger
       - label: Kaart
         icon: marker
-  selectedfilterContext:
-    items:
-      - label: Gezocht op
-        value: leveringen
-        url: "#"
-      - label: Bouwvergunning
-        url: "#"
-      - label: APV vergunning
-        url: "#"
   selectStraalContext:
     modifier: select-custom
     id: 1
