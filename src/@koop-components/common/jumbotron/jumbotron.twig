@@ -1,5 +1,5 @@
 <div class="jumbotron {{ modifier }}">
-  <div class="jumbotron__content {% if centered %}jumbotron__content--centered{% endif %}">
+  <div class="jumbotron__content {% if centered %}jumbotron__content--centered{{ size ? '-' ~ size}}{% endif %}">
     <div class="jumbotron__heading {% if centered %}jumbotron__heading--centered{% endif %}">
       <p class="jumbotron__subheader">{{ subheading }}</p>
       <{{ h }} class="jumbotron__header">{{ heading }}</{{ h }}>
