@@ -296,7 +296,7 @@ context:
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      share: false
       buttons:
         - button: Bekijk publicatie
           type: primary
@@ -308,7 +308,7 @@ context:
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      share: false
       buttons:
         - button: Bekijk publicatie
           type: primary
@@ -320,7 +320,7 @@ context:
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      share: false
       buttons:
         - button: Bekijk publicatie
           type: primary
@@ -364,15 +364,6 @@ context:
         icon: hamburger
       - label: Kaart
         icon: marker
-  selectedfilterContext:
-    items:
-      - label: Gezocht op
-        value: leveringen
-        url: "#"
-      - label: Bouwvergunning
-        url: "#"
-      - label: APV vergunning
-        url: "#"
   selectStraalContext:
     modifier: select-custom
     id: 1
