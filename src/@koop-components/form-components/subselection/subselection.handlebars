@@ -1,5 +1,5 @@
 <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}", "triggerOnChangeText": "{{linkTextActive}}", "maxShow": "{{maxShow}}" }'>
-  <div class="subselection__summary required"></div>
+  <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
