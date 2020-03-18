@@ -4,7 +4,8 @@ $fontPath: '../fonts' !default;
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '#{$fontPath}/ROsanswebtextregular.ttf' ) format( 'truetype' ),
+  src:
+  // url( '#{$fontPath}/ROsanswebtextregular.ttf' ) format( 'truetype' ),
        url( '#{$fontPath}/ROsanswebtextregular.woff' ) format( 'opentype' );
   font-style: normal;
   font-weight: normal;
@@ -12,7 +13,8 @@ $fontPath: '../fonts' !default;
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '#{$fontPath}/ROsanswebtextitalic.ttf' ) format( 'truetype' ),
+  src:
+  // url( '#{$fontPath}/ROsanswebtextitalic.ttf' ) format( 'truetype' ),
        url( '#{$fontPath}/ROsanswebtextitalic.woff' ) format( 'opentype' );
   font-style: italic;
   font-weight: normal;
@@ -20,7 +22,8 @@ $fontPath: '../fonts' !default;
 
 @font-face{
   font-family: $defaultFontFamily;
-  src: url( '#{$fontPath}/ROsanswebtextbold.ttf' ) format( 'truetype' ),
+  src:
+  // url( '#{$fontPath}/ROsanswebtextbold.ttf' ) format( 'truetype' ),
        url( '#{$fontPath}/ROsanswebtextbold.woff' ) format( 'opentype' );
   font-weight: bold;
   font-style: normal;

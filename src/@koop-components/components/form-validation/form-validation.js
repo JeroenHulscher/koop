@@ -42,8 +42,8 @@ var supports = function () {
     this.config.messageValueMissingSelectMulti = this.config.messageValueMissingSelectMulti || 'Selecteer minstens één waarde.';
     this.config.messageTypeMismatchEmail = this.config.messageTypeMismatchEmail || 'Vul een correct e-mailadres in.';
     this.config.messageTypeMismatchURL = this.config.messageTypeMismatchURL || 'Vul een website in.';
-    this.config.messageTooShort = this.config.messageTooShort || 'Gebruik minimaal {minLength} karakters. Op dit moment gebruik je {length} karakters.';
-    this.config.messageTooLong = this.config.messageTooLong || 'Het is niet toegestaan meer dan {maxLength} karakters te gebruiken. Op dit moment gebruik je {length} karakters.';
+    this.config.messageTooShort = this.config.messageTooShort || 'Gebruik minimaal {minLength} karakters. Op dit moment gebruik je {length} karakter(s).';
+    this.config.messageTooLong = this.config.messageTooLong || 'Het is niet toegestaan meer dan {maxLength} karakters te gebruiken. Op dit moment gebruik je {length} karakter(s).';
     this.config.messagePatternMismatch = this.config.messagePatternMismatch || 'Dit veld voldoet niet aan de eisen.';
     this.config.messageBadInput = this.config.messageBadInput || 'Vul een nummer in.';
     this.config.messageStepMismatch = this.config.messageStepMismatch || 'Vul een correcte waarde in.';
@@ -79,11 +79,26 @@ var supports = function () {
     return null;
   };
 
-  formvalidation.prototype.hasError = function (field, options) {
+  formvalidation.prototype.hasErrorInSubselection = function (field, options) {
+    var subselection = this.getClosest(field, '.subselection');
+    var subselectionSummary = subselection.querySelector('.subselection__summary');
+    var subselectionSummaryItems = subselectionSummary.childNodes;
+    // console.log('subselectionSummaryItems', subselectionSummaryItems);
+    // console.log('subselectionSummaryItems.length', subselectionSummaryItems.length);
+    if (subselectionSummaryItems.length > 0){
+      return false;
+    } else {
+      return this.config.messageValueMissing;
+    }
+    // for (var i = 0; i < subselectionSummaryItems.length; i++){
+    //   console.log('subselectionSummaryItems[i]', subselectionSummaryItems[i]);
+    // }
+  }
 
+  formvalidation.prototype.hasError = function (field, options) {
     // Don't validate submits, buttons, file and reset inputs, and disabled fields
-    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
-    console.log(field.value);
+    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === undefined || field.type === 'fieldset' || field.type === 'a' || field.type === '') return;
+
     // Get validity
     var validity = field.validity;
 
@@ -114,7 +129,6 @@ var supports = function () {
 
     // If field is required and empty
     if (validity.valueMissing) {
-      console.log('value missing', field.type);
       if (field.type === 'checkbox') return this.config.messageValueMissingCheckbox;
       if (field.type === 'radio') return this.config.messageValueMissingRadio;
       if (field.type === 'select-multiple') return this.config.messageValueMissingSelectMulti;
@@ -163,33 +177,55 @@ var supports = function () {
 
   };
 
+  formvalidation.prototype.showErrorSubselection = function (el) {
+    var subselectionSummary = el;
+    var subselection = this.getClosest(subselectionSummary, '.subselection');
+    var subselectionTrigger = subselection.querySelector('.subselection__trigger');
+    this.showError(subselectionTrigger, this.config.messageValueMissingCheckbox, 'subselection');
+  }
+
   formvalidation.prototype.showError = function (field, error, options) {
+    var firstOptionId;
 
     // Add error class to field
-    field.classList.add(this.config.classField);
+    if (field.type === 'select-one'){
+      field.parentNode.classList.add(this.config.classField);
+    } else {
+      field.classList.add(this.config.classField);
+    }
+
+    // console.log('showError field type', field.type);
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
     if (field.type === 'radio' && field.name) {
       var group = document.getElementsByName(field.name);
-      console.log('group', group);
       if (group.length > 0) {
         for (var i = 0; i < group.length; i++) {
-          console.log('group[i]', group[i]);
           if (group[i].form !== field.form) continue; // Only check fields in current form
           group[i].classList.add(this.config.classField);
+
+          // if type = radio, get id of first radio
+          if(i === 0){
+            firstOptionId = group[i].getAttribute('id');
+          }
         }
         field = group[group.length - 1];
       }
     }
 
+    // if (this.getClosest(field, '.subselection')) {}
+
+    // console.log('showerror: field id: ', field.id, field.name);
     // Get field id or name
     var id = field.id || field.name;
     if (!id) return;
 
     // Check if error message field already exists
     // If not, create one
-    var message = field.form.querySelector('.' + this.config.errorContainer + '#error-for-' + id);
+    var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id);
     var labelText;
+    var motherLabel;
+
     if (!message) {
       message = document.createElement('div');
       message.classList.add(this.config.errorContainer);
@@ -198,37 +234,81 @@ var supports = function () {
       // If the field is a radio button or checkbox, insert error after the label
       var label;
       if (field.type === 'radio' || field.type === 'checkbox') {
-        label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
+        if (this.getClosest(field, '.subselection')) {
+          var sub = this.getClosest(field, '.subselection');
+          label = sub.querySelector('.subselection__trigger');
+          firstOptionId = label.getAttribute('id');
+        } else {
+          label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
+        }
+
         if (label) {
           label.parentNode.insertBefore(message, label.nextSibling);
-          labelText = label.textContent;
+          motherLabel = this.getClosest(field, '[data-radiogroup-title]');
+          if (motherLabel) {
+            labelText = motherLabel.getAttribute('data-radiogroup-title');
+          } else {
+            labelText = label.textContent;
+          }
         }
       }
 
       if (field.type === 'select-one') {
         label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
         if (label) {
-          var parent = label.parentNode;
+          var parent = field.parentNode;
           parent.parentNode.insertBefore(message, parent.nextSibling);
+          labelText = label.textContent;
         }
       }
 
       // Otherwise, insert it after the field
       if (!label) {
         field.parentNode.insertBefore(message, field.nextSibling);
-        labelText = field.parentNode.querySelector('label').textContent;
+
+        if(options === 'subselection'){
+          labelText = field.textContent;
+        } else {
+          labelText = field.parentNode.querySelector('label').textContent;
+        }
       }
     } else {
       if (field.type === 'radio' || field.type === 'checkbox') {
+        if (this.getClosest(field, '.subselection')) {
+          var sub = this.getClosest(field, '.subselection');
+          label = sub.querySelector('.subselection__trigger');
+          firstOptionId = label.getAttribute('id');
+        } else {
+          label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
+        }
+        motherLabel = this.getClosest(field, '[data-radiogroup-title]');
+        if (motherLabel) {
+          labelText = motherLabel.getAttribute('data-radiogroup-title');
+        } else {
+          labelText = label.textContent;
+        }
+      } else if (field.type === 'select-one') {
         label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
-        labelText = label.textContent;
+        if (label) {
+          var parent = field.parentNode;
+          parent.parentNode.insertBefore(message, parent.nextSibling);
+          labelText = label.textContent;
+        }
       } else {
-        labelText = field.parentNode.querySelector('label').textContent;
+        if (options === 'subselection') {
+          labelText = field.textContent;
+        } else {
+          labelText = field.parentNode.querySelector('label').textContent;
+        }
+        // labelText = field.parentNode.querySelector('label').textContent;
       }
     }
 
-    this.errors.push({ "id": field.getAttribute('id'), "label": labelText, "error": error });
-
+    if (firstOptionId){
+      this.errors.push({ "id": firstOptionId, "label": labelText, "error": error });
+    } else {
+      this.errors.push({ "id": field.getAttribute('id'), "label": labelText, "error": error });
+    }
 
     // Add ARIA role to the field
     field.setAttribute('aria-describedby', 'error-for-' + id);
@@ -245,6 +325,34 @@ var supports = function () {
 
   };
 
+  formvalidation.prototype.markFieldValidInSummary = function (field, options) {
+    var fieldId;
+
+    if(field.type === "button" && this.getClosest(field, '.subselection')){
+      // is subselection
+      var sub = this.getClosest(field, '.subselection');
+      var subTrigger = sub.querySelector('.subselection__trigger');
+      fieldId = subTrigger.getAttribute('id');
+    } else {
+      if (field.type === 'radio' && field.name) {
+        var group = document.getElementsByName(field.name);
+        if (group.length > 0) {
+          for (var i = 0; i < group.length; i++) {
+            if (group[i].form !== field.form) continue; // Only check fields in current form
+            group[i].classList.remove(this.config.classField);
+          }
+          field = group[0];
+        }
+      }
+      fieldId = field.getAttribute('id')
+    }
+    var errorsContainerListItems = this.element.querySelectorAll('.' + this.config.errorsContainer + '> ul li');
+    for (var i = 0; i < errorsContainerListItems.length; i++){
+      if (errorsContainerListItems[i].getAttribute('data-id') === fieldId) {
+        errorsContainerListItems[i].childNodes[0].classList.add('line-through');
+      }
+    }
+  }
   formvalidation.prototype.markFieldValid = function (field, options) {
     field.classList.add('is-valid');
   }
@@ -255,7 +363,12 @@ var supports = function () {
     field.removeAttribute('aria-describedby');
 
     // Remove error class to field
-    field.classList.remove(this.config.classField);
+    if (field.type === 'select-one') {
+      field.parentNode.classList.remove(this.config.classField);
+    } else {
+      field.classList.remove(this.config.classField);
+    }
+
 
     // If the field is a radio button and part of a group, remove error from all and get the last item in the group
     if (field.type === 'radio' && field.name) {
@@ -274,7 +387,17 @@ var supports = function () {
     if (!id) return;
 
     // Check if an error message is in the DOM
-    var message = field.form.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
+    // console.log('remove error: field:', field);
+    if(this.getClosest(field, '.subselection')) {
+      // console.log('remove error: is sub.');
+      var sub = this.getClosest(field, '.subselection');
+      var message = sub.querySelector('.' + this.config.errorContainer);
+      // console.log('remove error: message', message);
+    } else {
+      var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
+    }
+
+
     if (!message) return;
 
     // If so, hide it
@@ -288,30 +411,108 @@ var supports = function () {
 
   };
 
-  formvalidation.prototype.blurHandler = function (event) {
+  formvalidation.prototype.removeErrorFromErrors = function (id) {
+    var id = id;
 
-    // Validate the field
-    var error = this.hasError(event.target);
+    this.errors = this.errors.filter(function (obj) {
+      return obj.id !== id;
+    });
+  }
+  formvalidation.prototype.pushErrorToErrors = function (el, error) {
+    var id = el.getAttribute('id');
+    this.errors = this.errors.filter(function (obj) {
+      return obj.id !== id;
+    });
 
-    // If there's an error, show it
-    if (error) {
+    var label = el.parentNode.querySelector('label').innerHTML || 'label';
+    this.errors.push({ "id": el.getAttribute('id'), "label": label, "error": error });
+  }
 
-      this.showError(event.target, error);
-      // this.addErrorToErrors(event.target, error);
-      // this.showErrorSummary();
-      // this.appendErrorToErrorsList(event.target);
-      return;
+  formvalidation.prototype.addErrorToErrors = function (el, error) {
+    var id = id;
+
+    this.pushErrorToErrors(el, error);
+    this.showErrorSummary();
+  }
+
+  formvalidation.prototype.showErrorSummary = function () {
+    var errorsContainer = this.element.querySelector('.' + this.config.errorsContainer);
+
+    if (!errorsContainer) {
+      errorsContainer = document.createElement('div');
+      errorsContainer.setAttribute('tabindex', '0')
+      errorsContainer.classList.add(this.config.errorsContainer, 'well');
+      this.element.insertBefore(errorsContainer, this.element.childNodes[0]);
+
+      var errorsContainerIntro = document.createElement('p');
+      errorsContainerIntro.innerHTML = this.config.errorsContainerIntro || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
+      errorsContainer.appendChild(errorsContainerIntro);
+
+      var errorsContainerList = document.createElement('ul');
+      errorsContainer.appendChild(errorsContainerList);
+    } else {
+      var errorsContainerList = this.element.querySelector('.' + this.config.errorsContainer + '> ul');
     }
 
-    // Otherwise, remove any errors that exist
-    this.removeError(event.target);
-    // this.removeErrorFromErrors(event.target.getAttribute('id'));
-    // this.showErrorSummary();
-    this.markFieldValid(event.target);
+    errorsContainerList.innerHTML = '';
+
+    // clean up errors; remove duplicates.
+    this.errors = onl.ui.uniqBy(this.errors, JSON.stringify);
+    for (var i = 0; i < this.errors.length; i++) {
+      this.appendErrorToErrorsList(this.errors[i]);
+    }
+  }
+
+  formvalidation.prototype.blurHandler = function (event) {
+    // console.log('blurHandler -----------');
+    var type = event.target.nodeName;
+    // console.log('type', type);
+    if ((type === 'DIV')) return;
+
+    if(type === 'A'){
+      // console.log('a', event.target);
+      if (event.target.classList.contains('subselection__trigger')){
+        // console.log('is subselection');
+        var error = this.hasErrorInSubselection(event.target);
+        // console.log('is subselection', error);
+        if (error) {
+          // console.log('is subselection: if error:', error)
+          // this.showError(event.target, error);
+          // return;
+        } else {
+          // Otherwise, remove any errors that exist
+          this.removeError(event.target);
+          this.markFieldValid(event.target);
+          this.markFieldValidInSummary(event.target);
+
+        }
+      } else {
+        return;
+      }
+    } else {
+      // Validate the field
+      var error = this.hasError(event.target);
+
+      // If there's an error, show it
+      if (error) {
+        this.showError(event.target, error);
+        return;
+      }
+
+      // Otherwise, remove any errors that exist
+      this.removeError(event.target);
+      this.markFieldValid(event.target);
+      this.markFieldValidInSummary(event.target);
+    }
+
+
+
+
 
   };
 
   formvalidation.prototype.clickHandler = function (event) {
+    // console.log('clickHandler  -----------');
 
     // Only run if the field is a checkbox or radio
     var type = event.target.getAttribute('type');
@@ -328,85 +529,28 @@ var supports = function () {
 
     // Otherwise, remove any errors that exist
     this.removeError(event.target);
+    this.markFieldValidInSummary(event.target);
 
   };
 
-  formvalidation.prototype.removeErrorFromErrors = function (id) {
-    var id = id;
 
-    this.errors = this.errors.filter(function (obj) {
-      return obj.id !== id;
-    });
-
-    console.log('errors', this.errors);
-
-    // var error = this.element.querySelector('[data-id="'+el.getAttribute('id')+'"]');
-    // console.log(error);
-    // if(error){
-    //   error.parentNode.removeChild(error);
-    // }
-  }
-  formvalidation.prototype.pushErrorToErrors = function (el, error) {
-    var id = el.getAttribute('id');
-    this.errors = this.errors.filter(function (obj) {
-      return obj.id !== id;
-    });
-
-    var label = el.parentNode.querySelector('label').innerHTML || 'label';
-    this.errors.push({ "id": el.getAttribute('id'), "label": label, "error": error });
-  }
-
-  formvalidation.prototype.addErrorToErrors = function (el, error) {
-    var id = id;
-
-    this.pushErrorToErrors(el, error);
-
-
-
-    console.log('errors', this.errors);
-
-    this.showErrorSummary();
-
-    // var error = this.element.querySelector('[data-id="'+el.getAttribute('id')+'"]');
-    // console.log(error);
-    // if(error){
-    //   error.parentNode.removeChild(error);
-    // }
-  }
-
-  formvalidation.prototype.showErrorSummary = function () {
-    var errorsContainer = this.element.querySelector('.' + this.config.errorsContainer);
-
-    if (!errorsContainer) {
-      errorsContainer = document.createElement('div');
-      errorsContainer.classList.add(this.config.errorsContainer, 'well');
-      this.element.insertBefore(errorsContainer, this.element.childNodes[0]);
-
-      var errorsContainerIntro = document.createElement('p');
-      errorsContainerIntro.innerHTML = this.config.errorsContainerIntro || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
-      errorsContainer.appendChild(errorsContainerIntro);
-
-      var errorsContainerList = document.createElement('ul');
-      errorsContainer.appendChild(errorsContainerList);
-    } else {
-      var errorsContainerList = this.element.querySelector('.' + this.config.errorsContainer + '> ul');
-    }
-
-    errorsContainerList.innerHTML = '';
-
-    for(var i = 0; i < this.errors.length; i++){
-      this.appendErrorToErrorsList(this.errors[i]);
-    }
-  }
 
   formvalidation.prototype.appendErrorToErrorsList = function (error) {
     var errorsContainerList = this.element.querySelector('.' + this.config.errorsContainer + '> ul');
+    var errorMsg = error.label;
+
+    errorMsg = errorMsg.replace('Verplicht', '');
+
     if (errorsContainerList){
       var item = document.createElement('li');
       var id = error.id || error.getAttribute('id');
       item.setAttribute('data-id', id);
-      console.log('item', item);
-      item.innerHTML = error.label;
+
+      var link = document.createElement('a');
+      link.setAttribute('href', '#'+id);
+      link.innerHTML = '<span class="visually-hidden">Spring naar veld: </span>' + errorMsg;
+
+      item.appendChild(link);
       errorsContainerList.appendChild(item);
     }
 
@@ -419,19 +563,38 @@ var supports = function () {
 
     // Get all of the form elements
     var fields = event.target.elements;
+    // console.log('fields', fields);
+    var subselections = this.element.querySelectorAll('.subselection__summary.required');
+    // console.log('subselections', subselections);
+
+    // Validate each subselection field
+    var hasErrors;
+    for (var y = 0; y < subselections.length; y++) {
+      if (subselections[y].innerHTML === ''){
+        // console.log('subselections[y] empty', subselections[y]);
+        // console.log('SHOW ERROR');
+        this.showErrorSubselection(subselections[y]);
+        if (!hasErrors) {
+          hasErrors = subselections[y];
+        }
+      }
+      // var error = this.hasError(subselections[y]);
+      // if (error) {
+      //   this.showError(subselections[y], error);
+      //   if (!hasErrors) {
+      //     hasErrors = subselections[y];
+      //   }
+      // }
+    }
 
     // Validate each field
     // Store the first field with an error to a variable so we can bring it into focus later
-    var hasErrors;
+    // var hasErrors;
     for (var i = 0; i < fields.length; i++) {
+
       var error = this.hasError(fields[i]);
       if (error) {
         this.showError(fields[i], error);
-        // console.log('fields[i]', fields[i]);
-        // console.log('before 5');
-        // var label = fields[i].parentNode.querySelector('label').innerHTML || 'label';
-        // console.log('before 5');
-        // this.errors.push({ "id": fields[i].getAttribute('id'), "label": label, "error": error });
         if (!hasErrors) {
           hasErrors = fields[i];
         }
@@ -448,16 +611,17 @@ var supports = function () {
 
     // If there are errrors, focus on first element with error
     if (hasErrors) {
-      hasErrors.focus();
+      var errorsContainer = this.element.querySelector('.' + this.config.errorsContainer);
+      errorsContainer.focus();
       return;
     }
 
     // Otherwise, submit the form
     if (this.config.doSubmit){
-      console.log('SUBMIT!');
+      // console.log('Success. SUBMIT!');
     } else {
       event.preventDefault();
-      console.log('SUBMIT! (not)');
+      // console.log('Success. SUBMIT! (idle)');
     }
 
   };

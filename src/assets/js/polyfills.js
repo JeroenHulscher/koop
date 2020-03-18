@@ -1,3 +1,10 @@
+var isVisible = function (ele) {
+  return ele.clientWidth !== 0 &&
+    ele.clientHeight !== 0 &&
+    ele.style.opacity !== 0 &&
+    ele.style.visibility !== 'hidden';
+}
+
 var getClosest = function (elem, selector) {
 
   // Element.matches() polyfill

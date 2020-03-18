@@ -366,16 +366,6 @@ context:
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
-
-  selectedfilterContext:
-    items:
-      - label: Gezocht op
-        value: leveringen
-        url: "#"
-      - label: Bouwvergunning
-        url: "#"
-      - label: APV vergunning
-        url: "#"
   selectStraalContext:
     modifier: select-custom--large
     id: 1

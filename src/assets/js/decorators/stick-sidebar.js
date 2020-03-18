@@ -105,7 +105,7 @@
       config = JSON.parse(el.getAttribute('data-config')) || [];
       scrollContentElement = config.scrollContentElement || '.js-scrollContentElement';
 
-      console.log('config', config);
+      // console.log('config', config);
 
       footer = onl.dom.$( '.footer' )[0];
       element = el;

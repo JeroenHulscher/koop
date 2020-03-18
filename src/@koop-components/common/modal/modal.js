@@ -36,6 +36,10 @@
       //   }
       // }
 
+      pubsub.publish('/modal/open', {
+        modal: modal
+      });
+
     },
     close: function( modal ) {
       onl.ui.hide( modal );

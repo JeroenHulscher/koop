@@ -10,7 +10,7 @@
   var scrollChapter = function (element) {
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    console.log('scrollChapter');
+    // console.log('scrollChapter');
 
     this.chapterLinks = this.config.chapterLinks || document.querySelectorAll('.nav-sub a');
     this.chapters = this.config.chapters || document.querySelectorAll('.js-scrollSection');

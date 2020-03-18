@@ -218,6 +218,16 @@
     var itemLinkedId = item.getAttribute('data-linkedid');
     var target = document.getElementById(itemLinkedId);
     target.checked = false;
+
+    // onchange event needs manual triggering on checkboxes
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      target.dispatchEvent(evt);
+    } else {
+      target.fireEvent("onchange");
+    }
+
     this.collectValues();
   };
 

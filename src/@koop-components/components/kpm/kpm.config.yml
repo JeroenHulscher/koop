@@ -1,6 +1,5 @@
----
 label: KPM Module
-status: prototype
+status: ready
 context:
   id: 1
 

@@ -5,6 +5,20 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  mapContext:
+    id: 1
+    modifier:
+    controls: false
+    buttonEditStraal: js-kpm-editstraal
+    kpm:
+      id: 1
+  mapContext2:
+    id: 2
+    modifier:
+    controls: false
+    buttonEditStraal: js-kpm-editstraal
+    kpm:
+      id: 2
   voorschriftenContext:
     moreless: true
     options:
@@ -275,20 +289,6 @@ context:
     - id: radio-2
       text: Berichten in mijn gemeente
       name: publicatie
-  resultmodalContext:
-    modifier: result--list--wide
-    items:
-    - title: Aangevraagde evenementenvergunningen 2018
-      headerimg: https://via.placeholder.com/720x280.png?text=Kaart+met+marker
-      titleHeader: h2
-      text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
-      buttons:
-        - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
-          type: primary
-          action: modal-4
-          modal: true
   resultsContext:
     modifier: result--list--wide
     items:
@@ -296,29 +296,31 @@ context:
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      share: false
       buttons:
         - button: Bekijk publicatie
           type: primary
         - button: Bekijk op kaart
           type: secendary
-          action: modal-4
+          action: modal-1
           modal: true
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      share: false
       buttons:
         - button: Bekijk publicatie
           type: primary
         - button: Bekijk op kaart
           type: secendary
+          action: modal-2
+          modal: true
     - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
       titleHeader: h2
       label: Nieuw vandaag
       text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      share: false
       buttons:
         - button: Bekijk publicatie
           type: primary
@@ -362,15 +364,6 @@ context:
         icon: hamburger
       - label: Kaart
         icon: marker
-  selectedfilterContext:
-    items:
-      - label: Gezocht op
-        value: leveringen
-        url: "#"
-      - label: Bouwvergunning
-        url: "#"
-      - label: APV vergunning
-        url: "#"
   selectStraalContext:
     modifier: select-custom
     id: 1

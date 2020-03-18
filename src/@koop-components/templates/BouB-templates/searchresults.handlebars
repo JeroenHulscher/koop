@@ -18,7 +18,6 @@
         </div>
       </div>
 
-
       <div class="row hidden-desktop">
         <address>
           Gouwestraat 26<br>
@@ -46,16 +45,63 @@
       {{render "@resultlist" resultsContext }}
 
 
-      <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
+      <div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
         <div class="modal__inner">
           <div class="modal__content">
-            {{!-- {{render "@resultlist" resultmodalContext }} --}}
             <div class="row row--large">
-              <div id="demo7" style="width:100%;height:200px; overflow: hidden"></div>
+              {{render "@map" mapContext }}
+              <script id="config1" type="application/json">
+                {
+                  "debug":false,
+                  "locations":[
+                  {
+                    "type":"punt",
+                    "geometry":"POINT(83388.72001447542 454483.4858568841)",
+                    "geometry_type":"WKT","title":"Punt 1",
+                    "url":"https://google.com"
+                  }],
+                    "options":{"mode":"geoview"}
+                  }
+              </script>
             </div>
             <h2>Aangevraagde evenementenvergunningen 2018</h2>
-            <p class="pre-h">4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
-            <ul class="list list--inline list--narrow">
+            <p>4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow u-nomargin">
+
+              <li class="list__item">
+                <a href="#" class="button button--primary">Bekijk publicatie</a>
+              </li>
+
+            </ul>
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <div class="row row--large">
+              {{render "@map" mapContext2 }}
+              <script id="config2" type="application/json">
+                {
+                  "debug":false,
+                  "locations":[
+                  {
+                    "type":"punt",
+                    "geometry":"POINT(83388.72001447542 464483.4858568841)",
+                    "geometry_type":"WKT","title":"Punt 1",
+                    "url":"https://google.com"
+                  }],
+                    "options":{"mode":"geoview"}
+                  }
+              </script>
+            </div>
+            <h2>Aangevraagde evenementenvergunningen 2018</h2>
+            <p>4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow u-nomargin">
 
               <li class="list__item">
                 <a href="#" class="button button--primary">Bekijk publicatie</a>
@@ -180,11 +226,6 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="form__row form__row--large">
-            <h3>Geselecteerde filters (2)</h3>
-            {{render "@form-selectedfilter" selectedfilterContext }}
           </div>
 
           <div class="form__row form__row--large">

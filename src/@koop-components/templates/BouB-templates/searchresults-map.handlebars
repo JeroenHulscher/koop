@@ -51,7 +51,6 @@
       <div class="row">
         {{render "@map" mapContext }}
         <script id="config1" type="application/json">
-
           {
             "debug":false,
             "locations":[
@@ -72,7 +71,8 @@
               "omschrijving":"Morbi tincidunt interdum nisi.","title":"Punt 3"},{"type":"punt",
               "geometry":"POINT(84488.72001447542 455583.4858568841)","geometry_type":"WKT",
               "omschrijving":"Phasellus vulputate sapien quis est faucibus suscipit. Donec tempus mattis orci, mattis cursus risus congue mattis. Nulla aliquet tempus ipsum sed porttitor. Morbi ex elit, suscipit at metus in, feugiat volutpat augue. Vivamus pulvinar urna sem, id dignissim tellus interdum id. Quisque ligula enim, tincidunt vel neque in, rhoncus faucibus turpis. Integer id condimentum urna, sit amet dapibus neque. Aenean lacinia porta porttitor. Nam a odio porttitor lacus consequat lobortis et nec massa. Sed erat tortor, rutrum feugiat libero ut, dictum vestibulum mauris. Vestibulum hendrerit, dui sed volutpat tempor, dui nulla tristique ligula, vel ultricies justo arcu sit amet augue. Duis tincidunt vitae ex at tincidunt. Pellentesque ipsum lorem, hendrerit ut faucibus nec, malesuada aliquam tellus. Fusce ut suscipit est. Etiam condimentum nunc quam. Aenean a felis dapibus, placerat lacus eget, porta leo.","title":"Punt 4"},{"type":"punt","geometry":"POINT(84488.72001447542 454583.4858568841)","geometry_type":"WKT","title":"Punt 5","url":"https://google.com"}],
-              "options":{"mode":"geoview"}}
+              "options":{"mode":"geoview"}
+              }
 
         </script>
 
@@ -183,11 +183,6 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="form__row form__row--large">
-            <h3>Geselecteerde filters (2)</h3>
-            {{render "@form-selectedfilter" selectedfilterContext }}
           </div>
 
           <div class="form__row form__row--large">

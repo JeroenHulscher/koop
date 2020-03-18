@@ -148,6 +148,13 @@ window.onl = {
     unbindFocusTrap: function( element ) {
       element.removeEventListener( 'keydown', onl.ui.trapFocus );
     },
+    uniqBy: function(a, key) {
+      var seen = {};
+      return a.filter(function (item) {
+        var k = key(item);
+        return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+      })
+    },
     // prevent (shift) tabbing away from an element
     trapFocus: function( event ) {
       var element = event.currentTarget;
@@ -280,3 +287,34 @@ window.onl = {
   }
 
 };
+
+var pubsub = (function () {
+  var topics = {};
+  var hOP = topics.hasOwnProperty;
+
+  return {
+    subscribe: function (topic, listener) {
+      // Create the topic's object if not yet created
+      if (!hOP.call(topics, topic)) topics[topic] = [];
+
+      // Add the listener to queue
+      var index = topics[topic].push(listener) - 1;
+
+      // Provide handle back for removal of topic
+      return {
+        remove: function () {
+          delete topics[topic][index];
+        }
+      };
+    },
+    publish: function (topic, info) {
+      // If the topic doesn't exist, or there's no listeners in queue, just leave
+      if (!hOP.call(topics, topic)) return;
+
+      // Cycle through topics queue, fire!
+      topics[topic].forEach(function (item) {
+        item(info != undefined ? info : {});
+      });
+    }
+  };
+})();
