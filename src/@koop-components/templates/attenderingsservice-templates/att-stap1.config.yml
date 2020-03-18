@@ -53,6 +53,7 @@ context:
       name: kpm-straal
       value: hideMap
   mapContext:
+    modifier: h-400
     controls: false
     buttonEditStraal: js-kpm-editstraal
   rondomadresContext:
@@ -64,6 +65,7 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     searchFilter: true
     maxShow: 3
+    required: true
     selectAll: true
     selectAllID: 9876
     type: span
@@ -72,7 +74,6 @@ context:
         id: 1237
         title: Rotterdam
         short: Spanje
-        required: required
       - Option: 2
         id: 22372312321312
         title: Schiedam
@@ -103,6 +104,7 @@ context:
     searchFilter: true
     maxShow: 3
     selectAll: true
+    required: true
     selectAllID: 9877
     type: span
     Options:
@@ -139,6 +141,7 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     searchFilter: true
     maxShow: 3
+    required: true
     selectAll: true
     selectAllID: 9879
     type: span
@@ -176,6 +179,7 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     searchFilter: true
     maxShow: 3
+    required: true
     selectAll: true
     selectAllID: 9880
     type: span
