@@ -83,8 +83,8 @@ var supports = function () {
     var subselection = this.getClosest(field, '.subselection');
     var subselectionSummary = subselection.querySelector('.subselection__summary');
     var subselectionSummaryItems = subselectionSummary.childNodes;
-    console.log('subselectionSummaryItems', subselectionSummaryItems);
-    console.log('subselectionSummaryItems.length', subselectionSummaryItems.length);
+    // console.log('subselectionSummaryItems', subselectionSummaryItems);
+    // console.log('subselectionSummaryItems.length', subselectionSummaryItems.length);
     if (subselectionSummaryItems.length > 0){
       return false;
     } else {
@@ -194,7 +194,7 @@ var supports = function () {
       field.classList.add(this.config.classField);
     }
 
-    console.log('showError field type', field.type);
+    // console.log('showError field type', field.type);
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
     if (field.type === 'radio' && field.name) {
@@ -215,7 +215,7 @@ var supports = function () {
 
     // if (this.getClosest(field, '.subselection')) {}
 
-    console.log('showerror: field id: ', field.id, field.name);
+    // console.log('showerror: field id: ', field.id, field.name);
     // Get field id or name
     var id = field.id || field.name;
     if (!id) return;
@@ -349,7 +349,7 @@ var supports = function () {
     var errorsContainerListItems = this.element.querySelectorAll('.' + this.config.errorsContainer + '> ul li');
     for (var i = 0; i < errorsContainerListItems.length; i++){
       if (errorsContainerListItems[i].getAttribute('data-id') === fieldId) {
-        errorsContainerListItems[i].classList.add('line-through');
+        errorsContainerListItems[i].childNodes[0].classList.add('line-through');
       }
     }
   }
@@ -387,12 +387,12 @@ var supports = function () {
     if (!id) return;
 
     // Check if an error message is in the DOM
-    console.log('remove error: field:', field);
+    // console.log('remove error: field:', field);
     if(this.getClosest(field, '.subselection')) {
-      console.log('remove error: is sub.');
+      // console.log('remove error: is sub.');
       var sub = this.getClosest(field, '.subselection');
       var message = sub.querySelector('.' + this.config.errorContainer);
-      console.log('remove error: message', message);
+      // console.log('remove error: message', message);
     } else {
       var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
     }
@@ -464,15 +464,15 @@ var supports = function () {
   }
 
   formvalidation.prototype.blurHandler = function (event) {
-    console.log('blurHandler -----------');
+    // console.log('blurHandler -----------');
     var type = event.target.nodeName;
-    console.log('type', type);
+    // console.log('type', type);
     if ((type === 'DIV')) return;
 
     if(type === 'A'){
-      console.log('a', event.target);
+      // console.log('a', event.target);
       if (event.target.classList.contains('subselection__trigger')){
-        console.log('is subselection');
+        // console.log('is subselection');
         var error = this.hasErrorInSubselection(event.target);
         // console.log('is subselection', error);
         if (error) {
@@ -512,7 +512,7 @@ var supports = function () {
   };
 
   formvalidation.prototype.clickHandler = function (event) {
-    console.log('clickHandler  -----------');
+    // console.log('clickHandler  -----------');
 
     // Only run if the field is a checkbox or radio
     var type = event.target.getAttribute('type');
@@ -563,16 +563,16 @@ var supports = function () {
 
     // Get all of the form elements
     var fields = event.target.elements;
-    console.log('fields', fields);
+    // console.log('fields', fields);
     var subselections = this.element.querySelectorAll('.subselection__summary.required');
-    console.log('subselections', subselections);
+    // console.log('subselections', subselections);
 
     // Validate each subselection field
     var hasErrors;
     for (var y = 0; y < subselections.length; y++) {
       if (subselections[y].innerHTML === ''){
-        console.log('subselections[y] empty', subselections[y]);
-        console.log('SHOW ERROR');
+        // console.log('subselections[y] empty', subselections[y]);
+        // console.log('SHOW ERROR');
         this.showErrorSubselection(subselections[y]);
         if (!hasErrors) {
           hasErrors = subselections[y];
@@ -618,10 +618,10 @@ var supports = function () {
 
     // Otherwise, submit the form
     if (this.config.doSubmit){
-      console.log('Success. SUBMIT!');
+      // console.log('Success. SUBMIT!');
     } else {
       event.preventDefault();
-      console.log('Success. SUBMIT! (idle)');
+      // console.log('Success. SUBMIT! (idle)');
     }
 
   };
