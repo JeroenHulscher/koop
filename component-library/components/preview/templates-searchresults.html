@@ -126,7 +126,6 @@
         </div>
       </div>
 
-
       <div class="row hidden-desktop">
         <address>
           Gouwestraat 26<br>
@@ -174,8 +173,29 @@
 
         <ul class="list list--inline list--narrow">
             <li class="list__item"><a href="#"  class="button button--primary">Bekijk publicatie</a></li>
-            <li class="list__item"><a href="#" data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="modal-4" class="button button--secendary">Bekijk op kaart</a></li>
-            <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
+            <li class="list__item"><a href="#" data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="modal-1" class="button button--secendary">Bekijk op kaart</a></li>
+        </ul>
+
+
+    </li>
+    <li>
+
+
+        <p class="result--label"><i><span class="label ">Nieuw vandaag</span></i></p>
+
+
+        <h2 class="result--title ">AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent</h2>
+
+
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!</p>
+
+
+
+
+
+        <ul class="list list--inline list--narrow">
+            <li class="list__item"><a href="#"  class="button button--primary">Bekijk publicatie</a></li>
+            <li class="list__item"><a href="#" data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="modal-2" class="button button--secendary">Bekijk op kaart</a></li>
         </ul>
 
 
@@ -198,30 +218,6 @@
         <ul class="list list--inline list--narrow">
             <li class="list__item"><a href="#"  class="button button--primary">Bekijk publicatie</a></li>
             <li class="list__item"><a href="#"  class="button button--secendary">Bekijk op kaart</a></li>
-            <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
-        </ul>
-
-
-    </li>
-    <li>
-
-
-        <p class="result--label"><i><span class="label ">Nieuw vandaag</span></i></p>
-
-
-        <h2 class="result--title ">AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent</h2>
-
-
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!</p>
-
-
-
-
-
-        <ul class="list list--inline list--narrow">
-            <li class="list__item"><a href="#"  class="button button--primary">Bekijk publicatie</a></li>
-            <li class="list__item"><a href="#"  class="button button--secendary">Bekijk op kaart</a></li>
-            <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
         </ul>
 
 
@@ -231,15 +227,79 @@
 
 
 
-      <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
+      <div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
         <div class="modal__inner">
           <div class="modal__content">
             <div class="row row--large">
-              <div id="demo7" style="width:100%;height:200px; overflow: hidden"></div>
+              <div class="map">
+  <div class="map__map">
+    <div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config1", "range":".js-kpm-editstraal" }'>
+
+</div>
+
+  </div>
+</div>
+
+              <script id="config1" type="application/json">
+                {
+                  "debug":false,
+                  "locations":[
+                  {
+                    "type":"punt",
+                    "geometry":"POINT(83388.72001447542 454483.4858568841)",
+                    "geometry_type":"WKT","title":"Punt 1",
+                    "url":"https://google.com"
+                  }],
+                    "options":{"mode":"geoview"}
+                  }
+              </script>
             </div>
             <h2>Aangevraagde evenementenvergunningen 2018</h2>
-            <p class="pre-h">4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
-            <ul class="list list--inline list--narrow">
+            <p>4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow u-nomargin">
+
+              <li class="list__item">
+                <a href="#" class="button button--primary">Bekijk publicatie</a>
+              </li>
+
+            </ul>
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <div class="row row--large">
+              <div class="map">
+  <div class="map__map">
+    <div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config2", "range":".js-kpm-editstraal" }'>
+
+</div>
+
+  </div>
+</div>
+
+              <script id="config2" type="application/json">
+                {
+                  "debug":false,
+                  "locations":[
+                  {
+                    "type":"punt",
+                    "geometry":"POINT(83388.72001447542 464483.4858568841)",
+                    "geometry_type":"WKT","title":"Punt 1",
+                    "url":"https://google.com"
+                  }],
+                    "options":{"mode":"geoview"}
+                  }
+              </script>
+            </div>
+            <h2>Aangevraagde evenementenvergunningen 2018</h2>
+            <p>4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow u-nomargin">
 
               <li class="list__item">
                 <a href="#" class="button button--primary">Bekijk publicatie</a>
@@ -350,6 +410,9 @@
     placeholder="Bijv. 12A"
     
     
+    
+    
+    
 
     data-decorator="toggle-remove-visibility"
     />
@@ -376,6 +439,9 @@
     
     aria-invalid="false"
     placeholder="Bijv. 12A"
+    
+    
+    
     
     
 
@@ -448,29 +514,6 @@
                 </button>
               </div>
             </div>
-
-          </div>
-
-          <div class="form__row form__row--large">
-            <h3>Geselecteerde filters (2)</h3>
-            <div class="form__selectedfilter ">
-  Gezocht op &quot;leveringen&quot;
-  <a href="#" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
-  </a>
-</div>
-<div class="form__selectedfilter ">
-  Bouwvergunning
-  <a href="#" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
-  </a>
-</div>
-<div class="form__selectedfilter ">
-  APV vergunning
-  <a href="#" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
-  </a>
-</div>
 
           </div>
 

@@ -191,8 +191,11 @@
     </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> error}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"input-text-1__error"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
     <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> error}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">true</span></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">false</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
     <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ fieldPlaceholder }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+    </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> required}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">required</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
     </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> disabled}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">disabled</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
     </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> value}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">value</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{value}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
+    </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> patterntype}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">data-pattern-type</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{patterntype}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
+    </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> title}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">title</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{title}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
 
     </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> remove}}</span><span class="xml"><span class="hljs-tag">
     <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"toggle-remove-visibility"</span>
@@ -340,7 +343,7 @@ onl.decorate({
   &amp;--medium {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.125rem</span>;
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$darkBlue</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">56px</span>; <span class="hljs-comment">// needed to correct crossbrowser fields; :(</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>; <span class="hljs-comment">// needed to correct crossbrowser fields; :(</span>
     <span class="hljs-attribute">padding</span>: .<span class="hljs-number">625em</span>;
     <span class="hljs-attribute">border-width</span>: <span class="hljs-number">2px</span>;
   }
@@ -2521,6 +2524,30 @@ onl.decorate({
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4988,6 +5015,30 @@ onl.decorate({
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form-validation.html" data-pjax>
+                <span>Form validation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="kpm.html" data-pjax>
                 <span>KPM Module</span>
                 
@@ -4997,7 +5048,7 @@ onl.decorate({
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7985,6 +8036,70 @@ onl.decorate({
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepageoeb.html" data-pjax>
                 <span>Homepage OEP</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl-live-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl Live Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-dienstverlening.html" data-pjax>
+                <span>Dienstverlening</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-lokalewetregelgeving.html" data-pjax>
+                <span>lokalewetregelgeving</span>
                 
 
 <div class="Status Status--unlabelled">

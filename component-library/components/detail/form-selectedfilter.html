@@ -158,6 +158,12 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter "</span>&gt;</span>
+    Gezocht op <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>zoekterm<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter "</span>&gt;</span>
     Aanlegvergunning
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -178,8 +184,8 @@
     <code class="Code Code--lang-handlebars">
         <pre><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> items}}</span><span class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> modifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">form__selectedfilter--</span></span></span><span class="hljs-template-variable">{{modifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-  </span><span class="hljs-template-variable">{{label}}</span><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{label}}</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> value}}</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> label}}</span><span class="xml"> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-variable">{{value}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="hljs-template-variable">{{value}}</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{url}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -196,10 +202,18 @@
   <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
   <span class="hljs-attr">"items"</span>: [
     {
-      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Aanlegvergunning"</span>
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Gezocht op"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"zoekterm"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
     },
     {
-      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Bouwvergunning"</span>
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Aanlegvergunning"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Bouwvergunning"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#"</span>
     }
   ]
 }</pre>
@@ -220,6 +234,8 @@
             <select class="FileBrowser-select" id="filebrowser-select">
                 
                 <option value="file-648d86526d2e9c903a11dd16e9a6fd18">form-selectedfilter.scss</option>
+                
+                <option value="file-b8a623503ebcb9c3e1dc18e4f0e18a5e">form-selectedfilter.twig</option>
                 
             </select>
         </div>
@@ -250,6 +266,43 @@
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
                     <span class="Meta-value">0 Byte</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-b8a623503ebcb9c3e1dc18e4f0e18a5e" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Twig FileBrowser-code">
+                                <pre><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> item in items %}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter </span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> item.modifier %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">form__selectedfilter--</span></span></span><span class="hljs-template-variable">{{ items.modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{item.label}}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> item.value and item.label %}</span><span class="xml"> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-variable">{{ item.value }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="hljs-template-variable">{{ item.value}}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ item.url ?: '#' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/form-selectedfilter/form-selectedfilter.twig"><span>/components/raw/form-selectedfilter/form-selectedfilter.twig</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/@koop-components/form-components/form-selectedfilter/form-selectedfilter.twig</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">402 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -295,14 +348,10 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(8)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(6)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="filter-organisation.html">@<span>filter-organisation</span></a>, 
-            
-                <a href="templates-searchresults.html">@<span>templates-searchresults</span></a>, 
-            
-                <a href="templates-searchresults-map.html">@<span>templates-searchresults-map</span></a>, 
             
                 <a href="templates-cvdr-searchresults.html">@<span>templates-cvdr-searchresults</span></a>, 
             
@@ -2235,6 +2284,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4702,6 +4775,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form-validation.html" data-pjax>
+                <span>Form validation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="kpm.html" data-pjax>
                 <span>KPM Module</span>
                 
@@ -4711,7 +4808,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7699,6 +7796,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepageoeb.html" data-pjax>
                 <span>Homepage OEP</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl-live-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl Live Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-dienstverlening.html" data-pjax>
+                <span>Dienstverlening</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-lokalewetregelgeving.html" data-pjax>
+                <span>lokalewetregelgeving</span>
                 
 
 <div class="Status Status--unlabelled">

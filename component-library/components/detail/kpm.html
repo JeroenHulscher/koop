@@ -71,7 +71,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Prototype</label>
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
 
 </div>
 
@@ -258,6 +258,24 @@
     <span class="hljs-keyword">this</span>.config = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-keyword">this</span>.element.getAttribute(<span class="hljs-string">'data-config'</span>)) || [];
     <span class="hljs-keyword">this</span>.dataFromJSON = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-keyword">this</span>.config.config).innerHTML;
     <span class="hljs-keyword">this</span>.inputRange = <span class="hljs-built_in">document</span>.getElementsByName(<span class="hljs-string">'kpm-straal'</span>);
+    <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+    <span class="hljs-keyword">var</span> isModalVisible = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">this</span>.id = <span class="hljs-keyword">this</span>.element.getAttribute(<span class="hljs-string">'id'</span>);
+
+    <span class="hljs-keyword">var</span> insideModal = getClosest(<span class="hljs-keyword">this</span>.element, <span class="hljs-string">'.modal'</span>);
+    <span class="hljs-keyword">if</span> (insideModal) {
+      isModalVisible = isVisible(insideModal);
+    }
+
+    <span class="hljs-keyword">if</span> (!isModalVisible) {
+      <span class="hljs-keyword">var</span> subscription = pubsub.subscribe(<span class="hljs-string">'/modal/open'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">obj</span>) </span>{
+        <span class="hljs-keyword">var</span> kpmMap = obj.modal.querySelector(<span class="hljs-string">'.map__kpm'</span>);
+        <span class="hljs-keyword">if</span> (self.id === kpmMap.getAttribute(<span class="hljs-string">'id'</span>)) {
+          self.setupMap();
+        }
+      });
+      <span class="hljs-keyword">return</span>;
+    }
 
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.inputRange) {
       <span class="hljs-keyword">this</span>.setRangeListener();
@@ -284,13 +302,14 @@
     <span class="hljs-keyword">this</span>.data = {
       <span class="hljs-attr">debug</span>: <span class="hljs-literal">false</span>,
       <span class="hljs-attr">on_cancel</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"The user has closed the map without saving"</span>);
+        <span class="hljs-comment">// console.log("The user has closed the map without saving");</span>
       },
       <span class="hljs-attr">on_submit</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">result</span>) </span>{
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"The following result was returned:"</span>, result);
+        <span class="hljs-comment">// console.log("The following result was returned:", result);</span>
       }
     };
-    <span class="hljs-keyword">this</span>.data.mount_element = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-keyword">this</span>.element.getAttribute(<span class="hljs-string">'id'</span>));;
+    <span class="hljs-keyword">this</span>.data.mount_element = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-keyword">this</span>.element.getAttribute(<span class="hljs-string">'id'</span>));
+
 
     <span class="hljs-comment">// extend object with component config;</span>
     <span class="hljs-built_in">Object</span>.assign(<span class="hljs-keyword">this</span>.data, <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-keyword">this</span>.dataFromJSON));
@@ -332,7 +351,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.9 KB</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -2304,6 +2323,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4770,6 +4813,30 @@
     
         
         
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="form-validation.html" data-pjax>
+                <span>Form validation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>KPM Module</span>
@@ -4780,7 +4847,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7768,6 +7835,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-homepageoeb.html" data-pjax>
                 <span>Homepage OEP</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl-live-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl Live Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-dienstverlening.html" data-pjax>
+                <span>Dienstverlening</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-lokalewetregelgeving.html" data-pjax>
+                <span>lokalewetregelgeving</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -122,14 +122,13 @@
             Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op <em>mail@koop.overheid.nl</em>
           </p>
         </div>
-        <form class="form">
+        <form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'>
           <fieldset>
             <legend class="visually-hidden">E-mailadres</legend>
             <div class="form__row">
               <div class="columns">
                 <div class="column">
-                  <div class="relative">
-
+                  
 
   <label for="input-text-1" class="form__label form__label--accent">Postcode<span class="mandatory">Verplicht</span></label>
 
@@ -143,15 +142,15 @@
     
     aria-invalid="false"
     placeholder="Bijv. 2453EH"
+    required
     
     
+    data-pattern-type="zipcode"
+    title="Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)"
 
-    data-decorator="toggle-remove-visibility"
-    />
+/>
 
 
-  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
-</div>
 
 
                 </div>
@@ -171,6 +170,9 @@
     
     aria-invalid="false"
     placeholder="52"
+    
+    
+    
     
     
 
@@ -203,19 +205,24 @@
   </div>
   <div class="container container--centered">
 
-  <div class="row">
-    <ul class="list list--stepcontainer">
-      <li class="list__item">
-        <div class="columns">
-          <div class="column">
-            <h2>Selecteer een gebied</h2>
-            <h3 class="h4 u-nomargin">Uw adres</h3>
-            <p>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag</p>
-            <h3 class="h4 u-nomargin">Straal</h3>
-            <p>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente</p>
-            <form class="form">
-              <div class="form__row">
-                  <div class="input-radio">
+  <form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'>
+    <fieldset>
+      <legend class="visually-hidden">Voorkeuren</legend>
+
+
+      <div class="row">
+        <ul class="list list--stepcontainer">
+          <li class="list__item">
+            <div class="columns">
+              <div class="column">
+                <h2>Selecteer een gebied</h2>
+                <h3 class="h4 u-nomargin">Uw adres</h3>
+                <p>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag</p>
+                <h3 class="h4 u-nomargin">Straal</h3>
+                <p>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente</p>
+                <form class="form">
+                  <div class="form__row">
+                      <div class="input-radio">
     <input class="radio__input" value="250" checked  type="radio"  id="option-radio-1" name="kpm-straal" />
     <label class="radio__label" for="option-radio-1">
       250 meter
@@ -252,11 +259,11 @@
     </label>
   </div>
 
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
-          <div class="column">
-            <div class="map">
+              <div class="column">
+                <div class="map map--h-400">
   <div class="map__map">
     <div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config1", "range":".js-kpm-editstraal" }'>
 
@@ -267,54 +274,54 @@
 
 
 
-            <script id="config1" type="application/json">
-            {
-              "locations": [
+                <script id="config1" type="application/json">
                 {
-                  "type": "adres",
-                  "geometry": "POINT(4.34015737 52.07846659)",
-                  "geometry_type": "WKT",
-                  "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
-                  "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
-                }
-              ],
-              "options": {
-                "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
-                "class": "kaartprikmodule-overlay",
-                "mode": "geoview",
-                "center": {
-                  "highlight": true,
-                  "type": "circle",
-                  "circle": {
-                    "radius": 200,
-                    "x": 83224,
-                    "y": 454983
+                  "locations": [
+                    {
+                      "type": "adres",
+                      "geometry": "POINT(4.34015737 52.07846659)",
+                      "geometry_type": "WKT",
+                      "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+                      "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+                    }
+                  ],
+                  "options": {
+                    "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                    "class": "kaartprikmodule-overlay",
+                    "mode": "geoview",
+                    "center": {
+                      "highlight": true,
+                      "type": "circle",
+                      "circle": {
+                        "radius": 200,
+                        "x": 83224,
+                        "y": 454983
+                      }
+                    },
+                    "controls": ["base-layer", "center", "fullscreen", "zoom"],
+                    "layers": {
+                      "bgtachtergrondkaart": {
+                        "enabled": true
+                      }
+                    }
                   }
-                },
-                "controls": ["base-layer", "center", "fullscreen", "zoom"],
-                "layers": {
-                  "bgtachtergrondkaart": {
-                    "enabled": true
-                  }
                 }
-              }
-            }
-            </script>
-          </div>
-        </div>
-      </li>
-      <li class="list__item">
-        <h2>Selecteer uw voorkeursinstellingen</h2>
-        <p>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.</p>
-        <fieldset>
-          <legend class="visually-hidden">Voorkeursinstellingen</legend>
-          <div class="columns">
-            <div class="column">
-              <div class="form__row u-margin-top-32">
-                <h3 class="form__sublegend">Rondom een adres</h3>
-                <p class="">Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.</p>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
-  <div class="subselection__summary"></div>
+                </script>
+              </div>
+            </div>
+          </li>
+          <li class="list__item">
+            <h2>Selecteer uw voorkeursinstellingen</h2>
+            <p>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.</p>
+            <fieldset>
+              <legend class="visually-hidden">Voorkeursinstellingen</legend>
+              <div class="columns">
+                <div class="column">
+                  <div class="form__row u-margin-top-32">
+                    <h3 class="form__sublegend">Rondom een adres</h3>
+                    <p class="">Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.</p>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary required"></div>
   <div id="modal-20" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
@@ -338,7 +345,7 @@
                 <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-1237" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-1237">
                         Rotterdam
@@ -347,7 +354,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-22372312321312" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-22372312321312" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-22372312321312">
                         Schiedam
@@ -356,7 +363,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-323723" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-323723" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-323723">
                         Vlaardingen
@@ -365,7 +372,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-1237232" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-1237232" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-1237232">
                         Den Haag
@@ -374,7 +381,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-223712312312" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-223712312312" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-223712312312">
                         Scheveningen
@@ -383,7 +390,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-3237123123" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-3237123123" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-3237123123">
                         Voorburg
@@ -406,12 +413,12 @@
   <a href="#" id="id20" data-handler="open-modal" data-modal="modal-20" class="subselection__trigger icon">Selecteer opties rondom een adres</a>
 </div>
 
-              </div>
-              <div class="form__row u-margin-top-48">
-                <h3 class="form__sublegend">Bestemmingsplannen</h3>
-                <p class="">Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.</p>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
-  <div class="subselection__summary"></div>
+                  </div>
+                  <div class="form__row u-margin-top-48">
+                    <h3 class="form__sublegend">Bestemmingsplannen</h3>
+                    <p class="">Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.</p>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary required"></div>
   <div id="modal-22" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
@@ -435,7 +442,7 @@
                 <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-1237" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-1237">
                         Rotterdam
@@ -444,7 +451,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-223723123312" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-223723123312" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-223723123312">
                         Schiedam
@@ -453,7 +460,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-3223" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-3223" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-3223">
                         Vlaardingen
@@ -462,7 +469,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-12332" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-12332" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-12332">
                         Den Haag
@@ -471,7 +478,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-2237312312" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-2237312312" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-2237312312">
                         Scheveningen
@@ -480,7 +487,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-32373123" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-32373123" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-32373123">
                         Voorburg
@@ -503,14 +510,14 @@
   <a href="#" id="id22" data-handler="open-modal" data-modal="modal-22" class="subselection__trigger icon">Selecteer opties over bestemmingsplannen</a>
 </div>
 
-              </div>
-            </div>
-            <div class="column">
-              <div class="form__row u-margin-top-32">
-                <h3 class="form__sublegend">Voorlichting</h3>
-                <p class="">Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.</p>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
-  <div class="subselection__summary"></div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="form__row u-margin-top-32">
+                    <h3 class="form__sublegend">Voorlichting</h3>
+                    <p class="">Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.</p>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary required"></div>
   <div id="modal-21" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
@@ -534,7 +541,7 @@
                 <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-1237" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-1237">
                         Rotterdam
@@ -543,7 +550,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-2237231232131" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-2237231232131" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-2237231232131">
                         Schiedam
@@ -552,7 +559,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-3237" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-3237" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-3237">
                         Vlaardingen
@@ -561,7 +568,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-1237232" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-1237232" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-1237232">
                         Den Haag
@@ -570,7 +577,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-22371231231" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-22371231231" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-22371231231">
                         Scheveningen
@@ -579,7 +586,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-323712123" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-323712123" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-323712123">
                         Voorburg
@@ -602,12 +609,12 @@
   <a href="#" id="id21" data-handler="open-modal" data-modal="modal-21" class="subselection__trigger icon">Selecteer opties over voorlichting</a>
 </div>
 
-              </div>
-              <div class="form__row u-margin-top-48">
-                <h3 class="form__sublegend">Voorschriften &amp; beleid</h3>
-                <p class="">Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.</p>
-                <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
-  <div class="subselection__summary"></div>
+                  </div>
+                  <div class="form__row u-margin-top-48">
+                    <h3 class="form__sublegend">Voorschriften &amp; beleid</h3>
+                    <p class="">Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.</p>
+                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+  <div class="subselection__summary required"></div>
   <div id="modal-23" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
@@ -631,7 +638,7 @@
                 <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-1237" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-1237" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-1237">
                         Rotterdam
@@ -640,7 +647,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-223723321312" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-223723321312" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-223723321312">
                         Schiedam
@@ -649,7 +656,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-3223" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-3223" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-3223">
                         Vlaardingen
@@ -658,7 +665,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-12372" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-12372" name="name"  data-value="Spanje"
                         value="2" />
                       <label class="checkbox__label" for="option-12372">
                         Den Haag
@@ -667,7 +674,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-2237122312" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-2237122312" name="name"  data-value="Griekenland"
                         value="2" />
                       <label class="checkbox__label" for="option-2237122312">
                         Scheveningen
@@ -676,7 +683,7 @@
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"    type="checkbox" id="option-32373123" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-32373123" name="name"  data-value="Nederland"
                         value="2" />
                       <label class="checkbox__label" for="option-32373123">
                         Voorburg
@@ -699,15 +706,15 @@
   <a href="#" id="id23" data-handler="open-modal" data-modal="modal-23" class="subselection__trigger icon">Selecteer opties over voorschriften &amp; beleid</a>
 </div>
 
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </fieldset>
-      </li>
-      <li class="list__item">
-        <h2>Selecteer overheidsorganisaties</h2>
-        <p>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.</p>
-        <div data-decorator="init-selectall">
+            </fieldset>
+          </li>
+          <li class="list__item">
+            <h2>Selecteer overheidsorganisaties</h2>
+            <p>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.</p>
+            <div data-decorator="init-selectall">
   <div class="input-checkbox">
     <input class="checkbox__input js-checkbox-master" type="checkbox" id="appel" name="selectAll" value="veel" />
     <label class="checkbox__label" for="appel">
@@ -771,16 +778,20 @@
 
 </div>
 
-      </li>
-    </ul>
-    <div class="columns">
-      <div class="column">
-        <p class="p p--med">U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <a href="#">privacystatement</a>.</p>
+          </li>
+        </ul>
+        <div class="columns">
+          <div class="column">
+            <p class="p p--med">U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <a href="#">privacystatement</a>.</p>
+          </div>
+          <div class="column align-right">
+            <button type="submit" class="button button--primary">Meld mij aan voor de nieuwsbrief</button>
+          </div>
       </div>
-      <div class="column align-right">
-        <button type="submit" class="button button--primary">Meld mij aan voor de nieuwsbrief</button>
-      </div>
-  </div>
+
+    </fieldset>
+  </form>
+
 
   </div>
 </div>

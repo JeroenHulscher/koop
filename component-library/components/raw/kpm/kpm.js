@@ -14,6 +14,24 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.dataFromJSON = document.querySelector(this.config.config).innerHTML;
     this.inputRange = document.getElementsByName('kpm-straal');
+    var self = this;
+    var isModalVisible = true;
+    this.id = this.element.getAttribute('id');
+
+    var insideModal = getClosest(this.element, '.modal');
+    if (insideModal) {
+      isModalVisible = isVisible(insideModal);
+    }
+
+    if (!isModalVisible) {
+      var subscription = pubsub.subscribe('/modal/open', function (obj) {
+        var kpmMap = obj.modal.querySelector('.map__kpm');
+        if (self.id === kpmMap.getAttribute('id')) {
+          self.setupMap();
+        }
+      });
+      return;
+    }
 
     if (this.inputRange) {
       this.setRangeListener();
@@ -40,13 +58,14 @@
     this.data = {
       debug: false,
       on_cancel: function () {
-        console.log("The user has closed the map without saving");
+        // console.log("The user has closed the map without saving");
       },
       on_submit: function (result) {
-        console.log("The following result was returned:", result);
+        // console.log("The following result was returned:", result);
       }
     };
-    this.data.mount_element = document.getElementById(this.element.getAttribute('id'));;
+    this.data.mount_element = document.getElementById(this.element.getAttribute('id'));
+
 
     // extend object with component config;
     Object.assign(this.data, JSON.parse(this.dataFromJSON));
