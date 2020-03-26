@@ -2,7 +2,24 @@
 label: Form validation
 status: prototype
 context:
+  datepicker:
+    id: 3
+    fieldLabel: Van
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 06-10-1960'
+    debug: false
+    required: true
+    haslabel: true
+    label: Geboortedatum
+  datepickerVT:
+    id: 2
+    range: true
+    fieldLabel: Datum
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 06-10-1960'
+    required: true
   subselectionContext:
+    required: true
     radio: true
     type: span
     linkText: Kies 'iets'
@@ -16,19 +33,16 @@ context:
         id: 4444
         title: Engeland
         short: Engeland
-        required: required
         name: subname
       - Option: 2222
         id: 2222
         title: Frankrijk
         short: Frankrijk
-        required: required
         name: subname
       - Option: 3333
         id: 3333
         title: Griekenland
         short: Griekenland
-        required: required
         name: subname
   rondomadresContext:
     linkText: Selecteer opties rondom een adres
@@ -44,15 +58,15 @@ context:
     selectAllID: 9876
     type: span
     Options:
-      - Option: 1
+      - Option: 155
         id: 1237
         title: Rotterdam
         short: Rotterdam
-      - Option: 2
+      - Option: 255
         id: 22372312321312
         title: Schiedam
         short: Griekenland
-      - Option: 3
+      - Option: 355
         id: 323723
         title: Vlaardingen
         short: Nederland

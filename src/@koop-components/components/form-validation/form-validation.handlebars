@@ -4,11 +4,20 @@
 
     <input type="submit" class="button" value="Submit">
 
+    {{!-- <div class="form__row">
+      {{render "@datepicker" datepicker }}
+    </div>
+
+    <div class="form__row">
+      {{render "@datepicker" datepickerVT }}
+    </div> --}}
+
     <div class="form__row">
       <a href="#">Random link</a>
     </div>
 
     <div class="form__row">
+      <h3 class="form__sublegend">Iets</h3>
       {{render "@subselection" subselectionContext}}
     </div>
 
@@ -45,11 +54,15 @@
     <div class="form__row">
       <label for="zcf1">Zipcode (dutch)</label>
       <p class="form__input-helptext">(preset pattern: zipcode. '1234AB')</p>
-      <input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="wel goed 1234AB doen he" required>
+      <input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="(handmatige melding) Het veld Zipcode is incorrect ingevuld. Voorbeeld invoer: 1234AB" required>
     </div>
 
     <div class="form__row" data-radiogroup-title="Radius zoekgeschiedenis">
       <p class="form__label">Radius zoekgeschiedenis</p>
+      <div class="input-radio">
+        <input class="radio__input" value="" type="radio" id="option-32" checked name="goor" required>
+        <label class="radio__label" for="option-32">All groups</label>
+      </div>
       <div class="input-radio">
         <input class="radio__input" value="" type="radio" id="option-3" name="goor" required>
         <label class="radio__label" for="option-3">Group item 1</label>

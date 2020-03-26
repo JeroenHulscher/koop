@@ -35,21 +35,23 @@ var supports = function () {
     this.errors = [];
 
     // Messages
-    this.config.messageValueMissing = this.config.messageValueMissing || 'Dit mag niet leeg zijn.';
-    this.config.messageValueMissingCheckbox = this.config.messageValueMissingCheckbox || 'Dit veld is verplicht.';
-    this.config.messageValueMissingRadio = this.config.messageValueMissingRadio || 'Kies een waarde.';
-    this.config.messageValueMissingSelect = this.config.messageValueMissingSelect || 'Selecteer een waarde.';
-    this.config.messageValueMissingSelectMulti = this.config.messageValueMissingSelectMulti || 'Selecteer minstens één waarde.';
-    this.config.messageTypeMismatchEmail = this.config.messageTypeMismatchEmail || 'Vul een correct e-mailadres in.';
-    this.config.messageTypeMismatchURL = this.config.messageTypeMismatchURL || 'Vul een website in.';
-    this.config.messageTooShort = this.config.messageTooShort || 'Gebruik minimaal {minLength} karakters. Op dit moment gebruik je {length} karakter(s).';
-    this.config.messageTooLong = this.config.messageTooLong || 'Het is niet toegestaan meer dan {maxLength} karakters te gebruiken. Op dit moment gebruik je {length} karakter(s).';
-    this.config.messagePatternMismatch = this.config.messagePatternMismatch || 'Dit veld voldoet niet aan de eisen.';
-    this.config.messageBadInput = this.config.messageBadInput || 'Vul een nummer in.';
-    this.config.messageStepMismatch = this.config.messageStepMismatch || 'Vul een correcte waarde in.';
-    this.config.messageRangeOverflow = this.config.messageRangeOverflow || 'Vul een waarde in dat lager is dan {max}.';
-    this.config.messageRangeUnderflow = this.config.messageRangeUnderflow || 'Vul een waarde in dat hoger is dan {min}.';
-    this.config.messageGeneric = this.config.messageGeneric || 'Dit veld is niet correct ingevuld.';
+    this.config.messageValueMissing = this.config.messageValueMissing || "Het veld '{label}' mag niet leeg zijn.";
+    this.config.messageValueMissingCheckbox = this.config.messageValueMissingCheckbox || "Het veld '{label}' is verplicht.";
+    this.config.messageValueMissingRadio = this.config.messageValueMissingRadio || "Kies van veld '{label}' een waarde.";
+    this.config.messageValueMissingSelect = this.config.messageValueMissingSelect || "Selecteer van veld '{label}' een waarde.";
+    this.config.messageValueMissingSelectMulti = this.config.messageValueMissingSelectMulti || "Selecteer van veld '{label}' minstens één waarde.";
+    this.config.messageTypeMismatchEmail = this.config.messageTypeMismatchEmail || "Vul in veld '{label}' een correct e-mailadres in.";
+    this.config.messageTypeMismatchURL = this.config.messageTypeMismatchURL || "Vul in veld '{label}' een correct website-adres in.";
+    this.config.messageTooShort = this.config.messageTooShort || "Gebruik in veld '{ label }' minimaal {minLength} karakters. Op dit moment gebruik je {length} karakter(s).";
+    this.config.messageTooLong = this.config.messageTooLong || "Het is in veld '{label}' niet toegestaan meer dan {maxLength} karakters te gebruiken. Op dit moment gebruik je {length} karakter(s).";
+    this.config.messagePatternMismatch = this.config.messagePatternMismatch || "Het veld '{label}' voldoet niet aan de eisen.";
+    this.config.messageBadInput = this.config.messageBadInput || "Vul in veld '{label}' een nummer in.";
+    this.config.messageStepMismatch = this.config.messageStepMismatch || "Vul in veld '{label}' een correcte waarde in.";
+    this.config.messageRangeOverflow = this.config.messageRangeOverflow || "Vul in veld '{label}' een waarde in dat lager is dan {max}.";
+    this.config.messageRangeUnderflow = this.config.messageRangeUnderflow || "Vul in veld '{label}' een waarde in dat hoger is dan {min}.";
+    this.config.passwordMismatch = this.config.passwordMismatch || "Het veld '{label}' voldoet niet aan de beveiligingseisen.";
+    this.config.passwordRepeatMismatch = this.config.passwordRepeatMismatch || "Het wachtwoord in veld '{label}' is niet gelijk aan het nieuwe wachtwoord.";
+    this.config.messageGeneric = this.config.messageGeneric || "Het veld '{label}' is niet correct ingevuld.";
 
     this.init();
   };
@@ -63,6 +65,7 @@ var supports = function () {
 
     // Event listeners
     this.element.addEventListener('blur', function (e) { this.blurHandler(e) }.bind(this), true);
+    // this.element.addEventListener('keyUp', function (e) { this.blurHandler(e) }.bind(this), true);
     this.element.addEventListener('click', function (e) { this.clickHandler(e) }.bind(this), false);
     this.element.addEventListener('submit', function (e) { this.submitHandler(e) }.bind(this), false);
 
@@ -83,15 +86,13 @@ var supports = function () {
     var subselection = this.getClosest(field, '.subselection');
     var subselectionSummary = subselection.querySelector('.subselection__summary');
     var subselectionSummaryItems = subselectionSummary.childNodes;
-    // console.log('subselectionSummaryItems', subselectionSummaryItems);
-    // console.log('subselectionSummaryItems.length', subselectionSummaryItems.length);
     if (subselectionSummaryItems.length > 0){
       return false;
     } else {
       return this.config.messageValueMissing;
     }
     // for (var i = 0; i < subselectionSummaryItems.length; i++){
-    //   console.log('subselectionSummaryItems[i]', subselectionSummaryItems[i]);
+    //   //////console.log('subselectionSummaryItems[i]', subselectionSummaryItems[i]);
     // }
   }
 
@@ -99,8 +100,21 @@ var supports = function () {
     // Don't validate submits, buttons, file and reset inputs, and disabled fields
     if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === undefined || field.type === 'fieldset' || field.type === 'a' || field.type === '') return;
 
+
     // Get validity
     var validity = field.validity;
+
+    var label = this.element.querySelector('[for="' + field.getAttribute('id') + '"]');
+    if(label){
+      label = label.innerHTML;
+    } else {
+      label = '';
+    }
+
+    // If field is invalid by extern validation (ie. password validator)
+    if (field.classList.contains('pw-invalid')) return this.config.passwordMismatch.replace("{label}", label);
+    if (field.classList.contains('pw-invalid-repeat')) return this.config.passwordRepeatMismatch.replace("{label}", label);
+
 
     // in case of use of default patterns (number, email, dutch zipcode)
     if (field.getAttribute('data-pattern-type')) {
@@ -117,10 +131,10 @@ var supports = function () {
         return;
       } else {
         if (field.value === '') {
-          return this.config.messageValueMissing;
+          return this.config.messageValueMissing.replace('{label}', label);
         }
         if (field.hasAttribute('title')) return field.getAttribute('title');
-        return this.config.messagePatternMismatch;
+        return this.config.messagePatternMismatch.replace('{label}', label);;
       }
     }
 
@@ -129,63 +143,70 @@ var supports = function () {
 
     // If field is required and empty
     if (validity.valueMissing) {
-      if (field.type === 'checkbox') return this.config.messageValueMissingCheckbox;
-      if (field.type === 'radio') return this.config.messageValueMissingRadio;
-      if (field.type === 'select-multiple') return this.config.messageValueMissingSelectMulti;
-      if (field.type === 'select-one') return this.config.messageValueMissingSelect;
+      if (field.type === 'checkbox') return this.config.messageValueMissingCheckbox.replace('{label}', label);
+      if (field.type === 'radio') return this.config.messageValueMissingRadio.replace('{label}', label);
+      if (field.type === 'select-multiple') return this.config.messageValueMissingSelectMulti.replace('{label}', label);
+      if (field.type === 'select-one') return this.config.messageValueMissingSelect.replace('{label}', label);
 
-      return this.config.messageValueMissing;
+      return this.config.messageValueMissing.replace('{label}', label);
     }
 
     // If not the right type
     if (validity.typeMismatch) {
-      if (field.type === 'email') return this.config.messageTypeMismatchEmail;
-      if (field.type === 'url') return this.config.messageTypeMismatchURL;
+      if (field.type === 'email') return this.config.messageTypeMismatchEmail.replace('{label}', label);;
+      if (field.type === 'url') return this.config.messageTypeMismatchURL.replace('{label}', label);;
     }
 
     // If too short
-    if (validity.tooShort) return this.config.messageTooShort.replace('{minLength}', field.getAttribute('minLength')).replace('{length}', field.value.length);
+    if (validity.tooShort) return this.config.messageTooShort.replace('{minLength}', field.getAttribute('minLength')).replace('{length}', field.value.length).replace('{label}', label);;
 
     // If too long
-    if (validity.tooLong) return this.config.messageTooLong.replace('{minLength}', field.getAttribute('maxLength')).replace('{length}', field.value.length);
+    if (validity.tooLong) return this.config.messageTooLong.replace('{minLength}', field.getAttribute('maxLength')).replace('{length}', field.value.length).replace('{label}', label);;
 
     // If number input isn't a number
-    if (validity.badInput) return this.config.messageBadInput;
+    if (validity.badInput) return this.config.messageBadInput.replace('{label}', label);;
 
     // If a number value doesn't match the step interval
-    if (validity.stepMismatch) return this.config.messageStepMismatch;
+    if (validity.stepMismatch) return this.config.messageStepMismatch.replace('{label}', label);;
 
     // If a number field is over the max
-    if (validity.rangeOverflow) return this.config.messageRangeOverflow.replace('{max}', field.getAttribute('max'));
+    if (validity.rangeOverflow) return this.config.messageRangeOverflow.replace('{max}', field.getAttribute('max')).replace('{label}', label);;
 
     // If a number field is below the min
-    if (validity.rangeUnderflow) return this.config.messageRangeUnderflow.replace('{min}', field.getAttribute('min'));
+    if (validity.rangeUnderflow) return this.config.messageRangeUnderflow.replace('{min}', field.getAttribute('min')).replace('{label}', label);;
 
     // If pattern doesn't match
     if (validity.patternMismatch) {
 
       // If pattern info is included, return custom error
-      if (field.hasAttribute('title')) return field.getAttribute('title');
+      if (field.hasAttribute('title')) return field.getAttribute('title').replace('{label}', label);;
 
       // Otherwise, generic error
-      return this.config.messagePatternMismatch;
+      return this.config.messagePatternMismatch.replace('{label}', label);;
 
     }
 
     // If all else fails, return a generic catchall error
-    return this.config.messageGeneric;
+    return this.config.messageGeneric.replace('{label}', label);;
 
   };
 
   formvalidation.prototype.showErrorSubselection = function (el) {
     var subselectionSummary = el;
+    //////console.log('subselectionSummary', subselectionSummary);
     var subselection = this.getClosest(subselectionSummary, '.subselection');
     var subselectionTrigger = subselection.querySelector('.subselection__trigger');
-    this.showError(subselectionTrigger, this.config.messageValueMissingCheckbox, 'subselection');
+    var label = subselection.parentNode.querySelector('.form__sublegend');
+    if(label){
+      label = label.innerHTML;
+    } else {
+      label = '';
+    }
+    this.showError(subselectionTrigger, this.config.messageValueMissingCheckbox.replace('{label}', label), 'subselection');
   }
 
   formvalidation.prototype.showError = function (field, error, options) {
-    var firstOptionId;
+    var firstOptionId = false;
 
     // Add error class to field
     if (field.type === 'select-one'){
@@ -194,7 +215,7 @@ var supports = function () {
       field.classList.add(this.config.classField);
     }
 
-    // console.log('showError field type', field.type);
+    // //////console.log('showError field type', field.type);
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
     if (field.type === 'radio' && field.name) {
@@ -213,9 +234,11 @@ var supports = function () {
       }
     }
 
+    // console.log('firstOptionId', firstOptionId);
+
     // if (this.getClosest(field, '.subselection')) {}
 
-    // console.log('showerror: field id: ', field.id, field.name);
+    // //////console.log('showerror: field id: ', field.id, field.name);
     // Get field id or name
     var id = field.id || field.name;
     if (!id) return;
@@ -248,6 +271,7 @@ var supports = function () {
           if (motherLabel) {
             labelText = motherLabel.getAttribute('data-radiogroup-title');
           } else {
+            //////console.log('1');
             labelText = label.textContent;
           }
         }
@@ -258,6 +282,7 @@ var supports = function () {
         if (label) {
           var parent = field.parentNode;
           parent.parentNode.insertBefore(message, parent.nextSibling);
+          //////console.log('2');
           labelText = label.textContent;
         }
       }
@@ -267,9 +292,17 @@ var supports = function () {
         field.parentNode.insertBefore(message, field.nextSibling);
 
         if(options === 'subselection'){
+          //////console.log('3');
           labelText = field.textContent;
         } else {
-          labelText = field.parentNode.querySelector('label').textContent;
+          //////console.log('4', field);
+          //////console.log('parent', field.parentNode);
+          var parent = field.parentNode;
+          if(field.parentNode.classList.contains('datepicker')){
+            parent = parent.parentNode;
+          }
+          labelText = parent.querySelector('label').textContent;
+          //////console.log('4 /');
         }
       }
     } else {
@@ -285,6 +318,7 @@ var supports = function () {
         if (motherLabel) {
           labelText = motherLabel.getAttribute('data-radiogroup-title');
         } else {
+          //////console.log('5');
           labelText = label.textContent;
         }
       } else if (field.type === 'select-one') {
@@ -292,22 +326,29 @@ var supports = function () {
         if (label) {
           var parent = field.parentNode;
           parent.parentNode.insertBefore(message, parent.nextSibling);
+          //////console.log('6');
           labelText = label.textContent;
         }
       } else {
         if (options === 'subselection') {
+          //////console.log('7');
           labelText = field.textContent;
         } else {
-          labelText = field.parentNode.querySelector('label').textContent;
+          //////console.log('8');
+          var parent = field.parentNode;
+          if (field.parentNode.classList.contains('datepicker')) {
+            parent = parent.parentNode;
+          }
+          labelText = parent.querySelector('label').textContent;
         }
         // labelText = field.parentNode.querySelector('label').textContent;
       }
     }
 
     if (firstOptionId){
-      this.errors.push({ "id": firstOptionId, "label": labelText, "error": error });
+      this.errors.push({ "id": firstOptionId, "label": labelText });
     } else {
-      this.errors.push({ "id": field.getAttribute('id'), "label": labelText, "error": error });
+      this.errors.push({ "id": field.getAttribute('id'), "label": labelText });
     }
 
     // Add ARIA role to the field
@@ -387,12 +428,12 @@ var supports = function () {
     if (!id) return;
 
     // Check if an error message is in the DOM
-    // console.log('remove error: field:', field);
+    // //////console.log('remove error: field:', field);
     if(this.getClosest(field, '.subselection')) {
-      // console.log('remove error: is sub.');
+      // //////console.log('remove error: is sub.');
       var sub = this.getClosest(field, '.subselection');
       var message = sub.querySelector('.' + this.config.errorContainer);
-      // console.log('remove error: message', message);
+      // //////console.log('remove error: message', message);
     } else {
       var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
     }
@@ -464,19 +505,31 @@ var supports = function () {
   }
 
   formvalidation.prototype.blurHandler = function (event) {
-    // console.log('blurHandler -----------');
+    // //////console.log('blurHandler -----------');
+    var self = this;
     var type = event.target.nodeName;
-    // console.log('type', type);
+    //////console.log('type', type, event.target);
     if ((type === 'DIV')) return;
 
-    if(type === 'A'){
-      // console.log('a', event.target);
+    if (type === 'BUTTON') {
+      if (event.target.classList.contains('subselection__summaryitem__remove')){
+        var summary = this.getClosest(event.target, '.subselection__summary');
+        ////////console.log('summary', summary, summary.innerHTML);
+        setTimeout(function(){
+        if (summary.innerHTML === '') {
+          ////////console.log('summaryXX');
+          self.showErrorSubselection(summary);
+        }
+        }, 200);
+      }
+    } else  if (type === 'A'){
+      ////////console.log('a', event.target);
       if (event.target.classList.contains('subselection__trigger')){
-        // console.log('is subselection');
+        // ////////console.log('is subselection');
         var error = this.hasErrorInSubselection(event.target);
-        // console.log('is subselection', error);
+        // ////////console.log('is subselection', error);
         if (error) {
-          // console.log('is subselection: if error:', error)
+          // ////////console.log('is subselection: if error:', error)
           // this.showError(event.target, error);
           // return;
         } else {
@@ -512,7 +565,7 @@ var supports = function () {
   };
 
   formvalidation.prototype.clickHandler = function (event) {
-    // console.log('clickHandler  -----------');
+    // ////////console.log('clickHandler  -----------');
 
     // Only run if the field is a checkbox or radio
     var type = event.target.getAttribute('type');
@@ -563,16 +616,16 @@ var supports = function () {
 
     // Get all of the form elements
     var fields = event.target.elements;
-    // console.log('fields', fields);
+    // ////////console.log('fields', fields);
     var subselections = this.element.querySelectorAll('.subselection__summary.required');
-    // console.log('subselections', subselections);
+    // ////////console.log('subselections', subselections);
 
     // Validate each subselection field
     var hasErrors;
     for (var y = 0; y < subselections.length; y++) {
       if (subselections[y].innerHTML === ''){
-        // console.log('subselections[y] empty', subselections[y]);
-        // console.log('SHOW ERROR');
+        // ////////console.log('subselections[y] empty', subselections[y]);
+        // ////////console.log('SHOW ERROR');
         this.showErrorSubselection(subselections[y]);
         if (!hasErrors) {
           hasErrors = subselections[y];
@@ -618,10 +671,10 @@ var supports = function () {
 
     // Otherwise, submit the form
     if (this.config.doSubmit){
-      // console.log('Success. SUBMIT!');
+      // ////////console.log('Success. SUBMIT!');
     } else {
       event.preventDefault();
-      // console.log('Success. SUBMIT! (idle)');
+      console.log('Success. SUBMIT! (idle)');
     }
 
   };
