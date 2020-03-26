@@ -6,7 +6,9 @@
 <div class="input-text__container input-text__container--prefix">
 {{/if}}
 
-  <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}{{#if required}}<span class="mandatory">Verplicht</span>{{/if}}</label>
+  <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
+
+  {{#if required}}<span class="mandatory">Verplicht</span>{{/if}}
 
   {{#if prefix}}
     <span class="input-text__prefix {{modifier2}}">{{prefixLabel}}</span>
