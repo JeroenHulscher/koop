@@ -78,8 +78,9 @@ context:
       text: Publicatie
       name: onderwerp455
   selectCustomContext:
-    items:
-    - id: 1
+    id: 1
+    options:
+    - id: 102
       value:
       label: Alle
       linkedto: 1

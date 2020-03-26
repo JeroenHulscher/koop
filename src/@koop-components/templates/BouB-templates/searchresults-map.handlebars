@@ -87,11 +87,11 @@
 
             <h2 class="jumbotron__header">Meld je aan voor de mail service</h2>
 
-            <form class="form">
+            <form class="form" data-decorator="init-form-validation">
               <fieldset>
                 <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
                 <div class="form__row">
-                  {{ render "@input-inputsubmit" }}
+                  {{ render "@input-inputsubmit" contextNewsletter merge=true}}
                 </div>
               </fieldset>
             </form>
@@ -128,7 +128,7 @@
                     <p class="jumbotron__subheader">Wijzig uw zoekopdracht</p>
                     <h1 class="jumbotron__header">Welke buurt zoekt u?</h1>
                   </div>
-                  <form class="form">
+                  <form class="form" data-decorator="init-form-validation">
                     <fieldset>
                       <legend class="visually-hidden">Zoek berichten</legend>
                       <div class="form__row ">

@@ -266,6 +266,7 @@ context:
     - id: radio-1112312312
       text: Vandaag
       name: publicatie
+      checked: checked
     - id: radio-21231232
       text: Afgelopen week
       name: publicatie
@@ -283,12 +284,13 @@ context:
   gebiedContext:
     moreless: true
     options:
-    - id: radio-1
+    - id: radio-1111
       text: Berichten rond mijn adres
-      name: publicatie
-    - id: radio-2
+      name: publicaties
+      checked: checked
+    - id: radio-2222
       text: Berichten in mijn gemeente
-      name: publicatie
+      name: publicaties
   resultsContext:
     modifier: result--list--wide
     items:
@@ -338,11 +340,12 @@ context:
   postcodeContext:
     modifier: input-text--medium
     labelmodifier: accent
+    required: true
     id: 1
-    fieldLabel: Huisnummer + toev.
+    fieldLabel: Postcode
     fieldLabelVisible: true
     fieldInstruction:
-    fieldPlaceholder: Bijv. 12A
+    fieldPlaceholder: 1234AB
     remove: true
   inputsubmitContext:
     label: Verfijn uw zoekopdracht
@@ -365,8 +368,8 @@ context:
       - label: Kaart
         icon: marker
   selectStraalContext:
-    modifier: select-custom
     id: 1
+    modifier: select-custom--large
     options:
       - label: 250 meter
         value: 250
@@ -379,5 +382,8 @@ context:
         value: 2000
       - label: Hele gemeente
         value: 9000
+  contextNewsletter:
+    required: true
+    type: email
 
 

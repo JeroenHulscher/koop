@@ -14,3 +14,5 @@ context:
     fieldInstruction:
     fieldPlaceholder: E-mailadres
     remove: true
+    type: email
+    required: true
