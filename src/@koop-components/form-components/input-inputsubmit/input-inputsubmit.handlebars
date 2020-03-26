@@ -2,7 +2,7 @@
 
   <div class="input-inputsubmit__grid">
     <label {{#if showLabel}}{{else}}class="visually-hidden" {{/if}} for="{{id}}">{{ label }}</label>
-    <input id="{{id}}" type="text" class="input {{modifier}}" placeholder="{{placeholder}}" />
+    <input id="{{id}}" {{#if required}}required{{/if}} type="{{#if type}}{{type}}{{else}}text{{/if}}" class="input {{modifier}}" placeholder="{{placeholder}}" />
     <button class="button button--primary"><span>{{button}}</span></button>
   </div>
 </div>
