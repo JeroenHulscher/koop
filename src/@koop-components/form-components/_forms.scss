@@ -162,6 +162,14 @@ fieldset {
     }
   }
 
+  &__label ~ .mandatory {
+    position: absolute;
+    top: -.125em;
+    right: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
   &__error {
     font-weight: bold;
     color: $red;
@@ -224,7 +232,7 @@ fieldset {
       height: 10px;
       position: absolute;
       right: 0.5em;
-      top: 0.68em;
+      top: 0.5em;
       display: inline-block;
     }
   }
@@ -527,8 +535,6 @@ input[type=date].datepicker__input {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
-    width: 4em;
     border-bottom: 1px solid $datepickerTriggerBackgroundColor;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -539,11 +545,18 @@ input[type=date].datepicker__input {
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;
+    height: 51px;
 
     img {
       width: 24px;
       height: 20px;
     }
+  }
+
+  &.has-error ~ .ui-datepicker-trigger {
+    border-color: red;
+    border-width: 2px;
+    height: 53px;
   }
 }
 
@@ -607,6 +620,6 @@ input[type=password],
 input[type=email],
 input[type=number] {
   &.is-valid {
-    background: $iconCheck2Green no-repeat right .5em center;
+    background: white $iconCheck2Green no-repeat right .5em center;
   }
 }
