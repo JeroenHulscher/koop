@@ -26,7 +26,7 @@
 
   passwordstrength.prototype.initEventListeners = function() {
     if (this.fieldPassword){
-      this.fieldPassword.addEventListener('keyup', function(e) { this.validateField(e); }.bind(this), false);
+      this.fieldPassword.addEventListener('keyup', function (e) { this.validateField(e); }.bind(this), false);
     }
     if (this.fieldPasswordRepeat){
       this.fieldPasswordRepeat.addEventListener('keyup', function(e) { this.validateFieldRepeat(e); }.bind(this), false);
@@ -63,8 +63,10 @@
 
     if (totalCorrect === this.regexs.length) {
       this.fieldPassword.classList.add('is-valid');
+      this.fieldPassword.classList.remove('pw-invalid');
     } else {
       this.fieldPassword.classList.remove('is-valid');
+      this.fieldPassword.classList.add('pw-invalid');
     }
 
     if (this.fieldPasswordRepeat) {
@@ -78,17 +80,21 @@
   };
 
   passwordstrength.prototype.validateFieldRepeat = function() {
+    console.log('validateFieldRepeat');
     var fieldRepeat = this.fieldPasswordRepeat.value;
     var field = this.fieldPassword.value;
 
     if (field !== fieldRepeat) {
       this.showError(this.fieldPasswordRepeat);
       this.fieldPasswordRepeat.classList.remove('is-valid');
+      this.fieldPasswordRepeat.classList.add('pw-invalid-repeat', 'has-error');
     } else {
       this.removeError(this.fieldPasswordRepeat);
-      if (this.fieldPassword.classList.contains('is-valid')){
+      // if (this.fieldPassword.classList.contains('is-valid')){
         this.fieldPasswordRepeat.classList.add('is-valid');
-      }
+        this.fieldPasswordRepeat.classList.remove('pw-invalid-repeat');
+      this.fieldPasswordRepeat.classList.remove('has-error');
+      // }
     }
   };
 
