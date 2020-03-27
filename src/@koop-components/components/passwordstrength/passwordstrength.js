@@ -80,7 +80,6 @@
   };
 
   passwordstrength.prototype.validateFieldRepeat = function() {
-    console.log('validateFieldRepeat');
     var fieldRepeat = this.fieldPasswordRepeat.value;
     var field = this.fieldPassword.value;
 
