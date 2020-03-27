@@ -529,15 +529,12 @@ input[type=date].datepicker__input {
   display: inline-block;
 
   & ~ .ui-datepicker-trigger {
-    border: 0;
+    border: 0 !important;
     padding: 0.5em;
-    background: $datepickerTriggerBackgroundColor;
     position: absolute;
-    top: 0;
-    right: 0;
-    border-bottom: 1px solid $datepickerTriggerBackgroundColor;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
     font-size: 0;
     width: 38px;
     color: white;
@@ -545,7 +542,7 @@ input[type=date].datepicker__input {
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;
-    height: 51px;
+
 
     img {
       width: 24px;
@@ -556,7 +553,7 @@ input[type=date].datepicker__input {
   &.has-error ~ .ui-datepicker-trigger {
     border-color: red;
     border-width: 2px;
-    height: 53px;
+    height: 50px;
   }
 }
 
