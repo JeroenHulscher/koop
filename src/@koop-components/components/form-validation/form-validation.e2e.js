@@ -8,7 +8,7 @@ describe('Form validation, should: ', function () {
       });
   });
 
-  fit('1] after submit, show error summary', function () {
+  it('1] after submit, show error summary', function () {
 
     browser.get('http://localhost:3000/components/preview/form-validation');
     browser.sleep(1000);
@@ -24,18 +24,19 @@ describe('Form validation, should: ', function () {
 
   });
 
-  fit('2] after submit, show field errors below field (10 fields)', function () {
+  it('2] after submit, show field errors below field (10 fields)', function () {
 
-    errorFieldContainer1 = element(by.css('#error-for-option-3333'));
+
+    errorFieldContainer1 = element(by.css('#error-for-id'));
     errorFieldContainer2 = element(by.css('#error-for-id20'));
     errorFieldContainer3 = element(by.css('#error-for-tf1'));
     errorFieldContainer4 = element(by.css('#error-for-tf2'));
     errorFieldContainer5 = element(by.css('#error-for-nf2'));
     errorFieldContainer6 = element(by.css('#error-for-ef1'));
     errorFieldContainer7 = element(by.css('#error-for-zcf1'));
-    errorFieldContainer8 = element(by.css('#error-for-option-5'));
     errorFieldContainer9 = element(by.css('#error-for-select1'));
     errorFieldContainer10 = element(by.css('#error-for-option-checkbox-2'));
+
 
     expect(errorFieldContainer1.isDisplayed()).toBe(true);
     expect(errorFieldContainer2.isDisplayed()).toBe(true);
@@ -44,13 +45,12 @@ describe('Form validation, should: ', function () {
     expect(errorFieldContainer5.isDisplayed()).toBe(true);
     expect(errorFieldContainer6.isDisplayed()).toBe(true);
     expect(errorFieldContainer7.isDisplayed()).toBe(true);
-    expect(errorFieldContainer8.isDisplayed()).toBe(true);
     expect(errorFieldContainer9.isDisplayed()).toBe(true);
     expect(errorFieldContainer10.isDisplayed()).toBe(true);
 
   });
 
-  fit('3] after submit, show field errors in summary (10 fields)', function () {
+  it('3] after submit, show field errors in summary (10 fields)', function () {
 
     errorFieldContainer1 = element(by.css('[data-id="id"]'));
     errorFieldContainer1Text = errorFieldContainer1.getText();
@@ -66,8 +66,6 @@ describe('Form validation, should: ', function () {
     errorFieldContainer6Text = errorFieldContainer6.getText();
     errorFieldContainer7 = element(by.css('[data-id="zcf1"]'));
     errorFieldContainer7Text = errorFieldContainer7.getText();
-    errorFieldContainer8 = element(by.css('[data-id="option-3"]'));
-    errorFieldContainer8Text = errorFieldContainer8.getText();
     errorFieldContainer9 = element(by.css('[data-id="select1"]'));
     errorFieldContainer9Text = errorFieldContainer9.getText();
     errorFieldContainer10 = element(by.css('[data-id="option-checkbox-2"]'));
@@ -87,8 +85,6 @@ describe('Form validation, should: ', function () {
     expect(errorFieldContainer6Text).toContain("Email field");
     expect(errorFieldContainer7.isDisplayed()).toBe(true);
     expect(errorFieldContainer7Text).toContain("Zipcode (dutch)");
-    expect(errorFieldContainer8.isDisplayed()).toBe(true);
-    expect(errorFieldContainer8Text).toContain("Radius zoekgeschiedenis");
     expect(errorFieldContainer9.isDisplayed()).toBe(true);
     expect(errorFieldContainer9Text).toContain("City of birth");
     expect(errorFieldContainer10.isDisplayed()).toBe(true);
@@ -96,7 +92,7 @@ describe('Form validation, should: ', function () {
 
   });
 
-  fit('4.1] after submit, when "Kies iets" is filled.. should remove errors.', function () {
+  it('4.1] after submit, when "Kies iets" is filled.. should remove errors.', function () {
     label = element(by.css('#id'));
     label.click();
 
@@ -112,13 +108,16 @@ describe('Form validation, should: ', function () {
 
     browser.driver.sleep(500);
 
+    body = element(by.css('body'));
+    body.click();
+
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-option-3333"]'));
+    error = element(by.css('[id="error-for-id"]'));
     expect(error.isDisplayed()).toBe(false);
 
   });
 
-  fit('4.2] after submit, when "Kies iets" is filled.. should remove error in summary.', function () {
+  it('4.2] after submit, when "Kies iets" is filled.. should remove error in summary.', function () {
 
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
@@ -137,7 +136,7 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('5.1] after submit, when "Selecteer opties rondom een adres" is filled.. should remove errors.', function () {
+  it('5.1] after submit, when "Selecteer opties rondom een adres" is filled.. should remove errors.', function () {
     label = element(by.css('#id20'));
     label.click();
 
@@ -153,13 +152,16 @@ describe('Form validation, should: ', function () {
 
     browser.driver.sleep(500);
 
+    body = element(by.css('body'));
+    body.click();
+
     // check if error under field is gone;
     error = element(by.css('[id="error-for-id20"]'));
     expect(error.isDisplayed()).toBe(false);
 
   });
 
-  fit('5.2] after submit, when "Selecteer opties rondom een adres" is filled.. should remove errors.', function () {
+  it('5.2] after submit, when "Selecteer opties rondom een adres" is filled.. should remove errors.', function () {
 
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
@@ -178,7 +180,7 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('6.1] when "Text field 1" is filled wrongly.. should display errors.', function () {
+  it('6.1] when "Text field 1" is filled wrongly.. should display errors.', function () {
     field = element(by.css('#tf1'));
     field.sendKeys('a');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -190,7 +192,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(true);
   });
 
-  fit('6.2] when "Text field 1" is filled correctly.. should remove errors.', function () {
+  it('6.2] when "Text field 1" is filled correctly.. should remove errors.', function () {
     field = element(by.css('#tf1'));
     field.sendKeys(protractor.Key.BACK_SPACE);
     field.sendKeys('1');
@@ -203,7 +205,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('6.3] when "Text field 1" is filled correctly.. should remove errors in summary.', function () {
+  it('6.3] when "Text field 1" is filled correctly.. should remove errors in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
@@ -221,7 +223,7 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('7.1] when "Text field 2" is filled wrongly.. should display errors.', function () {
+  it('7.1] when "Text field 2" is filled wrongly.. should display errors.', function () {
     field = element(by.css('#tf2'));
     field.sendKeys('a');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -233,7 +235,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(true);
   });
 
-  fit('7.2] when "Text field 2" is filled correctly.. should remove errors.', function () {
+  it('7.2] when "Text field 2" is filled correctly.. should remove errors.', function () {
     field = element(by.css('#tf2'));
     field.sendKeys(protractor.Key.BACK_SPACE);
     field.sendKeys('1');
@@ -246,7 +248,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('7.3] when "Text field 2" is filled correctly.. should remove errors in summary.', function () {
+  it('7.3] when "Text field 2" is filled correctly.. should remove errors in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
@@ -266,7 +268,7 @@ describe('Form validation, should: ', function () {
 
 
 
-  fit('8.1] when "Number field 2" is filled correctly.. should remove errors.', function () {
+  it('8.1] when "Number field 2" is filled correctly.. should remove errors.', function () {
     field = element(by.css('#nf2'));
     field.sendKeys('1');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -278,7 +280,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('8.2] when "Number field 2" is filled correctly.. should remove errors in summary.', function () {
+  it('8.2] when "Number field 2" is filled correctly.. should remove errors in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
@@ -296,7 +298,7 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('9.1] when "Email" is filled wrongly.. should display errors.', function () {
+  it('9.1] when "Email" is filled wrongly.. should display errors.', function () {
     field = element(by.css('#ef1'));
     field.sendKeys('info@info');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -308,7 +310,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(true);
   });
 
-  fit('9.2] when "Email" is filled correctly.. should remove errors.', function () {
+  it('9.2] when "Email" is filled correctly.. should remove errors.', function () {
     field = element(by.css('#ef1'));
     field.sendKeys(protractor.Key.BACK_SPACE);
     field.sendKeys(protractor.Key.BACK_SPACE);
@@ -329,7 +331,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('9.3] when "Email" is filled correctly.. should remove errors in summary.', function () {
+  it('9.3] when "Email" is filled correctly.. should remove errors in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
@@ -347,7 +349,7 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('10.1] when "Zipcode" is filled wrongly.. should display errors.', function () {
+  it('10.1] when "Zipcode" is filled wrongly.. should display errors.', function () {
     field = element(by.css('#zcf1'));
     field.sendKeys('1234');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -359,7 +361,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(true);
   });
 
-  fit('10.2] when "Zipcode" is filled correctly.. should remove errors.', function () {
+  it('10.2] when "Zipcode" is filled correctly.. should remove errors.', function () {
     field = element(by.css('#zcf1'));
     field.sendKeys('AZ');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -371,7 +373,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('10.3] when "Zipcode" is filled correctly.. should remove errors in summary.', function () {
+  it('10.3] when "Zipcode" is filled correctly.. should remove errors in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
@@ -389,36 +391,36 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('11.1] when "Radio" is clicked.. should remove error.', function () {
-    radio = element(by.css('[for="option-3"]'));
-    radio.click();
+  // it('11.1] when "Radio" is clicked.. should remove error.', function () {
+  //   radio = element(by.css('[for="option-3"]'));
+  //   radio.click();
 
-    browser.driver.sleep(500);
+  //   browser.driver.sleep(500);
 
-    // check if error under field is gone;
-    error = element(by.css('[id="error-for-option-5"]'));
-    expect(error.isDisplayed()).toBe(false);
-  });
+  //   // check if error under field is gone;
+  //   error = element(by.css('[id="error-for-option-5"]'));
+  //   expect(error.isDisplayed()).toBe(false);
+  // });
 
-  fit('11.2] when "Radio" is clicked.. should remove error in summary.', function () {
-    waitForCssValue = function (elementFinder, cssProperty, cssValue) {
-      return function () {
-        return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
-          return actualValue === cssValue;
-        });
-      };
-    };
+  // it('11.2] when "Radio" is clicked.. should remove error in summary.', function () {
+  //   waitForCssValue = function (elementFinder, cssProperty, cssValue) {
+  //     return function () {
+  //       return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
+  //         return actualValue === cssValue;
+  //       });
+  //     };
+  //   };
 
-    browser.driver.sleep(500);
+  //   browser.driver.sleep(500);
 
-    // check if error in summary has line through;
-    errorInSummary = element(by.css('[data-id="option-3"]'));
-    errorInSummaryLink = errorInSummary.element(by.css('.line-through'));
+  //   // check if error in summary has line through;
+  //   errorInSummary = element(by.css('[data-id="option-3"]'));
+  //   errorInSummaryLink = errorInSummary.element(by.css('.line-through'));
 
-    expect(errorInSummaryLink.isPresent()).toBe(true);
-  });
+  //   expect(errorInSummaryLink.isPresent()).toBe(true);
+  // });
 
-  fit('11.1] when "Select" is changed.. should remove error.', function () {
+  it('11.1] when "Select" is changed.. should remove error.', function () {
     var select = element(by.css('#select1'));
     select.sendKeys('London');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -430,7 +432,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('11.2] when "Select" is changed to empty.. should display error.', function () {
+  it('11.2] when "Select" is changed to empty.. should display error.', function () {
     var select = element(by.css('#select1'));
     select.sendKeys('Choose COB');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -442,7 +444,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(true);
   });
 
-  fit('11.3] when "Select" is changed.. should remove error.', function () {
+  it('11.3] when "Select" is changed.. should remove error.', function () {
     var select = element(by.css('#select1'));
     select.sendKeys('London');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -454,7 +456,7 @@ describe('Form validation, should: ', function () {
     expect(error.isDisplayed()).toBe(false);
   });
 
-  fit('11.4] when "Select" is changed.. should remove error in summary.', function () {
+  it('11.4] when "Select" is changed.. should remove error in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {
@@ -472,7 +474,7 @@ describe('Form validation, should: ', function () {
     expect(errorInSummaryLink.isPresent()).toBe(true);
   });
 
-  fit('X] after submit, and everything EXCEPT ONE is filled in, should display 1 summary error', function () {
+  it('X] after submit, and everything EXCEPT ONE is filled in, should display 1 summary error', function () {
 
     submit = element(by.css('.button'));
     submit.click();
@@ -488,7 +490,7 @@ describe('Form validation, should: ', function () {
     expect(visibleDivs.count()).toEqual(1);
   });
 
-  fit('12.1] after submit, when "checkbox" is checked.. should remove errors.', function () {
+  it('12.1] after submit, when "checkbox" is checked.. should remove errors.', function () {
 
     check = element(by.css('[for="option-checkbox-2"]'));
     check.click();
@@ -501,7 +503,7 @@ describe('Form validation, should: ', function () {
 
   });
 
-  fit('12.2] after submit, when "checkbox" is un-checked.. should display errors.', function () {
+  it('12.2] after submit, when "checkbox" is un-checked.. should display errors.', function () {
 
     check = element(by.css('[for="option-checkbox-2"]'));
     check.click();
@@ -514,7 +516,7 @@ describe('Form validation, should: ', function () {
 
   });
 
-  fit('12.3] after submit, when "checkbox" is checked.. should remove errors.', function () {
+  it('12.3] after submit, when "checkbox" is checked.. should remove errors.', function () {
 
     check = element(by.css('[for="option-checkbox-2"]'));
     check.click();
@@ -527,7 +529,7 @@ describe('Form validation, should: ', function () {
 
   });
 
-  fit('12.4] after submit, when "checkbox" is checked.. should remove error in summary.', function () {
+  it('12.4] after submit, when "checkbox" is checked.. should remove error in summary.', function () {
     waitForCssValue = function (elementFinder, cssProperty, cssValue) {
       return function () {
         return elementFinder.getCssValue(cssProperty).then(function (actualValue) {

@@ -11,7 +11,10 @@ if (!Element.prototype.matches) {
  * @return {Boolean} Returns true if required methods and APIs are supported by the browser
  */
 var supports = function () {
-  return 'querySelector' in document && 'addEventListener' in root;
+  if (!document.addEventListener && !document.querySelector('body')) {
+    return false;
+  }
+  return true;
 };
 
 (function () {
@@ -58,14 +61,13 @@ var supports = function () {
 
   formvalidation.prototype.init = function() {
     // feature test
-    // if (!supports()) return;
+    if (!supports()) return;
 
     // Add the `novalidate` attribute to all forms
     this.addNoValidate();
 
     // Event listeners
     this.element.addEventListener('blur', function (e) { this.blurHandler(e) }.bind(this), true);
-    // this.element.addEventListener('keyUp', function (e) { this.blurHandler(e) }.bind(this), true);
     this.element.addEventListener('click', function (e) { this.clickHandler(e) }.bind(this), false);
     this.element.addEventListener('submit', function (e) { this.submitHandler(e) }.bind(this), false);
 
@@ -91,9 +93,6 @@ var supports = function () {
     } else {
       return this.config.messageValueMissing;
     }
-    // for (var i = 0; i < subselectionSummaryItems.length; i++){
-    //   //////console.log('subselectionSummaryItems[i]', subselectionSummaryItems[i]);
-    // }
   }
 
   formvalidation.prototype.hasError = function (field, options) {
@@ -193,7 +192,6 @@ var supports = function () {
 
   formvalidation.prototype.showErrorSubselection = function (el) {
     var subselectionSummary = el;
-    //////console.log('subselectionSummary', subselectionSummary);
     var subselection = this.getClosest(subselectionSummary, '.subselection');
     var subselectionTrigger = subselection.querySelector('.subselection__trigger');
     var label = subselection.parentNode.querySelector('.form__sublegend');
@@ -215,8 +213,6 @@ var supports = function () {
       field.classList.add(this.config.classField);
     }
 
-    // //////console.log('showError field type', field.type);
-
     // If the field is a radio button and part of a group, error all and get the last item in the group
     if (field.type === 'radio' && field.name) {
       var group = document.getElementsByName(field.name);
@@ -234,11 +230,6 @@ var supports = function () {
       }
     }
 
-    // console.log('firstOptionId', firstOptionId);
-
-    // if (this.getClosest(field, '.subselection')) {}
-
-    // //////console.log('showerror: field id: ', field.id, field.name);
     // Get field id or name
     var id = field.id || field.name;
     if (!id) return;
@@ -271,7 +262,6 @@ var supports = function () {
           if (motherLabel) {
             labelText = motherLabel.getAttribute('data-radiogroup-title');
           } else {
-            //////console.log('1');
             labelText = label.textContent;
           }
         }
@@ -282,7 +272,6 @@ var supports = function () {
         if (label) {
           var parent = field.parentNode;
           parent.parentNode.insertBefore(message, parent.nextSibling);
-          //////console.log('2');
           labelText = label.textContent;
         }
       }
@@ -292,17 +281,13 @@ var supports = function () {
         field.parentNode.insertBefore(message, field.nextSibling);
 
         if(options === 'subselection'){
-          //////console.log('3');
           labelText = field.textContent;
         } else {
-          //////console.log('4', field);
-          //////console.log('parent', field.parentNode);
           var parent = field.parentNode;
           if(field.parentNode.classList.contains('datepicker')){
             parent = parent.parentNode;
           }
           labelText = parent.querySelector('label').textContent;
-          //////console.log('4 /');
         }
       }
     } else {
@@ -318,7 +303,6 @@ var supports = function () {
         if (motherLabel) {
           labelText = motherLabel.getAttribute('data-radiogroup-title');
         } else {
-          //////console.log('5');
           labelText = label.textContent;
         }
       } else if (field.type === 'select-one') {
@@ -326,22 +310,18 @@ var supports = function () {
         if (label) {
           var parent = field.parentNode;
           parent.parentNode.insertBefore(message, parent.nextSibling);
-          //////console.log('6');
           labelText = label.textContent;
         }
       } else {
         if (options === 'subselection') {
-          //////console.log('7');
           labelText = field.textContent;
         } else {
-          //////console.log('8');
           var parent = field.parentNode;
           if (field.parentNode.classList.contains('datepicker')) {
             parent = parent.parentNode;
           }
           labelText = parent.querySelector('label').textContent;
         }
-        // labelText = field.parentNode.querySelector('label').textContent;
       }
     }
 
@@ -428,12 +408,9 @@ var supports = function () {
     if (!id) return;
 
     // Check if an error message is in the DOM
-    // //////console.log('remove error: field:', field);
     if(this.getClosest(field, '.subselection')) {
-      // //////console.log('remove error: is sub.');
       var sub = this.getClosest(field, '.subselection');
       var message = sub.querySelector('.' + this.config.errorContainer);
-      // //////console.log('remove error: message', message);
     } else {
       var message = this.element.querySelector('.' + this.config.errorContainer + '#error-for-' + id + '');
     }
@@ -505,31 +482,24 @@ var supports = function () {
   }
 
   formvalidation.prototype.blurHandler = function (event) {
-    // //////console.log('blurHandler -----------');
     var self = this;
     var type = event.target.nodeName;
-    //////console.log('type', type, event.target);
+
     if ((type === 'DIV')) return;
 
     if (type === 'BUTTON') {
       if (event.target.classList.contains('subselection__summaryitem__remove')){
         var summary = this.getClosest(event.target, '.subselection__summary');
-        ////////console.log('summary', summary, summary.innerHTML);
         setTimeout(function(){
         if (summary.innerHTML === '') {
-          ////////console.log('summaryXX');
           self.showErrorSubselection(summary);
         }
         }, 200);
       }
     } else  if (type === 'A'){
-      ////////console.log('a', event.target);
       if (event.target.classList.contains('subselection__trigger')){
-        // ////////console.log('is subselection');
         var error = this.hasErrorInSubselection(event.target);
-        // ////////console.log('is subselection', error);
         if (error) {
-          // ////////console.log('is subselection: if error:', error)
           // this.showError(event.target, error);
           // return;
         } else {
@@ -537,7 +507,6 @@ var supports = function () {
           this.removeError(event.target);
           this.markFieldValid(event.target);
           this.markFieldValidInSummary(event.target);
-
         }
       } else {
         return;
@@ -565,7 +534,6 @@ var supports = function () {
   };
 
   formvalidation.prototype.clickHandler = function (event) {
-    // ////////console.log('clickHandler  -----------');
 
     // Only run if the field is a checkbox or radio
     var type = event.target.getAttribute('type');
@@ -616,28 +584,17 @@ var supports = function () {
 
     // Get all of the form elements
     var fields = event.target.elements;
-    // ////////console.log('fields', fields);
     var subselections = this.element.querySelectorAll('.subselection__summary.required');
-    // ////////console.log('subselections', subselections);
 
     // Validate each subselection field
     var hasErrors;
     for (var y = 0; y < subselections.length; y++) {
       if (subselections[y].innerHTML === ''){
-        // ////////console.log('subselections[y] empty', subselections[y]);
-        // ////////console.log('SHOW ERROR');
         this.showErrorSubselection(subselections[y]);
         if (!hasErrors) {
           hasErrors = subselections[y];
         }
       }
-      // var error = this.hasError(subselections[y]);
-      // if (error) {
-      //   this.showError(subselections[y], error);
-      //   if (!hasErrors) {
-      //     hasErrors = subselections[y];
-      //   }
-      // }
     }
 
     // Validate each field
@@ -670,11 +627,12 @@ var supports = function () {
     }
 
     // Otherwise, submit the form
-    if (this.config.doSubmit){
-      // ////////console.log('Success. SUBMIT!');
-    } else {
+    if (this.config.debug){
       event.preventDefault();
-      console.log('Success. SUBMIT! (idle)');
+      console.log('Form submit success');
+    } else {
+      // event.preventDefault();
+      // console.log('Success. SUBMIT! (idle)');
     }
 
   };
