@@ -1,5 +1,5 @@
 ---
-label: CVDR - Contentpage
+label: CVDR - Wettechnischegegevens
 status: prototype
 context:
   header:
@@ -13,14 +13,14 @@ context:
     id: 2
     items:
     - title: Wettechnische gegevens
-      href: "/components/preview/templates-cvdr-wettechnischegegevens"
+      href: ""
       sub: false
+      sactive: sactive
   navToeContext:
     id: 3
     items:
     - title: Regeling
       sub: true
-      active: true
       subItems:
       - stitle: Intitulé
         href: "#section-1"
