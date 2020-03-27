@@ -65,6 +65,7 @@
     </div>
   </div>
 
+
 <div class="row row--page-opener">
   <div class="container">
     <div class="breadcrumb">
@@ -105,11 +106,14 @@
             uw nieuwe wachtwoord in.
           </p>
         </div>
-        <form class="form">
+        <form class="form" data-decorator="init-form-validation">
+
           <div class="form__row">
             
 
   <label for="input-text-1" class="form__label form__label--">E-mailadres</label>
+
+  
 
 
   <input
@@ -136,7 +140,9 @@
           <div class="form__row">
             
 
-  <label for="input-text-4" class="form__label form__label--">Huidig wachtwoord<span class="mandatory">Verplicht</span></label>
+  <label for="input-text-4" class="form__label form__label--">Huidig wachtwoord</label>
+
+  <span class="mandatory">Verplicht</span>
 
 
   <input
@@ -166,7 +172,9 @@
                 <div class="form__row">
                    
 
-  <label for="input-text-2" class="form__label form__label--">Nieuw wachtwoord<span class="mandatory">Verplicht</span></label>
+  <label for="input-text-2" class="form__label form__label--">Nieuw wachtwoord</label>
+
+  <span class="mandatory">Verplicht</span>
 
 
   <input
@@ -210,7 +218,9 @@
           <div class="form__row form__row--medium">
             
 
-  <label for="input-text-3" class="form__label form__label--">Herhaal wachtwoord<span class="mandatory">Verplicht</span></label>
+  <label for="input-text-3" class="form__label form__label--">Herhaal wachtwoord</label>
+
+  <span class="mandatory">Verplicht</span>
 
 
   <input

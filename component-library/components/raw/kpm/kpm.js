@@ -26,6 +26,7 @@
     if (!isModalVisible) {
       var subscription = pubsub.subscribe('/modal/open', function (obj) {
         var kpmMap = obj.modal.querySelector('.map__kpm');
+        if (!kpmMap) { return; }
         if (self.id === kpmMap.getAttribute('id')) {
           self.setupMap();
         }

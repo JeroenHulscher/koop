@@ -420,10 +420,10 @@
                                                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
                                                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select-custom "</span>&gt;</span>
                                                             <span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span>  <span class="hljs-attr">true</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span>  &gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"50"</span>  &gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"100"</span>  &gt;</span>Item 4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-linkedto</span>=<span class="hljs-string">"1"</span> &gt;</span>Alle<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">data-linkedto</span>=<span class="hljs-string">"2"</span> &gt;</span>Op<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> <span class="hljs-attr">data-linkedto</span>=<span class="hljs-string">"3"</span> &gt;</span>Tot<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"30"</span> <span class="hljs-attr">data-linkedto</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">selected</span>&gt;</span>Tussen<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
                                                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -611,7 +611,7 @@
                       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column column-d-5"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"citem-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-form-conditionals__citem"</span>&gt;</span>
                           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
-                            </span><span class="hljs-template-variable">{{ render "<a href="select-custom.html">@select-custom</a>" selectCustomContext merge=true }}</span><span class="xml">
+                            </span><span class="hljs-template-variable">{{ render "<a href="select-custom.html">@select-custom</a>" selectCustomContext }}</span><span class="xml">
                           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -787,9 +787,10 @@
     ]
   },
   <span class="hljs-attr">"selectCustomContext"</span>: {
-    <span class="hljs-attr">"items"</span>: [
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"options"</span>: [
       {
-        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">102</span>,
         <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
         <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Alle"</span>,
         <span class="hljs-attr">"linkedto"</span>: <span class="hljs-number">1</span>
@@ -7675,6 +7676,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-cvdr-searchresults.html" data-pjax>
                 <span>CVDR - Searchresults</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-cvdr-wettechnischegegevens.html" data-pjax>
+                <span>CVDR - Wettechnischegegevens</span>
                 
 
 <div class="Status Status--unlabelled">
