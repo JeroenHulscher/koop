@@ -1,8 +1,54 @@
+<div class="row row--spacer">
+  <h1>
+    Form validation
+  </h1>
+  <p>
+    Automatic form validation can be made available by added the follow attribute to the 'form' element.
+  </p>
+  <p>The form validator works with predefined patterns (ie. email, url, number), as well as with custom patterns (regex)</p>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li><strong>Add decorator to form-element</strong><br>
+    In order to attach the form validation handlers to your form, simply add the following code to your 'form'-tag: <code>data-decorator="init-form-validation"</code>
+    <p>Example:</p>
+    <pre>
+      &lt;form class="form" <strong>data-decorator="init-form-validation"</strong>&gt;&lt;/form&gt;
+    </pre>
+    </li>
+    <li>
+      <strong>Use HTML5 semantic input types and apply validation-related attributes on your form fields</strong><br>
+      <ul>
+        <li>Add the required attribute to required fields.</li>
+        <li>Use correct input type: type="text', type="email" and type="url".
+        <li>Include pattern attributes, <code>min</code> and <code>max</code>, and so on to set validation criteria for your form fields.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Options and settings</h2>
+  <ol>
+    <li><strong>Custom error message</strong><br>Provide a custom error message by applying a filled in <code>title</code> tag.</li>
+  </ol>
+
+  {{!-- <p>
+    Form validation has been made available to the following fields:
+  </p>
+  <ul>
+    <li>Input (type=text, password, number, email)</li>
+    <li>Textarea</li>
+    <li>Radio button</li>
+    <li>Checkbox</li>
+    <li>Select / customselect</li>
+    <li>Subselection</li>
+  </ul> --}}
+<hr>
+</div>
+
+
 <form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'>
   <fieldset>
     <legend>Example form with validation</legend>
-
-    <input type="submit" class="button" value="Submit">
 
     {{!-- <div class="form__row">
       {{render "@datepicker" datepicker }}
@@ -17,44 +63,85 @@
     </div>
 
     <div class="form__row">
-      <h3 class="form__sublegend">Iets</h3>
-      {{render "@subselection" subselectionContext}}
+      <fieldset>
+        <legend>Subselection, with radio buttons</legend>
+        <p>Apply the class <code>required</code> to the div: <code>.subselection__summary</code></p>
+        <h3 class="form__sublegend">Iets</h3>
+        {{render "@subselection" subselectionContext}}
+      </fieldset>
+
     </div>
 
     <div class="form__row">
-      <h3 class="form__sublegend">Rondom een adres</h3>
-      <p class="">Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.</p>
-      {{render "@subselection" rondomadresContext }}
+      <fieldset>
+        <legend>Subselection, with checkboxes</legend>
+        <p>Apply the class
+          <code>required</code> to the div:
+          <code>.subselection__summary</code>
+        </p>
+        <h3 class="form__sublegend">Rondom een adres</h3>
+        {{render "@subselection" rondomadresContext }}
+      </fieldset>
     </div>
 
     <div class="form__row">
-      <label for="tf1">Text field 1</label>
-      <p class="form__input-helptext">(manual pattern - only number(s))</p>
-      <input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required>
+      <fieldset>
+        <legend>Input (text) - regex: only numbers</legend>
+          <pre>
+             &lt;input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required&gt;
+          </pre>
+          <label for="tf1">Text field 1</label>
+          <input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required>
+        </fieldset>
     </div>
 
 
     <div class="form__row">
-      <label for="tf2">Text field 2</label>
-      <p class="form__input-helptext">(preset pattern: number)</p>
-      <input type="text" name="tf2" id="tf2" data-pattern-type="number" required>
+      <fieldset>
+        <legend>Input (text) - pattern: only numbers</legend>
+        <pre>
+            &lt;input type="text" name="tf1" id="tf1" value="" data-pattern-type="number" required&gt;
+        </pre>
+        <label for="tf2">Text field 2</label>
+        <p class="form__input-helptext">(preset pattern: number)</p>
+        <input type="text" name="tf2" id="tf2" data-pattern-type="number" required>
+      </fieldset>
     </div>
 
     <div class="form__row">
-      <label for="nf2">Number field</label>
-      <input type="number" name="nf2" id="nf2" required>
+      <fieldset>
+        <legend>Input (number)</legend>
+        <pre>
+            &lt;input type="number" name="nf2" id="nf2" required&gt;
+        </pre>
+        <label for="nf2">Number field</label>
+        <input type="number" name="nf2" id="nf2" required>
+      </fieldset>
     </div>
 
     <div class="form__row">
-      <label for="ef1">Email field
-      </label>
-      <input type="email" name="ef1" id="ef1" data-pattern-type="email" required>
+      <fieldset>
+        <legend>Input (email)</legend>
+        <pre>
+            &lt;input type="email" name="ef1" id="ef1" required&gt;
+        </pre>
+        <label for="ef1">Email field
+        </label>
+        <input type="email" name="ef1" id="ef1" required>
+      </fieldset>
     </div>
 
     <div class="form__row">
-      <label for="zcf1">Zipcode (dutch)</label>
-      <p class="form__input-helptext">(preset pattern: zipcode. '1234AB')</p>
-      <input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="(handmatige melding) Het veld Zipcode is incorrect ingevuld. Voorbeeld invoer: 1234AB" required>
+      <fieldset>
+        <legend>Input (text) - pattern: zipcode </legend>
+        <pre>
+            &lt;input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="(handmatige melding) Het veld Zipcode
+            is incorrect ingevuld. Voorbeeld invoer: 1234AB" required&gt;
+        </pre>
+        <label for="zcf1">Zipcode (dutch)</label>
+        <p class="form__input-helptext">(Voorbeeld: '1234AB')</p>
+        <input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="(handmatige melding) Het veld Zipcode is incorrect ingevuld. Voorbeeld invoer: 1234AB" required>
+      </fieldset>
     </div>
 
     <div class="form__row" data-radiogroup-title="Radius zoekgeschiedenis">
@@ -78,9 +165,27 @@
     </div>
 
     <div class="form__row">
-      <label class="select-custom__label" for="select1">City of birth</label>
-      <div id="1" class="select-custom">
-        <select id="select1" name="selecter1" required>
+      <fieldset>
+        <legend>Custom select </legend>
+        <pre>
+            &lt;select id="select1" name="selecter1" required&gt;
+        </pre>
+        <label class="select-custom__label" for="select1">City of birth</label>
+        <div id="1" class="select-custom">
+          <select id="select1" name="selecter1" required>
+            <option value="">Choose COB</option>
+            <option value="10">Amsterdam</option>
+            <option value="20">London</option>
+            <option value="50">Barcelona</option>
+            <option value="100">New York</option>
+          </select>
+        </div>
+      </fieldset>
+    </div>
+
+    {{!-- <div class="form__row">
+      <label class="select-custom__label" for="select2">City of birth</label>
+        <select id="select2" name="selecter2" required>
           <option value="">Choose COB</option>
           <option value="10">Amsterdam</option>
           <option value="20">London</option>
@@ -88,17 +193,24 @@
           <option value="100">New York</option>
         </select>
       </div>
-    </div>
+    </div> --}}
 
     <div class="form__row">
-      <div class="input-checkbox">
-        <input class="checkbox__input" type="checkbox" id="option-checkbox-2" name="geer" value="akkoord" required>
-        <label class="checkbox__label" for="option-checkbox-2">
-          Gaat u hiermee akkoord?
-        </label>
-      </div>
+      <fieldset>
+        <legend>Checkbox</legend>
+        <pre>
+            &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-2" name="geer" value="akkoord" required&gt;
+        </pre>
+        <div class="input-checkbox">
+          <input class="checkbox__input" type="checkbox" id="option-checkbox-2" name="geer" value="akkoord" required>
+          <label class="checkbox__label" for="option-checkbox-2">
+            Gaat u hiermee akkoord?
+          </label>
+        </div>
+      </fieldset>
     </div>
 
+    <input type="submit" class="button" value="Submit">
 
   </fieldset>
 </form>
