@@ -1,4 +1,5 @@
 {{ render "@header" header merge=true }}
+
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" }}
@@ -23,7 +24,9 @@
             uw nieuwe wachtwoord in.
           </p>
         </div>
-        <form class="form">
+        <form class="form" data-decorator="init-form-validation">
+        {{!-- <form class="form"> --}}
+
           <div class="form__row">
             {{render "@input-text" emailInput }}
           </div>

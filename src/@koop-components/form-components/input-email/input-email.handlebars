@@ -1,5 +1,3 @@
-<div class="form__element">
-  <label for="input--{{ id }}">{{ fieldLabel }}</label>
-  <small>{{ fieldInstruction }}</small>
-  <input type="email" id="input--{{ id }}" />
-</div>
+<label for="form__label {{#if accent}}form__label--accent{{/if}} input--{{ id }}">{{ fieldLabel }}</label>
+<input type="email" {{#if required}}required{{/if}} id="input--{{ id }}" />
+

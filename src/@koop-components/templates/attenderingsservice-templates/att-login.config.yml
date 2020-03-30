@@ -9,6 +9,8 @@ context:
     modifier: input-text--medium
     labelmodifier: accent
     id: 1
+    required: true
+    patterntype: email
     fieldLabel: E-mailadres
     fieldLabelVisible: true
     fieldInstruction:
@@ -16,7 +18,8 @@ context:
   inputPWContext:
     modifier: input-text--medium
     labelmodifier: accent
-    id: 1
+    id: 2
+    required: true
     type: password
     fieldLabel: Wachtwoord
     fieldLabelVisible: true

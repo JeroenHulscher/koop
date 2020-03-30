@@ -22,11 +22,12 @@ context:
   postcodeContext:
     modifier: input-text--medium
     labelmodifier: accent
-    id: 1
-    fieldLabel: Huisnummer + toev.
+    id: 2
+    fieldLabel: Postcode
     fieldLabelVisible: true
     fieldInstruction:
     fieldPlaceholder: Bijv. 12A
-    remove: true
+    required: true
+    patterntype: zipcode
   picture1:
     src: ../../images/temp/Landing-Archief.jpg

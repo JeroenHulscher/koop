@@ -124,7 +124,7 @@
           </p>
         </div>
 
-  <div class="container container--small">
+      <div class="container container--small">
         <form class="form">
           <fieldset>
             <legend class="visually-hidden">Zoek berichten</legend>
@@ -166,29 +166,95 @@
   <div class="container container--small">
     <div class="row row--spacer">
 
-
        <h2 class="h2 h2--slim">Geselecteerd gebied</h2>
        <div class="row row--small">
-        <div class="map">
+         <div class="map">
+  <div class="map__map">
+    <div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config1", "range":".js-kpm-editstraal" }'>
 
-        </div>
+</div>
+
+  </div>
+</div>
+
+          <script id="config1" type="application/json">
+          {
+            "locations": [
+              {
+                "type": "adres",
+                "geometry": "POINT(4.34015737 52.07846659)",
+                "geometry_type": "WKT",
+                "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+                "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+              }
+            ],
+            "options": {
+              "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+              "class": "kaartprikmodule-overlay",
+              "mode": "geoview",
+              "center": {
+                "highlight": true,
+                "type": "circle",
+                "circle": {
+                  "radius": 200,
+                  "x": 83224,
+                  "y": 454983
+                }
+              },
+              "controls": ["base-layer", "center", "fullscreen", "zoom"],
+              "layers": {
+                "bgtachtergrondkaart": {
+                  "enabled": true
+                }
+              }
+            }
+          }
+        </script>
         </div>
        <h3>Over dit gebied zijn er momenteel 245 berichten</h3>
        <fieldset>
         <div class="form__row form__row--large">
-            <div class="input-radio">
-    <input class="radio__input" value=""   type="radio"  id="option-radio-1" name="publicatie" />
+          <form class="form">
+            <div class="form__row">
+                <div class="input-radio">
+    <input class="radio__input" value="250" checked  type="radio"  id="option-radio-1" name="kpm-straal" />
     <label class="radio__label" for="option-radio-1">
-      Een gebied van 250m rondom adres
+      250 meter
     </label>
   </div>
   <div class="input-radio">
-    <input class="radio__input" value=""   type="radio"  id="option-radio-2" name="publicatie" />
+    <input class="radio__input" value="500"   type="radio"  id="option-radio-2" name="kpm-straal" />
     <label class="radio__label" for="option-radio-2">
-      De hele gemeente
+      500 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="1000"   type="radio"  id="option-radio-3" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-3">
+      1000 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="1500"   type="radio"  id="option-radio-4" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-4">
+      1500 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="3000"   type="radio"  id="option-radio-5" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-5">
+      3000 meter
+    </label>
+  </div>
+  <div class="input-radio">
+    <input class="radio__input" value="hideMap"   type="radio"  id="option-radio-6" name="kpm-straal" />
+    <label class="radio__label" for="option-radio-6">
+      Hele gemeente 'Den Haag'
     </label>
   </div>
 
+            </div>
+          </form>
           </div>
         </fieldset>
 

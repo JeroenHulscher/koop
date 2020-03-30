@@ -1,12 +1,17 @@
 .map {
   position: relative;
-  min-height: 400px;
+  // min-height: 400px;
   background: #f1f1f1;
 
   &--h {
     &-600 {
       .main-column {
         height: 600px
+      }
+    }
+    &-400 {
+      .main-column {
+        height: 400px
       }
     }
   }

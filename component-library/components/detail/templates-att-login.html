@@ -251,7 +251,7 @@
                         Log in om uw e-mailservice te wijzigen.
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
@@ -260,16 +260,20 @@
 
                                     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--accent"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text input-text--medium  "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw e-mailadres"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw e-mailadres"</span> /&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text input-text--medium  "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw e-mailadres"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw e-mailadres"</span> <span class="hljs-attr">required</span> <span class="hljs-attr">data-pattern-type</span>=<span class="hljs-string">"email"</span> /&gt;</span>
 
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
 
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--accent"</span>&gt;</span>Wachtwoord<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--accent"</span>&gt;</span>Wachtwoord<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text input-text--medium  "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw wachtwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw wachtwoord"</span> /&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text input-text--medium  "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw wachtwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Uw wachtwoord"</span> <span class="hljs-attr">required</span> /&gt;</span>
 
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -360,7 +364,7 @@
                Log in om uw e-mailservice te wijzigen.
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
@@ -412,6 +416,8 @@
     <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
     <span class="hljs-attr">"labelmodifier"</span>: <span class="hljs-string">"accent"</span>,
     <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"patterntype"</span>: <span class="hljs-string">"email"</span>,
     <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"E-mailadres"</span>,
     <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
@@ -420,7 +426,8 @@
   <span class="hljs-attr">"inputPWContext"</span>: {
     <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
     <span class="hljs-attr">"labelmodifier"</span>: <span class="hljs-string">"accent"</span>,
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"password"</span>,
     <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"Wachtwoord"</span>,
     <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
@@ -2431,6 +2438,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4931,7 +4962,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7303,6 +7334,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-cvdr-searchresults.html" data-pjax>
                 <span>CVDR - Searchresults</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-cvdr-wettechnischegegevens.html" data-pjax>
+                <span>CVDR - Wettechnischegegevens</span>
                 
 
 <div class="Status Status--unlabelled">

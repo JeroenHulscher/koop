@@ -501,9 +501,12 @@
     <span class="hljs-keyword">this</span>.element = element;
     <span class="hljs-keyword">this</span>.config = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-keyword">this</span>.element.getAttribute(<span class="hljs-string">'data-config'</span>)) || [];
     <span class="hljs-keyword">this</span>.allInputs = onl.dom.$( <span class="hljs-string">'input, select'</span>, element );
-    <span class="hljs-keyword">this</span>.button = onl.dom.$( <span class="hljs-string">'.js-fixedbottom-button__button'</span>, element )[<span class="hljs-number">0</span>];
-    <span class="hljs-keyword">this</span>.button.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-string">'hidden'</span>);
-    <span class="hljs-keyword">this</span>.init();
+    <span class="hljs-keyword">this</span>.button = onl.dom.$( <span class="hljs-string">'.js-fixedbottom-button__button'</span>, element )[<span class="hljs-number">0</span>] || <span class="hljs-literal">false</span>;
+
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.button){
+      <span class="hljs-keyword">this</span>.button.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-string">'hidden'</span>);
+      <span class="hljs-keyword">this</span>.init();
+    }
   };
 
   fixedbottomButton.prototype.init = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -564,7 +567,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.3 KB</span>
+                    <span class="Meta-value">2.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -2588,6 +2591,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -5088,7 +5115,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7460,6 +7487,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-cvdr-searchresults.html" data-pjax>
                 <span>CVDR - Searchresults</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-cvdr-wettechnischegegevens.html" data-pjax>
+                <span>CVDR - Wettechnischegegevens</span>
                 
 
 <div class="Status Status--unlabelled">

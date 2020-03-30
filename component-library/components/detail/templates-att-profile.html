@@ -255,7 +255,8 @@
                         Voer het e-mailadres in waarmee u zich heeft geabonneerd op de e-mailservice en uw oude wachtwoord in. Voer vervolgens tweemaal uw nieuwe wachtwoord in.
                     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
+
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
 
                         <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -265,9 +266,11 @@
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
 
-                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Huidig wachtwoord<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Huidig wachtwoord<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text   "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">""</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text   "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">""</span> <span class="hljs-attr">required</span> /&gt;</span>
 
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
@@ -275,9 +278,11 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
 
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Nieuw wachtwoord<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Nieuw wachtwoord<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text  js-passwordstrength__input "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Nieuw wachtwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Nieuw wachtwoord"</span> /&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text  js-passwordstrength__input "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Nieuw wachtwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Nieuw wachtwoord"</span> <span class="hljs-attr">required</span> /&gt;</span>
 
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"well js-passwordstrength__regexcontainer hidden-desktop"</span>&gt;</span>
@@ -299,9 +304,11 @@
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
 
-                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Herhaal wachtwoord<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Herhaal wachtwoord<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text  js-passwordstrength__inputrepeat "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Herhaal uw wachtwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Herhaal uw wachtwoord"</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mandatory"</span>&gt;</span>Verplicht<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text  js-passwordstrength__inputrepeat "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Herhaal uw wachtwoord"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Herhaal uw wachtwoord"</span> <span class="hljs-attr">required</span> /&gt;</span>
 
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
@@ -367,6 +374,7 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-81ad1f1f391de4454bb4a90995dcf558-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="hljs-template-variable">{{ render "<a href="header.html">@header</a>" header merge=true }}</span><span class="xml">
+
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--page-opener"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ render "<a href="breadcrumb.html">@breadcrumb</a>" }}</span><span class="xml">
@@ -391,7 +399,9 @@
             uw nieuwe wachtwoord in.
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
+        </span><span class="hljs-comment">{{!-- &lt;form class="form"&gt; --}}</span><span class="xml">
+
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
             </span><span class="hljs-template-variable">{{render "<a href="input-text.html">@input-text</a>" emailInput }}</span><span class="xml">
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -2498,6 +2508,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4998,7 +5032,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7370,6 +7404,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-cvdr-searchresults.html" data-pjax>
                 <span>CVDR - Searchresults</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-cvdr-wettechnischegegevens.html" data-pjax>
+                <span>CVDR - Wettechnischegegevens</span>
                 
 
 <div class="Status Status--unlabelled">

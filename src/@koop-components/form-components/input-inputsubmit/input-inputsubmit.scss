@@ -49,6 +49,11 @@
     }
   }
 
+  .form__error {
+    order: 5;
+    width: 100%;
+  }
+
 
   &--s &__grid {
       display: flex;

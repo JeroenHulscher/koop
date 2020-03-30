@@ -601,28 +601,7 @@
 
     <span class="hljs-keyword">this</span>.stateTriggers = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-keyword">this</span>.triggerClass);
 
-
-
-
-
-    <span class="hljs-comment">// if (this.sourceslist) {</span>
-
-
-      <span class="hljs-comment">// this.questionIdTag = this.config.questionIdTag || '#citem-';</span>
-      <span class="hljs-comment">// this.questionContainer = this.config.questionContainer || '.js-form-conditionals__citem';</span>
-      <span class="hljs-comment">// this.submitContainer = this.config.submitContainer || this.element.querySelector('.js-form-conditionals__submitcontainer');</span>
-      <span class="hljs-comment">// this.respondsContainer = this.config.respondsContainer || this.element.querySelector('.js-form-conditionals__responds');</span>
-      <span class="hljs-comment">// this.buttonNextSelector = '.js-button-next';</span>
-
-      <span class="hljs-comment">// this.questions = this.element.querySelectorAll(this.questionContainer);</span>
-      <span class="hljs-comment">// this.inputs = this.element.querySelectorAll('input,select');</span>
-      <span class="hljs-comment">// this.buttonNexts = this.element.querySelectorAll(this.buttonNextSelector);</span>
-
-      <span class="hljs-keyword">this</span>.initEventListeners();
-      <span class="hljs-comment">// this.setInitialState();</span>
-
-      <span class="hljs-comment">// this.init();</span>
-    <span class="hljs-comment">// }</span>
+    <span class="hljs-keyword">this</span>.initEventListeners();
 
   };
 
@@ -674,226 +653,6 @@
     <span class="hljs-keyword">this</span>.sourceslist.classList.remove(<span class="hljs-string">'is-state-actions'</span>);
   }
 
-  <span class="hljs-comment">// formConditionals.prototype.setInitialState = function () {</span>
-  <span class="hljs-comment">//   var y;</span>
-  <span class="hljs-comment">//   var i;</span>
-  <span class="hljs-comment">//   var firstInput;</span>
-  <span class="hljs-comment">//   var evt;</span>
-
-  <span class="hljs-comment">//   for (y = 0; y &lt; this.questions.length; y++) {</span>
-  <span class="hljs-comment">//     if (y !== 0) {</span>
-  <span class="hljs-comment">//       this.questions[y].setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//     if (y === 0) {</span>
-  <span class="hljs-comment">//       firstInput = true;</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">//   if (firstInput) {</span>
-  <span class="hljs-comment">//     firstInput = this.questions[0].querySelectorAll('input,select');</span>
-  <span class="hljs-comment">//     if (firstInput[0]) {</span>
-
-  <span class="hljs-comment">//       if (firstInput[0].tagName === 'SELECT') {</span>
-  <span class="hljs-comment">//         if ('createEvent' in document) {</span>
-  <span class="hljs-comment">//           evt = document.createEvent('HTMLEvents');</span>
-  <span class="hljs-comment">//           evt.initEvent('change', false, true);</span>
-  <span class="hljs-comment">//           firstInput[0].dispatchEvent(evt);</span>
-  <span class="hljs-comment">//         }</span>
-  <span class="hljs-comment">//         else {</span>
-  <span class="hljs-comment">//           firstInput[0].fireEvent('onchange');</span>
-  <span class="hljs-comment">//         }</span>
-  <span class="hljs-comment">//       }</span>
-  <span class="hljs-comment">//       if (firstInput[0].tagName === 'INPUT') {</span>
-
-  <span class="hljs-comment">//         for (i = 0; i &lt; firstInput.length; i++) {</span>
-  <span class="hljs-comment">//           if (firstInput[i].checked) {</span>
-  <span class="hljs-comment">//             this.actOnChange(firstInput[i]);</span>
-  <span class="hljs-comment">//           }</span>
-  <span class="hljs-comment">//         }</span>
-  <span class="hljs-comment">//       }</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.initEventListeners = function (e) {</span>
-  <span class="hljs-comment">//   var y;</span>
-  <span class="hljs-comment">//   var i;</span>
-
-  <span class="hljs-comment">//   for (y = 0; y &lt; this.inputs.length; y++) {</span>
-  <span class="hljs-comment">//     this.inputs[y].addEventListener('change', function (e) { this.actOnChange(e); }.bind(this), false);</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">//   for (i = 0; i &lt; this.buttonNexts.length; i++) {</span>
-  <span class="hljs-comment">//     this.buttonNexts[i].addEventListener('click', function (e) { this.actOnChange(e); }.bind(this), false);</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.actOnChange = function (e) {</span>
-  <span class="hljs-comment">//   var obj;</span>
-  <span class="hljs-comment">//   var inputType;</span>
-  <span class="hljs-comment">//   var linkedToQuestionId;</span>
-  <span class="hljs-comment">//   var currentQuestionContainer;</span>
-  <span class="hljs-comment">//   var automaticProceed;</span>
-  <span class="hljs-comment">//   var showLast;</span>
-  <span class="hljs-comment">//   var showResponds;</span>
-  <span class="hljs-comment">//   var hideself;</span>
-
-  <span class="hljs-comment">//   console.log('klik');</span>
-
-  <span class="hljs-comment">//   if (e.target !== undefined) {</span>
-  <span class="hljs-comment">//     obj = e.target;</span>
-  <span class="hljs-comment">//   } else {</span>
-  <span class="hljs-comment">//     obj = e;</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">//   inputType = obj.type;</span>
-  <span class="hljs-comment">//   linkedToQuestionId;</span>
-  <span class="hljs-comment">//   currentQuestionContainer = obj.closest(this.questionContainer);</span>
-  <span class="hljs-comment">//   automaticProceed = true;</span>
-  <span class="hljs-comment">//   showLast = obj.getAttribute('data-triggerlaststep');</span>
-  <span class="hljs-comment">//   showResponds = obj.getAttribute('data-triggeresponds');</span>
-  <span class="hljs-comment">//   hideself = obj.getAttribute('data-hideself');</span>
-
-  <span class="hljs-comment">//   switch (inputType) {</span>
-  <span class="hljs-comment">//     case 'radio':</span>
-  <span class="hljs-comment">//       linkedToQuestionId = obj.getAttribute('data-linkedto');</span>
-  <span class="hljs-comment">//       break;</span>
-  <span class="hljs-comment">//     case 'submit':</span>
-  <span class="hljs-comment">//       linkedToQuestionId = obj.getAttribute('data-linkedto');</span>
-  <span class="hljs-comment">//       break;</span>
-  <span class="hljs-comment">//     case 'button':</span>
-  <span class="hljs-comment">//       linkedToQuestionId = obj.getAttribute('data-linkedto');</span>
-  <span class="hljs-comment">//       break;</span>
-  <span class="hljs-comment">//     case 'input':</span>
-  <span class="hljs-comment">//       linkedToQuestionId = obj.getAttribute('data-linkedto');</span>
-  <span class="hljs-comment">//       break;</span>
-  <span class="hljs-comment">//     case 'select-one':</span>
-  <span class="hljs-comment">//       linkedToQuestionId = obj[obj.selectedIndex].getAttribute('data-linkedto');</span>
-  <span class="hljs-comment">//       break;</span>
-  <span class="hljs-comment">//     case 'checkbox':</span>
-  <span class="hljs-comment">//       if (this.amountCheckedInFamily(obj, currentQuestionContainer) &gt; 0) {</span>
-  <span class="hljs-comment">//         currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('hidden');</span>
-  <span class="hljs-comment">//       } else {</span>
-  <span class="hljs-comment">//         currentQuestionContainer.querySelector(this.buttonNextSelector).setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">//         this.resetFutureQuestions(currentQuestionContainer);</span>
-  <span class="hljs-comment">//       }</span>
-  <span class="hljs-comment">//       automaticProceed = false;</span>
-  <span class="hljs-comment">//       break;</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">//   if (automaticProceed) {</span>
-  <span class="hljs-comment">//     this.resetFutureQuestions(currentQuestionContainer);</span>
-
-  <span class="hljs-comment">//     if (linkedToQuestionId) {</span>
-  <span class="hljs-comment">//       this.activateLinkedQuestion(linkedToQuestionId);</span>
-  <span class="hljs-comment">//       this.hideFormSubmit();</span>
-  <span class="hljs-comment">//     } else {</span>
-  <span class="hljs-comment">//       this.showFormSubmit();</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">//   if (showResponds) {</span>
-  <span class="hljs-comment">//     this.showResponds();</span>
-  <span class="hljs-comment">//     this.hideForm();</span>
-  <span class="hljs-comment">//   } else {</span>
-  <span class="hljs-comment">//     if (showLast) {</span>
-  <span class="hljs-comment">//       this.showFormSubmit();</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">//   if (hideself) {</span>
-  <span class="hljs-comment">//     this.hideCurrentQuestion(currentQuestionContainer);</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {</span>
-  <span class="hljs-comment">//   currentQuestionContainer.setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">// }</span>
-
-
-  <span class="hljs-comment">// formConditionals.prototype.amountCheckedInFamily = function (obj, parent) {</span>
-  <span class="hljs-comment">//   var list, index, item, checkedCount;</span>
-
-  <span class="hljs-comment">//   checkedCount = 0;</span>
-  <span class="hljs-comment">//   list = parent.getElementsByTagName('input');</span>
-  <span class="hljs-comment">//   for (index = 0; index &lt; list.length; ++index) {</span>
-  <span class="hljs-comment">//     item = list[index];</span>
-  <span class="hljs-comment">//     if (item.getAttribute('type') === "checkbox"</span>
-  <span class="hljs-comment">//       &amp;&amp; item.checked</span>
-  <span class="hljs-comment">//       &amp;&amp; item.name === obj.name) {</span>
-  <span class="hljs-comment">//       ++checkedCount;</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">//   return checkedCount;</span>
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.resetFutureQuestions = function (currentQuestionContainer) {</span>
-  <span class="hljs-comment">//   var i;</span>
-  <span class="hljs-comment">//   var y;</span>
-  <span class="hljs-comment">//   var allInputsInQuestion;</span>
-
-  <span class="hljs-comment">//   // strips #question-{{id}} to {{id}}</span>
-  <span class="hljs-comment">//   currentQuestionContainer = currentQuestionContainer.getAttribute('id');</span>
-  <span class="hljs-comment">//   currentQuestionContainer = currentQuestionContainer.substr(this.questionIdTag.length - 1, 5);</span>
-
-  <span class="hljs-comment">//   for (i = 0; i &lt; this.questions.length; i++) {</span>
-
-  <span class="hljs-comment">//     if (this.questions[i].getAttribute('id').substr(this.questionIdTag.length - 1, 5) &gt; currentQuestionContainer) {</span>
-  <span class="hljs-comment">//       allInputsInQuestion = this.questions[i].querySelectorAll('input');</span>
-
-  <span class="hljs-comment">//       // reset answers</span>
-  <span class="hljs-comment">//       for (y = 0; y &lt; allInputsInQuestion.length; y++) {</span>
-  <span class="hljs-comment">//         var type = allInputsInQuestion[y].getAttribute('type');</span>
-
-  <span class="hljs-comment">//         if (type === 'radio') {</span>
-  <span class="hljs-comment">//           allInputsInQuestion[y].checked = false;</span>
-  <span class="hljs-comment">//         }</span>
-  <span class="hljs-comment">//       }</span>
-
-  <span class="hljs-comment">//       // hide question;</span>
-  <span class="hljs-comment">//       this.questions[i].setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">//       this.questions[i].removeAttribute('role');</span>
-  <span class="hljs-comment">//     }</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.activateLinkedQuestion = function (questionId) {</span>
-  <span class="hljs-comment">//   var self = this;</span>
-  <span class="hljs-comment">//   var nextQuestion = this.element.querySelector(self.questionIdTag + questionId);</span>
-
-  <span class="hljs-comment">//   if (nextQuestion) {</span>
-  <span class="hljs-comment">//     nextQuestion.removeAttribute('hidden');</span>
-  <span class="hljs-comment">//     nextQuestion.setAttribute('role', 'alert');</span>
-  <span class="hljs-comment">//   }</span>
-
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.showFormSubmit = function () {</span>
-  <span class="hljs-comment">//   if (this.submitContainer) {</span>
-  <span class="hljs-comment">//     this.submitContainer.removeAttribute('hidden');</span>
-  <span class="hljs-comment">//     this.submitContainer.querySelector('button').setAttribute('role', 'alert');</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">// };</span>
-  <span class="hljs-comment">// formConditionals.prototype.hideFormSubmit = function () {</span>
-  <span class="hljs-comment">//   if (this.submitContainer) {</span>
-  <span class="hljs-comment">//     this.submitContainer.setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">//     this.submitContainer.querySelector('button').removeAttribute('role');</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.showResponds = function () {</span>
-  <span class="hljs-comment">//   this.respondsContainer.removeAttribute('hidden');</span>
-  <span class="hljs-comment">// };</span>
-
-  <span class="hljs-comment">// formConditionals.prototype.hideForm = function () {</span>
-  <span class="hljs-comment">//   var y;</span>
-
-  <span class="hljs-comment">//   for (y = 0; y &lt; this.questions.length; y++) {</span>
-  <span class="hljs-comment">//     this.questions[y].setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">//   }</span>
-  <span class="hljs-comment">//   this.submitContainer.setAttribute('hidden', 'hidden');</span>
-  <span class="hljs-comment">// };</span>
-
 })();
 </pre>
                             </code>
@@ -911,7 +670,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9.9 KB</span>
+                    <span class="Meta-value">2.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -2924,6 +2683,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -5424,7 +5207,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -7796,6 +7579,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-cvdr-searchresults.html" data-pjax>
                 <span>CVDR - Searchresults</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-cvdr-wettechnischegegevens.html" data-pjax>
+                <span>CVDR - Wettechnischegegevens</span>
                 
 
 <div class="Status Status--unlabelled">

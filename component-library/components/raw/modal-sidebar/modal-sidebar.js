@@ -38,9 +38,12 @@
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.allInputs = onl.dom.$( 'input, select', element );
-    this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0];
-    this.button.setAttribute('hidden', 'hidden');
-    this.init();
+    this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0] || false;
+
+    if(this.button){
+      this.button.setAttribute('hidden', 'hidden');
+      this.init();
+    }
   };
 
   fixedbottomButton.prototype.init = function () {

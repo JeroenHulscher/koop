@@ -28,10 +28,11 @@ context:
     modifier: input-text--medium
     labelmodifier: accent
     id: 1
-    fieldLabel: Huisnummer + toev.
+    required: true
+    fieldLabel: Postcode
     fieldLabelVisible: true
     fieldInstruction:
-    fieldPlaceholder: Bijv. 12A
+    fieldPlaceholder: 1234AB
     remove: true
   buttonswitchContext:
     text: banner
@@ -381,5 +382,8 @@ context:
         value: 2000
       - label: Hele gemeente
         value: 9000
+  contextNewsletter:
+    required: true
+    type: email
 
 

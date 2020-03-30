@@ -251,20 +251,19 @@
                         Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op &lt;em&gt;mail@koop.overheid.nl&lt;/em&gt;
                     &lt;/p&gt;
                 &lt;/div&gt;
-                &lt;form class="form"&gt;
+                &lt;form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'&gt;
                     &lt;fieldset&gt;
                         &lt;legend class="visually-hidden"&gt;E-mailadres&lt;/legend&gt;
                         &lt;div class="form__row"&gt;
                             &lt;div class="columns"&gt;
                                 &lt;div class="column"&gt;
-                                    &lt;div class="relative"&gt;
 
-                                        &lt;label for="input-text-1" class="form__label form__label--accent"&gt;Postcode&lt;span class="mandatory"&gt;Verplicht&lt;/span&gt;&lt;/label&gt;
+                                    &lt;label for="input-text-1" class="form__label form__label--accent"&gt;Postcode&lt;/label&gt;
 
-                                        &lt;input type="text" id="input-text-1" name="1" class="input input-text input-text--medium  " placeholder="Bijv. 2453EH" aria-invalid="false" placeholder="Bijv. 2453EH" data-decorator="toggle-remove-visibility" /&gt;
+                                    &lt;span class="mandatory"&gt;Verplicht&lt;/span&gt;
 
-                                        &lt;a href="#" class="input-text__remove invisible" data-handler="empty-input"&gt;&lt;span class="visually-hidden"&gt;Wis waarde&lt;/span&gt;&lt;/a&gt;
-                                    &lt;/div&gt;
+                                    &lt;input type="text" id="input-text-1" name="1" class="input input-text input-text--medium  " placeholder="Bijv. 2453EH" aria-invalid="false" placeholder="Bijv. 2453EH" required data-pattern-type="zipcode" title="Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)"
+                                    /&gt;
 
                                 &lt;/div&gt;
                                 &lt;div class="column"&gt;
@@ -298,537 +297,544 @@
     &lt;/div&gt;
     &lt;div class="container container--centered"&gt;
 
-        &lt;div class="row"&gt;
-            &lt;ul class="list list--stepcontainer"&gt;
-                &lt;li class="list__item"&gt;
-                    &lt;div class="columns"&gt;
-                        &lt;div class="column"&gt;
-                            &lt;h2&gt;Selecteer een gebied&lt;/h2&gt;
-                            &lt;h3 class="h4 u-nomargin"&gt;Uw adres&lt;/h3&gt;
-                            &lt;p&gt;Wilhelmina van Prijsenweg 52, 2595 AN Den Haag&lt;/p&gt;
-                            &lt;h3 class="h4 u-nomargin"&gt;Straal&lt;/h3&gt;
-                            &lt;p&gt;Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente&lt;/p&gt;
-                            &lt;form class="form"&gt;
-                                &lt;div class="form__row"&gt;
-                                    &lt;div class="input-radio"&gt;
-                                        &lt;input class="radio__input" value="250" checked type="radio" id="option-radio-1" name="kpm-straal" /&gt;
-                                        &lt;label class="radio__label" for="option-radio-1"&gt;
+        &lt;form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'&gt;
+            &lt;fieldset&gt;
+                &lt;legend class="visually-hidden"&gt;Voorkeuren&lt;/legend&gt;
+
+                &lt;div class="row"&gt;
+                    &lt;ul class="list list--stepcontainer"&gt;
+                        &lt;li class="list__item"&gt;
+                            &lt;div class="columns"&gt;
+                                &lt;div class="column"&gt;
+                                    &lt;h2&gt;Selecteer een gebied&lt;/h2&gt;
+                                    &lt;h3 class="h4 u-nomargin"&gt;Uw adres&lt;/h3&gt;
+                                    &lt;p&gt;Wilhelmina van Prijsenweg 52, 2595 AN Den Haag&lt;/p&gt;
+                                    &lt;h3 class="h4 u-nomargin"&gt;Straal&lt;/h3&gt;
+                                    &lt;p&gt;Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente&lt;/p&gt;
+                                    &lt;form class="form"&gt;
+                                        &lt;div class="form__row"&gt;
+                                            &lt;div class="input-radio"&gt;
+                                                &lt;input class="radio__input" value="250" checked type="radio" id="option-radio-1" name="kpm-straal" /&gt;
+                                                &lt;label class="radio__label" for="option-radio-1"&gt;
       250 meter
     &lt;/label&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="input-radio"&gt;
-                                        &lt;input class="radio__input" value="500" type="radio" id="option-radio-2" name="kpm-straal" /&gt;
-                                        &lt;label class="radio__label" for="option-radio-2"&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="input-radio"&gt;
+                                                &lt;input class="radio__input" value="500" type="radio" id="option-radio-2" name="kpm-straal" /&gt;
+                                                &lt;label class="radio__label" for="option-radio-2"&gt;
       500 meter
     &lt;/label&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="input-radio"&gt;
-                                        &lt;input class="radio__input" value="1000" type="radio" id="option-radio-3" name="kpm-straal" /&gt;
-                                        &lt;label class="radio__label" for="option-radio-3"&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="input-radio"&gt;
+                                                &lt;input class="radio__input" value="1000" type="radio" id="option-radio-3" name="kpm-straal" /&gt;
+                                                &lt;label class="radio__label" for="option-radio-3"&gt;
       1000 meter
     &lt;/label&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="input-radio"&gt;
-                                        &lt;input class="radio__input" value="1500" type="radio" id="option-radio-4" name="kpm-straal" /&gt;
-                                        &lt;label class="radio__label" for="option-radio-4"&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="input-radio"&gt;
+                                                &lt;input class="radio__input" value="1500" type="radio" id="option-radio-4" name="kpm-straal" /&gt;
+                                                &lt;label class="radio__label" for="option-radio-4"&gt;
       1500 meter
     &lt;/label&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="input-radio"&gt;
-                                        &lt;input class="radio__input" value="3000" type="radio" id="option-radio-5" name="kpm-straal" /&gt;
-                                        &lt;label class="radio__label" for="option-radio-5"&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="input-radio"&gt;
+                                                &lt;input class="radio__input" value="3000" type="radio" id="option-radio-5" name="kpm-straal" /&gt;
+                                                &lt;label class="radio__label" for="option-radio-5"&gt;
       3000 meter
     &lt;/label&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="input-radio"&gt;
-                                        &lt;input class="radio__input" value="hideMap" type="radio" id="option-radio-6" name="kpm-straal" /&gt;
-                                        &lt;label class="radio__label" for="option-radio-6"&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="input-radio"&gt;
+                                                &lt;input class="radio__input" value="hideMap" type="radio" id="option-radio-6" name="kpm-straal" /&gt;
+                                                &lt;label class="radio__label" for="option-radio-6"&gt;
       Hele gemeente 'Den Haag'
     &lt;/label&gt;
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt;
+                                    &lt;/form&gt;
+                                &lt;/div&gt;
+                                &lt;div class="column"&gt;
+                                    &lt;div class="map map--h-400"&gt;
+                                        &lt;div class="map__map"&gt;
+                                            &lt;div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config1", "range":".js-kpm-editstraal" }'&gt;
+
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt;
                                     &lt;/div&gt;
 
-                                &lt;/div&gt;
-                            &lt;/form&gt;
-                        &lt;/div&gt;
-                        &lt;div class="column"&gt;
-                            &lt;div class="map"&gt;
-                                &lt;div class="map__map"&gt;
-                                    &lt;div data-decorator="init-kpm" class="map__kpm" id="kpmMap" data-config='{"config":"#config1", "range":".js-kpm-editstraal" }'&gt;
-
-                                    &lt;/div&gt;
-
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-
-                            &lt;script id="config1" type="application/json"&gt;
-                                {
-                                    "locations": [{
-                                        "type": "adres",
-                                        "geometry": "POINT(4.34015737 52.07846659)",
-                                        "geometry_type": "WKT",
-                                        "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
-                                        "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
-                                    }],
-                                    "options": {
-                                        "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
-                                        "class": "kaartprikmodule-overlay",
-                                        "mode": "geoview",
-                                        "center": {
-                                            "highlight": true,
-                                            "type": "circle",
-                                            "circle": {
-                                                "radius": 200,
-                                                "x": 83224,
-                                                "y": 454983
-                                            }
-                                        },
-                                        "controls": ["base-layer", "center", "fullscreen", "zoom"],
-                                        "layers": {
-                                            "bgtachtergrondkaart": {
-                                                "enabled": true
+                                    &lt;script id="config1" type="application/json"&gt;
+                                        {
+                                            "locations": [{
+                                                "type": "adres",
+                                                "geometry": "POINT(4.34015737 52.07846659)",
+                                                "geometry_type": "WKT",
+                                                "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+                                                "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579"
+                                            }],
+                                            "options": {
+                                                "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                                                "class": "kaartprikmodule-overlay",
+                                                "mode": "geoview",
+                                                "center": {
+                                                    "highlight": true,
+                                                    "type": "circle",
+                                                    "circle": {
+                                                        "radius": 200,
+                                                        "x": 83224,
+                                                        "y": 454983
+                                                    }
+                                                },
+                                                "controls": ["base-layer", "center", "fullscreen", "zoom"],
+                                                "layers": {
+                                                    "bgtachtergrondkaart": {
+                                                        "enabled": true
+                                                    }
+                                                }
                                             }
                                         }
-                                    }
-                                }
-                            &lt;/script&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-                &lt;li class="list__item"&gt;
-                    &lt;h2&gt;Selecteer uw voorkeursinstellingen&lt;/h2&gt;
-                    &lt;p&gt;Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.&lt;/p&gt;
-                    &lt;fieldset&gt;
-                        &lt;legend class="visually-hidden"&gt;Voorkeursinstellingen&lt;/legend&gt;
-                        &lt;div class="columns"&gt;
-                            &lt;div class="column"&gt;
-                                &lt;div class="form__row u-margin-top-32"&gt;
-                                    &lt;h3 class="form__sublegend"&gt;Rondom een adres&lt;/h3&gt;
-                                    &lt;p class=""&gt;Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.&lt;/p&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
-                                        &lt;div class="subselection__summary"&gt;&lt;/div&gt;
-                                        &lt;div id="modal-20" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer opties rondom een adres&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--20"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-20" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--20" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-20"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--20" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-20" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer opties rondom een adres&lt;/legend&gt;
-                                                            &lt;div data-decorator="init-selectall"&gt;
-                                                                &lt;div class="input-checkbox u-margin--m"&gt;
-                                                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9876" name="selectAll" value="Alle iets" /&gt;
-                                                                    &lt;label class="checkbox__label" for="9876"&gt;
-                    &lt;strong&gt;Alle &lt;i class="js-amount-checkboxes"&gt;&lt;/i&gt; verdragen&lt;/strong&gt;
-                  &lt;/label&gt;
-                                                                &lt;/div&gt;
-
-                                                                &lt;ul class="list--unstyled"&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-1237"&gt;
-                        Rotterdam
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-22372312321312" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-22372312321312"&gt;
-                        Schiedam
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-323723" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-323723"&gt;
-                        Vlaardingen
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-1237232" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-1237232"&gt;
-                        Den Haag
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-223712312312" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-223712312312"&gt;
-                        Scheveningen
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-3237123123" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-3237123123"&gt;
-                        Voorburg
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                &lt;/ul&gt;
-
-                                                            &lt;/div&gt;
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
-
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
-                                                    &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id20" data-handler="open-modal" data-modal="modal-20" class="subselection__trigger icon"&gt;Selecteer opties rondom een adres&lt;/a&gt;
-                                    &lt;/div&gt;
-
-                                &lt;/div&gt;
-                                &lt;div class="form__row u-margin-top-48"&gt;
-                                    &lt;h3 class="form__sublegend"&gt;Bestemmingsplannen&lt;/h3&gt;
-                                    &lt;p class=""&gt;Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.&lt;/p&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
-                                        &lt;div class="subselection__summary"&gt;&lt;/div&gt;
-                                        &lt;div id="modal-22" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer opties over bestemmingsplannen&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--22"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-22" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--22" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-22"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--22" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-22" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer opties over bestemmingsplannen&lt;/legend&gt;
-                                                            &lt;div data-decorator="init-selectall"&gt;
-                                                                &lt;div class="input-checkbox u-margin--m"&gt;
-                                                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9879" name="selectAll" value="Alle iets" /&gt;
-                                                                    &lt;label class="checkbox__label" for="9879"&gt;
-                    &lt;strong&gt;Alle &lt;i class="js-amount-checkboxes"&gt;&lt;/i&gt; verdragen&lt;/strong&gt;
-                  &lt;/label&gt;
-                                                                &lt;/div&gt;
-
-                                                                &lt;ul class="list--unstyled"&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-1237"&gt;
-                        Rotterdam
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-223723123312" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-223723123312"&gt;
-                        Schiedam
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-3223" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-3223"&gt;
-                        Vlaardingen
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-12332" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-12332"&gt;
-                        Den Haag
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-2237312312" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-2237312312"&gt;
-                        Scheveningen
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-32373123" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-32373123"&gt;
-                        Voorburg
-                      &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                &lt;/ul&gt;
-
-                                                            &lt;/div&gt;
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
-
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
-                                                    &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id22" data-handler="open-modal" data-modal="modal-22" class="subselection__trigger icon"&gt;Selecteer opties over bestemmingsplannen&lt;/a&gt;
-                                    &lt;/div&gt;
-
+                                    &lt;/script&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
-                            &lt;div class="column"&gt;
-                                &lt;div class="form__row u-margin-top-32"&gt;
-                                    &lt;h3 class="form__sublegend"&gt;Voorlichting&lt;/h3&gt;
-                                    &lt;p class=""&gt;Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.&lt;/p&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
-                                        &lt;div class="subselection__summary"&gt;&lt;/div&gt;
-                                        &lt;div id="modal-21" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer opties over voorlichting&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--21"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-21" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--21" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-21"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--21" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-21" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer opties over voorlichting&lt;/legend&gt;
-                                                            &lt;div data-decorator="init-selectall"&gt;
-                                                                &lt;div class="input-checkbox u-margin--m"&gt;
-                                                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9877" name="selectAll" value="Alle iets" /&gt;
-                                                                    &lt;label class="checkbox__label" for="9877"&gt;
+                        &lt;/li&gt;
+                        &lt;li class="list__item"&gt;
+                            &lt;h2&gt;Selecteer uw voorkeursinstellingen&lt;/h2&gt;
+                            &lt;p&gt;Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.&lt;/p&gt;
+                            &lt;fieldset&gt;
+                                &lt;legend class="visually-hidden"&gt;Voorkeursinstellingen&lt;/legend&gt;
+                                &lt;div class="columns"&gt;
+                                    &lt;div class="column"&gt;
+                                        &lt;div class="form__row u-margin-top-32"&gt;
+                                            &lt;h3 class="form__sublegend"&gt;Rondom een adres&lt;/h3&gt;
+                                            &lt;p class=""&gt;Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.&lt;/p&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                                &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
+                                                &lt;div id="modal-20" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
+                                                    &lt;div class="modal__inner"&gt;
+                                                        &lt;div class="modal__content"&gt;
+                                                            &lt;h2&gt;Selecteer opties rondom een adres&lt;/h2&gt;
+                                                            &lt;div class="" data-decorator="init-filter-results"&gt;
+                                                                &lt;div class="form__row form__row--medium"&gt;
+                                                                    &lt;label class="visually-hidden" for="filter-id--20"&gt;&lt;/label&gt;
+                                                                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-20" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--20" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-20"
+                                                                        placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--20" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-20" aria-live="polite"&gt;
+                                                                    &lt;legend class="visually-hidden"&gt;Selecteer opties rondom een adres&lt;/legend&gt;
+                                                                    &lt;div data-decorator="init-selectall"&gt;
+                                                                        &lt;div class="input-checkbox u-margin--m"&gt;
+                                                                            &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9876" name="selectAll" value="Alle iets" /&gt;
+                                                                            &lt;label class="checkbox__label" for="9876"&gt;
                     &lt;strong&gt;Alle &lt;i class="js-amount-checkboxes"&gt;&lt;/i&gt; verdragen&lt;/strong&gt;
                   &lt;/label&gt;
-                                                                &lt;/div&gt;
+                                                                        &lt;/div&gt;
 
-                                                                &lt;ul class="list--unstyled"&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-1237"&gt;
+                                                                        &lt;ul class="list--unstyled"&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-1237"&gt;
                         Rotterdam
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-2237231232131" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-2237231232131"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-22372312321312" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-22372312321312"&gt;
                         Schiedam
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-3237" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-3237"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-323723" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-323723"&gt;
                         Vlaardingen
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-1237232" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-1237232"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-1237232" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-1237232"&gt;
                         Den Haag
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-22371231231" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-22371231231"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-223712312312" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-223712312312"&gt;
                         Scheveningen
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-323712123" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-323712123"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-3237123123" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-3237123123"&gt;
                         Voorburg
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                &lt;/ul&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                        &lt;/ul&gt;
 
+                                                                    &lt;/div&gt;
+                                                                &lt;/fieldset&gt;
                                                             &lt;/div&gt;
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
 
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
-                                                    &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id21" data-handler="open-modal" data-modal="modal-21" class="subselection__trigger icon"&gt;Selecteer opties over voorlichting&lt;/a&gt;
-                                    &lt;/div&gt;
-
-                                &lt;/div&gt;
-                                &lt;div class="form__row u-margin-top-48"&gt;
-                                    &lt;h3 class="form__sublegend"&gt;Voorschriften &amp;amp; beleid&lt;/h3&gt;
-                                    &lt;p class=""&gt;Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.&lt;/p&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
-                                        &lt;div class="subselection__summary"&gt;&lt;/div&gt;
-                                        &lt;div id="modal-23" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer opties over voorschriften &amp;amp; beleid&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--23"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-23" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--23" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-23"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--23" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
+                                                            &lt;div class="modal__buttonpane"&gt;
+                                                                &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
                                                         &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-23" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer opties over voorschriften &amp;amp; beleid&lt;/legend&gt;
-                                                            &lt;div data-decorator="init-selectall"&gt;
-                                                                &lt;div class="input-checkbox u-margin--m"&gt;
-                                                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9880" name="selectAll" value="Alle iets" /&gt;
-                                                                    &lt;label class="checkbox__label" for="9880"&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;a href="#" id="id20" data-handler="open-modal" data-modal="modal-20" class="subselection__trigger icon"&gt;Selecteer opties rondom een adres&lt;/a&gt;
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt;
+                                        &lt;div class="form__row u-margin-top-48"&gt;
+                                            &lt;h3 class="form__sublegend"&gt;Bestemmingsplannen&lt;/h3&gt;
+                                            &lt;p class=""&gt;Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.&lt;/p&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                                &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
+                                                &lt;div id="modal-22" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
+                                                    &lt;div class="modal__inner"&gt;
+                                                        &lt;div class="modal__content"&gt;
+                                                            &lt;h2&gt;Selecteer opties over bestemmingsplannen&lt;/h2&gt;
+                                                            &lt;div class="" data-decorator="init-filter-results"&gt;
+                                                                &lt;div class="form__row form__row--medium"&gt;
+                                                                    &lt;label class="visually-hidden" for="filter-id--22"&gt;&lt;/label&gt;
+                                                                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-22" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--22" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-22"
+                                                                        placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--22" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-22" aria-live="polite"&gt;
+                                                                    &lt;legend class="visually-hidden"&gt;Selecteer opties over bestemmingsplannen&lt;/legend&gt;
+                                                                    &lt;div data-decorator="init-selectall"&gt;
+                                                                        &lt;div class="input-checkbox u-margin--m"&gt;
+                                                                            &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9879" name="selectAll" value="Alle iets" /&gt;
+                                                                            &lt;label class="checkbox__label" for="9879"&gt;
                     &lt;strong&gt;Alle &lt;i class="js-amount-checkboxes"&gt;&lt;/i&gt; verdragen&lt;/strong&gt;
                   &lt;/label&gt;
-                                                                &lt;/div&gt;
+                                                                        &lt;/div&gt;
 
-                                                                &lt;ul class="list--unstyled"&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-1237"&gt;
+                                                                        &lt;ul class="list--unstyled"&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-1237"&gt;
                         Rotterdam
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-223723321312" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-223723321312"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-223723123312" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-223723123312"&gt;
                         Schiedam
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-3223" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-3223"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-3223" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-3223"&gt;
                         Vlaardingen
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-12372" name="name" data-value="Spanje" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-12372"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-12332" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-12332"&gt;
                         Den Haag
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-2237122312" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-2237122312"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-2237312312" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-2237312312"&gt;
                         Scheveningen
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                    &lt;li class=" js-filterresults__result"&gt;
-                                                                        &lt;div class="input-checkbox"&gt;
-                                                                            &lt;input class="checkbox__input" type="checkbox" id="option-32373123" name="name" data-value="Nederland" value="2" /&gt;
-                                                                            &lt;label class="checkbox__label" for="option-32373123"&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-32373123" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-32373123"&gt;
                         Voorburg
                       &lt;/label&gt;
-                                                                        &lt;/div&gt;
-                                                                    &lt;/li&gt;
-                                                                &lt;/ul&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                        &lt;/ul&gt;
 
+                                                                    &lt;/div&gt;
+                                                                &lt;/fieldset&gt;
                                                             &lt;/div&gt;
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
 
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
+                                                            &lt;div class="modal__buttonpane"&gt;
+                                                                &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
+                                                        &lt;/div&gt;
                                                     &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
                                                 &lt;/div&gt;
+                                                &lt;a href="#" id="id22" data-handler="open-modal" data-modal="modal-22" class="subselection__trigger icon"&gt;Selecteer opties over bestemmingsplannen&lt;/a&gt;
                                             &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id23" data-handler="open-modal" data-modal="modal-23" class="subselection__trigger icon"&gt;Selecteer opties over voorschriften &amp;amp; beleid&lt;/a&gt;
-                                    &lt;/div&gt;
 
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="column"&gt;
+                                        &lt;div class="form__row u-margin-top-32"&gt;
+                                            &lt;h3 class="form__sublegend"&gt;Voorlichting&lt;/h3&gt;
+                                            &lt;p class=""&gt;Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.&lt;/p&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                                &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
+                                                &lt;div id="modal-21" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
+                                                    &lt;div class="modal__inner"&gt;
+                                                        &lt;div class="modal__content"&gt;
+                                                            &lt;h2&gt;Selecteer opties over voorlichting&lt;/h2&gt;
+                                                            &lt;div class="" data-decorator="init-filter-results"&gt;
+                                                                &lt;div class="form__row form__row--medium"&gt;
+                                                                    &lt;label class="visually-hidden" for="filter-id--21"&gt;&lt;/label&gt;
+                                                                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-21" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--21" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-21"
+                                                                        placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--21" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-21" aria-live="polite"&gt;
+                                                                    &lt;legend class="visually-hidden"&gt;Selecteer opties over voorlichting&lt;/legend&gt;
+                                                                    &lt;div data-decorator="init-selectall"&gt;
+                                                                        &lt;div class="input-checkbox u-margin--m"&gt;
+                                                                            &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9877" name="selectAll" value="Alle iets" /&gt;
+                                                                            &lt;label class="checkbox__label" for="9877"&gt;
+                    &lt;strong&gt;Alle &lt;i class="js-amount-checkboxes"&gt;&lt;/i&gt; verdragen&lt;/strong&gt;
+                  &lt;/label&gt;
+                                                                        &lt;/div&gt;
+
+                                                                        &lt;ul class="list--unstyled"&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-1237"&gt;
+                        Rotterdam
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-2237231232131" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-2237231232131"&gt;
+                        Schiedam
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-3237" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-3237"&gt;
+                        Vlaardingen
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-1237232" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-1237232"&gt;
+                        Den Haag
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-22371231231" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-22371231231"&gt;
+                        Scheveningen
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-323712123" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-323712123"&gt;
+                        Voorburg
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                        &lt;/ul&gt;
+
+                                                                    &lt;/div&gt;
+                                                                &lt;/fieldset&gt;
+                                                            &lt;/div&gt;
+
+                                                            &lt;div class="modal__buttonpane"&gt;
+                                                                &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;a href="#" id="id21" data-handler="open-modal" data-modal="modal-21" class="subselection__trigger icon"&gt;Selecteer opties over voorlichting&lt;/a&gt;
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt;
+                                        &lt;div class="form__row u-margin-top-48"&gt;
+                                            &lt;h3 class="form__sublegend"&gt;Voorschriften &amp;amp; beleid&lt;/h3&gt;
+                                            &lt;p class=""&gt;Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.&lt;/p&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                                &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
+                                                &lt;div id="modal-23" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
+                                                    &lt;div class="modal__inner"&gt;
+                                                        &lt;div class="modal__content"&gt;
+                                                            &lt;h2&gt;Selecteer opties over voorschriften &amp;amp; beleid&lt;/h2&gt;
+                                                            &lt;div class="" data-decorator="init-filter-results"&gt;
+                                                                &lt;div class="form__row form__row--medium"&gt;
+                                                                    &lt;label class="visually-hidden" for="filter-id--23"&gt;&lt;/label&gt;
+                                                                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-23" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--23" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-23"
+                                                                        placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--23" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-23" aria-live="polite"&gt;
+                                                                    &lt;legend class="visually-hidden"&gt;Selecteer opties over voorschriften &amp;amp; beleid&lt;/legend&gt;
+                                                                    &lt;div data-decorator="init-selectall"&gt;
+                                                                        &lt;div class="input-checkbox u-margin--m"&gt;
+                                                                            &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="9880" name="selectAll" value="Alle iets" /&gt;
+                                                                            &lt;label class="checkbox__label" for="9880"&gt;
+                    &lt;strong&gt;Alle &lt;i class="js-amount-checkboxes"&gt;&lt;/i&gt; verdragen&lt;/strong&gt;
+                  &lt;/label&gt;
+                                                                        &lt;/div&gt;
+
+                                                                        &lt;ul class="list--unstyled"&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-1237" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-1237"&gt;
+                        Rotterdam
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-223723321312" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-223723321312"&gt;
+                        Schiedam
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-3223" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-3223"&gt;
+                        Vlaardingen
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-12372" name="name" data-value="Spanje" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-12372"&gt;
+                        Den Haag
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-2237122312" name="name" data-value="Griekenland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-2237122312"&gt;
+                        Scheveningen
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                            &lt;li class=" js-filterresults__result"&gt;
+                                                                                &lt;div class="input-checkbox"&gt;
+                                                                                    &lt;input class="checkbox__input" type="checkbox" id="option-32373123" name="name" data-value="Nederland" value="2" /&gt;
+                                                                                    &lt;label class="checkbox__label" for="option-32373123"&gt;
+                        Voorburg
+                      &lt;/label&gt;
+                                                                                &lt;/div&gt;
+                                                                            &lt;/li&gt;
+                                                                        &lt;/ul&gt;
+
+                                                                    &lt;/div&gt;
+                                                                &lt;/fieldset&gt;
+                                                            &lt;/div&gt;
+
+                                                            &lt;div class="modal__buttonpane"&gt;
+                                                                &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;a href="#" id="id23" data-handler="open-modal" data-modal="modal-23" class="subselection__trigger icon"&gt;Selecteer opties over voorschriften &amp;amp; beleid&lt;/a&gt;
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
                                 &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/fieldset&gt;
-                &lt;/li&gt;
-                &lt;li class="list__item"&gt;
-                    &lt;h2&gt;Selecteer overheidsorganisaties&lt;/h2&gt;
-                    &lt;p&gt;Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.&lt;/p&gt;
-                    &lt;div data-decorator="init-selectall"&gt;
-                        &lt;div class="input-checkbox"&gt;
-                            &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="appel" name="selectAll" value="veel" /&gt;
-                            &lt;label class="checkbox__label" for="appel"&gt;
+                            &lt;/fieldset&gt;
+                        &lt;/li&gt;
+                        &lt;li class="list__item"&gt;
+                            &lt;h2&gt;Selecteer overheidsorganisaties&lt;/h2&gt;
+                            &lt;p&gt;Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.&lt;/p&gt;
+                            &lt;div data-decorator="init-selectall"&gt;
+                                &lt;div class="input-checkbox"&gt;
+                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="appel" name="selectAll" value="veel" /&gt;
+                                    &lt;label class="checkbox__label" for="appel"&gt;
       Selecteer alle &lt;span class="js-amount-checkboxes"&gt;&lt;/span&gt; overheidsorganisaties
     &lt;/label&gt;
-                        &lt;/div&gt;
+                                &lt;/div&gt;
 
-                        &lt;div class="input-checkbox"&gt;
-                            &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-20" name="onderwerp" value="Gemeente" /&gt;
-                            &lt;label class="checkbox__label" for="option-checkbox-20"&gt;
+                                &lt;div class="input-checkbox"&gt;
+                                    &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-20" name="onderwerp" value="Gemeente" /&gt;
+                                    &lt;label class="checkbox__label" for="option-checkbox-20"&gt;
       Gemeente
     &lt;/label&gt;
-                        &lt;/div&gt;
+                                &lt;/div&gt;
 
-                        &lt;div class="input-checkbox"&gt;
-                            &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-21" name="onderwerp" value="Provincie" /&gt;
-                            &lt;label class="checkbox__label" for="option-checkbox-21"&gt;
+                                &lt;div class="input-checkbox"&gt;
+                                    &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-21" name="onderwerp" value="Provincie" /&gt;
+                                    &lt;label class="checkbox__label" for="option-checkbox-21"&gt;
       Provincie
     &lt;/label&gt;
-                        &lt;/div&gt;
+                                &lt;/div&gt;
 
-                        &lt;div class="input-checkbox"&gt;
-                            &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-22" name="onderwerp" value="Regionaal Samenwerkingsorgaan" /&gt;
-                            &lt;label class="checkbox__label" for="option-checkbox-22"&gt;
+                                &lt;div class="input-checkbox"&gt;
+                                    &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-22" name="onderwerp" value="Regionaal Samenwerkingsorgaan" /&gt;
+                                    &lt;label class="checkbox__label" for="option-checkbox-22"&gt;
       Regionaal Samenwerkingsorgaan
     &lt;/label&gt;
-                        &lt;/div&gt;
+                                &lt;/div&gt;
 
-                        &lt;div class="input-checkbox"&gt;
-                            &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-23" name="onderwerp" value="Rijkswaterstaat" /&gt;
-                            &lt;label class="checkbox__label" for="option-checkbox-23"&gt;
+                                &lt;div class="input-checkbox"&gt;
+                                    &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-23" name="onderwerp" value="Rijkswaterstaat" /&gt;
+                                    &lt;label class="checkbox__label" for="option-checkbox-23"&gt;
       Rijkswaterstaat
     &lt;/label&gt;
-                        &lt;/div&gt;
+                                &lt;/div&gt;
 
-                        &lt;div class="input-checkbox"&gt;
-                            &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-24" name="onderwerp" value="Waterschap" /&gt;
-                            &lt;label class="checkbox__label" for="option-checkbox-24"&gt;
+                                &lt;div class="input-checkbox"&gt;
+                                    &lt;input class="checkbox__input" type="checkbox" id="option-checkbox-24" name="onderwerp" value="Waterschap" /&gt;
+                                    &lt;label class="checkbox__label" for="option-checkbox-24"&gt;
       Waterschap
     &lt;/label&gt;
-                        &lt;/div&gt;
+                                &lt;/div&gt;
 
+                            &lt;/div&gt;
+
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class="columns"&gt;
+                        &lt;div class="column"&gt;
+                            &lt;p class="p p--med"&gt;U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze &lt;a href="#"&gt;privacystatement&lt;/a&gt;.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="column align-right"&gt;
+                            &lt;button type="submit" class="button button--primary"&gt;Meld mij aan voor de nieuwsbrief&lt;/button&gt;
+                        &lt;/div&gt;
                     &lt;/div&gt;
 
-                &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;div class="columns"&gt;
-                &lt;div class="column"&gt;
-                    &lt;p class="p p--med"&gt;U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze &lt;a href="#"&gt;privacystatement&lt;/a&gt;.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class="column align-right"&gt;
-                    &lt;button type="submit" class="button button--primary"&gt;Meld mij aan voor de nieuwsbrief&lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
 
         &lt;/div&gt;
     &lt;/div&gt;
@@ -903,7 +909,7 @@
             Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>mail@koop.overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"doSubmit": false}'</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
@@ -934,110 +940,119 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container container--centered"</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--stepcontainer"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"doSubmit": false}'</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeuren<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--stepcontainer"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer een gebied<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Uw adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Straal<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
+                    </span><span class="hljs-template-variable">{{render "<a href="input-radio.html">@input-radio</a>" straalContext }}</span><span class="xml">
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                </span><span class="hljs-template-variable">{{render "<a href="map.html">@map</a>" mapContext }}</span><span class="xml">
+
+                </span><span class="hljs-comment">{{!-- { "locatieserver_id":"wpl-9f875146c5008a6cacded0af3bfd9e5d", "title":"Woonplaats Duiven" } --}}</span><span class="xml">
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"config1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span>&gt;</span><span class="actionscript">
+                {
+                  <span class="hljs-string">"locations"</span>: [
+                    {
+                      <span class="hljs-string">"type"</span>: <span class="hljs-string">"adres"</span>,
+                      <span class="hljs-string">"geometry"</span>: <span class="hljs-string">"POINT(4.34015737 52.07846659)"</span>,
+                      <span class="hljs-string">"geometry_type"</span>: <span class="hljs-string">"WKT"</span>,
+                      <span class="hljs-string">"title"</span>: <span class="hljs-string">"Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"</span>,
+                      <span class="hljs-string">"locatieserver_id"</span>: <span class="hljs-string">"adr-617a18a4146998f5ea4c6851ef87c579"</span>
+                    }
+                  ],
+                  <span class="hljs-string">"options"</span>: {
+                    <span class="hljs-string">"location_types"</span>: [<span class="hljs-string">"provincie"</span>, <span class="hljs-string">"gemeente"</span>, <span class="hljs-string">"adres"</span>, <span class="hljs-string">"punt"</span>, <span class="hljs-string">"lijn"</span>],
+                    <span class="hljs-string">"class"</span>: <span class="hljs-string">"kaartprikmodule-overlay"</span>,
+                    <span class="hljs-string">"mode"</span>: <span class="hljs-string">"geoview"</span>,
+                    <span class="hljs-string">"center"</span>: {
+                      <span class="hljs-string">"highlight"</span>: <span class="hljs-literal">true</span>,
+                      <span class="hljs-string">"type"</span>: <span class="hljs-string">"circle"</span>,
+                      <span class="hljs-string">"circle"</span>: {
+                        <span class="hljs-string">"radius"</span>: <span class="hljs-number">200</span>,
+                        <span class="hljs-string">"x"</span>: <span class="hljs-number">83224</span>,
+                        <span class="hljs-string">"y"</span>: <span class="hljs-number">454983</span>
+                      }
+                    },
+                    <span class="hljs-string">"controls"</span>: [<span class="hljs-string">"base-layer"</span>, <span class="hljs-string">"center"</span>, <span class="hljs-string">"fullscreen"</span>, <span class="hljs-string">"zoom"</span>],
+                    <span class="hljs-string">"layers"</span>: {
+                      <span class="hljs-string">"bgtachtergrondkaart"</span>: {
+                        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>
+                      }
+                    }
+                  }
+                }
+                </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer uw voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Rondom een adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" rondomadresContext }}</span><span class="xml">
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Bestemmingsplannen<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" bestemmingsplannenContext }}</span><span class="xml">
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorlichting<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorlichtingContext }}</span><span class="xml">
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorschriften &amp;amp; beleid<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorschriftenContext }}</span><span class="xml">
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer overheidsorganisaties<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            </span><span class="hljs-template-variable">{{ render "<a href="checkbox-selectall.html">@checkbox-selectall</a>" checkallOverheidsorganisatiesContext}}</span><span class="xml">
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer een gebied<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Uw adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Straal<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="input-radio.html">@input-radio</a>" straalContext }}</span><span class="xml">
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p p--med"</span>&gt;</span>U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>privacystatement<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-            </span><span class="hljs-template-variable">{{render "<a href="map.html">@map</a>" mapContext }}</span><span class="xml">
-
-             </span><span class="hljs-comment">{{!-- { "locatieserver_id":"wpl-9f875146c5008a6cacded0af3bfd9e5d", "title":"Woonplaats Duiven" } --}}</span><span class="xml">
-
-            <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"config1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span>&gt;</span><span class="actionscript">
-            {
-              <span class="hljs-string">"locations"</span>: [
-                {
-                  <span class="hljs-string">"type"</span>: <span class="hljs-string">"adres"</span>,
-                  <span class="hljs-string">"geometry"</span>: <span class="hljs-string">"POINT(4.34015737 52.07846659)"</span>,
-                  <span class="hljs-string">"geometry_type"</span>: <span class="hljs-string">"WKT"</span>,
-                  <span class="hljs-string">"title"</span>: <span class="hljs-string">"Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"</span>,
-                  <span class="hljs-string">"locatieserver_id"</span>: <span class="hljs-string">"adr-617a18a4146998f5ea4c6851ef87c579"</span>
-                }
-              ],
-              <span class="hljs-string">"options"</span>: {
-                <span class="hljs-string">"location_types"</span>: [<span class="hljs-string">"provincie"</span>, <span class="hljs-string">"gemeente"</span>, <span class="hljs-string">"adres"</span>, <span class="hljs-string">"punt"</span>, <span class="hljs-string">"lijn"</span>],
-                <span class="hljs-string">"class"</span>: <span class="hljs-string">"kaartprikmodule-overlay"</span>,
-                <span class="hljs-string">"mode"</span>: <span class="hljs-string">"geoview"</span>,
-                <span class="hljs-string">"center"</span>: {
-                  <span class="hljs-string">"highlight"</span>: <span class="hljs-literal">true</span>,
-                  <span class="hljs-string">"type"</span>: <span class="hljs-string">"circle"</span>,
-                  <span class="hljs-string">"circle"</span>: {
-                    <span class="hljs-string">"radius"</span>: <span class="hljs-number">200</span>,
-                    <span class="hljs-string">"x"</span>: <span class="hljs-number">83224</span>,
-                    <span class="hljs-string">"y"</span>: <span class="hljs-number">454983</span>
-                  }
-                },
-                <span class="hljs-string">"controls"</span>: [<span class="hljs-string">"base-layer"</span>, <span class="hljs-string">"center"</span>, <span class="hljs-string">"fullscreen"</span>, <span class="hljs-string">"zoom"</span>],
-                <span class="hljs-string">"layers"</span>: {
-                  <span class="hljs-string">"bgtachtergrondkaart"</span>: {
-                    <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>
-                  }
-                }
-              }
-            }
-            </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column align-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Meld mij aan voor de nieuwsbrief<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer uw voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Rondom een adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" rondomadresContext }}</span><span class="xml">
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Bestemmingsplannen<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" bestemmingsplannenContext }}</span><span class="xml">
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorlichting<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorlichtingContext }}</span><span class="xml">
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorschriften &amp;amp; beleid<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorschriftenContext }}</span><span class="xml">
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer overheidsorganisaties<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        </span><span class="hljs-template-variable">{{ render "<a href="checkbox-selectall.html">@checkbox-selectall</a>" checkallOverheidsorganisatiesContext}}</span><span class="xml">
-      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p p--med"</span>&gt;</span>U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>privacystatement<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column align-right"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Meld mij aan voor de nieuwsbrief<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1067,8 +1082,9 @@
     <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
     <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Bijv. 2453EH"</span>,
-    <span class="hljs-attr">"remove"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"patterntype"</span>: <span class="hljs-string">"zipcode"</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)"</span>
   },
   <span class="hljs-attr">"inputHuisnummerContext"</span>: {
     <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
@@ -1122,6 +1138,7 @@
     ]
   },
   <span class="hljs-attr">"mapContext"</span>: {
+    <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"h-400"</span>,
     <span class="hljs-attr">"controls"</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">"buttonEditStraal"</span>: <span class="hljs-string">"js-kpm-editstraal"</span>
   },
@@ -1134,6 +1151,7 @@
     <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Bijv: 0612345678"</span>,
     <span class="hljs-attr">"searchFilter"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"maxShow"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAll"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAllID"</span>: <span class="hljs-number">9876</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"span"</span>,
@@ -1186,6 +1204,7 @@
     <span class="hljs-attr">"searchFilter"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"maxShow"</span>: <span class="hljs-number">3</span>,
     <span class="hljs-attr">"selectAll"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAllID"</span>: <span class="hljs-number">9877</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"span"</span>,
     <span class="hljs-attr">"Options"</span>: [
@@ -1236,6 +1255,7 @@
     <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Bijv: 0612345678"</span>,
     <span class="hljs-attr">"searchFilter"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"maxShow"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAll"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAllID"</span>: <span class="hljs-number">9879</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"span"</span>,
@@ -1287,6 +1307,7 @@
     <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Bijv: 0612345678"</span>,
     <span class="hljs-attr">"searchFilter"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"maxShow"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAll"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAllID"</span>: <span class="hljs-number">9880</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"span"</span>,
@@ -3374,6 +3395,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="jumbotron--highlight.html" data-pjax>
                 <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="jumbotron--narrow.html" data-pjax>
+                <span>Narrow</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -5874,7 +5919,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -8246,6 +8291,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-cvdr-searchresults.html" data-pjax>
                 <span>CVDR - Searchresults</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-cvdr-wettechnischegegevens.html" data-pjax>
+                <span>CVDR - Wettechnischegegevens</span>
                 
 
 <div class="Status Status--unlabelled">

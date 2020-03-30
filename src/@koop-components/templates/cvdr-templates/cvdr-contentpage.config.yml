@@ -13,7 +13,7 @@ context:
     id: 2
     items:
     - title: Wettechnische gegevens
-      href: ""
+      href: "/components/preview/templates-cvdr-wettechnischegegevens"
       sub: false
   navToeContext:
     id: 3

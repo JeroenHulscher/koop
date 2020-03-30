@@ -100,7 +100,7 @@
                Ontvang automatisch updates in uw e-mail inbox over alles wat er in uw buurt gebeurt.
           </p>
         </div>
-        <form class="form">
+        <form class="form" data-decorator="init-form-validation">
           <fieldset>
             <legend class="visually-hidden">E-mailadres</legend>
             <div class="form__row">
@@ -109,9 +109,11 @@
 
   <label for="input-text-1" class="form__label form__label--accent">Uw e-mailadres</label>
 
+  <span class="mandatory">Verplicht</span>
+
 
   <input
-    type="text"
+    type="email"
     id="input-text-1"
     name="1"
     class="input input-text input-text--medium  "
@@ -119,6 +121,9 @@
     
     aria-invalid="false"
     placeholder="E-mailadres"
+    required
+    
+    
     
     
 
