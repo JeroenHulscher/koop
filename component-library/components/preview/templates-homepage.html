@@ -121,39 +121,37 @@
               Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
           </p>
         </div>
-        <form class="form">
+        <form class="form" data-decorator="init-form-validation">
           <fieldset>
             <legend class="visually-hidden">Zoek berichten</legend>
             <div class="form__row ">
               <div class="columns">
                 <div class="form__row form__row--medium">
-                  <div class="relative">
+                  
 
+  <label for="input-text-2" class="form__label form__label--accent">Postcode</label>
 
-  <label for="input-text-1" class="form__label form__label--accent">Huisnummer + toev.</label>
+  <span class="mandatory">Verplicht</span>
 
 
   <input
     type="text"
-    id="input-text-1"
-    name="1"
+    id="input-text-2"
+    name="2"
     class="input input-text input-text--medium  "
     placeholder="Bijv. 12A"
     
     aria-invalid="false"
     placeholder="Bijv. 12A"
+    required
     
     
-    
-    
+    data-pattern-type="zipcode"
     
 
-    data-decorator="toggle-remove-visibility"
-    />
+/>
 
 
-  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
-</div>
 
 
                 </div>
@@ -162,6 +160,8 @@
 
 
   <label for="input-text-1" class="form__label form__label--accent">Huisnummer + toev.</label>
+
+  
 
 
   <input
@@ -276,8 +276,8 @@
               <div class="input-inputsubmit ">
 
   <div class="input-inputsubmit__grid">
-    <label class="visually-hidden"  for="">Uw e-mailadres</label>
-    <input id="" type="text" class="input " placeholder="Uw e-mailadres" />
+    <label class="visually-hidden"  for="101">Uw e-mailadres</label>
+    <input id="101"  type="text" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Aanmelden</span></button>
   </div>
 </div>

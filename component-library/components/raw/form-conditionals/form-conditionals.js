@@ -89,8 +89,6 @@
     var showResponds;
     var hideself;
 
-    console.log('klik');
-
     if (e.target !== undefined) {
       obj = e.target;
     } else {
