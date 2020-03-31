@@ -22,11 +22,8 @@ textarea {
   }
 
   &.has-error {
-    border-width: 2px;
-    border-color: red;
-    color: red;
-    background: white $iconCrossRed center right 0.75em;
-    background-repeat: no-repeat;
+    border-color: $red;
+    color: $red;
   }
 
   &:disabled,

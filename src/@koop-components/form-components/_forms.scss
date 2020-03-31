@@ -94,15 +94,34 @@ fieldset {
   text-align: left;
 
   &__errors {
-    background: lighten($lightRed,7) $infoIconRed no-repeat top 1.2em left 1em;
-    background-size: 1em;
-    padding: 1em 1em 1em 3em;
+    background: $lightGrey;
+    padding: 2em 1.75em;
     margin-bottom: 1em;
 
-    ul {
-      @extend .list--linked;
-      margin: 0;
+    &__heading {
+      font-size: em(20);
+      font-weight: bold;
+      margin-bottom: em(8);
+      line-height: 1.125;
     }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li > a {
+        display: inline-block;
+        padding-left: 2em;
+        margin-bottom: em(4);
+        background: $iconAlertRed no-repeat left center;
+
+        &.line-through {
+          background-image: $iconCheckFilledGreen;
+        }
+      }
+    }
+
+
   }
 
   &__row {
@@ -171,12 +190,15 @@ fieldset {
   }
 
   &__error {
-    font-weight: bold;
+    font-style: italic;
     color: $red;
-    background: $infoIconRed top 0.2em left;
+    background: $iconAlertRed top -5px left;
     background-repeat: no-repeat;
-    background-size: 1em;
-    padding-left: 1.5em;
+    // background-size: 1em;
+    padding-left: 1.75em;
+    font-size: 90%;
+    line-height: 0.9;
+    margin-top: em(4);
   }
 
   &__hint {
@@ -617,6 +639,12 @@ input[type=password],
 input[type=email],
 input[type=number] {
   &.is-valid {
-    background: white $iconCheck2Green no-repeat right .5em center;
+    border-color: $green;
+    background: white $iconCheckFilledGreen no-repeat right .5em center;
   }
+}
+
+
+input:before {
+  content: "AAAA";
 }

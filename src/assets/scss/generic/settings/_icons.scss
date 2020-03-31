@@ -1,5 +1,8 @@
 $imagePath: '../images' !default;
 
+$iconAlertBlue:  url( '#{$imagePath}/icon-alert-blue.svg' ) !default;
+$iconAlertRed:  url( '#{$imagePath}/icon-alert-red.svg' ) !default;
+
 $chevronRight:  url( '#{$imagePath}/icon-chevron-right.svg' ) !default;
 $chevronLeft:  url( '#{$imagePath}/icon-chevron-left.svg' ) !default;
 $iconCross: url( '#{$imagePath}/icon-close.svg' );
@@ -85,6 +88,10 @@ $refreshDocumentWhite: url( '#{$imagePath}/icon-refresh-document-white.svg' ) !d
 
 $modalCloser: $iconCross !default;
 $modalCloserHover: url( '#{$imagePath}/icon-close-hover.svg' ) !default;
+
+$iconCheckFilledBlue: url( '#{$imagePath}/icon-check-filled-blue.svg' ) !default;
+$iconCheckFilledRed: url( '#{$imagePath}/icon-check-filled-red.svg' ) !default;
+$iconCheckFilledGreen: url( '#{$imagePath}/icon-check-filled-green.svg' ) !default;
 
 $iconCheck2Blue: url( '#{$imagePath}/icon-check2-blue.svg' ) !default;
 $iconCheck2White: url( '#{$imagePath}/icon-check2-white.svg' ) !default;

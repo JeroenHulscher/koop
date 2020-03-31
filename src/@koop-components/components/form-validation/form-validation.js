@@ -459,10 +459,11 @@ var supports = function () {
     if (!errorsContainer) {
       errorsContainer = document.createElement('div');
       errorsContainer.setAttribute('tabindex', '0')
-      errorsContainer.classList.add(this.config.errorsContainer, 'well');
+      errorsContainer.classList.add(this.config.errorsContainer);
       this.element.insertBefore(errorsContainer, this.element.childNodes[0]);
 
       var errorsContainerIntro = document.createElement('p');
+      errorsContainerIntro.classList.add('form__errors__heading');
       errorsContainerIntro.innerHTML = this.config.errorsContainerIntro || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
       errorsContainer.appendChild(errorsContainerIntro);
 
