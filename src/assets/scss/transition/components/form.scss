@@ -100,15 +100,16 @@ fieldset {
   margin: 0;
 
   & + fieldset {
-    margin-top: 2em;
+    margin-top: 1.5em;
   }
 
   legend {
     border-bottom: 0;
-    font-size: 1.5em;
+    font-size: 1.325em;
     width: auto;
     display: inline-block;
     line-height: 1.2;
+    margin-bottom: 0.625em;
   }
 }
 .column--sidebar fieldset legend {

@@ -34,8 +34,13 @@
   &[name="selectAll"] {
     & ~ label {
       font-weight: bold;
-      margin-bottom: em(24);
     }
+  }
+}
+
+.modal .checkbox__input[name="selectAll"] {
+  & ~ label {
+    margin-bottom: em(24);
   }
 }
 
