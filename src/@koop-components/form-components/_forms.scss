@@ -189,10 +189,20 @@ fieldset {
     font-weight: normal;
   }
 
+  &__success {
+    background: white $iconCheckFilledGreen no-repeat left center;
+    padding-left: 1.75em;
+    color: $green;
+    font-style: italic;
+    font-size: 90%;
+    line-height: 0.9;
+    margin-top: em(4);
+
+  }
   &__error {
     font-style: italic;
     color: $red;
-    background: $iconAlertRed top -5px left;
+    background: $iconAlertRed top -6px left;
     background-repeat: no-repeat;
     // background-size: 1em;
     padding-left: 1.75em;
@@ -639,8 +649,9 @@ input[type=password],
 input[type=email],
 input[type=number] {
   &.is-valid {
-    border-color: $green;
-    background: white $iconCheckFilledGreen no-repeat right .5em center;
+    &[required] {
+      border-color: $green;
+    }
   }
 }
 
