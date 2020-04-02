@@ -354,11 +354,6 @@ context:
     button: Zoek
     modifierComponent: input-inputsubmit--s
     remove: true
-  inputsubmitSearchSaveContext:
-    label: Uw e-mailadres
-    showLabel: true
-    placeholder: Uw e-mailadres
-    button: Bevestigen
   buttonswitchContext:
     text: banner
     buttons:
@@ -385,5 +380,48 @@ context:
   contextNewsletter:
     required: true
     type: email
+  jumbotronSaveContext:
+    heading: Meld je aan voor de mail
+    h: h2
+    subheading: Deze zoekopdracht bewaren
+    centered: true
+    headingcentered: true
+    intro: Schrijf u in en ontvang dagelijks een update in uw inbox over alles wat er bij u in de buurt gebeurt.
+    inputsubmitSearchSaveContext:
+      id: 101
+      label: Uw e-mailadres
+      showLabel: true
+      placeholder: Uw e-mailadres
+      button: Bevestigen
+      required: true
+  jumbotronChangeContext:
+    heading: Welke buurt zoekt u?
+    subheading: Wijzig uw zoekopdracht
+    centered: true
+    headingcentered: true
+    huisnrContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Huisnummer + toev.
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 12A
+      remove: true
+    postcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 12A
+      required: true
+      patterntype: zipcode
+  jumbotron2Context:
+    modifier: slim
+    heading: Meld je aan voor de mail service
+    h: h2
+    subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
 
 

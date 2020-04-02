@@ -7,64 +7,55 @@
 
 <div class="container row" id="content" role="main">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered-medium">
-        <div class="row">
-          <p class="jumbotron__subheader">Dienstverlening</p>
-          <h1 class="jumbotron__header h2">Producten &amp; diensten</h1>
-          <p class="jumbotron__intro">Zoek naar diensten van diverse overheidsorganisaties voor particulieren en ondernemers. U kunt ook alle producten en diensten
-          per organisatie bekijken.</p>
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+            <label for="input543" class="visually-hidden">Zoekterm</label>
+            <div class="form__row form__row--medium">
+              <input type="text" id="input543" class="input-text input-text--searchmedium" placeholder="Waar bent u naar opzoek?" />
+            </div>
+          </fieldset>
         </div>
-
-        <form class="form" data-decorator="init-form-validation">
-          <div class="form__row form__row--large">
+        <div class="form__row form__row--medium columns columns--dominant">
+          <div class="column">
             <fieldset>
-              <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
-              <label for="input543" class="visually-hidden">Zoekterm</label>
-              <div class="form__row form__row--medium">
-                 <input type="text" id="input543" class="input-text input-text--searchmedium" placeholder="Waar bent u naar opzoek?" />
+              <legend>Locatie</legend>
+              <div class="form__row">
+                {{ render "@input-text" postcodeInput }}
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Diensten voor</legend>
+              <div class="form__row">
+                {{ render "@checkbox-selectall" checkallDienstenvoorContext}}
               </div>
             </fieldset>
           </div>
-          <div class="form__row form__row--medium columns columns--dominant">
-            <div class="column">
-              <fieldset>
-                <legend>Locatie</legend>
-                <div class="form__row">
-                  {{ render "@input-text" postcodeInput }}
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Diensten voor</legend>
-                <div class="form__row">
-                   {{ render "@checkbox-selectall" checkallDienstenvoorContext}}
-                </div>
-              </fieldset>
-            </div>
-            <div class="column">
-              <fieldset>
-                <legend>Diensten van</legend>
-                <div class="form__row">
-                  {{ render "@checkbox-selectall" checkallDienstenvanContext}}
-                </div>
-              </fieldset>
-            </div>
+          <div class="column">
+            <fieldset>
+              <legend>Diensten van</legend>
+              <div class="form__row">
+                {{ render "@checkbox-selectall" checkallDienstenvanContext}}
+              </div>
+            </fieldset>
           </div>
-          <div class="columns columns--vcenter">
-            <div class="column">
-              <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
-            </div>
-            <div class="column align-right">
-              <button type="submit" class="button button--primary">Zoeken</button>
-            </div>
+        </div>
+        <div class="columns columns--vcenter">
+          <div class="column">
+            <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
           </div>
+          <div class="column align-right">
+            <button type="submit" class="button button--primary">Zoeken</button>
+          </div>
+        </div>
 
 
-        </form>
-      </div>
+      </form>
+    {{/@jumbotron}}
 
-    </div>
   </div>
 
 </div>

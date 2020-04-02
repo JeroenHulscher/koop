@@ -7,13 +7,9 @@
 
 <div class="container row">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--side">
-        <div class="row">
-          <p class="jumbotron__subheader">Overheidsdocumenten</p>
-          <h1 class="jumbotron__header h2">Wegwijzer naar 2635121 actief openbaar gemaakte documenten van alle overheden</h1>
-        </div>
+    {{#> @jumbotron jumbotronContext }}
+
 
         <form class="form">
           <div class="form__row form__row--large">
@@ -96,7 +92,8 @@
           </div>
 
         </form>
-      </div>
+
+    {{/@jumbotron}}
 
     </div>
   </div>

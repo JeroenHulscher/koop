@@ -5,26 +5,6 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  inputPostcodeContext:
-    modifier: input-text--medium
-    labelmodifier: accent
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder: Bijv. 2453EH
-    required: true
-    patterntype: zipcode
-    title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
-  inputHuisnummerContext:
-    modifier: input-text--medium
-    labelmodifier: accent
-    id: 2
-    fieldLabel: Huisnummer
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder: 52
-    remove: true
   straalContext:
     options:
     - id: radio-1
@@ -228,3 +208,29 @@ context:
       - id: checkbox-24
         text: Waterschap
         name: onderwerp
+  jumbotronContext:
+    heading: Over welke betrekkingen wilt u meldingen ontvangen?
+    h: h2
+    subheading: Kies uw meldingen
+    intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
+    centered: true
+    inputPostcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 2453EH
+      required: true
+      patterntype: zipcode
+      title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
+    inputHuisnummerContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Huisnummer
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: 52
+      remove: true

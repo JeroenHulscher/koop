@@ -5,12 +5,19 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  prefixContext:
-    modifier: input-text--medium
-    modifier2: input-text__prefix--medium
-    prefix: true
-    type: text
-    prefixLabel: https://www.overheid.nl
-  formalertContext:
-    modifier: alert--warning
-    text: De opgegeven URI is ongeldig.
+  jumbotronContext:
+    heading: Zoek een URI
+    subheading: URI resolver
+    intro: Doorzoek hier de informatie in de collecties van Overheid.nl op basis van een Uniform Resource Identifier (URI).
+    centered: true
+    headingcentered: true
+    size: medium
+    prefixContext:
+      modifier: input-text--medium
+      modifier2: input-text__prefix--medium
+      prefix: true
+      type: text
+      prefixLabel: https://www.overheid.nl
+    formalertContext:
+      modifier: alert--warning
+      text: De opgegeven URI is ongeldig.

@@ -7,43 +7,29 @@
 
 <div class="container" id="content" role="main">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--centered">
-
-        <div class="jumbotron__heading jumbotron__heading--centered">
-          <p class="jumbotron__subheader">Lokale wet- en regelgeving</p>
-          <h1 class="jumbotron__header">Raadpleeg 87654 regelingen van decentrale overheden</h1>
-          <p class="jumbotron__intro">
-               Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.
-          </p>
-        </div>
-
-        <form class="form form__row form__row--medium u-nomargin">
-          <fieldset class="u-nomargin">
-            <legend class="visually-hidden">Doorzoek de decentrale overheden</legend>
-            <div class="form__row form__row--medium">
-              <div class="column form__row column-d-9">
-                {{ render "@input-text--medium" inputZoekwoord merge=true }}
-              </div>
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset class="u-nomargin">
+          <legend class="visually-hidden">Doorzoek de decentrale overheden</legend>
+          <div class="form__row form__row--medium">
+            <div class="column form__row column-d-9">
+              {{ render "@input-text--medium" inputZoekwoord merge=true }}
             </div>
+          </div>
 
-            <div class="columns">
-              <div class="u-order--d2 align-right form__row">
-                <button type="submit" class="form__button button button--primary button--large">Zoeken</button>
-              </div>
-              <div class="u-order--d1 u-nomargin">
-                <a href="#" class="cta">Uitgebreid zoeken</a>
-              </div>
+          <div class="columns">
+            <div class="u-order--d2 align-right form__row">
+              <button type="submit" class="form__button button button--primary button--large">Zoeken</button>
             </div>
-          </fieldset>
-        </form>
+            <div class="u-order--d1 u-nomargin">
+              <a href="#" class="cta">Uitgebreid zoeken</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
 
-
-
-      </div>
-
-    </div>
   </div>
 
   <div class="row row--large">

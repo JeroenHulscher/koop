@@ -5,14 +5,20 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Verfijn op zoekwoord
-    remove: true
+  jumbotronContext:
+    heading: Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden
+    subheading: Overheidsdocumenten
+    intro: Intro.
+    centered: true
+    headingcentered: true
+    inputSearchContext:
+      modifier: input-text--searchmedium
+      id: 1
+      fieldLabel: Postcode
+      fieldLabelVisible: false
+      fieldInstruction:
+      fieldPlaceholder: Verfijn op zoekwoord
+      remove: true
   themaItems:
     - title: Cultuur &amp; Recreatie
       id: 1

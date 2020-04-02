@@ -10,24 +10,38 @@ context:
     heading: Op zoek naar een ouder besluit?
     content: <p>Berichtgeving over een besluit blijft 8 weken beschikbaar via berichten over uw buurt. Na deze periode vindt u deze besluiten op ‘Officiële bekendmakingen’. In deze originele bron kunt u zoeken naar alle publicaties die betrekking hebben op uw omgeving.</p>
     buttonText: Zoek in oudere besluiten
-  huisnrContext:
-    modifier: input-text--medium
-    labelmodifier: accent
-    id: 1
-    fieldLabel: Huisnummer + toev.
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder: Bijv. 12A
-    remove: true
-  postcodeContext:
-    modifier: input-text--medium
-    labelmodifier: accent
-    id: 2
-    fieldLabel: Postcode
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder: Bijv. 12A
-    required: true
-    patterntype: zipcode
   picture1:
     src: ../../images/temp/Landing-Archief.jpg
+  jumbotronContext:
+    heading: Wat speelt er in úw buurt
+    subheading: Berichten over uw buurt
+    intro: Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
+    centered: true
+    headingcentered: true
+    huisnrContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Huisnummer + toev.
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 12A
+      remove: true
+    postcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 12A
+      required: true
+      patterntype: zipcode
+  jumbotron2Context:
+    modifier: slim
+    heading: Meld je aan voor de mail service
+    h: h2
+    subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
+    centered: true
+    headingcentered: true
+

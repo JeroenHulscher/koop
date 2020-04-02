@@ -6,17 +6,23 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
-  inputsubmitContext:
-    button: Zoek verdagen
-    placeholder: Vul hier uw zoekwoord(en) in
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Zoekwoord
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Vul hier uw zoekwoord(en) in
-    remove: true
+  jumbotronContext:
+    heading: Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is
+    subheading: Verdragenbank
+    intro: Intro.
+    centered: true
+    headingcentered: true
+    inputsubmitContext:
+      button: Zoek verdagen
+      placeholder: Vul hier uw zoekwoord(en) in
+    inputSearchContext:
+      modifier: input-text--searchmedium
+      id: 1
+      fieldLabel: Zoekwoord
+      fieldLabelVisible: false
+      fieldInstruction:
+      fieldPlaceholder: Vul hier uw zoekwoord(en) in
+      remove: true
   doubleline1Context:
     text: Overzicht verdragen in voorbereiding
     text2: officielebekendmakingen.nl
