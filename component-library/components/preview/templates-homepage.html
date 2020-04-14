@@ -112,22 +112,23 @@
 <div class="container">
   <div class="row row--spacer">
 
-    <div class="jumbotron jumbotron--highlight">
-      <div class="jumbotron__content jumbotron__content--centered">
-        <div class="jumbotron__heading jumbotron__heading--centered">
-          <p class="jumbotron__subheader">Berichten over uw buurt</p>
-          <h1 class="jumbotron__header">Wat speelt er in úw buurt</h1>
-          <p class="jumbotron__intro">
-              Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
-          </p>
-        </div>
-        <form class="form" data-decorator="init-form-validation">
-          <fieldset>
-            <legend class="visually-hidden">Zoek berichten</legend>
-            <div class="form__row ">
-              <div class="columns">
-                <div class="form__row form__row--medium">
-                  
+<div class="jumbotron">
+  <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered">
+    <div class="jumbotron__heading jumbotron__heading--centered">
+      <p class="jumbotron__subheader">Berichten over uw buurt</p>
+      <h1 class="jumbotron__header ">Wat speelt er in úw buurt</h1>
+        <p class="jumbotron__intro">
+          Alle vergunningen, plannen en plaatselijke regelgevingen die direct invloed hebben op jouw buurt in één archief.
+        </p>
+    </div>
+    
+          <form class="form" data-decorator="init-form-validation">
+            <fieldset>
+              <legend class="visually-hidden">Zoek berichten</legend>
+              <div class="form__row ">
+                <div class="columns">
+                  <div class="form__row form__row--medium">
+                    
 
   <label for="input-text-2" class="form__label form__label--accent">Postcode</label>
 
@@ -154,9 +155,9 @@
 
 
 
-                </div>
-                <div class="form__row form__row--medium">
-                  <div class="relative">
+                  </div>
+                  <div class="form__row form__row--medium">
+                    <div class="relative">
 
 
   <label for="input-text-1" class="form__label form__label--accent">Huisnummer + toev.</label>
@@ -187,28 +188,28 @@
 </div>
 
 
-                </div>
-                <div class="form__row form__row--medium">
-                  <label class="form__label form__label--accent" for="">Straal
-                    <span class="mandatory">Verplicht veld</span>
-                  </label>
-                  <div class="select-custom select-custom--large">
-                  <select>
-                    <option>250m</option>
-                    <option>1km</option>
-                    <option>2km</option>
-                  </select>
+                  </div>
+                  <div class="form__row form__row--medium">
+                    <label class="form__label form__label--accent" for="">Straal</label>
+                    <span class="mandatory">Verplicht</span>
+                    <div class="select-custom select-custom--large">
+                      <select>
+                        <option>250m</option>
+                        <option>1km</option>
+                        <option>2km</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="form__row align-right">
-              <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </div>
+              <div class="form__row align-right">
+                <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
+              </div>
+            </fieldset>
+          </form>
+    
+  </div>
+</div>
 
   </div>
   <div class="row">
@@ -224,7 +225,7 @@
 </div>
 </div>
       <div class="column column-d-7 column--padded-large">
-        <div class="block-content">
+        <div class="block-content   ">
     <p class="block-content__subheading">
       <i>Berichten over uw buurt</i>
     </p>
@@ -245,7 +246,7 @@
 </picture>
 </div>
       <div class="column column-d-7 column--padded-large">
-        <div class="block-content">
+        <div class="block-content   ">
     <p class="block-content__subheading">
       <i>Berichten ouder dan 8 weken</i>
     </p>
@@ -262,33 +263,32 @@
   </div>
 
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--promo">
 
-      <div class="jumbotron__content jumbotron__content--centered">
-        <div class="align-center">
-          <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
-          <h2 class="jumbotron__header">Meld je aan voor de mail service</h2>
-        </div>
-        <form class="form">
-          <fieldset>
-            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-            <div class="form__row">
-              <div class="input-inputsubmit ">
+<div class="jumbotron jumbotron--slim">
+  <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered">
+    <div class="jumbotron__heading jumbotron__heading--centered">
+      <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
+      <h2 class="jumbotron__header ">Meld je aan voor de mail service</h2>
+    </div>
+          <form class="form" data-decorator="init-form-validation">
+            <fieldset>
+              <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+              <div class="form__row">
+                <div class="input-inputsubmit ">
 
   <div class="input-inputsubmit__grid">
     <label class="visually-hidden"  for="101">Uw e-mailadres</label>
-    <input id="101"  type="text" class="input " placeholder="Uw e-mailadres" />
+    <input id="101" required type="email" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Aanmelden</span></button>
   </div>
 </div>
 
-            </div>
-          </fieldset>
-        </form>
+              </div>
+            </fieldset>
+          </form>
+  </div>
+</div>
 
-      </div>
-
-    </div>
   </div>
 
 </div>

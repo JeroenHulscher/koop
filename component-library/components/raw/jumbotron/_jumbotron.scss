@@ -4,10 +4,22 @@
   margin-bottom: 1em;
   position: relative;
 
+  background: $lightBlue;
+  padding: 2.5em 1em;
+
   @media (min-width: $breakpointDesktop) {
-    padding: 0 4em;
+    padding: 3.5em 2em;
   }
 
+  @media (min-width: $breakpointDesktopL) {
+    padding: 3.5em 4em;
+  }
+
+  &--transparent {
+    background: none;
+  }
+
+  // = default, do not use anymore.
   &--highlight {
     background: $lightBlue;
     padding: 2.5em 1em;
@@ -24,7 +36,8 @@
     margin-bottom: .25em;
   }
 
-  &--promo {
+  &--promo,
+  &--slim {
     background: $lightBlue;
     padding: 2em 1em;
     @media (min-width: $breakpointDesktop) {
@@ -46,7 +59,6 @@
 
   &__content {
 
-
     &--side {
       max-width: em(620);
       @media (min-width: $breakpointDesktop) {
@@ -57,21 +69,23 @@
       max-width: em(750);
       padding: 0;
       margin: 0 auto;
-    }
-    &--centered-medium {
-      max-width: em(860);
-    }
-    &--centered-s {
-      max-width: em(560);
-      padding: 0;
-      margin: 0 auto;
+
+      &-medium {
+        max-width: em(860);
+      }
+      &-s,
+      &-small {
+        max-width: em(560);
+        padding: 0;
+        margin: 0 auto;
+      }
     }
   }
 
   &__subheader {
     font-size: 1.125rem;
     font-style: italic;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     line-height: 1.125em;
     @media (min-width: $breakpointDesktop) {
       font-size: 1.5rem;
@@ -127,7 +141,11 @@
       font-size: 1.3rem;
       line-height: 1.8rem;
       margin-top: 1em;
-      margin-bottom: 1.5em;
+      margin-bottom: 1.75em;
+    }
+
+    & ~ p {
+      margin-top: -1em;
     }
   }
 
@@ -148,4 +166,9 @@
     }
   }
 
+}
+
+.modal .jumbotron {
+  padding: 0;
+  background: none;
 }

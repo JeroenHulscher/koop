@@ -1,5 +1,5 @@
 $gutter: 1em;
-$gutter-sm: 2em;
+$gutter--sm: 2em;
 $gutter--med: 4em;
 $gutter--lg: 6em;
 
@@ -9,34 +9,6 @@ $gutter--lg: 6em;
   }
   .column-count--half {
     column-count:2;
-  }
-}
-
-.row {
-  margin-bottom: 1.5em;
-
-  &--thick {
-    margin-top: 1.5em;
-  }
-
-  &--medium {
-    margin-bottom: 1.5em;
-  }
-
-  &--large {
-    margin-bottom: 2.5em;
-  }
-  &--xlarge {
-    margin-bottom: 2.5em;
-  }
-  &--xxlarge {
-    margin-bottom: 4em;
-  }
-  &--xxxlarge {
-    margin-bottom: 8em;
-  }
-  &--spacer {
-    margin-bottom: 3.25em;
   }
 }
 
@@ -76,6 +48,13 @@ $gutter--lg: 6em;
         }
       }
     }
+    &--gutter-sm {
+      @media ( min-width: $breakpointDesktop ) {
+        > * {
+          margin-left: $gutter--sm;
+        }
+      }
+    }
 
     > *:first-child,
     > *:only-child, {
@@ -94,6 +73,8 @@ $gutter--lg: 6em;
     }
 
     .column {
+      position: relative;
+
       &--padded {
         &-med {
           @media ( min-width: $breakpointDesktop ) {

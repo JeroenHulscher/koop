@@ -41,7 +41,7 @@
     this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0] || false;
 
     if(this.button){
-      this.button.setAttribute('hidden', 'hidden');
+      // this.button.setAttribute('hidden', 'hidden');
       this.init();
     }
   };

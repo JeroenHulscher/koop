@@ -157,7 +157,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-b99a80d89dec83cb1f928bc21c5094d7-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content   "</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content__subheading"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Berichten over uw buurt<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -175,13 +175,13 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b99a80d89dec83cb1f928bc21c5094d7-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> slim}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">block-content--slim</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> highlight}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">block-content--highlight</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> flexed}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">block-content--flexed</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> subheading}}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content__subheading"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span></span><span class="hljs-template-variable">{{subheading}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content__heading"</span>&gt;</span></span><span class="hljs-template-variable">{{heading}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> htype}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{htype}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">2</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content__heading"</span>&gt;</span></span><span class="hljs-template-variable">{{heading}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> htype}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{htype}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">2</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> content}}</span><span class="xml">
     </span><span class="hljs-template-variable">{{{content}}}</span><span class="xml">
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
@@ -190,6 +190,9 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{href}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> buttonModifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">button--</span></span></span><span class="hljs-template-variable">{{buttonModifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{buttonText}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       </span><span class="hljs-comment">{{!-- {{render "<a href="button.html">@button</a>" }} --}}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> cta}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ctahref}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-content__cta"</span> </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> ctaexternal}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">rel</span>=<span class="hljs-string">"external"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-variable">{{ctalabel}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -241,8 +244,12 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.block-content</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2em</span> <span class="hljs-number">0</span>;
   <span class="hljs-attribute">position</span>: relative;
+
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+  }
 
   &amp;__heading {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
@@ -252,6 +259,7 @@
   }
   <span class="hljs-selector-tag">h3</span><span class="hljs-selector-class">.block-content__heading</span> {
     <span class="hljs-attribute">font-size</span>: em(<span class="hljs-number">22</span>);
+    <span class="hljs-attribute">margin-bottom</span>: em(<span class="hljs-number">8</span>);
   }
 
   &amp;__subheading {
@@ -270,13 +278,43 @@
 
   @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
     &amp;--flexed {
-      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3em</span>;
+      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">1.5em</span>;
     }
+
     &amp;--flexed &amp;__cta {
       <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">bottom</span>: <span class="hljs-number">2em</span>;
-      <span class="hljs-attribute">left</span>: <span class="hljs-number">4em</span>;
+      <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
     }
+  }
+
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+    &amp;<span class="hljs-selector-class">.block-content--highlight</span><span class="hljs-selector-class">.block-content--flexed</span> {
+      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3.5em</span>;
+    }
+    &amp;<span class="hljs-selector-class">.block-content--highlight</span><span class="hljs-selector-class">.block-content--flexed</span> &amp;__cta {
+      <span class="hljs-attribute">bottom</span>: <span class="hljs-number">2em</span>;
+    }
+  }
+
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+    <span class="hljs-selector-class">.block-content--flexed</span><span class="hljs-selector-class">.block-content--highlight</span> {
+      &amp;__cta {
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">4em</span>;
+      }
+    }
+  }
+
+  &amp;--slim {
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2em</span>;
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">2em</span>;
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+      <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2em</span>;
+      <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">2em</span>;
+    }
+  }
+
+  &amp;--slim &amp;__cta {
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">2em</span>;
   }
 }
 
@@ -296,7 +334,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">657 Bytes</span>
+                    <span class="Meta-value">1.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -396,12 +434,14 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="templates-homepage.html">@<span>templates-homepage</span></a>, 
             
-                <a href="templates-cvdr-homepage.html">@<span>templates-cvdr-homepage</span></a>
+                <a href="templates-cvdr-homepage.html">@<span>templates-cvdr-homepage</span></a>, 
+            
+                <a href="templates-onl2-dienst-homepage.html">@<span>templates-onl2-dienst-homepage</span></a>
             
             </span>
         </li>
@@ -3068,6 +3108,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
                 <span>Ol Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--action.html" data-pjax>
+                <span>Action</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -8084,6 +8148,142 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-search-results.html" data-pjax>
                 <span>Zoekresultaten</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl2-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl 2 Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage.html" data-pjax>
+                <span>Beleid. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage-uitgebreid.html" data-pjax>
+                <span>Beleid. - Zoek oproep</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage.html" data-pjax>
+                <span>Dienstverl. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage-uitgebreid.html" data-pjax>
+                <span>Dienstverl. - Uitgebreid zoeken</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-searchresults.html" data-pjax>
+                <span>2.0 - Searchresults</span>
                 
 
 <div class="Status Status--unlabelled">

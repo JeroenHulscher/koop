@@ -92,59 +92,63 @@
 
 <div class="container row">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--side">
-        <div class="row">
-          <p class="jumbotron__subheader">Overheidsdocumenten</p>
-          <h1 class="jumbotron__header h2">Wegwijzer naar 2635121 actief openbaar gemaakte documenten van alle overheden</h1>
-        </div>
-
-        <form class="form">
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend class="visually-hidden">Doorzoek overheidsdocumenten</legend>
-              <div class="form__row form__row--medium">
-                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
-              </div>
-              <div class="form__row">
-                <ul class="list list--inline">
-                  <li class="list__item">
-                      <div class="input-radio">
-    <input class="radio__input" value=""   type="radio"  id="option-1" name="zoek" />
+<div class="jumbotron">
+  <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered-medium">
+    <div class="jumbotron__heading ">
+      <p class="jumbotron__subheader">Overheidsdocumenten</p>
+      <h1 class="jumbotron__header h2">Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden</h1>
+        <p class="jumbotron__intro">
+          Intro.
+        </p>
+    </div>
+    
+    
+            <form class="form">
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend class="visually-hidden">Doorzoek overheidsdocumenten</legend>
+                  <div class="form__row form__row--medium">
+                     <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+                  </div>
+                  <div class="form__row">
+                    <ul class="list list--inline">
+                      <li class="list__item">
+                          <div class="input-radio">
+    <input class="radio__input" value="" checked  type="radio"  id="option-1" name="zoek" />
     <label class="radio__label" for="option-1">
       Zoek alleen in titels
     </label>
   </div>
 
-                  </li>
-                  <li class="list__item">
-                      <div class="input-radio">
+                      </li>
+                      <li class="list__item">
+                          <div class="input-radio">
     <input class="radio__input" value=""   type="radio"  id="option-2" name="zoek" />
     <label class="radio__label" for="option-2">
       Zoek in de hele tekst
     </label>
   </div>
 
-                  </li>
-                </ul>
+                      </li>
+                    </ul>
+                  </div>
+    
+                </fieldset>
               </div>
-
-            </fieldset>
-          </div>
-          <div class="columns columns--dominant">
-            <div class="column">
-
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Datum beschikbaar <span class="tooltip " data-decorator="tooltip">
+              <div class="columns columns--dominant">
+                <div class="column">
+    
+                  <div class="form__row form__row--large">
+                    <fieldset>
+                      <legend>Datum beschikbaar <span class="tooltip " data-decorator="tooltip">
   <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
   <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
 </span>
 </legend>
-                  <div class="form__row form__row--medium">
-                      <div class="input-radio">
-    <input class="radio__input" value=""   type="radio"  id="option-checkbox-2220" name="onderwerp" />
+                      <div class="form__row form__row--medium">
+                          <div class="input-radio">
+    <input class="radio__input" value="" checked  type="radio"  id="option-checkbox-2220" name="onderwerp" />
     <label class="radio__label" for="option-checkbox-2220">
       Alle
     </label>
@@ -180,45 +184,45 @@
     </label>
   </div>
 
-                  </div>
-                  <div class="form__row">
-                    <label>Startdatum</label>
-                      <div class="datepicker">
-    <input type="date"  value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+                      </div>
+                      <div class="form__row">
+                        <label>Startdatum</label>
+                          <div class="datepicker">
+    <input type="date"  value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" />
   </div>
 
 
-                    <a href="#" class="reset">
-                      <small>Herstel</small>
-                    </a>
-                  </div>
-                  <div class="form__row">
-                    <label>Einddatum</label>
-                      <div class="datepicker">
-    <input type="date"  value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+                        <a href="#" class="reset">
+                          <small>Herstel</small>
+                        </a>
+                      </div>
+                      <div class="form__row">
+                        <label>Einddatum</label>
+                          <div class="datepicker">
+    <input type="date"  value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" />
   </div>
 
 
-                    <a href="#" class="reset">
-                      <small>Herstel</small>
-                    </a>
+                        <a href="#" class="reset">
+                          <small>Herstel</small>
+                        </a>
+                      </div>
+                    </fieldset>
                   </div>
-                </fieldset>
-              </div>
-            </div>
-            <div class="column">
-
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Informatiesoort <span class="tooltip " data-decorator="tooltip">
+                </div>
+                <div class="column">
+    
+                  <div class="form__row form__row--large">
+                    <fieldset>
+                      <legend>Informatiesoort <span class="tooltip " data-decorator="tooltip">
   <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
   <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
 </span>
 
-                  </legend>
-                  <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                      </legend>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-122" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -276,18 +280,18 @@
   <a href="#" id="id122" data-handler="open-modal" data-modal="modal-122" class="subselection__trigger icon">Selecteer informatiesoort(en)</a>
 </div>
 
-                </fieldset>
-              </div>
-
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Thema <span class="tooltip " data-decorator="tooltip">
+                    </fieldset>
+                  </div>
+    
+                  <div class="form__row form__row--large">
+                    <fieldset>
+                      <legend>Thema <span class="tooltip " data-decorator="tooltip">
   <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
   <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
 </span>
 
-                  </legend>
-                  <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                      </legend>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-16" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -354,18 +358,18 @@
   <a href="#" id="id16" data-handler="open-modal" data-modal="modal-16" class="subselection__trigger icon">Selecteer thema(s)</a>
 </div>
 
-                </fieldset>
-              </div>
-
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Organisatie <span class="tooltip " data-decorator="tooltip">
+                    </fieldset>
+                  </div>
+    
+                  <div class="form__row form__row--large">
+                    <fieldset>
+                      <legend>Organisatie <span class="tooltip " data-decorator="tooltip">
   <button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger">Help?</button>
   <span role="tooltip" id="tt1" class="tooltip__content">U moet dit volledig en naar waarheid invullen</span>
 </span>
 
-                  </legend>
-                  <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                      </legend>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-1" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -423,19 +427,21 @@
   <a href="#" id="id1" data-handler="open-modal" data-modal="modal-1" class="subselection__trigger icon">Selecteer organisatie(s)</a>
 </div>
 
-                </fieldset>
+                    </fieldset>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="align-right">
-            <ul class="list list--inline">
-              <li><button type="submit" class="button icon-bg button--erase">Leegmaken</button></li>
-              <li><button type="submit" class="button button--primary">Zoeken</button></li>
-            </ul>
-          </div>
-
-        </form>
-      </div>
+              <div class="align-right">
+                <ul class="list list--inline">
+                  <li><button type="submit" class="button icon-bg button--erase">Leegmaken</button></li>
+                  <li><button type="submit" class="button button--primary">Zoeken</button></li>
+                </ul>
+              </div>
+    
+            </form>
+    
+  </div>
+</div>
 
     </div>
   </div>
@@ -462,7 +468,7 @@
 
   <div class="input-inputsubmit__grid">
     <label class="visually-hidden"  for="101">Uw e-mailadres</label>
-    <input id="101"  type="text" class="input " placeholder="Uw e-mailadres" />
+    <input id="101" required type="email" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Aanmelden</span></button>
   </div>
 </div>

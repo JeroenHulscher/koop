@@ -21,6 +21,13 @@
       &:hover {
         box-shadow: 0 0 13px rgba(0,0,0,0.3);
       }
+      &:active {
+        background: $darkBlue;
+        color: white;
+      }
+      &:active .subselection__summaryitem__remove {
+        background-image: $iconCrossWhite;
+      }
 
       .subselection__summaryitem__remove {
         position: absolute;

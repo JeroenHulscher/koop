@@ -306,19 +306,18 @@
 
 
       <div class="row row--spacer">
-        <div class="jumbotron jumbotron--promo">
 
-          <div class="jumbotron__content">
-
-            <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
-
-            <h2 class="jumbotron__header">Meld je aan voor de mail service</h2>
-
-            <form class="form" data-decorator="init-form-validation">
-              <fieldset>
-                <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-                <div class="form__row">
-                  <div class="input-inputsubmit ">
+<div class="jumbotron jumbotron--slim">
+  <div class="jumbotron__content">
+    <div class="jumbotron__heading ">
+      <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
+      <h2 class="jumbotron__header ">Meld je aan voor de mail service</h2>
+    </div>
+              <form class="form" data-decorator="init-form-validation">
+                <fieldset>
+                  <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+                  <div class="form__row">
+                    <div class="input-inputsubmit ">
 
   <div class="input-inputsubmit__grid">
     <label class="visually-hidden"  for="101">Uw e-mailadres</label>
@@ -327,13 +326,12 @@
   </div>
 </div>
 
-                </div>
-              </fieldset>
-            </form>
+                  </div>
+                </fieldset>
+              </form>
+  </div>
+</div>
 
-          </div>
-
-        </div>
       </div>
 
 
@@ -355,56 +353,56 @@
             </address>
             <ul class="list list--inline">
               <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-4">Wijzigen</a></li>
-              <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bewaar deze zoekopdracht</a></li>
+              <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-5">Bewaar deze zoekopdracht</a></li>
             </ul>
 
             <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
               <div class="modal__inner">
                 <div class="modal__content">
-                  <div class="align-center">
-                    <p class="jumbotron__subheader">Wijzig uw zoekopdracht</p>
-                    <h1 class="jumbotron__header">Welke buurt zoekt u?</h1>
-                  </div>
-                  <form class="form" data-decorator="init-form-validation">
-                    <fieldset>
-                      <legend class="visually-hidden">Zoek berichten</legend>
-                      <div class="form__row ">
-                        <div class="columns">
-                          <div class="form__row form__row--medium">
-                            <div class="relative">
 
+<div class="jumbotron">
+  <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered">
+    <div class="jumbotron__heading jumbotron__heading--centered">
+      <p class="jumbotron__subheader">Wijzig uw zoekopdracht</p>
+      <h1 class="jumbotron__header ">Welke buurt zoekt u?</h1>
+    </div>
+    
+                        <form class="form" data-decorator="init-form-validation">
+                          <fieldset>
+                            <legend class="visually-hidden">Zoek berichten</legend>
+                            <div class="form__row ">
+                              <div class="columns">
+                                <div class="form__row form__row--medium">
+                                  
 
-  <label for="input-text-1" class="form__label form__label--accent">Postcode</label>
+  <label for="input-text-2" class="form__label form__label--accent">Postcode</label>
 
   <span class="mandatory">Verplicht</span>
 
 
   <input
     type="text"
-    id="input-text-1"
-    name="1"
+    id="input-text-2"
+    name="2"
     class="input input-text input-text--medium  "
-    placeholder="1234AB"
+    placeholder="Bijv. 12A"
     
     aria-invalid="false"
-    placeholder="1234AB"
+    placeholder="Bijv. 12A"
     required
     
     
+    data-pattern-type="zipcode"
     
-    
 
-    data-decorator="toggle-remove-visibility"
-    />
+/>
 
 
-  <a href="#" class="input-text__remove invisible" data-handler="empty-input" ><span class="visually-hidden">Wis waarde</span></a>
-</div>
 
 
-                          </div>
-                          <div class="form__row form__row--medium">
-                            <div class="relative">
+                                </div>
+                                <div class="form__row form__row--medium">
+                                  <div class="relative">
 
 
   <label for="input-text-1" class="form__label form__label--accent">Huisnummer + toev.</label>
@@ -435,61 +433,68 @@
 </div>
 
 
-                          </div>
-                          <div class="form__row form__row--medium">
-                            <label class="form__label form__label--accent" for="">Straal
-                              <span class="mandatory">Verplicht veld</span>
-                            </label>
-                            <div id="1" class="select-custom select-custom--large">
-  <select>
-      <option value="250"  true>250 meter</option>
-      <option value="500"  >500 meter</option>
-      <option value="1000"  >1000 meter</option>
-      <option value="2000"  >2000 meter</option>
-      <option value="9000"  >Hele gemeente</option>
-  </select>
+                                </div>
+                                <div class="form__row form__row--medium">
+                                  <label class="form__label form__label--accent" for="">Straal</label>
+                                  <span class="mandatory">Verplicht</span>
+                                  <div class="select-custom select-custom--large">
+                                    <select>
+                                      <option>250m</option>
+                                      <option>1km</option>
+                                      <option>2km</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__row align-right">
+                              <button type="submit" class="form__button button button--primary button--large">Zoek opnieuw</button>
+                            </div>
+                          </fieldset>
+                        </form>
+    
+  </div>
 </div>
 
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form__row align-right">
-                        <button type="submit" class="form__button button button--primary">Zoek opnieuw</button>
-                      </div>
-                    </fieldset>
-                  </form>
                 </div>
 
                 <button type="button" data-handler="close-modal" class="modal__close">
                   <span class="visually-hidden">Sluiten</span>
                 </button>
+
               </div>
             </div>
 
-            <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+            <div id="modal-5" class="modal modal--wide modal--off-screen" hidden role="alert">
               <div class="modal__inner">
                 <div class="modal__content">
-                  <div class="align-center">
-                    <p class="jumbotron__subheader">Deze zoekopdracht bewaren</p>
-                    <h1 class="jumbotron__header">Meld je aan voor de mail</h1>
-                    <p class="jumbotron__intro">Schrijf u in en ontvang dagelijks een update in uw inbox over alles wat er bij u in de buurt gebeurt.</p>
-                  </div>
-                  <form class="form">
-                    <fieldset>
-                      <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-                      <div class="form__row">
-                        <div class="input-inputsubmit ">
+<div class="jumbotron">
+  <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered">
+    <div class="jumbotron__heading jumbotron__heading--centered">
+      <p class="jumbotron__subheader">Deze zoekopdracht bewaren</p>
+      <h2 class="jumbotron__header ">Meld je aan voor de mail</h2>
+        <p class="jumbotron__intro">
+          Schrijf u in en ontvang dagelijks een update in uw inbox over alles wat er bij u in de buurt gebeurt.
+        </p>
+    </div>
+                        <form class="form" data-decorator="init-form-validation">
+                          <fieldset>
+                            <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+                            <div class="form__row">
+                              <div class="input-inputsubmit ">
 
   <div class="input-inputsubmit__grid">
-    <label  for="">Uw e-mailadres</label>
-    <input id=""  type="text" class="input " placeholder="Uw e-mailadres" />
+    <label  for="101">Uw e-mailadres</label>
+    <input id="101" required type="text" class="input " placeholder="Uw e-mailadres" />
     <button class="button button--primary"><span>Bevestigen</span></button>
   </div>
 </div>
 
-                      </div>
-                    </fieldset>
-                  </form>
+                            </div>
+                          </fieldset>
+                        </form>
+  </div>
+</div>
                 </div>
                 <button type="button" data-handler="close-modal" class="modal__close">
                   <span class="visually-hidden">Sluiten</span>

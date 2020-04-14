@@ -91,9 +91,10 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-      <div class="row row--spacer hidden-mobile">
+      <div class="hidden-mobile">
         <div class="columns">
           <div class="column column-d-7">
+            <div class="row">
             <div class="input-inputsubmit ">
 
   <div class="input-inputsubmit__grid">
@@ -103,10 +104,12 @@
   </div>
 </div>
 
+            </div>
           </div>
         </div>
         <div class="">
-          <div class="sort ">
+          <div class="row">
+            <div class="sort ">
   <div class="columns">
     <div class="column">
       Sorteer op:
@@ -137,6 +140,7 @@
   </div>
 </div>
 
+          </div>
         </div>
       </div>
 
@@ -292,29 +296,21 @@
             <h2>Zoekfilter</h2>
 
           <div class="form__row form__row--large">
-            <h3>Geselecteerde filters (2)</h3>
-            <div class="form__selectedfilter ">
-  Gezocht op <span>leveringen</span>
-  <a href="#" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
-  </a>
-</div>
-<div class="form__selectedfilter ">
-  Bouwvergunning
-  <a href="#" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
-  </a>
-</div>
-<div class="form__selectedfilter ">
-  APV vergunning
-  <a href="#" class="form__selectedfilter__remove">
-    <span class="visually-hidden">verwijder</span>
-  </a>
-</div>
-
+            <h4>Geselecteerde filters (7)</h4>
+            <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+              <ul class="list list--unstyled">
+                <li><div class="form__selectedfilter">Waarde 1<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 2<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 3<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 4<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 5<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 6<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 7<a href="" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+              </ul>
+            </div>
           </div>
 
-          <form id="formid">
+          <form id="formid" data-decorator="init-form-validation">
             <div class="form__row form__row--large hidden-desktop">
               <label for="">Filter op trefwoord</label>
               
@@ -354,45 +350,45 @@
 </span>
 
               </legend>
-              <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+              <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
-  <div id="modal-12" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+  <div id="modal-13" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
         <h2>Selecteer informatiesoort(en)</h2>
           <div class="" data-decorator="init-filter-results">
             <div class="form__row form__row--medium">
-              <label class="visually-hidden" for="filter-id--12"></label>
-              <input type="text" aria-controls="resultfilter-12" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--12" class="js-filterresults__input input-text input-text--searchmedium"
+              <label class="visually-hidden" for="filter-id--13"></label>
+              <input type="text" aria-controls="resultfilter-13" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--13" class="js-filterresults__input input-text input-text--searchmedium"
             />
             </div>
-            <fieldset class="js-filterresults__results" role="region" id="resultfilter-12" aria-live="polite">
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-13" aria-live="polite">
               <legend class="visually-hidden">Selecteer informatiesoort(en)</legend>
 
                 <ul class="list--unstyled">
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"     type="checkbox" id="option-4" name="name"  data-value="Spanje"
+                      <input class="checkbox__input"     type="checkbox" id="option-465" name="name"  data-value="Spanje"
                         value="2" />
-                      <label class="checkbox__label" for="option-4">
+                      <label class="checkbox__label" for="option-465">
                         Spanje
                       </label>
                     </div>
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"     type="checkbox" id="option-5" name="name"  data-value="Griekenland"
+                      <input class="checkbox__input"     type="checkbox" id="option-565" name="name"  data-value="Griekenland"
                         value="2" />
-                      <label class="checkbox__label" for="option-5">
+                      <label class="checkbox__label" for="option-565">
                         Griekenland
                       </label>
                     </div>
                   </li>
                   <li class=" js-filterresults__result">
                     <div class="input-checkbox">
-                      <input class="checkbox__input"     type="checkbox" id="option-6" name="name"  data-value="Nederland"
+                      <input class="checkbox__input"     type="checkbox" id="option-665" name="name"  data-value="Nederland"
                         value="2" />
-                      <label class="checkbox__label" for="option-6">
+                      <label class="checkbox__label" for="option-665">
                         Nederland
                       </label>
                     </div>
@@ -409,7 +405,7 @@
       </div>
     </div>
   </div>
-  <a href="#" id="id12" data-handler="open-modal" data-modal="modal-12" class="subselection__trigger icon">Selecteer informatiesoort(en)</a>
+  <a href="#" id="id13" data-handler="open-modal" data-modal="modal-13" class="subselection__trigger icon">Selecteer informatiesoort(en)</a>
 </div>
 
             </fieldset>
@@ -423,7 +419,7 @@
 </span>
 
               </legend>
-               <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+               <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerSubmit": true }'>
   <div class="subselection__summary "></div>
   <div id="modal-12" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -493,7 +489,7 @@
 </span>
 
               </legend>
-              <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+              <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-1" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -603,7 +599,7 @@
               <div class="form__row form__row--medium">
                 <label>Startdatum</label>
                   <div class="datepicker">
-    <input type="date"  value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+    <input type="date"  value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" />
   </div>
 
@@ -615,7 +611,7 @@
               <div class="form__row form__row--medium">
                 <label>Einddatum</label>
                   <div class="datepicker">
-    <input type="date"  value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+    <input type="date"  value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" />
   </div>
 
@@ -627,7 +623,8 @@
             </fieldset>
           </div>
 
-          <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+          <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+
           </form>
         </div>
 
@@ -643,7 +640,6 @@
 </div>
 
 </div>
-
 <div class="footer row--footer" role="contentinfo">
   <div class="container columns">
     <div >

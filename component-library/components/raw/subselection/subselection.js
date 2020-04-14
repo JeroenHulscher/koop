@@ -13,8 +13,17 @@
   var formSubselection = function( element ) {
     this.element = element;
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
-    this.config.type = this.config.type || 'span';
-    this.config.maxShow = this.config.maxShow || false;
+
+    // config
+      // available summary item types: 'span', 'abbr'.
+      this.config.type = this.config.type || 'span';
+      // amount of items to show;
+      this.config.maxShow = this.config.maxShow || false;
+      // trigger a form submit after removing an summary item?
+      this.config.triggerSubmit = this.config.triggerSubmit || false;
+      // label of the trigger, when there are summary items
+      this.config.triggerOnChangeText = this.config.triggerOnChangeText || 'Aanpassen';
+
     if (onl.dom.$('.selection_popup', this.element)[0]) {
       this.triggerClassDefault = 'icon--';
       this.triggerClassActive = 'icon--';
@@ -203,7 +212,7 @@
     this.trigger = onl.dom.$('.subselection__trigger', this.element)[0] || onl.dom.$('.selection_popup', this.element)[0];
 
     if ( length > 0 ) {
-      this.trigger.innerText = this.config.triggerOnChangeText || 'Aanpassen';
+      this.trigger.innerText = this.config.triggerOnChangeText;
       this.trigger.classList.remove(this.triggerClassDefault);
       this.trigger.classList.add(this.triggerClassActive);
     } else {
@@ -217,7 +226,28 @@
     var item = e.target.parentNode;
     var itemLinkedId = item.getAttribute('data-linkedid');
     var target = document.getElementById(itemLinkedId);
+
+    // uncheck the correspondig input (radio/checkbox)
     target.checked = false;
+
+    if (this.config.triggerSubmit) {
+      var form = getClosest(item, 'form');
+      var buttonSubmit = form.querySelector('[type="submit"]');
+      console.log('form', form);
+      console.log('form buttonSubmit', buttonSubmit);
+      if (buttonSubmit){
+        setTimeout(function(){
+          buttonSubmit.click();
+        }, 100);
+      }
+      // if ("createEvent" in document) {
+      //   var evt = document.createEvent("HTMLEvents");
+      //   evt.initEvent("click", false, true);
+      //   buttonSubmit.dispatchEvent(evt);
+      // } else {
+      //   buttonSubmit.fireEvent("click");
+      // }
+    }
 
     // onchange event needs manual triggering on checkboxes
     if ("createEvent" in document) {
