@@ -22,10 +22,6 @@ h1,
     margin-bottom: 0.25em;
   }
 
-  &__sub {
-    // font-size: 0.55em;
-  }
-
   &--large {
     font-size: em(40);
   }
@@ -49,9 +45,9 @@ h3,
 .h3 {
   font-size: em(18);
   line-height: 1.25em;
-  margin-bottom: 0.75em;
+  margin-bottom: 1em;
   @media (min-width: $breakpointDesktop) {
-    font-size: em(18);
+    font-size: em(22);
   }
 }
 
@@ -115,9 +111,11 @@ p {
 }
 .docTitel {
   @extend .h3;
+  font-size: em(18);
 }
 .docAfdeling {
   @extend .h3;
+  font-size: em(18);
 }
 .docParagraaf {
   @extend .h5;

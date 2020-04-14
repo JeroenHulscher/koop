@@ -6,7 +6,7 @@
     {{#if radio}}
       {{#each options }}
         <div class="input-group__item">
-          <input class="input-group__input" {{checked}} {{disabled}} type="radio" id="option-{{ id }}" name="{{ name }}" />
+          <input class="input-group__input" {{checked}} {{disabled}} type="radio" id="option-{{ id }}" name="{{ name }}" data-linkedto="{{linkedto}}"/>
           <label class="input-group__label" for="option-{{ id  }}">
             {{{ text }}}
           </label>

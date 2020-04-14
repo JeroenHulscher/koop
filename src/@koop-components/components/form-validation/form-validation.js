@@ -209,7 +209,6 @@ var supports = function () {
 
     // Remove success message (if excists);
     messageValid = field.parentNode.querySelector('.form__success');
-    console.log('messageValid', messageValid);
     if (messageValid) {
       messageValid.parentNode.removeChild(messageValid);
     }
@@ -602,6 +601,8 @@ var supports = function () {
   formvalidation.prototype.submitHandler = function (event) {
     this.errors = [];
 
+    console.log('submitHandler');
+
     // Get all of the form elements
     var fields = event.target.elements;
     var subselections = this.element.querySelectorAll('.subselection__summary.required');
@@ -648,11 +649,12 @@ var supports = function () {
 
     // Otherwise, submit the form
     if (this.config.debug){
-      event.preventDefault();
-      console.log('Form submit success');
+      // event.preventDefault();
+      console.log('debug: Form submit');
     } else {
       // event.preventDefault();
-      // console.log('Success. SUBMIT! (idle)');
+      console.log('prod: Form submit');
+      this.element.submit();
     }
 
   };

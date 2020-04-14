@@ -8,11 +8,11 @@
   padding: 2.5em 1em;
 
   @media (min-width: $breakpointDesktop) {
-    padding: 3.5em 2em;
+    padding: 5em 2em;
   }
 
   @media (min-width: $breakpointDesktopL) {
-    padding: 3.5em 4em;
+    padding: 5em 4em;
   }
 
   &--transparent {
@@ -20,21 +20,19 @@
   }
 
   // = default, do not use anymore.
-  &--highlight {
-    background: $lightBlue;
-    padding: 2.5em 1em;
+  // &--highlight {
+  //   background: $lightBlue;
+  //   padding: 2.5em 1em;
 
-    @media (min-width: $breakpointDesktop) {
-      padding: 3.5em 2em;
-    }
+  //   @media (min-width: $breakpointDesktop) {
+  //     padding: 4em 2em;
+  //   }
 
-    @media (min-width: $breakpointDesktopL) {
-      padding: 3.5em 4em;
-    }
-  }
-  &--highlight &__header {
-    margin-bottom: .25em;
-  }
+  //   @media (min-width: $breakpointDesktopL) {
+  //     padding: 4em 4em;
+  //   }
+  // }
+
 
   &--promo,
   &--slim {
@@ -48,6 +46,8 @@
   &--green {
     background-color: $lightGreen;
   }
+
+
 
   &__heading {
     margin: 0 0 2em;
@@ -85,7 +85,7 @@
   &__subheader {
     font-size: 1.125rem;
     font-style: italic;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
     line-height: 1.125em;
     @media (min-width: $breakpointDesktop) {
       font-size: 1.5rem;
@@ -111,7 +111,7 @@
 
   &__header {
     margin-top: 0;
-    margin-bottom: .5em;
+    margin-bottom: .25em;
     font-size: 2em;
     line-height: 1em;
 
@@ -142,6 +142,10 @@
       line-height: 1.8rem;
       margin-top: 1em;
       margin-bottom: 1.75em;
+    }
+
+    & ~ p {
+      margin-top: -1em;
     }
   }
 

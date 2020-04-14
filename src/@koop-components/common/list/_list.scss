@@ -441,10 +441,6 @@ ol {
   padding: 0;
 
   li {
-    // background: $iconCrossRed;
-    // background-repeat: no-repeat;
-    // background-position: .325em;
-    // padding-left: 2em;
     position: relative;
 
     &:before {
@@ -456,25 +452,14 @@ ol {
       height: 1.25em;
       background: $iconCheck2Green no-repeat;
       opacity: 0;
-      // transform: translate(-1em, .25em);
     }
 
     &.is-active {
       padding-left: 2em;
       font-weight: bold;
-      // animation: slideIn ease .45s forwards;
-      // -webkit-animation: slideIn ease .45s forwards;
-      // -moz-animation: slideIn ease .45s forwards;
-      // -o-animation: slideIn ease .45s forwards;
-      // -ms-animation: slideIn ease .45s forwards;
 
       &:before {
         opacity: 1;
-        // animation: fadeIn ease .5s .5s forwards;
-        // -webkit-animation: fadeIn ease .5s .5s forwards;
-        // -moz-animation: fadeIn ease .5s .5s forwards;
-        // -o-animation: fadeIn ease .5s .5s forwards;
-        // -ms-animation: fadeIn ease .5s .5s forwards;
       }
     }
   }
@@ -483,7 +468,6 @@ ol {
 .list--inline {
   margin-left: 0;
   padding-left: 0;
-  // text-align: right;
 
   li {
     @media ( min-width: $breakpointDesktop ) {
@@ -501,6 +485,10 @@ ol {
 
 .list {
   margin-bottom: 1em;
+
+  &--nummeric {
+    list-style-type: lower-alpha;
+  }
 
   &--alphabet {
     margin-left: 0;
@@ -526,6 +514,35 @@ ol {
       color: white;
     }
   }
+
+  &--action {
+    padding: 0;
+    margin: 0 0 2em 0;
+
+    > li {
+      list-style: none;
+      border-bottom: 1px solid $lighterGrey;
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: block;
+        padding: em(6) 0;
+        background-repeat: no-repeat;
+        background-position: center right 5px;
+        background-size: 0.325em;
+        background-image: $dartRightBlueIcon;
+
+        &[rel="external"] {
+          background-image: $externalLinkIcon;
+          background-size: 0.5em;
+          background-position: center right;
+        }
+      }
+    }
+  }
+
+
 }
 
 .list--narrow {
@@ -700,13 +717,88 @@ ol {
   }
 }
 
+.list--iconedcontainer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
+  .list__item {
+    margin: 0 0 4em;
+    padding-top: 6em;
+    position: relative;
+
+    &__header {
+      margin-bottom: .325em;
+      font-size: em(21);
+    }
+    &__intro {
+      font-size: em(18);
+      margin-bottom: em(32);
+    }
+
+    @media (min-width: $breakpointDesktopL) {
+      padding-top: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      @media (min-width: $breakpointDesktopL) {
+        left: -5em;
+        top: 0;
+      }
+
+      height: 4em;
+      width: 4em;
+      background: $lightBlue;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: $darkBlue;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+
+    &--kids {
+      &:before {
+        background-image: $icon64kids;
+      }
+    }
+    &--family {
+      &:before {
+        background-image: $icon64family;
+      }
+    }
+    &--people {
+      &:before {
+        background-image: $icon64people;
+      }
+    }
+    &--finance {
+      &:before {
+        background-image: $icon64finance;
+      }
+    }
+    &--living {
+      &:before {
+        background-image: $icon64living;
+      }
+    }
+  }
+}
 .list--stepcontainer {
   margin: 0;
   padding: 0;
   list-style: none;
   counter-reset: my-awesome-counter;
 
-  > li {
+  > li,
+  .list__item {
     counter-increment: my-awesome-counter;
     margin: 0 0 4em 0em;
     border-bottom: 2px solid $lightGrey;
@@ -742,6 +834,16 @@ ol {
     &:last-child {
       padding-bottom: 0;
       border: 0;
+    }
+  }
+
+  .list__item {
+    &__header {
+      margin-bottom: .325em;
+    }
+    &__intro {
+      font-size: em(18);
+      margin-bottom: em(40);
     }
   }
 }

@@ -246,6 +246,18 @@ fieldset {
     position: relative;
     margin-right: .25em;
     margin-bottom: .25em;
+    pointer-events: none;
+
+    &:hover {
+      box-shadow: 0 0 13px rgba(0,0,0,0.3);
+    }
+    &:active {
+      background: $darkBlue;
+      color: white;
+    }
+    &:active &__remove {
+      background-image: $iconCrossWhite;
+    }
 
     > span {
       &::before {
@@ -258,14 +270,17 @@ fieldset {
 
     &__remove {
       background: $iconCrossBlue;
-      background-size: 0.5em;
       background-repeat: no-repeat;
-      width: 10px;
-      height: 10px;
+      background-size: .4em;
+      background-position: center;
       position: absolute;
-      right: 0.5em;
-      top: 0.5em;
+      width: 1.5em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
       display: inline-block;
+      pointer-events: auto;
     }
   }
 
@@ -653,9 +668,4 @@ input[type=number] {
       border-color: $green;
     }
   }
-}
-
-
-input:before {
-  content: "AAAA";
 }

@@ -18,10 +18,10 @@
 
 {{else}}
   {{#if haslabel}}
-    <label for="input--{{id}}">{{label}}</label>
+    <label class="form__label{{#if labelmodifier}} form__label--{{labelmodifier}}{{/if}}" for="input--{{id}}">{{label}}</label>
   {{/if}}
   <div class="datepicker">
-    <input type="date" {{#if required}}required{{/if}} value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+    <input type="date" {{#if required}}required{{/if}} value="" data-date="" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
   </div>
 

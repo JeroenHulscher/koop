@@ -190,3 +190,10 @@ variants:
       - content: <p>1 item</p>
       - content: <p>2 item</p>
       - content: <p>3 item</p>
+  - name: Action
+    status: ready
+    context:
+      modifier: list--action
+      items:
+      - content: <a href="#">Internal link</a>
+      - content: <a href="#" rel="external">Internal link</a>

@@ -1,7 +1,10 @@
 .pagination {
   font-size: 1.25rem;
+  margin-top: 0;
 
   &__index {
+    margin-top: 0;
+
     li {
       border-radius: 3px;
       font-weight: bold;
