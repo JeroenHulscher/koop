@@ -6,7 +6,7 @@
 </div>
 
 <div class="container row">
-  <div class="row">
+  <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
 
@@ -32,7 +32,7 @@
     {{/@jumbotron}}
 
   </div>
-  <div class="row row--medium">
+  <div class="row row--large">
 
 
     <h2>Over de verdragenbank</h2>
@@ -50,27 +50,21 @@
   </div>
   <div class="row row--large">
     <div class="columns">
-        <div class="jumbotron jumbotron--highlight jumbotron--flexed">
-          <div class="jumbotron__content">
-              <p class="jumbotron__subheader jumbotron__subheader--subtle">Nieuw toegevoegd</p>
-              <h2 class="jumbotron__header">Recente verdragen</h2>
-            <a href="#" class="cta">Bekijken</a>
-          </div>
-        </div>
-        <div class="jumbotron jumbotron--highlight jumbotron--flexed">
-          <div class="jumbotron__content">
-            <p class="jumbotron__subheader jumbotron__subheader--subtle">Depositaire verdragen</p>
-            <h2 class="jumbotron__header">Recente notificaties</h2>
-            <a href="#" class="cta">Bekijken</a>
-          </div>
-        </div>
-        <div class="jumbotron jumbotron--highlight jumbotron--flexed">
-          <div class="jumbotron__content">
-            <p class="jumbotron__subheader jumbotron__subheader--subtle">Verdragen Internationaal Privaatrecht</p>
-            <h2 class="jumbotron__header">Haagse Conferentie</h2>
-            <a href="#" class="cta">Bekijken</a>
-          </div>
-        </div>
+      <div class="block-content block-content--slim block-content--highlight block-content--flexed">
+        <p class="block-content__subheading"><em>Nieuw toegevoegd</em></p>
+        <h2 class="block-content__heading">Recente verdragen</h2>
+        <a href="#" class="block-content__cta cta">Bekijken <span class="visually-hidden">van recente verdragen</span></a>
+      </div>
+      <div class="block-content block-content--slim block-content--highlight block-content--flexed">
+        <p class="block-content__subheading"><em>Depositaire verdragen</em></p>
+        <h2 class="block-content__heading">Recente notificaties</h2>
+        <a href="#" class="block-content__cta cta">Bekijken <span class="visually-hidden">van recente notificaties</span></a>
+      </div>
+      <div class="block-content block-content--slim block-content--highlight block-content--flexed">
+        <p class="block-content__subheading"><em>Verdragen Internationaal Privaatrecht</em></p>
+        <h2 class="block-content__heading">Haagse Conferentie</h2>
+        <a href="#" class="block-content__cta cta">Bekijken <span class="visually-hidden">van de Haagse Conferentie</span></a>
+      </div>
     </div>
   </div>
 

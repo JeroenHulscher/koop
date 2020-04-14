@@ -49,6 +49,7 @@ context:
     selectAll: true
     selectAllID: 9876
     type: span
+    triggerSubmit: true
     Options:
       - Option: 1
         id: 1237

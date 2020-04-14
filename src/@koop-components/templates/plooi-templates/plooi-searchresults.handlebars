@@ -9,14 +9,18 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-      <div class="row row--spacer hidden-mobile">
+      <div class="hidden-mobile">
         <div class="columns">
           <div class="column column-d-7">
+            <div class="row">
             {{render "@input-inputsubmit" inputsubmitContext }}
+            </div>
           </div>
         </div>
         <div class="">
-          {{ render "@sort" sortContext }}
+          <div class="row">
+            {{ render "@sort" sortContext }}
+          </div>
         </div>
       </div>
 
@@ -46,11 +50,22 @@
             <h2>Zoekfilter</h2>
 
           <div class="form__row form__row--large">
-            <h3>Geselecteerde filters (2)</h3>
-            {{render "@form-selectedfilter" selectedfilterContext }}
+            <h4>Geselecteerde filters (7)</h4>
+            <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+              <ul class="list list--unstyled">
+                <li><div class="form__selectedfilter">Waarde 1<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 2<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 3<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 4<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 5<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 6<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 7<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+              </ul>
+              {{!-- {{render "@form-selectedfilter" selectedfilterContext }} --}}
+            </div>
           </div>
 
-          <form id="formid">
+          <form id="formid" data-decorator="init-form-validation">
             <div class="form__row form__row--large hidden-desktop">
               <label for="">Filter op trefwoord</label>
               {{ render "@input-text" inputsearchMobContext }}
@@ -104,7 +119,8 @@
             </fieldset>
           </div>
 
-          <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+          <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+
           </form>
         </div>
 
@@ -120,5 +136,4 @@
 </div>
 
 </div>
-
 {{ render "@footer" }}

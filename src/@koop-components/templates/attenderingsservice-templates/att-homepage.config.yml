@@ -10,6 +10,7 @@ context:
     subheading: Aanmelden voor de attenderingsservice
     intro: Ontvang automatisch updates in uw e-mail inbox over alles wat er in uw buurt gebeurt.
     centered: true
+    headingcentered: true
     inputEmailContext:
       modifier: input-text--medium
       labelmodifier: accent
@@ -18,6 +19,5 @@ context:
       fieldLabelVisible: true
       fieldInstruction:
       fieldPlaceholder: E-mailadres
-      remove: true
       type: email
       required: true

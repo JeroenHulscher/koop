@@ -12,7 +12,6 @@ context:
     subheading: Dienstverlening
     intro: Zoek naar diensten van diverse overheidsorganisaties voor particulieren en ondernemers. U kunt ook alle producten en diensten per organisatie bekijken.
     centered: true
-    size: medium
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in

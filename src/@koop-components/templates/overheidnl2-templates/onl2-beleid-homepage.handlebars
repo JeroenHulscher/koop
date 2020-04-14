@@ -1,0 +1,77 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" id="content" role="main">
+  <div class="row row--xxlg">
+
+    {{#> @jumbotron jumbotronContext }}{{/@jumbotron}}
+
+  </div>
+
+  <div class="row row--xlg">
+    <h2 class="row__heading">Meest bezocht</h2>
+    <div class="columns columns--gutter-sm">
+      {{ render "@block" block1Context }}
+      {{ render "@block" block2Context }}
+      {{ render "@block" block3Context }}
+    </div>
+  </div>
+
+  <div class="row">
+    <h2 class="row__heading">Alle mogelijke publicaties</h2>
+    <div class="row">
+      <div class="columns columns--gutter-sm">
+        <div class="column">
+          <h3>Beleidsonderzoek</h3>
+          {{ render "@list--action" list1 merge=true }}
+        </div>
+        <div class="column">
+          <h3>Advies en besluitvorming</h3>
+          {{ render "@list--action" list2 merge=true }}
+        </div>
+        <div class="column">
+          <h3>Beleidsonderzoek</h3>
+          {{ render "@list--action" list3 merge=true }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns columns--gutter-sm">
+        <div class="column">
+          <h3>Wet- en regelgeving</h3>
+          {{ render "@list--action" list1 merge=true }}
+        </div>
+        <div class="column">
+          <h3>Uitvoering</h3>
+          {{ render "@list--action" list2 merge=true }}
+        </div>
+        <div class="column">
+          <h3>Klachten en rechtspraak</h3>
+          {{ render "@list--action" list3 merge=true }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns columns--gutter-sm">
+        <div class="column">
+          <h3>Toezicht</h3>
+          {{ render "@list--action" list2 merge=true }}
+        </div>
+        <div class="column">
+          <h3>Hoe werkt de overheid?</h3>
+          {{ render "@list--action" list1 merge=true }}
+        </div>
+        <div class="column">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{{ render "@footer" }}
