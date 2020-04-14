@@ -928,8 +928,8 @@
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.triggerSubmit) {
       <span class="hljs-keyword">var</span> form = getClosest(item, <span class="hljs-string">'form'</span>);
       <span class="hljs-keyword">var</span> buttonSubmit = form.querySelector(<span class="hljs-string">'[type="submit"]'</span>);
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'form'</span>, form);
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'form buttonSubmit'</span>, buttonSubmit);
+      <span class="hljs-comment">// console.log('form', form);</span>
+      <span class="hljs-comment">// console.log('form buttonSubmit', buttonSubmit);</span>
       <span class="hljs-keyword">if</span> (buttonSubmit){
         setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
           buttonSubmit.click();

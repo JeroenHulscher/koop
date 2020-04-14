@@ -103,10 +103,10 @@
           <form class="form" data-decorator="init-form-validation">
             <fieldset>
               <legend class="visually-hidden">E-mailadres</legend>
-              <div class="form__row">
                 <div class="columns">
                   <div class="column">
-                    
+                    <div class="form__row">
+                      
 
   <label for="input-text-1" class="form__label form__label--accent">Postcode</label>
 
@@ -133,9 +133,11 @@
 
 
 
+                    </div>
                   </div>
                   <div class="column">
-                    <div class="relative">
+                    <div class="form__row">
+                      <div class="relative">
 
 
   <label for="input-text-2" class="form__label form__label--accent">Huisnummer</label>
@@ -166,20 +168,21 @@
 </div>
 
 
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div class="">
+                  <div class="columns">
+                    <div class="u-order--d2 align-right form__row">
+                      <button type="submit" class="form__button button button--primary">Adres ophalen</button>
+                    </div>
+                    <div class="u-order--d1 u-nomargin">
+                      <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
+                    </div>
+                  </div>
+                </div>
             </fieldset>
-            <div class="">
-              <div class="columns">
-                <div class="u-order--d2 align-right form__row">
-                  <button type="submit" class="form__button button button--primary">Adres ophalen</button>
-                </div>
-                <div class="u-order--d1 u-nomargin">
-                  <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
-                </div>
-              </div>
-            </div>
+    
           </form>
   </div>
 </div>

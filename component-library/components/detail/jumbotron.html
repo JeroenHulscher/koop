@@ -249,11 +249,11 @@
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">2.5em</span> <span class="hljs-number">1em</span>;
 
   @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5em</span> <span class="hljs-number">2em</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5em</span> <span class="hljs-number">2em</span>;
   }
 
   @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5em</span> <span class="hljs-number">4em</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5em</span> <span class="hljs-number">4em</span>;
   }
 
   &amp;--transparent {
@@ -261,21 +261,19 @@
   }
 
   <span class="hljs-comment">// = default, do not use anymore.</span>
-  &amp;--highlight {
-    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$lightBlue</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">2.5em</span> <span class="hljs-number">1em</span>;
+  <span class="hljs-comment">// &amp;--highlight {</span>
+  <span class="hljs-comment">//   background: $lightBlue;</span>
+  <span class="hljs-comment">//   padding: 2.5em 1em;</span>
 
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5em</span> <span class="hljs-number">2em</span>;
-    }
+  <span class="hljs-comment">//   @media (min-width: $breakpointDesktop) {</span>
+  <span class="hljs-comment">//     padding: 4em 2em;</span>
+  <span class="hljs-comment">//   }</span>
 
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5em</span> <span class="hljs-number">4em</span>;
-    }
-  }
-  &amp;--highlight &amp;__header {
-    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">25em</span>;
-  }
+  <span class="hljs-comment">//   @media (min-width: $breakpointDesktopL) {</span>
+  <span class="hljs-comment">//     padding: 4em 4em;</span>
+  <span class="hljs-comment">//   }</span>
+  <span class="hljs-comment">// }</span>
+
 
   &amp;--promo,
   &amp;--slim {
@@ -289,6 +287,8 @@
   &amp;--green {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$lightGreen</span>;
   }
+
+
 
   &amp;__heading {
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2em</span>;
@@ -326,7 +326,7 @@
   &amp;__subheader {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.125rem</span>;
     <span class="hljs-attribute">font-style</span>: italic;
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.75em</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.5em</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.125em</span>;
     @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
       <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
@@ -352,7 +352,7 @@
 
   &amp;__header {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">5em</span>;
+    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">25em</span>;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1em</span>;
 
