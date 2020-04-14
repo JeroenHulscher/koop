@@ -7,17 +7,8 @@
 
 <div class="container">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--centered">
-
-        <div class="jumbotron__heading jumbotron__heading--centered">
-          <p class="jumbotron__subheader">Overheidsdocumenten</p>
-          <h1 class="jumbotron__header">Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden</h1>
-          <p class="jumbotron__intro">
-              ## omschrijving
-          </p>
-        </div>
+    {{#> @jumbotron jumbotronContext }}
 
         <form class="form form__row form__row--medium">
           <fieldset>
@@ -41,17 +32,12 @@
 
         </form>
 
+    {{/@jumbotron}}
 
-
-      </div>
-
-    </div>
   </div>
   <div class="row">
 
-    <div class="row row--large">
-      <h2>Zoek documenten op thema</h2>
-    </div>
+    <h2 class="row__heading">Zoek documenten op thema</h2>
 
     <ul class="list list--themas list--columns-4">
       {{#each themaItems}}

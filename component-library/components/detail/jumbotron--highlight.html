@@ -51,6 +51,10 @@
 
     
     
+        
+        
+        
+    
 
 <div class="Pen" data-behaviour="pen" id="pen-6095872a6fb630ce00567d05ca33afbc">
 
@@ -83,14 +87,16 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-             <iframe
-                class="Preview-iframe"
-                data-role="window"
-                src="../preview/jumbotron--highlight.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
-                 style=""
-                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
-            </iframe>
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>The partial @partial-block could not be found</p>
+
+    </div>
+    
+</div>
+
+            
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -157,20 +163,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-6095872a6fb630ce00567d05ca33afbc-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron jumbotron--highlight"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__content jumbotron__content--centered"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__heading jumbotron__heading--centered"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__subheader"</span>&gt;</span>Berichten die voor u belangrijk zijn<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__header"</span>&gt;</span>Welke informatie kunt u vinden in &amp;#x27;Berichten over uw Buurt&amp;#x27;?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__intro"</span>&gt;</span>
-                Dit is de intro van de Jumbotron
-            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals vergunningen, bouwplannen en plaatselijke regelgeving. De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden gepubliceerd.
-        Denk aan formele besluiten, die direct invloed op uw buurt hebben, zoals vergunningen, bouwplannen en plaatselijke regelgeving. De berichten zijn afkomstig van voornamelijk gemeenten, waterschappen en provincies en zijn in de afgelopen twee maanden
-        gepubliceerd.
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-comment">&lt;!-- Error rendering component:  --&gt;</span></pre>
         
     </code>
 </div>
@@ -178,26 +171,21 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6095872a6fb630ce00567d05ca33afbc-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron </span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__content </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> centered}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">jumbotron__content--centered</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> size}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">-</span></span></span><span class="hljs-template-variable">{{size}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__heading </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> centered}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">jumbotron__heading--centered</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> modifier}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> jumbotron--</span></span></span><span class="hljs-template-variable">{{ modifier }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__content</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> centered}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> jumbotron__content--centered jumbotron__content--centered</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> size}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">-</span></span></span><span class="hljs-template-variable">{{size}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__heading </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> headingcentered}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">jumbotron__heading--centered</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
       </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> subheading}}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__subheader"</span>&gt;</span></span><span class="hljs-template-variable">{{subheading}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-      </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> heading}}</span><span class="xml"><span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{h}}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__header"</span>&gt;</span></span><span class="hljs-template-variable">{{heading}}</span><span class="xml"><span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{h}}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+      </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> heading}}</span><span class="xml"><span class="hljs-tag">&lt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> h}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{h}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">h1</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__header </span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> hstyle}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{hstyle}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{heading}}</span><span class="xml"><span class="hljs-tag">&lt;/</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> h}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{h}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-variable">{{<span class="hljs-builtin-name">else</span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">h1</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
       </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> intro}}</span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__intro"</span>&gt;</span>
-        </span><span class="hljs-template-variable">{{intro}}</span><span class="xml">
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__intro"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{intro}}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> text}}</span><span class="xml">
+          </span><span class="hljs-template-variable">{{{text}}}</span><span class="xml">
+        </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
       </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> content}}</span><span class="xml">
-      </span><span class="hljs-template-variable">{{{content}}}</span><span class="xml">
-    </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> button}}</span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{link}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span></span><span class="hljs-template-variable">{{button}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
-    </span><span class="hljs-template-variable">{{content}}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{&gt; @partial-block}}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
@@ -258,27 +246,38 @@
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1em</span>;
   <span class="hljs-attribute">position</span>: relative;
 
+  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$lightBlue</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2.5em</span> <span class="hljs-number">1em</span>;
+
   @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">4em</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5em</span> <span class="hljs-number">2em</span>;
   }
 
-  &amp;--highlight {
-    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$lightBlue</span>;
-    <span class="hljs-attribute">padding</span>: <span class="hljs-number">2.5em</span> <span class="hljs-number">1em</span>;
-
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5em</span> <span class="hljs-number">2em</span>;
-    }
-
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">3.5em</span> <span class="hljs-number">4em</span>;
-    }
-  }
-  &amp;--highlight &amp;__header {
-    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">25em</span>;
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5em</span> <span class="hljs-number">4em</span>;
   }
 
-  &amp;--promo {
+  &amp;--transparent {
+    <span class="hljs-attribute">background</span>: none;
+  }
+
+  <span class="hljs-comment">// = default, do not use anymore.</span>
+  <span class="hljs-comment">// &amp;--highlight {</span>
+  <span class="hljs-comment">//   background: $lightBlue;</span>
+  <span class="hljs-comment">//   padding: 2.5em 1em;</span>
+
+  <span class="hljs-comment">//   @media (min-width: $breakpointDesktop) {</span>
+  <span class="hljs-comment">//     padding: 4em 2em;</span>
+  <span class="hljs-comment">//   }</span>
+
+  <span class="hljs-comment">//   @media (min-width: $breakpointDesktopL) {</span>
+  <span class="hljs-comment">//     padding: 4em 4em;</span>
+  <span class="hljs-comment">//   }</span>
+  <span class="hljs-comment">// }</span>
+
+
+  &amp;--promo,
+  &amp;--slim {
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$lightBlue</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span> <span class="hljs-number">1em</span>;
     @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
@@ -290,6 +289,8 @@
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$lightGreen</span>;
   }
 
+
+
   &amp;__heading {
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2em</span>;
 
@@ -299,7 +300,6 @@
   }
 
   &amp;__content {
-
 
     &amp;--side {
       <span class="hljs-attribute">max-width</span>: em(<span class="hljs-number">620</span>);
@@ -311,14 +311,16 @@
       <span class="hljs-attribute">max-width</span>: em(<span class="hljs-number">750</span>);
       <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
       <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
-    }
-    &amp;--centered-medium {
-      <span class="hljs-attribute">max-width</span>: em(<span class="hljs-number">860</span>);
-    }
-    &amp;--centered-s {
-      <span class="hljs-attribute">max-width</span>: em(<span class="hljs-number">560</span>);
-      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+
+      &amp;-medium {
+        <span class="hljs-attribute">max-width</span>: em(<span class="hljs-number">860</span>);
+      }
+      &amp;-s,
+      &amp;-<span class="hljs-selector-tag">small</span> {
+        <span class="hljs-attribute">max-width</span>: em(<span class="hljs-number">560</span>);
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+      }
     }
   }
 
@@ -351,7 +353,7 @@
 
   &amp;__header {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">5em</span>;
+    <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">25em</span>;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1em</span>;
 
@@ -381,7 +383,11 @@
       <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.3rem</span>;
       <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.8rem</span>;
       <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1em</span>;
-      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5em</span>;
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.75em</span>;
+    }
+
+    &amp; ~ <span class="hljs-selector-tag">p</span> {
+      <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">1em</span>;
     }
   }
 
@@ -403,6 +409,11 @@
   }
 
 }
+
+<span class="hljs-selector-class">.modal</span> <span class="hljs-selector-class">.jumbotron</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background</span>: none;
+}
 </pre>
                             </code>
                             
@@ -419,7 +430,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.7 KB</span>
+                    <span class="Meta-value">3 KB</span>
                 </li>
             </ul>
         </div>
@@ -3230,6 +3241,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
                 <span>Ol Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--action.html" data-pjax>
+                <span>Action</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -8270,6 +8305,142 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-search-results.html" data-pjax>
                 <span>Zoekresultaten</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl2-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl 2 Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage.html" data-pjax>
+                <span>Beleid. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage-uitgebreid.html" data-pjax>
+                <span>Beleid. - Zoek oproep</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage.html" data-pjax>
+                <span>Dienstverl. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage-uitgebreid.html" data-pjax>
+                <span>Dienstverl. - Uitgebreid zoeken</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-searchresults.html" data-pjax>
+                <span>2.0 - Searchresults</span>
                 
 
 <div class="Status Status--unlabelled">

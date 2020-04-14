@@ -86,9 +86,7 @@ context:
       - label: Gezocht op
         value: leveringen
         url: "#"
-      - label: Bouwvergunning
-        url: "#"
-      - label: APV vergunning
+      - label: Accountants
         url: "#"
   subselectionContext:
     linkText: Selecteer beroepsgroep(en)
@@ -255,8 +253,8 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
-    type: span
     radio: true
+    type: span
     OptionsLabel: Vrije beroepen
     buttonSubmit: true
     hideClose: true

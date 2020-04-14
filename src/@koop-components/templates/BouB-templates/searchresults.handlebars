@@ -120,26 +120,18 @@
       {{!-- </div> --}}
 
       <div class="row row--spacer">
-        <div class="jumbotron jumbotron--promo">
 
-          <div class="jumbotron__content">
+        {{#> @jumbotron jumbotron2Context }}
+          <form class="form" data-decorator="init-form-validation">
+            <fieldset>
+              <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+              <div class="form__row">
+                {{ render "@input-inputsubmit" }}
+              </div>
+            </fieldset>
+          </form>
+        {{/@jumbotron}}
 
-            <p class="jumbotron__subheader">Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?</p>
-
-            <h2 class="jumbotron__header">Meld je aan voor de mail service</h2>
-
-            <form class="form" data-decorator="init-form-validation">
-              <fieldset>
-                <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-                <div class="form__row">
-                  {{ render "@input-inputsubmit" contextNewsletter merge=true}}
-                </div>
-              </fieldset>
-            </form>
-
-          </div>
-
-        </div>
       </div>
 
 
@@ -161,64 +153,69 @@
             </address>
             <ul class="list list--inline">
               <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-4">Wijzigen</a></li>
-              <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bewaar deze zoekopdracht</a></li>
+              <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-5">Bewaar deze zoekopdracht</a></li>
             </ul>
 
             <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
               <div class="modal__inner">
                 <div class="modal__content">
-                  <div class="align-center">
-                    <p class="jumbotron__subheader">Wijzig uw zoekopdracht</p>
-                    <h1 class="jumbotron__header">Welke buurt zoekt u?</h1>
-                  </div>
-                  <form class="form" data-decorator="init-form-validation">
-                    <fieldset>
-                      <legend class="visually-hidden">Zoek berichten</legend>
-                      <div class="form__row ">
-                        <div class="columns">
-                          <div class="form__row form__row--medium">
-                            {{render "@input-text" postcodeContext }}
-                          </div>
-                          <div class="form__row form__row--medium">
-                            {{render "@input-text" huisnrContext }}
-                          </div>
-                          <div class="form__row form__row--medium">
-                            <label class="form__label form__label--accent" for="">Straal
-                              <span class="mandatory">Verplicht veld</span>
-                            </label>
-                            {{ render "@select-custom" selectStraalContext }}
+
+                  {{#> @jumbotron jumbotronChangeContext }}
+
+                    <form class="form" data-decorator="init-form-validation">
+                      <fieldset>
+                        <legend class="visually-hidden">Zoek berichten</legend>
+                        <div class="form__row ">
+                          <div class="columns">
+                            <div class="form__row form__row--medium">
+                              {{render "@input-text" postcodeContext }}
+                            </div>
+                            <div class="form__row form__row--medium">
+                              {{render "@input-text" huisnrContext }}
+                            </div>
+                            <div class="form__row form__row--medium">
+                              <label class="form__label form__label--accent" for="">Straal</label>
+                              <span class="mandatory">Verplicht</span>
+                              <div class="select-custom select-custom--large">
+                                <select>
+                                  <option>250m</option>
+                                  <option>1km</option>
+                                  <option>2km</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="form__row align-right">
-                        <button type="submit" class="form__button button button--primary">Zoek opnieuw</button>
-                      </div>
-                    </fieldset>
-                  </form>
+                        <div class="form__row align-right">
+                          <button type="submit" class="form__button button button--primary button--large">Zoek opnieuw</button>
+                        </div>
+                      </fieldset>
+                    </form>
+
+                  {{/@jumbotron}}
+
                 </div>
 
                 <button type="button" data-handler="close-modal" class="modal__close">
                   <span class="visually-hidden">Sluiten</span>
                 </button>
+
               </div>
             </div>
 
-            <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+            <div id="modal-5" class="modal modal--wide modal--off-screen" hidden role="alert">
               <div class="modal__inner">
                 <div class="modal__content">
-                  <div class="align-center">
-                    <p class="jumbotron__subheader">Deze zoekopdracht bewaren</p>
-                    <h1 class="jumbotron__header">Meld je aan voor de mail</h1>
-                    <p class="jumbotron__intro">Schrijf u in en ontvang dagelijks een update in uw inbox over alles wat er bij u in de buurt gebeurt.</p>
-                  </div>
-                  <form class="form">
-                    <fieldset>
-                      <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-                      <div class="form__row">
-                        {{ render "@input-inputsubmit" inputsubmitSearchSaveContext }}
-                      </div>
-                    </fieldset>
-                  </form>
+                   {{#> @jumbotron jumbotronSaveContext }}
+                    <form class="form" data-decorator="init-form-validation">
+                      <fieldset>
+                        <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+                        <div class="form__row">
+                          {{ render "@input-inputsubmit" inputsubmitSearchSaveContext }}
+                        </div>
+                      </fieldset>
+                    </form>
+                  {{/@jumbotron}}
                 </div>
                 <button type="button" data-handler="close-modal" class="modal__close">
                   <span class="visually-hidden">Sluiten</span>

@@ -9,6 +9,12 @@ context:
       - url: "#"
         text: Profiel
         class: button icon-bg icon-bg--profile
+  jumbotronContext:
+    heading: Berichten over uw buurt attenderingservice
+    subheading: Beheer uw abonnementen
+    intro: Uw heeft momenteel 4 abonnementen ingesteld.
+    centered: true
+    headingcentered: true
   abonnementenContext:
     id: sl2
     items:

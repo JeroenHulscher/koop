@@ -1,10 +1,10 @@
-<div class="block-content">
+<div class="block-content {{#if slim}}block-content--slim{{/if}} {{#if highlight}}block-content--highlight{{/if}} {{#if flexed}}block-content--flexed{{/if}}">
   {{#if subheading}}
     <p class="block-content__subheading">
       <i>{{subheading}}</i>
     </p>
   {{/if}}
-  <h2 class="block-content__heading">{{heading}}</h2>
+  <h{{#if htype}}{{htype}}{{else}}2{{/if}} class="block-content__heading">{{heading}}</h{{#if htype}}{{htype}}{{else}}2{{/if}}>
   {{#if content}}
     {{{content}}}
   {{/if}}
@@ -13,5 +13,8 @@
       <a href="{{href}}" class="button {{#if buttonModifier}}button--{{buttonModifier}}{{/if}}">{{buttonText}}</a>
       {{!-- {{render "@button" }} --}}
     </p>
+  {{/if}}
+  {{#if cta}}
+    <a href="{{ctahref}}" class="block-content__cta cta" {{#if ctaexternal}}rel="external"{{/if}}>{{ctalabel}}</a>
   {{/if}}
 </div>

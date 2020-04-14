@@ -94,15 +94,34 @@ fieldset {
   text-align: left;
 
   &__errors {
-    background: lighten($lightRed,7) $infoIconRed no-repeat top 1.2em left 1em;
-    background-size: 1em;
-    padding: 1em 1em 1em 3em;
+    background: $lightGrey;
+    padding: 2em 1.75em;
     margin-bottom: 1em;
 
-    ul {
-      @extend .list--linked;
-      margin: 0;
+    &__heading {
+      font-size: em(20);
+      font-weight: bold;
+      margin-bottom: em(8);
+      line-height: 1.125;
     }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li > a {
+        display: inline-block;
+        padding-left: 2em;
+        margin-bottom: em(4);
+        background: $iconAlertRed no-repeat left center;
+
+        &.line-through {
+          background-image: $iconCheckFilledGreen;
+        }
+      }
+    }
+
+
   }
 
   &__row {
@@ -170,13 +189,26 @@ fieldset {
     font-weight: normal;
   }
 
+  &__success {
+    background: white $iconCheckFilledGreen no-repeat left center;
+    padding-left: 1.75em;
+    color: $green;
+    font-style: italic;
+    font-size: 90%;
+    line-height: 0.9;
+    margin-top: em(4);
+
+  }
   &__error {
-    font-weight: bold;
+    font-style: italic;
     color: $red;
-    background: $infoIconRed top 0.2em left;
+    background: $iconAlertRed top -6px left;
     background-repeat: no-repeat;
-    background-size: 1em;
-    padding-left: 1.5em;
+    // background-size: 1em;
+    padding-left: 1.75em;
+    font-size: 90%;
+    line-height: 0.9;
+    margin-top: em(4);
   }
 
   &__hint {
@@ -214,6 +246,18 @@ fieldset {
     position: relative;
     margin-right: .25em;
     margin-bottom: .25em;
+    pointer-events: none;
+
+    &:hover {
+      box-shadow: 0 0 13px rgba(0,0,0,0.3);
+    }
+    &:active {
+      background: $darkBlue;
+      color: white;
+    }
+    &:active &__remove {
+      background-image: $iconCrossWhite;
+    }
 
     > span {
       &::before {
@@ -226,14 +270,17 @@ fieldset {
 
     &__remove {
       background: $iconCrossBlue;
-      background-size: 0.5em;
       background-repeat: no-repeat;
-      width: 10px;
-      height: 10px;
+      background-size: .4em;
+      background-position: center;
       position: absolute;
-      right: 0.5em;
-      top: 0.5em;
+      width: 1.5em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
       display: inline-block;
+      pointer-events: auto;
     }
   }
 
@@ -617,6 +664,8 @@ input[type=password],
 input[type=email],
 input[type=number] {
   &.is-valid {
-    background: white $iconCheck2Green no-repeat right .5em center;
+    &[required] {
+      border-color: $green;
+    }
   }
 }

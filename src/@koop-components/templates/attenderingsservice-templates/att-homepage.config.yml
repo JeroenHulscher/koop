@@ -5,14 +5,19 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  inputEmailContext:
-    modifier: input-text--medium
-    labelmodifier: accent
-    id: 1
-    fieldLabel: Uw e-mailadres
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder: E-mailadres
-    remove: true
-    type: email
-    required: true
+  jumbotronContext:
+    heading: Altijd op de hoogte van betrekkingen in uw woonomgeving
+    subheading: Aanmelden voor de attenderingsservice
+    intro: Ontvang automatisch updates in uw e-mail inbox over alles wat er in uw buurt gebeurt.
+    centered: true
+    headingcentered: true
+    inputEmailContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Uw e-mailadres
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: E-mailadres
+      type: email
+      required: true

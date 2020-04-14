@@ -1,0 +1,53 @@
+---
+label: Dienstverl. - Uitgebreid zoeken
+status: Ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  jumbotronContext:
+    heading: Producten & diensten
+    hstyle: h2
+    subheading: Dienstverlening
+    intro: Zoek naar diensten van diverse overheidsorganisaties voor particulieren en ondernemers. U kunt ook alle producten en diensten per organisatie bekijken.
+    centered: true
+    inputsubmitContext:
+      button: Zoek verdagen
+      placeholder: Vul hier uw zoekwoord(en) in
+    postcodeInput:
+      fieldLabelVisible: true
+      fieldPlaceholder: Bijv. 1234 AB
+      fieldLabel: Postcode
+      labelmodifier: accent
+    checkallDienstenvoorContext:
+      id: 1
+      label: doelgroepen
+      checkboxes:
+        options:
+        - id: checkbox-20
+          text: Ondernemers
+          name: onderwerp
+        - id: checkbox-21
+          text: Particulieren
+          name: onderwerp
+    checkallDienstenvanContext:
+      id: 2
+      label: organisaties
+      checkboxes:
+        options:
+        - id: checkbox-202
+          text: Gemeente
+          name: onderwerp2
+        - id: checkbox-212
+          text: Provincie
+          name: onderwerp2
+        - id: checkbox-222
+          text: Regionaal Samenwerkingsorgaan
+          name: onderwerp2
+        - id: checkbox-232
+          text: Rijkswaterstaat
+          name: onderwerp2
+        - id: checkbox-242
+          text: Waterschap
+          name: onderwerp2

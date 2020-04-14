@@ -205,12 +205,21 @@ var supports = function () {
 
   formvalidation.prototype.showError = function (field, error, options) {
     var firstOptionId = false;
+    var messageValid;
+
+    // Remove success message (if excists);
+    messageValid = field.parentNode.querySelector('.form__success');
+    if (messageValid) {
+      messageValid.parentNode.removeChild(messageValid);
+    }
 
     // Add error class to field
     if (field.type === 'select-one'){
       field.parentNode.classList.add(this.config.classField);
+      field.parentNode.classList.remove('is-valid');
     } else {
       field.classList.add(this.config.classField);
+      field.classList.remove('is-valid');
     }
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
@@ -220,6 +229,7 @@ var supports = function () {
         for (var i = 0; i < group.length; i++) {
           if (group[i].form !== field.form) continue; // Only check fields in current form
           group[i].classList.add(this.config.classField);
+          group[i].classList.remove('is-valid');
 
           // if type = radio, get id of first radio
           if(i === 0){
@@ -376,9 +386,15 @@ var supports = function () {
   }
   formvalidation.prototype.markFieldValid = function (field, options) {
     field.classList.add('is-valid');
+
+    // var messageValid = document.createElement('div');
+    // messageValid.classList.add('form__success');
+    // messageValid.innerHTML = this.config.messageValid || 'Correct';
+    // field.parentNode.insertBefore(messageValid, field.nextSibling);
   }
 
   formvalidation.prototype.removeError = function (field, options) {
+    var messageValid;
 
     // Remove ARIA role from the field
     field.removeAttribute('aria-describedby');
@@ -459,10 +475,11 @@ var supports = function () {
     if (!errorsContainer) {
       errorsContainer = document.createElement('div');
       errorsContainer.setAttribute('tabindex', '0')
-      errorsContainer.classList.add(this.config.errorsContainer, 'well');
+      errorsContainer.classList.add(this.config.errorsContainer);
       this.element.insertBefore(errorsContainer, this.element.childNodes[0]);
 
       var errorsContainerIntro = document.createElement('p');
+      errorsContainerIntro.classList.add('form__errors__heading');
       errorsContainerIntro.innerHTML = this.config.errorsContainerIntro || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
       errorsContainer.appendChild(errorsContainerIntro);
 
@@ -484,6 +501,8 @@ var supports = function () {
   formvalidation.prototype.blurHandler = function (event) {
     var self = this;
     var type = event.target.nodeName;
+
+    if (event.target.type === 'submit') return;
 
     if ((type === 'DIV')) return;
 
@@ -582,6 +601,8 @@ var supports = function () {
   formvalidation.prototype.submitHandler = function (event) {
     this.errors = [];
 
+    console.log('submitHandler');
+
     // Get all of the form elements
     var fields = event.target.elements;
     var subselections = this.element.querySelectorAll('.subselection__summary.required');
@@ -628,11 +649,12 @@ var supports = function () {
 
     // Otherwise, submit the form
     if (this.config.debug){
-      event.preventDefault();
-      console.log('Form submit success');
+      // event.preventDefault();
+      console.log('debug: Form submit');
     } else {
       // event.preventDefault();
-      // console.log('Success. SUBMIT! (idle)');
+      console.log('prod: Form submit');
+      this.element.submit();
     }
 
   };

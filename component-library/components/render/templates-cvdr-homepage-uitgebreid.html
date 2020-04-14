@@ -92,31 +92,32 @@
 
 <div class="container row" id="content" role="main">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered-medium">
-        <div class="row">
-          <p class="jumbotron__subheader">Lokake wet- en regelgeving</p>
-          <h1 class="jumbotron__header h2">Raadpleeg 4567876 regelingen van decentrale overheden</h1>
-          <p class="">Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.</p>
-        </div>
-
-        <form class="form">
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
-              <label for="input543" class="visually-hidden">Zoekterm</label>
-              <div class="form__row form__row--medium">
-                 <input type="text" id="input543" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoorden in" />
-              </div>
-            </fieldset>
-          </div>
-          <div class="form__row form__row--medium columns columns--dominant">
-            <div class="column">
+<div class="jumbotron">
+  <div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered-medium">
+    <div class="jumbotron__heading ">
+      <p class="jumbotron__subheader">Lokale wet- en regelgeving</p>
+      <h1 class="jumbotron__header h2">Raadpleeg 87654 regelingen van decentrale overheden</h1>
+        <p class="jumbotron__intro">
+          Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.
+        </p>
+    </div>
+          <form class="form" data-decorator="init-form-validation">
+            <div class="form__row form__row--large">
               <fieldset>
-                <legend>Locatie</legend>
-                <div class="form__row">
-                  
+                <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+                <label for="input543" class="visually-hidden">Zoekterm</label>
+                <div class="form__row form__row--medium">
+                  <input type="text" id="input543" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoorden in" />
+                </div>
+              </fieldset>
+            </div>
+            <div class="form__row form__row--medium columns columns--dominant">
+              <div class="column">
+                <fieldset>
+                  <legend>Locatie</legend>
+                  <div class="form__row">
+                    
 
   <label for="input-text-" class="form__label form__label--">Postcode</label>
 
@@ -143,12 +144,12 @@
 
 
 
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Woord of zinsdeel</legend>
-                <div class="form__row">
-                  
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Woord of zinsdeel</legend>
+                  <div class="form__row">
+                    
 
   <label for="input-text-765" class="form__label form__label--">Zoekwoord in titel</label>
 
@@ -175,9 +176,9 @@
 
 
 
-                </div>
-                <div class="form__row">
-                  
+                  </div>
+                  <div class="form__row">
+                    
 
   <label for="input-text-654" class="form__label form__label--">Woord in tekst</label>
 
@@ -204,9 +205,9 @@
 
 
 
-                </div>
-                <div class="form__row">
-                  
+                  </div>
+                  <div class="form__row">
+                    
 
   <label for="input-text-498" class="form__label form__label--">Wetstechnische gegevens</label>
 
@@ -233,38 +234,38 @@
 
 
 
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Geldigheidsperiode</legend>
-                <div class="form__row">
-                      <label for="input--786">Van</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Geldigheidsperiode</legend>
+                  <div class="form__row">
+                        <label class="form__label" for="input--786">Van</label>
   <div class="datepicker">
-    <input type="date"  value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+    <input type="date"  value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--786" placeholder="" />
   </div>
 
 
-                </div>
-                <div class="form__row">
-                      <label for="input--7836">Tot</label>
+                  </div>
+                  <div class="form__row">
+                        <label class="form__label" for="input--7836">Tot</label>
   <div class="datepicker">
-    <input type="date"  value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
+    <input type="date"  value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
       data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--7836" placeholder="" />
   </div>
 
 
-                </div>
-              </fieldset>
-            </div>
-            <div class="column">
-
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Organisaties</legend>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Gemeenten</h3>
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="column">
+    
+                <div class="form__row form__row--large">
+                  <fieldset>
+                    <legend>Organisaties</legend>
+                    <div class="form__row">
+                      <h3 class="form__sublegend">Gemeenten</h3>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "maxShow": "3" }'>
   <div class="subselection__summary "></div>
   <div id="modal-20" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -353,10 +354,10 @@
   <a href="#" id="id20" data-handler="open-modal" data-modal="modal-20" class="subselection__trigger icon">Selecteer gemeenten</a>
 </div>
 
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Provincies</h3>
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                    </div>
+                    <div class="form__row">
+                      <h3 class="form__sublegend">Provincies</h3>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-21" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -418,10 +419,10 @@
   <a href="#" id="id21" data-handler="open-modal" data-modal="modal-21" class="subselection__trigger icon">Selecteer provincies</a>
 </div>
 
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Waterschappen</h3>
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                    </div>
+                    <div class="form__row">
+                      <h3 class="form__sublegend">Waterschappen</h3>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-1900" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -483,10 +484,10 @@
   <a href="#" id="id1900" data-handler="open-modal" data-modal="modal-1900" class="subselection__trigger icon">Selecteer waterschappen</a>
 </div>
 
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                    </div>
+                    <div class="form__row">
+                      <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-119" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -548,10 +549,10 @@
   <a href="#" id="id119" data-handler="open-modal" data-modal="modal-119" class="subselection__trigger icon">Selecteer regionale samenwerkingsorganen</a>
 </div>
 
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                    </div>
+                    <div class="form__row">
+                      <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-122" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -613,10 +614,10 @@
   <a href="#" id="id122" data-handler="open-modal" data-modal="modal-122" class="subselection__trigger icon">Selecteer deelgemeenten / stadsdelen</a>
 </div>
 
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">BES eiland</h3>
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                    </div>
+                    <div class="form__row">
+                      <h3 class="form__sublegend">BES eiland</h3>
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-125" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -678,14 +679,14 @@
   <a href="#" id="id125" data-handler="open-modal" data-modal="modal-125" class="subselection__trigger icon">Selecteer BES eilanden</a>
 </div>
 
-                  </div>
-                </fieldset>
-              </div>
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Onderwerpen</legend>
-                  <div class="form__row">
-                    <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "" }'>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form__row form__row--large">
+                  <fieldset>
+                    <legend>Onderwerpen</legend>
+                    <div class="form__row">
+                      <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'>
   <div class="subselection__summary "></div>
   <div id="modal-1288" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
     <div class="modal__inner">
@@ -747,25 +748,23 @@
   <a href="#" id="id1288" data-handler="open-modal" data-modal="modal-1288" class="subselection__trigger icon">Selecteer onderwerpen</a>
 </div>
 
-                  </div>
-                </fieldset>
+                    </div>
+                  </fieldset>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="columns columns--vcenter">
-            <div class="column">
-              <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
+            <div class="columns columns--vcenter">
+              <div class="column">
+                <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
+              </div>
+              <div class="column align-right">
+                <button type="submit" class="button button--primary">Zoeken</button>
+              </div>
             </div>
-            <div class="column align-right">
-              <button type="submit" class="button button--primary">Zoeken</button>
-            </div>
-          </div>
+          </form>
+  </div>
+</div>
 
-
-        </form>
-      </div>
-
-    </div>
   </div>
 
 </div>

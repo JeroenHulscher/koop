@@ -7,13 +7,8 @@
 
 <div class="container row">
   <div class="row row--spacer">
-    <div class="jumbotron jumbotron--highlight">
 
-      <div class="jumbotron__content jumbotron__content--side">
-        <div class="row">
-          <p class="jumbotron__subheader">Verdragenbank</p>
-          <h1 class="jumbotron__header h2">Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is</h1>
-        </div>
+    {{#> @jumbotron jumbotronContext }}
 
         <form class="form">
           <div class="form__row form__row--large">
@@ -112,9 +107,10 @@
           </div>
 
         </form>
-      </div>
 
-    </div>
+    {{/@jumbotron}}
+
+
   </div>
 
 

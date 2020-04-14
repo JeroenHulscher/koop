@@ -6,99 +6,102 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
-  inputsubmitContext:
-    button: Zoek verdagen
-    placeholder: Vul hier uw zoekwoord(en) in
-  typeverdagContext:
-    moreless: true
-    options:
-    - id: checkbox-220
-      text: Bilateraal
-      name: onderwerp
-    - id: checkbox-221
-      text: Multilateraal
-      name: onderwerp
-    - id: checkbox-222
-      text: Plurilateraal
-      name: onderwerp
-  geldvoorContext:
-    options:
-    - id: checkbox-40
-      text: Nederland (in Europa)
-      name: onderwerp
-    - id: checkbox-41
-      text: Nederland (Bonaire)
-      name: onderwerp
-    - id: checkbox-422
-      text: Nederland (Sint Eustatius)
-      name: onderwerp
-    - id: checkbox-422
-      text: Aruba
-      name: onderwerp
-    - id: checkbox-422
-      text: Curacao
-      name: onderwerp
-    - id: checkbox-422
-      text: Sint Maarten
-      name: onderwerp
-  depositarisContext:
-    moreless: true
-    options:
-    - id: checkbox-30
-      text: Enkel deze verdragen tonen
-      name: onderwerp
-  geldendContext:
-    moreless: true
-    options:
-    - id: checkbox-40
-      text: Enkel deze verdragen tonen
-      name: onderwerp
-  subselectionContext:
-    linkText: Selecteer partij(en)
-    id: 1
-    modalTitle: Selecteer partijen
-    fieldLabel: fieldLabel
-    fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
-    searchFilter: true
-    type: span
-    Options:
-      - Option: 122
-        id: 122
-        title: Spanje
-        short: Spanje
-      - Option: 222
-        id: 222
-        title: Griekenland
-        short: Griekenland
-      - Option: 322
-        id: 322
-        title: Nederland
-        short: Nederland
-  subselectionOnderwerpContext:
-    linkText: Selecteer onderwerp(en)
-    id: 23
-    modalTitle: Selecteer onderwerp(en)
-    fieldLabel: fieldLabel
-    fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
-    type: span
-    Options:
-      - Option: 1
-        id: 1
-        title: Spanje
-        short: Spanje
-      - Option: 2
-        id: 2
-        title: Griekenland
-        short: Griekenland
-      - Option: 3
-        id: 3
-        title: Nederland
-        short: Nederland
-  newsletterCheckbox:
-    options:
-    - id: checkbox-112312312
-      text: Ik begrijp dat ...
+  jumbotronContext:
+    heading: Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is
+    hstyle: h2
+    subheading: Verdragenbank
+    intro: Intro.
+    centered: true
+    size: medium
+    inputsubmitContext:
+      button: Zoek verdagen
+      placeholder: Vul hier uw zoekwoord(en) in
+    typeverdagContext:
+      moreless: true
+      options:
+      - id: checkbox-220
+        text: Bilateraal
+        name: onderwerp
+      - id: checkbox-221
+        text: Multilateraal
+        name: onderwerp
+      - id: checkbox-222
+        text: Plurilateraal
+        name: onderwerp
+    geldvoorContext:
+      options:
+      - id: checkbox-40
+        text: Nederland (in Europa)
+        name: onderwerp
+      - id: checkbox-41
+        text: Nederland (Bonaire)
+        name: onderwerp
+      - id: checkbox-422
+        text: Nederland (Sint Eustatius)
+        name: onderwerp
+      - id: checkbox-422
+        text: Aruba
+        name: onderwerp
+      - id: checkbox-422
+        text: Curacao
+        name: onderwerp
+      - id: checkbox-422
+        text: Sint Maarten
+        name: onderwerp
+    depositarisContext:
+      moreless: true
+      options:
+      - id: checkbox-30
+        text: Enkel deze verdragen tonen
+        name: onderwerp
+    geldendContext:
+      moreless: true
+      options:
+      - id: checkbox-40
+        text: Enkel deze verdragen tonen
+        name: onderwerp
+    subselectionContext:
+      linkText: Selecteer partij(en)
+      id: 1
+      modalTitle: Selecteer partijen
+      fieldLabel: fieldLabel
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 0612345678'
+      searchFilter: true
+      type: span
+      Options:
+        - Option: 122
+          id: 122
+          title: Spanje
+          short: Spanje
+        - Option: 222
+          id: 222
+          title: Griekenland
+          short: Griekenland
+        - Option: 322
+          id: 322
+          title: Nederland
+          short: Nederland
+    subselectionOnderwerpContext:
+      linkText: Selecteer onderwerp(en)
+      id: 23
+      modalTitle: Selecteer onderwerp(en)
+      fieldLabel: fieldLabel
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 0612345678'
+      type: span
+      Options:
+        - Option: 1
+          id: 1
+          title: Spanje
+          short: Spanje
+        - Option: 2
+          id: 2
+          title: Griekenland
+          short: Griekenland
+        - Option: 3
+          id: 3
+          title: Nederland
+          short: Nederland
 
 

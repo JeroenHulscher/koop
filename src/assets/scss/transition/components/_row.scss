@@ -1,6 +1,50 @@
 .row {
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: 1.5em;
+
+  &--thick {
+    margin-top: 1.5em;
+  }
+
+  // please use: md, lg, etc.
+  &--md,
+  &--medium {
+    margin-bottom: 1.5em;
+  }
+
+  &--lg,
+  &--large {
+    margin-bottom: 2.5em;
+  }
+
+  &--xlg,
+  &--xlarge {
+    margin-bottom: 4em;
+  }
+
+  &--xxlg,
+  &--xxlarge,
+  &--spacer {
+    margin-bottom: 5em;
+  }
+
+  &--xxxlg,
+  &--xxxlarge {
+    margin-bottom: 6em;
+  }
+
+
+
+  &__heading {
+    font-size: em(29);
+    margin-bottom: em(14);
+  }
+
+  &__intro {
+    font-size: em(18);
+    margin-bottom: em(56);
+  }
 
   &--page-opener {
     padding-top: .325em;

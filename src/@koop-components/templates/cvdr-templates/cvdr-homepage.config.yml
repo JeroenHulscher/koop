@@ -5,24 +5,16 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Postcode
-    fieldLabelVisible: false
-    fieldInstruction:
-    fieldPlaceholder: Verfijn op zoekwoord
-    remove: true
-  inputPostcode:
-    id: search
-    cleanID: true
-    fieldPlaceholder: 0000 AA
-    fieldLabel: Postcode
-    fieldLabelVisible: true
-    labelmodifier: medium
-  inputZoekwoord:
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Zoekwoord
-    fieldLabelVisible: true
-    labelmodifier: medium
+  jumbotronContext:
+    heading: Raadpleeg 87654 regelingen van decentrale overheden
+    subheading: Lokale wet- en regelgeving
+    intro: Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.
+    centered: true
+    headingcentered: true
+    inputZoekwoord:
+      fieldPlaceholder: Zoekwoord
+      fieldLabel: Zoekwoord
+      fieldLabelVisible: true
+      labelmodifier: medium
+      required: true
 

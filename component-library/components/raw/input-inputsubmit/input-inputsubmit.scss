@@ -8,6 +8,10 @@
     // @media (min-width: $breakpointDesktop) {
       width: 100%;
     // }
+
+    &.visually-hidden {
+      width: auto;
+    }
   }
 
   &__grid {

@@ -244,13 +244,13 @@
 
   &amp;<span class="hljs-selector-attr">[href*="://"]</span>:not(<span class="hljs-selector-class">.button</span>):not(<span class="hljs-selector-class">.link</span>):not(<span class="hljs-selector-class">.pull-right</span>):not(<span class="hljs-selector-class">.pull-left</span>):not(<span class="hljs-selector-attr">[href*=".overheid.nl"]</span>):not(<span class="hljs-selector-attr">[href*=".officielebekendmakingen.nl"]</span>),
   &amp;<span class="hljs-selector-attr">[rel="external"]</span> {
-    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.25em</span>;
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.5em</span>;
     <span class="hljs-attribute">margin-right</span>: .<span class="hljs-number">25em</span>;
     <span class="hljs-attribute">background</span>: {
       repeat: no-repeat;
       image: <span class="hljs-variable">$externalLinkIcon</span>;
-      <span class="hljs-attribute">position</span>: right <span class="hljs-number">3px</span>;
-      size: <span class="hljs-number">13px</span> <span class="hljs-number">12px</span>;
+      <span class="hljs-attribute">position</span>: right center;
+      size: em(<span class="hljs-number">12</span>);
     }
     <span class="hljs-selector-class">.related--primaryBlue</span> &amp; {
       <span class="hljs-attribute">background-image</span>: <span class="hljs-variable">$externalLinkWhiteIcon</span>;
@@ -272,20 +272,19 @@
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$mediumBlue</span>;
   }
 
-
-  &amp;<span class="hljs-selector-class">.cta</span> {
+  &amp;<span class="hljs-selector-class">.cta</span>:not(<span class="hljs-selector-attr">[rel="external"]</span>) {
     <span class="hljs-comment">// text-decoration: none;</span>
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">2em</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.125rem</span>;
     <span class="hljs-attribute">background</span>: {
       repeat: no-repeat;
       image: <span class="hljs-variable">$arrowCTAIcon</span>;
-      <span class="hljs-attribute">position</span>: right <span class="hljs-number">1px</span> top <span class="hljs-number">3px</span>;
+      <span class="hljs-attribute">position</span>: right <span class="hljs-number">1px</span> top em(<span class="hljs-number">4</span>);
       size: <span class="hljs-number">1em</span>;
     }
 
     &amp;:hover {
-      <span class="hljs-attribute">background-position</span>: right <span class="hljs-number">0</span> top <span class="hljs-number">3px</span>;
+      <span class="hljs-attribute">background-position</span>: right <span class="hljs-number">0</span> top em(<span class="hljs-number">4</span>);
     }
 
     &amp;--<span class="hljs-attribute">left</span> {
@@ -3200,6 +3199,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
                 <span>Ol Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--action.html" data-pjax>
+                <span>Action</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -8240,6 +8263,142 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-search-results.html" data-pjax>
                 <span>Zoekresultaten</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl2-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl 2 Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage.html" data-pjax>
+                <span>Beleid. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage-uitgebreid.html" data-pjax>
+                <span>Beleid. - Zoek oproep</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage.html" data-pjax>
+                <span>Dienstverl. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage-uitgebreid.html" data-pjax>
+                <span>Dienstverl. - Uitgebreid zoeken</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-searchresults.html" data-pjax>
+                <span>2.0 - Searchresults</span>
                 
 
 <div class="Status Status--unlabelled">

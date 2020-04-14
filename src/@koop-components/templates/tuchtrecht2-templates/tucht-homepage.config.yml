@@ -5,14 +5,21 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  inputSearchContext:
-    modifier: input-text--searchmedium
-    id: 1
-    fieldLabel: Label
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder: Woord(en) of zinsdeel
-    remove: true
+  jumbotronContext:
+    heading: Collectie
+    subheading: Tuchtrecht
+    intro: Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
+    centered: true
+    headingcentered: true
+    size: medium
+    inputSearchContext:
+      modifier: input-text--searchmedium
+      id: 1
+      fieldLabel: Label
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Woord(en) of zinsdeel
+      remove: true
   themaItems:
     - title: Accountants (0)
       id: 1

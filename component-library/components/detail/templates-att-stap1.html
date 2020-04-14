@@ -242,21 +242,21 @@
 
     &lt;div class="row row--spacer"&gt;
 
-        &lt;div class="jumbotron jumbotron--highlight"&gt;
-            &lt;div class="jumbotron__content jumbotron__content--centered"&gt;
-                &lt;div class="jumbotron__heading"&gt;
+        &lt;div class="jumbotron"&gt;
+            &lt;div class="jumbotron__content jumbotron__content--centered jumbotron__content--centered"&gt;
+                &lt;div class="jumbotron__heading "&gt;
                     &lt;p class="jumbotron__subheader"&gt;Kies uw meldingen&lt;/p&gt;
-                    &lt;h1 class="jumbotron__header h2"&gt;Over welke betrekkingen wilt u meldingen ontvangen?&lt;/h1&gt;
+                    &lt;h2 class="jumbotron__header "&gt;Over welke betrekkingen wilt u meldingen ontvangen?&lt;/h2&gt;
                     &lt;p class="jumbotron__intro"&gt;
-                        Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op &lt;em&gt;mail@koop.overheid.nl&lt;/em&gt;
+                        Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
                     &lt;/p&gt;
                 &lt;/div&gt;
-                &lt;form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'&gt;
+                &lt;form class="form" data-decorator="init-form-validation"&gt;
                     &lt;fieldset&gt;
                         &lt;legend class="visually-hidden"&gt;E-mailadres&lt;/legend&gt;
-                        &lt;div class="form__row"&gt;
-                            &lt;div class="columns"&gt;
-                                &lt;div class="column"&gt;
+                        &lt;div class="columns"&gt;
+                            &lt;div class="column"&gt;
+                                &lt;div class="form__row"&gt;
 
                                     &lt;label for="input-text-1" class="form__label form__label--accent"&gt;Postcode&lt;/label&gt;
 
@@ -266,7 +266,9 @@
                                     /&gt;
 
                                 &lt;/div&gt;
-                                &lt;div class="column"&gt;
+                            &lt;/div&gt;
+                            &lt;div class="column"&gt;
+                                &lt;div class="form__row"&gt;
                                     &lt;div class="relative"&gt;
 
                                         &lt;label for="input-text-2" class="form__label form__label--accent"&gt;Huisnummer&lt;/label&gt;
@@ -279,25 +281,27 @@
                                 &lt;/div&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
-                    &lt;/fieldset&gt;
-                    &lt;div class=""&gt;
-                        &lt;div class="columns"&gt;
-                            &lt;div class="u-order--d2 align-right form__row"&gt;
-                                &lt;button type="submit" class="form__button button button--primary"&gt;Adres ophalen&lt;/button&gt;
-                            &lt;/div&gt;
-                            &lt;div class="u-order--d1 u-nomargin"&gt;
-                                &lt;a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right"&gt;Wijzig e-mailadres&lt;/a&gt;
+                        &lt;div class=""&gt;
+                            &lt;div class="columns"&gt;
+                                &lt;div class="u-order--d2 align-right form__row"&gt;
+                                    &lt;button type="submit" class="form__button button button--primary"&gt;Adres ophalen&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div class="u-order--d1 u-nomargin"&gt;
+                                    &lt;a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right"&gt;Wijzig e-mailadres&lt;/a&gt;
+                                &lt;/div&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
-                    &lt;/div&gt;
+                    &lt;/fieldset&gt;
+
                 &lt;/form&gt;
             &lt;/div&gt;
         &lt;/div&gt;
 
     &lt;/div&gt;
+
     &lt;div class="container container--centered"&gt;
 
-        &lt;form class="form" data-decorator="init-form-validation" data-config='{"doSubmit": false}'&gt;
+        &lt;form class="form" data-decorator="init-form-validation"&gt;
             &lt;fieldset&gt;
                 &lt;legend class="visually-hidden"&gt;Voorkeuren&lt;/legend&gt;
 
@@ -407,7 +411,7 @@
                                         &lt;div class="form__row u-margin-top-32"&gt;
                                             &lt;h3 class="form__sublegend"&gt;Rondom een adres&lt;/h3&gt;
                                             &lt;p class=""&gt;Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.&lt;/p&gt;
-                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "maxShow": "3", "triggerSubmit": true }'&gt;
                                                 &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
                                                 &lt;div id="modal-20" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
                                                     &lt;div class="modal__inner"&gt;
@@ -498,7 +502,7 @@
                                         &lt;div class="form__row u-margin-top-48"&gt;
                                             &lt;h3 class="form__sublegend"&gt;Bestemmingsplannen&lt;/h3&gt;
                                             &lt;p class=""&gt;Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.&lt;/p&gt;
-                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "maxShow": "3" }'&gt;
                                                 &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
                                                 &lt;div id="modal-22" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
                                                     &lt;div class="modal__inner"&gt;
@@ -591,7 +595,7 @@
                                         &lt;div class="form__row u-margin-top-32"&gt;
                                             &lt;h3 class="form__sublegend"&gt;Voorlichting&lt;/h3&gt;
                                             &lt;p class=""&gt;Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.&lt;/p&gt;
-                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "maxShow": "3" }'&gt;
                                                 &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
                                                 &lt;div id="modal-21" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
                                                     &lt;div class="modal__inner"&gt;
@@ -682,7 +686,7 @@
                                         &lt;div class="form__row u-margin-top-48"&gt;
                                             &lt;h3 class="form__sublegend"&gt;Voorschriften &amp;amp; beleid&lt;/h3&gt;
                                             &lt;p class=""&gt;Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.&lt;/p&gt;
-                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerOnChangeText": "", "maxShow": "3" }'&gt;
+                                            &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "maxShow": "3" }'&gt;
                                                 &lt;div class="subselection__summary required"&gt;&lt;/div&gt;
                                                 &lt;div id="modal-23" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
                                                     &lt;div class="modal__inner"&gt;
@@ -779,8 +783,8 @@
                             &lt;p&gt;Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.&lt;/p&gt;
                             &lt;div data-decorator="init-selectall"&gt;
                                 &lt;div class="input-checkbox"&gt;
-                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="appel" name="selectAll" value="veel" /&gt;
-                                    &lt;label class="checkbox__label" for="appel"&gt;
+                                    &lt;input class="checkbox__input js-checkbox-master" type="checkbox" id="appel1" name="selectAll" value="veel" /&gt;
+                                    &lt;label class="checkbox__label" for="appel1"&gt;
       Selecteer alle &lt;span class="js-amount-checkboxes"&gt;&lt;/span&gt; overheidsorganisaties
     &lt;/label&gt;
                                 &lt;/div&gt;
@@ -900,159 +904,153 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--spacer"</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron jumbotron--highlight"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__content jumbotron__content--centered"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__heading"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__subheader"</span>&gt;</span>Kies uw meldingen<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__header h2"</span>&gt;</span>Over welke betrekkingen wilt u meldingen ontvangen?<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron__intro"</span>&gt;</span>
-            Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>mail@koop.overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"doSubmit": false}'</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+    </span><span class="hljs-template-tag">{{#&gt; @<span class="hljs-name">jumbotron</span> jumbotronContext }}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>E-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
                   </span><span class="hljs-template-variable">{{render "<a href="input-text.html">@input-text</a>" inputPostcodeContext }}</span><span class="xml">
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
                   </span><span class="hljs-template-variable">{{render "<a href="input-text.html">@input-text</a>" inputHuisnummerContext }}</span><span class="xml">
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-order--d2 align-right form__row"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__button button button--primary"</span>&gt;</span>Adres ophalen<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-order--d1 u-nomargin"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/components/preview/templates-att-homepage"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--arrow-cta-right"</span>&gt;</span>Wijzig e-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-order--d2 align-right form__row"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__button button button--primary"</span>&gt;</span>Adres ophalen<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"u-order--d1 u-nomargin"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/components/preview/templates-att-homepage"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--arrow-cta-right"</span>&gt;</span>Wijzig e-mailadres<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    </span><span class="hljs-template-tag">{{/@<span class="hljs-name">jumbotron</span>}}</span><span class="xml">
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container container--centered"</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"doSubmit": false}'</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeuren<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeuren<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--stepcontainer"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer een gebied<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Uw adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Straal<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
-                    </span><span class="hljs-template-variable">{{render "<a href="input-radio.html">@input-radio</a>" straalContext }}</span><span class="xml">
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-                </span><span class="hljs-template-variable">{{render "<a href="map.html">@map</a>" mapContext }}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--stepcontainer"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer een gebied<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Uw adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4 u-nomargin"</span>&gt;</span>Straal<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row"</span>&gt;</span>
+                      </span><span class="hljs-template-variable">{{render "<a href="input-radio.html">@input-radio</a>" straalContext }}</span><span class="xml">
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                  </span><span class="hljs-template-variable">{{render "<a href="map.html">@map</a>" mapContext }}</span><span class="xml">
 
-                </span><span class="hljs-comment">{{!-- { "locatieserver_id":"wpl-9f875146c5008a6cacded0af3bfd9e5d", "title":"Woonplaats Duiven" } --}}</span><span class="xml">
+                  </span><span class="hljs-comment">{{!-- { "locatieserver_id":"wpl-9f875146c5008a6cacded0af3bfd9e5d", "title":"Woonplaats Duiven" } --}}</span><span class="xml">
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"config1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span>&gt;</span><span class="actionscript">
-                {
-                  <span class="hljs-string">"locations"</span>: [
-                    {
-                      <span class="hljs-string">"type"</span>: <span class="hljs-string">"adres"</span>,
-                      <span class="hljs-string">"geometry"</span>: <span class="hljs-string">"POINT(4.34015737 52.07846659)"</span>,
-                      <span class="hljs-string">"geometry_type"</span>: <span class="hljs-string">"WKT"</span>,
-                      <span class="hljs-string">"title"</span>: <span class="hljs-string">"Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"</span>,
-                      <span class="hljs-string">"locatieserver_id"</span>: <span class="hljs-string">"adr-617a18a4146998f5ea4c6851ef87c579"</span>
-                    }
-                  ],
-                  <span class="hljs-string">"options"</span>: {
-                    <span class="hljs-string">"location_types"</span>: [<span class="hljs-string">"provincie"</span>, <span class="hljs-string">"gemeente"</span>, <span class="hljs-string">"adres"</span>, <span class="hljs-string">"punt"</span>, <span class="hljs-string">"lijn"</span>],
-                    <span class="hljs-string">"class"</span>: <span class="hljs-string">"kaartprikmodule-overlay"</span>,
-                    <span class="hljs-string">"mode"</span>: <span class="hljs-string">"geoview"</span>,
-                    <span class="hljs-string">"center"</span>: {
-                      <span class="hljs-string">"highlight"</span>: <span class="hljs-literal">true</span>,
-                      <span class="hljs-string">"type"</span>: <span class="hljs-string">"circle"</span>,
-                      <span class="hljs-string">"circle"</span>: {
-                        <span class="hljs-string">"radius"</span>: <span class="hljs-number">200</span>,
-                        <span class="hljs-string">"x"</span>: <span class="hljs-number">83224</span>,
-                        <span class="hljs-string">"y"</span>: <span class="hljs-number">454983</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"config1"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span>&gt;</span><span class="actionscript">
+                  {
+                    <span class="hljs-string">"locations"</span>: [
+                      {
+                        <span class="hljs-string">"type"</span>: <span class="hljs-string">"adres"</span>,
+                        <span class="hljs-string">"geometry"</span>: <span class="hljs-string">"POINT(4.34015737 52.07846659)"</span>,
+                        <span class="hljs-string">"geometry_type"</span>: <span class="hljs-string">"WKT"</span>,
+                        <span class="hljs-string">"title"</span>: <span class="hljs-string">"Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage"</span>,
+                        <span class="hljs-string">"locatieserver_id"</span>: <span class="hljs-string">"adr-617a18a4146998f5ea4c6851ef87c579"</span>
                       }
-                    },
-                    <span class="hljs-string">"controls"</span>: [<span class="hljs-string">"base-layer"</span>, <span class="hljs-string">"center"</span>, <span class="hljs-string">"fullscreen"</span>, <span class="hljs-string">"zoom"</span>],
-                    <span class="hljs-string">"layers"</span>: {
-                      <span class="hljs-string">"bgtachtergrondkaart"</span>: {
-                        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>
+                    ],
+                    <span class="hljs-string">"options"</span>: {
+                      <span class="hljs-string">"location_types"</span>: [<span class="hljs-string">"provincie"</span>, <span class="hljs-string">"gemeente"</span>, <span class="hljs-string">"adres"</span>, <span class="hljs-string">"punt"</span>, <span class="hljs-string">"lijn"</span>],
+                      <span class="hljs-string">"class"</span>: <span class="hljs-string">"kaartprikmodule-overlay"</span>,
+                      <span class="hljs-string">"mode"</span>: <span class="hljs-string">"geoview"</span>,
+                      <span class="hljs-string">"center"</span>: {
+                        <span class="hljs-string">"highlight"</span>: <span class="hljs-literal">true</span>,
+                        <span class="hljs-string">"type"</span>: <span class="hljs-string">"circle"</span>,
+                        <span class="hljs-string">"circle"</span>: {
+                          <span class="hljs-string">"radius"</span>: <span class="hljs-number">200</span>,
+                          <span class="hljs-string">"x"</span>: <span class="hljs-number">83224</span>,
+                          <span class="hljs-string">"y"</span>: <span class="hljs-number">454983</span>
+                        }
+                      },
+                      <span class="hljs-string">"controls"</span>: [<span class="hljs-string">"base-layer"</span>, <span class="hljs-string">"center"</span>, <span class="hljs-string">"fullscreen"</span>, <span class="hljs-string">"zoom"</span>],
+                      <span class="hljs-string">"layers"</span>: {
+                        <span class="hljs-string">"bgtachtergrondkaart"</span>: {
+                          <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>
+                        }
                       }
                     }
                   }
-                }
-                </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+                  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
               <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer uw voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Rondom een adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                      </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" rondomadresContext }}</span><span class="xml">
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Bestemmingsplannen<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                      </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" bestemmingsplannenContext }}</span><span class="xml">
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorlichting<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                      </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorlichtingContext }}</span><span class="xml">
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorschriften &amp;amp; beleid<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                      </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorschriftenContext }}</span><span class="xml">
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer overheidsorganisaties<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              </span><span class="hljs-template-variable">{{ render "<a href="checkbox-selectall.html">@checkbox-selectall</a>" checkallOverheidsorganisatiesContext}}</span><span class="xml">
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p p--med"</span>&gt;</span>U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>privacystatement<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer uw voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Kies welke berichten u wilt ontvangen en van welke overheidsorganisaties u deze wilt ontvangen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Voorkeursinstellingen<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Rondom een adres<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verkeersbesluiten, omgevingsvergunningen voor bouwen, slopen, kappen van bomen en dergelijke.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" rondomadresContext }}</span><span class="xml">
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Bestemmingsplannen<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Bestemmingsplannen en voorbereidingsbesluiten. Ultricies Vulputate Amet Inceptos.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" bestemmingsplannenContext }}</span><span class="xml">
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-32"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorlichting<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Voorlichting voor de hele gemeente over bijvoorbeeld openingstijden, huisafval, inspraak en verkiezingen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorlichtingContext }}</span><span class="xml">
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row u-margin-top-48"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__sublegend"</span>&gt;</span>Voorschriften &amp;amp; beleid<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Verordeningen, structuurvisie, milieueffectrapportage en dergelijke voor de hele gemeente.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                    </span><span class="hljs-template-variable">{{render "<a href="subselection.html">@subselection</a>" voorschriftenContext }}</span><span class="xml">
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer overheidsorganisaties<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Behalve van uw gemeente kunnen berichten ook afkomstig zijn van andere overheidsorganisaties.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            </span><span class="hljs-template-variable">{{ render "<a href="checkbox-selectall.html">@checkbox-selectall</a>" checkallOverheidsorganisatiesContext}}</span><span class="xml">
-          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"p p--med"</span>&gt;</span>U kunt zich voor deze e-mail service op ieder moment afmelden. Meer details hiervan kunt u terugvinden in onze <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>privacystatement<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column align-right"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Meld mij aan voor de nieuwsbrief<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column align-right"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Meld mij aan voor de nieuwsbrief<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-
+      <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1073,28 +1071,6 @@
   <span class="hljs-attr">"header"</span>: {
     <span class="hljs-attr">"file"</span>: <span class="hljs-string">"logo.svg"</span>,
     <span class="hljs-attr">"alt"</span>: <span class="hljs-string">"Overheid.nl logo"</span>
-  },
-  <span class="hljs-attr">"inputPostcodeContext"</span>: {
-    <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
-    <span class="hljs-attr">"labelmodifier"</span>: <span class="hljs-string">"accent"</span>,
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
-    <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"Postcode"</span>,
-    <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
-    <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Bijv. 2453EH"</span>,
-    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"patterntype"</span>: <span class="hljs-string">"zipcode"</span>,
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)"</span>
-  },
-  <span class="hljs-attr">"inputHuisnummerContext"</span>: {
-    <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
-    <span class="hljs-attr">"labelmodifier"</span>: <span class="hljs-string">"accent"</span>,
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"Huisnummer"</span>,
-    <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
-    <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-number">52</span>,
-    <span class="hljs-attr">"remove"</span>: <span class="hljs-literal">true</span>
   },
   <span class="hljs-attr">"straalContext"</span>: {
     <span class="hljs-attr">"options"</span>: [
@@ -1155,6 +1131,7 @@
     <span class="hljs-attr">"selectAll"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"selectAllID"</span>: <span class="hljs-number">9876</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"span"</span>,
+    <span class="hljs-attr">"triggerSubmit"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"Options"</span>: [
       {
         <span class="hljs-attr">"Option"</span>: <span class="hljs-number">1</span>,
@@ -1382,6 +1359,35 @@
         }
       ]
     }
+  },
+  <span class="hljs-attr">"jumbotronContext"</span>: {
+    <span class="hljs-attr">"heading"</span>: <span class="hljs-string">"Over welke betrekkingen wilt u meldingen ontvangen?"</span>,
+    <span class="hljs-attr">"h"</span>: <span class="hljs-string">"h2"</span>,
+    <span class="hljs-attr">"subheading"</span>: <span class="hljs-string">"Kies uw meldingen"</span>,
+    <span class="hljs-attr">"intro"</span>: <span class="hljs-string">"Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl"</span>,
+    <span class="hljs-attr">"centered"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"inputPostcodeContext"</span>: {
+      <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
+      <span class="hljs-attr">"labelmodifier"</span>: <span class="hljs-string">"accent"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"Postcode"</span>,
+      <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-string">"Bijv. 2453EH"</span>,
+      <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"patterntype"</span>: <span class="hljs-string">"zipcode"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)"</span>
+    },
+    <span class="hljs-attr">"inputHuisnummerContext"</span>: {
+      <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"input-text--medium"</span>,
+      <span class="hljs-attr">"labelmodifier"</span>: <span class="hljs-string">"accent"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"fieldLabel"</span>: <span class="hljs-string">"Huisnummer"</span>,
+      <span class="hljs-attr">"fieldLabelVisible"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"fieldInstruction"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"fieldPlaceholder"</span>: <span class="hljs-number">52</span>,
+      <span class="hljs-attr">"remove"</span>: <span class="hljs-literal">true</span>
+    }
   }
 }</pre>
             
@@ -1430,12 +1436,14 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(8)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(9)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="header.html">@<span>header</span></a>, 
             
                 <a href="breadcrumb.html">@<span>breadcrumb</span></a>, 
+            
+                <a href="jumbotron.html">@<span>jumbotron</span></a>, 
             
                 <a href="input-text.html">@<span>input-text</span></a>, 
             
@@ -4139,6 +4147,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="list--ol-container.html" data-pjax>
                 <span>Ol Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--action.html" data-pjax>
+                <span>Action</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -9179,6 +9211,142 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="templates-search-results.html" data-pjax>
                 <span>Zoekresultaten</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-overheidnl2-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Overheidnl 2 Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage.html" data-pjax>
+                <span>Beleid. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-beleid-homepage-uitgebreid.html" data-pjax>
+                <span>Beleid. - Zoek oproep</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage.html" data-pjax>
+                <span>Dienstverl. - Homepage</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-dienst-homepage-uitgebreid.html" data-pjax>
+                <span>Dienstverl. - Uitgebreid zoeken</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="templates-onl2-searchresults.html" data-pjax>
+                <span>2.0 - Searchresults</span>
                 
 
 <div class="Status Status--unlabelled">

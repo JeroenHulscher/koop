@@ -301,6 +301,7 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     searchFilter: true
     type: span
+    triggerSubmit: true
     Options:
       - Option: 4
         id: 4
@@ -316,7 +317,7 @@ context:
         short: Nederland
   subselectionInfoContext:
     linkText: Selecteer informatiesoort(en)
-    id: 12
+    id: 13
     modalTitle: Selecteer informatiesoort(en)
     fieldLabel: fieldLabel
     fieldInstruction:
@@ -324,16 +325,16 @@ context:
     searchFilter: true
     type: span
     Options:
-      - Option: 4
-        id: 4
+      - Option: 465
+        id: 465
         title: Spanje
         short: Spanje
-      - Option: 5
-        id: 5
+      - Option: 565
+        id: 565
         title: Griekenland
         short: Griekenland
-      - Option: 6
-        id: 6
+      - Option: 665
+        id: 665
         title: Nederland
         short: Nederland
 
