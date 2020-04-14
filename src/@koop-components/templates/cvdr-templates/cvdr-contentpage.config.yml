@@ -21,6 +21,7 @@ context:
     - title: Regeling
       sub: true
       active: true
+      sactive: true
       subItems:
       - stitle: Intitulé
         href: "#section-1"
