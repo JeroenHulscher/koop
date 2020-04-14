@@ -9,13 +9,13 @@ a {
 
   &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]),
   &[rel="external"] {
-    padding-right: 1.25em;
+    padding-right: 1.5em;
     margin-right: .25em;
     background: {
       repeat: no-repeat;
       image: $externalLinkIcon;
       position: right center;
-      size: 13px 12px;
+      size: em(12);
     }
     .related--primaryBlue & {
       background-image: $externalLinkWhiteIcon;
@@ -37,20 +37,19 @@ a {
     color: $mediumBlue;
   }
 
-
-  &.cta {
+  &.cta:not([rel="external"]) {
     // text-decoration: none;
     padding: 0 2em 0 0;
     font-size: 1.125rem;
     background: {
       repeat: no-repeat;
       image: $arrowCTAIcon;
-      position: right 1px top 3px;
+      position: right 1px top em(4);
       size: 1em;
     }
 
     &:hover {
-      background-position: right 0 top 3px;
+      background-position: right 0 top em(4);
     }
 
     &--left {

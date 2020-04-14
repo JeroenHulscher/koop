@@ -241,13 +241,13 @@
 
   &amp;<span class="hljs-selector-attr">[href*="://"]</span>:not(<span class="hljs-selector-class">.button</span>):not(<span class="hljs-selector-class">.link</span>):not(<span class="hljs-selector-class">.pull-right</span>):not(<span class="hljs-selector-class">.pull-left</span>):not(<span class="hljs-selector-attr">[href*=".overheid.nl"]</span>):not(<span class="hljs-selector-attr">[href*=".officielebekendmakingen.nl"]</span>),
   &amp;<span class="hljs-selector-attr">[rel="external"]</span> {
-    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.25em</span>;
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1.5em</span>;
     <span class="hljs-attribute">margin-right</span>: .<span class="hljs-number">25em</span>;
     <span class="hljs-attribute">background</span>: {
       repeat: no-repeat;
       image: <span class="hljs-variable">$externalLinkIcon</span>;
       <span class="hljs-attribute">position</span>: right center;
-      size: <span class="hljs-number">13px</span> <span class="hljs-number">12px</span>;
+      size: em(<span class="hljs-number">12</span>);
     }
     <span class="hljs-selector-class">.related--primaryBlue</span> &amp; {
       <span class="hljs-attribute">background-image</span>: <span class="hljs-variable">$externalLinkWhiteIcon</span>;
@@ -269,20 +269,19 @@
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$mediumBlue</span>;
   }
 
-
-  &amp;<span class="hljs-selector-class">.cta</span> {
+  &amp;<span class="hljs-selector-class">.cta</span>:not(<span class="hljs-selector-attr">[rel="external"]</span>) {
     <span class="hljs-comment">// text-decoration: none;</span>
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">2em</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.125rem</span>;
     <span class="hljs-attribute">background</span>: {
       repeat: no-repeat;
       image: <span class="hljs-variable">$arrowCTAIcon</span>;
-      <span class="hljs-attribute">position</span>: right <span class="hljs-number">1px</span> top <span class="hljs-number">3px</span>;
+      <span class="hljs-attribute">position</span>: right <span class="hljs-number">1px</span> top em(<span class="hljs-number">4</span>);
       size: <span class="hljs-number">1em</span>;
     }
 
     &amp;:hover {
-      <span class="hljs-attribute">background-position</span>: right <span class="hljs-number">0</span> top <span class="hljs-number">3px</span>;
+      <span class="hljs-attribute">background-position</span>: right <span class="hljs-number">0</span> top em(<span class="hljs-number">4</span>);
     }
 
     &amp;--<span class="hljs-attribute">left</span> {

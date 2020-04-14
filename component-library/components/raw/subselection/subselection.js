@@ -233,8 +233,8 @@
     if (this.config.triggerSubmit) {
       var form = getClosest(item, 'form');
       var buttonSubmit = form.querySelector('[type="submit"]');
-      console.log('form', form);
-      console.log('form buttonSubmit', buttonSubmit);
+      // console.log('form', form);
+      // console.log('form buttonSubmit', buttonSubmit);
       if (buttonSubmit){
         setTimeout(function(){
           buttonSubmit.click();
