@@ -129,9 +129,9 @@
       <table class="table table--striped table--condensed" >
 <thead>
   <tr>
-    <th scope="col"></th>
-    <th scope="col">Titel</th>
-    <th scope="col">Annotaties</th>
+    <th scope="col" class=""></th>
+    <th scope="col" class="">Titel</th>
+    <th scope="col" class="">Annotaties</th>
   </tr>
    
 </thead>
@@ -152,9 +152,9 @@
       <table class="table table--striped table--condensed" >
 <thead>
   <tr>
-    <th scope="col">Uitgever</th>
-    <th scope="col">Titel</th>
-    <th scope="col">Annotaties</th>
+    <th scope="col" class="">Uitgever</th>
+    <th scope="col" class="">Titel</th>
+    <th scope="col" class="">Annotaties</th>
   </tr>
    
 </thead>
@@ -195,9 +195,9 @@
       <table class="table table--striped table--condensed" >
 <thead>
   <tr>
-    <th scope="col">Titel</th>
-    <th scope="col">Type</th>
-    <th scope="col">Grootte</th>
+    <th scope="col" class="">Titel</th>
+    <th scope="col" class="">Type</th>
+    <th scope="col" class="">Grootte</th>
   </tr>
    
 </thead>
@@ -329,7 +329,7 @@
       if (title) {
         selectStyle(title);
       }
-      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; left: 0; width: 20px;');
       for (var i = 0; i < styles.length; i++) {
         var option = document.createElement('option');
         option.text = 'CSS: ' + styles[i];

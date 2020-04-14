@@ -244,12 +244,8 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.block-content</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2em</span> <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;
   <span class="hljs-attribute">position</span>: relative;
-
-  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
-  }
 
   &amp;__heading {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
@@ -259,7 +255,6 @@
   }
   <span class="hljs-selector-tag">h3</span><span class="hljs-selector-class">.block-content__heading</span> {
     <span class="hljs-attribute">font-size</span>: em(<span class="hljs-number">22</span>);
-    <span class="hljs-attribute">margin-bottom</span>: em(<span class="hljs-number">8</span>);
   }
 
   &amp;__subheading {
@@ -271,51 +266,35 @@
   &amp;--highlight {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$lightBlue</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5em</span> <span class="hljs-number">2em</span>;
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
       <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span> <span class="hljs-number">4em</span>;
     }
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
     &amp;--flexed {
-      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">1.5em</span>;
+      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3em</span>;
     }
-
     &amp;--flexed &amp;__cta {
       <span class="hljs-attribute">position</span>: absolute;
-      <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
-    }
-  }
-
-  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
-    &amp;<span class="hljs-selector-class">.block-content--highlight</span><span class="hljs-selector-class">.block-content--flexed</span> {
-      <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3.5em</span>;
-    }
-    &amp;<span class="hljs-selector-class">.block-content--highlight</span><span class="hljs-selector-class">.block-content--flexed</span> &amp;__cta {
       <span class="hljs-attribute">bottom</span>: <span class="hljs-number">2em</span>;
+      <span class="hljs-attribute">left</span>: <span class="hljs-number">4em</span>;
     }
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
-    <span class="hljs-selector-class">.block-content--flexed</span><span class="hljs-selector-class">.block-content--highlight</span> {
-      &amp;__cta {
-        <span class="hljs-attribute">left</span>: <span class="hljs-number">4em</span>;
-      }
-    }
-  }
-
-  &amp;--slim {
-    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2em</span>;
-    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">2em</span>;
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktopL</span>) {
+    &amp;--slim {
       <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2em</span>;
       <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">2em</span>;
+      @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$breakpointDesktop</span>) {
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2em</span>;
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">2em</span>;
+      }
     }
-  }
 
-  &amp;--slim &amp;__cta {
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">2em</span>;
-  }
+    &amp;--slim &amp;__cta {
+      <span class="hljs-attribute">left</span>: <span class="hljs-number">2em</span>;
+    }
+
 }
 
 </pre>
@@ -334,7 +313,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.3 KB</span>
+                    <span class="Meta-value">883 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -3782,6 +3761,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="table--default.html" data-pjax>
                 <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--fixed-columns.html" data-pjax>
+                <span>Fixed columns</span>
                 
 
 <div class="Status Status--unlabelled">

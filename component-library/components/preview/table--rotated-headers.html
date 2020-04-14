@@ -26,10 +26,10 @@
   <caption>Deze tabel bevat headers die verticaal staan </caption>
 <thead>
   <tr>
-    <th scope="col"><span class="rotated"></span></th>
-    <th scope="col"><span class="rotated">Voornaam</span></th>
-    <th scope="col"><span class="rotated">Achternaam</span></th>
-    <th scope="col"><span class="rotated">Woonplaats</span></th>
+    <th scope="col" class=""><span class="rotated"></span></th>
+    <th scope="col" class=""><span class="rotated">Voornaam</span></th>
+    <th scope="col" class=""><span class="rotated">Achternaam</span></th>
+    <th scope="col" class=""><span class="rotated">Woonplaats</span></th>
   </tr>
    
 </thead>
@@ -88,7 +88,7 @@
       if (title) {
         selectStyle(title);
       }
-      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; left: 0; width: 20px;');
       for (var i = 0; i < styles.length; i++) {
         var option = document.createElement('option');
         option.text = 'CSS: ' + styles[i];

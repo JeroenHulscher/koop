@@ -227,6 +227,7 @@ $gutter--lg: 6em;
         }
       }
 
+
       > div {
         margin-left: $gutter;
       }
@@ -270,7 +271,7 @@ $gutter--lg: 6em;
           }
         }
 
-        > div {
+        > div:not(.modal-sidebar) {
           background-color: $white;
           position: fixed;
           top: 0;

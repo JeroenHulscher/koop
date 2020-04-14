@@ -158,13 +158,13 @@
     <table class="table " >
 <thead>
   <tr>
-    <th scope="col">Data-eigenaar</th>
-    <th scope="col">Soort organisatie</th>
-    <th scope="col">Valt onder</th>
-    <th scope="col">Datasets</th>
-    <th scope="col">Link-kwaliteit</th>
-    <th scope="col">Status</th>
-    <th scope="col">Exporteren</th>
+    <th scope="col" class="">Data-eigenaar</th>
+    <th scope="col" class="">Soort organisatie</th>
+    <th scope="col" class="">Valt onder</th>
+    <th scope="col" class="">Datasets</th>
+    <th scope="col" class="">Link-kwaliteit</th>
+    <th scope="col" class="">Status</th>
+    <th scope="col" class="">Exporteren</th>
   </tr>
    
 </thead>
@@ -348,7 +348,7 @@
       if (title) {
         selectStyle(title);
       }
-      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; left: 0; width: 20px;');
       for (var i = 0; i < styles.length; i++) {
         var option = document.createElement('option');
         option.text = 'CSS: ' + styles[i];

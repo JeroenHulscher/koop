@@ -601,7 +601,7 @@ var supports = function () {
   formvalidation.prototype.submitHandler = function (event) {
     this.errors = [];
 
-    console.log('submitHandler');
+    // console.log('submitHandler');
 
     // Get all of the form elements
     var fields = event.target.elements;
@@ -653,7 +653,7 @@ var supports = function () {
       console.log('debug: Form submit');
     } else {
       // event.preventDefault();
-      console.log('prod: Form submit');
+      // console.log('prod: Form submit');
       this.element.submit();
     }
 

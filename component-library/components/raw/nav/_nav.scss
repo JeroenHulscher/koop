@@ -25,7 +25,7 @@
   &__link {
     font-size: 1em;
     font-weight: bold;
-    padding: .2em 0;
+    padding: .2em .5em .2em 0;
     text-decoration: none;
     display: block;
 
@@ -34,6 +34,10 @@
       padding-left: .5em;
       border-right: 3px solid $darkBlue;
     }
+  }
+
+  &__item.is-active &__link.is-active {
+    border-right: 0;
   }
 
   &__sub {

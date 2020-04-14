@@ -161,10 +161,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>Deze tabel bevat teamleden van KOOP Overheid.nl <span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Voornaam<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Achternaam<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>Woonplaats<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Voornaam<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Achternaam<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Woonplaats<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
@@ -206,7 +206,7 @@
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> @first}}</span><span class="xml">
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> item }}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> ../../rotated}}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rotated"</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="hljs-template-variable">{{ type }}</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> ../../rotated}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{thclass}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> ../../rotated}}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rotated"</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="hljs-template-variable">{{ type }}</span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> ../../rotated}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
@@ -502,7 +502,7 @@
   &amp;<span class="hljs-selector-class">.table__data-overview</span> {
     <span class="hljs-selector-tag">th</span> {
       <span class="hljs-attribute">vertical-align</span>: top;
-      <span class="hljs-attribute">width</span>: <span class="hljs-number">30%</span>;
+      <span class="hljs-comment">// width: 30%;</span>
     }
   }
 
@@ -796,11 +796,15 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(10)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(11)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="table--default.html">
                     <span>Default</span>
+                </a>, 
+            
+                <a href="table--fixed-columns.html">
+                    <span>Fixed columns</span>
                 </a>, 
             
                 <a href="table--multilevel.html">
@@ -891,7 +895,18 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-abde3037ef1c109f96129d6dc894557f-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        <p>Table component.</p>
+<h1 id="custom-column-width">Custom column width</h1>
+<p>You can define your own width’s of the columns, by assigning the following classes of your preference:</p>
+<ul>
+<li>u-columnwidth-10p</li>
+<li>u-columnwidth-20p</li>
+<li>u-columnwidth-25p</li>
+<li>u-columnwidth-30p</li>
+<li>u-columnwidth-40p</li>
+<li>u-columnwidth-50p</li>
+</ul>
+
         
     </div>
 </div>
@@ -4218,6 +4233,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="table--default.html" data-pjax>
                 <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--fixed-columns.html" data-pjax>
+                <span>Fixed columns</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -1,10 +1,6 @@
 .block-content {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
   position: relative;
-
-  @media (min-width: $breakpointDesktop) {
-    margin-bottom: 0;
-  }
 
   &__heading {
     margin-top: 0;
@@ -14,7 +10,6 @@
   }
   h3.block-content__heading {
     font-size: em(22);
-    margin-bottom: em(8);
   }
 
   &__subheading {
@@ -26,50 +21,34 @@
   &--highlight {
     background-color: $lightBlue;
     padding: 1.5em 2em;
-    @media (min-width: $breakpointDesktopL) {
+    @media (min-width: $breakpointDesktop) {
       padding: 2em 4em;
     }
   }
 
-  @media (min-width: $breakpointDesktopL) {
+  @media (min-width: $breakpointDesktop) {
     &--flexed {
-      padding-bottom: 1.5em;
+      padding-bottom: 3em;
     }
-
     &--flexed &__cta {
       position: absolute;
-      bottom: 0;
-    }
-  }
-
-  @media (min-width: $breakpointDesktopL) {
-    &.block-content--highlight.block-content--flexed {
-      padding-bottom: 3.5em;
-    }
-    &.block-content--highlight.block-content--flexed &__cta {
       bottom: 2em;
+      left: 4em;
     }
   }
 
-  @media (min-width: $breakpointDesktopL) {
-    .block-content--flexed.block-content--highlight {
-      &__cta {
-        left: 4em;
-      }
-    }
-  }
-
-  &--slim {
-    padding-left: 2em;
-    padding-right: 2em;
-    @media (min-width: $breakpointDesktopL) {
+    &--slim {
       padding-left: 2em;
       padding-right: 2em;
+      @media (min-width: $breakpointDesktop) {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
     }
-  }
 
-  &--slim &__cta {
-    left: 2em;
-  }
+    &--slim &__cta {
+      left: 2em;
+    }
+
 }
 

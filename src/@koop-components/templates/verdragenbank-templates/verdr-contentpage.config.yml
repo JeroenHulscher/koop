@@ -10,21 +10,22 @@ context:
     id: 2
     items:
     - title: Basisgegevens
-      active: true
       sub: true
       subItems:
         - stitle: Algemeen
         - stitle: Koninkrijk
-          sactive: true
         - stitle: Partijen
         - stitle: Uitbreidingen
     - title: Voorbehouden, verklaringen en bezwaren
     - title: Wijzigingen
   navDepositairContext:
     id: 3
+    sactive: true
     items:
-    - title: Depositaire mededelingen
-    - title: Notificaties
+    - title: Recent depositary notifications
+    - title: The Hague Conference on Private International Law
+    - title: Other treaties for which the Netherlands acts as depositary
+      sactive: true
   onderwerpContext:
     moreless: true
     options:

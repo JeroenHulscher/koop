@@ -153,638 +153,635 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-c0b7be73b7fbf342f217c3fc30e66eb1-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre>&lt;header class="header"&gt;
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header"</span>&gt;</span>
 
-    &lt;div class="header__start"&gt;
-        &lt;div class="container"&gt;
-            &lt;div class="skiplinks"&gt;
-                &lt;a href="#content"&gt;Direct naar content&lt;/a&gt;
-            &lt;/div&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__start"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"skiplinks"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#content"</span>&gt;</span>Direct naar content<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false"&gt;Menu&lt;/button&gt;
-            &lt;div class="logo "&gt;
-                &lt;a href=""&gt;&lt;img src="../../images/logo.svg" alt="Overheid.nl logo" /&gt;&lt;/a&gt;
-                &lt;p class="logo__you-are-here"&gt;&lt;span class="visually-hidden"&gt;U bent nu hier: &lt;/span&gt;
-                    &lt;span&gt;Register voor overheidsinstanties&lt;/span&gt;
-                &lt;/p&gt;
-            &lt;/div&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-desktop button button--icon-hamburger"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"toggle-nav"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"nav"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"logo "</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../images/logo.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Overheid.nl logo"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"logo__you-are-here"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>U bent nu hier: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Register voor overheidsinstanties<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;nav class="header__nav header__nav--closed" id="nav"&gt;
-        &lt;h2 class="visually-hidden"&gt;Primaire navigatie&lt;/h2&gt;
-        &lt;div class="container"&gt;
-            &lt;ul class="header__primary-nav list list--unstyled"&gt;
-                &lt;li class="hidden-mobile"&gt;&lt;a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"&gt;&lt;span class="visually-hidden"&gt;Andere sites binnen &lt;/span&gt;Overheid.nl&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#" class=""&gt;Zoeken&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#" class=""&gt;uitgebreid zoeken&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"&gt;&lt;span class="visually-hidden"&gt;Andere sites binnen &lt;/span&gt;Overheid.nl&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/nav&gt;
-&lt;/header&gt;
-&lt;div class="header__more" id="other-sites"&gt;
-    &lt;div class="container columns"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Aankondigingen over uw buurt&lt;/h2&gt;
-            &lt;p&gt;Zoals bouwplannen en verkeersmaatregelen.&lt;/p&gt;
-            &lt;ul class="list list--linked"&gt;
-                &lt;li&gt;&lt;a href="https://beta.overheid.nl/aankondigingen-over-uw-buurt"&gt;Naar aankondigingen over uw buurt&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Dienstverlening&lt;/h2&gt;
-            &lt;p&gt;Zoals belastingen, uitkeringen en subsidies.&lt;/p&gt;
-            &lt;ul class="list list--linked"&gt;
-                &lt;li&gt;&lt;a href="https://beta.overheid.nl/dienstverlening"&gt;Naar dienstverlening&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Beleid &amp;amp; regelgeving&lt;/h2&gt;
-            &lt;p&gt;Officiële publicaties van de overheid.&lt;/p&gt;
-            &lt;ul class="list list--linked"&gt;
-                &lt;li&gt;&lt;a href="https://beta.overheid.nl/beleid-en-regelgeving"&gt;Naar beleid &amp;amp; regelgeving&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Contactgegevens overheden&lt;/h2&gt;
-            &lt;p&gt;Adressen en contactpersonen van overheidsorganisaties.&lt;/p&gt;
-            &lt;ul class="list list--linked"&gt;
-                &lt;li&gt;&lt;a href="https://almanak.overheid.nl/onl"&gt;Naar overheidsorganisaties&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__nav header__nav--closed"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Primaire navigatie<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__primary-nav list list--unstyled"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-mobile"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#other-sites"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"toggle-other-sites"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-toggle-other-sites"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Andere sites binnen <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>uitgebreid zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#other-sites"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-desktop"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"toggle-other-sites"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-toggle-other-sites"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Andere sites binnen <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__more"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"other-sites"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Aankondigingen over uw buurt<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Zoals bouwplannen en verkeersmaatregelen.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/aankondigingen-over-uw-buurt"</span>&gt;</span>Naar aankondigingen over uw buurt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Dienstverlening<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Zoals belastingen, uitkeringen en subsidies.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/dienstverlening"</span>&gt;</span>Naar dienstverlening<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Beleid &amp;amp; regelgeving<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Officiële publicaties van de overheid.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/beleid-en-regelgeving"</span>&gt;</span>Naar beleid &amp;amp; regelgeving<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Contactgegevens overheden<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Adressen en contactpersonen van overheidsorganisaties.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://almanak.overheid.nl/onl"</span>&gt;</span>Naar overheidsorganisaties<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;div class="row row--page-opener"&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="breadcrumb"&gt;
-            &lt;p&gt;U bent hier:&lt;/p&gt;
-            &lt;ol&gt;
-                &lt;li&gt;
-                    &lt;a href=#&gt;Zoeken&lt;/a&gt;&lt;/li&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href=#&gt;Zoekresultaten&lt;/a&gt;&lt;/li&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href=#&gt;Regeling&lt;/a&gt;&lt;/li&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row row--page-opener"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breadcrumb"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>U bent hier:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">#</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">#</span>&gt;</span>Zoekresultaten<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">#</span>&gt;</span>Regeling<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
                     Informatie
-                &lt;/li&gt;
-            &lt;/ol&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;div class="container row"&gt;
-    &lt;div class="columns columns--sidebar-left"&gt;
-        &lt;div class="column"&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns columns--sidebar-left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
 
-            &lt;div class="hidden-mobile"&gt;
-                &lt;div class="columns"&gt;
-                    &lt;div class="column column-d-7"&gt;
-                        &lt;div class="row"&gt;
-                            &lt;div class="input-inputsubmit "&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-mobile"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column column-d-7"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-inputsubmit "</span>&gt;</span>
 
-                                &lt;div class="input-inputsubmit__grid"&gt;
-                                    &lt;label class="visually-hidden" for=""&gt;Verfijn uw zoekopdracht&lt;/label&gt;
-                                    &lt;input id="" type="text" class="input input-text--search" placeholder="Verfijn uw zoekopdracht" /&gt;
-                                    &lt;button class="button button--primary"&gt;&lt;span&gt;Zoek&lt;/span&gt;&lt;/button&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-inputsubmit__grid"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">""</span>&gt;</span>Verfijn uw zoekopdracht<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text--search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Verfijn uw zoekopdracht"</span> /&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Zoek<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=""&gt;
-                    &lt;div class="row"&gt;
-                        &lt;div class="sort "&gt;
-                            &lt;div class="columns"&gt;
-                                &lt;div class="column"&gt;
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort "</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
                                     Sorteer op:
-                                    &lt;ul class="sort__options"&gt;
-                                        &lt;li&gt;
-                                            &lt;a href="" class="sort--ascending is-active" aria-pressed="true"&gt;&lt;span class="visually-hidden"&gt;Sorteer op: &lt;/span&gt;Datum&lt;/a&gt;
-                                        &lt;/li&gt;
-                                        &lt;li&gt;
-                                            &lt;a href="" class="sort--ascending " aria-pressed="false"&gt;&lt;span class="visually-hidden"&gt;Sorteer op: &lt;/span&gt;Titel&lt;/a&gt;
-                                        &lt;/li&gt;
-                                    &lt;/ul&gt;
-                                &lt;/div&gt;
-                                &lt;div class="column d-align-right"&gt;
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort__options"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort--ascending is-active"</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sorteer op: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Datum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort--ascending "</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sorteer op: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Titel<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column d-align-right"</span>&gt;</span>
                                     Aantal:
-                                    &lt;ul class="sort__options"&gt;
-                                        &lt;li&gt;
-                                            &lt;a href="" class="is-active" aria-pressed="true"&gt;&lt;span class="visually-hidden"&gt;Toon &lt;/span&gt;10&lt;span class="visually-hidden"&gt; resultaten per pagina&lt;/span&gt;&lt;/a&gt;
-                                        &lt;/li&gt;
-                                        &lt;li&gt;
-                                            &lt;a href="" class="" aria-pressed="false"&gt;&lt;span class="visually-hidden"&gt;Toon &lt;/span&gt;20&lt;span class="visually-hidden"&gt; resultaten per pagina&lt;/span&gt;&lt;/a&gt;
-                                        &lt;/li&gt;
-                                        &lt;li&gt;
-                                            &lt;a href="" class="" aria-pressed="false"&gt;&lt;span class="visually-hidden"&gt;Toon &lt;/span&gt;50&lt;span class="visually-hidden"&gt; resultaten per pagina&lt;/span&gt;&lt;/a&gt;
-                                        &lt;/li&gt;
-                                    &lt;/ul&gt;
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort__options"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"is-active"</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Toon <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>10<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span> resultaten per pagina<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Toon <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>20<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span> resultaten per pagina<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Toon <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>50<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span> resultaten per pagina<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;h1 class="h1 h1--slim"&gt;Zoekresultaten
-                &lt;span class="h1__sub"&gt;1-10 van de 105 resultaten&lt;/span&gt;
-            &lt;/h1&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h1 h1--slim"</span>&gt;</span>Zoekresultaten
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h1__sub"</span>&gt;</span>1-10 van de 105 resultaten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
-            &lt;div class="hidden-desktop align-right"&gt;
-                &lt;button class="button button--primary block-element button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter"&gt;Filter opties&lt;/button&gt;
-            &lt;/div&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-desktop align-right"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary block-element button--icon-filter"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-modalsidebar"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"open-modalsidebar"</span> <span class="hljs-attr">data-modal</span>=<span class="hljs-string">"modal-filter"</span>&gt;</span>Filter opties<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;div class="hidden-desktop"&gt;
-                &lt;div class="sort "&gt;
-                    &lt;div class="columns"&gt;
-                        &lt;div class="column"&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden-desktop"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort "</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"columns"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column"</span>&gt;</span>
                             Sorteer op:
-                            &lt;ul class="sort__options"&gt;
-                                &lt;li&gt;
-                                    &lt;a href="" class="sort--ascending is-active" aria-pressed="true"&gt;&lt;span class="visually-hidden"&gt;Sorteer op: &lt;/span&gt;Datum&lt;/a&gt;
-                                &lt;/li&gt;
-                                &lt;li&gt;
-                                    &lt;a href="" class="sort--ascending " aria-pressed="false"&gt;&lt;span class="visually-hidden"&gt;Sorteer op: &lt;/span&gt;Titel&lt;/a&gt;
-                                &lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/div&gt;
-                        &lt;div class="column d-align-right"&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort__options"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort--ascending is-active"</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sorteer op: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Datum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort--ascending "</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sorteer op: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Titel<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column d-align-right"</span>&gt;</span>
                             Aantal:
-                            &lt;ul class="sort__options"&gt;
-                                &lt;li&gt;
-                                    &lt;a href="" class="is-active" aria-pressed="true"&gt;&lt;span class="visually-hidden"&gt;Toon &lt;/span&gt;10&lt;span class="visually-hidden"&gt; resultaten per pagina&lt;/span&gt;&lt;/a&gt;
-                                &lt;/li&gt;
-                                &lt;li&gt;
-                                    &lt;a href="" class="" aria-pressed="false"&gt;&lt;span class="visually-hidden"&gt;Toon &lt;/span&gt;20&lt;span class="visually-hidden"&gt; resultaten per pagina&lt;/span&gt;&lt;/a&gt;
-                                &lt;/li&gt;
-                                &lt;li&gt;
-                                    &lt;a href="" class="" aria-pressed="false"&gt;&lt;span class="visually-hidden"&gt;Toon &lt;/span&gt;50&lt;span class="visually-hidden"&gt; resultaten per pagina&lt;/span&gt;&lt;/a&gt;
-                                &lt;/li&gt;
-                            &lt;/ul&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sort__options"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"is-active"</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Toon <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>10<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span> resultaten per pagina<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Toon <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>20<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span> resultaten per pagina<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Toon <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>50<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span> resultaten per pagina<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;/div&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;div class="result--list result--list--wide"&gt;
-                &lt;ul&gt;
-                    &lt;li&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--list result--list--wide"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
 
-                        &lt;p class="result--label"&gt;&lt;i&gt;&lt;span class="label "&gt;Nieuw vandaag&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label "</span>&gt;</span>Nieuw vandaag<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                        &lt;h2 class="result--title "&gt;Voortgangsrapportage CTIVD over de werking Wiv2017&lt;/h2&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--title "</span>&gt;</span>Voortgangsrapportage CTIVD over de werking Wiv2017<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-                        &lt;p&gt;Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017&lt;/p&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                        &lt;ul class="list--metadata"&gt;
-                            &lt;li&gt;Onderzoeksrapport&lt;/li&gt;
-                            &lt;li&gt;Ministerie van Justitie en Veiligheid&lt;/li&gt;
-                            &lt;li&gt;Beschikbaar sinds 04-12-2018&lt;/li&gt;
-                        &lt;/ul&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--metadata"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Onderzoeksrapport<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ministerie van Justitie en Veiligheid<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Beschikbaar sinds 04-12-2018<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                        &lt;ul class="list list--inline list--narrow"&gt;
-                            &lt;li class="list__item"&gt;&lt;a href="#" class="button button--secendary"&gt;Bekijk publicatie&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--inline list--narrow"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--secendary"</span>&gt;</span>Bekijk publicatie<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                        &lt;h3 class="h4"&gt;Bekijk document direct via&lt;/h3&gt;
-                        &lt;div data-decorator="showmoreless" data-config='{"amount":"2"}'&gt;
-                            &lt;ul class="list list--linked"&gt;
-                                &lt;li&gt;&lt;a href="http://www.google.nl"&gt;Rijksoverheid.nl&lt;/a&gt; (gepubliceerd op 07-07-2016 | XML)&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="http://www.google.nl"&gt;Overheid.nl&lt;/a&gt; (gepubliceerd op 06-07-2016 | PDF)&lt;/li&gt;
-                                &lt;li&gt;&lt;a href="http://www.google.nl"&gt;Rijksoverheid.nl&lt;/a&gt; (gepubliceerd op 07-07-2016 | XML)&lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/div&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h4"</span>&gt;</span>Bekijk document direct via<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"showmoreless"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"amount":"2"}'</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.google.nl"</span>&gt;</span>Rijksoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> (gepubliceerd op 07-07-2016 | XML)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.google.nl"</span>&gt;</span>Overheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> (gepubliceerd op 06-07-2016 | PDF)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.google.nl"</span>&gt;</span>Rijksoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> (gepubliceerd op 07-07-2016 | XML)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    &lt;/li&gt;
-                    &lt;li&gt;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
 
-                        &lt;p class="result--label"&gt;&lt;i&gt;&lt;span class="label "&gt;Nieuw vandaag&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label "</span>&gt;</span>Nieuw vandaag<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                        &lt;h2 class="result--title "&gt;AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent&lt;/h2&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--title "</span>&gt;</span>AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!&lt;/p&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                        &lt;ul class="list list--inline list--narrow"&gt;
-                            &lt;li class="list__item"&gt;&lt;a href="#" class="button button--primary"&gt;Bekijk publicatie&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="list__item"&gt;&lt;a href="#" class="button button--secendary"&gt;Bekijk op kaart&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="list__item d-pull-right"&gt;&lt;a href="#" class="button button--tertiary button--share"&gt;Delen&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--inline list--narrow"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Bekijk publicatie<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--secendary"</span>&gt;</span>Bekijk op kaart<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item d-pull-right"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--tertiary button--share"</span>&gt;</span>Delen<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                    &lt;/li&gt;
-                    &lt;li&gt;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
 
-                        &lt;p class="result--label"&gt;&lt;i&gt;&lt;span class="label "&gt;Nieuw vandaag&lt;/span&gt;&lt;/i&gt;&lt;/p&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label "</span>&gt;</span>Nieuw vandaag<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                        &lt;h2 class="result--title "&gt;AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent&lt;/h2&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"result--title "</span>&gt;</span>AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!&lt;/p&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-                        &lt;ul class="list list--inline list--narrow"&gt;
-                            &lt;li class="list__item"&gt;&lt;a href="#" class="button button--primary"&gt;Bekijk publicatie&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="list__item"&gt;&lt;a href="#" class="button button--secendary"&gt;Bekijk op kaart&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="list__item d-pull-right"&gt;&lt;a href="#" class="button button--tertiary button--share"&gt;Delen&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--inline list--narrow"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Bekijk publicatie<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--secendary"</span>&gt;</span>Bekijk op kaart<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item d-pull-right"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--tertiary button--share"</span>&gt;</span>Delen<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class="pagination"&gt;
-                &lt;div class="pagination__index"&gt;
-                    &lt;ul&gt;
-                        &lt;li class="prev"&gt;&lt;a href="#"&gt;&lt;span class=""&gt;&amp;laquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class="active"&gt;4&lt;/li&gt;
-                        &lt;li&gt;...&lt;/li&gt;
-                        &lt;li&gt;&lt;a href="#"&gt;102&lt;/a&gt;&lt;/li&gt;
-                        &lt;li class="next"&gt;&lt;a href="#"&gt;&lt;span class=""&gt;&amp;raquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pagination"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pagination__index"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"prev"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>&amp;laquo;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>102<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>&amp;raquo;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        &lt;/div&gt;
-        &lt;div class="column column--sidebar"&gt;
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column column--sidebar"</span>&gt;</span>
 
-            &lt;div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button"&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-filter"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-fixedbottom-button"</span>&gt;</span>
 
-                &lt;div class="modal-sidebar__content"&gt;
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar__content"</span>&gt;</span>
 
-                    &lt;div class="row--spacer"&gt;
-                        &lt;h2&gt;Zoekfilter&lt;/h2&gt;
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row--spacer"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Zoekfilter<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-                        &lt;div class="form__row form__row--large"&gt;
-                            &lt;h4&gt;Geselecteerde filters (7)&lt;/h4&gt;
-                            &lt;div data-decorator="showmoreless" data-config='{"amount": 2}'&gt;
-                                &lt;ul class="list list--unstyled"&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 1&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 2&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 3&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 4&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 5&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 6&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                    &lt;li&gt;
-                                        &lt;div class="form__selectedfilter"&gt;Waarde 7&lt;a href="" class="form__selectedfilter__remove"&gt;&lt;span class="visually-hidden"&gt;verwijder&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-                                    &lt;/li&gt;
-                                &lt;/ul&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--large"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Geselecteerde filters (7)<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"showmoreless"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"amount": 2}'</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--unstyled"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 1<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 2<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 3<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 4<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 5<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 6<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter"</span>&gt;</span>Waarde 7<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__selectedfilter__remove"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>verwijder<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                        &lt;form id="formid" data-decorator="init-form-validation"&gt;
-                            &lt;div class="form__row form__row--large hidden-desktop"&gt;
-                                &lt;label for=""&gt;Filter op trefwoord&lt;/label&gt;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formid"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-validation"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--large hidden-desktop"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">""</span>&gt;</span>Filter op trefwoord<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                                &lt;label class="visually-hidden" for="input-text-1" class="form__label form__label--"&gt;Op nummer zoeken&lt;/label&gt;
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__label form__label--"</span>&gt;</span>Op nummer zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 
-                                &lt;input type="text" id="input-text-1" name="1" class="input input-text   " placeholder="Bijv: BK001" aria-invalid="false" placeholder="Bijv: BK001" /&gt;
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-text-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input input-text   "</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Bijv: BK001"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Bijv: BK001"</span> /&gt;</span>
 
-                            &lt;/div&gt;
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                            &lt;div class="form__row form__row--large"&gt;
-                                &lt;fieldset&gt;
-                                    &lt;legend&gt;Informatiesoort &lt;span class="tooltip " data-decorator="tooltip"&gt;
-  &lt;button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger"&gt;Help?&lt;/button&gt;
-  &lt;span role="tooltip" id="tt1" class="tooltip__content"&gt;U moet dit volledig en naar waarheid invullen&lt;/span&gt;
-                                        &lt;/span&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--large"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Informatiesoort <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"tooltip"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Help?"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__trigger"</span>&gt;</span>Help?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tooltip"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__content"</span>&gt;</span>U moet dit volledig en naar waarheid invullen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-                                    &lt;/legend&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'&gt;
-                                        &lt;div class="subselection__summary "&gt;&lt;/div&gt;
-                                        &lt;div id="modal-13" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer informatiesoort(en)&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--13"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-13" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--13" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-13"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--13" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-13" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer informatiesoort(en)&lt;/legend&gt;
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-subselection"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{ "type": "span" }'</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection__summary "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-13"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--fixedpane modal--off-screen modal--hidden"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer informatiesoort(en)<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-filter-results"</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"filter-id--13"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"resultfilter-13"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Typ hier uw organisatie"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mysuper_field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"filter-id--13"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__input input-text input-text--searchmedium"</span> /&gt;</span>
+                                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__results"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"resultfilter-13"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"polite"</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Selecteer informatiesoort(en)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
-                                                            &lt;ul class="list--unstyled"&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-465" name="name" data-value="Spanje" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-465"&gt;
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-465"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Spanje"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-465"</span>&gt;</span>
                         Spanje
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-565" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-565"&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-565"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Griekenland"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-565"</span>&gt;</span>
                         Griekenland
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-665" name="name" data-value="Nederland" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-665"&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-665"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Nederland"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-665"</span>&gt;</span>
                         Nederland
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                            &lt;/ul&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
+                                                        <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
-                                                    &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id13" data-handler="open-modal" data-modal="modal-13" class="subselection__trigger icon"&gt;Selecteer informatiesoort(en)&lt;/a&gt;
-                                    &lt;/div&gt;
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__buttonpane"</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Kiezen<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>Sluit modaal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"id13"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"open-modal"</span> <span class="hljs-attr">data-modal</span>=<span class="hljs-string">"modal-13"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection__trigger icon"</span>&gt;</span>Selecteer informatiesoort(en)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                &lt;/fieldset&gt;
-                            &lt;/div&gt;
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                            &lt;div class="form__row form__row--large"&gt;
-                                &lt;fieldset&gt;
-                                    &lt;legend&gt;Thema &lt;span class="tooltip " data-decorator="tooltip"&gt;
-  &lt;button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger"&gt;Help?&lt;/button&gt;
-  &lt;span role="tooltip" id="tt1" class="tooltip__content"&gt;U moet dit volledig en naar waarheid invullen&lt;/span&gt;
-                                        &lt;/span&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--large"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Thema <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"tooltip"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Help?"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__trigger"</span>&gt;</span>Help?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tooltip"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__content"</span>&gt;</span>U moet dit volledig en naar waarheid invullen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-                                    &lt;/legend&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span", "triggerSubmit": true }'&gt;
-                                        &lt;div class="subselection__summary "&gt;&lt;/div&gt;
-                                        &lt;div id="modal-12" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer thema(s)&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--12"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-12" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--12" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-12"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--12" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-12" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer thema(s)&lt;/legend&gt;
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-subselection"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{ "type": "span", "triggerSubmit": true }'</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection__summary "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-12"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--fixedpane modal--off-screen modal--hidden"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer thema(s)<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-filter-results"</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"filter-id--12"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"resultfilter-12"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Typ hier uw organisatie"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mysuper_field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"filter-id--12"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__input input-text input-text--searchmedium"</span> /&gt;</span>
+                                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__results"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"resultfilter-12"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"polite"</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Selecteer thema(s)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
-                                                            &lt;ul class="list--unstyled"&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-4" name="name" data-value="Spanje" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-4"&gt;
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Spanje"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-4"</span>&gt;</span>
                         Spanje
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-5" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-5"&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-5"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Griekenland"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-5"</span>&gt;</span>
                         Griekenland
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-6" name="name" data-value="Nederland" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-6"&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-6"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Nederland"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-6"</span>&gt;</span>
                         Nederland
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                            &lt;/ul&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
+                                                        <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
-                                                    &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id12" data-handler="open-modal" data-modal="modal-12" class="subselection__trigger icon"&gt;Selecteer thema(s)&lt;/a&gt;
-                                    &lt;/div&gt;
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__buttonpane"</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Kiezen<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>Sluit modaal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"id12"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"open-modal"</span> <span class="hljs-attr">data-modal</span>=<span class="hljs-string">"modal-12"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection__trigger icon"</span>&gt;</span>Selecteer thema(s)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                &lt;/fieldset&gt;
-                            &lt;/div&gt;
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                            &lt;div class="form__row form__row--large"&gt;
-                                &lt;fieldset&gt;
-                                    &lt;legend&gt;Organisatie
-                                        &lt;span class="tooltip " data-decorator="tooltip"&gt;
-  &lt;button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger"&gt;Help?&lt;/button&gt;
-  &lt;span role="tooltip" id="tt1" class="tooltip__content"&gt;U moet dit volledig en naar waarheid invullen&lt;/span&gt;
-                                        &lt;/span&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--large"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Organisatie
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"tooltip"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Help?"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__trigger"</span>&gt;</span>Help?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tooltip"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__content"</span>&gt;</span>U moet dit volledig en naar waarheid invullen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 
-                                    &lt;/legend&gt;
-                                    &lt;div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "span" }'&gt;
-                                        &lt;div class="subselection__summary "&gt;&lt;/div&gt;
-                                        &lt;div id="modal-1" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert"&gt;
-                                            &lt;div class="modal__inner"&gt;
-                                                &lt;div class="modal__content"&gt;
-                                                    &lt;h2&gt;Selecteer organisatie(s)&lt;/h2&gt;
-                                                    &lt;div class="" data-decorator="init-filter-results"&gt;
-                                                        &lt;div class="form__row form__row--medium"&gt;
-                                                            &lt;label class="visually-hidden" for="filter-id--1"&gt;&lt;/label&gt;
-                                                            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &lt;input type="text" aria-controls="resultfilter-1" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--1" class="js-filterresults__input input-text input-text--searchmedium"=======&lt; input type="text" aria-controls="resultfilter-1"
-                                                                placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--1" class="js-filterresults__input input-text input-text--searchmedium"&gt;&gt;&gt;&gt;&gt;&gt;&gt; release/1.9.19 /&gt;
-                                                        &lt;/div&gt;
-                                                        &lt;fieldset class="js-filterresults__results" role="region" id="resultfilter-1" aria-live="polite"&gt;
-                                                            &lt;legend class="visually-hidden"&gt;Selecteer organisatie(s)&lt;/legend&gt;
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-form-subselection"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{ "type": "span" }'</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection__summary "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal modal--fixedpane modal--off-screen modal--hidden"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__inner"</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__content"</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Selecteer organisatie(s)<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-filter-results"</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"filter-id--1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"resultfilter-1"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Typ hier uw organisatie"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"mysuper_field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"filter-id--1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__input input-text input-text--searchmedium"</span> /&gt;</span>
+                                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-filterresults__results"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"resultfilter-1"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"polite"</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Selecteer organisatie(s)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
 
-                                                            &lt;ul class="list--unstyled"&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-1" name="name" data-value="Spanje" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-1"&gt;
+                                                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list--unstyled"</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Spanje"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-1"</span>&gt;</span>
                         Spanje
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-2" name="name" data-value="Griekenland" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-2"&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Griekenland"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-2"</span>&gt;</span>
                         Griekenland
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                                &lt;li class=" js-filterresults__result"&gt;
-                                                                    &lt;div class="input-checkbox"&gt;
-                                                                        &lt;input class="checkbox__input" type="checkbox" id="option-3" name="name" data-value="Nederland" value="2" /&gt;
-                                                                        &lt;label class="checkbox__label" for="option-3"&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">" js-filterresults__result"</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-checkbox"</span>&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">data-value</span>=<span class="hljs-string">"Nederland"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+                                                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-3"</span>&gt;</span>
                         Nederland
-                      &lt;/label&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/li&gt;
-                                                            &lt;/ul&gt;
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 
-                                                        &lt;/fieldset&gt;
-                                                    &lt;/div&gt;
+                                                        <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                                    &lt;div class="modal__buttonpane"&gt;
-                                                        &lt;button type="button" data-handler="close-modal" class="button button--primary"&gt;Kiezen&lt;/button&gt;
-                                                    &lt;/div&gt;
-                                                    &lt;button type="button" data-handler="close-modal" class="modal__close"&gt;Sluit modaal&lt;/button&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;a href="#" id="id1" data-handler="open-modal" data-modal="modal-1" class="subselection__trigger icon"&gt;Selecteer organisatie(s)&lt;/a&gt;
-                                    &lt;/div&gt;
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__buttonpane"</span>&gt;</span>
+                                                        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button--primary"</span>&gt;</span>Kiezen<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modal"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal__close"</span>&gt;</span>Sluit modaal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"id1"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"open-modal"</span> <span class="hljs-attr">data-modal</span>=<span class="hljs-string">"modal-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subselection__trigger icon"</span>&gt;</span>Selecteer organisatie(s)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                &lt;/fieldset&gt;
-                            &lt;/div&gt;
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                            &lt;div class="form__row form__row--large"&gt;
-                                &lt;fieldset&gt;
-                                    &lt;legend&gt;Datum beschikbaar &lt;span class="tooltip " data-decorator="tooltip"&gt;
-  &lt;button aria-label="Help?" aria-describedby="tt1" aria-expanded="false" class="tooltip__trigger"&gt;Help?&lt;/button&gt;
-  &lt;span role="tooltip" id="tt1" class="tooltip__content"&gt;U moet dit volledig en naar waarheid invullen&lt;/span&gt;
-                                        &lt;/span&gt;
-                                    &lt;/legend&gt;
-                                    &lt;div class="form__row form__row--medium"&gt;
-                                        &lt;div class="input-radio"&gt;
-                                            &lt;input class="radio__input" value="" type="radio" id="option-checkbox-20" name="onderwerp" /&gt;
-                                            &lt;label class="radio__label" for="option-checkbox-20"&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--large"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Datum beschikbaar <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip "</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"tooltip"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Help?"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__trigger"</span>&gt;</span>Help?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tooltip"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tt1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tooltip__content"</span>&gt;</span>U moet dit volledig en naar waarheid invullen<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-radio"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-checkbox-20"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"onderwerp"</span> /&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-checkbox-20"</span>&gt;</span>
       Alle
-    &lt;/label&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="input-radio"&gt;
-                                            &lt;input class="radio__input" value="" type="radio" id="option-checkbox-20" name="onderwerp" /&gt;
-                                            &lt;label class="radio__label" for="option-checkbox-20"&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-radio"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-checkbox-20"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"onderwerp"</span> /&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-checkbox-20"</span>&gt;</span>
       Vandaag
-    &lt;/label&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="input-radio"&gt;
-                                            &lt;input class="radio__input" value="" type="radio" id="option-checkbox-20" name="onderwerp" /&gt;
-                                            &lt;label class="radio__label" for="option-checkbox-20"&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-radio"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-checkbox-20"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"onderwerp"</span> /&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-checkbox-20"</span>&gt;</span>
       Afgelopen week
-    &lt;/label&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="input-radio"&gt;
-                                            &lt;input class="radio__input" value="" type="radio" id="option-checkbox-20" name="onderwerp" /&gt;
-                                            &lt;label class="radio__label" for="option-checkbox-20"&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-radio"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-checkbox-20"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"onderwerp"</span> /&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-checkbox-20"</span>&gt;</span>
       Afgelopen maand
-    &lt;/label&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="input-radio"&gt;
-                                            &lt;input class="radio__input" value="" type="radio" id="option-checkbox-20" name="onderwerp" /&gt;
-                                            &lt;label class="radio__label" for="option-checkbox-20"&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-radio"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-checkbox-20"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"onderwerp"</span> /&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-checkbox-20"</span>&gt;</span>
       Afgelopen 3 maanden
-    &lt;/label&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="input-radio"&gt;
-                                            &lt;input class="radio__input" value="" type="radio" id="option-checkbox-20" name="onderwerp" /&gt;
-                                            &lt;label class="radio__label" for="option-checkbox-20"&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-radio"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__input"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"option-checkbox-20"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"onderwerp"</span> /&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio__label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"option-checkbox-20"</span>&gt;</span>
       Zelf een periode kiezen
-    &lt;/label&gt;
-                                        &lt;/div&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                    &lt;/div&gt;
-                                    &lt;div class="form__row form__row--medium"&gt;
-                                        &lt;label&gt;Startdatum&lt;/label&gt;
-                                        &lt;div class="datepicker"&gt;
-                                            &lt;input type="date" value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" /&gt;
-                                        &lt;/div&gt;
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Startdatum<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"datepicker"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-date</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"datepicker__input "</span> <span class="hljs-attr">data-date-format</span>=<span class="hljs-string">"DD-MM-YYYY"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-datepicker"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{ "dateFormat" : "dd-mm-yy" }'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input--1"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Bijv: 06-10-1960"</span> /&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                        &lt;a href="#" class="reset"&gt;
-                  &lt;small&gt;Herstel&lt;/small&gt;
-                &lt;/a&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="form__row form__row--medium"&gt;
-                                        &lt;label&gt;Einddatum&lt;/label&gt;
-                                        &lt;div class="datepicker"&gt;
-                                            &lt;input type="date" value="" data-date="" class="datepicker__input " data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy" }' id="input--1" placeholder="Bijv: 06-10-1960" /&gt;
-                                        &lt;/div&gt;
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"reset"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>Herstel<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form__row form__row--medium"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Einddatum<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"datepicker"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-date</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"datepicker__input "</span> <span class="hljs-attr">data-date-format</span>=<span class="hljs-string">"DD-MM-YYYY"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-datepicker"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{ "dateFormat" : "dd-mm-yy" }'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input--1"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Bijv: 06-10-1960"</span> /&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                                        &lt;a href="#" class="reset"&gt;
-                  &lt;small&gt;Herstel&lt;/small&gt;
-                &lt;/a&gt;
-                                    &lt;/div&gt;
-                                &lt;/fieldset&gt;
-                            &lt;/div&gt;
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"reset"</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>Herstel<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                            &lt;button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky" data-config='{"position":"bottom"}'&gt;Opnieuw zoeken&lt;/button&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-fixedbottom-button__button modal-sidebar__submit button button--primary"</span> <span class="hljs-attr">data-decorator</span>=<span class="hljs-string">"init-sticky"</span> <span class="hljs-attr">data-config</span>=<span class="hljs-string">'{"position":"bottom"}'</span>&gt;</span>Opnieuw zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-                        &lt;/form&gt;
-                    &lt;/div&gt;
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-                    &lt;button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close"&gt;
-          &lt;span class="visually-hidden"&gt;Sluiten&lt;/span&gt;
-        &lt;/button&gt;
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-handler</span>=<span class="hljs-string">"close-modalsidebar"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-sidebar__close"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Sluiten<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-                &lt;/div&gt;
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;/div&gt;
-&lt;div class="footer row--footer" role="contentinfo"&gt;
-    &lt;div class="container columns"&gt;
-        &lt;div&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer row--footer"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container columns"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;ul class="list list--linked"&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://beta.overheid.nl/over-deze-site"&gt;Over deze website&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://beta.overheid.nl/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://beta.overheid.nl/english" lang="en"&gt;English&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://beta.overheid.nl/help"&gt;Help&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://beta.overheid.nl/help/zoeken"&gt;Zoeken&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/over-deze-site"</span>&gt;</span>Over deze website<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/contact"</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/english"</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>English<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/help"</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://beta.overheid.nl/help/zoeken"</span>&gt;</span>Zoeken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;ul class="list list--linked"&gt;
-                &lt;li class="list__item"&gt;&lt;a href="/informatie-hergebruiken"&gt;Informatie hergebruiken&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="/privacy-statement"&gt;Privacy en cookies&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="/toegankelijkheid"&gt;Toegankelijkheid&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="/sitemap"&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/informatie-hergebruiken"</span>&gt;</span>Informatie hergebruiken<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/privacy-statement"</span>&gt;</span>Privacy en cookies<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/toegankelijkheid"</span>&gt;</span>Toegankelijkheid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/sitemap"</span>&gt;</span>Sitemap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;ul class="list list--linked"&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://data.overheid.nl"&gt;Open data&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="http://linkeddata.overheid.nl"&gt;Linked Data Overheid&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://puc.overheid.nl"&gt;PUC Open Data&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://data.overheid.nl"</span>&gt;</span>Open data<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://linkeddata.overheid.nl"</span>&gt;</span>Linked Data Overheid<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://puc.overheid.nl"</span>&gt;</span>PUC Open Data<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-            &lt;ul class="list list--linked"&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://mijn.overheid.nl"&gt;MijnOverheid.nl&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://www.rijksoverheid.nl"&gt;Rijksoverheid.nl&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://ondernemersplein.nl"&gt;Ondernemersplein.nl&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="list__item"&gt;&lt;a href="https://www.werkenbijdeoverheid.nl"&gt;Werkenbijdeoverheid.nl&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--linked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://mijn.overheid.nl"</span>&gt;</span>MijnOverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.rijksoverheid.nl"</span>&gt;</span>Rijksoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://ondernemersplein.nl"</span>&gt;</span>Ondernemersplein.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.werkenbijdeoverheid.nl"</span>&gt;</span>Werkenbijdeoverheid.nl<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -4886,6 +4883,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="table--default.html" data-pjax>
                 <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--fixed-columns.html" data-pjax>
+                <span>Fixed columns</span>
                 
 
 <div class="Status Status--unlabelled">

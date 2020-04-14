@@ -204,3 +204,26 @@
     border-bottom: 1px solid $lighterGrey !important;
   }
 }
+
+@media (min-width: $breakpointDesktop ) {
+  .u-columnwidth {
+    &-10p {
+      width: 10%;
+    }
+    &-20p {
+      width: 20%;
+    }
+    &-25p {
+      width: 25%;
+    }
+    &-30p {
+      width: 30%;
+    }
+    &-40p {
+      width: 40%;
+    }
+    &-50p {
+      width: 50%;
+    }
+  }
+}

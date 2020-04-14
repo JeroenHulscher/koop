@@ -3,6 +3,9 @@
   &--sticky-sidebar {
 
     > .columns--sticky-sidebar__sidebar {
+      padding-left: 0;
+      padding-right: 0;
+
       > div {
         // padding-top: 1em;
       }
@@ -10,7 +13,7 @@
       @media ( min-width: $breakpointDesktop ) {
         border: 1px solid transparent;
         border-right: 1px solid $lighterGrey;
-        top: 1.8em;
+        // top: 1.8em;
 
 
         &.is-sticky {
@@ -18,7 +21,7 @@
         }
 
         .nav-sub {
-          margin-right: -1em;
+          // margin-right: -1em;
           border-right: 0;
         }
       }

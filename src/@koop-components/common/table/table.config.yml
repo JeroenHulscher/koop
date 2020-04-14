@@ -44,6 +44,53 @@ context:
         type: Woonplaats
         value: Alkmaar
 variants:
+  - name: Fixed columns
+    label: Fixed columns
+    context:
+      caption: Deze tabel bevat teamleden van KOOP Overheid.nl
+      items:
+        - item:
+          - column:
+            type:
+            value: 1
+          - column:
+            thclass: u-columnwidth-30p
+            type: Voornaam
+            value: Alexander
+          - column:
+            thclass: u-columnwidth-30p
+            type: Achternaam
+            value: Fase
+          - column:
+            thclass: u-columnwidth-30p
+            type: Woonplaats
+            value: Delft
+        - item:
+          - column:
+            type:
+            value: 2
+          - column:
+            type: Voornaam
+            value: Ted
+          - column:
+            type: Achternaam
+            value: van Geest
+          - column:
+            type: Woonplaats
+            value: Delft
+        - item:
+          - column:
+            type:
+            value: 3
+          - column:
+            type: Voornaam
+            value: Ard
+          - column:
+            type: Achternaam
+            value: van der Heijden
+          - column:
+            type: Woonplaats
+            value: Alkmaar
   - name: Multilevel
     label: Multilevel
     context:

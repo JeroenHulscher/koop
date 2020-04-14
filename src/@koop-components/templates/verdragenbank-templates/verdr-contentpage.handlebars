@@ -5,32 +5,36 @@
   </div>
 </div>
 
-<div class="container row">
-  <div class="columns columns--sidebar-left">
-    <div class="column">
 
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
 
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Pagina navigatie</button>
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <h3 class="u-fontw--default"><i>Verdrag</i></h3>
+      <div>
+        {{render "@nav" navVerdragContext }}
       </div>
-
-      <div class="align-right">
-        {{!-- <ul class="list list--inline">
-          <li><a href="#" class="link-iconed link-iconed--print">Printen</a></li>
-          <li><a href="#" class="link-iconed link-iconed--download">Downloaden</a></li>
-          <li><a href="#" class="link-iconed link-iconed--mail">Abonneren</a></li>
-        </ul> --}}
-        {{ render "@pageactions"}}
+      <h3 class="u-fontw--default"><i>Depositair</i></h3>
+      <div>
+        {{render "@nav"  navDepositairContext }}
       </div>
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close"><span class="visually-hidden">Sluiten</span></button>
+    </div>
+  </div>
 
-      <h1 class="h1">Wijziging van bijlagen V en VII bij het Protocol van 1998 inzake persistente organische verontreinigende stoffen</h1>
+  <div>
 
-      <h2>Partijen</h2>
+    <div class="align-right">
+      {{ render "@pageactions"}}
+    </div>
 
+    <h1 class="h1">Wijziging van bijlagen V en VII bij het Protocol van 1998 inzake persistente organische verontreinigende stoffen</h1>
+
+    <h2>Partijen</h2>
+    <div class="table__container">
       <table class="table__data-overview table--striped">
         <thead>
-          <th>Partij {{render "@tooltip" }}</th>
+          <th class="u-columnwidth-20p">Partij {{render "@tooltip" }}</th>
           <th>Ondertekening</th>
           <th>Voorlopige toepassing</th>
           <th>Ratificatie</th>
@@ -40,16 +44,20 @@
         </thead>
         <tbody>
           <tr>
-          <th><a href="#">Albanië</a></th>
-          <td></td>
-          <td></td>
-          <td>04-05-2007 (T)</td>
-          <td>01-08-2008</td>
-          <td></td>
-          <td></td>
+            <th>
+              <a href="#">Albanië</a>
+            </th>
+            <td></td>
+            <td></td>
+            <td>04-05-2007 (T)</td>
+            <td>01-08-2008</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <th><a href="#">Andorra</a></th>
+            <th>
+              <a href="#">Andorra</a>
+            </th>
             <td></td>
             <td></td>
             <td>04-05-2007 (T)</td>
@@ -59,13 +67,14 @@
           </tr>
         </tbody>
       </table>
+    </div>
 
 
-      <h2>Partij</h2>
-
+    <h2>Partij</h2>
+    <div class="table__container">
       <table class="table__data-overview table--striped">
         <thead>
-          <th>Partij</th>
+          <th class="u-columnwidth-20p">Partij</th>
           <th>Voorbehoud/verklaring</th>
           <th>Bezwaren</th>
         </thead>
@@ -86,63 +95,70 @@
           </tr>
         </tbody>
       </table>
+    </div>
 
-      <p><strong>Toon details in de tabel</strong></p>
-      <p>
-        {{render "@buttonswitch" detailsContent}}
-      </p>
+    <p>
+      <strong>Toon details in de tabel</strong>
+    </p>
+    <p>
+      {{render "@buttonswitch" detailsContent}}
+    </p>
 
-      <h2>Belarus</h2>
-      <p class="p pre-h cur">15-01-2016</p>
-      <p>
-         The Republic of Belarus on the basis of Article XV of the Agreement shall not apply Annex 3 to the Agreement with respect to:
-      </p>
-      <ul>
-        <li>
-           the prohibition referred to in paragraph 2.1.2(a) of Annex 3 to the Agreement on the taking of birds belonging to the populations
-          listed in column B of table 1 of Annex 3 to the Agreement at various stages of reproduction and rearing and during their
-          return to their breeding grounds if the taking has an unfavourable impact on the conservation status of the population concerned;
-        </li>
-        <li>
-           the prohibition referred to in paragraph 2.1.2(b) of Annex 3 to the Agreement on the use of all indiscriminate means of
-          taking out and means capable of causing mass destruction, the local disappearance, as well as causing serious anxiety to
-          the birds belonging to the populations listed in column B of table 1 of Annex 3 to the Agreement;
-        </li>
-        <li>
-           paragraph 4.1.4 of Annex 3 to the Agreement.
-        </li>
-      </ul>
+    <h2>Belarus</h2>
+    <p class="p pre-h cur">15-01-2016</p>
+    <p>
+      The Republic of Belarus on the basis of Article XV of the Agreement shall not apply Annex 3 to the Agreement with respect
+      to:
+    </p>
+    <ul>
+      <li>
+        the prohibition referred to in paragraph 2.1.2(a) of Annex 3 to the Agreement on the taking of birds belonging to the populations
+        listed in column B of table 1 of Annex 3 to the Agreement at various stages of reproduction and rearing and during their
+        return to their breeding grounds if the taking has an unfavourable impact on the conservation status of the population
+        concerned;
+      </li>
+      <li>
+        the prohibition referred to in paragraph 2.1.2(b) of Annex 3 to the Agreement on the use of all indiscriminate means of taking
+        out and means capable of causing mass destruction, the local disappearance, as well as causing serious anxiety to the
+        birds belonging to the populations listed in column B of table 1 of Annex 3 to the Agreement;
+      </li>
+      <li>
+        paragraph 4.1.4 of Annex 3 to the Agreement.
+      </li>
+    </ul>
 
-      <div class="content-note">
-        <h2 class="content-note__heading">België, 15-01-2016</h2>
-         <p>In 2004 Belgium raised an objection to the accession of Albania in accordance with article 12, paragraph 2, of the Convention. Belgium has decided to withdraw this objection.</p>
-      </div>
+    <div class="content-note">
+      <h2 class="content-note__heading">België, 15-01-2016</h2>
+      <p>In 2004 Belgium raised an objection to the accession of Albania in accordance with article 12, paragraph 2, of the Convention.
+        Belgium has decided to withdraw this objection.</p>
+    </div>
 
 
-      <h2>Algemeen</h2>
-
-      <table class="table__data-overview table--striped">
-        <tbody>
-          <tr>
-          <th>Verdragsnummer</th>
+    <h2>Algemeen</h2>
+    <div class="table__container">
+    <table class="table__data-overview table--striped">
+      <tbody>
+        <tr>
+          <th class="u-columnwidth-30p">Verdragsnummer</th>
           <td>012477</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>Datum totstandkoming</th>
           <td>18-12-2009</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>Plaats totstandkoming</th>
           <td>Genève</td>
-          </tr>
-          <tr><th>Voorlopige toestand</th>
+        </tr>
+        <tr>
+          <th>Voorlopige toestand</th>
           <td></td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>In werking</th>
           <td>13-12-2010</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>Tractatenblad</th>
           <td class="u-nopadding">
             <div data-decorator="showmoreless" data-config='{"labelmore":"Toon alle tractaten"}'>
@@ -172,67 +188,133 @@
 
 
           </td>
-          </tr>
-        </tbody>
-      </table>
+        </tr>
+      </tbody>
+    </table>
+    </div>
 
-      <h2>Konkrijk der Nederlanden</h2>
+    <h2>Konkrijk der Nederlanden</h2>
 
-      <table class="table__data-overview table--striped">
+    <div class="table__container">
+      <table id="koninkrijktabel" class="table__data-overview table--striped">
         <thead>
-          <th>Voorlopige toepassing</th>
-          <th>In werking</th>
-          <th>Terugwerkende kracht</th>
-          <th>Buiten werking</th>
+          <tr>
+            <th></th>
+            <th>Voorlopige
+              <br>toepassing
+            </th>
+            <th>In werking</th>
+            <th>Terugwerkende kracht</th>
+            <th class="u-columnwidth-20p">Buiten werking</th>
+          </tr>
         </thead>
         <tbody>
+
           <tr>
+
             <th>Nederland (in Europa)</th>
-            <td></td>
-            <td>26-03-1925</td>
-            <td></td>
+
+            <td class="u-nobreak">17-07-1992</td>
+
+            <td class="u-nobreak">09-11-1992</td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
           <tr>
+
             <th>Nederland (Bonaire)</th>
-            <td></td>
-            <td></td>
-            <td></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
           <tr>
+
             <th>Nederland (Sint Eustatius)</th>
-            <td></td>
-            <td></td>
-            <td></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
           <tr>
+
             <th>Nederland (Saba)</th>
-            <td></td>
-            <td></td>
-            <td></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
           <tr>
+
             <th>Aruba</th>
-            <td></td>
-            <td></td>
-            <td></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
           <tr>
+
             <th>Curaçao</th>
-            <td></td>
-            <td></td>
-            <td></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
           <tr>
+
             <th>Sint Maarten</th>
-            <td></td>
-            <td></td>
-            <td></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
+            <td class="u-nobreak"></td>
+
           </tr>
+
         </tbody>
       </table>
+    </div>
 
-      <h2>Kinderverdrag(en)</h2>
+    <h2>Kinderverdrag(en)</h2>
 
+    <div class="table__container">
       <table class="table__data-overview">
         <thead>
           <th>Titel</th>
@@ -241,51 +323,31 @@
         </thead>
         <tbody>
           <tr>
-            <th><a href="#">Verdrag tot vaststelling van de minimumleeftijd van toelating van kinderen tot arbeid op zee (herzien)</a></th>
+            <th>
+              <a href="#">Verdrag tot vaststelling van de minimumleeftijd van toelating van kinderen tot arbeid op zee (herzien)</a>
+            </th>
             <td>24-10-1936</td>
             <td>Genève</td>
           </tr>
           <tr>
-            <th><a href="#">Maritiem arbeidsverdrag, 2006</a></th>
+            <th>
+              <a href="#">Maritiem arbeidsverdrag, 2006</a>
+            </th>
             <td>23-02-2006</td>
             <td>Genève</td>
           </tr>
 
         </tbody>
       </table>
-
-      <h2>Gewaarmerkt afschrift</h2>
-
-       {{ render "@sources-list" }}
-
-       {{render "@to-top"}}
-
     </div>
-    <div class="column column--sidebar">
 
-      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
+    <h2>Gewaarmerkt afschrift</h2>
 
-          <div class="modal-sidebar__content">
-            <h3 class="u-fontw--default"><i>Verdrag</i></h3>
-            <div>
-              {{render "@nav" navVerdragContext }}
-            </div>
-
-            <h3 class="u-fontw--default"><i>Depositair</i></h3>
-            <div>
-              {{render "@nav"  navDepositairContext }}
-            </div>
-
-            <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-              <span class="visually-hidden">Sluiten</span>
-            </button>
+    {{ render "@sources-list" }} {{render "@to-top"}}
 
 
-
-      </div>
-
-    </div>
   </div>
+
 </div>
 
 {{ render "@footer" }}

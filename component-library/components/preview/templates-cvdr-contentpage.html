@@ -123,7 +123,7 @@
       <div class="scrollContentReceiver"></div>
       <ul class="nav-sub ">
     <li class="nav-sub__item is-active">
-      <a href="" class="nav-sub__link ">Regeling</a>
+      <a href="" class="nav-sub__link is-active">Regeling</a>
         <ul class="nav-sub__sub">
             <li class="nav-sub__sub-item"><a href="#section-1" class="nav-sub__sub-link ">Intitulé</a>
             </li>
@@ -302,7 +302,7 @@
       </div>
 
 
-</div>
+  </div>
 
 </div>
 
@@ -378,7 +378,7 @@
       if (title) {
         selectStyle(title);
       }
-      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; right: 0; width: 20px;');
+      select.setAttribute('style', 'z-index:999; position: absolute; top: 0; left: 0; width: 20px;');
       for (var i = 0; i < styles.length; i++) {
         var option = document.createElement('option');
         option.text = 'CSS: ' + styles[i];

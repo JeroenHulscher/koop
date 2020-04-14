@@ -7,7 +7,7 @@
   {{#if @first}}
   <tr>
     {{#each item }}
-    <th scope="col">{{#if ../../rotated}}<span class="rotated">{{/if}}{{ type }}{{#if ../../rotated}}</span>{{/if}}</th>
+    <th scope="col" class="{{thclass}}">{{#if ../../rotated}}<span class="rotated">{{/if}}{{ type }}{{#if ../../rotated}}</span>{{/if}}</th>
     {{/each}}
   </tr>
   {{/if}}
