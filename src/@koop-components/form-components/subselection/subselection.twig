@@ -1,0 +1,103 @@
+<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{ type }}"{% if linkTextActive %}, "triggerOnChangeText": "{{ linkTextActive }}"{% endif %}{% if maxShow %}, "maxShow": "{{ maxShow }}"{% endif %}{% if triggerSubmit %}, "triggerSubmit": true{% endif %} }'>
+  <div class="subselection__summary {% if required %}required{% endif %}"></div>
+  <div id="modal-{{ id }}" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <h2>{{ modalTitle }}</h2>
+        {% if searchFilter %}
+          <div class="" data-decorator="init-filter-results">
+            <div class="form__row form__row--medium">
+              <label class="visually-hidden" for="filter-id--{{ id }}">{{ label }}</label>
+              <input type="text" aria-controls="resultfilter-{{ id }}" placeholder="{% if inputPlaceholder %}{{ inputPlaceholder }}{% else %}Typ hier uw organisatie{% endif %}" name="mysuper_field" id="filter-id--{{ id }}" class="js-filterresults__input input-text input-text--searchmedium" />
+            </div>
+            <fieldset class="js-filterresults__results" role="region" id="resultfilter-{{ id }}" aria-live="polite">
+              <legend class="visually-hidden">{{ modalTitle }}</legend>
+              {% endif %}
+              {% if selectAll %}
+              <div data-decorator="init-selectall">
+                <div class="input-checkbox u-margin--m">
+                  <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{ selectAllID }}" name="selectAll" value="Alle iets" />
+                  <label class="checkbox__label" for="{{ selectAllID }}">
+                    <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+                  </label>
+                </div>
+              {% endif %}
+              {% if radio %}
+                <div class="" data-decorator="init-formreset">
+                  <p><a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
+              {% endif %}
+
+              {% if multilevel %}
+                {% for Options_i in Options %}
+                  {% if Options_i.checkAll %}
+                    <div data-decorator="init-selectall">
+                      <div class="input-checkbox">
+                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{ Options_i.id }}" name="selectAll" value="Alle iets"
+                        />
+                        <label class="checkbox__label u-nomargin" for="{{ Options_i.id }}">
+                          <strong>{{ Options_i.title }}</strong>
+                        </label>
+                      </div>
+                  {% else %}
+                    <p class="form__label">{% if Options_i.title %}{{ Options_i.title }}{% endif %}</p>
+                  {% endif %}
+
+                  <ul class="list--unstyled">
+                    {% for OptionsSubs_i in Options_i.OptionsSubs %}
+                      <li class=" js-filterresults__result">
+                        <div class="input-{% if Options_i.radio %}radio{% else %}checkbox{% endif %}">
+                          <input class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__input" {{ OptionsSubs_i.disabled }} {{ OptionsSubs_i.checked }} {% if OptionsSubs_i.linkedto %}data-linkedto="{{ OptionsSubs_i.linkedto }}"{% endif %} type="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}" id="option-{{ OptionsSubs_i.id }}" name="name" {{ OptionsSubs_i.status }} data-value="{{ OptionsSubs_i.short }}" value="2"
+                          />
+                          <label class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ OptionsSubs_i.id }}">
+                            {{ OptionsSubs_i.title }}
+                          </label>
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% if Options_i.checkAll %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+
+            {% else %}
+                <ul class="list--unstyled">
+                  {% for Options_i in Options %}
+                  <li class=" js-filterresults__result">
+                    <div class="input-{% if radio %}radio{% else %}checkbox{% endif %}">
+                      <input class="{% if radio %}radio{% else %}checkbox{% endif %}__input" {{ Options_i.disabled }} {{ Options_i.checked }} {{ Options_i.required }} {% if Options_i.linkedto %}data-linkedto="{{ Options_i.linkedto }}"
+                        {% endif %} type="{% if radio %}radio{% else %}checkbox{% endif %}" id="option-{{ Options_i.id }}" name="{% if Options_i.name %}{{ Options_i.name }}{% else %}name{% endif %}" {{ Options_i.status }} data-value="{{ Options_i.short }}"
+                        value="2" />
+                      <label class="{% if radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ Options_i.id }}">
+                        {{ Options_i.title }}
+                      </label>
+                    </div>
+                  </li>
+                  {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% if radio %}
+            </div>
+            {% endif %}
+          {% if selectAll %}
+          </div>
+          {% endif %}
+        {% if searchFilter %}
+            </fieldset>
+          </div>
+        {% endif %}
+
+        <div class="modal__buttonpane">
+          {% if buttonSubmit %}
+            <button type="submit" class="button button--primary">Opnieuw zoeken</button>
+          {% else %}
+            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+          {% endif %}
+        </div>
+        {% if hideClose %}{% else %}<button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>{% endif %}
+      </div>
+    </div>
+  </div>
+  <a href="#" id="id{{ id }}" data-handler="open-modal" data-modal="modal-{{ id }}" class="subselection__trigger icon">{{ linkText }}</a>
+</div>
