@@ -1,8 +1,0 @@
-<div class="search" id="search">
-  <h2 class="visually-hidden">Zoekfunctie</h2>
-  <form action="/" {% if toggleableSearch is defined %}data-decorator="init-search-toggle"{% endif %}>
-    <label class="visually-hidden" for="searchInput">Vul uw zoekterm in</label>
-    <input id="searchInput" type="search" class="search__term" placeholder="{{ placeholder }}" />
-    <button type="submit" class="search__submit">Zoek</button>
-  </form>
-</div>
