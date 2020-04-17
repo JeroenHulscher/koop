@@ -33,22 +33,35 @@
     &--flexed &__cta {
       position: absolute;
       bottom: 2em;
+      // left: 4em;
+      left: 0em;
+    }
+  }
+
+  @media (min-width: $breakpointDesktop) {
+    &--highlight.block-content--flexed {
+      padding-bottom: 3em;
+    }
+    &--highlight.block-content--flexed &__cta {
+      position: absolute;
+      bottom: 2em;
       left: 4em;
     }
   }
 
-    &--slim {
+
+  &--slim {
+    padding-left: 2em;
+    padding-right: 2em;
+    @media (min-width: $breakpointDesktop) {
       padding-left: 2em;
       padding-right: 2em;
-      @media (min-width: $breakpointDesktop) {
-        padding-left: 2em;
-        padding-right: 2em;
-      }
     }
+  }
 
-    &--slim &__cta {
-      left: 2em;
-    }
+  &--slim &__cta {
+    left: 2em;
+  }
 
 }
 
