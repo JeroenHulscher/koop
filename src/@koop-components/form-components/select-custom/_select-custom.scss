@@ -10,6 +10,9 @@
   &.has-error {
     border: 2px solid $red;
   }
+  &.is-valid {
+    border-color: $green;
+  }
 
   &:after {
     position: absolute;

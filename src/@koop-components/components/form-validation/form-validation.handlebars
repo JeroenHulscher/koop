@@ -86,6 +86,22 @@
 
     <div class="form__row">
       <fieldset>
+        <legend>Subselection - NOT REQUIRED</legend>
+        <h3 class="form__sublegend">Rondom een woonplaats</h3>
+        {{render "@subselection" rondomadres1Context }}
+      </fieldset>
+    </div>
+
+    <div class="form__row">
+      <fieldset>
+        <legend>Input (text) - NOT REQUIRED</legend>
+          <label for="tf0">Text field 0</label>
+          <input type="text" name="tf0" id="tf0" value="">
+        </fieldset>
+    </div>
+
+    <div class="form__row">
+      <fieldset>
         <legend>Input (text) - regex: only numbers</legend>
           <pre>
              &lt;input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required&gt;

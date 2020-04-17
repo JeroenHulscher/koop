@@ -77,7 +77,7 @@
     this.summaryItemRemovers = this.containerSummary.querySelectorAll('.subselection__summaryitem__remove');
 
     for (i = 0; i < this.summaryItemRemovers.length; i++ ) {
-      this.summaryItemRemovers[i].addEventListener( 'click', function (e) { this.removeSummaryItem(e); }.bind(this), false);
+      this.summaryItemRemovers[i].addEventListener( 'click', function (e) { e.preventDefault(); this.removeSummaryItem(e); }.bind(this), false);
     }
   };
 
@@ -126,7 +126,7 @@
       title = this.items[y][1];
       id = this.items[y][2];
       if (this.config.type !== 'abbr') {
-        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<button class="subselection__summaryitem__remove"></button></' + this.config.type +'> ';
+        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<a href="#" class="subselection__summaryitem__remove"></a></' + this.config.type +'> ';
       } else {
         summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
       }
