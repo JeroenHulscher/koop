@@ -13,7 +13,7 @@
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.dataFromJSON = document.querySelector(this.config.config).innerHTML;
-    this.inputRange = document.getElementsByName('kpm-straal');
+    this.rangeSelectors = document.querySelectorAll(this.config.rangeselector);
     var self = this;
     var isModalVisible = true;
     this.id = this.element.getAttribute('id');
@@ -34,7 +34,7 @@
       return;
     }
 
-    if (this.inputRange) {
+    if (this.rangeSelectors) {
       this.setRangeListener();
     }
 
@@ -46,8 +46,8 @@
   kpmService.prototype.setRangeListener = function(  ) {
     var y;
 
-    for (y = 0; y < this.inputRange.length; y++) {
-      this.inputRange[y].addEventListener('change', function (e) { this.setupMap(e, "editRange"); }.bind(this), false);
+    for (y = 0; y < this.rangeSelectors.length; y++) {
+      this.rangeSelectors[y].addEventListener('change', function (e) { this.setupMap(e, "editRange"); }.bind(this), false);
     }
   };
 

@@ -9,33 +9,32 @@ context:
     options:
     - id: radio-1
       text: 250 meter
-      name: kpm-straal
+      name: radio-group-1
       checked: checked
       value: 250
     - id: radio-2
       text: 500 meter
-      name: kpm-straal
+      name: radio-group-1
       value: 500
     - id: radio-3
       text: 1000 meter
-      name: kpm-straal
+      name: radio-group-1
       value: 1000
     - id: radio-4
       text: 1500 meter
-      name: kpm-straal
+      name: radio-group-1
       value: 1500
     - id: radio-5
       text: 3000 meter
-      name: kpm-straal
+      name: radio-group-1
       value: 3000
     - id: radio-6
       text: Hele gemeente 'Den Haag'
-      name: kpm-straal
+      name: radio-group-1
       value: hideMap
   mapContext:
     modifier: h-400
     controls: false
-    buttonEditStraal: js-kpm-editstraal
   rondomadresContext:
     linkText: Selecteer opties rondom een adres
     id: 20
