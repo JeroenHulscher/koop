@@ -232,6 +232,12 @@ $gutter--lg: 6em;
         margin-left: $gutter;
       }
 
+      @media ( min-width: $breakpointDesktop ) {
+        > div:not(.columns--sticky-sidebar__sidebar) {
+          min-height: 500px;
+        }
+      }
+
       > .columns--sticky-sidebar__sidebar {
 
         @media ( min-width: $breakpointDesktop ) {
