@@ -71,14 +71,17 @@ variants:
           id: 2
           title: Frankrijk
           short: Frankrijk
+          checked: checked
         - Option: 3
           id: 3
           title: Griekenland
           short: Griekenland
+          checked: checked
         - Option: 4
           id: 4
           title: Spanje
           short: Spanje
+          checked: checked
         - Option: 5
           id: 5
           title: Spanje

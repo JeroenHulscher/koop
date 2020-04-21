@@ -16,7 +16,7 @@
 
     // config
       // available summary item types: 'span', 'abbr'.
-      this.config.type = this.config.type || 'span';
+      this.config.type = this.config.type || 'div';
       // amount of items to show;
       this.config.maxShow = this.config.maxShow || false;
       // trigger a form submit after removing an summary item?
@@ -126,9 +126,9 @@
       title = this.items[y][1];
       id = this.items[y][2];
       if (this.config.type !== 'abbr') {
-        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
+        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
       } else {
-        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
+        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
       }
     }
     this.containerSummary.innerHTML = summary;
@@ -142,7 +142,9 @@
   };
 
   formSubselection.prototype.initHideUnwantedResults = function () {
-    this.resultItems = [].slice.call(this.element.querySelectorAll(this.config.type));
+    var subselectionSummaryContainer = this.element.querySelector('.subselection__summary');
+    this.resultItems = [].slice.call(subselectionSummaryContainer.querySelectorAll('.subselection__summaryitem'));
+    console.log('this.resultItems', this.resultItems);
     this.config.labelMore = this.config.labelmore || 'Toon meer';
     this.config.labelLess = this.config.labelless || 'Toon minder';
     this.allvisible = false;

@@ -28,7 +28,7 @@ describe('Subselection', function () {
     var modalButton = element(by.css('.modal .button.button--primary'));
     modalButton.click();
 
-    browser.driver.findElements(by.css('.subselection__summary span')).
+    browser.driver.findElements(by.css('.subselection__summaryitem')).
       then(function (elems) {
         expect(elems.length).toEqual(5);
       }
@@ -37,12 +37,12 @@ describe('Subselection', function () {
 
   it('should remove item when clicked on X', function () {
 
-    var itemRemoveTrigger = element(by.css('.subselection__summary span:first-child button'));
+    var itemRemoveTrigger = element(by.css('.subselection__summaryitem:first-child .subselection__summaryitem__remove'));
     itemRemoveTrigger.click();
 
     browser.driver.sleep(1500);
 
-    browser.driver.findElements(by.css('.subselection__summary span')).
+    browser.driver.findElements(by.css('.subselection__summaryitem')).
       then(function (elems) {
         expect(elems.length).toEqual(4);
       }
