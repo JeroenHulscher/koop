@@ -20,11 +20,10 @@ context:
     required: true
   subselectionContext:
     required: true
-    radio: true
     type: span
-    linkText: Kies 'iets'
+    linkText: Selecteer 'gemeenten'
     linkTextActive: Pas opties aan
-    modalTitle: Selecteer ministeries
+    modalTitle: Selecteer gemeenten
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
@@ -50,7 +49,8 @@ context:
     modalTitle: Selecteer opties rondom een adres
     fieldLabel: fieldLabel
     fieldInstruction:
-    fieldPlaceholder: 'Bijv: 0612345678'
+    label: Filter op stad
+    inputPlaceholder: Zoek op stad
     searchFilter: true
     maxShow: 3
     selectAll: true

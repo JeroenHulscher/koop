@@ -1,6 +1,6 @@
 <div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
-  <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+  <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
         <h2>{{modalTitle}}</h2>
@@ -99,5 +99,5 @@
       </div>
     </div>
   </div>
-  <a href="#" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger icon">{{linkText}}</a>
+  <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger icon">{{ linkText }}</button>
 </div>

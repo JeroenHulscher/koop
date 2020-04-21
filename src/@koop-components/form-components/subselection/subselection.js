@@ -126,7 +126,7 @@
       title = this.items[y][1];
       id = this.items[y][2];
       if (this.config.type !== 'abbr') {
-        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="'+id+'">' + value + '<a href="#" class="subselection__summaryitem__remove"></a></' + this.config.type +'> ';
+        summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
       } else {
         summary += '<' + this.config.type + ' title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
       }

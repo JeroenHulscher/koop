@@ -4,11 +4,39 @@
     float: right;
   }
 
+  &__trigger {
+    font-size: 1em;
+    border: 0;
+    font-family: inherit;
+    color: $darkBlue;
+    text-decoration: underline;
+    display: inline-block;
+    outline: 2px solid transparent;
+    outline-offset: .5em;
+    transition: outline-offset $fastEaseInOut;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: 0;
+    }
+  }
+
   &__summary {
     display: block;
 
     &:not(:empty) {
       padding-top: .5em;
+    }
+
+    > abbr {
+      .subselection__summaryitem__remove {
+        display: none;
+      }
     }
 
     > span {

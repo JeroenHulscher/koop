@@ -40,7 +40,7 @@ var supports = function () {
     this.errors = [];
 
     this.config.txtIntroErrorsContainer = this.config.txtIntroErrorsContainer || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
-    this.config.messageLabelValid = this.config.messageLabelValid || "Correct";
+    this.config.messageLabelValid = this.config.messageLabelValid || "Correct ingevuld";
 
     // Messages
     this.config.messageValueMissing = this.config.messageValueMissing || "Het veld '{label}' mag niet leeg zijn.";
