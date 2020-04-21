@@ -13,7 +13,7 @@ describe('Form validation, should: ', function () {
     browser.get('http://localhost:3000/components/preview/form-validation');
     browser.sleep(1000);
 
-    submit = element(by.css('.button'));
+    submit = element(by.css('.button[type="submit"]'));
     submit.click();
 
     browser.sleep(500);
@@ -27,15 +27,15 @@ describe('Form validation, should: ', function () {
   it('2] after submit, show field errors below field (10 fields)', function () {
 
 
-    errorFieldContainer1 = element(by.css('#error-for-id'));
-    errorFieldContainer2 = element(by.css('#error-for-id20'));
-    errorFieldContainer3 = element(by.css('#error-for-tf1'));
-    errorFieldContainer4 = element(by.css('#error-for-tf2'));
-    errorFieldContainer5 = element(by.css('#error-for-nf2'));
-    errorFieldContainer6 = element(by.css('#error-for-ef1'));
-    errorFieldContainer7 = element(by.css('#error-for-zcf1'));
-    errorFieldContainer9 = element(by.css('#error-for-select1'));
-    errorFieldContainer10 = element(by.css('#error-for-option-checkbox-2'));
+    errorFieldContainer1 = element(by.css('[id="message-for-id"].form__error'));
+    errorFieldContainer2 = element(by.css('[id="message-for-id20"].form__error'));
+    errorFieldContainer3 = element(by.css('[id="message-for-tf1"].form__error'));
+    errorFieldContainer4 = element(by.css('[id="message-for-tf2"].form__error'));
+    errorFieldContainer5 = element(by.css('[id="message-for-nf2"].form__error'));
+    errorFieldContainer6 = element(by.css('[id="message-for-ef1"].form__error'));
+    errorFieldContainer7 = element(by.css('[id="message-for-zcf1"].form__error'));
+    errorFieldContainer9 = element(by.css('[id="message-for-select1"].form__error'));
+    errorFieldContainer10 = element(by.css('[id="message-for-option-checkbox-2"].form__error'));
 
 
     expect(errorFieldContainer1.isDisplayed()).toBe(true);
@@ -72,7 +72,7 @@ describe('Form validation, should: ', function () {
     errorFieldContainer10Text = errorFieldContainer10.getText();
 
     expect(errorFieldContainer1.isDisplayed()).toBe(true);
-    expect(errorFieldContainer1Text).toContain("Kies 'iets'");
+    expect(errorFieldContainer1Text).toContain("Selecteer 'gemeenten'");
     expect(errorFieldContainer2.isDisplayed()).toBe(true);
     expect(errorFieldContainer2Text).toContain("Selecteer opties rondom een adres");
     expect(errorFieldContainer3.isDisplayed()).toBe(true);
@@ -92,7 +92,7 @@ describe('Form validation, should: ', function () {
 
   });
 
-  it('4.1] after submit, when "Kies iets" is filled.. should remove errors.', function () {
+  it('4.1] after submit, when "Kies gemeenten" is filled.. should remove errors.', function () {
     label = element(by.css('#id'));
     label.click();
 
@@ -112,8 +112,8 @@ describe('Form validation, should: ', function () {
     body.click();
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-id"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-id"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
 
   });
 
@@ -156,8 +156,8 @@ describe('Form validation, should: ', function () {
     body.click();
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-id20"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-id20"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
 
   });
 
@@ -188,7 +188,7 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-tf1"]'));
+    error = element(by.css('[id="message-for-tf1"].form__error'));
     expect(error.isDisplayed()).toBe(true);
   });
 
@@ -201,8 +201,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-tf1"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-tf1"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('6.3] when "Text field 1" is filled correctly.. should remove errors in summary.', function () {
@@ -231,7 +231,7 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-tf2"]'));
+    error = element(by.css('[id="message-for-tf2"].form__error'));
     expect(error.isDisplayed()).toBe(true);
   });
 
@@ -244,8 +244,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-tf2"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-tf2"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('7.3] when "Text field 2" is filled correctly.. should remove errors in summary.', function () {
@@ -276,8 +276,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-nf2"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-nf2"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('8.2] when "Number field 2" is filled correctly.. should remove errors in summary.', function () {
@@ -306,7 +306,7 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-ef1"]'));
+    error = element(by.css('[id="message-for-ef1"]'));
     expect(error.isDisplayed()).toBe(true);
   });
 
@@ -327,8 +327,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-ef1"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-ef1"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('9.3] when "Email" is filled correctly.. should remove errors in summary.', function () {
@@ -357,7 +357,7 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-zcf1"]'));
+    error = element(by.css('[id="message-for-zcf1"]'));
     expect(error.isDisplayed()).toBe(true);
   });
 
@@ -369,8 +369,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-zcf1"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-zcf1"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('10.3] when "Zipcode" is filled correctly.. should remove errors in summary.', function () {
@@ -398,7 +398,7 @@ describe('Form validation, should: ', function () {
   //   browser.driver.sleep(500);
 
   //   // check if error under field is gone;
-  //   error = element(by.css('[id="error-for-option-5"]'));
+  //   error = element(by.css('[id="message-for-option-5"]'));
   //   expect(error.isDisplayed()).toBe(false);
   // });
 
@@ -428,8 +428,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-select1"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-select1"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('11.2] when "Select" is changed to empty.. should display error.', function () {
@@ -440,11 +440,11 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-select1"]'));
+    error = element(by.css('[id="message-for-select1"]'));
     expect(error.isDisplayed()).toBe(true);
   });
 
-  it('11.3] when "Select" is changed.. should remove error.', function () {
+  it('11.3] when "Select" is changed.. should remove error and show success.', function () {
     var select = element(by.css('#select1'));
     select.sendKeys('London');
     browser.actions().sendKeys(protractor.Key.TAB).perform();
@@ -452,8 +452,8 @@ describe('Form validation, should: ', function () {
     browser.driver.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-select1"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-select1"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
   });
 
   it('11.4] when "Select" is changed.. should remove error in summary.', function () {
@@ -476,7 +476,7 @@ describe('Form validation, should: ', function () {
 
   it('X] after submit, and everything EXCEPT ONE is filled in, should display 1 summary error', function () {
 
-    submit = element(by.css('.button'));
+    submit = element(by.css('.button[type="submit"]'));
     submit.click();
 
     browser.sleep(500);
@@ -498,8 +498,8 @@ describe('Form validation, should: ', function () {
     browser.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-option-checkbox-2"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-option-checkbox-2"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
 
   });
 
@@ -511,7 +511,7 @@ describe('Form validation, should: ', function () {
     browser.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-option-checkbox-2"]'));
+    error = element(by.css('[id="message-for-option-checkbox-2"].form__error'));
     expect(error.isDisplayed()).toBe(true);
 
   });
@@ -524,8 +524,8 @@ describe('Form validation, should: ', function () {
     browser.sleep(500);
 
     // check if error under field is gone;
-    error = element(by.css('[id="error-for-option-checkbox-2"]'));
-    expect(error.isDisplayed()).toBe(false);
+    error = element(by.css('[id="message-for-option-checkbox-2"].form__success'));
+    expect(error.isDisplayed()).toBe(true);
 
   });
 
