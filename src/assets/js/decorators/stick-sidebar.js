@@ -115,6 +115,14 @@
         h1ReferenceTop = onl.dom.$('h1')[0].getBoundingClientRect().bottom;
       };
 
+      var sidebarHeight = document.querySelector('.columns--sticky-sidebar__sidebar > div').offsetHeight;
+      var columns = document.querySelectorAll('.columns--sticky-sidebar > div');
+      for (var i = 0; i < columns.length; i++) {
+        if (!columns[i].classList.contains('columns--sticky-sidebar__sidebar')) {
+          columns[i].style.minHeight = sidebarHeight + 80 + "px";
+        }
+      }
+
       calculate();
 
       // window.requestAnimationFrame(updateStickability);
