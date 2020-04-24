@@ -234,7 +234,7 @@ $gutter--lg: 6em;
 
       @media ( min-width: $breakpointDesktop ) {
         > div:not(.columns--sticky-sidebar__sidebar) {
-          min-height: 500px;
+          // min-height: 500px;
         }
       }
 
