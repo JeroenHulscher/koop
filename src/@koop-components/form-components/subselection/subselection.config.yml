@@ -48,7 +48,7 @@ variants:
           id: 3
           title: Sociale Zaken en Werkgelegenheid (szw)
           short: szw
-  - name: Default (span) limit (3)
+  - name: Default limit (3)
     context:
       id: 1
       type: div
@@ -262,37 +262,10 @@ variants:
           id: 49
           title: Spanje
           short: Spanje
-<<<<<<< HEAD
-  - name: Default (span) inputfilter
-    context:
-      linkText: Selecteer land(en)
-      id: 122
-      modalTitle: Selecteer land(en)
-      fieldLabel: fieldLabel
-      fieldInstruction:
-      fieldPlaceholder: 'Bijv: 0612345678'
-      searchFilter: true
-      inputPlaceholder: Typ hier een land
-      type: span
-      Options:
-        - Option: 4
-          id: 456
-          title: Spanje
-          short: Spanje
-        - Option: 5
-          id: 556
-          title: Griekenland
-          short: Griekenland
-        - Option: 6
-          id: 656
-          title: Nederland
-          short: Nederland
-=======
         - Option: 50
           id: 50
           title: Zweden
           short: Zweden
->>>>>>> release/1.9.25
   - name: Filter selection - Multilevel
     context:
       id: 1

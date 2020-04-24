@@ -5,7 +5,7 @@ describe('Subselection', function () {
   });
 
   it('should display 5 results, after selecting one more.', function () {
-    browser.get('http://localhost:3000/components/preview/subselection--filter-selection---limit-(3)');
+    browser.get('http://localhost:3000/components/preview/subselection--default-limit-(3)');
 
     var width = 1200;
     var height = 800;
