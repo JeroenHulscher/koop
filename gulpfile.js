@@ -186,6 +186,7 @@ gulp.task( 'js:watch', function() {
 });
 
 gulp.task( 'default', gulp.parallel( 'css', 'images', 'fonts', 'js' ) );
+gulp.task( 'public-build', gulp.series( 'default' ) );
 gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'fractal:build' ) );
 // gulp.task( 'watch', gulp.parallel( 'lint:watch', 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'watch', gulp.parallel( 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
