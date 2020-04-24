@@ -1,9 +1,5 @@
 ---
 label: Form disregardchanges
-status: prototype
-context:
----
-label: Form disregardchanges
-status: prototype
+status: ready
 context:
   id: 1
