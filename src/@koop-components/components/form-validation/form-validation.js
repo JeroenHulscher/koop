@@ -350,12 +350,11 @@ var supports = function () {
   };
 
   formvalidation.prototype.markFieldValidInSummary = function (field, options) {
-    console.log('markFieldValidInSummary', field);
     var fieldId;
 
-    if(this.getClosest(field, '.subselection')){
+    var sub = this.getClosest(field, '.subselection');
+    if(sub){
       // is subselection
-      var sub = this.getClosest(field, '.subselection');
       var subTrigger = sub.querySelector('.subselection__trigger');
       fieldId = subTrigger.getAttribute('id');
     } else {
@@ -379,63 +378,10 @@ var supports = function () {
     }
   }
 
-  formvalidation.prototype.IsFieldMarkedValid = function (field) {
-    // console.log('field', field);
+  // formvalidation.prototype.markFieldValid = function (field, options) {
+    // field.classList.add('is-valid');
+  // }
 
-    var id = field.getAttribute('id');
-    var validMessage = this.element.querySelector("#message-for-" + id);
-    if (validMessage){
-      return true;
-    } else {
-      return false;
-    }
-
-    // var subselection = this.getClosest(field, '.subselection');
-    // if (subselection){
-    //   var subselectionSummary = sub.querySelector('.subselection__summary');
-    // } else {
-    //   var parent = field.parentNode;
-    //   if (parent.querySelector('.form__success')) {
-    //     return true;
-    //   }
-    //   if (parent.classList.contains('select-custom')) {
-    //     console.log('1');
-    //     console.log('parentNode', parent.parentNode);
-    //     console.log('parentNode', parent.parentNode.querySelector('.form__success'));
-    //     var parentparent = parent.parentNode;
-    //     if (parentparent.querySelector('.form__success')) {
-    //       console.log('2');
-    //       return true;
-    //     }
-    //   }
-    //   return false;
-    // }
-  };
-
-  formvalidation.prototype.markFieldValid = function (field, options) {
-    field.classList.add('is-valid');
-
-    // this.showValidMessage(field);
-  }
-  /*
-  formvalidation.prototype.showValidMessage = function (field, options) {
-    var id = field.getAttribute('id');
-    var messageValid = document.createElement('div');
-    messageValid.id = 'validmessage-for-' + id;
-    messageValid.classList.add('form__success');
-    messageValid.innerHTML = this.config.messageValid || 'Correct';
-
-    // Add ARIA role to the field
-    field.setAttribute('aria-describedby', 'validmessage-for-' + id);
-
-    var parent = field.parentNode;
-    if (parent.classList.contains('select-custom')) {
-      parent.parentNode.insertBefore(messageValid, parent.nextSibling);
-    } else {
-      field.parentNode.insertBefore(messageValid, field.nextSibling);
-    }
-  }
-  */
 
   formvalidation.prototype.removeFieldValid = function(field) {
     var id = field.getAttribute('id');
@@ -444,19 +390,6 @@ var supports = function () {
   }
 
   formvalidation.prototype.removeMessage = function (field, subselection, options) {
-    var messageValid;
-    console.log('removeMessage', field);
-
-    // var classStateOldField = this.config.classValidField;
-    // var classStateNewField = this.config.classErrorField;
-    // var classMessageContainer = this.config.classErrorContainer;
-    // var prefixId = 'messageerror';
-    // if (messageType === "success") {
-    //   classStateOldField = this.config.classErrorField;
-    //   classStateNewField = this.config.classValidField;
-    //   classMessageContainer = this.config.classValidContainer;
-    //   prefixId = 'messagesuccess';
-    // }
 
     // Remove ARIA role from the field
     field.removeAttribute('aria-describedby');
@@ -489,41 +422,16 @@ var supports = function () {
 
     // Check if an error message is in the DOM
     var message;
-    // var subselection = this.getClosest(field, '.subselection');
-    console.log('subselection', subselection);
     if (subselection) {
-      console.log('ik ben onderdeel van een sub');
       message = subselection.querySelector('.form__message');
     } else {
       message = this.element.querySelector('#message-for-' + field.id);
-      // console.log('field', field);
-      // console.log('field', field.nodeName);
-      // var nodeName = field.nodeName;
-
-      // if(nodeName === "SELECT") {
-      //   var parent = field.parentNode;
-      //   message = parent.parentNode.querySelector('.form__message');
-      // } else {
-      //   message = field.parentNode.querySelector('.form__message');
-      // }
     }
-
 
     if (!message) return;
 
     // remove error div from DOM;
     message.parentNode.removeChild(message);
-
-    /*
-    // If so, hide it
-    message.innerHTML = '';
-
-    message.style.display = 'none';
-    message.style.visibility = 'hidden';
-*/
-    // After remove error callback
-    // this.config.afterRemoveError(field);
-
   };
 
   formvalidation.prototype.removeErrorFromErrors = function (id) {
@@ -598,7 +506,8 @@ var supports = function () {
   }
 
   formvalidation.prototype.blurHandler = function (event) {
-    var self = this;
+    console.log('blurHandler');
+    // var self = this;
     var type = event.target.nodeName;
 
     if (event.target.type === 'submit' || type === 'DIV') return;
@@ -606,18 +515,21 @@ var supports = function () {
     if (type === 'BUTTON') {
 
     } else  if (type === 'A'){
-      if (event.target.classList.contains('subselection__summaryitem__remove')) {
-        var subselection = self.getClosest(event.target, '.subselection');
-        setTimeout(function () {
-          var error = self.hasErrorInSubselection(subselection);
-          if (error) {
-            self.showErrorSubselection(subselection);
-          } else {
-            self.removeMessage(event.target, subselection);
-          }
-        }, 200);
-      }
-      return;
+      // console.log('blurHandler A');
+      // if (event.target.classList.contains('subselection__summaryitem__remove')) {
+      //   var subselection = self.getClosest(event.target, '.subselection');
+      //   console.log('before setTimeout');
+      //   setTimeout(function () {
+      //     console.log('setTimeout');
+      //     var error = self.hasErrorInSubselection(subselection);
+      //     if (error) {
+      //       self.showErrorSubselection(subselection);
+      //     } else {
+      //       self.showMessage("success", event.target, subselection);
+      //     }
+      //   }, 200);
+      // }
+      // return;
     } else {
       // Validate the field
       var error = this.hasError(event.target);
@@ -639,9 +551,25 @@ var supports = function () {
   formvalidation.prototype.clickHandler = function (event) {
 
     // Only run if the field is a checkbox or radio
+    var self = this;
     var type = event.target.getAttribute('type');
     if (type == null) {
       type = event.target.tagName;
+    }
+    if (type === 'A') {
+      // if event.target is the remove-trigger for the subselection component (removes selected filter)
+      if (event.target.classList.contains('subselection__summaryitem__remove')) {
+        var subselectionId = event.target.getAttribute('data-subselection-id');
+        var subselection = this.element.querySelector('[data-id="'+subselectionId+'"');
+        var error = self.hasErrorInSubselection(subselection);
+
+        if (error) {
+          self.showErrorSubselection(subselection);
+        } else {
+          self.showMessage("success", event.target, subselection);
+        }
+      }
+      return;
     }
     if (!(type === 'checkbox' || type === 'radio')) return;
 
@@ -708,7 +636,6 @@ var supports = function () {
 
     // Validate each field
     // Store the first field with an error to a variable so we can bring it into focus later
-    // var hasErrors;
     for (var i = 0; i < fields.length; i++) {
 
       var error = this.hasError(fields[i]);
