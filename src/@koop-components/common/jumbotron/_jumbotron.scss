@@ -59,6 +59,7 @@
 
   &__content {
 
+    // nowhere used;
     &--side {
       max-width: em(620);
       @media (min-width: $breakpointDesktop) {
@@ -66,16 +67,18 @@
       }
     }
     &--centered {
-      max-width: em(750);
+      // max-width: em(750); // original width;
+      max-width: em(560);
       padding: 0;
       margin: 0 auto;
 
       &-medium {
         max-width: em(860);
       }
-      &-s,
-      &-small {
-        max-width: em(560);
+      // &-s,
+      // &-small,
+      &-semimedium {
+        max-width: em(750);
         padding: 0;
         margin: 0 auto;
       }
