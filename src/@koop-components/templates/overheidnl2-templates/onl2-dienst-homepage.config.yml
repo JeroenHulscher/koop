@@ -10,7 +10,6 @@ context:
     subheading: Dienstverlening
     intro: Diensten van lokale overheden in uw buurt of wat u met de overheid moet regelen als er een bepaalde levensgebeurtenis plaatsvindt.
     centered: true
-    size: s
     headingcentered: true
     inputPostcodeContext:
       modifier: input-text--medium
