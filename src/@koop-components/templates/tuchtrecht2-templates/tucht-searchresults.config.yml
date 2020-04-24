@@ -117,6 +117,7 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
+    inputPlaceholder: Typ hier een instantie
     searchFilter: true
     type: span
     Options:
