@@ -63,17 +63,18 @@
     </div>
 
     <div class="form__row">
+      {{!-- <fieldset data-decorator="init-form-disregardchanges"> --}}
       <fieldset>
         <legend>Subselection, with radio buttons</legend>
         <p>Apply the class <code>required</code> to the div: <code>.subselection__summary</code></p>
-        <h3 class="form__sublegend">Iets</h3>
+        <h3 class="form__sublegend">Selecteer gemeenten</h3>
         {{render "@subselection" subselectionContext}}
       </fieldset>
-
     </div>
 
     <div class="form__row">
-      <fieldset>
+      <fieldset data-decorator="init-form-disregardchanges">
+      {{!-- <fieldset> --}}
         <legend>Subselection, with checkboxes</legend>
         <p>Apply the class
           <code>required</code> to the div:
@@ -82,6 +83,22 @@
         <h3 class="form__sublegend">Rondom een adres</h3>
         {{render "@subselection" rondomadresContext }}
       </fieldset>
+    </div>
+
+    <div class="form__row">
+      <fieldset>
+        <legend>Subselection - NOT REQUIRED</legend>
+        <h3 class="form__sublegend">Rondom een woonplaats</h3>
+        {{render "@subselection" rondomadres1Context }}
+      </fieldset>
+    </div>
+
+    <div class="form__row">
+      <fieldset>
+        <legend>Input (text) - NOT REQUIRED</legend>
+          <label for="tf0">Text field 0</label>
+          <input type="text" name="tf0" id="tf0" value="">
+        </fieldset>
     </div>
 
     <div class="form__row">

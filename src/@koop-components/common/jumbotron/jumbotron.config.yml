@@ -33,7 +33,6 @@ variants:
       modifier: jumbotron--highlight
       h: h1
       centered: true
-      size: s
       intro: Dit is de intro van de Jumbotron
       button: false
 

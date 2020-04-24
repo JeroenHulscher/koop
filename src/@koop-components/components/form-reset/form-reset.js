@@ -13,8 +13,9 @@
     this.resetElementClass = this.config.resetElementClass || 'formreset-resetlink';
 
     this.resetLink = this.element.querySelector('.' + this.resetElementClass);
-
-    this.initEventListeners();
+    if (this.resetLink) {
+      this.initEventListeners();
+    }
   };
 
   formReset.prototype.initEventListeners = function() {

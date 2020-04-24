@@ -10,6 +10,9 @@
   &.has-error {
     border: 2px solid $red;
   }
+  &.is-valid {
+    border-color: $green;
+  }
 
   &:after {
     position: absolute;
@@ -30,7 +33,7 @@
     border: none;
     box-shadow: none;
     display: block;
-    height: 41px;
+    height: 2.65em;
     background-color: transparent;
     background-image: none;
     appearance: none;

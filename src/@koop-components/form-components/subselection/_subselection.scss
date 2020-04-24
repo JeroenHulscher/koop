@@ -4,6 +4,30 @@
     float: right;
   }
 
+  &__trigger {
+    background-color: transparent;
+    text-align: left;
+    font-size: 1em;
+    border: 0;
+    font-family: inherit;
+    color: $darkBlue;
+    text-decoration: underline;
+    display: inline-block;
+    outline: 2px solid transparent;
+    outline-offset: .5em;
+    transition: outline-offset $fastEaseInOut;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: 0;
+    }
+  }
+
   &__summary {
     display: block;
 
@@ -11,6 +35,13 @@
       padding-top: .5em;
     }
 
+    > abbr {
+      .subselection__summaryitem__remove {
+        display: none;
+      }
+    }
+
+    > div:not(.link),
     > span {
       @extend .form__selectedfilter;
       @extend .group;
@@ -32,7 +63,7 @@
       .subselection__summaryitem__remove {
         position: absolute;
         background: $iconCrossBlue no-repeat center;
-        background-size: 0.625em;
+        background-size: 0.4em;
         width: 30px;
         right: 0;
         top: 0;

@@ -35,7 +35,7 @@ describe('Datepicker', function() {
 
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
-
+/*
   xit('allows you to type in a date and opens using the keyboard on the datepicker button', function() {
     var datepickerInput;
     var datepicker;
@@ -109,6 +109,7 @@ describe('Datepicker', function() {
 
     expect(datepicker.isDisplayed()).toBeFalsy();
   });
+  */
 
   it('[RANGE] select the 13th, when clicked on the day', function () {
     var datepickerButton;

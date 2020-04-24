@@ -11,7 +11,6 @@ context:
     intro: Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
     centered: true
     headingcentered: true
-    size: medium
     inputSearchContext:
       modifier: input-text--searchmedium
       id: 1

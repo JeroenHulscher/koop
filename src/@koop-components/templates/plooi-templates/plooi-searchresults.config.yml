@@ -282,16 +282,16 @@ context:
     Options:
       - Option: 1
         id: 1
-        title: Spanje
-        short: Spanje
+        title: Organisatie 1
+        short: Organisatie 1
       - Option: 2
         id: 2
-        title: Griekenland
-        short: Griekenland
+        title: Organisatie 2
+        short: Organisatie 2
       - Option: 3
         id: 3
-        title: Nederland
-        short: Nederland
+        title: Organisatie 3
+        short: Organisatie 3
   subselectionThemaContext:
     linkText: Selecteer thema(s)
     id: 12

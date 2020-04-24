@@ -190,7 +190,8 @@ fieldset {
   }
 
   &__success {
-    background: white $iconCheckFilledGreen no-repeat left center;
+    background: $iconCheckFilledGreen no-repeat left center;
+    background-color: transparent;
     padding-left: 1.75em;
     color: $green;
     font-style: italic;
@@ -203,6 +204,7 @@ fieldset {
     font-style: italic;
     color: $red;
     background: $iconAlertRed top -6px left;
+    background-color: transparent;
     background-repeat: no-repeat;
     // background-size: 1em;
     padding-left: 1.75em;
@@ -581,7 +583,7 @@ input[type=date].datepicker__input {
     position: absolute;
     top: 2px;
     right: 2px;
-    bottom: 2px;
+    height: 46px;
     font-size: 0;
     width: 38px;
     color: white;

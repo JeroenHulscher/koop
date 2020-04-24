@@ -1,0 +1,39 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <h3 class="u-fontw--default"><i>Verdrag</i></h3>
+      <div>
+        {{render "@nav" navVerdragContext }}
+      </div>
+      <h3 class="u-fontw--default"><i>Depositair</i></h3>
+      <div>
+        {{render "@nav"  navDepositairContext }}
+      </div>
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close"><span class="visually-hidden">Sluiten</span></button>
+    </div>
+  </div>
+
+  <div>
+
+    <div class="align-right">
+      {{ render "@pageactions"}}
+    </div>
+
+    <h1 class="h1">Wijziging van bijlagen V en VII bij het Protocol van 1998 inzake persistente organische verontreinigende stoffen</h1>
+
+
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

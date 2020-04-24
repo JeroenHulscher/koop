@@ -7,3 +7,13 @@ context:
   content: <p>Besluiten zoals vergunningen, bouwplannen en plaatselijke regelgeving kunnen van invloed zijn op uw woonomgeving. Uw gemeente en andere overheidsinstanties publiceren deze besluiten op berichten over uw buurt. Wat dit voor u betekent leggen we graag uit. </p>
   buttonText: Meer informatie
   href: '#'
+variants:
+  - name: primary
+    context:
+      modifier: primary
+  - name: secondary
+    context:
+      modifier: secondary
+  - name: secondary
+    context:
+      modifier: secondary

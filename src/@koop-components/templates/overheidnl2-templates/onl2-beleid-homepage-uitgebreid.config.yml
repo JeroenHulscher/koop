@@ -13,6 +13,7 @@ context:
     intro: Via deze zoekpagina worden de Staatscourant rubrieken Oproepingen en Gerechtelijke aankondigingen voor u ontsloten.
     text: <p>U kunt op basis van persoons- of bedrijfsgegevens zoeken naar publicaties over u, de Oproepingen, of naar publicaties waarin u een belanghebbende bent, de Gerechtelijke aankondigingen. Met uitzondering van de rubrieken 'Oproepingen | Schuldeisers' en 'Gerechtelijke aankondigingen | Handlichtingen', zijn de overige publicaties een beperkte termijn via deze zoekpagina vindbaar.</p>
     centered: true
+    size: medium
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
