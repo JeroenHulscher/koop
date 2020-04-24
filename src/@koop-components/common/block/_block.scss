@@ -4,13 +4,11 @@
 
   &__heading {
     margin-top: 0;
-  }
-  h2.block-content__heading {
     font-size: em(29);
   }
-  h3.block-content__heading {
-    font-size: em(22);
-  }
+  // h3.block-content__heading {
+    // font-size: em(22);
+  // }
 
   &__subheading {
     margin-bottom: em(4);
@@ -18,8 +16,17 @@
     font-style: italic;
   }
 
-  &--highlight {
+  &--highlight,
+  &--primary {
     background-color: $lightBlue;
+    padding: 1.5em 2em;
+    @media (min-width: $breakpointDesktop) {
+      padding: 2em 4em;
+    }
+  }
+
+  &--secondary {
+    background-color: $lightGreen;
     padding: 1.5em 2em;
     @media (min-width: $breakpointDesktop) {
       padding: 2em 4em;
@@ -39,10 +46,14 @@
   }
 
   @media (min-width: $breakpointDesktop) {
-    &--highlight.block-content--flexed {
-      padding-bottom: 3em;
+    &--highlight.block-content--flexed,
+    &--primary.block-content--flexed,
+    &--secondary.block-content--flexed {
+      padding-bottom: 4em;
     }
-    &--highlight.block-content--flexed &__cta {
+    &--highlight.block-content--flexed &__cta,
+    &--primary.block-content--flexed &__cta,
+    &--secondary.block-content--flexed &__cta {
       position: absolute;
       bottom: 2em;
       left: 4em;
@@ -60,7 +71,7 @@
   }
 
   &--slim &__cta {
-    left: 2em;
+    left: 2em !important;
   }
 
 }
