@@ -22,7 +22,7 @@ var supports = function () {
 
   onl.decorate({
     'init-form-validation': function (element) {
-      new formvalidation(element);
+      // new formvalidation(element);
     }
   });
 
@@ -506,8 +506,6 @@ var supports = function () {
   }
 
   formvalidation.prototype.blurHandler = function (event) {
-    console.log('blurHandler');
-    // var self = this;
     var type = event.target.nodeName;
 
     if (event.target.type === 'submit' || type === 'DIV') return;
@@ -515,21 +513,6 @@ var supports = function () {
     if (type === 'BUTTON') {
 
     } else  if (type === 'A'){
-      // console.log('blurHandler A');
-      // if (event.target.classList.contains('subselection__summaryitem__remove')) {
-      //   var subselection = self.getClosest(event.target, '.subselection');
-      //   console.log('before setTimeout');
-      //   setTimeout(function () {
-      //     console.log('setTimeout');
-      //     var error = self.hasErrorInSubselection(subselection);
-      //     if (error) {
-      //       self.showErrorSubselection(subselection);
-      //     } else {
-      //       self.showMessage("success", event.target, subselection);
-      //     }
-      //   }, 200);
-      // }
-      // return;
     } else {
       // Validate the field
       var error = this.hasError(event.target);
