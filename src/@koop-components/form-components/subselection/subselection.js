@@ -1,3 +1,12 @@
+function findObjectByKey(array, key, value) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i][key] === value) {
+      return array[i];
+    }
+  }
+  return null;
+}
+
 (function () {
 
   'use strict';
@@ -6,6 +15,10 @@
 
     'init-form-subselection': function (element) {
       new formSubselection(element);
+      new disregardchanges(element);
+    },
+    'init-form-disregardchanges': function (element) {
+      new disregardchanges(element);
     }
 
   });
@@ -46,6 +59,10 @@
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
+
+    var uniqueId = Math.floor(Math.random() * 1000000);
+    this.element.setAttribute('data-id', uniqueId);
+    this.elementId = uniqueId;
 
     // TODO: improve
     setTimeout(function(){
@@ -126,7 +143,7 @@
       title = this.items[y][1];
       id = this.items[y][2];
       if (this.config.type !== 'abbr') {
-        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
+        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove" data-subselection-id="' + this.elementId +'"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
       } else {
         summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
       }
@@ -144,7 +161,7 @@
   formSubselection.prototype.initHideUnwantedResults = function () {
     var subselectionSummaryContainer = this.element.querySelector('.subselection__summary');
     this.resultItems = [].slice.call(subselectionSummaryContainer.querySelectorAll('.subselection__summaryitem'));
-    console.log('this.resultItems', this.resultItems);
+    // console.log('this.resultItems', this.resultItems);
     this.config.labelMore = this.config.labelmore || 'Toon meer';
     this.config.labelLess = this.config.labelless || 'Toon minder';
     this.allvisible = false;
@@ -225,6 +242,7 @@
   };
 
   formSubselection.prototype.removeSummaryItem = function (e) {
+    console.log('removeSummaryItem');
     var item = e.target.parentNode;
     var itemLinkedId = item.getAttribute('data-linkedid');
     var target = document.getElementById(itemLinkedId);
@@ -260,8 +278,103 @@
       target.fireEvent("onchange");
     }
 
+    // used in: "form-disregardchanges.js";
+    pubsub.publish('/subselection/removeSummaryItem', {
+      element: this.element
+    });
+
     this.collectValues();
   };
+
+
+  // ======
+
+
+  var disregardchanges = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    this.triggerDisregard = this.element.querySelector(this.config.triggerDisregard) || this.element.querySelector('.modal__close');
+    this.triggerApplySelection = this.element.querySelector(this.config.triggerApplySelection) || this.element.querySelector('[data-handler="close-modal"]');
+
+    this.options = onl.dom.$('input[type=checkbox], input[type=radio]', this.element);
+
+    this.init();
+  };
+
+  disregardchanges.prototype.init = function () {
+    var self = this;
+    this.createState();
+    this.setEventListeners();
+
+
+    var subscription = pubsub.subscribe('/subselection/removeSummaryItem', function (obj) {
+      var subselection = self.element;
+
+      // if clicked remove-trigger from subselection is in the same subselection component.
+      if (obj.element === subselection) {
+        self.createState();
+      }
+    });
+
+  };
+
+
+
+  disregardchanges.prototype.setEventListeners = function () {
+
+    // Event listeners
+    if (this.triggerDisregard) {
+      this.triggerDisregard.addEventListener('click', function (e) { this.disregardAll(e) }.bind(this), false);
+    }
+    if (this.triggerApplySelection) {
+      this.triggerApplySelection.addEventListener('click', function (e) { this.rebuildState(e) }.bind(this), false);
+    }
+
+  }
+
+  disregardchanges.prototype.rebuildState = function () {
+    this.createState();
+  }
+
+  disregardchanges.prototype.createState = function () {
+    this.state = [];
+
+    var elements = onl.dom.$('input[type=checkbox], input[type=radio]', this.element);
+
+    for (var i = 0; i < elements.length; i++) {
+
+      // only accept radio and checkbox;
+      if (!(elements[i].type === 'radio' || elements[i].type === 'checkbox')) return;
+
+      var id = elements[i].getAttribute('id');
+      var type = elements[i].type;
+      var state = elements[i].checked;
+      this.state.push({ "ID": id, "type": type, "state": state });
+    }
+  }
+
+  disregardchanges.prototype.disregardAll = function () {
+    var state = this.state;
+
+    for (var i = 0; i < state.length; i++) {
+      // create relation between state and input;
+      var item = findObjectByKey(state, 'ID', state[i].ID);
+      // set state;
+      var input = document.getElementById(item.ID);
+      input.checked = state[i].state;
+
+      // onchange event needs manual triggering on checkboxes
+      if ("createEvent" in document) {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("change", false, true);
+        input.dispatchEvent(evt);
+      } else {
+        input.fireEvent("onchange");
+      }
+    }
+  }
+
 
 
 })();
