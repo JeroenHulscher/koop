@@ -38,8 +38,8 @@
   }
 }
 
-.modal .checkbox__input[name="selectAll"] {
-  & ~ label {
+.modal [data-decorator="init-selectall"] {
+  .js-checkbox-master {
     margin-bottom: em(24);
   }
 }
