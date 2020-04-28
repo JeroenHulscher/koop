@@ -12,7 +12,12 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.placeholderContainer = this.element.querySelector('.video__placeholder');
     this.trigger = this.element.querySelector('.video__placeholder button');
-    this.initEventListeners();
+
+    this.elementVideo = this.element.querySelector('video');
+
+    if (this.elementVideo) {
+      this.initEventListeners();
+    }
   };
 
   video.prototype.initEventListeners = function (e) {
@@ -20,8 +25,20 @@
   };
 
   video.prototype.showVideo = function () {
+    var self = this;
+
     this.element.classList.add('is-video');
     this.element.setAttribute('role', 'alert');
+
+    this.elementVideo.setAttribute('autoplay', true);
+
+    new Plyr(this.elementVideo);
+
+    // todo: is there a on-ready function to react on?
+    setTimeout(function(){
+      self.element.querySelector('.plyr').focus();
+    }, 200);
+
   };
 
 })();

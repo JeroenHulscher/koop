@@ -1,6 +1,6 @@
 <div class="video" data-decorator="init-video">
   <div class="video__video">
-     <img src="https://via.placeholder.com/1200x700.jpg?text=video+player" alt="placeholder voor de video player"/>
+     {{ render "@videoplayer" videoplayerContext }}
   </div>
   <div class="video__placeholder">
     <img src="{{placeholderSrc}}" alt="{{placeholderAlt}}" />
