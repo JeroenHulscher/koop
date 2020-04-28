@@ -19,6 +19,7 @@ const paths = {
   scripts : 'src/assets/js',
   fonts : 'src/assets/fonts',
   images : 'src/assets/images',
+  nodemodules : 'node_modules',
   components: 'src/@koop-components',
   allSrc: 'src',
   drop : 'public'
@@ -166,6 +167,7 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/vendor/stickybit.min.js',
     paths.scripts + '/vendor/jquery-autocomplete.js',
     paths.scripts + '/vendor/validityState.polyfill.js',
+    paths.nodemodules + '/plyr/dist/plyr.polyfilled.min.js',
     paths.scripts + '/polyfills.js',
     paths.scripts + '/main.js',
     paths.components + '/**/*.js',

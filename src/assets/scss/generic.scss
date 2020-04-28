@@ -1,4 +1,8 @@
 @import 'generic/settings';
 @import 'generic/base';
+
+// plyr video player
+@import '/node_modules/plyr/dist/plyr.css';
+
 @import 'generic/components';
 @import 'generic/print';
