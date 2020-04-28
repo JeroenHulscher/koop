@@ -1,0 +1,8 @@
+<video {{#if_eq standalone true}}data-decorator="init-videoplayer"{{/if_eq}} {{#if poster}}poster="{{poster}}"{{/if}} id="player" {{#if_eq settings/autoplay true}}autoplay{{/if_eq}} {{#if_eq settings/hideControls true}}hideControls{{/if_eq}} {{#if_eq settings/playsinline true}}playsinline{{/if_eq}} {{#if_eq settings/controls true}}controls{{/if_eq}}>
+  {{#if file/mp4}}<source src="{{file/mp4}}" type="video/mp4" />{{/if}}
+  {{#if file/webm}}<source src="{{file/webm}}" type="video/webm" />{{/if}}
+
+  {{#if_eq caption/enabled true}}
+    <track kind="captions" label="{{caption/label}}" src="{{#if caption/src}}{{caption/src}}{{/if}}" srclang="{{caption/lang}}" default />
+  {{/if_eq}}
+</video>

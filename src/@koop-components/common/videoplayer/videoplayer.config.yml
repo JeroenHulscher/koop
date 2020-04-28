@@ -1,0 +1,16 @@
+name: Videoplayer
+context:
+  id: 1
+  standalone: true
+  caption:
+    enabled: true
+    label: Nederlandse ondertiteling
+    src: /path/to/captions.vtt
+    lang: nl
+  poster: ../../images/temp/Landing-OverBOUB.jpg
+  file:
+    mp4: https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4
+  settings:
+    playsinline: true
+    controls: true
+    hideControls: true
