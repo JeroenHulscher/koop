@@ -15,6 +15,10 @@
         border-right: 1px solid $lighterGrey;
         // top: 1.8em;
 
+        @media ( min-width: $breakpointDesktop ) {
+          top: 0;
+        }
+
 
         &.is-sticky {
 
