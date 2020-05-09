@@ -2904,6 +2904,2380 @@ var pubsub = (function () {
 
 })();
 
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-selectall': function (element) {
+      new selectall(element);
+    }
+  });
+
+  var selectall = function (element) {
+    this.element = element;
+    this.mastercheckbox = this.element.querySelector('.js-checkbox-master');
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]');
+
+    this.amountLabel = this.element.querySelector('.js-amount-checkboxes');
+    if(this.amountLabel){
+      this.amountLabel.innerHTML = this.checkboxes.length - 1;
+    }
+
+    this.initEventListeners();
+  };
+
+  selectall.prototype.initEventListeners = function (e) {
+    var i;
+
+    // master checkbox (select all)
+    this.mastercheckbox.addEventListener('change', function (e) {
+      var i;
+      var checkboxes = this.checkboxes;
+
+      for (i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] !== e.target) {
+          checkboxes[i].checked = e.target.checked;
+
+          // onchange event needs manual triggering on checkboxes
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            checkboxes[i].dispatchEvent(evt);
+          } else {
+            checkboxes[i].fireEvent("onchange");
+          }
+        }
+
+      }
+    }.bind(this), false);
+
+    // uncheck the 'select all'-checkbox when any of the checkboxes is not checked anymore;
+    for (i = 0; i < this.checkboxes.length; i++) {
+      this.checkboxes[i].addEventListener('change', function (e) {
+        if (!e.target.classList.contains('js-checkbox-master')) {
+          this.regularCheckboxListener(e);
+        }
+      }.bind(this), false);
+    }
+
+  };
+
+  selectall.prototype.regularCheckboxListener = function (e) {
+    var checkbox = e.target;
+
+    if (checkbox.checked === false && this.mastercheckbox.checked) {
+      this.mastercheckbox.checked = false;
+    }
+
+  };
+
+})();
+
+
+(function () {
+
+  'use strict';
+
+  onl.decorate({
+
+    'init-filter-results': function (element) {
+      new filterResults(element);
+    }
+
+  });
+
+  var filterResults = function( element ) {
+    this.element = element;
+    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
+    this.init();
+  };
+
+  filterResults.prototype.init = function() {
+    this.input = onl.dom.$( '.js-filterresults__input', this.element )[0];
+    this.results = onl.dom.$( '.js-filterresults__result', this.element );
+
+    this.addEventListeners();
+  };
+
+  filterResults.prototype.addEventListeners = function() {
+    this.input.addEventListener('keyup', function() { this.doFilter(); }.bind(this), false);
+  };
+  filterResults.prototype.doFilter = function() {
+    var i;
+    var a;
+    var txtValue;
+    var filter = this.input.value.toUpperCase();
+
+    for (i = 0; i < this.results.length; i++) {
+      a = this.results[i];
+      txtValue = a.textContent || a.innerText;
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        this.results[i].style.display = '';
+      } else {
+        this.results[i].style.display = 'none';
+      }
+    }
+  };
+
+
+})();
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-form-conditionals': function (element) {
+      new formConditionals(element);
+    }
+  });
+
+  var formConditionals = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    this.questionIdTag = this.config.questionIdTag || '#citem-';
+    this.questionContainer = this.config.questionContainer || '.js-form-conditionals__citem';
+    this.submitContainer = this.config.submitContainer || this.element.querySelector('.js-form-conditionals__submitcontainer');
+    this.respondsContainer = this.config.respondsContainer || this.element.querySelector('.js-form-conditionals__responds');
+    this.buttonNextSelector = '.js-button-next';
+
+    this.questions = this.element.querySelectorAll(this.questionContainer);
+    this.inputs = this.element.querySelectorAll('input,select');
+    this.buttonNexts = this.element.querySelectorAll(this.buttonNextSelector);
+
+    this.initEventListeners();
+    this.setInitialState();
+
+  };
+
+  formConditionals.prototype.setInitialState = function() {
+    var y;
+    var i;
+    var firstInput;
+    var evt;
+
+    for (y = 0; y < this.questions.length; y++) {
+      if (y !== 0) {
+        this.questions[y].setAttribute('hidden', 'hidden');
+      }
+      if (y === 0) {
+        firstInput = true;
+      }
+    }
+    if (firstInput) {
+      firstInput = this.questions[0].querySelectorAll('input,select');
+      if (firstInput[0]) {
+
+        if (firstInput[0].tagName === 'SELECT') {
+          if ('createEvent' in document) {
+            evt = document.createEvent('HTMLEvents');
+            evt.initEvent('change', false, true);
+            firstInput[0].dispatchEvent(evt);
+          }
+          else {
+            firstInput[0].fireEvent('onchange');
+          }
+        }
+        if (firstInput[0].tagName === 'INPUT') {
+
+          for (i = 0; i < firstInput.length; i++) {
+            if (firstInput[i].checked) {
+              this.actOnChange(firstInput[i]);
+            }
+          }
+        }
+      }
+    }
+  };
+
+  formConditionals.prototype.initEventListeners = function(e) {
+    var y;
+    var i;
+
+    for (y = 0; y < this.inputs.length; y++) {
+      this.inputs[y].addEventListener('change', function(e) { this.actOnChange(e); }.bind(this), false);
+    }
+    for (i = 0; i < this.buttonNexts.length; i++) {
+      this.buttonNexts[i].addEventListener('click', function(e) { this.actOnChange(e); }.bind(this), false);
+    }
+
+  };
+
+  formConditionals.prototype.actOnChange = function(e) {
+    var obj;
+    var inputType;
+    var linkedToQuestionId;
+    var currentQuestionContainer;
+    var automaticProceed;
+    var showLast;
+    var showResponds;
+    var hideself;
+
+    if (e.target !== undefined) {
+      obj = e.target;
+    } else {
+      obj = e;
+    }
+
+    inputType = obj.type;
+    linkedToQuestionId;
+    currentQuestionContainer = obj.closest(this.questionContainer);
+    automaticProceed = true;
+    showLast = obj.getAttribute('data-triggerlaststep');
+    showResponds = obj.getAttribute('data-triggeresponds');
+    hideself = obj.getAttribute('data-hideself');
+
+    switch (inputType) {
+    case 'radio':
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
+      break;
+    case 'submit':
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
+      break;
+    case 'button':
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
+      break;
+    case 'input':
+      linkedToQuestionId = obj.getAttribute('data-linkedto');
+      break;
+    case 'select-one':
+      linkedToQuestionId = obj[obj.selectedIndex].getAttribute('data-linkedto');
+      break;
+    case 'checkbox':
+      if (this.amountCheckedInFamily(obj, currentQuestionContainer) > 0) {
+        currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('hidden');
+      } else {
+        currentQuestionContainer.querySelector(this.buttonNextSelector).setAttribute('hidden', 'hidden');
+        this.resetFutureQuestions(currentQuestionContainer);
+      }
+      automaticProceed = false;
+      break;
+    }
+
+    if (automaticProceed) {
+      this.resetFutureQuestions(currentQuestionContainer);
+
+      if (linkedToQuestionId) {
+        this.activateLinkedQuestion(linkedToQuestionId);
+        this.hideFormSubmit();
+      } else {
+        this.showFormSubmit();
+      }
+    }
+
+    if (showResponds) {
+      this.showResponds();
+      this.hideForm();
+    } else {
+      if (showLast) {
+        this.showFormSubmit();
+      }
+    }
+
+    if (hideself) {
+      this.hideCurrentQuestion(currentQuestionContainer);
+    }
+  };
+
+  formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {
+    currentQuestionContainer.setAttribute('hidden', 'hidden');
+  }
+
+
+  formConditionals.prototype.amountCheckedInFamily = function(obj, parent) {
+    var list, index, item, checkedCount;
+
+    checkedCount = 0;
+    list = parent.getElementsByTagName('input');
+    for (index = 0; index < list.length; ++index) {
+      item = list[index];
+      if (item.getAttribute('type') === "checkbox"
+        && item.checked
+        && item.name === obj.name) {
+        ++checkedCount;
+      }
+    }
+    return checkedCount;
+  };
+
+  formConditionals.prototype.resetFutureQuestions = function(currentQuestionContainer) {
+    var i;
+    var y;
+    var allInputsInQuestion;
+
+    // strips #question-{{id}} to {{id}}
+    currentQuestionContainer = currentQuestionContainer.getAttribute('id');
+    currentQuestionContainer = currentQuestionContainer.substr(this.questionIdTag.length - 1, 5);
+
+    for (i = 0; i < this.questions.length; i++) {
+
+      if (this.questions[i].getAttribute('id').substr(this.questionIdTag.length - 1, 5) > currentQuestionContainer) {
+        allInputsInQuestion = this.questions[i].querySelectorAll('input');
+
+        // reset answers
+        for (y = 0; y < allInputsInQuestion.length; y++) {
+          var type = allInputsInQuestion[y].getAttribute('type');
+
+          if (type === 'radio') {
+            allInputsInQuestion[y].checked = false;
+          }
+        }
+
+        // hide question;
+        this.questions[i].setAttribute('hidden', 'hidden');
+        this.questions[i].removeAttribute('role');
+      }
+    }
+
+  };
+
+  formConditionals.prototype.activateLinkedQuestion = function(questionId) {
+    var self = this;
+    var nextQuestion = this.element.querySelector(self.questionIdTag + questionId);
+
+    if (nextQuestion){
+      nextQuestion.removeAttribute('hidden');
+      nextQuestion.setAttribute('role', 'alert');
+    }
+
+  };
+
+  formConditionals.prototype.showFormSubmit = function() {
+    if (this.submitContainer){
+      this.submitContainer.removeAttribute('hidden');
+      this.submitContainer.querySelector('button').setAttribute('role', 'alert');
+    }
+  };
+  formConditionals.prototype.hideFormSubmit = function() {
+    if (this.submitContainer){
+      this.submitContainer.setAttribute('hidden', 'hidden');
+      this.submitContainer.querySelector('button').removeAttribute('role');
+    }
+  };
+
+  formConditionals.prototype.showResponds = function() {
+    this.respondsContainer.removeAttribute('hidden');
+  };
+
+  formConditionals.prototype.hideForm = function() {
+    var y;
+
+    for (y = 0; y < this.questions.length; y++) {
+      this.questions[y].setAttribute('hidden', 'hidden');
+    }
+    this.submitContainer.setAttribute('hidden', 'hidden');
+  };
+
+})();
+
+// script in subselection.js
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-formredirecter': function (element) {
+      new formredirecter(element);
+    }
+  });
+
+  var formredirecter = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    this.element.field = this.config.field || '.js-form-redirecter__field';
+    this.root = location.protocol + '//' + location.host;
+
+    this.element.addEventListener('submit', function (e) {
+      e.preventDefault();
+      this.formValue = this.element.querySelector(this.element.field).value;
+      if ( this.formValue.charAt(0) !== '/') {
+        this.formValue = '/' + this.formValue;
+      }
+      window.location = this.root + this.formValue;
+    }.bind(this), false);
+  };
+
+})();
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-formreset': function (element) {
+      new formReset(element);
+    }
+  });
+
+  var formReset = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.resetElementClass = this.config.resetElementClass || 'formreset-resetlink';
+
+    this.resetLink = this.element.querySelector('.' + this.resetElementClass);
+    if (this.resetLink) {
+      this.initEventListeners();
+    }
+  };
+
+  formReset.prototype.initEventListeners = function() {
+    this.resetLink.addEventListener('click', function (e) { this.resetForm(e); }.bind(this), false);
+  };
+
+  formReset.prototype.resetForm = function() {
+    var y;
+
+    this.inputs = this.element.querySelectorAll('input,select');
+
+    for (y = 0; y < this.inputs.length; y++) {
+
+      switch (this.inputs[y].getAttribute('type')) {
+      case 'radio':
+        if (this.inputs[y].checked) {
+          this.inputs[y].checked = false;
+        }
+      }
+    }
+  };
+
+
+
+})();
+
+/**
+ * Element.matches() polyfill (simple version)
+ * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
+ */
+if (!Element.prototype.matches) {
+  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
+
+/**
+ * Feature test
+ * @return {Boolean} Returns true if required methods and APIs are supported by the browser
+ */
+var supports = function () {
+  if (!document.addEventListener && !document.querySelector('body')) {
+    return false;
+  }
+  return true;
+};
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-form-validation': function (element) {
+      // new formvalidation(element);
+    }
+  });
+
+  var formvalidation = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    // Classes and Selectors
+    this.config.classErrorField = this.config.classErrorField || 'has-error';
+    this.config.classValidField = this.config.classValidField || 'is-valid';
+    this.config.classErrorContainer = this.config.classErrorContainer || 'form__error';
+    this.config.classValidContainer = this.config.classValidContainer || 'form__success';
+    this.config.classErrorsContainer = this.config.classErrorsContainer || 'form__errors';
+
+    this.errors = [];
+
+    this.config.txtIntroErrorsContainer = this.config.txtIntroErrorsContainer || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
+    this.config.messageLabelValid = this.config.messageLabelValid || "Correct ingevuld";
+
+    // Messages
+    this.config.messageValueMissing = this.config.messageValueMissing || "Het veld '{label}' mag niet leeg zijn.";
+    this.config.messageValueMissingCheckbox = this.config.messageValueMissingCheckbox || "Het veld '{label}' is verplicht.";
+    this.config.messageValueMissingRadio = this.config.messageValueMissingRadio || "Kies van veld '{label}' een waarde.";
+    this.config.messageValueMissingSelect = this.config.messageValueMissingSelect || "Selecteer van veld '{label}' een waarde.";
+    this.config.messageValueMissingSelectMulti = this.config.messageValueMissingSelectMulti || "Selecteer van veld '{label}' minstens één waarde.";
+    this.config.messageTypeMismatchEmail = this.config.messageTypeMismatchEmail || "Vul in veld '{label}' een correct e-mailadres in.";
+    this.config.messageTypeMismatchURL = this.config.messageTypeMismatchURL || "Vul in veld '{label}' een correct website-adres in.";
+    this.config.messageTooShort = this.config.messageTooShort || "Gebruik in veld '{ label }' minimaal {minLength} karakters. Op dit moment gebruik je {length} karakter(s).";
+    this.config.messageTooLong = this.config.messageTooLong || "Het is in veld '{label}' niet toegestaan meer dan {maxLength} karakters te gebruiken. Op dit moment gebruik je {length} karakter(s).";
+    this.config.messagePatternMismatch = this.config.messagePatternMismatch || "Het veld '{label}' voldoet niet aan de eisen.";
+    this.config.messageBadInput = this.config.messageBadInput || "Vul in veld '{label}' een nummer in.";
+    this.config.messageStepMismatch = this.config.messageStepMismatch || "Vul in veld '{label}' een correcte waarde in.";
+    this.config.messageRangeOverflow = this.config.messageRangeOverflow || "Vul in veld '{label}' een waarde in dat lager is dan {max}.";
+    this.config.messageRangeUnderflow = this.config.messageRangeUnderflow || "Vul in veld '{label}' een waarde in dat hoger is dan {min}.";
+    this.config.passwordMismatch = this.config.passwordMismatch || "Het veld '{label}' voldoet niet aan de beveiligingseisen.";
+    this.config.passwordRepeatMismatch = this.config.passwordRepeatMismatch || "Het wachtwoord in veld '{label}' is niet gelijk aan het nieuwe wachtwoord.";
+    this.config.messageGeneric = this.config.messageGeneric || "Het veld '{label}' is niet correct ingevuld.";
+
+    this.init();
+  };
+
+  formvalidation.prototype.init = function() {
+    // feature test
+    if (!supports()) return;
+
+    // Add the `novalidate` attribute to all forms
+    this.addNoValidate();
+
+    // Event listeners
+    this.element.addEventListener('blur', function (e) { this.blurHandler(e) }.bind(this), true);
+    this.element.addEventListener('click', function (e) { this.clickHandler(e) }.bind(this), false);
+    this.element.addEventListener('submit', function (e) { this.submitHandler(e) }.bind(this), false);
+
+  };
+
+  formvalidation.prototype.addNoValidate = function () {
+    this.element.setAttribute('novalidate', true);
+  };
+
+  formvalidation.prototype.getClosest = function (elem, selector) {
+    for (; elem && elem !== document; elem = elem.parentNode) {
+      if (elem.matches(selector)) return elem;
+    }
+    return null;
+  };
+
+  formvalidation.prototype.hasErrorInSubselection = function (subselection, options) {
+    var subselectionSummary = subselection.querySelector('.subselection__summary');
+
+    // check if it's required;
+    if (subselectionSummary.classList.contains('required')){
+
+      // check if it has active filters;
+      var subselectionSummaryItems = subselectionSummary.childNodes;
+      if (subselectionSummaryItems.length > 0) {
+        return false;
+      } else {
+        return this.config.messageValueMissing;
+      }
+    }
+    return false;
+  }
+
+  formvalidation.prototype.hasError = function (field, options) {
+    // Don't validate submits, buttons, file and reset inputs, and disabled fields
+    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === undefined || field.type === 'fieldset' || field.type === 'a' || field.type === '') return;
+
+    // Get validity
+    var validity = field.validity;
+
+    var label = this.element.querySelector('[for="' + field.getAttribute('id') + '"]');
+    if(label){
+      label = label.innerHTML;
+    } else {
+      label = '';
+    }
+
+    // If field is invalid by extern validation (ie. password validator)
+    if (field.classList.contains('pw-invalid')) return this.config.passwordMismatch.replace("{label}", label);
+    if (field.classList.contains('pw-invalid-repeat')) return this.config.passwordRepeatMismatch.replace("{label}", label);
+
+
+    // in case of use of default patterns (number, email, dutch zipcode)
+    if (field.getAttribute('data-pattern-type')) {
+      if (field.getAttribute('data-pattern-type') === 'number') {
+        var pattern = /^\d+$/;
+      }
+      if (field.getAttribute('data-pattern-type') === 'email') {
+        var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      }
+      if (field.getAttribute('data-pattern-type') === 'zipcode') {
+        var pattern = /^\d{4} ?[a-z]{2}$/i;
+      }
+      if (pattern.test(field.value)) {
+        return;
+      } else {
+        if (field.value === '') {
+          return this.config.messageValueMissing.replace('{label}', label);
+        }
+        if (field.hasAttribute('title')) return field.getAttribute('title');
+        return this.config.messagePatternMismatch.replace('{label}', label);;
+      }
+    }
+
+    // If valid, return null
+    if (validity.valid) return;
+
+    // If field is required and empty
+    if (validity.valueMissing) {
+      if (field.type === 'checkbox') return this.config.messageValueMissingCheckbox.replace('{label}', label);
+      if (field.type === 'radio') return this.config.messageValueMissingRadio.replace('{label}', label);
+      if (field.type === 'select-multiple') return this.config.messageValueMissingSelectMulti.replace('{label}', label);
+      if (field.type === 'select-one') return this.config.messageValueMissingSelect.replace('{label}', label);
+
+      return this.config.messageValueMissing.replace('{label}', label);
+    }
+
+    // If not the right type
+    if (validity.typeMismatch) {
+      if (field.type === 'email') return this.config.messageTypeMismatchEmail.replace('{label}', label);;
+      if (field.type === 'url') return this.config.messageTypeMismatchURL.replace('{label}', label);;
+    }
+
+    // If too short
+    if (validity.tooShort) return this.config.messageTooShort.replace('{minLength}', field.getAttribute('minLength')).replace('{length}', field.value.length).replace('{label}', label);;
+
+    // If too long
+    if (validity.tooLong) return this.config.messageTooLong.replace('{minLength}', field.getAttribute('maxLength')).replace('{length}', field.value.length).replace('{label}', label);;
+
+    // If number input isn't a number
+    if (validity.badInput) return this.config.messageBadInput.replace('{label}', label);;
+
+    // If a number value doesn't match the step interval
+    if (validity.stepMismatch) return this.config.messageStepMismatch.replace('{label}', label);;
+
+    // If a number field is over the max
+    if (validity.rangeOverflow) return this.config.messageRangeOverflow.replace('{max}', field.getAttribute('max')).replace('{label}', label);;
+
+    // If a number field is below the min
+    if (validity.rangeUnderflow) return this.config.messageRangeUnderflow.replace('{min}', field.getAttribute('min')).replace('{label}', label);;
+
+    // If pattern doesn't match
+    if (validity.patternMismatch) {
+
+      // If pattern info is included, return custom error
+      if (field.hasAttribute('title')) return field.getAttribute('title').replace('{label}', label);;
+
+      // Otherwise, generic error
+      return this.config.messagePatternMismatch.replace('{label}', label);;
+
+    }
+
+    // If all else fails, return a generic catchall error
+    return this.config.messageGeneric.replace('{label}', label);;
+
+  };
+
+  formvalidation.prototype.showErrorSubselection = function (subselection) {
+    var subselectionTrigger = subselection.querySelector('.subselection__trigger');
+    var label = subselection.parentNode.querySelector('.form__sublegend');
+    if(label){
+      label = label.innerHTML;
+    } else {
+      label = '';
+    }
+    this.showMessage("error", subselectionTrigger, this.config.messageValueMissingCheckbox.replace('{label}', label), 'subselection');
+  }
+
+  formvalidation.prototype.showMessage = function (messageType, field, error, options) {
+    /*
+      Available values:
+      messageType: "error", "success".
+    */
+    var firstOptionId = false;
+    var labelText;
+    var motherLabel;
+    var message;
+    var label;
+
+    var subselection = this.getClosest(field, '.subselection');
+    if (subselection) {
+      this.removeMessage(field, subselection);
+    } else {
+      this.removeMessage(field);
+    }
+
+    var classStateOldField = this.config.classValidField;
+    var classStateNewField = this.config.classErrorField;
+    var classMessageContainer = this.config.classErrorContainer;
+    var prefixId = 'message';
+    if(messageType === "success") {
+      classStateOldField = this.config.classErrorField;
+      classStateNewField = this.config.classValidField;
+      classMessageContainer = this.config.classValidContainer;
+      prefixId = 'message';
+    }
+
+    // Add/remove state class to field
+    if (field.type === 'select-one'){
+      field.parentNode.classList.add(classStateNewField);
+      field.parentNode.classList.remove(classStateOldField);
+    } else {
+      field.classList.add(classStateNewField);
+      field.classList.remove(classStateOldField);
+    }
+
+    // If the field is a radio button and part of a group, error all and get the last item in the group
+    if (field.type === 'radio' && field.name) {
+      var group = document.getElementsByName(field.name);
+      if (group.length > 0) {
+        for (var i = 0; i < group.length; i++) {
+          if (group[i].form !== field.form) continue; // Only check fields in current form
+
+          if (messageType !== "success") {
+            group[i].classList.add(this.config.classErrorField);
+            group[i].classList.remove(this.config.classValidField);
+          }
+
+          // if type = radio, get id of first radio
+          if(i === 0){
+            firstOptionId = group[i].getAttribute('id');
+          }
+        }
+        field = group[group.length - 1];
+      }
+    }
+
+    // Get field id or name
+    var id;
+    if (subselection) {
+      var trigger = subselection.querySelector('.subselection__trigger');
+      id = trigger.getAttribute('id');
+    } else {
+      id = field.id || field.name;
+    }
+
+    if (!id) return;
+
+    // create message container;
+    message = document.createElement('div');
+    message.classList.add('form__message');
+    message.classList.add(classMessageContainer);
+    message.id = prefixId + '-for-' + id;
+
+    // If the field is a radio button or checkbox, insert error after the label
+    if (field.type === 'radio' || field.type === 'checkbox') {
+      if (subselection) {
+        label = subselection.querySelector('.subselection__trigger');
+        firstOptionId = label.getAttribute('id');
+      } else {
+        label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
+      }
+
+      if (label) {
+        label.parentNode.insertBefore(message, label.nextSibling);
+        motherLabel = this.getClosest(field, '[data-radiogroup-title]');
+        if (motherLabel) {
+          labelText = motherLabel.getAttribute('data-radiogroup-title');
+        } else {
+          labelText = label.textContent;
+        }
+      }
+    }
+
+    // if custom-select; insert one level higher.
+    if (field.type === 'select-one') {
+      label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
+      if (label) {
+        var parent = field.parentNode;
+        parent.parentNode.insertBefore(message, parent.nextSibling);
+        labelText = label.textContent;
+      }
+    }
+
+    // Otherwise, insert it after the field
+    if (!label) {
+      field.parentNode.insertBefore(message, field.nextSibling);
+
+      // options = given in function;
+      if(options === 'subselection'){
+        labelText = field.textContent;
+      } else {
+        var parent = field.parentNode;
+        if(field.parentNode.classList.contains('datepicker')){
+          parent = parent.parentNode;
+        }
+        labelText = parent.querySelector('label').textContent;
+      }
+    }
+
+    // if subselection, use different ID;
+    if (firstOptionId){
+      this.errors.push({ "id": firstOptionId, "label": labelText });
+    } else {
+      // all others;
+      this.errors.push({ "id": field.getAttribute('id'), "label": labelText });
+    }
+
+    // Add ARIA role to the field
+    field.setAttribute('aria-describedby', prefixId + '-for-' + id);
+
+    // Fill state container
+    message.innerHTML = error;
+
+  };
+
+  formvalidation.prototype.markFieldValidInSummary = function (field, options) {
+    var fieldId;
+
+    var sub = this.getClosest(field, '.subselection');
+    if(sub){
+      // is subselection
+      var subTrigger = sub.querySelector('.subselection__trigger');
+      fieldId = subTrigger.getAttribute('id');
+    } else {
+      if (field.type === 'radio' && field.name) {
+        var group = document.getElementsByName(field.name);
+        if (group.length > 0) {
+          for (var i = 0; i < group.length; i++) {
+            if (group[i].form !== field.form) continue; // Only check fields in current form
+            group[i].classList.remove(this.config.classErrorField);
+          }
+          field = group[0];
+        }
+      }
+      fieldId = field.getAttribute('id')
+    }
+    var errorsContainerListItems = this.element.querySelectorAll('.' + this.config.classErrorsContainer + '> ul li');
+    for (var i = 0; i < errorsContainerListItems.length; i++){
+      if (errorsContainerListItems[i].getAttribute('data-id') === fieldId) {
+        errorsContainerListItems[i].childNodes[0].classList.add('line-through');
+      }
+    }
+  }
+
+  // formvalidation.prototype.markFieldValid = function (field, options) {
+    // field.classList.add('is-valid');
+  // }
+
+
+  formvalidation.prototype.removeFieldValid = function(field) {
+    var id = field.getAttribute('id');
+    var message = this.element.querySelector("#message-for-" + id);
+    message.parentNode.removeChild(message);
+  }
+
+  formvalidation.prototype.removeMessage = function (field, subselection, options) {
+
+    // Remove ARIA role from the field
+    field.removeAttribute('aria-describedby');
+
+    // Remove error class to field
+    if (field.type === 'select-one') {
+      field.parentNode.classList.remove(this.config.classErrorField);
+      field.parentNode.classList.remove(this.config.classValidField);
+    } else {
+      field.classList.remove(this.config.classErrorField);
+      field.classList.remove(this.config.classValidField);
+    }
+
+
+    // If the field is a radio button and part of a group, remove error from all and get the last item in the group
+    if (field.type === 'radio' && field.name) {
+      var group = document.getElementsByName(field.name);
+      if (group.length > 0) {
+        for (var i = 0; i < group.length; i++) {
+          if (group[i].form !== field.form) continue; // Only check fields in current form
+          group[i].classList.remove(this.config.classErrorField);
+        }
+        field = group[group.length - 1];
+      }
+    }
+
+    // Get field id or name
+    // var id = field.id || field.name;
+    // if (!id) return;
+
+    // Check if an error message is in the DOM
+    var message;
+    if (subselection) {
+      message = subselection.querySelector('.form__message');
+    } else {
+      message = this.element.querySelector('#message-for-' + field.id);
+    }
+
+    if (!message) return;
+
+    // remove error div from DOM;
+    message.parentNode.removeChild(message);
+  };
+
+  formvalidation.prototype.removeErrorFromErrors = function (id) {
+    var id = id;
+
+    this.errors = this.errors.filter(function (obj) {
+      return obj.id !== id;
+    });
+  }
+  formvalidation.prototype.pushErrorToErrors = function (el, error) {
+    var id = el.getAttribute('id');
+    this.errors = this.errors.filter(function (obj) {
+      return obj.id !== id;
+    });
+
+    var label = el.parentNode.querySelector('label').innerHTML || 'label';
+    this.errors.push({ "id": el.getAttribute('id'), "label": label, "error": error });
+  }
+
+  formvalidation.prototype.addErrorToErrors = function (el, error) {
+    var id = id;
+
+    this.pushErrorToErrors(el, error);
+    this.showErrorSummary();
+  }
+
+  formvalidation.prototype.showErrorSummary = function () {
+    var errorsContainer = this.element.querySelector('.' + this.config.classErrorsContainer);
+
+    if (!errorsContainer) {
+      errorsContainer = document.createElement('div');
+      errorsContainer.setAttribute('tabindex', '0')
+      errorsContainer.classList.add(this.config.classErrorsContainer);
+      this.element.insertBefore(errorsContainer, this.element.childNodes[0]);
+
+      var errorsContainerIntro = document.createElement('p');
+      errorsContainerIntro.classList.add('form__errors__heading');
+      errorsContainerIntro.innerHTML = this.config.txtIntroErrorsContainer;
+      errorsContainer.appendChild(errorsContainerIntro);
+
+      var errorsContainerList = document.createElement('ul');
+      errorsContainer.appendChild(errorsContainerList);
+    } else {
+      var errorsContainerList = this.element.querySelector('.' + this.config.classErrorsContainer + '> ul');
+    }
+
+    errorsContainerList.innerHTML = '';
+
+    // clean up errors; remove duplicates.
+    this.errors = onl.ui.uniqBy(this.errors, JSON.stringify);
+    for (var i = 0; i < this.errors.length; i++) {
+      this.appendErrorToErrorsList(this.errors[i]);
+    }
+  }
+
+  formvalidation.prototype.isRequired = function (field) {
+    // regular fields;
+    if (field.hasAttribute('required')) {
+      return true;
+    }
+
+    // subselection;
+    var subselection = self.getClosest(field, '.subselection');
+    if (subselection) {
+      var subselectionRequiredState = subselection.querySelector('.subselection__summary.required');
+      if (subselectionRequiredState) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  formvalidation.prototype.blurHandler = function (event) {
+    var type = event.target.nodeName;
+
+    if (event.target.type === 'submit' || type === 'DIV') return;
+
+    if (type === 'BUTTON') {
+
+    } else  if (type === 'A'){
+    } else {
+      // Validate the field
+      var error = this.hasError(event.target);
+
+      // If there's an error, show it
+      if (error) {
+        this.showMessage("error", event.target, error);
+        return;
+      }
+
+      if (this.isRequired(event.target)) {
+        this.showMessage("success", event.target, this.config.messageLabelValid);
+        this.markFieldValidInSummary(event.target);
+      }
+
+    }
+  };
+
+  formvalidation.prototype.clickHandler = function (event) {
+
+    // Only run if the field is a checkbox or radio
+    var self = this;
+    var type = event.target.getAttribute('type');
+    if (type == null) {
+      type = event.target.tagName;
+    }
+    if (type === 'A') {
+      // if event.target is the remove-trigger for the subselection component (removes selected filter)
+      if (event.target.classList.contains('subselection__summaryitem__remove')) {
+        var subselectionId = event.target.getAttribute('data-subselection-id');
+        var subselection = this.element.querySelector('[data-id="'+subselectionId+'"');
+        var error = self.hasErrorInSubselection(subselection);
+
+        if (error) {
+          self.showErrorSubselection(subselection);
+        } else {
+          self.showMessage("success", event.target, subselection);
+        }
+      }
+      return;
+    }
+    if (!(type === 'checkbox' || type === 'radio')) return;
+
+    // Validate the field
+    var error = this.hasError(event.target);
+
+    // If there's an error, show it
+    if (error) {
+      this.showMessage("error", event.target, error);
+      return;
+    }
+
+    // Otherwise, remove any errors that exist
+    if(this.isRequired(event.target)){
+      this.showMessage("success", event.target, this.config.messageLabelValid);
+      this.markFieldValidInSummary(event.target);
+    }
+
+  };
+
+
+
+  formvalidation.prototype.appendErrorToErrorsList = function (error) {
+    var errorsContainerList = this.element.querySelector('.' + this.config.classErrorsContainer + '> ul');
+    var errorMsg = error.label;
+
+    errorMsg = errorMsg.replace("Verplicht", '');
+
+    if (errorsContainerList){
+      var item = document.createElement('li');
+      var id = error.id || error.getAttribute('id');
+      item.setAttribute('data-id', id);
+
+      var link = document.createElement('a');
+      link.setAttribute('href', '#'+id);
+      link.innerHTML = '<span class="visually-hidden">Spring naar veld: </span>' + errorMsg;
+
+      item.appendChild(link);
+      errorsContainerList.appendChild(item);
+    }
+
+    //todo: check if empty; <- why?
+  }
+
+
+  formvalidation.prototype.submitHandler = function (event) {
+    //reset form;
+    this.errors = [];
+
+    // Get all of the form elements
+    var fields = event.target.elements;
+    var subselections = this.element.querySelectorAll('.subselection__summary.required');
+
+    // Validate each subselection field
+    var hasErrors;
+    for (var y = 0; y < subselections.length; y++) {
+      if (subselections[y].innerHTML === ''){
+        this.showErrorSubselection(subselections[y].parentNode);
+        if (!hasErrors) {
+          hasErrors = subselections[y];
+        }
+      }
+    }
+
+    // Validate each field
+    // Store the first field with an error to a variable so we can bring it into focus later
+    for (var i = 0; i < fields.length; i++) {
+
+      var error = this.hasError(fields[i]);
+      if (error) {
+        // console.log('in submitHandler');
+        this.showMessage("error", fields[i], error);
+        if (!hasErrors) {
+          hasErrors = fields[i];
+        }
+      }
+    }
+    if(hasErrors){
+      this.showErrorSummary(this.errors);
+    }
+
+    // Prevent form from submitting if there are errors or submission is disabled
+    if (hasErrors) {
+      event.preventDefault();
+    }
+
+    // If there are errrors, focus on first element with error
+    if (hasErrors) {
+      var errorsContainer = this.element.querySelector('.' + this.config.classErrorsContainer);
+      errorsContainer.focus();
+      return;
+    }
+
+    // Otherwise, submit the form
+    if (this.config.debug){
+      // event.preventDefault();
+      console.log('debug: Form submit');
+    } else {
+      // event.preventDefault();
+      // console.log('prod: Form submit');
+      this.element.submit();
+    }
+
+  };
+
+})();
+/*
+Inspired by Go Make Things, LLC's project "validate", MIT, https://github.com/cferdinandi/validate
+*/
+
+(function () {
+
+  'use strict';
+
+  onl.decorate({
+
+    'init-kpm': function (element) {
+      new kpmService(element, 'push');
+    }
+  });
+
+  var kpmService = function (element, action) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.dataFromJSON = document.querySelector(this.config.config).innerHTML;
+    this.rangeSelectors = document.querySelectorAll(this.config.rangeselector);
+    var self = this;
+    var isModalVisible = true;
+    this.id = this.element.getAttribute('id');
+
+    var insideModal = getClosest(this.element, '.modal');
+    if (insideModal) {
+      isModalVisible = isVisible(insideModal);
+    }
+
+    if (!isModalVisible) {
+      var subscription = pubsub.subscribe('/modal/open', function (obj) {
+        var kpmMap = obj.modal.querySelector('.map__kpm');
+        if (!kpmMap) { return; }
+        if (self.id === kpmMap.getAttribute('id')) {
+          self.setupMap();
+        }
+      });
+      return;
+    }
+
+    if (this.rangeSelectors) {
+      this.setRangeListener();
+    }
+
+    if ( action === 'push') {
+      this.setupMap();
+    }
+  };
+
+  kpmService.prototype.setRangeListener = function(  ) {
+    var y;
+
+    for (y = 0; y < this.rangeSelectors.length; y++) {
+      this.rangeSelectors[y].addEventListener('change', function (e) { this.setupMap(e, "editRange"); }.bind(this), false);
+    }
+  };
+
+  kpmService.prototype.setupMap = function(e, action ) {
+
+    window.kaartprikmodule = window.kaartprikmodule || [];
+
+    // create default object;
+    this.data = {
+      debug: false,
+      on_cancel: function () {
+        // console.log("The user has closed the map without saving");
+      },
+      on_submit: function (result) {
+        // console.log("The following result was returned:", result);
+      }
+    };
+    this.data.mount_element = document.getElementById(this.element.getAttribute('id'));
+
+
+    // extend object with component config;
+    Object.assign(this.data, JSON.parse(this.dataFromJSON));
+
+    if(action === "editRange") {
+      var parent = getClosest(this.element, '.map');
+
+      if (e.target.value === "hideMap"){
+        parent.setAttribute('hidden','hidden');
+      } else {
+        this.data.options.center.circle.radius = parseInt(e.target.value, 10);
+        parent.removeAttribute('hidden');
+      }
+    }
+
+    // start KPM;
+    this.renderMap();
+
+  };
+
+  kpmService.prototype.renderMap = function () {
+    kaartprikmodule.bootstrapKpm(this.data);
+  };
+
+})();
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-passwordstrength': function (element) {
+      new passwordstrength(element);
+    }
+  });
+
+  var passwordstrength = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.fieldPassword = this.config.fieldPassword || '.js-passwordstrength__input';
+    this.fieldPassword = this.element.querySelector(this.fieldPassword);
+    this.fieldPasswordRepeat = this.config.fieldPasswordRepeat || '.js-passwordstrength__inputrepeat';
+    this.fieldPasswordRepeat = document.querySelector(this.fieldPasswordRepeat);
+    this.regexContainer = this.element.querySelector('.js-passwordstrength__regexcontainer > div');
+    this.regexs = this.regexContainer.querySelectorAll('[data-regex]');
+
+    this.duplicateRegexContainer = document.querySelector('.js-passwordstrength__duplicateregexcontainer');
+    if (this.duplicateRegexContainer){
+      this.makeDuplicateRegexContainer();
+    }
+    this.initEventListeners();
+  };
+
+  passwordstrength.prototype.initEventListeners = function() {
+    if (this.fieldPassword){
+      this.fieldPassword.addEventListener('keyup', function (e) { this.validateField(e); }.bind(this), false);
+    }
+    if (this.fieldPasswordRepeat){
+      this.fieldPasswordRepeat.addEventListener('keyup', function(e) { this.validateFieldRepeat(e); }.bind(this), false);
+    }
+  };
+
+  passwordstrength.prototype.makeDuplicateRegexContainer = function() {
+    this.duplicateRegexContainer.innerHTML = '';
+    var duplicate = this.regexContainer.cloneNode(true);
+    this.duplicateRegexContainer.appendChild(duplicate);
+  }
+
+  passwordstrength.prototype.validateField = function() {
+    var i;
+    var regexFormula;
+    var totalCorrect = 0;
+    var self = this;
+
+    // reset actives;
+    for (i = 0; i < this.regexs.length; i++) {
+      this.regexs[i].classList.remove('is-active');
+      this.regexContainer.setAttribute('role', '');
+    }
+
+    for (i = 0; i < this.regexs.length; i++) {
+      regexFormula = new RegExp(this.regexs[i].dataset.regex);
+
+      if (regexFormula.test(this.fieldPassword.value)){
+        this.regexs[i].classList.add('is-active');
+        totalCorrect++;
+        this.regexContainer.setAttribute('role', 'alert');
+      }
+    }
+
+    if (totalCorrect === this.regexs.length) {
+      this.fieldPassword.classList.add('is-valid');
+      this.fieldPassword.classList.remove('pw-invalid');
+    } else {
+      this.fieldPassword.classList.remove('is-valid');
+      this.fieldPassword.classList.add('pw-invalid');
+    }
+
+    if (this.fieldPasswordRepeat) {
+      if (this.fieldPasswordRepeat.value !== ''){
+        this.validateFieldRepeat();
+      }
+    }
+
+    this.makeDuplicateRegexContainer();
+
+  };
+
+  passwordstrength.prototype.validateFieldRepeat = function() {
+    var fieldRepeat = this.fieldPasswordRepeat.value;
+    var field = this.fieldPassword.value;
+
+    if (field !== fieldRepeat) {
+      this.showError(this.fieldPasswordRepeat);
+      this.fieldPasswordRepeat.classList.remove('is-valid');
+      this.fieldPasswordRepeat.classList.add('pw-invalid-repeat', 'has-error');
+    } else {
+      this.removeError(this.fieldPasswordRepeat);
+      // if (this.fieldPassword.classList.contains('is-valid')){
+        this.fieldPasswordRepeat.classList.add('is-valid');
+        this.fieldPasswordRepeat.classList.remove('pw-invalid-repeat');
+      this.fieldPasswordRepeat.classList.remove('has-error');
+      // }
+    }
+  };
+
+  passwordstrength.prototype.showError = function (field) {
+    if (field.nextElementSibling){
+      field.nextElementSibling.removeAttribute('hidden');
+    }
+  }
+  passwordstrength.prototype.removeError = function (field) {
+    if (field.nextElementSibling) {
+      field.nextElementSibling.setAttribute('hidden', 'hidden');
+    }
+  }
+
+
+})();
+
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-scroll-chapter': function (element) {
+      new scrollChapter(element);
+    }
+  });
+
+  var scrollChapter = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    this.chapterLinks = this.config.chapterLinks || document.querySelectorAll('.nav-sub a');
+    this.chapters = this.config.chapters || document.querySelectorAll('.js-scrollSection');
+    this.lastId;
+    this.cur = [];
+
+    this.initEventListeners();
+
+  };
+
+  scrollChapter.prototype.initEventListeners = function() {
+
+    window.addEventListener('scroll', function(e) {
+      var self = this;
+      var timer;
+
+      if (timer) {
+        window.clearTimeout(timer);
+      }
+
+      timer = window.setTimeout(function() {
+        self.onScroll(e);
+      }, 10);
+     }.bind(this), false);
+
+  };
+
+  scrollChapter.prototype.offset = function(el){
+    var rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
+
+  scrollChapter.prototype.onScroll = function() {
+    var section;
+    var fromTop = window.pageYOffset + 2;
+    var offset;
+    var i;
+    var link;
+
+    for (i = 0; i < this.chapterLinks.length; i++) {
+      link = this.chapterLinks[i];
+      if (link.hash !== '') {
+        section = document.querySelector(link.hash);
+        offset = this.offset(section);
+        if (
+          offset.top <= fromTop &&
+          offset.top + section.offsetHeight > fromTop
+        ) {
+          link.classList.add('is-currentchapter');
+        } else {
+          link.classList.remove('is-currentchapter');
+        }
+      }
+    }
+
+  };
+
+})();
+
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+
+
+onl.handle({
+  /**
+   * Close an alert that is fixed to the top of the screen.
+   * @param element 
+   * @param event 
+   */
+  'close-alert': function(element, event) {
+    event.preventDefault();
+
+    var alerts = findAncestorWithClass(element, 'alert');
+
+    // Prevention of classList.replace as IE9 does not support it.
+    alerts.classList.remove('show');
+    alerts.classList.add('hide');
+
+    setTimeout(function() {
+      alerts.classList.remove('hide');
+    }, 500);
+  }
+});
+
+/**
+ * Finds and returns the first ancestor with a given class.
+ * @param el element to start looking from
+ * @param className class name to look for
+ */
+function findAncestorWithClass(el, className) {
+  while((el = el.parentElement) && !el.classList.contains(className));
+  return el;
+}
+
+(function () {
+
+  'use strict';
+
+  var collapsibles = {
+    show: function ( collapsible ) {
+      onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'true' );
+      if(onl.dom.$( '.collapsible__header a', collapsible )[0].getAttribute( 'data-text') == 'show/hide'){
+        onl.dom.$( '.collapsible__header a', collapsible )[0].innerHTML='Toon minder informatie';
+      }
+      onl.ui.show( onl.dom.$( '.collapsible__content', collapsible )[0] );
+    },
+    hide: function ( collapsible ) {
+      onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'false' );
+      if(onl.dom.$( '.collapsible__header a', collapsible )[0].getAttribute( 'data-text') == 'show/hide'){
+        onl.dom.$( '.collapsible__header a', collapsible )[0].innerHTML='Toon meer informatie';
+      }
+      onl.ui.hide( onl.dom.$( '.collapsible__content', collapsible )[0] );
+    },
+    isCollapsed: function ( collapsible ) {
+      return onl.ui.isHidden( onl.dom.$( '.collapsible__content', collapsible )[0] );
+    }
+  };
+
+  onl.handle({
+    'toggle-collapsible': function( element, event ) {
+      var collapsibleElement = element.closest( '.collapsible' );
+      var collapsiblesParentContainer = collapsibleElement.parentElement;
+      var collapsibleSiblings = onl.dom.$( '.collapsible', collapsiblesParentContainer ).filter( function( element ) {
+        return element.id === collapsibleElement.id;
+      });
+
+      event.preventDefault();
+
+      if ( collapsibles.isCollapsed( collapsibleElement ) ) {
+        collapsibleSiblings.forEach( function ( sibling ) {
+          if ( !collapsibles.isCollapsed( sibling ) )
+            collapsibles.hide( sibling );
+        } );
+        collapsibles.show( collapsibleElement );
+      }
+      else {
+        collapsibles.hide( collapsibleElement );
+      }
+    }
+  });
+
+  onl.decorate({
+    'init-collapsible': function( element ) {
+      var showInitially = onl.dom.$('.collapsible--initially-visible', element ).length > 0;
+
+      if ( showInitially === true ){
+        collapsibles.show( element );
+      }
+      else {
+        collapsibles.hide( element );
+      }
+    }
+  });
+
+})();
+(function () {
+
+  'use strict';
+
+  onl.decorate({
+    'init-copydata': function( element ) {
+      new copydata( element );
+    }
+  });
+
+  var copydata = function( element ) {
+    this.element = element;
+    this.datafield = element.querySelector( '.js-copydata__datafield' );
+    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
+    this.init();
+  };
+
+  copydata.prototype.init = function( ) {
+    this.createAndPlaceTrigger();
+    this.addEventListeners();
+  };
+
+  copydata.prototype.addEventListeners = function() {
+    this.trigger.addEventListener( 'click', function( e ) { this.triggerCopy( e ); }.bind( this ), false );
+  };
+
+  copydata.prototype.triggerCopy = function(e) {
+    e.preventDefault();
+    this.putValueInClipboard();
+  };
+
+  copydata.prototype.createAndPlaceTrigger = function() {
+    this.trigger = document.createElement( 'span' );
+    this.triggerSpan = document.createElement( 'span' );
+    this.trigger.classList.add( this.config.triggerClass );
+    this.trigger.setAttribute('tabindex', '0');
+    this.trigger.setAttribute('aria-label', this.config.triggerLabel + ':' + this.datafield.innerHTML);
+    this.triggerSpan.innerText = this.config.triggerLabel;
+    this.trigger.appendChild(this.triggerSpan);
+    this.element.appendChild( this.trigger );
+  };
+
+  copydata.prototype.giveFeedbackToUser = function() {
+    var self = this;
+    var originalLabel = this.trigger.innerText;
+    var tempLabel = this.config.triggerCopiedlabel || 'Gekopiëerd';
+
+    this.trigger.classList.add("is-active");
+    this.triggerSpan.innerHTML = tempLabel;
+
+    setTimeout( function(){
+      self.triggerSpan.innerHTML = originalLabel;
+      self.trigger.classList.remove("is-active");
+    }, 5000 );
+
+  };
+
+  copydata.prototype.putValueInClipboard = function() {
+    if ( document.selection ) {
+      var range = document.body.createTextRange( this.datafield );
+      range.moveToElementText();
+      range.select().createTextRange();
+      document.execCommand( "copy" );
+    } else if ( window.getSelection ) {
+      var range = document.createRange();
+      range.selectNode( this.datafield );
+      window.getSelection().removeAllRanges( range );
+      window.getSelection().addRange( range );
+      document.execCommand( "copy" );
+    }
+    this.giveFeedbackToUser();
+  };
+
+})();
+
+(function () {
+
+  'use strict';
+
+  onl.decorate({
+    'init-footnote': function (element) {
+      new footnote(element);
+    }
+  });
+
+  var footnote = function (element) {
+    this.element = element;
+    this.footnote = document.querySelector(this.element.getAttribute('href'));
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.referenceClass = this.config.referenceClass || '.reference';
+    this.init();
+  };
+
+  footnote.prototype.init = function () {
+    this.element.setAttribute('id', 'footnumber' + Math.floor(Math.random() * (+10000 - +0)) + +0 );
+    this.addEventListeners();
+  };
+
+  footnote.prototype.addEventListeners = function () {
+    this.element.addEventListener('click', function (e) { this.setReferenceAnker(e); }.bind(this), false);
+  };
+
+  footnote.prototype.setReferenceAnker = function () {
+    this.footnote.querySelector('.reference').setAttribute('href', '#' + this.element.getAttribute('id'));
+  };
+
+})();
+
+(function () {
+
+  'use strict';
+
+  var modalInvisibleClass = 'modal--off-screen'; /* we use this so that we can animate visibility */
+  var previouslyFocused = null;
+  var SHOW_DELAY = 400;
+
+  var modal = {
+    open: function (modal, element ) {
+
+      previouslyFocused = document.activeElement;
+
+      // To facilitate animation, this show(), while it toggles the `hidden` attribute,
+      // does not actually make it visible just yet
+      onl.ui.show( modal );
+      modal.classList.add('is-open');
+
+      window.setTimeout( function() {
+        // This makes the element actually visible on screen
+        modal.classList.remove( modalInvisibleClass );
+      }, SHOW_DELAY );
+
+      onl.ui.focus( modal );
+      onl.ui.bindFocusTrap( modal );
+
+      var config = JSON.parse(element.getAttribute('data-config')) || [];
+      if (typeof window[config.function] === 'function') {
+        var functionToCall = window[config.function];
+        new functionToCall(config.action, JSON.parse(document.getElementById(config.data).innerHTML));
+      }
+
+      // if ( config.function === 'kpm' ) {
+      //   if ( config.action === 'push' ) {
+      //     kpmService.push( JSON.parse(document.getElementById(config.data).innerHTML ) );
+      //   }
+      // }
+
+      pubsub.publish('/modal/open', {
+        modal: modal
+      });
+
+    },
+    close: function( modal ) {
+      onl.ui.hide( modal );
+      modal.classList.add( modalInvisibleClass );
+      modal.classList.remove('is-open');
+
+      onl.ui.unbindFocusTrap( modal );
+
+      if ( previouslyFocused ) {
+        onl.ui.focus( previouslyFocused );
+      }
+    },
+    recalculateAndSetBounds: function( modalElement ) {
+      var modal = modalElement;
+      var height = window.innerHeight;
+      var dialogContent = modal.querySelector( '.modal__content' );
+
+      // reset height, before calculating
+      dialogContent.style.height = 'auto';
+
+      if ( ( dialogContent.offsetHeight + 100 ) >= height ) {
+        dialogContent.style.height = height - 100 + 'px';
+      } else {
+        dialogContent.style.height = 'auto';
+      }
+    },
+    setHeight: function( modalElement ) {
+      var resizeTimeout;
+
+      modal.recalculateAndSetBounds( modalElement );
+
+      window.addEventListener( 'resize', function() {
+        if ( resizeTimeout ) {
+          clearTimeout( resizeTimeout );
+        }
+        resizeTimeout = window.setTimeout( function() {
+          modal.recalculateAndSetBounds( modalElement );
+        }, 50 );
+      });
+    }
+  };
+
+  onl.decorate({
+    'init-modal': function( element ) {
+
+    }
+  });
+
+  onl.handle({
+    'open-modal': function( element, event ) {
+      event.preventDefault();
+      var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
+      var body = document.getElementsByTagName('body');
+      body[0].classList.add('no-scroll');
+      body[0].classList.add('is-modal-open');
+
+      modal.open(modalElement, element );
+      modal.setHeight ( modalElement );
+    },
+    'close-modal': function( element ) {
+      var modalElement;
+      var body = document.getElementsByTagName('body');
+      body[0].classList.remove('no-scroll');
+      body[0].classList.remove('is-modal-open');
+
+      if ( element.getAttribute( 'data-modal' ) ) {
+        modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
+      }
+      else {
+        modalElement = element.closest( '.modal' );
+      }
+
+      modal.close( modalElement );
+    }
+  });
+
+
+})();
+
+(function () {
+
+  'use strict';
+
+  var previouslyFocused = null;
+
+
+  var modalsidebar = {
+    open: function( modal ) {
+      previouslyFocused = document.activeElement;
+
+      modal.classList.add('is-open');
+
+      onl.ui.focus( modal );
+      onl.ui.bindFocusTrap( modal );
+    },
+    close: function( modal ) {
+
+      modal.classList.remove('is-open');
+
+      onl.ui.unbindFocusTrap( modal );
+
+      if ( previouslyFocused ) {
+        onl.ui.focus( previouslyFocused );
+      }
+    }
+  };
+
+  onl.decorate({
+    'init-modalsidebar': function() {
+    },
+    'init-fixedbottom-button': function(element) {
+      new fixedbottomButton(element);
+    }
+  });
+
+  var fixedbottomButton = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.allInputs = onl.dom.$( 'input, select', element );
+    this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0] || false;
+
+    if(this.button){
+      // this.button.setAttribute('hidden', 'hidden');
+      this.init();
+    }
+  };
+
+  fixedbottomButton.prototype.init = function () {
+    this.attachListerners();
+  };
+  fixedbottomButton.prototype.attachListerners = function () {
+    var i;
+
+    for (i = 0; i < this.allInputs.length; i++) {
+      this.allInputs[i].addEventListener('change', function (e) { this.doChangeAction(e); }.bind(this), false);
+    }
+  };
+  fixedbottomButton.prototype.doChangeAction = function () {
+    this.button.removeAttribute('hidden');
+  };
+
+  onl.handle({
+    'open-modalsidebar': function( element ) {
+      var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
+      var body = document.getElementsByTagName('body');
+
+      body[0].classList.add('no-scroll');
+      body[0].classList.add('has-modal-open');
+
+      modalsidebar.open( modalElement );
+    },
+    'close-modalsidebar': function( element ) {
+      var modalElement;
+      var body = document.getElementsByTagName('body');
+
+      body[0].classList.remove('no-scroll');
+      body[0].classList.remove('has-modal-open');
+
+      if ( element.getAttribute( 'data-modal' ) ) {
+        modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
+      }
+      else {
+        modalElement = element.closest( '.modal-sidebar' );
+      }
+
+      modalsidebar.close( modalElement );
+    }
+  });
+})();
+
+(function () {
+
+  'use strict';
+
+  var toggle = function( element ) {
+    var toggledElement = document.getElementById( element.getAttribute( 'aria-controls' ) );
+    var isExpanded = element.getAttribute( 'aria-expanded' ) === 'true';
+
+    if ( isExpanded ) {
+      onl.ui.hide( toggledElement );
+      element.setAttribute( 'aria-expanded', 'false' );
+    } else {
+      onl.ui.show( toggledElement );
+      element.setAttribute( 'aria-expanded', 'true' );
+    }
+  };
+
+  onl.decorate({
+    'init-profile-toggle': function( element ) {
+      var togglerHolder = onl.dom.$( '[data-toggler]', element )[0];
+      var toggled = onl.dom.$( '[data-toggled]', element )[0];
+      var toggler = document.createElement( 'button' );
+
+      toggler.type = 'button';
+      toggler.textContent = 'Opties';
+      toggler.setAttribute( 'aria-controls', toggled.id );
+      toggler.setAttribute( 'aria-expanded', 'true' ); // this gets set to false when toggle( toggler ) is called
+      toggler.setAttribute( 'data-handler', 'toggle-profile-options' );
+
+      togglerHolder.appendChild( toggler );
+      toggle( toggler );
+    }
+  });
+
+  onl.handle({
+    'toggle-profile-options': function( element ) {
+      toggle(element);
+    }
+  });
+
+})();
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-sourceslist': function (element) {
+      new sourceslist(element);
+    }
+  });
+
+  var sourceslist = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    this.triggerClass = this.config.triggerClass || '.js-sourceslist-statetrigger';
+    this.triggerConfig = JSON.parse(this.element.getAttribute('data-config')) || [];
+
+    this.stateTriggers = document.querySelectorAll(this.triggerClass);
+
+    this.initEventListeners();
+
+  };
+
+
+
+  sourceslist.prototype.initEventListeners = function () {
+    var y;
+    for (y = 0; y < this.stateTriggers.length; y++) {
+      this.stateTriggers[y].addEventListener('click', function (e) { this.getTriggerConfig(e); }.bind(this), false);
+    }
+  };
+
+  sourceslist.prototype.getTriggerConfig = function (e) {
+    e.preventDefault();
+    var trigger = e.target;
+    var triggerDataset = JSON.parse(trigger.dataset.config);
+    var state = triggerDataset.state;
+    var id = triggerDataset.id;
+
+    this.sourceslist = document.querySelector('#' + id);
+
+    if (this.sourceslist) {
+      this.sourceslist.classList.add('is-state-' + state);
+      this.sourceslist.setAttribute('role', 'alert');
+      this.sourceslist.setAttribute('tabindex', '0');
+      this.sourceslist.focus();
+      trigger.setAttribute('hidden', 'hidden');
+      this.createDiscardLink(trigger);
+    }
+
+  };
+
+  sourceslist.prototype.createDiscardLink = function (trigger) {
+    var newNode = document.createElement('a');
+    var text = document.createTextNode("Annuleren");
+    newNode.appendChild(text);
+    newNode.href = "#";
+
+    var referenceNode = trigger;
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+
+    newNode.addEventListener('click', function (e) { this.reset(e, trigger); }.bind(this), false);
+  }
+
+  sourceslist.prototype.reset = function (e, trigger) {
+    e.preventDefault();
+    e.target.parentNode.removeChild(e.target);
+    trigger.removeAttribute('hidden');
+    this.sourceslist.classList.remove('is-state-actions');
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  onl.decorate({
+    'init-table': function( element ) {
+      var div = document.createElement( 'div' );
+      var container = div.cloneNode( false );
+
+      element.parentNode.insertBefore( container, element );
+      container.classList.add( 'table__container' );
+      container.appendChild( element );
+    }
+  });
+
+})();
+
+( function() {
+
+  'use strict';
+
+  var tabs = {
+    openPanel: function( element ) {
+      var tabsHolder = element.closest( '[data-decorator="init-tabs"]' );
+      var tabs = onl.dom.$( '[role="tab"]', tabsHolder );
+      var currentTab = onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
+      // var currentPanel = document.getElementById( currentTab.getAttribute( 'aria-controls' ) );
+      var currentPanel = onl.dom.$( '#' + currentTab.getAttribute( 'aria-controls' ), tabsHolder )[0];
+      var panelToShow = onl.dom.$( '#' + element.getAttribute( 'aria-controls' ), tabsHolder )[0];
+
+      // set tab-hash in url;
+      window.location.hash = element.getAttribute( 'aria-controls' );
+
+      // hide current panel
+      onl.ui.hide( currentPanel );
+
+      // show panel to show
+      onl.ui.show( panelToShow );
+
+      // update aria-selected attributes
+      tabs.forEach( function( tab ) {
+        tab.setAttribute( 'aria-selected', 'false' );
+      });
+
+      element.setAttribute( 'aria-selected', 'true' );
+    },
+    // get next panel element based on current tab element
+    getNextPanel: function( currentPanel ) {
+      if ( currentPanel.parentElement.nextElementSibling ) {
+        return currentPanel.parentElement.nextElementSibling.firstElementChild;
+      }
+      else {
+        return currentPanel.parentElement.parentElement.firstElementChild.firstElementChild;
+      }
+    },
+    // get previous panel element based on current tab element
+    getPreviousPanel: function( currentPanel ) {
+      if ( currentPanel.parentElement.previousElementSibling ) {
+        return currentPanel.parentElement.previousElementSibling.firstElementChild;
+      }
+      else {
+        return currentPanel.parentElement.parentElement.lastElementChild.lastElementChild;
+      }
+    },
+    // get current panel element from any element inside tabs element
+    getCurrentPanel: function( element ) {
+      var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
+
+      return onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
+    },
+    switch: function( event ) {
+      var currentPanel = event.target;
+      var nextPanel = tabs.getNextPanel( currentPanel );
+      var previousPanel = tabs.getPreviousPanel( currentPanel );
+
+      if ( event.which === 39 ) {
+        nextPanel.focus();
+        tabs.openPanel( nextPanel );
+      }
+
+      if ( event.which === 37 ) {
+        previousPanel.focus();
+        tabs.openPanel( previousPanel );
+      }
+    }
+  };
+
+  onl.decorate({
+    'init-tabs': function( element ) {
+      var theseTabs = onl.dom.$( '[role="tab"]', element );
+      var panels = onl.dom.$( '[role="tabpanel"]', element );
+      var totalPanels = 0;
+      var hasHashTab;
+
+      // set all selected states
+      // fire switchTab function when keys are pressed
+      theseTabs.forEach( function( tab ) {
+        tab.setAttribute( 'aria-selected', 'false' );
+        tab.addEventListener( 'keyup', tabs.switch );
+      });
+
+      // hide all panels
+      panels.forEach( function( panel ) {
+        onl.ui.hide( panel );
+      });
+
+      var hash = window.location.hash;
+      if ( window.location.hash !== '' ) {
+        hash = hash.substr ( 1, 500 );
+
+        panels.forEach( function( panel ) {
+          if ( hash !== '' && hash === panel.getAttribute( 'id' ) ) {
+            onl.ui.show( panel );
+            theseTabs[totalPanels].setAttribute( 'aria-selected', 'true' );
+            hasHashTab = true;
+          }
+          totalPanels++;
+        });
+        if ( !hasHashTab ) {
+          onl.ui.show(panels[0]);
+          theseTabs[0].setAttribute('aria-selected', 'true');
+        }
+      } else {
+        // show first panel
+        onl.ui.show( panels[0] );
+        theseTabs[0].setAttribute( 'aria-selected', 'true' );
+      }
+    }
+  });
+
+  onl.handle({
+    'open-panel': function( element, event ) {
+      event.preventDefault();
+      tabs.openPanel( element );
+    },
+    'open-next-panel': function( element ) {
+      var currentPanel = tabs.getCurrentPanel( element );
+      var nextPanel = tabs.getNextPanel( currentPanel );
+      tabs.openPanel( nextPanel );
+    },
+    'open-previous-panel': function( element ) {
+      var currentPanel = tabs.getCurrentPanel( element );
+      var prevPanel = tabs.getPreviousPanel( currentPanel );
+      tabs.openPanel( prevPanel );
+    }
+  });
+
+})();
+
+( function() {
+
+  'use strict';
+
+  onl.decorate({
+    'to-top': function( element ) {
+      var el = element;
+      el.classList.add('irrelevant');
+      window.addEventListener('scroll', function () {
+        var footer = document.querySelector('.footer');
+        var footerTop = footer.offsetTop;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 500 && (scrollTop + window.innerHeight <= footerTop ) ) {
+          el.classList.remove('irrelevant');
+        } else {
+          el.classList.add('irrelevant');
+        }
+      });
+    }
+
+  });
+
+})();
+
+( function() {
+
+  'use strict';
+
+  var openText = 'Toon onderliggende';
+  var closeText = 'Verberg onderliggende';
+
+  var treeview = {
+    getFoldableChildren: function( element ) {
+      // note: element is <a> element that contains button ;
+      // this returns an array of all the elements except the
+      return Array.prototype.slice.call( element.parentNode.children, 1 );
+    },
+    getFoldableChildrenIDRef: function( foldableChildren ) {
+      var string = '';
+      var i;
+
+      for ( i = 0; i < foldableChildren.length; i++ ) {
+        if ( i > 0 ) {
+          string += ' ' + foldableChildren[i].id;
+        }
+        else {
+          string += foldableChildren[i].id;
+        }
+      }
+
+      return string;
+    }
+  };
+
+  onl.handle({
+    'toggle-fold': function( element, event ) {
+
+      var containingLink = element.parentNode;
+      var subLists = treeview.getFoldableChildren( containingLink );
+
+      event.preventDefault();
+
+      subLists.forEach( function( toggleable ) {
+        if ( onl.ui.isHidden( toggleable ) ) {
+          onl.ui.show( toggleable );
+          element.textContent = closeText;
+          element.setAttribute( 'aria-expanded', 'true' );
+        }
+        else {
+          onl.ui.hide( toggleable );
+          element.textContent = openText;
+          element.setAttribute( 'aria-expanded', 'false' );
+        }
+      });
+    }
+  });
+
+  onl.decorate({
+    'add-foldability': function( element ) {
+
+      var foldableChildren = treeview.getFoldableChildren( element );
+      var foldableChildrenIDRef = treeview.getFoldableChildrenIDRef( foldableChildren );
+      var needsFoldability = foldableChildren.length > 0;
+      var toggleButton;
+
+      if ( needsFoldability ) {
+        toggleButton = document.createElement( 'button' );
+        toggleButton.type = 'button';
+        toggleButton.textContent = closeText;
+        toggleButton.setAttribute( 'data-handler', 'toggle-fold' );
+        toggleButton.setAttribute( 'aria-expanded', 'false' );
+
+        if ( foldableChildrenIDRef ) {
+          toggleButton.setAttribute( 'aria-controls', foldableChildrenIDRef );
+        }
+
+        element.appendChild( toggleButton );
+      }
+    }
+  });
+
+})();
+
+(function () {
+  'use strict';
+
+  onl.decorate({
+    'init-video': function (element) {
+      new video(element);
+    }
+  });
+
+  var video = function (element) {
+    this.element = element;
+    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
+    this.placeholderContainer = this.element.querySelector('.video__placeholder');
+    this.trigger = this.element.querySelector('.video__placeholder button');
+    this.initEventListeners();
+  };
+
+  video.prototype.initEventListeners = function (e) {
+    this.trigger.addEventListener('click', function (e) { this.showVideo(e); }.bind(this), false);
+  };
+
+  video.prototype.showVideo = function () {
+    this.element.classList.add('is-video');
+    this.element.setAttribute('role', 'alert');
+  };
+
+})();
+
+(function() {
+  onl.decorate({
+    'active-item-toggle': function(element, event) {
+      var contentItems = element.querySelectorAll('.content-item');
+
+      contentItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          // Prevent the flow from executing if the user clicks on one of the modal buttons.
+          if(e.target.type === 'button') {
+            return;
+          }
+
+          var activeItem = document.getElementsByClassName('content-item active');
+
+          if(activeItem.length > 0) {
+            // If the current item clicked is the active item, remove class and return early.
+            if(activeItem[0] === item) {
+              activeItem[0].classList.remove('active');
+              return;
+            }
+
+            activeItem[0].classList.remove('active');
+          }
+
+          item.classList.add('active');
+        });
+      });
+    }
+  });
+})();
+
+onl.handle({
+  'toggle-other-sites': function( element, event ) {
+    var otherSites = onl.dom.getElementFromHref( element.href );
+    var toggleState = element.getAttribute( 'aria-expanded' );
+    var openEvent = document.createEvent( 'Event' );
+    var closeEvent = document.createEvent( 'Event' );
+
+    event.preventDefault();
+
+    openEvent.initEvent( 'othersites:open', true, true );
+    closeEvent.initEvent( 'othersites:close', true, true );
+
+    if ( toggleState === 'true' ) {
+      onl.ui.hide( otherSites );
+      element.setAttribute( 'aria-expanded', 'false' );
+      window.dispatchEvent( closeEvent );
+    }
+
+    else {
+      onl.ui.show( otherSites );
+
+      if ( onl.ui.getFocusableElements( otherSites ).length > 0 ) {
+        onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
+      }
+      else {
+        onl.ui.focus ( otherSites );
+      }
+
+      element.setAttribute( 'aria-expanded', 'true' );
+      window.dispatchEvent( openEvent );
+    }
+  },
+  'toggle-nav': function( element ) {
+    var nav = document.getElementById( element.getAttribute( 'aria-controls' ) );
+    var closedClass = 'header__nav--closed';
+
+    if ( element.getAttribute( 'aria-expanded' ) === 'false' ) {
+      nav.classList.remove( closedClass );
+      element.setAttribute( 'aria-expanded', 'true' );
+      onl.ui.focus( nav );
+    }
+    else {
+      nav.classList.add( closedClass );
+      element.setAttribute( 'aria-expanded', 'false' );
+    }
+  }
+});
+
+onl.decorate({
+  'init-toggle-other-sites': function( element ) {
+    var otherSites = onl.dom.getElementFromHref( element.href );
+
+    element.setAttribute( 'aria-controls', otherSites.id );
+    element.setAttribute( 'aria-expanded', 'false' );
+
+    otherSites.classList.add( 'header__more--closed' );
+
+    onl.ui.hide( otherSites );
+  }
+});
+
+( function() {
+
+  'use strict';
+
+  var searchToggle = {
+    context: {
+      searchTermHiddenClass : 'search__term--hidden',
+      searchTermAnimateClass : 'search__term--animating',
+      open : 'Open zoekveld',
+      close : 'Sluit zoekveld',
+      submit : 'Zoek'
+    },
+    handleInputChange: function( event ) {
+      var input = event.target;
+      var button = input.form.querySelector( 'button' );
+
+      if ( input.value.length > 0 ) {
+        button.textContent = searchToggle.context.submit;
+      }
+      else {
+        button.textContent = searchToggle.context.close;
+      }
+    }
+  };
+
+  onl.handle({
+    'toggle-search': function toggleSearch( submitButton, event ) {
+      var form = submitButton.closest( 'form' );
+      var searchTerm = form.querySelector( '.search__term' );
+      var searchButton = form.querySelector( 'button' );
+      var searchTermHiddenClass = searchToggle.context.searchTermHiddenClass;
+
+      event.preventDefault();
+
+      if ( searchTerm.value.length > 0 ) {
+        form.submit();
+      }
+      else {
+        if ( searchTerm.classList.contains( searchTermHiddenClass ) ) {
+          // open
+          searchTerm.classList.remove( searchTermHiddenClass );
+          searchTerm.focus();
+          searchButton.textContent = searchToggle.context.close;
+        }
+        else {
+          // close
+          searchTerm.classList.add( searchTermHiddenClass );
+          searchButton.textContent = searchToggle.context.open;
+          searchTerm.value = ''; // reset so we don't submit while term is hidden
+        }
+      }
+    }
+  });
+
+  onl.decorate({
+    'init-search-toggle': function( element ) {
+      var searchTerm = element.querySelector( '.search__term' );
+      var searchButton = element.querySelector( 'button' );
+
+      var searchTermHiddenClass = searchToggle.context.searchTermHiddenClass;
+      var searchTermAnimateClass = searchToggle.context.searchTermAnimateClass;
+
+      searchTerm.classList.add( searchTermHiddenClass );
+      searchTerm.addEventListener( 'keyup', searchToggle.handleInputChange );
+      searchButton.textContent = searchToggle.context.open;
+      searchButton.setAttribute( 'data-handler', 'toggle-search' );
+
+      setTimeout( function(){
+        searchTerm.classList.add( searchTermAnimateClass );
+      }, 500 );
+    }
+  });
+
+})();
+
 (function() {
 
   onl.decorate({
@@ -4494,2377 +6868,6 @@ function findObjectByKey(array, key, value) {
   });
 
 })();
-
-(function() {
-  onl.decorate({
-    'active-item-toggle': function(element, event) {
-      var contentItems = element.querySelectorAll('.content-item');
-
-      contentItems.forEach(function(item) {
-        item.addEventListener('click', function(e) {
-          // Prevent the flow from executing if the user clicks on one of the modal buttons.
-          if(e.target.type === 'button') {
-            return;
-          }
-
-          var activeItem = document.getElementsByClassName('content-item active');
-
-          if(activeItem.length > 0) {
-            // If the current item clicked is the active item, remove class and return early.
-            if(activeItem[0] === item) {
-              activeItem[0].classList.remove('active');
-              return;
-            }
-
-            activeItem[0].classList.remove('active');
-          }
-
-          item.classList.add('active');
-        });
-      });
-    }
-  });
-})();
-
-onl.handle({
-  'toggle-other-sites': function( element, event ) {
-    var otherSites = onl.dom.getElementFromHref( element.href );
-    var toggleState = element.getAttribute( 'aria-expanded' );
-    var openEvent = document.createEvent( 'Event' );
-    var closeEvent = document.createEvent( 'Event' );
-
-    event.preventDefault();
-
-    openEvent.initEvent( 'othersites:open', true, true );
-    closeEvent.initEvent( 'othersites:close', true, true );
-
-    if ( toggleState === 'true' ) {
-      onl.ui.hide( otherSites );
-      element.setAttribute( 'aria-expanded', 'false' );
-      window.dispatchEvent( closeEvent );
-    }
-
-    else {
-      onl.ui.show( otherSites );
-
-      if ( onl.ui.getFocusableElements( otherSites ).length > 0 ) {
-        onl.ui.focus( onl.ui.getFocusableElements( otherSites )[0] );
-      }
-      else {
-        onl.ui.focus ( otherSites );
-      }
-
-      element.setAttribute( 'aria-expanded', 'true' );
-      window.dispatchEvent( openEvent );
-    }
-  },
-  'toggle-nav': function( element ) {
-    var nav = document.getElementById( element.getAttribute( 'aria-controls' ) );
-    var closedClass = 'header__nav--closed';
-
-    if ( element.getAttribute( 'aria-expanded' ) === 'false' ) {
-      nav.classList.remove( closedClass );
-      element.setAttribute( 'aria-expanded', 'true' );
-      onl.ui.focus( nav );
-    }
-    else {
-      nav.classList.add( closedClass );
-      element.setAttribute( 'aria-expanded', 'false' );
-    }
-  }
-});
-
-onl.decorate({
-  'init-toggle-other-sites': function( element ) {
-    var otherSites = onl.dom.getElementFromHref( element.href );
-
-    element.setAttribute( 'aria-controls', otherSites.id );
-    element.setAttribute( 'aria-expanded', 'false' );
-
-    otherSites.classList.add( 'header__more--closed' );
-
-    onl.ui.hide( otherSites );
-  }
-});
-
-( function() {
-
-  'use strict';
-
-  var searchToggle = {
-    context: {
-      searchTermHiddenClass : 'search__term--hidden',
-      searchTermAnimateClass : 'search__term--animating',
-      open : 'Open zoekveld',
-      close : 'Sluit zoekveld',
-      submit : 'Zoek'
-    },
-    handleInputChange: function( event ) {
-      var input = event.target;
-      var button = input.form.querySelector( 'button' );
-
-      if ( input.value.length > 0 ) {
-        button.textContent = searchToggle.context.submit;
-      }
-      else {
-        button.textContent = searchToggle.context.close;
-      }
-    }
-  };
-
-  onl.handle({
-    'toggle-search': function toggleSearch( submitButton, event ) {
-      var form = submitButton.closest( 'form' );
-      var searchTerm = form.querySelector( '.search__term' );
-      var searchButton = form.querySelector( 'button' );
-      var searchTermHiddenClass = searchToggle.context.searchTermHiddenClass;
-
-      event.preventDefault();
-
-      if ( searchTerm.value.length > 0 ) {
-        form.submit();
-      }
-      else {
-        if ( searchTerm.classList.contains( searchTermHiddenClass ) ) {
-          // open
-          searchTerm.classList.remove( searchTermHiddenClass );
-          searchTerm.focus();
-          searchButton.textContent = searchToggle.context.close;
-        }
-        else {
-          // close
-          searchTerm.classList.add( searchTermHiddenClass );
-          searchButton.textContent = searchToggle.context.open;
-          searchTerm.value = ''; // reset so we don't submit while term is hidden
-        }
-      }
-    }
-  });
-
-  onl.decorate({
-    'init-search-toggle': function( element ) {
-      var searchTerm = element.querySelector( '.search__term' );
-      var searchButton = element.querySelector( 'button' );
-
-      var searchTermHiddenClass = searchToggle.context.searchTermHiddenClass;
-      var searchTermAnimateClass = searchToggle.context.searchTermAnimateClass;
-
-      searchTerm.classList.add( searchTermHiddenClass );
-      searchTerm.addEventListener( 'keyup', searchToggle.handleInputChange );
-      searchButton.textContent = searchToggle.context.open;
-      searchButton.setAttribute( 'data-handler', 'toggle-search' );
-
-      setTimeout( function(){
-        searchTerm.classList.add( searchTermAnimateClass );
-      }, 500 );
-    }
-  });
-
-})();
-
-onl.handle({
-  /**
-   * Close an alert that is fixed to the top of the screen.
-   * @param element 
-   * @param event 
-   */
-  'close-alert': function(element, event) {
-    event.preventDefault();
-
-    var alerts = findAncestorWithClass(element, 'alert');
-
-    // Prevention of classList.replace as IE9 does not support it.
-    alerts.classList.remove('show');
-    alerts.classList.add('hide');
-
-    setTimeout(function() {
-      alerts.classList.remove('hide');
-    }, 500);
-  }
-});
-
-/**
- * Finds and returns the first ancestor with a given class.
- * @param el element to start looking from
- * @param className class name to look for
- */
-function findAncestorWithClass(el, className) {
-  while((el = el.parentElement) && !el.classList.contains(className));
-  return el;
-}
-
-(function () {
-
-  'use strict';
-
-  var collapsibles = {
-    show: function ( collapsible ) {
-      onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'true' );
-      if(onl.dom.$( '.collapsible__header a', collapsible )[0].getAttribute( 'data-text') == 'show/hide'){
-        onl.dom.$( '.collapsible__header a', collapsible )[0].innerHTML='Toon minder informatie';
-      }
-      onl.ui.show( onl.dom.$( '.collapsible__content', collapsible )[0] );
-    },
-    hide: function ( collapsible ) {
-      onl.dom.$( '.collapsible__header a', collapsible )[0].setAttribute( 'aria-expanded', 'false' );
-      if(onl.dom.$( '.collapsible__header a', collapsible )[0].getAttribute( 'data-text') == 'show/hide'){
-        onl.dom.$( '.collapsible__header a', collapsible )[0].innerHTML='Toon meer informatie';
-      }
-      onl.ui.hide( onl.dom.$( '.collapsible__content', collapsible )[0] );
-    },
-    isCollapsed: function ( collapsible ) {
-      return onl.ui.isHidden( onl.dom.$( '.collapsible__content', collapsible )[0] );
-    }
-  };
-
-  onl.handle({
-    'toggle-collapsible': function( element, event ) {
-      var collapsibleElement = element.closest( '.collapsible' );
-      var collapsiblesParentContainer = collapsibleElement.parentElement;
-      var collapsibleSiblings = onl.dom.$( '.collapsible', collapsiblesParentContainer ).filter( function( element ) {
-        return element.id === collapsibleElement.id;
-      });
-
-      event.preventDefault();
-
-      if ( collapsibles.isCollapsed( collapsibleElement ) ) {
-        collapsibleSiblings.forEach( function ( sibling ) {
-          if ( !collapsibles.isCollapsed( sibling ) )
-            collapsibles.hide( sibling );
-        } );
-        collapsibles.show( collapsibleElement );
-      }
-      else {
-        collapsibles.hide( collapsibleElement );
-      }
-    }
-  });
-
-  onl.decorate({
-    'init-collapsible': function( element ) {
-      var showInitially = onl.dom.$('.collapsible--initially-visible', element ).length > 0;
-
-      if ( showInitially === true ){
-        collapsibles.show( element );
-      }
-      else {
-        collapsibles.hide( element );
-      }
-    }
-  });
-
-})();
-(function () {
-
-  'use strict';
-
-  onl.decorate({
-    'init-copydata': function( element ) {
-      new copydata( element );
-    }
-  });
-
-  var copydata = function( element ) {
-    this.element = element;
-    this.datafield = element.querySelector( '.js-copydata__datafield' );
-    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
-    this.init();
-  };
-
-  copydata.prototype.init = function( ) {
-    this.createAndPlaceTrigger();
-    this.addEventListeners();
-  };
-
-  copydata.prototype.addEventListeners = function() {
-    this.trigger.addEventListener( 'click', function( e ) { this.triggerCopy( e ); }.bind( this ), false );
-  };
-
-  copydata.prototype.triggerCopy = function(e) {
-    e.preventDefault();
-    this.putValueInClipboard();
-  };
-
-  copydata.prototype.createAndPlaceTrigger = function() {
-    this.trigger = document.createElement( 'span' );
-    this.triggerSpan = document.createElement( 'span' );
-    this.trigger.classList.add( this.config.triggerClass );
-    this.trigger.setAttribute('tabindex', '0');
-    this.trigger.setAttribute('aria-label', this.config.triggerLabel + ':' + this.datafield.innerHTML);
-    this.triggerSpan.innerText = this.config.triggerLabel;
-    this.trigger.appendChild(this.triggerSpan);
-    this.element.appendChild( this.trigger );
-  };
-
-  copydata.prototype.giveFeedbackToUser = function() {
-    var self = this;
-    var originalLabel = this.trigger.innerText;
-    var tempLabel = this.config.triggerCopiedlabel || 'Gekopiëerd';
-
-    this.trigger.classList.add("is-active");
-    this.triggerSpan.innerHTML = tempLabel;
-
-    setTimeout( function(){
-      self.triggerSpan.innerHTML = originalLabel;
-      self.trigger.classList.remove("is-active");
-    }, 5000 );
-
-  };
-
-  copydata.prototype.putValueInClipboard = function() {
-    if ( document.selection ) {
-      var range = document.body.createTextRange( this.datafield );
-      range.moveToElementText();
-      range.select().createTextRange();
-      document.execCommand( "copy" );
-    } else if ( window.getSelection ) {
-      var range = document.createRange();
-      range.selectNode( this.datafield );
-      window.getSelection().removeAllRanges( range );
-      window.getSelection().addRange( range );
-      document.execCommand( "copy" );
-    }
-    this.giveFeedbackToUser();
-  };
-
-})();
-
-(function () {
-
-  'use strict';
-
-  onl.decorate({
-    'init-footnote': function (element) {
-      new footnote(element);
-    }
-  });
-
-  var footnote = function (element) {
-    this.element = element;
-    this.footnote = document.querySelector(this.element.getAttribute('href'));
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.referenceClass = this.config.referenceClass || '.reference';
-    this.init();
-  };
-
-  footnote.prototype.init = function () {
-    this.element.setAttribute('id', 'footnumber' + Math.floor(Math.random() * (+10000 - +0)) + +0 );
-    this.addEventListeners();
-  };
-
-  footnote.prototype.addEventListeners = function () {
-    this.element.addEventListener('click', function (e) { this.setReferenceAnker(e); }.bind(this), false);
-  };
-
-  footnote.prototype.setReferenceAnker = function () {
-    this.footnote.querySelector('.reference').setAttribute('href', '#' + this.element.getAttribute('id'));
-  };
-
-})();
-
-(function () {
-
-  'use strict';
-
-  var modalInvisibleClass = 'modal--off-screen'; /* we use this so that we can animate visibility */
-  var previouslyFocused = null;
-  var SHOW_DELAY = 400;
-
-  var modal = {
-    open: function (modal, element ) {
-
-      previouslyFocused = document.activeElement;
-
-      // To facilitate animation, this show(), while it toggles the `hidden` attribute,
-      // does not actually make it visible just yet
-      onl.ui.show( modal );
-      modal.classList.add('is-open');
-
-      window.setTimeout( function() {
-        // This makes the element actually visible on screen
-        modal.classList.remove( modalInvisibleClass );
-      }, SHOW_DELAY );
-
-      onl.ui.focus( modal );
-      onl.ui.bindFocusTrap( modal );
-
-      var config = JSON.parse(element.getAttribute('data-config')) || [];
-      if (typeof window[config.function] === 'function') {
-        var functionToCall = window[config.function];
-        new functionToCall(config.action, JSON.parse(document.getElementById(config.data).innerHTML));
-      }
-
-      // if ( config.function === 'kpm' ) {
-      //   if ( config.action === 'push' ) {
-      //     kpmService.push( JSON.parse(document.getElementById(config.data).innerHTML ) );
-      //   }
-      // }
-
-      pubsub.publish('/modal/open', {
-        modal: modal
-      });
-
-    },
-    close: function( modal ) {
-      onl.ui.hide( modal );
-      modal.classList.add( modalInvisibleClass );
-      modal.classList.remove('is-open');
-
-      onl.ui.unbindFocusTrap( modal );
-
-      if ( previouslyFocused ) {
-        onl.ui.focus( previouslyFocused );
-      }
-    },
-    recalculateAndSetBounds: function( modalElement ) {
-      var modal = modalElement;
-      var height = window.innerHeight;
-      var dialogContent = modal.querySelector( '.modal__content' );
-
-      // reset height, before calculating
-      dialogContent.style.height = 'auto';
-
-      if ( ( dialogContent.offsetHeight + 100 ) >= height ) {
-        dialogContent.style.height = height - 100 + 'px';
-      } else {
-        dialogContent.style.height = 'auto';
-      }
-    },
-    setHeight: function( modalElement ) {
-      var resizeTimeout;
-
-      modal.recalculateAndSetBounds( modalElement );
-
-      window.addEventListener( 'resize', function() {
-        if ( resizeTimeout ) {
-          clearTimeout( resizeTimeout );
-        }
-        resizeTimeout = window.setTimeout( function() {
-          modal.recalculateAndSetBounds( modalElement );
-        }, 50 );
-      });
-    }
-  };
-
-  onl.decorate({
-    'init-modal': function( element ) {
-
-    }
-  });
-
-  onl.handle({
-    'open-modal': function( element, event ) {
-      event.preventDefault();
-      var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
-      var body = document.getElementsByTagName('body');
-      body[0].classList.add('no-scroll');
-      body[0].classList.add('is-modal-open');
-
-      modal.open(modalElement, element );
-      modal.setHeight ( modalElement );
-    },
-    'close-modal': function( element ) {
-      var modalElement;
-      var body = document.getElementsByTagName('body');
-      body[0].classList.remove('no-scroll');
-      body[0].classList.remove('is-modal-open');
-
-      if ( element.getAttribute( 'data-modal' ) ) {
-        modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
-      }
-      else {
-        modalElement = element.closest( '.modal' );
-      }
-
-      modal.close( modalElement );
-    }
-  });
-
-
-})();
-
-(function () {
-
-  'use strict';
-
-  var previouslyFocused = null;
-
-
-  var modalsidebar = {
-    open: function( modal ) {
-      previouslyFocused = document.activeElement;
-
-      modal.classList.add('is-open');
-
-      onl.ui.focus( modal );
-      onl.ui.bindFocusTrap( modal );
-    },
-    close: function( modal ) {
-
-      modal.classList.remove('is-open');
-
-      onl.ui.unbindFocusTrap( modal );
-
-      if ( previouslyFocused ) {
-        onl.ui.focus( previouslyFocused );
-      }
-    }
-  };
-
-  onl.decorate({
-    'init-modalsidebar': function() {
-    },
-    'init-fixedbottom-button': function(element) {
-      new fixedbottomButton(element);
-    }
-  });
-
-  var fixedbottomButton = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.allInputs = onl.dom.$( 'input, select', element );
-    this.button = onl.dom.$( '.js-fixedbottom-button__button', element )[0] || false;
-
-    if(this.button){
-      // this.button.setAttribute('hidden', 'hidden');
-      this.init();
-    }
-  };
-
-  fixedbottomButton.prototype.init = function () {
-    this.attachListerners();
-  };
-  fixedbottomButton.prototype.attachListerners = function () {
-    var i;
-
-    for (i = 0; i < this.allInputs.length; i++) {
-      this.allInputs[i].addEventListener('change', function (e) { this.doChangeAction(e); }.bind(this), false);
-    }
-  };
-  fixedbottomButton.prototype.doChangeAction = function () {
-    this.button.removeAttribute('hidden');
-  };
-
-  onl.handle({
-    'open-modalsidebar': function( element ) {
-      var modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
-      var body = document.getElementsByTagName('body');
-
-      body[0].classList.add('no-scroll');
-      body[0].classList.add('has-modal-open');
-
-      modalsidebar.open( modalElement );
-    },
-    'close-modalsidebar': function( element ) {
-      var modalElement;
-      var body = document.getElementsByTagName('body');
-
-      body[0].classList.remove('no-scroll');
-      body[0].classList.remove('has-modal-open');
-
-      if ( element.getAttribute( 'data-modal' ) ) {
-        modalElement = document.getElementById( element.getAttribute( 'data-modal' ) );
-      }
-      else {
-        modalElement = element.closest( '.modal-sidebar' );
-      }
-
-      modalsidebar.close( modalElement );
-    }
-  });
-})();
-
-(function () {
-
-  'use strict';
-
-  var toggle = function( element ) {
-    var toggledElement = document.getElementById( element.getAttribute( 'aria-controls' ) );
-    var isExpanded = element.getAttribute( 'aria-expanded' ) === 'true';
-
-    if ( isExpanded ) {
-      onl.ui.hide( toggledElement );
-      element.setAttribute( 'aria-expanded', 'false' );
-    } else {
-      onl.ui.show( toggledElement );
-      element.setAttribute( 'aria-expanded', 'true' );
-    }
-  };
-
-  onl.decorate({
-    'init-profile-toggle': function( element ) {
-      var togglerHolder = onl.dom.$( '[data-toggler]', element )[0];
-      var toggled = onl.dom.$( '[data-toggled]', element )[0];
-      var toggler = document.createElement( 'button' );
-
-      toggler.type = 'button';
-      toggler.textContent = 'Opties';
-      toggler.setAttribute( 'aria-controls', toggled.id );
-      toggler.setAttribute( 'aria-expanded', 'true' ); // this gets set to false when toggle( toggler ) is called
-      toggler.setAttribute( 'data-handler', 'toggle-profile-options' );
-
-      togglerHolder.appendChild( toggler );
-      toggle( toggler );
-    }
-  });
-
-  onl.handle({
-    'toggle-profile-options': function( element ) {
-      toggle(element);
-    }
-  });
-
-})();
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-sourceslist': function (element) {
-      new sourceslist(element);
-    }
-  });
-
-  var sourceslist = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-
-    this.triggerClass = this.config.triggerClass || '.js-sourceslist-statetrigger';
-    this.triggerConfig = JSON.parse(this.element.getAttribute('data-config')) || [];
-
-    this.stateTriggers = document.querySelectorAll(this.triggerClass);
-
-    this.initEventListeners();
-
-  };
-
-
-
-  sourceslist.prototype.initEventListeners = function () {
-    var y;
-    for (y = 0; y < this.stateTriggers.length; y++) {
-      this.stateTriggers[y].addEventListener('click', function (e) { this.getTriggerConfig(e); }.bind(this), false);
-    }
-  };
-
-  sourceslist.prototype.getTriggerConfig = function (e) {
-    e.preventDefault();
-    var trigger = e.target;
-    var triggerDataset = JSON.parse(trigger.dataset.config);
-    var state = triggerDataset.state;
-    var id = triggerDataset.id;
-
-    this.sourceslist = document.querySelector('#' + id);
-
-    if (this.sourceslist) {
-      this.sourceslist.classList.add('is-state-' + state);
-      this.sourceslist.setAttribute('role', 'alert');
-      this.sourceslist.setAttribute('tabindex', '0');
-      this.sourceslist.focus();
-      trigger.setAttribute('hidden', 'hidden');
-      this.createDiscardLink(trigger);
-    }
-
-  };
-
-  sourceslist.prototype.createDiscardLink = function (trigger) {
-    var newNode = document.createElement('a');
-    var text = document.createTextNode("Annuleren");
-    newNode.appendChild(text);
-    newNode.href = "#";
-
-    var referenceNode = trigger;
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-
-    newNode.addEventListener('click', function (e) { this.reset(e, trigger); }.bind(this), false);
-  }
-
-  sourceslist.prototype.reset = function (e, trigger) {
-    e.preventDefault();
-    e.target.parentNode.removeChild(e.target);
-    trigger.removeAttribute('hidden');
-    this.sourceslist.classList.remove('is-state-actions');
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  onl.decorate({
-    'init-table': function( element ) {
-      var div = document.createElement( 'div' );
-      var container = div.cloneNode( false );
-
-      element.parentNode.insertBefore( container, element );
-      container.classList.add( 'table__container' );
-      container.appendChild( element );
-    }
-  });
-
-})();
-
-( function() {
-
-  'use strict';
-
-  var tabs = {
-    openPanel: function( element ) {
-      var tabsHolder = element.closest( '[data-decorator="init-tabs"]' );
-      var tabs = onl.dom.$( '[role="tab"]', tabsHolder );
-      var currentTab = onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
-      // var currentPanel = document.getElementById( currentTab.getAttribute( 'aria-controls' ) );
-      var currentPanel = onl.dom.$( '#' + currentTab.getAttribute( 'aria-controls' ), tabsHolder )[0];
-      var panelToShow = onl.dom.$( '#' + element.getAttribute( 'aria-controls' ), tabsHolder )[0];
-
-      // set tab-hash in url;
-      window.location.hash = element.getAttribute( 'aria-controls' );
-
-      // hide current panel
-      onl.ui.hide( currentPanel );
-
-      // show panel to show
-      onl.ui.show( panelToShow );
-
-      // update aria-selected attributes
-      tabs.forEach( function( tab ) {
-        tab.setAttribute( 'aria-selected', 'false' );
-      });
-
-      element.setAttribute( 'aria-selected', 'true' );
-    },
-    // get next panel element based on current tab element
-    getNextPanel: function( currentPanel ) {
-      if ( currentPanel.parentElement.nextElementSibling ) {
-        return currentPanel.parentElement.nextElementSibling.firstElementChild;
-      }
-      else {
-        return currentPanel.parentElement.parentElement.firstElementChild.firstElementChild;
-      }
-    },
-    // get previous panel element based on current tab element
-    getPreviousPanel: function( currentPanel ) {
-      if ( currentPanel.parentElement.previousElementSibling ) {
-        return currentPanel.parentElement.previousElementSibling.firstElementChild;
-      }
-      else {
-        return currentPanel.parentElement.parentElement.lastElementChild.lastElementChild;
-      }
-    },
-    // get current panel element from any element inside tabs element
-    getCurrentPanel: function( element ) {
-      var tabsHolder = element.closest( '[data-decorator="init-tabs]' );
-
-      return onl.dom.$( '[aria-selected="true"]', tabsHolder )[0];
-    },
-    switch: function( event ) {
-      var currentPanel = event.target;
-      var nextPanel = tabs.getNextPanel( currentPanel );
-      var previousPanel = tabs.getPreviousPanel( currentPanel );
-
-      if ( event.which === 39 ) {
-        nextPanel.focus();
-        tabs.openPanel( nextPanel );
-      }
-
-      if ( event.which === 37 ) {
-        previousPanel.focus();
-        tabs.openPanel( previousPanel );
-      }
-    }
-  };
-
-  onl.decorate({
-    'init-tabs': function( element ) {
-      var theseTabs = onl.dom.$( '[role="tab"]', element );
-      var panels = onl.dom.$( '[role="tabpanel"]', element );
-      var totalPanels = 0;
-      var hasHashTab;
-
-      // set all selected states
-      // fire switchTab function when keys are pressed
-      theseTabs.forEach( function( tab ) {
-        tab.setAttribute( 'aria-selected', 'false' );
-        tab.addEventListener( 'keyup', tabs.switch );
-      });
-
-      // hide all panels
-      panels.forEach( function( panel ) {
-        onl.ui.hide( panel );
-      });
-
-      var hash = window.location.hash;
-      if ( window.location.hash !== '' ) {
-        hash = hash.substr ( 1, 500 );
-
-        panels.forEach( function( panel ) {
-          if ( hash !== '' && hash === panel.getAttribute( 'id' ) ) {
-            onl.ui.show( panel );
-            theseTabs[totalPanels].setAttribute( 'aria-selected', 'true' );
-            hasHashTab = true;
-          }
-          totalPanels++;
-        });
-        if ( !hasHashTab ) {
-          onl.ui.show(panels[0]);
-          theseTabs[0].setAttribute('aria-selected', 'true');
-        }
-      } else {
-        // show first panel
-        onl.ui.show( panels[0] );
-        theseTabs[0].setAttribute( 'aria-selected', 'true' );
-      }
-    }
-  });
-
-  onl.handle({
-    'open-panel': function( element, event ) {
-      event.preventDefault();
-      tabs.openPanel( element );
-    },
-    'open-next-panel': function( element ) {
-      var currentPanel = tabs.getCurrentPanel( element );
-      var nextPanel = tabs.getNextPanel( currentPanel );
-      tabs.openPanel( nextPanel );
-    },
-    'open-previous-panel': function( element ) {
-      var currentPanel = tabs.getCurrentPanel( element );
-      var prevPanel = tabs.getPreviousPanel( currentPanel );
-      tabs.openPanel( prevPanel );
-    }
-  });
-
-})();
-
-( function() {
-
-  'use strict';
-
-  onl.decorate({
-    'to-top': function( element ) {
-      var el = element;
-      el.classList.add('irrelevant');
-      window.addEventListener('scroll', function () {
-        var footer = document.querySelector('.footer');
-        var footerTop = footer.offsetTop;
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > 500 && (scrollTop + window.innerHeight <= footerTop ) ) {
-          el.classList.remove('irrelevant');
-        } else {
-          el.classList.add('irrelevant');
-        }
-      });
-    }
-
-  });
-
-})();
-
-( function() {
-
-  'use strict';
-
-  var openText = 'Toon onderliggende';
-  var closeText = 'Verberg onderliggende';
-
-  var treeview = {
-    getFoldableChildren: function( element ) {
-      // note: element is <a> element that contains button ;
-      // this returns an array of all the elements except the
-      return Array.prototype.slice.call( element.parentNode.children, 1 );
-    },
-    getFoldableChildrenIDRef: function( foldableChildren ) {
-      var string = '';
-      var i;
-
-      for ( i = 0; i < foldableChildren.length; i++ ) {
-        if ( i > 0 ) {
-          string += ' ' + foldableChildren[i].id;
-        }
-        else {
-          string += foldableChildren[i].id;
-        }
-      }
-
-      return string;
-    }
-  };
-
-  onl.handle({
-    'toggle-fold': function( element, event ) {
-
-      var containingLink = element.parentNode;
-      var subLists = treeview.getFoldableChildren( containingLink );
-
-      event.preventDefault();
-
-      subLists.forEach( function( toggleable ) {
-        if ( onl.ui.isHidden( toggleable ) ) {
-          onl.ui.show( toggleable );
-          element.textContent = closeText;
-          element.setAttribute( 'aria-expanded', 'true' );
-        }
-        else {
-          onl.ui.hide( toggleable );
-          element.textContent = openText;
-          element.setAttribute( 'aria-expanded', 'false' );
-        }
-      });
-    }
-  });
-
-  onl.decorate({
-    'add-foldability': function( element ) {
-
-      var foldableChildren = treeview.getFoldableChildren( element );
-      var foldableChildrenIDRef = treeview.getFoldableChildrenIDRef( foldableChildren );
-      var needsFoldability = foldableChildren.length > 0;
-      var toggleButton;
-
-      if ( needsFoldability ) {
-        toggleButton = document.createElement( 'button' );
-        toggleButton.type = 'button';
-        toggleButton.textContent = closeText;
-        toggleButton.setAttribute( 'data-handler', 'toggle-fold' );
-        toggleButton.setAttribute( 'aria-expanded', 'false' );
-
-        if ( foldableChildrenIDRef ) {
-          toggleButton.setAttribute( 'aria-controls', foldableChildrenIDRef );
-        }
-
-        element.appendChild( toggleButton );
-      }
-    }
-  });
-
-})();
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-video': function (element) {
-      new video(element);
-    }
-  });
-
-  var video = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.placeholderContainer = this.element.querySelector('.video__placeholder');
-    this.trigger = this.element.querySelector('.video__placeholder button');
-    this.initEventListeners();
-  };
-
-  video.prototype.initEventListeners = function (e) {
-    this.trigger.addEventListener('click', function (e) { this.showVideo(e); }.bind(this), false);
-  };
-
-  video.prototype.showVideo = function () {
-    this.element.classList.add('is-video');
-    this.element.setAttribute('role', 'alert');
-  };
-
-})();
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-selectall': function (element) {
-      new selectall(element);
-    }
-  });
-
-  var selectall = function (element) {
-    this.element = element;
-    this.mastercheckbox = this.element.querySelector('.js-checkbox-master');
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.checkboxes = this.element.querySelectorAll('input[type="checkbox"]');
-
-    this.amountLabel = this.element.querySelector('.js-amount-checkboxes');
-    if(this.amountLabel){
-      this.amountLabel.innerHTML = this.checkboxes.length - 1;
-    }
-
-    this.initEventListeners();
-  };
-
-  selectall.prototype.initEventListeners = function (e) {
-    var i;
-
-    // master checkbox (select all)
-    this.mastercheckbox.addEventListener('change', function (e) {
-      var i;
-      var checkboxes = this.checkboxes;
-
-      for (i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] !== e.target) {
-          checkboxes[i].checked = e.target.checked;
-
-          // onchange event needs manual triggering on checkboxes
-          if ("createEvent" in document) {
-            var evt = document.createEvent("HTMLEvents");
-            evt.initEvent("change", false, true);
-            checkboxes[i].dispatchEvent(evt);
-          } else {
-            checkboxes[i].fireEvent("onchange");
-          }
-        }
-
-      }
-    }.bind(this), false);
-
-    // uncheck the 'select all'-checkbox when any of the checkboxes is not checked anymore;
-    for (i = 0; i < this.checkboxes.length; i++) {
-      this.checkboxes[i].addEventListener('change', function (e) {
-        if (!e.target.classList.contains('js-checkbox-master')) {
-          this.regularCheckboxListener(e);
-        }
-      }.bind(this), false);
-    }
-
-  };
-
-  selectall.prototype.regularCheckboxListener = function (e) {
-    var checkbox = e.target;
-
-    if (checkbox.checked === false && this.mastercheckbox.checked) {
-      this.mastercheckbox.checked = false;
-    }
-
-  };
-
-})();
-
-
-(function () {
-
-  'use strict';
-
-  onl.decorate({
-
-    'init-filter-results': function (element) {
-      new filterResults(element);
-    }
-
-  });
-
-  var filterResults = function( element ) {
-    this.element = element;
-    this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
-    this.init();
-  };
-
-  filterResults.prototype.init = function() {
-    this.input = onl.dom.$( '.js-filterresults__input', this.element )[0];
-    this.results = onl.dom.$( '.js-filterresults__result', this.element );
-
-    this.addEventListeners();
-  };
-
-  filterResults.prototype.addEventListeners = function() {
-    this.input.addEventListener('keyup', function() { this.doFilter(); }.bind(this), false);
-  };
-  filterResults.prototype.doFilter = function() {
-    var i;
-    var a;
-    var txtValue;
-    var filter = this.input.value.toUpperCase();
-
-    for (i = 0; i < this.results.length; i++) {
-      a = this.results[i];
-      txtValue = a.textContent || a.innerText;
-
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        this.results[i].style.display = '';
-      } else {
-        this.results[i].style.display = 'none';
-      }
-    }
-  };
-
-
-})();
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-form-conditionals': function (element) {
-      new formConditionals(element);
-    }
-  });
-
-  var formConditionals = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-
-    this.questionIdTag = this.config.questionIdTag || '#citem-';
-    this.questionContainer = this.config.questionContainer || '.js-form-conditionals__citem';
-    this.submitContainer = this.config.submitContainer || this.element.querySelector('.js-form-conditionals__submitcontainer');
-    this.respondsContainer = this.config.respondsContainer || this.element.querySelector('.js-form-conditionals__responds');
-    this.buttonNextSelector = '.js-button-next';
-
-    this.questions = this.element.querySelectorAll(this.questionContainer);
-    this.inputs = this.element.querySelectorAll('input,select');
-    this.buttonNexts = this.element.querySelectorAll(this.buttonNextSelector);
-
-    this.initEventListeners();
-    this.setInitialState();
-
-  };
-
-  formConditionals.prototype.setInitialState = function() {
-    var y;
-    var i;
-    var firstInput;
-    var evt;
-
-    for (y = 0; y < this.questions.length; y++) {
-      if (y !== 0) {
-        this.questions[y].setAttribute('hidden', 'hidden');
-      }
-      if (y === 0) {
-        firstInput = true;
-      }
-    }
-    if (firstInput) {
-      firstInput = this.questions[0].querySelectorAll('input,select');
-      if (firstInput[0]) {
-
-        if (firstInput[0].tagName === 'SELECT') {
-          if ('createEvent' in document) {
-            evt = document.createEvent('HTMLEvents');
-            evt.initEvent('change', false, true);
-            firstInput[0].dispatchEvent(evt);
-          }
-          else {
-            firstInput[0].fireEvent('onchange');
-          }
-        }
-        if (firstInput[0].tagName === 'INPUT') {
-
-          for (i = 0; i < firstInput.length; i++) {
-            if (firstInput[i].checked) {
-              this.actOnChange(firstInput[i]);
-            }
-          }
-        }
-      }
-    }
-  };
-
-  formConditionals.prototype.initEventListeners = function(e) {
-    var y;
-    var i;
-
-    for (y = 0; y < this.inputs.length; y++) {
-      this.inputs[y].addEventListener('change', function(e) { this.actOnChange(e); }.bind(this), false);
-    }
-    for (i = 0; i < this.buttonNexts.length; i++) {
-      this.buttonNexts[i].addEventListener('click', function(e) { this.actOnChange(e); }.bind(this), false);
-    }
-
-  };
-
-  formConditionals.prototype.actOnChange = function(e) {
-    var obj;
-    var inputType;
-    var linkedToQuestionId;
-    var currentQuestionContainer;
-    var automaticProceed;
-    var showLast;
-    var showResponds;
-    var hideself;
-
-    if (e.target !== undefined) {
-      obj = e.target;
-    } else {
-      obj = e;
-    }
-
-    inputType = obj.type;
-    linkedToQuestionId;
-    currentQuestionContainer = obj.closest(this.questionContainer);
-    automaticProceed = true;
-    showLast = obj.getAttribute('data-triggerlaststep');
-    showResponds = obj.getAttribute('data-triggeresponds');
-    hideself = obj.getAttribute('data-hideself');
-
-    switch (inputType) {
-    case 'radio':
-      linkedToQuestionId = obj.getAttribute('data-linkedto');
-      break;
-    case 'submit':
-      linkedToQuestionId = obj.getAttribute('data-linkedto');
-      break;
-    case 'button':
-      linkedToQuestionId = obj.getAttribute('data-linkedto');
-      break;
-    case 'input':
-      linkedToQuestionId = obj.getAttribute('data-linkedto');
-      break;
-    case 'select-one':
-      linkedToQuestionId = obj[obj.selectedIndex].getAttribute('data-linkedto');
-      break;
-    case 'checkbox':
-      if (this.amountCheckedInFamily(obj, currentQuestionContainer) > 0) {
-        currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('hidden');
-      } else {
-        currentQuestionContainer.querySelector(this.buttonNextSelector).setAttribute('hidden', 'hidden');
-        this.resetFutureQuestions(currentQuestionContainer);
-      }
-      automaticProceed = false;
-      break;
-    }
-
-    if (automaticProceed) {
-      this.resetFutureQuestions(currentQuestionContainer);
-
-      if (linkedToQuestionId) {
-        this.activateLinkedQuestion(linkedToQuestionId);
-        this.hideFormSubmit();
-      } else {
-        this.showFormSubmit();
-      }
-    }
-
-    if (showResponds) {
-      this.showResponds();
-      this.hideForm();
-    } else {
-      if (showLast) {
-        this.showFormSubmit();
-      }
-    }
-
-    if (hideself) {
-      this.hideCurrentQuestion(currentQuestionContainer);
-    }
-  };
-
-  formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {
-    currentQuestionContainer.setAttribute('hidden', 'hidden');
-  }
-
-
-  formConditionals.prototype.amountCheckedInFamily = function(obj, parent) {
-    var list, index, item, checkedCount;
-
-    checkedCount = 0;
-    list = parent.getElementsByTagName('input');
-    for (index = 0; index < list.length; ++index) {
-      item = list[index];
-      if (item.getAttribute('type') === "checkbox"
-        && item.checked
-        && item.name === obj.name) {
-        ++checkedCount;
-      }
-    }
-    return checkedCount;
-  };
-
-  formConditionals.prototype.resetFutureQuestions = function(currentQuestionContainer) {
-    var i;
-    var y;
-    var allInputsInQuestion;
-
-    // strips #question-{{id}} to {{id}}
-    currentQuestionContainer = currentQuestionContainer.getAttribute('id');
-    currentQuestionContainer = currentQuestionContainer.substr(this.questionIdTag.length - 1, 5);
-
-    for (i = 0; i < this.questions.length; i++) {
-
-      if (this.questions[i].getAttribute('id').substr(this.questionIdTag.length - 1, 5) > currentQuestionContainer) {
-        allInputsInQuestion = this.questions[i].querySelectorAll('input');
-
-        // reset answers
-        for (y = 0; y < allInputsInQuestion.length; y++) {
-          var type = allInputsInQuestion[y].getAttribute('type');
-
-          if (type === 'radio') {
-            allInputsInQuestion[y].checked = false;
-          }
-        }
-
-        // hide question;
-        this.questions[i].setAttribute('hidden', 'hidden');
-        this.questions[i].removeAttribute('role');
-      }
-    }
-
-  };
-
-  formConditionals.prototype.activateLinkedQuestion = function(questionId) {
-    var self = this;
-    var nextQuestion = this.element.querySelector(self.questionIdTag + questionId);
-
-    if (nextQuestion){
-      nextQuestion.removeAttribute('hidden');
-      nextQuestion.setAttribute('role', 'alert');
-    }
-
-  };
-
-  formConditionals.prototype.showFormSubmit = function() {
-    if (this.submitContainer){
-      this.submitContainer.removeAttribute('hidden');
-      this.submitContainer.querySelector('button').setAttribute('role', 'alert');
-    }
-  };
-  formConditionals.prototype.hideFormSubmit = function() {
-    if (this.submitContainer){
-      this.submitContainer.setAttribute('hidden', 'hidden');
-      this.submitContainer.querySelector('button').removeAttribute('role');
-    }
-  };
-
-  formConditionals.prototype.showResponds = function() {
-    this.respondsContainer.removeAttribute('hidden');
-  };
-
-  formConditionals.prototype.hideForm = function() {
-    var y;
-
-    for (y = 0; y < this.questions.length; y++) {
-      this.questions[y].setAttribute('hidden', 'hidden');
-    }
-    this.submitContainer.setAttribute('hidden', 'hidden');
-  };
-
-})();
-
-// script in subselection.js
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-formredirecter': function (element) {
-      new formredirecter(element);
-    }
-  });
-
-  var formredirecter = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-
-    this.element.field = this.config.field || '.js-form-redirecter__field';
-    this.root = location.protocol + '//' + location.host;
-
-    this.element.addEventListener('submit', function (e) {
-      e.preventDefault();
-      this.formValue = this.element.querySelector(this.element.field).value;
-      if ( this.formValue.charAt(0) !== '/') {
-        this.formValue = '/' + this.formValue;
-      }
-      window.location = this.root + this.formValue;
-    }.bind(this), false);
-  };
-
-})();
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-formreset': function (element) {
-      new formReset(element);
-    }
-  });
-
-  var formReset = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.resetElementClass = this.config.resetElementClass || 'formreset-resetlink';
-
-    this.resetLink = this.element.querySelector('.' + this.resetElementClass);
-    if (this.resetLink) {
-      this.initEventListeners();
-    }
-  };
-
-  formReset.prototype.initEventListeners = function() {
-    this.resetLink.addEventListener('click', function (e) { this.resetForm(e); }.bind(this), false);
-  };
-
-  formReset.prototype.resetForm = function() {
-    var y;
-
-    this.inputs = this.element.querySelectorAll('input,select');
-
-    for (y = 0; y < this.inputs.length; y++) {
-
-      switch (this.inputs[y].getAttribute('type')) {
-      case 'radio':
-        if (this.inputs[y].checked) {
-          this.inputs[y].checked = false;
-        }
-      }
-    }
-  };
-
-
-
-})();
-
-/**
- * Element.matches() polyfill (simple version)
- * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
- */
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-}
-
-/**
- * Feature test
- * @return {Boolean} Returns true if required methods and APIs are supported by the browser
- */
-var supports = function () {
-  if (!document.addEventListener && !document.querySelector('body')) {
-    return false;
-  }
-  return true;
-};
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-form-validation': function (element) {
-      // new formvalidation(element);
-    }
-  });
-
-  var formvalidation = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-
-    // Classes and Selectors
-    this.config.classErrorField = this.config.classErrorField || 'has-error';
-    this.config.classValidField = this.config.classValidField || 'is-valid';
-    this.config.classErrorContainer = this.config.classErrorContainer || 'form__error';
-    this.config.classValidContainer = this.config.classValidContainer || 'form__success';
-    this.config.classErrorsContainer = this.config.classErrorsContainer || 'form__errors';
-
-    this.errors = [];
-
-    this.config.txtIntroErrorsContainer = this.config.txtIntroErrorsContainer || 'Er zijn één of meerdere velden niet of niet juist ingevuld. Controleer uw gegevens en verstuur het formulier opnieuw.';
-    this.config.messageLabelValid = this.config.messageLabelValid || "Correct ingevuld";
-
-    // Messages
-    this.config.messageValueMissing = this.config.messageValueMissing || "Het veld '{label}' mag niet leeg zijn.";
-    this.config.messageValueMissingCheckbox = this.config.messageValueMissingCheckbox || "Het veld '{label}' is verplicht.";
-    this.config.messageValueMissingRadio = this.config.messageValueMissingRadio || "Kies van veld '{label}' een waarde.";
-    this.config.messageValueMissingSelect = this.config.messageValueMissingSelect || "Selecteer van veld '{label}' een waarde.";
-    this.config.messageValueMissingSelectMulti = this.config.messageValueMissingSelectMulti || "Selecteer van veld '{label}' minstens één waarde.";
-    this.config.messageTypeMismatchEmail = this.config.messageTypeMismatchEmail || "Vul in veld '{label}' een correct e-mailadres in.";
-    this.config.messageTypeMismatchURL = this.config.messageTypeMismatchURL || "Vul in veld '{label}' een correct website-adres in.";
-    this.config.messageTooShort = this.config.messageTooShort || "Gebruik in veld '{ label }' minimaal {minLength} karakters. Op dit moment gebruik je {length} karakter(s).";
-    this.config.messageTooLong = this.config.messageTooLong || "Het is in veld '{label}' niet toegestaan meer dan {maxLength} karakters te gebruiken. Op dit moment gebruik je {length} karakter(s).";
-    this.config.messagePatternMismatch = this.config.messagePatternMismatch || "Het veld '{label}' voldoet niet aan de eisen.";
-    this.config.messageBadInput = this.config.messageBadInput || "Vul in veld '{label}' een nummer in.";
-    this.config.messageStepMismatch = this.config.messageStepMismatch || "Vul in veld '{label}' een correcte waarde in.";
-    this.config.messageRangeOverflow = this.config.messageRangeOverflow || "Vul in veld '{label}' een waarde in dat lager is dan {max}.";
-    this.config.messageRangeUnderflow = this.config.messageRangeUnderflow || "Vul in veld '{label}' een waarde in dat hoger is dan {min}.";
-    this.config.passwordMismatch = this.config.passwordMismatch || "Het veld '{label}' voldoet niet aan de beveiligingseisen.";
-    this.config.passwordRepeatMismatch = this.config.passwordRepeatMismatch || "Het wachtwoord in veld '{label}' is niet gelijk aan het nieuwe wachtwoord.";
-    this.config.messageGeneric = this.config.messageGeneric || "Het veld '{label}' is niet correct ingevuld.";
-
-    this.init();
-  };
-
-  formvalidation.prototype.init = function() {
-    // feature test
-    if (!supports()) return;
-
-    // Add the `novalidate` attribute to all forms
-    this.addNoValidate();
-
-    // Event listeners
-    this.element.addEventListener('blur', function (e) { this.blurHandler(e) }.bind(this), true);
-    this.element.addEventListener('click', function (e) { this.clickHandler(e) }.bind(this), false);
-    this.element.addEventListener('submit', function (e) { this.submitHandler(e) }.bind(this), false);
-
-  };
-
-  formvalidation.prototype.addNoValidate = function () {
-    this.element.setAttribute('novalidate', true);
-  };
-
-  formvalidation.prototype.getClosest = function (elem, selector) {
-    for (; elem && elem !== document; elem = elem.parentNode) {
-      if (elem.matches(selector)) return elem;
-    }
-    return null;
-  };
-
-  formvalidation.prototype.hasErrorInSubselection = function (subselection, options) {
-    var subselectionSummary = subselection.querySelector('.subselection__summary');
-
-    // check if it's required;
-    if (subselectionSummary.classList.contains('required')){
-
-      // check if it has active filters;
-      var subselectionSummaryItems = subselectionSummary.childNodes;
-      if (subselectionSummaryItems.length > 0) {
-        return false;
-      } else {
-        return this.config.messageValueMissing;
-      }
-    }
-    return false;
-  }
-
-  formvalidation.prototype.hasError = function (field, options) {
-    // Don't validate submits, buttons, file and reset inputs, and disabled fields
-    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === undefined || field.type === 'fieldset' || field.type === 'a' || field.type === '') return;
-
-    // Get validity
-    var validity = field.validity;
-
-    var label = this.element.querySelector('[for="' + field.getAttribute('id') + '"]');
-    if(label){
-      label = label.innerHTML;
-    } else {
-      label = '';
-    }
-
-    // If field is invalid by extern validation (ie. password validator)
-    if (field.classList.contains('pw-invalid')) return this.config.passwordMismatch.replace("{label}", label);
-    if (field.classList.contains('pw-invalid-repeat')) return this.config.passwordRepeatMismatch.replace("{label}", label);
-
-
-    // in case of use of default patterns (number, email, dutch zipcode)
-    if (field.getAttribute('data-pattern-type')) {
-      if (field.getAttribute('data-pattern-type') === 'number') {
-        var pattern = /^\d+$/;
-      }
-      if (field.getAttribute('data-pattern-type') === 'email') {
-        var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      }
-      if (field.getAttribute('data-pattern-type') === 'zipcode') {
-        var pattern = /^\d{4} ?[a-z]{2}$/i;
-      }
-      if (pattern.test(field.value)) {
-        return;
-      } else {
-        if (field.value === '') {
-          return this.config.messageValueMissing.replace('{label}', label);
-        }
-        if (field.hasAttribute('title')) return field.getAttribute('title');
-        return this.config.messagePatternMismatch.replace('{label}', label);;
-      }
-    }
-
-    // If valid, return null
-    if (validity.valid) return;
-
-    // If field is required and empty
-    if (validity.valueMissing) {
-      if (field.type === 'checkbox') return this.config.messageValueMissingCheckbox.replace('{label}', label);
-      if (field.type === 'radio') return this.config.messageValueMissingRadio.replace('{label}', label);
-      if (field.type === 'select-multiple') return this.config.messageValueMissingSelectMulti.replace('{label}', label);
-      if (field.type === 'select-one') return this.config.messageValueMissingSelect.replace('{label}', label);
-
-      return this.config.messageValueMissing.replace('{label}', label);
-    }
-
-    // If not the right type
-    if (validity.typeMismatch) {
-      if (field.type === 'email') return this.config.messageTypeMismatchEmail.replace('{label}', label);;
-      if (field.type === 'url') return this.config.messageTypeMismatchURL.replace('{label}', label);;
-    }
-
-    // If too short
-    if (validity.tooShort) return this.config.messageTooShort.replace('{minLength}', field.getAttribute('minLength')).replace('{length}', field.value.length).replace('{label}', label);;
-
-    // If too long
-    if (validity.tooLong) return this.config.messageTooLong.replace('{minLength}', field.getAttribute('maxLength')).replace('{length}', field.value.length).replace('{label}', label);;
-
-    // If number input isn't a number
-    if (validity.badInput) return this.config.messageBadInput.replace('{label}', label);;
-
-    // If a number value doesn't match the step interval
-    if (validity.stepMismatch) return this.config.messageStepMismatch.replace('{label}', label);;
-
-    // If a number field is over the max
-    if (validity.rangeOverflow) return this.config.messageRangeOverflow.replace('{max}', field.getAttribute('max')).replace('{label}', label);;
-
-    // If a number field is below the min
-    if (validity.rangeUnderflow) return this.config.messageRangeUnderflow.replace('{min}', field.getAttribute('min')).replace('{label}', label);;
-
-    // If pattern doesn't match
-    if (validity.patternMismatch) {
-
-      // If pattern info is included, return custom error
-      if (field.hasAttribute('title')) return field.getAttribute('title').replace('{label}', label);;
-
-      // Otherwise, generic error
-      return this.config.messagePatternMismatch.replace('{label}', label);;
-
-    }
-
-    // If all else fails, return a generic catchall error
-    return this.config.messageGeneric.replace('{label}', label);;
-
-  };
-
-  formvalidation.prototype.showErrorSubselection = function (subselection) {
-    var subselectionTrigger = subselection.querySelector('.subselection__trigger');
-    var label = subselection.parentNode.querySelector('.form__sublegend');
-    if(label){
-      label = label.innerHTML;
-    } else {
-      label = '';
-    }
-    this.showMessage("error", subselectionTrigger, this.config.messageValueMissingCheckbox.replace('{label}', label), 'subselection');
-  }
-
-  formvalidation.prototype.showMessage = function (messageType, field, error, options) {
-    /*
-      Available values:
-      messageType: "error", "success".
-    */
-    var firstOptionId = false;
-    var labelText;
-    var motherLabel;
-    var message;
-    var label;
-
-    var subselection = this.getClosest(field, '.subselection');
-    if (subselection) {
-      this.removeMessage(field, subselection);
-    } else {
-      this.removeMessage(field);
-    }
-
-    var classStateOldField = this.config.classValidField;
-    var classStateNewField = this.config.classErrorField;
-    var classMessageContainer = this.config.classErrorContainer;
-    var prefixId = 'message';
-    if(messageType === "success") {
-      classStateOldField = this.config.classErrorField;
-      classStateNewField = this.config.classValidField;
-      classMessageContainer = this.config.classValidContainer;
-      prefixId = 'message';
-    }
-
-    // Add/remove state class to field
-    if (field.type === 'select-one'){
-      field.parentNode.classList.add(classStateNewField);
-      field.parentNode.classList.remove(classStateOldField);
-    } else {
-      field.classList.add(classStateNewField);
-      field.classList.remove(classStateOldField);
-    }
-
-    // If the field is a radio button and part of a group, error all and get the last item in the group
-    if (field.type === 'radio' && field.name) {
-      var group = document.getElementsByName(field.name);
-      if (group.length > 0) {
-        for (var i = 0; i < group.length; i++) {
-          if (group[i].form !== field.form) continue; // Only check fields in current form
-
-          if (messageType !== "success") {
-            group[i].classList.add(this.config.classErrorField);
-            group[i].classList.remove(this.config.classValidField);
-          }
-
-          // if type = radio, get id of first radio
-          if(i === 0){
-            firstOptionId = group[i].getAttribute('id');
-          }
-        }
-        field = group[group.length - 1];
-      }
-    }
-
-    // Get field id or name
-    var id;
-    if (subselection) {
-      var trigger = subselection.querySelector('.subselection__trigger');
-      id = trigger.getAttribute('id');
-    } else {
-      id = field.id || field.name;
-    }
-
-    if (!id) return;
-
-    // create message container;
-    message = document.createElement('div');
-    message.classList.add('form__message');
-    message.classList.add(classMessageContainer);
-    message.id = prefixId + '-for-' + id;
-
-    // If the field is a radio button or checkbox, insert error after the label
-    if (field.type === 'radio' || field.type === 'checkbox') {
-      if (subselection) {
-        label = subselection.querySelector('.subselection__trigger');
-        firstOptionId = label.getAttribute('id');
-      } else {
-        label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
-      }
-
-      if (label) {
-        label.parentNode.insertBefore(message, label.nextSibling);
-        motherLabel = this.getClosest(field, '[data-radiogroup-title]');
-        if (motherLabel) {
-          labelText = motherLabel.getAttribute('data-radiogroup-title');
-        } else {
-          labelText = label.textContent;
-        }
-      }
-    }
-
-    // if custom-select; insert one level higher.
-    if (field.type === 'select-one') {
-      label = field.form.querySelector('label[for="' + id + '"]') || this.getClosest(field, 'label');
-      if (label) {
-        var parent = field.parentNode;
-        parent.parentNode.insertBefore(message, parent.nextSibling);
-        labelText = label.textContent;
-      }
-    }
-
-    // Otherwise, insert it after the field
-    if (!label) {
-      field.parentNode.insertBefore(message, field.nextSibling);
-
-      // options = given in function;
-      if(options === 'subselection'){
-        labelText = field.textContent;
-      } else {
-        var parent = field.parentNode;
-        if(field.parentNode.classList.contains('datepicker')){
-          parent = parent.parentNode;
-        }
-        labelText = parent.querySelector('label').textContent;
-      }
-    }
-
-    // if subselection, use different ID;
-    if (firstOptionId){
-      this.errors.push({ "id": firstOptionId, "label": labelText });
-    } else {
-      // all others;
-      this.errors.push({ "id": field.getAttribute('id'), "label": labelText });
-    }
-
-    // Add ARIA role to the field
-    field.setAttribute('aria-describedby', prefixId + '-for-' + id);
-
-    // Fill state container
-    message.innerHTML = error;
-
-  };
-
-  formvalidation.prototype.markFieldValidInSummary = function (field, options) {
-    var fieldId;
-
-    var sub = this.getClosest(field, '.subselection');
-    if(sub){
-      // is subselection
-      var subTrigger = sub.querySelector('.subselection__trigger');
-      fieldId = subTrigger.getAttribute('id');
-    } else {
-      if (field.type === 'radio' && field.name) {
-        var group = document.getElementsByName(field.name);
-        if (group.length > 0) {
-          for (var i = 0; i < group.length; i++) {
-            if (group[i].form !== field.form) continue; // Only check fields in current form
-            group[i].classList.remove(this.config.classErrorField);
-          }
-          field = group[0];
-        }
-      }
-      fieldId = field.getAttribute('id')
-    }
-    var errorsContainerListItems = this.element.querySelectorAll('.' + this.config.classErrorsContainer + '> ul li');
-    for (var i = 0; i < errorsContainerListItems.length; i++){
-      if (errorsContainerListItems[i].getAttribute('data-id') === fieldId) {
-        errorsContainerListItems[i].childNodes[0].classList.add('line-through');
-      }
-    }
-  }
-
-  // formvalidation.prototype.markFieldValid = function (field, options) {
-    // field.classList.add('is-valid');
-  // }
-
-
-  formvalidation.prototype.removeFieldValid = function(field) {
-    var id = field.getAttribute('id');
-    var message = this.element.querySelector("#message-for-" + id);
-    message.parentNode.removeChild(message);
-  }
-
-  formvalidation.prototype.removeMessage = function (field, subselection, options) {
-
-    // Remove ARIA role from the field
-    field.removeAttribute('aria-describedby');
-
-    // Remove error class to field
-    if (field.type === 'select-one') {
-      field.parentNode.classList.remove(this.config.classErrorField);
-      field.parentNode.classList.remove(this.config.classValidField);
-    } else {
-      field.classList.remove(this.config.classErrorField);
-      field.classList.remove(this.config.classValidField);
-    }
-
-
-    // If the field is a radio button and part of a group, remove error from all and get the last item in the group
-    if (field.type === 'radio' && field.name) {
-      var group = document.getElementsByName(field.name);
-      if (group.length > 0) {
-        for (var i = 0; i < group.length; i++) {
-          if (group[i].form !== field.form) continue; // Only check fields in current form
-          group[i].classList.remove(this.config.classErrorField);
-        }
-        field = group[group.length - 1];
-      }
-    }
-
-    // Get field id or name
-    // var id = field.id || field.name;
-    // if (!id) return;
-
-    // Check if an error message is in the DOM
-    var message;
-    if (subselection) {
-      message = subselection.querySelector('.form__message');
-    } else {
-      message = this.element.querySelector('#message-for-' + field.id);
-    }
-
-    if (!message) return;
-
-    // remove error div from DOM;
-    message.parentNode.removeChild(message);
-  };
-
-  formvalidation.prototype.removeErrorFromErrors = function (id) {
-    var id = id;
-
-    this.errors = this.errors.filter(function (obj) {
-      return obj.id !== id;
-    });
-  }
-  formvalidation.prototype.pushErrorToErrors = function (el, error) {
-    var id = el.getAttribute('id');
-    this.errors = this.errors.filter(function (obj) {
-      return obj.id !== id;
-    });
-
-    var label = el.parentNode.querySelector('label').innerHTML || 'label';
-    this.errors.push({ "id": el.getAttribute('id'), "label": label, "error": error });
-  }
-
-  formvalidation.prototype.addErrorToErrors = function (el, error) {
-    var id = id;
-
-    this.pushErrorToErrors(el, error);
-    this.showErrorSummary();
-  }
-
-  formvalidation.prototype.showErrorSummary = function () {
-    var errorsContainer = this.element.querySelector('.' + this.config.classErrorsContainer);
-
-    if (!errorsContainer) {
-      errorsContainer = document.createElement('div');
-      errorsContainer.setAttribute('tabindex', '0')
-      errorsContainer.classList.add(this.config.classErrorsContainer);
-      this.element.insertBefore(errorsContainer, this.element.childNodes[0]);
-
-      var errorsContainerIntro = document.createElement('p');
-      errorsContainerIntro.classList.add('form__errors__heading');
-      errorsContainerIntro.innerHTML = this.config.txtIntroErrorsContainer;
-      errorsContainer.appendChild(errorsContainerIntro);
-
-      var errorsContainerList = document.createElement('ul');
-      errorsContainer.appendChild(errorsContainerList);
-    } else {
-      var errorsContainerList = this.element.querySelector('.' + this.config.classErrorsContainer + '> ul');
-    }
-
-    errorsContainerList.innerHTML = '';
-
-    // clean up errors; remove duplicates.
-    this.errors = onl.ui.uniqBy(this.errors, JSON.stringify);
-    for (var i = 0; i < this.errors.length; i++) {
-      this.appendErrorToErrorsList(this.errors[i]);
-    }
-  }
-
-  formvalidation.prototype.isRequired = function (field) {
-    // regular fields;
-    if (field.hasAttribute('required')) {
-      return true;
-    }
-
-    // subselection;
-    var subselection = self.getClosest(field, '.subselection');
-    if (subselection) {
-      var subselectionRequiredState = subselection.querySelector('.subselection__summary.required');
-      if (subselectionRequiredState) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  formvalidation.prototype.blurHandler = function (event) {
-    var type = event.target.nodeName;
-
-    if (event.target.type === 'submit' || type === 'DIV') return;
-
-    if (type === 'BUTTON') {
-
-    } else  if (type === 'A'){
-    } else {
-      // Validate the field
-      var error = this.hasError(event.target);
-
-      // If there's an error, show it
-      if (error) {
-        this.showMessage("error", event.target, error);
-        return;
-      }
-
-      if (this.isRequired(event.target)) {
-        this.showMessage("success", event.target, this.config.messageLabelValid);
-        this.markFieldValidInSummary(event.target);
-      }
-
-    }
-  };
-
-  formvalidation.prototype.clickHandler = function (event) {
-
-    // Only run if the field is a checkbox or radio
-    var self = this;
-    var type = event.target.getAttribute('type');
-    if (type == null) {
-      type = event.target.tagName;
-    }
-    if (type === 'A') {
-      // if event.target is the remove-trigger for the subselection component (removes selected filter)
-      if (event.target.classList.contains('subselection__summaryitem__remove')) {
-        var subselectionId = event.target.getAttribute('data-subselection-id');
-        var subselection = this.element.querySelector('[data-id="'+subselectionId+'"');
-        var error = self.hasErrorInSubselection(subselection);
-
-        if (error) {
-          self.showErrorSubselection(subselection);
-        } else {
-          self.showMessage("success", event.target, subselection);
-        }
-      }
-      return;
-    }
-    if (!(type === 'checkbox' || type === 'radio')) return;
-
-    // Validate the field
-    var error = this.hasError(event.target);
-
-    // If there's an error, show it
-    if (error) {
-      this.showMessage("error", event.target, error);
-      return;
-    }
-
-    // Otherwise, remove any errors that exist
-    if(this.isRequired(event.target)){
-      this.showMessage("success", event.target, this.config.messageLabelValid);
-      this.markFieldValidInSummary(event.target);
-    }
-
-  };
-
-
-
-  formvalidation.prototype.appendErrorToErrorsList = function (error) {
-    var errorsContainerList = this.element.querySelector('.' + this.config.classErrorsContainer + '> ul');
-    var errorMsg = error.label;
-
-    errorMsg = errorMsg.replace("Verplicht", '');
-
-    if (errorsContainerList){
-      var item = document.createElement('li');
-      var id = error.id || error.getAttribute('id');
-      item.setAttribute('data-id', id);
-
-      var link = document.createElement('a');
-      link.setAttribute('href', '#'+id);
-      link.innerHTML = '<span class="visually-hidden">Spring naar veld: </span>' + errorMsg;
-
-      item.appendChild(link);
-      errorsContainerList.appendChild(item);
-    }
-
-    //todo: check if empty; <- why?
-  }
-
-
-  formvalidation.prototype.submitHandler = function (event) {
-    //reset form;
-    this.errors = [];
-
-    // Get all of the form elements
-    var fields = event.target.elements;
-    var subselections = this.element.querySelectorAll('.subselection__summary.required');
-
-    // Validate each subselection field
-    var hasErrors;
-    for (var y = 0; y < subselections.length; y++) {
-      if (subselections[y].innerHTML === ''){
-        this.showErrorSubselection(subselections[y].parentNode);
-        if (!hasErrors) {
-          hasErrors = subselections[y];
-        }
-      }
-    }
-
-    // Validate each field
-    // Store the first field with an error to a variable so we can bring it into focus later
-    for (var i = 0; i < fields.length; i++) {
-
-      var error = this.hasError(fields[i]);
-      if (error) {
-        // console.log('in submitHandler');
-        this.showMessage("error", fields[i], error);
-        if (!hasErrors) {
-          hasErrors = fields[i];
-        }
-      }
-    }
-    if(hasErrors){
-      this.showErrorSummary(this.errors);
-    }
-
-    // Prevent form from submitting if there are errors or submission is disabled
-    if (hasErrors) {
-      event.preventDefault();
-    }
-
-    // If there are errrors, focus on first element with error
-    if (hasErrors) {
-      var errorsContainer = this.element.querySelector('.' + this.config.classErrorsContainer);
-      errorsContainer.focus();
-      return;
-    }
-
-    // Otherwise, submit the form
-    if (this.config.debug){
-      // event.preventDefault();
-      console.log('debug: Form submit');
-    } else {
-      // event.preventDefault();
-      // console.log('prod: Form submit');
-      this.element.submit();
-    }
-
-  };
-
-})();
-
-(function () {
-
-  'use strict';
-
-  onl.decorate({
-
-    'init-kpm': function (element) {
-      new kpmService(element, 'push');
-    }
-  });
-
-  var kpmService = function (element, action) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.dataFromJSON = document.querySelector(this.config.config).innerHTML;
-    this.rangeSelectors = document.querySelectorAll(this.config.rangeselector);
-    var self = this;
-    var isModalVisible = true;
-    this.id = this.element.getAttribute('id');
-
-    var insideModal = getClosest(this.element, '.modal');
-    if (insideModal) {
-      isModalVisible = isVisible(insideModal);
-    }
-
-    if (!isModalVisible) {
-      var subscription = pubsub.subscribe('/modal/open', function (obj) {
-        var kpmMap = obj.modal.querySelector('.map__kpm');
-        if (!kpmMap) { return; }
-        if (self.id === kpmMap.getAttribute('id')) {
-          self.setupMap();
-        }
-      });
-      return;
-    }
-
-    if (this.rangeSelectors) {
-      this.setRangeListener();
-    }
-
-    if ( action === 'push') {
-      this.setupMap();
-    }
-  };
-
-  kpmService.prototype.setRangeListener = function(  ) {
-    var y;
-
-    for (y = 0; y < this.rangeSelectors.length; y++) {
-      this.rangeSelectors[y].addEventListener('change', function (e) { this.setupMap(e, "editRange"); }.bind(this), false);
-    }
-  };
-
-  kpmService.prototype.setupMap = function(e, action ) {
-
-    window.kaartprikmodule = window.kaartprikmodule || [];
-
-    // create default object;
-    this.data = {
-      debug: false,
-      on_cancel: function () {
-        // console.log("The user has closed the map without saving");
-      },
-      on_submit: function (result) {
-        // console.log("The following result was returned:", result);
-      }
-    };
-    this.data.mount_element = document.getElementById(this.element.getAttribute('id'));
-
-
-    // extend object with component config;
-    Object.assign(this.data, JSON.parse(this.dataFromJSON));
-
-    if(action === "editRange") {
-      var parent = getClosest(this.element, '.map');
-
-      if (e.target.value === "hideMap"){
-        parent.setAttribute('hidden','hidden');
-      } else {
-        this.data.options.center.circle.radius = parseInt(e.target.value, 10);
-        parent.removeAttribute('hidden');
-      }
-    }
-
-    // start KPM;
-    this.renderMap();
-
-  };
-
-  kpmService.prototype.renderMap = function () {
-    kaartprikmodule.bootstrapKpm(this.data);
-  };
-
-})();
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-passwordstrength': function (element) {
-      new passwordstrength(element);
-    }
-  });
-
-  var passwordstrength = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.fieldPassword = this.config.fieldPassword || '.js-passwordstrength__input';
-    this.fieldPassword = this.element.querySelector(this.fieldPassword);
-    this.fieldPasswordRepeat = this.config.fieldPasswordRepeat || '.js-passwordstrength__inputrepeat';
-    this.fieldPasswordRepeat = document.querySelector(this.fieldPasswordRepeat);
-    this.regexContainer = this.element.querySelector('.js-passwordstrength__regexcontainer > div');
-    this.regexs = this.regexContainer.querySelectorAll('[data-regex]');
-
-    this.duplicateRegexContainer = document.querySelector('.js-passwordstrength__duplicateregexcontainer');
-    if (this.duplicateRegexContainer){
-      this.makeDuplicateRegexContainer();
-    }
-    this.initEventListeners();
-  };
-
-  passwordstrength.prototype.initEventListeners = function() {
-    if (this.fieldPassword){
-      this.fieldPassword.addEventListener('keyup', function (e) { this.validateField(e); }.bind(this), false);
-    }
-    if (this.fieldPasswordRepeat){
-      this.fieldPasswordRepeat.addEventListener('keyup', function(e) { this.validateFieldRepeat(e); }.bind(this), false);
-    }
-  };
-
-  passwordstrength.prototype.makeDuplicateRegexContainer = function() {
-    this.duplicateRegexContainer.innerHTML = '';
-    var duplicate = this.regexContainer.cloneNode(true);
-    this.duplicateRegexContainer.appendChild(duplicate);
-  }
-
-  passwordstrength.prototype.validateField = function() {
-    var i;
-    var regexFormula;
-    var totalCorrect = 0;
-    var self = this;
-
-    // reset actives;
-    for (i = 0; i < this.regexs.length; i++) {
-      this.regexs[i].classList.remove('is-active');
-      this.regexContainer.setAttribute('role', '');
-    }
-
-    for (i = 0; i < this.regexs.length; i++) {
-      regexFormula = new RegExp(this.regexs[i].dataset.regex);
-
-      if (regexFormula.test(this.fieldPassword.value)){
-        this.regexs[i].classList.add('is-active');
-        totalCorrect++;
-        this.regexContainer.setAttribute('role', 'alert');
-      }
-    }
-
-    if (totalCorrect === this.regexs.length) {
-      this.fieldPassword.classList.add('is-valid');
-      this.fieldPassword.classList.remove('pw-invalid');
-    } else {
-      this.fieldPassword.classList.remove('is-valid');
-      this.fieldPassword.classList.add('pw-invalid');
-    }
-
-    if (this.fieldPasswordRepeat) {
-      if (this.fieldPasswordRepeat.value !== ''){
-        this.validateFieldRepeat();
-      }
-    }
-
-    this.makeDuplicateRegexContainer();
-
-  };
-
-  passwordstrength.prototype.validateFieldRepeat = function() {
-    var fieldRepeat = this.fieldPasswordRepeat.value;
-    var field = this.fieldPassword.value;
-
-    if (field !== fieldRepeat) {
-      this.showError(this.fieldPasswordRepeat);
-      this.fieldPasswordRepeat.classList.remove('is-valid');
-      this.fieldPasswordRepeat.classList.add('pw-invalid-repeat', 'has-error');
-    } else {
-      this.removeError(this.fieldPasswordRepeat);
-      // if (this.fieldPassword.classList.contains('is-valid')){
-        this.fieldPasswordRepeat.classList.add('is-valid');
-        this.fieldPasswordRepeat.classList.remove('pw-invalid-repeat');
-      this.fieldPasswordRepeat.classList.remove('has-error');
-      // }
-    }
-  };
-
-  passwordstrength.prototype.showError = function (field) {
-    if (field.nextElementSibling){
-      field.nextElementSibling.removeAttribute('hidden');
-    }
-  }
-  passwordstrength.prototype.removeError = function (field) {
-    if (field.nextElementSibling) {
-      field.nextElementSibling.setAttribute('hidden', 'hidden');
-    }
-  }
-
-
-})();
-
-
-(function () {
-  'use strict';
-
-  onl.decorate({
-    'init-scroll-chapter': function (element) {
-      new scrollChapter(element);
-    }
-  });
-
-  var scrollChapter = function (element) {
-    this.element = element;
-    this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-
-    this.chapterLinks = this.config.chapterLinks || document.querySelectorAll('.nav-sub a');
-    this.chapters = this.config.chapters || document.querySelectorAll('.js-scrollSection');
-    this.lastId;
-    this.cur = [];
-
-    this.initEventListeners();
-
-  };
-
-  scrollChapter.prototype.initEventListeners = function() {
-
-    window.addEventListener('scroll', function(e) {
-      var self = this;
-      var timer;
-
-      if (timer) {
-        window.clearTimeout(timer);
-      }
-
-      timer = window.setTimeout(function() {
-        self.onScroll(e);
-      }, 10);
-     }.bind(this), false);
-
-  };
-
-  scrollChapter.prototype.offset = function(el){
-    var rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-  }
-
-  scrollChapter.prototype.onScroll = function() {
-    var section;
-    var fromTop = window.pageYOffset + 2;
-    var offset;
-    var i;
-    var link;
-
-    for (i = 0; i < this.chapterLinks.length; i++) {
-      link = this.chapterLinks[i];
-      if (link.hash !== '') {
-        section = document.querySelector(link.hash);
-        offset = this.offset(section);
-        if (
-          offset.top <= fromTop &&
-          offset.top + section.offsetHeight > fromTop
-        ) {
-          link.classList.add('is-currentchapter');
-        } else {
-          link.classList.remove('is-currentchapter');
-        }
-      }
-    }
-
-  };
-
-})();
-
-
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
-
-
 
 
 
