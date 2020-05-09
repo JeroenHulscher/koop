@@ -659,3 +659,6 @@ var supports = function () {
   };
 
 })();
+/*
+Inspired by Go Make Things, LLC's project "validate", MIT, https://github.com/cferdinandi/validate
+*/
