@@ -1,6 +1,26 @@
 .logo {
+  position: relative;
+
+  img {
+    width: 150px;
+    max-width: 150px;
+    margin: .5em 0;
+
+    @media ( min-width: $breakpointDesktop ) {
+      width: 180px;
+      max-width: 180px;
+      margin: 0;
+    }
+  }
 
   &__you-are-here {
+    margin: -.75em 0 0 0 !important;
+    color: $darkBlue;
     font-size: 0.8em;
+
+    @media ( min-width: $breakpointDesktop ) {
+      margin: -.3em 0 0 0 !important;
+    }
+
   }
 }
