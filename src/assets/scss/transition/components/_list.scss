@@ -1,3 +1,11 @@
 .list {
   margin: 0 0 2em 0;
 }
+
+.list--linked {
+  li.link--down,
+  li.link--up {
+    padding-left: 0;
+    background: none;
+  }
+}
