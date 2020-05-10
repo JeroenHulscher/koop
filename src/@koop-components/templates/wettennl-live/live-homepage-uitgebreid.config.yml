@@ -1,0 +1,9 @@
+---
+name: live - wettennl - homepage uitgebreid
+label: live - wettennl - homepage uitgebreid
+status: ready
+context:
+  dataWoord:
+    title: Woord(en) of zinsdeel
+
+
