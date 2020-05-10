@@ -1,21 +1,21 @@
 a {
   color: $darkBlue;
   text-decoration: underline;
+  text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   outline: 2px solid transparent;
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
-  word-break: break-word;
 
-  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]),
+  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl/"]):not([href*=".officielebekendmakingen.nl/"]),
   &[rel="external"] {
-    padding-right: 1.5em;
+    padding-right: 1.25em;
     margin-right: .25em;
     background: {
       repeat: no-repeat;
       image: $externalLinkIcon;
-      position: right center;
-      size: em(12);
+      position: right 3px;
+      size: 13px 12px;
     }
     .related--primaryBlue & {
       background-image: $externalLinkWhiteIcon;
@@ -37,35 +37,21 @@ a {
     color: $mediumBlue;
   }
 
-  &.cta:not([rel="external"]) {
-    // text-decoration: none;
+  &.cta {
+    text-decoration: none;
     padding: 0 2em 0 0;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     background: {
       repeat: no-repeat;
       image: $arrowCTAIcon;
-      position: right 1px top em(4);
+      position: right 3px;
       size: 1em;
-    }
-
-    &:hover {
-      background-position: right 0 top em(4);
     }
 
     &--left {
       padding: 0 0 0 2em;
       background-position: left 3px;
-      &:hover {
-        background-position: left 1px top 3px;
-      }
-    }
-    &--external {
-      background: {
-        repeat: no-repeat;
-        image: $externalLinkIcon;
-        position: right 3px top 1px;
-        size: 1em;
-      }
     }
   }
 
@@ -87,48 +73,6 @@ p a {
   text-decoration: underline;
 }
 
-// double declaration needed for showmore correction. (link--down/up should have been on the a, now on li)
-a.link {
-   &--down {
-    background: {
-      position: 0 center !important;
-      repeat: no-repeat;
-      image: $dartDownIcon !important;
-      size: 9px !important;
-    }
-    padding-left: 1em;
-  }
-  &--up {
-    background: {
-      position: 0 center !important;
-      repeat: no-repeat;
-      image: $dartUpIcon !important;
-      size: 9px !important;
-    }
-    padding-left: 1em;
-  }
-}
-li.link {
-   &--down a {
-    background: {
-      position: 0 center !important;
-      repeat: no-repeat;
-      image: $dartDownIcon !important;
-      size: 9px !important;
-    }
-    padding-left: 1em;
-  }
-  &--up a {
-    background: {
-      position: 0 center !important;
-      repeat: no-repeat;
-      image: $dartUpIcon !important;
-      size: 9px !important;
-    }
-    padding-left: 1em;
-  }
-}
-
 .link {
 
   &:hover {
@@ -136,17 +80,24 @@ li.link {
     text-decoration: underline;
   }
 
-  &--delete {
-    font-size: 90%;
+  &--down {
     background: {
+      position: 0 center;
       repeat: no-repeat;
-      image: $removeIcon;
-      position: left center;
-      size: 1em;
+      image: $dartDownIcon;
+      size: 9px;
     }
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
-
+  &--up {
+    background: {
+      position: 0 center;
+      repeat: no-repeat;
+      image: $dartUpIcon;
+      size: 9px;
+    }
+    padding-left: 1em;
+  }
   &--forward {
     background: {
       position: 0 center;
@@ -164,37 +115,5 @@ li.link {
       size: 6px 9px;
     }
     padding-left: 1em;
-  }
-  &--map {
-    background: {
-      position: 0 center;
-      repeat: no-repeat;
-      image: $iconMap;
-    }
-    padding-left: 2em;
-  }
-}
-
-.link-iconed {
-  padding-right: 1.5em;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: right center;
-
-  &--print {
-    background-image: $printIcon;
-    background-size: 1em;
-  }
-  &--download {
-    background-image: $downloadIcon;
-    background-size: .8em;
-  }
-  &--mail {
-    background-image: $iconMail;
-    background-size: .8em;
-  }
-  &--publication {
-    background-image: $iconPublicatie;
-    background-size: 1em;
   }
 }
