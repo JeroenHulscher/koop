@@ -1,3 +1,248 @@
 .header {
+  border-bottom: .5em solid $headerBorderColor;
+  position: relative;
   margin-bottom: 2em;
+
+  .skiplinks {
+    position: relative;
+
+    a {
+      position: absolute;
+      left: -999em;
+      top: 2em;
+
+      &:focus {
+        left: 15em;
+        background: $white;
+        color: $darkBlue;
+      }
+    }
+  }
+
+  ul,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  li {
+
+    @media ( min-width: $breakpointDesktop ) {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  &__start {
+    background-color: $white;
+    padding: .25em 0 .5em;
+    position: relative;
+    // z-index: 2; why was this set?
+
+    @media ( min-width: $breakpointDesktop ) {
+      padding: .75em 0;
+    }
+
+    button {
+      float: right;
+      position: relative;
+      z-index: 1;
+      margin-top: 0.25em;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .header__meta {
+
+      @media ( min-width: $breakpointDesktop ) {
+        position: absolute;
+        right: 1em;
+        top: .5em;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: .8em;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.link-iconed {
+          padding-right: 1.25em;
+          font-weight: 400;
+        }
+      }
+
+      .button {
+        margin-top: 0.5em;
+        @media ( min-width: $breakpointDesktop ) {
+        font-size: 1em;
+        position: relative;
+        margin-top: -0.5em;
+        }
+      }
+
+    }
+  }
+
+  &__nav {
+    background-color: $headerBackgroundColor;
+    position: relative;
+
+    > .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      position: relative;
+
+      @media ( min-width: $breakpointDesktop ) {
+        flex-direction: row;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      @media ( min-width: $breakpointDesktop ) {
+        flex-direction: row;
+      }
+    }
+
+    a {
+      color: $headerLinkColor;
+      text-decoration: none;
+      padding: .625em 1em;
+      display: block;
+      font-size: 1.125rem;
+      word-break: normal;
+
+      &:hover {
+        color: $headerLinkCurrentColor;
+        background-color: $headerBorderColor;
+      }
+
+      &.is-active {
+        background: $mediumBlue;
+        color: $black;
+      }
+    }
+
+    .button--primary {
+      position: absolute;
+      right: .5em;
+      top: .375em;
+      font-size: 1rem;
+    }
+
+    [data-handler="toggle-other-sites"] {
+      color: $headerLinkCurrentColor;
+      position: relative;
+      margin: 0 -1em;
+      padding: .75em 2em;
+      z-index: 0;
+      background: {
+        color: $white;
+        image: $dartDownIcon;
+        repeat: no-repeat;
+        position: right .75em center;
+      };
+
+      @media ( min-width: $breakpointDesktop ) {
+        margin: 0;
+        padding: .625em 2em .625em 1em;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: .5em;
+        width: 100%;
+        background-color: $white;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out;
+      }
+
+      &:hover {
+        background-color: $white;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    [aria-controls="other-sites"][aria-expanded="true"] {
+      background-image: $dartTopIcon;
+
+      &::before {
+        opacity: 1;
+        z-index: 0;
+      }
+    }
+  }
+
+  &__nav--closed {
+    display: none;
+    z-index: -1;
+
+    @media ( min-width: $breakpointDesktop ) {
+      display: block;
+      z-index: auto;
+    }
+  }
+
+  &__more {
+    overflow-y: hidden;
+
+    .container {
+      padding-top: 1em;
+      padding-bottom: 1em;
+
+      @media ( min-width: $breakpointDesktop ) {
+        flex-direction: row;
+        animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
+      }
+    }
+
+    &[hidden="true"] .container {
+      animation: closeNav 0.8s ease-in-out;
+    }
+  }
 }
+
+@keyframes openNav {
+
+    0% {
+      max-height: 0;
+    }
+
+    100% {
+      max-height: 30em;
+    }
+}
+
+@keyframes closeNav {
+
+    0% {
+      max-height: 30em;
+    }
+
+    100% {
+      max-height: 0;
+    }
+}
+

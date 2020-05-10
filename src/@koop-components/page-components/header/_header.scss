@@ -1,7 +1,6 @@
 .header {
   border-bottom: .5em solid $headerBorderColor;
   position: relative;
-  margin-top: -2em;
 
   .skiplinks {
     position: relative;
@@ -32,7 +31,7 @@
 
   li {
 
-    @media ( min-width: $breakpointDesktop ) {
+    @media ( min-width: 50em ) {
       display: inline-block;
       vertical-align: bottom;
     }
@@ -40,19 +39,18 @@
 
   &__start {
     background-color: $white;
-    padding: .25em 0 .5em;
+    padding: .5em;
     position: relative;
     // z-index: 2; why was this set?
 
-    @media ( min-width: $breakpointDesktop ) {
-      padding: .75em 0;
+    @media ( min-width: 50em ) {
+      padding: 1em;
     }
 
     button {
       float: right;
       position: relative;
       z-index: 1;
-      margin-top: 0.25em;
     }
 
     .container {
@@ -61,7 +59,7 @@
 
     .header__meta {
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: 50em ) {
         position: absolute;
         right: 1em;
         top: .5em;
@@ -70,27 +68,11 @@
       a {
         text-decoration: none;
         font-weight: 700;
-        font-size: .8em;
 
         &:hover {
           text-decoration: underline;
         }
-
-        &.link-iconed {
-          padding-right: 1.25em;
-          font-weight: 400;
-        }
       }
-
-      .button {
-        margin-top: 0.5em;
-        @media ( min-width: $breakpointDesktop ) {
-        font-size: 1em;
-        position: relative;
-        margin-top: -0.5em;
-        }
-      }
-
     }
   }
 
@@ -104,7 +86,7 @@
       flex-direction: column;
       position: relative;
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: 50em ) {
         flex-direction: row;
       }
     }
@@ -113,7 +95,7 @@
       display: flex;
       flex-direction: column;
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: 50em ) {
         flex-direction: row;
       }
     }
@@ -121,10 +103,9 @@
     a {
       color: $headerLinkColor;
       text-decoration: none;
-      padding: .625em 1em;
+      padding: .75em 1em;
       display: block;
       font-size: 1.125rem;
-      word-break: normal;
 
       &:hover {
         color: $headerLinkCurrentColor;
@@ -157,9 +138,9 @@
         position: right .75em center;
       };
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: 50em ) {
         margin: 0;
-        padding: .625em 2em .625em 1em;
+        padding: .75em 2em .75em 1em;
       }
 
       &::before {
@@ -199,7 +180,7 @@
     display: none;
     z-index: -1;
 
-    @media ( min-width: $breakpointDesktop ) {
+    @media ( min-width: 50em ) {
       display: block;
       z-index: auto;
     }
@@ -212,7 +193,7 @@
       padding-top: 1em;
       padding-bottom: 1em;
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: 50em ) {
         flex-direction: row;
         animation: openNav 0.8s cubic-bezier(0, 0.47, 0.58, 1);
       }
