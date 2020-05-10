@@ -7,20 +7,14 @@ $thinBorder: .5em;
   padding-top: $mobileSpacing;
   padding-bottom: $mobileSpacing;
 
-  @media ( min-width: $breakpointDesktop ) {
+  @media ( min-width: 50em ) {
     padding-top: $desktopSpacing;
     padding-bottom: $desktopSpacing;
   }
 
   &--page-opener {
     background-color: $lightBlue;
-    padding: .325em 0;
-    padding-bottom: .5em !important;
-    margin-bottom: .5em;
-
-    @media ( min-width: $breakpointDesktop ) {
-      padding: .75em 0 !important;
-    }
+    padding: 1em 0;
 
     + .row--browse {
       margin-top: 0;
@@ -72,7 +66,7 @@ $thinBorder: .5em;
       background: $white;
       width: auto;
       padding: 1em 2em 2em;
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: 50em ) {
         max-width: 60%;
         margin-bottom: 5em;
       }
