@@ -1,6 +1,6 @@
 ---
-name: live - wettennl - homepage uitgebreid
-label: live - wettennl - homepage uitgebreid
+name: live - wettennl - searchresults
+label: live - wettennl - searchresults
 status: ready
 context:
   dataWoord:
@@ -8,8 +8,9 @@ context:
   breadcrumbContext:
     title: "U bent hier:"
     breadcrumb:
-    - text: Zoeken
+    - text: Uitgebreid zoeken
       url: '#'
+    - text: Zoekresultaten
   headerContext:
     file: logo.svg
     alt: Overheid.nl logo
@@ -49,8 +50,5 @@ context:
         links:
           - url: 'https://almanak.overheid.nl/onl'
             text: Naar overheidsorganisaties
-
-
-
 
 
