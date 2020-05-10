@@ -1,13 +1,12 @@
 .breadcrumb {
-  padding: .125em 0;
-
+  padding: .25em 0;
 
   p {
     position: absolute;
     left: -999em;
   }
 
-  @media ( min-width: $breakpointDesktop ) {
+  @media ( min-width: 50em ) {
 
     padding: 0;
 
