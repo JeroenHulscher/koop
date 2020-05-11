@@ -1,3 +1,11 @@
 .sort {
   margin: 0 0 1em 0;
+
+  &__options {
+    padding-left: 1em;
+  }
+
+  li::after {
+    content: ' | ';
+  }
 }
