@@ -126,8 +126,7 @@
     });
   }
 
-})(window, document);
-/*
+})(window, document);/*
 The MIT License (MIT)
 
 Copyright (c) Go Make Things, LLC
