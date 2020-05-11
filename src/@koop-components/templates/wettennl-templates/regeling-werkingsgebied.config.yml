@@ -1,0 +1,47 @@
+---
+title: Regeling werkingsgebied
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: true
+    youAreHere:
+      - text: Wettenbank
+    hamburgerButtonText: Menu
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    headerMore:
+      - title: Aankondigingen over uw buurt
+        description: Zoals bouwplannen en verkeersmaatregelen.
+        links:
+          - url: 'https://beta.overheid.nl/aankondigingen-over-uw-buurt'
+            text: Naar aankondigingen over uw buurt
+      - title: Dienstverlening
+        description: Zoals belastingen, uitkeringen en subsidies.
+        links:
+          - url: 'https://beta.overheid.nl/dienstverlening'
+            text: Naar dienstverlening
+      - title: Beleid & regelgeving
+        description: Officiële publicaties van de overheid.
+        links:
+          - url: 'https://beta.overheid.nl/beleid-en-regelgeving'
+            text: Naar beleid & regelgeving
+      - title: Contactgegevens overheden
+        description: Adressen en contactpersonen van overheidsorganisaties.
+        links:
+          - url: 'https://almanak.overheid.nl/onl'
+            text: Naar overheidsorganisaties
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - content: <a href="#">Veelgestelde vragen</a>
