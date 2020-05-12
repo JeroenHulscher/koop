@@ -1,10 +1,4 @@
-/**
- * moment.js
- * version : 2.10.3
- * authors : Tim Wood, Iskren Chernev, Moment.js contributors
- * license : MIT
- * momentjs.com
-*/
+/** @license * moment.js * version : 2.10.3 * authors : Tim Wood, Iskren Chernev, Moment.js contributors * license : MIT * momentjs.com */
 
 (function() {
 
