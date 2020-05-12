@@ -178,7 +178,7 @@ gulp.task( 'js:build', function() {
     mangle: false,
     output: {
       beautify: false,
-      comments: "all"
+      comments: "some"
     }
    }))
   .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
