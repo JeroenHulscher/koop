@@ -31,7 +31,10 @@ context:
     - id: radio-6
       text: Hele gemeente 'Den Haag'
       name: radio-group-1
-      value: hideMap
+      value: Gemeente Den Haag
+      dataattributes:
+        - data: data-kpm-rangetype
+          value: city
   mapContext:
     modifier: h-400
     controls: false
