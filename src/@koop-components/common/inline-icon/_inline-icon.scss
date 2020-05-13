@@ -46,7 +46,7 @@ $icons: (
     background-image: $downloadIcon;
   }
 
-  &--remove {
+  &--remove-right {
     background: {
       image: $removeIcon;
       position: right 50%;
@@ -55,7 +55,7 @@ $icons: (
     padding-right: 1.5em;
   }
 
-  &--remove-left {
+  &--remove {
     background-image: $removeIcon;
   }
 

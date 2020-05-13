@@ -24,7 +24,7 @@ context:
       title: Sociale Zaken en Werkgelegenheid (szw)
       short: szw
 variants:
-  - name: Filter selection
+  - name: Default (span)
     context:
       id: 1
       type: span
@@ -48,7 +48,7 @@ variants:
           id: 3
           title: Sociale Zaken en Werkgelegenheid (szw)
           short: szw
-  - name: Filter selection - Limit (3)
+  - name: Default limit (3)
     context:
       id: 1
       type: div

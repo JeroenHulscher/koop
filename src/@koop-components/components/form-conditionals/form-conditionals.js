@@ -43,7 +43,6 @@
     if (firstInput) {
       firstInput = this.questions[0].querySelectorAll('input,select');
       if (firstInput[0]) {
-
         if (firstInput[0].tagName === 'SELECT') {
           if ('createEvent' in document) {
             evt = document.createEvent('HTMLEvents');
@@ -55,7 +54,6 @@
           }
         }
         if (firstInput[0].tagName === 'INPUT') {
-
           for (i = 0; i < firstInput.length; i++) {
             if (firstInput[i].checked) {
               this.actOnChange(firstInput[i]);
