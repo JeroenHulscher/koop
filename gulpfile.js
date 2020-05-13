@@ -174,7 +174,13 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/run.js'
   ])
   .pipe( concat( 'main.js' ) )
-  .pipe( uglify() )
+  .pipe(uglify({
+    mangle: false,
+    output: {
+      beautify: false,
+      comments: "some"
+    }
+   }))
   .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
