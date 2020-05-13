@@ -1,0 +1,50 @@
+.pageactions {
+  margin: 0;
+  // float: right;
+  text-align: right;
+  background: $lightGrey;
+  margin: 0 0 40px;
+  padding: 8px;
+  float: none;
+
+  li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: .5em 2em .5em .5em;
+    margin-left: em(16);
+    font-size: 80%;
+    background: none;
+    text-decoration: underline;
+    @media ( min-width: $breakpointDesktop ) {
+      font-size: 100%;
+      padding: .5em 2.5em .5em .5em;
+    }
+    &:hover {
+      background: none;
+      color: $primaryBlue;
+      text-decoration: underline;
+    }
+
+    img {
+        position: absolute;
+        right: .25em;
+        top: 50%;
+        margin-top: -7px;
+        height: 18px;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: -13px;
+          height: 28px;
+        }
+      }
+
+      svg {
+        fill: $darkBlue;
+      }
+    }
+
+}
