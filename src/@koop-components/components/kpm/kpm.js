@@ -72,14 +72,13 @@
     Object.assign(this.data, JSON.parse(this.dataFromJSON));
 
     if(action === "editRange") {
-      var parent = getClosest(this.element, '.map');
-
-      if (e.target.value === "hideMap"){
-        parent.setAttribute('hidden','hidden');
+      if (e.target.getAttribute('data-kpm-rangetype') === "city"){
+        this.element.setAttribute('hidden','hidden');
       } else {
         this.data.options.center.circle.radius = parseInt(e.target.value, 10);
-        parent.removeAttribute('hidden');
+        this.element.removeAttribute('hidden');
       }
+
     }
 
     // start KPM;
