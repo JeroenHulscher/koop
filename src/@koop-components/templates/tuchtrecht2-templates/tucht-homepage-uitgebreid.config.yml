@@ -13,6 +13,12 @@ context:
     intro: Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
     centered: true
     size: medium
+    inputZoekwoord:
+      fieldPlaceholder: Woord(en) of zinsdeel
+      fieldLabel: Zoekwoord(en)
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
     vrijeberoepenContext:
       moreless: true
       searchFilter: true

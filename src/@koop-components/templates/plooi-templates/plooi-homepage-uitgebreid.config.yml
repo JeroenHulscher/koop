@@ -16,6 +16,12 @@ context:
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
+    inputZoekwoord:
+      fieldPlaceholder: Woord(en) of zinsdeel
+      fieldLabel: Zoekwoord(en)
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
     subselectionOnderwerpContext:
       linkText: Selecteer onderwerp(en)
       id: 23

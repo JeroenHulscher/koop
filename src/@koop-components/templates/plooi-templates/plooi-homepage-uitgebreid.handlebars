@@ -15,9 +15,11 @@
           <div class="form__row form__row--large">
             <fieldset>
               <legend class="visually-hidden">Doorzoek overheidsdocumenten</legend>
-              <div class="form__row form__row--medium">
-                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+
+              <div class="form__row">
+                {{ render "@input-text--medium" inputZoekwoord merge=true }}
               </div>
+
               <div class="form__row">
                 <ul class="list list--inline">
                   <li class="list__item">

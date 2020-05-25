@@ -13,6 +13,12 @@ context:
     intro: Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.
     centered: true
     size: medium
+    inputZoekwoord:
+      fieldPlaceholder: Woord(en) of zinsdeel
+      fieldLabel: Zoekwoord(en)
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
     vanDatepicker:
       id: 786
       haslabel: true
