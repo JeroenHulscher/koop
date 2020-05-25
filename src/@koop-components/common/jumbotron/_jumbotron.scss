@@ -125,6 +125,15 @@
     }
   }
 
+  &__header ~ p {
+    @media (min-width: $breakpointDesktop) {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      margin-top: 1em;
+      margin-bottom: 1.75em;
+    }
+  }
+
   h2.jumbotron__header,
   .h2.jumbotron__header,
   h3.jumbotron__header,
