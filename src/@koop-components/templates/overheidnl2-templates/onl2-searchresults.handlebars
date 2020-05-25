@@ -9,37 +9,21 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-      <div class="row">
-         {{render "@sort" sortContext }}
-      </div>
+      {{render "@sort" sortContext }}
 
       <div class="row">
-          <h1 class="h1">Zoekresultaten <span class="h1__sub">1-10 van de 105</span></h1>
+          <h1 class="h1">Zoekresultaten <span class="h1__sub">1-10 van de 105 resultaten</span></h1>
       </div>
 
       <div class="row hidden-desktop align-right">
         <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
       </div>
-      <div class="row hidden-desktop">
-        <div class="align-right">
-          {{render "@buttonswitch" buttonswitchContext }}
-        </div>
-      </div>
-
-
 
       {{render "@resultlist" resultsContext }}
-
-
-
 
       <div class="pull-right">
         {{render "@pagination" }}
       </div>
-
-
-
-
 
     </div>
     <div class="column column--sidebar">
@@ -62,10 +46,6 @@
               <h3 class="h4">Geselecteerde filters (3)</h3>
               {{render "@form-selectedfilter" selectedfilterContext }}
             </div>
-
-
-
-
 
           <form class="form" data-decorator="init-form-validation">
 

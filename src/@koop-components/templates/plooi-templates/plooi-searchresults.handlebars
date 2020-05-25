@@ -9,11 +9,7 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-      <div class="hidden-mobile">
-        <div class="row">
-          {{ render "@sort" sortContext }}
-        </div>
-      </div>
+      {{ render "@sort" sortContext }}
 
       <h1 class="h1 h1--result--list">Zoekresultaten <span class="h1__sub">1-10 van de 105 resultaten</span></h1>
 
@@ -22,11 +18,9 @@
           data-modal="modal-filter">Filter opties</button>
       </div>
 
-  <div class="hidden-desktop">
-     {{ render "@sort" sortContext }}
-  </div>
+      {{render "@resultlist" resultsContext }}
 
-  {{render "@resultlist" resultsContext }} {{render "@pagination" }}
+      {{render "@pagination" }}
 
     </div>
     <div class="column column--sidebar">

@@ -212,13 +212,15 @@ context:
       name: onderwerp
   sortContext:
     modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
     options:
     - label: Datum
       value: value
       active: is-active
     - label: Titel
       value: value
-    amountPerPageFilter: true
   inputsubmitContext:
     label: Verfijn uw zoekopdracht
     showLabel: false

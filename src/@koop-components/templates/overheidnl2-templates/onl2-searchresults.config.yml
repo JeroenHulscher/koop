@@ -6,8 +6,16 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
   sortContext:
-    amountPerPageFilter: true
+    modifier:
     columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
   resultsContext:
     modifier: result--list--wide
     items:
