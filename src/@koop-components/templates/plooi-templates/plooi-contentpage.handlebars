@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container row">
+<div class="container row" role="main" id="content">
   <div class="columns columns--sidebar-left">
     <div class="column">
 
@@ -15,13 +15,7 @@
           data-modal="modal-filter">Pagina navigatie</button>
       </div>
 
-      <div class="align-right">
-        <ul class="list list--inline">
-          <li><a href="#" class="link-iconed link-iconed--print">Printen</a></li>
-          <li><a href="#" class="link-iconed link-iconed--download">Downloaden</a></li>
-          <li><a href="#" class="link-iconed link-iconed--mail">Abonneren</a></li>
-        </ul>
-      </div>
+      {{ render "@pageactions" pageactions }}
 
       <h1 class="h1 h1--small">Rapport 'Eerste ervaringen met spoedeisend preventief fouilleren'</h1>
 
