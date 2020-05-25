@@ -70,3 +70,9 @@
     }
   }
 }
+
+.result--list ~ .pagination {
+  .pagination__index {
+    float: right;
+  }
+}
