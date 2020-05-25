@@ -126,3 +126,11 @@ input[type=text].datepicker__input~.ui-datepicker-trigger {
   width: 53px;
   padding: 4em .5em .5em .5em;
 }
+
+/* refactor asap */
+.form__row h2.u-nomargin ~ p > a {
+  @extend .icon;
+  @extend .icon--refresh;
+  margin: .9em 0 1.5em;
+  display: block;
+}
