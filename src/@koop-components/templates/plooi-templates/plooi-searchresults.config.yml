@@ -193,7 +193,7 @@ context:
     showLabel: false
     placeholder: Verfijn uw zoekopdracht
     button: Zoek
-    modifier: input-text--search
+    modifierComponent: input-inputsubmit--s
   resultsContext:
     modifier: result--list--wide
     items:

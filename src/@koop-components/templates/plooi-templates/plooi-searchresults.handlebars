@@ -10,17 +10,8 @@
     <div class="column">
 
       <div class="hidden-mobile">
-        <div class="columns">
-          <div class="column column-d-7">
-            <div class="row">
-            {{render "@input-inputsubmit" inputsubmitContext }}
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="row">
-            {{ render "@sort" sortContext }}
-          </div>
+        <div class="row">
+          {{ render "@sort" sortContext }}
         </div>
       </div>
 
@@ -42,10 +33,16 @@
 
       <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
 
-        <div class="modal-sidebar__content" >
+        <div class="modal-sidebar__content">
 
-          <div class="row--spacer">
+
             <h2>Zoekfilter</h2>
+
+            <div class="row">
+              <p>
+                <a href="#" class="icon icon--refresh">Alle filters verwijderen</a>
+              </p>
+            </div>
 
           <div class="form__row form__row--large">
             <h4>Geselecteerde filters (7)</h4>
@@ -59,14 +56,16 @@
                 <li><div class="form__selectedfilter">Waarde 6<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
                 <li><div class="form__selectedfilter">Waarde 7<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
               </ul>
-              {{!-- {{render "@form-selectedfilter" selectedfilterContext }} --}}
             </div>
           </div>
 
           <form id="formid" data-decorator="init-form-validation">
-            <div class="form__row form__row--large hidden-desktop">
-              <label for="">Filter op trefwoord</label>
-              {{ render "@input-text" inputsearchMobContext }}
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Zoekwoord(en)</legend>
+                {{render "@input-inputsubmit" inputsubmitContext }}
+              </fieldset>
             </div>
 
           <div class="form__row form__row--large">
@@ -120,7 +119,7 @@
           <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
 
           </form>
-        </div>
+
 
 
         <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">

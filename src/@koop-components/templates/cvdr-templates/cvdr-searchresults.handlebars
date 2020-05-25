@@ -9,17 +9,6 @@
   <div class="columns columns--sidebar-left">
     <div class="column">
 
-      <div class="columns">
-        <div class="column column-d-8">
-          <div class="hidden-mobile">
-            <fieldset class="u-nomargin">
-              <legend class="visually-hidden">Legendje</legend>
-              {{render "@input-inputsubmit" inputsubmitContext }}
-            </fieldset>
-          </div>
-        </div>
-      </div>
-
       <div class="row row--large hidden-mobile">
          {{ render "@sort" sortContext }}
       </div>
@@ -65,6 +54,13 @@
             <div class="form__row form__row--large hidden-desktop">
               <label for="">Filter op trefwoord</label>
               {{ render "@input-text" inputsearchMobContext }}
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Zoekwoord(en)</legend>
+                {{render "@input-inputsubmit" inputsubmitContext }}
+              </fieldset>
             </div>
 
               <fieldset>

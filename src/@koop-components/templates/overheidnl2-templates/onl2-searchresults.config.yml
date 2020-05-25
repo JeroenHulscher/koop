@@ -58,7 +58,6 @@ context:
     placeholder: Verfijn uw zoekopdracht
     button: Zoek
     modifierComponent: input-inputsubmit--s
-    remove: true
   digitaalaanvragenContext:
     options:
     - id: radio-1

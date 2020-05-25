@@ -220,12 +220,11 @@ context:
       value: value
     amountPerPageFilter: true
   inputsubmitContext:
-    id: search
     label: Verfijn uw zoekopdracht
     showLabel: false
     placeholder: Verfijn uw zoekopdracht
     button: Zoek
-    modifier: input-text--search
+    modifierComponent: input-inputsubmit--s
   resultsContext:
     modifier: result--list--wide
     items:
