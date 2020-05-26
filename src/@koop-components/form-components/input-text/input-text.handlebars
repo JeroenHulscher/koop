@@ -6,7 +6,7 @@
 <div class="input-text__container input-text__container--prefix">
 {{/if}}
 
-  <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
+  <label for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}" class="{{#if fieldLabelVisible}}{{else}}visually-hidden {{/if}}form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
 
   {{#if required}}<span class="mandatory">Verplicht</span>{{/if}}
 
@@ -22,7 +22,6 @@
     placeholder="{{ fieldPlaceholder }}"
     {{#if error}}aria-describedby="input-text-1__error"{{/if}}
     aria-invalid="{{#if error}}true{{else}}false{{/if}}"
-    placeholder="{{ fieldPlaceholder }}"
     {{#if required}}required{{/if}}
     {{#if disabled}}disabled{{/if}}
     {{#if value}}value="{{value}}"{{/if}}

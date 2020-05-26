@@ -6,7 +6,7 @@
 <div class="input-text__container input-text__container--prefix">
 {% endif %}
 
-  <label {% if fieldLabelVisible %}{% else %}class="visually-hidden"{% endif %}for="{% if cleanID %}{{ id }}{% else %}input-text-{{ id }}{% endif %}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
+  <label for="{% if cleanID %}{{ id }}{% else %}input-text-{{ id }}{% endif %}" class="{% if fieldLabelVisible %}{% else %}visually-hidden {% endif %}form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
 
   {% if prefix %}
     <span class="input-text__prefix {{ modifier2 }}">{{ prefixLabel }}</span>
@@ -20,7 +20,6 @@
     placeholder="{{ fieldPlaceholder }}"
     {% if error %}aria-describedby="input-text-1__error"{% endif %}
     aria-invalid="{% if error %}true{% else %}false{% endif %}"
-    placeholder="{{ fieldPlaceholder }}"
     {% if disabled %}disabled{% endif %}
     {% if value %}value="{{ value }}"{% endif %}
 
