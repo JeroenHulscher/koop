@@ -1,5 +1,5 @@
 <div role="group" class="buttonswitch{{ modifier ? 'buttonswitch--' ~ modifier }}">
   {% for b in buttons %}
-    <a href="{{ b.url ?: '#' }}" class="buttonswitch__button{{ b.disabled ? ' is-disabled' }}{{ b.active ? ' is-active' }}{{ b.icon ? ' icon icon--' ~ b.icon }}" aria-pressed="{{ b.active ? 'true' : 'false' }}">{{ b.label }}</a>
+    <a href="{{ b.url ?: '#' }}" role="button" class="buttonswitch__button{{ b.disabled ? ' is-disabled' }}{{ b.active ? ' is-active' }}{{ b.icon ? ' icon icon--' ~ b.icon }}" aria-pressed="{{ b.active ? 'true' : 'false' }}">{{ b.label }}</a>
   {% endfor %}
 </div>
