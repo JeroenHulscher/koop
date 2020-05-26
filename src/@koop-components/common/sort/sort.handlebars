@@ -6,7 +6,7 @@
       <ul class="sort__options">
         {{#each options}}
           <li>
-            <a href="{{href}}" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
+            <a href="{{href}}" role="button" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
           </li>
         {{/each}}
       </ul>
@@ -21,13 +21,13 @@
           Aantal:
           <ul class="sort__options">
             <li>
-              <a href="{{href}}" class="is-active" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="{{href}}" class="is-active" role="button" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="{{href}}" class="" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="{{href}}" class="" role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="{{href}}" class=""  aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a href="{{href}}" class=""  role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
           </ul>
 
