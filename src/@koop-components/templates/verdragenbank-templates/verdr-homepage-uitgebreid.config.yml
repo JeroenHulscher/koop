@@ -45,13 +45,13 @@ context:
       - id: checkbox-422
         text: Nederland (Sint Eustatius)
         name: onderwerp
-      - id: checkbox-422
+      - id: checkbox-4223
         text: Aruba
         name: onderwerp
-      - id: checkbox-422
+      - id: checkbox-4224
         text: Curacao
         name: onderwerp
-      - id: checkbox-422
+      - id: checkbox-4225
         text: Sint Maarten
         name: onderwerp
     depositarisContext:
@@ -109,5 +109,44 @@ context:
           id: 3
           title: Nederland
           short: Nederland
+    tt1Context:
+      id: 112
+    tt2Context:
+      id: 113
+    tt3Context:
+      id: 114
+    tt4Context:
+      id: 115
+    tt5Context:
+      id: 116
+    tt6Context:
+      id: 117
+    tt7Context:
+      id: 118
+    startDatepicker:
+      id: 234
+      haslabel: true
+      label: Startdatum
+      fieldPlaceholder: Bijv. 01-01-2020
+    endDatepicker:
+      id: 345
+      haslabel: true
+      label: Einddatum
+      fieldPlaceholder: Bijv. 01-01-2020
+    inputPlaats:
+      id: 98765
+      fieldPlaceholder: 'Bijv: XXX'
+      fieldLabelVisible: true
+      fieldLabel: Plaats
+    inputHuisnummer:
+      id: 98766
+      fieldPlaceholder: 'Bijv: XXX'
+      fieldLabelVisible: true
+      fieldLabel: Huisnummer
+    inputToevoeging:
+      id: 98767
+      fieldPlaceholder: 'Bijv: XXX'
+      fieldLabelVisible: true
+      fieldLabel: Toevoeging
 
 

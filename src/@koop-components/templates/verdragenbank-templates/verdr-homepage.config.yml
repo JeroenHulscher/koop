@@ -28,7 +28,7 @@ context:
     text2: officielebekendmakingen.nl
     modifier: button--doubleline button--icon-external
     action: http://www.google.nl
-    anchor: false
+    anchor: true
     button: true
     iconButton: false
     inputButton: false
@@ -41,7 +41,7 @@ context:
     text2: officielebekendmakingen.nl
     modifier: button--doubleline button--icon-external
     action: http://www.google.nl
-    anchor: false
+    anchor: true
     button: true
     iconButton: false
     inputButton: false
@@ -53,6 +53,7 @@ context:
     options:
     - id: checkbox-112312312
       text: Ik begrijp dat ...
+      name: agreement
   newslCollap:
     heading: Lees meer over uw privacy
     id: 11231231

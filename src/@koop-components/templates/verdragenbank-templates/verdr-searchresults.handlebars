@@ -11,7 +11,7 @@
 
       {{ render "@sort" sortContext }}
       <div class="align-right">
-        <a href="#" class="icon icon--download">Download {{render "@tooltip" }}</a>
+        <a href="#" class="icon icon--download">Download</a>{{render "@tooltip" }}
       </div>
 
 
@@ -30,32 +30,8 @@
 
       {{render "@resultlist" resultsContext }}
 
-      <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
-        <div class="modal__inner">
-          <div class="modal__content">
-            <p><img src="https://via.placeholder.com/720x280.png?text=Kaart+met+marker"></p>
-            <h2>Aangevraagde evenementenvergunningen 2018</h2>
-            <p class="pre-h">4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
-            <ul class="list list--inline list--narrow">
+      {{render "@pagination" }}
 
-              <li class="list__item">
-                <a href="#" class="button button--primary">Bekijk publicatie</a>
-              </li>
-              <li class="list__item">
-                <a href="#" class="button button--secendary">Open interactieve kaart</a>
-              </li>
-
-            </ul>
-          </div>
-          <button type="button" data-handler="close-modal" class="modal__close">
-            <span class="visually-hidden">Sluiten</span>
-          </button>
-        </div>
-      </div>
-
-      {{!-- <div class="pull-right"> --}}
-        {{render "@pagination" }}
-      {{!-- </div> --}}
 
     </div>
     <div class="column column--sidebar">
@@ -90,28 +66,23 @@
               <fieldset>
                 <legend>Totstandkoming</legend>
                 <div class="form__row form__row--medium">
-                  <label>Startdatum</label>
-                  {{render "@datepicker" }}
+                  {{render "@datepicker" startDatepicker }}
                   <a href="#" class="reset"><small>Herstel</small></a>
                 </div>
                 <div class="form__row form__row--medium">
-                  <label>Einddatum</label>
-                  {{render "@datepicker" }}
+                  {{render "@datepicker" endDatepicker }}
                   <a href="#" class="reset"><small>Herstel</small></a>
                 </div>
                 <div class="form__row">
-                  <label>Plaats</label>
-                  {{render "@input-text" }}
+                  {{render "@input-text" inputPlaats }}
                 </div>
                 <div class="form__row">
                   <div class="columns">
                     <div class="column">
-                      <label>Huisnummer</label>
-                      {{render "@input-text" }}
+                      {{render "@input-text" inputHuisnummer }}
                     </div>
                     <div class="column">
-                      <label>Toevoeging</label>
-                      {{render "@input-text" }}
+                      {{render "@input-text" inputToevoeging }}
                     </div>
                   </div>
                 </div>

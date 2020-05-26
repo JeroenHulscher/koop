@@ -14,6 +14,7 @@ context:
     haslabel: true
     label: Tot
   postcodeInput:
+    id: 5
     fieldLabelVisible: true
     fieldPlaceholder: Bijv. 1234 AB
     fieldLabel: Postcode
@@ -222,6 +223,7 @@ context:
     - label: Titel
       value: value
   inputsubmitContext:
+    id: 5
     label: Verfijn uw zoekopdracht
     showLabel: false
     placeholder: Verfijn uw zoekopdracht

@@ -19,6 +19,16 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+    zoeknummerInput:
+      id: 431
+      fieldLabel: Zoeknummer
+      fieldLabelVisible: true
+      fieldPlaceholder: Bijv. XXXX
+    ecliInput:
+      id: 4221
+      fieldLabel: ECLI
+      fieldLabelVisible: true
+      fieldPlaceholder: Bijv. XXXX
     vrijeberoepenContext:
       moreless: true
       searchFilter: true

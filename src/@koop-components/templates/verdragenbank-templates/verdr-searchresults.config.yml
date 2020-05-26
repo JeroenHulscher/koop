@@ -81,6 +81,7 @@ context:
         - button: Bekijken
           type: secendary
   inputsubmitContext:
+    id: 876
     label: Verfijn uw zoekopdracht
     showLabel: false
     placeholder: Verfijn uw zoekopdracht
@@ -131,16 +132,16 @@ context:
     - id: checkbox-41
       text: Nederland (Bonaire)
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4223
       text: Nederland (Sint Eustatius)
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4224
       text: Aruba
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4226
       text: Curacao
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4227
       text: Sint Maarten
       name: onderwerp
   typeverdagContext:
@@ -212,5 +213,30 @@ context:
         id: 3
         title: Nederland
         short: Nederland
+  startDatepicker:
+    id: 234
+    haslabel: true
+    label: Startdatum
+    fieldPlaceholder: Bijv. 01-01-2020
+  endDatepicker:
+    id: 345
+    haslabel: true
+    label: Einddatum
+    fieldPlaceholder: Bijv. 01-01-2020
+  inputPlaats:
+    id: 98765
+    fieldPlaceholder: 'Bijv: XXX'
+    fieldLabelVisible: true
+    fieldLabel: Plaats
+  inputHuisnummer:
+    id: 98766
+    fieldPlaceholder: 'Bijv: XXX'
+    fieldLabelVisible: true
+    fieldLabel: Huisnummer
+  inputToevoeging:
+    id: 98767
+    fieldPlaceholder: 'Bijv: XXX'
+    fieldLabelVisible: true
+    fieldLabel: Toevoeging
 
 

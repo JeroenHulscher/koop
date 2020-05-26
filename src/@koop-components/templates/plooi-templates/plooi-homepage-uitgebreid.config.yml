@@ -164,4 +164,22 @@ context:
       - id: checkbox-204
         text: Zelf een periode kiezen
         name: onderwerp
+    startDatepicker:
+      id: 234
+      haslabel: true
+      label: Startdatum
+      fieldPlaceholder: Bijv. 01-01-2020
+    endDatepicker:
+      id: 345
+      haslabel: true
+      label: Einddatum
+      fieldPlaceholder: Bijv. 01-01-2020
+    tt1Context:
+      id: 112
+    tt2Context:
+      id: 113
+    tt3Context:
+      id: 114
+    tt4Context:
+      id: 115
 

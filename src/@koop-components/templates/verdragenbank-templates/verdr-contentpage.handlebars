@@ -38,13 +38,15 @@
     <div class="table__container">
       <table class="table__data-overview table--striped">
         <thead>
-          <th class="u-columnwidth-20p">Partij {{render "@tooltip" }}</th>
-          <th>Ondertekening</th>
-          <th>Voorlopige toepassing</th>
-          <th>Ratificatie</th>
-          <th>In werking</th>
-          <th>Opzegging</th>
-          <th>Buiten werking</th>
+          <tr>
+            <th class="u-columnwidth-20p">Partij {{render "@tooltip" }}</th>
+            <th>Ondertekening</th>
+            <th>Voorlopige toepassing</th>
+            <th>Ratificatie</th>
+            <th>In werking</th>
+            <th>Opzegging</th>
+            <th>Buiten werking</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -78,9 +80,11 @@
     <div class="table__container">
       <table class="table__data-overview table--striped">
         <thead>
-          <th class="u-columnwidth-20p">Partij</th>
-          <th>Voorbehoud/verklaring</th>
-          <th>Bezwaren</th>
+          <tr>
+            <th class="u-columnwidth-20p">Partij</th>
+            <th>Voorbehoud/verklaring</th>
+            <th>Bezwaren</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -104,9 +108,11 @@
     <p>
       <strong>Toon details in de tabel</strong>
     </p>
-    <p>
+
+    <div class="row">
       {{render "@buttonswitch" detailsContent}}
-    </p>
+    </div>
+
 
     <h2>Belarus</h2>
     <p class="p pre-h cur">15-01-2016</p>
@@ -321,9 +327,11 @@
     <div class="table__container">
       <table class="table__data-overview">
         <thead>
-          <th>Titel</th>
-          <th>Datum totstandkoming</th>
-          <th>Plaats totstandkoming</th>
+          <tr>
+            <th>Titel</th>
+            <th>Datum totstandkoming</th>
+            <th>Plaats totstandkoming</th>
+          </tr>
         </thead>
         <tbody>
           <tr>

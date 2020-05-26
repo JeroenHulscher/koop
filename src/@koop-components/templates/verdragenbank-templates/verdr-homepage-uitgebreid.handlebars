@@ -23,30 +23,28 @@
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Totstandkoming {{render "@tooltip"}}</legend>
+                  <legend>Totstandkoming {{render "@tooltip" tt1Context merge=true}}</legend>
                   <div class="form__row">
-                    <label>Startdatum</label>
-                    {{render "@datepicker" }}
+                    {{render "@datepicker" startDatepicker }}
                     <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
-                    <label>Einddatum</label>
-                    {{render "@datepicker" }}
+                    {{render "@datepicker" endDatepicker }}
                     <a href="#" class="reset"><small>Herstel</small></a>
                   </div>
                   <div class="form__row">
                     <label>Plaats</label>
-                    {{render "@input-text" }}
+                    {{render "@input-text" inputPlaats }}
                   </div>
                   <div class="form__row">
                     <div class="columns">
                       <div class="column">
                         <label>Huisnummer</label>
-                        {{render "@input-text" }}
+                        {{render "@input-text" inputHuisnummer }}
                       </div>
                       <div class="column">
                         <label>Toevoeging</label>
-                        {{render "@input-text" }}
+                        {{render "@input-text" inputToevoeging }}
                       </div>
                     </div>
                   </div>
@@ -54,19 +52,21 @@
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Onderwerp {{render "@tooltip"}}</legend>
+                  <legend>Onderwerp {{render "@tooltip" tt2Context merge=true}}</legend>
                   {{render "@subselection" subselectionOnderwerpContext }}
+                </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nu geldend voor {{render "@tooltip"}}</legend>
+                  <legend>Nu geldend voor {{render "@tooltip" tt3Context merge=true}}</legend>
                   {{render "@input-checkbox" geldvoorContext }}
+                </fieldset>
               </div>
             </div>
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Tractatenblad/Staatsblad {{render "@tooltip"}}</legend>
+                  <legend>Tractatenblad/Staatsblad {{render "@tooltip" tt4Context merge=true}}</legend>
                   <div class="form__row">
                     <label>Jaar</label>
                     <input type="number" class="input-text" placeholder="Bijv. 2018"/>
@@ -80,19 +80,19 @@
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Type verdrag {{render "@tooltip"}}</legend>
+                  <legend>Type verdrag {{render "@tooltip" tt5Context merge=true}}</legend>
                   {{render "@input-checkbox" typeverdagContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nederland depositaris {{render "@tooltip"}}</legend>
+                  <legend>Nederland depositaris {{render "@tooltip" tt6Context merge=true}}</legend>
                   {{render "@input-checkbox" depositarisContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Partij {{render "@tooltip"}}</legend>
+                  <legend>Partij {{render "@tooltip" tt7Context merge=true}}</legend>
                   {{render "@subselection" subselectionContext }}
                 </fieldset>
               </div>

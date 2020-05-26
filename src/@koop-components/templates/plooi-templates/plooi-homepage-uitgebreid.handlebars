@@ -38,20 +38,18 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
+                  <legend>Datum beschikbaar {{render "@tooltip" tt4Context merge=true }}</legend>
                   <div class="form__row form__row--medium">
                     {{render "@input-radio" onderwerpContext }}
                   </div>
                   <div class="form__row">
-                    <label>Startdatum</label>
-                    {{render "@datepicker" }}
+                    {{render "@datepicker" startDatepicker }}
                     <a href="#" class="reset">
                       <small>Herstel</small>
                     </a>
                   </div>
                   <div class="form__row">
-                    <label>Einddatum</label>
-                    {{render "@datepicker" }}
+                    {{render "@datepicker" endDatepicker }}
                     <a href="#" class="reset">
                       <small>Herstel</small>
                     </a>
@@ -63,7 +61,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Informatiesoort {{render "@tooltip"}}
+                  <legend>Informatiesoort {{render "@tooltip" tt1Context merge=true }}
                   </legend>
                   {{render "@subselection" subselectionInfoContext }}
                 </fieldset>
@@ -71,7 +69,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Thema {{render "@tooltip"}}
+                  <legend>Thema {{render "@tooltip" tt2Context merge=true }}
                   </legend>
                   {{render "@subselection" subselectionThemaContext }}
                 </fieldset>
@@ -79,7 +77,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Organisatie {{render "@tooltip"}}
+                  <legend>Organisatie {{render "@tooltip" tt3Context merge=true }}
                   </legend>
                   {{render "@subselection" subselectionContext }}
                 </fieldset>
@@ -100,7 +98,7 @@
     {{/@jumbotron}}
 
     </div>
-  </div>
+
 
 
 

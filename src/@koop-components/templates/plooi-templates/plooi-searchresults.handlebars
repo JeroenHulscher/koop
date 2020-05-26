@@ -64,7 +64,7 @@
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Informatiesoort {{render "@tooltip"}}
+              <legend>Informatiesoort {{render "@tooltip" tt1Context marge=true }}
               </legend>
               {{render "@subselection" subselectionInfoContext }}
             </fieldset>
@@ -72,7 +72,7 @@
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Thema {{render "@tooltip"}}
+              <legend>Thema {{render "@tooltip" tt2Context marge=true}}
               </legend>
                {{render "@subselection" subselectionThemaContext }}
             </fieldset>
@@ -81,7 +81,7 @@
           <div class="form__row form__row--large">
             <fieldset>
               <legend>Organisatie
-              {{render "@tooltip"}}
+              {{render "@tooltip" tt3Context marge=true}}
               </legend>
               {{render "@subselection" subselectionContext }}
             </fieldset>
@@ -89,20 +89,18 @@
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
+              <legend>Datum beschikbaar {{render "@tooltip" tt4Context marge=true}}</legend>
               <div class="form__row form__row--medium">
                 {{render "@input-radio" onderwerpContext }}
               </div>
               <div class="form__row form__row--medium">
-                <label>Startdatum</label>
-                {{render "@datepicker" }}
+                {{render "@datepicker" startDatepicker }}
                 <a href="#" class="reset">
                   <small>Herstel</small>
                 </a>
               </div>
               <div class="form__row form__row--medium">
-                <label>Einddatum</label>
-                {{render "@datepicker" }}
+                {{render "@datepicker" endDatepicker }}
                 <a href="#" class="reset">
                   <small>Herstel</small>
                 </a>
