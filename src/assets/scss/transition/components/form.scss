@@ -135,11 +135,45 @@ input[type=text].datepicker__input~.ui-datepicker-trigger {
         margin: 0;
       }
     }
+
+    &--submit {
+      .column {
+        margin-bottom: 1em;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-bottom: 0;
+        }
+      }
+      .align-right {
+        text-align: left;
+        @media ( min-width: $breakpointDesktop ) {
+          text-align: right;
+        }
+      }
+
+    }
   }
 
   &__label {
     display: inline-block;
+    line-height: 1em;
+
+    .mandatory {
+      position: absolute;
+      top: .125em;
+      right: 0;
+      font-size: 0.9em;
+      font-weight: normal;
+    }
   }
+
+  &__label ~ .mandatory {
+    position: absolute;
+    top: .125em;
+    right: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
 }
 
 /* refactor asap */
