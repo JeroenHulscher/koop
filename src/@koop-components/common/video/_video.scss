@@ -46,9 +46,7 @@
         cursor: pointer;
         background-color: darken($darkBlue, 5);
       }
-      &:active {
-        scale: 0.95;
-      }
+      &:active {}
 
       &:focus {
         animation: 0;
