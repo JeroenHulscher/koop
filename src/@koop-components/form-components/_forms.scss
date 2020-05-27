@@ -137,6 +137,13 @@ fieldset {
       position: absolute;
       right: 0;
       top: 0;
+      small {
+        font-size: 0.9em;
+      }
+    }
+
+    &--slim {
+      margin-bottom: .5em;
     }
 
     &--medium {
@@ -150,6 +157,7 @@ fieldset {
     &--xlarge {
       margin-bottom: 3em;
     }
+
   }
 
   &--intro {
@@ -165,6 +173,10 @@ fieldset {
     &--medium,
     &--accent {
       font-weight: bold;
+    }
+
+    &--secondary {
+      font-style: italic;
     }
 
     & ~ .input-radio,

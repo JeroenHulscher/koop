@@ -127,6 +127,21 @@ input[type=text].datepicker__input~.ui-datepicker-trigger {
   padding: 4em .5em .5em .5em;
 }
 
+.form {
+
+  &__row {
+    fieldset {
+      .list:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+  }
+}
+
 /* refactor asap */
 .form__row h2.u-nomargin ~ p > a {
   @extend .icon;
