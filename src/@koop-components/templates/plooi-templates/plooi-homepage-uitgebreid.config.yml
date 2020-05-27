@@ -194,6 +194,9 @@ context:
       fieldLabel: Datum
       fieldLabelVisible: true
       labelmodifier: accent
+      hastooltip: true
+      tooltip:
+        id: 12312
       options:
       - id: 102
         value:
