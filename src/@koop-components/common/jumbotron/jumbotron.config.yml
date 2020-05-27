@@ -32,7 +32,7 @@ variants:
       centered: true
       size: medium
       headingcentered: true
-      content: De 'semimedium'-size jumbotron wordt gebruikt bij grotere formulieren in de jumbotron
+      content: De 'medium'-size jumbotron wordt gebruikt bij grotere formulieren in de jumbotron
   - name: Slim
     label: Slim
     context:
