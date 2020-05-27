@@ -84,16 +84,14 @@ context:
     id: 876
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Verfijn uw zoekopdracht
-    button: Zoek
+    placeholder: Zoekwoord of verdragsnummer
+    button: Zoeken
     modifierComponent: input-inputsubmit--s
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
-  inputsearchMobContext:
-    fieldPlaceholder: Verfijn uw zoekopdracht
   sortContext:
     modifier:
     columns: true
@@ -105,15 +103,26 @@ context:
       active: is-active
     - label: Titel
       value: value
-  buttonswitchContext:
-    text: banner
-    buttons:
-      - label: Kaart
-        active: true
-        icon: marker
-      - label: Lijst
-        active: false
-        icon: hamburger
+  geldvoorContext:
+      options:
+      - id: checkbox-40
+        text: Nederland (in Europa)
+        name: onderwerp
+      - id: checkbox-41
+        text: Nederland (Bonaire)
+        name: onderwerp
+      - id: checkbox-422
+        text: Nederland (Sint Eustatius)
+        name: onderwerp
+      - id: checkbox-4223
+        text: Aruba
+        name: onderwerp
+      - id: checkbox-4224
+        text: Curacao
+        name: onderwerp
+      - id: checkbox-4225
+        text: Sint Maarten
+        name: onderwerp
   selectedfilterContext:
     items:
       - label: Bouwvergunning
@@ -216,27 +225,44 @@ context:
   startDatepicker:
     id: 234
     haslabel: true
-    label: Startdatum
-    fieldPlaceholder: Bijv. 01-01-2020
+    labelmodifier: secondary
+    label: Vanaf
+    fieldPlaceholder: DD-MM-JJJJ
   endDatepicker:
     id: 345
     haslabel: true
-    label: Einddatum
-    fieldPlaceholder: Bijv. 01-01-2020
+    labelmodifier: secondary
+    label: Tot en met
+    fieldPlaceholder: DD-MM-JJJJ
   inputPlaats:
     id: 98765
-    fieldPlaceholder: 'Bijv: XXX'
+    fieldPlaceholder: 'Plaats totstandkoming'
     fieldLabelVisible: true
     fieldLabel: Plaats
+    labelmodifier: accent
   inputHuisnummer:
-    id: 98766
-    fieldPlaceholder: 'Bijv: XXX'
+    id: 987669
+    fieldPlaceholder: 'JJJJ'
     fieldLabelVisible: true
     fieldLabel: Huisnummer
   inputToevoeging:
-    id: 98767
-    fieldPlaceholder: 'Bijv: XXX'
+    id: 9876777
+    fieldPlaceholder: '000'
     fieldLabelVisible: true
     fieldLabel: Toevoeging
+  inputJaargang:
+    id: 987653
+    type: number
+    fieldPlaceholder: JJJJ
+    fieldLabelVisible: true
+    fieldLabel: Jaargang
+    labelmodifier: accent
+  inputNummer:
+    id: 987651212
+    type: number
+    fieldPlaceholder: '000'
+    fieldLabelVisible: true
+    fieldLabel: Nummer
+    labelmodifier: accent
 
 

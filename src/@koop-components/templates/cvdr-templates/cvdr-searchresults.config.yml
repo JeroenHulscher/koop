@@ -8,7 +8,9 @@ context:
   vanDatepicker:
     id: 786
     haslabel: true
-    label: Van
+    label: Regeling is in werking op
+    labelmodifier: accent
+    fieldPlaceholder: DD-MM-JJJJ
   totDatepicker:
     id: 7836
     haslabel: true
@@ -18,21 +20,25 @@ context:
     fieldLabelVisible: true
     fieldPlaceholder: Bijv. 1234 AB
     fieldLabel: Postcode
+    labelmodifier: accent
   wordintitelInput:
-    id: 543
+    id: 765
     fieldLabelVisible: true
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Zoekwoord in titel
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: In titel
+    labelmodifier: accent
   wordintextInput:
-    id: 432
+    id: 654
     fieldLabelVisible: true
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Woord in tekst
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: In tekst
+    labelmodifier: accent
   wetgegevensInput:
-    id: 321
+    id: 498
     fieldLabelVisible: true
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Wetstechnische gegevens
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: Wettechnische gegevens
+    labelmodifier: accent
   subselectionGemContext:
     linkText: Selecteer gemeenten
     id: 20
@@ -226,8 +232,8 @@ context:
     id: 5
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Verfijn uw zoekopdracht
-    button: Zoek
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
     modifierComponent: input-inputsubmit--s
   resultsContext:
     modifier: result--list--wide

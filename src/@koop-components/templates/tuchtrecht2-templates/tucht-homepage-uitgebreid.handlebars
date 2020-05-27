@@ -50,7 +50,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Zoek op</legend>
+                  <legend>Nummer</legend>
                   <div class="form__row">
                     {{ render "@input-text" ecliInput }}
                   </div>
@@ -59,40 +59,32 @@
                   </div>
                 </fieldset>
                 <fieldset>
-                  <legend>Zoek op datum</legend>
+                  <legend>Datum</legend>
                   <div class="form__row">
-                     {{ render "@input-group" datumvanContext merge=true }}
+                     {{ render "@input-group" datumvanContext }}
                   </div>
                   <div class="form__row">
-                    <h3 class="form__label">Periode</h3>
-                    <div class="columns" data-decorator="init-form-conditionals">
-                      <div class="column column-d-5">
-                        <div id="citem-1" class="js-form-conditionals__citem">
-                          <div class="form__row">
-                            {{ render "@select-custom" selectCustomContext }}
-                          </div>
+                    <div data-decorator="init-form-conditionals">
+                      <div id="citem-1" class="js-form-conditionals__citem">
+                        <div class="form__row">
+                          {{ render "@select-custom" selectCustomContext }}
                         </div>
                       </div>
-                      <div class="column column-d-7">
-                        <div id="citem-2" class="js-form-conditionals__citem">
-                          {{ render "@datepicker" opDatepicker merge=true }}
-                        </div>
-                        <div id="citem-3" class="js-form-conditionals__citem">
-                          {{ render "@datepicker" totDatepicker }}
-                        </div>
-                        <div id="citem-4" class="js-form-conditionals__citem">
-                          <div class="form__row">
-                            <label for="" class="visually-hidden">Startdatum</label>
-                            {{ render "@datepicker" vanDatepicker }}
+                      <div id="citem-2" class="js-form-conditionals__citem">
+                        <div class="columns">
+                          <div class="column">
+                            {{render "@datepicker" startDatepicker }}
                           </div>
-                          <div class="form__row">
-                            <label for="">en einddatum:</label>
-                            {{ render "@datepicker" totDatepicker }}
+                          <div class="column">
+                            {{render "@datepicker" endDatepicker }}
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <a href="#" class="reset">
+                    <small>Herstellen</small>
+                  </a>
                 </fieldset>
               </div>
             </div>
@@ -100,10 +92,10 @@
           </div>
           <div class="columns columns--vcenter">
             <div class="column">
-              <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
+              <a href="#" class="icon icon--refresh">Herstel alle filters</a>
             </div>
             <div class="column align-right">
-              <button type="submit" class="button button--primary">Zoeken</button>
+              <button type="submit" class="button button--primary">Zoek uitspraken</button>
             </div>
           </div>
 

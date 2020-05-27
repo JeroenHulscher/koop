@@ -64,7 +64,7 @@ context:
     label: Verfijn uw zoekopdracht
     showLabel: false
     placeholder: Verfijn uw zoekopdracht
-    button: Zoek
+    button: Zoeken
     modifierComponent: input-inputsubmit--s
   digitaalaanvragenContext:
     options:

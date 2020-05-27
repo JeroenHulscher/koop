@@ -133,34 +133,14 @@ context:
         id: 6443
         title: Instantie 3
         short: Instantie 3
-  selectCustomContext:
-    id: 8399
-    options:
-    - id: 1
-      value: 0
-      label: Alle
-      linkedto: 1
-    - id: 1
-      value: 10
-      label: Op
-      linkedto: 2
-      selected: selected
-    - id: 2
-      value: 20
-      label: Tot
-      linkedto: 3
-    - id: 3
-      value: 30
-      label: Tussen
-      linkedto: 4
   datumvanContext:
-    label: Datum van
     radio: true
     id: 7654
     options:
     - id: checkbox-40123123123125
       text: Uitspraak
       name: onderwerp455
+      checked: checked
     - id: checkbox-40232321313215
       text: Publicatie
       name: onderwerp455
@@ -315,12 +295,14 @@ context:
     id: 546
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Woord(en) of zinsdeel
-    button: Zoek
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
     modifierComponent: input-inputsubmit--s
   zoekeninContext:
     label: Zoekwoord(en) in
     radio: true
+    size: large
+    labelsize: accent
     flex: true
     options:
     - id: checkbox-4012312312312
@@ -354,12 +336,62 @@ context:
     id: 431
     fieldLabel: Zoeknummer
     fieldLabelVisible: true
-    fieldPlaceholder: Bijv. XXXX
+    fieldPlaceholder: 2014/346
+    labelmodifier: accent
+    hastooltip: true
+    tooltipContext:
+      id: 1002
   ecliInput:
     id: 4221
-    fieldLabel: ECLI
+    fieldLabel: European Case Law Identifier
     fieldLabelVisible: true
-    fieldPlaceholder: Bijv. XXXX
+    fieldPlaceholder: ECLI:NL:TGZRAMS:2015:60
+    labelmodifier: accent
+    hastooltip: true
+    tooltipContext:
+      id: 1001
+  startDatepicker:
+    id: 234
+    haslabel: true
+    label: Vanaf
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  endDatepicker:
+    id: 345
+    haslabel: true
+    label: Tot en met
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  selectCustomContext:
+    id: 1
+    fieldLabel: Periode
+    fieldLabelVisible: true
+    labelmodifier: accent
+    hastooltip: true
+    tooltipContext:
+      id: 1003
+    options:
+    - id: 102
+      value:
+      label: Alle
+      linkedto: 1
+    - id: 1
+      value: 10
+      label: Vandaag
+      linkedto: 1
+    - id: 2
+      value: 20
+      label: Afgelopen week
+      linkedto: 1
+    - id: 3
+      value: 30
+      label: Afgelopen 3 maanden
+      linkedto: 1
+    - id: 4
+      value: 30
+      label: Zelf een periode kiezen
+      linkedto: 2
+      selected: selected
 
 
 

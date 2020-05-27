@@ -7,22 +7,19 @@ context:
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is
+    heading: Verdragen van het Koninkrijk der Nederlanden
     subheading: Verdragenbank
-    intro: Intro.
+    intro: In de Verdragenbank zoekt u naar gegevens van verdragen waarbij het Koninkrijk der Nederlanden deelgenoot is.
     centered: true
     headingcentered: true
-    inputsubmitContext:
-      button: Zoek verdagen
-      placeholder: Vul hier uw zoekwoord(en) in
     inputSearchContext:
       modifier: input-text--searchmedium
       id: 1
-      fieldLabel: Zoekwoord
-      fieldLabelVisible: false
+      fieldLabel: Zoek in de Verdragenbank
+      fieldLabelVisible: true
       fieldInstruction:
-      fieldPlaceholder: Vul hier uw zoekwoord(en) in
-      remove: true
+      fieldPlaceholder: Zoekwoord of verdragsnummer
+      labelmodifier: accent
   doubleline1Context:
     text: Overzicht verdragen in voorbereiding
     text2: officielebekendmakingen.nl

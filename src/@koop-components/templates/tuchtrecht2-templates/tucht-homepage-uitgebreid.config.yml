@@ -7,28 +7,36 @@ context:
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Collectie
+    heading: Uitspraken in het Nederlandse Tuchtrecht
     hstyle: h2
     subheading: Tuchtrecht
-    intro: Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
+    intro: In tuchtrecht zoekt u naar uitspraken die betrekking hebben op een aanklacht richting de uitvoering of uitvoerder van een vrije beroep of producent.
     centered: true
     size: medium
     inputZoekwoord:
-      fieldPlaceholder: Woord(en) of zinsdeel
-      fieldLabel: Zoekwoord(en)
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar uitspraken
       fieldLabelVisible: true
-      labelmodifier: medium
+      labelmodifier: accent
       modifier: input-text--searchmedium
     zoeknummerInput:
       id: 431
       fieldLabel: Zoeknummer
       fieldLabelVisible: true
-      fieldPlaceholder: Bijv. XXXX
+      fieldPlaceholder: 2014/346
+      labelmodifier: accent
+      hastooltip: true
+      tooltipContext:
+        id: 1002
     ecliInput:
       id: 4221
-      fieldLabel: ECLI
+      fieldLabel: European Case Law Identifier
       fieldLabelVisible: true
-      fieldPlaceholder: Bijv. XXXX
+      fieldPlaceholder: ECLI:NL:TGZRAMS:2015:60
+      labelmodifier: accent
+      hastooltip: true
+      tooltipContext:
+        id: 1001
     vrijeberoepenContext:
       moreless: true
       searchFilter: true
@@ -77,7 +85,7 @@ context:
         text: Inhoudsindicatie
         name: onderwerp3
     zoekeninContext:
-      label: zoekwoord(en) in
+      label: Zoekwoord(en) in
       radio: true
       size: large
       labelsize: accent
@@ -90,18 +98,36 @@ context:
         text: Inhoudsindicatie
         name: onderwerp45
     datumvanContext:
-      label: Datum van
       radio: true
       id: 7654
       options:
       - id: checkbox-40123123123125
         text: Uitspraak
         name: onderwerp455
+        checked: checked
       - id: checkbox-40232321313215
         text: Publicatie
         name: onderwerp455
+    startDatepicker:
+      id: 234
+      haslabel: true
+      label: Vanaf
+      labelmodifier: accent
+      fieldPlaceholder: DD-MM-JJJJ
+    endDatepicker:
+      id: 345
+      haslabel: true
+      label: Tot en met
+      labelmodifier: accent
+      fieldPlaceholder: DD-MM-JJJJ
     selectCustomContext:
       id: 1
+      fieldLabel: Periode
+      fieldLabelVisible: true
+      labelmodifier: accent
+      hastooltip: true
+      tooltipContext:
+        id: 1003
       options:
       - id: 102
         value:
@@ -109,16 +135,20 @@ context:
         linkedto: 1
       - id: 1
         value: 10
-        label: Op
-        linkedto: 2
+        label: Vandaag
+        linkedto: 1
       - id: 2
         value: 20
-        label: Tot
-        linkedto: 3
+        label: Afgelopen week
+        linkedto: 1
       - id: 3
         value: 30
-        label: Tussen
-        linkedto: 4
+        label: Afgelopen 3 maanden
+        linkedto: 1
+      - id: 4
+        value: 30
+        label: Zelf een periode kiezen
+        linkedto: 2
         selected: selected
 
 

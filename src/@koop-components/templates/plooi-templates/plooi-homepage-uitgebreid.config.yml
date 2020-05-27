@@ -7,21 +7,26 @@ context:
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden
+    heading: Documenten van Nederlandse overheden actief openbaar
     hstyle: h2
     subheading: Overheidsdocumenten
-    intro: Intro.
+    intro: In overheidsdocumenten zoekt u naar documenten actief openbaar gemaakt door alle Nederlandse bestuursinstanties volgens Wet open overheid.
     size: medium
     centered: true
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
     inputZoekwoord:
-      fieldPlaceholder: Woord(en) of zinsdeel
-      fieldLabel: Zoekwoord(en)
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar documenten
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+    searchcheckbox:
+      options:
+        - id: checkbox-19874
+          text: Zoek alleen in titels
+          name: searchcr
     subselectionOnderwerpContext:
       linkText: Selecteer onderwerp(en)
       id: 23
@@ -167,13 +172,15 @@ context:
     startDatepicker:
       id: 234
       haslabel: true
-      label: Startdatum
-      fieldPlaceholder: Bijv. 01-01-2020
+      label: Vanaf
+      labelmodifier: secondary
+      fieldPlaceholder: DD-MM-JJJJ
     endDatepicker:
       id: 345
       haslabel: true
-      label: Einddatum
-      fieldPlaceholder: Bijv. 01-01-2020
+      label: Tot en met
+      labelmodifier: secondary
+      fieldPlaceholder: DD-MM-JJJJ
     tt1Context:
       id: 112
     tt2Context:
@@ -182,4 +189,31 @@ context:
       id: 114
     tt4Context:
       id: 115
+    selectCustomContext:
+      id: 1
+      fieldLabel: Datum
+      fieldLabelVisible: true
+      labelmodifier: accent
+      options:
+      - id: 102
+        value:
+        label: Alle
+        linkedto: 1
+      - id: 1
+        value: 10
+        label: Vandaag
+        linkedto: 1
+      - id: 2
+        value: 20
+        label: Afgelopen week
+        linkedto: 1
+      - id: 3
+        value: 30
+        label: Afgelopen 3 maanden
+        linkedto: 1
+      - id: 4
+        value: 30
+        label: Zelf een periode kiezen
+        linkedto: 2
+        selected: selected
 

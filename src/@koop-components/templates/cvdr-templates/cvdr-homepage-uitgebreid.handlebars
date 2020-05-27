@@ -39,12 +39,9 @@
               </div>
             </fieldset>
             <fieldset>
-              <legend>Geldigheidsperiode</legend>
+              <legend>Datum geldigheid</legend>
               <div class="form__row">
                 {{ render "@datepicker" vanDatepicker }}
-              </div>
-              <div class="form__row">
-                {{ render "@datepicker" totDatepicker }}
               </div>
             </fieldset>
           </div>
@@ -69,32 +66,16 @@
                   <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
                   {{render "@subselection" subselectionRegContext }}
                 </div>
-                <div class="form__row">
-                  <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
-                  {{render "@subselection" subselectionDeeContext }}
-                </div>
-                <div class="form__row">
-                  <h3 class="form__sublegend">BES eiland</h3>
-                  {{render "@subselection" subselectionBesContext }}
-                </div>
-              </fieldset>
-            </div>
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Onderwerpen</legend>
-                <div class="form__row">
-                  {{render "@subselection" subselectionOndContext }}
-                </div>
               </fieldset>
             </div>
           </div>
         </div>
         <div class="columns columns--vcenter">
           <div class="column">
-            <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
+            <a href="#" class="icon icon--refresh">Herstel alle filters</a>
           </div>
           <div class="column align-right">
-            <button type="submit" class="button button--primary">Zoeken</button>
+            <button type="submit" class="button button--primary">Zoek regelingen</button>
           </div>
         </div>
       </form>

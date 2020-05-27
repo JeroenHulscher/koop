@@ -6,19 +6,19 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
   jumbotronContext:
-    heading: Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden
+    heading: Documenten van Nederlandse overheden actief openbaar
     subheading: Overheidsdocumenten
-    intro: Intro.
+    intro: In overheidsdocumenten zoekt u naar documenten actief openbaar gemaakt door alle Nederlandse bestuursinstanties volgens Wet open overheid.
     centered: true
     headingcentered: true
     inputSearchContext:
+      id: 87656
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar documenten
+      fieldLabelVisible: true
+      name: searchcr
+      labelmodifier: medium
       modifier: input-text--searchmedium
-      id: 1
-      fieldLabel: Postcode
-      fieldLabelVisible: false
-      fieldInstruction:
-      fieldPlaceholder: Verfijn op zoekwoord
-      remove: true
   themaItems:
     - title: Cultuur &amp; Recreatie (2)
       id: 1

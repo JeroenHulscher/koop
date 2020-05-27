@@ -33,7 +33,7 @@
             <h2>Zoekfilter</h2>
             <div class="row">
               <p>
-                <a href="#" class="icon icon--refresh">Alle filters verwijderen</a>
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
               </p>
             </div>
 
@@ -47,11 +47,6 @@
               <div class="form__row form__row--large">
                 <fieldset>
                   <legend>Zoekwoord(en)</legend>
-                  <a href="#" class="reset">
-                    <small>Herstel
-                      <span class="visually-hidden">zoekwoord(en)</span>
-                    </small>
-                  </a>
                   <div class="form__row">
                     {{render "@input-inputsubmit" inputsubmitContext }}
                   </div>
@@ -64,12 +59,7 @@
               <div class="form__row form__row--large">
 
                 <fieldset>
-                  <legend>Domein {{render "@tooltip"}}</legend>
-                  <a href="#" class="reset">
-                    <small>Herstel
-                      <span class="visually-hidden">het domein</span>
-                    </small>
-                  </a>
+                  <legend>Domein</legend>
                   <div class="form__row">
                     {{render "@subselection" subselectionInfoContext }}
                   </div>
@@ -103,12 +93,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Zoek op</legend>
-                  <a href="#" class="reset">
-                    <small>Herstel
-                      <span class="visually-hidden">alle filters van 'ECLI' en 'Zoeknummer'</span>
-                    </small>
-                  </a>
+                  <legend>Nummer</legend>
                   <div class="form__row">
                     {{ render "@input-text" ecliInput }}
                   </div>
@@ -117,49 +102,36 @@
                   </div>
                 </fieldset>
                 <fieldset>
-                  <legend>Zoek op datum</legend>
-                  <a href="#" class="reset">
-                    <small>Herstel
-                      <span class="visually-hidden">alle filters van 'zoek op datum'</span>
-                    </small>
-                  </a>
+                  <legend>Datum</legend>
                   <div class="form__row">
-                    {{ render "@input-group" datumvanContext merge=true }}
+                    {{ render "@input-group" datumvanContext }}
                   </div>
                   <div class="form__row">
-                    <h3 class="form__label">Periode</h3>
                     <div data-decorator="init-form-conditionals">
                       <div id="citem-1" class="js-form-conditionals__citem">
                         <div class="form__row">
                           {{ render "@select-custom" selectCustomContext }}
                         </div>
                       </div>
-
                       <div id="citem-2" class="js-form-conditionals__citem">
-                        {{ render "@datepicker" opDatepicker }}
-                      </div>
-                      <div id="citem-3" class="js-form-conditionals__citem">
-                        {{ render "@datepicker" totDatepicker }}
-                      </div>
-                      <div id="citem-4" class="js-form-conditionals__citem">
                         <div class="form__row">
-                          <label for="" class="visually-hidden">Startdatum</label>
-                          {{ render "@datepicker" vanDatepicker }}
+                          {{render "@datepicker" startDatepicker }}
                         </div>
                         <div class="form__row">
-                          <label for="">en
-                            <span class="visually-hidde">einddatum</span>:</label>
-                          {{ render "@datepicker" totDatepicker }}
+                          {{render "@datepicker" endDatepicker }}
                         </div>
+
                       </div>
                     </div>
                   </div>
+                  <a href="#" class="reset">
+                    <small>Herstellen</small>
+                  </a>
                 </fieldset>
               </div>
 
-
                 <a href="#" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky"
-                  data-config='{"position":"bottom"}'>Opnieuw zoeken</a>
+                  data-config='{"position":"bottom"}'>Zoek opnieuw</a>
             </form>
             </div>
 

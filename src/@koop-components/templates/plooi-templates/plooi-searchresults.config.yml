@@ -5,156 +5,6 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  voorschriftenContext:
-    moreless: true
-    options:
-    - id: checkbox-2042
-      text: Aanwijzingsbesluit
-      name: onderwerp
-    - id: checkbox-2411
-      text: Agenda en notulen
-      name: onderwerp
-    - id: checkbox-2039
-      text: Belastingbesluit
-      name: onderwerp
-    - id: checkbox-2038
-      text: Besluitenlijst
-      name: onderwerp
-    - id: checkbox-2037
-      text: Collectevergunning
-      name: onderwerp
-    - id: checkbox-2036
-      text: Delegatiebesluit
-      name: onderwerp
-    - id: checkbox-2035
-      text: Gemeenschappelijke regelingen
-      name: onderwerp
-    - id: checkbox-2034
-      text: Kansspelvergunning
-      name: onderwerp
-    - id: checkbox-2033
-      text: Loterijvergunning
-      name: onderwerp
-    - id: checkbox-2032
-      text: Milieu-informatie
-      name: onderwerp
-    - id: checkbox-2031
-      text: Milieuverordening
-      name: onderwerp
-    - id: checkbox-2030
-      text: Optochtvergunning
-      name: onderwerp
-    - id: checkbox-2029
-      text: Peilbesluit
-      name: onderwerp
-    - id: checkbox-2027
-      text: Register kinderopvang
-      name: onderwerp
-    - id: checkbox-2026
-      text: Stedelijk waterplan
-      name: onderwerp
-    - id: checkbox-2025
-      text: Streekplan
-      name: onderwerp
-    - id: checkbox-2024
-      text: Stroomgebiedsvisie
-      name: onderwerp
-    - id: checkbox-2023
-      text: Structuurvisie
-      name: onderwerp
-    - id: checkbox-2022
-      text: Vaarvergunning
-      name: onderwerp
-    - id: checkbox-2021
-      text: Ventvergunning
-      name: onderwerp
-    - id: checkbox-2020
-      text: Vervoer gevaarlijke stoffen vergunning
-      name: onderwerp
-    - id: checkbox-2019
-      text: Verordeningen en reglementen
-      name: onderwerp
-    - id: checkbox-2018
-      text: Waterbeheersplan
-  bestemmingContext:
-    moreless: true
-    options:
-    - id: checkbox-2017
-      text: Bestemmingsplan
-      name: onderwerp
-    - id: checkbox-2016
-      text: Voorbereidingsbesluit
-      name: onderwerp
-  voorlichtingContext:
-    moreless: true
-    options:
-    - id: checkbox-2015
-      text: Aankondiging
-      name: onderwerp
-    - id: checkbox-2014
-      text: Huisafval
-      name: onderwerp
-    - id: checkbox-2013
-      text: Inspraak
-      name: onderwerp
-    - id: checkbox-2012
-      text: Mededelingen
-      name: onderwerp
-    - id: checkbox-2011
-      text: Meldingen
-      name: onderwerp
-    - id: checkbox-2010
-      text: Openingstijden
-      name: onderwerp
-    - id: checkbox-209
-      text: Overig
-      name: onderwerp
-    - id: checkbox-208
-      text: Rectificatie
-      name: onderwerp
-    - id: checkbox-207
-      text: Verkiezingen
-      name: onderwerp
-  onderwerpContext:
-    moreless: true
-    options:
-    - id: checkbox-206
-      text: Alle
-      name: onderwerp
-    - id: checkbox-205
-      text: Vandaag
-      name: onderwerp
-    - id: checkbox-204
-      text: Afgelopen week
-      name: onderwerp
-    - id: checkbox-203
-      text: Afgelopen maand
-      name: onderwerp
-    - id: checkbox-202
-      text: Afgelopen 3 maanden
-      name: onderwerp
-    - id: checkbox-201
-      text: Zelf een periode kiezen
-      name: onderwerp
-  publicatiedatumContext:
-    moreless: true
-    options:
-    - id: radio-1
-      text: Vandaag
-      name: publicatie
-    - id: radio-2
-      text: Afgelopen week
-      name: publicatie
-    - id: radio-3
-      text: Afgelopen maand
-      name: publicatie
-    - id: radio-4
-      text: Afgelopen 2 maanden
-      name: publicatie
-      disabled: disabled
-    - id: radio-5
-      text: Zelf een periode kiezen
-      name: publicatie
   gebiedContext:
     moreless: true
     options:
@@ -192,8 +42,8 @@ context:
     id: 1055
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Verfijn uw zoekopdracht
-    button: Zoek
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
     modifierComponent: input-inputsubmit--s
   resultsContext:
     modifier: result--list--wide
@@ -247,7 +97,6 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
@@ -349,13 +198,42 @@ context:
   startDatepicker:
     id: 234
     haslabel: true
-    label: Startdatum
-    fieldPlaceholder: Bijv. 01-01-2020
+    label: Vanaf
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
   endDatepicker:
     id: 345
     haslabel: true
-    label: Einddatum
-    fieldPlaceholder: Bijv. 01-01-2020
+    label: Tot en met
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  selectCustomContext:
+      id: 1
+      fieldLabel: Datum
+      fieldLabelVisible: true
+      labelmodifier: accent
+      options:
+      - id: 102
+        value:
+        label: Alle
+        linkedto: 1
+      - id: 1
+        value: 10
+        label: Vandaag
+        linkedto: 1
+      - id: 2
+        value: 20
+        label: Afgelopen week
+        linkedto: 1
+      - id: 3
+        value: 30
+        label: Afgelopen 3 maanden
+        linkedto: 1
+      - id: 4
+        value: 30
+        label: Zelf een periode kiezen
+        linkedto: 2
+        selected: selected
 
 
 

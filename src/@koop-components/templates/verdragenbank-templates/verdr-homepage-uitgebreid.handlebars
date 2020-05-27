@@ -23,42 +23,27 @@
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Totstandkoming {{render "@tooltip" tt1Context merge=true}}</legend>
+                  <legend>Totstandkoming</legend>
                   <div class="form__row">
-                    {{render "@datepicker" startDatepicker }}
-                    <a href="#" class="reset"><small>Herstel</small></a>
-                  </div>
-                  <div class="form__row">
-                    {{render "@datepicker" endDatepicker }}
-                    <a href="#" class="reset"><small>Herstel</small></a>
-                  </div>
-                  <div class="form__row">
-                    <label>Plaats</label>
-                    {{render "@input-text" inputPlaats }}
-                  </div>
-                  <div class="form__row">
+                    <p class="form__sublegend">Datum</p>
                     <div class="columns">
                       <div class="column">
-                        <label>Huisnummer</label>
-                        {{render "@input-text" inputHuisnummer }}
+                        {{render "@datepicker" startDatepicker }}
                       </div>
                       <div class="column">
-                        <label>Toevoeging</label>
-                        {{render "@input-text" inputToevoeging }}
+                        {{render "@datepicker" endDatepicker }}
                       </div>
                     </div>
+                    <a href="#" class="reset"><small>Herstellen</small></a>
+                  </div>
+                  <div class="form__row">
+                    {{render "@input-text" inputPlaats }}
                   </div>
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Onderwerp {{render "@tooltip" tt2Context merge=true}}</legend>
-                  {{render "@subselection" subselectionOnderwerpContext }}
-                </fieldset>
-              </div>
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Nu geldend voor {{render "@tooltip" tt3Context merge=true}}</legend>
+                  <legend>Nu geldend voor</legend>
                   {{render "@input-checkbox" geldvoorContext }}
                 </fieldset>
               </div>
@@ -66,44 +51,47 @@
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Tractatenblad/Staatsblad {{render "@tooltip" tt4Context merge=true}}</legend>
+                  <legend>Tractatenblad of staatsblad</legend>
                   <div class="form__row">
-                    <label>Jaar</label>
-                    <input type="number" class="input-text" placeholder="Bijv. 2018"/>
+                    {{render "@input-text" inputJaargang }}
                   </div>
                   <div class="form__row">
-                    <label>Nummer</label>
-                    <input type="number" class="input-text" placeholder="Bijv. 2018" />
+                    {{render "@input-text" inputNummer }}
                   </div>
-
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Type verdrag {{render "@tooltip" tt5Context merge=true}}</legend>
+                  <legend>Type verdrag</legend>
                   {{render "@input-checkbox" typeverdagContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nederland depositaris {{render "@tooltip" tt6Context merge=true}}</legend>
+                  <legend>Nederland depositair</legend>
                   {{render "@input-checkbox" depositarisContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Partij {{render "@tooltip" tt7Context merge=true}}</legend>
+                  <legend>Partijen</legend>
                   {{render "@subselection" subselectionContext }}
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Onderwerpen</legend>
+                  {{render "@subselection" subselectionOnderwerpContext }}
                 </fieldset>
               </div>
             </div>
           </div>
           <div class="columns columns--vcenter">
             <div class="column">
-              <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
+              <a href="#" class="icon icon--refresh">Herstel alle filters</a>
             </div>
             <div class="column align-right">
-              <button type="submit" class="button button--primary">Zoeken</button>
+              <button type="submit" class="button button--primary">Zoek verdragen</button>
             </div>
           </div>
 
@@ -134,6 +122,7 @@
             <div class="form__row">
               {{ render "@input-inputsubmit" }}
             </div>
+            {{ render "@collapsible" newslCollap }}
             {{ render "@input-checkbox" newsletterCheckbox }}
           </fieldset>
         </form>

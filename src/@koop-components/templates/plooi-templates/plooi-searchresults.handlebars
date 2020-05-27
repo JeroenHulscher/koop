@@ -34,7 +34,7 @@
 
             <div class="row">
               <p>
-                <a href="#" class="icon icon--refresh">Alle filters verwijderen</a>
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
               </p>
             </div>
 
@@ -53,7 +53,7 @@
             </div>
           </div>
 
-          <form id="formid" data-decorator="init-form-validation">
+          <form id="formid">
 
             <div class="form__row form__row--large">
               <fieldset>
@@ -62,57 +62,54 @@
               </fieldset>
             </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Informatiesoort {{render "@tooltip" tt1Context marge=true }}
-              </legend>
-              {{render "@subselection" subselectionInfoContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Thema {{render "@tooltip" tt2Context marge=true}}
-              </legend>
-               {{render "@subselection" subselectionThemaContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Organisatie
-              {{render "@tooltip" tt3Context marge=true}}
-              </legend>
-              {{render "@subselection" subselectionContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Datum beschikbaar {{render "@tooltip" tt4Context marge=true}}</legend>
-              <div class="form__row form__row--medium">
-                {{render "@input-radio" onderwerpContext }}
-              </div>
-              <div class="form__row form__row--medium">
-                {{render "@datepicker" startDatepicker }}
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Datum van publicatie</legend>
+                <div data-decorator="init-form-conditionals">
+                  <div id="citem-1" class="js-form-conditionals__citem">
+                    <div class="form__row">
+                      {{ render "@select-custom" selectCustomContext }}
+                    </div>
+                  </div>
+                  <div id="citem-2" class="js-form-conditionals__citem">
+                    <div class="form__row">
+                      {{render "@datepicker" startDatepicker }}
+                    </div>
+                    <div class="form__row">
+                      {{render "@datepicker" endDatepicker }}
+                    </div>
+                  </div>
+                </div>
                 <a href="#" class="reset">
-                  <small>Herstel</small>
+                  <small>Herstellen</small>
                 </a>
-              </div>
-              <div class="form__row form__row--medium">
-                {{render "@datepicker" endDatepicker }}
-                <a href="#" class="reset">
-                  <small>Herstel</small>
-                </a>
-              </div>
-            </fieldset>
-          </div>
+              </fieldset>
+            </div>
 
-          <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Informatiesoort</legend>
+                {{render "@subselection" subselectionInfoContext }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Thema</legend>
+                {{render "@subselection" subselectionThemaContext }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Organisatie</legend>
+                {{render "@subselection" subselectionContext }}
+              </fieldset>
+            </div>
+
+            <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Zoek opnieuw</button>
 
           </form>
-
-
 
         <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
           <span class="visually-hidden">Sluiten</span>

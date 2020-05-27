@@ -7,21 +7,18 @@ context:
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is
+    heading: Verdragen van het Koninkrijk der Nederlanden
     hstyle: h2
     subheading: Verdragenbank
-    intro: Intro.
+    intro: In de Verdragenbank zoekt u naar gegevens van verdragen waarbij het Koninkrijk der Nederlanden deelgenoot is.
     centered: true
     size: medium
-    inputsubmitContext:
-      button: Zoek verdagen
-      placeholder: Vul hier uw zoekwoord(en) in
     inputZoekwoord:
-      fieldPlaceholder: Woord(en) of zinsdeel
-      fieldLabel: Zoekwoord(en)
+      modifier: input-text--searchmedium
+      fieldPlaceholder: Zoekwoord of verdragsnummer
+      fieldLabel: Zoek in de Verdragenbank
       fieldLabelVisible: true
       labelmodifier: medium
-      modifier: input-text--searchmedium
     typeverdagContext:
       moreless: true
       options:
@@ -126,27 +123,41 @@ context:
     startDatepicker:
       id: 234
       haslabel: true
-      label: Startdatum
-      fieldPlaceholder: Bijv. 01-01-2020
+      labelmodifier: secondary
+      label: Vanaf
+      fieldPlaceholder: DD-MM-JJJJ
     endDatepicker:
       id: 345
       haslabel: true
-      label: Einddatum
-      fieldPlaceholder: Bijv. 01-01-2020
+      labelmodifier: secondary
+      label: Tot en met
+      fieldPlaceholder: DD-MM-JJJJ
     inputPlaats:
       id: 98765
-      fieldPlaceholder: 'Bijv: XXX'
+      fieldPlaceholder: Plaats totstandkoming
       fieldLabelVisible: true
       fieldLabel: Plaats
-    inputHuisnummer:
-      id: 98766
-      fieldPlaceholder: 'Bijv: XXX'
+      labelmodifier: accent
+    inputJaargang:
+      id: 987656
+      type: number
+      fieldPlaceholder: JJJJ
       fieldLabelVisible: true
-      fieldLabel: Huisnummer
-    inputToevoeging:
-      id: 98767
-      fieldPlaceholder: 'Bijv: XXX'
+      fieldLabel: Jaargang
+      labelmodifier: accent
+    inputNummer:
+      id: 987657
+      type: number
+      fieldPlaceholder: '000'
       fieldLabelVisible: true
-      fieldLabel: Toevoeging
-
-
+      fieldLabel: Nummer
+      labelmodifier: accent
+  newsletterCheckbox:
+    options:
+    - id: checkbox-112312312
+      text: Ik begrijp dat ...
+      name: agreement
+  newslCollap:
+    heading: Lees meer over uw privacy
+    id: 11231231
+    text: Meer informatie over privacy en andere zaken

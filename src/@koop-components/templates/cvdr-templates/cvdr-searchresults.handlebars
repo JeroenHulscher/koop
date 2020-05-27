@@ -33,7 +33,7 @@
           <div class="row--spacer">
             <h2>Zoekfilter</h2>
             <div class="row">
-              <p><a href="#" class="icon icon--refresh">Alle filters verwijderen</a></p>
+              <p><a href="#" class="icon icon--refresh">Herstel alle filters</a></p>
             </div>
 
 
@@ -50,13 +50,13 @@
                 {{render "@input-inputsubmit" inputsubmitContext }}
               </fieldset>
             </div>
-
+            <div class="form__row form__row--large">
               <fieldset>
                 <legend>Locatie</legend>
-                <div class="form__row">
-                  {{ render "@input-text" postcodeInput }}
-                </div>
+                {{ render "@input-text" postcodeInput }}
               </fieldset>
+            </div>
+            <div class="form__row form__row--large">
               <fieldset>
                 <legend>Woord of zinsdeel</legend>
                 <div class="form__row">
@@ -69,55 +69,38 @@
                   {{ render "@input-text" wetgegevensInput }}
                 </div>
               </fieldset>
+            </div>
+            <div class="form__row form__row--large">
               <fieldset>
-                <legend>Geldigheidsperiode</legend>
+                <legend>Datum geldigheid</legend>
                 <div class="form__row">
                   {{ render "@datepicker" vanDatepicker }}
                 </div>
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Organisaties</legend>
                 <div class="form__row">
-                  {{ render "@datepicker" totDatepicker }}
+                  <h3 class="form__sublegend">Gemeenten</h3>
+                  {{render "@subselection" subselectionGemContext }}
+                </div>
+                <div class="form__row">
+                  <h3 class="form__sublegend">Provincies</h3>
+                  {{render "@subselection" subselectionProContext }}
+                </div>
+                <div class="form__row">
+                  <h3 class="form__sublegend">Waterschappen</h3>
+                  {{render "@subselection" subselectionWatContext }}
+                </div>
+                <div class="form__row">
+                  <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
+                  {{render "@subselection" subselectionRegContext }}
                 </div>
               </fieldset>
+            </div>
 
-              {{!-- <div class="form__row form__row--large"> --}}
-                <fieldset>
-                  <legend>Organisaties</legend>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Gemeenten</h3>
-                    {{render "@subselection" subselectionGemContext }}
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Provincies</h3>
-                    {{render "@subselection" subselectionProContext }}
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Waterschappen</h3>
-                    {{render "@subselection" subselectionWatContext }}
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
-                    {{render "@subselection" subselectionRegContext }}
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
-                    {{render "@subselection" subselectionDeeContext }}
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__sublegend">BES eiland</h3>
-                    {{render "@subselection" subselectionBesContext }}
-                  </div>
-                </fieldset>
-              {{!-- </div> --}}
-              {{!-- <div class="form__row form__row--large"> --}}
-                <fieldset>
-                  <legend>Onderwerpen</legend>
-                  <div class="form__row">
-                    {{render "@subselection" subselectionOndContext }}
-                  </div>
-                </fieldset>
-              {{!-- </div> --}}
-
-            <button class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+            <button class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Zoek opnieuw</button>
           </form>
         </div>
 
