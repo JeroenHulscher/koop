@@ -38,8 +38,18 @@
             </div>
 
             <div class="form__row form__row--large">
-              <h3 class="h4">Geselecteerde filters (2)</h3>
-              {{render "@form-selectedfilter" selectedfilterContext }}
+              <h4>Geselecteerde filters (7)</h4>
+              <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+                <ul class="list list--unstyled">
+                  <li><div class="form__selectedfilter">Waarde 1<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                  <li><div class="form__selectedfilter">Waarde 2<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                  <li><div class="form__selectedfilter">Waarde 3<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                  <li><div class="form__selectedfilter">Waarde 4<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                  <li><div class="form__selectedfilter">Waarde 5<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                  <li><div class="form__selectedfilter">Waarde 6<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                  <li><div class="form__selectedfilter">Waarde 7<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                </ul>
+              </div>
             </div>
 
             <form id="formid">

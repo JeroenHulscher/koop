@@ -21,12 +21,6 @@
         <button class="button block-element button--primary button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
           data-modal="modal-filter">Filter opties</button>
       </div>
-      <div class="row hidden-desktop">
-        {{ render "@sort" sortContext }}
-        <div class="align-right">
-          <a href="#" class="icon icon--download">Download</a>
-        </div>
-      </div>
 
       {{render "@resultlist" resultsContext }}
 
@@ -47,15 +41,22 @@
             </div>
 
             <div class="form__row form__row--large">
-              <h3 class="h4">Geselecteerde filters (2)</h3>
-              {{render "@form-selectedfilter" selectedfilterContext }}
-
+            <h4>Geselecteerde filters (7)</h4>
+            <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+              <ul class="list list--unstyled">
+                <li><div class="form__selectedfilter">Waarde 1<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 2<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 3<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 4<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 5<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 6<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+                <li><div class="form__selectedfilter">Waarde 7<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
+              </ul>
             </div>
-            <form id="formid">
-            {{!-- <div class="form__row form__row--large hidden-desktop">
-              <label for="">Filter op trefwoord</label>
-              {{ render "@input-text" inputsearchMobContext }}
-            </div> --}}
+          </div>
+
+          <form id="formid">
+
             <div class="form__row form__row--large">
               <fieldset>
                 <legend>Zoekwoord(en)</legend>
