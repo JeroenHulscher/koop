@@ -45,7 +45,7 @@ context:
       text: Fout in deze regeling
       icon: icon-alert-blue.svg
     - link: '#'
-      text: Download
+      text: Downloaden
       icon: icon-download.svg
     - link: '#'
       text: Printen

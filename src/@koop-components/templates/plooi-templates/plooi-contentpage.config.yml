@@ -61,7 +61,7 @@ context:
   pageactions:
     items:
     - link: '#'
-      text: Download
+      text: Downloaden
       icon: icon-download.svg
     - link: '#'
       text: Printen
