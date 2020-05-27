@@ -43,7 +43,7 @@ context:
       modal: true
     - link: '#'
       text: Fout in deze regeling
-      icon: icon-info-blue.svg
+      icon: icon-alert-blue.svg
     - link: '#'
       text: Download
       icon: icon-download.svg
