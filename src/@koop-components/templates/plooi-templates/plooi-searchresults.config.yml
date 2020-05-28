@@ -69,26 +69,48 @@ context:
           txt: (gepubliceerd op 06-07-2016 | PDF)
         - link: Rijksoverheid.nl
           txt: (gepubliceerd op 07-07-2016 | XML)
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
       titleHeader: h2
       label: Nieuw vandaag
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
       buttons:
         - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
           type: secendary
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
       titleHeader: h2
       label: Nieuw vandaag
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
       buttons:
         - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
           type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1
