@@ -1,6 +1,6 @@
 ---
 label: Verdr. - Homepage uitgebreid
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg

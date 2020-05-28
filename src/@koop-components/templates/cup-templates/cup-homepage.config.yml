@@ -1,6 +1,6 @@
 ---
 label: CUP - Homepage
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg

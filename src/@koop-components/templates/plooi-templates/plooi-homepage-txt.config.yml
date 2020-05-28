@@ -1,6 +1,6 @@
 ---
 label: PLOOI - Homepage TXT
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg

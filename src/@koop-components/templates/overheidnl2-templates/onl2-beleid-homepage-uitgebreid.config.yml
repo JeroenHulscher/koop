@@ -1,6 +1,6 @@
 ---
 label: Beleid. - Zoek oproep
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
