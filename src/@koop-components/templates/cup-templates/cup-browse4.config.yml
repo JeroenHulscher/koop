@@ -43,9 +43,6 @@ context:
     - link: '#'
       text: Downloaden
       icon: icon-download.svg
-    - link: '#'
-      text: Printen
-      icon: icon-print.svg
   sortContext:
     modifier:
     columns: true
