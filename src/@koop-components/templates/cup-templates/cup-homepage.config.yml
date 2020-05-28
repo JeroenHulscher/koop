@@ -25,4 +25,10 @@ context:
           value: 50
         - label: 100
           value: 100
+  block1Context:
+    id: 1
+    heading: Gebruik repositoryservice
+    subheading: Repository
+    content: '<p> Via deze service is het mogelijk om de repository te benaderen. Via verschillende manieren is het mogelijk om items op te vragen/in te zien. De mogelijkheden worden hieronder beschreven per niveau. In het algemeen gelden de volgende mogelijkheden. </p> <p> <a href="#" class="button button--secondary">Meer over de repository</a> </p>'
+    cta: false
 

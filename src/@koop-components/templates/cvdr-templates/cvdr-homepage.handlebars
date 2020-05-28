@@ -52,16 +52,8 @@
 
   <div class="row">
     <div class="columns">
-      <div class="block-content block-content--highlight block-content--flexed">
-          <p class="block-content__subheading"><em>Negatieve lijst</em></p>
-          <h2 class="block-content__heading">Welke overheden nemen nog geen deel?</h2>
-          <a href="#" class="block-content__cta cta">Bekijk de lijst <span class="visually-hidden">van overheden die niet deelnemen</span></a>
-      </div>
-      <div class="block-content block-content--highlight block-content--flexed">
-        <p class="block-content__subheading">Vragen</p>
-        <h2 class="block-content__heading">Onduidelijkheden, vragen of opmerkingen over regelingen?</h2>
-        <a href="#" class="block-content__cta cta">Neem contact op</a>
-      </div>
+      {{ render "@block" block1Context }}
+      {{ render "@block" block2Context }}
     </div>
   </div>
 

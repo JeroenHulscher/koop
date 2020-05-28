@@ -17,4 +17,22 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+  block1Context:
+    id: 1
+    htype: 3
+    heading: Welke overheden nemen nog geen deel?
+    subheading: Negatieve lijst
+    highlight: true
+    cta: true
+    ctalabel: Bekijk de lijst
+    ctahref: '#'
+  block2Context:
+    id: 1
+    htype: 3
+    heading: Onduidelijkheden, vragen of opmerkingen over regelingen?
+    subheading: Vragen
+    highlight: true
+    cta: true
+    ctalabel: Neem contact op
+    ctahref: '#'
 

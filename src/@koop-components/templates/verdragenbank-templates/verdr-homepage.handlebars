@@ -50,21 +50,9 @@
   </div>
   <div class="row row--large">
     <div class="columns">
-      <div class="block-content block-content--slim block-content--highlight block-content--flexed">
-        <p class="block-content__subheading"><em>Nieuw toegevoegd</em></p>
-        <h2 class="block-content__heading">Recente verdragen</h2>
-        <a href="#" class="block-content__cta cta">Bekijken <span class="visually-hidden">van recente verdragen</span></a>
-      </div>
-      <div class="block-content block-content--slim block-content--highlight block-content--flexed">
-        <p class="block-content__subheading"><em>Depositaire verdragen</em></p>
-        <h2 class="block-content__heading">Recente notificaties</h2>
-        <a href="#" class="block-content__cta cta">Bekijken <span class="visually-hidden">van recente notificaties</span></a>
-      </div>
-      <div class="block-content block-content--slim block-content--highlight block-content--flexed">
-        <p class="block-content__subheading"><em>Verdragen Internationaal Privaatrecht</em></p>
-        <h2 class="block-content__heading">Haagse Conferentie</h2>
-        <a href="#" class="block-content__cta cta">Bekijken <span class="visually-hidden">van de Haagse Conferentie</span></a>
-      </div>
+      {{ render "@block" block1Context }}
+      {{ render "@block" block2Context }}
+      {{ render "@block" block3Context }}
     </div>
   </div>
 
@@ -72,34 +60,8 @@
     <div class="columns">
       <div class="column u-order--d2 column--padded-med ">
         <div class="column__content">
-
-          <div class="block-content">
-            <h2 class="block-content__heading">Depositaire verdragen</h2>
-            <p>
-              Het Koninkrijk der Nederlanden is depositaris van ongeveer 100 verdragen. De taak van een depositaris is het bijhouden van
-              de administratie van een verdrag. De tekst van een verdrag bepaalt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris
-              is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij
-              het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.
-            </p>
-            <p>
-              <a href="#" class="button button--primary button--arrowed">Bekijk alle depositaire verdragen</a>
-            </p>
-          </div>
+          {{ render "@block" block4Context }}
         </div>
-
-
       </div>
       <div class="column u-order--d1">
          {{render "@picture" }}
