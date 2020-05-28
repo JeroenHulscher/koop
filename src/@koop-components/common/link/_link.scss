@@ -1,7 +1,6 @@
 a {
   color: $darkBlue;
   text-decoration: underline;
-  text-decoration-skip-ink: auto;
   outline: 2px solid transparent;
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
@@ -37,7 +36,7 @@ a {
     color: $mediumBlue;
   }
 
-  &.cta:not([rel="external"]) {
+  &.cta {
     // text-decoration: none;
     padding: 0 2em 0 0;
     font-size: 1.125rem;
@@ -48,16 +47,9 @@ a {
       size: 1em;
     }
 
-    &:hover {
-      background-position: right 0 top em(4);
-    }
-
     &--left {
       padding: 0 0 0 2em;
       background-position: left 3px;
-      &:hover {
-        background-position: left 1px top 3px;
-      }
     }
     &--external {
       background: {
