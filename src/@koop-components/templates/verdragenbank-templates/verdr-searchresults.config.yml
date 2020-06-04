@@ -54,32 +54,39 @@ context:
       titleHeader: h2
       text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
       buttons:
-        - button: Bekijken
+        - button: Bekijk verdrag
           type: secendary
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+    - title: Verdrag inzake de verkrijging van bewijs in het buitenland in burgerlijke en in handelszaken
       titleHeader: h2
       label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       metadata:
         - value: 12 september 1986
         - value: Brussel
       buttons:
-        - button: Bekijken
-          type: secendary
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+        - button: Bekijk verdrag
+          type: secondary
+    - title: Europese Code inzake sociale zekerheid
       titleHeader: h2
-      text: 12 september 1986, Brussel
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
       buttons:
-        - button: Bekijken
-          type: secendary
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+        - button: Bekijk verdrag
+          type: secondary
+    - title: Internationaal Verdrag van Nairobi inzake het opruimen van wrakken, 2007
       titleHeader: h2
-      text: 12 september 1986, Brussel
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
       buttons:
-        - button: Bekijken
-          type: secendary
+        - button: Bekijk verdrag
+          type: secondary
   inputsubmitContext:
     id: 876
     label: Verfijn uw zoekopdracht

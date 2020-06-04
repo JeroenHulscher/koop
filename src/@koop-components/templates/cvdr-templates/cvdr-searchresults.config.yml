@@ -238,73 +238,35 @@ context:
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
       label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       share: false
+      metadata:
+        - value: "Uitgegeven door: Flevoland"
       buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+        - button: Bekijk regeling
+          type: secondary
+    - title: Handhavingsbeleid Vergunningplicht Autoverhuur Heerlen 2019
       titleHeader: h2
       label: Regeling vervallen per 01-01-2019
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       labelType: danger
       buttons:
-        - button: Bekijken
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+        - button: Bekijk regeling
+          type: secondary
+      metadata:
+        - value: "Uitgegeven door: Heerlen"
+    - title: Verordening i.h.k.v. Wet Gemeentelijke Antidiscriminatievoorzieningen (V-WGA)
       titleHeader: h2
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       share: false
       buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
-      titleHeader: h2
-      share: false
-      buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
-      titleHeader: h2
-      share: false
-      buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
+        - button: Bekijk regeling
+          type: secondary
+      metadata:
+        - value: "Uitgegeven door: Bernisse"
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1
@@ -313,7 +275,6 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true

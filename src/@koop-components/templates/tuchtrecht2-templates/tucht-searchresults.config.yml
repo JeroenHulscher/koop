@@ -32,42 +32,41 @@ context:
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: ECLI:NL:TGZRAMS:2015:60 Regionaal Tuchtcollege voor de Gezondheidszorg Amsterdam 2014/346
       titleHeader: h2
       label: Nieuw vandaag
-      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      text: "De klacht betreft de behandeling van klagers vader, verder te noemen: patiënt. Klager verwijt de specialist ouderengeneeskunde dat zij een medicatiefout heeft gemaakt en nalatig ten aanzien van ..."
       share: false
       buttons:
-        - button: Bekijk publicatie
+        - button: Bekijk uitspraak
+          type: secondary
+      metadata:
+        - value: "Datum publicatie: 23-06-2020"
+        - value: "Datum uitspraak: 23-06-2015"
+        - value: "ECLI:NL:TGZRAMS:2015:60"
+    - title: ECLI:NL:TNORSHE:2020:11 Kamer voor het notariaat 's-Hertogenbosch SHE/2019/54
+      titleHeader: h2
+      text: Klager verwijt de kandidaat-notaris dat hij onzorgvuldig heeft gehandeld bij de financiële afwikkeling van de overdracht van de aan hem en zijn ex-echtgenote in eigendom toebehorende woning.
+      share: false
+      buttons:
+        - button: Bekijk uitspraak
           type: secendary
-      metadataDates:
-        - value: "Datum uitspraak: 15-05-2009"
-        - value: "Datum publicatie: 15-05-2009"
-        - value: "ECLI:NL:NOGIETS"
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+      metadata:
+        - value: "Datum publicatie: 03-06-2020"
+        - value: "Datum uitspraak: 20-04-2020"
+        - value: "ECLI:NL:TNORSHE:2020:11"
+    - title: ECLI:NL:TADRARL:2020:120 Raad van Discipline Arnhem-Leeuwarden 19-845
       titleHeader: h2
       label: Nieuw vandaag
-      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      text: Voorzittersbeslissing. Nu klager heeft gesteld dat verweerder in eerste instantie de opdracht tot bijstandverlening in hoger beroep had aanvaard en zich daarna zonder opgaaf van redenen heeft ...
       share: false
       buttons:
-        - button: Bekijk publicatie
+        - button: Bekijk uitspraak
           type: secendary
-      metadataDates:
-        - value: "Datum uitspraak: 15-05-2009"
-        - value: "Datum publicatie: 15-05-2009"
-        - value: "ECLI:NL:NOGIETS"
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
-      titleHeader: h2
-      label: Nieuw vandaag
-      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
-      share: false
-      buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      metadataDates:
-        - value: "Datum uitspraak: 15-05-2009"
-        - value: "Datum publicatie: 15-05-2009"
-        - value: "ECLI:NL:NOGIETS"
+      metadata:
+        - value: "Datum publicatie: 03-06-2020"
+        - value: "Datum uitspraak: 16-03-2020"
+        - value: "ECLI:NL:TADRARL:2020:120"
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1

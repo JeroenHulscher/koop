@@ -48,13 +48,13 @@ context:
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
       label: Nieuw vandaag
       text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
       share: false
       buttons:
-        - button: Bekijk publicatie
+        - button: Bekijk document
           type: secendary
       metadata:
         - value: Onderzoeksrapport
@@ -69,13 +69,12 @@ context:
           txt: (gepubliceerd op 06-07-2016 | PDF)
         - link: Rijksoverheid.nl
           txt: (gepubliceerd op 07-07-2016 | XML)
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
-      label: Nieuw vandaag
       text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
       share: false
       buttons:
-        - button: Bekijk publicatie
+        - button: Bekijk document
           type: secendary
       metadata:
         - value: Onderzoeksrapport
@@ -90,13 +89,12 @@ context:
           txt: (gepubliceerd op 06-07-2016 | PDF)
         - link: Rijksoverheid.nl
           txt: (gepubliceerd op 07-07-2016 | XML)
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
-      label: Nieuw vandaag
       text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
       share: false
       buttons:
-        - button: Bekijk publicatie
+        - button: Bekijk document
           type: secendary
       metadata:
         - value: Onderzoeksrapport
