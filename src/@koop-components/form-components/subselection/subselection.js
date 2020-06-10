@@ -242,7 +242,6 @@ function findObjectByKey(array, key, value) {
   };
 
   formSubselection.prototype.removeSummaryItem = function (e) {
-    console.log('removeSummaryItem');
     var item = e.target.parentNode;
     var itemLinkedId = item.getAttribute('data-linkedid');
     var target = document.getElementById(itemLinkedId);

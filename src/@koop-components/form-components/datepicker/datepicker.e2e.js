@@ -124,7 +124,7 @@ describe('Datepicker', function() {
     datepickerButton.click();
 
     var days = element.all(by.css('.ui-state-default'));
-    console.log('days.length', days.length);
+    // console.log('days.length', days.length);
     days.filter(function (elem) {
       return elem.getText().then(function (text) {
         return text === '15';
