@@ -17,8 +17,9 @@
     <label for="input--{{id}}">{{label}}</label>
   {{/if}}
   <div class="datepicker">
-    <input type="date" value="" data-date="" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker"
-      data-config='{ "dateFormat" : "dd-mm-yy"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+
+    <input type="date" {{#if required}}required{{/if}} value="{{value}}" data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "{{configDateFormat}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
   </div>
 
   {{#if debug}}
