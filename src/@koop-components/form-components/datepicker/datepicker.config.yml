@@ -25,3 +25,7 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 06-10-1960'
       yearrange: "c-50:c+5"
+  - name: Today
+    context:
+      id: 4
+      selectToday: true

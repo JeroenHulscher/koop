@@ -26,6 +26,15 @@
       } else {
         input.value = pad(now.getDate()) + '-' + pad(now.getMonth() + 1) + '-' + now.getFullYear();
       }
+
+      // trigger onchange on date field
+      if ("createEvent" in document) {
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("change", false, true);
+        input.dispatchEvent(evt);
+      } else {
+        input.fireEvent("onchange");
+      }
     },
 
     'toggle-option': function ( element ) {
