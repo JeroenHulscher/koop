@@ -1,0 +1,27 @@
+---
+label: Aanm. - Aanmelding bevestigd
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Uw aanmelding is bevestigd
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: We hebben uw bevestiging ontvangen. U ontvangt vanaf nu de nieuwste berichten over uw buurt in uw inbox.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonSubmit:
+      id: 123
+      text: Registreren
+      anchor: '#'
+      modifier: button--primary

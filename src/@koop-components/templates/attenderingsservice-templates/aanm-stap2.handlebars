@@ -1,0 +1,45 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+      <p>
+        <a href="#" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
+      </p>
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">E-mailadres</legend>
+            <div class="columns">
+              <div class="column">
+                <div class="form__row">
+                  {{render "@input-text" inputPostcodeContext }}
+                </div>
+              </div>
+              <div class="column">
+                <div class="form__row">
+                  {{render "@input-text" inputHuisnummerContext }}
+                </div>
+              </div>
+            </div>
+            <div class="form__row align-right">
+              {{ render "@button" buttonSubmit }}
+            </div>
+        </fieldset>
+
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+</div>
+
+<!-- why? -->
+</div>
+
+{{ render "@footer" }}

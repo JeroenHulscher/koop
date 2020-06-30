@@ -1,0 +1,27 @@
+---
+label: Aanm. - Bevestig aanmelding
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Bevestig uw aanmelding
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: We hebben uw aanmelding voor de attenderingsservice Berichten over uw Buurt ontvangen. Binnen 1 uur ontvangt u een e-mail met een bevestiging van uw aanmelding. U dient via de link in deze e-mail te bevestigen om attenderingen te ontvangen.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonSubmit:
+      id: 123
+      text: Bezoek Berichten over uw Buurt
+      anchor: '#'
+      modifier: button--primary

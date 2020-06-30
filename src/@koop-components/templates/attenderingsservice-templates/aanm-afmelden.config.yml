@@ -1,0 +1,33 @@
+---
+label: Aanm. - Afmelden
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Afmelden attenderingsservice
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: Gebruik de knop 'Afmelden' om u af te melden voor abonnement 2595AN, 52 op de e-mailservice Berichten over uw buurt.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonAfmelden:
+      id: 123
+      text: Afmelden
+      button: true
+      inputSubmit: true
+      modifier: button--primary
+    buttonAnnuleren:
+      id: 123
+      text: Annuleren
+      anchor: '#'
+      modifier: button--secondary

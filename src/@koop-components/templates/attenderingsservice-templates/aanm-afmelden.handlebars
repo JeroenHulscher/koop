@@ -1,0 +1,25 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+      <form>
+        {{ render "@button" buttonAfmelden }}
+        {{ render "@button" buttonAnnuleren }}
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+</div>
+
+<!-- why? -->
+</div>
+
+{{ render "@footer" }}
