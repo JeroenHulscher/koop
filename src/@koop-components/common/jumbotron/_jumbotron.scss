@@ -47,8 +47,6 @@
     background-color: $lightGreen;
   }
 
-
-
   &__heading {
     margin: 0 0 2em;
 
@@ -66,6 +64,7 @@
         max-width: 70%;
       }
     }
+
     &--centered {
       // "small" has become the standard
       // max-width: em(750); = original width;
@@ -82,6 +81,10 @@
         padding: 0;
         margin: 0 auto;
       }
+    }
+
+    &--aligncenter {
+      text-align: center;
     }
   }
 
