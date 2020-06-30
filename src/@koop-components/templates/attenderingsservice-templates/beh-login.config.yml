@@ -1,0 +1,47 @@
+---
+label: Beh. - Login
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: E-mailservice Berichten over uw buurt
+    subheading: Wijzigen e-mailservice Berichten over uw buurt
+    intro: Log in om uw e-mailservice te wijzigen.
+    centered: true
+    size: s
+    headingcentered: true
+    inputEmailContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      required: true
+      patterntype: email
+      fieldLabel: E-mailadres
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Uw e-mailadres
+      hastooltip: true
+      tooltipContext:
+        id: 1231
+    inputPWContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      required: true
+      type: password
+      fieldLabel: Wachtwoord
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Uw wachtwoord
+      hastooltip: true
+      tooltipContext:
+        id: 12312
