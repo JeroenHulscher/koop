@@ -16,7 +16,8 @@ $icons: (
   plus-white: $plusIconWhite,
   mail: $iconMail,
   play: $iconPlay,
-  profile: $iconProfile
+  profile: $iconProfile,
+  logout: $iconLogout
 );
 
 .icon {
@@ -351,6 +352,6 @@ $value in $icons {
   }
 }
 
-.icon-bg--profile {
-  background-position: right .8em center !important;
-}
+// .icon-bg--profile {
+//   background-position: right .8em center !important;
+// }
