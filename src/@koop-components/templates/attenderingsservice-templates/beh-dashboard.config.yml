@@ -15,17 +15,10 @@ context:
     metaLinks:
       - url: "#"
         text: Profiel
-        class: button icon-bg icon-bg--profile
-        subItems:
-          - url: "#"
-            text: Profiel
-            class: icon-bg icon-bg--profile
-          - url: "#"
-            text: Uitloggen
-            class: icon-bg icon-bg--logout
+        class: button button--profile
       - url: "#"
         text: Uitloggen
-        class: button icon-bg icon-bg--logout
+        class: button button--logout
   jumbotronContext:
     heading: Berichten over uw buurt attenderingservice
     subheading: Beheer uw abonnementen
