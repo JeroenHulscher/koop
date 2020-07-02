@@ -29,5 +29,6 @@ context:
     buttonAnnuleren:
       id: 123
       text: Annuleren
-      anchor: '#'
+      anchor: true
+      action: '#'
       modifier: button--secondary

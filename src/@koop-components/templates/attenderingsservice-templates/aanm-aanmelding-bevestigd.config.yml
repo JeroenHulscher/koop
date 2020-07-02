@@ -23,5 +23,6 @@ context:
     buttonSubmit:
       id: 123
       text: Registreren
-      anchor: '#'
+      anchor: true
+      action: '#'
       modifier: button--primary

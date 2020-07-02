@@ -10,9 +10,6 @@
   <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
-      <p>
-        <a href="#" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
-      </p>
       <form class="form" data-decorator="init-form-validation">
         <fieldset>
           <legend class="visually-hidden">E-mailadres</legend>
@@ -28,15 +25,8 @@
                 </div>
               </div>
             </div>
-            <div class="">
-              <div class="columns">
-                <div class="u-order--d2 align-right form__row">
-                  {{ render "@button" buttonSubmit }}
-                </div>
-                <div class="u-order--d1 u-nomargin">
-                  <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
-                </div>
-              </div>
+            <div class="form__row align-right">
+              {{ render "@button" buttonSubmit }}
             </div>
         </fieldset>
 

@@ -225,6 +225,9 @@ context:
     intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
     centered: true
     size: semimedium
+    backlink:
+      title: Wijzig e-mailadres
+      href: '#'
     inputPostcodeContext:
       modifier: input-text--medium
       labelmodifier: accent

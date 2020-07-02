@@ -23,5 +23,6 @@ context:
     buttonSubmit:
       id: 123
       text: Bezoek Berichten over uw Buurt
-      anchor: '#'
+      anchor: true
+      action: '#'
       modifier: button--primary
