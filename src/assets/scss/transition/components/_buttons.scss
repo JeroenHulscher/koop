@@ -17,6 +17,15 @@
     box-shadow: 0 0 0.5em rgba(21,66,115,0.2);
   }
 
+  &--text[href] {
+    text-decoration: underline;
+  }
+
+  &--text[href]:hover {
+    text-decoration: underline;
+    color: $primaryBlue;
+  }
+
   &.icon-bg {
     padding-right: 3.75em;
     background-position: right .75em center;
@@ -107,4 +116,43 @@
       background: white;
     }
   }
+
+  &--logout {
+    @extend .icon-bg--logout;
+    padding-right: 3.75em;
+    background-position: right .5em center;
+    @media ( min-width: $breakpointDesktop ) {
+      background-position: right .75em center;
+    }
+    background-repeat: no-repeat;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 2.75em;
+      top: .6em;
+      bottom: .6em;
+      width: 1px;
+      background: $darkBlue;
+    }
+  }
+
+  &--profile {
+    @extend .icon-bg--profile;
+    background-size: 1.25em;
+    background-position: right .8em center;
+    color: $darkBlue;
+    padding-right: 3.75em;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 2.75em;
+      top: .6em;
+      bottom: .6em;
+      width: 1px;
+      background: $darkBlue;
+    }
+  }
+
 }
