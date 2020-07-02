@@ -1,0 +1,45 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
+  </div>
+</div>
+
+<div class="container container--centered">
+
+  <div class="row row--spacer u-margin-top-40">
+    <div class="columns columns--gutter-med">
+      <div class="column">
+
+        <div class="form__row form__row--large">
+          <h1>Registeren e-mailservice Berichten over uw Buurt</h1>
+          <p>
+             Uw abonnement aanpassen, verwijderen of nieuwe abonnementen aanmaken? Maak een account aan om abonnement(en) te beheren.
+          </p>
+        </div>
+        <form class="form" data-decorator="init-form-validation">
+
+
+          <div class="form__row">
+            {{render "@input-text" emailInput }}
+          </div>
+          <div class="form__row">
+            <button type="submit" class="button button--primary">Bevestigen</button>
+            {{!-- <button class="button button--text">Al een account? Wachtwoord vergeten</button> --}}
+          </div>
+        </form>
+        <p>
+          <a href="/components/preview/templates-att-homepage" class="icon icon--mail">Wachtwoord vergeten</a>
+        </p>
+      </div>
+      <div class="column">
+        {{ render "@alert" error }}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

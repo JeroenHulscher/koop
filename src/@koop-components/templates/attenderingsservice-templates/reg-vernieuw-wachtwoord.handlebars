@@ -1,0 +1,68 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
+  </div>
+</div>
+
+<div class="container container--centered">
+
+  <div class="row row--spacer u-margin-top-40">
+    <div class="columns columns--gutter-med">
+      <div class="column">
+
+        <div class="form__row form__row--large">
+          <h1>Wachtwoord vergeten</h1>
+          <p>
+             Vernieuw uw wachtwoord door een nieuw wachtwoord te kiezen en bevestigen.
+          </p>
+        </div>
+        <form class="form" data-decorator="init-form-validation">
+
+
+          <div class="form__row">
+            {{render "@input-text" emailInput }}
+          </div>
+          <div class="form__row">
+            <div data-decorator="init-passwordstrength">
+              <div class="form__row">
+                <div class="form__row">
+                   {{render "@input-text" newPWInput }}
+                </div>
+                <div class="well js-passwordstrength__regexcontainer hidden-desktop">
+                  <div>
+                    <p>
+                      Het wachtwoord dient te voldoen aan de volgende beveiligingseisen:
+                    </p>
+                    <ul class="list list--checked">
+                      <li data-regex="(?&#x3D;.{12,})" data-regex-label="">Minimaal 12 tekens</li>
+                      <li data-regex="(?&#x3D;.*[A-Z])" data-regex-label="">Minimaal 1 hoofdletter</li>
+                      <li data-regex="(?&#x3D;.*[a-z])" data-regex-label="">Minimaal 1 kleine letter</li>
+                      <li data-regex="(?&#x3D;.*[0-9])" data-regex-label="">Minimaal 1 cijfer</li>
+                      <li data-regex="[!@#$%^&amp;*(),.?:{}|&lt;&gt;]" data-regex-label="">Minimaal 1 leesteken</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__row form__row--medium">
+            {{render "@input-text" repeatPWInput }}
+          </div>
+          <div class="form__row">
+            {{ render "@button" buttonSubmit }}
+            {{ render "@button" buttonCancel }}
+          </div>
+        </form>
+      </div>
+      <div class="column">
+        <div class="well js-passwordstrength__duplicateregexcontainer hidden-mobile"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
