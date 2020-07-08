@@ -36,6 +36,7 @@ context:
       fieldInstruction:
       fieldPlaceholder: Bijv. 12A
       required: true
+      requiredLabel: true
       patterntype: zipcode
   jumbotron2Context:
     modifier: slim
