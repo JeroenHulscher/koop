@@ -52,6 +52,8 @@
   sourceslist.prototype.createDiscardLink = function (trigger) {
     var newNode = document.createElement('a');
     var text = document.createTextNode("Annuleren");
+    newNode.classList.add('button');
+    newNode.classList.add('button--secondary');
     newNode.appendChild(text);
     newNode.href = "#";
 

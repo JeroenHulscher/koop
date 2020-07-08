@@ -16,6 +16,7 @@
     this.trigger.addEventListener('keyup', function (e) { this.hideTooltipKeyboard(e); }.bind(this), false);
     this.trigger.addEventListener('mouseout', function (e) { this.hideTooltip(e); }.bind(this), false);
     this.trigger.addEventListener('blur', function (e) { this.hideTooltip(e); }.bind(this), false);
+    this.trigger.addEventListener('click', function (e) { e.preventDefault(); }.bind(this), false);
   };
 
   tooltip.prototype.showTooltip = function () {

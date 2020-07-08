@@ -1,0 +1,13 @@
+.icon {
+  &--backlink {
+    display: block;
+    padding: 0 0 .5em 1.75em;
+    margin-bottom: 1em;
+    background: {
+      image: $arrowCTABackwardsIcon;
+      size: 20px;
+      repeat: no-repeat;
+      position: left .25em;
+    }
+  }
+}

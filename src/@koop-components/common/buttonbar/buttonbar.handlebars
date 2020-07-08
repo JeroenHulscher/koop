@@ -1,0 +1,10 @@
+<div class="buttonbar {{#if devided}}buttonbar--devided{{/if}}">
+  <div class="buttonbar__heading">
+    <{{header/tag}} class="buttonbar__header">{{header/text}}</{{header/tag}}>
+  </div>
+  <div class="buttonbar__content">
+    {{#> @partial-block}}
+      {{ render "@button--doubleline" }}
+    {{/ @partial-block}}
+  </div>
+</div>

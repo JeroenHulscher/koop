@@ -27,7 +27,7 @@
       this.initDatepicker( element );
 
       $(element).on('change', function () {
-        this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
+        this.setAttribute('data-date', this.value);
         self.hiddenfield.setAttribute('value', this.value);
         if ( self.round > 0 ) {
           if ($('.js-fixedbottom-button__button')){
@@ -38,8 +38,8 @@
       }).trigger('change');
     } else {
       $(element).on('change', function () {
-        this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
-        self.hiddenfield.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format(this.getAttribute('data-date-format')));
+        this.setAttribute('data-date', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
+        self.hiddenfield.setAttribute('value', moment(this.value, 'YYYY-MM-DD').format("DD-MM-YYYY"));
         if (self.round > 0) {
           if ($('.js-fixedbottom-button__button')) {
             $('.js-fixedbottom-button__button').removeAttr('hidden');
@@ -83,6 +83,7 @@
         if ($('.js-fixedbottom-button__button')) {
           $('.js-fixedbottom-button__button').removeAttr('hidden');
         }
+        $(this).change();
       }
     });
     $(element).val($(element).data('date'));

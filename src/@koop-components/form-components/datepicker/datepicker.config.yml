@@ -6,6 +6,9 @@ context:
   fieldLabel: Datum
   fieldInstruction:
   fieldPlaceholder: 'Bijv: 06-10-1960'
+  value: '2020-04-19'
+  datavalue: '19-04-2020'
+  configDateFormat: 'dd-mm-yy'
   debug: false
 variants:
   - name: Range
@@ -22,3 +25,8 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 06-10-1960'
       yearrange: "c-50:c+5"
+  - name: Today
+    context:
+      id: 4
+      selectToday: true
+

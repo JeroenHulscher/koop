@@ -138,3 +138,11 @@ h3.ankered {
   line-height: 1em;
 }
 
+.h {
+  &--preheader {
+    font-style: italic;
+    font-size: em(21);
+    margin-bottom: 0;
+  }
+}
+
