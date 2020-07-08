@@ -1,0 +1,57 @@
+.buttonbar {
+  @media (min-width: $breakpointDesktop) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      flex-grow: 1;
+    }
+  }
+
+  &--devided {
+    border-top: 2px solid $lightGrey;
+    padding-top: em(50);
+    margin-top: em(50);
+  }
+
+  &__heading {
+
+  }
+
+  &__header {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.667em;
+
+    @media (min-width: $breakpointDesktop) {
+      margin: 0 0 em(4) 0;
+      font-size: 2.667em;
+    }
+  }
+
+  &__content {
+    text-align: right;
+
+    .button {
+      display: block;
+      width: 100%;
+      margin: 0 0 em(8) 0;
+
+      &+.button {
+        margin: 0 0 em(8) 0;
+      }
+
+      @media (min-width: $breakpointDesktop) {
+        display: inline-block;
+        width: auto;
+
+        &+.button {
+          margin-left: .75em;
+        }
+      }
+    }
+  }
+
+}

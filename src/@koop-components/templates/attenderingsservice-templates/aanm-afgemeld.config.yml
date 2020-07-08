@@ -1,0 +1,28 @@
+---
+label: Aanm. - Afgemeld
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: U bent afgemeld
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: We hebben uw afmeldingen ontvangen. U ontvangt vanaf nu geen nieuwe attenderingen. Wilt u een nieuw abonnement aanmaken? Dit kan via de attenderingsservice.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonSubmit:
+      id: 123
+      text: Opnieuw aanmelden
+      anchor: true
+      action: '#'
+      modifier: button--primary

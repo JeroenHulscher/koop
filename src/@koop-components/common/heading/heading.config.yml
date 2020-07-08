@@ -1,3 +1,28 @@
 ---
 title: heading
 label: Headings
+context:
+  tag: h1
+  value: Dit is heading 1
+variants:
+  - name: h2
+    label: h2
+    context:
+      tag: h2
+      value: Dit is heading 2
+  - name: h3
+    label: h3
+    context:
+      tag: h3
+      value: Dit is heading 3
+  - name: h4
+    label: h4
+    context:
+      tag: h4
+      value: Dit is heading 4
+  - name: preheader
+    label: preheader
+    context:
+      tag: p
+      value: Dit is preheader, gebruikt in combinatie met een normale heading
+      class: h h--preheader

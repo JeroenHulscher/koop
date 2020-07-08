@@ -1,10 +1,17 @@
 ---
-label: Att - Stap 1
+label: Aanm. - Stap 3
 status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
   straalContext:
     options:
     - id: radio-1
@@ -54,7 +61,7 @@ context:
     triggerSubmit: true
     Options:
       - Option: 1
-        id: 1237
+        id: 123711111
         title: Rotterdam
         short: Spanje
       - Option: 2
@@ -66,7 +73,7 @@ context:
         title: Vlaardingen
         short: Nederland
       - Option: 1222222222
-        id: 1237232
+        id: 12372327
         title: Den Haag
         short: Spanje
       - Option: 2222222222222
@@ -92,7 +99,7 @@ context:
     type: span
     Options:
       - Option: 1
-        id: 1237
+        id: 1237222222
         title: Rotterdam
         short: Spanje
       - Option: 2
@@ -104,7 +111,7 @@ context:
         title: Vlaardingen
         short: Nederland
       - Option: 122222222
-        id: 1237232
+        id: 12372329
         title: Den Haag
         short: Spanje
       - Option: 222222222222
@@ -138,7 +145,7 @@ context:
         title: Schiedam
         short: Griekenland
       - Option: 3
-        id: 3223
+        id: 322333333
         title: Vlaardingen
         short: Nederland
       - Option: 12222222
@@ -150,7 +157,7 @@ context:
         title: Scheveningen
         short: Griekenland
       - Option: 3222222
-        id: 32373123
+        id: 32373123888
         title: Voorburg
         short: Nederland
   voorschriftenContext:
@@ -168,7 +175,7 @@ context:
     type: span
     Options:
       - Option: 1
-        id: 1237
+        id: 123766666
         title: Rotterdam
         short: Spanje
       - Option: 2
@@ -213,15 +220,18 @@ context:
         name: onderwerp
   jumbotronContext:
     heading: Over welke betrekkingen wilt u meldingen ontvangen?
-    h: h2
     subheading: Kies uw meldingen
     intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
     centered: true
     size: semimedium
+    backlink:
+      title: Wijzig e-mailadres
+      href: '#'
     inputPostcodeContext:
       modifier: input-text--medium
       labelmodifier: accent
       id: 1
+      value: 2453EH
       fieldLabel: Postcode
       fieldLabelVisible: true
       fieldInstruction:
@@ -237,4 +247,9 @@ context:
       fieldLabelVisible: true
       fieldInstruction:
       fieldPlaceholder: 52
-      remove: true
+      value: 52
+    buttonSubmit:
+      id: 123
+      text: Adres ophalen
+      button: true
+      modifier: button--primary form__button

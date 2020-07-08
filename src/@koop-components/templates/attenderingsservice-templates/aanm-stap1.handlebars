@@ -1,11 +1,11 @@
 {{ render "@header" header merge=true }}
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
   </div>
 </div>
 
-<div class="container">
+<div class="container" role="main" id="content">
 
   <div class="row">
 
@@ -16,10 +16,12 @@
           <div class="form__row">
             {{render "@input-text" inputEmailContext }}
           </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+          </div>
         </fieldset>
-        <div class="align-right form__row">
-          <button type="submit" class="form__button button button--primary">Verzenden</button>
-        </div>
       </form>
     {{/@jumbotron}}
 

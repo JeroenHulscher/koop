@@ -1,27 +1,27 @@
 ---
-label: Att - Profiel
+label: Reg. - Vernieuw wachtwoord
 status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
   emailInput:
     modifier:
     id: 1
     fieldLabel: E-mailadres
     fieldLabelVisible: true
+    labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
     disabled: true
     value: uwnaam@koop.overheid.nl
-  currentPWInput:
-    modifier:
-    id: 4
-    fieldLabel: Huidig wachtwoord
-    fieldLabelVisible: true
-    fieldInstruction:
-    fieldPlaceholder:
-    required: true
   newPWInput:
     modifier:
     id: 2
@@ -29,9 +29,11 @@ context:
     class: js-passwordstrength__input
     fieldLabel: Nieuw wachtwoord
     fieldLabelVisible: true
+    labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Nieuw wachtwoord
     required: true
+    requiredLabel: true
   repeatPWInput:
     modifier:
     id: 3
@@ -39,6 +41,23 @@ context:
     class: js-passwordstrength__inputrepeat
     fieldLabel: Herhaal wachtwoord
     fieldLabelVisible: true
+    labelmodifier: accent
     fieldInstruction:
-    fieldPlaceholder: Herhaal uw wachtwoord
+    fieldPlaceholder: Herhaal nieuw wachtwoord
     required: true
+    requiredLabel: true
+  buttonSubmit:
+      id: 123
+      text: Bevestigen
+      button: true
+      modifier: button--primary form__button
+  buttonCancel:
+      id: 123
+      text: Annuleren
+      anchor: true
+      action: '#'
+      modifier: button--text
+  linkBack:
+    text: Inloggen
+  preheader:
+    value: E-mailservice Berichten over uw buurt
