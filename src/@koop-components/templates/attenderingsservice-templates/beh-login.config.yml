@@ -45,3 +45,8 @@ context:
       hastooltip: true
       tooltipContext:
         id: 12312
+    buttonSubmit:
+      id: 123
+      text: Inloggen
+      button: true
+      modifier: button--primary form__button

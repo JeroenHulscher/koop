@@ -13,28 +13,29 @@
       <div class="column">
 
         <div class="form__row form__row--large">
-          <h1>Registeren e-mailservice Berichten over uw Buurt</h1>
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Registeren</h1>
           <p>
              Uw abonnement aanpassen, verwijderen of nieuwe abonnementen aanmaken? Maak een account aan om abonnement(en) te beheren.
           </p>
         </div>
         <form class="form" data-decorator="init-form-validation">
-
+          {{ render "@alert" error }}
 
           <div class="form__row">
             {{render "@input-text" emailInput }}
           </div>
-          <div class="form__row">
-            <button type="submit" class="button button--primary">Bevestigen</button>
-            {{!-- <button class="button button--text">Al een account? Wachtwoord vergeten</button> --}}
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+            <div class="form__rowsubmit__item">
+              {{ render "@link--wachtwoord-vergeten" }}
+            </div>
           </div>
         </form>
-        <p>
-          <a href="/components/preview/templates-att-homepage" class="icon icon--mail">Wachtwoord vergeten</a>
-        </p>
       </div>
       <div class="column">
-        {{ render "@alert" error }}
       </div>
     </div>
 

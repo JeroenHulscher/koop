@@ -16,10 +16,12 @@
           <div class="form__row">
             {{render "@input-text" inputEmailContext }}
           </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+          </div>
         </fieldset>
-        <div class="align-right form__row">
-          {{ render "@button" buttonSubmit }}
-        </div>
       </form>
     {{/@jumbotron}}
 

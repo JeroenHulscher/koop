@@ -24,3 +24,10 @@ context:
   error:
     modifier: alert--warning
     text: Er is al een actief account op dit e-mailadres.
+  preheader:
+    value: E-mailservice Berichten over uw buurt
+  buttonSubmit:
+      id: 123
+      text: Registreren
+      button: true
+      modifier: button--primary

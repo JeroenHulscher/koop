@@ -9,9 +9,6 @@ context:
       - url: "#"
         text: Profiel
         class: button button--profile
-      - url: "#"
-        text: Uitloggen
-        class: button button--logout
   breadcrumbAttenderen:
     breadcrumb:
     - text: Home
@@ -68,7 +65,7 @@ context:
     triggerSubmit: true
     Options:
       - Option: 1
-        id: 1237
+        id: 1237111
         title: Aanlegvergunning
         short: Aanlegvergunning
         checked: checked
@@ -83,7 +80,7 @@ context:
         short: Bodembeschermingvergunning
         checked: checked
       - Option: 1222222222
-        id: 1237232
+        id: 123723266666
         title: Den Haag
         short: Spanje
       - Option: 2222222222222
@@ -109,7 +106,7 @@ context:
     type: span
     Options:
       - Option: 1
-        id: 1237
+        id: 1237666
         title: Rotterdam
         short: Spanje
       - Option: 2
@@ -147,7 +144,7 @@ context:
     type: span
     Options:
       - Option: 1
-        id: 1237
+        id: 12378888
         title: Rotterdam
         short: Spanje
       - Option: 2
@@ -155,7 +152,7 @@ context:
         title: Schiedam
         short: Griekenland
       - Option: 3
-        id: 3223
+        id: 322322222
         title: Vlaardingen
         short: Nederland
       - Option: 12222222
@@ -167,7 +164,7 @@ context:
         title: Scheveningen
         short: Griekenland
       - Option: 3222222
-        id: 32373123
+        id: 323731234444
         title: Voorburg
         short: Nederland
   voorschriftenContext:
@@ -185,7 +182,7 @@ context:
     type: span
     Options:
       - Option: 1
-        id: 1237
+        id: 12371122
         title: Rotterdam
         short: Spanje
       - Option: 2
@@ -232,7 +229,6 @@ context:
         name: onderwerp
   jumbotronContext:
     heading: Over welke betrekkingen wilt u meldingen ontvangen?
-    h: h2
     subheading: Abonnement wijzigen
     intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
     centered: true
@@ -266,5 +262,4 @@ context:
       id: 123
       text: Adres wijzigen
       button: true
-      inputSubmit: true
       modifier: button--primary form__button

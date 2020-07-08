@@ -35,6 +35,5 @@ context:
       id: 123
       text: Volgende stap
       button: true
-      inputSubmit: true
       modifier: button--primary form__button
 

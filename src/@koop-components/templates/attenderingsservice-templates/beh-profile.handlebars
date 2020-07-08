@@ -9,16 +9,12 @@
 <div class="container container--centered">
 
   <div class="row row--spacer u-margin-top-40">
-    <div class="form__row form__row--large">
-      <p>
-        <a href="/components/preview/templates-att-homepage" class="icon--backlink">Terug naar abbonnementen</a>
-      </p>
-    </div>
+    {{ render "@link--terug-naar" linkBack merge=true }}
     <div class="columns columns--gutter-med">
-      <div class="column">
-
+       <div class="column">
         <div class="form__row form__row--large">
-          <h1>Uw gegevens</h1>
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Gegevens wijzigen</h1>
           <p>
              U kunt een nieuw wachtwoord instellen door in onderstaande velden uw huidige en nieuwe wachtwoord in te voeren.
           </p>
@@ -58,19 +54,25 @@
           <div class="form__row form__row--medium">
             {{render "@input-text" repeatPWInput }}
           </div>
-          <div class="form__row">
-            {{ render "@button" buttonSubmit }}
-            {{ render "@button" buttonCancel }}
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
           </div>
         </form>
-
-        <p>
-          <a href="#" class="icon icon--right icon--bin">Account verwijderen</a>
-        </p>
       </div>
       <div class="column">
         <div class="well js-passwordstrength__duplicateregexcontainer hidden-mobile"></div>
       </div>
+    </div>
+
+    <div class="row">
+
+       {{#> @buttonbar buttonbar }}
+        {{ render "@button--doubleline" buttonbarButton1 merge=true }}
+        {{ render "@button--doubleline" buttonbarButton2 merge=true }}
+       {{/@buttonbar}}
+
     </div>
 
   </div>

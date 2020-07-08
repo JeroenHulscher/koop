@@ -50,7 +50,6 @@ context:
       id: 123
       text: Bevestigen
       button: true
-      inputSubmit: true
       modifier: button--primary form__button
   buttonCancel:
       id: 123
@@ -58,3 +57,7 @@ context:
       anchor: true
       action: '#'
       modifier: button--text
+  linkBack:
+    text: Inloggen
+  preheader:
+    value: E-mailservice Berichten over uw buurt

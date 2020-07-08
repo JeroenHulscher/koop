@@ -14,7 +14,6 @@ context:
     - text: Berichten over uw buurt
   jumbotronContext:
     heading: Over welke betrekkingen wilt u meldingen ontvangen?
-    h: h2
     subheading: Kies uw meldingen
     intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
     centered: true
@@ -46,5 +45,4 @@ context:
       id: 123
       text: Adres ophalen
       button: true
-      inputSubmit: true
       modifier: button--primary form__button

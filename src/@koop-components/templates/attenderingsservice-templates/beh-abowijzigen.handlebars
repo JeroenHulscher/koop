@@ -25,8 +25,10 @@
                 </div>
               </div>
             </div>
-            <div class="form__row align-right">
-              {{ render "@button" buttonSubmit }}
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
             </div>
         </fieldset>
 
@@ -52,11 +54,11 @@
                   <p>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag</p>
                   <h3 class="h4 u-nomargin">Straal</h3>
                   <p>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente</p>
-                  <form class="form">
+                  <div class="form">
                     <div class="form__row">
                       {{render "@input-radio" straalContext }}
                     </div>
-                  </form>
+                  </div>
                 </div>
                 <div class="column">
                   {{render "@map" mapContext }}
@@ -143,6 +145,7 @@
             <div class="column align-right">
               <button type="submit" class="button button--primary">Meld mij aan voor de nieuwsbrief</button>
             </div>
+          </div>
         </div>
 
       </fieldset>
@@ -151,7 +154,5 @@
   </div>
 </div>
 
-<!-- why? -->
-</div>
 
 {{ render "@footer" }}

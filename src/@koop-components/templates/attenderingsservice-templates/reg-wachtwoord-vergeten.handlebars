@@ -9,11 +9,12 @@
 <div class="container container--centered">
 
   <div class="row row--spacer u-margin-top-40">
+    {{ render "@link--terug-naar" linkBack merge=true }}
     <div class="columns columns--gutter-med">
       <div class="column">
-
         <div class="form__row form__row--large">
-          <h1>Wachtwoord vergeten</h1>
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Wachtwoord vergeten</h1>
           <p>
              Uw abonnement aanpassen, verwijderen of nieuwe abonnementen aanmaken? Maak een account aan om abonnement(en) te beheren.
           </p>
@@ -22,9 +23,10 @@
           <div class="form__row">
             {{render "@input-text" emailInput }}
           </div>
-          <div class="form__row">
-            {{ render "@button" buttonSubmit }}
-            {{ render "@button" buttonCancel }}
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
           </div>
         </form>
       </div>

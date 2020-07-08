@@ -9,9 +9,6 @@ context:
       - url: "#"
         text: Profiel
         class: button button--profile
-      - url: "#"
-        text: Uitloggen
-        class: button button--logout
   breadcrumbAttenderen:
     breadcrumb:
     - text: Home
@@ -67,7 +64,6 @@ context:
       id: 123
       text: Wijzigingen opslaan
       button: true
-      inputSubmit: true
       modifier: button--primary form__button
   buttonCancel:
       id: 123
@@ -75,3 +71,21 @@ context:
       anchor: true
       action: '#'
       modifier: button--text
+  linkBack:
+    text: Terug naar abonnementen
+  preheader:
+    value: Uw profiel
+  buttonbar:
+    header:
+      tag: h2
+      text: Uw account
+    devided: true
+    buttonbarButton1:
+      text: Uitloggen
+      text2: Account verlaten
+      modifier: button--doubleline button--logout
+    buttonbarButton2:
+      text: Account verwijderen
+      text2: Geen attenderingen meer ontvangen
+      modifier: button--doubleline button--bin
+

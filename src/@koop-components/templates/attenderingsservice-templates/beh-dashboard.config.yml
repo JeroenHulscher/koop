@@ -16,13 +16,10 @@ context:
       - url: "#"
         text: Profiel
         class: button button--profile
-      - url: "#"
-        text: Uitloggen
-        class: button button--logout
   jumbotronContext:
     heading: Berichten over uw buurt attenderingservice
     subheading: Beheer uw abonnementen
-    intro: Uw heeft momenteel 4 abonnementen ingesteld.
+    intro: Uw heeft momenteel onderstaande abonnementen ingesteld.
     centered: true
     headingcentered: true
   abonnementenContext:
