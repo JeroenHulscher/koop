@@ -229,11 +229,6 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap3.html"
     },
     {
-      "label": "Attenderingsservice - templates-aanm-stap1",
-      "url": "http://localhost:3000/components/preview/templates-att-login",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-login.html"
-    },
-    {
       "label": "Attenderingsservice - templates-beh-abowijzigen",
       "url": "http://localhost:3000/components/preview/templates-beh-abowijzigen",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-abowijzigen.html"
