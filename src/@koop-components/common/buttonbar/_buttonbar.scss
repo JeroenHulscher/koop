@@ -23,6 +23,7 @@
   &__header {
     font-weight: bold;
     font-style: normal;
+    font-size: 1.667em;
 
     @media (min-width: $breakpointDesktop) {
       margin: 0 0 em(4) 0;
