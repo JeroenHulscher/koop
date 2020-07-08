@@ -173,6 +173,14 @@ li.link {
     }
     padding-left: 2em;
   }
+  &--forgotpw {
+    @extend .icon;
+    @extend .icon--mail;
+  }
+  &--profile {
+    @extend .icon;
+    @extend .icon--profile;
+  }
 }
 
 .link-iconed {
