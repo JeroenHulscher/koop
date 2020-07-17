@@ -197,3 +197,15 @@ variants:
       items:
       - content: <a href="#">Internal link</a>
       - content: <a href="#" rel="external">Internal link</a>
+  - name: Themas
+    context:
+      modifier: list--themas list--columns-4
+      items:
+      - content: <h3 class="list__heading"><a href="#">BMS</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">Configutatie Service</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">Integriteitservice</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">LogoService</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">Monitor</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">PUP Algemeen</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">PUP EOB</a></h3><p>Een korte beschrijving van het project</p>
+      - content: <h3 class="list__heading"><a href="#">RPS</a></h3><p>Een korte beschrijving van het project</p>

@@ -1,0 +1,33 @@
+---
+label: Eb - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+    - url: '/components/preview/templates-eb-projectlanding'
+      text: SGD
+    - url: '#'
+      text: '...'
+    metaLinks:
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+    youAreHere:
+      - text: Externe Beheersite
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Externe Beheersite
+    h: h1
+    subheading: Subheader
+    intro: introtekst
+    centered: true
+    headingcentered: true
+  themas:
+    modifier: list--themas list--columns-4
+    items:
+      - content: <h3 class="list__heading"><a href="/components/preview/templates-eb-projectlanding">SGD</a></h3><p>Een korte beschrijving van het project</p>
