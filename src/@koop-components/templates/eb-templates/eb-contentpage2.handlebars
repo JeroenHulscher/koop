@@ -1,0 +1,27 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Externe Beheersite</a>
+      </p>
+      {{render "@nav" navToeContext }}
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    <h1>Publicaties publiceren</h1>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

@@ -1,0 +1,55 @@
+---
+label: EB - Projectlanding
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+    - url: '#'
+      text: SGD
+      className: is-active
+    - url: '#'
+      text: '...'
+    metaLinks:
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+    youAreHere:
+      - text: Externe Beheersite
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '/components/preview/templates-eb-homepage'
+    - text: SGD
+      url: '#'
+  navToeContext:
+    id: 2
+    items:
+    - title: SGD
+      sub: true
+      active: true
+      sactive: true
+      subItems:
+        - stitle: Publicatieproces
+        - stitle: Spoedpublicaties
+          sub: true
+          href: /components/preview/templates-eb-contentpage
+        - stitle: Updaten metadata
+        - stitle: Vervangen verschijningsvormen
+        - stitle: Zoekdienst
+        - stitle: Controlelijst
+        - stitle: OEB ochtendcontrole
+  button1:
+    id: 123
+    text: Publicaties voorpubliceren
+    anchor: true
+    action: '#'
+    modifier: button--primary
+  button2:
+    id: 123
+    text: Publicaties publiceren
+    anchor: true
+    action: '#'
+    modifier: button--primary

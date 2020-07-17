@@ -11,3 +11,15 @@
     }
   }
 }
+
+.columns {
+  &--sticky-sidebar {
+    > .columns--sticky-sidebar__sidebar {
+
+      .icon--backlink {
+        border-bottom: 0;
+      }
+
+    }
+  }
+}
