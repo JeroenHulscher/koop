@@ -1,6 +1,6 @@
 ---
 label: EB - Projectlanding
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
