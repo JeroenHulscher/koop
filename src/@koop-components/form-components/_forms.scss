@@ -124,6 +124,7 @@ fieldset {
 
   }
 
+
   &__row {
     margin-bottom: 1em;
     position: relative;
@@ -158,6 +159,33 @@ fieldset {
       margin-bottom: 3em;
     }
 
+  }
+
+  &__rowsubmit {
+
+    &__item {
+      margin-bottom: em(8);
+    }
+    @media (min-width: $breakpointDesktop) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      &__item {
+        flex-grow: 1;
+
+        &:first-child {
+          order: 2;
+          text-align: right;
+          padding-bottom: 0;
+
+          button {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
 
   &--intro {

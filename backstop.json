@@ -194,29 +194,89 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard3.html"
     },
     {
-      "label": "Attenderingsservice - homepage",
-      "url": "http://localhost:3000/components/preview/templates-att-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-homepage.html"
+      "label": "Attenderingsservice - templates-aanm-aanmelding-bevestigd",
+      "url": "http://localhost:3000/components/preview/templates-aanm-aanmelding-bevestigd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-aanmelding-bevestigd.html"
     },
     {
-      "label": "Attenderingsservice - Stap 1",
-      "url": "http://localhost:3000/components/preview/templates-att-stap1",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-stap1.html"
+      "label": "Attenderingsservice - templates-aanm-afgemeld",
+      "url": "http://localhost:3000/components/preview/templates-aanm-afgemeld",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-afgemeld.html"
     },
     {
-      "label": "Attenderingsservice - Profiel",
-      "url": "http://localhost:3000/components/preview/templates-att-profile",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-profile.html"
+      "label": "Attenderingsservice - templates-aanm-afmelden",
+      "url": "http://localhost:3000/components/preview/templates-aanm-afmelden",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-afmelden.html"
     },
     {
-      "label": "Attenderingsservice - Beheer",
-      "url": "http://localhost:3000/components/preview/templates-att-beheer",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-beheer.html"
+      "label": "Attenderingsservice - templates-aanm-bevestig-aanmelding",
+      "url": "http://localhost:3000/components/preview/templates-aanm-bevestig-aanmelding",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-bevestig-aanmelding.html"
     },
     {
-      "label": "Attenderingsservice - Login",
-      "url": "http://localhost:3000/components/preview/templates-att-login",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-att-login.html"
+      "label": "Attenderingsservice - templates-aanm-stap1",
+      "url": "http://localhost:3000/components/preview/templates-aanm-stap1",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap1.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-aanm-stap2",
+      "url": "http://localhost:3000/components/preview/templates-aanm-stap2",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap2.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-aanm-stap3",
+      "url": "http://localhost:3000/components/preview/templates-aanm-stap3",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap3.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-beh-abowijzigen",
+      "url": "http://localhost:3000/components/preview/templates-beh-abowijzigen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-abowijzigen.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-beh-dashboard",
+      "url": "http://localhost:3000/components/preview/templates-beh-dashboard",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-dashboard.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-beh-login",
+      "url": "http://localhost:3000/components/preview/templates-beh-login",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-login.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-beh-profile",
+      "url": "http://localhost:3000/components/preview/templates-beh-profile",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-profile.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-reg-account-aanmaken",
+      "url": "http://localhost:3000/components/preview/templates-reg-account-aanmaken",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-account-aanmaken.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-reg-bevestigingregistratie",
+      "url": "http://localhost:3000/components/preview/templates-reg-bevestigingregistratie",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-bevestigingregistratie.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-reg-vernieuw-wachtwoord",
+      "url": "http://localhost:3000/components/preview/templates-reg-vernieuw-wachtwoord",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-vernieuw-wachtwoord.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-reg-wachtwoord-opgevraagd",
+      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoord-opgevraagd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoord-opgevraagd.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-reg-wachtwoord-vergeten",
+      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoord-vergeten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoord-vergeten.html"
+    },
+    {
+      "label": "Attenderingsservice - templates-reg-wachtwoordvernieuwd",
+      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoordvernieuwd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoordvernieuwd.html"
     },
     {
       "label": "CUP - Homepage",

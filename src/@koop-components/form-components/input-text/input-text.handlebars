@@ -10,7 +10,9 @@
 
   {{#if hastooltip}}{{render "@tooltip" tooltipContext merge=true }}{{/if}}
 
-  {{#if required}}<span class="mandatory">Verplicht</span>{{/if}}
+  {{#if hastooltip}}{{render "@tooltip" tooltipContext merge=true }}{{/if}}
+
+  {{#if requiredLabel}}<span class="mandatory">Verplicht</span>{{/if}}
 
   {{#if prefix}}
     <span class="input-text__prefix {{modifier2}}">{{prefixLabel}}</span>

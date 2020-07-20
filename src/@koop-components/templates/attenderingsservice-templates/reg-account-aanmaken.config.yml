@@ -1,0 +1,33 @@
+---
+label: Reg. - Account aanmaken
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichten over uw buurt
+      url: '#'
+    - text: Registratie
+  emailInput:
+    modifier:
+    id: 1
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+    value: uwnaam@koop.overheid.nl
+  error:
+    modifier: alert--warning
+    text: Er is al een actief account op dit e-mailadres.
+  preheader:
+    value: E-mailservice Berichten over uw buurt
+  buttonSubmit:
+      id: 123
+      text: Registreren
+      button: true
+      modifier: button--primary

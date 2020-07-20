@@ -1,18 +1,25 @@
 ---
-label: Att - Beheer
+label: Beh. - Dashboard
 status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    breadcrumbAttenderen:
+      breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Berichtgeving
+        url: '#'
+      - text: Berichten over uw buurt
     metaLinks:
       - url: "#"
         text: Profiel
-        class: button icon-bg icon-bg--profile
+        class: button button--profile
   jumbotronContext:
     heading: Berichten over uw buurt attenderingservice
     subheading: Beheer uw abonnementen
-    intro: Uw heeft momenteel 4 abonnementen ingesteld.
+    intro: Uw heeft momenteel onderstaande abonnementen ingesteld.
     centered: true
     headingcentered: true
   abonnementenContext:

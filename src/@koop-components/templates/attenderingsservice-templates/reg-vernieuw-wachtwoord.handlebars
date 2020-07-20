@@ -2,36 +2,28 @@
 
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
   </div>
 </div>
 
-<div id="content" role="main" class="container container--centered">
+<div class="container container--centered">
 
   <div class="row row--spacer u-margin-top-40">
-    <div class="form__row form__row--large">
-      <p>
-        <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Terug naar abbonnementen</a>
-      </p>
-    </div>
+    {{ render "@link--terug-naar" linkBack merge=true }}
     <div class="columns columns--gutter-med">
       <div class="column">
-
         <div class="form__row form__row--large">
-          <h1>Gegevens wijzigen</h1>
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Wachtwoord vergeten</h1>
           <p>
-            Voer het e-mailadres in waarmee u zich heeft geabonneerd op de e-mailservice en uw oude wachtwoord in. Voer vervolgens tweemaal
-            uw nieuwe wachtwoord in.
+             Vernieuw uw wachtwoord door een nieuw wachtwoord te kiezen en bevestigen.
           </p>
         </div>
         <form class="form" data-decorator="init-form-validation">
-        {{!-- <form class="form"> --}}
+
 
           <div class="form__row">
             {{render "@input-text" emailInput }}
-          </div>
-          <div class="form__row">
-            {{render "@input-text" currentPWInput }}
           </div>
           <div class="form__row">
             <div data-decorator="init-passwordstrength">
@@ -59,9 +51,10 @@
           <div class="form__row form__row--medium">
             {{render "@input-text" repeatPWInput }}
           </div>
-          <div class="form__row">
-            <button type="submit" class="button button--primary">Wijzigingen opslaan</button>
-            <button class="button button--text">Annuleren</button>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
           </div>
         </form>
       </div>

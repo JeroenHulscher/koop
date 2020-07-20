@@ -15,4 +15,23 @@ variants:
       text: externe link (manual)
       action: http://www.google.nl
       mode: manual
+  - name: Wachtwoord vergeten
+    label: Wachtwoord vergeten
+    context:
+      text: Wachtwoord vergeten
+      action: '#'
+      class: link link--forgotpw
+  - name: Terug naar
+    label: Terug naar
+    context:
+      text: Terug naar het overzicht
+      action: '#'
+      class: icon--backlink
+  - name: Profiel
+    label: profiel
+    context:
+      text: Ik heb nog geen profiel
+      action: '#'
+      class: link link--profile
+
 

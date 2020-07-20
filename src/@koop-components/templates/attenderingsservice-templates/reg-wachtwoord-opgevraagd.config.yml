@@ -1,0 +1,33 @@
+---
+label: Reg. - Wachtwoord opgevraagd
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichten over uw Buurt
+      url: '#'
+    - text: Wachtwoord vergeten
+  jumbotronContext:
+    heading: Wachtwoord vergeten
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: Binnen enkele ogenblikken ontvangt u een e-mail met een link, via deze verwijzing kunt u een nieuw wachtwoord instellen
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonInloggen:
+      id: 123
+      text: Inloggen
+      anchor: true
+      action: '#'
+      modifier: button--primary
+    buttonNoEmail:
+      id: 123
+      text: Geen link ontvangen
+      anchor: '#'
+      modifier: button--secondary

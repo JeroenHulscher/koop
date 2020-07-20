@@ -1,0 +1,75 @@
+---
+label: EB - Contentpage 2
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+    - url: '#'
+      text: SGD
+      className: is-active
+    - url: '#'
+      text: '...'
+    metaLinks:
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+    youAreHere:
+      - text: Externe Beheersite
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '/components/preview/templates-eb-homepage'
+    - text: SGD
+      url: '#'
+    - text: Spoedpublicaties
+      url: '#'
+    - text: Publicaties publiceren
+  navToeContext:
+    id: 2
+    items:
+    - title: SGD
+      href: /components/preview/templates-eb-projectlanding
+      active: true
+      sub: true
+      subItems:
+        - stitle: Publicatieproces
+        - stitle: Spoedpublicaties
+          sub: true
+          subItems:
+            - stitle: Spoedpublicaties voorpubliceren
+            - stitle: Spoedpublicaties publiceren
+              sactive: true
+        - stitle: Updaten metadata
+        - stitle: Vervangen verschijningsvormen
+        - stitle: Zoekdienst
+        - stitle: Controlelijst
+        - stitle: OEB ochtendcontrole
+  button1:
+    id: 123
+    text: Publicaties voorpubliceren
+    text2: '## copy'
+    modifier: button--doubleline button--ctaright
+    action: http://www.google.nl
+    anchor: '#'
+    button: true
+    iconButton: false
+    inputButton: false
+    inputSubmit: false
+    buttonWithDivider: false
+    disabled: ''
+  button2:
+    id: 123
+    text: Bekijk publicatie
+    text2: '## copy'
+    modifier: button--doubleline button--ctaright
+    action: http://www.google.nl
+    anchor: '#'
+    button: true
+    iconButton: false
+    inputButton: false
+    inputSubmit: false
+    buttonWithDivider: false
+    disabled: ''

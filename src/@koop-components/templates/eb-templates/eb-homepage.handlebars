@@ -1,0 +1,28 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="row">
+
+    <h2 class="row__heading">Omgevingen</h2>
+
+    {{ render "@list--themas" themas }}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

@@ -1,0 +1,28 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Externe Beheersite</a>
+      </p>
+      {{render "@nav" navToeContext }}
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    <h1>SGD</h1>
+    <p>Suspendisse varius mollis porta. Mauris cursus lacinia odio at tristique. Sed felis velit, egestas vel molestie eget, sollicitudin id lorem. Maecenas pulvinar felis vitae tellus tempus, at pulvinar dui vestibulum.</p>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

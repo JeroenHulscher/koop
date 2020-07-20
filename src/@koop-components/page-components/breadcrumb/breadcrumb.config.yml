@@ -7,6 +7,3 @@ context:
     - text: Zoekresultaten
       url: '#'
     - text: Regeling
-      url: '#'
-    - text: Informatie
-    

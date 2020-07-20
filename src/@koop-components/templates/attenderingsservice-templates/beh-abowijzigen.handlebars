@@ -1,7 +1,7 @@
 {{ render "@header" header merge=true }}
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumbAttenderen merge=true }}
   </div>
 </div>
 
@@ -25,14 +25,9 @@
                 </div>
               </div>
             </div>
-            <div class="">
-              <div class="columns">
-                <div class="u-order--d2 align-right form__row">
-                  <button type="submit" class="form__button button button--primary">Adres ophalen</button>
-                </div>
-                <div class="u-order--d1 u-nomargin">
-                  <a href="/components/preview/templates-att-homepage" class="icon icon--arrow-cta-right">Wijzig e-mailadres</a>
-                </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
               </div>
             </div>
         </fieldset>
@@ -59,11 +54,11 @@
                   <p>Wilhelmina van Prijsenweg 52, 2595 AN Den Haag</p>
                   <h3 class="h4 u-nomargin">Straal</h3>
                   <p>Kies voor een straal rondom uw woning of voor meldingen uit uw gemeente</p>
-                  <form class="form">
+                  <div class="form">
                     <div class="form__row">
                       {{render "@input-radio" straalContext }}
                     </div>
-                  </form>
+                  </div>
                 </div>
                 <div class="column">
                   {{render "@map" mapContext }}
@@ -150,6 +145,7 @@
             <div class="column align-right">
               <button type="submit" class="button button--primary">Meld mij aan voor de nieuwsbrief</button>
             </div>
+          </div>
         </div>
 
       </fieldset>
@@ -158,7 +154,5 @@
   </div>
 </div>
 
-<!-- why? -->
-</div>
 
 {{ render "@footer" }}

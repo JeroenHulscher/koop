@@ -1,21 +1,19 @@
-<div class="jumbotron {{ modifier }}">
-  <div class="jumbotron__content {% if centered %}jumbotron__content--centered{{ size ? '-' ~ size}}{% endif %}">
+<div class="jumbotron {{ modifier ? 'jumbotron--' ~ modifier}}">
+  <div class="jumbotron__content {% if centered %}jumbotron__content--centered jumbotron__content--centered{{ size ? '-' ~ size}}{% endif %}">
     <div class="jumbotron__heading {% if headingcentered %}jumbotron__heading--centered{% endif %}">
-      <p class="jumbotron__subheader">{{ subheading }}</p>
-      <{{ h }} class="jumbotron__header">{{ heading }}</{{ h }}>
-      {% if intro %}
+      {% if subheading %}<p class="jumbotron__subheader">{{ subheading }}</p>{% endif %}
+      {% if heading %}<{{ h ?? 'h1'}} class="jumbotron__header{{ hstyle ? ' ' ~ hstyle}}">{{ heading }}</{{ h ?? 'h1'}}>{% endif %}
+    {% if intro %}
       <p class="jumbotron__intro">
-        {{ intro|raw }}
+        {{ intro }}
       </p>
+      {% if text %}
+        {{ text }}
       {% endif %}
-    </div>
-    {% if button %}
-      <p>
-        <a href="{{ link ?: '#'}}" class="button button--primary">{{ button }}</a>
-      </p>
     {% endif %}
+  </div>
   {% block content %}
     {{ content }}
   {% endblock %}
-  </div>
+</div>
 </div>

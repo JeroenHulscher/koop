@@ -1,0 +1,34 @@
+---
+label: Reg. - Bevestiging registratie
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichten over uw Buurt
+      url: '#'
+    - text: Registratie
+  jumbotronContext:
+    heading: Bevestiging van uw registratie
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: We hebben uw registratie ontvangen. Binnen enkele minuten ontvangt u een e-mail met een bevestiging en uw wachtwoord.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonInloggen:
+      id: 123
+      text: Inloggen
+      anchor: true
+      action: '#'
+      modifier: button--primary
+    buttonNoEmail:
+      id: 123
+      text: Ik heb geen email ontvangen
+      anchor: true
+      action: '#'
+      modifier: button--secondary

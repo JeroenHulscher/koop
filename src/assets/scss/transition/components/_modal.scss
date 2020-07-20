@@ -65,7 +65,11 @@
     }
   }
   &--fixedpane &__content {
-    padding-bottom: 5.5em;
+    border-bottom: 4em solid transparent;
+
+    @media ( min-width: $breakpointDesktop ) {
+      border-bottom: 5.5em solid transparent;
+    }
   }
 
 }
