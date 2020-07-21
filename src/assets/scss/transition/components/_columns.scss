@@ -1,4 +1,14 @@
 .columns {
+  &--sidebar {
+    &__sidebar {
+      > div {
+        padding-top: 1em;
+        @media ( min-width: $breakpointDesktop ) {
+          padding-top: 0;
+        }
+      }
+    }
+  }
 
   &--sticky-sidebar {
 
