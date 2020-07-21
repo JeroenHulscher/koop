@@ -112,7 +112,8 @@ fieldset {
     margin-bottom: 0.625em;
   }
 }
-.column--sidebar fieldset legend {
+.column--sidebar fieldset legend,
+.columns--sidebar__sidebar fieldset legend {
   font-size: 1.25em;
   padding-right: 3.25em;
 }
