@@ -1,5 +1,4 @@
 .result--list {
-  margin-left: -1em;
   margin-right: -1em;
 
   @media (min-width: $breakpointDesktop) {
@@ -64,7 +63,6 @@
   }
   h2.result--title {
     ~ .list--metadata {
-      margin-top: -.8em;
       line-height: 1.25em;
       margin-bottom: 1em;
 
