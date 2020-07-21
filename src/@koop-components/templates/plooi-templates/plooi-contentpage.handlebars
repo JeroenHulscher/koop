@@ -5,105 +5,113 @@
   </div>
 </div>
 
-<div class="container row" role="main" id="content">
-  <div class="columns columns--sidebar-left">
-    <div class="column content content--publication">
+<div class="container columns columns--sticky-sidebar">
 
-
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Pagina navigatie</button>
-      </div>
-
-      {{ render "@pageactions" pageactions }}
-
-      <h1>Rapport 'Eerste ervaringen met spoedeisend preventief fouilleren'</h1>
-
-      <h2 id="omschrijving">Omschrijving</h2>
-
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
       <p>
-         Het rapport bevat een onderzoek naar de ervaringen die gemeenten en vooral de burgemeesters hebben opgedaan met spoedeisend
-        preventief fouilleren sinds de wetswijziging van 1 juli 2014.
+        <a href="#" class="icon icon--arrow-cta-right">Terug naar zoekresultaten</a>
       </p>
 
-      <table class="table__data-overview">
-        <tbody>
-          <tr>
-            <th>Bron/Auteur</th>
-            <td>WODC</td>
-          </tr>
-          <tr>
-            <th>Verantwoordelijke</th>
-            <td>Ministerie van Justitie en Veiligheid</td>
-          </tr>
-          <tr>
-            <th>Thema</th>
-            <td>Openbare orde &amp; veiligheid: Veiligheid</td>
-          </tr>
-          <tr>
-            <th>Informatiesoort</th>
-            <td>Onderzoeksrapport</td>
-          </tr>
-        </tbody>
-      </table>
+      {{render "@nav" navVerdragContext }}
 
-
-      <h2 id="publicaties">Publicaties</h2>
-
-      {{render "@resultlist"  resultsContext }}
-
-      <h2 id="relaties">Relaties</h2>
-
-      <h3>Gerelateerde onderwerpen</h3>
-      <ul class="list list--unstyled">
-         <li><a href="#">Politie (https://www.rijksoverheid.nl/onderwerpen/politie)</a></li>
-      </ul>
-
-      <h3>Gerelateerde wet- en regelgeving</h3>
-      <ul class="list list--unstyled">
-         <li><a href="#">Gemeentewet artikel 151b (http://wetten.overheid.nl/jci1.3:c:BWBR0005416&titeldeel=III&hoofdstuk=IX&artikel=151b) (16)</a></li>
-         <li><a href="#">Gemeentewet artikel 174b (http://wetten.overheid.nl/jci1.3:c:BWBR0005416&titeldeel=III&hoofdstuk=XI&artikel=174b) (15)</a></li>
-         <li><a href="#">De artikelen 50, derde lid (onderzoek bagage en tassen), 51, derde lid (vervoermiddelen), en 52, derde lid (kleding) van de Wet wapens en munitie (1)</a></li>
-         <li><a href="#">Artikel 27 Wetboek van Strafvordering (1)</a></li>
-         <li><a href="#">Artikel 9 van de Opiumwet (1)</a></li>
-      </ul>
-
-      <h3>Gerelateerde rechtspraak</h3>
-      <ul class="list list--unstyled">
-         <li><a href="#">Rb Rotterdam 4 januari 2000, NbSr 2000, 011-012, LJN AA4046 en LJN AA4047 (Millinxbuurt) (1)</a></li>
-         <li><a href="#">HR 13 mei 2014, NJ 2014/283 (Turks koffiehuis) (1)</a></li>
-         <li><a href="#">HR 20 februari 2007, LJN AZ2475 (Amsterdam) (1)</a></li>
-         <li><a href="#">ABRvS 9 november 2005, LJN AU5839 (Utrecht) (1)</a></li>
-      </ul>
-
-      <h3>Gerelateerde documenten</h3>
-      <ul class="list list--unstyled">
-        <li>
-          <a href="#">https://www.wodc.nl/publicaties/internetbronnengids/040Veiligheidenpreventie/index.aspx</a>
-        </li>
-      </ul>
-
-    </div>
-    <div class="column column--sidebar">
-
-      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
-
-        <div class="modal-sidebar__content">
-          <p>
-            <a href="#" class="icon icon--arrow-cta-right">Terug naar zoekresultaten</a>
-          </p>
-
-          {{render "@nav" navVerdragContext }}
-
-          <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-            <span class="visually-hidden">Sluiten</span>
-          </button>
-        </div>
-
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+        <span class="visually-hidden">Sluiten</span>
+      </button>
     </div>
   </div>
-</div>
+  <div id="content" role="main" class="column content content--publication">
 
+    {{ render "@pageactions" pageactions }}
+
+    <h1>Rapport 'Eerste ervaringen met spoedeisend preventief fouilleren'</h1>
+
+    <h2 id="omschrijving">Omschrijving</h2>
+
+    <p>
+      Het rapport bevat een onderzoek naar de ervaringen die gemeenten en vooral de burgemeesters hebben opgedaan met spoedeisend
+      preventief fouilleren sinds de wetswijziging van 1 juli 2014.
+    </p>
+
+    <table class="table__data-overview">
+      <tbody>
+        <tr>
+          <th>Bron/Auteur</th>
+          <td>WODC</td>
+        </tr>
+        <tr>
+          <th>Verantwoordelijke</th>
+          <td>Ministerie van Justitie en Veiligheid</td>
+        </tr>
+        <tr>
+          <th>Thema</th>
+          <td>Openbare orde &amp; veiligheid: Veiligheid</td>
+        </tr>
+        <tr>
+          <th>Informatiesoort</th>
+          <td>Onderzoeksrapport</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h2 id="publicaties">Publicaties</h2>
+
+    {{render "@resultlist" resultsContext }}
+
+    <h2 id="relaties">Relaties</h2>
+
+    <h3>Gerelateerde onderwerpen</h3>
+    <ul class="list list--unstyled">
+      <li>
+        <a href="#">Politie (https://www.rijksoverheid.nl/onderwerpen/politie)</a>
+      </li>
+    </ul>
+
+    <h3>Gerelateerde wet- en regelgeving</h3>
+    <ul class="list list--unstyled">
+      <li>
+        <a href="#">Gemeentewet artikel 151b (http://wetten.overheid.nl/jci1.3:c:BWBR0005416&titeldeel=III&hoofdstuk=IX&artikel=151b) (16)</a>
+      </li>
+      <li>
+        <a href="#">Gemeentewet artikel 174b (http://wetten.overheid.nl/jci1.3:c:BWBR0005416&titeldeel=III&hoofdstuk=XI&artikel=174b) (15)</a>
+      </li>
+      <li>
+        <a href="#">De artikelen 50, derde lid (onderzoek bagage en tassen), 51, derde lid (vervoermiddelen), en 52, derde lid (kleding)
+          van de Wet wapens en munitie (1)</a>
+      </li>
+      <li>
+        <a href="#">Artikel 27 Wetboek van Strafvordering (1)</a>
+      </li>
+      <li>
+        <a href="#">Artikel 9 van de Opiumwet (1)</a>
+      </li>
+    </ul>
+
+    <h3>Gerelateerde rechtspraak</h3>
+    <ul class="list list--unstyled">
+      <li>
+        <a href="#">Rb Rotterdam 4 januari 2000, NbSr 2000, 011-012, LJN AA4046 en LJN AA4047 (Millinxbuurt) (1)</a>
+      </li>
+      <li>
+        <a href="#">HR 13 mei 2014, NJ 2014/283 (Turks koffiehuis) (1)</a>
+      </li>
+      <li>
+        <a href="#">HR 20 februari 2007, LJN AZ2475 (Amsterdam) (1)</a>
+      </li>
+      <li>
+        <a href="#">ABRvS 9 november 2005, LJN AU5839 (Utrecht) (1)</a>
+      </li>
+    </ul>
+
+    <h3>Gerelateerde documenten</h3>
+    <ul class="list list--unstyled">
+      <li>
+        <a href="#">https://www.wodc.nl/publicaties/internetbronnengids/040Veiligheidenpreventie/index.aspx</a>
+      </li>
+    </ul>
+
+  </div>
 </div>
 
 {{ render "@footer" }}

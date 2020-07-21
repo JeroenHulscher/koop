@@ -5,56 +5,48 @@
   </div>
 </div>
 
-<div class="container row" role="main" id="content">
-  <div class="columns columns--sidebar-left">
-    <div class="column">
+<div class="container columns columns--sticky-sidebar" role="main" id="content">
 
-
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Pagina navigatie</button>
-      </div>
-
-      <h1>Aanmelden e-mailservice nieuwe notificaties</h1>
-
-      {{ render "@steps" stepsContext }}
-
-      <form id="formid" class="">
-        <fieldset>
-          <legend>Samenvatting</legend>
-
-          <table class="table__data-overview u-margin--m">
-            <tbody>
-              <tr>
-                <th>E-mailadres</th>
-                <td>appel@sap.nl</td>
-              </tr>
-              <tr>
-                <th rowspan="2" scope="rowgroup">Verdragen</th>
-                <td>
-                   Verdrag over de status en werkzaamheden van de Internationale Commissie voor Vermiste Personen; Brussel, 15 december 2014
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Verdrag betreffende de bevoegdheid van autoriteiten, de toepasselijke wet en de erkenning van beslissingen inzake adoptie;
-                  's-Gravenhage, 15 november 1965
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <button type="submit" role="button" class="button button--primary">Abonneren</button>
-        </fieldset>
-      </form>
-
-
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <a href="#" class="icon icon--arrow-cta-right">Terug naar het overzicht</a>
     </div>
-    <div class="column column--sidebar">
+  </div>
 
-      <a href="#" class="link link--back">Terug naar het overzicht</a>
+  <div id="content" role="main">
 
-    </div>
+    <h1>Aanmelden e-mailservice nieuwe notificaties</h1>
+
+    {{ render "@steps" stepsContext }}
+
+    <form id="formid" class="">
+      <fieldset>
+        <legend>Samenvatting</legend>
+
+        <table class="table__data-overview u-margin--m">
+          <tbody>
+            <tr>
+              <th>E-mailadres</th>
+              <td>appel@sap.nl</td>
+            </tr>
+            <tr>
+              <th rowspan="2" scope="rowgroup">Verdragen</th>
+              <td>
+                  Verdrag over de status en werkzaamheden van de Internationale Commissie voor Vermiste Personen; Brussel, 15 december 2014
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Verdrag betreffende de bevoegdheid van autoriteiten, de toepasselijke wet en de erkenning van beslissingen inzake adoptie;
+                's-Gravenhage, 15 november 1965
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="submit" role="button" class="button button--primary">Abonneren</button>
+      </fieldset>
+    </form>
   </div>
 </div>
 
