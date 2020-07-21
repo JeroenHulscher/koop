@@ -5,16 +5,10 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  vanDatepicker:
-    id: 786
-    haslabel: true
-    label: Regeling is in werking op
-    labelmodifier: accent
-    fieldPlaceholder: DD-MM-JJJJ
-  totDatepicker:
-    id: 7836
-    haslabel: true
-    label: Tot
+  dateselection:
+    layout: narrow
+    dateselectionDatum:
+      label: Geldend op
   postcodeInput:
     id: 5
     fieldLabelVisible: true

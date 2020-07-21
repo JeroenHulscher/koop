@@ -82,10 +82,11 @@
             </div>
             <div class="form__row form__row--large">
               <fieldset>
-                <legend>Datum geldigheid</legend>
-                <div class="form__row">
-                  {{ render "@datepicker" vanDatepicker }}
-                </div>
+                <legend>Geldigheid</legend>
+                {{ render "@date-selection" dateselection merge=true }}
+                <a href="#" class="reset">
+                  <small>Herstellen</small>
+                </a>
               </fieldset>
             </div>
             <div class="form__row form__row--large">

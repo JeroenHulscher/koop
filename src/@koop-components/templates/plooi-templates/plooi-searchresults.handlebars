@@ -64,22 +64,8 @@
 
             <div class="form__row form__row--large">
               <fieldset>
-                <legend>Datum van publicatie</legend>
-                <div data-decorator="init-form-conditionals">
-                  <div id="citem-1" class="js-form-conditionals__citem">
-                    <div class="form__row">
-                      {{ render "@select-custom" selectCustomContext }}
-                    </div>
-                  </div>
-                  <div id="citem-2" class="js-form-conditionals__citem">
-                    <div class="form__row">
-                      {{render "@datepicker" startDatepicker }}
-                    </div>
-                    <div class="form__row">
-                      {{render "@datepicker" endDatepicker }}
-                    </div>
-                  </div>
-                </div>
+                <legend>Beschikbaarheid</legend>
+                {{ render "@date-selection" dateselection merge=true }}
                 <a href="#" class="reset">
                   <small>Herstellen</small>
                 </a>

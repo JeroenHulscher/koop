@@ -66,13 +66,7 @@
             <div class="form__row form__row--large">
               <fieldset>
                 <legend>Totstandkoming</legend>
-                <p class="form__sublegend">Datum</p>
-                <div class="form__row">
-                  {{render "@datepicker" startDatepicker }}
-                </div>
-                <div class="form__row">
-                    {{render "@datepicker" endDatepicker }}
-                </div>
+                {{ render "@date-selection" dateselection merge=true }}
                 <a href="#" class="reset">
                   <small>Herstellen</small>
                 </a>

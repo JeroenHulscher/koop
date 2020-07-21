@@ -169,18 +169,6 @@ context:
       - id: checkbox-204
         text: Zelf een periode kiezen
         name: onderwerp
-    startDatepicker:
-      id: 234
-      haslabel: true
-      label: Vanaf
-      labelmodifier: secondary
-      fieldPlaceholder: DD-MM-JJJJ
-    endDatepicker:
-      id: 345
-      haslabel: true
-      label: Tot en met
-      labelmodifier: secondary
-      fieldPlaceholder: DD-MM-JJJJ
     tt1Context:
       id: 112
     tt2Context:
@@ -189,34 +177,4 @@ context:
       id: 114
     tt4Context:
       id: 115
-    selectCustomContext:
-      id: 1
-      fieldLabel: Datum
-      fieldLabelVisible: true
-      labelmodifier: accent
-      hastooltip: true
-      tooltip:
-        id: 12312
-      options:
-      - id: 102
-        value:
-        label: Alle
-        linkedto: 1
-      - id: 1
-        value: 10
-        label: Vandaag
-        linkedto: 1
-      - id: 2
-        value: 20
-        label: Afgelopen week
-        linkedto: 1
-      - id: 3
-        value: 30
-        label: Afgelopen 3 maanden
-        linkedto: 1
-      - id: 4
-        value: 30
-        label: Zelf een periode kiezen
-        linkedto: 2
-        selected: selected
 

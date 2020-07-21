@@ -19,12 +19,9 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
-    vanDatepicker:
-      id: 786
-      haslabel: true
-      label: Regeling is in werking op
-      labelmodifier: accent
-      fieldPlaceholder: DD-MM-JJJJ
+    dateselection:
+      dateselectionDatum:
+        label: Geldend op
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in

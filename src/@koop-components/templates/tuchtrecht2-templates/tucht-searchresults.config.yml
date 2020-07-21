@@ -75,6 +75,10 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
+  dateselection:
+    layout: narrow
+    dateselectionDatum:
+      label: Publicatie of uitspraak op
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true

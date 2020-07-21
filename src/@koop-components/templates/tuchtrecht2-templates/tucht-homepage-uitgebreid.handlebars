@@ -59,29 +59,8 @@
                   </div>
                 </fieldset>
                 <fieldset>
-                  <legend>Datum</legend>
-                  <div class="form__row">
-                     {{ render "@input-group" datumvanContext }}
-                  </div>
-                  <div class="form__row">
-                    <div data-decorator="init-form-conditionals">
-                      <div id="citem-1" class="js-form-conditionals__citem">
-                        <div class="form__row">
-                          {{ render "@select-custom" selectCustomContext }}
-                        </div>
-                      </div>
-                      <div id="citem-2" class="js-form-conditionals__citem">
-                        <div class="columns">
-                          <div class="column">
-                            {{render "@datepicker" startDatepicker }}
-                          </div>
-                          <div class="column">
-                            {{render "@datepicker" endDatepicker }}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <legend>Publicatie of uitspraak</legend>
+                  {{ render "@date-selection" dateselection merge=true }}
                   <a href="#" class="reset">
                     <small>Herstellen</small>
                   </a>

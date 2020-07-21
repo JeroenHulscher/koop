@@ -5,6 +5,8 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+  dateselection:
+    layout: narrow
   gebiedContext:
     moreless: true
     options:

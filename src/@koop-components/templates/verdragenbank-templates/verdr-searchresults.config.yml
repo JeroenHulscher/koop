@@ -99,6 +99,10 @@ context:
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
+  dateselection:
+    layout: narrow
+    dateselectionDatum:
+      label: Totstandgekomen op
   sortContext:
     modifier:
     columns: true

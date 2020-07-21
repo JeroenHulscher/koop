@@ -30,27 +30,8 @@
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Datum van publicatie</legend>
-                  <div data-decorator="init-form-conditionals">
-                    <div id="citem-1" class="js-form-conditionals__citem">
-                      <div class="form__row">
-                        {{ render "@select-custom" selectCustomContext }}
-                      </div>
-                    </div>
-                    <div id="citem-2" class="js-form-conditionals__citem">
-                      <div class="columns">
-                        <div class="column">
-                          {{render "@datepicker" startDatepicker }}
-                        </div>
-                        <div class="column">
-                          {{render "@datepicker" endDatepicker }}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="reset">
-                    <small>Herstellen</small>
-                  </a>
+                  <legend>Beschikbaarheid</legend>
+                  {{ render "@date-selection" }}
                 </fieldset>
               </div>
             </div>

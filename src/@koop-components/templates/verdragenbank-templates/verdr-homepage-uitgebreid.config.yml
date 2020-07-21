@@ -19,6 +19,9 @@ context:
       fieldLabel: Zoek in de Verdragenbank
       fieldLabelVisible: true
       labelmodifier: medium
+    dateselection:
+      dateselectionDatum:
+        label: Totstandgekomen op
     typeverdagContext:
       moreless: true
       options:

@@ -108,47 +108,8 @@ context:
       - id: checkbox-40232321313215
         text: Publicatie
         name: onderwerp455
-    startDatepicker:
-      id: 234
-      haslabel: true
-      label: Vanaf
-      labelmodifier: accent
-      fieldPlaceholder: DD-MM-JJJJ
-    endDatepicker:
-      id: 345
-      haslabel: true
-      label: Tot en met
-      labelmodifier: accent
-      fieldPlaceholder: DD-MM-JJJJ
-    selectCustomContext:
-      id: 1
-      fieldLabel: Periode
-      fieldLabelVisible: true
-      labelmodifier: accent
-      hastooltip: true
-      tooltipContext:
-        id: 1003
-      options:
-      - id: 102
-        value:
-        label: Alle
-        linkedto: 1
-      - id: 1
-        value: 10
-        label: Vandaag
-        linkedto: 1
-      - id: 2
-        value: 20
-        label: Afgelopen week
-        linkedto: 1
-      - id: 3
-        value: 30
-        label: Afgelopen 3 maanden
-        linkedto: 1
-      - id: 4
-        value: 30
-        label: Zelf een periode kiezen
-        linkedto: 2
-        selected: selected
+    dateselection:
+      dateselectionDatum:
+        label: Publicatie of uitspraak op
 
 

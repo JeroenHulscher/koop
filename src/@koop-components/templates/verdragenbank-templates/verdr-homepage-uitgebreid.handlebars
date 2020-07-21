@@ -24,18 +24,10 @@
               <div class="form__row form__row--large">
                 <fieldset>
                   <legend>Totstandkoming</legend>
-                  <div class="form__row">
-                    <p class="form__sublegend">Datum</p>
-                    <div class="columns">
-                      <div class="column">
-                        {{render "@datepicker" startDatepicker }}
-                      </div>
-                      <div class="column">
-                        {{render "@datepicker" endDatepicker }}
-                      </div>
-                    </div>
-                    <a href="#" class="reset"><small>Herstellen</small></a>
-                  </div>
+                  {{ render "@date-selection" dateselection merge=true }}
+                  <a href="#" class="reset">
+                    <small>Herstellen</small>
+                  </a>
                   <div class="form__row">
                     {{render "@input-text" inputPlaats }}
                   </div>
