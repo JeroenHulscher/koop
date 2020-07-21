@@ -9,10 +9,6 @@ context:
       selected: true
     - label: Item 2
       value: 20
-    - label: Item 3
-      value: 50
-    - label: Item 4
-      value: 100
   fieldLabel: Aantal resultaten per pagina
   fieldInstruction: verplicht veld
 variants:
