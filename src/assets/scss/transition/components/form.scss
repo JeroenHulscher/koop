@@ -114,8 +114,12 @@ fieldset {
 }
 .column--sidebar fieldset legend,
 .columns--sidebar__sidebar fieldset legend {
-  font-size: 1.25em;
+  font-size: 1.1em;
   padding-right: 3.25em;
+
+  @media ( min-width: $breakpointDesktop ) {
+    font-size: 1.25em;
+  }
 }
 
 input[type=date].datepicker__input~.ui-datepicker-trigger,

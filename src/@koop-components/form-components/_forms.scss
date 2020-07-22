@@ -137,8 +137,14 @@ fieldset {
     a.reset {
       position: absolute;
       right: 0;
-      top: 0;
+      top: .25em;
+      font-size: .7em;
+
       small {
+        font-size: 1em;
+      }
+
+      @media (min-width: $breakpointDesktop) {
         font-size: 0.9em;
       }
     }
