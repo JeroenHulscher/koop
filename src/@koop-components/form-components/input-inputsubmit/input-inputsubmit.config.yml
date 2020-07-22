@@ -1,5 +1,5 @@
 ---
-label: Input InputSearch
+label: Input InputSubmit
 status: ready
 context:
   id: 101
@@ -9,3 +9,8 @@ context:
   button: Aanmelden
   required: true
   type: email
+variants:
+  - name: Small
+    label: Small
+    context:
+      modifierComponent: input-inputsubmit--s
