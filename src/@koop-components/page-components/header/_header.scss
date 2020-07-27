@@ -1,7 +1,6 @@
 .header {
   border-bottom: .5em solid $headerBorderColor;
   position: relative;
-  margin-top: -2em;
 
   .skiplinks {
     position: relative;
@@ -65,6 +64,15 @@
         position: absolute;
         right: 1em;
         top: .5em;
+      }
+
+      > span {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: 80%;
+        @media ( min-width: $breakpointDesktop ) {
+          font-size: 100%;
+        }
       }
 
       a {
