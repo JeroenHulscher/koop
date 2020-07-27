@@ -1,14 +1,11 @@
-.header {
-  border-bottom: .5em solid $headerBorderColor;
-  position: relative;
-
-  .skiplinks {
+.skiplinks {
     position: relative;
+    z-index: 1;
 
     a {
       position: absolute;
       left: -999em;
-      top: 2em;
+      top: 2.8em;
 
       &:focus {
         left: 15em;
@@ -17,6 +14,9 @@
       }
     }
   }
+.header {
+  border-bottom: .5em solid $headerBorderColor;
+  position: relative;
 
   ul,
   p {
