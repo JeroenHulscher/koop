@@ -33,6 +33,11 @@
       }
 
       var select = document.createElement('select');
+      select.id = 'selectedID';
+      var selectLabel = document.createElement('label');
+      selectLabel.innerText = 'Kies style';
+      selectLabel.classList.add('visually-hidden');
+      selectLabel.setAttribute('for', 'selectedID');
       var title = localStorage.getItem('title');
 
       function selectStyle(title) {
@@ -60,6 +65,7 @@
         select.add(option);
       }
       document.body.appendChild(select);
+      document.body.appendChild(selectLabel);
 
       select.addEventListener('change', function (event) {
         title = event.target.options[event.target.selectedIndex].value;
