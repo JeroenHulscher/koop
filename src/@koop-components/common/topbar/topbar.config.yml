@@ -1,0 +1,9 @@
+---
+title: Topbar
+context:
+  navItems:
+    - label: Beheersite
+      href: '#'
+      active: true
+    - label: Digitaal Loket
+      href: '#'
