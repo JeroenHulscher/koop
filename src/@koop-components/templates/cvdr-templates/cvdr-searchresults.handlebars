@@ -6,10 +6,10 @@
 </div>
 
   <div class="container columns columns--sidebar">
-    <div class="columns--sidebar__sidebar" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
       <div data-decorator="init-fixedbottom-button">
 
-        <h2>Zoekfilter</h2>
+        <h2 class="sidebar__header">Zoekfilter</h2>
         <div class="row">
           <p>
             <a href="#" class="icon icon--refresh">Herstel alle filters</a>
@@ -18,7 +18,7 @@
 
 
         <div class="form__row form__row--large">
-          <h4>Geselecteerde filters (7)</h4>
+          <h3 class="sidebar__subheader">Geselecteerde filters (7)</h3>
           <div data-decorator="showmoreless" data-config='{"amount": 2}'>
             <ul class="list list--unstyled">
               <li>
@@ -73,6 +73,8 @@
             </ul>
           </div>
         </div>
+
+        <h2 class="visually-hidden">Filters</h2>
 
         <form id="formid">
 
