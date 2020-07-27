@@ -7,7 +7,7 @@ De componentenbibliotheek voor KOOP.
 - webdriver-manager: ```npm install webdriver-manager -g```, see [webdriver-manager on npm](https://www.npmjs.com/package/webdriver-manager).
 
 ## Intergratie - Gebruik de KOOP componentenbibliotheek
-De bestanden die nodig zijn om de KOOP componentenbibliotheek te gebruiken kan je vinden in de /dist/ map. Hier staan alle assets (geminified).
+De bestanden die nodig zijn om de KOOP componentenbibliotheek te gebruiken kan je vinden in de ```/dist/``` map. Hier staan alle assets (geminified).
 
 ## Ontwikkeling
 - ```npm run start``` start de ontwikkel-omgeving, erna te bekijken via ```localhost:3000```
