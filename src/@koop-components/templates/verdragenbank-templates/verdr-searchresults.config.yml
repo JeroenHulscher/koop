@@ -101,6 +101,8 @@ context:
     button: Bevestigen
   dateselection:
     layout: narrow
+    tooltip:
+      id: 568987654567898765
     dateselectionDatum:
       label: Totstandgekomen op
   sortContext:

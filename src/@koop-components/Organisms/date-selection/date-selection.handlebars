@@ -1,15 +1,15 @@
 <div data-decorator="init-form-conditionals">
-  <div id="citem-1" class="js-form-conditionals__citem">
+  <div id="citem-1" role="region" class="js-form-conditionals__citem">
     <div class="form__row">
       {{ render "@select-custom" dateselectionType merge=true }}
     </div>
   </div>
-  <div id="citem-2" class="js-form-conditionals__citem">
+  <div id="citem-2" role="region" class="js-form-conditionals__citem">
     <div class="form__row">
       {{render "@datepicker" dateselectionDatum merge=true }}
     </div>
   </div>
-  <div id="citem-3" class="js-form-conditionals__citem">
+  <div id="citem-3" role="region" class="js-form-conditionals__citem">
     {{#if_eq layout 'narrow'}}
       <div class="form__row">
         {{render "@datepicker" dateselectionDatumStart merge=true }}
