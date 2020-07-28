@@ -1,19 +1,19 @@
 .skiplinks {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    a {
-      position: absolute;
-      left: -999em;
-      top: 2.8em;
+  a {
+    position: absolute;
+    left: -999em;
+    top: 2.8em;
 
-      &:focus {
-        left: 15em;
-        background: $white;
-        color: $darkBlue;
-      }
+    &:focus {
+      left: 15em;
+      background: $white;
+      color: $darkBlue;
     }
   }
+}
 .header {
   border-bottom: .5em solid $headerBorderColor;
   position: relative;

@@ -1,15 +1,14 @@
-{{#if skipLinks }}
-<div class="skiplinks container">
-  {{#each skipLinks }}
-  <a href="{{ url }}">{{ text }}</a>
-  {{/each}}
-</div>
-{{/if}}
-{{#if topbar}}
-  {{render "@topbar" topbar }}
-{{/if}}
 <header class="header">
-
+  {{#if skipLinks }}
+    <div class="skiplinks container">
+      {{#each skipLinks }}
+      <a href="{{ url }}">{{ text }}</a>
+      {{/each}}
+    </div>
+  {{/if}}
+  {{#if topbar}}
+    {{render "@topbar" topbar }}
+  {{/if}}
   <div class="header__start">
     <div class="container">
 
