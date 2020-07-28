@@ -12,11 +12,23 @@ context:
     - url: '#'
       text: '...'
     metaLinks:
+      - text: K. Fortrie BECOP
+        class: icon icon--profile
+        nonlink: true
       - url: "#"
         text: Uitloggen
         class: button button--logout
     youAreHere:
       - text: Externe Beheersite
+    topbar:
+      navItems:
+        - label: Beheersite
+          href: '#'
+          active: true
+        - label: Digitaal Loket
+          href: '#'
+        - label: Stage BMS
+          href: '#'
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
