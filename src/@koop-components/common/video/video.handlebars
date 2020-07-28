@@ -1,9 +1,10 @@
-<div class="video" data-decorator="init-video">
-  <div class="video__video">
-     <img src="https://via.placeholder.com/1200x700.jpg?text=video+player" alt="placeholder voor de video player"/>
-  </div>
-  <div class="video__placeholder">
-    <img src="{{placeholderSrc}}" alt="{{placeholderAlt}}" />
-    <div class="video__play"><button class="video__play__trigger"><span class="visually-hidden">Start video 'video naam'</span></button></div>
-  </div>
+<div class="video">
+	<iframe
+		title="{{ videoTitle }}" 
+		width="560" 
+		height="315" 
+		src="{{ videoEmbedURL }}" 
+		frameborder="0" allow="encrypted-media" allowfullscreen>
+	</iframe>
+	<a href="{{ videoURL }}">{{ videoTitle }} bekijken op Youtube</a>
 </div>
