@@ -1,14 +1,16 @@
 <header class="header">
-
+  {{#if skipLinks }}
+    <div class="skiplinks container">
+      {{#each skipLinks }}
+      <a href="{{ url }}">{{ text }}</a>
+      {{/each}}
+    </div>
+  {{/if}}
+  {{#if topbar}}
+    {{render "@topbar" topbar }}
+  {{/if}}
   <div class="header__start">
     <div class="container">
-      {{#if skipLinks }}
-      <div class="skiplinks">
-        {{#each skipLinks }}
-        <a href="{{ url }}">{{ text }}</a>
-        {{/each}}
-      </div>
-      {{/if}}
 
       {{#if nav}}
         <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
@@ -20,7 +22,12 @@
       {{#if metaLinks }}
       <div class="header__meta">
         {{#each metaLinks }}
-        <a href="{{ url }}" class="{{class}}">{{ text }}</a>
+          {{#if nonlink}}
+            <span class="{{class}}">{{ text }}</span>
+          {{else}}
+            <a href="{{ url }}" class="{{class}}">{{ text }}</a>
+          {{/if}}
+
         {{/each}}
       </div>
       {{/if}}

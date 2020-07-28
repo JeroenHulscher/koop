@@ -1,23 +1,22 @@
+.skiplinks {
+  position: relative;
+  z-index: 1;
+
+  a {
+    position: absolute;
+    left: -999em;
+    top: 2.8em;
+
+    &:focus {
+      left: 15em;
+      background: $white;
+      color: $darkBlue;
+    }
+  }
+}
 .header {
   border-bottom: .5em solid $headerBorderColor;
   position: relative;
-  margin-top: -2em;
-
-  .skiplinks {
-    position: relative;
-
-    a {
-      position: absolute;
-      left: -999em;
-      top: 2em;
-
-      &:focus {
-        left: 15em;
-        background: $white;
-        color: $darkBlue;
-      }
-    }
-  }
 
   ul,
   p {
@@ -65,6 +64,15 @@
         position: absolute;
         right: 1em;
         top: .5em;
+      }
+
+      > span {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: 80%;
+        @media ( min-width: $breakpointDesktop ) {
+          font-size: 100%;
+        }
       }
 
       a {
