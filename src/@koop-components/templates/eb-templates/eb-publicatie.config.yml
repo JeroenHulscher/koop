@@ -1,5 +1,5 @@
 ---
-label: EB - Contentpage 2
+label: EB - Publicatie
 status: ready
 context:
   header:
@@ -37,8 +37,6 @@ context:
     - text: SGD
       url: '#'
     - text: Spoedpublicaties
-      url: '#'
-    - text: Publicaties publiceren
   navToeContext:
     id: 2
     items:
@@ -47,15 +45,29 @@ context:
       active: true
       sub: true
       subItems:
-        - stitle: Publicatieproces
+        - stitle: Publicaties
+          sactive: true
         - stitle: Spoedpublicaties
-          sub: true
-          subItems:
-            - stitle: Spoedpublicaties voorpubliceren
-            - stitle: Spoedpublicaties publiceren
-              sactive: true
         - stitle: Updaten metadata
         - stitle: Vervangen verschijningsvormen
         - stitle: Zoekdienst
         - stitle: Controlelijst
         - stitle: OEB ochtendcontrole
+  actions:
+    items:
+    - link: '#'
+      text: Manifestaties
+      icon: icon-info-blue.svg
+    - link: '#'
+      text: Wijzig metadata
+      icon: icon-bewerken-blue.svg
+  publicatiegegevens:
+    modifier:
+    items:
+    - item:
+      - column:
+        type: Publicatie gegevens
+        value: Aantal pagina's
+      - column:
+        type: Waarde
+        value: 9

@@ -1,0 +1,64 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Publicatie</a>
+      </p>
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    {{ render "@pageactions" actions }}
+
+    <h1>Planologische Kernbeslissing Waddenzee</h1>
+
+    <p>Onderstaande tabel bevat een overzicht van de publicatiegegevens (metadata) die bij deze publicatie horen.</p>
+
+    <form>
+      <div class="table__container">
+        <table class="table--condensed table--borderless">
+          <thead>
+            <tr>
+              <th>Publicatiegegevens</th>
+              <th>Waarde</th>
+              <th>Acties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Aantal pagina's</th>
+              <td data-before="Aantal pagina's">{{ render "@input-text" txt1 merge=true }}</td>
+              <td class="">{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
+            </tr>
+            <tr>
+              <th>Beschikbaar sinds</th>
+              <td data-before="Beschikbaar sinds">{{ render "@input-text" txt2 merge=true }}</td>
+              <td class="">{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
+            </tr>
+            <tr>
+              <th>Bron</th>
+              <td data-before="Bron">{{ render "@input-text" txt3 merge=true }}</td>
+              <td>{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {{ render "@button--primary" buttonSave merge=true }}
+      {{ render "@button" buttonCancel merge=true }}
+    </form>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

@@ -1,5 +1,5 @@
 ---
-label: EB - Contentpage 2
+label: EB - Publicatie wijzigen
 status: ready
 context:
   header:
@@ -37,8 +37,6 @@ context:
     - text: SGD
       url: '#'
     - text: Spoedpublicaties
-      url: '#'
-    - text: Publicaties publiceren
   navToeContext:
     id: 2
     items:
@@ -47,15 +45,26 @@ context:
       active: true
       sub: true
       subItems:
-        - stitle: Publicatieproces
+        - stitle: Publicaties
+          sactive: true
         - stitle: Spoedpublicaties
-          sub: true
-          subItems:
-            - stitle: Spoedpublicaties voorpubliceren
-            - stitle: Spoedpublicaties publiceren
-              sactive: true
         - stitle: Updaten metadata
         - stitle: Vervangen verschijningsvormen
         - stitle: Zoekdienst
         - stitle: Controlelijst
         - stitle: OEB ochtendcontrole
+  actions:
+    items:
+    - link: '#'
+      text: Metadataveld toevoegen
+      icon: icon-plus-shape.svg
+  txt1:
+    value: 9
+  txt2:
+    value: 02-06-2020
+  txt3:
+    value: Staten-Generaal digitaal
+  buttonSave:
+    text: Opslaan
+  buttonCancel:
+    text: Annuleren

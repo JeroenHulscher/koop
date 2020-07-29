@@ -1,4 +1,5 @@
 {{ render "@header" header merge=true }}
+
 <div class="row row--page-opener">
   <div class="container">
     {{ render "@breadcrumb" breadcrumb }}
@@ -10,15 +11,25 @@
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
       <p>
-        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Externe Beheersite</a>
+        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Publicaties</a>
       </p>
-      {{render "@nav" navToeContext }}
     </div>
   </div>
 
   <div role="main" id="content">
 
-    <h1>Publicatie publiceren</h1>
+    {{ render "@pageactions" actions }}
+
+    <h1>Manifestaties (Planologische Kernbeslissing Waddenzee)</h1>
+
+    <div class="table__container">
+      {{ render "@table" table }}
+    </div>
+
+    <p>
+      {{ render "@button--primary" buttonDeleteall merge=true }}
+    </p>
+
 
   </div>
 
