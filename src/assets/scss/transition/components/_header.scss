@@ -1,7 +1,23 @@
 .header {
   margin-bottom: 2em;
 
-  &__meta > ul > li > a.icon-bg {
-      background-position: right .65em center !important;
+  &__start {
+    .header__meta {
+      @media ( min-width: $breakpointDesktop ) {
+        top: 0.125em;
+      }
+      .button {
+        margin-top: 0.5em;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      > ul > li > a.icon-bg {
+        background-position: right .65em center !important;
+      }
+    }
   }
+
 }
