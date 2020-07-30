@@ -282,7 +282,8 @@ table.table--borderless {
   thead tr th
   thead th,td,
   tbody th td,
-  tbody tr td {
+  tbody tr td,
+  tbody tr th {
     border: 0;
   }
 
