@@ -10,6 +10,11 @@
 
 .video {
   position: relative;
+  width: 100%;
+
+  iframe {
+    display: block;
+  }
 
   &__video {
     display: none;
