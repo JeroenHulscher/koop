@@ -11,9 +11,11 @@
 .video {
   position: relative;
   width: 100%;
+  margin-bottom: 2em;
 
   iframe {
     display: block;
+    margin: 0 0 1em 0;
   }
 
   &__video {
