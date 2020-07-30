@@ -1,7 +1,6 @@
 name: Video
 context:
   id: 1
-  placeholderSrc: ../../images/temp/Landing-OverBOUB.jpg
-  placeholderalt: alt text
-
-
+  videoTitle: Berichten over uw buurt promo-video
+  videoEmbedURL: https://www.youtube.com/embed/JAl4Ht5jMZY
+  videoURL: https://www.youtube.com/watch?v=JAl4Ht5jMZY

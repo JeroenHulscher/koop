@@ -21,7 +21,8 @@ const paths = {
   images : 'src/assets/images',
   components: 'src/@koop-components',
   allSrc: 'src',
-  drop : 'public'
+  drop : 'public',
+  dist : 'dist'
 };
 
 
@@ -130,6 +131,15 @@ gulp.task( 'images:watch', function() {
   gulp.watch( paths.images + '/**/*', gulp.parallel( 'images' ) );
 });
 
+// Dist - dist folder (= copy of 'public' folder)
+gulp.task( 'dist:clean', function() {
+  return del([paths.dist]);
+});
+gulp.task( 'dist:copypublic', function() {
+  return gulp.src( paths.drop + '/**/*' )
+    .pipe( gulp.dest( paths.dist ) );
+});
+
 
 // Fonts
 gulp.task( 'fonts:copy', function() {
@@ -192,7 +202,7 @@ gulp.task( 'js:watch', function() {
 });
 
 gulp.task( 'default', gulp.parallel( 'css', 'images', 'fonts', 'js' ) );
-gulp.task( 'public-build', gulp.series( 'default' ) );
+gulp.task( 'dist-build', gulp.series( 'default', 'dist:clean', 'dist:copypublic' ) );
 gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'fractal:build' ) );
 // gulp.task( 'watch', gulp.parallel( 'lint:watch', 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'watch', gulp.parallel( 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );

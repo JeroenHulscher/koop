@@ -6,20 +6,26 @@ De componentenbibliotheek voor KOOP.
 - NPM
 - webdriver-manager: ```npm install webdriver-manager -g```, see [webdriver-manager on npm](https://www.npmjs.com/package/webdriver-manager).
 
-## Development
-In order to start your development environment, run ```npm run start``` or ```yarn start``` from the root of the project.
+## Intergratie - Gebruik de KOOP componentenbibliotheek
+De bestanden die nodig zijn om de KOOP componentenbibliotheek te gebruiken kan je vinden in de ```/dist/``` map. Hier staan alle assets (geminified).
 
-## E2E testing
-Make sure you webdriver-manager is up to date, you can check this by running ```webdriver-manager update```.
+## Ontwikkeling
+- ```npm run start``` start de ontwikkel-omgeving, erna te bekijken via ```localhost:3000```
 
-Run three terminals and run the following commands:
+## E2E test
+Controleer, geautomatiseerd, de werking van de componenten na het aanbrengen van een wijziging.
+
+Volg de onderstaande stappen om een E2E uit te voeren:
+- ```webdriver-manager update```
 - ```webdriver-manager start```
-- ```gulp dev``` or ```yarn start``` or ```npm run start```
+- ```npm run start```
 - ```npm run e2e```
 
-## Visual regression testing
-Run two terminals and run the following commands:
-- ```gulp dev``` or ```yarn start``` or ```npm run start```
+## Visuale regressie test
+Controleer, geautomatiseerd, de visuele verschillen na het aanbrengen van een wijziging.
+
+Volg de onderstaande stappen om een Visuale regressie test uit te voeren:
+- ```npm run start```
 - ```npm run vrtest```
 
-```npm run vrtest``` automatically updates your reference screenshots before creating new screenshots of your local. If you want to only create and diff new local screenshots, you can simply run ```backstop test```.
+Een extra browser-scherm zal automatisch worden geopend met de resultaten van de test.
