@@ -68,7 +68,7 @@ context:
           linkedto: 1
           hideself: true
       buttonContext:
-        modifier: button--secundary
+        modifier: button--secondary
         button: false
         anchor: true
         action: /components/preview/templates-att-stap1
