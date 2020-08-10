@@ -18,7 +18,11 @@
   "license": "ISC",
   "dependencies": {
     "chromedriver": "^77.0.0",
+    "dot-prop": "^5.1.1",
+    "is-obj": "^2.0.0",
     "jquery": "^3.5.1",
+    "lodash": "^4.17.19",
+    "node-sass": "^4.14.1",
     "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
