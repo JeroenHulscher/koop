@@ -22,8 +22,12 @@
     "is-obj": "^2.0.0",
     "jpeg-js": "^0.4.0",
     "jquery": "^3.5.1",
+    "js-yaml": "^3.13.1",
+    "kind-of": "^6.0.3",
     "lodash": "^4.17.19",
+    "minimist": "^0.2.1",
     "node-sass": "^4.14.1",
+    "set-value": "^2.0.1",
     "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
