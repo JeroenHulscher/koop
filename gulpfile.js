@@ -6,7 +6,7 @@ const sass = require( 'gulp-sass' );
 const postcss = require( 'gulp-postcss' );
 const concat = require( 'gulp-concat' );
 const packagejson = require( './package.json' );
-const uglify = require( 'gulp-uglify' );
+const minify = require('gulp-minifier');
 const autoprefixer = require( 'autoprefixer' );
 const eslint = require( 'gulp-eslint' );
 const del = require( 'del' );
@@ -184,13 +184,12 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/run.js'
   ])
   .pipe( concat( 'main.js' ) )
-  .pipe(uglify({
-    mangle: false,
-    output: {
-      beautify: false,
-      comments: "some"
-    }
-   }))
+  .pipe(minify({
+    minify: true,
+    minifyJS: {
+      sourceMap: false
+    },
+  }))
   .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });
