@@ -35,7 +35,7 @@
     "@frctl/mandelbrot": "^1.2.1",
     "@frctl/twig": "^1.0.0-beta.5",
     "autoprefixer": "^9.6.1",
-    "backstopjs": "^4.3.2",
+    "backstopjs": "^5.0.1",
     "combobo": "2.0.1",
     "del": "^5.1.0",
     "eslint": "^6.3.0",
