@@ -34,10 +34,6 @@
 
       var select = document.createElement('select');
       select.id = 'selectedID';
-      var selectLabel = document.createElement('label');
-      selectLabel.innerText = 'Kies style';
-      selectLabel.classList.add('visually-hidden');
-      selectLabel.setAttribute('for', 'selectedID');
       var title = localStorage.getItem('title');
 
       function selectStyle(title) {
