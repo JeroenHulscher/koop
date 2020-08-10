@@ -168,7 +168,7 @@ gulp.task( 'js:copy', function() {
 
 gulp.task( 'js:build', function() {
   return gulp.src([
-    paths.scripts + '/vendor/jquery.js', // 3.3.1
+    'node_modules/jquery/dist/jquery.min.js', // 3.5.1
     paths.scripts + '/vendor/jquery-ui.min.js', // 1.2
     paths.scripts + '/vendor/fastsearch.js',
     paths.scripts + '/vendor/fastselect.js',
