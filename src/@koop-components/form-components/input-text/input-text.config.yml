@@ -26,6 +26,24 @@ variants:
       fieldLabel: number
       fieldInstruction:
       fieldPlaceholder: 'number'
+  - name: Email
+    label: Input email
+    context:
+      modifier: input--email input--small
+      id: 1
+      type: email
+      fieldLabel: email
+      fieldInstruction:
+      fieldPlaceholder: 'email'
+  - name: URL
+    label: Input URL
+    context:
+      modifier: input--url input--small
+      id: 1
+      type: url
+      fieldLabel: URL
+      fieldInstruction:
+      fieldPlaceholder: 'URL'
   - name: Postal code
     label: Input postcode
     context:
