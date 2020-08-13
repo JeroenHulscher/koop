@@ -1,11 +1,15 @@
 <form data-decorator="init-formredirecter">
 
   <p>
-    The value of this field get's added to the base URL; the page will redirect automaticly.
+    De waarde van dit veld wordt automatisch bijgevoegd aan de bestaande URL; de pagina zal automatisch doorverwijzen.
   </p>
   <p>
-    It's possible to assign custom input element, data-config='{"field":"#field#"}'
+    Beschikbare configuratie:
   </p>
+  <ul>
+    <li>Veld selector: data-config='{"field":"#field#"}'</li>
+  </ul>
+
   <input class="js-form-redirecter__field" value="abc/def/g?appel=peer" />
 
   <button type="submit">Verzenden</button>
