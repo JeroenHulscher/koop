@@ -29,24 +29,24 @@
         <table class="table--condensed table--borderless">
           <thead>
             <tr>
-              <th>Publicatiegegevens</th>
-              <th>Waarde</th>
-              <th>Acties</th>
+              <th scope="col">Publicatiegegevens</th>
+              <th scope="col">Waarde</th>
+              <th scope="col">Acties</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>Aantal pagina's</th>
+              <th scope="row">Aantal pagina's</th>
               <td data-before="Aantal pagina's">{{ render "@input-text" txt1 merge=true }}</td>
               <td class="">{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
             </tr>
             <tr>
-              <th>Beschikbaar sinds</th>
+              <th scope="row">Beschikbaar sinds</th>
               <td data-before="Beschikbaar sinds">{{ render "@input-text" txt2 merge=true }}</td>
               <td class="">{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
             </tr>
             <tr>
-              <th>Bron</th>
+              <th scope="row">Bron</th>
               <td data-before="Bron">{{ render "@input-text" txt3 merge=true }}</td>
               <td>{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
             </tr>
