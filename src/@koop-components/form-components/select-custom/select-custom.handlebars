@@ -1,5 +1,6 @@
-<div id="{{id}}" class="select-custom {{modifier}}">
-  <select>
+<label {{#if fieldLabelVisible}}{{else}}class="visually-hidden" {{/if}}for="{{id}}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
+<div class="select-custom {{modifier}}">
+  <select id="{{id}}">
     {{#each options}}
       <option value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} {{selected}}>{{label}}</option>
     {{/each}}

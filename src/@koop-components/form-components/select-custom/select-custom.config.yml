@@ -13,8 +13,6 @@ context:
       value: 50
     - label: Item 4
       value: 100
-  fieldLabel: Aantal resultaten per pagina
-  fieldInstruction: verplicht veld
 variants:
   - name: large
     context:
@@ -22,3 +20,8 @@ variants:
   - name: small
     context:
       modifier: select-custom--small
+  - name: with label
+    context:
+      fieldLabel: Metadata type
+      labelmodifier: accent
+      fieldLabelVisible: true
