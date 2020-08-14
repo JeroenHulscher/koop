@@ -17,3 +17,9 @@ variants:
     context:
       modifier: button-icon--min
       text: Verwijderen
+  - name: Bin
+    status: prototype
+    notes: This variant is used for small icons in toolbars etc. It has a smaller padding than the default icon button and no background color.
+    context:
+      modifier: button-icon--bin
+      text: Verwijderen
