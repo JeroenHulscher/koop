@@ -56,8 +56,8 @@ context:
   actions:
     items:
     - link: '#'
-      text: Manifestaties
-      icon: icon-info-blue.svg
+      text: Wijzig bestanden
+      icon: icon-bewerken-blue.svg
     - link: '#'
       text: Wijzig metadata
       icon: icon-bewerken-blue.svg

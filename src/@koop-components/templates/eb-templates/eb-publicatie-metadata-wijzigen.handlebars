@@ -18,43 +18,70 @@
 
   <div role="main" id="content">
 
-    {{ render "@pageactions" actions }}
-
-    <h1>Planologische Kernbeslissing Waddenzee</h1>
+    <h1>Metadata wijzigen van Planologische Kernbeslissing Waddenzee</h1>
 
     <p>Onderstaande tabel bevat een overzicht van de publicatiegegevens (metadata) die bij deze publicatie horen.</p>
 
     <form>
-      <div class="table__container">
-        <table class="table--condensed table--borderless">
+      <fieldset>
+        <legend class="visually-hidden">Metadata wijzigen</legend>
+
+
+        <table class="table--condensed table--headerhighlight">
           <thead>
             <tr>
               <th scope="col">Publicatiegegevens</th>
               <th scope="col">Waarde</th>
-              <th scope="col">Acties</th>
+              <th scope="col">Verwijderen</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Aantal pagina's</th>
               <td data-before="Aantal pagina's">{{ render "@input-text" txt1 merge=true }}</td>
-              <td class="">{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
+              <td>{{ render "@button-icon--bin" submitContext merge=true }}</td>
             </tr>
             <tr>
               <th scope="row">Beschikbaar sinds</th>
               <td data-before="Beschikbaar sinds">{{ render "@input-text" txt2 merge=true }}</td>
-              <td class="">{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
+              <td>{{ render "@button-icon--bin" submitContext merge=true }}</td>
             </tr>
             <tr>
               <th scope="row">Bron</th>
               <td data-before="Bron">{{ render "@input-text" txt3 merge=true }}</td>
-              <td>{{ render "@button-icon--plus" }} {{ render "@button-icon--min" }}</td>
+              <td>{{ render "@button-icon--bin" submitContext merge=true }}</td>
             </tr>
           </tbody>
         </table>
-      </div>
-      {{ render "@button--primary" buttonSave merge=true }}
-      {{ render "@button" buttonCancel merge=true }}
+        {{#> @modal modalContextMetadata }}
+          <fieldset>
+            <legend>Metadata toevoegen</legend>
+            <div class="columns">
+              <div class="column">
+                <div class="form__row">
+                    {{ render "@select-custom" selectcustom }}
+                </div>
+              </div>
+              <div class="column">
+                <div class="form__row">
+                  {{render "@input-text" inputMetadata merge=true }}
+                </div>
+              </div>
+            </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{render "@button" buttonSubmitMetadata }}
+              </div>
+            </div>
+          </fieldset>
+        {{/@modal}}
+
+        <p>
+          {{ render "@button--primary" buttonSave merge=true }}
+          {{ render "@button" buttonCancel merge=true }}
+        </p>
+
+      </fieldset>
     </form>
 
   </div>
