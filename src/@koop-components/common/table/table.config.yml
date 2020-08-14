@@ -134,6 +134,10 @@ variants:
     label: hover
     context:
       modifier: table--hover
+  - name: Header highlighted
+    label: header highlighted
+    context:
+      modifier: table--headerhighlight
   - name: datakalender
     context:
       caption:
