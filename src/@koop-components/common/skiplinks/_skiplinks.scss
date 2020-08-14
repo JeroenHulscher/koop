@@ -1,0 +1,18 @@
+.skiplinks {
+  position: relative;
+  z-index: 1;
+
+  a {
+    position: absolute;
+    left: -999em;
+    top: 2.8em;
+
+    &:focus {
+      position: relative;
+      left: 0;
+      top: 0;
+      background: $white;
+      color: $darkBlue;
+    }
+  }
+}
