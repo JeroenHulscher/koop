@@ -7,22 +7,27 @@
   outline: 2px solid transparent;
   outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
-  padding: .8em 3.5em .7em 0.825em;
+  padding: 1.05em;
   font-size: 1em;
   margin: 0;
 
   & ~ .button-icon {
-    margin-right: .5em;
+    margin-left: .5em;
   }
 
-  &:after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 60%;
-    top: 20%;
-    right: 2.75em;
-    background: $darkBlue;
+  &--thumb-up,
+  &--thumb-down {
+    padding: .8em 3.5em .7em 0.825em;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 60%;
+      top: 20%;
+      right: 2.75em;
+      background: $darkBlue;
+    }
   }
 
   &--thumb-up {
@@ -99,7 +104,11 @@
   }
 
   &--plus {
-    background-image: $plusIconWhite;
+    background-image: $plusShapeIcon;
+  }
+
+  &--min {
+    background-image: $minusShapeIcon;
   }
 
   &--cross {

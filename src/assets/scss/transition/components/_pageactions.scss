@@ -45,6 +45,30 @@
       svg {
         fill: $darkBlue;
       }
-    }
 
+      [src$="icon-check2-blue.svg"] {
+        margin-top: -9px;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: -13px;
+        }
+      }
+
+      [src$="icon-cross-blue.svg"] {
+        height: 10px;
+        margin-top: -5px;
+        @media ( min-width: $breakpointDesktop ) {
+          height: 20px;
+          margin-top: -8px;
+        }
+      }
+      [src$="icon-plus-shape.svg"] {
+        height: 10px;
+        margin-top: -5px;
+        @media ( min-width: $breakpointDesktop ) {
+          height: 20px;
+          margin-top: -8px;
+        }
+      }
+    }
 }
+

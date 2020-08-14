@@ -18,7 +18,20 @@
 
   <div role="main" id="content">
 
-    <h1>Publicatie publiceren</h1>
+    <h1>Publicaties</h1>
+
+    <div class="row">
+      {{ render "@input-inputsubmit" searchPublications merge=true }}
+    </div>
+
+    <div class="row">
+      <h2>Resultaten
+        <span class="h2__sub">2 resultaten</span>
+      </h2>
+      {{ render "@table--condensed" tableResults }}
+    </div>
+
+    {{ render "@pagination" }}
 
   </div>
 

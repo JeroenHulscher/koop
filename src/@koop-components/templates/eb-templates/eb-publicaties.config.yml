@@ -1,5 +1,5 @@
 ---
-label: EB - Contentpage 2
+label: EB - Publicaties
 status: ready
 context:
   header:
@@ -37,8 +37,6 @@ context:
     - text: SGD
       url: '#'
     - text: Spoedpublicaties
-      url: '#'
-    - text: Publicaties publiceren
   navToeContext:
     id: 2
     items:
@@ -47,15 +45,29 @@ context:
       active: true
       sub: true
       subItems:
-        - stitle: Publicatieproces
-        - stitle: Spoedpublicaties
-          sub: true
-          subItems:
-            - stitle: Spoedpublicaties voorpubliceren
-            - stitle: Spoedpublicaties publiceren
-              sactive: true
-        - stitle: Updaten metadata
-        - stitle: Vervangen verschijningsvormen
-        - stitle: Zoekdienst
-        - stitle: Controlelijst
-        - stitle: OEB ochtendcontrole
+        - stitle: Publicaties
+          sactive: true
+  searchPublications:
+    showLabel: true
+    label: Zoek publicatie
+    placeholder: Identifier
+    button: Zoek identifier
+    modifierComponent: input-inputsubmit--s
+  tableResults:
+    caption: false
+    modifier: table--condensed
+    items:
+    - item:
+      - column:
+        type: Identifier
+        value: '<a href="#">0000013938</a>'
+      - column:
+        type: Titel
+        value: Planologische Kernbeslissing Waddenzee
+    - item:
+      - column:
+        type: Identifier
+        value: '<a href="#">0000013939</a>'
+      - column:
+        type: Titel
+        value: Tweede Kamer der Staten-Generaal

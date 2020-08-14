@@ -7,5 +7,12 @@ context:
   showLabel: false
   placeholder: Uw e-mailadres
   button: Aanmelden
-  required: true
   type: email
+variants:
+  - name: Small
+    label: Small
+    context:
+      type: text
+      button: Zoeken
+      placeholder: Trefwoord
+      modifierComponent: input-inputsubmit--s

@@ -282,10 +282,19 @@ table.table--borderless {
   thead tr th
   thead th,td,
   tbody th td,
-  tbody tr td {
+  tbody tr td,
+  tbody tr th {
     border: 0;
   }
-
+}
+table.table--headerhighlight {
+  thead tr {
+    background: $lightGrey;
+    border-bottom: 2px solid $darkBlue;
+  }
+  &.table--condensed thead tr th {
+    padding: 0.75em .25em;
+  }
 }
 
 

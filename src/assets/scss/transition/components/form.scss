@@ -15,6 +15,7 @@ textarea {
   outline: 2px solid transparent;
   outline-offset: .5em;
   transition: outline-offset $fastEaseInOut;
+  margin: 0;
 
   &:focus {
     outline: 2px solid #ffb612;
