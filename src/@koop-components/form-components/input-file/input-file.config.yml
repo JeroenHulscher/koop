@@ -2,15 +2,21 @@
 label: Input file
 status: ready
 context:
-  id: 1
+  id: 15678765434567
   fieldLabel: Kies bestand
   fieldInstruction:
   fieldPlaceholder: 'placeholder'
   showButtonOnSelection: true
   submitLabel: Uploaden
   debug: true
+  showbuttonAfterChange: false
+  prelabel: "Upload een nieuw bestand: "
 variants:
+  - name: With submit button
+    status: ready
+    context:
+      showbuttonAfterChange: true
   - name: AJAX
-    status: wip
+    status: prototype
     context:
       ajax: true
