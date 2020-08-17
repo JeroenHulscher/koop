@@ -1,6 +1,6 @@
 ---
-name: lokalewetregelgeving
-label: lokalewetregelgeving
+name: live - lokalewetregelgeving
+label: live - lokalewetregelgeving
 status: ready
 context:
   headerContext:
