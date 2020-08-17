@@ -163,7 +163,7 @@ context:
           value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></a>'
   modalContextMetadata:
     initClosed: true
-    openButton: Manifestatie toevoegen
+    openButton: Bestand toevoegen
     closeButton: Toevoegen
     selectcustom:
       id: 1
