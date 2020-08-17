@@ -28,17 +28,11 @@
         {{#> @modal modalContextMetadata }}
           <fieldset>
             <legend>Bestand toevoegen</legend>
-            <div class="columns">
-              <div class="column">
-                <div class="form__row">
-                  {{ render "@select-custom" selectcustom }}
-                </div>
-              </div>
-              <div class="column">
-                <div class="form__row">
-                  {{render "@input-text" inputfile merge=true }}
-                </div>
-              </div>
+            <div class="form__row">
+              {{ render "@select-custom" selectcustom }}
+            </div>
+            <div class="form__row">
+              {{ render "@input-file" }}
             </div>
             <div class="form__rowsubmit">
               <div class="form__rowsubmit__item">
