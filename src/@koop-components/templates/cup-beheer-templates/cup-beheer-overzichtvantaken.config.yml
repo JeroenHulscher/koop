@@ -203,6 +203,7 @@ context:
           value: 11-08-2020 15:15:00
   inputsubmitContext:
     label: Job-id
+    id: 8765467
     showLabel: false
     placeholder: Verfijn op job-id
     button: Zoek
@@ -244,18 +245,20 @@ context:
         text: vandaag (1161)
         name: subject
   status:
-    modifier: inline-group
-    fieldLabel: Welke landen vochten er mee met de geallieerden in de Tweede Wereldoorlog?
-    name: alliedforces
+    name: status
     options:
       - id: checkbox-1
         text: ERROR (8)
+        name: status
       - id: checkbox-2
         text: FATAL (26)
+        name: status
       - id: checkbox-3
         text: INFO (45679)
+        name: status
       - id: checkbox-4
         text: WARN (266)
+        name: status
   subselectionTaak:
     linkText: Selecteer taken
     id: 202
