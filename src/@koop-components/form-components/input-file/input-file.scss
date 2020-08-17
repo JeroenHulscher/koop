@@ -1,5 +1,5 @@
 .input-filebox {
-  border-radius: .5em;
+  border-radius: .25em;
   background: $lightBlue;
   padding: 1em;
   margin: 0 0 2em 0;
@@ -164,17 +164,15 @@
       padding: 0;
       background: none;
       text-align: left;
-      margin-bottom: .5em;
 
       label {
-        font-size: .75rem;
+        font-size: .75em;
       }
     }
 
     &.has-file .input-dragbox__prelabel {
       display: inline-block;
       margin-right: em(16);
-      margin-bottom: em(8);
     }
   }
 
@@ -220,6 +218,10 @@
       left: .325em;
       top: .325em;
     }
+  }
+
+  .js-input-dragbox__button {
+    margin-top: 1em;
   }
 }
 

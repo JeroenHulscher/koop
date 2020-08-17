@@ -89,12 +89,12 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
     }
 
     if (fileName) {
-      this.label.innerHTML = 'Selecteer ander document';
+      this.label.innerHTML = 'Selecteer ander bestand';
       this.prelabel.innerHTML = fileName;
       this.prelabel.setAttribute('tabindex','0');
       this.prelabel.focus();
       this.area.classList.add('has-file');
-      if (this.config.showbuttonAfterChange) {
+      if (this.config.showbuttonAfterChange === 'true') {
         this.showbuttonAfterChange();
       }
     }
@@ -132,7 +132,9 @@ a.setAttribute("aria-valuenow",parseFloat(a.getAttribute("value"))||0):a.removeA
       }
     });
 
-    this.element.querySelector('.js-reset').addEventListener('click', function (e) { e.preventDefault(); this.resetElement(e); }.bind( this ), false );
+    if (this.isAjaxHandling){
+      this.element.querySelector('.js-reset').addEventListener('click', function (e) { e.preventDefault(); this.resetElement(e); }.bind( this ), false );
+    }
 
     // Firefox bug fix
     this.area.addEventListener('focus', function ( e ) { this.area.classList.add('has-focus'); }.bind( this ), false );
