@@ -1,11 +1,28 @@
 <div class="" data-decorator="init-filter-results">
   <div class="form__row">
-    <label class="visually-hidden" for="filterinput--{{id}}">Filter op</label>
-    <input type="text" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filterinput--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" />
+    <label class="visually-hidden" for="filter-id--{{id}}">Filter op</label>
+    <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" />
   </div>
   <div class="form__row">
-    <fieldset class="js-filterresults__results">
-      {{render "@input-checkbox" }}
+    <fieldset class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
+    {{!-- <fieldset class="js-filterresults__results"> --}}
+      {{!-- {{render "@input-checkbox" }} --}}
+
+      <ul class="list--unstyled">
+        {{#each Options }}
+        <li class=" js-filterresults__result">
+          <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+            <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"
+              {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}"
+              value="2" />
+            <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+              {{ title }}
+            </label>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+
     </fieldset>
   </div>
 </div>

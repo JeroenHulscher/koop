@@ -6,7 +6,7 @@ const sass = require( 'gulp-sass' );
 const postcss = require( 'gulp-postcss' );
 const concat = require( 'gulp-concat' );
 const packagejson = require( './package.json' );
-const uglify = require( 'gulp-uglify' );
+const minify = require('gulp-minifier');
 const autoprefixer = require( 'autoprefixer' );
 const eslint = require( 'gulp-eslint' );
 const del = require( 'del' );
@@ -168,7 +168,7 @@ gulp.task( 'js:copy', function() {
 
 gulp.task( 'js:build', function() {
   return gulp.src([
-    paths.scripts + '/vendor/jquery.js', // 3.3.1
+    'node_modules/jquery/dist/jquery.min.js', // 3.5.1
     paths.scripts + '/vendor/jquery-ui.min.js', // 1.2
     paths.scripts + '/vendor/fastsearch.js',
     paths.scripts + '/vendor/fastselect.js',
@@ -184,13 +184,12 @@ gulp.task( 'js:build', function() {
     paths.scripts + '/run.js'
   ])
   .pipe( concat( 'main.js' ) )
-  .pipe(uglify({
-    mangle: false,
-    output: {
-      beautify: false,
-      comments: "some"
-    }
-   }))
+  .pipe(minify({
+    minify: true,
+    minifyJS: {
+      sourceMap: false
+    },
+  }))
   .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
   .pipe( gulp.dest( paths.drop + '/js' ) );
 });

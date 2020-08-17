@@ -1,6 +1,6 @@
 ---
 label: Input email
-status: ready
+status: prototype
 context:
   id: 1
   fieldLabel: E-mail

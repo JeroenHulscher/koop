@@ -1,6 +1,6 @@
 ---
 label: Input telephone
-status: ready
+status: prototype
 context:
   id: 1
   fieldLabel: Telefoonnummer

@@ -48,6 +48,9 @@ variants:
           id: 3
           title: Sociale Zaken en Werkgelegenheid (szw)
           short: szw
+  - name: with Search filter
+    context:
+      searchFilter: true
   - name: Default limit (3)
     context:
       id: 1

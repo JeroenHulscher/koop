@@ -31,17 +31,15 @@
     border-color: $mediumGrey;
   }
 
-  &[name="selectAll"] {
+  &.js-checkbox-master {
     & ~ label {
       font-weight: bold;
     }
   }
 }
 
-.modal [data-decorator="init-selectall"] {
-  .js-checkbox-master {
-    margin-bottom: em(24);
-  }
+.modal .js-checkbox-master {
+  margin-bottom: em(24);
 }
 
 .checkbox__label {

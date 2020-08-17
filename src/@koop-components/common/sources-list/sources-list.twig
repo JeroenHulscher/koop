@@ -1,0 +1,79 @@
+<ul id="{{ id }}" class="list--sources">
+  {% for item in items %}
+    <li>
+      <div class="list--source__information {{ item.icon }}">
+        {{ item.name }}
+        <span class="list--sources__item__filesize">{{ item.filesize }}</span>
+        {% if item.files %}
+          {% for file in item.files %}
+            <span class="label label--{{ file.type }}">{{ file.type }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      {% if item.buttonContext.action %}
+        <a href="{{ item.buttonContext.action }}" class="button {{ item.buttonContext.modifier }}">{{ item.buttonContext.text }}
+          <span class="visually-hidden">van abonnement: {{ item.name }}</span>
+        </a>
+      {% endif %}
+
+      {# {{ render "@button" buttonContext }} #}
+      {% if item.actionsOne %}
+        <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{ item.idprefix }}"}'>
+          <div id="{{ item.idprefix }}1" class="js-form-conditionals__citem">
+            {{ item.actionsOneLabel }}
+            {% for actionOne in item.actionsOne %}
+              {% if actionOne.iconOnly %}
+                <button class="button-icon button-icon--plain button-icon--bin js-button-next" data-linkedto="{{ actionOne.linkedto }}" data-triggeresponds="{{ actionOne.triggeresponds }}" data-hideself="{{ actionOne.hideself }}"><span class="visually-hidden">{{ actionOne.label }}</span></button>
+              {% else %}
+                <button class="button {{ actionOne.buttonContext.modifier }} js-button-next" data-linkedto="{{ actionOne.linkedto }}" data-triggeresponds="{{ actionOne.triggeresponds }}" data-hideself="{{ actionOne.hideself }}">{{ actionOne.label }}</button>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div id="{{ item.idprefix }}2" class="js-form-conditionals__citem">
+            <em>{{ item.actionsTwoLabel }}</em>
+            {% for actionTwo in item.actionsTwo %}
+              {% if actionTwo.iconOnly %}
+                <button class="button {{ actionTwo.buttonContext.modifier }} js-button-next" data-linkedto="{{ actionTwo.linkedto }}" data-triggeresponds="{{ actionTwo.triggeresponds }}" data-triggerLastStep="{{ actionTwo.triggerLastStep }}" data-hideself="{{ actionTwo.hideself }}"><span class="visually-hidden">{{ actionTwo.label }}</span></button>
+              {% else %}
+                <button class="button {{ actionTwo.buttonContext.modifier }} js-button-next" data-linkedto="{{ actionTwo.linkedto }}" data-triggeresponds="{{ actionTwo.triggeresponds }}" data-triggerLastStep="{{ actionTwo.triggerLastStep }}" data-hideself="{{ actionTwo.hideself }}">{{ actionTwo.label }}</button>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div id="{{ item.idprefix }}3" class="js-form-conditionals__citem">
+            {{ item.actionsThreeLabel }}
+            {% for alternativeActions_i in item.alternativeActions %}
+              <button class="button {{ alternativeActions_i.buttonContext.modifier }} js-button-next" data-linkedto="{{ alternativeActions_i.linkedto }}" data-triggeresponds="{{ alternativeActions_i.triggeresponds }}" data-triggerLastStep="{{ alternativeActions_i.triggerLastStep }}" data-hideself="{{ alternativeActions_i.hideself }}">{{ alternativeActions_i.label }}</button>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+
+      {% endif %}
+
+      {% if item.moreInfo %}
+        <div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
+          <div class="collapsible__header">
+            <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible" data-text="show/hide">toon informatie</a>
+          </div>
+          <div class="collapsible__content" id="collapsible-content-1">
+            <div>
+              <h3>{{ item.title }}</h3>
+              <div class="well well--linkContainer">{{ item.link }}</div>
+              {% if item.tableData %}
+                <table>
+                  {% for data in item.tableData %}
+                    <tr>
+                      <th>{{ data.type }}</th>
+                      <td data-before="{{ data.type }}">{{ data.value|raw }}</td>
+                    </tr>
+                  {% endfor %}
+                </table>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

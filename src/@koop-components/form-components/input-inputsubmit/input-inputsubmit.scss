@@ -60,7 +60,12 @@
 
 
   &--s &__grid {
-      display: flex;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &--s label {
+    font-size: 1em;
+    flex: 0 0 100%;
   }
   &--s .input {
     border-width: 1px;

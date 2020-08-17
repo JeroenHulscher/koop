@@ -2,13 +2,19 @@ table,
 .table {
   font-size: 1.125rem;
   margin: 0 0 3em 0;
-  border: 1px solid $lighterGrey;
+  @media ( min-width: $breakpointDesktop ) {
+    border: 1px solid $lighterGrey;
+  }
 
   tr td,
   tr th {
     border-bottom: 1px solid $lighterGrey;
     border-left: 1px solid $lighterGrey;
     padding: 1em;
+  }
+
+  &.table__data-overview {
+    border: 1px solid $lighterGrey;
   }
 }
 

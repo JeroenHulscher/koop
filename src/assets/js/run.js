@@ -1,3 +1,4 @@
+/* @license Fastselect: Copyright(c) 2015 Damir Brekalo */
 document.documentElement.className = 'has-js';
 
 // run all decorators on page load
@@ -33,5 +34,3 @@ document.addEventListener( 'click', function handleClick( event ) {
   });
 
 });
-
-// Fastselect: Copyright(c) 2015 Damir Brekalo

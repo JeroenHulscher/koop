@@ -49,7 +49,11 @@
   &--page-opener {
     padding-top: .325em;
     margin-bottom: 1.5em;
-    margin-top: -2em;
+
+    .header ~ &,
+    .header ~ div[role="main"] > & {
+      margin-top: -2em;
+    }
 
     @media ( min-width: $breakpointDesktop ) {
       padding: .75em 0;

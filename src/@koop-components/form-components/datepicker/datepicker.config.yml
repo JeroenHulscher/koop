@@ -12,6 +12,7 @@ context:
   debug: false
 variants:
   - name: Range
+    status: prototype
     context:
       id: 2
       range: true

@@ -6,7 +6,7 @@
 <div class="input-text__container input-text__container--prefix">
 {{/if}}
 
-  <label {{#if fieldLabelVisible}}{{else}}class="visually-hidden"{{/if}}for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}" class="form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
+  <label class="form__label form__label--{{ labelmodifier }}{{#if fieldLabelVisible}}{{else}} visually-hidden{{/if}}" for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}">{{ fieldLabel }}</label>
 
   {{#if hastooltip}}{{render "@tooltip" tooltipContext merge=true }}{{/if}}
 
@@ -21,7 +21,7 @@
     id="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}"
     name="{{id}}"
     class="input input-text {{ modifier }} {{class}} {{#if error}}has-error{{/if}}"
-    placeholder="{{ fieldPlaceholder }}"
+    {{#if fieldPlaceholder}}placeholder="{{ fieldPlaceholder }}"{{/if}}
     {{#if error}}aria-describedby="input-text-1__error"{{/if}}
     aria-invalid="{{#if error}}true{{else}}false{{/if}}"
     {{#if required}}required{{/if}}

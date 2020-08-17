@@ -1,34 +1,60 @@
 ---
 label: Filtersearch results
-status: prototype
+status: ready
 context:
   id: 176575675
-  gemeentenContext:
-    options:
-    - id: checkbox-204565
-      text: Haarlem
-      name: onderwerp
-    - id: checkbox-214565
-      text: Haarlemmermeer
-      name: onderwerp
-    - id: checkbox-224565
-      text: Halderberge
-      name: onderwerp
-    - id: checkbox-224565
-      text: Hardenberg
-      name: onderwerp
-    - id: checkbox-224565
-      text: Hattem
-      name: onderwerp
-    - id: checkbox-224565
-      text: Heerenveen
-      name: onderwerp
-    - id: checkbox-224565
-      text: Helmond
-      name: onderwerp
-  selectedfilterContext:
-    items:
-      - label: "Gemeenten: Den Haag"
-        url: "#"
-      - label: "Ministeries: Ministerie van Binnenlandse Zaken"
-        url: "#"
+  Options:
+    - Option: 1
+      id: 123766666
+      title: Rotterdam
+      short: Spanje
+    - Option: 2
+      id: 223723321312
+      title: Schiedam
+      short: Griekenland
+    - Option: 3
+      id: 3223
+      title: Vlaardingen
+      short: Nederland
+    - Option: 12222222
+      id: 12372
+      title: Den Haag
+      short: Spanje
+    - Option: 22222222222
+      id: 2237122312
+      title: Scheveningen
+      short: Griekenland
+    - Option: 3222222
+      id: 32373123
+      title: Voorburg
+      short: Nederland
+variants:
+  - name: Input radio
+    context:
+      id: 176575675
+      radio: true
+      Options:
+        - Option: 1
+          id: 123766666
+          title: Rotterdam
+          short: Spanje
+        - Option: 2
+          id: 223723321312
+          title: Schiedam
+          short: Griekenland
+        - Option: 3
+          id: 3223
+          title: Vlaardingen
+          short: Nederland
+        - Option: 12222222
+          id: 12372
+          title: Den Haag
+          short: Spanje
+        - Option: 22222222222
+          id: 2237122312
+          title: Scheveningen
+          short: Griekenland
+        - Option: 3222222
+          id: 32373123
+          title: Voorburg
+          short: Nederland

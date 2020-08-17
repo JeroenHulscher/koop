@@ -1,0 +1,377 @@
+---
+label: CUP-beheer - Overzicht van taken
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: CUP Beheer
+    skipLinks: false
+    metaLinks:
+      - text: Gebruiker
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+  topbar:
+    navItems:
+      - label: CUP Beheer
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Enviroment
+        url: '#'
+      - text: Platform
+        url: '#'
+      - text: Overzicht van taken
+  pageactions:
+    title: ''
+    intro: ''
+    items:
+      - link: '#'
+        text: Nieuw werk
+        icon: icon-plus-shape.svg
+  tableResults:
+    label: false
+    caption: false
+    modifier: table--striped
+    items:
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NewDocuments</a>
+        - column:
+          type: Description
+          value: number-of-subscriptions
+        - column:
+          type: Start
+          value: 11-08-2020 15:22:00
+        - column:
+          type: End
+          value: 11-08-2020 15:22:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">Intermediate</a>
+        - column:
+          type: Description
+          value: create-intermediates
+        - column:
+          type: Start
+          value: 11-08-2020 15:20:00
+        - column:
+          type: End
+          value: 11-08-2020 15:20:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NotificationMailer</a>
+        - column:
+          type: Description
+          value: mailer-frequency-direct
+        - column:
+          type: Start
+          value: 11-08-2020 15:15:00
+        - column:
+          type: End
+          value: 11-08-2020 15:15:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NewDocuments</a>
+        - column:
+          type: Description
+          value: number-of-subscriptions
+        - column:
+          type: Start
+          value: 11-08-2020 15:12:00
+        - column:
+          type: End
+          value: 11-08-2020 15:12:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">Intermediate</a>
+        - column:
+          type: Description
+          value: create-intermediates
+        - column:
+          type: Start
+          value: 11-08-2020 15:20:00
+        - column:
+          type: End
+          value: 11-08-2020 15:20:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NotificationMailer</a>
+        - column:
+          type: Description
+          value: mailer-frequency-direct
+        - column:
+          type: Start
+          value: 11-08-2020 15:15:00
+        - column:
+          type: End
+          value: 11-08-2020 15:15:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NotificationMailer</a>
+        - column:
+          type: Description
+          value: mailer-frequency-direct
+        - column:
+          type: Start
+          value: 11-08-2020 15:15:00
+        - column:
+          type: End
+          value: 11-08-2020 15:15:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NewDocuments</a>
+        - column:
+          type: Description
+          value: number-of-subscriptions
+        - column:
+          type: Start
+          value: 11-08-2020 15:12:00
+        - column:
+          type: End
+          value: 11-08-2020 15:12:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">Intermediate</a>
+        - column:
+          type: Description
+          value: create-intermediates
+        - column:
+          type: Start
+          value: 11-08-2020 15:20:00
+        - column:
+          type: End
+          value: 11-08-2020 15:20:00
+      - item:
+        - column:
+          type: Status
+          value: INFO
+        - column:
+          type: Taaknaam
+          value: <a href="#">NotificationMailer</a>
+        - column:
+          type: Description
+          value: mailer-frequency-direct
+        - column:
+          type: Start
+          value: 11-08-2020 15:15:00
+        - column:
+          type: End
+          value: 11-08-2020 15:15:00
+  inputsubmitContext:
+    label: Job-id
+    id: 8765467
+    showLabel: false
+    placeholder: Verfijn op job-id
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
+  radioTijdstip:
+    fieldLabel: false
+    name: tijdstip
+    explanation: false
+    options:
+      - id: 1
+        name: subject
+        text: Voor vorige week (85632)
+      - id: 2
+        text: Vorige week (7587)
+        name: subject
+        checked: checked
+      - id: 3
+        text: 6 dagen geleden (1178)
+        name: subject
+      - id: 4
+        text: 5 dagen geleden (1078)
+        name: subject
+      - id: 5
+        text: 4 dagen geleden (2848)
+        name: subject
+      - id: 6
+        text: 3 dagen geleden (1478)
+        name: subject
+      - id: 7
+        text: 2 dagen geleden (1245)
+        name: subject
+      - id: 8
+        text: 2 dagen geleden (16)
+        name: subject
+      - id: 9
+        text: gisteren (10)
+        name: subject
+      - id: 10
+        text: vandaag (1161)
+        name: subject
+  status:
+    name: status
+    options:
+      - id: checkbox-1
+        text: ERROR (8)
+        name: status
+      - id: checkbox-2
+        text: FATAL (26)
+        name: status
+      - id: checkbox-3
+        text: INFO (45679)
+        name: status
+      - id: checkbox-4
+        text: WARN (266)
+        name: status
+  subselectionTaak:
+    linkText: Selecteer taken
+    id: 202
+    modalTitle: Selecteer taken
+    fieldLabel: fieldLabel
+    maxShow: 3
+    type: span
+    triggerSubmit: false
+    Options:
+      - Option: 1
+        id: 123711111
+        title: BMClean (4683)
+        short: BMClean
+      - Option: 2
+        id: 22372312321312
+        title: CleanComponentJob (604)
+        short: CleanComponentJob
+      - Option: 3
+        id: 323723
+        title: ConsistencyCheckJob (78)
+        short: ConsistencyCheckJob
+      - Option: 1222222222
+        id: 12372327
+        title: Corb (222)
+        short: Corb
+      - Option: 2222222222222
+        id: 223712312312
+        title: DataMovement (21)
+        short: DataMovement
+      - Option: 322222222
+        id: 3237123123
+        title: DeleteInactiveAccountData (26)
+        short: DeleteInactiveAccountData
+      - Option: 22191
+        id: 22191
+        title: EventReceived (91)
+        short: EventReceived
+      - Option: 22193015
+        id: 22193015
+        title: GVOPLokaleBekendmakingen (93015)
+        short: GVOPLokaleBekendmakingen
+      - Option: 22149
+        id: 22149
+        title: HybridSubscriptionConversion (49)
+        short: HybridSubscriptionConversion
+      - Option: 22128435
+        id: 22128435
+        title: Intermediate (28435)
+        short: Intermediate
+      - Option: 221102
+        id: 221102
+        title: MissingFrbrContentForComponentJob (102)
+        short: MissingFrbrContentForComponentJob
+      - Option: 22128392
+        id: 22128392
+        title: NewDocuments (28392)
+        short: NewDocuments
+  subselectionType:
+    linkText: Selecteer type
+    id: 2022
+    modalTitle: Selecteer type
+    fieldLabel: fieldLabel
+    maxShow: 3
+    type: span
+    triggerSubmit: false
+    Options:
+      - Option: 1
+        id: 1237111111
+        title: clean-bm-works (4683)
+        short: clean-bm-works
+      - Option: 2
+        id: 223723123213121
+        title: complete (604)
+        short: complete
+      - Option: 3
+        id: 3237231
+        title: consistency-check-error (78)
+        short: consistency-check-error
+      - Option: 12222222221
+        id: 123723271
+        title: corb-event (222)
+        short: corb-event
+      - Option: 22222222222221
+        id: 2237123123121
+        title: corb-uri-batchimport-corb-selector (21)
+        short: corb-uri-batchimport-corb-selector
+      - Option: 3222222221
+        id: 32371231231
+        title: corb-uri-xqm-replace-searchables-corb-selector (26)
+        short: corb-uri-xqm-replace-searchables-corb-selector
+      - Option: 221911
+        id: 221911
+        title: create-intermediates (91)
+        short: create-intermediates
+      - Option: 221930151
+        id: 221930151
+        title: datamovement-success (93015)
+        short: datamovement-success
+      - Option: 221491
+        id: 221491
+        title: error (49)
+        short: error
+      - Option: 221284351
+        id: 221284351
+        title: failed (28435)
+        short: failed
+      - Option: 2211021
+        id: 2211021
+        title: job-end (102)
+        short: job-end
+      - Option: 221283921
+        id: 221283921
+        title: job-error (28392)
+        short: job-error
+
+
