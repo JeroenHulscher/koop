@@ -61,7 +61,6 @@
         select.add(option);
       }
       document.body.appendChild(select);
-      document.body.appendChild(selectLabel);
 
       select.addEventListener('change', function (event) {
         title = event.target.options[event.target.selectedIndex].value;
