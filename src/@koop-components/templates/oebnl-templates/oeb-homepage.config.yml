@@ -6,19 +6,12 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
     navLinks:
-    - url: '/components/preview/templates-eb-projectlanding'
-      text: SGD
     - url: '#'
-      text: '...'
-    metaLinks:
-      - text: Gebruiker
-        class: icon icon--profile
-        nonlink: true
-      - url: "#"
-        text: Uitloggen
-        class: button button--logout
+      text: Uitgebreid zoeken
+    - url: '#'
+      text: 'Mijn abonnementen'
     youAreHere:
-      - text: Externe Beheersite
+      - text: Publicaties > Officiële publicaties
     skipLinks:
       skipLinks:
         - url: '#content'
@@ -33,6 +26,7 @@ context:
     subheading: Officiële bekendmakingen
     centered: true
     headingcentered: true
+    size: semimedium
     searchterm:
       modifier: input-text--medium
       labelmodifier: accent
@@ -51,4 +45,8 @@ context:
       modifier: button--primary form__button
     linkPar:
       text: Uitgebreid zoeken
+  linkPar:
+      text: Uitgebreid zoeken
+  vandaag:
+    value: Woensdag 19 augustus 2020
 
