@@ -1,5 +1,12 @@
 .columns {
 
+  .column {
+    margin-bottom: 3em;
+    @media ( min-width: $breakpointDesktop ) {
+      margin-bottom: 0;
+    }
+  }
+
   &--sticky-sidebar {
 
     > .columns--sticky-sidebar__sidebar {
