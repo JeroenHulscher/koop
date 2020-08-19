@@ -71,6 +71,7 @@
 
   onl.decorate({
     'add-mobile-foldability': function( el ) {
+      var parentOffsets = el.getBoundingClientRect();
       var button = document.createElement( 'button' );
       var labels = {
         open: 'Open sidebar',
@@ -89,6 +90,9 @@
       // set initial state
       button.setAttribute( 'aria-expanded', 'false' );
       button.textContent = labels.close;
+
+      // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
+      button.style.top = Math.round(parentOffsets.top) + 40 + 'px';
 
       el.before( button );
 
