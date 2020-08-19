@@ -6,7 +6,7 @@ context:
   options:
     - label: Item 1
       value: 10
-      selected: true
+      selected: selected
     - label: Item 2
       value: 20
     - label: Item 3
