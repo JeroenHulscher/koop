@@ -10,7 +10,8 @@ context:
   fieldInstruction: ''
   fieldLabel: Documentsoort
   fieldLabelVisible: true
-  fieldPlaceholder: 'Bijv: BK001'
+  fieldPlaceholder: 'Kies een of meerdere documentsoorten'
+  describedbyId: multiselect-helptext-1
   categories:
     - title: Parlementaire documenten
       options:
