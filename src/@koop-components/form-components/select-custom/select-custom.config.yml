@@ -25,3 +25,22 @@ variants:
       fieldLabel: Metadata type
       labelmodifier: accent
       fieldLabelVisible: true
+  - name: with optgroup
+    context:
+      fieldLabel: Documentsoort
+      labelmodifier: accent
+      fieldLabelVisible: true
+      optgroup: true
+      items:
+        - optgroupLabel: Parlementaire documenten
+          options:
+            - label: Handelingen
+              value: 10
+            - label: Moties
+              value: 20
+        - optgroupLabel: Officiële bekendmakingen
+          options:
+            - label: Tractatenblad
+              value: 101
+            - label: Staatsblad
+              value: 201
