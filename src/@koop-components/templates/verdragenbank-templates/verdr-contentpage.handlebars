@@ -6,41 +6,43 @@
 </div>
 
 
-<div class="container columns columns--sticky-sidebar row">
+<div class="container columns columns--sticky-sidebar row" role="main" id="content">
 
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
+      <p>
+        <a href="#" class="icon icon--arrow-cta-right">Terug naar zoekresultaten</a>
+      </p>
+
       <h3 class="u-fontw--default"><i>Verdrag</i></h3>
-      <div>
-        {{render "@nav" navVerdragContext }}
-      </div>
+      {{render "@nav" navVerdragContext }}
       <h3 class="u-fontw--default"><i>Depositair</i></h3>
-      <div>
-        {{render "@nav"  navDepositairContext }}
-      </div>
-      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close"><span class="visually-hidden">Sluiten</span></button>
+      {{render "@nav"  navDepositairContext }}
+
     </div>
   </div>
 
-  <div>
+  <div id="content" role="main" class="content content--publication">
 
     <div class="align-right">
       {{ render "@pageactions"}}
     </div>
 
-    <h1 class="h1">Wijziging van bijlagen V en VII bij het Protocol van 1998 inzake persistente organische verontreinigende stoffen</h1>
+    <h1>Wijziging van bijlagen V en VII bij het Protocol van 1998 inzake persistente organische verontreinigende stoffen</h1>
 
     <h2>Partijen</h2>
     <div class="table__container">
       <table class="table__data-overview table--striped">
         <thead>
-          <th class="u-columnwidth-20p">Partij {{render "@tooltip" }}</th>
-          <th>Ondertekening</th>
-          <th>Voorlopige toepassing</th>
-          <th>Ratificatie</th>
-          <th>In werking</th>
-          <th>Opzegging</th>
-          <th>Buiten werking</th>
+          <tr>
+            <th class="u-columnwidth-20p">Partij {{render "@tooltip" }}</th>
+            <th>Ondertekening</th>
+            <th>Voorlopige toepassing</th>
+            <th>Ratificatie</th>
+            <th>In werking</th>
+            <th>Opzegging</th>
+            <th>Buiten werking</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -74,9 +76,11 @@
     <div class="table__container">
       <table class="table__data-overview table--striped">
         <thead>
-          <th class="u-columnwidth-20p">Partij</th>
-          <th>Voorbehoud/verklaring</th>
-          <th>Bezwaren</th>
+          <tr>
+            <th class="u-columnwidth-20p">Partij</th>
+            <th>Voorbehoud/verklaring</th>
+            <th>Bezwaren</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -100,9 +104,11 @@
     <p>
       <strong>Toon details in de tabel</strong>
     </p>
-    <p>
+
+    <div class="row">
       {{render "@buttonswitch" detailsContent}}
-    </p>
+    </div>
+
 
     <h2>Belarus</h2>
     <p class="p pre-h cur">15-01-2016</p>
@@ -317,9 +323,11 @@
     <div class="table__container">
       <table class="table__data-overview">
         <thead>
-          <th>Titel</th>
-          <th>Datum totstandkoming</th>
-          <th>Plaats totstandkoming</th>
+          <tr>
+            <th>Titel</th>
+            <th>Datum totstandkoming</th>
+            <th>Plaats totstandkoming</th>
+          </tr>
         </thead>
         <tbody>
           <tr>

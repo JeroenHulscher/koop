@@ -1,20 +1,38 @@
 ---
 label: CVDR - Homepage
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
   jumbotronContext:
-    heading: Raadpleeg 87654 regelingen van decentrale overheden
+    heading: Regelingen van decentrale overheden
     subheading: Lokale wet- en regelgeving
-    intro: Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.
+    intro: Binnen de lokale wet- en regelgeving zoekt u naar algemeen verbindende voorschriften uitgegeven door gemeenten, provincies, waterschappen en regionale samenwerkingsorganen.
     centered: true
     headingcentered: true
     inputZoekwoord:
-      fieldPlaceholder: Zoekwoord
-      fieldLabel: Zoekwoord
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar regelingen
       fieldLabelVisible: true
       labelmodifier: medium
-      required: true
+      modifier: input-text--searchmedium
+  block1Context:
+    id: 1
+    htype: 3
+    heading: Welke overheden nemen nog geen deel?
+    subheading: Negatieve lijst
+    highlight: true
+    cta: true
+    ctalabel: Bekijk de lijst
+    ctahref: '#'
+  block2Context:
+    id: 1
+    htype: 3
+    heading: Onduidelijkheden, vragen of opmerkingen over regelingen?
+    subheading: Vragen
+    highlight: true
+    cta: true
+    ctalabel: Neem contact op
+    ctahref: '#'
 

@@ -73,14 +73,20 @@
     'add-mobile-foldability': function( el ) {
       var parentOffsets = el.getBoundingClientRect();
       var button = document.createElement( 'button' );
+      var classlist = 'is-column-default';
       var labels = {
         open: 'Open sidebar',
         close: 'Sluit sidebar'
       };
 
+      if (document.querySelector('.columns--sidebar__sidebar form') ) {
+        classlist = 'is-column-filters';
+      }
+
       // set data to button
       // button.classList.add( 'hidden-desktop' );
       button.type = 'button';
+      button.classList.add(classlist);
       button.setAttribute( 'data-handler', 'toggle-sidebar' );
       button.setAttribute( 'aria-controls', el.id );
       button.setAttribute( 'data-toggle-open', labels.open );

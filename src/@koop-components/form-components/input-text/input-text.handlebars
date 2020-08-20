@@ -6,7 +6,8 @@
 <div class="input-text__container input-text__container--prefix">
 {{/if}}
 
-  <label class="form__label form__label--{{ labelmodifier }}{{#if fieldLabelVisible}}{{else}} visually-hidden{{/if}}" for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}">{{ fieldLabel }}</label>
+
+  <label for="{{#if cleanID}}{{id}}{{else}}input-text-{{ id }}{{/if}}" class="{{#if fieldLabelVisible}}{{else}}visually-hidden {{/if}}form__label form__label--{{ labelmodifier }}">{{ fieldLabel }}</label>
 
   {{#if hastooltip}}{{render "@tooltip" tooltipContext merge=true }}{{/if}}
 

@@ -14,6 +14,28 @@ variants:
   - name: secondary
     context:
       modifier: secondary
-  - name: secondary
+  - name: Call to action
     context:
-      modifier: secondary
+      id: 1
+      htype: 3
+      heading: Welke overheden nemen nog geen deel?
+      subheading: Negatieve lijst
+      content: false
+      buttonText: false
+      highlight: true
+      cta: true
+      ctalabel: Bekijk de lijst
+      ctahref: '#'
+  - name: Slim
+    context:
+      id: 1
+      htype: 3
+      heading: Welke overheden nemen nog geen deel?
+      subheading: Negatieve lijst
+      content: false
+      buttonText: false
+      highlight: true
+      slim: true
+      cta: true
+      ctalabel: Bekijk de lijst
+      ctahref: '#'

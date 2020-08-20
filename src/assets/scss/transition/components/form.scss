@@ -113,8 +113,14 @@ fieldset {
     margin-bottom: 0.625em;
   }
 }
-.column--sidebar fieldset legend {
-  font-size: 1.25em;
+.column--sidebar fieldset legend,
+.columns--sidebar__sidebar fieldset legend {
+  font-size: 1.1em;
+  padding-right: 3.25em;
+
+  @media ( min-width: $breakpointDesktop ) {
+    font-size: 1.25em;
+  }
 }
 
 input[type=date].datepicker__input~.ui-datepicker-trigger,
@@ -126,4 +132,61 @@ input[type=text].datepicker__input~.ui-datepicker-trigger {
   background-size: 22px;
   width: 53px;
   padding: 4em .5em .5em .5em;
+}
+
+.form {
+
+  &__row {
+    fieldset {
+      .list:last-child {
+        margin: 0;
+      }
+    }
+
+    &--submit {
+      .column {
+        margin-bottom: 1em;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-bottom: 0;
+        }
+      }
+      .align-right {
+        text-align: left;
+        @media ( min-width: $breakpointDesktop ) {
+          text-align: right;
+        }
+      }
+
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    line-height: 1em;
+
+    .mandatory {
+      position: absolute;
+      top: .125em;
+      right: 0;
+      font-size: 0.9em;
+      font-weight: normal;
+    }
+  }
+
+  &__label ~ .mandatory {
+    position: absolute;
+    top: .125em;
+    right: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
+}
+
+/* refactor asap */
+.form__row h2.u-nomargin ~ p > a {
+  @extend .icon;
+  @extend .icon--refresh;
+  margin: .9em 0 1.5em;
+  display: block;
 }

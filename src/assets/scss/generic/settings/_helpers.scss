@@ -71,7 +71,8 @@
 }
 
 [hidden],
-.is-hidden {
+.is-hidden,
+[aria-hidden="true"] {
   display: none !important;
 }
 

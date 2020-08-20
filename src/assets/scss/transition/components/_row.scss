@@ -39,6 +39,13 @@
   &__heading {
     font-size: em(29);
     margin-bottom: em(14);
+
+    .sub {
+      display: inline-block;
+      font-size: 75%;
+      font-style: italic;
+      font-weight: 400;
+    }
   }
 
   &__intro {

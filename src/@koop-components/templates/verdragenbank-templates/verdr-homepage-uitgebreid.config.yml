@@ -1,21 +1,27 @@
 ---
 label: Verdr. - Homepage uitgebreid
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is
+    heading: Verdragen van het Koninkrijk der Nederlanden
     hstyle: h2
     subheading: Verdragenbank
-    intro: Intro.
+    intro: In de Verdragenbank zoekt u naar gegevens van verdragen waarbij het Koninkrijk der Nederlanden deelgenoot is.
     centered: true
     size: medium
-    inputsubmitContext:
-      button: Zoek verdagen
-      placeholder: Vul hier uw zoekwoord(en) in
+    inputZoekwoord:
+      modifier: input-text--searchmedium
+      fieldPlaceholder: Zoekwoord of verdragsnummer
+      fieldLabel: Zoek in de Verdragenbank
+      fieldLabelVisible: true
+      labelmodifier: medium
+    dateselection:
+      dateselectionDatum:
+        label: Totstandgekomen op
     typeverdagContext:
       moreless: true
       options:
@@ -39,13 +45,13 @@ context:
       - id: checkbox-422
         text: Nederland (Sint Eustatius)
         name: onderwerp
-      - id: checkbox-422
+      - id: checkbox-4223
         text: Aruba
         name: onderwerp
-      - id: checkbox-422
+      - id: checkbox-4224
         text: Curacao
         name: onderwerp
-      - id: checkbox-422
+      - id: checkbox-4225
         text: Sint Maarten
         name: onderwerp
     depositarisContext:
@@ -103,5 +109,58 @@ context:
           id: 3
           title: Nederland
           short: Nederland
-
-
+    tt1Context:
+      id: 112
+    tt2Context:
+      id: 113
+    tt3Context:
+      id: 114
+    tt4Context:
+      id: 115
+    tt5Context:
+      id: 116
+    tt6Context:
+      id: 117
+    tt7Context:
+      id: 118
+    startDatepicker:
+      id: 234
+      haslabel: true
+      labelmodifier: secondary
+      label: Vanaf
+      fieldPlaceholder: DD-MM-JJJJ
+    endDatepicker:
+      id: 345
+      haslabel: true
+      labelmodifier: secondary
+      label: Tot en met
+      fieldPlaceholder: DD-MM-JJJJ
+    inputPlaats:
+      id: 98765
+      fieldPlaceholder: Plaats totstandkoming
+      fieldLabelVisible: true
+      fieldLabel: Plaats
+      labelmodifier: accent
+    inputJaargang:
+      id: 987656
+      type: number
+      fieldPlaceholder: JJJJ
+      fieldLabelVisible: true
+      fieldLabel: Jaargang
+      labelmodifier: accent
+    inputNummer:
+      id: 987657
+      type: number
+      fieldPlaceholder: '000'
+      fieldLabelVisible: true
+      fieldLabel: Nummer
+      labelmodifier: accent
+  newsletterCheckbox:
+    options:
+    - id: checkbox-112312312
+      text: Ik begrijp dat ...
+      name: agreement
+  newslCollap:
+    heading: Lees meer over uw privacy
+    id: 11231231
+    text: Meer informatie over privacy en andere zaken

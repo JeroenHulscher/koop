@@ -13,9 +13,8 @@
         <div class="form__row form__row--large">
           <fieldset>
             <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
-            <label for="input543" class="visually-hidden">Zoekterm</label>
-            <div class="form__row form__row--medium">
-              <input type="text" id="input543" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoorden in" />
+            <div class="form__row">
+              {{ render "@input-text--medium" inputZoekwoord merge=true }}
             </div>
           </fieldset>
         </div>
@@ -40,13 +39,11 @@
               </div>
             </fieldset>
             <fieldset>
-              <legend>Geldigheidsperiode</legend>
-              <div class="form__row">
-                {{ render "@datepicker" vanDatepicker }}
-              </div>
-              <div class="form__row">
-                {{ render "@datepicker" totDatepicker }}
-              </div>
+              <legend>Geldigheid</legend>
+              {{ render "@date-selection" dateselection merge=true }}
+              <a href="#" class="reset">
+                <small>Herstellen</small>
+              </a>
             </fieldset>
           </div>
           <div class="column">
@@ -70,32 +67,18 @@
                   <h3 class="form__sublegend">Regionale samenwerkingsorganen</h3>
                   {{render "@subselection" subselectionRegContext }}
                 </div>
-                <div class="form__row">
-                  <h3 class="form__sublegend">Deelgemeenten / stadsdelen</h3>
-                  {{render "@subselection" subselectionDeeContext }}
-                </div>
-                <div class="form__row">
-                  <h3 class="form__sublegend">BES eiland</h3>
-                  {{render "@subselection" subselectionBesContext }}
-                </div>
-              </fieldset>
-            </div>
-            <div class="form__row form__row--large">
-              <fieldset>
-                <legend>Onderwerpen</legend>
-                <div class="form__row">
-                  {{render "@subselection" subselectionOndContext }}
-                </div>
               </fieldset>
             </div>
           </div>
         </div>
-        <div class="columns columns--vcenter">
-          <div class="column">
-            <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
-          </div>
-          <div class="column align-right">
-            <button type="submit" class="button button--primary">Zoeken</button>
+        <div class="form__row form__row--submit">
+          <div class="columns columns--vcenter">
+            <div class="column">
+              <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+            </div>
+            <div class="column align-right">
+              <button type="submit" class="button button--primary">Zoek regelingen</button>
+            </div>
           </div>
         </div>
       </form>

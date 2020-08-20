@@ -29,10 +29,7 @@ context:
       icon: icon-permalink.svg
       modal: true
     - link: '#'
-      text: Fout in deze regeling
-      icon: icon-info-blue.svg
-    - link: '#'
-      text: Download
+      text: Downloaden
       icon: icon-download.svg
     - link: '#'
       text: Printen

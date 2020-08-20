@@ -5,58 +5,53 @@
   </div>
 </div>
 
-<div class="container row">
-  <div class="columns columns--sidebar-left">
-    <div class="column">
+<div class="container columns columns--sticky-sidebar" role="main" id="content">
 
-
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Pagina navigatie</button>
-      </div>
-
-      <h1>Aanmelden e-mailservice nieuwe notificaties</h1>
-
-      <p>
-        Om berichten te ontvangen van nieuwe notificaties van depositaire verdragen kunt u hier uw e-mailadres opgeven.
-      </p>
-      <p>
-        Aanmelden voor de e-mailservice gebeurt in drie stappen:
-      </p>
-      <ol>
-        <li>Inschrijven op e-mailadres</li>
-        <li>Depositaire verdragen selecteren</li>
-        <li>Aanmelding bevestigen</li>
-      </ol>
-      <p>
-        Vervolgens ontvangt u een e-mail ter bevestiging, in deze e-mail staat een link die u kunt aanklikken om de aanmelding te
-        voltooien.
-      </p>
-
-
-      {{ render "@steps" stepsContext }}
-
-      <form id="formid" class="form jumbotron jumbotron--highlight">
-        <fieldset>
-          <legend>Inschrijven op e-mailadres</legend>
-
-          <div class="form__row form__row--large">
-            {{ render "@input-text" inputEmail merge=true }}
-          </div>
-          <div class="align-right">
-            <button type="submit" class="button button--primary">Volgende stap</button>
-          </div>
-        </fieldset>
-      </form>
-
-
-    </div>
-    <div class="column column--sidebar">
-
-      <a href="#" class="link link--back">Terug naar het overzicht</a>
-
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <a href="#" class="icon icon--arrow-cta-right">Terug naar het overzicht</a>
     </div>
   </div>
+
+  <div id="content" role="main">
+
+    <h1>Aanmelden e-mailservice nieuwe notificaties</h1>
+
+    <p>
+      Om berichten te ontvangen van nieuwe notificaties van depositaire verdragen kunt u hier uw e-mailadres opgeven.
+    </p>
+    <p>
+      Aanmelden voor de e-mailservice gebeurt in drie stappen:
+    </p>
+    <ol>
+      <li>Inschrijven op e-mailadres</li>
+      <li>Depositaire verdragen selecteren</li>
+      <li>Aanmelding bevestigen</li>
+    </ol>
+    <p>
+      Vervolgens ontvangt u een e-mail ter bevestiging, in deze e-mail staat een link die u kunt aanklikken om de aanmelding te
+      voltooien.
+    </p>
+
+
+    {{ render "@steps" stepsContext }}
+
+    <form id="formid" class="form jumbotron jumbotron--highlight">
+      <fieldset>
+        <legend>Inschrijven op e-mailadres</legend>
+
+        <div class="form__row form__row--large">
+          {{ render "@input-text" inputEmail merge=true }}
+        </div>
+        <div class="align-right">
+          <button type="submit" class="button button--primary">Volgende stap</button>
+        </div>
+      </fieldset>
+    </form>
+
+
+  </div>
+
 </div>
 
 {{ render "@footer" }}

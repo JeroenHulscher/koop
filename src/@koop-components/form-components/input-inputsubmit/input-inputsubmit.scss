@@ -70,12 +70,15 @@
   &--s .input {
     border-width: 1px;
     height: auto;
-    width: auto;
-    margin: 0 .5em 0 0;
-    flex: 1 0 3em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    width: 100%;
+    margin: 0 0 .5em 0;
+    @media (min-width: $breakpointDesktop) {
+      flex: 1 0 3em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 0 .5em 0 0;
+    }
   }
 
   &--s .input ~ .button {
@@ -83,9 +86,11 @@
     background-repeat: no-repeat;
     background-position: center center;
     padding-right: .75em;
-    flex: 0 0 auto;
-    margin: 0;
-    width: auto;
+    @media (min-width: $breakpointDesktop) {
+      flex: 0 0 auto;
+      margin: 0;
+      width: auto;
+    }
 
     span {
       @extend .visually-hidden;

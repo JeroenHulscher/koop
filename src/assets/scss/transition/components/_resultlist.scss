@@ -1,5 +1,4 @@
 .result--list {
-  margin-left: -1em;
   margin-right: -1em;
 
   @media (min-width: $breakpointDesktop) {
@@ -20,20 +19,28 @@
     > li {
       background: white;
       list-style: none;
-      padding: 1em .5em .5em 1em;
+      padding: 1em;
       margin-bottom: 1.25em;
       border: 0;
 
       @media (min-width: $breakpointDesktop) {
-        padding: 1.5em 1.25em .5em 2em;
+        padding: 1.5em 1.25em 1.5em 2em;
       }
 
       p {
         padding-right: 0;
       }
+
+      >*:last-child,
+      > div[data-decorator="showmoreless"] .list:last-child {
+        margin-bottom: 0;
+      }
+
     }
 
   }
+
+
 
   p {
     margin-bottom: 1.325em;
@@ -55,8 +62,9 @@
     }
   }
   h2.result--title {
+    margin-bottom: .5em;
+
     ~ .list--metadata {
-      margin-top: -.8em;
       line-height: 1.25em;
       margin-bottom: 1em;
 
@@ -90,15 +98,17 @@
     }
   }
 
-
-
   @media (min-width: $breakpointDesktop) {
     &--wide {
       > ul > li,
       > ul:first-child > li {
-        padding: 2.25em 4em 1px;
+        padding: 2.25em 4em 2.25em;
       }
     }
   }
 }
 
+
+.columns--sticky-sidebar .result--title {
+  display: block;
+}

@@ -1,21 +1,32 @@
 ---
 label: PLOOI - Homepage uitgebreid
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden
+    heading: Documenten van Nederlandse overheden actief openbaar
     hstyle: h2
     subheading: Overheidsdocumenten
-    intro: Intro.
+    intro: In overheidsdocumenten zoekt u naar documenten actief openbaar gemaakt door alle Nederlandse bestuursinstanties volgens Wet open overheid.
     size: medium
     centered: true
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
+    inputZoekwoord:
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar documenten
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    searchcheckbox:
+      options:
+        - id: checkbox-19874
+          text: Zoek alleen in titels
+          name: searchcr
     subselectionOnderwerpContext:
       linkText: Selecteer onderwerp(en)
       id: 23
@@ -158,4 +169,12 @@ context:
       - id: checkbox-204
         text: Zelf een periode kiezen
         name: onderwerp
+    tt1Context:
+      id: 112
+    tt2Context:
+      id: 113
+    tt3Context:
+      id: 114
+    tt4Context:
+      id: 115
 

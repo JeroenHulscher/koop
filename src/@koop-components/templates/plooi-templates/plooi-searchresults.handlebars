@@ -5,133 +5,132 @@
   </div>
 </div>
 
-<div class="container row">
-  <div class="columns columns--sidebar-left">
-    <div class="column">
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
 
-      <div class="hidden-mobile">
-        <div class="columns">
-          <div class="column column-d-7">
-            <div class="row">
+      <h2 class="sidebar__header">Zoekfilter</h2>
+
+      <div class="row">
+        <p>
+          <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+        </p>
+      </div>
+
+      <div class="form__row form__row--large">
+        <h3 class="sidebar__subheader">Geselecteerde filters (7)</h3>
+        <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+          <ul class="list list--unstyled">
+            <li>
+              <div class="form__selectedfilter">Waarde 1
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 2
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 3
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 4
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 5
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 6
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 7
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="visually-hidden">Filters</h2>
+
+      <form id="formid">
+
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Zoekwoord(en)</legend>
             {{render "@input-inputsubmit" inputsubmitContext }}
-            </div>
-          </div>
+          </fieldset>
         </div>
-        <div class="">
-          <div class="row">
-            {{ render "@sort" sortContext }}
-          </div>
+
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Beschikbaarheid</legend>
+            {{ render "@date-selection" dateselection merge=true }}
+            <a href="#" class="reset">
+              <small>Herstellen</small>
+            </a>
+          </fieldset>
         </div>
-      </div>
 
-      <h1 class="h1 h1--slim">Zoekresultaten
-        <span class="h1__sub">1-10 van de 105 resultaten</span>
-      </h1>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Informatiesoort</legend>
+            {{render "@subselection" subselectionInfoContext }}
+          </fieldset>
+        </div>
 
-      <div class="hidden-desktop align-right">
-        <button class="button button--primary block-element button--icon-filter" data-decorator="init-modalsidebar" data-handler="open-modalsidebar"
-          data-modal="modal-filter">Filter opties</button>
-      </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Thema</legend>
+            {{render "@subselection" subselectionThemaContext }}
+          </fieldset>
+        </div>
 
-  <div class="hidden-desktop">
-     {{ render "@sort" sortContext }}
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Organisatie</legend>
+            {{render "@subselection" subselectionContext }}
+          </fieldset>
+        </div>
+
+        <button type="submit" class="fixedbottom-button__button js-fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
+          data-config='{"position":"bottom"}'>Zoek opnieuw</button>
+
+      </form>
+
+    </div>
   </div>
+  <div role="main" id="content">
+    {{ render "@sort" sortContext }}
 
-  {{render "@resultlist" resultsContext }} {{render "@pagination" }}
+    <h1 class="h1 h1--result--list">Zoekresultaten
+      <span class="h1__sub">1-10 van de 105 resultaten</span>
+    </h1>
 
-    </div>
-    <div class="column column--sidebar">
-
-      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
-
-        <div class="modal-sidebar__content" >
-
-          <div class="row--spacer">
-            <h2>Zoekfilter</h2>
-
-          <div class="form__row form__row--large">
-            <h4>Geselecteerde filters (7)</h4>
-            <div data-decorator="showmoreless" data-config='{"amount": 2}'>
-              <ul class="list list--unstyled">
-                <li><div class="form__selectedfilter">Waarde 1<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-                <li><div class="form__selectedfilter">Waarde 2<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-                <li><div class="form__selectedfilter">Waarde 3<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-                <li><div class="form__selectedfilter">Waarde 4<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-                <li><div class="form__selectedfilter">Waarde 5<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-                <li><div class="form__selectedfilter">Waarde 6<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-                <li><div class="form__selectedfilter">Waarde 7<a href="{{url}}" class="form__selectedfilter__remove"><span class="visually-hidden">verwijder</span></a></div></li>
-              </ul>
-              {{!-- {{render "@form-selectedfilter" selectedfilterContext }} --}}
-            </div>
-          </div>
-
-          <form id="formid" data-decorator="init-form-validation">
-            <div class="form__row form__row--large hidden-desktop">
-              <label for="">Filter op trefwoord</label>
-              {{ render "@input-text" inputsearchMobContext }}
-            </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Informatiesoort {{render "@tooltip"}}
-              </legend>
-              {{render "@subselection" subselectionInfoContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Thema {{render "@tooltip"}}
-              </legend>
-               {{render "@subselection" subselectionThemaContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Organisatie
-              {{render "@tooltip"}}
-              </legend>
-              {{render "@subselection" subselectionContext }}
-            </fieldset>
-          </div>
-
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
-              <div class="form__row form__row--medium">
-                {{render "@input-radio" onderwerpContext }}
-              </div>
-              <div class="form__row form__row--medium">
-                <label>Startdatum</label>
-                {{render "@datepicker" }}
-                <a href="#" class="reset">
-                  <small>Herstel</small>
-                </a>
-              </div>
-              <div class="form__row form__row--medium">
-                <label>Einddatum</label>
-                {{render "@datepicker" }}
-                <a href="#" class="reset">
-                  <small>Herstel</small>
-                </a>
-              </div>
-            </fieldset>
-          </div>
-
-          <button type="submit" class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
-
-          </form>
-        </div>
-
-
-        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-          <span class="visually-hidden">Sluiten</span>
-        </button>
-
-      </div>
-
-    </div>
+    {{render "@resultlist" resultsContext }} {{render "@pagination" }}
   </div>
 </div>
 

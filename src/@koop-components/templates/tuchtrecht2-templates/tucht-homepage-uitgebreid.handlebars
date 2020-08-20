@@ -13,16 +13,15 @@
         <form class="form">
           <div class="form__row form__row--large">
             <fieldset>
-              <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+              <legend class="visually-hidden">Doorzoek alle documenten</legend>
               <div class="columns">
                 <div class="column column-d-8">
-                  <div class="form__row form__row--medium">
-                    <label class="form__label form__label--accent" for="input543">Zoekwoord(en)</label>
-                    <input type="text" id="input543" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoorden in" />
+                  <div class="form__row">
+                    {{ render "@input-text--medium" inputZoekwoord merge=true }}
                   </div>
                 </div>
                 <div class="column column-d-4">
-                  <div class="form__row form__row--medium">
+                  <div class="form__row">
                     {{ render "@input-group" zoekeninContext merge=true }}
                   </div>
                 </div>
@@ -51,62 +50,33 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Zoek op</legend>
+                  <legend>Nummer</legend>
                   <div class="form__row">
-                    <label class="form__label">ECLI</label>
-                    {{ render "@input-text" wordintextInput }}
+                    {{ render "@input-text" ecliInput }}
                   </div>
                   <div class="form__row">
-                    <label class="form__label">Zoeknummer</label>
-                    {{ render "@input-text" wetgegevensInput }}
+                    {{ render "@input-text" zoeknummerInput }}
                   </div>
                 </fieldset>
                 <fieldset>
-                  <legend>Zoek op datum</legend>
-                  <div class="form__row">
-                     {{ render "@input-group" datumvanContext merge=true }}
-                  </div>
-                  <div class="form__row">
-                    <h3 class="form__label">Periode</h3>
-                    <div class="columns" data-decorator="init-form-conditionals">
-                      <div class="column column-d-5">
-                        <div id="citem-1" class="js-form-conditionals__citem">
-                          <div class="form__row">
-                            {{ render "@select-custom" selectCustomContext }}
-                          </div>
-                        </div>
-                      </div>
-                      <div class="column column-d-7">
-                        <div id="citem-2" class="js-form-conditionals__citem">
-                          {{ render "@datepicker" opDatepicker }}
-                        </div>
-                        <div id="citem-3" class="js-form-conditionals__citem">
-                          {{ render "@datepicker" totDatepicker }}
-                        </div>
-                        <div id="citem-4" class="js-form-conditionals__citem">
-                          <div class="form__row">
-                            <label for="" class="visually-hidden">Startdatum</label>
-                            {{ render "@datepicker" vanDatepicker }}
-                          </div>
-                          <div class="form__row">
-                            <label for="">en <span class="visually-hidde">einddatum</span>:</label>
-                            {{ render "@datepicker" totDatepicker }}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <legend>Publicatie of uitspraak</legend>
+                  {{ render "@date-selection" dateselection merge=true }}
+                  <a href="#" class="reset">
+                    <small>Herstellen</small>
+                  </a>
                 </fieldset>
               </div>
             </div>
-
           </div>
-          <div class="columns columns--vcenter">
-            <div class="column">
-              <a href="#" class="icon icon--refresh">Alle filters herstellen</a>
-            </div>
-            <div class="column align-right">
-              <button type="submit" class="button button--primary">Zoeken</button>
+
+          <div class="form__row form__row--submit">
+            <div class="columns columns--vcenter">
+              <div class="column">
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+              </div>
+              <div class="column align-right">
+                <button type="submit" class="button button--primary">Zoek uitspraken</button>
+              </div>
             </div>
           </div>
 

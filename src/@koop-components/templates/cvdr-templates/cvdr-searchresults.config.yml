@@ -5,33 +5,34 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  vanDatepicker:
-    id: 786
-    haslabel: true
-    label: Van
-  totDatepicker:
-    id: 7836
-    haslabel: true
-    label: Tot
+  dateselection:
+    layout: narrow
+    dateselectionDatum:
+      label: Geldend op
   postcodeInput:
+    id: 5
     fieldLabelVisible: true
     fieldPlaceholder: Bijv. 1234 AB
     fieldLabel: Postcode
+    labelmodifier: accent
   wordintitelInput:
-    id: 543
+    id: 765
     fieldLabelVisible: true
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Zoekwoord in titel
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: In titel
+    labelmodifier: accent
   wordintextInput:
-    id: 432
+    id: 654
     fieldLabelVisible: true
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Woord in tekst
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: In tekst
+    labelmodifier: accent
   wetgegevensInput:
-    id: 321
+    id: 498
     fieldLabelVisible: true
-    fieldPlaceholder: Zoekwoord
-    fieldLabel: Wetstechnische gegevens
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: Wettechnische gegevens
+    labelmodifier: accent
   subselectionGemContext:
     linkText: Selecteer gemeenten
     id: 20
@@ -212,90 +213,54 @@ context:
       name: onderwerp
   sortContext:
     modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
     options:
     - label: Datum
       value: value
       active: is-active
     - label: Titel
       value: value
-    amountPerPageFilter: true
   inputsubmitContext:
-    id: search
+    id: 5
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Verfijn uw zoekopdracht
-    button: Zoek
-    modifier: input-text--search
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
       label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       share: false
+      metadata:
+        - value: "Uitgegeven door: Flevoland"
       buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+        - button: Bekijk regeling
+          type: secondary
+    - title: Handhavingsbeleid Vergunningplicht Autoverhuur Heerlen 2019
       titleHeader: h2
       label: Regeling vervallen per 01-01-2019
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       labelType: danger
       buttons:
-        - button: Bekijken
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+        - button: Bekijk regeling
+          type: secondary
+      metadata:
+        - value: "Uitgegeven door: Heerlen"
+    - title: Verordening i.h.k.v. Wet Gemeentelijke Antidiscriminatievoorzieningen (V-WGA)
       titleHeader: h2
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       share: false
       buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
-      titleHeader: h2
-      share: false
-      buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
-      titleHeader: h2
-      share: false
-      buttons:
-        - button: Bekijk publicatie
-          type: secendary
-      definitionlist: true
-      definitionlistModifier: condensed
-      definitionlistItems:
-          - title: Geldendheidsperiode
-            description: 01-01-2019 t/m heden
-          - title: Uitgegeven door
-            description: Samenwerkingsverband vastgoedinformatie
+        - button: Bekijk regeling
+          type: secondary
+      metadata:
+        - value: "Uitgegeven door: Bernisse"
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1
@@ -304,7 +269,6 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true

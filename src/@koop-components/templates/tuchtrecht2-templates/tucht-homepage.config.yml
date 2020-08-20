@@ -6,18 +6,19 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
   jumbotronContext:
-    heading: Collectie
+    heading: Uitspraken in het Nederlandse Tuchtrecht
     subheading: Tuchtrecht
-    intro: Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.
+    intro: In tuchtrecht zoekt u naar uitspraken die betrekking hebben op een aanklacht richting de uitvoering of uitvoerder van een vrije beroep of producent.
     centered: true
     headingcentered: true
     inputSearchContext:
       modifier: input-text--searchmedium
       id: 1
-      fieldLabel: Label
+      fieldLabel: Zoek naar uitspraken
       fieldLabelVisible: true
       fieldInstruction:
-      fieldPlaceholder: Woord(en) of zinsdeel
+      labelmodifier: accent
+      fieldPlaceholder: Zoekwoord of zinsdeel
       remove: true
   themaItems:
     - title: Accountants (0)

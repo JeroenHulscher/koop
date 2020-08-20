@@ -5,13 +5,13 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" role="main" id="content">
   <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
     <form class="form form__row form__row--medium">
       <fieldset>
-        <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+        <legend class="visually-hidden">Doorzoek de uitspraken in het Nederlandse Tuchtrecht</legend>
         <div class="form__row form__row--medium">
           {{render "@input-text" inputSearchContext }}
         </div>
@@ -20,7 +20,7 @@
       <div class="">
         <div class="columns">
           <div class="u-order--d2 align-right form__row">
-            <button type="submit" class="form__button button button--primary button--large">Zoeken</button>
+            <button type="submit" class="form__button button button--primary button--large">Zoek uitspraken</button>
           </div>
           <div class="u-order--d1 u-nomargin">
             <a href="#" class="cta">Uitgebreid zoeken</a>
@@ -35,9 +35,9 @@
 
   <div class="row">
 
-    <div class="row row--large">
-      <h2 class="h1">Uitspraken vrije beroepen <span class="h1__sub">November 2019</span></h2>
-    </div>
+
+    <h2 class="row__heading">Uitspraken vrije beroepen <span class="sub">November 2019</span></h2>
+
 
     <ul class="list list--themas list--columns-4">
       {{#each themaItems}}
