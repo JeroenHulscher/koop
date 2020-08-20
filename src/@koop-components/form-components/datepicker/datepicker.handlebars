@@ -22,7 +22,7 @@
   {{/if}}
   <div class="datepicker">
     <input type="date" {{#if required}}required{{/if}} value="{{value}}" data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
-      data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" placeholder="{{ fieldPlaceholder }}" />
+      data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" data-placeholder="{{ fieldPlaceholder }}" />
   </div>
 {{/if}}
 {{#if selectToday}}
