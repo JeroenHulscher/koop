@@ -62,6 +62,8 @@
     }
   }
   h2.result--title {
+    margin-bottom: .5em;
+
     ~ .list--metadata {
       line-height: 1.25em;
       margin-bottom: 1em;
@@ -106,3 +108,7 @@
   }
 }
 
+
+.columns--sticky-sidebar .result--title {
+  display: block;
+}
