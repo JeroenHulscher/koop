@@ -11,10 +11,6 @@
         <p class="result--label"><i><span class="label {{#if labelType}}label--{{labelType}}{{/if}}">{{ label }}</span></i></p>
       {{/if}}
 
-      {{#if theme }}
-      <span class="icon icon--{{theme}}">{{ theme-name }}</span>
-      {{/if}}
-
       {{#if titleHeader }}
         <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{ title }}</{{ titleHeader }}>
       {{else}}
