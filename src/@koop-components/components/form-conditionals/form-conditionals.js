@@ -119,6 +119,7 @@
       break;
     case 'checkbox':
       if (this.amountCheckedInFamily(obj, currentQuestionContainer) > 0) {
+        currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('hidden');
         currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('aria-hidden');
       } else {
         currentQuestionContainer.querySelector(this.buttonNextSelector).setAttribute('aria-hidden', 'true');
@@ -220,14 +221,14 @@
 
   formConditionals.prototype.showFormSubmit = function() {
     if (this.submitContainer){
-      // this.submitContainer.removeAttribute('hidden');
+      this.submitContainer.removeAttribute('hidden');
       this.submitContainer.removeAttribute('aria-hidden');
       // this.submitContainer.querySelector('button').setAttribute('role', 'alert');
     }
   };
   formConditionals.prototype.hideFormSubmit = function() {
     if (this.submitContainer){
-      // this.submitContainer.setAttribute('hidden', 'hidden');
+      this.submitContainer.setAttribute('hidden', 'hidden');
       this.submitContainer.setAttribute('aria-hidden', 'true');
       // this.submitContainer.querySelector('button').removeAttribute('role');
     }
