@@ -15,6 +15,9 @@
       {{> @logo }}
 
 
+      {{#if profile}}
+        {{ render "@profile--logged-in" profileContext }}
+      {{/if}}
 
       {{#if metaLinks }}
       <div class="header__meta">
