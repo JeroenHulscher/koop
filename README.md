@@ -12,6 +12,10 @@ De bestanden die nodig zijn om de KOOP componentenbibliotheek te gebruiken kan j
 ## Ontwikkeling
 - ```npm run start``` start de ontwikkel-omgeving, erna te bekijken via ```localhost:3000```
 
+## Exporteren
+Voor het exporteren/bouwen van de gehele (fractal) componentenbibliotheek:
+- ```gulp fractal-build```
+
 ## E2E test
 Controleer, geautomatiseerd, de werking van de componenten na het aanbrengen van een wijziging.
 
