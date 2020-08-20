@@ -151,6 +151,7 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     searchFilter: true
     type: span
+    label: Filter resultaten op trefwoord
     Options:
       - Option: 1
         id: 1
