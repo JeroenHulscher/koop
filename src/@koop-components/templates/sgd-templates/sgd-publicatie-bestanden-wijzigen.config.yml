@@ -178,6 +178,8 @@ context:
           value: 20
         - label: ocr
           value: 50
+        - label: pdf
+          value: 60
         - label: coordinaten
           value: 100
     inputfile:
