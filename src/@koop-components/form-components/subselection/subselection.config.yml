@@ -51,6 +51,7 @@ variants:
   - name: with Search filter
     context:
       searchFilter: true
+      label: Zoek thema
   - name: Default limit (3)
     context:
       id: 1
