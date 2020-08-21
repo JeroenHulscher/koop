@@ -70,7 +70,8 @@
       </div>
       <div class="column">
         {{!-- {{render "@heading--preheader" vandaag merge=true }} --}}
-        <h2>Vandaag toegevoegd <span class="h2__sub">2137 publicaties</span></h2>
+        <h2>Vandaag toegevoegd</h2>
+        <p>Vandaag, vrijdag 19 augustus 2020, zijn er 2137 publicaties gepubliceerd.</p>
          {{ render "@browse" }}
       </div>
     </div>
@@ -109,17 +110,8 @@
 
   </div>
 
-  <div class="row--disclaimer">
-    <div class="">
-      <p>
-         Staatsblad, Staatscourant en Tractatenblad worden met ingang van 1 juli 2009 als pdf-bestanden uitgegeven. De hier aangeboden
-        pdf-bestanden van deze bladen vormen de formele bekendmakingen in de zin van de Grondwet. Voor publicaties van vóór deze
-        datum geldt dat alleen de in papieren vorm uitgegeven bladen formele status hebben; de hier aangeboden elektronische versies
-        daarvan worden bij wijze van service aangeboden.
-      </p>
-    </div>
-  </div>
-
 </div>
+
+{{ render "@disclaimer" }}
 
 {{ render "@footer" }}
