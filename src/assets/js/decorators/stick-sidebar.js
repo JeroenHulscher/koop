@@ -33,7 +33,16 @@
   };
 
   var updateStickability = function (scrollContentElement) {
-    var footerOffset = footer.getBoundingClientRect();
+    var footerOffset;
+    var disclaimer = document.querySelector('.disclaimer');
+
+    // the height of the sidebar (when sticky) is based on the footer area of the page;
+    if (disclaimer) {
+      footerOffset = disclaimer.getBoundingClientRect();
+    } else {
+      footerOffset = footer.getBoundingClientRect();
+    }
+
     var scrollY = getScrollY();
     var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
