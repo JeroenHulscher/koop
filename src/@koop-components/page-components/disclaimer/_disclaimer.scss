@@ -1,0 +1,13 @@
+.disclaimer {
+  border-top: 2px solid $lightGrey;
+  padding-top: 2em;
+  margin: 4em 0 -1em;
+
+  p {
+    font-size: 90%;
+    font-style: italic;
+  }
+  p:last-child {
+    margin: 0;
+  }
+}
