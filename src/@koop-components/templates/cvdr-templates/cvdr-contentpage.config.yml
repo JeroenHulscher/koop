@@ -50,3 +50,7 @@ context:
     - link: '#'
       text: Printen
       icon: icon-print.svg
+  tablecontainer1:
+    topbar:
+      - text: Toon tabel in een apart scherm
+        href: '#'
