@@ -24,6 +24,10 @@ context:
       title: Sociale Zaken en Werkgelegenheid (szw)
       short: szw
 variants:
+  - name: Secondary
+    context:
+      modifier: secondary
+      type: span
   - name: Default (span)
     context:
       id: 1
