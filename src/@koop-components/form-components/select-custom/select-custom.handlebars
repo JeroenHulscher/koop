@@ -2,8 +2,18 @@
 {{#if hastooltip}}{{render "@tooltip" tooltip merge=true }}{{/if}}
 <div class="select-custom {{modifier}}">
   <select id="{{id}}">
-    {{#each options}}
-      <option value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} {{selected}}>{{label}}</option>
-    {{/each}}
+    {{#if optgroup}}
+      {{#each items}}
+        <optgroup label="{{optgroupLabel}}">
+          {{#each options}}
+            <option value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} {{selected}}>{{label}}</option>
+          {{/each}}
+        </optgroup>
+      {{/each}}
+    {{else}}
+      {{#each options}}
+        <option value="{{value}}" {{#if linkedto}}data-linkedto="{{linkedto}}" {{/if}} {{selected}}>{{label}}</option>
+      {{/each}}
+    {{/if}}
   </select>
 </div>
