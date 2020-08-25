@@ -5,10 +5,15 @@ onl.handle({
    * @param event
    */
   'empty-input': function(element, event) {
+    var keyupEvent = new Event('keyup');
+
     event.preventDefault();
     element.previousElementSibling.value = '';
     element.classList.add('invisible');
     element.previousElementSibling.focus();
+
+    // trigger keyUp event on input (for ie. filtersearch-results component)
+    element.previousElementSibling.dispatchEvent(keyupEvent);
   }
 });
 
@@ -34,6 +39,7 @@ onl.decorate({
         // If button is visible and input does not contain text, make button invisible.
         removeButton.classList.add('invisible');
       }
+
     }, false);
   }
 });
