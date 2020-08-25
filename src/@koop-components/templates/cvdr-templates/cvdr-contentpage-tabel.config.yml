@@ -1,6 +1,6 @@
 ---
 label: CVDR - Contentpage tabel
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
