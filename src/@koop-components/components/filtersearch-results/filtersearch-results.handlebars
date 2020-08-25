@@ -1,7 +1,15 @@
 <div class="" data-decorator="init-filter-results">
   <div class="form__row">
     <label class="visually-hidden" for="filter-id--{{id}}">Filter op</label>
-    <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" />
+    <div class="relative">
+      <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
+      <a href="#" class="input-text__remove invisible" data-handler="empty-input">
+        <span class="visually-hidden">Wis waarde</span>
+      </a>
+    </div>
+  </div>
+  <div class="form__row">
+    <button class="button js-filterresults__btnSelectAll">Selecteer alles</button>
   </div>
   <div class="form__row">
     <div class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
