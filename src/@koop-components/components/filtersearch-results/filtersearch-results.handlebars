@@ -1,4 +1,4 @@
-<div class="" data-decorator="init-filter-results">
+<div class="" data-decorator="init-filter-results{{#if controls}} init-formreset{{/if}}">
   <div class="form__row">
     <label class="visually-hidden" for="filter-id--{{id}}">Filter op</label>
     <div class="relative">
@@ -8,9 +8,12 @@
       </a>
     </div>
   </div>
+  {{#if controls}}
   <div class="form__row">
     <button class="button js-filterresults__btnSelectAll">Selecteer alles</button>
+    <a href="#" class="formreset-resetlink">reset</a>
   </div>
+  {{/if}}
   <div class="form__row">
     <div class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
       {{#if Sets }}

@@ -28,8 +28,12 @@
   };
 
   filterResults.prototype.addEventListeners = function() {
-    this.btnSelectAll.addEventListener('click', function() { this.selectAll(); }.bind(this), false);
-    this.input.addEventListener('keyup', function() { this.doFilter(); }.bind(this), false);
+    if (this.btnSelectAll) {
+      this.btnSelectAll.addEventListener('click', function() { this.selectAll(); }.bind(this), false);
+    }
+    if (this.input) {
+      this.input.addEventListener('keyup', function() { this.doFilter(); }.bind(this), false);
+    }
   };
 
   filterResults.prototype.selectAll = function() {

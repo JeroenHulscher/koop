@@ -58,6 +58,9 @@ variants:
           id: 32373123
           title: Voorburg
           short: Nederland
+  - name: with Controls
+    context:
+      controls: true
   - name: Multilevel
     context:
       id: 176575675
