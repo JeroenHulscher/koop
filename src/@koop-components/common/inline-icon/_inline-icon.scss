@@ -20,6 +20,18 @@ $icons: (
   logout: $iconLogout
 );
 
+button.icon {
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  background-color: transparent;
+  color: $darkBlue;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 .icon {
   padding-left: 1.75em;
   background: {
