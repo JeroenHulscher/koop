@@ -3,6 +3,7 @@ label: Filtersearch results
 status: ready
 context:
   id: 176575675
+  searchfieldPlaceholder: Typ hier uw organisatie
   Options:
     - Option: 1
       id: 123766666
@@ -60,7 +61,9 @@ variants:
           short: Nederland
   - name: with Controls
     context:
-      controls: true
+      controls:
+        enabled: true
+        selectAllLabel: Selecteer alle organisaties
   - name: Multilevel
     context:
       id: 176575675

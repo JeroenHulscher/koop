@@ -20,7 +20,7 @@
     this.input = onl.dom.$( '.js-filterresults__input', this.element )[0];
     this.results = onl.dom.$( '.js-filterresults__result', this.element );
     this.setContainerClass = '.js-filterresults__resultmother';
-    this.btnSelectAll = this.element.querySelector(this.config.btnSelectAll) || this.element.querySelector('.js-filterresults__btnSelectAll');
+    this.btnSelectAll = this.element.querySelector(this.config.btnSelectAll) || this.element.querySelector('.js-filterresults__btn-selectall');
     this.allCheckboxes = this.element.querySelectorAll('input[type="checkbox"]');
     this.setContainers = this.element.querySelectorAll(this.setContainerClass);
 
@@ -128,6 +128,19 @@
       // There are results, remove alert message;
       if (this.element.querySelector(alertId)){
         this.element.querySelector(alertId).parentNode.removeChild(this.element.querySelector(alertId));
+      }
+    }
+
+    if (this.btnSelectAll) {
+      if (hasVisibleResults) {
+        this.btnSelectAll.removeAttribute('aria-hidden');
+      } else {
+        this.btnSelectAll.setAttribute('aria-hidden', 'true');
+      }
+      if(this.input.value === '') {
+        this.btnSelectAll.innerHTML = this.btnSelectAll.getAttribute('data-label');
+      } else {
+        this.btnSelectAll.innerHTML = 'Selecteer alle "' + this.input.value + '"';
       }
     }
   };
