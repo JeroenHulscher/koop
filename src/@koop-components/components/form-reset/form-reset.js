@@ -40,6 +40,9 @@
         }
       case 'text':
         this.inputs[y].value = '';
+          var keyupEvent = new Event('keyup');
+          // trigger keyUp event on input (for ie. filtersearch-results component)
+          this.inputs[y].dispatchEvent(keyupEvent);
       }
     }
 
