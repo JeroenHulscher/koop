@@ -15,14 +15,14 @@
       <fieldset>
         <legend class="visually-hidden">Zoek een publicatie</legend>
         <div class="columns">
-          <div class="column">
+          <div class="column column-d-8">
             <div class="form__row">
               {{ render "@input-text" searchterm }}
             </div>
           </div>
-          <div class="column">
+          <div class="column column-d-5">
             <div class="form__row">
-              {{ render "@select-multi--large" }}
+              {{ render "@select-custom--with-label" selectContext merge=true }}
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
         {{!-- {{render "@heading--preheader" vandaag merge=true }} --}}
         <h2>Vandaag toegevoegd</h2>
         <p>Vandaag, vrijdag 19 augustus 2020, zijn er 2137 publicaties gepubliceerd.</p>
-         {{ render "@browse" }}
+         {{ render "@browse" browse }}
       </div>
     </div>
 
