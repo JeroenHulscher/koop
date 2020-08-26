@@ -37,16 +37,6 @@ table,
     color: white !important;
   }
 
-  &__topbar {
-    margin-bottom: .5em;
-    text-align: right;
-
-    &__list {
-      @extend .list--inline;
-      margin: 0;
-    }
-  }
-
   &__rowheading {
 
     th,
