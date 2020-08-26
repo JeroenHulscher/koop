@@ -9,7 +9,7 @@
             <div class="form__row form__row--medium">
               <label class="form__label form__label--accent" for="filter-id--{{id}}">{{#if label}}{{label}}{{else}}Filter resultaten op trefwoord{{/if}}</label>
               <div class="relative">
-                <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if inputPlaceholder}}{{inputPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
+                <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if inputPlaceholder}}{{inputPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="{{#if inputName}}{{inputName}}{{else}}name{{/if}}" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
                 <a href="#" class="input-text__remove invisible" data-handler="empty-input">
                   <span class="visually-hidden">Wis waarde</span>
                 </a>
