@@ -52,5 +52,7 @@ context:
       icon: icon-print.svg
   tablecontainer1:
     topbar:
-      - text: Toon tabel in een apart scherm
+      items:
+      - text: Toon volledige tabel
         href: '#'
+        class: icon icon--fullscreen

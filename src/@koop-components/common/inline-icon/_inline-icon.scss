@@ -17,7 +17,8 @@ $icons: (
   mail: $iconMail,
   play: $iconPlay,
   profile: $iconProfile,
-  logout: $iconLogout
+  logout: $iconLogout,
+  fullscreen: $iconFullscreen
 );
 
 .icon {
@@ -336,6 +337,10 @@ $icons: (
       background-size: .5em;
       padding-left: 1em;
     }
+  }
+
+  &--fullscreen {
+    background-size: 1.5em;
   }
 }
 
