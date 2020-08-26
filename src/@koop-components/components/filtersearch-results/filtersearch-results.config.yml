@@ -62,7 +62,6 @@ variants:
   - name: with Controls
     context:
       controls:
-        enabled: true
         selectAllLabel: Selecteer alle organisaties
   - name: Multilevel
     context:

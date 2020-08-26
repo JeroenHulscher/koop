@@ -1,4 +1,4 @@
-<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
@@ -15,6 +15,12 @@
                 </a>
               </div>
             </div>
+            {{#if controls}}
+              <div class="form__row">
+                <button class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
+              </div>
+            {{/if}}
+
             <fieldset class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
               <legend class="visually-hidden">{{modalTitle}}</legend>
               {{/if}}
@@ -98,6 +104,9 @@
         {{/if}}
 
         <div class="modal__buttonpane">
+          {{#if buttonResetForm}}
+            <button class="icon icon--refresh formreset-resetlink">Reset formulier</button>
+          {{/if}}
           {{#if buttonSubmit}}
             <button type="submit" class="button button--primary">Opnieuw zoeken</button>
           {{else}}

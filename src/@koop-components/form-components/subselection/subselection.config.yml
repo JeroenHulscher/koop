@@ -327,11 +327,96 @@ variants:
       modalTitle: Publicerende organisatie(s)
       label: Filter op zoekwoord of zinsdeel
       inputPlaceholder: 'Zoekwoord of zinsdeel'
-      clearFieldButton: true
       maxShow: 3
       type: span
       searchFilter: true
       multilevel: true
+      Options:
+        - Option: 1
+          id: 1
+          title: Adviescollege
+          short: Adviescollege
+          OptionsSubs:
+            - OptionsSub: 11
+              id: 11
+              title: Algemene Rekenkamer
+              short: Algemene Rekenkamer
+            - OptionsSub: 12
+              id: 12
+              title: Raad voor Cultuur
+              short: Raad voor Cultuur
+            - OptionsSub: 13
+              id: 13
+              title: Raad voor Strafrechtstoepassing en Jeugdbescherming (RSJ)
+              short: Raad voor Strafrechtstoepassing en Jeugdbescherming (RSJ)
+            - OptionsSub: 14
+              id: 14
+              title: Raad voor Werk en Inkomen
+              short: Raad voor Werk en Inkomen
+        - Option: 2
+          id: 2
+          title: Deelgemeente
+          short: Deelgemeente
+          OptionsSubs:
+            - OptionSub: 21
+              id: 21
+              title: Amsterdam - Bos en Lommer
+              short: Amsterdam - Bos en Lommer
+            - OptionSub: 22
+              id: 22
+              title: Amsterdam - Geuzenveld-Slotermeer
+              short: Amsterdam - Geuzenveld-Slotermeer
+            - OptionSub: 23
+              id: 23
+              title: Amsterdam - Nieuw-West
+              short: Amsterdam - Nieuw-West
+            - OptionSub: 24
+              id: 24
+              title: Amsterdam - Noord
+              short: Amsterdam - Noord
+            - OptionSub: 25
+              id: 225
+              title: Amsterdam - Oost
+              short: Amsterdam - Oost
+        - Option: 3
+          id: 3
+          title: Hoge college van staat
+          short: Hoge college van staat
+          OptionsSubs:
+            - OptionSub: 211
+              id: 211
+              title: Algemene rekenkamer
+              short: Algemene rekenkamer
+            - OptionSub: 221
+              id: 221
+              title: Hoge raad van Adel
+              short: Hoge raad van Adel
+            - OptionSub: 231
+              id: 231
+              title: Kabinet der Koningin
+              short: Kabinet der Koningin
+            - OptionSub: 241
+              id: 241
+              title: Kanselarij der Nederlandse Orden
+              short: Kanselarij der Nederlandse Orden
+            - OptionSub: 251
+              id: 2251
+              title: Nationale Ombudsman
+              short: Nationale Ombudsman
+  - name: With Catagories and select all
+    context:
+      linkText: Kies 'Publicerende organisatie(s)'
+      linkTextActive: Pas opties aan
+      modalTitle: Publicerende organisatie(s)
+      label: Zoek publicerende organisatie(s)
+      inputPlaceholder: 'Zoekwoord'
+      maxShow: 3
+      type: span
+      searchFilter: true
+      multilevel: true
+      buttonResetForm: true
+      controls:
+        selectAllLabel: Selecteer alle organisaties
       Options:
         - Option: 1
           id: 1
