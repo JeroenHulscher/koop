@@ -5,7 +5,7 @@ describe('Subselection', function () {
   });
 
   it('should display 5 results, after selecting one more.', function () {
-    browser.get('http://localhost:3000/components/preview/subselection--default-limit-(3)');
+    browser.get('http://localhost:3000/components/preview/subselection--with-limit-(3)');
 
     var width = 1200;
     var height = 800;
@@ -230,6 +230,104 @@ describe('Subselection', function () {
 
     expect(subTrigger.getText()).toEqual("Kies 'iets'");
 
+  });
+
+  it('should have its buttonSelectAll in the default state', function () {
+    browser.get('http://localhost:3000/components/preview/subselection--with-catagories-and-select-all');
+
+    var width = 1200;
+    var height = 800;
+    var results;
+    browser.driver.manage().window().setSize(width, height);
+
+    browser.driver.sleep(500);
+
+    var subTrigger = element(by.css('#id1'));
+    subTrigger.click();
+
+    browser.driver.sleep(1500);
+
+    var buttonSelectall = element(by.css('.js-filterresults__btn-selectall'))
+
+    expect(buttonSelectall.getText()).toEqual("Selecteer alle organisaties");
+  });
+
+  it('should have its buttonSelectAll in the searched state ("dam")', function () {
+    var fieldSearch = element(by.css('#filter-id--1'));
+    fieldSearch.sendKeys('dam');
+
+    browser.driver.sleep(500);
+
+    var buttonSelectall = element(by.css('.js-filterresults__btn-selectall'));
+
+    expect(buttonSelectall.getText()).toEqual('Selecteer alle "dam"');
+  });
+
+  it('should only have 1 category as result', function () {
+    browser.driver.findElements(by.css('.js-filterresults__resultmother[aria-hidden="true"]')).
+      then(function (elems) {
+        expect(elems.length).toEqual(2);
+      }
+      );
+  });
+
+  it('should only have 5 visible results', function () {
+    browser.driver.findElements(by.css('.js-filterresults__result.is-visible')).
+      then(function (elems) {
+        expect(elems.length).toEqual(5);
+      }
+      );
+  });
+
+  it('should have ZERO visible results', function () {
+    var fieldSearch = element(by.css('#filter-id--1'));
+    fieldSearch.sendKeys('a');
+
+    browser.driver.sleep(500);
+
+    browser.driver.findElements(by.css('.js-filterresults__result.is-visible')).
+      then(function (elems) {
+        expect(elems.length).toEqual(0);
+      }
+      );
+  });
+  it('should have ZERO visible results and its buttonSelectAll INVISIBLE', function () {
+    var buttonSelectall = element(by.css('.js-filterresults__btn-selectall'));
+    expect(buttonSelectall.isDisplayed()).toBeFalsy();
+  });
+
+
+  it('should have ZERO visible results and display noresults-message', function () {
+    browser.driver.findElements(by.css('#alert-resultfilter-1')).
+      then(function (elems) {
+        expect(elems.length).toEqual(1);
+      }
+    );
+  });
+
+  it('should reset the searchfield after clicking the reset-button', function () {
+    var buttonReset = element(by.css('.formreset-resetlink'));
+    buttonReset.click();
+
+    var fieldSearch = element(by.css('#filter-id--1'));
+
+    browser.driver.sleep(500);
+
+    expect(fieldSearch.getText()).toEqual('');
+  });
+
+  it('should reset the searchfield after clicking the clear-button', function () {
+    var fieldSearch = element(by.css('#filter-id--1'));
+    fieldSearch.sendKeys('dam');
+
+    browser.driver.sleep(500);
+
+    var buttonClear = element(by.css('.input-text__remove'));
+    buttonClear.click();
+
+    browser.driver.sleep(500);
+
+    expect(fieldSearch.getText()).toEqual('');
   });
 
 

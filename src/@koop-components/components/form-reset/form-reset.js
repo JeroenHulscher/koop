@@ -22,7 +22,7 @@
     this.resetLink.addEventListener('click', function (e) { this.resetForm(e); }.bind(this), false);
   };
 
-  formReset.prototype.resetForm = function() {
+  formReset.prototype.resetForm = function(e) {
     var y;
 
     this.inputs = this.element.querySelectorAll('input,select');
@@ -34,8 +34,24 @@
         if (this.inputs[y].checked) {
           this.inputs[y].checked = false;
         }
+      case 'checkbox':
+        if (this.inputs[y].checked) {
+          this.inputs[y].checked = false;
+        }
+      case 'text':
+        this.inputs[y].value = '';
+          // trigger keyUp event on input (for ie. filtersearch-results component)
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("keyup", false, true);
+            this.inputs[y].dispatchEvent(evt);
+          } else {
+            this.inputs[y].fireEvent("keyup");
+          }
       }
     }
+
+    e.preventDefault();
   };
 
 

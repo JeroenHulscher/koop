@@ -1,6 +1,6 @@
 ---
 label: CVDR - Contentpage
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
@@ -50,3 +50,9 @@ context:
     - link: '#'
       text: Printen
       icon: icon-print.svg
+  tablecontainer1:
+    topbar:
+      items:
+      - text: Toon volledige tabel
+        href: '#'
+        class: icon icon--fullscreen

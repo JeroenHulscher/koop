@@ -26,6 +26,28 @@
       outline: 2px solid $yellow;
       outline-offset: 0;
     }
+
+    &.is-filled {
+      @extend .icon;
+      @extend .icon--edit;
+    }
+    &.is-empty {
+      @extend .icon;
+      @extend .icon--list;
+    }
+  }
+
+  &--secondary &__trigger {
+    &.is-empty {
+      display: block;
+      width: 100%;
+      border: 2px solid $darkBlue;
+      background: white;
+      padding: .25em .5em;
+    }
+    &.is-filled {
+
+    }
   }
 
   &__summary {

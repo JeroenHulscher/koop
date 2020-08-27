@@ -104,6 +104,10 @@ fieldset {
     margin-top: 1.5em;
   }
 
+  .modal & + fieldset {
+    margin-top: 0;
+  }
+
   legend {
     border-bottom: 0;
     font-size: 1.325em;
