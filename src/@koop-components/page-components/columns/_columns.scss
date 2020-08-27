@@ -227,10 +227,6 @@ $gutter--lg: 6em;
         flex-grow: 0;     /* do not grow   - initial value: 0 */
         flex-shrink: 0;   /* do not shrink - initial value: 1 */
         flex-basis: 19em; /* width/height  - initial value: auto */
-        display: none;
-        @media ( min-width: $breakpointDesktop ) {
-          display: block;
-        }
 
         > div {
           background-color: $white;
