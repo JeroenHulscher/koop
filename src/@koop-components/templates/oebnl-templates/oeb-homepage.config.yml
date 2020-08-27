@@ -6,16 +6,27 @@ context:
     file: logo.svg
     alt: Overheid.nl logo
     navLinks:
-    - url: '#'
-      text: Uitgebreid zoeken
-    - url: '#'
-      text: 'Mijn abonnementen'
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
       skipLinks:
         - url: '#content'
           text: Direct naar content
+    profile: true
+    profileContext:
+      loggedIn: true
+      textLoggedIn: Mijn account
+      options:
+        - text: Mijn abonnementen
+          url: '#'
+        - text: Inloggen
+          url: '#'
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
