@@ -1,0 +1,13 @@
+<div class="select-multi select-multi--{{modifier}}">
+  <label class="form__label form__label--{{ labelmodifier }}{{#if fieldLabelVisible}}{{else}} visually-hidden{{/if}}" for="{{id}}">{{ fieldLabel }}</label>
+  <p id="{{describedbyId}}" class="visually-hidden">{{helptext}}</p>
+  <select id="{{id}}" aria-describedby="{{describedbyId}}" class="multipleSelect " multiple name="{{name}}" data-decorator="init-multiselect" data-decorator-placeholder="{{fieldPlaceholder}}">
+    {{#each categories}}
+      <optgroup label="{{ title }}">
+        {{#each options}}
+          <option {{selected}} value="{{ value }}">{{ label }}</option>
+        {{/each}}
+      </optgroup>
+    {{/each}}
+  </select>
+</div>

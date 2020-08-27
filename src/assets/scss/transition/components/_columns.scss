@@ -74,6 +74,22 @@
     }
   }
 
+  .column {
+    margin-bottom: 3em;
+    @media ( min-width: $breakpointDesktop ) {
+      margin-bottom: 0;
+    }
+  }
+
+  form & {
+    .column {
+      margin-bottom: 0;
+      @media ( min-width: $breakpointDesktop ) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &--sticky-sidebar {
 
     > .columns--sticky-sidebar__sidebar {

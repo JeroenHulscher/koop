@@ -1,0 +1,117 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+    <form>
+      <fieldset>
+        <legend class="visually-hidden">Zoek een publicatie</legend>
+        <div class="columns">
+          <div class="column column-d-8">
+            <div class="form__row">
+              {{ render "@input-text" searchterm }}
+            </div>
+          </div>
+          <div class="column column-d-5">
+            <div class="form__row">
+              {{ render "@select-custom--with-label" selectContext merge=true }}
+            </div>
+          </div>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+          <div class="form__rowsubmit__item">
+            {{render "@link--cta" linkPar merge=true }}
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="row row--xlg">
+
+    {{!-- <h2 class="row__heading">Omgevingen</h2> --}}
+
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        <h2>Welke informatie vindt u op deze website?</h2>
+        <p>
+          Op officielebekendmakingen.nl vindt u de officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de
+          Gemeentebladen, Provinciale bladen, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle
+          publicaties van het parlement.
+        </p>
+        <h2>Direct uitgebreid zoeken</h2>
+        <p>
+          Wilt u op een gestructureerde manier zoeken naar parlementaire documenten of officiële bekendmakingen? Dan kunt u daarvoor
+          gebruik maken van de uitgebreide zoekmogelijkheden.
+        </p>
+        <p>
+           {{render "@link--cta" linkPar merge=true }}
+        </p>
+        {{!-- <p>
+          <a href="https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/parlementair" class=" btn btn-orange">
+            <em class="fa fa-search"></em> Parlementaire documenten</a>
+          <a href="https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen" class="btn btn-orange">
+            <em class="fa fa-search"></em> Officiële bekendmakingen</a>
+        </p> --}}
+      </div>
+      <div class="column">
+        {{!-- {{render "@heading--preheader" vandaag merge=true }} --}}
+        <h2>Vandaag toegevoegd</h2>
+        <p>Vandaag, vrijdag 19 augustus 2020, zijn er 2137 publicaties gepubliceerd.</p>
+         {{ render "@browse" browse }}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row row--wdevider">
+
+    <h2 class="row__heading">Over deze website</h2>
+
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        <h3>Historische parlementaire documenten</h3>
+        <p>De collectie parlementaire documenten is uitgebreid met Kamerstukken, Kamervragen en Handelingen uit de periode 1814 tot
+          1995. U kunt op deze documenten zoeken via het zoekscherm voor
+          <a href="https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/historisch">historische parlementaire documenten</a>. </p>
+        <p>Voorheen waren deze documenten beschikbaar via de website
+          <a href="https://www.statengeneraaldigitaal.nl">statengeneraaldigitaal.nl</a>.</p>
+      </div>
+      <div class="column">
+        <h3>Nieuwe vormgeving en zoekfuncties op de website</h3>
+        <p>Welkom op de vernieuwde website! Vanaf vandaag is de vertrouwde oranje kleurstelling vervangen door het blauw van de Rijkshuisstijl.
+          En niet alleen de kleuren van de website zijn anders, maar ook de zoekfunctionaliteit zelf is aangepast.</p>
+
+        <p>Snel op trefwoord zoeken kunt u via de nieuwe zoekbalk voor eenvoudig zoeken. De mogelijkheden voor het uitgebreid zoeken
+          zijn bovendien gebruiksvriendelijker gemaakt. En uw zoekresultaten kunt u verfijnen door het gebruik van zogenaamde facetten
+          die u worden aangeboden aan de linkerkant van het scherm met zoekresultaten. </p>
+
+        <p>Meer informatie over o.a. het zoeken op de vernieuwde website vindt u onder
+          <a href="https://www.overheid.nl/help/officiele-bekendmakingen/">Help</a>.</p>
+
+        <p>Heeft u desondanks vragen over de werking van de website, neemt u dan contact op met onze servicedesk via het
+          <a href="https://www.overheid.nl/contact/reageren-op-officiele-bekendmakingen">reactieformulier</a>. Zij helpen u graag verder.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

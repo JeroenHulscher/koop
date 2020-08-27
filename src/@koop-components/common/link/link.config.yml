@@ -33,5 +33,11 @@ variants:
       text: Ik heb nog geen profiel
       action: '#'
       class: link link--profile
+  - name: CTA
+    label: cta
+    context:
+      text: Ga naar het overzicht
+      action: '#'
+      class: cta
 
 

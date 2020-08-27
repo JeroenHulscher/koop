@@ -1,0 +1,18 @@
+.profile {
+  position: relative;
+  ul {
+    position: absolute;
+    left: 0;
+    top: 2.5em;
+    width: 10em;
+    padding: .5em;
+
+    @media ( min-width: $breakpointDesktop ) {
+      right: 0;
+      left: auto;
+    }
+  }
+  li {
+    display: block;
+  }
+}

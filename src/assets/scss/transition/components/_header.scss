@@ -1,7 +1,18 @@
 .header {
   margin-bottom: 2em;
 
+  .profile {
+    @media ( min-width: $breakpointDesktop ) {
+      position: absolute;
+      right: 1em;
+      top: 0;
+    }
+  }
+
+
   &__start {
+    z-index: 1;
+
     .header__meta {
       @media ( min-width: $breakpointDesktop ) {
         top: 0.125em;

@@ -9,8 +9,6 @@ context:
       selected: selected
     - label: Item 2
       value: 20
-  fieldLabel: Aantal resultaten per pagina
-  fieldInstruction: verplicht veld
 variants:
   - name: large
     context:

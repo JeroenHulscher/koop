@@ -143,6 +143,10 @@ h3.ankered {
     font-style: italic;
     font-size: em(21);
     margin-bottom: 0;
+
+    + h2, h3 {
+      margin-top: 0;
+    }
   }
 }
 
