@@ -16,19 +16,12 @@
       <p>Typ de postode waarvoor u bekendmakingen wilt vinden.</p>
       {{ render '@input-text--postal-code' }}
       {{ render '@input-radio' postalCodeStraal merge="true" }}
-      <h2>Organisaties</h2>
-      {{ render '@multi-select' gemeenteSelect  }}
-      {{ render '@multi-select' provinceSelect  }}
-      {{ render '@multi-select' waterschappen }}
-      {{ render '@multi-select' regionalOrgsSelect  }}
     </div>
     <div>
       <h2>Zoek op woord of zinsdeel</h2>
       <p>Typ een of meer woorden die exact zo moeten voorkomen in de tekst.</p>
       <h3>Zoek op onderwerp</h3>
       {{ render '@input-text' searchSubject }}
-      <h3>Selecteer onderwerpen</h3>
-      {{ render '@multi-select' onderwerpen }}
       <h2>Zoek op datum</h2>
       <p>Kies de periode waarbinnen de bekendmakingen zijn gepubliceerd.</p>
       {{ render '@input-radio' timeScale merge="true" }}
