@@ -40,9 +40,14 @@
         }
       case 'text':
         this.inputs[y].value = '';
-          var keyupEvent = new Event('keyup');
           // trigger keyUp event on input (for ie. filtersearch-results component)
-          this.inputs[y].dispatchEvent(keyupEvent);
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("keyup", false, true);
+            this.inputs[y].dispatchEvent(evt);
+          } else {
+            this.inputs[y].fireEvent("keyup");
+          }
       }
     }
 

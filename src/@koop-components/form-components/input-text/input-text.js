@@ -5,7 +5,6 @@ onl.handle({
    * @param event
    */
   'empty-input': function(element, event) {
-    var keyupEvent = new Event('keyup');
 
     event.preventDefault();
     element.previousElementSibling.value = '';
@@ -13,7 +12,14 @@ onl.handle({
     element.previousElementSibling.focus();
 
     // trigger keyUp event on input (for ie. filtersearch-results component)
-    element.previousElementSibling.dispatchEvent(keyupEvent);
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("keyup", false, true);
+      element.previousElementSibling.dispatchEvent(evt);
+    } else {
+      element.previousElementSibling.fireEvent("keyup");
+    }
+
   }
 });
 
