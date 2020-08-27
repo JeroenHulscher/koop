@@ -232,7 +232,7 @@ describe('Subselection', function () {
 
   });
 
-  fit('should have its buttonSelectAll in the default state', function () {
+  it('should have its buttonSelectAll in the default state', function () {
     browser.get('http://localhost:3000/components/preview/subselection--with-catagories-and-select-all');
 
     var width = 1200;
@@ -252,7 +252,7 @@ describe('Subselection', function () {
     expect(buttonSelectall.getText()).toEqual("Selecteer alle organisaties");
   });
 
-  fit('should have its buttonSelectAll in the searched state ("dam")', function () {
+  it('should have its buttonSelectAll in the searched state ("dam")', function () {
     var fieldSearch = element(by.css('#filter-id--1'));
     fieldSearch.sendKeys('dam');
 
@@ -263,7 +263,7 @@ describe('Subselection', function () {
     expect(buttonSelectall.getText()).toEqual('Selecteer alle "dam"');
   });
 
-  fit('should only have 1 category as result', function () {
+  it('should only have 1 category as result', function () {
     browser.driver.findElements(by.css('.js-filterresults__resultmother[aria-hidden="true"]')).
       then(function (elems) {
         expect(elems.length).toEqual(2);
@@ -271,7 +271,7 @@ describe('Subselection', function () {
       );
   });
 
-  fit('should only have 5 visible results', function () {
+  it('should only have 5 visible results', function () {
     browser.driver.findElements(by.css('.js-filterresults__result.is-visible')).
       then(function (elems) {
         expect(elems.length).toEqual(5);
@@ -279,7 +279,7 @@ describe('Subselection', function () {
       );
   });
 
-  fit('should have ZERO visible results', function () {
+  it('should have ZERO visible results', function () {
     var fieldSearch = element(by.css('#filter-id--1'));
     fieldSearch.sendKeys('a');
 
@@ -291,13 +291,13 @@ describe('Subselection', function () {
       }
       );
   });
-  fit('should have ZERO visible results and its buttonSelectAll INVISIBLE', function () {
+  it('should have ZERO visible results and its buttonSelectAll INVISIBLE', function () {
     var buttonSelectall = element(by.css('.js-filterresults__btn-selectall'));
     expect(buttonSelectall.isDisplayed()).toBeFalsy();
   });
 
 
-  fit('should have ZERO visible results and display noresults-message', function () {
+  it('should have ZERO visible results and display noresults-message', function () {
     browser.driver.findElements(by.css('#alert-resultfilter-1')).
       then(function (elems) {
         expect(elems.length).toEqual(1);
@@ -305,7 +305,7 @@ describe('Subselection', function () {
     );
   });
 
-  fit('should reset the searchfield after clicking the reset-button', function () {
+  it('should reset the searchfield after clicking the reset-button', function () {
     var buttonReset = element(by.css('.formreset-resetlink'));
     buttonReset.click();
 
@@ -316,7 +316,7 @@ describe('Subselection', function () {
     expect(fieldSearch.getText()).toEqual('');
   });
 
-  fit('should reset the searchfield after clicking the clear-button', function () {
+  it('should reset the searchfield after clicking the clear-button', function () {
     var fieldSearch = element(by.css('#filter-id--1'));
     fieldSearch.sendKeys('dam');
 
