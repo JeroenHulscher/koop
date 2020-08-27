@@ -4,7 +4,7 @@ describe('Form reset', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should reset the text-field', function () {
+  it('should reset the text-field', function () {
     browser.get('http://localhost:3000/components/preview/form-reset');
 
     var width = 1200;
