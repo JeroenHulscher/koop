@@ -80,7 +80,11 @@
 
   onl.decorate({
     'add-mobile-foldability': function( el ) {
+      var newTop = '150';
       var parentOffsets = el.getBoundingClientRect();
+      if(parentOffsets.top != '0') {
+        newTop = parentOffsets.top;
+      }
       var button = document.createElement( 'button' );
       var classlist = 'is-column-default';
       var labels = {
@@ -107,7 +111,7 @@
       button.textContent = labels.close;
 
       // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
-      button.style.top = Math.round(parentOffsets.top) + 40 + 'px';
+      button.style.top = Math.round(newTop) + 40 + 'px';
 
       el.before( button );
 
