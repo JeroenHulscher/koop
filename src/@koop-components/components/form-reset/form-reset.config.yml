@@ -3,3 +3,5 @@ label: Form reset
 status: prototype
 context:
   id: 1
+  inputtext:
+    value: een waarde

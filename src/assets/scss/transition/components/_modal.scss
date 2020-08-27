@@ -16,6 +16,12 @@
     }
   }
 
+  fieldset {
+    legend {
+      font-size: 1.125em;
+    }
+  }
+
   &__close,
   &__close:hover {
     right: 3em;
@@ -44,6 +50,7 @@
     padding: 1em 1em .25em;
     background: $bgBlue;
     box-shadow: 0px -3px 5px rgba(0,0,0,.05);
+    text-align: right;
 
     &:before,
     &:after {
@@ -62,6 +69,12 @@
 
     @media ( min-width: $breakpointDesktop ) {
       padding-left: 4em;
+      padding-right: 4em;
+    }
+
+    .formreset-resetlink {
+      float: left;
+      margin-top: .75em;
     }
   }
   &--fixedpane &__content {

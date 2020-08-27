@@ -1,4 +1,4 @@
-<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
@@ -7,9 +7,20 @@
         {{#if searchFilter}}
           <div class="" data-decorator="init-filter-results">
             <div class="form__row form__row--medium">
-              <label class="visually-hidden" for="filter-id--{{id}}">{{#if label}}{{label}}{{else}}Filter resultaten op trefwoord{{/if}}</label>
-              <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if inputPlaceholder}}{{inputPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" />
+              <label class="form__label form__label--accent" for="filter-id--{{id}}">{{#if label}}{{label}}{{else}}Filter resultaten op trefwoord{{/if}}</label>
+              <div class="relative">
+                <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if inputPlaceholder}}{{inputPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="{{#if inputName}}{{inputName}}{{else}}name{{/if}}" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
+                <a href="#" class="input-text__remove invisible" data-handler="empty-input">
+                  <span class="visually-hidden">Wis waarde</span>
+                </a>
+              </div>
             </div>
+            {{#if controls}}
+              <div class="form__row">
+                <button class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
+              </div>
+            {{/if}}
+
             <fieldset class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
               <legend class="visually-hidden">{{modalTitle}}</legend>
               {{/if}}
@@ -29,7 +40,10 @@
 
               {{#if multilevel}}
                 {{#each Options }}
+                  <fieldset class="js-filterresults__resultmother">
+
                   {{#if checkAll}}
+                    <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
                     <div data-decorator="init-selectall">
                       <div class="input-checkbox">
                         <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="selectAll" value="Alle iets"
@@ -39,7 +53,7 @@
                         </label>
                       </div>
                   {{else}}
-                    <p class="form__label">{{#if title}}{{title}}{{/if}}</p>
+                    <legend>{{#if title}}{{title}}{{/if}}</legend>
                   {{/if}}
 
                   <ul class="list--unstyled">
@@ -58,6 +72,7 @@
                 {{#if checkAll}}
                   </div>
                 {{/if}}
+                </fieldset>
               {{/each}}
 
             {{else}}
@@ -89,6 +104,9 @@
         {{/if}}
 
         <div class="modal__buttonpane">
+          {{#if buttonResetForm}}
+            <button class="icon icon--refresh formreset-resetlink">Reset formulier</button>
+          {{/if}}
           {{#if buttonSubmit}}
             <button type="submit" class="button button--primary">Opnieuw zoeken</button>
           {{else}}

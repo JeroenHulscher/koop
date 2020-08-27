@@ -1,4 +1,22 @@
-<div data-decorator="init-formreset">
-  {{render "@input-radio" }}
-  <a href="#" class="formreset-resetlink">reset</a>
-</div>
+<h2>Form reset</h2>
+<p>
+  Deze functionaliteit geeft de mogelijkheid alle velden in een formulier leeg te maken. Op dit moment is er ondersteuning voor de volgende velden: "radio", "checkbox", "text".
+</p>
+<p>
+  Plaats <code>data-decorator="init-formreset"</code> op de omliggende container. Geef de desbetreffende reset-knop de class <code>formreset-resetlink</code>.
+</p>
+<form data-decorator="init-formreset">
+  <fieldset>
+    <legend>Voorbeeld formulier</legend>
+    <div class="form__row">
+      {{render "@input-radio" }}
+    </div>
+    <div class="form__row">
+      {{render "@input-checkbox" }}
+    </div>
+    <div class="form__row">
+      {{render "@input-text" inputtext merge=true }}
+    </div>
+    <button class="button button--primary formreset-resetlink">Reset velden</button>
+  </fieldset>
+</form>
