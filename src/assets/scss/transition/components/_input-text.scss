@@ -16,6 +16,7 @@ input[type=text] {
   background: $iconCrossFilled no-repeat center center;
   height: 1.5em;
 }
+.input-text--searchmedium ~ .input-text__remove,
 .input-text--medium ~ .input-text__remove {
   bottom: .9em;
 }
