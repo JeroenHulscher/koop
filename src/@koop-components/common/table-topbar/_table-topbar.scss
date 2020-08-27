@@ -1,0 +1,9 @@
+.table-topbar {
+  margin-bottom: .5em;
+  text-align: right;
+
+  &__list {
+    @extend .list--inline;
+    margin: 0;
+  }
+}
