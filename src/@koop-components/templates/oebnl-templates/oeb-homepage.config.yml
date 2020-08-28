@@ -101,7 +101,31 @@ context:
         count: 32
         count_context: gepubliceerd
       - link: '#'
-        text: gemeenschappelijke regeling
+        text: Blad gemeenschappelijke regeling
         count: 0
         count_context: gepubliceerd
+  buttonPar:
+    anchor: true
+    action: '#'
+    text: Parlementaire documenten
+  buttonOf:
+    anchor: true
+    action: '#'
+    text: Officiële bekendmakingen
+    modifier: icon-bg icon--searchBlue
+  buttonbarContext:
+    header:
+      tag: h2
+      text: Bekijk ook
+    devided: true
+    btndouble1:
+      text: Help
+      text2: Hulp bij Officiële bekendmakingen
+      anchor: true
+      action: "#"
+    btndouble2:
+      text: Reactieformulier
+      text2: Reageren op Officiële bekendmakingen
+      anchor: true
+      action: "#"
 

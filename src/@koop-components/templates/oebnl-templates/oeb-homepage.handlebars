@@ -53,23 +53,16 @@
           Gemeentebladen, Provinciale bladen, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle
           publicaties van het parlement.
         </p>
-        <h2>Direct uitgebreid zoeken</h2>
+        <h3>Direct uitgebreid zoeken</h3>
         <p>
           Wilt u op een gestructureerde manier zoeken naar parlementaire documenten of officiële bekendmakingen? Dan kunt u daarvoor
           gebruik maken van de uitgebreide zoekmogelijkheden.
         </p>
         <p>
-          <a href="#" class="button">Parlementaire documenten</a>
-          <a href="#" class="button">Officiële bekendmakingen</a>
+          <a href="#" class="button icon-bg icon--searchBlue">Parlementaire documenten</a>
+          <a href="#" class="button icon-bg icon--searchBlue">Officiële bekendmakingen</a>
         </p>
 
-        <h2>Over deze website</h2>
-        {{!-- <p>
-          <a href="https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/parlementair" class=" btn btn-orange">
-            <em class="fa fa-search"></em> Parlementaire documenten</a>
-          <a href="https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen" class="btn btn-orange">
-            <em class="fa fa-search"></em> Officiële bekendmakingen</a>
-        </p> --}}
         <h3>Historische parlementaire documenten</h3>
         <p>De collectie parlementaire documenten is uitgebreid met Kamerstukken, Kamervragen en Handelingen uit de periode 1814 tot
           1995. U kunt op deze documenten zoeken via het zoekscherm voor
@@ -85,6 +78,13 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="row">
+    {{#> @buttonbar buttonbarContext }}
+       {{ render "@button--doubleline" btndouble1 merge=true }}
+       {{ render "@button--doubleline" btndouble2 merge=true }}
+    {{/@buttonbar}}
   </div>
 
 </div>
