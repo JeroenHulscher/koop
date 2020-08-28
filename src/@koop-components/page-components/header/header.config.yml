@@ -36,4 +36,30 @@ context:
       links:
         - url: 'https://almanak.overheid.nl/onl'
           text: Naar overheidsorganisaties
+variants:
+  - name: With Meta Nav
+    context:
+      metaLinks:
+      - href: '#'
+        text: Attenderen
+      - href: '#'
+        text: Contactgegevens
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+  - name: With Profile
+    context:
+      metaLinks:
+      - nonlink: true
+        text: Gebruiker
+        class: icon icon--profile
+      - profile: true
+        profileContext:
+          loggedIn: true
+          textLoggedIn: Mijn account
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+            - text: Inloggen
+              url: '#'
 
