@@ -1,6 +1,6 @@
 ---
 label: Document search
-status: ready
+status: prototype
 context:
   id: 1
   searchScope:

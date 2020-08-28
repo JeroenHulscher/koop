@@ -1,6 +1,6 @@
 ---
 label: CUP-beheer - Overzicht van taken
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg

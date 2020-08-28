@@ -1,6 +1,6 @@
 ---
 label: Form conditionals
-status: prototype
+status: ready
 context:
   id: 1
   submitLabel: Verzenden

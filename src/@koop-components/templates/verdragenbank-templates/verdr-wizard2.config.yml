@@ -1,6 +1,6 @@
 ---
 label: Verdr. - Wizard 2
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg

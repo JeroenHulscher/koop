@@ -1,6 +1,6 @@
 ---
 label: Verdr. - Contentpage
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg

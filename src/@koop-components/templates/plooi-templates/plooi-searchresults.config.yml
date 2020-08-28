@@ -1,6 +1,6 @@
 ---
 label: PLOOI - Searchresults
-status: prototype
+status: search
 context:
   header:
     file: logo.svg
@@ -175,6 +175,8 @@ context:
     searchFilter: true
     type: span
     triggerSubmit: true
+    buttonSubmit: true
+    buttonSubmitLabel: Bekijk resultaat
     Options:
       - Option: 4
         id: 4

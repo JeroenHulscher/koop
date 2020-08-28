@@ -1,6 +1,6 @@
 ---
 label: Form reset
-status: prototype
+status: ready
 context:
   id: 1
   inputtext:
