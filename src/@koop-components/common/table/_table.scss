@@ -14,9 +14,10 @@
     margin-top: .5em;
   }
 
-  p {
+  > p {
     margin: 0;
   }
+
   .table__caption,
   .table__description {
     margin-top: .5em;
@@ -35,6 +36,10 @@ table,
   [scope=colgroup] {
     background: $darkBlue !important;
     color: white !important;
+  }
+
+  &--fontsmall {
+    font-size: 0.9em;
   }
 
   &__rowheading {
