@@ -29,11 +29,6 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults-map.html"
     },
     {
-      "label": "boub - newsletter",
-      "url": "http://localhost:3000/components/preview/templates-newsletter",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-newsletter.html"
-    },
-    {
       "label": "identifier - homepage",
       "url": "http://localhost:3000/components/preview/templates-identifiernl-homepage",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-identifiernl-homepage.html"
@@ -330,23 +325,108 @@
     },
     {
       "label": "tucht - Homepage",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage.html"
+      "url": "http://localhost:3000/components/preview/templates-tucht-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-homepage.html"
     },
     {
       "label": "tucht - Homepage uitgebreid",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage-uitgebreid",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage-uitgebreid.html"
+      "url": "http://localhost:3000/components/preview/templates-tucht-homepage-uitgebreid",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-homepage-uitgebreid.html"
     },
     {
       "label": "tucht - Content",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-contentpage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-contentpage.html"
+      "url": "http://localhost:3000/components/preview/templates-tucht-contentpage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-contentpage.html"
     },
     {
       "label": "tucht - searchresults",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-searchresults.html"
+      "url": "http://localhost:3000/components/preview/templates-tucht-searchresults",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-searchresults.html"
+    },
+    {
+      "label": "att - templates-aanm-aanmelding-bevestigd",
+      "url": "http://localhost:3000/components/preview/templates-aanm-aanmelding-bevestigd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-aanmelding-bevestigd.html"
+    },
+    {
+      "label": "att - templates-aanm-afgemeld",
+      "url": "http://localhost:3000/components/preview/templates-aanm-afgemeld",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-afgemeld.html"
+    },
+    {
+      "label": "att - templates-aanm-afmelden",
+      "url": "http://localhost:3000/components/preview/templates-aanm-afmelden",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-afmelden.html"
+    },
+    {
+      "label": "att - templates-aanm-bevestig-aanmelding",
+      "url": "http://localhost:3000/components/preview/templates-aanm-bevestig-aanmelding",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-bevestig-aanmelding.html"
+    },
+    {
+      "label": "att - templates-aanm-stap1",
+      "url": "http://localhost:3000/components/preview/templates-aanm-stap1",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap1.html"
+    },
+    {
+      "label": "att - ",
+      "url": "http://localhost:3000/components/preview/templates-aanm-stap2",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap2.html"
+    },
+    {
+      "label": "att - ",
+      "url": "http://localhost:3000/components/preview/templates-aanm-stap3",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap3.html"
+    },
+    {
+      "label": "att - templates-beh-abowijzigen",
+      "url": "http://localhost:3000/components/preview/templates-beh-abowijzigen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-abowijzigen.html"
+    },
+    {
+      "label": "att - templates-beh-dashboard",
+      "url": "http://localhost:3000/components/preview/templates-beh-dashboard",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-dashboard.html"
+    },
+    {
+      "label": "att - templates-beh-login",
+      "url": "http://localhtemplates-beh-dashboardost:3000/components/preview/templates-beh-login",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-login.html"
+    },
+    {
+      "label": "att - templates-beh-profile",
+      "url": "http://localhost:3000/components/preview/templates-beh-profile",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-profile.html"
+    },
+    {
+      "label": "att - templates-reg-account-aanmaken",
+      "url": "http://localhost:3000/components/preview/templates-reg-account-aanmaken",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-account-aanmaken.html"
+    },
+    {
+      "label": "att - templates-reg-bevestigingregistratie",
+      "url": "http://localhost:3000/components/preview/templates-reg-bevestigingregistratie",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-bevestigingregistratie.html"
+    },
+    {
+      "label": "att - templates-reg-vernieuw-wachtwoord",
+      "url": "http://localhost:3000/components/preview/templates-reg-vernieuw-wachtwoord",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-vernieuw-wachtwoord.html"
+    },
+    {
+      "label": "att - templates-reg-wachtwoord-opgevraagd",
+      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoord-opgevraagd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoord-opgevraagd.html"
+    },
+    {
+      "label": "att - templates-reg-wachtwoord-vergeten",
+      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoord-vergeten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoord-vergeten.html"
+    },
+    {
+      "label": "att - templates-reg-wachtwoordvernieuwd",
+      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoordvernieuwd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoordvernieuwd.html"
     }
 
   ],
