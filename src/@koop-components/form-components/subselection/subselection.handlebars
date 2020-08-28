@@ -108,9 +108,9 @@
             <button class="icon icon--refresh formreset-resetlink">Reset formulier</button>
           {{/if}}
           {{#if buttonSubmit}}
-            <button type="submit" class="button button--primary">Opnieuw zoeken</button>
+            <button type="submit" class="button button--primary">{{#if buttonSubmitLabel}}{{buttonSubmitLabel}}{{else}}Opnieuw zoeken{{/if}}</button>
           {{else}}
-            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">Bevestig selectie</button>
           {{/if}}
         </div>
         {{#if hideClose}}{{else}}<button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>{{/if}}

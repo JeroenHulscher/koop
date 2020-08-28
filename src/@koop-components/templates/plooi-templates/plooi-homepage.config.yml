@@ -20,7 +20,7 @@ context:
       labelmodifier: medium
       modifier: input-text--searchmedium
   themaItems:
-    - title: Cultuur &amp; Recreatie (2)
+    - title: Cultuur & Recreatie (2)
       id: 1
       descr: Cultureel erfgoed, evenementen, horeca, media en recreatie, ...
     - title: Economie (12)
