@@ -13,17 +13,15 @@
         <form class="form form__row form__row--medium">
           <fieldset>
             <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
-            <div class="form__row form__row--large">
+            <div class="form__row form__row">
                {{render "@input-text" inputSearchContext }}
             </div>
-            <div class="">
-              <div class="columns">
-                <div class="u-order--d2 align-right form__row">
-                  <button type="submit" class="form__button button button--primary button--large">Zoek verdragen</button>
-                </div>
-                <div class="u-order--d1 u-nomargin">
-                  <a href="#" class="cta">Uitgebreid zoeken</a>
-                </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                <button type="submit" class="form__button button button--primary button--large">Zoek verdragen</button>
+              </div>
+              <div class="form__rowsubmit__item">
+                <a href="#" class="cta">Uitgebreid zoeken</a>
               </div>
             </div>
           </fieldset>

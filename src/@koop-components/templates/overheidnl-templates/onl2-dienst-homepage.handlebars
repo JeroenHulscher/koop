@@ -13,27 +13,27 @@
       <form class="form" data-decorator="init-form-validation">
         <fieldset>
           <legend class="visually-hidden">E-mailadres</legend>
-          <div class="form__row">
-            <div class="columns">
-              <div class="column column-d-4">
+          <div class="columns">
+            <div class="column column-d-4">
+              <div class="form__row">
                 {{render "@input-text" inputPostcodeContext }}
               </div>
-              <div class="column column-d-8">
+            </div>
+            <div class="column column-d-8">
+              <div class="form__row">
                 {{render "@input-text" zoektermContext }}
               </div>
             </div>
           </div>
-        </fieldset>
-        <div class="">
-          <div class="columns">
-            <div class="u-order--d2 align-right form__row">
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
               <button type="submit" class="form__button button button--primary">Zoeken</button>
             </div>
-            <div class="u-order--d1 u-nomargin">
+            <div class="form__rowsubmit__item">
               <a href="/components/preview/templates-att-homepage" class="cta">Uitgebreid zoeken</a>
             </div>
           </div>
-        </div>
+        </fieldset>
       </form>
     {{/@jumbotron}}
 
