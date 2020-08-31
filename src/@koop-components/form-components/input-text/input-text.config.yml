@@ -53,6 +53,15 @@ variants:
       fieldLabel: Postcode
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 2282LL'
+  - name: Tel
+    label: Input tel
+    context:
+      type: tel
+      modifier: input--tel
+      id: 1
+      fieldLabel: Telefoonnummer
+      fieldInstruction:
+      fieldPlaceholder: 'Bijv: 061234567879'
   - name: Medium
     label: medium
     context:
