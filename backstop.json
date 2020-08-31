@@ -284,9 +284,9 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-content.html"
     },
     {
-      "label": "CUP - Browse 1",
-      "url": "http://localhost:3000/components/preview/templates-cup-browse1",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse1.html"
+      "label": "CUP - Browse",
+      "url": "http://localhost:3000/components/preview/templates-cup-browse",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse.html"
     },
     {
       "label": "CUP - Browse (vervolg)",
