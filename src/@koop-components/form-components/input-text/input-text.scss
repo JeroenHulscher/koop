@@ -8,6 +8,10 @@ input[type=email].input-text,
   width: 100%;
   height: auto;
 
+  &::-ms-clear {
+    display: none;
+  }
+
   &--medium {
     font-size: 1.125rem;
     color: $darkBlue;

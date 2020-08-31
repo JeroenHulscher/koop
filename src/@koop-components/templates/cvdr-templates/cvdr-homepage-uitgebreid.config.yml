@@ -1,48 +1,54 @@
 ---
 label: CVDR - Homepage uitgebreid
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Raadpleeg 87654 regelingen van decentrale overheden
+    heading: Regelingen van decentrale overheden
     hstyle: h2
     subheading: Lokale wet- en regelgeving
-    intro: Doorzoek de complete collectie van algemeen verbindende voorschriften uitgegeven door decentrale overheden.
+    intro: Binnen de lokale wet- en regelgeving zoekt u naar algemeen verbindende voorschriften uitgegeven door gemeenten, provincies, waterschappen en regionale samenwerkingsorganen.
     centered: true
     size: medium
-    vanDatepicker:
-      id: 786
-      haslabel: true
-      label: Van
-    totDatepicker:
-      id: 7836
-      haslabel: true
-      label: Tot
+    inputZoekwoord:
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar regelingen
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    dateselection:
+      dateselectionDatum:
+        label: Geldend op
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
     postcodeInput:
+      id: 321
       fieldLabelVisible: true
       fieldPlaceholder: Bijv. 1234 AB
       fieldLabel: Postcode
+      labelmodifier: accent
     wordintitelInput:
       id: 765
       fieldLabelVisible: true
-      fieldPlaceholder: Zoekwoord
-      fieldLabel: Zoekwoord in titel
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: In titel
+      labelmodifier: accent
     wordintextInput:
       id: 654
       fieldLabelVisible: true
-      fieldPlaceholder: Zoekwoord
-      fieldLabel: Woord in tekst
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: In tekst
+      labelmodifier: accent
     wetgegevensInput:
       id: 498
       fieldLabelVisible: true
-      fieldPlaceholder: Zoekwoord
-      fieldLabel: Wetstechnische gegevens
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Wettechnische gegevens
+      labelmodifier: accent
     subselectionGemContext:
       linkText: Selecteer gemeenten
       id: 20

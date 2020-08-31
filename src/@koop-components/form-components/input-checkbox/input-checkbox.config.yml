@@ -9,11 +9,14 @@ context:
     - id: checkbox-1
       text: Groot-Brittanië
       status: disabled
+      name: countries
     - id: checkbox-2
       text: Verenigde Staten
       checked: checked
+      name: countries
     - id: checkbox-3
       text: Canada
+      name: countries
 variants:
   - name: Many
     label: Uitgebreid

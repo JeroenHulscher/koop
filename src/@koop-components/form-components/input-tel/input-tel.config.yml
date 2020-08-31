@@ -1,8 +1,0 @@
----
-label: Input telephone
-status: prototype
-context:
-  id: 1
-  fieldLabel: Telefoonnummer
-  fieldInstruction:
-  fieldPlaceholder: 'Bijv: 0612345678'

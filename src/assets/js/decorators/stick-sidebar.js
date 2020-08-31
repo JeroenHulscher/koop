@@ -33,7 +33,16 @@
   };
 
   var updateStickability = function (scrollContentElement) {
-    var footerOffset = footer.getBoundingClientRect();
+    var footerOffset;
+    var disclaimer = document.querySelector('.disclaimer');
+
+    // the height of the sidebar (when sticky) is based on the footer area of the page;
+    if (disclaimer) {
+      footerOffset = disclaimer.getBoundingClientRect();
+    } else {
+      footerOffset = footer.getBoundingClientRect();
+    }
+
     var scrollY = getScrollY();
     var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
@@ -71,15 +80,26 @@
 
   onl.decorate({
     'add-mobile-foldability': function( el ) {
+      var newTop = '150';
+      var parentOffsets = el.getBoundingClientRect();
+      if(parentOffsets.top != '0') {
+        newTop = parentOffsets.top;
+      }
       var button = document.createElement( 'button' );
+      var classlist = 'is-column-default';
       var labels = {
         open: 'Open sidebar',
         close: 'Sluit sidebar'
       };
 
+      if (document.querySelector('.columns--sidebar__sidebar form') ) {
+        classlist = 'is-column-filters';
+      }
+
       // set data to button
       // button.classList.add( 'hidden-desktop' );
       button.type = 'button';
+      button.classList.add(classlist);
       button.setAttribute( 'data-handler', 'toggle-sidebar' );
       button.setAttribute( 'aria-controls', el.id );
       button.setAttribute( 'data-toggle-open', labels.open );
@@ -89,6 +109,9 @@
       // set initial state
       button.setAttribute( 'aria-expanded', 'false' );
       button.textContent = labels.close;
+
+      // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
+      button.style.top = Math.round(newTop) + 40 + 'px';
 
       el.before( button );
 
@@ -104,8 +127,6 @@
 
       config = JSON.parse(el.getAttribute('data-config')) || [];
       scrollContentElement = config.scrollContentElement || '.js-scrollContentElement';
-
-      // console.log('config', config);
 
       footer = onl.dom.$( '.footer' )[0];
       element = el;

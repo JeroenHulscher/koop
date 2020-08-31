@@ -1,5 +1,5 @@
 ---
-label: Input InputSearch
+label: Input InputSubmit
 status: ready
 context:
   id: 101

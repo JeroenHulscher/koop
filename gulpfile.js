@@ -14,6 +14,7 @@ const imageOptim = require( 'gulp-imagemin' );
 const changed = require( 'gulp-changed' );
 const header = require( 'gulp-header' );
 const cleancss = require('gulp-clean-css');
+var replace = require('gulp-replace');
 const paths = {
   styles : 'src/assets/scss',
   scripts : 'src/assets/js',
@@ -94,7 +95,8 @@ gulp.task( 'css:process', function() {
     })
     .pipe( postcss([autoprefixer({ browsers: ['last 2 versions'] })]) )
     .pipe( cleancss ({ compatibility: 'ie8' }) )
-    .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
+    .pipe( replace('@charset "UTF-8";', ''))
+    .pipe( header( '@charset "UTF-8";/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name }) )
     .pipe( gulp.dest( paths.drop + '/css' ) );
 });
 

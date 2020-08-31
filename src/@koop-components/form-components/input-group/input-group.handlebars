@@ -1,7 +1,7 @@
 {{#if radio}}
   <div role="radiogroup">
 {{/if}}
-  {{#if label}}<label class="form__label {{#if labelsize}}form__label--{{labelsize}}{{/if}}" for="{{id}}">{{label}}</label>{{/if}}
+  {{#if label}}<p class="form__label {{#if labelsize}}form__label--{{labelsize}}{{/if}}">{{label}}</p>{{/if}}
   <div class="input-group {{#if size}}input-group--{{size}}{{/if}} {{#if flex}}input-group--flex{{/if}}">
     {{#if radio}}
       {{#each options }}

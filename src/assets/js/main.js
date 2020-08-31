@@ -59,6 +59,9 @@ window.onl = {
       }
       return element.hasAttribute( 'hidden' ) || checkForHiddenParents && hasHiddenParents;
     },
+    isVisible: function (e) {
+      return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
+    },
     // focus `element`
     focus: function( element ) {
       if ( element ) {

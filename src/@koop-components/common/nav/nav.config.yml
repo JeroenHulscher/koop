@@ -1,5 +1,5 @@
 title: Nav
-status: prototype
+status: ready
 default: Nav
 context:
   id: 1

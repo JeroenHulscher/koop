@@ -1,0 +1,73 @@
+---
+label: 2.0 - Beleid. - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  jumbotronContext:
+    heading: Beleid & regelgeving
+    subheading: Publicatieoverzicht
+    intro: Overheid.nl geeft u hier de mogelijkheid om te zoeken naar publicaties omtrent onder meer wet- en regelgeving, rechtspraak, besluitvorming, consultatie, bekendmaking en uitvoering.
+    centered: true
+    headingcentered: true
+  block1Context:
+    id: 1
+    htype: 3
+    heading: Lokale wet- en regelgeving
+    content: <p>Plaatselijk (gemeente, provincie, waterschap, regionaal samenwerkingsverband)</p>
+    cta: true
+    ctalabel: Lokale wet- en regelgeving
+    ctahref: '#'
+    ctaexternal: true
+  block2Context:
+    id: 2
+    htype: 3
+    heading: Europese overheidsinformatie
+    content: <p>Informatie van Europese instellingen en nationale overheidsinformatie in Europees verband.</p>
+    cta: true
+    ctalabel: Europese overheidsinformatie
+    ctahref: '#'
+    ctaexternal: true
+  block3Context:
+    id: 3
+    htype: 3
+    heading: Berichten over uw buurt
+    content: <p>Publicaties op websites van gemeenten, provincies, waterschappen en regionale samenwerkingsverbanden</p>
+    cta: true
+    ctalabel: Berichten over uw buurt
+    ctahref: '#'
+    ctaexternal: true
+  list1:
+    items:
+      - content: <a href="#" rel="external">Evaluaties en beleidsdoorlichtingen</a>
+      - content: <a href="#">Wetenschappelijke Raad voor het Regeringsbeleid (WRR)</a>
+      - content: <a href="#">Centraal Planbureau (CPB)</a>
+      - content: <a href="#" rel="external">Sociaal en Cultureel Planbureau (SCP)</a>
+      - content: <a href="#" rel="external">Centraal Bureau voor de Statistiek (CBS)</a>
+      - content: <a href="#" rel="external">Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC)</a>
+      - content: <a href="#" rel="external">Planbureau voor de Leefomgeving (PBL)</a>
+      - content: <a href="#" rel="external">Kennisbank Openbaar Bestuur</a>
+  list2:
+    items:
+      - content: <a href="#" rel="external">Centraal Planbureau (CPB)</a>
+      - content: <a href="#" rel="external">Sociaal en Cultureel Planbureau (SCP)</a>
+      - content: <a href="#" rel="external">Centraal Bureau voor de Statistiek (CBS)</a>
+      - content: <a href="#" rel="external">Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC)</a>
+      - content: <a href="#" rel="external">Planbureau voor de Leefomgeving (PBL)</a>
+      - content: <a href="#" rel="external">Kennisbank Openbaar Bestuur</a>
+  list3:
+    items:
+      - content: <a href="#" rel="external">Centraal Planbureau (CPB)</a>
+      - content: <a href="#" rel="external">Sociaal en Cultureel Planbureau (SCP)</a>
+      - content: <a href="#" rel="external">Centraal Bureau voor de Statistiek (CBS)</a>
+      - content: <a href="#" rel="external">Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC)</a>
+      - content: <a href="#" rel="external">Planbureau voor de Leefomgeving (PBL)</a>
+      - content: <a href="#" rel="external">Kennisbank Openbaar Bestuur</a>
+      - content: <a href="#" rel="external">Centraal Planbureau (CPB)</a>
+      - content: <a href="#" rel="external">Sociaal en Cultureel Planbureau (SCP)</a>
+      - content: <a href="#" rel="external">Centraal Bureau voor de Statistiek (CBS)</a>
+      - content: <a href="#" rel="external">Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC)</a>
+      - content: <a href="#" rel="external">Planbureau voor de Leefomgeving (PBL)</a>
+      - content: <a href="#" rel="external">Kennisbank Openbaar Bestuur</a>

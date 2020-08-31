@@ -1,4 +1,78 @@
 .columns {
+  &--sidebar,
+  &--sticky-sidebar {
+
+    [data-handler="toggle-sidebar"] {
+      text-indent: -15em;
+      width: 2.25em;
+      height: 6.9em;
+      font-family: inherit;
+      font-size: .8em;
+      top: 12em;
+
+      background: {
+        image: $chevronroundRightWhite;
+        repeat: no-repeat;
+        size: 1.25em;
+        color: $darkBlue;
+        position: bottom .5em center;
+
+      };
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: .5em;
+        bottom: 2.25em;
+        height: 1px;
+        width: 1.3em;
+        background: white;
+      }
+
+      &:after {
+        content: "Details";
+        display: inline-block;
+        transform: rotate(-90deg);
+        background: red;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        left: 15px;
+        top: -83px;
+      }
+      &.is-column-filters {
+        background: {
+          image: $iconFilterRotatedWhite;
+          repeat: no-repeat;
+          size: 1em;
+          color: $darkBlue;
+          position: bottom .45em center;
+        };
+
+        &:after {
+          content: "Filteren";
+        }
+      }
+      &[aria-expanded=true] {
+        background: {
+          image: $iconCrossroundWhite;
+          repeat: no-repeat;
+          size: 1em;
+          color: $darkBlue;
+          position: bottom .65em center;
+        };
+      }
+    }
+
+    &__sidebar {
+      > div {
+        padding-top: 1em;
+        @media ( min-width: $breakpointDesktop ) {
+          padding-top: 0;
+        }
+      }
+    }
+  }
 
   &--sticky-sidebar {
 
@@ -36,3 +110,4 @@
     }
   }
 }
+

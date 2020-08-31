@@ -8,6 +8,13 @@ fractal.components.engine(require('@frctl/handlebars')({
         increment: function(number, amount) {
             // Parsing the number to ensure it was not provided as string.
             return parseInt(number) + amount;
+        },
+        if_eq: function (a, b, opts) {
+          if (a == b) {
+            return opts.fn(this);
+          } else {
+            return opts.inverse(this);
+          }
         }
     }
 }));

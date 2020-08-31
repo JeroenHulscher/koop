@@ -1,7 +1,7 @@
 ---
 title: Tooltip
 label: Tooltip
-status: wip
+status: ready
 context:
   id: 1
   label: Help?

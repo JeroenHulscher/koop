@@ -43,6 +43,7 @@
     }
   }
 
+  &--secondary,
   &--green {
     background-color: $lightGreen;
   }
@@ -129,6 +130,15 @@
       font-size: em(43);
       line-height: 1em;
       margin-bottom: .5em;
+    }
+  }
+
+  &__header ~ p {
+    @media (min-width: $breakpointDesktop) {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      margin-top: 1em;
+      margin-bottom: 1.75em;
     }
   }
 

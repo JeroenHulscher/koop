@@ -6,6 +6,10 @@ table,
     border: 1px solid $lighterGrey;
   }
 
+  &--fontsmall {
+    font-size: 0.9em;
+  }
+
   tr td,
   tr th {
     border-bottom: 1px solid $lighterGrey;

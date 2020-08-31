@@ -1,0 +1,28 @@
+.disclaimer {
+  padding-top: 1em;
+  margin: 3em 0 .5em;
+
+  @media ( min-width: $breakpointDesktop ) {
+    margin: 4em 0 .5em;
+    padding-top: 2em;
+  }
+
+  &__content {
+    padding: 1em;
+    background: $lightGrey;
+    color: $darkGrey;
+
+    @media ( min-width: $breakpointDesktop ) {
+      padding: 1em 1.8em;
+    }
+  }
+
+  p {
+    font-size: 80%;
+    font-style: italic;
+    line-height: 1.2;
+  }
+  p:last-child {
+    margin: 0;
+  }
+}

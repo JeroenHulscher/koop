@@ -1,0 +1,71 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" role="main" id="content">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+      <div class="row row--large">
+       <div class="sort">
+         Aantal:
+        <ul class="sort__options">
+          <li>
+            <a href="?sortby={{value}}" class="is-active">
+              <span class="visually-hidden">Toon </span>10
+              <span class="visually-hidden"> resultaten per pagina</span>
+            </a>
+          </li>
+          <li>
+            <a href="?sortby={{value}}" class="">
+              <span class="visually-hidden">Toon </span>20
+              <span class="visually-hidden"> resultaten per pagina</span>
+            </a>
+          </li>
+          <li>
+            <a href="?sortby={{value}}" class="">
+              <span class="visually-hidden">Toon </span>50
+              <span class="visually-hidden"> resultaten per pagina</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
+
+
+      <h1>Area <span class="h1__sub">1 - 20 van de 300 resultaten</span></h1>
+
+      <p>
+        Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond.
+      </p>
+
+      {{ render "@browse" repoContext }}
+
+      {{!-- {{ render "@sources-list" sourcesContext }} --}}
+
+      {{ render "@pagination"  }}
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-sticky">
+
+        <div class="modal-sidebar__content">
+          {{render "@nav" navWetContext }}
+
+          <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{ render "@footer" }}

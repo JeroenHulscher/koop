@@ -5,31 +5,28 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" role="main" id="content">
   <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
 
         <form class="form form__row form__row--medium">
           <fieldset>
-            <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
+            <legend class="visually-hidden">Doorzoek de overheidsdocumenten</legend>
             <div class="form__row form__row--medium">
               {{render "@input-text" inputSearchContext }}
             </div>
-          </fieldset>
-
-          <div class="">
-            <div class="columns">
-              <div class="u-order--d2 align-right form__row">
-                <button type="submit" class="form__button button button--primary button--large">Zoek berichten</button>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                <button type="submit" class="form__button button button--primary button--large">Zoek documenten</button>
               </div>
-              <div class="u-order--d1 u-nomargin">
-                <a href="#" class="cta">Uitgebreid zoeken</a><br>
+              <div class="form__rowsubmit__item">
+                <a href="#" class="cta">Uitgebreid zoeken</a>
+                <br>
                 <a href="#" class="cta">Wat is actief openbaar?</a>
               </div>
             </div>
-          </div>
-
+          </fieldset>
         </form>
 
     {{/@jumbotron}}
@@ -38,23 +35,22 @@
   <div class="row">
 
     <h2 class="row__heading">Zoek documenten op thema</h2>
-
     <ul class="list list--themas list--columns-4">
       {{#each themaItems}}
         <li class="list__item">
           <h3 class="list__heading"><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-{{id}}">{{title}}</a></h3>
           <p>{{descr}}</p>
-          <div id="modal-{{id}}" class="modal modal--slim modal--off-screen" hidden aria-labelledby="dialog{{id}}_label" aria-model="true" role="dialog         ">
+          <div id="modal-{{id}}" class="modal modal--slim modal--off-screen" hidden aria-labelledby="dialog{{id}}_label" role="dialog">
             <div class="modal__inner">
               <div class="modal__content">
                 <p id="dialog{{id}}_label" class="cur">Thema<span class="visually-hidden">: {{title}}</span></p>
                 <ul class="list-options">
                   <li class="list-options__item">
-                    <span href="#" class="list-options__heading">{{title}} <span class="u-amount">212</span></span> <p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk documenten <span class="visually-hidden">over {{title}}</span></a></p>
+                    <span class="list-options__heading">{{title}} <span class="u-amount">212</span></span> <p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk thema <span class="visually-hidden">over {{title}}</span></a></p>
                     <ul class="list-options__sub">
-                      <li><p class="list-options__subheading">Criminaliteit <span class="u-amount">12</span></p><p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk documenten <span class="visually-hidden">over criminaliteit</span></a></p></li>
-                      <li><p class="list-options__subheading">Veiligheid <span class="u-amount">43</span></p><p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk documenten <span class="visually-hidden">over veiligheid</span></a></p></li>
-                      <li><p class="list-options__subheading">Terrorisme <span class="u-amount">56</span></p><p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk documenten <span class="visually-hidden">over terrorisme</span></a></p></li>
+                      <li><p class="list-options__subheading">Criminaliteit <span class="u-amount">12</span></p><p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk thema <span class="visually-hidden">over criminaliteit</span></a></p></li>
+                      <li><p class="list-options__subheading">Veiligheid <span class="u-amount">43</span></p><p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk thema <span class="visually-hidden">over veiligheid</span></a></p></li>
+                      <li><p class="list-options__subheading">Terrorisme <span class="u-amount">56</span></p><p class="list-options__item__cta"><a href="#" class="button button--secendary">Bekijk thema <span class="visually-hidden">over terrorisme</span></a></p></li>
                     </ul>
                   </li>
                 </ul>

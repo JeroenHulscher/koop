@@ -1,6 +1,6 @@
 ---
 label: CUP-beheer - Verkenner
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg

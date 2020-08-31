@@ -34,7 +34,7 @@
 
     for (y = 0; y < this.questions.length; y++) {
       if (y !== 0) {
-        this.questions[y].setAttribute('hidden', 'hidden');
+        this.questions[y].setAttribute('aria-hidden', 'true');
       }
       if (y === 0) {
         firstInput = true;
@@ -120,8 +120,9 @@
     case 'checkbox':
       if (this.amountCheckedInFamily(obj, currentQuestionContainer) > 0) {
         currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('hidden');
+        currentQuestionContainer.querySelector(this.buttonNextSelector).removeAttribute('aria-hidden');
       } else {
-        currentQuestionContainer.querySelector(this.buttonNextSelector).setAttribute('hidden', 'hidden');
+        currentQuestionContainer.querySelector(this.buttonNextSelector).setAttribute('aria-hidden', 'true');
         this.resetFutureQuestions(currentQuestionContainer);
       }
       automaticProceed = false;
@@ -154,7 +155,7 @@
   };
 
   formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {
-    currentQuestionContainer.setAttribute('hidden', 'hidden');
+    currentQuestionContainer.setAttribute('aria-hidden', 'true');
   }
 
 
@@ -198,8 +199,9 @@
         }
 
         // hide question;
-        this.questions[i].setAttribute('hidden', 'hidden');
-        this.questions[i].removeAttribute('role');
+        // this.questions[i].setAttribute('hidden', 'hidden');
+        this.questions[i].setAttribute('aria-hidden', 'true');
+        // this.questions[i].removeAttribute('role');
       }
     }
 
@@ -210,8 +212,9 @@
     var nextQuestion = this.element.querySelector(self.questionIdTag + questionId);
 
     if (nextQuestion){
-      nextQuestion.removeAttribute('hidden');
-      nextQuestion.setAttribute('role', 'alert');
+      // nextQuestion.removeAttribute('hidden');
+      nextQuestion.removeAttribute('aria-hidden');
+      // nextQuestion.setAttribute('aria-live', '');
     }
 
   };
@@ -219,27 +222,32 @@
   formConditionals.prototype.showFormSubmit = function() {
     if (this.submitContainer){
       this.submitContainer.removeAttribute('hidden');
-      this.submitContainer.querySelector('button').setAttribute('role', 'alert');
+      this.submitContainer.removeAttribute('aria-hidden');
+      // this.submitContainer.querySelector('button').setAttribute('role', 'alert');
     }
   };
   formConditionals.prototype.hideFormSubmit = function() {
     if (this.submitContainer){
       this.submitContainer.setAttribute('hidden', 'hidden');
-      this.submitContainer.querySelector('button').removeAttribute('role');
+      this.submitContainer.setAttribute('aria-hidden', 'true');
+      // this.submitContainer.querySelector('button').removeAttribute('role');
     }
   };
 
   formConditionals.prototype.showResponds = function() {
-    this.respondsContainer.removeAttribute('hidden');
+    // this.respondsContainer.removeAttribute('hidden');
+    this.respondsContainer.removeAttribute('aria-hidden');
   };
 
   formConditionals.prototype.hideForm = function() {
     var y;
 
     for (y = 0; y < this.questions.length; y++) {
-      this.questions[y].setAttribute('hidden', 'hidden');
+      // this.questions[y].setAttribute('hidden', 'hidden');
+      this.questions[y].setAttribute('aria-hidden', 'true');
     }
-    this.submitContainer.setAttribute('hidden', 'hidden');
+    // this.submitContainer.setAttribute('hidden', 'hidden');
+    this.submitContainer.setAttribute('aria-hidden', 'true');
   };
 
 })();

@@ -2,9 +2,17 @@
 .table__container {
   max-width: 100%;
   overflow-x: scroll;
-  border: 1px solid $lightBlue;
-  padding: .5em;
   margin-bottom: 2em;
+  position: relative;
+  border: .5em solid transparent;
+  outline: 1px solid $lightBlue;
+  box-sizing: border-box;
+
+  .table__container {
+    border: 0;
+    outline: 0;
+  }
+
 
   > table {
     margin: 0;
@@ -13,15 +21,18 @@
     margin-top: .5em;
   }
 
-  p {
+  > p {
     margin: 0;
   }
+
   .table__caption,
   .table__description {
     margin-top: .5em;
     margin-bottom: .5em;
     font-style: italic;
   }
+
+
 }
 
 table,
@@ -34,6 +45,10 @@ table,
   [scope=colgroup] {
     background: $darkBlue !important;
     color: white !important;
+  }
+
+  &--fontsmall {
+    font-size: 0.9em;
   }
 
   &__rowheading {

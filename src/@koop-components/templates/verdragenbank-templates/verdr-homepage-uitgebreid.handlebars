@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container row">
+<div class="container row" role="main" id="content">
   <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
@@ -15,8 +15,7 @@
             <fieldset>
               <legend class="visually-hidden">Doorzoek de verdragenbank</legend>
               <div class="form__row">
-                 {{!-- {{render "@input-text"  }} --}}
-                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+                {{ render "@input-text--medium" inputZoekwoord merge=true }}
               </div>
             </fieldset>
           </div>
@@ -24,86 +23,71 @@
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Totstandkoming {{render "@tooltip"}}</legend>
+                  <legend>Totstandkoming</legend>
+                  {{ render "@date-selection" dateselection merge=true }}
+                  <a href="#" class="reset">
+                    <small>Herstellen</small>
+                  </a>
                   <div class="form__row">
-                    <label>Startdatum</label>
-                    {{render "@datepicker" }}
-                    <a href="#" class="reset"><small>Herstel</small></a>
-                  </div>
-                  <div class="form__row">
-                    <label>Einddatum</label>
-                    {{render "@datepicker" }}
-                    <a href="#" class="reset"><small>Herstel</small></a>
-                  </div>
-                  <div class="form__row">
-                    <label>Plaats</label>
-                    {{render "@input-text" }}
-                  </div>
-                  <div class="form__row">
-                    <div class="columns">
-                      <div class="column">
-                        <label>Huisnummer</label>
-                        {{render "@input-text" }}
-                      </div>
-                      <div class="column">
-                        <label>Toevoeging</label>
-                        {{render "@input-text" }}
-                      </div>
-                    </div>
+                    {{render "@input-text" inputPlaats }}
                   </div>
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Onderwerp {{render "@tooltip"}}</legend>
-                  {{render "@subselection" subselectionOnderwerpContext }}
-              </div>
-              <div class="form__row form__row--large">
-                <fieldset>
-                  <legend>Nu geldend voor {{render "@tooltip"}}</legend>
+                  <legend>Nu geldend voor</legend>
                   {{render "@input-checkbox" geldvoorContext }}
+                </fieldset>
               </div>
             </div>
             <div class="column">
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Tractatenblad/Staatsblad {{render "@tooltip"}}</legend>
+                  <legend>Tractatenblad of staatsblad</legend>
                   <div class="form__row">
-                    <label>Jaar</label>
-                    <input type="number" class="input-text" placeholder="Bijv. 2018"/>
+                    {{render "@input-text" inputJaargang }}
                   </div>
                   <div class="form__row">
-                    <label>Nummer</label>
-                    <input type="number" class="input-text" placeholder="Bijv. 2018" />
+                    {{render "@input-text" inputNummer }}
                   </div>
-
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Type verdrag {{render "@tooltip"}}</legend>
+                  <legend>Type verdrag</legend>
                   {{render "@input-checkbox" typeverdagContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Nederland depositaris {{render "@tooltip"}}</legend>
+                  <legend>Nederland depositair</legend>
                   {{render "@input-checkbox" depositarisContext }}
                 </fieldset>
               </div>
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Partij {{render "@tooltip"}}</legend>
+                  <legend>Partijen</legend>
                   {{render "@subselection" subselectionContext }}
+                </fieldset>
+              </div>
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Onderwerpen</legend>
+                  {{render "@subselection" subselectionOnderwerpContext }}
                 </fieldset>
               </div>
             </div>
           </div>
-          <div class="align-right">
-            <ul class="list list--inline">
-              <li><button type="submit" class="button button--erase">Leegmaken</button></li>
-              <li><button type="submit" class="button button--primary">Zoeken</button></li>
-            </ul>
+
+          <div class="form__row form__row--submit">
+            <div class="columns columns--vcenter">
+              <div class="column">
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+              </div>
+              <div class="column align-right">
+                <button type="submit" class="button button--primary">Zoek verdragen</button>
+              </div>
+            </div>
           </div>
 
         </form>
@@ -133,6 +117,7 @@
             <div class="form__row">
               {{ render "@input-inputsubmit" }}
             </div>
+            {{ render "@collapsible" newslCollap }}
             {{ render "@input-checkbox" newsletterCheckbox }}
           </fieldset>
         </form>
@@ -146,5 +131,7 @@
   </div>
 
 </div>
+
+{{ render "@disclaimer" }}
 
 {{ render "@footer" }}

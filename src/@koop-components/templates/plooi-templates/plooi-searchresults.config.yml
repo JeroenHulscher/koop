@@ -1,160 +1,12 @@
 ---
 label: PLOOI - Searchresults
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  voorschriftenContext:
-    moreless: true
-    options:
-    - id: checkbox-20
-      text: Aanwijzingsbesluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Agenda en notulen
-      name: onderwerp
-    - id: checkbox-20
-      text: Belastingbesluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Besluitenlijst
-      name: onderwerp
-    - id: checkbox-20
-      text: Collectevergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Delegatiebesluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Gemeenschappelijke regelingen
-      name: onderwerp
-    - id: checkbox-20
-      text: Kansspelvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Loterijvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Milieu-informatie
-      name: onderwerp
-    - id: checkbox-20
-      text: Milieuverordening
-      name: onderwerp
-    - id: checkbox-20
-      text: Optochtvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Peilbesluit
-      name: onderwerp
-    - id: checkbox-20
-      text: Register kinderopvang
-      name: onderwerp
-    - id: checkbox-20
-      text: Stedelijk waterplan
-      name: onderwerp
-    - id: checkbox-20
-      text: Streekplan
-      name: onderwerp
-    - id: checkbox-20
-      text: Stroomgebiedsvisie
-      name: onderwerp
-    - id: checkbox-20
-      text: Structuurvisie
-      name: onderwerp
-    - id: checkbox-20
-      text: Vaarvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Ventvergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Vervoer gevaarlijke stoffen vergunning
-      name: onderwerp
-    - id: checkbox-20
-      text: Verordeningen en reglementen
-      name: onderwerp
-    - id: checkbox-20
-      text: Waterbeheersplan
-  bestemmingContext:
-    moreless: true
-    options:
-    - id: checkbox-20
-      text: Bestemmingsplan
-      name: onderwerp
-    - id: checkbox-20
-      text: Voorbereidingsbesluit
-      name: onderwerp
-  voorlichtingContext:
-    moreless: true
-    options:
-    - id: checkbox-20
-      text: Aankondiging
-      name: onderwerp
-    - id: checkbox-20
-      text: Huisafval
-      name: onderwerp
-    - id: checkbox-20
-      text: Inspraak
-      name: onderwerp
-    - id: checkbox-20
-      text: Mededelingen
-      name: onderwerp
-    - id: checkbox-20
-      text: Meldingen
-      name: onderwerp
-    - id: checkbox-20
-      text: Openingstijden
-      name: onderwerp
-    - id: checkbox-20
-      text: Overig
-      name: onderwerp
-    - id: checkbox-20
-      text: Rectificatie
-      name: onderwerp
-    - id: checkbox-20
-      text: Verkiezingen
-      name: onderwerp
-  onderwerpContext:
-    moreless: true
-    options:
-    - id: checkbox-20
-      text: Alle
-      name: onderwerp
-    - id: checkbox-20
-      text: Vandaag
-      name: onderwerp
-    - id: checkbox-20
-      text: Afgelopen week
-      name: onderwerp
-    - id: checkbox-20
-      text: Afgelopen maand
-      name: onderwerp
-    - id: checkbox-20
-      text: Afgelopen 3 maanden
-      name: onderwerp
-    - id: checkbox-20
-      text: Zelf een periode kiezen
-      name: onderwerp
-  publicatiedatumContext:
-    moreless: true
-    options:
-    - id: radio-1
-      text: Vandaag
-      name: publicatie
-    - id: radio-2
-      text: Afgelopen week
-      name: publicatie
-    - id: radio-3
-      text: Afgelopen maand
-      name: publicatie
-    - id: radio-4
-      text: Afgelopen 2 maanden
-      name: publicatie
-      disabled: disabled
-    - id: radio-5
-      text: Zelf een periode kiezen
-      name: publicatie
+  dateselection:
+    layout: narrow
   gebiedContext:
     moreless: true
     options:
@@ -189,21 +41,22 @@ context:
     - label: Titel
       value: value
   inputsubmitContext:
+    id: 1055
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Verfijn uw zoekopdracht
-    button: Zoek
-    modifier: input-text--search
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: Voortgangsrapportage CTIVD over de werking Wiv2017
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
       label: Nieuw vandaag
       text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
       share: false
       buttons:
-        - button: Bekijk publicatie
+        - button: Bekijk document
           type: secendary
       metadata:
         - value: Onderzoeksrapport
@@ -218,26 +71,46 @@ context:
           txt: (gepubliceerd op 06-07-2016 | PDF)
         - link: Rijksoverheid.nl
           txt: (gepubliceerd op 07-07-2016 | XML)
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
-      label: Nieuw vandaag
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
       buttons:
-        - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
+        - button: Bekijk document
           type: secendary
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
-      label: Nieuw vandaag
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      share: true
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
       buttons:
-        - button: Bekijk publicatie
-          type: primary
-        - button: Bekijk op kaart
+        - button: Bekijk document
           type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
   inputSearchContext:
     modifier: input-text--searchmedium
     id: 1
@@ -246,7 +119,6 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
-
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
@@ -279,6 +151,7 @@ context:
     fieldPlaceholder: 'Bijv: 0612345678'
     searchFilter: true
     type: span
+    label: Filter resultaten op trefwoord
     Options:
       - Option: 1
         id: 1
@@ -302,6 +175,8 @@ context:
     searchFilter: true
     type: span
     triggerSubmit: true
+    buttonSubmit: true
+    buttonSubmitLabel: Bekijk resultaat
     Options:
       - Option: 4
         id: 4
@@ -337,7 +212,53 @@ context:
         id: 665
         title: Nederland
         short: Nederland
-
+  tt1Context:
+    id: 112
+  tt2Context:
+    id: 113
+  tt3Context:
+    id: 114
+  tt4Context:
+    id: 115
+  startDatepicker:
+    id: 234
+    haslabel: true
+    label: Vanaf
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  endDatepicker:
+    id: 345
+    haslabel: true
+    label: Tot en met
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  selectCustomContext:
+      id: 1
+      fieldLabel: Datum
+      fieldLabelVisible: true
+      labelmodifier: accent
+      options:
+      - id: 102
+        value:
+        label: Alle
+        linkedto: 1
+      - id: 1
+        value: 10
+        label: Vandaag
+        linkedto: 1
+      - id: 2
+        value: 20
+        label: Afgelopen week
+        linkedto: 1
+      - id: 3
+        value: 30
+        label: Afgelopen 3 maanden
+        linkedto: 1
+      - id: 4
+        value: 30
+        label: Zelf een periode kiezen
+        linkedto: 2
+        selected: selected
 
 
 

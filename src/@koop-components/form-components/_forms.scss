@@ -137,7 +137,20 @@ fieldset {
     a.reset {
       position: absolute;
       right: 0;
-      top: 0;
+      top: .25em;
+      font-size: .7em;
+
+      small {
+        font-size: 1em;
+      }
+
+      @media (min-width: $breakpointDesktop) {
+        font-size: 0.9em;
+      }
+    }
+
+    &--slim {
+      margin-bottom: .5em;
     }
 
     &--medium {
@@ -151,6 +164,7 @@ fieldset {
     &--xlarge {
       margin-bottom: 3em;
     }
+
   }
 
   &__rowsubmit {
@@ -195,6 +209,10 @@ fieldset {
       font-weight: bold;
     }
 
+    &--secondary {
+      font-style: italic;
+    }
+
     & ~ .input-radio,
     & ~ .input-checkbox {
       margin-top: .5em;
@@ -211,9 +229,9 @@ fieldset {
 
   &__label ~ .mandatory {
     position: absolute;
-    top: -.125em;
+    top: .25em;
     right: 0;
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-weight: normal;
   }
 
@@ -336,6 +354,7 @@ fieldset {
   &__sublegend {
     font-size: em(16);
     margin: 0 0 em(6) 0;
+    font-weight: bold;
   }
 }
 

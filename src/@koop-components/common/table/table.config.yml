@@ -358,4 +358,11 @@ variants:
             type: Exporteren
             value: xml
             download: true
+  - name: Met Topbar
+    context:
+      topbar:
+        items:
+          - text: Open in nieuw scherm
+            href: www.overheid.nl
+            class: icon icon--fullscreen
 

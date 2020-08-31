@@ -1,34 +1,31 @@
 ---
 label: Verdr. - Homepage
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
     language: true
   jumbotronContext:
-    heading: Doorzoek de 3621 verdragen waarbij het Konkrijk der Nederlanden partij is
+    heading: Verdragen van het Koninkrijk der Nederlanden
     subheading: Verdragenbank
-    intro: Intro.
+    intro: In de Verdragenbank zoekt u naar gegevens van verdragen waarbij het Koninkrijk der Nederlanden deelgenoot is.
     centered: true
     headingcentered: true
-    inputsubmitContext:
-      button: Zoek verdagen
-      placeholder: Vul hier uw zoekwoord(en) in
     inputSearchContext:
       modifier: input-text--searchmedium
       id: 1
-      fieldLabel: Zoekwoord
-      fieldLabelVisible: false
+      fieldLabel: Zoek in de Verdragenbank
+      fieldLabelVisible: true
       fieldInstruction:
-      fieldPlaceholder: Vul hier uw zoekwoord(en) in
-      remove: true
+      fieldPlaceholder: Zoekwoord of verdragsnummer
+      labelmodifier: accent
   doubleline1Context:
     text: Overzicht verdragen in voorbereiding
     text2: officielebekendmakingen.nl
     modifier: button--doubleline button--icon-external
     action: http://www.google.nl
-    anchor: false
+    anchor: true
     button: true
     iconButton: false
     inputButton: false
@@ -41,7 +38,7 @@ context:
     text2: officielebekendmakingen.nl
     modifier: button--doubleline button--icon-external
     action: http://www.google.nl
-    anchor: false
+    anchor: true
     button: true
     iconButton: false
     inputButton: false
@@ -53,9 +50,46 @@ context:
     options:
     - id: checkbox-112312312
       text: Ik begrijp dat ...
+      name: agreement
   newslCollap:
     heading: Lees meer over uw privacy
     id: 11231231
     text: Meer informatie over privacy en andere zaken
   figure:
     figcaption: false
+  block1Context:
+    id: 1
+    htype: 3
+    heading: Recente verdragen
+    subheading: Nieuw toegevoegd
+    highlight: true
+    slim: true
+    cta: true
+    ctalabel: Bekijken
+    ctahref: '#'
+  block2Context:
+    id: 1
+    htype: 3
+    heading: Recente notificaties
+    subheading: Depositaire verdragen
+    highlight: true
+    slim: true
+    cta: true
+    ctalabel: Bekijken
+    ctahref: '#'
+  block3Context:
+    id: 1
+    htype: 3
+    heading: Haagse Conferentie
+    subheading: Verdragen Internationaal Privaatrecht
+    highlight: true
+    slim: true
+    cta: true
+    ctalabel: Bekijken
+    ctahref: '#'
+  block4Context:
+    id: 1
+    heading: Depositaire verdragen
+    subheading: false
+    content: '<p> Het Koninkrijk der Nederlanden is depositaris van ongeveer 100 verdragen. De taak van een depositaris is het bijhouden van de administratie van een verdrag. De tekst van een verdrag bepaalt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen.lt welke staat of internationale organisatie de depositaris is. De administratie betreft gegevens over het in werking treden en buiten werking treden van verdragen, de partijen bij het verdrag, de gemaakte voorbehouden en de afgelegde verklaringen. </p> <p> <a href="#" class="button button--primary button--arrowed">Bekijk alle depositaire verdragen</a> </p>'
+    cta: false

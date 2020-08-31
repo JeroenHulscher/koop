@@ -1,11 +1,11 @@
-<p><button type="button" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-1" class="button">{{ openButton }}</button></p>
-<div id="modal-1" class="modal-sidebar {{#if initClosed }}modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
-  <div class="modal-sidebar__inner">
+<p><button type="button" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-1" class="button">{{ openButton }}</button></p>
+<div id="modal-1" class="modal-sidebar {{#if initClosed }}modal--off-screen{{/if}}" role="alert">
+  {{!-- <div class="modal-sidebar__inner"> --}}
     <div class="modal-sidebar__content">
       {{{ text }}}
+      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+        <span class="visually-hidden">{{ closeButton }}</span>
+      </button>
     </div>
-    <button type="button" data-handler="close-modal" class="modal-sidebar__close">
-      <span class="visually-hidden">{{ closeButton }}</span>
-    </button>
-  </div>
+  {{!-- </div> --}}
 </div>

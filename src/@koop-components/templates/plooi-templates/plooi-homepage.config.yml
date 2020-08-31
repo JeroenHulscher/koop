@@ -1,70 +1,70 @@
 ---
 label: PLOOI - Homepage
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
   jumbotronContext:
-    heading: Wegwijzer naar 2.635.121 actief openbaar gemaakte documenten van alle overheden
+    heading: Documenten van Nederlandse overheden actief openbaar
     subheading: Overheidsdocumenten
-    intro: Intro.
+    intro: In overheidsdocumenten zoekt u naar documenten actief openbaar gemaakt door alle Nederlandse bestuursinstanties volgens Wet open overheid.
     centered: true
     headingcentered: true
     inputSearchContext:
+      id: 87656
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar documenten
+      fieldLabelVisible: true
+      name: searchcr
+      labelmodifier: medium
       modifier: input-text--searchmedium
-      id: 1
-      fieldLabel: Postcode
-      fieldLabelVisible: false
-      fieldInstruction:
-      fieldPlaceholder: Verfijn op zoekwoord
-      remove: true
   themaItems:
-    - title: Cultuur &amp; Recreatie
+    - title: Cultuur & Recreatie (2)
       id: 1
       descr: Cultureel erfgoed, evenementen, horeca, media en recreatie, ...
-    - title: Economie
+    - title: Economie (12)
       descr: Ondernemen, markttoezicht, handel en dienstensector, …
       id: 2
-    - title: Internationaal
+    - title: Internationaal (13)
       descr: Europese zaken, internationale betrekkingen en ontwikkelingshulp, …
       id: 3
-    - title: Migratie & Integratie
+    - title: Migratie & Integratie (5)
       descr: Migratie, emigratie, nationaliteit en vluchtelingen, …
       id: 4
-    - title: Natuur & Milieu
+    - title: Natuur & Milieu (8)
       descr: Leefomgeving, energie, natuur, klimaatverandering en afval, …
       id: 5
-    - title: Onderwijs & Wetenschap
+    - title: Onderwijs & Wetenschap (2)
       descr: Onderzoek en wetenschap, onderwijs-voorzieningen, studiefinanciering, …
       id: 6
-    - title: Openbare orde & veiligheid
+    - title: Openbare orde & veiligheid  (10)
       descr: Criminaliteit, terrorisme, fraude, hulpdiensten en veiligheid, …
       id: 7
-    - title: Organisatie & bedrijfsvoering
+    - title: Organisatie & bedrijfsvoering (16)
       descr: Inrichting van de overheid, konikrijksrelaties en dienstverlening, …
       id: 8
-    - title: Overheidsfinanciën
+    - title: Overheidsfinanciën (201)
       descr: Begroting en verantwoording, belastingen en subsidies, …
       id: 9
-    - title: Recht
+    - title: Recht (33)
       descr: Rechten en vrijheden, bezwaar en klachten, privacy en discriminatie, …
       id: 10
-    - title: Ruimte & Infrastructuur
+    - title: Ruimte & Infrastructuur (22)
       descr: Ruimtelijke ordening, infrastructuur en waterbeheer, …
       id: 11
-    - title: Sociale zekerheid
+    - title: Sociale zekerheid (11)
       descr: Voorzieningen voor ziekte, werkloosheid, ouderen, kinderen, …
       id: 12
-    - title: Verkeer
+    - title: Verkeer (2)
       descr: Luchtvaart, scheepvaart, openbaar vervoer en wegverkeer, …
       id: 13
-    - title: Werk
+    - title: Werk (108)
       descr: Arbeidsomstandigheden, arbeidsmarkt en arbeidsverhoudingen, …
       id: 14
-    - title: Wonen
+    - title: Wonen (42)
       descr: Woningmarkt, bouwen en verbouwen, huurbeleid, …
       id: 15
-    - title: Zorg & Gezondheid
+    - title: Zorg & Gezondheid (45)
       descr: Zorgvoorzieningen en -verzekeringen, geneesmiddelen en ethiek, …
       id: 16

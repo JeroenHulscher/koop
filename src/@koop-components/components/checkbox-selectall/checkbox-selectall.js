@@ -31,6 +31,12 @@
 
       for (i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i] !== e.target) {
+
+          // skip this checkbox if it's not visible;
+          if(!onl.ui.isVisible(checkboxes[i])) {
+            continue;
+          }
+
           checkboxes[i].checked = e.target.checked;
 
           // onchange event needs manual triggering on checkboxes

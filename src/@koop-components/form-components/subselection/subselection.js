@@ -41,8 +41,8 @@ function findObjectByKey(array, key, value) {
       this.triggerClassDefault = 'icon--';
       this.triggerClassActive = 'icon--';
     } else {
-      this.triggerClassDefault = 'icon--list';
-      this.triggerClassActive = 'icon--edit';
+      this.triggerClassDefault = 'is-empty';
+      this.triggerClassActive = 'is-filled';
     }
     this.init();
   };
@@ -50,9 +50,9 @@ function findObjectByKey(array, key, value) {
   formSubselection.prototype.init = function() {
     var self = this;
     this.trigger = onl.dom.$('.subselection__trigger', this.element)[0] || onl.dom.$('.selection_popup', this.element)[0];
-    if (!onl.dom.$('.selection_popup', this.element)[0]) {
-      this.trigger.classList.add('icon');
-    }
+    // if (!onl.dom.$('.selection_popup', this.element)[0]) {
+    //   this.trigger.classList.add('icon');
+    // }
     this.trigger.classList.add(this.triggerClassDefault);
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
@@ -161,7 +161,7 @@ function findObjectByKey(array, key, value) {
   formSubselection.prototype.initHideUnwantedResults = function () {
     var subselectionSummaryContainer = this.element.querySelector('.subselection__summary');
     this.resultItems = [].slice.call(subselectionSummaryContainer.querySelectorAll('.subselection__summaryitem'));
-    // console.log('this.resultItems', this.resultItems);
+
     this.config.labelMore = this.config.labelmore || 'Toon meer';
     this.config.labelLess = this.config.labelless || 'Toon minder';
     this.allvisible = false;
@@ -252,8 +252,6 @@ function findObjectByKey(array, key, value) {
     if (this.config.triggerSubmit) {
       var form = getClosest(item, 'form');
       var buttonSubmit = form.querySelector('[type="submit"]');
-      // console.log('form', form);
-      // console.log('form buttonSubmit', buttonSubmit);
       if (buttonSubmit){
         setTimeout(function(){
           buttonSubmit.click();

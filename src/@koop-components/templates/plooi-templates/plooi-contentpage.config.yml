@@ -1,6 +1,6 @@
 ---
 label: PLOOI - Contentpage
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
@@ -58,3 +58,14 @@ context:
     fieldInstruction:
     fieldPlaceholder: Verfijn op zoekwoord
     remove: true
+  pageactions:
+    items:
+    - link: '#'
+      text: Downloaden
+      icon: icon-download.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print.svg
+    - link: '#'
+      text: Abonneren
+      icon: icon-mail.svg

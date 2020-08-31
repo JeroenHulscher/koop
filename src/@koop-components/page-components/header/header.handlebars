@@ -16,15 +16,19 @@
 
 
 
+
       {{#if metaLinks }}
       <div class="header__meta">
         {{#each metaLinks }}
-          {{#if nonlink}}
-            <span class="{{class}}">{{ text }}</span>
+          {{#if profile}}
+            {{ render "@profile--logged-in" profileContext }}
           {{else}}
-            <a href="{{ url }}" class="{{class}}">{{ text }}</a>
+            {{#if nonlink}}
+              <span class="{{class}}">{{ text }}</span>
+            {{else}}
+              <a href="{{ url }}" class="{{class}}">{{ text }}</a>
+            {{/if}}
           {{/if}}
-
         {{/each}}
       </div>
       {{/if}}

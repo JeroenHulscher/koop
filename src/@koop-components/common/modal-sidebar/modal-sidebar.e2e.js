@@ -9,7 +9,7 @@ describe('The Modal', function () {
     var modalContent;
     var openModalButton;
 
-    browser.get('http://localhost:3000/components/preview/templates-plooi-searchresults');
+    browser.get('http://localhost:3000/components/preview/templates-plooi-searchresults-ori');
 
     browser.driver.manage().window().setSize(width, height);
 

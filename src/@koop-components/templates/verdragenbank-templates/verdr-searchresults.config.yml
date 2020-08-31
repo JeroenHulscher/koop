@@ -1,6 +1,6 @@
 ---
 label: Verdr. - Searchresults
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
@@ -54,45 +54,57 @@ context:
       titleHeader: h2
       text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
       buttons:
-        - button: Bekijken
+        - button: Bekijk verdrag
           type: secendary
   resultsContext:
     modifier: result--list--wide
     items:
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+    - title: Verdrag inzake de verkrijging van bewijs in het buitenland in burgerlijke en in handelszaken
       titleHeader: h2
       label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       metadata:
         - value: 12 september 1986
         - value: Brussel
       buttons:
-        - button: Bekijken
-          type: secendary
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+        - button: Bekijk verdrag
+          type: secondary
+    - title: Europese Code inzake sociale zekerheid
       titleHeader: h2
-      text: 12 september 1986, Brussel
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
       buttons:
-        - button: Bekijken
-          type: secendary
-    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+        - button: Bekijk verdrag
+          type: secondary
+    - title: Internationaal Verdrag van Nairobi inzake het opruimen van wrakken, 2007
       titleHeader: h2
-      text: 12 september 1986, Brussel
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
       buttons:
-        - button: Bekijken
-          type: secendary
+        - button: Bekijk verdrag
+          type: secondary
   inputsubmitContext:
+    id: 876
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Verfijn uw zoekopdracht
-    button: Zoek
+    placeholder: Zoekwoord of verdragsnummer
+    button: Zoeken
     modifierComponent: input-inputsubmit--s
   inputsubmitSearchSaveContext:
     label: Uw e-mailadres
     showLabel: true
     placeholder: Uw e-mailadres
     button: Bevestigen
-  inputsearchMobContext:
-    fieldPlaceholder: Verfijn uw zoekopdracht
+  dateselection:
+    layout: narrow
+    tooltip:
+      id: 568987654567898765
+    dateselectionDatum:
+      label: Totstandgekomen op
   sortContext:
     modifier:
     columns: true
@@ -104,15 +116,26 @@ context:
       active: is-active
     - label: Titel
       value: value
-  buttonswitchContext:
-    text: banner
-    buttons:
-      - label: Kaart
-        active: true
-        icon: marker
-      - label: Lijst
-        active: false
-        icon: hamburger
+  geldvoorContext:
+      options:
+      - id: checkbox-40
+        text: Nederland (in Europa)
+        name: onderwerp
+      - id: checkbox-41
+        text: Nederland (Bonaire)
+        name: onderwerp
+      - id: checkbox-422
+        text: Nederland (Sint Eustatius)
+        name: onderwerp
+      - id: checkbox-4223
+        text: Aruba
+        name: onderwerp
+      - id: checkbox-4224
+        text: Curacao
+        name: onderwerp
+      - id: checkbox-4225
+        text: Sint Maarten
+        name: onderwerp
   selectedfilterContext:
     items:
       - label: Bouwvergunning
@@ -131,16 +154,16 @@ context:
     - id: checkbox-41
       text: Nederland (Bonaire)
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4223
       text: Nederland (Sint Eustatius)
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4224
       text: Aruba
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4226
       text: Curacao
       name: onderwerp
-    - id: checkbox-422
+    - id: checkbox-4227
       text: Sint Maarten
       name: onderwerp
   typeverdagContext:
@@ -212,5 +235,47 @@ context:
         id: 3
         title: Nederland
         short: Nederland
+  startDatepicker:
+    id: 234
+    haslabel: true
+    labelmodifier: secondary
+    label: Vanaf
+    fieldPlaceholder: DD-MM-JJJJ
+  endDatepicker:
+    id: 345
+    haslabel: true
+    labelmodifier: secondary
+    label: Tot en met
+    fieldPlaceholder: DD-MM-JJJJ
+  inputPlaats:
+    id: 98765
+    fieldPlaceholder: 'Plaats totstandkoming'
+    fieldLabelVisible: true
+    fieldLabel: Plaats
+    labelmodifier: accent
+  inputHuisnummer:
+    id: 987669
+    fieldPlaceholder: 'JJJJ'
+    fieldLabelVisible: true
+    fieldLabel: Huisnummer
+  inputToevoeging:
+    id: 9876777
+    fieldPlaceholder: '000'
+    fieldLabelVisible: true
+    fieldLabel: Toevoeging
+  inputJaargang:
+    id: 987653
+    type: number
+    fieldPlaceholder: JJJJ
+    fieldLabelVisible: true
+    fieldLabel: Jaargang
+    labelmodifier: accent
+  inputNummer:
+    id: 987651212
+    type: number
+    fieldPlaceholder: '000'
+    fieldLabelVisible: true
+    fieldLabel: Nummer
+    labelmodifier: accent
 
 

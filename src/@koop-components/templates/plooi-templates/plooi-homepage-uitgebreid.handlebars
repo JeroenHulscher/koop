@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container row">
+<div class="container row" role="main" id="content">
   <div class="row row--spacer">
 
     {{#> @jumbotron jumbotronContext }}
@@ -15,45 +15,23 @@
           <div class="form__row form__row--large">
             <fieldset>
               <legend class="visually-hidden">Doorzoek overheidsdocumenten</legend>
-              <div class="form__row form__row--medium">
-                 <input type="text" class="input-text input-text--searchmedium" placeholder="Vul hier uw zoekwoord(en) in" />
+
+              <div class="form__row form__row--slim">
+                {{ render "@input-text--medium" inputZoekwoord merge=true }}
               </div>
+
               <div class="form__row">
-                <ul class="list list--inline">
-                  <li class="list__item">
-                    {{ render "@input-radio"  radioContext1 }}
-                  </li>
-                  <li class="list__item">
-                    {{ render "@input-radio" radioContext2 }}
-                  </li>
-                </ul>
+                {{ render "@input-checkbox" searchcheckbox }}
               </div>
 
             </fieldset>
           </div>
           <div class="columns columns--dominant">
             <div class="column">
-
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Datum beschikbaar {{render "@tooltip"}}</legend>
-                  <div class="form__row form__row--medium">
-                    {{render "@input-radio" onderwerpContext }}
-                  </div>
-                  <div class="form__row">
-                    <label>Startdatum</label>
-                    {{render "@datepicker" }}
-                    <a href="#" class="reset">
-                      <small>Herstel</small>
-                    </a>
-                  </div>
-                  <div class="form__row">
-                    <label>Einddatum</label>
-                    {{render "@datepicker" }}
-                    <a href="#" class="reset">
-                      <small>Herstel</small>
-                    </a>
-                  </div>
+                  <legend>Beschikbaarheid</legend>
+                  {{ render "@date-selection" }}
                 </fieldset>
               </div>
             </div>
@@ -61,7 +39,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Informatiesoort {{render "@tooltip"}}
+                  <legend>Informatiesoort
                   </legend>
                   {{render "@subselection" subselectionInfoContext }}
                 </fieldset>
@@ -69,7 +47,7 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Thema {{render "@tooltip"}}
+                  <legend>Thema
                   </legend>
                   {{render "@subselection" subselectionThemaContext }}
                 </fieldset>
@@ -77,18 +55,22 @@
 
               <div class="form__row form__row--large">
                 <fieldset>
-                  <legend>Organisatie {{render "@tooltip"}}
+                  <legend>Organisatie
                   </legend>
                   {{render "@subselection" subselectionContext }}
                 </fieldset>
               </div>
             </div>
           </div>
-          <div class="align-right">
-            <ul class="list list--inline">
-              <li><button type="submit" class="button icon-bg button--erase">Leegmaken</button></li>
-              <li><button type="submit" class="button button--primary">Zoeken</button></li>
-            </ul>
+          <div class="form__row form__row--submit">
+            <div class="columns columns--vcenter">
+              <div class="column">
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+              </div>
+              <div class="column align-right">
+                <button type="submit" class="button button--primary">Zoek documenten</button>
+              </div>
+            </div>
           </div>
 
         </form>
@@ -96,7 +78,7 @@
     {{/@jumbotron}}
 
     </div>
-  </div>
+
 
 
 

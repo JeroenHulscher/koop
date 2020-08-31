@@ -1,8 +1,0 @@
----
-label: Input date
-status: prototype
-context:
-  id: 1
-  fieldLabel: Datum
-  fieldInstruction:
-  fieldPlaceholder: 'Bijv: 06-10-1960'

@@ -4,6 +4,7 @@
 
   &__index {
     margin-top: 0;
+    float: right;
 
     li {
       border-radius: 3px;
@@ -68,5 +69,11 @@
       clear: none;
       margin: 0;
     }
+  }
+}
+
+.result--list ~ .pagination {
+  .pagination__index {
+    float: right;
   }
 }

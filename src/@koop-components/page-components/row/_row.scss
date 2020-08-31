@@ -41,8 +41,12 @@ $thinBorder: .5em;
     border-top: $fatBorder solid $lighterGrey;
     border-bottom: $fatBorder solid $lighterGrey;
     background-color: $lightGrey;
+  }
 
-
+  &--disclaimer {
+    p {
+      font-size: 0.9em;
+    }
   }
 
   &--before-footer {

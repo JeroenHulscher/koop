@@ -1,0 +1,353 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container row" data-decorator="">
+
+  {{ render "@link--terug-naar" terugnaarContext merge=true }}
+
+  {{#> @table-container }}
+    <table class="zebra table__data-overview table table--condensed table--fontsmall" summary="" cellspacing="0">
+      <colgroup>
+        <col title="colA" width="%">
+        <col title="colB" width="%">
+        <col title="colC" width="%">
+        <col title="colD" width="%">
+        <col title="colE" width="%">
+        <col title="colF" width="%">
+        <col title="colG" width="%">
+      </colgroup>
+      <tbody class="left middle">
+        <tr class="odd left middle">
+          <td class="left middle">
+            <strong class="vet">Grondslag overtreding</strong>
+          </td>
+          <td class="left middle">
+            <strong class="vet">Onderwerp</strong>
+          </td>
+          <td class="left middle">
+            <strong class="vet">Omschrijving</strong>
+          </td>
+          <td class="left middle">
+            <strong class="vet">Feitcode</strong>
+          </td>
+          <td class="left middle" colspan="3">
+            <strong class="vet">Boetebedrag</strong>
+          </td>
+          <td class="left middle">
+            <strong class="vet">Systeemcode</strong>
+          </td>
+          <td class="left middle">
+            <strong class="vet">Uniek-ID</strong>
+          </td>
+          <td class="left middle">
+            <strong class="vet">Extra omschrijving</strong>
+          </td>
+          <td><strong>Boetecode</strong></td>
+          <td><strong>Boete-ID</strong></td>
+          <td><strong>Boete-artikelnummer</strong></td>
+          <td><strong>Afdeling</strong></td>
+          <td><strong>Datum</strong></td>
+        </tr>
+        <tr class="even left middle">
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle" colspan="2">
+            <em class="cur">Natuurlijke persoon </em>
+          </td>
+          <td class="left middle">
+            <em class="cur">Rechtspersoon</em>
+          </td>
+          <td></td>
+          <td>54</td>
+          <td></td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td><span class="u-nobreak">Ministerie van Buitenlandse Zaken</span></td>
+          <td>
+            <span class="u-nobreak">01-01-2020</span>
+          </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td class="left middle">
+            <em class="cur">vanaf 12 jaar</em>
+          </td>
+          <td class="left middle">
+            <em class="cur">vanaf 16 jaar</em>
+          </td>
+          <td class="left middle">
+            &nbsp;</td>
+          <td></td>
+          <td>22</td>
+          <td></td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td><span class="u-nobreak">Ministerie van Buitenlandse Zaken</span></td>
+          <td><span class="u-nobreak">01-01-2020</span></td>
+        </tr>
+        <tr class="even left middle">
+          <td class="left middle" colspan="7">
+            <strong class="vet">
+              <em class="cur">Algemene plaatselijke verordening 2008 (APV)</em>
+            </strong>
+          </td>
+          <td></td>
+          <td>19</td>
+          <td></td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <span class="u-nobreak">01-01-2020</span>
+          </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.3 APV</td>
+          <td class="left middle">Plaatsen van zaken bij samenkomsten</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen
+            zaken op of aan de weg te plaatsen of te hebben.</td>
+          <td class="left middle">BA001</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>17</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="even left middle">
+          <td class="left middle">art. 2.4 APV</td>
+          <td class="left middle">Betreden van afzettingen</td>
+          <td class="left middle">Het is verboden zich te begeven op terreinen, wegen of weggedeelten die door het bevoegde bestuursorgaan zijn afgezet
+            vanwege de openbare orde of veiligheid, de verkeersveiligheid of een ander algemeen belang.</td>
+          <td class="left middle">BA002</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>7</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td><span class="u-nobreak">Ministerie van Buitenlandse Zaken</span></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 1, APV</td>
+          <td class="left middle">Verbod klanten werven voor prostitutie</td>
+          <td class="left middle">Het is verboden zich op of aan de weg of in een voor publiek toegankelijk gebouw op te houden met het kennelijke doel
+            om klanten te werven voor prostitutie.</td>
+          <td class="left middle">BA003</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>2</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="even left middle">
+          <td class="left middle">art. 2.12, lid 2, APV</td>
+          <td class="left middle">Verbod klanten werven voor prostitutie</td>
+          <td class="left middle">Het is verboden vanuit een gebouw of vanuit de toegang naar een gebouw klanten die zich op of aan de weg bevinden te
+            werven voor prostitutie.</td>
+          <td class="left middle">BA004</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>1231</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 4, APV</td>
+          <td class="left middle">Verbod onnodig opdringen door sekswerkers</td>
+          <td class="left middle">Het is een prostituee verboden een passant hinderlijk te bejegenen of zich aan de passant op te dringen dan wel zich
+            ongekleed of vrijwel ongekleed achter het raam, in de toegang tot het raamprostitutiebedrijf, of op de weg op te
+            houden.
+          </td>
+          <td class="left middle">BA005</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>65</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 4, APV</td>
+          <td class="left middle">Verbod onnodig opdringen door sekswerkers</td>
+          <td class="left middle">Het is een prostituee verboden een passant hinderlijk te bejegenen of zich aan de passant op te dringen dan wel zich
+            ongekleed of vrijwel ongekleed achter het raam, in de toegang tot het raamprostitutiebedrijf, of op de weg op te
+            houden.
+          </td>
+          <td class="left middle">BA005</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>65</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 4, APV</td>
+          <td class="left middle">Verbod onnodig opdringen door sekswerkers</td>
+          <td class="left middle">Het is een prostituee verboden een passant hinderlijk te bejegenen of zich aan de passant op te dringen dan wel zich
+            ongekleed of vrijwel ongekleed achter het raam, in de toegang tot het raamprostitutiebedrijf, of op de weg op te
+            houden.
+          </td>
+          <td class="left middle">BA005</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>65</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 4, APV</td>
+          <td class="left middle">Verbod onnodig opdringen door sekswerkers</td>
+          <td class="left middle">Het is een prostituee verboden een passant hinderlijk te bejegenen of zich aan de passant op te dringen dan wel zich
+            ongekleed of vrijwel ongekleed achter het raam, in de toegang tot het raamprostitutiebedrijf, of op de weg op te
+            houden.
+          </td>
+          <td class="left middle">BA005</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>65</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 4, APV</td>
+          <td class="left middle">Verbod onnodig opdringen door sekswerkers</td>
+          <td class="left middle">Het is een prostituee verboden een passant hinderlijk te bejegenen of zich aan de passant op te dringen dan wel zich
+            ongekleed of vrijwel ongekleed achter het raam, in de toegang tot het raamprostitutiebedrijf, of op de weg op te
+            houden.
+          </td>
+          <td class="left middle">BA005</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>65</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+        <tr class="odd left middle">
+          <td class="left middle">art. 2.12, lid 4, APV</td>
+          <td class="left middle">Verbod onnodig opdringen door sekswerkers</td>
+          <td class="left middle">Het is een prostituee verboden een passant hinderlijk te bejegenen of zich aan de passant op te dringen dan wel zich
+            ongekleed of vrijwel ongekleed achter het raam, in de toegang tot het raamprostitutiebedrijf, of op de weg op te
+            houden.
+          </td>
+          <td class="left middle">BA005</td>
+          <td class="left middle">€ 120</td>
+          <td class="left middle">€ 240</td>
+          <td class="left middle">€ 1.200</td>
+          <td></td>
+          <td>65</td>
+          <td class="left middle">Het is verboden bij openbare samenkomsten en vermakelijkheden op door de burgemeester aangewezen tijden en plaatsen zaken
+            op of aan de weg te plaatsen of te hebben.</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="u-nobreak">01-01-2020</span>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  {{/@table-container}}
+
+</div>
+
+{{ render "@footer" }}

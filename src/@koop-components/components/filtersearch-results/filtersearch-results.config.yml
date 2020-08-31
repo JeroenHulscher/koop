@@ -3,6 +3,7 @@ label: Filtersearch results
 status: ready
 context:
   id: 176575675
+  searchfieldPlaceholder: Typ hier uw organisatie
   Options:
     - Option: 1
       id: 123766666
@@ -58,3 +59,47 @@ variants:
           id: 32373123
           title: Voorburg
           short: Nederland
+  - name: with Controls
+    context:
+      controls:
+        selectAllLabel: Selecteer alle organisaties
+  - name: Multilevel
+    context:
+      id: 176575675
+      Sets:
+        - title: Nederland
+          Options:
+          - Option: 1
+            id: 123766666
+            title: Rotterdam
+            short: Spanje
+          - Option: 2
+            id: 223723321312
+            title: Schiedam
+            short: Griekenland
+          - Option: 3
+            id: 3223
+            title: Vlaardingen
+            short: Nederland
+          - Option: 12222222
+            id: 12372
+            title: Den Haag
+            short: Spanje
+          - Option: 22222222222
+            id: 2237122312
+            title: Scheveningen
+            short: Griekenland
+          - Option: 3222222
+            id: 32373123
+            title: Voorburg
+            short: Nederland
+        - title: Belgie
+          Options:
+          - Option: 1
+            id: 1237666662
+            title: Brussel
+            short: Brussel
+          - Option: 2
+            id: 2237233213122
+            title: Antwerpen
+            short: Antwerpen

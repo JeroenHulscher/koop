@@ -1,28 +1,57 @@
-<div class="" data-decorator="init-filter-results">
+<div class="" data-decorator="init-filter-results{{#if controls}} init-formreset{{/if}}">
   <div class="form__row">
     <label class="visually-hidden" for="filter-id--{{id}}">Filter op</label>
-    <input type="text" aria-controls="resultfilter-{{id}}" placeholder="Typ hier uw organisatie" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" />
+    <div class="relative">
+      <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{searchfieldPlaceholder}}" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
+      <a href="#" class="input-text__remove invisible" data-handler="empty-input">
+        <span class="visually-hidden">Wis waarde</span>
+      </a>
+    </div>
   </div>
+  {{#if controls}}
   <div class="form__row">
-    <fieldset class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
-    {{!-- <fieldset class="js-filterresults__results"> --}}
-      {{!-- {{render "@input-checkbox" }} --}}
-
-      <ul class="list--unstyled">
-        {{#each Options }}
-        <li class=" js-filterresults__result">
-          <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-            <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"
-              {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}"
-              value="2" />
-            <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
-              {{ title }}
-            </label>
-          </div>
-        </li>
+    <button class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
+    <button class="icon icon--refresh formreset-resetlink">Reset formulier</button>
+  </div>
+  {{/if}}
+  <div class="form__row">
+    <div class="js-filterresults__results" id="resultfilter-{{id}}" aria-live="polite">
+      {{#if Sets }}
+        {{#each Sets }}
+        <fieldset class="js-filterresults__resultmother">
+          <legend>{{title}}</legend>
+          <ul class="list--unstyled">
+            {{#each Options }}
+              <li class="js-filterresults__result">
+                <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                  <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"
+                    {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}"
+                    value="2" />
+                  <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                    {{ title }}
+                  </label>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </fieldset>
         {{/each}}
-      </ul>
-
-    </fieldset>
+      {{else}}
+        <ul class="list--unstyled">
+          {{#each Options }}
+            <li class="js-filterresults__result">
+              <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
+                <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"
+                  {{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}"
+                  value="2" />
+                <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
+                  {{ title }}
+                </label>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
   </div>
 </div>

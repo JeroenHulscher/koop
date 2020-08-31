@@ -1,0 +1,22 @@
+---
+label: CVDR - Contentpage tabel
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  terugnaarContext:
+    text: Terug naar de vorige pagina
+  breadcrumb:
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Regeling
+        url: '#'
+      - text: Naam van de tabel

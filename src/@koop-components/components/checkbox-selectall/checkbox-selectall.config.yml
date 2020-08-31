@@ -1,6 +1,6 @@
 ---
 label: Checkbox Select all
-status: prototype
+status: ready
 context:
   id: 1
   label: verdragen

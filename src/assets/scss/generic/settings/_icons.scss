@@ -5,12 +5,17 @@ $iconAlertRed:  url( '#{$imagePath}/icon-alert-red.svg' ) !default;
 
 $chevronRight:  url( '#{$imagePath}/icon-chevron-right.svg' ) !default;
 $chevronLeft:  url( '#{$imagePath}/icon-chevron-left.svg' ) !default;
+$chevronroundRightBlue:  url( '#{$imagePath}/icon-chevronround-right-blue.svg' ) !default;
+$chevronroundRightWhite:  url( '#{$imagePath}/icon-chevronround-right-white.svg' ) !default;
 $iconCross: url( '#{$imagePath}/icon-close.svg' );
 $iconCrossWhite: url( '#{$imagePath}/icon-close-white.svg' );
+$iconCrossroundWhite: url( '#{$imagePath}/icon-cross-white.svg' );
 $iconCrossBlue: url( '#{$imagePath}/icon-cross-blue.svg' );
 $iconCrossRed: url( '#{$imagePath}/icon-cross-red.svg' );
 $iconCrossFilled: url( '#{$imagePath}/icon-cross-filled.svg' );
 $iconFilter: url( '#{$imagePath}/icon-filter.svg' );
+$iconFilterBlue: url( '#{$imagePath}/icon-filter-blue.svg' );
+$iconFilterRotatedWhite: url( '#{$imagePath}/icon-filter-rotated-white.svg' );
 
 $iconNews: url( '#{$imagePath}/icon-news.svg' );
 
@@ -19,6 +24,7 @@ $datepickerButtonPrev: $chevronLeft;
 
 $dartLeftIcon: url( '#{$imagePath}/icon-dart-left.svg' ) !default;
 $dartRightIcon: url( '#{$imagePath}/icon-dart-right.svg' ) !default;
+$dartRightWhiteIcon: url( '#{$imagePath}/icon-dart-right-white.svg' ) !default;
 $dartTopIcon: url( '#{$imagePath}/icon-dart-top.svg' ) !default;
 $dartTopWhiteIcon: url( '#{$imagePath}/icon-dart-top-white.svg' ) !default;
 $dartDownIcon: url( '#{$imagePath}/icon-dart-down.svg' ) !default;

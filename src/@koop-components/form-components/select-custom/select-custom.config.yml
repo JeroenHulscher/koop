@@ -6,13 +6,9 @@ context:
   options:
     - label: Item 1
       value: 10
-      selected: true
+      selected: selected
     - label: Item 2
       value: 20
-    - label: Item 3
-      value: 50
-    - label: Item 4
-      value: 100
 variants:
   - name: large
     context:
@@ -25,3 +21,22 @@ variants:
       fieldLabel: Metadata type
       labelmodifier: accent
       fieldLabelVisible: true
+  - name: with optgroup
+    context:
+      fieldLabel: Documentsoort
+      labelmodifier: accent
+      fieldLabelVisible: true
+      optgroup: true
+      items:
+        - optgroupLabel: Parlementaire documenten
+          options:
+            - label: Handelingen
+              value: 10
+            - label: Moties
+              value: 20
+        - optgroupLabel: Officiële bekendmakingen
+          options:
+            - label: Tractatenblad
+              value: 101
+            - label: Staatsblad
+              value: 201

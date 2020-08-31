@@ -1,14 +1,13 @@
-.input-text,
-input[type=text] {
-
-  &__remove {
-    position: absolute;
-    right: 1em;
-    top: 0;
-    width: 2em;
-    bottom: 0;
-    background: $iconCrossFilled no-repeat center center;
-  }
-
-
+.input-text__remove {
+  position: absolute;
+  top: auto;
+  right: .5em;
+  width: 2em;
+  bottom: .6em;
+  background: $iconCrossFilled no-repeat center center;
+  height: 1.5em;
+}
+.input-text--searchmedium ~ .input-text__remove,
+.input-text--medium ~ .input-text__remove {
+  bottom: .9em;
 }

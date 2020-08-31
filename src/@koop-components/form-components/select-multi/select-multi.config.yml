@@ -1,0 +1,48 @@
+---
+label: Select Multi
+status: ready
+context:
+  id: 1112312
+  placeholder: Selecteer documentsoort
+  name: documenten
+  helptext: Gebruik de TAB toets, of de pijl beneden toets om toegang te krijgen tot de suggesties. Druk om ENTER om uw keuze te bevestigen.
+  labelmodifier: accent
+  fieldInstruction: ''
+  fieldLabel: Documentsoort
+  fieldLabelVisible: true
+  fieldPlaceholder: 'Kies een of meerdere documentsoorten'
+  describedbyId: multiselect-helptext-1
+  categories:
+    - title: Parlementaire documenten
+      options:
+        - label: Handelingen
+          value: Hand
+        - label: Moties
+          value: Moti
+        - label: Kamervragen
+          value: Kamev
+        - label: Kamerstukken
+          value: Kames
+        - label: Agenda's
+          value: Agen
+    - title: Officiële bekendmakingen
+      options:
+        - label: Tractatenblad
+          value: Tractatenblad
+        - label: Staatsblad
+          value: Staatsblad
+        - label: Staatscourant
+          value: Staatscourant
+        - label: Gemeenteblad
+          value: Gemeenteblad
+        - label: Provinciaal blad
+          value: Provinciaal blad
+        - label: Waterschapsblad
+          value: Waterschapsblad
+        - label: Blad gemeenschappelijke regeling
+          value: Blad gemeenschappelijke regeling
+variants:
+  - name: Large
+    context:
+      modifier: large
+

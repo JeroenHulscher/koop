@@ -52,6 +52,12 @@
 
   datepicker.prototype.initDatepicker = function(element) {
     var self = this;
+    var dataPlaceholder = this.element.getAttribute('data-placeholder');
+
+    if (dataPlaceholder) {
+      // set placeholder
+      this.element.setAttribute('placeholder', dataPlaceholder);
+    }
 
     // datepicker config
     $(element).attr('type', 'text').datepicker({

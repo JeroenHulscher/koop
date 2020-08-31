@@ -1,7 +1,0 @@
----
-label: Input email
-status: prototype
-context:
-  id: 1
-  fieldLabel: E-mail
-  fieldInstruction:

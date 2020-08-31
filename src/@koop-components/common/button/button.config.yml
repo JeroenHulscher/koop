@@ -23,6 +23,11 @@ variants:
     context:
       text: Secundaire knop
       modifier: button--secondary
+  - name: Secondary Icon Search
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--searchBlue
   - name: Tertiary
     status: ready
     context:

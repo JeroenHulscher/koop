@@ -18,6 +18,8 @@
   copydata.prototype.init = function( ) {
     this.createAndPlaceTrigger();
     this.addEventListeners();
+
+    this.trigger.setAttribute('aria-live', 'polite');
   };
 
   copydata.prototype.addEventListeners = function() {
@@ -26,11 +28,12 @@
 
   copydata.prototype.triggerCopy = function(e) {
     e.preventDefault();
+
     this.putValueInClipboard();
   };
 
   copydata.prototype.createAndPlaceTrigger = function() {
-    this.trigger = document.createElement( 'span' );
+    this.trigger = document.createElement( 'button' );
     this.triggerSpan = document.createElement( 'span' );
     this.trigger.classList.add( this.config.triggerClass );
     this.trigger.setAttribute('tabindex', '0');
@@ -47,11 +50,13 @@
 
     this.trigger.classList.add("is-active");
     this.triggerSpan.innerHTML = tempLabel;
+    this.trigger.setAttribute('aria-label', tempLabel);
 
     setTimeout( function(){
       self.triggerSpan.innerHTML = originalLabel;
+      self.trigger.setAttribute('aria-label', self.config.triggerLabel + ':' + self.datafield.innerHTML);
       self.trigger.classList.remove("is-active");
-    }, 5000 );
+    }, 10000 );
 
   };
 

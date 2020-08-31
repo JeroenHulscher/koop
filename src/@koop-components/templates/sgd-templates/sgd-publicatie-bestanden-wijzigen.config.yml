@@ -1,0 +1,201 @@
+---
+label: SGD - Publicatie bestanden wijzigen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+    - url: '#'
+      text: SGD
+      className: is-active
+    - url: '#'
+      text: '...'
+    skipLinks: false
+    metaLinks:
+      - text: Gebruiker
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+    youAreHere:
+      - text: Externe Beheersite
+  skipLinks:
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  topbar:
+    navItems:
+      - label: Beheersite
+        href: '#'
+        active: true
+      - label: Digitaal Loket
+        href: '#'
+      - label: Stage BMS
+        href: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '/components/preview/templates-eb-homepage'
+    - text: SGD
+      url: '#'
+    - text: Spoedpublicaties
+  navToeContext:
+    id: 2
+    items:
+    - title: SGD
+      href: /components/preview/templates-eb-projectlanding
+      active: true
+      sub: true
+      subItems:
+        - stitle: Publicaties
+          sactive: true
+        - stitle: Spoedpublicaties
+        - stitle: Updaten metadata
+        - stitle: Vervangen verschijningsvormen
+        - stitle: Zoekdienst
+        - stitle: Controlelijst
+        - stitle: OEB ochtendcontrole
+  publicatiegegevens:
+    modifier:
+    items:
+    - item:
+      - column:
+        type: Publicatie gegevens
+        value: Aantal pagina's
+      - column:
+        type: Waarde
+        value: 9
+  table:
+    modifier: table--condensed
+    items:
+      - item:
+        - column:
+          type: Bestandstype
+          value: metadata
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">metadata.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder metadata</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: metadata
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">didl.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder metadata</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: jpg
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_0000001.jpg</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: jpg
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_0000002.jpg</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: ocr
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_tekt_0000002.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: ocr
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_tekt_0000001.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: ocr
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_tekt_0000002.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: coordinaten
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_coordinaten_0000001.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></a>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: coordinaten
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_coordinaten_0000002.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></a>'
+  modalContextMetadata:
+    initClosed: true
+    openButton: Bestand toevoegen
+    closeButton: Toevoegen
+    selectcustom:
+      id: 1
+      fieldLabel: Bestandstype
+      labelmodifier: accent
+      fieldLabelVisible: true
+      options:
+        - label: metadata
+          value: 10
+          selected: selected
+        - label: jpg
+          value: 20
+        - label: ocr
+          value: 50
+        - label: pdf
+          value: 60
+        - label: coordinaten
+          value: 100
+    inputfile:
+      type: file
+      fieldLabel: Bestand
+      labelmodifier: accent
+      fieldLabelVisible: true
+      fieldPlaceholder: false
+    buttonSubmitMetadata:
+      text: Toevoegen
+      action: http://www.google.nl
+      anchor: false
+      button: true
+      iconButton: false
+      inputButton: false
+      inputSubmit: true
+      buttonWithDivider: false
+      type: submit
+      modifier: "button--primary"
