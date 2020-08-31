@@ -1,12 +1,3 @@
-input[type=text] {
-  &__remove {
-    position: absolute;
-    right: 1em;
-    width: 2em;
-    bottom: 1.2em;
-    background: $iconCrossFilled no-repeat center center;
-  }
-}
 .input-text__remove {
   position: absolute;
   top: auto;
