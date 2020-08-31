@@ -1,6 +1,6 @@
 ---
 label: 2.0 - Dienstverl. - Uitgebreid zoeken
-status: Ready
+status: ready
 context:
   header:
     file: logo.svg
