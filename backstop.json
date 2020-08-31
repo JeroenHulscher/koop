@@ -289,19 +289,9 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse1.html"
     },
     {
-      "label": "CUP - Browse 2",
-      "url": "http://localhost:3000/components/preview/templates-cup-browse2",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse2.html"
-    },
-    {
-      "label": "CUP - Browse 3",
-      "url": "http://localhost:3000/components/preview/templates-cup-browse3",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse3.html"
-    },
-    {
-      "label": "CUP - Browse 4",
-      "url": "http://localhost:3000/components/preview/templates-cup-browse4",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse4.html"
+      "label": "CUP - Browse (vervolg)",
+      "url": "http://localhost:3000/components/preview/templates-cup-browse-vervolg",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse-vervolg.html"
     },
     {
       "label": "CVDR - Homepage",
@@ -390,7 +380,7 @@
     },
     {
       "label": "att - templates-beh-login",
-      "url": "http://localhtemplates-beh-dashboardost:3000/components/preview/templates-beh-login",
+      "url": "http://localhost:3000/components/preview/templates-beh-login",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-login.html"
     },
     {
