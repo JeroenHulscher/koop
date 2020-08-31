@@ -127,15 +127,7 @@
                               {{render "@input-text" huisnrContext }}
                             </div>
                             <div class="form__row form__row--medium">
-                              <label class="form__label form__label--accent" for="">Straal</label>
-                              <span class="mandatory">Verplicht</span>
-                              <div class="select-custom select-custom--large">
-                                <select>
-                                  <option>250m</option>
-                                  <option>1km</option>
-                                  <option>2km</option>
-                                </select>
-                              </div>
+                              {{ render "@select-custom--with-label" selectContext merge=true }}
                             </div>
                           </div>
                         </div>
@@ -187,7 +179,7 @@
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Gebied {{render "@tooltip"}}
+              <legend>Gebied {{render "@tooltip" tt1 }}
               </legend>
               {{render "@input-radio" gebiedContext }}
             </fieldset>
@@ -199,7 +191,7 @@
             <div id="citem-0" class="form__row form__row--large js-form-conditionals__citem">
               <fieldset>
                 <legend>Publicatiedatum
-                {{render "@tooltip"}}
+                {{render "@tooltip" tt2}}
                 </legend>
                 {{render "@input-radio" publicatiedatumContext }}
               </fieldset>
@@ -209,30 +201,32 @@
               {{render "@datepicker" publicatieCustomRange merge=true }}
             </div>
 
+          </div>
+
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Onderwerpen {{render "@tooltip"}}</legend>
+              <legend>Onderwerpen {{render "@tooltip" tt3}}</legend>
               {{render "@input-checkbox" onderwerpContext }}
             </fieldset>
           </div>
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Voorlichting {{render "@tooltip"}}</legend>
+              <legend>Voorlichting {{render "@tooltip" tt4}}</legend>
               {{render "@input-checkbox" voorlichtingContext }}
             </fieldset>
           </div>
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Bestemming {{render "@tooltip"}}</legend>
+              <legend>Bestemming {{render "@tooltip" tt5}}</legend>
               {{render "@input-checkbox" bestemmingContext }}
             </fieldset>
           </div>
 
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Voorschriften {{render "@tooltip"}}</legend>
+              <legend>Voorschriften {{render "@tooltip" tt6}}</legend>
               {{render "@input-checkbox" voorschriftenContext }}
             </fieldset>
           </div>

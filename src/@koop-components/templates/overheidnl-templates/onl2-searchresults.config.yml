@@ -61,6 +61,7 @@ context:
         - button: Bekijken
           type: icon button--icon-external
   inputsubmitContext:
+    id: 9657
     label: Verfijn uw zoekopdracht
     showLabel: false
     placeholder: Verfijn uw zoekopdracht
@@ -99,10 +100,13 @@ context:
     options:
       - id: checkbox-1
         text: Afgelopen week
+        name: segment
       - id: checkbox-2
         text: Huidige jaar
+        name: segment
       - id: checkbox-3
         text: Eerder
+        name: segment
   checkallDienstenvanContext:
     id: 2
     label: organisaties

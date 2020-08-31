@@ -18,7 +18,7 @@ context:
       options:
         - label: Gemeente Den Haag
           value: 10
-          selected: true
+          selected: selected
         - label: 20
           value: 20
         - label: 50

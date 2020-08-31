@@ -17,10 +17,12 @@ context:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
     postcodeInput:
+      id: 12312312
       fieldLabelVisible: true
       fieldPlaceholder: Bijv. 1234 AB
       fieldLabel: Postcode
       labelmodifier: accent
+      name: postcode
     checkallDienstenvoorContext:
       id: 1
       label: doelgroepen

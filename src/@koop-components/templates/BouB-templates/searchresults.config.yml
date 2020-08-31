@@ -22,244 +22,246 @@ context:
   voorschriftenContext:
     moreless: true
     options:
-    - id: checkbox-20
+    - id: checkbox-200
       text: Aanwijzingsbesluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-201
       text: Agenda en notulen
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-202
       text: Belastingbesluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-203
       text: Besluitenlijst
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-204
       text: Collectevergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-205
       text: Delegatiebesluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-206
       text: Gemeenschappelijke regelingen
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-207
       text: Kansspelvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-208
       text: Loterijvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-209
       text: Milieu-informatie
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2010
       text: Milieuverordening
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2011
       text: Optochtvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2012
       text: Peilbesluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2013
       text: Register kinderopvang
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2014
       text: Stedelijk waterplan
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2015
       text: Streekplan
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2016
       text: Stroomgebiedsvisie
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2017
       text: Structuurvisie
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2018
       text: Vaarvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2019
       text: Ventvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2020
       text: Vervoer gevaarlijke stoffen vergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2021
       text: Verordeningen en reglementen
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-20221
       text: Waterbeheersplan
+      name: onderwerp
   bestemmingContext:
     moreless: true
     options:
     - id: checkbox-20
       text: Bestemmingsplan
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2022
       text: Voorbereidingsbesluit
       name: onderwerp
   voorlichtingContext:
     moreless: true
     options:
-    - id: checkbox-20
+    - id: checkbox-2023
       text: Aankondiging
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2024
       text: Huisafval
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2025
       text: Inspraak
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2026
       text: Mededelingen
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2027
       text: Meldingen
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2028
       text: Openingstijden
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2029
       text: Overig
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2030
       text: Rectificatie
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2031
       text: Verkiezingen
       name: onderwerp
   onderwerpContext:
     moreless: true
     options:
-    - id: checkbox-20
+    - id: checkbox-2032
       text: Aanlegvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2033
       text: Aanlegvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2034
       text: Apv vergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2035
       text: Bodembeschermingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2036
       text: Bouwvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2037
       text: Drank- en horecavergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2038
       text: Evenementenvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2039
       text: Exploitatievergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2040
       text: Gebruiksvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2041
       text: Gedoogbesluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2042
       text: Gehandicaptenparkeervergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2043
       text: Geluidvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2044
       text: Grondwateronttrekkingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2045
       text: Grondwatervergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2046
       text: In- en uitritvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2047
       text: Kapvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2048
       text: Keurvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2049
       text: Ligplaatsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2050
       text: Lozingsmelding
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2051
       text: Lozingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2052
       text: Marktvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2053
       text: Milieueffectrapportage besluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2054
       text: Milieuvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2055
       text: Monumentenvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2056
       text: Natuurbeschermingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2057
       text: Omgevingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2058
       text: Ontgrondingenvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2059
       text: Ontheffing flora en faunawet
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2060
       text: Ontheffing ligplaatsverbod
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2061
       text: Ontheffing stortverbod
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2062
       text: Onttrekkingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2063
       text: Reclamevergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2064
       text: Sloopvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2065
       text: Speelautomatenvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2066
       text: Splitsingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2067
       text:  Standplaatsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2068
       text: Stookvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2069
       text: Terrasvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2070
       text: Uitstallingvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2071
       text: Verkeersbesluit
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2072
       text: Vestigingsvergunning
       name: onderwerp
-    - id: checkbox-20
+    - id: checkbox-2073
       text: Vuurwerkvergunning
       name: onderwerp
   publicatieCustomRange:
     range: true
+    placeholder: false
   publicatiedatumContext:
     moreless: true
     options:
@@ -348,6 +350,7 @@ context:
     fieldPlaceholder: 1234AB
     remove: true
   inputsubmitContext:
+    id: 5432
     label: Verfijn uw zoekopdracht
     showLabel: false
     placeholder: Verfijn uw zoekopdracht
@@ -388,7 +391,7 @@ context:
     headingcentered: true
     intro: Schrijf u in en ontvang dagelijks een update in uw inbox over alles wat er bij u in de buurt gebeurt.
     inputsubmitSearchSaveContext:
-      id: 101
+      id: 102
       label: Uw e-mailadres
       showLabel: true
       placeholder: Uw e-mailadres
@@ -423,5 +426,28 @@ context:
     heading: Meld je aan voor de mail service
     h: h2
     subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
-
+  tt1:
+    id: 11
+  tt2:
+    id: 12
+  tt3:
+    id: 13
+  tt4:
+    id: 14
+  tt5:
+    id: 15
+  tt6:
+    id: 16
+  selectContext:
+      id: 876
+      modifier: select-custom--large
+      fieldLabel: Straal
+      options:
+        - label: 250m
+          value: 250m
+          selected: selected
+        - label: 1km
+          value: 1km
+        - label: 2km
+          value: 2km
 

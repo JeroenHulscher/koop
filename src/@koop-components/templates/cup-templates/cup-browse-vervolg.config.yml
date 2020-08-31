@@ -57,6 +57,7 @@ context:
       - title: area
         active: true
   sourcesContext:
+    id: 112
     items:
     - name: SGD_1840_coordinaten_14000
       filesize: (12kb)
@@ -98,6 +99,7 @@ context:
       remark: true
       remarkText: <p>Link is niet ok.<br />Laatste controle op 18-07-2018</p>
   sourcesContext2:
+    id: 113
     items:
     - name: Score PC4 2016
       filesize: (12kb)
@@ -113,6 +115,7 @@ context:
       remark: true
       remarkText: <p>Link is niet ok.<br />Laatste controle op 18-07-2018</p>
   sourcesContext3:
+    id: 114
     items:
     - name: Score PC4 2016
       filesize: (12kb)

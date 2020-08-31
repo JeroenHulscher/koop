@@ -76,73 +76,75 @@
       <h2 class="visually-hidden">Filters</h2>
 
       <form id="formid">
+        <fieldset>
+          <legend>Verfijn zoekresulaten</legend>
 
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Zoekwoord(en)</legend>
-            {{render "@input-inputsubmit" inputsubmitContext }}
-          </fieldset>
-        </div>
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Totstandkoming</legend>
-            {{ render "@date-selection" dateselection merge=true }}
-            <a href="#" class="reset">
-              <small>Herstellen</small>
-            </a>
-            <div class="form__row">
-              {{render "@input-text" inputPlaats }}
-            </div>
-          </fieldset>
-        </div>
-        <div class="form__row form__row--large">
           <div class="form__row form__row--large">
             <fieldset>
-              <legend>Nu geldend voor</legend>
-              {{render "@input-checkbox" geldvoorContext }}
+              <legend>Zoekwoord(en)</legend>
+              {{render "@input-inputsubmit" inputsubmitContext }}
             </fieldset>
           </div>
-        </div>
-
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Tractatenblad of staatsblad</legend>
-            <div class="form__row">
-              {{render "@input-text" inputJaargang }}
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Totstandkoming</legend>
+              {{ render "@date-selection" dateselection merge=true }}
+              <a href="#" class="reset">
+                <small>Herstellen</small>
+              </a>
+              <div class="form__row">
+                {{render "@input-text" inputPlaats }}
+              </div>
+            </fieldset>
+          </div>
+          <div class="form__row form__row--large">
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Nu geldend voor</legend>
+                {{render "@input-checkbox" geldvoorContext }}
+              </fieldset>
             </div>
-            <div class="form__row">
-              {{render "@input-text" inputNummer }}
-            </div>
-          </fieldset>
-        </div>
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Type verdrag</legend>
-            {{render "@input-checkbox" typeverdagContext }}
-          </fieldset>
-        </div>
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Nederland depositair</legend>
-            {{render "@input-checkbox" depositarisContext }}
-          </fieldset>
-        </div>
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Partijen</legend>
-            {{render "@subselection" subselectionContext }}
-          </fieldset>
-        </div>
-        <div class="form__row form__row--large">
-          <fieldset>
-            <legend>Onderwerpen</legend>
-            {{render "@subselection" subselectionOnderwerpContext }}
-          </fieldset>
-        </div>
+          </div>
 
-        <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
-          data-config='{"position":"bottom"}'>Zoek opnieuw</button>
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Tractatenblad of staatsblad</legend>
+              <div class="form__row">
+                {{render "@input-text" inputJaargang }}
+              </div>
+              <div class="form__row">
+                {{render "@input-text" inputNummer }}
+              </div>
+            </fieldset>
+          </div>
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Type verdrag</legend>
+              {{render "@input-checkbox" typeverdagContext }}
+            </fieldset>
+          </div>
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Nederland depositair</legend>
+              {{render "@input-checkbox" depositarisContext }}
+            </fieldset>
+          </div>
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Partijen</legend>
+              {{render "@subselection" subselectionContext }}
+            </fieldset>
+          </div>
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Onderwerpen</legend>
+              {{render "@subselection" subselectionOnderwerpContext }}
+            </fieldset>
+          </div>
 
+          <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Zoek opnieuw</button>
+        </fieldset>
+      </form>
 
     </div>
 
@@ -161,7 +163,7 @@
     {{render "@resultlist" resultsContext }} {{render "@pagination" }}
 
   </div>
-</div>
+
 </div>
 
 {{ render "@disclaimer" }}

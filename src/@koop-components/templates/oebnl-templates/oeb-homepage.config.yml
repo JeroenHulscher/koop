@@ -55,7 +55,7 @@ context:
       options:
         - label: Alle documenten
           value: 10
-          selected: true
+          selected: selected
         - label: Parlementaire documenten
           value: 20
         - label: Officiële bekendmakingen
@@ -103,7 +103,7 @@ context:
         count_context: gepubliceerd
       - link: '#'
         text: Blad gemeenschappelijke regeling
-        count: 0
+        count: 102
         count_context: gepubliceerd
   buttonPar:
     anchor: true

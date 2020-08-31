@@ -4,7 +4,7 @@
     <div class="datepicker">
 
       <input type="date" {{#if required}}required{{/if}} value="2015-02-14" data-date="13-02-2015" class="datepicker__input" data-decorator="init-datepicker"
-        data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}", "range" : "true", "rangePosition": "from", "rangeRelation":"#input--2" }' id="input--1" placeholder="{{ fieldPlaceholder }}" />
+        data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}", "range" : "true", "rangePosition": "from", "rangeRelation":"#input--2" }' id="input--1" data-placeholder="{{ fieldPlaceholder }}" />
     </div>
   </div>
   <div>
@@ -12,7 +12,7 @@
     <div class="datepicker">
 
       <input type="date" {{#if required}}required{{/if}} value="2015-02-14" data-date="14-02-2015" class="datepicker__input" data-decorator="init-datepicker"
-        data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}", "range" : "true", "rangePosition": "to", "rangeRelation":"#input--1" }' id="input--2" placeholder="{{ fieldPlaceholder2 }}" />
+        data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}", "range" : "true", "rangePosition": "to", "rangeRelation":"#input--1" }' id="input--2" data-placeholder="{{ fieldPlaceholder2 }}" />
     </div>
   </div>
 
