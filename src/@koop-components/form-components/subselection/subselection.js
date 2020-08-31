@@ -161,7 +161,7 @@ function findObjectByKey(array, key, value) {
   formSubselection.prototype.initHideUnwantedResults = function () {
     var subselectionSummaryContainer = this.element.querySelector('.subselection__summary');
     this.resultItems = [].slice.call(subselectionSummaryContainer.querySelectorAll('.subselection__summaryitem'));
-    // console.log('this.resultItems', this.resultItems);
+
     this.config.labelMore = this.config.labelmore || 'Toon meer';
     this.config.labelLess = this.config.labelless || 'Toon minder';
     this.allvisible = false;
@@ -242,7 +242,6 @@ function findObjectByKey(array, key, value) {
   };
 
   formSubselection.prototype.removeSummaryItem = function (e) {
-    console.log('removeSummaryItem');
     var item = e.target.parentNode;
     var itemLinkedId = item.getAttribute('data-linkedid');
     var target = document.getElementById(itemLinkedId);
@@ -253,8 +252,6 @@ function findObjectByKey(array, key, value) {
     if (this.config.triggerSubmit) {
       var form = getClosest(item, 'form');
       var buttonSubmit = form.querySelector('[type="submit"]');
-      // console.log('form', form);
-      // console.log('form buttonSubmit', buttonSubmit);
       if (buttonSubmit){
         setTimeout(function(){
           buttonSubmit.click();
