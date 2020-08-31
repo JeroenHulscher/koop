@@ -1,6 +1,6 @@
 ---
-label: CUP - Browse 4
-status: prototype
+label: CUP - Browse (vervolg)
+status: ready
 context:
   header:
     file: logo.svg
