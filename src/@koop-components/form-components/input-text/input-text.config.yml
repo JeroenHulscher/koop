@@ -100,3 +100,7 @@ variants:
       fieldPlaceholder:
       prefix: true
       prefixLabel: https://www.overheid.nl/
+  - name: With remove
+    label: With remove
+    context:
+      remove: true
