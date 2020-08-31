@@ -18,6 +18,7 @@
   }
 
   &__trigger {
+    @extend .button;
     position: absolute;
     right: .5em;
     top: .5em;
