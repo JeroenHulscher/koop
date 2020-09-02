@@ -1,0 +1,33 @@
+.documentbanner {
+  @extend .container;
+  font-size: 1em;
+  position: relative;
+  padding-left: 2em;
+
+  @media (min-width: $breakpointDesktop) {
+    padding-left: 0;
+  }
+
+  &__logo {
+    padding-top: 0;
+    padding-left: 0;
+    flex: 0 0 22em;
+  }
+
+  &__content {
+
+    table,
+    .table,
+    .table__container {
+      border: 0;
+      outline: 0;
+    }
+    @media (min-width: $breakpointDesktop) {
+      padding-top: 2em;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+  }
+}
