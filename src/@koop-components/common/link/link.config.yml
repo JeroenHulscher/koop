@@ -39,5 +39,11 @@ variants:
       text: Ga naar het overzicht
       action: '#'
       class: cta
+  - name: Mail
+    label: mail
+    context:
+      text: Label
+      action: '#'
+      class: link link--forgotpw
 
 
