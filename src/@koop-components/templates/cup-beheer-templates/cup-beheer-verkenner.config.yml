@@ -36,6 +36,19 @@ context:
       - link: '#'
         text: Nieuw werk
         icon: icon-plus-shape.svg
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Titel
+      value: value
+      active: is-active
+    - label: Laatste wijziging
+      value: value
+    - label: Aanmaakdatum
+      value: value
   tableResults:
     label: false
     caption: false
@@ -54,6 +67,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -66,7 +85,13 @@ context:
           value: Overeenkomst tussen het Koninkrijk der Nederlanden en het Koninkrijk Saoedi-Arabië inzake luchtvervoer
         - column:
           type: Aantal expressies
-          value: 1
+          value: 2
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#2</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -80,6 +105,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -92,7 +123,13 @@ context:
           value: Overeenkomst inzake het behoud van het architectonische erfgoed van Europa
         - column:
           type: Aantal expressies
-          value: 1
+          value: 3
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#3</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -106,6 +143,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -119,6 +162,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -132,6 +181,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -145,6 +200,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -158,6 +219,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
       - item:
         - column:
           type: Werklabel
@@ -171,6 +238,12 @@ context:
         - column:
           type: Aantal expressies
           value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
   wordintitelInput:
     id: 543
     fieldLabelVisible: true

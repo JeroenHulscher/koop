@@ -36,6 +36,17 @@ context:
       - link: '#'
         text: Nieuw werk
         icon: icon-plus-shape.svg
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
   tableResults:
     label: false
     caption: false
