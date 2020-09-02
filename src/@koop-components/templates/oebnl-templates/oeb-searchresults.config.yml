@@ -1,0 +1,83 @@
+---
+label: OEB 2.0 - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          loggedIn: true
+          textLoggedIn: Mijn account
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+            - text: Inloggen
+              url: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum publicatie
+      value: value
+      active: is-active
+    - label: Datum document
+      value: value
+    - label: Relevantie
+      value: value
+  linkAbonneren:
+    text: Abonneren op deze zoekvraag
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Autorisatiebesluiten Basisregistratie Personen
+      titleHeader: h2
+      text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+      share: false
+      downloads:
+      - type: PDF
+        size: (12kb)
+      metadata:
+        - value: "Datum publicatie: 01-09-2020"
+        - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+        - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+      buttons:
+        - button: Bekijk bekendmaking
+          type: secondary
+  selectContext:
+    fieldLabel: Documentsoort
+    options:
+      - label: Alle documenten
+        value: 10
+        selected: selected
+      - label: Parlementaire documenten
+        value: 20
+      - label: Officiële bekendmakingen
+        value: 50
+  inputsubmitContext:
+    id: 5432
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Zoekterm of (dossier)nummer
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
