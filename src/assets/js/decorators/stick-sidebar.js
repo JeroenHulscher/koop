@@ -80,8 +80,16 @@
 
   onl.decorate({
     'add-mobile-foldability': function( el ) {
+      var parent;
       var newTop = '150';
-      var parentOffsets = el.getBoundingClientRect();
+      var parentOffsets;
+      var documentbanner = document.querySelector('.documentbanner');
+      if (documentbanner) {
+        parent = documentbanner;
+      } else {
+        parent = el;
+      }
+      parentOffsets = parent.getBoundingClientRect();
       if(parentOffsets.top != '0') {
         newTop = parentOffsets.top;
       }
