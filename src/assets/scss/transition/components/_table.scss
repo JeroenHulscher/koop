@@ -25,7 +25,10 @@ table,
     font-size: .9em;
 
     th, td {
-      padding: 0 1em 0 0;
+      padding: .5em;
+      @media ( min-width: $breakpointDesktop ) {
+        padding: 0 1em 0 0;
+      }
     }
     th {
       padding-bottom: 0;
