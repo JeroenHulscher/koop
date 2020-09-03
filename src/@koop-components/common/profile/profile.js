@@ -14,6 +14,15 @@
       element.setAttribute( 'aria-expanded', 'true' );
     }
   };
+  var close = function( element ) {
+    var toggledElement = document.getElementById( element.getAttribute( 'aria-controls' ) );
+    var isExpanded = element.getAttribute( 'aria-expanded' ) === 'true';
+
+    if ( isExpanded ) {
+      onl.ui.hide( toggledElement );
+      element.setAttribute( 'aria-expanded', 'false' );
+    }
+  };
 
   onl.decorate({
     'init-profile-toggle': function( element ) {
@@ -29,6 +38,14 @@
 
       togglerHolder.appendChild( toggler );
       toggle( toggler );
+
+      // close menu when clicked outside element;
+      document.addEventListener('click', function(event){
+        var isClickInside = element.contains(event.target);
+        if(!isClickInside) {
+          close( toggler );
+        }
+      });
     }
   });
 
