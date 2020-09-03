@@ -1,6 +1,6 @@
 <div class="sort {{ modifier }}">
   <div class="columns">
-    <div class="column">
+    <div class="column {{#if columns}}column-d-8{{/if}}">
       {{#if options}}
       Sorteer op:
       <ul class="sort__options">
@@ -13,7 +13,7 @@
       {{/if}}
     </div>
     {{#if columns}}
-      <div class="column d-align-right">
+      <div class="column column-d-4 d-align-right">
       {{#if buttonDownload}}
         <a href="#" class="icon icon--download">Download</a>
       {{/if}}
