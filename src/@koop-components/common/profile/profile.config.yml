@@ -1,6 +1,6 @@
 ---
 title: profile
-status: prototype
+status: ready
 default: Logged in
 context:
   id: 1
@@ -10,10 +10,23 @@ context:
   options:
     - text: Mijn abonnementen
       url: '#'
-    - text: Wachtwoord wijzigen
+    - text: Uitloggen
       url: '#'
 variants:
+  - name: Logged in (with icons)
+    status: ready
+    context:
+      options:
+      - text: Mijn abonnementen
+        url: '#'
+        class: link link--forgotpw
+      - text: Uitloggen
+        url: '#'
+        class: link link--logout
   - name: logged out
+    status: ready
     context:
       id: 2
       loggedIn: false
+      buttonLogin:
+        text: Inloggen
