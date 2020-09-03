@@ -417,6 +417,11 @@
       "label": "att - templates-reg-wachtwoordvernieuwd",
       "url": "http://localhost:3000/components/preview/templates-reg-wachtwoordvernieuwd",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoordvernieuwd.html"
+    },
+    {
+      "label": "Foutpagina",
+      "url": "http://localhost:3000/components/preview/templates-page-error",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-page-error.html"
     }
 
   ],
