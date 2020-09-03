@@ -171,6 +171,38 @@ $gutter--lg: 6em;
           display: none;
         }
       }
+
+      [data-decorator="init-fixedbottom-button"] {
+        padding-bottom: 3em !important;
+
+        @media ( min-width: $breakpointDesktop ) {
+          padding-bottom: 0 !important;
+        }
+      }
+      .fixedbottom-button__button {
+        position: fixed;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+
+        @media ( max-width: $breakpointDesktop ) {
+          // display: block !important;
+          // position: fixed !important;
+          // bottom: .5em !important;
+          left: 1em;
+          margin: 0;
+        }
+
+        @media ( min-width: $breakpointDesktop ) {
+          position: relative;
+          margin: 0 0 1em 0;
+          bottom: .5em !important;
+          width: auto;
+
+          &.js-is-stuck {
+            position: relative !important;
+          }
+        }
+      }
     }
 
     &--sidebar-right {
