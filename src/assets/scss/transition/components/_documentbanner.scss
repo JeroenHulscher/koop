@@ -1,33 +1,49 @@
+.row.row--page-opener ~ .documentbanner {
+  margin-top: -1em;
+}
 .documentbanner {
   @extend .container;
   font-size: 1em;
   position: relative;
   padding-left: 2em;
+  margin-bottom: 2em;
 
   @media (min-width: $breakpointDesktop) {
-    padding-left: 0;
+    padding: 1em 0;
+
+    margin-bottom: 2em;
+    border-bottom: 1px solid $lightGrey;
+    align-items: center;
   }
 
   &__logo {
-    padding-top: 0;
-    padding-left: 0;
-    flex: 0 0 22em;
+    padding: 0;
+    margin-bottom: 1em;
+    @media (min-width: $breakpointDesktop) {
+      flex: 0 0 21em;
+      margin-right: 2em;
+    }
   }
 
   &__content {
+    flex: 0 0 calc( 100% - 23em);
+    overflow-x: auto;
+    padding-top: 0;
 
     table,
     .table,
     .table__container {
       border: 0;
       outline: 0;
-    }
-    @media (min-width: $breakpointDesktop) {
-      padding-top: 2em;
+      margin: 0;
     }
 
     h1 {
       font-size: 1.4em;
+      margin: 0;
+      @media (min-width: $breakpointDesktop) {
+        margin-bottom: 1em;
+      }
     }
   }
 }
