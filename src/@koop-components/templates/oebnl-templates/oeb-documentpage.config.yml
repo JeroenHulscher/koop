@@ -32,6 +32,12 @@ context:
     title: "U bent hier:"
     breadcrumb:
     - text: Home
+      url: '#'
+    - text: Vandaag
+      url: '#'
+    - text: Spoedpublicatie
+      url: '#'
+    - text: Staatsblad 2020, 225609
   pageactions:
     items:
     - link: '#'
@@ -39,14 +45,14 @@ context:
       icon: icon-download.svg
     - link: '#'
       text: Informatie over publicatie
-      icon: icon-info.svg
+      icon: icon-info-blue.svg
     - link: '#'
       text: Delen
-      icon: icon-share.svg
+      icon: icon-share-blue.svg
     - link: '#'
       text: Printen
-      icon: icon-print.svg
+      icon: icon-print-blue.svg
   documentbanner:
     img:
-      src: /images/maintiendrai-grijs.png
+      src: ../../images/maintiendrai-grijs.png
     heading: Staatsblad van het Koninkrijk der Nederlanden
