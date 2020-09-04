@@ -1,5 +1,5 @@
 .row.row--page-opener ~ .documentbanner {
-  margin-top: -1em;
+  margin-top: -1.5em;
 }
 .documentbanner {
   @extend .container;
@@ -39,10 +39,9 @@
     }
 
     h1 {
-      font-size: 1.4em;
       margin: 0;
       @media (min-width: $breakpointDesktop) {
-        margin-bottom: 1em;
+        margin-bottom: .5em;
       }
     }
   }
