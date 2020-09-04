@@ -8,6 +8,17 @@
     border-right: 1px solid #f1f1f1;
   }
 
+  &__heading {
+    font-style: italic;
+    font-weight: normal;
+    font-size: em(18);
+    line-height: 1em;
+    margin-bottom: 1em;
+    @media (min-width: $breakpointDesktop) {
+      font-size: em(22);
+    }
+  }
+
   &__item {
     margin-bottom: .5em;
 
