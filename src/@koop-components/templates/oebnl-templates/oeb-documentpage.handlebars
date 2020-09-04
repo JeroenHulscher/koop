@@ -10,8 +10,12 @@
   <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
       <a href="#" class="icon--backlink">Terug naar zoekresultaten (9430)</a>
-      <h2>Inhoudsopgave</h2>
+
+      <h3 class="nav-sub__heading "><i>Publicatie</i></h3>
       {{ render "@treeview" treeview }}
+
+      <h3 class="nav-sub__heading">Informatie</h3>
+      {{render "@nav" navInformatie }}
     </div>
   </div>
   <div id="content" role="main" class="content content--publication">

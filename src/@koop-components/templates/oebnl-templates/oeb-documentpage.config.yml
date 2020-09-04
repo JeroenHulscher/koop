@@ -47,9 +47,6 @@ context:
       text: Authentieke versie (PDF)
       icon: icon-download.svg
     - link: '#'
-      text: Informatie over publicatie
-      icon: icon-info-blue.svg
-    - link: '#'
       text: Delen
       icon: icon-share-blue.svg
     - link: '#'
@@ -59,3 +56,6 @@ context:
     img:
       src: ../../images/maintiendrai-grijs.png
     heading: Staatsblad van het Koninkrijk der Nederlanden
+  navInformatie:
+    items:
+      - title: Informatie over publicatie
