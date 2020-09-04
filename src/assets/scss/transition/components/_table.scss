@@ -31,17 +31,19 @@ table,
       }
     }
     th {
-      padding-bottom: 0;
-    }
-    th {
+      padding-bottom: .5em;
+      font-weight: normal;
       color: $darkBlue;
-      font-weight: 700;
       line-height: 1.25;
     }
 
     th,
     td {
       border: none;
+    }
+
+    td {
+      font-weight: 700;
     }
   }
 }
