@@ -30,6 +30,10 @@ dl,
     }
   }
 
+  &--nomargin {
+    margin-bottom: .5em;
+  }
+
   &--horizontal {
     @media ( min-width: $breakpointDesktop ) {
       display: flex;
