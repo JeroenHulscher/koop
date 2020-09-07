@@ -47,7 +47,7 @@
 
   onl.decorate({
     'init-collapsible': function( element ) {
-      var showInitially = onl.dom.$('.collapsible--initially-visible', element ).length > 0;
+      var showInitially = element.classList.contains('collapsible--initially-visible');
 
       if ( showInitially === true ){
         collapsibles.show( element );
