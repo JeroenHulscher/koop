@@ -17,6 +17,13 @@ variants:
       h: h1
       centered: true
       headingcentered: true
+  - name: Text centered
+    label: Text centered
+    context:
+      h: h1
+      centered: true
+      headingcentered: true
+      contentcentered: true
   - name: Centered (semimedium)
     label: Centered (semimedium)
     context:

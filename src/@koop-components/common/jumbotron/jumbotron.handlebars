@@ -1,5 +1,5 @@
 <div class="jumbotron{{#if modifier}} jumbotron--{{ modifier }}{{/if}}">
-  <div class="jumbotron__content{{#if centered}} jumbotron__content--centered jumbotron__content--centered{{#if size}}-{{size}}{{/if}}{{/if}} {{#if contentcentered}}jumbotron__content--aligncenter{{/if}}">
+  <div class="jumbotron__content{{#if centered}} jumbotron__content--centered{{/if}}{{#if size}} jumbotron__content--centered-{{size}}{{/if}}{{#if contentcentered}} jumbotron__content--aligncenter{{/if}}">
     {{#if backlink}}
       <p class="jumbotron__backlink">
         <a href="{{backlink/href}}" class="icon--backlink">{{backlink/title}}</a>
