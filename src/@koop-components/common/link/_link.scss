@@ -166,7 +166,8 @@ div.link {
     }
     padding-left: 2em;
   }
-  &--forgotpw {
+  &--forgotpw,
+  &--mail {
     @extend .icon;
     @extend .icon--mail;
   }
