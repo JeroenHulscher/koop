@@ -1,7 +1,7 @@
 {{ render "@header" header merge=true }}
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" breadcrumb }}
+    {{ render "@breadcrumb" breadcrumb merge=true }}
   </div>
 </div>
 
@@ -15,7 +15,6 @@
           <a href="#" class="icon icon--refresh">Herstel alle filters</a>
         </p>
       </div>
-
 
       <div class="form__row form__row--large">
         <h3 class="sidebar__subheader">Geselecteerde filters (7)</h3>
@@ -80,21 +79,48 @@
 
         <div class="form__row form__row--large">
           <fieldset>
-            <legend>Verfijn bekendmakingen</legend>
+            <legend>Zoekterm(en)</legend>
             <div class="form__row">
                {{render "@input-inputsubmit" inputsubmitContext }}
             </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Datum van publicatie</legend>
+            {{ render "@date-selection" dateselection merge=true }}
+            <a href="#" class="reset">
+              <small>Herstellen</small>
+            </a>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Documentsoort en gedetailleerde gegevens</legend>
             <div class="form__row">
-              {{ render "@select-custom--with-label" selectContext merge=true }}
+              {{ render "@checkbox-selectall" checkboxDocumentsoort }}
             </div>
           </fieldset>
         </div>
-        {{!-- <div class="form__row form__row--large">
+        <div class="form__row form__row--large">
           <fieldset>
-            <legend>Locatie</legend>
-
+            <legend>Aanvullende zoekcriteria</legend>
+            <div class="form__row">
+              <p class="form__sublegend">Publicerende organisatie(s)</p>
+              {{ render "@input-checkbox" checkboxPub }}
+            </div>
+            <div class="form__row">
+              <p class="form__sublegend">Onderwerp(en)</p>
+              {{render "@subselection" subselectionWatContext }}
+            </div>
+            <div class="form__row">
+              <p class="form__sublegend">Vergaderjaar</p>
+              {{render "@subselection" subselectionVerContext }}
+            </div>
           </fieldset>
-        </div> --}}
+        </div>
+
 
         <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
           data-config='{"position":"bottom"}'>Zoek opnieuw</button>
@@ -106,13 +132,13 @@
 
     {{ render "@sort" sortContext }}
 
+    <div class="row align-right">
+      {{render "@link--mail" linkAbonneren merge=true }}
+    </div>
+
     <h1>Zoekresultaten
       <span class="h1__sub">1-10 van de 7396 resultaten</span>
     </h1>
-
-    <div class="row">
-      {{render "@link--wachtwoord-vergeten" linkAbonneren merge=true }}
-    </div>
 
     {{render "@resultlist" resultsContext }}
 

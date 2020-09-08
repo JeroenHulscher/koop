@@ -1,0 +1,75 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container row" id="content" role="main">
+  <div class="row row--spacer">
+
+    {{ render "@list--tabs" tabs merge=true }}
+
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+            <div class="form__row">
+              {{ render "@input-text--medium" inputZoekwoord merge=true }}
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--medium columns columns--dominant">
+          <div class="column">
+            <fieldset>
+              <legend>Datum van publicatie</legend>
+              {{ render "@date-selection" dateselection merge=true }}
+              <a href="#" class="reset">
+                <small>Herstellen</small>
+              </a>
+            </fieldset>
+            <fieldset>
+              <legend>Documentsoort en gedetailleerde gegevens</legend>
+              <div class="form__row">
+                {{ render "@checkbox-selectall" checkboxDocumentsoort }}
+              </div>
+            </fieldset>
+          </div>
+          <div class="column">
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Aanvullende zoekcriteria</legend>
+                <div class="form__row">
+                  <p class="form__sublegend">Publicerende organisatie(s)</p>
+                  {{ render "@input-checkbox" checkboxPub }}
+                </div>
+                <div class="form__row">
+                  <p class="form__sublegend">Onderwerp(en)</p>
+                  {{render "@subselection" subselectionWatContext }}
+                </div>
+                <div class="form__row">
+                  <p class="form__sublegend">Vergaderjaar</p>
+                  {{render "@subselection" subselectionVerContext }}
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+          <div class="form__rowsubmit__item">
+            <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+          </div>
+        </div>
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
