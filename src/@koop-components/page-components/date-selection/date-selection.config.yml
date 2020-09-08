@@ -29,7 +29,7 @@ context:
     id: 231
     haslabel: true
     label: Beschikbaar op
-    labelmodifier: secondary
+    labelmodifier: accent
     fieldPlaceholder: DD-MM-JJJJ
     value: ''
     datavalue: ''
@@ -38,7 +38,7 @@ context:
     id: 234
     haslabel: true
     label: Vanaf
-    labelmodifier: secondary
+    labelmodifier: accent
     fieldPlaceholder: DD-MM-JJJJ
     value: ''
     datavalue: ''
@@ -47,7 +47,7 @@ context:
     id: 345
     haslabel: true
     label: Tot en met
-    labelmodifier: secondary
+    labelmodifier: accent
     fieldPlaceholder: DD-MM-JJJJ
     value: ''
     datavalue: ''
