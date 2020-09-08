@@ -1,3 +1,16 @@
 .sort {
   margin: 0 0 2em 0;
+
+  .column ~ .column {
+    margin-top: 1em;
+
+    @media (min-width: $breakpointDesktop) {
+      margin: 0;
+    }
+  }
+
+  & ~ .align-right {
+    margin-top: -1em;
+    margin-bottom: 1em;
+  }
 }
