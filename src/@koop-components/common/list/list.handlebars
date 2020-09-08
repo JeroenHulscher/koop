@@ -1,4 +1,4 @@
-<div {{#if maxItems }}data-decorator="showmoreless" data-config='{"amount": "{{maxItems}}" }'{{/if}}>
+{{#if maxItems }}<div data-decorator="showmoreless" data-config='{"amount": "{{maxItems}}" }'>{{/if}}
 {{#if heading }}
   <{{#if headingType }}{{headingType}}{{else}}h4{{/if}} class="facet--heading">{{ heading }}</{{#if headingType }}{{headingType}}{{else}}h4{{/if}}>
 {{/if }}
@@ -50,4 +50,6 @@
 {{else}}
   </ul>
 {{/if }}
+{{#if maxItems }}
 </div>
+{{/if}}

@@ -103,6 +103,99 @@ ol {
   }
 }
 
+.list--tabs {
+  position: relative;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin-right: .5em;
+    a {
+      display: inline-block;
+      background: white;
+      border: 1px solid $darkBlue;
+      text-decoration: none;
+      font-weight: bold;
+      padding: .5em;
+
+      &.is-selected {
+        background: $darkBlue;
+        color: white;
+      }
+    }
+  }
+
+  @media ( min-width: $breakpointDesktop ) {
+    padding-left: 1.5em;
+
+
+    & ~ .jumbotron {
+      margin-top: -2em;
+    }
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: $darkBlue;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    li {
+      display: inline-block;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border: 2px solid $darkBlue;
+      background: white;
+      border-bottom: 0;
+      margin-right: .325em;
+
+      a {
+        border: 0;
+        margin-top: 2px;
+        text-decoration: none;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom: 2px solid $darkBlue;
+        padding: .75em calc(1.5em + 2px);
+        font-weight: bold;
+        display: inline-block;
+
+        &:hover {
+          color: $darkBlue;
+          background-color: $lightGrey;
+        }
+
+        &[aria-selected="true"],
+        &.is-selected {
+          border: 0;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid #154273;
+          padding: calc(.75em - 2px) 1.5em .75em;
+          margin-right: 2px;
+          margin-left: 2px;
+          margin-top: 2px;
+          background: $darkBlue;
+          color: white;
+          bottom: 0;
+
+          &:hover {
+            background-color: $darkBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .list--law {
   font-weight: 700;
 
