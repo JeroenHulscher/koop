@@ -56,6 +56,8 @@
         this.allCheckboxes[i].fireEvent("onchange");
       }
     }
+
+    event.preventDefault();
   };
 
   filterResults.prototype.doFilter = function() {
