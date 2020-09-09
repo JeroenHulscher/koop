@@ -235,7 +235,7 @@
   };
 
   formConditionals.prototype.showResponds = function() {
-    // this.respondsContainer.removeAttribute('hidden');
+    this.respondsContainer.removeAttribute('hidden');
     this.respondsContainer.removeAttribute('aria-hidden');
   };
 
