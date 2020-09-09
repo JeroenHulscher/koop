@@ -81,7 +81,7 @@
   onl.decorate({
     'add-mobile-foldability': function( el ) {
 
-      setTimeout(function(el){
+
         var parent;
         var newTop = '150';
         var parentOffsets;
@@ -129,6 +129,22 @@
         // if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
         //   toggle( button );
         // }
+      setTimeout(function (el) {
+        var parent;
+        var newTop = '150';
+        var parentOffsets;
+        var documentbanner = document.querySelector('.documentbanner');
+        if (documentbanner) {
+          parent = documentbanner;
+        } else {
+          parent = el;
+        }
+        parentOffsets = parent.getBoundingClientRect();
+        if (parentOffsets.top != '0') {
+          newTop = parentOffsets.top;
+        }
+        var trigger = document.querySelector('[data-handler="toggle-sidebar"]');
+        trigger.style.top = Math.round(newTop) + 40 + 'px';
       }, 1000, el);
     },
     'stick-sidebar': function( el ) {
