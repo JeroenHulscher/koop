@@ -7,3 +7,16 @@ context:
       active: is-active
     - label: Titel
       href: '#'
+variants:
+  - name: with amount
+    label: met Aantal resultaten
+    context:
+      columns: true
+      amountPerPageFilter: true
+      buttonDownload: false
+  - name: with Download
+    label: met button Download
+    context:
+      columns: true
+      buttonDownload: true
+
