@@ -8,7 +8,7 @@ describe('Select all', function () {
       });
   });
 
-  fit('selects all checkboxes when selecting the master (select-all) checkbox', function () {
+  it('selects all checkboxes when selecting the master (select-all) checkbox', function () {
     var masterCheckbox;
 
     browser.get('http://localhost:3000/components/preview/checkbox-selectall');
@@ -23,7 +23,7 @@ describe('Select all', function () {
     });
   });
 
-  fit('de-selects all checkboxes when selecting the master (select-all) checkbox again', function () {
+  it('de-selects all checkboxes when selecting the master (select-all) checkbox again', function () {
     var masterCheckbox;
 
     masterCheckbox = element(by.css('.js-checkbox-master ~ .checkbox__label'));
@@ -35,7 +35,7 @@ describe('Select all', function () {
     });
   });
 
-  fit('de-selects the mastercheckbox when de-selecting a checkbox', function () {
+  it('de-selects the mastercheckbox when de-selecting a checkbox', function () {
     var masterCheckboxLabel;
     var masterCheckbox;
 
@@ -56,7 +56,7 @@ describe('Select all', function () {
 
   });
 
-  fit('selects the mastercheckbox when all checkboxes are selected', function () {
+  it('selects the mastercheckbox when all checkboxes are selected', function () {
     var masterCheckbox;
 
     masterCheckbox = element(by.css('.js-checkbox-master'));
