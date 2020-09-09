@@ -21,7 +21,7 @@
       <div class="header__meta">
         {{#each metaLinks }}
           {{#if profile}}
-            {{ render "@profile--logged-in" profileContext }}
+            {{ render "@profile" profileContext }}
           {{else}}
             {{#if nonlink}}
               <span class="{{class}}">{{ text }}</span>

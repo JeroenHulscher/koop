@@ -1,14 +1,16 @@
-<div class="documentbanner">
+<header class="documentbanner">
 
   <div class="documentbanner__logo">
-    <img src="/images/logo.svg" width="200" />
+    {{#if img}}
+      <img src="{{img/src}}" {{#if img/width}}width="{{img/width}}"{{/if}} />
+    {{else}}
+      <img src="/images/logo.svg" width="200" />
+    {{/if}}
   </div>
 
   <div class="documentbanner__content">
 
-    <h1>Wijziging van de Wet op het primair onderwijs en de Wet op de expertisecentra in verband met het regelen van de mogelijkheid een deel van het onderwijs te geven in de Engelse, Duitse of Franse taal.</h1>
-
-    <h2>Staatsblad van het Koninkrijk der Nederlanden</h2>
+    {{#if heading}}<h1>{{heading}}</h1>{{/if}}
 
     <table class="table--dataintro">
       <thead>
@@ -17,24 +19,20 @@
               <th>{{ value2 }}</th>
               <th>{{ value3 }}</th>
               <th>{{ value4 }}</th>
-              <th>{{ value5 }}</th>
           </tr>
       </thead>
       <tbody>
           <tr>
               <td data-before="{{ value1 }}">
-                  <time datetime="25-7-2016 14:17:15" itemprop="datePublished">25-07-2016 14:17</time>
+                  <time datetime="25-7-2016 14:17:15" itemprop="datePublished" class="u-nobreak">25-07-2016 14:17</time>
               </td>
               <td data-before="{{ value2 }}">Ministerie van Buitenlandse Zaken</td>
               <td data-before="{{ value3 }}">Blad gemeenschappelijke regeling 2016, 25018</td>
               <td data-before="{{ value4 }}">Verdrag</td>
-              <td data-before="{{ value5 }}">
-                  <time datetime="1994-12-07" itemprop="Datum totstandkoming">07-12-1994</time>
-              </td>
           </tr>
       </tbody>
     </table>
 
   </div>
 
-</div>
+</header>

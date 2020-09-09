@@ -209,3 +209,9 @@ variants:
       - content: <h3 class="list__heading"><a href="#">PUP Algemeen</a></h3><p>Een korte beschrijving van het project</p>
       - content: <h3 class="list__heading"><a href="#">PUP EOB</a></h3><p>Een korte beschrijving van het project</p>
       - content: <h3 class="list__heading"><a href="#">RPS</a></h3><p>Een korte beschrijving van het project</p>
+  - name: Tabs
+    context:
+      modifier: list--tabs
+      items:
+        - content: <a href="#" class="is-selected">Tab 1</a>
+        - content: <a href="#">Tab 2</a>

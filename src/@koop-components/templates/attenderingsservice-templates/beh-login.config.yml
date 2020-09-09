@@ -45,6 +45,8 @@ context:
       hastooltip: true
       tooltipContext:
         id: 12312
+    linkWw:
+      text: Wachtwoord vergeten
     buttonSubmit:
       id: 123
       text: Inloggen

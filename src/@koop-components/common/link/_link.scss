@@ -166,13 +166,18 @@ div.link {
     }
     padding-left: 2em;
   }
-  &--forgotpw {
+  &--forgotpw,
+  &--mail {
     @extend .icon;
     @extend .icon--mail;
   }
   &--profile {
     @extend .icon;
     @extend .icon--profile;
+  }
+  &--logout {
+    @extend .icon;
+    @extend .icon--logout;
   }
 }
 

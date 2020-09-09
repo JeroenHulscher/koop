@@ -7,29 +7,9 @@
   </div>
 </div>
 
-<div class="container columns columns--sidebar-left">
-
-  <div id="content" role="main">
-
-    {{ render "@pageactions" pageactions }}
-
-    {{ render "@sort" sortContext }}
-
-    <h1>Zoekresultaten
-      <span class="h1__sub">1-10 van de 7587 resultaten</span>
-    </h1>
-
-    {{ render "@table" tableResults }}
-
-    <div class="align-right">
-      {{ render "@pagination" }}
-    </div>
-
-  </div>
-
-  <div role="complementary">
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
     <div data-decorator="init-fixedbottom-button">
-
       <h2 class="sidebar__header">Zoekfilter</h2>
       <div class="row">
         <p>
@@ -92,7 +72,22 @@
         <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
           data-config='{"position":"bottom"}'>Zoek opnieuw</button>
       </form>
-
     </div>
+  </div>
+
+  <div id="content" role="main">
+
+    {{ render "@pageactions" pageactions }}
+
+    <h1>Zoekresultaten
+      <span class="h1__sub">1-10 van de 7587 resultaten</span>
+    </h1>
+
+    {{ render "@table" tableResults }}
+
+    <div class="align-right">
+      {{ render "@pagination" }}
+    </div>
+
   </div>
 </div>

@@ -28,16 +28,28 @@ variants:
       action: '#'
       class: icon--backlink
   - name: Profiel
-    label: profiel
+    label: Profiel
     context:
       text: Ik heb nog geen profiel
       action: '#'
       class: link link--profile
   - name: CTA
-    label: cta
+    label: Cta
     context:
       text: Ga naar het overzicht
       action: '#'
       class: cta
+  - name: Mail
+    label: Mail
+    context:
+      text: Label
+      action: '#'
+      class: link link--forgotpw
+  - name: Logout
+    label: Logout
+    context:
+      text: Label
+      action: '#'
+      class: link link--logout
 
 

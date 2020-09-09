@@ -4,7 +4,7 @@
   text-align: right;
   background: $lightGrey;
   margin: 0 0 40px;
-  padding: 8px;
+  padding: .5em 1em;
   float: none;
 
   li {
@@ -67,6 +67,14 @@
         @media ( min-width: $breakpointDesktop ) {
           height: 18px;
           margin-top: -8px;
+        }
+      }
+      [src$="icon-mail.svg"] {
+        height: 14px;
+        margin-top: -5px;
+        @media ( min-width: $breakpointDesktop ) {
+          height: 16px;
+          margin-top: -7px;
         }
       }
     }

@@ -1,0 +1,158 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+
+      <h2 class="sidebar__header">Zoekfilter</h2>
+      <div class="row">
+        <p>
+          <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+        </p>
+      </div>
+
+      <div class="form__row form__row--large">
+        <h3 class="sidebar__subheader">Geselecteerde filters (7)</h3>
+        <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+          <ul class="list list--unstyled">
+            <li>
+              <div class="form__selectedfilter">Waarde 1
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 2
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 3
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 4
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 5
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 6
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="form__selectedfilter">Waarde 7
+                <a href="{{url}}" class="form__selectedfilter__remove">
+                  <span class="visually-hidden">verwijder</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="visually-hidden">Filters</h2>
+
+      <form id="formid">
+
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Zoekterm(en)</legend>
+            <div class="form__row">
+               {{render "@input-inputsubmit" inputsubmitContext }}
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Datum van publicatie</legend>
+            {{ render "@date-selection" dateselection merge=true }}
+            <a href="#" class="reset">
+              <small>Herstellen</small>
+            </a>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Documentsoort</legend>
+            <div class="form__row">
+              {{ render "@checkbox-selectall" checkboxDocumentsoort }}
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Aanvullende zoekcriteria</legend>
+            <div class="form__row">
+              <p class="form__sublegend">Type organisatie(s)</p>
+              {{render "@subselection--with-catagories-and-select-all" subselectionGemContext merge=true }}
+            </div>
+            <div class="form__row">
+              <p class="form__sublegend">Publicerende organisatie(s)</p>
+              {{render "@subselection--with-catagories-and-select-all" subselectionPubContext merge=true }}
+            </div>
+            <div class="form__row">
+              <p class="form__sublegend">Onderwerp(en)</p>
+              {{render "@subselection" subselectionWatContext }}
+            </div>
+          </fieldset>
+        </div>
+
+        {{!-- <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Locatie</legend>
+
+          </fieldset>
+        </div> --}}
+
+        <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
+          data-config='{"position":"bottom"}'>Zoek opnieuw</button>
+      </form>
+
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    {{ render "@sort" sortContext }}
+
+    <h1>Zoekresultaten
+      <span class="h1__sub">1-10 van de 7396 resultaten</span>
+    </h1>
+
+    <div class="row">
+      {{render "@link--mail" linkAbonneren merge=true }}
+    </div>
+
+    {{render "@resultlist" resultsContext }}
+
+    {{render "@pagination" }}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

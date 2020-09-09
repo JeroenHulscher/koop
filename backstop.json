@@ -422,6 +422,36 @@
       "label": "Foutpagina",
       "url": "http://localhost:3000/components/preview/templates-page-error",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-page-error.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-documentpage",
+      "url": "http://localhost:3000/components/preview/templates-oeb-documentpage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-documentpage.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-homepage",
+      "url": "http://localhost:3000/components/preview/templates-oeb-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-homepage.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-resultaten-ob",
+      "url": "http://localhost:3000/components/preview/templates-oeb-resultaten-ob",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-resultaten-ob.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-resultaten-pd",
+      "url": "http://localhost:3000/components/preview/templates-oeb-resultaten-pd",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-resultaten-pd.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-zoek-bekendmakingen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-zoek-bekendmakingen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-zoek-bekendmakingen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-zoek-documenten",
+      "url": "http://localhost:3000/components/preview/templates-oeb-zoek-documenten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-zoek-documenten.html"
     }
 
   ],

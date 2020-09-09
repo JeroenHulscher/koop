@@ -2,8 +2,8 @@
 
   &__list {
     border-top: 1px solid $mediumGrey;
-    a {
 
+    a {
       font-weight: bold;
       border-bottom: 1px solid $mediumGrey;
       background: {
@@ -25,7 +25,22 @@
         text-decoration: none;
       }
     }
+  }
 
+  &__item {
+    position: relative;
+
+    &--alert {
+      &:after {
+        content: "";
+        position: absolute;
+        right: 1.5em;
+        top: calc(50% - .75em);
+        width: 1.5em;
+        height: 1.5em;
+        background-image: $iconAlertBlue;
+      }
+    }
   }
 
   &__count {

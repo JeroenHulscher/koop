@@ -21,13 +21,12 @@ context:
     metaLinks:
       - profile: true
         profileContext:
-          loggedIn: true
-          textLoggedIn: Mijn account
-          options:
-            - text: Mijn abonnementen
-              url: '#'
-            - text: Inloggen
-              url: '#'
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
@@ -77,6 +76,7 @@ context:
         text: Spoedpublicaties
         count: 25
         count_context: gepubliceerd
+        state: alert
       - link: '#'
         text: Tractatenblad
         count: 3

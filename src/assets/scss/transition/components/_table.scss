@@ -20,6 +20,32 @@ table,
   &.table__data-overview {
     border: 1px solid $lighterGrey;
   }
+
+  &.table--dataintro {
+    font-size: .9em;
+
+    th, td {
+      padding: .5em;
+      @media ( min-width: $breakpointDesktop ) {
+        padding: 0 1em 0 0;
+      }
+    }
+    th {
+      padding-bottom: .5em;
+      font-weight: normal;
+      color: $darkBlue;
+      line-height: 1.25;
+    }
+
+    th,
+    td {
+      border: none;
+    }
+
+    td {
+      font-weight: 700;
+    }
+  }
 }
 
 

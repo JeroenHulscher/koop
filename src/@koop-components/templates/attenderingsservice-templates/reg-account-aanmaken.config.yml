@@ -26,6 +26,8 @@ context:
     text: Er is al een actief account op dit e-mailadres.
   preheader:
     value: E-mailservice Berichten over uw buurt
+  linkWw:
+    text: Wachtwoord vergeten
   buttonSubmit:
       id: 123
       text: Registreren

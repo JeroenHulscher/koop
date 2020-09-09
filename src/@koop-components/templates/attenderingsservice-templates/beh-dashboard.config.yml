@@ -13,9 +13,18 @@ context:
         url: '#'
       - text: Berichten over uw buurt
     metaLinks:
-      - url: "#"
-        text: Profiel
-        class: button button--profile
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: G. Bruikersnaam
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
   jumbotronContext:
     heading: Berichten over uw buurt attenderingservice
     subheading: Beheer uw abonnementen
