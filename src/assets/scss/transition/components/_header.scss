@@ -5,10 +5,24 @@
     z-index: 1;
 
     .header__meta {
-      > a {
-        margin-right: 1em;
+      > .button {
+        margin: .5em 1em .5em 0;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
         &:last-child {
-          margin: 0;
+          margin-right: 0;
+        }
+      }
+      > div {
+        margin: .4em 1em .4em 0;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        &:last-child {
+          margin-right: 0;
         }
       }
       @media ( min-width: $breakpointDesktop ) {
