@@ -69,6 +69,14 @@
           margin-top: -8px;
         }
       }
+      [src$="icon-mail.svg"] {
+        height: 14px;
+        margin-top: -5px;
+        @media ( min-width: $breakpointDesktop ) {
+          height: 16px;
+          margin-top: -7px;
+        }
+      }
     }
 }
 
