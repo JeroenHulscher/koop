@@ -55,7 +55,7 @@
 @import '../../@koop-components/common/toolbar/toolbar';
 @import '../../@koop-components/common/buttonswitch/buttonswitch';
 @import '../../@koop-components/common/buttonbar/buttonbar';
-@import '../../@koop-components/common/inline-icon/inline-icon';
+@import '../../@koop-components/common/_inline-icon/inline-icon';
 @import '../../@koop-components/common/topbar/topbar';
 @import '../../@koop-components/common/skiplinks/skiplinks';
 
@@ -68,13 +68,13 @@
 @import '../../@koop-components/form-components/input-file/input-file';
 @import '../../@koop-components/form-components/input-autocomplete/input-autocomplete';
 @import '../../@koop-components/form-components/datepicker/datepicker';
-@import '../../@koop-components/form-components/multi-select/multi-select';
-@import '../../@koop-components/form-components/question-explanation/question-explanation';
+@import '../../@koop-components/form-components/_multi-select/multi-select';
+@import '../../@koop-components/form-components/_question-explanation/question-explanation';
 @import '../../@koop-components/form-components/tooltip/tooltip';
 @import '../../@koop-components/form-components/remove-element/remove-element';
 @import '../../@koop-components/form-components/subselection/subselection';
 
-@import '../../@koop-components/page-components/document-search/document-search';
+@import '../../@koop-components/page-components/_document-search/document-search';
 @import '../../@koop-components/page-components/header/header';
 @import '../../@koop-components/page-components/footer/footer';
 @import '../../@koop-components/page-components/breadcrumb/breadcrumb';
@@ -85,7 +85,7 @@
 @import '../../@koop-components/page-components/row/row';
 @import '../../@koop-components/page-components/az/az';
 @import '../../@koop-components/page-components/search/search';
-@import '../../@koop-components/page-components/pagesearch/pagesearch';
+@import '../../@koop-components/page-components/_pagesearch/pagesearch';
 @import '../../@koop-components/page-components/disclaimer/disclaimer';
 
 
