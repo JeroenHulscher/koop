@@ -1,5 +1,5 @@
 title: Button
-status: prototype
+status: ready
 default: Default
 context:
   text: Verzenden
