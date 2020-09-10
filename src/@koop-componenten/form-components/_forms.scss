@@ -149,6 +149,27 @@ fieldset {
       }
     }
 
+    // needed for Firefox and Safari; positions absolute elements wrongly when there's a legend involved.
+    // FireFox
+    @-moz-document url-prefix() {
+      fieldset legend ~ a.reset,
+      fieldset legend ~ div ~ a.reset,
+      fieldset legend ~ div ~ div ~ a.reset {
+        top: -2.4em;
+      }
+    }
+
+    // Safari
+    @media not all and (min-resolution:.001dpcm) {
+      @supports (-webkit-appearance:none) {
+        fieldset legend ~ a.reset,
+        fieldset legend ~ div ~ a.reset,
+        fieldset legend ~ div ~ div ~ a.reset {
+          top: -2.4em;
+        }
+      }
+    }
+
     &--slim {
       margin-bottom: .5em;
     }
