@@ -29,14 +29,14 @@
 
   filterResults.prototype.addEventListeners = function() {
     if (this.btnSelectAll) {
-      this.btnSelectAll.addEventListener('click', function() { this.selectAll(); }.bind(this), false);
+      this.btnSelectAll.addEventListener('click', function() { this.selectAll(event); return false; }.bind(this), false);
     }
     if (this.input) {
       this.input.addEventListener('keyup', function() { this.doFilter(); }.bind(this), false);
     }
   };
 
-  filterResults.prototype.selectAll = function() {
+  filterResults.prototype.selectAll = function(event) {
     var i;
 
     for (i = 0; i < this.allCheckboxes.length; i++) {
@@ -57,7 +57,12 @@
       }
     }
 
-    event.preventDefault();
+    // IE 10 triggers a form-submit, therefor we have to use this statement.
+    if (navigator.appVersion.indexOf("MSIE 10") !== -1) {
+      event.returnValue = false;
+    } else {
+      event.preventDefault();
+    }
   };
 
   filterResults.prototype.doFilter = function() {
