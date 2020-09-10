@@ -33,7 +33,7 @@ variants:
       id: 1
       type: span
       linkText: Kies 'iets'
-      linkTextActive: Pas opties aan
+      linkTextActive: Wijzig selectie
       modalTitle: Selecteer ministeries
       fieldLabel: fieldLabel
       fieldInstruction:
@@ -61,7 +61,7 @@ variants:
       id: 1
       type: div
       linkText: Kies 'iets'
-      linkTextActive: Pas opties aan
+      linkTextActive: Wijzig selectie
       modalTitle: Selecteer ministeries
       fieldLabel: fieldLabel
       fieldInstruction:
@@ -283,7 +283,7 @@ variants:
       id: 1
       type: span
       linkText: Kies 'iets anders'
-      linkTextActive: Pas opties aan
+      linkTextActive: Wijzig selectie
       modalTitle: Selecteer uit deze themas
       fieldLabel: fieldLabel
       fieldInstruction:
@@ -323,7 +323,7 @@ variants:
   - name: With Catagories
     context:
       linkText: Kies 'Publicerende organisatie(s)'
-      linkTextActive: Pas opties aan
+      linkTextActive: Wijzig selectie
       modalTitle: Publicerende organisatie(s)
       label: Filter op zoekwoord of zinsdeel
       inputPlaceholder: 'Zoekwoord of zinsdeel'
@@ -406,7 +406,7 @@ variants:
   - name: With Catagories and select all
     context:
       linkText: Kies 'Publicerende organisatie(s)'
-      linkTextActive: Pas opties aan
+      linkTextActive: Wijzig selectie
       modalTitle: Publicerende organisatie(s)
       label: Zoek publicerende organisatie(s)
       inputPlaceholder: 'Zoekwoord'
