@@ -35,7 +35,7 @@ function findObjectByKey(array, key, value) {
       // trigger a form submit after removing an summary item?
       this.config.triggerSubmit = this.config.triggerSubmit || false;
       // label of the trigger, when there are summary items
-      this.config.triggerOnChangeText = this.config.triggerOnChangeText || 'Aanpassen';
+      this.config.triggerOnChangeText = this.config.triggerOnChangeText || 'Wijzig selectie';
 
     if (onl.dom.$('.selection_popup', this.element)[0]) {
       this.triggerClassDefault = 'icon--';
