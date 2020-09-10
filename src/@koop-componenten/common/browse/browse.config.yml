@@ -24,6 +24,7 @@ context:
       count_context: gepubliceerd
 variants:
   - name: icons
+    label: met Iconen
     context:
       title: ''
       intro: ''

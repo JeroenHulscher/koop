@@ -5,7 +5,7 @@ context:
     text: Uw account
 variants:
   - name: With devider
-    label: With devider
+    label: met Devider
     context:
       header:
         tag: h2
