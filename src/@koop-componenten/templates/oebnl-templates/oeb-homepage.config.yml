@@ -12,6 +12,9 @@ context:
         text: Uitgebreid zoeken
       - url: '#'
         text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:

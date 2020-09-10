@@ -12,6 +12,9 @@ context:
         text: Uitgebreid zoeken
       - url: '#'
         text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
@@ -21,22 +24,23 @@ context:
     metaLinks:
       - profile: true
         profileContext:
+          id: 12
           loggedIn: true
-          textLoggedIn: Mijn account
+          textLoggedIn: G. Bruikersnaam
           options:
             - text: Mijn abonnementen
               url: '#'
-              class: link--mail
-            - text: Inloggen
+              class: link link--forgotpw
+            - text: Uitloggen
               url: '#'
-              class: link--logout
+              class: link link--logout
   breadcrumb:
     breadcrumb:
       - text: Home
         url: '#'
       - text: Uitgebreid zoeken
         url: '#'
-      - text: Officiële bekendmakingen
+      - text: Parlementaire documenten
         url: '#'
       - text: Zoekresultaat
   sortContext:
@@ -75,7 +79,7 @@ context:
     id: 5432
     label: Verfijn uw zoekopdracht
     showLabel: false
-    placeholder: Zoekterm
+    placeholder: Zoekterm of (dossier)nummer
     button: Zoek
     modifierComponent: input-inputsubmit--s
   checkboxDocumentsoort:

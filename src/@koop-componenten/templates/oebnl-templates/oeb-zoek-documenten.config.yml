@@ -5,6 +5,17 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
     metaLinks:
       - profile: true
         profileContext:

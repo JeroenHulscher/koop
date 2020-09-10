@@ -12,6 +12,9 @@ context:
         text: Uitgebreid zoeken
       - url: '#'
         text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
@@ -49,9 +52,12 @@ context:
     - link: '#'
       text: Delen
       icon: icon-share-blue.svg
+      modal: true
+      modalId: 512
     - link: '#'
       text: Printen
       icon: icon-print-blue.svg
+      actionPrint: true
   documentbanner:
     img:
       src: ../../images/maintiendrai-grijs.png
@@ -59,3 +65,10 @@ context:
   navInformatie:
     items:
       - title: Informatie over publicatie
+  modalDelen:
+    modalId: 512
+    initClosed: true
+    openButton: false
+    closeButton: Toevoegen
+    copydata:
+      url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
