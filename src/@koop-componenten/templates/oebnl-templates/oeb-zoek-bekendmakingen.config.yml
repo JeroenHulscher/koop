@@ -51,7 +51,14 @@ context:
       modifier: input-text--searchmedium
     dateselection:
       dateselectionDatum:
-        label: Periode
+        label: Datum
+        value: '2020-09-11'
+        datavalue: '11-09-2020'
+        configDateFormat: 'dd-mm-yy'
+      dateselectionDatumEnd:
+        value: '2020-09-11'
+        datavalue: '11-09-2020'
+        configDateFormat: 'dd-mm-yy'
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
