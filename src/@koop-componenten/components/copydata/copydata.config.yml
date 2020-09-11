@@ -1,4 +1,5 @@
 name: copydata
+label: Kopieer link
 status: ready
 context:
   triggerLabel: Kopieer link
