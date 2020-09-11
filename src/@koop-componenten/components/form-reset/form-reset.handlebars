@@ -7,7 +7,7 @@
 </p>
 <form data-decorator="init-formreset">
   <fieldset>
-    <legend>Voorbeeld formulier</legend>
+    <legend>Reset geheel formulier</legend>
     <div class="form__row">
       {{render "@input-radio" }}
     </div>
@@ -15,8 +15,30 @@
       {{render "@input-checkbox" }}
     </div>
     <div class="form__row">
+      {{render "@select-custom" }}
+    </div>
+    <div class="form__row">
       {{render "@input-text" inputtext merge=true }}
     </div>
     <button class="button button--primary formreset-resetlink">Reset velden</button>
+  </fieldset>
+</form>
+
+<form>
+  <fieldset>
+    <legend>Reset een deel van een formulier</legend>
+    <div class="form__row">
+      {{render "@input-radio" radios2 merge=true }}
+    </div>
+    <div class="form__row" data-decorator="init-formreset">
+      {{render "@input-checkbox" checkboxes2 merge=true }}
+      <a href="#" class="reset formreset-resetlink">
+        <small>Herstellen</small>
+      </a>
+    </div>
+    <div class="form__row">
+      {{render "@input-text" inputtext2 merge=true }}
+    </div>
+    <button class="button button--primary ">Reset velden</button>
   </fieldset>
 </form>
