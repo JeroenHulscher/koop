@@ -51,7 +51,7 @@ context:
       icon: icon-download.svg
     - link: '#'
       text: Delen
-      icon: icon-share-blue.svg
+      icon: icon-permalink.svg
       modal: true
       modalId: 512
     - link: '#'
