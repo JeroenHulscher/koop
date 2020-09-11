@@ -1,4 +1,5 @@
 name: DS - Design
+label: DS - Design
 context:
   header:
     nav: false

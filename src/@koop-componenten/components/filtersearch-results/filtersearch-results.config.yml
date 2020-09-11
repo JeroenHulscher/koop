@@ -1,5 +1,5 @@
 ---
-label: Filtersearch results
+label: Filter resultaten
 status: ready
 context:
   id: 176575675
@@ -31,6 +31,7 @@ context:
       short: Nederland
 variants:
   - name: Input radio
+    label: met Radio
     context:
       id: 176575675
       radio: true
@@ -60,6 +61,7 @@ variants:
           title: Voorburg
           short: Nederland
   - name: with Controls
+    label: met Controls
     context:
       controls:
         selectAllLabel: Selecteer alle organisaties

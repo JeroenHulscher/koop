@@ -43,6 +43,7 @@ context:
           value: Blad gemeenschappelijke regeling
 variants:
   - name: Large
+    label: Groot
     context:
       modifier: large
 

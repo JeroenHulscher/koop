@@ -1,4 +1,5 @@
-label: sources-list
+title: sources-list
+label: Bronlijst
 context:
   id: sl1
   items:

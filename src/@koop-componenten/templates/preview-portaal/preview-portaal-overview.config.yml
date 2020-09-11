@@ -1,6 +1,6 @@
 ---
 title: PP Overview
-label: PP Overview
+label: PP - Overzicht
 status: ready
 context:
   headerContext:
@@ -13,7 +13,6 @@ context:
       - text: Overheidsinformatie
       - text: Internetconsultatie
       - text: NFP wijzigingspakket 2018-1
-
   facelistContextActions:
     modifier: list--facet
     heading: Acties

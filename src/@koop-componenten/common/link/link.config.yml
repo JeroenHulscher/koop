@@ -1,16 +1,15 @@
 title: Link
-default: internal
 context:
   text: link
   action: /link/intern/
 variants:
   - name: extern (auto)
-    label: External (auto)
+    label: Externe link (auto)
     context:
       text: externe link
       action: http://www.google.nl
   - name: extern (manual)
-    label: External (manual)
+    label: Externe link (manual)
     context:
       text: externe link (manual)
       action: http://www.google.nl
@@ -40,13 +39,13 @@ variants:
       action: '#'
       class: cta
   - name: Mail
-    label: Mail
+    label: Email
     context:
       text: Label
       action: '#'
-      class: link link--forgotpw
+      class: link link--mail
   - name: Logout
-    label: Logout
+    label: Uitloggen
     context:
       text: Label
       action: '#'

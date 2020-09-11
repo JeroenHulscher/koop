@@ -1,6 +1,6 @@
 ---
 name: Dienstverlening
-label: Dienstverlening
+label: ONL - Dienstverlening
 status: ready
 context:
   headerContext:

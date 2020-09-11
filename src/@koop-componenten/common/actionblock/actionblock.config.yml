@@ -1,8 +1,9 @@
 ---
 title: actionblock
+label: Actieblok
 context:
-  title: 'Actionblock'
-  intro: 'Description of the actionblock'
+  title: 'Actieblock'
+  intro: 'Omschrijving van het blok'
   items:
     - link: '#'
       text: Alles openklappen

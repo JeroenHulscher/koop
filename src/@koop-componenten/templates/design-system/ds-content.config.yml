@@ -1,4 +1,5 @@
 name: DS - Content
+label: DS - Content
 context:
   header:
     nav: false

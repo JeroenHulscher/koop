@@ -1,4 +1,5 @@
-label: Homepage block
+title: Homepage block
+label: Blok (homepage)
 default: Hoe-blok
 context:
   heading: Hoe werkt democratie

@@ -1,4 +1,5 @@
 title: Artikel header wetten.nl
+label: Artikel hoofd
 context:
   useTitle: true
   titleTag: h3

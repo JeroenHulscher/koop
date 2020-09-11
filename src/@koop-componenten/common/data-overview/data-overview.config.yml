@@ -1,5 +1,6 @@
 ---
-label: Data overview
+title: Data overview
+label: Data overzicht
 context:
   value1: E-mailadres
   value2: Postcode en huisnummer

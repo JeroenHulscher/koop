@@ -1,7 +1,8 @@
 ---
 title: profile
+label: Profiel knop
 status: ready
-default: Logged in
+default: Ingelogd
 context:
   id: 1
   loggedIn: true
@@ -14,6 +15,7 @@ context:
       url: '#'
 variants:
   - name: Logged in (with icons)
+    label: Ingelogd (met Iconen)
     status: ready
     context:
       options:
@@ -24,9 +26,12 @@ variants:
         url: '#'
         class: link link--logout
   - name: logged out
+    label: Uitgelogd
     status: ready
     context:
       id: 2
       loggedIn: false
       buttonLogin:
         text: Inloggen
+        anchor: true
+        action: '#'

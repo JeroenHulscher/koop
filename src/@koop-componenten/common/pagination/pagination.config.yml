@@ -1,4 +1,5 @@
 title: Pagination
+label: Paginering
 context:
   filterLabel: Aantal per pagina
   previousPage: 3

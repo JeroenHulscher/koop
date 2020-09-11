@@ -18,7 +18,7 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Password'
   - name: Number
-    label: Input number
+    label: Input Number
     context:
       modifier: input--postalcode input--small
       id: 1
@@ -27,7 +27,7 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'number'
   - name: Email
-    label: Input email
+    label: Input Email
     context:
       modifier: input--email input--small
       id: 1
@@ -45,7 +45,7 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'URL'
   - name: Postal code
-    label: Input postcode
+    label: Input Postcode
     context:
       type: text
       modifier: input--postalcode input--small
@@ -54,7 +54,7 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 2282LL'
   - name: Tel
-    label: Input tel
+    label: Input Tel
     context:
       type: tel
       modifier: input--tel
@@ -63,14 +63,14 @@ variants:
       fieldInstruction:
       fieldPlaceholder: 'Bijv: 061234567879'
   - name: Medium
-    label: medium
+    label: Groot
     context:
       type: text
       modifier: input-text--medium
       id: 1
       fieldPlaceholder: 'Placeholder'
   - name: Search
-    label: Search
+    label: Zoeken
     context:
       modifier: input-text--search
       id: 1
@@ -80,7 +80,7 @@ variants:
       fieldPlaceholder: 'Wat zoek je precies?'
       remove: true
   - name: Search medium
-    label: Search medium
+    label: Zoeken (groot)
     context:
       type: text
       modifier: input-text--searchmedium
@@ -101,6 +101,6 @@ variants:
       prefix: true
       prefixLabel: https://www.overheid.nl/
   - name: With remove
-    label: With remove
+    label: met Remove
     context:
       remove: true

@@ -20,7 +20,7 @@ context:
       code: XYZ
 variants:
   - name: Input Search Autocomplete
-    label: Input Search (large)
+    label: input Zoek (groot)
     context:
       id: 2
       modifier: input-text input-text--searchmedium

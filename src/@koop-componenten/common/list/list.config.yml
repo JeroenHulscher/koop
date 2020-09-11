@@ -1,4 +1,5 @@
-label: List
+title: List
+label: Lijsten
 context:
   items:
     - content: 1e item
@@ -42,6 +43,7 @@ variants:
         - content: 3e item
         - content: 4e item
   - name: linklist
+    label: linklijst
     context:
       modifier: list--linked
       items:
@@ -50,6 +52,7 @@ variants:
         - content: <a href="#">Een derde item dat een stuk langer is dan de andere en misschien wel over twee regels valt. </a>
         - content: <a href="#">4e item</a>
   - name: facetlist
+    label: facetlijst
     context:
       modifier: list--facet
       heading: Eerste categorie
@@ -63,6 +66,7 @@ variants:
         - content: <a href="#"><span>zbo</span> <span>(19)</span></a>
         - content: <a href="#"><span>Wet-BES</span> <span>(104)</span></a>
   - name: alphabet
+    label: alfabet
     context:
       modifier: list--alphabet
       items:
@@ -93,6 +97,7 @@ variants:
         - content: <a href="#" class="list__link"><span>Y</span></a>
         - content: <a href="#" class="list__link"><span>Z</span></a>
   - name: relationlist
+    label: relatielijst
     status: prototype
     context:
       modifier: list--relations
@@ -101,6 +106,7 @@ variants:
         - content: <a href="#" rel="external">2e item over minder belangrijke zaken</a>
         - content: <a href="#">3e item</a><small>Item omschrijving met iets meer context</small>
   - name: Law list
+    label: wetten lijst
     status: prototype
     context:
       orderedList: true
@@ -114,6 +120,7 @@ variants:
           - content: <p>2e subitem</p>
       - content: <p>4e item</p>
   - name: Law list unordered
+    label: wetten lijst unordered
     status: ready
     context:
       modifier: list--law__unordered
@@ -130,23 +137,6 @@ variants:
     context:
       modifier: list--legenda
       items:
-      - content: Eemshaven
-        color: color1
-      - content: Maasvlakte 1
-        color: color2
-      - content: Borssele/Vlissingen
-        color: color3
-  - name: Legenda columns
-    status: ready
-    context:
-      modifier: list--legenda list--columns-4
-      items:
-      - content: Eemshaven
-        color: color1
-      - content: Maasvlakte 1
-        color: color2
-      - content: Borssele/Vlissingen
-        color: color3
       - content: Eemshaven
         color: color1
       - content: Maasvlakte 1
@@ -191,6 +181,7 @@ variants:
       - content: <p>2 item</p>
       - content: <p>3 item</p>
   - name: Action
+    label: Actielijst
     status: ready
     context:
       modifier: list--action

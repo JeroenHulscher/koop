@@ -49,7 +49,7 @@ variants:
       headingcentered: true
       content: De 'slim'-variant jumbotron.
   - name: Secondary style
-    label: Secondary style
+    label: Alternatieve stijl
     context:
       h: h1
       modifier: secondary

@@ -53,10 +53,12 @@ variants:
           title: Sociale Zaken en Werkgelegenheid (szw)
           short: szw
   - name: With Search filter
+    label: met Zoekfilter
     context:
       searchFilter: true
       label: Zoek thema
   - name: With Limit (3)
+    label: met Limiet (3)
     context:
       id: 1
       type: div
@@ -273,12 +275,13 @@ variants:
           title: Zweden
           short: Zweden
   - name: with Check all
+    label: met Selecteer alle
     context:
       type: span
       selectAll: true
       selectAllID: 123211
   - name: With Check All - multiple
-    label: With Check All (multiple)
+    label: met Selecteer alle (meerdere)
     context:
       id: 1
       type: span
@@ -321,6 +324,7 @@ variants:
               title: FrankrijkSub2
               short: FrankrijkSub2
   - name: With Catagories
+    label: met Categorieen
     context:
       linkText: Kies 'Publicerende organisatie(s)'
       linkTextActive: Wijzig selectie
@@ -404,6 +408,7 @@ variants:
               title: Nationale Ombudsman
               short: Nationale Ombudsman
   - name: With Catagories and select all
+    label: met Categorieen en selecteer alle
     context:
       linkText: Kies 'Publicerende organisatie(s)'
       linkTextActive: Wijzig selectie

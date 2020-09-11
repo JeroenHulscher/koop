@@ -1,4 +1,5 @@
 title: Table
+label: Tabel
 status: ready
 context:
   label: default
@@ -45,7 +46,7 @@ context:
         value: Alkmaar
 variants:
   - name: Fixed columns
-    label: Fixed columns
+    label: Vaste kolommen
     context:
       caption: Deze tabel bevat teamleden van KOOP Overheid.nl
       items:
@@ -92,7 +93,7 @@ variants:
             type: Woonplaats
             value: Alkmaar
   - name: Multilevel
-    label: Multilevel
+    label: Meerlaags
     context:
       modifier:
       caption: Deze tabel bevat teamleden van KOOP Overheid.nl
@@ -103,39 +104,39 @@ variants:
         - title: 4
         - title: 5
   - name: with Caption
-    label: with Caption
+    label: met Caption
     context:
       modifier:
       caption: Deze tabel bevat teamleden van KOOP Overheid.nl
   - name: with Description
-    label: with Description
+    label: met Omschrijving
     context:
       modifier:
       describedby: described123
       tableDescription: Deze tabel bevat een extra uitleg onder de tabel.
   - name: borderless
-    label: borderless
+    label: Zonder border
     context:
       modifier: table--borderless
   - name: Rotated headers
-    label: Rotated headers
+    label: Gedraaide headers
     context:
       rotated: true
       caption: Deze tabel bevat headers die verticaal staan
   - name: striped
-    label: striped
+    label: Strepen
     context:
       modifier: table--striped
   - name: condensed
-    label: condensed
+    label: Dun
     context:
       modifier: table--condensed
   - name: hover
-    label: hover
+    label: met Hovereffect
     context:
       modifier: table--hover
   - name: Header highlighted
-    label: header highlighted
+    label: Header uitgelicht
     context:
       modifier: table--headerhighlight
   - name: datakalender

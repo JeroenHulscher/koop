@@ -10,7 +10,7 @@ context:
   type: email
 variants:
   - name: Small
-    label: Small
+    label: Klein
     context:
       type: text
       button: Zoeken

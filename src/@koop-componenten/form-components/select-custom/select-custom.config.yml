@@ -11,17 +11,21 @@ context:
       value: 20
 variants:
   - name: large
+    label: Groot
     context:
       modifier: select-custom--large
   - name: small
+    label: Klein
     context:
       modifier: select-custom--small
-  - name: with label
+  - name: with Label
+    label: met Label
     context:
       fieldLabel: Metadata type
       labelmodifier: accent
       fieldLabelVisible: true
-  - name: with optgroup
+  - name: with Optgroup
+    label: met Optgroup
     context:
       fieldLabel: Documentsoort
       labelmodifier: accent

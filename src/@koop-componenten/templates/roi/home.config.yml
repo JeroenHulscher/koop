@@ -1,5 +1,5 @@
 name: home ROI
-label: home ROI
+label: ROI - Homepage
 context:
   filter1:
     heading: Soort organisatie

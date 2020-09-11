@@ -38,6 +38,7 @@ context:
           text: Naar overheidsorganisaties
 variants:
   - name: With Meta Nav
+    label: met Meta navigatie
     context:
       metaLinks:
       - href: '#'
@@ -48,6 +49,7 @@ variants:
         text: Uitloggen
         class: button button--logout
   - name: With Profile
+    label: met Profiel
     context:
       metaLinks:
       - nonlink: true

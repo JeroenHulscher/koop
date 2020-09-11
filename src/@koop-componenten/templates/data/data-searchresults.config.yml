@@ -1,4 +1,5 @@
 name: data searchresults
+label: Data - Zoekresultaten
 context:
   headerContext:
     youAreHere:
