@@ -1,0 +1,19 @@
+.form__element.form__element--search {
+  @extend .input-inputsubmit;
+
+  .input {
+    max-width: none;
+    height: auto;
+  }
+  .button {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+}
+
+.columns--sidebar-left > div:last-child .form__element.form__element--search {
+  .input {
+    width: 100%;
+    margin-bottom: .5em;
+  }
+}
