@@ -1,6 +1,6 @@
 ---
-name: search laws - live
-label: LIVE - Uitgebreid zoeken
+name: search laws complex - live
+label: LIVE - Eenvoudig zoeken
 status: ready
 context:
   dataWoord:

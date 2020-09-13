@@ -1,6 +1,6 @@
 ---
-name: search laws - live
-label: LIVE - Uitgebreid zoeken
+name: search eu - live
+label: LIVE - Zoeken EU-richtlijnen
 status: ready
 context:
   dataWoord:
