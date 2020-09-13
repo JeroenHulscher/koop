@@ -336,7 +336,7 @@ describe('Subselection', function () {
 
 
   it('OLD COMPONENT: should display 1 result', function () {
-    browser.get('http://localhost:3000/components/preview/templates-search-laws-complex---live');
+    browser.get('http://localhost:3000/components/preview/templates-search-laws---live');
 
     var width = 1200;
     var height = 800;
