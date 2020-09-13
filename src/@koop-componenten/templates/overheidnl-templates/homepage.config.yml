@@ -1,6 +1,6 @@
 ---
 name: homepage A-variant
-label: ONL - Homepage (A-variant)
+label: ONL - Homepage
 status: ready
 context:
   headerContext:
