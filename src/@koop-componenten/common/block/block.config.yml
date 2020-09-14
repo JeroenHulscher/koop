@@ -1,0 +1,41 @@
+---
+label: Blok (inhoud)
+context:
+  id: 1
+  heading: Altijd op de hoogte van besluiten in uw buurt
+  subheading: Berichten over uw buurt
+  content: <p>Besluiten zoals vergunningen, bouwplannen en plaatselijke regelgeving kunnen van invloed zijn op uw woonomgeving. Uw gemeente en andere overheidsinstanties publiceren deze besluiten op berichten over uw buurt. Wat dit voor u betekent leggen we graag uit. </p>
+  buttonText: Meer informatie
+  href: '#'
+variants:
+  - name: primary
+    context:
+      modifier: primary
+  - name: secondary
+    context:
+      modifier: secondary
+  - name: Call to action
+    context:
+      id: 1
+      htype: 3
+      heading: Welke overheden nemen nog geen deel?
+      subheading: Negatieve lijst
+      content: false
+      buttonText: false
+      highlight: true
+      cta: true
+      ctalabel: Bekijk de lijst
+      ctahref: '#'
+  - name: Slim
+    context:
+      id: 1
+      htype: 3
+      heading: Welke overheden nemen nog geen deel?
+      subheading: Negatieve lijst
+      content: false
+      buttonText: false
+      highlight: true
+      slim: true
+      cta: true
+      ctalabel: Bekijk de lijst
+      ctahref: '#'

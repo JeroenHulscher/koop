@@ -1,0 +1,52 @@
+---
+label: ONL 2.0 - Dienstverl. - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  jumbotronContext:
+    heading: Zoek naar diensten van de overheid
+    subheading: Dienstverlening
+    intro: Diensten van lokale overheden in uw buurt of wat u met de overheid moet regelen als er een bepaalde levensgebeurtenis plaatsvindt.
+    centered: true
+    headingcentered: true
+    inputPostcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 2453EH
+      required: true
+      patterntype: zipcode
+      title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
+    zoektermContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Zoekterm
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Waar ben u naar opzoek?
+  block1Context:
+    id: 1
+    flexed: true
+    htype: 4
+    heading: Berichten over uw buurt
+    content: <p>Publicaties op websites van gemeenten, provincies, waterschappen en regionale samenwerkingsverbanden</p>
+    cta: true
+    ctalabel: Persoonlijk overzicht bij adoptie
+    ctahref: '#'
+    ctaexternal: true
+  block2Context:
+    id: 2
+    flexed: true
+    htype: 4
+    heading: Een pleegkind krijgen
+    content: <p>Wilt u weten wat er verandert als er een pleegkind in huis komt wonen? Vul dan uw persoonlijke situatie in en maak uw eigen checklist.</p>
+    cta: true
+    ctalabel: Checklist bij een pleegkind krijgen
+    ctahref: '#'
+    ctaexternal: true

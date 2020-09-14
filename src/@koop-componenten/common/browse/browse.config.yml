@@ -1,0 +1,47 @@
+---
+title: browse
+context:
+  items:
+    - link: '#'
+      text: Wetten
+      count: 25
+      count_context: gepubliceerd
+    - link: '#'
+      text: Ruimtelijke plannen
+      count: 3
+      count_context: gepubliceerd
+    - link: '#'
+      text: Officiële bekendmakingen
+      count: 14
+      count_context: bekend gemaakt
+    - link: '#'
+      text: Staatsblad
+      count: 5
+      count_context: gepubliceerd
+    - link: '#'
+      text: Internetconsultatie
+      count: 3
+      count_context: gepubliceerd
+variants:
+  - name: icons
+    label: met Iconen
+    context:
+      title: ''
+      intro: ''
+      modifier: browse--icons
+      items:
+        - link: '#'
+          text: Authentieke versie
+          icon: icon-download.svg
+        - link: '#'
+          text: Informatie over de publicatie
+          icon: icon-info.svg
+        - link: '#'
+          text: Gerelateerde documenten
+          icon: icon-related-docs.svg
+        - link: '#'
+          text: Printen
+          icon: icon-print.svg
+        - link: '#'
+          text: Delen
+          icon: icon-share.svg

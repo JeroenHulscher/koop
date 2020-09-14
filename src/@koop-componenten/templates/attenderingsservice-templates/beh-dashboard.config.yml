@@ -1,0 +1,84 @@
+---
+label: Beh. - Dashboard
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    breadcrumbAttenderen:
+      breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Berichtgeving
+        url: '#'
+      - text: Berichten over uw buurt
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: G. Bruikersnaam
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  jumbotronContext:
+    heading: Berichten over uw buurt attenderingservice
+    subheading: Beheer uw abonnementen
+    intro: Uw heeft momenteel onderstaande abonnementen ingesteld.
+    centered: true
+    headingcentered: true
+  abonnementenContext:
+    id: sl2
+    items:
+    - name: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+      icon: icon-bg--news
+      idprefix: unit-1-
+      actionsOne:
+        - label: Verwijder abonnement Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+          icon: icon--bin
+          iconOnly: true
+          href: '#'
+          linkedto: 2
+          hideself: true
+      actionsTwoLabel: Verwijderen?
+      actionsTwo:
+        - label: Ja
+          href: '#'
+        - label: Nee
+          href: '#'
+          linkedto: 1
+          hideself: true
+      buttonContext:
+        modifier: button--secundary
+        button: false
+        anchor: true
+        action: /components/preview/templates-att-stap1
+        text: Bewerken
+    - name: Adamshofstraat 69, 3061ZB Rotterdam
+      icon: icon-bg--news
+      idprefix: unit-2-
+      actionsOne:
+        - label: Verwijder abonnement Adamshofstraat 69, 3061ZB Rotterdam
+          icon: icon--bin
+          iconOnly: true
+          href: '#'
+          linkedto: 2
+          hideself: true
+      actionsTwoLabel: Verwijderen?
+      actionsTwo:
+        - label: Ja
+          href: '#'
+        - label: Nee
+          href: '#'
+          linkedto: 1
+          hideself: true
+      buttonContext:
+        modifier: button--secondary
+        button: false
+        anchor: true
+        action: /components/preview/templates-att-stap1
+        text: Bewerken

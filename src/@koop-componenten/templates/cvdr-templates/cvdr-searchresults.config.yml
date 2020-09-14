@@ -1,0 +1,364 @@
+---
+label: CVDR - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  dateselection:
+    layout: narrow
+    dateselectionDatum:
+      label: Geldend op
+  postcodeInput:
+    id: 5
+    fieldLabelVisible: true
+    fieldPlaceholder: Bijv. 1234 AB
+    fieldLabel: Postcode
+    labelmodifier: accent
+  wordintitelInput:
+    id: 765
+    fieldLabelVisible: true
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: In titel
+    labelmodifier: accent
+  wordintextInput:
+    id: 654
+    fieldLabelVisible: true
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: In tekst
+    labelmodifier: accent
+  wetgegevensInput:
+    id: 498
+    fieldLabelVisible: true
+    fieldPlaceholder: Zoekwoord of zinsdeel
+    fieldLabel: Wettechnische gegevens
+    labelmodifier: accent
+  subselectionGemContext:
+    linkText: Selecteer gemeenten
+    id: 20
+    modalTitle: Selecteer Gemeenten
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 1
+        id: 1237
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2237
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3237
+        title: Nederland
+        short: Nederland
+  subselectionProContext:
+    linkText: Selecteer provincies
+    id: 21
+    modalTitle: Selecteer provincies
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 1
+        id: 1346
+        title: Zuid-Holland
+        short: Zuid-Holland
+      - Option: 2
+        id: 2346
+        title: Noord-Holland
+        short: Noord-Holland
+        checked: checked
+      - Option: 3
+        id: 3346
+        title: Zeeland
+        short: Zeeland
+        checked: checked
+  subselectionWatContext:
+    linkText: Selecteer waterschappen
+    id: 1900
+    modalTitle: Selecteer waterschappen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 4
+        id: 4455
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5455
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6455
+        title: Nederland
+        short: Nederland
+  subselectionRegContext:
+    linkText: Selecteer regionale samenwerkingsorganen
+    id: 119
+    modalTitle: Selecteer regionale samenwerkingsorganen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 42
+        id: 4564
+        title: Spanje
+        short: Spanje
+      - Option: 52
+        id: 5564
+        title: Griekenland
+        short: Griekenland
+      - Option: 62
+        id: 6564
+        title: Nederland
+        short: Nederland
+  subselectionDeeContext:
+    linkText: Selecteer deelgemeenten / stadsdelen
+    id: 122
+    modalTitle: Selecteer deelgemeenten / stadsdelen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 41
+        id: 4563
+        title: Spanje
+        short: Spanje
+      - Option: 51
+        id: 5563
+        title: Griekenland
+        short: Griekenland
+      - Option: 61
+        id: 6563
+        title: Nederland
+        short: Nederland
+  subselectionBesContext:
+    linkText: Selecteer BES eilanden
+    id: 125
+    modalTitle: Selecteer BES eilanden
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 44
+        id: 4562
+        title: Spanje
+        short: Spanje
+      - Option: 55
+        id: 5562
+        title: Griekenland
+        short: Griekenland
+      - Option: 66
+        id: 6562
+        title: Nederland
+        short: Nederland
+  subselectionOndContext:
+    linkText: Selecteer onderwerpen
+    id: 1288
+    modalTitle: Selecteer onderwerpen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 444
+        id: 4561
+        title: Spanje
+        short: Spanje
+      - Option: 555
+        id: 5561
+        title: Griekenland
+        short: Griekenland
+      - Option: 666
+        id: 6561
+        title: Nederland
+        short: Nederland
+  onderwerpContext:
+    moreless: true
+    searchFilter: true
+    options:
+    - id: checkbox-20
+      text: Alle
+      name: onderwerp
+    - id: checkbox-20
+      text: Vandaag
+      name: onderwerp
+    - id: checkbox-20
+      text: Afgelopen week
+      name: onderwerp
+    - id: checkbox-20
+      text: Afgelopen maand
+      name: onderwerp
+    - id: checkbox-20
+      text: Afgelopen 3 maanden
+      name: onderwerp
+    - id: checkbox-20
+      text: Zelf een periode kiezen
+      name: onderwerp
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
+  inputsubmitContext:
+    id: 5
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      share: false
+      metadata:
+        - value: "Uitgegeven door: Flevoland"
+      buttons:
+        - button: Bekijk regeling
+          type: secondary
+    - title: Handhavingsbeleid Vergunningplicht Autoverhuur Heerlen 2019
+      titleHeader: h2
+      label: Regeling vervallen per 01-01-2019
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      labelType: danger
+      buttons:
+        - button: Bekijk regeling
+          type: secondary
+      metadata:
+        - value: "Uitgegeven door: Heerlen"
+    - title: Verordening i.h.k.v. Wet Gemeentelijke Antidiscriminatievoorzieningen (V-WGA)
+      titleHeader: h2
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      share: false
+      buttons:
+        - button: Bekijk regeling
+          type: secondary
+      metadata:
+        - value: "Uitgegeven door: Bernisse"
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  selectedfilterContext:
+    items:
+      - label: Gezocht op "leveringen"
+        url: "#"
+      - label: Bouwvergunning
+        url: "#"
+      - label: APV vergunning
+        url: "#"
+  subselectionContext:
+    linkText: Selecteer organisatie(s)
+    id: 1
+    modalTitle: Selecteer organisatie(s)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3
+        title: Nederland
+        short: Nederland
+  subselectionThemaContext:
+    linkText: Selecteer thema(s)
+    id: 12
+    modalTitle: Selecteer thema(s)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 4
+        id: 4
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6
+        title: Nederland
+        short: Nederland
+  subselectionInfoContext:
+    linkText: Selecteer informatiesoort(en)
+    id: 12
+    modalTitle: Selecteer informatiesoort(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 4
+        id: 4
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6
+        title: Nederland
+        short: Nederland
+
+
+
+
+

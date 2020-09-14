@@ -1,0 +1,134 @@
+---
+label: Verdr. - Contentpagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Basisgegevens
+      sub: true
+      subItems:
+        - stitle: Algemeen
+        - stitle: Koninkrijk
+        - stitle: Partijen
+        - stitle: Uitbreidingen
+    - title: Voorbehouden, verklaringen en bezwaren
+    - title: Wijzigingen
+  navDepositairContext:
+    id: 3
+    sactive: true
+    items:
+    - title: Recent depositary notifications
+    - title: The Hague Conference on Private International Law
+    - title: Other treaties for which the Netherlands acts as depositary
+      sactive: true
+  onderwerpContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Aanlegvergunning
+      name: onderwerp
+    - id: checkbox-21
+      text: Apv vergunning
+      name: onderwerp
+    - id: checkbox-22
+      text: Bodembeschermingsvergunning
+      name: onderwerp
+    - id: checkbox-23
+      text: Bouwvergunning
+      name: onderwerp
+    - id: checkbox-24
+      text: Drank- en horecavergunning
+      name: onderwerp
+    - id: checkbox-25
+      text: Evenementenvergunning
+      name: onderwerp
+  publicatiedatumContext:
+    moreless: true
+    options:
+    - id: radio-1
+      text: Vandaag (1)
+      name: publicatie
+    - id: radio-2
+      text: Afgelopen week (21)
+      name: publicatie
+    - id: radio-3
+      text: Afgelopen maand (54)
+      name: publicatie
+    - id: radio-4
+      text: Afgelopen 2 maanden (0)
+      name: publicatie
+      disabled: disabled
+    - id: radio-5
+      text: Zelf een periode kiezen
+      name: publicatie
+  resultmodalContext:
+    modifier: result--list--wide
+    items:
+    - title: Aangevraagde evenementenvergunningen 2018
+      headerimg: https://via.placeholder.com/720x280.png?text=Kaart+met+marker
+      titleHeader: h2
+      text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
+      buttons:
+        - button: Bekijken
+          type: secendary
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      buttons:
+        - button: Bekijken
+          type: primary
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      buttons:
+        - button: Bekijken
+          type: primary
+    - title: AppelAfdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of dienstent
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      buttons:
+        - button: Bekijken
+          type: primary
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  selectedfilterContext:
+    items:
+      - label: Bouwvergunning
+      - label: APV vergunning
+  detailsContent:
+    buttons:
+        - label: Toon details
+          active: true
+        - label: Verberg details
+          active: false

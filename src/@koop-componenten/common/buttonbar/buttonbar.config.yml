@@ -1,0 +1,14 @@
+title: buttonbar
+context:
+  header:
+    tag: h2
+    text: Uw account
+variants:
+  - name: With devider
+    label: met Devider
+    context:
+      header:
+        tag: h2
+        text: Uw account
+      devided: true
+

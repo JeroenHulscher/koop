@@ -1,0 +1,12 @@
+---
+title: Collapsible
+context:
+  heading: Gerelateerde documenten
+  id: 1
+  text: <ul class="list--relations"> <li><a href="#">1e item over belangrijke zaken</a><small>Item omschrijving</small></li> <li><a href="#" rel="external">2e item over minder belangrijke zaken</a></li> <li><a href="#">3e item</a><small>Item omschrijving met iets meer context</small></li> </ul>
+variants:
+  - name: collapsible--small
+    label: Small
+    context:
+      modifier: collapsible--small
+

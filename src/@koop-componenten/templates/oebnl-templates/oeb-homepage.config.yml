@@ -1,0 +1,135 @@
+---
+label: OEB 2.0 - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Zoek in alle documenten
+    h: h1
+    subheading: Officiële bekendmakingen
+    centered: true
+    headingcentered: true
+    searchterm:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Zoeken op
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Zoekterm of (dossier)nummer
+      required: true
+      requiredLabel: true
+      patterntype: text
+    selectContext:
+      modifier: select-custom--large
+      fieldLabel: Documentsoort
+      options:
+        - label: Alle documenten
+          value: 10
+          selected: selected
+        - label: Parlementaire documenten
+          value: 20
+        - label: Officiële bekendmakingen
+          value: 50
+    buttonSubmit:
+      id: 123
+      text: Zoek documenten
+      button: true
+      modifier: button--primary form__button
+    linkPar:
+      text: Uitgebreid zoeken
+  linkPar:
+      text: Uitgebreid zoeken
+  vandaag:
+    value: Woensdag 19 augustus 2020
+  browse:
+    items:
+      - link: '#'
+        text: Spoedpublicaties
+        count: 25
+        count_context: gepubliceerd
+        state: alert
+      - link: '#'
+        text: Tractatenblad
+        count: 3
+        count_context: gepubliceerd
+      - link: '#'
+        text: Staatsblad
+        count: 14
+        count_context: bekend gemaakt
+      - link: '#'
+        text: Staatscourant
+        count: 5
+        count_context: gepubliceerd
+      - link: '#'
+        text: Gemeenteblad
+        count: 40
+        count_context: gepubliceerd
+      - link: '#'
+        text: Provinciaal blad
+        count: 1923
+        count_context: gepubliceerd
+      - link: '#'
+        text: Waterschapsblad
+        count: 32
+        count_context: gepubliceerd
+      - link: '#'
+        text: Blad gemeenschappelijke regeling
+        count: 102
+        count_context: gepubliceerd
+  buttonPar:
+    anchor: true
+    action: '#'
+    text: Parlementaire documenten
+  buttonOf:
+    anchor: true
+    action: '#'
+    text: Officiële bekendmakingen
+    modifier: icon-bg icon--searchBlue
+  buttonbarContext:
+    header:
+      tag: h2
+      text: Bekijk ook
+    devided: true
+    btndouble1:
+      text: Help
+      text2: Hulp bij Officiële bekendmakingen
+      anchor: true
+      action: "#"
+    btndouble2:
+      text: Reactieformulier
+      text2: Reageren op Officiële bekendmakingen
+      anchor: true
+      action: "#"
+

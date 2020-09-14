@@ -1,0 +1,41 @@
+title: Ic Reply 3
+label: Ic - Stap 3
+status: ready
+context:
+  headerContext:
+    youAreHere:
+      - text: De wegwijzer naar informatie en diensten van alle overheden
+    metaLinks:
+      - url: "#"
+        text: MijnOverheid.nl
+  breadcrumbContext:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Overheidsinformatie
+        url: '#'
+      - text: Internetconsultatie
+        url: '#'
+      - text: NFP wijzigingspakket 2018-1
+        url: '#'
+      - text: Reageren
+  stepsContext:
+    steps:
+      - title: Stap 1
+        active: true
+      - title: Stap 2
+      - title: Stap 3
+  stepsContext2:
+    steps:
+      - title: Stap 1
+      - title: Stap 2
+        active: true
+      - title: Stap 3
+  stepsContext3:
+    steps:
+      - title: Stap 1
+      - title: Stap 2
+      - title: Stap 3
+        active: true
+  fileContext:
+    fieldLabel: Documenten

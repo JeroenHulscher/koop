@@ -1,0 +1,18 @@
+title: Data home
+label: Data - Homepage
+context:
+  headerContext:
+    youAreHere:
+    - text: Open data van de Overheid
+    navLinks:
+    - url: '#'
+      text: Datasets
+    - url: '#'
+      text: Statistieken
+    - url: '#'
+      text: Ondersteuning
+    - url: '#'
+      text: Toepassingen
+    - url: '#'
+      text: Dataset aanmelden
+      modifier: button--primary

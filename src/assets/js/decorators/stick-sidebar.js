@@ -80,45 +80,72 @@
 
   onl.decorate({
     'add-mobile-foldability': function( el ) {
-      var newTop = '150';
-      var parentOffsets = el.getBoundingClientRect();
-      if(parentOffsets.top != '0') {
-        newTop = parentOffsets.top;
-      }
-      var button = document.createElement( 'button' );
-      var classlist = 'is-column-default';
-      var labels = {
-        open: 'Open sidebar',
-        close: 'Sluit sidebar'
-      };
-
-      if (document.querySelector('.columns--sidebar__sidebar form') ) {
-        classlist = 'is-column-filters';
-      }
-
-      // set data to button
-      // button.classList.add( 'hidden-desktop' );
-      button.type = 'button';
-      button.classList.add(classlist);
-      button.setAttribute( 'data-handler', 'toggle-sidebar' );
-      button.setAttribute( 'aria-controls', el.id );
-      button.setAttribute( 'data-toggle-open', labels.open );
-      button.setAttribute( 'data-toggle-close', labels.close );
 
 
-      // set initial state
-      button.setAttribute( 'aria-expanded', 'false' );
-      button.textContent = labels.close;
+        var parent;
+        var newTop = '150';
+        var parentOffsets;
+        var documentbanner = document.querySelector('.documentbanner');
+        if (documentbanner) {
+          parent = documentbanner;
+        } else {
+          parent = el;
+        }
+        parentOffsets = parent.getBoundingClientRect();
+        if(parentOffsets.top != '0') {
+          newTop = parentOffsets.top;
+        }
+        var button = document.createElement( 'button' );
+        var classlist = 'is-column-default';
+        var labels = {
+          open: 'Open sidebar',
+          close: 'Sluit sidebar'
+        };
 
-      // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
-      button.style.top = Math.round(newTop) + 40 + 'px';
+        if (document.querySelector('.columns--sidebar__sidebar form') ) {
+          classlist = 'is-column-filters';
+        }
 
-      el.before( button );
+        // set data to button
+        // button.classList.add( 'hidden-desktop' );
+        button.type = 'button';
+        button.classList.add(classlist);
+        button.setAttribute( 'data-handler', 'toggle-sidebar' );
+        button.setAttribute( 'aria-controls', el.id );
+        button.setAttribute( 'data-toggle-open', labels.open );
+        button.setAttribute( 'data-toggle-close', labels.close );
 
-      // apply first time
-      // if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
-      //   toggle( button );
-      // }
+
+        // set initial state
+        button.setAttribute( 'aria-expanded', 'false' );
+        button.textContent = labels.close;
+
+        // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
+        button.style.top = Math.round(newTop) + 40 + 'px';
+
+        el.before( button );
+
+        // apply first time
+        // if ( !( window.matchMedia( '(min-width: 50em)' ).matches ) ) {
+        //   toggle( button );
+        // }
+      setTimeout(function (el) {
+        var parent;
+        var newTop = '150';
+        var parentOffsets;
+        var documentbanner = document.querySelector('.documentbanner');
+        if (documentbanner) {
+          parent = documentbanner;
+        } else {
+          parent = el;
+        }
+        parentOffsets = parent.getBoundingClientRect();
+        if (parentOffsets.top != '0') {
+          newTop = parentOffsets.top;
+        }
+        var trigger = document.querySelector('[data-handler="toggle-sidebar"]');
+        trigger.style.top = Math.round(newTop) + 40 + 'px';
+      }, 1000, el);
     },
     'stick-sidebar': function( el ) {
       var timer;

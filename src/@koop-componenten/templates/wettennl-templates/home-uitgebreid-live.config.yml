@@ -1,0 +1,9 @@
+---
+name: search laws - live
+label: LIVE - Uitgebreid zoeken
+status: ready
+context:
+  dataWoord:
+    title: Woord(en) of zinsdeel
+
+

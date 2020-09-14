@@ -1,24 +1,140 @@
-.profile {
+.profile,
+.header__start .header__meta .profile {
   position: relative;
-  ul {
+  display: inline-block;
+
+  p[data-toggler] {
+    padding-top: .9em;
+    padding-bottom: .80em;
+    padding-left: .75em;
+    padding-right: 3.75em;
+    border: 1px solid $darkBlue;
+    border-radius: .25em;
+    background: white $iconProfile no-repeat right .75em center;
+    background-size: 1.25em;
+    font-weight: bold;
+    line-height: 1;
+    font-size: .8em;
+    z-index: 1;
+
+
+    @media ( min-width: $breakpointDesktop ) {
+      font-size: 1em;
+      padding-bottom: .8em;
+      background: white $iconProfile no-repeat right .8em center;
+      background-size: 1.25em;
+    }
+
+    button {
+      z-index: 2;
+      background: rgba(255,255,255,0.01);
+      margin-top: 0;
+      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 0.75em rgba(21,66,115,0.4);
+      background-color: white;
+      color: $darkBlue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    &:active {
+      box-shadow: 0 0 0.5em rgba(21,66,115,0.2);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 2.75em;
+      top: .6em;
+      bottom: .6em;
+      width: 1px;
+      background: $darkBlue;
+    }
+  }
+  &__options {
     position: absolute;
     left: 0;
     top: 2.5em;
-    width: 10em;
-    padding: .5em;
+    width: 15em;
+    background: transparent;
+    padding-top: 1em;
+    zoom: .8;
 
     @media ( min-width: $breakpointDesktop ) {
+      padding-top: 1.25em;
+      zoom: 1;
+    }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 .5em .5em .5em;
+      border-color: transparent transparent white transparent;
+      position: absolute;
+      left: 1em;
+      top: .5em;
+
+      @media ( min-width: $breakpointDesktop ) {
+        top: .75em;
+      }
+    }
+
+    ul {
+      background: white;
+      box-shadow: 0 0 0.5em rgba(21,66,115,0.2);
+      padding: 0 1.25em;
+
+      @media ( min-width: $breakpointDesktop ) {
+        text-align: left;
+      }
+
+      > li {
+        display: block;
+        line-height: 1.1em;
+        border-bottom: 1px solid $lightGrey;
+
+        &:last-child {
+          border: 0;
+        }
+
+        > a {
+          font-size: 1em;
+          font-weight: bold;
+          text-decoration: none;
+          display: block;
+          padding-top: .85em;
+          padding-bottom: .85em;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header__start .header__meta .profile {
+  &__options {
+    @media ( min-width: $breakpointDesktop ) {
+      text-align: right;
       right: 0;
       left: auto;
     }
+
+    &:after {
+      @media ( min-width: $breakpointDesktop ) {
+        right: 1em;
+        left: auto;
+        top: .75em;
+      }
+    }
   }
-  li {
-    display: block;
-  }
-}
-.header__meta .profile {
-  position: relative;
-  right: auto;
-  top: auto;
-  display: inline-block;
 }

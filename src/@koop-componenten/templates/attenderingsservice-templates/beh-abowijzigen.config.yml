@@ -1,0 +1,274 @@
+---
+label: Beh. - Abonnement wijzigen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: G. Bruikersnaam
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  straalContext:
+    options:
+    - id: radio-1
+      text: 250 meter
+      name: radio-group-1
+      checked: checked
+      value: 250
+    - id: radio-2
+      text: 500 meter
+      name: radio-group-1
+      value: 500
+    - id: radio-3
+      text: 1000 meter
+      name: radio-group-1
+      value: 1000
+    - id: radio-4
+      text: 1500 meter
+      name: radio-group-1
+      value: 1500
+    - id: radio-5
+      text: 3000 meter
+      name: radio-group-1
+      value: 3000
+    - id: radio-6
+      text: Hele gemeente 'Den Haag'
+      name: radio-group-1
+      value: Gemeente Den Haag
+      dataattributes:
+        - data: data-kpm-rangetype
+          value: city
+  mapContext:
+    modifier: h-400
+    controls: false
+  rondomadresContext:
+    linkText: Selecteer opties rondom een adres
+    id: 20
+    modalTitle: Selecteer opties rondom een adres
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    required: true
+    selectAll: true
+    selectAllID: 9876
+    type: span
+    triggerSubmit: true
+    Options:
+      - Option: 1
+        id: 1237111
+        title: Aanlegvergunning
+        short: Aanlegvergunning
+        checked: checked
+      - Option: 2
+        id: 22372312321312
+        title: Apv vergunning
+        short: Apv vergunning
+        checked: checked
+      - Option: 3
+        id: 323723
+        title: Bodembeschermingvergunning
+        short: Bodembeschermingvergunning
+        checked: checked
+      - Option: 1222222222
+        id: 123723266666
+        title: Den Haag
+        short: Spanje
+      - Option: 2222222222222
+        id: 223712312312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 322222222
+        id: 3237123123
+        title: Voorburg
+        short: Nederland
+  voorlichtingContext:
+    linkText: Selecteer opties over voorlichting
+    id: 21
+    modalTitle: Selecteer opties over voorlichting
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    selectAll: true
+    required: true
+    selectAllID: 9877
+    type: span
+    Options:
+      - Option: 1
+        id: 1237666
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 2237231232131
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 3237
+        title: Vlaardingen
+        short: Nederland
+      - Option: 122222222
+        id: 1237232
+        title: Den Haag
+        short: Spanje
+      - Option: 222222222222
+        id: 22371231231
+        title: Scheveningen
+        short: Griekenland
+      - Option: 32222222
+        id: 323712123
+        title: Voorburg
+        short: Nederland
+  bestemmingsplannenContext:
+    linkText: Selecteer opties over bestemmingsplannen
+    id: 22
+    modalTitle: Selecteer opties over bestemmingsplannen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    required: true
+    selectAll: true
+    selectAllID: 9879
+    type: span
+    Options:
+      - Option: 1
+        id: 12378888
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 223723123312
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 322322222
+        title: Vlaardingen
+        short: Nederland
+      - Option: 12222222
+        id: 12332
+        title: Den Haag
+        short: Spanje
+      - Option: 22222222222
+        id: 2237312312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 3222222
+        id: 323731234444
+        title: Voorburg
+        short: Nederland
+  voorschriftenContext:
+    linkText: Selecteer opties over voorschriften & beleid
+    id: 23
+    modalTitle: Selecteer opties over voorschriften & beleid
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    maxShow: 3
+    required: true
+    selectAll: true
+    selectAllID: 9880
+    type: span
+    Options:
+      - Option: 1
+        id: 12371122
+        title: Rotterdam
+        short: Spanje
+      - Option: 2
+        id: 223723321312
+        title: Schiedam
+        short: Griekenland
+      - Option: 3
+        id: 3223
+        title: Vlaardingen
+        short: Nederland
+      - Option: 12222222
+        id: 12372
+        title: Den Haag
+        short: Spanje
+      - Option: 22222222222
+        id: 2237122312
+        title: Scheveningen
+        short: Griekenland
+      - Option: 3222222
+        id: 32373123
+        title: Voorburg
+        short: Nederland
+  checkallOverheidsorganisatiesContext:
+    id: 1
+    label: overheidsorganisaties
+    checkboxes:
+      options:
+      - id: checkbox-20
+        text: Gemeente
+        name: onderwerp
+      - id: checkbox-21
+        text: Provincie
+        name: onderwerp
+        checked: checked
+      - id: checkbox-22
+        text: Regionaal Samenwerkingsorgaan
+        name: onderwerp
+        checked: checked
+      - id: checkbox-23
+        text: Rijkswaterstaat
+        name: onderwerp
+      - id: checkbox-24
+        text: Waterschap
+        name: onderwerp
+  jumbotronContext:
+    heading: Over welke betrekkingen wilt u meldingen ontvangen?
+    subheading: Abonnement wijzigen
+    intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
+    centered: true
+    size: semimedium
+    backlink:
+      title: Terug naar overzicht
+      href: '#'
+    inputPostcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      value: 2453EH
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 2453EH
+      required: true
+      requiredLabel: true
+      patterntype: zipcode
+      title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
+    inputHuisnummerContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Huisnummer
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: 52
+      value: 52
+    buttonSubmit:
+      id: 123
+      text: Adres wijzigen
+      button: true
+      modifier: button--primary form__button

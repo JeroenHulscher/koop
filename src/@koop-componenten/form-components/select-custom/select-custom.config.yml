@@ -1,0 +1,46 @@
+---
+label: Select custom
+status: ready
+context:
+  id: 1
+  options:
+    - label: Item 1
+      value: 10
+      selected: selected
+    - label: Item 2
+      value: 20
+variants:
+  - name: large
+    label: Groot
+    context:
+      modifier: select-custom--large
+  - name: small
+    label: Klein
+    context:
+      modifier: select-custom--small
+  - name: with Label
+    label: met Label
+    context:
+      fieldLabel: Metadata type
+      labelmodifier: accent
+      fieldLabelVisible: true
+  - name: with Optgroup
+    label: met Optgroup
+    context:
+      fieldLabel: Documentsoort
+      labelmodifier: accent
+      fieldLabelVisible: true
+      optgroup: true
+      items:
+        - optgroupLabel: Parlementaire documenten
+          options:
+            - label: Handelingen
+              value: 10
+            - label: Moties
+              value: 20
+        - optgroupLabel: Officiële bekendmakingen
+          options:
+            - label: Tractatenblad
+              value: 101
+            - label: Staatsblad
+              value: 201

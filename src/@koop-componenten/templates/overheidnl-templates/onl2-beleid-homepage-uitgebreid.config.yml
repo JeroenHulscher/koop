@@ -1,0 +1,73 @@
+---
+label: ONL 2.0 - Beleid. - Zoek oproep
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  jumbotronContext:
+    heading: Oproeping en aankondigingen
+    hstyle: h2
+    subheading: Beleid & regelgeving
+    intro: Via deze zoekpagina worden de Staatscourant rubrieken Oproepingen en Gerechtelijke aankondigingen voor u ontsloten.
+    text: <p>U kunt op basis van persoons- of bedrijfsgegevens zoeken naar publicaties over u, de Oproepingen, of naar publicaties waarin u een belanghebbende bent, de Gerechtelijke aankondigingen. Met uitzondering van de rubrieken 'Oproepingen | Schuldeisers' en 'Gerechtelijke aankondigingen | Handlichtingen', zijn de overige publicaties een beperkte termijn via deze zoekpagina vindbaar.</p>
+    centered: true
+    size: medium
+    inputsubmitContext:
+      button: Zoek verdagen
+      placeholder: Vul hier uw zoekwoord(en) in
+    postcodeInput:
+      fieldLabelVisible: true
+      fieldPlaceholder: Bijv. 1234 AB
+      fieldLabel: Postcode
+      labelmodifier: accent
+    zoekeninContext:
+      label: Zoeken op
+      radio: true
+      labelsize: accent
+      options:
+      - id: checkbox-4012312312312
+        text: Persoon
+        name: onderwerp45
+        linkedto: 2
+      - id: checkbox-4023232131321
+        text: Bedrijf
+        name: onderwerp45
+        linkedto: 3
+    TussenvoegselContext:
+      postcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2222
+      fieldLabel: Tussenvoegsel
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Tussenvoegsel
+    AchternaamContext:
+      postcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 333333333
+      fieldLabel: Achternaam
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Achternaam
+      required: true
+    datepickerContext:
+      id: 4444
+      inputclass: input-text--medium
+      haslabel: true
+      label: Geboortedatum
+      labelmodifier: accent
+      fieldPlaceholder: DD / MM / YYYY
+      debug: false
+    bedrijfContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 3333
+      fieldLabel: Bedrijfsnaam (zonder rechtsvorm)
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bedrijfsnaam
+      required: true

@@ -1,0 +1,265 @@
+---
+label: PLOOI - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  dateselection:
+    layout: narrow
+  gebiedContext:
+    moreless: true
+    options:
+    - id: radio-1
+      text: Berichten rond mijn adres
+      name: publicatie
+    - id: radio-2
+      text: Berichten in mijn gemeente
+      name: publicatie
+  resultmodalContext:
+    modifier: result--list--wide
+    items:
+    - title: Aangevraagde evenementenvergunningen 2018
+      headerimg: https://via.placeholder.com/720x280.png?text=Kaart+met+marker
+      titleHeader: h2
+      text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
+      buttons:
+        - button: Bekijk publicatie
+          type: primary
+        - button: Bekijk op kaart
+          type: primary
+          action: modal-4
+          modal: true
+  sortContext:
+    modifier:
+    amountPerPageFilter: true
+    columns: true
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
+  inputsubmitContext:
+    id: 1055
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Zoekwoord of zinsdeel
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
+      buttons:
+        - button: Bekijk document
+          type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
+      titleHeader: h2
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
+      buttons:
+        - button: Bekijk document
+          type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+    - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
+      titleHeader: h2
+      text: Het rapport bevat de bevindingen van de Commissie van Toezicht op de Inlichtingen- en Veiligheidsdiensten inzake de werking van de Wet op de inlichtingen en veiligheidsdiensten 2017
+      share: false
+      buttons:
+        - button: Bekijk document
+          type: secendary
+      metadata:
+        - value: Onderzoeksrapport
+        - value: Ministerie van Justitie en Veiligheid
+        - value: Beschikbaar sinds 04-12-2018
+      linklist: true
+      linklistLimit: true
+      linklistItems:
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+        - link: Overheid.nl
+          txt: (gepubliceerd op 06-07-2016 | PDF)
+        - link: Rijksoverheid.nl
+          txt: (gepubliceerd op 07-07-2016 | XML)
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  buttonswitchContext:
+    text: banner
+    buttons:
+      - label: Kaart
+        active: true
+        icon: marker
+      - label: Lijst
+        active: false
+        icon: hamburger
+  selectedfilterContext:
+    items:
+      - label: Gezocht op
+        value: leveringen
+        url: "#"
+      - label: Bouwvergunning
+        url: "#"
+      - label: APV vergunning
+        url: "#"
+  subselectionContext:
+    linkText: Selecteer organisatie(s)
+    id: 1
+    modalTitle: Selecteer organisatie(s)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    label: Filter resultaten op trefwoord
+    Options:
+      - Option: 1
+        id: 1
+        title: Organisatie 1
+        short: Organisatie 1
+      - Option: 2
+        id: 2
+        title: Organisatie 2
+        short: Organisatie 2
+      - Option: 3
+        id: 3
+        title: Organisatie 3
+        short: Organisatie 3
+  subselectionThemaContext:
+    linkText: Selecteer thema(s)
+    id: 12
+    modalTitle: Selecteer thema(s)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    triggerSubmit: true
+    buttonSubmit: true
+    buttonSubmitLabel: Bekijk resultaat
+    Options:
+      - Option: 4
+        id: 4
+        title: Spanje
+        short: Spanje
+      - Option: 5
+        id: 5
+        title: Griekenland
+        short: Griekenland
+      - Option: 6
+        id: 6
+        title: Nederland
+        short: Nederland
+  subselectionInfoContext:
+    linkText: Selecteer informatiesoort(en)
+    id: 13
+    modalTitle: Selecteer informatiesoort(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    searchFilter: true
+    type: span
+    Options:
+      - Option: 465
+        id: 465
+        title: Spanje
+        short: Spanje
+      - Option: 565
+        id: 565
+        title: Griekenland
+        short: Griekenland
+      - Option: 665
+        id: 665
+        title: Nederland
+        short: Nederland
+  tt1Context:
+    id: 112
+  tt2Context:
+    id: 113
+  tt3Context:
+    id: 114
+  tt4Context:
+    id: 115
+  startDatepicker:
+    id: 234
+    haslabel: true
+    label: Vanaf
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  endDatepicker:
+    id: 345
+    haslabel: true
+    label: Tot en met
+    labelmodifier: secondary
+    fieldPlaceholder: DD-MM-JJJJ
+  selectCustomContext:
+      id: 1
+      fieldLabel: Datum
+      fieldLabelVisible: true
+      labelmodifier: accent
+      options:
+      - id: 102
+        value:
+        label: Alle
+        linkedto: 1
+      - id: 1
+        value: 10
+        label: Vandaag
+        linkedto: 1
+      - id: 2
+        value: 20
+        label: Afgelopen week
+        linkedto: 1
+      - id: 3
+        value: 30
+        label: Afgelopen 3 maanden
+        linkedto: 1
+      - id: 4
+        value: 30
+        label: Zelf een periode kiezen
+        linkedto: 2
+        selected: selected
+
+
+
+

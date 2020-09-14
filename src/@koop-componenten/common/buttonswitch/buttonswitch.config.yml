@@ -1,0 +1,37 @@
+title: buttonswitch
+context:
+  text: Default
+  buttons:
+    - label: Button 1
+      active: true
+      url: "#"
+    - label: Button 2
+      active: false
+      url: "#"
+    - label: Button 3
+      active: false
+      url: "#"
+variants:
+  - name: with Icons
+    label: met Iconen
+    context:
+      buttons:
+        - label: Button 1
+          active: false
+          url: "#"
+          icon: marker
+        - label: Button 2
+          active: true
+          url: "#"
+          icon: hamburger
+  - name: Disabled
+    label: Inactief
+    context:
+      buttons:
+        - label: Button 1
+          active: false
+          url: "#"
+          disabled: true
+        - label: Button 2
+          active: true
+          url: "#"

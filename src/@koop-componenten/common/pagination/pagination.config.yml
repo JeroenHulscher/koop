@@ -1,0 +1,11 @@
+title: Pagination
+label: Paginering
+context:
+  filterLabel: Aantal per pagina
+  previousPage: 3
+  currentPage: 4
+  lastPage: 102
+  filterOptions:
+    - 10
+    - 25
+    - 100

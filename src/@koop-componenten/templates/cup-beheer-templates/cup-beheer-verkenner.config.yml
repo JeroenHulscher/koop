@@ -1,0 +1,340 @@
+---
+label: CUP-beheer - Verkenner
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: CUP Beheer
+    skipLinks: false
+    metaLinks:
+      - text: Gebruiker
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+  topbar:
+    navItems:
+      - label: CUP Beheer
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Enviroment
+        url: '#'
+      - text: Platform
+        url: '#'
+      - text: Verkenner
+  pageactions:
+    title: ''
+    intro: ''
+    items:
+      - link: '#'
+        text: Nieuw werk
+        icon: icon-plus-shape.svg
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Titel
+      value: value
+      active: is-active
+    - label: Laatste wijziging
+      value: value
+    - label: Aanmaakdatum
+      value: value
+  tableResults:
+    label: false
+    caption: false
+    modifier: table--striped
+    items:
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00001</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Administratief Akkoord tussen het Koninkrijk der Nederlanden en de Republiek Indonesië inzake een project betreffende de instelling van opleidingsmogelijkheden en cursussen in het inventariseren van bosbestand en de interpretatie van luchtfoto's
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00002</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Overeenkomst tussen het Koninkrijk der Nederlanden en het Koninkrijk Saoedi-Arabië inzake luchtvervoer
+        - column:
+          type: Aantal expressies
+          value: 2
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#2</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00003</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Wijziging van de Overeenkomst van Wenen tot instelling van een internationale classificatie van beeldbestanddelen van merken
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00004</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Overeenkomst inzake het behoud van het architectonische erfgoed van Europa
+        - column:
+          type: Aantal expressies
+          value: 3
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#3</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00004_w</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value:
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00005</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Overeenkomst tot oprichting van het Multilaterale Agentschap voor Investeringsgaranties
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00005_w</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value:
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00006</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Europees Handvest inzake lokale autonomie
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00006_w</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value:
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+      - item:
+        - column:
+          type: Werklabel
+          value: <a href="#">00007</a>
+        - column:
+          type: Area
+          value: vd
+        - column:
+          type: Titel
+          value: Internationale Overeenkomst inzake het gebruik van INMARSAT-grondstations aan boord van schepen binnen de territoriale zee en de havens
+        - column:
+          type: Aantal expressies
+          value: 1
+        - column:
+          type: Laatste expressie
+          value: '<a href="#">#1</a>'
+        - column:
+          type: Laatste wijziging
+          value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+  wordintitelInput:
+    id: 543
+    fieldLabelVisible: true
+    fieldPlaceholder: (een deel van een) werk-label
+    fieldLabel: Werk-label
+    labelmodifier: accent
+  wordintextInput:
+    id: 432
+    fieldLabelVisible: true
+    fieldPlaceholder: (deel van een) area
+    fieldLabel: Area
+    labelmodifier: accent
+  cga:
+    modifier: inline-group
+    fieldLabel: false
+    name: cga
+    options:
+      - id: checkbox-1
+        text: Inclusief CGA
+        name: cga
+  radioGegenereed:
+    fieldLabel: false
+    name: gegenereerd
+    explanation: false
+    options:
+      - id: 1
+        name: subject
+        text: Voor vorige week (85632)
+      - id: 2
+        text: Vorige week (7587)
+        name: subject
+        checked: checked
+      - id: 3
+        text: 6 dagen geleden (1178)
+        name: subject
+      - id: 4
+        text: 5 dagen geleden (1078)
+        name: subject
+      - id: 5
+        text: 4 dagen geleden (2848)
+        name: subject
+      - id: 6
+        text: 3 dagen geleden (1478)
+        name: subject
+      - id: 7
+        text: 2 dagen geleden (1245)
+        name: subject
+      - id: 8
+        text: 2 dagen geleden (16)
+        name: subject
+      - id: 9
+        text: gisteren (10)
+        name: subject
+      - id: 10
+        text: vandaag (1161)
+        name: subject
+  radioGewijzigd:
+    fieldLabel: false
+    name: gewijzigd
+    explanation: false
+    options:
+      - id: 111
+        name: subject
+        text: Voor vorige week (85632)
+      - id: 22
+        text: Vorige week (7587)
+        name: subject
+      - id: 33
+        text: 6 dagen geleden (1178)
+        name: subject
+      - id: 44
+        text: 5 dagen geleden (1078)
+        name: subject
+      - id: 55
+        text: 4 dagen geleden (2848)
+        name: subject
+      - id: 66
+        text: 3 dagen geleden (1478)
+        name: subject
+      - id: 77
+        text: 2 dagen geleden (1245)
+        name: subject
+      - id: 88
+        text: 2 dagen geleden (16)
+        name: subject
+      - id: 99
+        text: gisteren (10)
+        name: subject
+      - id: 101
+        text: vandaag (1161)
+        name: subject
+
+
+

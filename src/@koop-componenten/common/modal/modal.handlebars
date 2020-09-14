@@ -1,0 +1,17 @@
+{{#if openButton}}<p><button type="button" data-handler="open-modal" data-modal="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}" class="button">{{ openButton }}</button></p>{{/if}}
+<div id="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}" class="modal {{#if initClosed }}modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
+  <div class="modal__inner">
+    <div class="modal__content">
+      {{#if text}}
+        {{{ text }}}
+      {{else}}
+        {{#> @partial-block}}
+          {{content}}
+        {{/ @partial-block}}
+      {{/if}}
+    </div>
+    <button type="button" data-handler="close-modal" class="modal__close">
+      <span class="visually-hidden">{{ closeButton }}</span>
+    </button>
+  </div>
+</div>

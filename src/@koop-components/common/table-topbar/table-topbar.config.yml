@@ -1,8 +1,0 @@
----
-title: Table Topbar
-status: ready
-context:
-  items:
-    - text: Download tabel
-      href: www.overheid.nl
-      class: icon icon--download

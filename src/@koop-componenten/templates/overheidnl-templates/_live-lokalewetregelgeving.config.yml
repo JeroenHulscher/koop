@@ -1,0 +1,63 @@
+---
+name: live - lokalewetregelgeving
+label: ONL - live - lokalewetregelgeving
+status: ready
+context:
+  headerContext:
+    metaLinks:
+      - url: '#'
+        text: MijnOverheid.nl
+  homepageBlock1:
+    image: '../../images/temp/homepage-indebuurt.jpg'
+    heading: <a href="#">Aankondigingen over<br />uw buurt</a>
+    subtitle: Zoals bouwplannen en evenementen.
+    items:
+      - url: '#'
+        text: Aankondigingen over uw buurt
+      - url: '#'
+        text: Abonneren op aankondigingen over uw buurt
+  homepageBlock2:
+    image: '../../images/temp/homepage-diensten.jpg'
+    heading: <a href="#">Dienstverlening</a>
+    subtitle: Zoals belastingen, uitkeringen en subsidies.
+    items:
+      - url: '#'
+        text: Particulieren
+      - url: 'http://www.ondernemersplein.nl/'
+        text: Ondernemersplein
+  homepageBlock3:
+    image: '../../images/temp/homepage-beleid.jpg'
+    heading: <a href="#">Beleid &amp; Regelgeving</a>
+    subtitle: Officiële publicaties van de Overheid.
+    items:
+      - text: Wettenbank
+        subItems:
+          - url: '#'
+            text: nationaal
+          - url: '#'
+            text: lokaal
+      - url: '#'
+        text: Bekendmakingen
+      - url: '#'
+        text: Parlementaire stukken
+      - url: '#'
+        text: Internetconsultatie
+      - url: '#'
+        text: Alle beleid &amp; regelgeving
+  homepageBlock4:
+    image: '../../images/temp/homepage-overheidsinformatie.jpg'
+    heading: <a href="#">Contactgegevens Overheden</a>
+    subtitle: Adressen en contactpersonen van Overheidsorganisaties.
+    items:
+      - url: '#'
+        text: In uw regio
+      - url: '#'
+        text: Gemeenten
+      - url: '#'
+        text: Provincies
+      - url: '#'
+        text: Waterschappen
+      - url: '#'
+        text: Ministeries
+      - url: '#'
+        text: 'Alle overheden'

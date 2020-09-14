@@ -1,0 +1,11 @@
+title: Steps
+label: Stappen
+context:
+  text: link
+  action: /link/intern/
+  steps:
+    - title: Start
+    - title: Tussen
+      active: true
+    - title: Finish
+

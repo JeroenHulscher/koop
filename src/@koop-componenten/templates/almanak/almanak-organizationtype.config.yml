@@ -1,0 +1,20 @@
+label: Almanak - Organisatietype
+context:
+  list--linklist:
+    items:
+      - text: <a href="#">Gemeente Alkmaar</a>
+      - text: <a href="#">Gemeente Aarlemmermeer</a>
+      - text: <a href="#">Gemeente Aandam</a>
+      - text: <a href="#">Gemeente Aalst</a>
+      - text: <a href="#">Gemeente Alkmaar</a>
+      - text: <a href="#">Gemeente Aarlemmermeer</a>
+      - text: <a href="#">Gemeente Aandam</a>
+      - text: <a href="#">Gemeente Aalst</a>
+      - text: <a href="#">Gemeente Alkmaar</a>
+      - text: <a href="#">Gemeente Aarlemmermeer</a>
+      - text: <a href="#">Gemeente Aandam</a>
+      - text: <a href="#">Gemeente Aalst</a>
+      - text: <a href="#">Gemeente Alkmaar</a>
+      - text: <a href="#">Gemeente Aarlemmermeer</a>
+      - text: <a href="#">Gemeente Aandam</a>
+      - text: <a href="#">Gemeente Aalst</a>

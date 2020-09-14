@@ -1,0 +1,35 @@
+---
+label: Form reset
+status: ready
+context:
+  id: 1
+  inputtext:
+    value: een waarde
+  inputtext2:
+    id: 5
+    value: een waarde
+  radios2:
+    options:
+    - id: 11
+      name: subject
+      checked: checked
+      text: Afgelopen maand
+    - id: 22
+      text: Afgelopen 3 maanden
+      name: subject
+    - id: 33
+      text: Afgelopen 12 maanden
+      name: subject
+  checkboxes2:
+    options:
+      - id: checkbox-11
+        text: Groot-Brittanië
+        status: disabled
+        name: countries
+      - id: checkbox-22
+        text: Verenigde Staten
+        checked: checked
+        name: countries
+      - id: checkbox-33
+        text: Canada
+        name: countries

@@ -1,0 +1,9 @@
+name: copydata
+label: Kopieer link
+status: ready
+context:
+  triggerLabel: Kopieer link
+  triggerLabelCopied: Gekopieerd naar clipboard
+  description: Aanbestedingswet 2012
+  link: Google Link
+  url: https://www.google.nl

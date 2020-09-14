@@ -1,0 +1,255 @@
+---
+label: OEB 2.0 - Zoek - Officiële bekendmakingen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Officiële bekendmakingen
+  tabs:
+    items:
+      - content: <a href="templates-oeb-zoek-bekendmakingen" class="is-selected">Officiële bekendmakingen</a>
+      - content: <a href="templates-oeb-zoek-documenten">Parlementaire documenten</a>
+  jumbotronContext:
+    heading: Zoek in officiële bekendmakingen
+    hstyle: h2
+    subheading: Officiële bekendmakingen
+    intro: Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.
+    centered: true
+    size: semimedium
+    inputZoekwoord:
+      fieldPlaceholder: Zoekterm of (dossier)nummer
+      fieldLabel: Zoek in officiële bekendmakingen
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    dateselection:
+      dateselectionDatum:
+        label: Datum
+        value: '2020-09-11'
+        datavalue: '11-09-2020'
+        configDateFormat: 'dd-mm-yy'
+      dateselectionDatumEnd:
+        value: '2020-09-11'
+        datavalue: '11-09-2020'
+        configDateFormat: 'dd-mm-yy'
+    inputsubmitContext:
+      button: Zoek verdagen
+      placeholder: Vul hier uw zoekwoord(en) in
+    checkboxDocumentsoort:
+      id: 5
+      label: documentsoorten
+      checkboxes:
+        options:
+          - id: checkbox-20
+            text: Tractatenblad
+            name: documentsoort
+          - id: checkbox-201
+            text: Staatsblad
+            name: documentsoort
+          - id: checkbox-202
+            text: Staatcourant
+            name: documentsoort
+          - id: checkbox-203
+            text: Gemeenteblad
+            name: documentsoort
+          - id: checkbox-204
+            text: Provinciaal blad
+            name: documentsoort
+          - id: checkbox-205
+            text: Waterschapsblad
+            name: documentsoort
+          - id: checkbox-206
+            text: Blad gemeenschappelijke regeling
+            name: documentsoort
+    buttonSubmit:
+      id: 123
+      text: Zoek bekendmakingen
+      button: true
+      modifier: button--primary form__button
+    subselectionGemContext:
+      linkText: Selecteer informatiesoort(en)
+      id: 20
+      modalTitle: Type organisatie(s)
+      label: Zoek type organisatie(s)
+      inputPlaceholder: 'Zoekterm'
+      searchFilter: true
+      maxShow: 3
+      type: span
+      multilevel: false
+      controls:
+        selectAllLabel: "Selecteer alle organisaties"
+      Options:
+        - Option: 1
+          id: 1237
+          title: Adviescollege
+          short: Adviescollege
+        - Option: 2
+          id: 22372312321312
+          title: Deelgemeente
+          short: Deelgemeente
+        - Option: 3
+          id: 323723
+          title: Dienst en agentschap
+          short: Dienst en agentschap
+        - Option: 1222222222
+          id: 1237232
+          title: Gemeente
+          short: Gemeente
+        - Option: 2222222222222
+          id: 223712312312
+          title: Hoog college van staat
+          short: Hoog college van staat
+        - Option: 3222222221
+          id: 32371231231
+          title: Koepelorganisatie
+          short: Koepelorganisatie
+        - Option: 32222222212
+          id: 32371231232
+          title: Ministerie
+          short: Ministerie
+        - Option: 3222222223
+          id: 32371231233
+          title: Openbaar lichaam voor bedrijf en beroep
+          short: Openbaar lichaam voor bedrijf en beroep
+        - Option: 3222222224
+          id: 32371231234
+          title: Politiekorps
+          short: Politiekorps
+        - Option: 3222222225
+          id: 32371231235
+          title: Provincie
+          short: Provincie
+        - Option: 3222222226
+          id: 32371231237
+          title: Rechterlijke macht
+          short: Rechterlijke macht
+        - Option: 3222222227
+          id: 32371231238
+          title: Regionaal samenwerkingsorgaan
+          short: Regionaal samenwerkingsorgaan
+        - Option: 3222222228
+          id: 32371231239
+          title: Staten generaal
+          short: Staten generaal
+        - Option: 3222222229
+          id: 323712312310
+          title: Waterschap
+          short: Waterschap
+        - Option: 32222222271
+          id: 323712312311
+          title: Zelfstandig berstuurorgaan
+          short: Zelfstandig berstuurorgaan
+    subselectionPubContext:
+      linkText: Selecteer informatiesoort(en)
+      id: 21
+      modalTitle: Publicerende organisatie(s)
+      label: Zoek publicerende organisatie(s)
+      inputPlaceholder: 'Zoekterm'
+    subselectionWatContext:
+      linkText: Selecteer informatiesoort(en)
+      id: 1900
+      modalTitle: Onderwerp(en)
+      label: Zoek onderwerp
+      inputPlaceholder: 'Zoekterm'
+      type: span
+      searchFilter: true
+      multilevel: false
+      buttonResetForm: true
+      controls:
+        selectAllLabel: Selecteer alle onderwerpen
+      Options:
+        - Option: 4
+          id: 44551
+          title: Bestuur
+          short: Bestuur
+        - Option: 5
+          id: 54552
+          title: Cultuur en recreatie
+          short: Cultuur en recreatie
+        - Option: 6
+          id: 64553
+          title: Economie
+          short: Economie
+        - Option: 6
+          id: 64554
+          title: Financiën
+          short: Financiën
+        - Option: 6
+          id: 64555
+          title: Huisvesting
+          short: Huisvesting
+        - Option: 6
+          id: 64556
+          title: Internationaal
+          short: Internationaal
+        - Option: 6
+          id: 64557
+          title: Landbouw
+          short: Landbouw
+        - Option: 6
+          id: 64558
+          title: Migratie en integratie
+          short: Migratie en integratie
+        - Option: 6
+          id: 64559
+          title: Natuur en milieu
+          short: Natuur en milieu
+        - Option: 6
+          id: 645510
+          title: Onderwijs en waterschap
+          short: Onderwijs en waterschap
+        - Option: 6
+          id: 645511
+          title: Openbare orde en veiligheid
+          short: Openbare orde en veiligheid
+        - Option: 6
+          id: 645512
+          title: Recht
+          short: Recht
+        - Option: 6
+          id: 645513
+          title: Ruimte en infrastructuur
+          short: Ruimte en infrastructuur
+        - Option: 6
+          id: 645514
+          title: Sociale zekerheid
+          short: Sociale zekerheid
+        - Option: 6
+          id: 645515
+          title: Verkeer
+          short: Verkeer
+        - Option: 6
+          id: 645516
+          title: Werk
+          short: Werk
+        - Option: 6
+          id: 645517
+          title: Zorg en gezondheid
+          short: Zorg en gezondheid

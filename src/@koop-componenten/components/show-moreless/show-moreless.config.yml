@@ -1,0 +1,27 @@
+---
+label: Toon meer/minder
+status: ready
+context:
+  id: 1
+  amount: 5
+  items:
+    - item: Belastingen
+    - item: Bouwen, wonen en leefomgeving
+    - item: Cultuur, sport, vrije tijd
+    - item: Defensie
+    - item: Economie en ondernemen
+    - item: Belastingen 4
+    - item: Bouwen, wonen en leefomgeving 4
+    - item: Cultuur, sport, vrije tijd 4
+    - item: Defensie 4
+    - item: Economie en ondernemen 4
+    - item: Belastingen 3
+    - item: Bouwen, wonen en leefomgeving 3
+    - item: Cultuur, sport, vrije tijd 3
+    - item: Defensie 3
+    - item: Economie en ondernemen 3
+    - item: Belastingen 2
+    - item: Bouwen, wonen en leefomgeving 2
+    - item: Cultuur, sport, vrije tijd 2
+    - item: Defensie 2
+    - item: Economie en ondernemen 2

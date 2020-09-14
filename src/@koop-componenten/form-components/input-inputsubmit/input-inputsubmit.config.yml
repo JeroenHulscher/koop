@@ -1,0 +1,18 @@
+---
+label: Input InputSubmit
+status: ready
+context:
+  id: 101
+  label: Uw e-mailadres
+  showLabel: false
+  placeholder: Uw e-mailadres
+  button: Aanmelden
+  type: email
+variants:
+  - name: Small
+    label: Klein
+    context:
+      type: text
+      button: Zoeken
+      placeholder: Trefwoord
+      modifierComponent: input-inputsubmit--s

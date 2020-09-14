@@ -1,0 +1,20 @@
+{{#if items }}
+<ul class="pageactions">
+  {{#each items }}
+  <li>
+    <a href="{{ link }}" {{#if actionPrint}}data-decorator="init-printtrigger"{{/if}}{{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}"{{/if}}>
+    {{#if icon }}
+    <img src="../../images/{{ icon }}" alt="" role="presentation" />
+    {{/if}}
+    {{ text }}
+    {{#if count }}
+    <span class="browse__count">
+      {{ count }}
+      <span class="visually-hidden"> {{ count_context }}</span></span>
+    {{/if}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
+

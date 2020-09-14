@@ -1,0 +1,35 @@
+title: labels
+context:
+  text: default
+  modifier: label-default
+variants:
+  - name: blue
+    label: Blauw
+    context:
+      text: blauw
+      modifier: label--blue
+  - name: primary
+    context:
+      text: primary
+      modifier: label--primary
+  - name: orange
+    label: Oranje
+    context:
+      text: oranje
+      modifier: label--orange
+  - name: success
+    label: Succes
+    context:
+      text: succes
+      modifier: label--success
+  - name: warning
+    label: Waarschuwing
+    context:
+      text: waarschuwing
+      modifier: label--warning
+  - name: danger
+    label: Gevaar
+    context:
+      text: gevaar
+      modifier: label--danger
+

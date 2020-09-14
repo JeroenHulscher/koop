@@ -1,0 +1,17 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+  <div class="row">
+    {{#> @jumbotron jumbotronContext }}
+      {{ render "@button" buttonAgain }}
+      {{ render "@button" buttonContact }}
+    {{/@jumbotron}}
+  </div>
+</div>
+
+{{ render "@footer" }}

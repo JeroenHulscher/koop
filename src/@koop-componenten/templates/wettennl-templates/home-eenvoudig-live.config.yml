@@ -1,0 +1,9 @@
+---
+name: search laws complex - live
+label: LIVE - Eenvoudig zoeken
+status: ready
+context:
+  dataWoord:
+    title: Woord(en) of zinsdeel
+
+

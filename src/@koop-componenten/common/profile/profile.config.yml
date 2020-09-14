@@ -1,0 +1,37 @@
+---
+title: profile
+label: Profiel knop
+status: ready
+default: Ingelogd
+context:
+  id: 1
+  loggedIn: true
+  textLoggedIn: Mijn account
+  textLoggedOut: U bent uitgelogd
+  options:
+    - text: Mijn abonnementen
+      url: '#'
+    - text: Uitloggen
+      url: '#'
+variants:
+  - name: Logged in (with icons)
+    label: Ingelogd (met Iconen)
+    status: ready
+    context:
+      options:
+      - text: Mijn abonnementen
+        url: '#'
+        class: link link--forgotpw
+      - text: Uitloggen
+        url: '#'
+        class: link link--logout
+  - name: logged out
+    label: Uitgelogd
+    status: ready
+    context:
+      id: 2
+      loggedIn: false
+      buttonLogin:
+        text: Inloggen
+        anchor: true
+        action: '#'

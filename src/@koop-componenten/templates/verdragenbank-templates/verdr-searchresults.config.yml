@@ -1,0 +1,281 @@
+---
+label: Verdr. - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  onderwerpContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Aanlegvergunning
+      name: onderwerp
+    - id: checkbox-21
+      text: Apv vergunning
+      name: onderwerp
+    - id: checkbox-22
+      text: Bodembeschermingsvergunning
+      name: onderwerp
+    - id: checkbox-23
+      text: Bouwvergunning
+      name: onderwerp
+    - id: checkbox-24
+      text: Drank- en horecavergunning
+      name: onderwerp
+    - id: checkbox-25
+      text: Evenementenvergunning
+      name: onderwerp
+  publicatiedatumContext:
+    moreless: true
+    options:
+    - id: radio-1
+      text: Vandaag (1)
+      name: publicatie
+    - id: radio-2
+      text: Afgelopen week (21)
+      name: publicatie
+    - id: radio-3
+      text: Afgelopen maand (54)
+      name: publicatie
+    - id: radio-4
+      text: Afgelopen 2 maanden (0)
+      name: publicatie
+      disabled: disabled
+    - id: radio-5
+      text: Zelf een periode kiezen
+      name: publicatie
+  resultmodalContext:
+    modifier: result--list--wide
+    items:
+    - title: Aangevraagde evenementenvergunningen 2018
+      headerimg: https://via.placeholder.com/720x280.png?text=Kaart+met+marker
+      titleHeader: h2
+      text: 4 september 2018 -  Aangevraagde evenementenvergunningen 2018
+      buttons:
+        - button: Bekijk verdrag
+          type: secendary
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Verdrag inzake de verkrijging van bewijs in het buitenland in burgerlijke en in handelszaken
+      titleHeader: h2
+      label: Nieuw vandaag
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
+      buttons:
+        - button: Bekijk verdrag
+          type: secondary
+    - title: Europese Code inzake sociale zekerheid
+      titleHeader: h2
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
+      buttons:
+        - button: Bekijk verdrag
+          type: secondary
+    - title: Internationaal Verdrag van Nairobi inzake het opruimen van wrakken, 2007
+      titleHeader: h2
+      text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
+      metadata:
+        - value: 12 september 1986
+        - value: Brussel
+      buttons:
+        - button: Bekijk verdrag
+          type: secondary
+  inputsubmitContext:
+    id: 876
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Zoekwoord of verdragsnummer
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
+  inputsubmitSearchSaveContext:
+    label: Uw e-mailadres
+    showLabel: true
+    placeholder: Uw e-mailadres
+    button: Bevestigen
+  dateselection:
+    layout: narrow
+    tooltip:
+      id: 568987654567898765
+    dateselectionDatum:
+      label: Totstandgekomen op
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum
+      value: value
+      active: is-active
+    - label: Titel
+      value: value
+  geldvoorContext:
+      options:
+      - id: checkbox-40
+        text: Nederland (in Europa)
+        name: onderwerp
+      - id: checkbox-41
+        text: Nederland (Bonaire)
+        name: onderwerp
+      - id: checkbox-422
+        text: Nederland (Sint Eustatius)
+        name: onderwerp
+      - id: checkbox-4223
+        text: Aruba
+        name: onderwerp
+      - id: checkbox-4224
+        text: Curacao
+        name: onderwerp
+      - id: checkbox-4225
+        text: Sint Maarten
+        name: onderwerp
+  selectedfilterContext:
+    items:
+      - label: Bouwvergunning
+      - label: APV vergunning
+  depositarisContext:
+    moreless: true
+    options:
+    - id: checkbox-30
+      text: Enkel deze verdragen tonen
+      name: onderwerp
+  geldendContext:
+    options:
+    - id: checkbox-40
+      text: Nederland (in Europa)
+      name: onderwerp
+    - id: checkbox-41
+      text: Nederland (Bonaire)
+      name: onderwerp
+    - id: checkbox-4223
+      text: Nederland (Sint Eustatius)
+      name: onderwerp
+    - id: checkbox-4224
+      text: Aruba
+      name: onderwerp
+    - id: checkbox-4226
+      text: Curacao
+      name: onderwerp
+    - id: checkbox-4227
+      text: Sint Maarten
+      name: onderwerp
+  typeverdagContext:
+    moreless: true
+    options:
+    - id: checkbox-20
+      text: Bilateraal
+      name: onderwerp
+    - id: checkbox-21
+      text: Multilateraal
+      name: onderwerp
+    - id: checkbox-22
+      text: Plurilateraal
+      name: onderwerp
+  laatstContext:
+    options:
+    - id: checkbox-20111
+      text: Afgelopen maand
+      name: onderwerp
+    - id: checkbox-21111
+      text: Afgelopen 3 maanden
+      name: onderwerp
+    - id: checkbox-22111
+      text: Afgelopen 12 maanden
+      name: onderwerp
+    - id: checkbox-221112
+      text: Alle resultaten
+      name: onderwerp
+      checked: checked
+  subselectionContext:
+    linkText: Selecteer partij(en)
+    id: 1
+    modalTitle: Selecteer partijen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 122
+        id: 122
+        title: Spanje
+        short: Spanje
+      - Option: 222
+        id: 222
+        title: Griekenland
+        short: Griekenland
+      - Option: 322
+        id: 322
+        title: Nederland
+        short: Nederland
+  subselectionOnderwerpContext:
+    linkText: Selecteer onderwerp(en)
+    id: 23
+    modalTitle: Selecteer onderwerp(en)
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    type: span
+    Options:
+      - Option: 1
+        id: 1
+        title: Spanje
+        short: Spanje
+      - Option: 2
+        id: 2
+        title: Griekenland
+        short: Griekenland
+      - Option: 3
+        id: 3
+        title: Nederland
+        short: Nederland
+  startDatepicker:
+    id: 234
+    haslabel: true
+    labelmodifier: secondary
+    label: Vanaf
+    fieldPlaceholder: DD-MM-JJJJ
+  endDatepicker:
+    id: 345
+    haslabel: true
+    labelmodifier: secondary
+    label: Tot en met
+    fieldPlaceholder: DD-MM-JJJJ
+  inputPlaats:
+    id: 98765
+    fieldPlaceholder: 'Plaats totstandkoming'
+    fieldLabelVisible: true
+    fieldLabel: Plaats
+    labelmodifier: accent
+  inputHuisnummer:
+    id: 987669
+    fieldPlaceholder: 'JJJJ'
+    fieldLabelVisible: true
+    fieldLabel: Huisnummer
+  inputToevoeging:
+    id: 9876777
+    fieldPlaceholder: '000'
+    fieldLabelVisible: true
+    fieldLabel: Toevoeging
+  inputJaargang:
+    id: 987653
+    type: number
+    fieldPlaceholder: JJJJ
+    fieldLabelVisible: true
+    fieldLabel: Jaargang
+    labelmodifier: accent
+  inputNummer:
+    id: 987651212
+    type: number
+    fieldPlaceholder: '000'
+    fieldLabelVisible: true
+    fieldLabel: Nummer
+    labelmodifier: accent
+
+

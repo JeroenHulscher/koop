@@ -1,0 +1,40 @@
+---
+label: Foutpagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    navLinks: false
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Att
+      url: '#'
+    - text: "Demo: Attenderingsservice 'Er is iets mis gegaan'"
+  jumbotronContext:
+    heading: Er is iets mis gegaan
+    h: h1
+    subheading: Serverfout
+    intro: Er is een fout opgetreden, uw actie is niet voltooid. Probeer het nogmaals. Blijft deze fout optreden? Neem contact op met onze servicedesk.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonAgain:
+      id: 123
+      text: Probeer nogmaals
+      anchor: true
+      action: '#'
+      modifier: button--primary
+    buttonContact:
+      id: 123
+      text: Neem contact op
+      anchor: true
+      action: '#'

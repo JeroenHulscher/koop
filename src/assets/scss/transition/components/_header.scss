@@ -1,21 +1,29 @@
 .header {
   margin-bottom: 2em;
 
-  .profile {
-    @media ( min-width: $breakpointDesktop ) {
-      position: absolute;
-      right: 1em;
-      top: 0;
-    }
-  }
-
-
   &__start {
     z-index: 1;
 
     .header__meta {
-      > a {
-        margin-right: 1em;
+      > .button {
+        margin: .5em 1em .5em 0;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      > div {
+        margin: .4em 1em .4em 0;
+        @media ( min-width: $breakpointDesktop ) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
       }
       @media ( min-width: $breakpointDesktop ) {
         top: 0.125em;
@@ -31,6 +39,43 @@
       > ul > li > a.icon-bg {
         background-position: right .65em center !important;
       }
+    }
+  }
+
+  &__primary-nav {
+
+    a.secondary {
+      border: 0;
+      background: transparent;
+      font-weight: normal;
+      text-align: left;
+      padding: .75em 1em;
+      border-radius: 0;
+      &:hover {
+        border: 0;
+        box-shadow: none;
+        color: $headerLinkCurrentColor;
+        background-color: $headerBorderColor;
+      }
+      @media ( min-width: $breakpointDesktop ) {
+        position: absolute;
+        right: .125em;
+        top: .125em;
+        border: 0;
+        background: transparent;
+        font-weight: normal;
+        &:hover {
+          color: white;
+          background: transparent;
+          text-decoration: underline;
+        }
+      }
+    }
+    .button--primary {
+      position: absolute;
+      right: 1em;
+      top: .375em;
+      font-size: 1rem;
     }
   }
 

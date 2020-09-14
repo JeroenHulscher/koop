@@ -1,0 +1,12 @@
+title: pageactions
+label: Pagina acties
+context:
+  title: ''
+  intro: ''
+  items:
+    - link: '#'
+      text: downloaden
+      icon: icon-download.svg
+    - link: '#'
+      text: printen
+      icon: icon-print.svg

@@ -1,0 +1,23 @@
+title: Homepage block
+label: Blok (homepage)
+default: Hoe-blok
+context:
+  heading: Hoe werkt democratie
+  image: /images/temp/homepage-block-bg.png
+  blockLink: http://www.google.nl
+  items:
+    - url: /intern
+      text: Interne link
+    - url: https://www.google.com/
+      text: Google
+    - url: https://wetten.overheid.nl/
+      text: wetten.overheid.nl
+variants:
+  - name: related
+    label: Gerelateerd
+    context:
+      modifier: related
+      color: related--primaryBlue
+      heading: In de buurt
+      subtitle: Alle belangrijke zaken bij u in de buurt
+      blockLink: #

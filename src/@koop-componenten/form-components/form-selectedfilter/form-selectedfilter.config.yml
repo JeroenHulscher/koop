@@ -1,0 +1,14 @@
+---
+label: Actieve filter
+status: ready
+context:
+  id: 1
+  items:
+    - label: Gezocht op
+      value: zoekterm
+      url: "#"
+    - label: Aanlegvergunning
+      url: "#"
+    - label:
+      value: Bouwvergunning
+      url: "#"

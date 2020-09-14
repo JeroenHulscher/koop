@@ -20,7 +20,7 @@ const paths = {
   scripts : 'src/assets/js',
   fonts : 'src/assets/fonts',
   images : 'src/assets/images',
-  components: 'src/@koop-components',
+  components: 'src/@koop-componenten',
   allSrc: 'src',
   drop : 'public',
   dist : 'dist'

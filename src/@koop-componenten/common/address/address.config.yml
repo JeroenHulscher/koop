@@ -1,0 +1,8 @@
+title: address
+label: Adres
+context:
+  title: KOOP
+  textLines:
+    - text: Rijkskantoor Beatrixpark
+    - text: Wilhelmina van Pruisenweg 52
+    - text: 2595 AN Den Haag

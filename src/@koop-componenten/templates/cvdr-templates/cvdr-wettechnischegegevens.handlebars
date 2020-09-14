@@ -1,0 +1,135 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon icon--arrow-cta-right">Terug naar zoekresultaten</a>
+      </p>
+      <div class="scrollContentReceiver"></div>
+      {{render "@nav" navToeContext }}
+      {{render "@nav" navWetContext }}
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    {{ render "@pageactions" pageactions }}
+
+    <div id="modal-1" class="modal modal--off-screen" hidden role="alert">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <h2>Permanente link</h2>
+
+          <h3>Kopieer de regeling naar uw clipboard </h3>
+          <div class="row">
+              {{render "@copydata" }}
+          </div>
+          <h3>Verfijn in Linktool </h3>
+          <p>Ga naar de
+            <a href="http://linkeddata-acc.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0032203%2f2016-07-01%2f0%2fDeel1&amp;geldigheidsdatum=2016-07-01&amp;zichtdatum=2016-07-01"
+              id="aLinktoolurl" rel="external" target="_blank">Linktool</a>
+          </p>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">
+          <span class="visually-hidden">sluiten</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row row--large">
+      <div class="js-scrollContentElement">
+        <h1 class="h2">Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016</h1>
+        <p><span class="label label--info label--lg"><i>Geldend van 01-01-2019 t/m heden</i></span></p>
+      </div>
+    </div>
+
+
+
+     <h2>Gegevens van de regeling</h2>
+
+    <table class="table__data-overview">
+      <tbody>
+        <tr>
+          <th scope="row">Organisatie</th>
+          <td>Zuid-Holland</td>
+        </tr>
+        <tr>
+          <th scope="row">Organisatietype</th>
+          <td>Provincie</td>
+        </tr>
+        <tr>
+          <th scope="row">Officiële naam regeling</th>
+          <td>Besluit van Geduputeerde Staten van de provincie Zuid-Holland van 2 oktober 2018, PZH-2018-661534998, DOS-2016-0005086, tot
+          vaststelling van de deelplafonds 2019 paragraaf 2.11 van de Subsidieregeling groen Zuid-Holland 2016</td>
+        </tr>
+        <tr>
+          <td colspan="2">Etc.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="">Opmerkingen met betrekking tot de regeling</h2>
+    <p>
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+      inwerking treedt.
+    </p>
+
+    <h2 class="">Wettelijke grondslag(en) of bevoegdheid waarop de regeling is gebaseerd</h2>
+    <p>
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+      inwerking treedt.
+    </p>
+
+    <h2 class="">Regelgeving die op deze regeling is gebaseerd (gedelegeerde regelgeving)</h2>
+    <p>
+      Dit besluit treedt in werking, op het tijdstip dat het besluit van Provinciale Staten tot het vaststellen van hoofdplafond
+      voor het jaar 2019voor paragraaf 2.11van de Subsidieregeling groen Zuid-Holland 2016, als onderdeel van de begroting 2019,
+      inwerking treedt.
+    </p>
+
+      <h2 class="">Overzicht van in de tekst verwerkte wijzigingen</h2>
+      <div class="table__container">
+        <table class="table__data-overview">
+          <thead>
+            <tr>
+              <th scope="col">Datum inwerkingtreding</th>
+              <th scope="col">Terugwerkende kracht tot en met</th>
+              <th scope="col">Datum uitwerkingtreding</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>07-03-2019</td>
+              <td>07-03-2019</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>07-03-2019</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="row row--large">
+        {{ render "@alert" alertFoutief }}
+      </div>
+
+
+</div>
+
+</div>
+
+{{ render "@footer" }}

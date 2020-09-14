@@ -1,0 +1,152 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row row--heading">
+  <h1>Wet- en regelgeving</h1>
+</div>
+
+<div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_pnlFormulier" class="form">
+
+  <div class="container columns row">
+    <div>
+      <h2 class="title--underlined">Richtlijnen in de Wettenbank</h2>
+      <p>
+        Deze tab geeft toegang tot informatie over richtlijnen die door Nederland geïmplementeerd zijn/worden vanaf 2005. Voor richtlijnen
+        die volledig zijn geïmplementeerd vanaf 2013 wordt tevens informatie getoond over de wijze van implementeren daarvan
+        in nationale regelgeving.
+      </p>
+      <p>Dit onderdeel is nog experimenteel en kent mogelijk nog onvolkomenheden.</p>
+
+    </div>
+
+    <div>
+      <h2 class="title--underlined">Zoek op implementatie EU-richtlijn</h2>
+
+      <div class="form__element form__fixedWidth">
+        <div class="form__element__label">
+          <label for="ZoekOp_BesluitnummerDeel1">EU-richtlijnnummer</label>
+
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEURichtlijnnummer_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEURichtlijnnummer_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting EU-richtlijnnummer
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEURichtlijnnummer_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+
+              <p>U zoekt hier op het nummer van de richtlijn bestaande uit vier cijfers van het jaartal en maximaal vier cijfers
+                van het nummer.</p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEURichtlijnnummer_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+          <label for="ZoekOp_BesluitnummerDeel1" class="visually-hidden">Jaar</label>
+          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_BesluitnummerDeel1" type="text" maxlength="4"
+            id="ZoekOp_BesluitnummerDeel1" class="input input--small" placeholder="jjjj" />
+
+          <label for="ZoekOp_BesluitnummerDeel2" class="visually-hidden">Nummer</label>
+          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_BesluitnummerDeel2" type="text" maxlength="4"
+            id="ZoekOp_BesluitnummerDeel2" class="input input--small" placeholder="nnnn" />
+
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer" class="form__error"
+            style="display:none;">Naast een jaar is ook een richtlijnnummer vereist.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar" class="form__error" style="display:none;">Er is een ongeldig richtlijn jaar opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnNummer" class="form__error" style="display:none;">Er is een ongeldig richtlijnnummer opgegeven.</p>
+        </div>
+      </div>
+
+      <div class="form__element form__fixedWidth">
+        <div class="form__element__label">
+          <label for="ZoekOp_PublicatiebladTekst">EU-publicatieblad</label>
+
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEUPublicatieblad_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEUPublicatieblad_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting EU-publicatieblad
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEUPublicatieblad_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+
+              <p>Vul het gehele nummer (inclusief serie) van de vindplaats publicatieblad EU in en/of de bijbehorende publicatiedatum.
+                Let op dat na de C of een L een spatie moet worden ingevuld. Voorbeeld: L 63/9 - 01-03-2008.</p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoEUPublicatieblad_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+          <label for="ZoekOp_PublicatiebladTekst" class="visually-hidden">Nummer</label>
+          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_PublicatiebladTekst" type="text" maxlength="12"
+            id="ZoekOp_PublicatiebladTekst" class="input input--small" placeholder="Bijv: L 63/9" />
+
+          <label for="ZoekOp_PublicatiebladDatum" class="visually-hidden">Datum</label>
+          <div class="datepicker">
+            <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_PublicatiebladDatum" type="date" id="ZoekOp_PublicatiebladDatum"
+              class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config="{ &quot;dateFormat&quot; : &quot;dd-mm-yy&quot;, &quot;yearrange&quot;: &quot;c-20:c+0&quot; }"
+              placeholder="dd-mm-yyyy" onchange="Page_ClientValidate()" data-date="" />
+          </div>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+        </div>
+      </div>
+
+      <div class="form__element form__fixedWidth">
+        <div class="form__element__label">
+          <label for="ZoekOp_Tekst">Titel van richtlijn</label>
+
+          <div class="question-explanation">
+            <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoTitelVanRichtlijn_Inhoud"
+              id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoTitelVanRichtlijn_ctl00" class="question-explanation__link"
+              data-handler="toggle-explanation">
+              Toelichting Titel van richtlijn
+            </a>
+
+            <div id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoTitelVanRichtlijn_Inhoud" class="question-explanation__content"
+              data-decorator="hide-self" hidden="true">
+
+
+              <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de richtlijnen.</p>
+
+              <a href="../../Controls/Algemeen/#ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_InfoTitelVanRichtlijn_ctl00"
+                class="question-explanation__close" data-handler="close-explanation">Sluiten</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__element__inputs">
+          <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_Tekst" type="text" id="ZoekOp_Tekst"
+            class="input" />
+        </div>
+      </div>
+
+      <input type="button" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$btnWisScherm" value="Wis scherm"
+        onclick="javascript:__doPostBack(&#39;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$btnWisScherm&#39;,&#39;&#39;)"
+        id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_btnWisScherm" class="button" />
+      <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$btnZoeken" value="Zoeken" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$btnZoeken&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+        id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_btnZoeken" class="button button--primary" />
+    </div>
+  </div>
+
+  <div class="container row">
+    <p>
+      De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het Tractatenblad,
+      het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen heeft een officieel
+      karakter.
+    </p>
+  </div>
+
+</div>
+
+{{ render "@footer" }}

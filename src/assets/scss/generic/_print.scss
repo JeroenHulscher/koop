@@ -28,9 +28,11 @@
       margin-top: 20px;
     }
 
-    .header__nav,
+    .header__nav
+    .header__meta,
     .button,
-    .skiplinks {
+    .skiplinks,
+    [data-handler=toggle-sidebar] {
       display: none;
     }
   }

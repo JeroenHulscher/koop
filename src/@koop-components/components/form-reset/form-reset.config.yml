@@ -1,7 +1,0 @@
----
-label: Form reset
-status: ready
-context:
-  id: 1
-  inputtext:
-    value: een waarde

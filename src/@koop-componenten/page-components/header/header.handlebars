@@ -1,0 +1,85 @@
+{{#if skipLinks}}
+<div class="skiplinks container">
+  {{#each skipLinks }}
+  <a href="{{ url }}">{{ text }}</a>
+  {{/each}}
+</div>
+{{/if}}
+<header class="header">
+  <div class="header__start">
+    <div class="container">
+
+      {{#if nav}}
+        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
+      {{/if}}
+      {{> @logo }}
+
+
+
+
+      {{#if metaLinks }}
+      <div class="header__meta">
+        {{#each metaLinks }}
+          {{#if profile}}
+            {{ render "@profile" profileContext }}
+          {{else}}
+            {{#if nonlink}}
+              <span class="{{class}}">{{ text }}</span>
+            {{else}}
+              <a href="{{ url }}" class="{{class}}">{{ text }}</a>
+            {{/if}}
+          {{/if}}
+        {{/each}}
+      </div>
+      {{/if}}
+      {{#if language }}
+      <div class="header__meta">
+        <a href="#" class="link-iconed link-iconed--publication">English</a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  {{#if nav}}
+  <nav class="header__nav header__nav--closed" id="nav">
+    <h2 class="visually-hidden">Primaire navigatie</h2>
+    <div class="container">
+      <ul class="header__primary-nav list list--unstyled">
+        <li class="hidden-mobile"><a href="#other-sites" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a></li>
+        {{#if navLinks }}
+        {{#each navLinks }}
+          {{#if modifier }}
+            <li><a class="button {{ modifier }}" href="{{ action }}" role="button">{{ text }}</a></li>
+          {{else}}
+            <li><a href="{{ url }}" class="{{ className }}">{{ text }}</a></li>
+          {{/if}}
+        {{/each}}
+        {{/if}}
+      </ul>
+      {{#if headerMore }}
+      <a href="#other-sites" class="hidden-desktop" data-handler="toggle-other-sites" data-decorator="init-toggle-other-sites"><span class="visually-hidden">Andere sites binnen </span>Overheid.nl</a>
+      {{/if}}
+    </div>
+  </nav>
+  {{/if}}
+</header>
+{{#if nav}}
+  {{#if headerMore }}
+  <div class="header__more" id="other-sites">
+    <div class="container columns">
+      {{#each headerMore }}
+      <div>
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+        {{#if links }}
+        <ul class="list list--linked">
+          {{#each links }}
+          <li><a href="{{ url }}">{{ text }}</a></li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+{{/if}}

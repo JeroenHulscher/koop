@@ -1,0 +1,71 @@
+---
+label: PLOOI - Contentpagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Omschrijving
+      href: "#omschrijving"
+    - title: Publicaties
+      href: "#publicaties"
+      active: true
+      sub: true
+      subItems:
+        - stitle: Versie 1
+        - stitle: Versie 2
+          sactive: true
+    - title: Relaties
+      href: "#relaties"
+  resultsContext:
+    modifier:
+    items:
+    - title: Bekendmaking op Rijksoverheid.nl
+      titleHeader: h2
+      theme: publication
+      titleIcon: true
+      hasCollapsable: true
+      collapsContext:
+        heading: Bekijk details
+        id: 1
+        text: <ul class="list--relations"> <li><a href="#">1e item over belangrijke zaken</a><small>Item omschrijving</small></li> <li><a href="#" rel="external">2e item over minder belangrijke zaken</a></li> <li><a href="#">3e item</a><small>Item omschrijving met iets meer context</small></li> </ul>
+      text: "bijlage bij:  https://www.rijksoverheid.nl/documenten/kamerstukken/2016/07/06/tk-wodc-rapport-spoedeisend-preventief-fouilleren-aanbiedingsbrief-aan-tk"
+    - title: Bekendmaking op Rijksoverheid.nl
+      titleHeader: h2
+      theme: publication
+      titleIcon: true
+      text: "bijlage bij:  https://www.rijksoverheid.nl/documenten/kamerstukken/2016/07/06/tk-wodc-rapport-spoedeisend-preventief-fouilleren-aanbiedingsbrief-aan-tk"
+      buttons:
+        - button: Bekijk details
+          type: secendary
+    - title: Bekendmaking op Rijksoverheid.nl
+      titleHeader: h2
+      theme: publication
+      titleIcon: true
+      text: "bijlage bij:  https://www.rijksoverheid.nl/documenten/kamerstukken/2016/07/06/tk-wodc-rapport-spoedeisend-preventief-fouilleren-aanbiedingsbrief-aan-tk"
+      buttons:
+        - button: Bekijk details
+          type: secendary
+  inputSearchContext:
+    modifier: input-text--searchmedium
+    id: 1
+    fieldLabel: Postcode
+    fieldLabelVisible: false
+    fieldInstruction:
+    fieldPlaceholder: Verfijn op zoekwoord
+    remove: true
+  pageactions:
+    items:
+    - link: '#'
+      text: Downloaden
+      icon: icon-download.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+    - link: '#'
+      text: Abonneren
+      icon: icon-mail.svg

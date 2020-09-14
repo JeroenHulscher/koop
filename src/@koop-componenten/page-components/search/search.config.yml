@@ -1,0 +1,12 @@
+---
+name: search
+label: Zoeken
+context:
+  toggleableSearch: true
+  placeholder: Waar zoekt u naar?
+variants:
+  - name: untoggable
+    label: Uitgeklapt
+    context:
+      toggleableSearch: false
+

@@ -1,0 +1,87 @@
+---
+label: Beh. - Profiel
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: G. Bruikersnaam
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  emailInput:
+    modifier:
+    id: 1
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+    disabled: true
+    value: uwnaam@koop.overheid.nl
+  currentPWInput:
+    modifier:
+    id: 4
+    fieldLabel: Huidig wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder:
+    required: true
+    requiredLabel: true
+  newPWInput:
+    modifier:
+    id: 2
+    type: password
+    class: js-passwordstrength__input
+    fieldLabel: Nieuw wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Nieuw wachtwoord
+    required: true
+    requiredLabel: true
+  repeatPWInput:
+    modifier:
+    id: 3
+    type: password
+    class: js-passwordstrength__inputrepeat
+    fieldLabel: Herhaal wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Herhaal nieuw wachtwoord
+    required: true
+    requiredLabel: true
+  buttonSubmit:
+      id: 123
+      text: Wijzigingen opslaan
+      button: true
+      modifier: button--primary form__button
+  buttonCancel:
+      id: 123
+      text: Annuleren
+      anchor: true
+      action: '#'
+      modifier: button--text
+  linkBack:
+    text: Terug naar abonnementen
+  preheader:
+    value: Uw profiel
+

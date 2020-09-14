@@ -1,0 +1,24 @@
+<div class="jumbotron{{#if modifier}} jumbotron--{{ modifier }}{{/if}}">
+  <div class="jumbotron__content{{#if centered}} jumbotron__content--centered{{/if}}{{#if size}} jumbotron__content--centered-{{size}}{{/if}}{{#if contentcentered}} jumbotron__content--aligncenter{{/if}}">
+    {{#if backlink}}
+      <p class="jumbotron__backlink">
+        <a href="{{backlink/href}}" class="icon--backlink">{{backlink/title}}</a>
+      </p>
+    {{/if}}
+    <div class="jumbotron__heading {{#if headingcentered}}jumbotron__heading--centered{{/if}}">
+      {{#if subheading}}<p class="jumbotron__subheader">{{subheading}}</p>{{/if}}
+      {{#if heading}}<{{#if h}}{{h}}{{else}}h1{{/if}} class="jumbotron__header {{#if hstyle}}{{hstyle}}{{/if}}">{{heading}}</{{#if h}}{{h}}{{else}}h1{{/if}}>{{/if}}
+      {{#if intro}}
+        <p class="jumbotron__intro">
+          {{intro}}
+        </p>
+        {{#if text}}
+          {{{text}}}
+        {{/if}}
+      {{/if}}
+    </div>
+    {{#> @partial-block}}
+      {{content}}
+    {{/ @partial-block}}
+  </div>
+</div>

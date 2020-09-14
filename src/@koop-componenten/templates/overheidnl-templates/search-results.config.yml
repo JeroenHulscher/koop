@@ -1,0 +1,43 @@
+---
+title: Zoekresultaten
+label: ONL - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  spoedpublicatiemelding:
+    modifier: alert--info
+    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  filter1:
+    modifier: list--facet
+    heading: Vandaag gepubliceerd
+    maxItems: 3
+    items:
+      - content: <a href="#">Tractatenblad (0)</a>
+      - content: <a href="#">Staatblad (0)</a>
+      - content: <a href="#">Staatscourant (0)</a>
+      - content: <a href="#">Gemeenteblad (0)</a>
+      - content: <a href="#">Provenciaal blad (0)</a>
+      - content: <a href="#">Waterschapsblad (0)</a>
+      - content: <a href="#">Blad gemeenschappelijke regeling (0)</a>
+  filter2:
+    modifier: list--facet
+    heading: Organisatie
+    items:
+      - content: <a href="#">Ministerie van Binnenlandse zaken (8)</a>
+      - content: <a href="#">Ministerie van Defensie (25)</a>
+  filter3:
+    modifier: list--facet
+    heading: Rubriek
+    maxItems: 6
+    items:
+      - content: <a href="#">Defensie (4)</a>
+      - content: <a href="#">Europese zaken (3)</a>
+      - content: <a href="#">Fiscaal (12)</a>
+      - content: <a href="#">Internationale samenwerking (4)</a>
+      - content: <a href="#">Militaire missies (3)</a>
+      - content: <a href="#">Ontwikkelingssamenwerking (12)</a>
+      - content: <a href="#">Organisatie en beleid (4)</a>
+      - content: <a href="#">Militaire missies (3)</a>
+      - content: <a href="#">Reizen (12)</a>
