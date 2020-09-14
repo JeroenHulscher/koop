@@ -83,8 +83,15 @@ context:
     button: Zoek
     modifierComponent: input-inputsubmit--s
   dateselection:
-      dateselectionDatum:
-        label: Periode
+    dateselectionDatum:
+      label: Datum
+      value: '2020-09-11'
+      datavalue: '11-09-2020'
+      configDateFormat: 'dd-mm-yy'
+    dateselectionDatumEnd:
+      value: '2020-09-11'
+      datavalue: '11-09-2020'
+      configDateFormat: 'dd-mm-yy'
   checkboxDocumentsoort:
     id: 5
     label: documentsoorten

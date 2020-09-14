@@ -87,10 +87,10 @@
         </div>
 
         <div class="form__row form__row--large">
-          <fieldset>
+          <fieldset data-decorator="init-formreset" data-config='{"elements": "select"}'>
             <legend>Datum van publicatie</legend>
             {{ render "@date-selection" dateselection merge=true }}
-            <a href="#" class="reset">
+            <a href="#" class="reset formreset-resetlink">
               <small>Herstellen</small>
             </a>
           </fieldset>
