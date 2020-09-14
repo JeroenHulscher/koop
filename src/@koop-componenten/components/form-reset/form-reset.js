@@ -52,7 +52,13 @@
           }
         case 'select':
           this.inputs[y].selectedIndex = 0;
-          this.fireEvent(this.inputs[y], 'change');
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", true, true);
+            this.inputs[y].dispatchEvent(evt);
+          } else {
+            this.inputs[y].fireEvent("change");
+          }
         case 'text':
           this.inputs[y].value = '';
             // trigger keyUp event on input (for ie. filtersearch-results component)
@@ -69,21 +75,5 @@
 
     e.preventDefault();
   };
-
-  formReset.prototype.fireEvent = function(element, event) {
-    if (document.createEventObject) {
-      // dispatch for IE
-      var evt = document.createEventObject();
-      return element.fireEvent('on' + event, evt)
-    }
-    else {
-      // dispatch for firefox + others
-      var evt = document.createEvent("HTMLEvents");
-      evt.initEvent(event, true, true); // event type,bubbling,cancelable
-      return !element.dispatchEvent(evt);
-    }
-  }
-
-
 
 })();
