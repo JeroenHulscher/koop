@@ -668,6 +668,10 @@ input[type=date].datepicker__input {
     }
   }
 
+  &.input-text--medium ~ .ui-datepicker-trigger {
+    top: 8px;
+  }
+
   &.has-error ~ .ui-datepicker-trigger {
     border-color: red;
     border-width: 2px;
