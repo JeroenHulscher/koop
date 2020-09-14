@@ -170,6 +170,13 @@ fieldset {
       }
     }
 
+    // ie 10+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      fieldset a.reset {
+        top: 1em;
+      }
+    }
+
     &--slim {
       margin-bottom: .5em;
     }
