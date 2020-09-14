@@ -252,6 +252,12 @@ $gutter--lg: 6em;
 
       > div {
         margin-left: 1em;
+
+        @media ( min-width: $breakpointDesktop ) {
+          &:not(.columns--sidebar__sidebar) {
+            width: calc(100% - 22em);
+          }
+        }
       }
       &__sidebar {
         margin-left: 0;
