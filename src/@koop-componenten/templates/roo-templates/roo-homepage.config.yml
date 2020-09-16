@@ -1,0 +1,75 @@
+---
+label: ROO - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+    youAreHere:
+      - text: Register voor Overheidsorganisaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Contactgegevens overheden
+    h: h1
+    subheading: Register voor Overheidsorganisaties
+    intro: Zoek naar contactgegevens van de Nederlandse overheidsorganisaties.
+    centered: true
+    headingcentered: true
+    searchterm:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Zoek overheidsorganisatie
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Zoekterm
+      requiredLabel: true
+    buttonSubmit:
+      id: 123
+      text: Zoek documenten
+      button: true
+      modifier: button--primary form__button
+  blockIntro:
+    id: 1
+    heading: Vind snel een organisatie
+    subheading: Register van Overheidsorganisaties
+    content: <p>In dit onderdeel staan de namen, adressen en andere contactgegevens van de Nederlandse overheidsorganisaties. Ook de persoonsgegevens van (voornamelijk) leidinggevende personen binnen de Nederlandse overheid zijn opgenomen. Publicatie geschiedt in opdracht van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties, op basis van een Koninklijk Besluit van 16 juli 1859.</p><p>De organisaties zijn zelf verantwoordelijk voor de volledigheid, juistheid en actualiteit van de gegevens.</p>
+    buttonText: Meer over het register
+    href: '#'
+  list1:
+    items:
+      - content: <a href="#">Gemeenten</a>
+      - content: <a href="#">Provincies</a>
+      - content: <a href="#">Waterschappen</a>
+      - content: <a href="#">Regionale samenwerkingsorganen</a>
+      - content: <a href="#">Openbare lichamen voor beroep en bedrijf</a>
+      - content: <a href="#">Staten-Generaal</a>
+      - content: <a href="#">Hoge Colleges van Staat</a>
+      - content: <a href="#">Ministeries</a>
+      - content: <a href="#">Adviescolleges</a>
+      - content: <a href="#">Rechterlijke macht</a>
+      - content: <a href="#">Politie en brandweer</a>
+      - content: <a href="#">Caribisch gebied (BES-eilanden)</a>
+      - content: <a href="#">Aruba, curaçao en Sint Maarten</a>
+      - content: <a href="#">Zelfstandige bestuursorganen</a>
+  jumbotron2Context:
+    modifier: slim
+    heading: Meld je aan voor de mail service
+    h: h2
+    subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
+    centered: true
+    headingcentered: true
+

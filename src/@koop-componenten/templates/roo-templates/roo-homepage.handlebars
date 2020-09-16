@@ -1,0 +1,66 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+
+    <form>
+      <fieldset>
+        <legend class="visually-hidden">Zoek een publicatie</legend>
+        <div class="form__row">
+          {{ render "@input-text" searchterm }}
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="row row--xxlg">
+    <h2 class="row__heading">Direct naar</h2>
+    <div class="column column-count column-count--half">
+      {{ render "@list--action" list1 merge=true }}
+    </div>
+  </div>
+
+  <div class="row row--xlg">
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        {{ render "@block" blockIntro }}
+      </div>
+      <div class="column">
+        {{ render "@figure--without-figcaption" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    {{#> @jumbotron jumbotron2Context }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+          <div class="form__row">
+            {{ render "@input-inputsubmit" }}
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
+  </div>
+
+</div>
+
+
+{{ render "@footer" }}
