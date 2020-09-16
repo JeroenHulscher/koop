@@ -89,7 +89,8 @@ variants:
           - id: 51
             answer: Ja
             icon: thumb-up
-            triggerReponds: true
+            triggerReponds: false
+            buttonSubmit: true
           - id: 52
             answer: Nee
             link: 2
@@ -99,5 +100,5 @@ variants:
           question: Waar ben je precies naar opzoek?
           paragraph: Wat kunnen wij verbeteren?
           textarea: true
-          placeholder: Placeholder
+          placeholder: Beschrijf de verbeterpunten
           required: false
