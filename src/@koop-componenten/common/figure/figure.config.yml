@@ -5,3 +5,8 @@ context:
   figcaptionText: Voorbeeld van een plaatje.
   source: true
   sourceText: www.google.nl
+variants:
+  - name: without figcaption
+    label: zonder Figcaption
+    context:
+      figcaption: false
