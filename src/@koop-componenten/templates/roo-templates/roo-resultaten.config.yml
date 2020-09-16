@@ -1,0 +1,88 @@
+---
+label: ROO - Zoekresultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Zoekresultaat
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+  linkAbonneren:
+    text: Abonneren op deze zoekvraag
+  resultsContext:
+    modifier: result--list--wide
+    items:
+    - title: Gemeente Delft
+      titleHeader: h2
+      text: '<address>Gemeente Delft, <br>Stationsplein 1, 2611 BV DELFT</address>'
+      share: false
+      linklist: true
+      linklistHeading: 'Ga direct naar:'
+      linklistLimit: false
+      linklistItems:
+        - link: www.delft.nl
+          url: https://www.delft.nl
+      buttons:
+        - button: Bekijk details
+          type: primary
+    - title: Stichting IHE Delft Institute for Water Education
+      titleHeader: h2
+      text: '<address>Stichting IHE Delft Institute for Water Education, <br>Westvest 7, 2611 AX Delft</address>'
+      share: false
+      linklist: true
+      linklistHeading: 'Ga direct naar:'
+      linklistLimit: false
+      linklistItems:
+        - link: www.stichtingihe.nl
+          url: https://www.google.nl
+      buttons:
+        - button: Bekijk details
+          type: primary
+    - title: Stichting Theater Delft
+      titleHeader: h2
+      text: '<address>Stichting Theater Delft, <br>Westvest 7, 2611 AX Delft</address>'
+      share: false
+      linklist: true
+      linklistHeading: 'Ga direct naar:'
+      linklistLimit: false
+      linklistItems:
+        - link: www.stichtingtheaterdelft.nl
+          url: https://www.google.nl
+      buttons:
+        - button: Bekijk details
+          type: primary
+  inputsubmitContext:
+    id: 5432
+    label: Verfijn uw zoekopdracht
+    value: Delft
+    showLabel: false
+    placeholder: Zoekterm
+    button: Zoek
+    modifierComponent: input-inputsubmit--s
+  facet1:
+    modifier: list--facet
+    heading: Type
+    items:
+      - content: <a href="#"><span>Gemeente</span> <span>(1)</span></a>
+      - content: <a href="#"><span>Semi-overheid</span> <span>(4)</span></a>
