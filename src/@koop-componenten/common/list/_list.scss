@@ -617,6 +617,10 @@ ol {
       margin: 0;
       padding: 0;
 
+      -webkit-column-break-inside: avoid-column;
+      page-break-inside: avoid-column;
+      break-inside: avoid-column;
+
       a {
         display: block;
         padding: em(6) em(16) em(6) 0;
