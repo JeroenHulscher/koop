@@ -51,7 +51,7 @@
           {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
           <div class="form__row">
             {{#each answers}}
-              <button class="button-icon button-icon--{{icon}} js-button-next" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
+              <button {{#if buttonSubmit}}type="submit"{{/if}} class="button-icon button-icon--{{icon}} js-button-next" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
             {{/each}}
           </div>
         </div>
