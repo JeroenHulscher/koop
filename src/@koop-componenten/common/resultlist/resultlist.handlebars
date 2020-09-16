@@ -46,7 +46,7 @@
       {{/if}}
 
       {{#if text }}
-       <p>{{ text }}</p>
+       <p>{{{ text }}}</p>
       {{/if}}
 
       {{#if owner }}
@@ -91,11 +91,11 @@
       {{/if}}
 
       {{#if linklist}}
-        <h3 class="h4">Bekijk document direct via</h3>
+        <h3 class="h4">{{#if linklistHeading}}{{linklistHeading}}{{else}}Bekijk document direct via{{/if}}</h3>
         <div data-decorator="showmoreless" data-config='{"amount":"2"}'>
           <ul class="list list--linked">
             {{#each linklistItems}}
-            <li><a href="http://www.google.nl">{{link}}</a> {{txt}}</li>
+            <li><a href="{{url}}">{{link}}</a> {{txt}}</li>
             {{/each}}
           </ul>
         </div>
