@@ -10,8 +10,11 @@ context:
         text: Zoeken
       - url: '#'
         text: Uitgebreid zoeken
+      - url: '#'
+        text: Help
+        modifier: secondary
     youAreHere:
-      - text: Publicaties > Officiële publicaties
+      - text: Register voor Overheidsorganisaties
     skipLinks:
       skipLinks:
         - url: '#content'
@@ -20,12 +23,15 @@ context:
     breadcrumb:
       - text: Home
         url: '#'
-      - text: Uitgebreid zoeken
-        url: '#'
       - text: Zoekresultaat
+        url: '#'
   sortContext:
     modifier:
     columns: true
+    options:
+    - label: Naam
+      href: '#'
+      active: is-active
     amountPerPageFilter: true
     buttonDownload: false
   linkAbonneren:
@@ -35,7 +41,7 @@ context:
     items:
     - title: Gemeente Delft
       titleHeader: h2
-      text: '<address>Gemeente Delft, <br>Stationsplein 1, 2611 BV DELFT</address>'
+      address: 'Gemeente Delft, <br>Stationsplein 1, 2611 BV DELFT'
       share: false
       linklist: true
       linklistHeading: 'Ga direct naar:'
@@ -48,7 +54,7 @@ context:
           type: primary
     - title: Stichting IHE Delft Institute for Water Education
       titleHeader: h2
-      text: '<address>Stichting IHE Delft Institute for Water Education, <br>Westvest 7, 2611 AX Delft</address>'
+      address: 'Stichting IHE Delft Institute for Water Education, <br>Westvest 7, 2611 AX Delft'
       share: false
       linklist: true
       linklistHeading: 'Ga direct naar:'
@@ -61,7 +67,7 @@ context:
           type: primary
     - title: Stichting Theater Delft
       titleHeader: h2
-      text: '<address>Stichting Theater Delft, <br>Westvest 7, 2611 AX Delft</address>'
+      address: 'Stichting Theater Delft, <br>Westvest 7, 2611 AX Delft'
       share: false
       linklist: true
       linklistHeading: 'Ga direct naar:'
@@ -80,9 +86,221 @@ context:
     placeholder: Zoekterm
     button: Zoek
     modifierComponent: input-inputsubmit--s
-  facet1:
-    modifier: list--facet
-    heading: Type
-    items:
-      - content: <a href="#"><span>Gemeente</span> <span>(1)</span></a>
-      - content: <a href="#"><span>Semi-overheid</span> <span>(4)</span></a>
+  checkboxClassificatie:
+    modifier: inline-group
+    fieldLabel: false
+    name: cga
+    options:
+      - id: checkbox-1
+        text: WNT-instelling (Wet normering topinkomens)
+        name: cga
+  radioType:
+    name: type
+    explanation: false
+    options:
+      - id: 1
+        name: subject
+        text: Adviescollege (3)
+      - id: 2
+        text: Caribisch openbaar lichaam (3)
+        name: subject
+      - id: 3
+        text: Gemeente (355)
+        name: subject
+  subOrganisatie:
+    radio: true
+    type: span
+    id: 765
+    searchFilter: true
+    linkText: Selecteer organisatie
+    modalTitle: Selecteer organisatie
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    inputPlaceholder: 'Zoekterm'
+    Options:
+      - Option: 122
+        id: 122
+        title: Nederlandse Woonbond (1)
+        short: 'Nederlandse Woonbond'
+      - Option: 222
+        id: 222
+        title: Aa en Maas (1)
+        short: Aa en Maas
+      - Option: 322
+        id: 322
+        title: Aangemelde instanties ex Regeling overige pyrotechnische artikelen (1)
+        short: Aangemelde instanties ex Regeling overige pyrotechnische artikelen
+      - Option: 3221
+        id: 3221
+        title: Algemene Rekenkamer (8)
+        short: Algemene Rekenkamer
+      - Option: 3222
+        id: 3222
+        title: Algemene Zaken (4)
+        short: Algemene Zaken (4)
+      - Option: 3223
+        id: 3223
+        title: Amstel, Gooi en Vecht (1)
+        short: Amstel, Gooi en Vecht (1)
+      - Option: 3224
+        id: 3224
+        title: B.V. Sport (1)
+        short: B.V. Sport (1)
+      - Option: 3225
+        id: 3225
+        title: Bonaire (1)
+        short: Bonaire (1)
+      - Option: 3226
+        id: 3226
+        title: Bosbad B.V. (1)
+        short: Bosbad B.V. (1)
+      - Option: 3227
+        id: 3227
+        title: Brabant Water N.V. (1)
+        short: Brabant Water N.V. (1)
+      - Option: 3228
+        id: 3228
+        title: Brabantse Delta (1)
+        short: Brabantse Delta (1)
+      - Option: 32299
+        id: 32299
+        title: Brandweer (1)
+        short: Brandweer (1)
+      - Option: 32221
+        id: 32221
+        title: Bright Move B.V. (1)
+        short: Bright Move B.V. (1)
+      - Option: 32222
+        id: 32222
+        title: Brüggen (1)
+        short: Brüggen (1)
+      - Option: 32223
+        id: 32223
+        title: Buitenlandse Zaken (6)
+        short: Buitenlandse Zaken (6)
+      - Option: 32224
+        id: 32224
+        title: Bureau Architectenregister (1)
+        short: Bureau Architectenregister (1)
+      - Option: 32225
+        id: 32225
+        title: Bureau Erkenningen (1)
+        short: Bureau Erkenningen (1)
+      - Option: 32226
+        id: 32226
+        title: Bureau Financieel Toezicht (1)
+        short: Bureau Financieel Toezicht (1)
+      - Option: 32227
+        id: 32227
+        title: CAK (1)
+        short: CAK (1)
+      - Option: 32228
+        id: 32228
+        title: Carnegie-Stichting (1)
+        short: Carnegie-Stichting (1)
+      - Option: 32229
+        id: 32229
+        title: Caiw Diensten B.V. (1)
+        short: Caiw Diensten B.V. (1)
+  subGrondslag:
+    radio: true
+    type: span
+    id: 987
+    searchFilter: true
+    linkText: Selecteer grondslag
+    modalTitle: Selecteer grondslag
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    inputPlaceholder: 'Zoekterm'
+    Options:
+      - Option: 9
+        id: 9
+        title: Artikel 1.3.1. (Artikel 1.3, lid 1, WNT) (20)
+        short: Artikel 1.3.1. (Artikel 1.3, lid 1, WNT) (20)
+      - Option: 91
+        id: 91
+        title: Bijlagen (Bijlagen van de WNT) (86)
+        short: Bijlagen (Bijlagen van de WNT) (86)
+      - Option: 911
+        id: 911
+        title: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2, lid 1h, WNT) (366)
+        short: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2, lid 1h, WNT) (366)
+      - Option: 912
+        id: 912
+        title: Gemeenten (Artikel 1.2, lid 1c, WNT) (355)
+        short: Gemeenten (Artikel 1.2, lid 1c, WNT) (355)
+      - Option: 913
+        id: 913
+        title: Invloed (Artikel 1.3, lid 1b, WNT) (274)
+        short: Invloed (Artikel 1.3, lid 1b, WNT) (274)
+      - Option: 914
+        id: 914
+        title: Minister (Artikel 1.2, lid 1a, WNT) (9)
+        short: Minister (Artikel 1.2, lid 1a, WNT) (9)
+      - Option: 915
+        id: 915
+        title: Openbaar gezag (Artikel 1.3, lid 1a, WNT) (15)
+        short: Openbaar gezag (Artikel 1.3, lid 1a, WNT) (15)
+      - Option: 916
+        id: 916
+        title: Openbare lichamen voor beroep en bedrijf (Artikel 1.2, lid 1e, WNT) (6)
+        short: Openbare lichamen voor beroep en bedrijf (Artikel 1.2, lid 1e, WNT) (6)
+      - Option: 917
+        id: 917
+        title: Provincies (Artikel 1.2, lid 1b, WNT) (12)
+        short: Provincies (Artikel 1.2, lid 1b, WNT) (12)
+      - Option: 918
+        id: 918
+        title: Subsidie (Artikel 1.3, lid 1c, WNT) (744)
+        short: Subsidie (Artikel 1.3, lid 1c, WNT) (744)
+      - Option: 919
+        id: 919
+        title: Waterschappen (Artikel 1.2, lid 1d, WNT) (22)
+        short: Waterschappen (Artikel 1.2, lid 1d, WNT) (22)
+      - Option: 9111
+        id: 9111
+        title: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid 1h, WNT) (27)
+        short: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid 1h, WNT) (27)
+  subBeleidsterrein:
+    radio: true
+    type: span
+    id: 984
+    searchFilter: true
+    linkText: Selecteer beleidsterrein
+    modalTitle: Selecteer beleidsterrein
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    inputPlaceholder: 'Zoekterm'
+    Options:
+      - Option: 5
+        id: 5
+        title: Bestuur | Gemeenten (50)
+        short: Bestuur | Gemeenten (50)
+      - Option: 51
+        id: 51
+        title: Bestuur | Organisatie en beleid (20)
+        short: Bestuur | Organisatie en beleid (20)
+      - Option: 52
+        id: 52
+        title: Bestuur | Provincies (8)
+        short: Bestuur | Provincies (8)
+      - Option: 533
+        id: 53
+        title: Bestuur | Waterschappen (6)
+        short: Bestuur | Waterschappen (6)
+      - Option: 54
+        id: 54
+        title: Cultuur en recreatie | Cultuur (3)
+        short: Cultuur en recreatie | Cultuur (3)
+      - Option: 55
+        id: 55
+        title: Cultuur en recreatie | Kunst (1)
+        short: Cultuur en recreatie | Kunst (1)
+      - Option: 56
+        id: 56
+        title: Cultuur en recreatie | Organisatie en beleid (1)
+        short: Cultuur en recreatie | Organisatie en beleid (1)
+      - Option: 57
+        id: 57
+        title: Cultuur en recreatie | Recreatie (10)
+        short: Cultuur en recreatie | Recreatie (10)

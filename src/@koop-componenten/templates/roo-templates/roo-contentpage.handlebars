@@ -1,7 +1,7 @@
 {{ render "@header" header merge=true }}
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumb merge=true }}
   </div>
 </div>
 
@@ -28,7 +28,7 @@
     <h1>Gemeente Delft (Delft)(ZH)</h1>
 
     <p>
-    {{ render "@label" labelGewijzigd }}
+      {{ render "@label" labelType }} {{ render "@label" labelGewijzigd }}
     </p>
 
     <section class="section-chapter js-scrollSection" id="sectie-adresgegevens">
@@ -254,17 +254,6 @@
     <section class="section-chapter js-scrollSection" id="sectie-classificaties">
       <h2>Classificaties (1)</h2>
       {{ render "@table" tableClassificaties }}
-    </section>
-    <section class="section-chapter js-scrollSection" id="sectie-organisatietype">
-      <h2>Organisatietype</h2>
-      <table class="table__data-overview">
-        <tbody>
-          <tr>
-            <th scope="row">Organisatietype</th>
-            <td><a href="#">Gemeente</a></td>
-          </tr>
-        </tbody>
-      </table>
     </section>
 
     {{ render "@form-conditionals--feedback" }}

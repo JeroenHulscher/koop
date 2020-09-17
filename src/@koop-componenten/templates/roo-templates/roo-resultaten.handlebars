@@ -86,16 +86,52 @@
           </fieldset>
         </div>
 
-        {{ render "@list--facetlist" facet1 }}
-
-        {{!-- <div class="form__row form__row--large">
+        <div class="form__row form__row--large">
           <fieldset>
-            <legend>Documentsoort en gedetailleerde gegevens</legend>
+            <legend>Classificatie</legend>
             <div class="form__row">
-              {{ render "@checkbox-selectall" checkboxDocumentsoort }}
+              {{ render "@input-checkbox" checkboxClassificatie }}
             </div>
           </fieldset>
-        </div> --}}
+        </div>
+
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Type</legend>
+            <div class="form__row">
+              <div class="" data-decorator="init-formreset">
+                <p>
+                  <a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a>
+                </p>
+                {{ render "@input-radio" radioType }}
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Organisatie</legend>
+            <div class="form__row">
+              {{ render "@subselection" subOrganisatie }}
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Wettelijke Grondslag WNT</legend>
+            <div class="form__row">
+              {{ render "@subselection" subGrondslag }}
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend>Beleidsterrein</legend>
+            <div class="form__row">
+              {{ render "@subselection" subBeleidsterrein }}
+            </div>
+          </fieldset>
+        </div>
 
         {{!-- <div class="form__row form__row--large">
           <fieldset>
@@ -127,7 +163,5 @@
 
   </div>
 </div>
-
-{{ render "@disclaimer" }}
 
 {{ render "@footer" }}

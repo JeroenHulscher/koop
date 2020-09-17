@@ -5,11 +5,31 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-    language: true
+    navLinks:
+      - url: '#'
+        text: Zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Register voor Overheidsorganisaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Zoekresultaat
+        url: '#'
+      - text: Gemeente Delft
   navVerdragContext:
     id: 2
     items:
     - title: Gemeente Delft (Delft) (ZH)
+      href: "#"
       sub: true
       active: true
       sactive: true
@@ -26,8 +46,6 @@ context:
           href: "#sectie-gemeenteraad"
         - stitle: Classificaties (1)
           href: "#sectie-classificaties"
-        - stitle: Organisatietype
-          href: "#sectie-organisatietype"
   pageactions:
     title: ''
     intro: ''
@@ -37,7 +55,10 @@ context:
         icon: icon-download.svg
   labelGewijzigd:
     text: 'Laatst bijgewerkt op: 27-07-2020'
-    modifier: label-default label--lg
+    modifier: label-default label--lg label--italic
+  labelType:
+    text: 'Gemeente'
+    modifier: label--info label--lg label--italic
   tableGemeenteraad:
     label: default
     items:

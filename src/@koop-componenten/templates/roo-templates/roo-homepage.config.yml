@@ -11,12 +11,13 @@ context:
       - url: '#'
         text: Uitgebreid zoeken
       - url: '#'
+        text: Help
+        modifier: secondary
     youAreHere:
       - text: Register voor Overheidsorganisaties
     skipLinks:
-      skipLinks:
-        - url: '#content'
-          text: Direct naar content
+      - url: '#content'
+        text: Direct naar content
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
@@ -31,7 +32,7 @@ context:
     searchterm:
       modifier: input-text--medium
       labelmodifier: accent
-      id: 2
+      id: search
       fieldLabel: Zoek overheidsorganisatie
       fieldLabelVisible: true
       fieldInstruction:
@@ -39,7 +40,7 @@ context:
       requiredLabel: true
     buttonSubmit:
       id: 123
-      text: Zoek documenten
+      text: Zoek organisaties
       button: true
       modifier: button--primary form__button
   blockIntro:
@@ -58,6 +59,8 @@ context:
       - content: <a href="#">Openbare lichamen voor beroep en bedrijf</a>
       - content: <a href="#">Staten-Generaal</a>
       - content: <a href="#">Hoge Colleges van Staat</a>
+  list2:
+    items:
       - content: <a href="#">Ministeries</a>
       - content: <a href="#">Adviescolleges</a>
       - content: <a href="#">Rechterlijke macht</a>
@@ -72,4 +75,20 @@ context:
     subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
     centered: true
     headingcentered: true
+  blockOrganisatiesBuiten:
+    id: 100
+    flexed: true
+    highlight: true
+    cta: false
+    heading: Organisaties buiten de Nederlandse overheid
+    listBuiten:
+      modifier: list--linked u-nomargin
+      items:
+        - content: <a href="http://www.parlement.com/id/vh8lnhrpfxut/partijen_in_tweede_en_eerste_kamer/">Politieke partijen in Eerste en Tweede Kamer</a>
+        - content: <a href="http://www.rijksoverheid.nl/onderwerpen/ambassades-consulaten-en-overige-vertegenwoordigingen">Buitenlandse ambassades en consulaten in Nederland</a>
+        - content: <a href="http://www.europa-nu.nl/9353000/1/j9vvh6nf08temv0/vh7goo0jfubw">Europese organisaties</a>
+        - content: <a href="https://www.rijksoverheid.nl/onderwerpen/internationale-organisaties-in-nederland/lijst-van-internationale-organisaties-in-nederland">Internationale organisaties in Nederland</a>
+        - content: <a href="http://libguides.northwestern.edu/ForeignGovernmentList">Internationale overheidsorganisaties</a>
+        - content: <a href="http://taalunieversum.org/koppelingen/74/scholen_onderwijsinstellingen">Onderwijs- en onderzoeksinstellingen</a>
+        - content: <a href="http://www.bibliotheek.nl/">Openbare bibliotheken</a>
 

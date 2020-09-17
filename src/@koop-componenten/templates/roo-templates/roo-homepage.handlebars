@@ -31,9 +31,15 @@
 
   <div class="row row--xxlg">
     <h2 class="row__heading">Direct naar</h2>
-    <div class="column column-count column-count--half">
-      {{ render "@list--action" list1 merge=true }}
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        {{ render "@list--action" list1 merge=true }}
+      </div>
+      <div class="column">
+        {{ render "@list--action" list2 merge=true }}
+      </div>
     </div>
+
   </div>
 
   <div class="row row--xlg">
@@ -41,8 +47,16 @@
       <div class="column">
         {{ render "@block" blockIntro }}
       </div>
+      {{!-- <div class="block-content block-content--highlight block-content--flexed">
+        <p class="block-content__subheading">Vragen</p>
+        <h3 class="block-content__heading">Onduidelijkheden, vragen of opmerkingen over regelingen?</h3>
+        <a href="#" class="block-content__cta cta">Neem contact op</a>
+      </div> --}}
       <div class="column">
-        {{ render "@figure--without-figcaption" }}
+      {{#> @block blockOrganisatiesBuiten }}
+        <p>Het onderdeel Overheidsorganisaties bevat alleen gegevens van Nederlandse overheden. Een aantal organisaties die niet tot de Nederlandse overheid worden gerekend, vindt u hieronder.</p>
+        {{ render "@list--linklist" listBuiten merge=true }}
+      {{/@block}}
       </div>
     </div>
   </div>
