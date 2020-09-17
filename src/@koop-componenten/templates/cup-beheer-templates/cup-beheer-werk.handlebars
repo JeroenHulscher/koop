@@ -1,0 +1,796 @@
+{{render "@skiplinks" skipLinks }}
+{{render "@topbar" topbar }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Verkenner</a>
+      </p>
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    {{ render "@pageactions" actions }}
+
+    {{#> @modal modalWerkManifest }}
+
+      <h2>Framework manifest</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;work area="vd" gegenereerd="2020-01-07T12:54:21.292+01:00" label="000047" _isDeleted="false" collections="/framework/area/vd,/framework/options/manifest,/framework/work/000047" work-modified="2020-06-18T10:59:25.898335+02:00"&gt;
+        &lt;metadata&gt;
+          &lt;publicatieverwerkingsdatum&gt;2020-01-07&lt;/publicatieverwerkingsdatum&gt;
+          &lt;title&gt;Wijzigingen van de Bijlagen A en B bij de Europese Overeenkomst betreffende het internationale vervoer van gevaarlijke goederen over de weg (ADR)&lt;/title&gt;
+          &lt;isNLdepositair&gt;false&lt;/isNLdepositair&gt;
+        &lt;/metadata&gt;
+      &lt;/work&gt;</document></pre>
+
+    {{/@modal}}
+
+    <h1>Metadata werk ag-11580</h1>
+
+    {{ render "@definitionlist" werkDL }}
+
+    <table class="table--condensed table--headerhighlight">
+      <thead>
+        <tr>
+          <th scope="col">Meta type</th>
+          <th scope="col">Waarde</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">DC.creator</th>
+          <td data-before="DC.creator">Eerste Kamer der Staten-Generaal</td>
+        </tr>
+        <tr>
+          <th scope="row">DC.identifier</th>
+          <td data-before="DC.identifier">ag-11580</td>
+        </tr>
+        <tr>
+          <th scope="row">DC.title</th>
+          <td data-before="DC.title">groene agenda van de vergaderingen van 31 maart 2009</td>
+        </tr>
+        <tr>
+          <th scope="row">DC.type</th>
+          <td data-before="DC.type">Agenda</td>
+        </tr>
+        <tr>
+          <th scope="row">DCTERMS.available</th>
+          <td data-before="DCTERMS.available">2009-03-26</td>
+        </tr>
+        <tr>
+          <th scope="row">DCTERMS.issued</th>
+          <td data-before="DCTERMS.issued">2009-03-26</td>
+        </tr>
+        <tr>
+          <th scope="row">is_privacygevoelig</th>
+          <td data-before="is_privacygevoelig">False</td>
+        </tr>
+        <tr>
+          <th scope="row">is_spoedpublicatie</th>
+          <td data-before="is_spoedpublicatie">False</td>
+        </tr>
+        <tr>
+          <th scope="row">opdrachtnummer</th>
+          <td data-before="opdrachtnummer">11580</td>
+        </tr>
+        <tr>
+          <th scope="row">OVERHEIDop.publicationName</th>
+          <td data-before="OVERHEIDop.publicationName">Agenda</td>
+        </tr>
+        <tr>
+          <th scope="row">OVERHEIDop.vergaderjaar</th>
+          <td data-before="OVERHEIDop.vergaderjaar">2008-2009</td>
+        </tr>
+        <tr>
+          <th scope="row">sorteersleutel</th>
+          <td data-before="sorteersleutel">1700017991909673000000000099</td>
+        </tr>
+        <tr>
+          <th scope="row">timestamp</th>
+          <td data-before="timestamp">2014-07-02T13:34:14.1752145+02:00</td>
+        </tr>
+      </tbody>
+    </table>
+    {{!-- <p>
+      {{ render "@button" btnEdit merge=true }}
+      {{ render "@button" btnSync merge=true }}
+      {{ render "@button" btnRem merge=true }}
+    </p> --}}
+
+    <h2>Expressies</h2>
+    {{#> @collapsible expressie2 }}
+      {{ render "@pageactions" manifest2Actions }}
+      {{ render "@table" tableExpressie2 }}
+    {{/@collapsible}}
+
+    {{#> @modal modalExpressie2Manifest }}
+
+      <h2>Expressie 2: framework manifest</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;expression label="1" _isDeleted="false" collections="/framework/area/vd,/framework/options/manifest,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-nl,/framework/manifestation/xml-en"&gt;
+        &lt;metadata/&gt;
+        &lt;manifestation label="xml-nl" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-nl"&gt;
+          &lt;metadata/&gt;
+          &lt;item label="000047.xml" _deleted="false" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-nl,/framework/item/000047.xml,/framework/options/item"/&gt;
+        &lt;/manifestation&gt;
+        &lt;manifestation label="xml-en" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-en"&gt;
+          &lt;metadata/&gt;
+          &lt;item label="000047.xml" _deleted="false" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-en,/framework/item/000047.xml,/framework/options/item"/&gt;
+        &lt;/manifestation&gt;
+      &lt;/expression&gt;</document></pre>
+
+    {{/@modal}}
+
+    {{#> @modal modalExpressie2SearchableEN }}
+
+      <h2>Expressie 2: searchable (EN)</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;sm:searchable-doc identifier="/vd/content/frbr/vd/000047/1/xml-en/000047.xml" gegenereerd="2020-06-18T10:59:26.427766+02:00" time-to-generate="PT0.466689S" xmlns:prs="http://koop.overheid.nl/internal-namespaces/cds/frbr/pre-searchable" xmlns:sm="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation" xmlns:smh="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation/header" xmlns:an="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD03" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:overheid="http://standaarden.overheid.nl/owms/terms/" xmlns:overheidwetgeving="http://standaarden.overheid.nl/wetgeving/" xmlns:tooi="https://identifier.overheid.nl/tooi" xmlns:c="http://standaarden.overheid.nl/collectie/" xmlns:cd="http://standaarden.overheid.nl/cup/data" xmlns:am="http://koop.overheid.nl/apps/attenderingsmakelaar/"&gt;
+        &lt;smh:header&gt;
+          &lt;overheidwetgeving:meta&gt;
+            &lt;overheidwetgeving:owmskern&gt;
+      	&lt;dcterms:identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;000047&lt;/dcterms:identifier&gt;
+      	&lt;dcterms:title xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Amendments to Annexes A and B of the European Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR)&lt;/dcterms:title&gt;
+      	&lt;dcterms:language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;en&lt;/dcterms:language&gt;
+      	&lt;dcterms:type scheme="overheid:Informatietype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Verdrag&lt;/dcterms:type&gt;
+      	&lt;dcterms:creator scheme="overheid:Ministerie" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Ministerie van Buitenlandse Zaken&lt;/dcterms:creator&gt;
+      	&lt;dcterms:modified&gt;2019-12-17&lt;/dcterms:modified&gt;
+            &lt;/overheidwetgeving:owmskern&gt;
+            &lt;overheidwetgeving:owmsmantel&gt;
+      	&lt;dcterms:available&gt;2020-06-18&lt;/dcterms:available&gt;
+      	&lt;dcterms:hasVersion&gt;1&lt;/dcterms:hasVersion&gt;
+      	&lt;dcterms:issued&gt;2014-01-14&lt;/dcterms:issued&gt;
+      	&lt;dcterms:isPartOf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;trb-1985-61&lt;/dcterms:isPartOf&gt;
+      	&lt;dcterms:subject xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Transport&lt;/dcterms:subject&gt;
+      	&lt;dcterms:subject xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Road Traffic&lt;/dcterms:subject&gt;
+            &lt;/overheidwetgeving:owmsmantel&gt;
+            &lt;overheidwetgeving:tpmeta&gt;
+      	&lt;c:product-area&gt;vd&lt;/c:product-area&gt;
+      	&lt;c:content-area&gt;vd&lt;/c:content-area&gt;
+      	&lt;overheidwetgeving:plaatsTotstandkoming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Genève&lt;/overheidwetgeving:plaatsTotstandkoming&gt;
+      	&lt;overheidwetgeving:statusVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Inwerkinggetreden&lt;/overheidwetgeving:statusVerdrag&gt;
+      	&lt;overheidwetgeving:typeVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Multilateraal&lt;/overheidwetgeving:typeVerdrag&gt;
+      	&lt;overheidwetgeving:isNLDepositair xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isNLDepositair&gt;
+      	&lt;overheidwetgeving:isHaagseConferentiePrivaatrecht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isHaagseConferentiePrivaatrecht&gt;
+      	&lt;overheidwetgeving:inwerkingtredingsdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:inwerkingtredingsdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_startdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:geldigheidsperiodeNederland_startdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_einddatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;9999-12-31&lt;/overheidwetgeving:geldigheidsperiodeNederland_einddatum&gt;
+      	&lt;overheidwetgeving:datumTotstandkoming&gt;1984-11-20&lt;/overheidwetgeving:datumTotstandkoming&gt;
+            &lt;/overheidwetgeving:tpmeta&gt;
+          &lt;/overheidwetgeving:meta&gt;
+        &lt;/smh:header&gt;
+        &lt;sm:internal&gt;
+          &lt;sm:urls&gt;
+            &lt;sm:specific-url name="preferred"&gt;https://verdragenbank-env.overheid.nl/nl/Verdrag/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:specific-url name="preferred-en"&gt;https://treatydatabase-env.overheid.nl/en/Treaty/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:template-url name="notificatie"&gt;https://repository-env.overheid.nl/frbr/vd/000047/1/pdf/&lt;/sm:template-url&gt;
+            &lt;sm:items&gt;
+      	&lt;sm:item type="xml-en" uri="/vd/content/frbr/vd/000047/1/xml-en/000047.xml"/&gt;
+      	&lt;sm:item type="xml-nl" uri="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml"/&gt;
+            &lt;/sm:items&gt;
+          &lt;/sm:urls&gt;
+        &lt;/sm:internal&gt;
+        &lt;sm:content xml:lang="en"&gt;
+          &lt;sm:source-document uri="/vd/content/frbr/vd/000047/1/xml-en/000047.xml"&gt;
+            &lt;sm:Verdragenbank&gt;
+      	&lt;sm:meta&gt;
+      	  &lt;sm:owmskern&gt;
+      	    &lt;sm:identifier&gt;000047&lt;/sm:identifier&gt;
+      	    &lt;sm:title&gt;Amendments to Annexes A and B of the European Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR)&lt;/sm:title&gt;
+      	    &lt;sm:language&gt;en&lt;/sm:language&gt;
+      	    &lt;sm:type scheme="overheid:Informatietype"&gt;Verdrag&lt;/sm:type&gt;
+      	    &lt;sm:creator scheme="overheid:Ministerie"&gt;Ministerie van Buitenlandse Zaken&lt;/sm:creator&gt;
+      	    &lt;sm:modified&gt;2019-12-17&lt;/sm:modified&gt;
+      	  &lt;/sm:owmskern&gt;
+      	  &lt;sm:owmsmantel&gt;
+      	    &lt;sm:issued&gt;2014-01-14&lt;/sm:issued&gt;
+      	    &lt;sm:Tractatenbladen&gt;
+      	      &lt;sm:Tractatenblad&gt;
+      		&lt;sm:TractatenbladText&gt;1985, 61&lt;/sm:TractatenbladText&gt;
+      	      &lt;/sm:Tractatenblad&gt;
+      	    &lt;/sm:Tractatenbladen&gt;
+      	    &lt;sm:Kamerstukken/&gt;
+      	    &lt;sm:Verdragstekst&gt;
+      	      &lt;sm:isPartOf resourceIdentifier="http://wetten.overheid.nl/BWBV0006433"&gt;0006433&lt;/sm:isPartOf&gt;
+      	    &lt;/sm:Verdragstekst&gt;
+      	    &lt;sm:subject&gt;Transport&lt;/sm:subject&gt;
+      	    &lt;sm:subject&gt;Road Traffic&lt;/sm:subject&gt;
+      	  &lt;/sm:owmsmantel&gt;
+      	  &lt;sm:verdragipm&gt;
+      	    &lt;sm:sluitingsDatum&gt;1984-11-20&lt;/sm:sluitingsDatum&gt;
+      	    &lt;sm:sluitingsPlaats&gt;Genève&lt;/sm:sluitingsPlaats&gt;
+      	    &lt;sm:voorlopigeToepassingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:inwerkingtredingDatum&gt;1985-05-01&lt;/sm:inwerkingtredingDatum&gt;
+      	    &lt;sm:terugwerkendeKrachtDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:uitwerkingtredingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:isNLDepositair&gt;false&lt;/sm:isNLDepositair&gt;
+      	    &lt;sm:isHaagseConferentiePrivaatrecht&gt;false&lt;/sm:isHaagseConferentiePrivaatrecht&gt;
+      	    &lt;sm:verdragType&gt;Multilateraal&lt;/sm:verdragType&gt;
+      	    &lt;sm:verdragStatus&gt;Inwerkinggetreden&lt;/sm:verdragStatus&gt;
+      	    &lt;sm:gepubliceerdeWijzigingsDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	  &lt;/sm:verdragipm&gt;
+      	&lt;/sm:meta&gt;
+      	&lt;sm:body&gt;
+      	  &lt;sm:verdrag&gt;
+      	    &lt;sm:Opmerking/&gt;
+      	    &lt;sm:Koninkrijksdelen&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (in Europe)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding&gt;1985-05-01&lt;/sm:DatumInwerkingtreding&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (Bonaire)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (Sint Eustatius)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (Saba)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Aruba&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Curaçao&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Sint Maarten&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	    &lt;/sm:Koninkrijksdelen&gt;
+      	    &lt;sm:Partijen/&gt;
+      	    &lt;sm:Moederverdragen/&gt;
+      	    &lt;sm:Kindverdragen/&gt;
+      	    &lt;sm:DepositaireGegevens/&gt;
+      	  &lt;/sm:verdrag&gt;
+      	&lt;/sm:body&gt;
+            &lt;/sm:Verdragenbank&gt;
+          &lt;/sm:source-document&gt;
+        &lt;/sm:content&gt;
+      &lt;/sm:searchable-doc&gt;</document></pre>
+
+    {{/@modal}}
+
+    {{#> @modal modalExpressie2SearchableNL }}
+
+      <h2>Expressie 2: searchable (NL)</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;sm:searchable-doc identifier="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml" gegenereerd="2020-06-18T10:59:26.270776+02:00" time-to-generate="PT0.311421S" xmlns:prs="http://koop.overheid.nl/internal-namespaces/cds/frbr/pre-searchable" xmlns:sm="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation" xmlns:smh="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation/header" xmlns:an="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD03" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:overheid="http://standaarden.overheid.nl/owms/terms/" xmlns:overheidwetgeving="http://standaarden.overheid.nl/wetgeving/" xmlns:tooi="https://identifier.overheid.nl/tooi" xmlns:c="http://standaarden.overheid.nl/collectie/" xmlns:cd="http://standaarden.overheid.nl/cup/data" xmlns:am="http://koop.overheid.nl/apps/attenderingsmakelaar/"&gt;
+        &lt;smh:header&gt;
+          &lt;overheidwetgeving:meta&gt;
+            &lt;overheidwetgeving:owmskern&gt;
+      	&lt;dcterms:identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;000047&lt;/dcterms:identifier&gt;
+      	&lt;dcterms:title xml:lang="nl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Wijzigingen van de Bijlagen A en B bij de Europese Overeenkomst betreffende het internationale vervoer van gevaarlijke goederen over de weg (ADR)&lt;/dcterms:title&gt;
+      	&lt;dcterms:language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;nl&lt;/dcterms:language&gt;
+      	&lt;dcterms:type scheme="overheid:Informatietype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Verdrag&lt;/dcterms:type&gt;
+      	&lt;dcterms:creator scheme="overheid:Ministerie" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Ministerie van Buitenlandse Zaken&lt;/dcterms:creator&gt;
+      	&lt;dcterms:modified&gt;2019-12-17&lt;/dcterms:modified&gt;
+            &lt;/overheidwetgeving:owmskern&gt;
+            &lt;overheidwetgeving:owmsmantel&gt;
+      	&lt;dcterms:available&gt;2020-06-18&lt;/dcterms:available&gt;
+      	&lt;dcterms:hasVersion&gt;1&lt;/dcterms:hasVersion&gt;
+      	&lt;dcterms:issued&gt;2014-01-14&lt;/dcterms:issued&gt;
+      	&lt;dcterms:isPartOf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;trb-1985-61&lt;/dcterms:isPartOf&gt;
+      	&lt;dcterms:subject xml:lang="nl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Vervoer&lt;/dcterms:subject&gt;
+      	&lt;dcterms:subject xml:lang="nl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Wegverkeer&lt;/dcterms:subject&gt;
+            &lt;/overheidwetgeving:owmsmantel&gt;
+            &lt;overheidwetgeving:tpmeta&gt;
+      	&lt;c:product-area&gt;vd&lt;/c:product-area&gt;
+      	&lt;c:content-area&gt;vd&lt;/c:content-area&gt;
+      	&lt;overheidwetgeving:plaatsTotstandkoming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Genève&lt;/overheidwetgeving:plaatsTotstandkoming&gt;
+      	&lt;overheidwetgeving:statusVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Inwerkinggetreden&lt;/overheidwetgeving:statusVerdrag&gt;
+      	&lt;overheidwetgeving:typeVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Multilateraal&lt;/overheidwetgeving:typeVerdrag&gt;
+      	&lt;overheidwetgeving:isNLDepositair xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isNLDepositair&gt;
+      	&lt;overheidwetgeving:isHaagseConferentiePrivaatrecht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isHaagseConferentiePrivaatrecht&gt;
+      	&lt;overheidwetgeving:inwerkingtredingsdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:inwerkingtredingsdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_startdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:geldigheidsperiodeNederland_startdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_einddatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;9999-12-31&lt;/overheidwetgeving:geldigheidsperiodeNederland_einddatum&gt;
+      	&lt;overheidwetgeving:datumTotstandkoming&gt;1984-11-20&lt;/overheidwetgeving:datumTotstandkoming&gt;
+            &lt;/overheidwetgeving:tpmeta&gt;
+          &lt;/overheidwetgeving:meta&gt;
+        &lt;/smh:header&gt;
+        &lt;sm:internal&gt;
+          &lt;sm:urls&gt;
+            &lt;sm:specific-url name="preferred"&gt;https://verdragenbank-env.overheid.nl/nl/Verdrag/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:specific-url name="preferred-en"&gt;https://treatydatabase-env.overheid.nl/en/Treaty/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:template-url name="notificatie"&gt;https://repository-env.overheid.nl/frbr/vd/000047/1/pdf/&lt;/sm:template-url&gt;
+            &lt;sm:items&gt;
+      	&lt;sm:item type="xml-en" uri="/vd/content/frbr/vd/000047/1/xml-en/000047.xml"/&gt;
+      	&lt;sm:item type="xml-nl" uri="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml"/&gt;
+            &lt;/sm:items&gt;
+          &lt;/sm:urls&gt;
+        &lt;/sm:internal&gt;
+        &lt;sm:content xml:lang="nl"&gt;
+          &lt;sm:source-document uri="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml"&gt;
+            &lt;sm:Verdragenbank&gt;
+      	&lt;sm:meta&gt;
+      	  &lt;sm:owmskern&gt;
+      	    &lt;sm:identifier&gt;000047&lt;/sm:identifier&gt;
+      	    &lt;sm:title&gt;Wijzigingen van de Bijlagen A en B bij de Europese Overeenkomst betreffende het internationale vervoer van gevaarlijke goederen over de weg (ADR)&lt;/sm:title&gt;
+      	    &lt;sm:language&gt;nl&lt;/sm:language&gt;
+      	    &lt;sm:type scheme="overheid:Informatietype"&gt;Verdrag&lt;/sm:type&gt;
+      	    &lt;sm:creator scheme="overheid:Ministerie"&gt;Ministerie van Buitenlandse Zaken&lt;/sm:creator&gt;
+      	    &lt;sm:modified&gt;2019-12-17&lt;/sm:modified&gt;
+      	  &lt;/sm:owmskern&gt;
+      	  &lt;sm:owmsmantel&gt;
+      	    &lt;sm:issued&gt;2014-01-14&lt;/sm:issued&gt;
+      	    &lt;sm:Tractatenbladen&gt;
+      	      &lt;sm:Tractatenblad&gt;
+      		&lt;sm:TractatenbladText&gt;1985, 61&lt;/sm:TractatenbladText&gt;
+      		&lt;sm:Omschrijving&gt;Fr, inwerkingtreding&lt;/sm:Omschrijving&gt;
+      	      &lt;/sm:Tractatenblad&gt;
+      	    &lt;/sm:Tractatenbladen&gt;
+      	    &lt;sm:Kamerstukken/&gt;
+      	    &lt;sm:Verdragstekst&gt;
+      	      &lt;sm:isPartOf resourceIdentifier="http://wetten.overheid.nl/BWBV0006433"&gt;0006433&lt;/sm:isPartOf&gt;
+      	    &lt;/sm:Verdragstekst&gt;
+      	    &lt;sm:subject&gt;Vervoer&lt;/sm:subject&gt;
+      	    &lt;sm:subject&gt;Wegverkeer&lt;/sm:subject&gt;
+      	  &lt;/sm:owmsmantel&gt;
+      	  &lt;sm:verdragipm&gt;
+      	    &lt;sm:sluitingsDatum&gt;1984-11-20&lt;/sm:sluitingsDatum&gt;
+      	    &lt;sm:sluitingsPlaats&gt;Genève&lt;/sm:sluitingsPlaats&gt;
+      	    &lt;sm:voorlopigeToepassingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:inwerkingtredingDatum&gt;1985-05-01&lt;/sm:inwerkingtredingDatum&gt;
+      	    &lt;sm:terugwerkendeKrachtDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:uitwerkingtredingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:isNLDepositair&gt;false&lt;/sm:isNLDepositair&gt;
+      	    &lt;sm:isHaagseConferentiePrivaatrecht&gt;false&lt;/sm:isHaagseConferentiePrivaatrecht&gt;
+      	    &lt;sm:verdragType&gt;Multilateraal&lt;/sm:verdragType&gt;
+      	    &lt;sm:verdragStatus&gt;Inwerkinggetreden&lt;/sm:verdragStatus&gt;
+      	    &lt;sm:gepubliceerdeWijzigingsDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	  &lt;/sm:verdragipm&gt;
+      	&lt;/sm:meta&gt;
+      	&lt;sm:body&gt;
+      	  &lt;sm:verdrag&gt;
+      	    &lt;sm:Opmerking/&gt;
+      	    &lt;sm:Koninkrijksdelen&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (in Europa)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding&gt;1985-05-01&lt;/sm:DatumInwerkingtreding&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (Bonaire)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (Sint Eustatius)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (Saba)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Aruba&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Curaçao&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Sint Maarten&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	    &lt;/sm:Koninkrijksdelen&gt;
+      	    &lt;sm:Partijen/&gt;
+      	    &lt;sm:Moederverdragen/&gt;
+      	    &lt;sm:Kindverdragen/&gt;
+      	    &lt;sm:DepositaireGegevens/&gt;
+      	  &lt;/sm:verdrag&gt;
+      	&lt;/sm:body&gt;
+            &lt;/sm:Verdragenbank&gt;
+          &lt;/sm:source-document&gt;
+        &lt;/sm:content&gt;
+      &lt;/sm:searchable-doc&gt;</document></pre>
+
+    {{/@modal}}
+
+
+    {{#> @collapsible expressie1 }}
+      {{ render "@pageactions" manifest1Actions }}
+      {{ render "@table" tableExpressie1 }}
+    {{/@collapsible}}
+
+    {{#> @modal modalExpressieManifest }}
+
+      <h2>Expressie 1: framework manifest</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;expression label="1" _isDeleted="false" collections="/framework/area/vd,/framework/options/manifest,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-nl,/framework/manifestation/xml-en"&gt;
+        &lt;metadata/&gt;
+        &lt;manifestation label="xml-nl" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-nl"&gt;
+          &lt;metadata/&gt;
+          &lt;item label="000047.xml" _deleted="false" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-nl,/framework/item/000047.xml,/framework/options/item"/&gt;
+        &lt;/manifestation&gt;
+        &lt;manifestation label="xml-en" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-en"&gt;
+          &lt;metadata/&gt;
+          &lt;item label="000047.xml" _deleted="false" collections="/framework/area/vd,/framework/work/000047,/framework/work-expression/000047/1,/framework/manifestation/xml-en,/framework/item/000047.xml,/framework/options/item"/&gt;
+        &lt;/manifestation&gt;
+      &lt;/expression&gt;</document></pre>
+
+    {{/@modal}}
+
+    {{#> @modal modalExpressieSearchableEN }}
+
+      <h2>Expressie 1: searchable (EN)</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;sm:searchable-doc identifier="/vd/content/frbr/vd/000047/1/xml-en/000047.xml" gegenereerd="2020-06-18T10:59:26.427766+02:00" time-to-generate="PT0.466689S" xmlns:prs="http://koop.overheid.nl/internal-namespaces/cds/frbr/pre-searchable" xmlns:sm="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation" xmlns:smh="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation/header" xmlns:an="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD03" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:overheid="http://standaarden.overheid.nl/owms/terms/" xmlns:overheidwetgeving="http://standaarden.overheid.nl/wetgeving/" xmlns:tooi="https://identifier.overheid.nl/tooi" xmlns:c="http://standaarden.overheid.nl/collectie/" xmlns:cd="http://standaarden.overheid.nl/cup/data" xmlns:am="http://koop.overheid.nl/apps/attenderingsmakelaar/"&gt;
+        &lt;smh:header&gt;
+          &lt;overheidwetgeving:meta&gt;
+            &lt;overheidwetgeving:owmskern&gt;
+      	&lt;dcterms:identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;000047&lt;/dcterms:identifier&gt;
+      	&lt;dcterms:title xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Amendments to Annexes A and B of the European Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR)&lt;/dcterms:title&gt;
+      	&lt;dcterms:language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;en&lt;/dcterms:language&gt;
+      	&lt;dcterms:type scheme="overheid:Informatietype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Verdrag&lt;/dcterms:type&gt;
+      	&lt;dcterms:creator scheme="overheid:Ministerie" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Ministerie van Buitenlandse Zaken&lt;/dcterms:creator&gt;
+      	&lt;dcterms:modified&gt;2019-12-17&lt;/dcterms:modified&gt;
+            &lt;/overheidwetgeving:owmskern&gt;
+            &lt;overheidwetgeving:owmsmantel&gt;
+      	&lt;dcterms:available&gt;2020-06-18&lt;/dcterms:available&gt;
+      	&lt;dcterms:hasVersion&gt;1&lt;/dcterms:hasVersion&gt;
+      	&lt;dcterms:issued&gt;2014-01-14&lt;/dcterms:issued&gt;
+      	&lt;dcterms:isPartOf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;trb-1985-61&lt;/dcterms:isPartOf&gt;
+      	&lt;dcterms:subject xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Transport&lt;/dcterms:subject&gt;
+      	&lt;dcterms:subject xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Road Traffic&lt;/dcterms:subject&gt;
+            &lt;/overheidwetgeving:owmsmantel&gt;
+            &lt;overheidwetgeving:tpmeta&gt;
+      	&lt;c:product-area&gt;vd&lt;/c:product-area&gt;
+      	&lt;c:content-area&gt;vd&lt;/c:content-area&gt;
+      	&lt;overheidwetgeving:plaatsTotstandkoming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Genève&lt;/overheidwetgeving:plaatsTotstandkoming&gt;
+      	&lt;overheidwetgeving:statusVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Inwerkinggetreden&lt;/overheidwetgeving:statusVerdrag&gt;
+      	&lt;overheidwetgeving:typeVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Multilateraal&lt;/overheidwetgeving:typeVerdrag&gt;
+      	&lt;overheidwetgeving:isNLDepositair xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isNLDepositair&gt;
+      	&lt;overheidwetgeving:isHaagseConferentiePrivaatrecht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isHaagseConferentiePrivaatrecht&gt;
+      	&lt;overheidwetgeving:inwerkingtredingsdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:inwerkingtredingsdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_startdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:geldigheidsperiodeNederland_startdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_einddatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;9999-12-31&lt;/overheidwetgeving:geldigheidsperiodeNederland_einddatum&gt;
+      	&lt;overheidwetgeving:datumTotstandkoming&gt;1984-11-20&lt;/overheidwetgeving:datumTotstandkoming&gt;
+            &lt;/overheidwetgeving:tpmeta&gt;
+          &lt;/overheidwetgeving:meta&gt;
+        &lt;/smh:header&gt;
+        &lt;sm:internal&gt;
+          &lt;sm:urls&gt;
+            &lt;sm:specific-url name="preferred"&gt;https://verdragenbank-env.overheid.nl/nl/Verdrag/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:specific-url name="preferred-en"&gt;https://treatydatabase-env.overheid.nl/en/Treaty/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:template-url name="notificatie"&gt;https://repository-env.overheid.nl/frbr/vd/000047/1/pdf/&lt;/sm:template-url&gt;
+            &lt;sm:items&gt;
+      	&lt;sm:item type="xml-en" uri="/vd/content/frbr/vd/000047/1/xml-en/000047.xml"/&gt;
+      	&lt;sm:item type="xml-nl" uri="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml"/&gt;
+            &lt;/sm:items&gt;
+          &lt;/sm:urls&gt;
+        &lt;/sm:internal&gt;
+        &lt;sm:content xml:lang="en"&gt;
+          &lt;sm:source-document uri="/vd/content/frbr/vd/000047/1/xml-en/000047.xml"&gt;
+            &lt;sm:Verdragenbank&gt;
+      	&lt;sm:meta&gt;
+      	  &lt;sm:owmskern&gt;
+      	    &lt;sm:identifier&gt;000047&lt;/sm:identifier&gt;
+      	    &lt;sm:title&gt;Amendments to Annexes A and B of the European Agreement Concerning the International Carriage of Dangerous Goods by Road (ADR)&lt;/sm:title&gt;
+      	    &lt;sm:language&gt;en&lt;/sm:language&gt;
+      	    &lt;sm:type scheme="overheid:Informatietype"&gt;Verdrag&lt;/sm:type&gt;
+      	    &lt;sm:creator scheme="overheid:Ministerie"&gt;Ministerie van Buitenlandse Zaken&lt;/sm:creator&gt;
+      	    &lt;sm:modified&gt;2019-12-17&lt;/sm:modified&gt;
+      	  &lt;/sm:owmskern&gt;
+      	  &lt;sm:owmsmantel&gt;
+      	    &lt;sm:issued&gt;2014-01-14&lt;/sm:issued&gt;
+      	    &lt;sm:Tractatenbladen&gt;
+      	      &lt;sm:Tractatenblad&gt;
+      		&lt;sm:TractatenbladText&gt;1985, 61&lt;/sm:TractatenbladText&gt;
+      	      &lt;/sm:Tractatenblad&gt;
+      	    &lt;/sm:Tractatenbladen&gt;
+      	    &lt;sm:Kamerstukken/&gt;
+      	    &lt;sm:Verdragstekst&gt;
+      	      &lt;sm:isPartOf resourceIdentifier="http://wetten.overheid.nl/BWBV0006433"&gt;0006433&lt;/sm:isPartOf&gt;
+      	    &lt;/sm:Verdragstekst&gt;
+      	    &lt;sm:subject&gt;Transport&lt;/sm:subject&gt;
+      	    &lt;sm:subject&gt;Road Traffic&lt;/sm:subject&gt;
+      	  &lt;/sm:owmsmantel&gt;
+      	  &lt;sm:verdragipm&gt;
+      	    &lt;sm:sluitingsDatum&gt;1984-11-20&lt;/sm:sluitingsDatum&gt;
+      	    &lt;sm:sluitingsPlaats&gt;Genève&lt;/sm:sluitingsPlaats&gt;
+      	    &lt;sm:voorlopigeToepassingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:inwerkingtredingDatum&gt;1985-05-01&lt;/sm:inwerkingtredingDatum&gt;
+      	    &lt;sm:terugwerkendeKrachtDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:uitwerkingtredingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:isNLDepositair&gt;false&lt;/sm:isNLDepositair&gt;
+      	    &lt;sm:isHaagseConferentiePrivaatrecht&gt;false&lt;/sm:isHaagseConferentiePrivaatrecht&gt;
+      	    &lt;sm:verdragType&gt;Multilateraal&lt;/sm:verdragType&gt;
+      	    &lt;sm:verdragStatus&gt;Inwerkinggetreden&lt;/sm:verdragStatus&gt;
+      	    &lt;sm:gepubliceerdeWijzigingsDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	  &lt;/sm:verdragipm&gt;
+      	&lt;/sm:meta&gt;
+      	&lt;sm:body&gt;
+      	  &lt;sm:verdrag&gt;
+      	    &lt;sm:Opmerking/&gt;
+      	    &lt;sm:Koninkrijksdelen&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (in Europe)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding&gt;1985-05-01&lt;/sm:DatumInwerkingtreding&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (Bonaire)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (Sint Eustatius)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Netherlands (Saba)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Aruba&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Curaçao&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Sint Maarten&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	    &lt;/sm:Koninkrijksdelen&gt;
+      	    &lt;sm:Partijen/&gt;
+      	    &lt;sm:Moederverdragen/&gt;
+      	    &lt;sm:Kindverdragen/&gt;
+      	    &lt;sm:DepositaireGegevens/&gt;
+      	  &lt;/sm:verdrag&gt;
+      	&lt;/sm:body&gt;
+            &lt;/sm:Verdragenbank&gt;
+          &lt;/sm:source-document&gt;
+        &lt;/sm:content&gt;
+      &lt;/sm:searchable-doc&gt;</document></pre>
+
+    {{/@modal}}
+
+    {{#> @modal modalExpressieSearchableNL }}
+
+      <h2>Expressie 1: searchable (NL)</h2>
+
+      <pre class="prettyprint linenums lang-xml xmlwrap"><document xmlns="">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;sm:searchable-doc identifier="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml" gegenereerd="2020-06-18T10:59:26.270776+02:00" time-to-generate="PT0.311421S" xmlns:prs="http://koop.overheid.nl/internal-namespaces/cds/frbr/pre-searchable" xmlns:sm="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation" xmlns:smh="http://koop.overheid.nl/internal-namespaces/cds/frbr/searchable-manifestation/header" xmlns:an="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD03" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:overheid="http://standaarden.overheid.nl/owms/terms/" xmlns:overheidwetgeving="http://standaarden.overheid.nl/wetgeving/" xmlns:tooi="https://identifier.overheid.nl/tooi" xmlns:c="http://standaarden.overheid.nl/collectie/" xmlns:cd="http://standaarden.overheid.nl/cup/data" xmlns:am="http://koop.overheid.nl/apps/attenderingsmakelaar/"&gt;
+        &lt;smh:header&gt;
+          &lt;overheidwetgeving:meta&gt;
+            &lt;overheidwetgeving:owmskern&gt;
+      	&lt;dcterms:identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;000047&lt;/dcterms:identifier&gt;
+      	&lt;dcterms:title xml:lang="nl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Wijzigingen van de Bijlagen A en B bij de Europese Overeenkomst betreffende het internationale vervoer van gevaarlijke goederen over de weg (ADR)&lt;/dcterms:title&gt;
+      	&lt;dcterms:language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;nl&lt;/dcterms:language&gt;
+      	&lt;dcterms:type scheme="overheid:Informatietype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Verdrag&lt;/dcterms:type&gt;
+      	&lt;dcterms:creator scheme="overheid:Ministerie" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Ministerie van Buitenlandse Zaken&lt;/dcterms:creator&gt;
+      	&lt;dcterms:modified&gt;2019-12-17&lt;/dcterms:modified&gt;
+            &lt;/overheidwetgeving:owmskern&gt;
+            &lt;overheidwetgeving:owmsmantel&gt;
+      	&lt;dcterms:available&gt;2020-06-18&lt;/dcterms:available&gt;
+      	&lt;dcterms:hasVersion&gt;1&lt;/dcterms:hasVersion&gt;
+      	&lt;dcterms:issued&gt;2014-01-14&lt;/dcterms:issued&gt;
+      	&lt;dcterms:isPartOf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;trb-1985-61&lt;/dcterms:isPartOf&gt;
+      	&lt;dcterms:subject xml:lang="nl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Vervoer&lt;/dcterms:subject&gt;
+      	&lt;dcterms:subject xml:lang="nl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Wegverkeer&lt;/dcterms:subject&gt;
+            &lt;/overheidwetgeving:owmsmantel&gt;
+            &lt;overheidwetgeving:tpmeta&gt;
+      	&lt;c:product-area&gt;vd&lt;/c:product-area&gt;
+      	&lt;c:content-area&gt;vd&lt;/c:content-area&gt;
+      	&lt;overheidwetgeving:plaatsTotstandkoming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Genève&lt;/overheidwetgeving:plaatsTotstandkoming&gt;
+      	&lt;overheidwetgeving:statusVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Inwerkinggetreden&lt;/overheidwetgeving:statusVerdrag&gt;
+      	&lt;overheidwetgeving:typeVerdrag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;Multilateraal&lt;/overheidwetgeving:typeVerdrag&gt;
+      	&lt;overheidwetgeving:isNLDepositair xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isNLDepositair&gt;
+      	&lt;overheidwetgeving:isHaagseConferentiePrivaatrecht xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;false&lt;/overheidwetgeving:isHaagseConferentiePrivaatrecht&gt;
+      	&lt;overheidwetgeving:inwerkingtredingsdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:inwerkingtredingsdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_startdatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;1985-05-01&lt;/overheidwetgeving:geldigheidsperiodeNederland_startdatum&gt;
+      	&lt;overheidwetgeving:geldigheidsperiodeNederland_einddatum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;9999-12-31&lt;/overheidwetgeving:geldigheidsperiodeNederland_einddatum&gt;
+      	&lt;overheidwetgeving:datumTotstandkoming&gt;1984-11-20&lt;/overheidwetgeving:datumTotstandkoming&gt;
+            &lt;/overheidwetgeving:tpmeta&gt;
+          &lt;/overheidwetgeving:meta&gt;
+        &lt;/smh:header&gt;
+        &lt;sm:internal&gt;
+          &lt;sm:urls&gt;
+            &lt;sm:specific-url name="preferred"&gt;https://verdragenbank-env.overheid.nl/nl/Verdrag/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:specific-url name="preferred-en"&gt;https://treatydatabase-env.overheid.nl/en/Treaty/Details/000047.html&lt;/sm:specific-url&gt;
+            &lt;sm:template-url name="notificatie"&gt;https://repository-env.overheid.nl/frbr/vd/000047/1/pdf/&lt;/sm:template-url&gt;
+            &lt;sm:items&gt;
+      	&lt;sm:item type="xml-en" uri="/vd/content/frbr/vd/000047/1/xml-en/000047.xml"/&gt;
+      	&lt;sm:item type="xml-nl" uri="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml"/&gt;
+            &lt;/sm:items&gt;
+          &lt;/sm:urls&gt;
+        &lt;/sm:internal&gt;
+        &lt;sm:content xml:lang="nl"&gt;
+          &lt;sm:source-document uri="/vd/content/frbr/vd/000047/1/xml-nl/000047.xml"&gt;
+            &lt;sm:Verdragenbank&gt;
+      	&lt;sm:meta&gt;
+      	  &lt;sm:owmskern&gt;
+      	    &lt;sm:identifier&gt;000047&lt;/sm:identifier&gt;
+      	    &lt;sm:title&gt;Wijzigingen van de Bijlagen A en B bij de Europese Overeenkomst betreffende het internationale vervoer van gevaarlijke goederen over de weg (ADR)&lt;/sm:title&gt;
+      	    &lt;sm:language&gt;nl&lt;/sm:language&gt;
+      	    &lt;sm:type scheme="overheid:Informatietype"&gt;Verdrag&lt;/sm:type&gt;
+      	    &lt;sm:creator scheme="overheid:Ministerie"&gt;Ministerie van Buitenlandse Zaken&lt;/sm:creator&gt;
+      	    &lt;sm:modified&gt;2019-12-17&lt;/sm:modified&gt;
+      	  &lt;/sm:owmskern&gt;
+      	  &lt;sm:owmsmantel&gt;
+      	    &lt;sm:issued&gt;2014-01-14&lt;/sm:issued&gt;
+      	    &lt;sm:Tractatenbladen&gt;
+      	      &lt;sm:Tractatenblad&gt;
+      		&lt;sm:TractatenbladText&gt;1985, 61&lt;/sm:TractatenbladText&gt;
+      		&lt;sm:Omschrijving&gt;Fr, inwerkingtreding&lt;/sm:Omschrijving&gt;
+      	      &lt;/sm:Tractatenblad&gt;
+      	    &lt;/sm:Tractatenbladen&gt;
+      	    &lt;sm:Kamerstukken/&gt;
+      	    &lt;sm:Verdragstekst&gt;
+      	      &lt;sm:isPartOf resourceIdentifier="http://wetten.overheid.nl/BWBV0006433"&gt;0006433&lt;/sm:isPartOf&gt;
+      	    &lt;/sm:Verdragstekst&gt;
+      	    &lt;sm:subject&gt;Vervoer&lt;/sm:subject&gt;
+      	    &lt;sm:subject&gt;Wegverkeer&lt;/sm:subject&gt;
+      	  &lt;/sm:owmsmantel&gt;
+      	  &lt;sm:verdragipm&gt;
+      	    &lt;sm:sluitingsDatum&gt;1984-11-20&lt;/sm:sluitingsDatum&gt;
+      	    &lt;sm:sluitingsPlaats&gt;Genève&lt;/sm:sluitingsPlaats&gt;
+      	    &lt;sm:voorlopigeToepassingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:inwerkingtredingDatum&gt;1985-05-01&lt;/sm:inwerkingtredingDatum&gt;
+      	    &lt;sm:terugwerkendeKrachtDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:uitwerkingtredingDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	    &lt;sm:isNLDepositair&gt;false&lt;/sm:isNLDepositair&gt;
+      	    &lt;sm:isHaagseConferentiePrivaatrecht&gt;false&lt;/sm:isHaagseConferentiePrivaatrecht&gt;
+      	    &lt;sm:verdragType&gt;Multilateraal&lt;/sm:verdragType&gt;
+      	    &lt;sm:verdragStatus&gt;Inwerkinggetreden&lt;/sm:verdragStatus&gt;
+      	    &lt;sm:gepubliceerdeWijzigingsDatum xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	  &lt;/sm:verdragipm&gt;
+      	&lt;/sm:meta&gt;
+      	&lt;sm:body&gt;
+      	  &lt;sm:verdrag&gt;
+      	    &lt;sm:Opmerking/&gt;
+      	    &lt;sm:Koninkrijksdelen&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (in Europa)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding&gt;1985-05-01&lt;/sm:DatumInwerkingtreding&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (Bonaire)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (Sint Eustatius)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Nederland (Saba)&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Aruba&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Curaçao&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	      &lt;sm:Koninkrijksdeel&gt;
+      		&lt;sm:NaamKoninkrijksdeel&gt;Sint Maarten&lt;/sm:NaamKoninkrijksdeel&gt;
+      		&lt;sm:DatumVoorlopigeToepassing xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumInwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumTerugwerkendeKracht xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      		&lt;sm:DatumBuitenwerkingtreding xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+      	      &lt;/sm:Koninkrijksdeel&gt;
+      	    &lt;/sm:Koninkrijksdelen&gt;
+      	    &lt;sm:Partijen/&gt;
+      	    &lt;sm:Moederverdragen/&gt;
+      	    &lt;sm:Kindverdragen/&gt;
+      	    &lt;sm:DepositaireGegevens/&gt;
+      	  &lt;/sm:verdrag&gt;
+      	&lt;/sm:body&gt;
+            &lt;/sm:Verdragenbank&gt;
+          &lt;/sm:source-document&gt;
+        &lt;/sm:content&gt;
+      &lt;/sm:searchable-doc&gt;</document></pre>
+
+    {{/@modal}}
+
+  </div>
+
+
+</div>
+
+{{ render "@footer" }}
