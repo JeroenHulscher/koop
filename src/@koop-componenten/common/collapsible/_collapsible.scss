@@ -26,6 +26,10 @@
         background-image: $minusIcon;
       }
     }
+    > span {
+      margin-left: 1em;
+      font-style: italic;
+    }
   }
 
   .collapsible__content {
