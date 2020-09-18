@@ -1,0 +1,72 @@
+---
+label: OEB 2.0 - Document informatie
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Vandaag
+      url: '#'
+    - text: Spoedpublicatie
+      url: '#'
+    - text: Staatsblad 2020, 225609
+  documentbanner:
+    img:
+      src: ../../images/maintiendrai-grijs.png
+    heading: Staatsblad van het Koninkrijk der Nederlanden
+  listFormats:
+    modifier: list--unstyled
+    items:
+      - content: <a href="#" class="icon--downloadfile">PDF</a>
+      - content: <a href="#" class="icon--downloadfile">Download</a>
+  listMeta:
+    modifier: list--unstyled
+    items:
+      - content: <a href="#" class="icon--downloadfile">Metadata in XML formaat</a>
+      - content: <a href="#" class="icon--downloadfile">Metadata in OWMS formaat</a>
+  listDownloads1:
+    heading: Publicaties over kamerdossier
+    headingType: h2
+    modifier: list--relations
+    items:
+      - content: <a href="#">Kamerdossier 45643</a><small>Toon publicaties die dit dossier behandelen</small>
+  listDownloads2:
+    heading: Geconsolideerde regelgeving
+    headingType: h2
+    modifier: list--relations
+    items:
+      - content: <a href="https://wetten.overheid.nl">Tabals- en rookwarenwet</a><small>Toon geconsolideerde verrsie op wetten.nl</small>

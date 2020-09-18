@@ -1,0 +1,100 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+{{ render "@document-banner" documentbanner merge=true }}
+<div class="container columns columns--sticky-sidebar">
+  <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <a href="#" class="icon--backlink">Terug naar zoekresultaten (9430)</a>
+
+
+      {{ render "@list" listDownloads1 }}
+      {{ render "@list" listDownloads2 }}
+
+    </div>
+  </div>
+  <div id="content" role="main" class="content content--publication">
+    <h1>Informatie over deze publicatie</h1>
+    <p>
+       Deze publicatie is op 17-09-2020 gepubliceerd door Aalsmeer. De publicatie is van het type Beleidsregels en heeft als identifier
+      "gmb-2020-241181".
+    </p>
+    <h2>Bestandsformaten</h2>
+    <p>
+       Op dit moment is de publicatie beschikbaar in de volgende formaten:
+    </p>
+    {{ render "@list--unstyled" listFormats }}
+    <h2>Publicatiegegevens</h2>
+    <p>
+       Onderstaande tabel bevat een overzicht van de publicatiegegevens (metadata) die bij deze publicatie horen. Deze zijn ook
+      als los bestand beschikbaar:
+    </p>
+    <table class="table--condensed table--headerhighlight">
+      <thead>
+        <tr>
+          <th scope="col">Publicatiegegevens</th>
+          <th scope="col">Waarde</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Beleidsonderwerp</th>
+          <td data-before="Beleidsonderwerp">Zorg en gezondheid | Organisatie en beleid</td>
+        </tr>
+        <tr>
+          <th scope="row">Bijlage</th>
+          <td data-before="Bijlage">Publieksversie|exb-2020-49767</td>
+        </tr>
+        <tr>
+          <th scope="row">Citeertitel</th>
+          <td data-before="Citeertitel">Beleidsregels gemeentelijke taken uitvoering Wet kinderopvang gemeente Aalsmeer 2020</td>
+        </tr>
+        <tr>
+          <th scope="row">DTD-versie</th>
+          <td data-before="DTD-versie">Officiële Publicaties, versie 1.1</td>
+        </tr>
+        <tr>
+          <th scope="row">Eindverantwoordelijke</th>
+          <td data-before="Eindverantwoordelijke">Aalsmeer</td>
+        </tr>
+        <tr>
+          <th scope="row">Geo informatie (gemeente)</th>
+          <td data-before="Geo informatie (gemeente)">Aalsmeer</td>
+        </tr>
+        <tr>
+          <th scope="row">Taal</th>
+          <td data-before="Taal">nl</td>
+        </tr>
+        <tr>
+          <th scope="row">Titel</th>
+          <td data-before="Titel">Planologische Kernbeslissing Waddenzee</td>
+        </tr>
+        <tr>
+          <th scope="row">Url</th>
+          <td data-before="url" class="u-breakall">https://repository.overheid.nl/frbr/sgd/19921993/0000013938/1/pdf/SGD_19921993_0003492.pdf</td>
+        </tr>
+        <tr>
+          <th scope="row">Vergaderjaar</th>
+          <td data-before="Vergaderjaar">1992-1993</td>
+        </tr>
+        <tr>
+          <th scope="row">Wijzigingsdatum</th>
+          <td data-before="Wijzigingsdatum">02-06-2020</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      De metadata is ook als los bestand beschikbaar
+    </p>
+     {{ render "@list--unstyled" listMeta }}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}
