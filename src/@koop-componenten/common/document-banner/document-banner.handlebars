@@ -9,29 +9,30 @@
   </div>
 
   <div class="documentbanner__content">
+    <article>
+      {{#if heading}}<h1>{{heading}}</h1>{{/if}}
 
-    {{#if heading}}<h1>{{heading}}</h1>{{/if}}
-
-    <table class="table--dataintro">
-      <thead>
-          <tr>
-              <th>{{ value1 }}</th>
-              <th>{{ value2 }}</th>
-              <th>{{ value3 }}</th>
-              <th>{{ value4 }}</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td data-before="{{ value1 }}">
-                  <time datetime="25-7-2016 14:17:15" itemprop="datePublished" class="u-nobreak">25-07-2016 14:17</time>
-              </td>
-              <td data-before="{{ value2 }}">Ministerie van Buitenlandse Zaken</td>
-              <td data-before="{{ value3 }}">Blad gemeenschappelijke regeling 2016, 25018</td>
-              <td data-before="{{ value4 }}">Verdrag</td>
-          </tr>
-      </tbody>
-    </table>
+      <table class="table--dataintro">
+        <thead>
+            <tr>
+                <th>{{ value1 }}</th>
+                <th>{{ value2 }}</th>
+                <th>{{ value3 }}</th>
+                <th>{{ value4 }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-before="{{ value1 }}">
+                    <time datetime="25-7-2016 14:17:15" itemprop="datePublished" class="u-nobreak">25-07-2016 14:17</time>
+                </td>
+                <td data-before="{{ value2 }}">Ministerie van Buitenlandse Zaken</td>
+                <td data-before="{{ value3 }}">Blad gemeenschappelijke regeling 2016, 25018</td>
+                <td data-before="{{ value4 }}">Verdrag</td>
+            </tr>
+        </tbody>
+      </table>
+    </article>
 
   </div>
 
