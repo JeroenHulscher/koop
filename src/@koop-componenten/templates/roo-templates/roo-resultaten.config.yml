@@ -16,10 +16,10 @@ context:
     youAreHere:
       - text: Register voor Overheidsorganisaties
     skipLinks:
-      skipLinks:
-        - url: '#content'
-          text: Direct naar content
+      - url: '#content'
+        text: Direct naar content
   breadcrumb:
+    title: "U bent hier:"
     breadcrumb:
       - text: Home
         url: '#'
