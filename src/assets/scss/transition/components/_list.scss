@@ -1,3 +1,21 @@
 .list {
   margin: 0 0 2em 0;
+
+  &--relations {
+    > li {
+      padding-left: 1em;
+      background: {
+        position: 0 .55em;
+        repeat: no-repeat;
+        image: $dartRightIcon;
+        size: 6px 9px;
+      }
+    }
+  }
+}
+.facet--heading {
+  font-size: 1em;
+  padding: 0;
+  background: none;
+  margin-bottom: .5em;
 }
