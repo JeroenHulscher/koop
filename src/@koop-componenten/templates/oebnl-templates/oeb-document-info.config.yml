@@ -51,8 +51,8 @@ context:
   listFormats:
     modifier: list--unstyled
     items:
-      - content: <a href="#" class="icon--downloadfile">PDF</a>
-      - content: <a href="#" class="icon--downloadfile">Download</a>
+      - content: <a href="#" class="icon--downloadfile"><span class="visually-hidden">Download publicatie in formaat </span>PDF</a>
+      - content: <a href="#" class="icon--downloadfile"><span class="visually-hidden">Download publicatie in formaat </span>HTML</a>
   listMeta:
     modifier: list--unstyled
     items:
