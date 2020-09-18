@@ -98,7 +98,7 @@
         <div data-decorator="showmoreless" data-config='{"amount":"2"}'>
           <ul class="list list--linked">
             {{#each linklistItems}}
-            <li><a href="{{url}}">{{link}}</a> {{txt}}</li>
+            <li><a href="{{#if url}}{{url}}{{else}}http://www.externesite.nl{{/if}}">{{link}}</a> {{txt}}</li>
             {{/each}}
           </ul>
         </div>
