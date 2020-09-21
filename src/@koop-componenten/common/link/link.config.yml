@@ -50,5 +50,17 @@ variants:
       text: Label
       action: '#'
       class: link link--logout
+  - name: Edit
+    label: Wijzigen
+    context:
+      text: Label
+      action: '#'
+      class: link link--edit
+  - name: Delete
+    label: Verwijderen
+    context:
+      text: Label
+      action: '#'
+      class: link link--remove
 
 
