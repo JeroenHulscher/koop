@@ -2,9 +2,9 @@
 
   <div class="documentbanner__logo">
     {{#if img}}
-      <img src="{{img/src}}" {{#if img/width}}width="{{img/width}}"{{/if}} />
+      <img src="{{img/src}}" {{#if img/width}}width="{{img/width}}"{{/if}} {{#if img/alt}}alt="{{img/alt}}"{{/if}} />
     {{else}}
-      <img src="/images/logo.svg" width="200" />
+      <img src="/images/logo.svg" width="200" {{#if img/alt}}alt="{{img/alt}}"{{/if}} />
     {{/if}}
   </div>
 
@@ -24,7 +24,7 @@
         <tbody>
             <tr>
                 <td data-before="{{ value1 }}">
-                    <time datetime="25-7-2016 14:17:15" itemprop="datePublished" class="u-nobreak">25-07-2016 14:17</time>
+                    <time datetime="2018-07-07" class="u-nobreak">25-07-2016 14:17</time>
                 </td>
                 <td data-before="{{ value2 }}">Ministerie van Buitenlandse Zaken</td>
                 <td data-before="{{ value3 }}">Blad gemeenschappelijke regeling 2016, 25018</td>

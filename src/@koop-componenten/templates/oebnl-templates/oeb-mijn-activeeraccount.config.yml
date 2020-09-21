@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Activeer account
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg

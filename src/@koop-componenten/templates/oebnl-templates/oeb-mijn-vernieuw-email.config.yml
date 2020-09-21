@@ -1,5 +1,5 @@
 ---
-label: Mijn Abo. - Wachtwoord wijzigen
+label: Mijn Abo. - E-mailadres wijzigen
 status: prototype
 context:
   header:
@@ -39,52 +39,37 @@ context:
     breadcrumb:
     - text: Home
       url: '#'
-    - text: Berichtgeving
+    - text: Mijn abonnementen
       url: '#'
-    - text: X
-  emailInput:
-    modifier:
+    - text: E-mailadres wijigen
+  oldEmailInput:
     id: 1
-    fieldLabel: E-mailadres
+    type: email
+    fieldLabel: Huidig e-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
     disabled: true
     value: uwnaam@koop.overheid.nl
-  oldPWInput:
-    modifier:
-    id: 222
-    type: password
-    fieldLabel: Huidig wachtwoord
-    fieldLabelVisible: true
-    labelmodifier: accent
-    fieldInstruction:
-    fieldPlaceholder: Huidig wachtwoord
-    required: true
-    requiredLabel: true
-  newPWInput:
-    modifier:
+  newEmailInput:
     id: 2
-    type: password
-    class: js-passwordstrength__input
-    fieldLabel: Nieuw wachtwoord
+    type: email
+    fieldLabel: Nieuw e-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Nieuw wachtwoord
     required: true
     requiredLabel: true
-  repeatPWInput:
-    modifier:
+  PWInput:
     id: 3
     type: password
-    class: js-passwordstrength__inputrepeat
-    fieldLabel: Herhaal wachtwoord
+    fieldLabel: Wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
-    fieldPlaceholder: Herhaal nieuw wachtwoord
+    fieldPlaceholder: Wachtwoord
     required: true
     requiredLabel: true
   buttonSubmit:

@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Inloggen
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg

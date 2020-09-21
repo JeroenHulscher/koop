@@ -47,6 +47,7 @@ context:
   documentbanner:
     img:
       src: ../../images/maintiendrai-grijs.png
+      alt: Logo overheid
     heading: Staatsblad van het Koninkrijk der Nederlanden
   listFormats:
     modifier: list--unstyled

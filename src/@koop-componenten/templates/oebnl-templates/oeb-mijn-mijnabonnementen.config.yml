@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Mijn abonnementen
-status: ready
+status: prototype
 context:
   header:
     file: logo.svg
@@ -32,6 +32,15 @@ context:
             - text: Mijn abonnementen
               url: '#'
               class: link link--forgotpw
+            - text: Wachtwoord wijzigen
+              url: '#'
+              class: link link--edit
+            - text: E-mailadres wijzigen
+              url: '#'
+              class: link link--edit
+            - text: Account verwijderen
+              url: '#'
+              class: link link--remove
             - text: Uitloggen
               url: '#'
               class: link link--logout
@@ -44,7 +53,7 @@ context:
   jumbotronContext:
     heading: Mijn Abonnementen
     subheading: Officiële bekendmakingen
-    intro: Uw heeft momenteel onderstaande abonnementen ingesteld.
+    intro: U heeft momenteel onderstaande abonnementen ingesteld.
     centered: true
     headingcentered: true
   abonnementenContext:
