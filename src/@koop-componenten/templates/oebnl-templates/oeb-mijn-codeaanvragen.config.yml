@@ -1,0 +1,67 @@
+---
+label: Mijn Abo. - Activeringscode aanvragen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn Abonnementen
+      url: '#'
+    - text: Activeringscode aanvragen
+  jumbotronContext:
+    heading: Activeringscode aanvragen
+    subheading: Officiële bekendmakingen
+    intro: Indien u uw activeringscode niet (meer) heeft, kunt u een nieuwe aanvragen. Wij sturen uw nieuwe activeringscode naar het door u opgegeven e-mailadres.
+    centered: true
+    size: s
+    headingcentered: true
+    inputEmailContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      required: true
+      patterntype: email
+      fieldLabel: E-mailadres
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Uw e-mailadres
+      hastooltip: true
+      tooltipContext:
+        id: 1231
+        content: Het e-mailadres waarmee u zich heeft geregistreerd.
+    buttonSubmit:
+      id: 123
+      text: Activeringscode aanvragen
+      button: true
+      modifier: button--primary form__button

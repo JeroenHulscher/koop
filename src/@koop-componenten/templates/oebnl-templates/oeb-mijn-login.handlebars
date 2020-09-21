@@ -10,6 +10,9 @@
   <div class="row">
 
     {{#> @jumbotron jumbotronContext }}
+
+      {{ render "@alert--success" alert merge=true }}
+
       <form class="form" data-decorator="init-form-validation">
         <fieldset>
           <legend class="visually-hidden">E-mailadres</legend>
