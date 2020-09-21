@@ -10,6 +10,16 @@
 					{{/each}}
 				{{/if}}
 			</div>
+      {{#if metadata}}
+      <div class="list--source__metadata">
+        <dl class="dl dl--horizontal">
+          {{#each metadata/items}}
+            <dt>{{dt}}</dt>
+            <dd>{{dd}}</dd>
+          {{/each}}
+        </dl>
+      </div>
+      {{/if}}
 
       {{#if buttonContext/action}}
       <a href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}

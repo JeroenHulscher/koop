@@ -27,6 +27,27 @@
       }
     }
 
+    .list--source__metadata {
+      padding-left: 3.25em;
+
+      dl {
+        margin: .5em 0 0;
+      }
+      dt,dd {
+        margin: 0;
+        font-weight: normal;
+        font-size: 90%;
+      }
+      dd {
+        font-style: italic;
+        @media ( min-width: $breakpointDesktop ) {
+          font-style: normal;
+        }
+      }
+
+
+    }
+
     &:nth-child(even) {
       background-color: lighten($lightGrey, 2);
     }
@@ -38,13 +59,13 @@
       padding-top: .55em;
       padding-bottom: .55em;
       font-weight: normal;
-      margin-top: .5em;
+      margin-top: 1em;
+      margin-left: 3.25em;
       @media ( min-width: $breakpointDesktop ) {
         position: absolute;
         right: 1em;
         top: .6em;
         margin: 0;
-
       }
     }
 
@@ -53,6 +74,8 @@
   &__actions {
     order: 3;
     display: none;
+    margin-left: 3.25em;
+    margin-top: 1em;
 
     @media ( min-width: $breakpointDesktop ) {
       position: absolute;
@@ -62,12 +85,20 @@
       width: auto;
     }
 
+    .button-icon {
+      margin-bottom: 0.5em;
+      @media ( min-width: $breakpointDesktop ) {
+        margin-bottom: 0;
+      }
+    }
     .button {
-      width: 100%;
-      margin: 1em 0;
+      width: auto;
+      margin: .5em 0 .5em;
       font-weight: normal;
       padding-right: .75em;
       padding-left: .75em;
+      padding-top: .55em;
+      padding-bottom: .55em;
       font-size: 1em;
 
       @media ( min-width: $breakpointDesktop ) {
@@ -78,9 +109,12 @@
       }
     }
 
-    .button,
-    .button-icon {
+    .button + .button,
+    .button-icon + .button-icon {
       margin-left: 0.25em !important;
+    }
+    em + .button {
+      margin-left: .5em !important;
     }
 
   }
