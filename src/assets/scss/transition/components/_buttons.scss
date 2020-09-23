@@ -26,6 +26,14 @@
     color: $primaryBlue;
   }
 
+  &--slim {
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-top: .55em;
+    padding-bottom: .55em;
+    font-weight: normal;
+  }
+
   &.icon-bg {
     padding-right: 3.75em;
     background-position: right .75em center;

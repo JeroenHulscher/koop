@@ -66,6 +66,14 @@
     color: $mediumGrey;
   }
 
+  &--slim {
+    font-weight: normal;
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-top: .55em;
+    padding-bottom: .55em;
+  }
+
   &--text {
     border: 0;
     text-decoration: underline;
