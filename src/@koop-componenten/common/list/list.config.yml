@@ -101,7 +101,6 @@ variants:
     status: ready
     context:
       modifier: list--relations
-      heading: Titel van de lijst
       items:
         - content: <a href="#">1e item over belangrijke zaken</a><small>Item omschrijving</small>
         - content: <a href="#" rel="external">2e item over minder belangrijke zaken</a>
