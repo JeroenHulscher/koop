@@ -15,20 +15,22 @@
       <table class="table--dataintro">
         <thead>
             <tr>
-                <th>{{ value1 }}</th>
-                <th>{{ value2 }}</th>
-                <th>{{ value3 }}</th>
-                <th>{{ value4 }}</th>
+              {{#each items}}
+                <th>{{ title }}</th>
+              {{/each}}
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td data-before="{{ value1 }}">
-                    <time datetime="2018-07-07" class="u-nobreak">25-07-2016 14:17</time>
+               {{#each items}}
+                <td data-before="{{ title }}">
+                  {{#if isTime}}
+                    <time datetime="2018-07-07" class="u-nobreak">{{ value }}</time>
+                  {{else}}
+                    {{ value }}
+                  {{/if}}
                 </td>
-                <td data-before="{{ value2 }}">Ministerie van Buitenlandse Zaken</td>
-                <td data-before="{{ value3 }}">Blad gemeenschappelijke regeling 2016, 25018</td>
-                <td data-before="{{ value4 }}">Verdrag</td>
+               {{/each}}
             </tr>
         </tbody>
       </table>
