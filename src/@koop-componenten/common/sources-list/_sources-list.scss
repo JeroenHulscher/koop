@@ -1,3 +1,5 @@
+$breakpointDesktopListSources: 65em;
+
 .list--sources {
 	margin: 0 0 1em 0;
   padding: 0;
@@ -7,7 +9,13 @@
 		list-style: none;
 		border-bottom: 1px solid $mediumGrey;
 		position: relative;
-		padding: 1em 1em .8em 0;
+    padding: 1em 1em 1em 0;
+
+    @media (min-width: $breakpointDesktopListSources) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
 
 		.list--source__information {
       font-weight: bold;
@@ -16,14 +24,75 @@
       background-position: .75em 0.1em;
       background-repeat: no-repeat;
       padding-left: 3.25em;
+      position: relative;
+      width: 100%;
 
-      @media ( min-width: $breakpointDesktop ) {
-        padding-right: 13em;
+      &.icon--publication {
+        background-image: $iconDocumentSimple;
+      }
+      &.icon--publication-new {
+        background-image: $iconDocumentSimpleNew;
+      }
+
+      .list--sources__item__date {
+        font-weight: normal;
+
+        .list--sources__item__filesize {
+          position: relative;
+          padding-left: .5em;
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: .2em;
+            bottom: .2em;
+            width: 1px;
+            background: $darkBlue;
+          }
+        }
+        .tooltip ~ .list--sources__item__filesize {
+          margin-left: 0;
+        }
+        & ~ .label {
+          margin-left: 0;
+          @media (min-width: $breakpointDesktopListSources) {
+            margin-left: .5em;
+          }
+        }
+      }
+
+      @media (min-width: $breakpointDesktopListSources) {
+        width: auto;
+        margin: 0;
+        flex: 1 0 8em;
+        margin-right: 1em;
+        padding-right: 11em;
+
+
+        .list--sources__item__filesize,
+        .list--sources__item__date {
+          order: 100;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .list--sources__item__date {
+          .list--sources__item__filesize {
+            position: relative;
+            right: auto;
+            top: auto;
+          }
+        }
+
       }
 
       .label {
-        margin-left: 1em;
+        margin-left: .5em;
+        margin-right: 0;
         font-style: italic;
+        width: auto;
+        display: inline-block;
+
       }
     }
 
@@ -40,7 +109,7 @@
       }
       dd {
         font-style: italic;
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopListSources ) {
           font-style: normal;
         }
       }
@@ -53,7 +122,6 @@
     }
 
     > .button {
-      order: 3;
       padding-right: .75em;
       padding-left: .75em;
       padding-top: .55em;
@@ -61,33 +129,37 @@
       font-weight: normal;
       margin-top: 1em;
       margin-left: 3.25em;
-      @media ( min-width: $breakpointDesktop ) {
-        position: absolute;
-        right: 1em;
-        top: .6em;
-        margin: 0;
+
+      @media (min-width: $breakpointDesktopListSources) {
+        flex: 0 0 auto;
+        margin: -.4em 0 -.5em 0;
+        width: auto;
       }
+
+    }
+
+    > .collapsible {
+      width: calc(100% - 3.25em);
+      margin-left: 3.25em;
+      margin-top: .5em;
     }
 
   }
 
   &__actions {
-    order: 3;
     display: none;
     margin-left: 3.25em;
     margin-top: 1em;
 
-    @media ( min-width: $breakpointDesktop ) {
-      position: absolute;
-      right: 1em;
-      top: .6em;
-      margin: 0;
+    @media (min-width: $breakpointDesktopListSources) {
+      flex: 0 0 auto;
+      margin: -.4em 0 -.5em 0;
       width: auto;
     }
 
     .button-icon {
       margin-bottom: 0.5em;
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopListSources ) {
         margin-bottom: 0;
       }
     }
@@ -101,7 +173,7 @@
       padding-bottom: .55em;
       font-size: 1em;
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopListSources ) {
         width: auto;
         padding-top: .55em;
         padding-bottom: .55em;
@@ -139,7 +211,7 @@
     clear: both;
     margin: 0 0 .5em 0 !important;
 
-		@media ( min-width: $breakpointDesktop ) {
+		@media ( min-width: $breakpointDesktopListSources ) {
 			padding: 2em 0 0 0;
     }
 
@@ -149,7 +221,7 @@
 			background: $bgBlue;
 			padding: 1em;
 
-			@media ( min-width: $breakpointDesktop ) {
+			@media ( min-width: $breakpointDesktopListSources ) {
 				button {
 					right: 2em;
 					top: 3.5em;
