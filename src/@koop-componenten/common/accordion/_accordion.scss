@@ -1,0 +1,46 @@
+.accordion {
+  border-top: 1px solid $lightGrey;
+
+  &.is-focused {
+    // border: 2px solid $darkBlue;
+  }
+
+  &__item {
+    border-bottom: 1px solid $lightGrey;
+
+    &__header {
+      &-trigger {
+        background: transparent;
+        border: 0;
+        padding: 0 0 0 1.5em;
+        font-size: 1em;
+        font-family: inherit;
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: $iconArrowDown no-repeat left top .75em;
+        background-size: .9em;
+
+        &[aria-expanded="true"] {
+          background-image: $iconArrowUp;
+        }
+      }
+    }
+
+    &__heading {
+      font-size: 1em;
+      margin: 0;
+      padding: .75em 0;
+      font-weight: bold;
+    }
+
+    &--checkbox &__header-trigger {
+      padding-left: 0;
+      background-position: right top .75em;
+    }
+
+    &__content {
+      padding: .5em 0;
+    }
+  }
+}

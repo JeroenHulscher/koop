@@ -1,0 +1,9 @@
+---
+title: Accordion
+status: prototype
+context:
+  item:
+    headerId: header1
+    headerLabel: Accordion Vraag 1
+    contentId: con1
+    content: Accordion Antwoord 1
