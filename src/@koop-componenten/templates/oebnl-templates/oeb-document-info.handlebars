@@ -9,8 +9,12 @@
 <div class="container columns columns--sticky-sidebar">
   <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
-      <a href="#" class="icon--backlink">Terug naar zoekresultaten (9430)</a>
+      <a href="#" class="icon--backlink">Terug naar de publicatie</a>
 
+      <h3 class="nav-sub__heading">Informatie</h3>
+      {{render "@nav" navInformatie }}
+
+      <h3 class="nav-sub__heading">Gerelateerd</h3>
 
       {{ render "@list" listDownloads1 }}
       {{ render "@list" listDownloads2 }}

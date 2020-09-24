@@ -79,13 +79,10 @@ context:
         value: Tot en met 28-05-2020
   navInformatie:
     items:
-      - title: Informatie over publicatie
-        sub: true
+      - title: Informatie over deze publicatie
+      - title: Terinzagelegging
         active: true
-        subItems:
-          - stitle: Terinzagelegging
-            href: "#"
-            sactive: true
+        sactive: true
   modalDelen:
     modalId: 512
     initClosed: true

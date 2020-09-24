@@ -44,6 +44,12 @@ context:
     - text: Spoedpublicatie
       url: '#'
     - text: Staatsblad 2020, 225609
+  navInformatie:
+    items:
+      - title: Informatie over deze publicatie
+        active: true
+        sactive: true
+      - title: Terinzagelegging
   documentbanner:
     img:
       src: ../../images/maintiendrai-grijs.png
