@@ -1,5 +1,5 @@
 ---
-label: Mijn Abo. - Activeer account
+label: Mijn Abo. - Wachtwoord reset
 status: prototype
 context:
   header:
@@ -38,11 +38,11 @@ context:
       url: '#'
     - text: Mijn Abonnementen
       url: '#'
-    - text: Activeer uw account
+    - text: Reset wachtwoord
   jumbotronContext:
-    heading: Activeer uw account
+    heading: Reset uw wachtwoord
     subheading: Officiële bekendmakingen
-    intro: U dient uw account te activeren voordat u van uw account gebruik kunt maken. Wij hebben een activatiecode naar het door u opgegeven e-mailadres gestuurd.
+    intro: Indien u uw wachtwoord bent vergeten kunt u een nieuw wachtwoord aanvragen. Wij sturen uw nieuwe wachtwoord naar het dor u opgegeven e-mailadres.
     centered: true
     size: s
     headingcentered: true
@@ -56,28 +56,12 @@ context:
       fieldLabelVisible: true
       fieldInstruction:
       fieldPlaceholder: Uw e-mailadres
-    inputCodeContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 2
-      required: true
-      type: text
-      fieldLabel: Activeringscode
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder:
       hastooltip: true
       tooltipContext:
         id: 1231
-        content: De activeringscode uit de activeringse-mail
-    linkNewcode:
-      text: Nieuwe activeringscode aanvragen
-    linkAccount:
-      text: Ik heb al een account
+        content: Het e-mailadres waarmee u zich heeft geregistreerd.
     buttonSubmit:
       id: 123
-      text: Activeren
+      text: Reset wachtwoord
       button: true
       modifier: button--primary form__button
-    alert:
-      text: Wij hebben u een activeringse-mail gestuurd, indien uw e-mailadres nog niet bij ons is geregistreerd.

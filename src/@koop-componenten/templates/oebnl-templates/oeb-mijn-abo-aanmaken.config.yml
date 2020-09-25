@@ -1,0 +1,81 @@
+---
+label: Mijn Abo. - Abonnement aanmaken
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn abonnementen
+      url: '#'
+    - text: Abonnement aanmaken
+  titleInput:
+    id: 2
+    fieldLabel: Titel abonnement
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder:
+    required: true
+    requiredLabel: true
+  buttonSubmit:
+      id: 123
+      text: Opslaan abonnement
+      button: true
+      modifier: button--primary form__button
+  linkBack:
+    text: Terug naar Mijn abonnementen
+  preheader:
+    value: Mijn abonnementen
+  radioMelding:
+    name: melding
+    explanation: false
+    options:
+      - id: 1122
+        name: melding
+        checked: checked
+        text: Ja
+      - id: 2222
+        text: Nee
+        name: melding
+  radioFrequentie:
+    name: frequentie
+    explanation: false
+    options:
+      - id: 111
+        name: frequentie
+        checked: checked
+        text: Direct na publicatie

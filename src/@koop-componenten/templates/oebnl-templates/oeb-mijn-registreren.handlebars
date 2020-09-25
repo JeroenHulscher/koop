@@ -1,0 +1,107 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div id="content" role="main" class="container container--centered">
+
+  <div class="row row--spacer u-margin-top-40">
+    <div class="columns columns--gutter-med">
+      <div class="column">
+
+        <div class="form__row form__row--large">
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Registeren</h1>
+          <p>
+            Uw abonnement aanpassen, verwijderen of nieuwe abonnementen aanmaken? Maak een account aan om abonnement(en) te beheren.
+          </p>
+        </div>
+        <form class="form" data-decorator="init-form-validation">
+          <fieldset>
+            {{ render "@alert" error }}
+
+            <div class="form__row">
+              {{render "@input-text" emailInput }}
+            </div>
+            <div class="form__row">
+              <div data-decorator="init-passwordstrength">
+                <div class="form__row">
+                  {{render "@input-text" newPWInput }}
+                </div>
+                <div class="well js-passwordstrength__regexcontainer hidden-desktop">
+                  <div>
+                    <p>
+                      Het wachtwoord dient te voldoen aan de volgende beveiligingseisen:
+                    </p>
+                    <ul class="list list--checked">
+                      <li data-regex="(?&#x3D;.{12,})" data-regex-label="">Minimaal 12 tekens</li>
+                      <li data-regex="(?&#x3D;.*[A-Z])" data-regex-label="">Minimaal 1 hoofdletter</li>
+                      <li data-regex="(?&#x3D;.*[a-z])" data-regex-label="">Minimaal 1 kleine letter</li>
+                      <li data-regex="(?&#x3D;.*[0-9])" data-regex-label="">Minimaal 1 cijfer</li>
+                      <li data-regex="[!@#$%^&amp;*(),.?:{}|&lt;&gt;]" data-regex-label="">Minimaal 1 leesteken</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              {{render "@input-text" repeatPWInput }}
+            </div>
+          </fieldset>
+          <fieldset>
+            <h2 class="h3">Informatie over de verwerking van uw persoonsgegevens</h2>
+            <p>
+                KOOP (onderdeel van het Ministerie van Binnenlandse Zaken en Koninkrijksrelaties) vraagt om uw e-mailadres wanneer u gebruik
+              wilt maken van 'Mijn abonnementen'.
+            </p>
+            <div class="form__row">
+              {{#> @collapsible collapsible }}
+                <div class="well">
+                  <h3 class="h4">Waarom worden deze gegevens gevraagd?</h3>
+                  <p>Het verstrekken van uw e-mailadres is noodzakelijk om toegang te verkrijgen tot het gepersonaliseerde onderdeel 'Mijn abonnementen'
+                    van onze website. Indien u dit specifiek aangeeft, ontvangt u van ons per e-mail updates over de door u opgeslagen zoekvragen.</p>
+                  <h3 class="h4">Op welke manier worden uw gegevens verwerkt?</h3>
+                  <p>Uw e-mailadres wordt opgeslagen in het abonnementensysteem van KOOP. Uw gegevens worden niet voor andere doeleinden gebruikt
+                    dan hierboven beschreven.</p>
+                  <h3 class="h4">Hoe lang bewaren wij uw gegevens?</h3>
+                  <p>Wij bewaren uw accountgegevens, tenzij u besluit uw account te verwijderen.</p>
+                  <h3 class="h4">Wat zijn uw rechten?</h3>
+                  <p>Voor uw rechten m.b.t. de verwerking van uw gegevens verwijzen wij u naar de privacyverklaring van deze website. U kunt
+                    ook contact opnemen met de Servicedesk van KOOP :
+                    <a href="mailto:servicedesk@koop.overheid.nl">servicedesk@koop.overheid.nl</a>.</p>
+                  <p>In de
+                    <a href="https://www.overheid.nl/contact/privacyverklaring">privacyverklaring</a> leest u hoe Overheid.nl omgaat met uw persoonsgegevens en met cookies.</p>
+                  <p>Voor vragen aan KOOP kunt u terecht op onze
+                    <a href="https://www.koopoverheid.nl/contact">contactpagina</a>.</p>
+                </div>
+              {{/@collapsible}}
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Akkoord verklaring</legend>
+            {{!-- <h2 class="h3">Akkoord verklaring</h2> --}}
+            {{ render "@input-checkbox" checkboxAgree }}
+          </fieldset>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+            <div class="form__rowsubmit__item">
+              {{ render "@link--profiel" linkAccount merge=true }}
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="column">
+        <div class="well js-passwordstrength__duplicateregexcontainer hidden-mobile"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

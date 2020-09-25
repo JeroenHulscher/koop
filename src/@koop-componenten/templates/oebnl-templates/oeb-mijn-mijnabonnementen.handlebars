@@ -16,7 +16,10 @@
 
   <div class="container container--centered">
     <div class="row">
-      <h2>Mijn abonnementen <span class="h2__sub">4 abonnementen</span></h2>
+      {{ render "@alert--success" alert merge=true }}
+    </div>
+    <div class="row">
+      <h2>Uw opgeslagen zoekvragen <span class="h2__sub">4 abonnementen</span></h2>
       <div class="row">
         <div data-decorator="init-sourceslist">
           {{render "@sources-list" abonnementenContext}}

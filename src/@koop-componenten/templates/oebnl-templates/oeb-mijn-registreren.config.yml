@@ -1,0 +1,95 @@
+---
+label: Mijn Abo. - Registeren
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn Abonnementen
+      url: '#'
+    - text: Registreren
+  emailInput:
+    modifier:
+    id: 1
+    fieldLabel: Uw e-mailadres
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+    value: uwnaam@koop.overheid.nl
+  newPWInput:
+    modifier:
+    id: 2
+    type: password
+    class: js-passwordstrength__input
+    fieldLabel: Wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Wachtwoord
+    required: true
+    requiredLabel: true
+  repeatPWInput:
+    modifier:
+    id: 3
+    type: password
+    class: js-passwordstrength__inputrepeat
+    fieldLabel: Herhaal wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Herhaal wachtwoord
+    required: true
+    requiredLabel: true
+  error:
+    modifier: alert--warning
+    text: Er is al een actief account op dit e-mailadres.
+  preheader:
+    value: Officiële bekendmakingen
+  linkAccount:
+    text: Ik heb al een account
+  buttonSubmit:
+      id: 123
+      text: Registreren
+      button: true
+      modifier: button--primary
+  collapsible:
+    id: 505
+    heading: Extra informatie over de verwerking van uw persoonsgegevens.
+  checkboxAgree:
+    name: regAgree
+    options:
+      - id: checkbox-1
+        text: Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan.
+        name: regAgree

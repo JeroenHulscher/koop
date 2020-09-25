@@ -143,3 +143,5 @@ context:
       items:
         - content: <a href="/uitgebreidzoeken/parlementair">Parlementaire documenten</a>
         - content: <a href="/uitgebreidzoeken/officielebekendmakingen">Officiële bekendmakingen</a>
+  alert:
+    text: Uw abonnement is verwijderd.
