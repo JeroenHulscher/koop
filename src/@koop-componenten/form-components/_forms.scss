@@ -195,6 +195,9 @@ fieldset {
 
   }
 
+  fieldset ~ &__rowsubmit {
+    margin-top: 2em;
+  }
   &__rowsubmit {
 
     &__item {
