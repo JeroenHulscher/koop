@@ -5,6 +5,10 @@
     font-size: 1em;
   }
 
+  &--italic {
+    font-style: italic;
+  }
+
   &--danger, &--pdf {
     background: $lightRed;
     color: $darkBlue;

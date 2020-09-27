@@ -201,6 +201,7 @@
         // hide question;
         // this.questions[i].setAttribute('hidden', 'hidden');
         this.questions[i].setAttribute('aria-hidden', 'true');
+        this.questions[i].removeAttribute('aria-live');
         // this.questions[i].removeAttribute('role');
       }
     }
@@ -214,7 +215,7 @@
     if (nextQuestion){
       // nextQuestion.removeAttribute('hidden');
       nextQuestion.removeAttribute('aria-hidden');
-      // nextQuestion.setAttribute('aria-live', '');
+      nextQuestion.setAttribute('aria-live', 'polite');
     }
 
   };

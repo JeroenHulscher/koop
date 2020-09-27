@@ -1,0 +1,94 @@
+---
+label: ROO - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Register voor Overheidsorganisaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Contactgegevens overheden
+    h: h1
+    subheading: Register voor Overheidsorganisaties
+    intro: Zoek naar contactgegevens van de Nederlandse overheidsorganisaties.
+    centered: true
+    headingcentered: true
+    searchterm:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: search
+      fieldLabel: Zoek overheidsorganisatie
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Zoekterm
+      requiredLabel: true
+    buttonSubmit:
+      id: 123
+      text: Zoek organisaties
+      button: true
+      modifier: button--primary form__button
+  blockIntro:
+    id: 1
+    heading: Vind snel een organisatie
+    subheading: Register van Overheidsorganisaties
+    content: <p>In dit onderdeel staan de namen, adressen en andere contactgegevens van de Nederlandse overheidsorganisaties. Ook de persoonsgegevens van (voornamelijk) leidinggevende personen binnen de Nederlandse overheid zijn opgenomen. Publicatie geschiedt in opdracht van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties, op basis van een Koninklijk Besluit van 16 juli 1859.</p><p>De organisaties zijn zelf verantwoordelijk voor de volledigheid, juistheid en actualiteit van de gegevens.</p>
+    buttonText: Meer over het register
+    href: '#'
+  list1:
+    items:
+      - content: <a href="#">Gemeenten</a>
+      - content: <a href="#">Provincies</a>
+      - content: <a href="#">Waterschappen</a>
+      - content: <a href="#">Regionale samenwerkingsorganen</a>
+      - content: <a href="#">Openbare lichamen voor beroep en bedrijf</a>
+      - content: <a href="#">Staten-Generaal</a>
+      - content: <a href="#">Hoge Colleges van Staat</a>
+  list2:
+    items:
+      - content: <a href="#">Ministeries</a>
+      - content: <a href="#">Adviescolleges</a>
+      - content: <a href="#">Rechterlijke macht</a>
+      - content: <a href="#">Politie en brandweer</a>
+      - content: <a href="#">Caribisch gebied (BES-eilanden)</a>
+      - content: <a href="#">Aruba, curaçao en Sint Maarten</a>
+      - content: <a href="#">Zelfstandige bestuursorganen</a>
+  jumbotron2Context:
+    modifier: slim
+    heading: Meld je aan voor de mail service
+    h: h2
+    subheading: Automatisch op de hoogte blijven van gebeurtenissen in uw buurt?
+    centered: true
+    headingcentered: true
+  blockOrganisatiesBuiten:
+    id: 100
+    flexed: true
+    highlight: true
+    cta: false
+    heading: Organisaties buiten de Nederlandse overheid
+    listBuiten:
+      modifier: list--linked u-nomargin
+      items:
+        - content: <a href="http://www.parlement.com/id/vh8lnhrpfxut/partijen_in_tweede_en_eerste_kamer/">Politieke partijen in Eerste en Tweede Kamer</a>
+        - content: <a href="http://www.rijksoverheid.nl/onderwerpen/ambassades-consulaten-en-overige-vertegenwoordigingen">Buitenlandse ambassades en consulaten in Nederland</a>
+        - content: <a href="http://www.europa-nu.nl/9353000/1/j9vvh6nf08temv0/vh7goo0jfubw">Europese organisaties</a>
+        - content: <a href="https://www.rijksoverheid.nl/onderwerpen/internationale-organisaties-in-nederland/lijst-van-internationale-organisaties-in-nederland">Internationale organisaties in Nederland</a>
+        - content: <a href="http://libguides.northwestern.edu/ForeignGovernmentList">Internationale overheidsorganisaties</a>
+        - content: <a href="http://taalunieversum.org/koppelingen/74/scholen_onderwijsinstellingen">Onderwijs- en onderzoeksinstellingen</a>
+        - content: <a href="http://www.bibliotheek.nl/">Openbare bibliotheken</a>
+

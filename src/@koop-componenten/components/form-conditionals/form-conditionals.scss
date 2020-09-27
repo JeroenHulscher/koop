@@ -27,18 +27,18 @@
   }
 
   &__container--flex {
-    @media (min-width: $breakpointDesktop) {
+    @media (min-width: 62em) {
       display: flex;
     }
     p {
-      @media (min-width: $breakpointDesktop) {
+      @media (min-width: 62em) {
         flex: 0 0 auto;
         margin: 0;
         width: auto;
       }
     }
     .form__row {
-      @media (min-width: $breakpointDesktop) {
+      @media (min-width: 62em) {
         flex: 0 0 auto;
         margin: -1.325em 0 0 2em;
         width: auto;
@@ -48,6 +48,10 @@
 
   &__heading {
     margin: 0;
+  }
+
+  .js-form-conditionals__submitcontainer {
+    margin-top: 1.5em;
   }
 
 }

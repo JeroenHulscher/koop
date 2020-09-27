@@ -21,7 +21,7 @@
     this.results = onl.dom.$( '.js-filterresults__result', this.element );
     this.setContainerClass = '.js-filterresults__resultmother';
     this.btnSelectAll = this.element.querySelector(this.config.btnSelectAll) || this.element.querySelector('.js-filterresults__btn-selectall');
-    this.allCheckboxes = this.element.querySelectorAll('input[type="checkbox"]');
+    this.allCheckboxes = this.element.querySelectorAll('input[type="checkbox"], input[type="radio"]');
     this.setContainers = this.element.querySelectorAll(this.setContainerClass);
 
     this.addEventListeners();
