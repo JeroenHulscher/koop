@@ -1,0 +1,45 @@
+name: DS - Content
+label: DS - Content
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Content
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      href: templates-ds---homepage
+      sub: true
+      subItems:
+        - stitle: Toelichting
+          href: templates-ds---toelichting
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes
+        - stitle: Componenten
+          href: templates-ds---componenten
+        - stitle: Content
+          href: templates-ds---content
+          sactive: true
+  jumbotronContext:
+    heading: Content
+    h: h1
+    subheading: Design system
+    intro: Onder content verstaan we alle onderdelen die collectie specifiek worden toegevoegd aan een template, die daarmee samen een pagina vormen. Hieronder vallen tekst (microcopy) of beeld (beeldtaal).
+  navContentContext:
+    items:
+    - title: Content
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Microcopy
+          href: sectie-microcopy
+        - stitle: Beeldtaal
+          href: sectie-beeldtaal
+

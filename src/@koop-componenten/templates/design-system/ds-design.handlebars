@@ -1,0 +1,131 @@
+{{ render "@header" header merge=true }}
+
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
+
+       {{render "@nav" navMenuContext }} {{render "@nav" navContentContext }}
+
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
+      <div class="row row--spacer">
+         {{#> @jumbotron jumbotronContext }} {{/@jumbotron}}
+      </div>
+
+      <section class="section-chapter js-scrollSection" id="sectie-merk">
+        <h2>Merk</h2>
+        <p>
+          Overheid.nl is een overkoepelend merk boven verschillende collecties van ‘officiele overheidsinformatie’. Om een consistente vormgeving en gebruikerservaring te garanderen dienen alle collecties zich te houden aan de volgende merkvoorwaarden:
+        </p>
+        <ul>
+          <li>Alle collecties maken gebruik van de componentenbibliotheek 2.0 en confomeren zich aan de rationale beschreven in dit designsysteem.</li>
+          <li>Alle collecties voeren het ‘Overheid.nl’ logo. De ’tagline’ mag per collectie vrij ingevuld worden. </li>
+          <li>Alle collecties maken gebruik van de ‘Overheid.nl’ navigatie. Deze bestaat uit een header, kruimelpad en footer. Binnen deze elementen is ruimte voor collectie-specifieke invulling. </li>
+        </ul>
+      </section>
+      <section class="section-chapter js-scrollSection" id="sectie-logo">
+        <h2>Logo</h2>
+        <p>
+          Alle collecties voeren het ‘Overheid.nl’ logo inclusief tagline. De ’tagline’ mag door een collectie vrij ingevuld worden. Heeft een collectie geen eigen invulling voor de tagline, dan wordt altijd de standaard ‘Wegwijzer naar informatie en diensnten van alle overheden’ togepast.
+        </p>
+        <h3>Taglines</h3>
+        <p>
+          De collectie krijgt onder het overheid.nl logo ruimte om zelf een tagline in te vullen die een omschrijving geeft van haar inhoud.
+        </p>
+        <ul>
+          <li><strong>Overheid.nl</strong> Wegwijzer naar informatie en diensten van alle overheden</li>
+          <li><strong>Almanak.overheid.nl</strong> Wegwijzer naar informatie en diensten van alle overheden</li>
+          <li><strong>Berichten over uw Buurt</strong> Wegwijzer naar informatie en diensten van alle overheden</li>
+          <li><strong>Tuchtrecht.overheid.nl</strong> Tuchtrecht</li>
+          <li><strong>Data.overheid.nl</strong> Open data van de Overheid</li>
+          <li><strong>Lokale wet- en regelgeving</strong> Wegwijzer naar informatie en diensten van alle overheden</li>
+          <li><strong>Wetten.overheid.nl</strong> Wettenbank</li>
+          <li><strong>Officielebekendmakingen.nl</strong> Publicaties > Officiële publicaties</li>
+          <li><strong>Internetconsultatie.nl</strong> De wegwijzer naar informatie en diensten van alle overheden</li>
+        </ul>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-navigatie">
+        <h2>Navigatie</h2>
+        <p>
+          Alle collecties maken gebruik van de ‘Overheid.nl’ navigatie. Deze bestaat uit een header, kruimelpad en footer. Binnen deze elementen is ruimte voor collectie-specifieke invulling.
+        </p>
+        <h3>Header</h3>
+        {{ render "@header" }}
+        <h3>Kruimelpad</h3>
+        {{ render "@breadcrumb" }}
+      </section>
+
+
+      <section class="section-chapter js-scrollSection" id="sectie-kleur">
+        <h2 id="">Kleuren</h2>
+        {{render "@colors"}}
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-typografie">
+
+        <h2 id="">Typografie</h2>
+        <p>
+          Binnen KOOP gebruiken wij het lettertype "Rijksoverheid Sans". De standaard kopsgrootte is 18px.
+        </p>
+        <div class="banner">
+          <h1>Dit is een heading 1</h1>
+          <p>Rijksoverheid Sans - Size: 48px - line-height: 48px - Bold</p>
+          <h2>Dit is een heading 2</h2>
+          <p>Rijksoverheid Sans - Size: 32px - line-height: 40px - Bold</p>
+          <h3>Dit is een heading 3</h3>
+          <p>Rijksoverheid Sans - Size: 24px - line-height: 24px - Bold</p>
+          <h4>Dit is een heading 4</h4>
+          <p>Rijksoverheid Sans - Size: 18px - line-height: 24px - Bold</p>
+          <h5>Dit is een heading 5</h5>
+          <p>Rijksoverheid Sans - Size: 18px - line-height: 24px - Italic</p>
+          <h6>Dit is een heading 6</h6>
+          <p>Rijksoverheid Sans - Size: 18px - line-height: 24px</p>
+        </div>
+        <div class="banner">
+          <p>Paragraaf: Rijksoverheid Sans - Size: 16px - line-height: 20px</p>
+          <p>Paragraaf met een
+            <a href="#">link</a> en een gedeelte in
+            <small>kleine tekst</small>.</p>
+        </div>
+
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-iconen">
+        <h2 id="">Iconen</h2>
+        <p>Binnen KOOP gebruiken we iconen van formaat: 24px en 64px.</p>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-layout">
+        <h2 id="">Layout</h2>
+        <h3>Grid</h3>
+        <p>
+           De componentenbibliotheek ontwerpt voor 2 verschillende breekpunten.
+        </p>
+        <ul>
+          <li><strong>Mobiel</strong> is de standaard.</li>
+          <li><strong>Desktop</strong> heeft een breekpunt op 1024px</li>
+        </ul>
+        <h3>Kolommen</h3>
+        <p>
+           Templates worden in de componentenbibliotheek gebaseerd op een combinatie van een grid en kolom indeling. Het design systeem
+          kent 3 kolomindelingen die ingezet kunnen worden voor verschillende templates. Binnen de kolom indeling is het mogelijk om
+          op het grid te werken. Dit wil zeggen dat niet altijd de volledige content over de breedte van een kolom moet lopen. Het
+          is daarbij belangrijk om rekening te houden met:
+        </p>
+        <ul>
+          <li>Lichaam (lopende tekst) mag nooit over meer dan 3/4 breedte van het grid lopen. Bredere tekst is onprettig voor de leesbaarheid</li>
+          <li>Er zijn afwijkingen in de kolom indeling voor de breekpunten tablet en mobiel. Specifieke toepassingen zijn per indeling beschreven</li>
+        </ul>
+        <h3>Spacing</h3>
+        <p>...</p>
+      </section>
+
+    </div>
+  </div>
+
+

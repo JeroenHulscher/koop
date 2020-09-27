@@ -1,0 +1,98 @@
+{{ render "@header" header merge=true }}
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
+
+       {{render "@nav" navMenuContext }}
+       {{render "@nav" navContentContext }}
+
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
+    <div class="row row--spacer">
+
+      {{#> @jumbotron jumbotronContext }} {{/@jumbotron}}
+
+    </div>
+
+    <section class="section-chapter js-scrollSection" id="sectie-microcopy">
+      <h2>Microcopy</h2>
+      <h3>Wat is microcopy?</h3>
+      <p>
+        Onder ‘microcopy’ verstaan we alle tekst op het platform die ondersteunend is aan de interface. Dit kan variëren van een label in een button, tot een ‘error’ bericht bij een invoerveld of de titel van de pagina. Microcopy geeft de gebruiker sturing, biedt context en vormt vertrouwen in het platform.
+      </p>
+      <p>
+        Onderstaande beschrijving geeft richting over schrijfwijze van microcopy. <strong>De officiële informatie binnen de collecties is hier van uitgesloten</strong>, deze mag door haar formele karakter nooit bewerkt worden.
+      </p>
+      <h4>Uitgangspunten (samenvattend)</h4>
+      <ul>
+        <li>We schrijven gebiedende wijs</li>
+        <li>We vormen zinnen zijn kort en bondig, maximaal 10 tot 15 woorden</li>
+        <li>We vermijden het gebruik van bijvoegelijk naamwoorden</li>
+        <li>We zijn formeel en onafhankelijk: We publiceren zonder waardeoordeel</li>
+        <li>We helpen en acitveren: Help de gebruiker zo snel mogelijk richting een doel</li>
+        <li>We communiceren concreet en eenvoudig: Hoe specifieker, hoe beter</li>
+      </ul>
+      <h3>Voice &amp; tone</h3>
+      <p>De verschillende collecties die onder de KOOP paraplu vallen moeten eenheid uitstralen. Daarom is het belangrijk dat ook
+        details als microcopy herkenbaar voelen. Door een consistente toepassing van de schrijfstijl kunnen we platform-breed een
+        gelijkwaardige ervaring bieden. De schrijfstijl is opgebouwd op basis van een ‘voice’ en ‘tone’.&nbsp;</p>
+      <h4>Voice</h4>
+      <p>De voice bepaald de manier waarop we communiceren met de gebruiker. Het is een weerspiegeling van het karakter van de organisatie.
+      Deze karakteristieken zorgen ervoor dat we bepaalde woorden of zinsopbouw wel of niet gebruiken. Door een consistente toepassing
+      van de voice zullen alle losse collecties als een eenheid voelen.</p>
+      <h5>Formeel &amp; onafhankelijk</h5>
+      <p>Overheid.nl en de daarbij behorende collecties zijn een officieel kanaal voor overheidsinformatie. Aan deze informatie kunnen
+      rechten worden ontleend, KOOP is hierin enkel de publicerende partij die over de inhoud geen regie voert.</p>
+      <p>We brengen daarom deze informatie uit zonder waardeoordeel en aansluitend op het formele karakter van de inhoud en altijd
+      juridisch dekkend.</p>
+      <h5>Behulpzaam &amp; actief</h5>
+      <p>
+        De diensten van KOOP zijn altijd gericht op service richting haar gebruikers. Een goede dienstverlening mag daarom ook nooit gehinderd worden door andere belangen zoals conversie.
+      </p>
+      <p>
+        Een gemiddelde gebruiker (of dit nou is met een burger- of professioneel motief) komt meestal op het platform terecht met een specifieke informatievraag. De interface helpt daarom actief het doel van informatievergaring de behalen.
+      </p>
+      <h5>Concreet &amp; eenvoudig</h5>
+      <p>
+         Door het officiële karakter van de informatie wordt deze soms moeilijk begrijpbaar. Waar we (juridisch) kunnen, versimpelen
+        we daarom de tekst en blijven we weg van jargon. Let hier wel op dat een vereenvoudiging in de interface wel duidelijk in
+        lijn blijft met de inhoud van de informatie.
+      </p>
+      <p>
+         Omdat een complexe boodschap soms onvermijdelijk is, zijn we in de interface zo concreet mogelijk. We beschrijving precies
+        wat een actie in de interface teweeg brengt en vinden een balans tussen technische omschrijvingen en verhalend omschrijvingen.
+      </p>
+      <h4>Tone</h4>
+      <p>
+         Waar een ‘voice’ in alle situaties hetzelfde is, kan een ‘tone’ afwijken aan de hand van wat het doel van de gebruiker is.
+        Het is de manier waarop we de gebruiker aanspreken in de interface. In de praktijk zal dit voor KOOP niet vaak afwijken,
+        maar in theorie zijn er twee verschillende manieren waarop we de gebruiker kunnen benaderen.
+      </p>
+      <h5>Actief</h5>
+      <p>
+         Een gebruiker komt met als doel het vinden van (vooraf) bepaalde informatie. Het vinden van deze informatie vraagt handelingen
+        van de gebruiker. De tone die we daarom aanhouden is een actieve vorm de gebruiker aanspreekt tot actie.
+      </p>
+      <h5>Passief</h5>
+      <p>
+         Op het moment dat de gebruiker een informatiebron (detailpagina) bekijkt, heeft deze als goed is het doel van informatievergaring
+        bereikt. Het doel van zoeken veranderd hier dan ook in opnemen van informatie. De interface is in deze context meer passief
+        aanwezig.
+      </p>
+    </section>
+
+    <section class="section-chapter js-scrollSection" id="sectie-beeldtaal">
+      <h2>Beeldtaal</h2>
+      <p>...</p>
+    </section>
+
+
+  </div>
+
+</div>
+
+

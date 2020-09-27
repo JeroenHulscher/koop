@@ -1,46 +1,34 @@
 {{ render "@header" header merge=true }}
 
-<div class="container">
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
 
-  <div class="columns columns--sidebar-left">
-    <div class="column ds-content">
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
 
-      <div class="hidden-desktop align-right">
-        <a href="#subnav" class="button button--primary" role="button">Navigatie</a>
-      </div>
+       {{render "@nav" navMenuContext }}
+       {{render "@nav" navComponentsContext }}
+
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
 
       <div class="row row--spacer">
-        <div class="jumbotron jumbotron--highlight">
 
-          <div class="jumbotron__content">
+         {{#> @jumbotron jumbotronContext }} {{/@jumbotron}}
 
-            <div class="jumbotron__heading">
-              <p class="jumbotron__subheader">Design system</p>
-              <h1 class="jumbotron__header">Componenten</h1>
-              <p class="jumbotron__intro">
-
-                  Op deze pagina's vind je een overzicht van de beschikbare componenten waarmee websites kunnen worden opgebouwd.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
       </div>
 
-      <article class="row row--xxxlarge">
-        <div class="row row--large">
-          <h1 id="address">Address</h1>
+      <section class="section-chapter js-scrollSection" id="address">
+          <h2 id="">Address</h2>
 
           <p>Gebruik altijd een <code>address</code> element bij het uitschrijven van een adres.</p>
 
           {{render "@address" }}
-        </div>
-      </article>
+      </section>
 
-      <article class="row row--xxxlarge">
-        <div class="row row--large">
-          <h1 id="alert">Alert</h1>
+      <section class="section-chapter js-scrollSection" id="alert">
+          <h2 id="">Alert</h2>
 
           <p>Alerts worden gebruikt voor het weergeven van tussentijdse informatie op een pagina. Dit kan inline, dus tussen twee blokken op de pagina, of ze kunnen sticky aan de bovenzijde worden weergegeven.</p>
 
@@ -62,29 +50,25 @@
             <h2 class="h5">Success</h2>
             {{render "@alert--success" }}
           </div>
-        </div>
-      </article>
+      </section>
 
-      <article class="row row--xxxlarge">
-        <div class="row row--large">
-          <h1 id="articleheader">Article header</h1>
+      <section class="section-chapter js-scrollSection" id="articleheader">
+          <h2 id="">Article header</h2>
           <p>De article header wordt gebruikt boven wetgevingen en geeft de gebruiker functionaliteiten gerelateerd aan de wetgeving en of artikel.</p>
 
           {{render "@article-header" }}
-        </div>
-      </article>
+      </section>
 
-      <article class="row row--xxxlarge">
+      <section class="section-chapter js-scrollSection" id="banner">
         <div class="row row--large">
-          <h1 id="banner">Banner</h1>
+          <h2 id="">Banner</h2>
 
           {{render "@banner" }}
-        </div>
-      </article>
+      </section>
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="blockquote">Blockquote</h1>
+          <h2 id="blockquote">Blockquote</h2>
           <p>Een citaat wordt weergegeven in een <code>blockquote</code> element. Geef in de <code>cite</code> de bron aan van de citaat.</p>
 
           {{render "@blockquote" }}
@@ -93,7 +77,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="browse">Browse</h1>
+          <h2 id="browse">Browse</h2>
           <p>Het browse-component toont een lijst van items, inclusief het aantal per item. Beschikbaar in een versie mét en zónder iconen.</p>
           <h2 class="h5">Default</h2>
           {{render "@browse" }}
@@ -104,7 +88,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="buttons">Buttons</h1>
+          <h2 id="buttons">Buttons</h2>
           <p>Buttons worden opgemaakt middels de <code>.button</code> class. Gebruik bij voorkeur altijd het <code>button</code> element. Een hyperlink (a) als button krijgt <code>role="button"</code> ten behoeve van de toegankelijkheid</p>
         </div>
         <div class="columns row row--xxlarge">
@@ -151,7 +135,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="copyurl">CopyURL</h1>
+          <h2 id="copyurl">CopyURL</h2>
 
 
           {{render "@copydata" }}
@@ -160,14 +144,14 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="characteristics">Characteristics</h1>
+          <h2 id="characteristics">Characteristics</h2>
           {{render "@characteristic" }}
         </div>
       </article>
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="collapsible">Collapsible</h1>
+          <h2 id="collapsible">Collapsible</h2>
           <p>
              Collapsibles gebruikt men als informatie initieel verborgen moet zijn. De informatie wordt zichtbaar bij muis/toetsenbord-klik.
           </p>
@@ -194,7 +178,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="definitionlist">Definitionlist</h1>
+          <h2 id="definitionlist">Definitionlist</h2>
           <p>Een lijst met definities; titel en omschrijving.</p>
           {{render "@definitionlist" }}
         </div>
@@ -202,14 +186,14 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="delins">Del / Ins</h1>
+          <h2 id="delins">Del / Ins</h2>
           {{render "@del-ins" }}
         </div>
       </article>
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="gridcontainers">Grid &amp; containers</h1>
+          <h2 id="gridcontainers">Grid &amp; containers</h2>
           <p>Zonder toevoegingen werkt het grid percentueel in een gelijke verdeling. De meer kolommen, de smaller deze worden. Naar wens kan er een handmatige percentuele verdeling gemaakt worden, middels het toevoegen van een class op de column zelf.</p>
           <p>
 
@@ -341,7 +325,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="figure">Figure</h1>
+          <h2 id="figure">Figure</h2>
           <p>Voeg <strong>altijd</strong> een passende <code>alt</code>-tekst toe aan de afbeelding.</p>
           {{render "@figure" }}
         </div>
@@ -349,7 +333,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="footnote">Footnote</h1>
+          <h2 id="footnote">Footnote</h2>
           <p>Voetnoten staan standaard onderaan de pagina. De verwijziging naar een voetnote werkt met een simpele anker-link. </p>
 
           {{render "@footnote" }}
@@ -358,7 +342,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="forms">Forms</h1>
+          <h2 id="forms">Forms</h2>
           <p>Een formulier wordt altijd opgebouwd met de class <code>.form</code> op de <code>form</code> tag. Elke rij is voorzien van de <code>.form__row</code> class voor consistende overgangen van elementen.</p>
         </div>
         <div class="row row--xxlarge">
@@ -531,7 +515,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="highlight">Highlight</h1>
+          <h2 id="highlight">Highlight</h2>
 
 
           {{render "@highlight" }}
@@ -540,7 +524,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="jumbotron">Jumbotron</h1>
+          <h2 id="jumbotron">Jumbotron</h2>
 
 
           {{render "@jumbotron" }}
@@ -549,7 +533,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="labels">Labels</h1>
+          <h2 id="labels">Labels</h2>
 
 
           <div class="row">
@@ -586,7 +570,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="link">Link</h1>
+          <h2 id="link">Link</h2>
           <p>Een hyperlink komt mee met een standaard style. Het icoon wordt automagisch geplaatst op basis van de <code>href</code>.</p>
           <h2 class="h5">Internal</h2>
           <p>
@@ -601,7 +585,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="lists">Lists</h1>
+          <h2 id="lists">Lists</h2>
 
         </div>
         <div class="columns row row--xxlarge">
@@ -653,7 +637,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="modal">Modal</h1>
+          <h2 id="modal">Modal</h2>
 
           Het modal component kan informatie tonen in een vlak dat over de rest van de pagina heenligt, en waarbij de rest van de pagina
           ontoegankelijk is gemaakt.
@@ -687,7 +671,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="navigation">Navigation</h1>
+          <h2 id="navigation">Navigation</h2>
 
           <h2 class="h5">Sub-navigation</h2>
           {{render "@nav" }}
@@ -698,7 +682,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="pageactions">Pageactions</h1>
+          <h2 id="pageactions">Pageactions</h2>
 
           {{render "@pageactions" }}
         </div>
@@ -706,7 +690,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="pre">Pre</h1>
+          <h2 id="pre">Pre</h2>
 
           {{render "@pre" }}
         </div>
@@ -714,7 +698,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="resultlist">Resultlist</h1>
+          <h2 id="resultlist">Resultlist</h2>
 
           {{render "@resultlist" }}
         </div>
@@ -722,7 +706,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="sort">Sort</h1>
+          <h2 id="sort">Sort</h2>
 
           {{render "@sort" }}
         </div>
@@ -730,7 +714,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="steps">Steps</h1>
+          <h2 id="steps">Steps</h2>
 
           {{render "@steps" }}
         </div>
@@ -738,7 +722,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="tabs">Tabs</h1>
+          <h2 id="tabs">Tabs</h2>
 
           <h2 class="h5">Default</h2>
           {{render "@tabs" }}
@@ -749,7 +733,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="table">Table</h1>
+          <h2 id="table">Table</h2>
 
           <h2 class="h5">Default</h2>
           {{render "@table" }}
@@ -764,7 +748,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="themeblock">Themeblock</h1>
+          <h2 id="themeblock">Themeblock</h2>
 
           <ul class="themelist list--unstyled">
 
@@ -781,7 +765,7 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="tooltip">Tooltip</h1>
+          <h2 id="tooltip">Tooltip</h2>
 
 
           <p>Een titel{{render "@tooltip" }}</p>
@@ -790,24 +774,12 @@
 
       <article class="row row--xxxlarge">
         <div class="row row--large">
-          <h1 id="treeview">Treeview</h1>
+          <h2 id="treeview">Treeview</h2>
 
 
           {{render "@treeview" }}
         </div>
       </article>
-
-    </div>
-
-    <div class="column column--sidebar" id="subnav">
-
-      {{render "@nav" navMenuContext }} {{render "@nav" navComponentsContext }}
-
-      <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
-        <span class="visually-hidden">Sluiten</span>
-      </button>
-
-      <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a>
 
     </div>
 
