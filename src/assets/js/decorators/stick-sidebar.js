@@ -34,17 +34,25 @@
 
   var updateStickability = function (scrollContentElement) {
     var footerOffset;
+    var maxTop
     var disclaimer = document.querySelector('.disclaimer');
+    var footer = document.querySelector('.footer');
 
     // the height of the sidebar (when sticky) is based on the footer area of the page;
     if (disclaimer) {
       footerOffset = disclaimer.getBoundingClientRect();
-    } else {
+    } else if(footer){
       footerOffset = footer.getBoundingClientRect();
     }
 
+    if (footerOffset) {
+      maxTop = footerOffset.top;
+    } else {
+      maxTop = '0';
+    }
+
     var scrollY = getScrollY();
-    var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - footerOffset.top ), 0 );
+    var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - maxTop ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
     var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
     var elements;
@@ -159,7 +167,12 @@
       element = el;
       var calculate = function() {
         referenceTop = element.closest( '.columns--sticky-sidebar' ).getBoundingClientRect().top + getScrollY() + 16;
-        left = onl.dom.$( '.breadcrumb' )[0].getBoundingClientRect().left;
+        if (onl.dom.$('.container > .breadcrumb')[0]) {
+          left = onl.dom.$('.container > .breadcrumb')[0].getBoundingClientRect().left;
+        } else {
+          left = onl.dom.$('.logo')[0].getBoundingClientRect().left;
+        }
+
         h1ReferenceTop = onl.dom.$('h1')[0].getBoundingClientRect().bottom;
       };
 
