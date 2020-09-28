@@ -10,7 +10,7 @@
   var sourceslist = function (element) {
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    console.log('this.config',this.config);
+
     this.triggerClass = this.config.triggerClass || '.js-sourceslist-statetrigger';
     this.triggerConfig = JSON.parse(this.element.getAttribute('data-config')) || [];
 
