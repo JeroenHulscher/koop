@@ -1,0 +1,56 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div id="content" class="container">
+
+  <div class="row row--spacer">
+
+    {{#> @jumbotron jumbotronContext }}
+    {{/@jumbotron}}
+
+  </div>
+
+  <div class="container container--centered">
+    <div class="row">
+      {{ render "@alert--success" alert merge=true }}
+    </div>
+    <div class="row">
+      <h2>Uw opgeslagen zoekvragen <span class="h2__sub">4 abonnementen</span></h2>
+      <div class="row">
+        <div data-decorator="init-sourceslist">
+          {{render "@sources-list" abonnementenContext}}
+        </div>
+      </div>
+      <div class="columns columns--vcenter">
+        <div class="column">
+          {{!-- <a href="/components/preview/templates-att-stap1" class="button button--primary icon-bg icon-bg--plus-white">Nieuw abonnement aanmaken</a> --}}
+          {{#> @modal modalNewAbo }}
+            <h2>Nieuwe zoekvraag aanmaken</h2>
+            <h3>Toelichting</h3>
+            <p>
+               U kunt zich abonneren op een door u gestelde zoekvraag. Dit doet u door eerst een zoekvraag te stellen. Vervolgens klikt
+              u in het overzicht met zoekresultaten op de link "Abonneren op deze zoekvraag". Ten slotte kunt u aangeven hoe u de zoekvraag
+              wilt opslaan en hoe frequent u updates per e-mail wilt ontvangen.
+            </p>
+            <h3>Maak uw keuze</h3>
+            <p>
+               Start met het stellen van een zoekvraag binnen de collectie met parlementaire documenten of de collectie met bekendmakingen.
+            </p>
+            {{ render "@list--linklist" listLinks }}
+          {{/@modal}}
+        </div>
+        <div class="column align-right">
+          <a href="#" class="icon icon--right icon--bin js-sourceslist-statetrigger" data-config='{"id":"sl2", "state":"actions"}'>Abonnement verwijderen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{{ render "@footer" }}

@@ -8,6 +8,9 @@
   {{#if content}}
     {{{content}}}
   {{/if}}
+  {{#> @partial-block}}
+  {{/ @partial-block}}
+
   {{#if buttonText}}
     <p>
       <a href="{{href}}" class="button {{#if buttonModifier}}button--{{buttonModifier}}{{/if}}">{{buttonText}}</a>

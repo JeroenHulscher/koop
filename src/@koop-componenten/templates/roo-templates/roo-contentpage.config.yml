@@ -1,0 +1,147 @@
+---
+label: ROO - Contentpagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Register voor Overheidsorganisaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Zoekresultaat
+        url: '#'
+      - text: Gemeente Delft
+  navVerdragContext:
+    id: 2
+    items:
+    - title: Gemeente Delft (Delft) (ZH)
+      href: "#"
+      sub: true
+      active: true
+      sactive: true
+      subItems:
+        - stitle: Adresgegevens
+          href: "#sectie-adresgegevens"
+        - stitle: Gemeenschappelijke regelingen (11)
+          href: "#sectie-gemeenschappelijkeregeling"
+        - stitle: Basisgegevens
+          href: "#sectie-basisgegevens"
+        - stitle: Functies
+          href: "#sectie-functies"
+        - stitle: Gemeenteraad
+          href: "#sectie-gemeenteraad"
+        - stitle: Classificaties (1)
+          href: "#sectie-classificaties"
+  pageactions:
+    title: ''
+    intro: ''
+    items:
+      - link: '#'
+        text: Exporteer gegevens (csv)
+        icon: icon-download.svg
+  labelGewijzigd:
+    text: 'Laatst bijgewerkt op: 27-07-2020'
+    modifier: label-default label--lg label--italic
+  labelType:
+    text: 'Gemeente'
+    modifier: label--info label--lg label--italic
+  tableGemeenteraad:
+    label: default
+    items:
+      - item:
+        - column:
+          type: Partij
+          value: Groenlinks
+        - column:
+          type: Aantal zetels
+          value: 7
+      - item:
+        - column:
+          type: Partij
+          value: STIP
+        - column:
+          type: Aantal zetels
+          value: 6
+      - item:
+        - column:
+          type: Partij
+          value: Onafhankelijk Delft
+        - column:
+          type: Aantal zetels
+          value: 5
+      - item:
+        - column:
+          type: Partij
+          value: D66
+        - column:
+          type: Aantal zetels
+          value: 5
+      - item:
+        - column:
+          type: Partij
+          value: SP
+        - column:
+          type: Aantal zetels
+          value: 3
+      - item:
+        - column:
+          type: Partij
+          value: VVD
+        - column:
+          type: Aantal zetels
+          value: 3
+      - item:
+        - column:
+          type: Partij
+          value: CDA
+        - column:
+          type: Aantal zetels
+          value: 3
+      - item:
+        - column:
+          type: Partij
+          value: PvdA
+        - column:
+          type: Aantal zetels
+          value: 3
+      - item:
+        - column:
+          type: Partij
+          value: ChristenUnie
+        - column:
+          type: Aantal zetels
+          value: 2
+      - item:
+        - column:
+          type: Partij
+          value: Stadsbelangen
+        - column:
+          type: Aantal zetels
+          value: 2
+  tableClassificaties:
+    label: default
+    items:
+      - item:
+        - column:
+          type: Geldigheid
+          value: Geldend van 01-01-2018 t/m heden
+        - column:
+          type: Classificatie
+          value: <a href="#">WNT-instelling</a> Deze organisatie valt onder de Wet normering topinkomens (WNT)
+        - column:
+          type: Grondslag
+          value: <a href="#">Gemeenten (Artikel 1.2, lid 1c, WNT)</a>

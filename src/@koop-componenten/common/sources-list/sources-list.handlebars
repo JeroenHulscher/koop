@@ -3,7 +3,18 @@
 		<li>
 			<div class="list--source__information {{icon}}">
 				{{ name }}
-        <span class="list--sources__item__filesize">{{ filesize }}</span>
+        {{#if date }}
+          <div class="list--sources__item__date">
+          {{ date/timestamp }} {{ render "@tooltip" date/tooltip merge=true }}
+           {{#if filesize}}
+              <span class="list--sources__item__filesize">{{ filesize }}</span>
+            {{/if}}
+          </div>
+        {{else}}
+        {{#if filesize}}
+          <span class="list--sources__item__filesize">{{ filesize }}</span>
+        {{/if}}
+        {{/if}}
 				{{#if files }}
 					{{#each files }}
 						<span class="label label--{{ type }}">{{ type}}</span>
@@ -16,6 +27,7 @@
         <span class="visually-hidden">van abonnement: {{name}}</span>
       </a>
       {{/if}}
+
 
 			{{!-- {{ render "@button" buttonContext }} --}}
       {{#if actionsOne}}
@@ -49,6 +61,17 @@
         </div>
       {{else}}
 
+      {{/if}}
+
+      {{#if metadata}}
+      <div class="list--source__metadata">
+        <dl class="dl dl--horizontal">
+          {{#each metadata/items}}
+            <dt>{{dt}}</dt>
+            <dd>{{dd}}</dd>
+          {{/each}}
+        </dl>
+      </div>
       {{/if}}
 
 

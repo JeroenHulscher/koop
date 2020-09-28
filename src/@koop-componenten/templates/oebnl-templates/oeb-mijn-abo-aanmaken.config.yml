@@ -1,0 +1,96 @@
+---
+label: Mijn Abo. - Abonnement aanmaken
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn abonnementen
+      url: '#'
+    - text: Abonnement aanmaken
+  jumbotronContext:
+    heading: Abonnement aanmaken
+    subheading: Mijn abonnementen
+    intro: U kunt zich abonneren op een door u gestelde zoekvraag. U wordt vervolgens op de hoogte gesteld als er nieuwe publicaties verschijnen die aan uw zoekterm(en) voldoen.
+    centered: true
+    size: s
+    titleInput:
+      id: 2
+      modifier: input-text--medium
+      fieldLabel: Titel abonnement
+      fieldLabelVisible: true
+      labelmodifier: accent
+      fieldInstruction:
+      fieldPlaceholder:
+      required: true
+      requiredLabel: true
+    selectContext:
+      modifier: select-custom--large
+      fieldLabel: Meldingen
+      options:
+        - label: Ja
+          value: 10
+          selected: selected
+        - label: Nee
+          value: 20
+    buttonSubmit:
+        id: 123
+        text: Opslaan abonnement
+        button: true
+        modifier: button--primary form__button
+    backlink:
+      title: Terug naar Mijn abonnementen
+      href: '#'
+    radioMelding:
+      name: melding
+      explanation: false
+      options:
+        - id: 1122
+          name: melding
+          checked: checked
+          text: Ja
+        - id: 2222
+          text: Nee
+          name: melding
+    radioFrequentie:
+      name: frequentie
+      explanation: false
+      options:
+        - id: 111
+          name: frequentie
+          checked: checked
+          text: Direct na publicatie

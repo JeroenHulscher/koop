@@ -1,4 +1,4 @@
-name: DS - Components
+name: DS - Componenten
 label: DS - Componenten
 context:
   header:
@@ -14,16 +14,25 @@ context:
     items:
     - title: Design system
       active: true
-      href: /
+      href: templates-ds---homepage
       sub: true
       subItems:
-        - stitle: Content
-          href: content.html
-        - stitle: Design
-          href: ontwerpprincipes.html
-        - stitle: Components
-          href: componenten.html
+        - stitle: Toelichting
+          href: templates-ds---toelichting
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes
+        - stitle: Componenten
+          href: templates-ds---componenten
           sactive: true
+        - stitle: Content
+          href: templates-ds---content
+        - stitle: Templates
+          href: templates-ds---templates
+  jumbotronContext:
+    heading: Componenten
+    h: h1
+    subheading: Design system
+    intro: Op deze pagina's vind je een overzicht van de beschikbare componenten waarmee websites kunnen worden opgebouwd.
   inputDefault:
     type: email
   inputHasError:

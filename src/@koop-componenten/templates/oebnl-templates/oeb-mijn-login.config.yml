@@ -1,0 +1,81 @@
+---
+label: Mijn Abo. - Inloggen
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn Abonnementen
+      url: '#'
+    - text: Inloggen
+  jumbotronContext:
+    heading: Inloggen bij Officiële bekendmakingen
+    subheading: Officiële bekendmakingen
+    intro: U kunt zich abonneren op een door u gestelde zoekvraag. U wordt vervolgens op de hoogte gesteld als er nieuwe publicaties verschijnen die aan uw zoekterm(en) voldoen.
+    centered: true
+    size: s
+    headingcentered: true
+    inputEmailContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      required: true
+      patterntype: email
+      fieldLabel: E-mailadres
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Uw e-mailadres
+      hastooltip: true
+      tooltipContext:
+        id: 1231
+        content: Het e-mailadres waarmee u zich heeft geregistreerd.
+    inputPWContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      required: true
+      type: password
+      fieldLabel: Wachtwoord
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Uw wachtwoord
+    linkWw:
+      text: Wachtwoord vergeten
+    buttonSubmit:
+      id: 123
+      text: Inloggen
+      button: true
+      modifier: button--primary form__button
+    alert:
+      text: Uw account is succesvol geactiveerd. U kunt nu inloggen.

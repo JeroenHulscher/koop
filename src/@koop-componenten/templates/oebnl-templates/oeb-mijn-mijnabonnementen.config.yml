@@ -1,0 +1,137 @@
+---
+label: Mijn Abo. - Mijn abonnementen
+status: prototype
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Wachtwoord wijzigen
+              url: '#'
+              class: link link--edit
+            - text: E-mailadres wijzigen
+              url: '#'
+              class: link link--edit
+            - text: Account verwijderen
+              url: '#'
+              class: link link--remove
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn Abonnementen
+  jumbotronContext:
+    heading: Mijn Abonnementen
+    subheading: Officiële bekendmakingen
+    intro: U heeft momenteel onderstaande abonnementen ingesteld.
+    centered: true
+    headingcentered: true
+  abonnementenContext:
+    id: sl2
+    items:
+    - name: Naamgeving zoekvraag
+      icon: icon-bg--news
+      idprefix: unit-1-
+      metadata:
+        items:
+          - dt: Aanmaakdatum
+            dd: 18-09-2020 14:49
+          - dt: Laatste e-mail
+            dd: n.v.t
+          - dt: Frequentie
+            dd: Zo snel mogelijk na publicatie
+      actionsOne:
+        - label: Verwijder abonnement Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+          icon: icon--bin
+          iconOnly: true
+          href: '#'
+          linkedto: 2
+          hideself: true
+      actionsTwoLabel: Verwijderen?
+      actionsTwo:
+        - label: Ja
+          href: '#'
+        - label: Nee
+          href: '#'
+          linkedto: 1
+          hideself: true
+      buttonContext:
+        modifier: button--secundary
+        button: false
+        anchor: true
+        action: /components/preview/templates-att-stap1
+        text: Bewerken
+    - name: Zoekvraag 2
+      icon: icon-bg--news
+      idprefix: unit-2-
+      metadata:
+        items:
+          - dt: Aanmaakdatum
+            dd: 08-03-2019 12:11
+          - dt: Laatste e-mail
+            dd: n.v.t
+          - dt: Frequentie
+            dd: Zo snel mogelijk na publicatie
+      actionsOne:
+        - label: Verwijder abonnement Adamshofstraat 69, 3061ZB Rotterdam
+          icon: icon--bin
+          iconOnly: true
+          href: '#'
+          linkedto: 2
+          hideself: true
+      actionsTwoLabel: Verwijderen?
+      actionsTwo:
+        - label: Ja
+          href: '#'
+        - label: Nee
+          href: '#'
+          linkedto: 1
+          hideself: true
+      buttonContext:
+        modifier: button--secondary
+        button: false
+        anchor: true
+        action: /components/preview/templates-att-stap1
+        text: Bewerken
+  modalNewAbo:
+    initClosed: true
+    buttonModifier: button--primary icon-bg icon-bg--plus-white
+    openButton: Nieuw abonnement aanmaken
+    closeButton: sluiten
+    listLinks:
+      modifier: list--linked
+      items:
+        - content: <a href="/uitgebreidzoeken/parlementair">Parlementaire documenten</a>
+        - content: <a href="/uitgebreidzoeken/officielebekendmakingen">Officiële bekendmakingen</a>
+  alert:
+    text: Uw abonnement is verwijderd.

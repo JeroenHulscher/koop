@@ -1,0 +1,95 @@
+{{ render "@header" header merge=true }}
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
+
+     {{render "@nav" navMenuContext }}
+     {{render "@nav" navContentContext }}
+
+    <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+      <span class="visually-hidden">Sluiten</span>
+    </button>
+
+    {{!-- <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a> --}}
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
+      <div class="row row--spacer">
+
+        {{#> @jumbotron jumbotronContext }}
+        {{/@jumbotron}}
+
+      </div>
+
+
+          <section class="section-chapter js-scrollSection" id="sectie-introductie">
+            <h2>Introductie</h2>
+            <p>
+              Dit designsysteem is ondersteunend aan de componentenbibliotheek 2.0 (complib).
+            </p>
+            <h3>In dit design systeem</h3>
+            <ul>
+              <li>Overview Handvatten tot het gebruik van de componentenbibliotheek</li>
+              <li>Foundation Basis principes tot het vormen van componenten, templates en pagina’s op basis van de componentenbibliotheek</li>
+              <li>Components Voorgedefinieerde atomen, moleculen en organismen</li>
+              <li>Templates Voorgedefinieerde templates </li>
+              <li>Content Toepassing van content binnen templates </li>
+            </ul>
+          </section>
+
+          <section class="section-chapter js-scrollSection" id="sectie-ontwerpen-en-doorontwikkelen">
+            <h2>Ontwerpen en doorontwikkelen</h2>
+            <p>Wat te doen zodra je een wijziging wilt doorvoeren op de de componentenbliotheek design system?</p>
+            <h3>Algemeen</h3>
+            <p>Wijzigingen in sketch file uploaden naar design systeem</p>
+            <h3>Nieuw component</h3>
+            <ol>
+              <li>Nieuw component ontwerpen</li>
+              <li>Symbool van maken</li>
+            </ol>
+            <h3>Wijziging bestaand component</h3>
+            <p>Wijziging bestaande stijl</p>
+          </section>
+
+          <section class="section-chapter js-scrollSection" id="sectie-toegankelijkheid">
+            <h2>Toegankelijkheid</h2>
+            <p>...</p>
+          </section>
+
+          <section class="section-chapter js-scrollSection" id="sectie-naamgevingsconventie">
+            <h2>Naamgevingsconventie</h2>
+            <h3>Begrippenlijst</h3>
+            <dl>
+              <dt>Atomen</dt>
+              <dd>Basis elementen die je nodig hebt om alle componenten (moleculen, organismen en templates) voor KOOP te kunnen creeeren</dd>
+              <dt>Beeldtaal</dt> <dd>De strategie voor toepassing van beeld op het platform</dd>
+              <dt>Collectie</dt> <dd>Een (sub)set aan overheidsinformatie die op een individueel platform beschikbaar gesteld wordt</dd>
+              <dt>Comlib</dt> <dd>Componentenbibliotheek 2.0</dd>
+              <dt>Home</dt> <dd>Portaal www.overheid.nl</dd>
+              <dt>Landing</dt> <dd>Homepage van een collectie</dd>
+              <dt>Microcopy</dt> <dd>Alle tekst op het platform die ondersteunend is aan de interface</dd>
+              <dt>Moleculen</dt> <dd>Een combinatie van atomen die een interactie element vormen</dd>
+              <dt>Organismen</dt> <dd>Een combinatie van moleculen om een uitgebreide interactie te kunnen uitvoeren</dd>
+              <dt>Publicatie</dt> <dd>Detailpagina van bijvoorbeeld een verdrag, wet of bekendmaking</dd>
+              <dt>Templates</dt> <dd>Een combinatie van organismen die een skelet vormen voor een pagina</dd>
+            </dl>
+          </section>
+
+          <section class="section-chapter js-scrollSection" id="sectie-changelog">
+            <h2>Change log</h2>
+            <p>Wijzigingen doorgevoerd op het design systeem.</p>
+            <ul>
+              <li>[groen] = Kleine update</li>
+              <li>[oranje] = Middelgrote update</li>
+              <li>[rood] = Grote update</li>
+            </ul>
+          </section>
+
+
+  </div>
+</div>
+
+

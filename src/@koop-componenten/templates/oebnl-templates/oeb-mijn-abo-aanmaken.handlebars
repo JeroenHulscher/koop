@@ -1,0 +1,44 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+
+      <form class="form" data-decorator="init-form-validation">
+        <div class="columns">
+          <div class="column column-d-8">
+            <div class="form__row">
+              {{ render "@input-text" titleInput }}
+            </div>
+          </div>
+          <div class="column column-d-5">
+            <div class="form__row">
+              {{ render "@select-custom--with-label" selectContext merge=true }}
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <p>
+            <strong>Frequentie</strong>: Direct naar publicatie
+          </p>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+        </div>
+      </form>
+
+    {{/@jumbotron}}
+  </div>
+
+</div>
+
+{{ render "@footer" }}

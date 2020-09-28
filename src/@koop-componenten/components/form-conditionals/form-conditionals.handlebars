@@ -1,6 +1,6 @@
 <div class="form-conditionals" data-decorator="init-form-conditionals">
   {{#each questions}}
-    <fieldset arial-label="{{question}}" id="citem-{{id}}" class="form-conditionals__citem form-conditionals__citem js-form-conditionals__citem">
+    <fieldset id="citem-{{id}}" class="form-conditionals__citem form-conditionals__citem js-form-conditionals__citem">
       <legend>{{question}}</legend>
         {{#if radio}}
         {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
@@ -51,7 +51,7 @@
           {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
           <div class="form__row">
             {{#each answers}}
-              <button class="button-icon button-icon--{{icon}} js-button-next" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
+              <button {{#if buttonSubmit}}type="submit"{{/if}} class="button-icon button-icon--{{icon}} js-button-next" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
             {{/each}}
           </div>
         </div>

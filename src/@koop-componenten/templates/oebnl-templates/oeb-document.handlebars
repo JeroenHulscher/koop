@@ -20,16 +20,6 @@
   </div>
   <div id="content" role="main" class="content content--publication">
 
-    {{#> @modal modalDelen }}
-
-      <h2>Permanente link</h2>
-      <p class="form__sublegend">Kopieer de link naar uw clipboard </p>
-      <div class="row">
-        {{render "@copydata" copydata merge=true }}
-      </div>
-
-    {{/@modal}}
-
     {{ render "@pageactions" pageactions }}
 
     <article>
@@ -3280,7 +3270,15 @@
 
     </article>
 
+    {{#> @modal modalDelen }}
 
+      <h2>Permanente link</h2>
+      <p class="form__sublegend">Kopieer de link naar uw clipboard </p>
+      <div class="row">
+        {{render "@copydata" copydata merge=true }}
+      </div>
+
+    {{/@modal}}
 
   </div>
 </div>

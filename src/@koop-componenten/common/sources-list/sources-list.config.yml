@@ -7,6 +7,35 @@ context:
       files:
       - type: xml
       - type: xls
+      filesize: 1292kb
+      idprefix: c-item
+      date:
+        timestamp: 20-04-2020
+        tooltip:
+          id: 4
+          content: Dit document is gewijzigd op 20-04-2020
+      buttonContext:
+        modifier: button--primary
+        button: false
+        anchor: true
+        action: http://www.google.nl
+        text: download bestand
+    - name: Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente Score Gemeente 2016 Score Gemeente 2016 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016
+      files:
+      - type: xml
+      - type: xls
+      idprefix: c-item
+      filesize: 1292kb
+      buttonContext:
+        modifier: button--primary
+        button: false
+        anchor: true
+        action: http://www.google.nl
+        text: download bestand
+    - name: Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente Score Gemeente 2016 Score Gemeente 2016 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016 Score Gemeente 2016
+      files:
+      - type: xml
+      - type: xls
       idprefix: c-item
       buttonContext:
         modifier: button--primary
@@ -17,6 +46,12 @@ context:
     - name: Score wijk 2016
       files:
       - type: xml
+      filesize: 1292kb
+      date:
+        timestamp: 20-04-2020
+        tooltip:
+          id: 4
+          content: Dit document is gewijzigd op 20-04-2020
       idprefix: c-item
       buttonContext:
         modifier: button--primary
@@ -32,6 +67,60 @@ context:
           value: <a href="#">Locatie stembureaus Delfzijl 2016</a>
         - type: Laatst gewijzigd
           value: 9 maart 2017
+    - name: Score PC4 2016
+      files:
+      - type: xml
+      - type: xls
+      filesize: 1292kb
+      idprefix: c-item
+      buttonContext:
+        modifier: button--primary
+        button: false
+        anchor: true
+        action: http://www.google.nl
+        text: download bestand
+        disabled: disabled
+      remark: true
+      remarkText: <p>Link is niet ok.<br />Laatste controle op 18-07-2018</p>
+    - name: Score PC4 2016
+      files:
+      - type: xml
+      - type: xls
+      filesize: 1292kb
+      date:
+        timestamp: 20-04-2020
+        tooltip:
+          id: 4
+          content: Dit document is gewijzigd op 20-04-2020
+      idprefix: c-item
+      buttonContext:
+        modifier: button--primary
+        button: false
+        anchor: true
+        action: http://www.google.nl
+        text: download bestand
+        disabled: disabled
+      remark: true
+      remarkText: <p>Link is niet ok.<br />Laatste controle op 18-07-2018</p>
+    - name: Score PC4 2016
+      files:
+      - type: xml
+      - type: xls
+      date:
+        timestamp: 20-04-2020
+        tooltip:
+          id: 4
+          content: Dit document is gewijzigd op 20-04-2020
+      idprefix: c-item
+      buttonContext:
+        modifier: button--primary
+        button: false
+        anchor: true
+        action: http://www.google.nl
+        text: download bestand
+        disabled: disabled
+      remark: true
+      remarkText: <p>Link is niet ok.<br />Laatste controle op 18-07-2018</p>
     - name: Score PC4 2016
       files:
       - type: xml

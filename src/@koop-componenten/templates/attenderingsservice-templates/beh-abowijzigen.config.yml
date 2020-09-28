@@ -10,7 +10,7 @@ context:
         profileContext:
           id: 12
           loggedIn: true
-          textLoggedIn: G. Bruikersnaam
+          textLoggedIn: Profiel
           options:
             - text: Mijn abonnementen
               url: '#'

@@ -1,0 +1,48 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div id="content" role="main" class="container">
+
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+
+      {{ render "@alert--success" alert merge=true }}
+
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">E-mailadres</legend>
+          <div class="columns">
+            <div class="column">
+              <div class="form__row form__row--medium">
+                {{render "@input-text" inputEmailContext }}
+              </div>
+            </div>
+            <div class="column">
+              <div class="form__row form__row--medium">
+                {{render "@input-text" inputCodeContext }}
+              </div>
+            </div>
+          </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+            <div class="form__rowsubmit__item">
+              {{render "@link--mail" linkNewcode merge=true }}<br/>
+              {{render "@link--profiel" linkAccount merge=true }}
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

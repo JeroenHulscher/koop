@@ -1,0 +1,19 @@
+---
+title: Accordion
+status: ready
+context:
+  item1:
+    headerId: header1
+    headerLabel: Accordion Vraag 1
+    contentId: con1
+    content: Accordion Antwoord 1
+  item2:
+    headerId: header2
+    headerLabel: Accordion Vraag 2
+    contentId: con2
+    content: Accordion Antwoord 2
+  item3:
+    headerId: header3
+    headerLabel: Accordion Vraag 3
+    contentId: con3
+    content: Accordion Antwoord 3

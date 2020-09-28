@@ -1,0 +1,53 @@
+name: DS - Toelichting
+label: DS - Toelichting
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Content
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      href: templates-ds---homepage
+      sub: true
+      subItems:
+        - stitle: Toelichting
+          href: templates-ds---toelichting
+          sactive: true
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes
+        - stitle: Componenten
+          href: templates-ds---componenten
+        - stitle: Content
+          href: templates-ds---content
+        - stitle: Templates
+          href: templates-ds---templates
+  navContentContext:
+    items:
+    - title: Toelichting
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Introductie
+          href: sectie-introductie
+        - stitle: Ontwerpen en doorontwikkelen
+          href: sectie-ontwerpen-en-doorontwikkelen
+        - stitle: Toegankelijkheid
+          href: sectie-toegankelijkheid
+        - stitle: Naamgevingsconventie
+          href: sectie-naamgevingsconventie
+        - stitle: Change log
+          href: sectie-changelog
+  jumbotronContext:
+    heading: Toelichting
+    h: h1
+    subheading: Design system
+    intro: Uitleg over deze pagina.
+

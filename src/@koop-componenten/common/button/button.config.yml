@@ -54,6 +54,11 @@ variants:
     context:
       text: Kleine knop
       modifier: button--smaller
+  - name: slim
+    status: ready
+    context:
+      text: Dunne knop
+      modifier: button--slim
   - name: inversed
     status: ready
     context:

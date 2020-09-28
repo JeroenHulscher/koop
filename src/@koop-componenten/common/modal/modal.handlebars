@@ -1,5 +1,5 @@
-{{#if openButton}}<p><button type="button" data-handler="open-modal" data-modal="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}" class="button">{{ openButton }}</button></p>{{/if}}
-<div id="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}" class="modal {{#if initClosed }}modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
+{{#if openButton}}<button type="button" data-handler="open-modal" data-modal="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}" class="button {{buttonModifier}}">{{ openButton }}</button>{{/if}}
+<div id="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}" class="modal {{modifier}}{{#if initClosed }} modal--off-screen{{/if}}" {{#if initClosed }}hidden{{/if}} role="alert">
   <div class="modal__inner">
     <div class="modal__content">
       {{#if text}}

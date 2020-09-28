@@ -1,0 +1,25 @@
+.row-heading {
+  margin: 0 0 1em 0;
+
+  h2, h3, h4 {
+    margin-bottom: .5em !important;
+  }
+
+  @media ( min-width: $breakpointDesktop ) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+
+    h2, h3, h4 {
+      margin: 0 !important;
+    }
+
+    > div:last-child {
+      text-align: right;
+      .button {
+        margin: 0;
+      }
+    }
+  }
+}

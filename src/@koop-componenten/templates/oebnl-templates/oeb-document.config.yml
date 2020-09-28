@@ -1,5 +1,5 @@
 ---
-label: OEB 2.0 - Documentpagina
+label: OEB 2.0 - Document
 status: ready
 context:
   header:
@@ -26,7 +26,7 @@ context:
         profileContext:
           id: 12
           loggedIn: true
-          textLoggedIn: G. Bruikersnaam
+          textLoggedIn: Profiel
           options:
             - text: Mijn abonnementen
               url: '#'

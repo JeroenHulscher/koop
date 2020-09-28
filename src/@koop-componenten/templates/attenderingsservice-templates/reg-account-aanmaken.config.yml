@@ -15,7 +15,7 @@ context:
   emailInput:
     modifier:
     id: 1
-    fieldLabel: E-mailadres
+    fieldLabel: Uw e-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
@@ -26,6 +26,8 @@ context:
     text: Er is al een actief account op dit e-mailadres.
   preheader:
     value: E-mailservice Berichten over uw buurt
+  linkAccount:
+    text: Ik heb al een account
   linkWw:
     text: Wachtwoord vergeten
   buttonSubmit:

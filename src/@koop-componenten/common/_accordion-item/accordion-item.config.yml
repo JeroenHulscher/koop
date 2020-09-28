@@ -1,0 +1,9 @@
+---
+title: Accordion item
+status: prototype
+context:
+  headerId: header1
+  headerLabel: Accordion Item Vraag 1
+  contentId: con1
+  content: Accordion Item Antwoord 1
+  type: checkbox

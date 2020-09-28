@@ -1,3 +1,12 @@
 .list {
   margin: 0 0 2em 0;
 }
+.facet--heading {
+  font-size: 1em;
+  padding: 0 0 0 .75em;
+  margin-bottom: .5em;
+}
+
+.list--relations ~ .facet--heading {
+  margin-top: -1em;
+}

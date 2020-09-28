@@ -14,16 +14,25 @@ context:
     items:
     - title: Design system
       active: true
-      href: /
+      href: templates-ds---homepage
       sub: true
       subItems:
+        - stitle: Toelichting
+          href: templates-ds---toelichting
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes
+        - stitle: Componenten
+          href: templates-ds---componenten
         - stitle: Content
-          href: content.html
+          href: templates-ds---content
           sactive: true
-        - stitle: Design
-          href: ontwerpprincipes.html
-        - stitle: Components
-          href: componenten.html
+        - stitle: Templates
+          href: templates-ds---templates
+  jumbotronContext:
+    heading: Content
+    h: h1
+    subheading: Design system
+    intro: Onder content verstaan we alle onderdelen die collectie specifiek worden toegevoegd aan een template, die daarmee samen een pagina vormen. Hieronder vallen tekst (microcopy) of beeld (beeldtaal).
   navContentContext:
     items:
     - title: Content
@@ -31,6 +40,8 @@ context:
       sub: true
       anker: true
       subItems:
-        - stitle: Schrijfwijzer
-          href: schrijfwijzer
+        - stitle: Microcopy
+          href: sectie-microcopy
+        - stitle: Beeldtaal
+          href: sectie-beeldtaal
 

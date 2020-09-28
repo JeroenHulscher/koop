@@ -1,0 +1,56 @@
+name: DS - Templates
+label: DS - Templates
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Content
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      href: templates-ds---homepage
+      sub: true
+      subItems:
+        - stitle: Toelichting
+          href: templates-ds---toelichting
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes
+        - stitle: Componenten
+          href: templates-ds---componenten
+        - stitle: Content
+          href: templates-ds---content
+        - stitle: Templates
+          href: templates-ds---templates
+          sactive: true
+  jumbotronContext:
+    heading: Templates
+    h: h1
+    subheading: Design system
+  navContentContext:
+    items:
+    - title: Content
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Home
+          href: sectie-home
+        - stitle: Landing
+          href: sectie-landing
+        - stitle: Uitgebreid zoeken
+          href: sectie-uitgebreidzoeken
+        - stitle: Zoekresultaten
+          href: sectie-zoekresultaten
+        - stitle: Detail
+          href: sectie-detail
+  alertInformatie:
+    text: De 'landing' van een collectie bestaat altijd uit een aantal vaste elementen. De invulling van de 'collectie onderscheidend' is specifiek per collectie invulbaar. Momenteel is er nog geen duidelijke rationale achter de invulling hiervan en is er een geaccepteerde afwijking tussen de verschillende collecties.
+  alertUZ:
+    text: Uitgebreid zoeken heeft een afhankelijkheid met de rationale rondom 'zoeken'. Deze rationale zijn nog niet compleet waardoor er een afwijking is ontstaan in de toepassing. Dit is een geaccepteerde afwijking. Nieuwe toepassing van een uitgebreid zoeken template dient te worden gebaseerd op de nieuwe rationale.
+

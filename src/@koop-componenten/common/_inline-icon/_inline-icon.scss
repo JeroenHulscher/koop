@@ -118,6 +118,17 @@ button.icon {
     }
   }
 
+  &--downloadfile {
+    display: inline-block;
+    padding: 0 0 0 1.5em;
+    background: {
+      image: $downloadIcon !important;
+      size: 1em !important;
+      repeat: no-repeat !important;
+      position: left .25em !important;
+    }
+  }
+
   &--publication {
     display: inline-block;
     padding: 0 1.5em 0 0;

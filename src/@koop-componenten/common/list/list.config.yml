@@ -98,7 +98,7 @@ variants:
         - content: <a href="#" class="list__link"><span>Z</span></a>
   - name: relationlist
     label: relatielijst
-    status: prototype
+    status: ready
     context:
       modifier: list--relations
       items:

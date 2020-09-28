@@ -1,0 +1,48 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container container--centered">
+
+  <div class="row row--spacer u-margin-top-40">
+    {{ render "@link--terug-naar" linkBack merge=true }}
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        <div class="form__row form__row--large">
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">E-mailadres wijzigen</h1>
+          <p>
+             U kunt hier het e-mailadres van uw account wijzigen. U krijgt op uw nieuwe e-mailadres een bevestigingscode toegestuurd
+            om uw wijziging te bevestigen. Na bevestiging sturen wij attenderingen voortaan naar uw nieuwe e-mailadres.
+          </p>
+        </div>
+        <form class="form" data-decorator="init-form-validation">
+
+
+          <div class="form__row">
+              {{render "@input-text" oldEmailInput }}
+          </div>
+          <div class="form__row">
+              {{render "@input-text" newEmailInput }}
+          </div>
+          <div class="form__row">
+            {{render "@input-text" PWInput }}
+          </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="column"></div>
+    </div>
+
+
+
+</div>
+
+{{ render "@footer" }}

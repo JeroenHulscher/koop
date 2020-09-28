@@ -171,6 +171,14 @@ div.link {
     @extend .icon;
     @extend .icon--mail;
   }
+  &--edit {
+    @extend .icon;
+    @extend .icon--edit;
+  }
+  &--remove {
+    @extend .icon;
+    @extend .icon--bin;
+  }
   &--profile {
     @extend .icon;
     @extend .icon--profile;

@@ -32,7 +32,7 @@
   sourceslist.prototype.getTriggerConfig = function (e) {
     e.preventDefault();
     var trigger = e.target;
-    var triggerDataset = JSON.parse(trigger.dataset.config);
+    var triggerDataset = JSON.parse(e.target.getAttribute('data-config'));
     var state = triggerDataset.state;
     var id = triggerDataset.id;
 

@@ -1,8 +1,12 @@
 ---
 label: Document banner
 context:
-  value1: Datum publicatie
-  value2: Organisatie
-  value3: Jaargang en nummer
-  value4: Rubriek
-  value5: Datum totstandkoming
+  items:
+    - title: Datum publicatie
+      value: 25-07-2016 14:17
+    - title: Organisatie
+      value: Ministerie van Buitenlandse Zaken
+    - title: Jaargang en nummer
+      value: Blad gemeenschappelijke regeling 2016, 25018
+    - title: Rubriek
+      value: Verdrag
