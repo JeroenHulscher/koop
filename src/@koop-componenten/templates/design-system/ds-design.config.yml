@@ -26,6 +26,8 @@ context:
           href: templates-ds---componenten
         - stitle: Content
           href: templates-ds---content
+        - stitle: Templates
+          href: templates-ds---templates
   navContentContext:
     items:
     - title: Design

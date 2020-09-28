@@ -26,6 +26,8 @@ context:
           sactive: true
         - stitle: Content
           href: templates-ds---content
+        - stitle: Templates
+          href: templates-ds---templates
   jumbotronContext:
     heading: Componenten
     h: h1

@@ -1,0 +1,109 @@
+{{ render "@header" header merge=true }}
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
+
+       {{render "@nav" navMenuContext }}
+       {{render "@nav" navContentContext }}
+
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
+    <div class="row row--spacer">
+
+      {{#> @jumbotron jumbotronContext }} {{/@jumbotron}}
+
+    </div>
+
+    <section class="section-chapter js-scrollSection" id="sectie-home">
+      <h2>Home</h2>
+      <p>Alleen voor overheid.nl</p>
+      <ul>
+        <li>De tegelvariant van overheid.nl is een template exclusief voor deze toepassing</li>
+        <li>De homepage van het portaal moet altijd onderscheidend zijn van die van de collecties omdat die een andere functie heeft
+        dan die van de collecties.</li>
+      </ul>
+    </section>
+
+    <section class="section-chapter js-scrollSection" id="sectie-landing">
+      <h2>Landing</h2>
+      <p>
+        De ‘Landing’ is de startpagina van een collectie. Dit is (in veel gevallen) het eerste contact wat een gebruiker met een
+        collectie heeft. Van origine krijgt de landing daarom de functie van ‘eenvoudig zoeken’ binnen de specifieke collectie.
+        Een landing is in geen geval een homepage, overheid.nl heeft hier altijd een overkoepelende functie.
+      </p>
+
+      <p>Het landing template is opgebouwd uit een aantal vaste onderdelen:</p>
+      <dl>
+        <dt>Header</dt>
+        <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+        <dt>Jumbotron</dt>
+        <dd>De jumbotron biedt gebruiker een introductie tot de collectie en de optie tot ‘eenvoudig zoeken’ binnen de collectie</dd>
+        <dt>Collectie onderscheidend</dt>
+        <dd>Deze ruimte mag vrij ingevuld worden door de collectie</dd>
+        <dt>Footer</dt>
+        <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+      </dl>
+      <h3>Collectie onderscheidend</h3>
+      <p>Tijdens de ontwikkeling van complib 2.0 is de wens ontstaan om de landing te verrijken. Deze wens is ontstaan doordat er
+        collecties zijn die, naast het ontsluiten van haar informatie in een zoekbare database, een secundair doel hebben met het
+        platform. Voorbeelden hiervan zijn conversie (voorbeeld: Berichten over uw Buurt attenderingsservice) of informatie (voorbeeld:
+        Berichten over uw Buurt verwijzing naar archief www.officielebekendmakingen.nl). De collectie onderscheidend mag daarom
+        ingezet worden op 2 manieren. </p>
+      <h4>Eenvoudig zoeken</h4>
+      <p>Naast de vorm van ‘eenvoudig zoeken’ in de Jumbotron hebben collecties binnen deze ruimte de mogelijkheid een secundaire
+        vorm van ‘eevoudig zoeken’ toe te passen. Eenvoudig zoeken op landing template mag toegepast worden op basis van deze componenten:</p>
+      <dl>
+        <dt>Themalijst</dt>
+        <dd>Als een collectie is opgebouw op basis van categorieen (navigatie zoekfilter)</dd>
+      </dl>
+      <h4>Informatie</h4>
+      <p>
+        Het toepassen van informatie binnen een collectie landing template is alleen toegestaan als een collectie een duidelijk secundair
+        doel heeft. Bij het opstellen van een landing is het dan ook belangrijk dat er een content strategie voor een collectie
+        is. Daarbij moet vooral worden afgevraagd wat de doelen van de gebruiker en de collectie zelf zijn.
+      </p>
+      {{ render "@alert--info" alertInformatie merge=true }}
+    </section>
+
+    <section class="section-chapter js-scrollSection" id="sectie-uitgebreidzoeken">
+      <h2>Uitgebreid zoeken</h2>
+      <p>Uitgebreid zoeken is een template met als actie het invullen van een configuratie om een zoekquery samen te stellen. Deze
+      vorm van zoeken is over het algemeen complex (er moet een basis begrip zijn van de data uit een collectie) en wordt daarom
+      gezien als een functie voor de power user.</p>
+      <p>
+         Een uitgebreid zoeken functie is niet binnen alle collecties toepasbaar. Het toepassen van uitgebreid zoeken voegt waarde
+        toe zodra: ...
+      </p>
+      <p>
+         Als een uitgebreid zoeken wordt toegevoegd aan een collectie dient deze te voldoen aan een aantal voorwaarden:
+      </p>
+      <ul>
+        <li>De filters van de collectie zijn altijd deel van de configuratie</li>
+        <li>De beschikbaar facetten hebben afhankelijkheid van elkaar en de filters.</li>
+        <li>Een gebruiker mag geen facetten selecteren die niet ‘beschikbaar’ (0 resultaten) zijn</li>
+      </ul>
+      <p><em>Een goed voorbeeld van uitgebreid zoeken op basis van deze voorwaarden is www.officielebekendmakingen.nl.</em></p>
+      <p>
+         Een uitgebreid zoeken template bestaat uit een aantal vaste elementen:
+      </p>
+      <dl>
+        <dt>Header</dt>
+        <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+        <dt>Zoekopties</dt>
+        <dd>Deze worden ingericht op basis van de datastructuur</dd>
+        <dt>Footer</dt>
+        <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+      </dl>
+       {{ render "@alert--info" alertUZ merge=true }}
+    </section>
+
+
+  </div>
+
+</div>
+
+
