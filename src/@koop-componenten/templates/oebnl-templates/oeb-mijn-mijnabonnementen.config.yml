@@ -61,16 +61,6 @@ context:
     items:
     - name: Naamgeving zoekvraag
       icon: icon-bg--news
-    - name: Naamgeving zoekvraag
-      icon: icon-bg--news
-      buttonContext:
-        modifier: button--secundary
-        button: false
-        anchor: true
-        action: /components/preview/templates-att-stap1
-        text: Bewerken
-    - name: Naamgeving zoekvraag
-      icon: icon-bg--news
       idprefix: unit-1-
       metadata:
         items:

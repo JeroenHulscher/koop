@@ -5,41 +5,38 @@
   </div>
 </div>
 
-<div class="container container--centered">
+<div class="container">
 
-  <div class="row row--spacer u-margin-top-40">
-    {{ render "@link--terug-naar" linkBack merge=true }}
-    <div class="columns columns--gutter-med">
-      <div class="column">
-        <div class="form__row form__row--large">
-          {{ render "@heading--preheader" preheader merge=true }}
-          <h1 class="h1 h1--slim">Abonnement aanmaken</h1>
-          <p>
-             Tekst?
-          </p>
-        </div>
-        <form class="form" data-decorator="init-form-validation">
-          <div class="form__row">
-              {{render "@input-text" titleInput }}
-          </div>
-          <div class="form__row">
-            <div class="form__label form__label--accent">Melding bij nieuwe resultaten</div>
-            {{render "@input-radio" radioMelding }}
-          </div>
-          <div class="form__row">
-            <div class="form__label form__label--accent">Frequentie</div>
-            {{render "@input-radio" radioFrequentie }}
-          </div>
-          <div class="form__rowsubmit">
-            <div class="form__rowsubmit__item">
-              {{ render "@button" buttonSubmit }}
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+
+      <form class="form" data-decorator="init-form-validation">
+        <div class="columns">
+          <div class="column column-d-8">
+            <div class="form__row">
+              {{ render "@input-text" titleInput }}
             </div>
           </div>
-        </form>
-      </div>
-      <div class="column"></div>
-    </div>
+          <div class="column column-d-5">
+            <div class="form__row">
+              {{ render "@select-custom--with-label" selectContext merge=true }}
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          <p>
+            <strong>Frequentie</strong>: Direct naar publicatie
+          </p>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+        </div>
+      </form>
 
+    {{/@jumbotron}}
   </div>
 
 </div>
