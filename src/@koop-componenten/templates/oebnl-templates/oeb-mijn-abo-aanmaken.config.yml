@@ -60,7 +60,7 @@ context:
       requiredLabel: true
     selectContext:
       modifier: select-custom--large
-      fieldLabel: Meldingen
+      fieldLabel: E-mail notificaties
       options:
         - label: Ja
           value: 10
