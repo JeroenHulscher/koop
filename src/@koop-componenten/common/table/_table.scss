@@ -45,12 +45,18 @@ table,
   [scope=colgroup] {
     background: $darkBlue !important;
     color: white !important;
+    a {
+      color: white !important;
+    }
   }
 
   thead {
     th[scope=col] {
       background: $darkBlue !important;
       color: white !important;
+      a {
+        color: white !important;
+      }
     }
   }
 

@@ -155,7 +155,7 @@ p {
   font-weight: normal;
 }
 
-/*legacy*/
+/* === legacy.css */
 
 
 
@@ -258,6 +258,7 @@ p {
 
 #broodtekst div.alineagroep {
     margin-top: 1em;
+    border-bottom: 1px solid transparent;
 }
 
 #broodtekst h1+div.alineagroep,
@@ -278,13 +279,13 @@ p {
     clear: both;
 }
 
-// #broodtekst .context {
-//     font-size: 1em;
-//     text-align: left;
-//     font-style: italic;
-//     margin-top: 1em;
-//     margin-bottom: 1em;
-// }
+#broodtekst .context {
+    font-size: 1em;
+    text-align: left;
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
 #broodtekst .context_al {
     margin-top: 0;
@@ -388,9 +389,9 @@ p {
     font-size: 1.3em;
 }
 
-#broodtekst p.subkop strong {
-    color: #808080;
-}
+// #broodtekst p.subkop strong {
+//     color: #808080;
+// }
 
 // #broodtekst .staatsblad_kop,
 // #broodtekst .staatscourant_kop,
@@ -403,7 +404,8 @@ p {
 }
 
 #broodtekst .tussenkop {
-    margin-top: 1em;
+    margin-top: 0;
+    padding-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -688,6 +690,9 @@ hr .item {
 #broodtekst ._p_al {
     line-height: 1.5em;
     margin-bottom: 1em;
+    > sup > object > ._p_table {
+      margin-top: 1em;
+    }
 }
 
 #broodtekst ._p_al-groep_al {
@@ -1069,7 +1074,9 @@ hr .item {
 }
 
 #broodtekst h1.stuktitel,#broodtekst h1.stuktitel a,#broodtekst span.stuknummer {
-    margin-top: 3em;
+    // margin-top: 3em;
+    margin-top: 0; // kst-33852-1-n1
+    padding-top: 3em;
 }
 
 #broodtekst span.dossiernummer {
@@ -1081,7 +1088,8 @@ hr .item {
 
 #broodtekst span.stuknummer {
     margin-left: 0;
-    margin-top: -1em;
+    padding-top: 0;
+    margin-top: -1em; // kst-33852-1-n1
     display: block;
     left: auto;
 }
@@ -1139,7 +1147,7 @@ hr .item {
     margin-right: 1em;
 }
 
-cd #broodtekst li p {
+#broodtekst li p {
     margin: 0;
     padding: 0 0 .5em 0;
 }
@@ -1151,6 +1159,7 @@ cd #broodtekst li p {
 #broodtekst ul.nootlijst {
     list-style: none;
     width: auto;
+    margin-left: 1em;  // trb-2014-31
 }
 
 #broodtekst ul.nootlijst p.labeled span.ol {
@@ -1315,6 +1324,101 @@ h5.note-close {
     border-left: inherit;
 }
 
+
+/* === tractatenblad.css */
+
+#broodtekst .tractatenblad_kop {
+    text-align: left;
+    margin-top: 1em;
+    padding-bottom: 2em;
+    margin-bottom: 0;
+}
+#broodtekst .tractatenblad_kop p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+	font-weight:bold; /* updated MvBon - Eden Design */
+	font-size: 1.3em !important; /* updated MvBon - Eden Design */
+}
+#broodtekst .tractatenblad_kop, #broodtekst .tractatenblad_kop * {
+  line-height: 1.3em;
+}
+#broodtekst .rubriek_kop {
+    font-size: 1.18em;
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+#broodtekst .rubriek_kop,
+#broodtekst .rubriek_kop *{
+    color: #154273;
+}
+#broodtekst .verdragtekst_kop {
+    font-size: 1.18em;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: 1em;
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+#broodtekst .verdragtekst_kop > span {
+    display: block;
+    margin-top: 1em;
+}
+#broodtekst .geadresseerde {
+    font-style:italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#broodtekst .geadresseerde > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#broodtekst .afzender {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+#broodtekst .afzender > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#broodtekst .kenmerk {
+    font-weight: normal;
+}
+hr {
+    /*color: #154273;*/
+/* IE */
+    /*background-color: #ff8a00;*/
+/* Mozilla */
+    width: 58mm;
+    height: 1px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#broodtekst .bezwaar {
+    margin-left: 2em;
+}
+/* uitzondering voor brieftekst */
+#broodtekst .brieftekst .dagtekening {
+    font-style: normal;
+}
+#broodtekst .onderwerpbrief {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#broodtekst .onderwerpbrief > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#broodtekst .gewijzigd-verdrag {
+    margin-bottom: 3em;
+}
+
+
+
+/* === agenda.css */
+
 /* agenda specific CSS selectors */
 /* SDU: Version 3.6 build 12896 */
 #broodtekst div.vergadertijdstip {
@@ -1421,9 +1525,11 @@ h5.note-close {
 #broodtekst ul.onderwerp, #broodtekst ul.onderwerp ul {
     width: 300px !important;
 }
-#broodtekst h1.agenda-divisie_kop, h1.agenda_kop
+#broodtekst h1.agenda-divisie_kop,
+h1.agenda_kop
 {
     /*color: #154273;*/
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -1520,6 +1626,153 @@ h5.note-close {
     margin-bottom: 5em;
 }
 
+/* ==== maandbericht.css t/m regel 131 */
+
+/* SDU: Version 3.6 build 12896 */
+#broodtekst td, #broodtekst th {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst td.border-row,
+#broodtekst th.border-row {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst td.border-column,
+#broodtekst th.border-column {
+    /* updated MvBon - Eden Design */
+}
+
+#broodtekst table thead tr {
+    /* updated MvBon - Eden Design */
+}
+
+#broodtekst table thead tr.head-row-last {
+   /* updated MvBon - Eden Design */
+}
+
+#broodtekst table thead tr a {
+    /* updated MvBon - Eden Design */
+}
+
+#broodtekst table thead tr.head-row-last a {
+   /* updated MvBon - Eden Design */
+}
+
+/* table type: extension */
+#broodtekst table.extension thead tr.head-row1 {
+   /* updated MvBon - Eden Design */
+}
+#broodtekst table.extension thead tr.head-row2 {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.extension thead tr.head-row-rest {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.extension thead tr.head-row-last {
+    /* updated MvBon - Eden Design */
+}
+/* table type: no-states */
+#broodtekst table.no-states thead tr.head-row1 {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.no-states thead tr.head-row2 {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.no-states thead tr.head-row-rest {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.no-states thead tr.head-row-last {
+    /* updated MvBon - Eden Design */
+    /* updated MvBon - Eden Design */
+}
+#broodtekst able.no-states thead tr.head-row-last a {
+    /* updated MvBon - Eden Design */
+}
+
+/* table type: contracting-states */
+#broodtekst table.contracting-states thead tr.head-row1 {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.contracting-states thead tr.head-row2 {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.contracting-states thead tr.head-row-rest {
+    /* updated MvBon - Eden Design */
+}
+#broodtekst table.contracting-states thead tr.head-row-last {
+  /* updated MvBon - Eden Design */
+}
+
+
+/* Nieuw MvBon Eden Design */
+// /* #broodtekst table.contracting-states  */
+// 	#broodtekst table.contracting-states {  background:#e7ebef; border:0; border-right:5px solid #fff; margin-bottom: 1em;}
+// 		#broodtekst table.contracting-states thead tr th {  background:#e7ebef; border:1px solid #e7ebef; padding:3px 12px 3px 5px; vertical-align:top; }
+// 			#broodtekst table.contracting-states thead tr th p, #broodtekst table thead tr th strong { color:#566478; font-weight:normal;  }
+// 				#broodtekst table.contracting-states thead tr th p { color:#000 !important; font-weight:normal;  }
+
+// 	#broodtekst table.contracting-states thead tr th.border-column {  vertical-align:bottom; padding:0 12px 4px 5px; border:1px solid #fff; border-bottom:4px solid #fff; vertical-align:bottom; background:#fff url(../../afbeeldingen/achtergronden/tabelheader.gif) 100% 100%  no-repeat;  }
+// 		#broodtekst table.contracting-states thead tr th.border-column p, #broodtekst table thead tr th.border-column strong { color:#154273; font-weight:bold;  }
+// 			#broodtekst table.contracting-states thead tr th.border-column a { display:block; text-decoration:underline;   }
+
+// 	#broodtekst table.contracting-states tbody td {  padding:0 12px 4px 5px; border:1px solid #fff; border-bottom:4px solid #fff; background:#fff url(../../afbeeldingen/achtergronden/tabelcel.gif) 100% 100%  no-repeat;  }
+
+// /* #broodtekst table.no-states  */
+// 	#broodtekst table.no-states {  background:#e7ebef; border:0; border-right:5px solid #fff; margin-bottom: 1em;}
+// 		#broodtekst table.no-states thead tr th {  background:#e7ebef; border:1px solid #e7ebef; padding:3px 12px 3px 5px; vertical-align:top; }
+// 			#broodtekst table.no-states thead tr th p, #broodtekst table thead tr th strong { color:#566478; font-weight:normal;  }
+// 				#broodtekst table.no-states thead tr th p { color:#000 !important; font-weight:normal;  }
+#broodtekst table.contracting-states thead tr th,
+#broodtekst table.no-states thead tr th { background: white !important; color: $darkBlue !important; }
+
+#broodtekst table.contracting-states tr th p,
+#broodtekst table.no-states tr th p {
+  font-weight: normal;
+  > strong {
+    font-weight: bold;
+  }
+}
+// 	#broodtekst table.no-states thead tr th.border-column {  vertical-align:bottom; padding:0 12px 4px 5px; border:1px solid #fff; border-bottom:4px solid #fff; vertical-align:bottom; background:#fff url(../../afbeeldingen/achtergronden/tabelheader.gif) 100% 100%  no-repeat;  }
+// 		#broodtekst table.no-states thead tr th.border-column p, #broodtekst table thead tr th.border-column strong { color:#154273; font-weight:bold;  }
+// 			#broodtekst table.no-states thead tr th.border-column a { display:block; text-decoration:underline;   }
+
+// 	#broodtekst table.no-states tbody td {  padding:0 12px 4px 5px; border:1px solid #fff; border-bottom:4px solid #fff; background:#fff url(../../afbeeldingen/achtergronden/tabelcel.gif) 100% 100%  no-repeat;  }
+
+// /* #broodtekst table.extension  */
+// 	#broodtekst table.extension {  border:0; border-right:5px solid #fff;border-bottom:20px solid #fff; }
+// 		#broodtekst table.extension th, #broodtekst table.extension td {  border:1px solid #fff; border-bottom:4px solid #fff;border-right:10px solid #fff; }
+// /* Einde nieuw MvBon Eden Design */
+
+
+#broodtekst .wijzigingen_kop {
+    font-size: 1.18em;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#broodtekst div.wijzigingen {
+    margin-left:2.2em;
+
+}
+#broodtekst .tractatenblad_kop {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#broodtekst .tractatenblad_kop,
+#broodtekst .tractatenblad_kop * {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #154273;
+}
+#broodtekst .opmerking{
+margin-top: 1em;
+// margin-bottom:10em;
+margin-bottom:2em;
+}
+
+/* == end maandbericht.css */
+
 
 /* stop-xml */
 
@@ -1554,7 +1807,9 @@ h5.note-close {
   margin: 0 0 .5em 0;
 }
 #broodtekst h2.bijlage_kop,
-#broodtekst h3.hoofdstuk_kop {
+#broodtekst h3.bijlage_kop,
+#broodtekst h3.hoofdstuk_kop,
+#broodtekst h2.object_van_advies_kop {
   font-size: 1.375em;
   margin: 0 0 1em 0;
   padding-top: 1em;
@@ -1562,10 +1817,24 @@ h5.note-close {
 #broodtekst h3.wijzig-artikel_kop {
   padding-top: 1em;
 }
-#broodtekst h3.divisiekop1 { // stcrt-2015-48003
-  font-size: 1.25em;
+#broodtekst h2.divisiekop1,
+#broodtekst h3.divisiekop1,
+#broodtekst h4.divisiekop1 {
+  // stcrt-2015-48003
+  // stcrt-2014-3719
+  font-size: 1.125em;
   padding-top: 1.5em;
   margin: 0 0 1.5em;
+}
+#broodtekst h4.divisiekop1 {
+  // stcrt-2014-3719
+  // font-size: 1.125em;
+  // padding-top: .5em;
+  // margin: 0 0 1em;
+}
+#broodtekst h3.bijlage_kop ~ .divisiekop1 {
+  padding-top: 0.5em;
+  margin-bottom: 1em;
 }
 #broodtekst h4.afdeling_kop {
   padding-top: 1em;
@@ -1574,7 +1843,19 @@ h5.note-close {
   font-weight: bold;
   font-style: normal;
 }
+#broodtekst h4.hoofdstuk_kop {
+  // stcrt-2014-3719
+  margin-bottom: 1em;
+}
+#broodtekst h3.divisiekop2,
 #broodtekst h4.divisiekop2 { // stcrt-2015-48003
+  font-size: 1em;
+  padding-top: .75em;
+  margin: 0 0 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+#broodtekst h5.divisiekop2 { // stcrt-2014-3719
   font-size: 1em;
   padding-top: .75em;
   margin: 0 0 1em;
@@ -1600,24 +1881,49 @@ h5.note-close {
 #broodtekst h5.paragraaf_kop {
   padding: 1em 0 0 0;
   margin: 0 0 1em;
+  font-size: 1.125em;
+}
+#broodtekst h5.afdeling_kop {
+  font-weight: bold;
+  font-style: normal;
   font-size: 1em;
+  padding-top: 1em;
 }
 #broodtekst .sub-paragraaf_kop {
   font-style: italic;
 }
+#broodtekst h4.sub-paragraaf_kop {
+  // stcrt-2014-3866
+  padding-top: 1em;
+  font-style: normal;
+}
+#broodtekst h5.sub-paragraaf_kop {
+  padding-top: 1em;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.9em;
+}
+#broodtekst h5.wijzig-divisie_kop {
+  font-style: normal;
+}
+
 #broodtekst ._p_kop_level0 {
   margin-top: 2em;
 }
 
 #broodtekst .artikel,
-#broodtekst .paragraaf {
+#broodtekst .paragraaf,
+#broodtekst .wetsluiting {
+  // needed to correct overlapping margin
   padding-top: 1px;
+  padding-bottom: 1px;
 }
 #broodtekst h1 {
   > br {
     display: none;
   }
 }
+#broodtekst hr,
 #broodtekst #noten hr {
   width: 58mm;
   height: 1px;
@@ -1627,7 +1933,17 @@ h5.note-close {
   border-top: 1px solid #eeeeee;
 }
 
-a.nootnum{
-  vertical-align:super;
+#broodtekst a.nootnum {
+  // vertical-align:super;  <- veroorzaakt regel verschil (trb-2014-31: "Limit values for dust emiss")
+  position: relative;
+  top: -.65em;
+
   font-size:70%;
+}
+#broodtekst .brieftekst_kop {
+  padding-top: 1em;
+  margin-top: 0;
+}
+#broodtekst p {
+  padding-top: 0.1px; // to avoid collapsing margins
 }
