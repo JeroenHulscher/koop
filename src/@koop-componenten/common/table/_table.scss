@@ -47,6 +47,13 @@ table,
     color: white !important;
   }
 
+  thead {
+    th[scope=col] {
+      background: $darkBlue !important;
+      color: white !important;
+    }
+  }
+
   &--fontsmall {
     font-size: 0.9em;
   }
