@@ -2,7 +2,13 @@
 
   <div class="input-inputsubmit__grid">
     <label {{#if showLabel}}{{else}}class="visually-hidden" {{/if}} for="{{id}}">{{ label }}</label>
-    <input id="{{id}}" {{#if required}}required{{/if}} type="{{#if type}}{{type}}{{else}}text{{/if}}" class="input {{modifier}}" placeholder="{{placeholder}}" value="{{value}}" />
+    {{#if_eq inputType 'textarea'}}
+      <textarea id="{{id}}" {{#if required}}required{{/if}} class="input {{modifier}}" placeholder="{{placeholder}}">{{value}}</textarea>
+    {{else}}
+      <input id="{{id}}" {{#if required}}required{{/if}} type="{{#if type}}{{type}}{{else}}text{{/if}}" class="input {{modifier}}"
+        placeholder="{{placeholder}}" value="{{value}}" />
+    {{/if_eq}}
+
     <button class="button button--primary"><span>{{button}}</span></button>
   </div>
 </div>
