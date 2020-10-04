@@ -36,6 +36,14 @@ context:
       - link: '#'
         text: Nieuw werk
         icon: icon-plus-shape.svg
+  inputsubmitContext:
+    id: 5
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: (een deel van) een werk-label of area, bijvoorbeeld kst-12345-1 of 234
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
+    inputType: textarea
   sortContext:
     modifier:
     columns: true
