@@ -341,10 +341,10 @@ p {
     margin-bottom: .5em;
 }
 
-// #broodtekst .dictum_kop,
+#broodtekst .dictum_kop {
 // #broodtekst .artikel_kop {
-//     font-size: 1em !important;
-// }
+    font-size: 1em !important;
+}
 
 #broodtekst .advies_kop,
 #broodtekst .nader-rapport_kop,
@@ -389,6 +389,10 @@ p {
     font-size: 1.3em;
 }
 
+#broodtekst p.subkop {
+  line-height: 1.125em;
+  margin-bottom: 1em;
+}
 // #broodtekst p.subkop strong {
 //     color: #808080;
 // }
@@ -1529,7 +1533,7 @@ hr {
 h1.agenda_kop
 {
     /*color: #154273;*/
-    margin-top: 1em;
+    margin-top: 1em; // ag-tk-2013-09-13
     margin-bottom: 1em;
 }
 
@@ -1773,6 +1777,142 @@ margin-bottom:2em;
 
 /* == end maandbericht.css */
 
+/* === waterschapsblad.css */
+
+/* SDU: Version 3.7 build svnversion: warning: cannot set LC_CTYPE locale
+svnversion: warning: environment variable LC_CTYPE is UTF-8
+svnversion: warning: please check that your locale name is correct
+12966 */
+#broodtekst .cao-heading {
+    font-size: 1em;
+}
+#broodtekst .cao-heading p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+#broodtekst .cao-heading p.ministerie {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/*
+#broodtekst .dictum {
+    font-size: 0.85em;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+*/
+#broodtekst .cao-heading {
+    margin-top: 3px; /* updated MvBon - Eden Design */
+    margin-bottom: 1em;
+}
+#broodtekst .cao-heading p {
+   margin-top: 0em;
+   margin-bottom: 0em;
+}
+#broodtekst .cao-heading p.ministerie {
+   margin-top: 1em;
+}
+#broodtekst .cao-sluiting {
+}
+#broodtekst .onbekend_kop,
+#broodtekst .cao-divisie_kop {
+    font-size: 1.18em;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-style: normal;
+}
+#broodtekst .cao-bijlage_kop {
+    font-size: 1.18em;
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+#broodtekst .wijzig-cao-tekst .wat {
+    font-size: 1em;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#broodtekst .wijzig-cao-lid .wat {
+}
+#broodtekst .cao-wijziging .wat {
+}
+#broodtekst .advies_kop,
+#broodtekst .nader-rapport_kop,
+#broodtekst .ontwerp-besluit_kop,
+#broodtekst .object_van_advies_kop {
+	font-size: 1.18em;
+	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+// #broodtekst .advies_kop,
+// #broodtekst .advies_kop *,
+// #broodtekst .nader-rapport_kop,
+// #broodtekst .nader-rapport_kop *,
+// #broodtekst .ontwerp-besluit_kop,
+// #broodtekst .ontwerp-besluit_kop *,
+// #broodtekst .object_van_advies_kop,
+// #broodtekst .object_van_advies_kop * {
+// 	color: #154273;
+// }
+
+#broodtekst .verklaring-betrokkene_kop {
+	font-size: 1em;
+	font-weight: bold;
+   	margin-left: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/* == end waterschapsblad */
+
+/* === start kamervragen.css */
+
+/* kamervragen */
+/* SDU: Version 3.6 build 12896 */
+#broodtekst .kamervraagnummer,
+#broodtekst .antwoord_kop {
+	font-size: 1.18em;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    padding-bottom: 0em;
+    padding-top: 0em;
+}
+
+#broodtekst .kamervraagnummer,
+#broodtekst .kamervraagnummer *,
+#broodtekst .antwoord_kop,
+#broodtekst .antwoord_kop * {
+	color: #154273;
+}
+#broodtekst h2.kamervraagopmerking_kop {
+    font-size: 1.3em;
+}
+
+#broodtekst .vraag,  #broodtekst .antwoord,  #broodtekst .omschr{
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+#broodtekst .vraag p.nummer, #broodtekst .antwoord p.nummer {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+// #broodtekst table tr.head-row1 th *,
+// #broodtekst table tr.head-row1 th > *{
+//  color: #154273;}
+
+/* == end kamervragen.css */
+
+
 
 /* stop-xml */
 
@@ -1785,6 +1925,9 @@ margin-bottom:2em;
   font-size: 1.3em;
   line-height: 1.2em;
   margin: 0 0 1em 0;
+}
+#broodtekst .cao-heading ~ h1.staatscourant_kop {
+  padding-top: 1em;
 }
 #broodtekst h1 span.dossiernummer {
   margin-bottom: .5em;
@@ -1842,6 +1985,9 @@ margin-bottom:2em;
   font-size: 1em;
   font-weight: bold;
   font-style: normal;
+}
+#broodtekst h4.paragraaf_kop { // stcrt-2010-141
+  margin-bottom: 1em;
 }
 #broodtekst h4.hoofdstuk_kop {
   // stcrt-2014-3719
@@ -1906,7 +2052,10 @@ margin-bottom:2em;
 #broodtekst h5.wijzig-divisie_kop {
   font-style: normal;
 }
-
+#broodtekst h6.divisiekop4 {
+  margin-top: 0;
+  padding-top: 1em;
+}
 #broodtekst ._p_kop_level0 {
   margin-top: 2em;
 }
@@ -1932,7 +2081,10 @@ margin-bottom:2em;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
-
+#broodtekst .noot h5 { //ah-tk-20082009-3410
+  font-style: normal;
+  font-weight: bold;
+}
 #broodtekst a.nootnum {
   // vertical-align:super;  <- veroorzaakt regel verschil (trb-2014-31: "Limit values for dust emiss")
   position: relative;
@@ -1944,6 +2096,9 @@ margin-bottom:2em;
   padding-top: 1em;
   margin-top: 0;
 }
-#broodtekst p {
+#broodtekst p,
+.dictum,
+.cao-divisie,
+.nota-toelichting {
   padding-top: 0.1px; // to avoid collapsing margins
 }
