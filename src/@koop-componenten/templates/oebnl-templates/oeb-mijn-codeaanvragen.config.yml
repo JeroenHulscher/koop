@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Activeringscode aanvragen
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
