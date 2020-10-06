@@ -1944,12 +1944,17 @@ svnversion: warning: please check that your locale name is correct
   font-size: 1.25em;
   margin: 0 0 .75em 0;
 }
+#broodtekst h2.hoofdstuk_kop {
+  margin-top: 0;
+  padding-top: 1em;
+}
 #broodtekst .kamervraagopmerking_kop { //h2
   font-size: 1.25em;
   padding-top: 1em;
   margin: 0 0 .5em 0;
 }
 #broodtekst h2.bijlage_kop,
+#broodtekst h2.algemeen_kop,
 #broodtekst h3.bijlage_kop,
 #broodtekst h3.hoofdstuk_kop,
 #broodtekst h2.object_van_advies_kop {
@@ -1968,6 +1973,10 @@ svnversion: warning: please check that your locale name is correct
   font-size: 1.125em;
   padding-top: 1.5em;
   margin: 0 0 1.5em;
+}
+#broodtekst h4.wijzig-artikel_kop {
+  margin-top: 0;
+  padding-top: 1em;
 }
 #broodtekst h4.divisiekop1 {
   // stcrt-2014-3719
@@ -1996,10 +2005,15 @@ svnversion: warning: please check that your locale name is correct
 #broodtekst h3.divisiekop2,
 #broodtekst h4.divisiekop2 { // stcrt-2015-48003
   font-size: 1em;
-  padding-top: .75em;
+  padding-top: 1em; // ori = .75em. now 1em for: kst-32467-3
   margin: 0 0 1em;
   font-weight: bold;
   font-style: italic;
+}
+#broodtekst h4.divisiekop3 { // kst-32467-3
+  font-size: 1em;
+  margin-top: 0;
+  padding-top: 1em;
 }
 #broodtekst h5.divisiekop2 { // stcrt-2014-3719
   font-size: 1em;
@@ -2012,7 +2026,7 @@ svnversion: warning: please check that your locale name is correct
   font-size: 1em;
   padding-top: .75em;
   margin: 0 0 1em;
-  font-weight: bold;
+  font-weight: normal; // bold for stcrt-2015-48003, normal for stcrt-2010-14090
   font-style: italic;
 }
 #broodtekst .artikel_kop,
@@ -2056,6 +2070,11 @@ svnversion: warning: please check that your locale name is correct
   margin-top: 0;
   padding-top: 1em;
 }
+#broodtekst h6.divisiekop5 {
+  margin-top: 0;
+  padding-top: 1em;
+  font-weight: normal;
+}
 #broodtekst ._p_kop_level0 {
   margin-top: 2em;
 }
@@ -2067,11 +2086,11 @@ svnversion: warning: please check that your locale name is correct
   padding-top: 1px;
   padding-bottom: 1px;
 }
-#broodtekst h1 {
-  > br {
-    display: none;
-  }
-}
+// #broodtekst h1 {
+//   > br {
+//     display: none;
+//   }
+// }
 #broodtekst hr,
 #broodtekst #noten hr {
   width: 58mm;
@@ -2099,6 +2118,18 @@ svnversion: warning: please check that your locale name is correct
 #broodtekst p,
 .dictum,
 .cao-divisie,
-.nota-toelichting {
+.nota-toelichting,
+.wettekst,
+.wijziging,
+.wijzig-divisie {
   padding-top: 0.1px; // to avoid collapsing margins
+}
+.wat,
+.wijzig-lid,
+.wijziging,
+.wijzig-divisie {
+  padding-bottom: .1px;
+}
+#broodtekst .officiele-inhoudsopgave {
+  margin-bottom: 3em;
 }

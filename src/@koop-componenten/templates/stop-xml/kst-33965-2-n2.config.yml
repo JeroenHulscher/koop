@@ -1,0 +1,74 @@
+---
+label: Document kst-33965-2-n2
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Vandaag
+      url: '#'
+    - text: Spoedpublicatie
+      url: '#'
+    - text: Staatsblad 2020, 225609
+  pageactions:
+    items:
+    - link: '#'
+      text: Authentieke versie (PDF)
+      icon: icon-download.svg
+    - link: '#'
+      text: Delen
+      icon: icon-permalink.svg
+      modal: true
+      modalId: 512
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+      actionPrint: true
+  documentbanner:
+    img:
+      src: ../../images/maintiendrai-grijs.png
+    heading: Staatsblad van het Koninkrijk der Nederlanden
+  navInformatie:
+    items:
+      - title: Informatie over publicatie
+  modalDelen:
+    modalId: 512
+    initClosed: true
+    openButton: false
+    closeButton: Toevoegen
+    copydata:
+      url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
