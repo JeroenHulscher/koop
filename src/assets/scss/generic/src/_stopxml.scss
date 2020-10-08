@@ -79,7 +79,8 @@
     background: #fff;
     border-width: 0;
     margin: 1em;
-    max-width: initial;
+    // max-width: initial;
+    max-width: 100%;
 }
 
 #broodtekst div.plaatje {
@@ -1815,10 +1816,15 @@ svnversion: warning: please check that your locale name is correct
 #broodtekst .staatscourant_kop,
 #broodtekst .agenda_kop,
 #broodtekst .agenda-divisie_kop,
+#broodtekst .verbeterblad_kop,
 #broodtekst h1 {
   font-size: 1.3em;
   line-height: 1.2em;
   margin: 0 0 1em 0;
+}
+#broodtekst .verbeterblad_kop {
+  padding-top: 1em;
+  margin-bottom: .5em;
 }
 #broodtekst .cao-heading ~ h1.staatscourant_kop {
   padding-top: 1em;
