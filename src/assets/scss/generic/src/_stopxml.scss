@@ -79,6 +79,7 @@
     background: #fff;
     border-width: 0;
     margin: 1em;
+    max-width: initial;
 }
 
 #broodtekst div.plaatje {
@@ -1970,6 +1971,9 @@ svnversion: warning: please check that your locale name is correct
 }
 #broodtekst ._p_kop_level0 {
   margin-top: 2em;
+}
+#broodtekst ._p_staatscourant ._p_kop_level0 {
+  margin-top: 1em;
 }
 
 #broodtekst .artikel,
