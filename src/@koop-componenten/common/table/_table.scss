@@ -42,24 +42,6 @@ table,
   table-layout: fixed;
   min-width: 100%;
 
-  [scope=colgroup] {
-    background: $darkBlue !important;
-    color: white !important;
-    a {
-      color: white !important;
-    }
-  }
-
-  thead {
-    th[scope=col] {
-      background: $darkBlue !important;
-      color: white !important;
-      a {
-        color: white !important;
-      }
-    }
-  }
-
   &--fontsmall {
     font-size: 0.9em;
   }
@@ -384,6 +366,55 @@ table.table--headerhighlight {
 
     &.table--condensed td::before {
       padding: .25em;
+    }
+  }
+}
+
+#broodtekst table {
+  @media ( max-width: $breakpointDesktop ) {
+    border-color: $lightGrey;
+    border-right: 1px solid $lightGrey;
+    border-bottom: 0;
+    table-layout: auto;
+
+    colgroup {
+      display: table-column-group;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tbody tr:nth-child(odd) td {
+      background: transparent;
+    }
+
+    tr {
+      display: table-row;
+      border: none;
+      margin: 0;
+    }
+    th {
+      position: relative;
+      left: auto;
+      border-left: 1px solid $lightGrey !important;
+      border-bottom: 1px solid $lightGrey !important;
+    }
+    td {
+      width: auto;
+      left: auto;
+      position: relative;
+      background: white;
+      display: table-cell;
+      clear: none;
+      border-left: 1px solid $lightGrey !important;
+      border-bottom: 1px solid $lightGrey !important;
+
+      &:nth-child(odd) {
+        background: white !important;
+      }
+
+      &:before {
+        display: none;
+      }
     }
   }
 }

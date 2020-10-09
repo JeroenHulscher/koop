@@ -1,3 +1,25 @@
+#broodtekst table,
+#broodtekst .table {
+  // [scope=colgroup] {
+  //   background: $darkBlue !important;
+  //   color: white !important;
+  //   a {
+  //     color: white !important;
+  //   }
+  // }
+
+  thead {
+    tr.head-row1 th.top,
+    th[scope=col] {
+      background: $darkBlue !important;
+      color: white !important;
+      a {
+        color: white !important;
+      }
+    }
+  }
+}
+
 .docRegelingOpschrift {
   @extend .h1;
 }
