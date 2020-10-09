@@ -6,6 +6,8 @@ yarn.lock
 package-lock.json
 *.json
 !/package.json
+!/backstop.json
+!/backstop_stopxml.json
 /package-lock.json
 component-library/
 public/
