@@ -72,11 +72,20 @@
     Object.assign(this.data, JSON.parse(this.dataFromJSON));
 
     if(action === "editRange") {
-      if (e.target.getAttribute('data-kpm-rangetype') === "city"){
-        this.element.setAttribute('hidden','hidden');
+      var rangeType = e.target.getAttribute('data-kpm-rangetype');
+      var rangeTitle = e.target.getAttribute('value');
+      if (rangeType === "gemeente"){
+        this.data.options.center.type = 'location';
+        this.data.options.center.location = {};
+        this.data.options.center.location.type = rangeType;
+        this.data.options.center.location.title = rangeTitle;
       } else {
-        this.data.options.center.circle.radius = parseInt(e.target.value, 10);
-        this.element.removeAttribute('hidden');
+        if (!isNaN(e.target.value)) {
+          this.data.options.center.circle.radius = parseInt(e.target.value, 10);
+        } else {
+          // not a valid number; do nothing.
+          return false;
+        }
       }
 
     }
