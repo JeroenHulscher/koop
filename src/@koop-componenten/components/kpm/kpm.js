@@ -96,7 +96,9 @@
   };
 
   kpmService.prototype.renderMap = function () {
-    kaartprikmodule.bootstrapKpm(this.data);
+    if (typeof kaartprikmodule.bootstrapKpm != "undefined") {
+      kaartprikmodule.bootstrapKpm(this.data);
+    }
   };
 
 })();
