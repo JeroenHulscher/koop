@@ -253,3 +253,13 @@ context:
           id: 645517
           title: Zorg en gezondheid
           short: Zorg en gezondheid
+  item1:
+    headerId: header1
+    headerLabel: Accordion Vraag 1
+    contentId: con1
+    content: Accordion Antwoord 1
+  item2:
+    headerId: header2
+    headerLabel: Accordion Vraag 2
+    contentId: con2
+    content: Accordion Antwoord 2

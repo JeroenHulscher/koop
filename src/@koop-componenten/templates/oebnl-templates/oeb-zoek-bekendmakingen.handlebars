@@ -32,7 +32,15 @@
             <fieldset>
               <legend>Documentsoort</legend>
               <div class="form__row">
-                {{ render "@checkbox-selectall" checkboxDocumentsoort }}
+                {{!-- {{ render "@checkbox-selectall" checkboxDocumentsoort }} --}}
+                {{#> @accordion accordion1 }}
+                  {{#> @accordion-item accordionItem1 }}
+                      Form items 1 = 1
+                  {{/@accordion-item}}
+                  {{#> @accordion-item accordionItem2 }}
+                      Form items 2 = 2
+                  {{/@accordion-item}}
+                {{/@accordion}}
               </div>
             </fieldset>
           </div>
