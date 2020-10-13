@@ -49,7 +49,53 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+    zoekeninContext:
+      fieldLabel: Zoek in
+      labelmodifier: accent
+      fieldLabelVisible: true
+      modifier: select-custom--large
+      options:
+        - label: Gehele tekst
+          value: gehele-tekst
+          selected: selected
+        - label: Alleen titel
+          value: alleen-titel
     dateselection:
+      additionalSelect:
+        id: 1678765
+        fieldLabel: Datum van
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: true
+        tooltip:
+          content: 'Datum publicatie: Gebruik de datum waarop het document is gepubliceerd op deze site. Datum document: Gebruik de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          id: 1231298765456789
+        options:
+        - id: 1012
+          value:
+          label: Publicatie
+          linkedto: 1
+          selected: selected
+        - id: 1023
+          value: 10
+          label: Document
+      additionalSelect2:
+        id: 16787654
+        fieldLabel: Datum van
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: true
+        tooltip:
+          id: 12312987657456789
+        options:
+        - id: 1012
+          value:
+          label: Publicatie
+          linkedto: 1
+          selected: selected
+        - id: 1023
+          value: 10
+          label: Document
       dateselectionDatum:
         label: Datum
         value: '2020-09-11'
@@ -253,13 +299,13 @@ context:
           id: 645517
           title: Zorg en gezondheid
           short: Zorg en gezondheid
-  item1:
-    headerId: header1
-    headerLabel: Accordion Vraag 1
-    contentId: con1
-    content: Accordion Antwoord 1
-  item2:
-    headerId: header2
-    headerLabel: Accordion Vraag 2
-    contentId: con2
-    content: Accordion Antwoord 2
+    item1:
+      headerId: header1
+      headerLabel: Accordion Vraag 1
+      contentId: con1
+      content: Accordion Antwoord 1
+    item2:
+      headerId: header2
+      headerLabel: Accordion Vraag 2
+      contentId: con2
+      content: Accordion Antwoord 2
