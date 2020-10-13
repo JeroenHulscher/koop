@@ -1,9 +1,21 @@
 <div class="accordion__item">
-  <div class="accordion__item__header {{#if_eq type 'checkbox'}}accordion__item--checkbox{{/if_eq}}">
-      <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
-        <h3 class="accordion__item__heading">{{headerLabel}}</h3>
-      </button>
+  <div class="accordion__item__header {{#if type}}accordion__item--{{type}}{{/if}}">
+      {{#if_eq type 'checkbox'}}
+        {{render "@input-checkbox" accordionCheckbox }}
+        {{#if_eq hasContent false}}
+        {{else}}
+          <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
+            <span class="visually-hidden">Toon inhoud</span>
+          </button>
+        {{/if_eq}}
+      {{else}}
+        <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
+          <h3 class="accordion__item__heading">{{headerLabel}}</h3>
+        </button>
+      {{/if_eq}}
   </div>
+  {{#if_eq hasContent false}}
+  {{else}}
   <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{headerId}}">
     <div>
       {{#> @partial-block}}
@@ -11,4 +23,5 @@
       {{/ @partial-block}}
     </div>
   </div>
+  {{/if_eq}}
 </div>

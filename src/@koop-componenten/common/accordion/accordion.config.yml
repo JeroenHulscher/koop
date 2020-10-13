@@ -17,3 +17,43 @@ context:
     headerLabel: Accordion Vraag 3
     contentId: con3
     content: Accordion Antwoord 3
+variants:
+  - name: Checkbox
+    context:
+      type: checkbox
+      item1:
+        type: checkbox
+        headerId: header1
+        headerLabel: Accordion Vraag 1
+        contentId: con1
+        content: Accordion Antwoord 1
+        accordionCheckbox:
+          options:
+          - id: checkbox-1
+            text: Agenda's
+            name: countries
+            inputClass: is-accordion-trigger
+      item2:
+        type: checkbox
+        headerId: header2
+        headerLabel: Accordion Vraag 2
+        contentId: con2
+        content: Accordion Antwoord 2
+        accordionCheckbox:
+          options:
+          - id: checkbox-2
+            text: Handelingen
+            name: countries
+            inputClass: is-accordion-trigger
+      item3:
+        type: checkbox
+        headerId: header3
+        headerLabel: Accordion Vraag 3
+        contentId: con3
+        content: Accordion Antwoord 3
+        hasContent: false
+        accordionCheckbox:
+          options:
+          - id: checkbox-3
+            text: Kamerstukken
+            name: countries
