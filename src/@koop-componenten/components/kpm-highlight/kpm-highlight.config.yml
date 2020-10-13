@@ -1,0 +1,37 @@
+label: KPM Highlighter
+status: ready
+context:
+  straalContext:
+    options:
+      - id: radio-1
+        text: 250 meter
+        name: radio-group-1
+        checked: checked
+        value: 250
+      - id: radio-2
+        text: 500 meter
+        name: radio-group-1
+        value: 500
+      - id: radio-3
+        text: 1000 meter
+        name: radio-group-1
+        value: 1000
+      - id: radio-4
+        text: 1500 meter
+        name: radio-group-1
+        value: 1500
+      - id: radio-5
+        text: 3000 meter
+        name: radio-group-1
+        value: 3000
+      - id: radio-6
+        text: Hele gemeente 'Den Haag'
+        name: radio-group-1
+        value: "Gemeente Den Haag"
+        dataattributes:
+          - data: data-kpm-rangetype
+            value: gemeente
+  mapContext:
+    modifier: h-400
+    controls: false
+

@@ -18,16 +18,16 @@ context:
       sub: true
       subItems:
         - stitle: Toelichting
-          href: templates-ds---toelichting
+          href: templates-ds---toelichting.html
         - stitle: Ontwerpprincipes
-          href: templates-ds---ontwerpprincipes
+          href: templates-ds---ontwerpprincipes.html
         - stitle: Componenten
-          href: templates-ds---componenten
+          href: templates-ds---componenten.html
         - stitle: Content
-          href: templates-ds---content
+          href: templates-ds---content.html
           sactive: true
         - stitle: Templates
-          href: templates-ds---templates
+          href: templates-ds---templates.html
   jumbotronContext:
     heading: Content
     h: h1

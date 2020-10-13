@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Registeren
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
@@ -42,7 +42,7 @@ context:
   emailInput:
     modifier:
     id: 1
-    fieldLabel: Uw e-mailadres
+    fieldLabel: E-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:

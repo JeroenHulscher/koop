@@ -26,7 +26,8 @@
     {
       "label": "boub - searchresults map",
       "url": "http://localhost:3000/components/preview/templates-searchresults-map",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults-map.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults-map.html",
+      "delay": 2000
     },
     {
       "label": "identifier - homepage",
@@ -159,8 +160,8 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-kaartpagina.html"
     },
     {
-      "label": "STOP XML",
-      "url": "http://localhost:3000/components/preview/templates-stop-xml",
+      "label": "STOP XML Elementen",
+      "url": "http://localhost:3000/components/preview/templates-1stop-xml-elementen",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-stop-xml.html"
     },
     {
@@ -274,19 +275,21 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap1.html"
     },
     {
-      "label": "att - ",
+      "label": "att - stap 2",
       "url": "http://localhost:3000/components/preview/templates-aanm-stap2",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap2.html"
     },
     {
-      "label": "att - ",
+      "label": "att - stap 3",
       "url": "http://localhost:3000/components/preview/templates-aanm-stap3",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap3.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap3.html",
+      "delay": 1000
     },
     {
       "label": "att - templates-beh-abowijzigen",
       "url": "http://localhost:3000/components/preview/templates-beh-abowijzigen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-abowijzigen.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-abowijzigen.html",
+      "delay": 2000
     },
     {
       "label": "att - templates-beh-dashboard",
@@ -339,9 +342,9 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-page-error.html"
     },
     {
-      "label": "oebnl - templates-oeb-documentpage",
-      "url": "http://localhost:3000/components/preview/templates-oeb-documentpage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-documentpage.html"
+      "label": "oebnl - templates-oeb-document",
+      "url": "http://localhost:3000/components/preview/templates-oeb-document",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-document.html"
     },
     {
       "label": "oebnl - templates-oeb-homepage",
@@ -368,7 +371,6 @@
       "url": "http://localhost:3000/components/preview/templates-oeb-zoek-documenten",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-zoek-documenten.html"
     }
-
   ],
   "paths": {
     "bitmaps_reference": "backstop_data/bitmaps_reference",

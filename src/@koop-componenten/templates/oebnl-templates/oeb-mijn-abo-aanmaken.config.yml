@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Abonnement aanmaken
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg
@@ -32,6 +32,15 @@ context:
             - text: Mijn abonnementen
               url: '#'
               class: link link--forgotpw
+            - text: Wachtwoord wijzigen
+              url: '#'
+              class: link link--edit
+            - text: E-mailadres wijzigen
+              url: '#'
+              class: link link--edit
+            - text: Account verwijderen
+              url: '#'
+              class: link link--remove
             - text: Uitloggen
               url: '#'
               class: link link--logout
@@ -60,7 +69,7 @@ context:
       requiredLabel: true
     selectContext:
       modifier: select-custom--large
-      fieldLabel: Meldingen
+      fieldLabel: E-mail notificaties
       options:
         - label: Ja
           value: 10

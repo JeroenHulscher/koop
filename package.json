@@ -1,6 +1,6 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "1.9.35",
+  "version": "1.9.36",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "gulp dev",
     "e2e": "protractor test/protractor.config.js",
     "vrtest": "backstop reference && backstop test",
+    "vrtest_stopxml": "backstop reference --configPath=backstop_stopxml.json && backstop test --configPath=backstop_stopxml.json",
     "atest": "pa11y-ci --threshold 10 --config test/pa11yci.json"
   },
   "repository": {

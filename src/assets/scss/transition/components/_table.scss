@@ -10,6 +10,24 @@ table,
     font-size: 0.9em;
   }
 
+  [scope=colgroup] {
+    background: $darkBlue !important;
+    color: white !important;
+    a {
+      color: white !important;
+    }
+  }
+
+  // thead {
+  //   th[scope=col] {
+  //     background: $darkBlue !important;
+  //     color: white !important;
+  //     a {
+  //       color: white !important;
+  //     }
+  //   }
+  // }
+
   tr td,
   tr th {
     border-bottom: 1px solid $lighterGrey;

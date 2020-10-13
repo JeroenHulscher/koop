@@ -1,6 +1,6 @@
 ---
 label: Mijn Abo. - Wachtwoord reset
-status: prototype
+status: ready
 context:
   header:
     file: logo.svg

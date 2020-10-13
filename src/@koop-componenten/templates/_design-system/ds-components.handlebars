@@ -696,6 +696,25 @@
         </div>
       </article>
 
+      <article id="profiel" class="row row--xxxlarge">
+        <div class="row row--large">
+          <h2 >Profiel</h2>
+          <p>Dit component komt in twee staten: ingelogd, niet ingelogd.</p>
+          <ul>
+            <li>Voor publieke sites wordt alleen "Profiel" getoond als label. Vooralsnog is voor deze omgevingen geen gebruikersnaam beschikbaar of van toepassing. Het emailadres tonen is als label te lang.</li>
+            <li>Voor niet-publieke websites kan een andere afweging worden gemaakt door hier of een gebruikersnaam of emailadres te tonen.</li>
+          </ul>
+          <div class="row">
+            <h2 class="h5">Niet ingelogd</h2>
+            {{render "@profile" profileNotloggedin }}
+          </div>
+          <div class="row">
+            <h2 class="h5">Ingelogd</h2>
+            {{render "@profile" profileLoggedin merge=true }}
+          </div>
+        </div>
+      </article>
+
       <article class="row row--xxxlarge">
         <div class="row row--large">
           <h2 id="resultlist">Resultlist</h2>

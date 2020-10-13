@@ -6,7 +6,7 @@ default: Ingelogd
 context:
   id: 1
   loggedIn: true
-  textLoggedIn: Mijn account
+  textLoggedIn: Profiel
   textLoggedOut: U bent uitgelogd
   options:
     - text: Mijn abonnementen

@@ -38,10 +38,10 @@ context:
     - id: radio-6
       text: Hele gemeente 'Den Haag'
       name: radio-group-1
-      value: Gemeente Den Haag
+      value: "Gemeente Den Haag"
       dataattributes:
         - data: data-kpm-rangetype
-          value: city
+          value: gemeente
   mapContext:
     modifier: h-400
     controls: false

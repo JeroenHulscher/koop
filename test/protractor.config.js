@@ -4,7 +4,7 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     // seleniumAddress: './node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
     specs: ['../src/**/*.e2e.js'],
-    // chromeDriver: '/usr/local/bin/chromedriver',
+    chromeDriver: '/Applications/chromedriver',
 
     capabilities: {
       browserName: 'chrome',

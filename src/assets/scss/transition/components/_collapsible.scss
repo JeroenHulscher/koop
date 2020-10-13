@@ -8,10 +8,10 @@
       color: #154273;
       line-height: 1.2em;
       text-decoration: underline;
-      background: $plusShapeIcon no-repeat left top .1em;
+      background: $iconPlusFilledBlue no-repeat left top -.1em;
 
       &[aria-expanded=true] {
-        background: $minusShapeIcon no-repeat left -1px top .5em;
+        background-image: $iconMinFilledBlue;;
       }
     }
   }
