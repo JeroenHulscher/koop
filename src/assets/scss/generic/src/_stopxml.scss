@@ -1307,7 +1307,7 @@ h5.note-close {
 #broodtekst .kenmerk {
     font-weight: normal;
 }
-hr {
+#broodtekst hr {
     /*color: #154273;*/
 /* IE */
     /*background-color: #ff8a00;*/
@@ -2042,18 +2042,18 @@ svnversion: warning: please check that your locale name is correct
   margin-top: 0;
 }
 #broodtekst p,
-.dictum,
-.cao-divisie,
-.nota-toelichting,
-.wettekst,
-.wijziging,
-.wijzig-divisie {
+#broodtekst .dictum,
+#broodtekst .cao-divisie,
+#broodtekst .nota-toelichting,
+#broodtekst .wettekst,
+#broodtekst .wijziging,
+#broodtekst .wijzig-divisie {
   padding-top: 0.1px; // to avoid collapsing margins
 }
-.wat,
-.wijzig-lid,
-.wijziging,
-.wijzig-divisie {
+#broodtekst .wat,
+#broodtekst .wijzig-lid,
+#broodtekst .wijziging,
+#broodtekst .wijzig-divisie {
   padding-bottom: .1px;
 }
 #broodtekst .officiele-inhoudsopgave {
