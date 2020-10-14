@@ -4,9 +4,9 @@
         {{render "@input-checkbox" accordionCheckbox }}
         {{#if_eq hasContent false}}
         {{else}}
-          <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
+          {{!-- <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
             <span class="visually-hidden">Toon inhoud</span>
-          </button>
+          </button> --}}
         {{/if_eq}}
       {{else}}
         <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
@@ -16,7 +16,7 @@
   </div>
   {{#if_eq hasContent false}}
   {{else}}
-  <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{headerId}}">
+  <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{#if_eq type 'checkbox'}}option-{{/if_eq}}{{headerId}}">
     <div>
       {{#> @partial-block}}
         {{content}}

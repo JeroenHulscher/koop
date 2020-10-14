@@ -108,32 +108,6 @@ context:
     inputsubmitContext:
       button: Zoek verdagen
       placeholder: Vul hier uw zoekwoord(en) in
-    checkboxDocumentsoort:
-      id: 5
-      label: documentsoorten
-      checkboxes:
-        options:
-          - id: checkbox-20
-            text: Tractatenblad
-            name: documentsoort
-          - id: checkbox-201
-            text: Staatsblad
-            name: documentsoort
-          - id: checkbox-202
-            text: Staatcourant
-            name: documentsoort
-          - id: checkbox-203
-            text: Gemeenteblad
-            name: documentsoort
-          - id: checkbox-204
-            text: Provinciaal blad
-            name: documentsoort
-          - id: checkbox-205
-            text: Waterschapsblad
-            name: documentsoort
-          - id: checkbox-206
-            text: Blad gemeenschappelijke regeling
-            name: documentsoort
     buttonSubmit:
       id: 123
       text: Zoek bekendmakingen
@@ -299,13 +273,470 @@ context:
           id: 645517
           title: Zorg en gezondheid
           short: Zorg en gezondheid
-    item1:
-      headerId: header1
-      headerLabel: Accordion Vraag 1
-      contentId: con1
-      content: Accordion Antwoord 1
-    item2:
-      headerId: header2
-      headerLabel: Accordion Vraag 2
-      contentId: con2
-      content: Accordion Antwoord 2
+    accordion1:
+      type: checkbox
+      item1:
+        type: checkbox
+        headerId: header1
+        headerLabel: Accordion Vraag 1
+        contentId: con1
+        hasContent: false
+        accordionCheckbox:
+          options:
+          - id: header1
+            text: Alle
+            name: countries
+            checked: checked
+      item2:
+        type: checkbox
+        headerId: header2
+        contentId: con2
+        accordionCheckbox:
+          options:
+          - id: header2
+            text: Tractatenblad
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con2" id="option-header2" aria-expanded="false"
+        trac_jaargang:
+          id: 11112
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        trac_nummer:
+          id: 11113
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        trac_onderwerpen:
+          id: 11114
+          multilevel: false
+          linkText: Selecteer onderwerp(en)
+          linkTextActive: Wijzig selectie
+          modalTitle: Selecteer onderwerp(en)
+          fieldLabel: fieldLabel
+          fieldPlaceholder: ''
+          label: Zoek onderwerp
+          controls:
+            selectAllLabel: Selecteer alle onderwerpen
+          Options:
+          - Option: 211
+            id: 211
+            title: Arbeid
+            short: Arbeid
+          - Option: 212
+            id: 212
+            title: Arbitrage
+            short: Arbitrage
+          - Option: 213
+            id: 213
+            title: Belasting
+            short: Belasting
+          - Option: 214
+            id: 214
+            title: Burgelijk procesrecht
+            short: Burgelijk procesrecht
+          - Option: 215
+            id: 215
+            title: Burgelijke stand
+            short: Burgelijke stand
+          - Option: 216
+            id: 216
+            title: Cultuur
+            short: Cultuur
+          - Option: 217
+            id: 217
+            title: Diplomatieke en consulaire betrekkingen
+            short: Diplomatieke en consulaire betrekkingen
+        trac_nummer2:
+          id: 11115
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        trac_jaar:
+          id: 11116
+          type: number
+          fieldLabel: Jaar
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        trac_volgnummer:
+          id: 11117
+          type: number
+          fieldLabel: Volgnummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Volgnummer'
+          labelmodifier: secondary
+        trac_datepicker1:
+          id: 11118
+          fieldLabel: Vanaf
+          fieldInstruction:
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        trac_datepicker2:
+          id: 11119
+          fieldLabel: Tot en met
+          fieldInstruction:
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        trac_plaats:
+          id: 11120
+          type: text
+          fieldLabel: Plaats
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Plaats'
+          labelmodifier: secondary
+      item3:
+        type: checkbox
+        headerId: header3
+        contentId: con3
+        accordionCheckbox:
+          options:
+          - id: header3
+            text: Staatsblad
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con3" id="option-header3" aria-expanded="false"
+        sb_jaargang:
+          id: 11121
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        sb_nummer:
+          id: 11122
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+      item4:
+        type: checkbox
+        headerId: header4
+        contentId: con4
+        accordionCheckbox:
+          options:
+          - id: header4
+            text: Staatscourant
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con4" id="option-header4" aria-expanded="false"
+        sc_jaargang:
+          id: 11123
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        sc_nummer:
+          id: 11124
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        sc_rubrieken:
+          id: 11125
+          multilevel: false
+          linkText: Selecteer rubriek(en)
+          linkTextActive: Wijzig selectie
+          modalTitle: Selecteer rubriek(en)
+          fieldLabel: fieldLabel
+          fieldPlaceholder: ''
+          label: Zoek rubriek
+          controls:
+            selectAllLabel: Selecteer alle rubrieken
+          Options:
+          - Option: 11126
+            id: 11126
+            title: Aanbestedingen
+            short: Aanbestedingen
+          - Option: 11127
+            id: 11127
+            title: Adviezen Raad van State
+            short: Adviezen Raad van State
+          - Option: 11128
+            id: 11128
+            title: Algemeenverbindendverklaring van CAO-bepalingen
+            short: Algemeenverbindendverklaring van CAO-bepalingen
+          - Option: 11129
+            id: 11129
+            title: Autorisatiebesluiten basisregistratie Personen
+            short: Autorisatiebesluiten basisregistratie Personen
+          - Option: 11130
+            id: 11130
+            title: Bekendmakingen aan de scheepvaart
+            short: Bekendmakingen aan de scheepvaart
+          - Option: 11131
+            id: 11131
+            title: Bekendmakingen aan het wegverkeer
+            short: Bekendmakingen aan het wegverkeer
+          - Option: 11132
+            id: 11132
+            title: Bekendmakingen Nederland Zorgautoriteit
+            short: Bekendmakingen Nederland Zorgautoriteit
+      item5:
+        type: checkbox
+        headerId: header5
+        contentId: con5
+        accordionCheckbox:
+          options:
+          - id: header5
+            text: Gemeenteblad
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con5" id="option-header5" aria-expanded="false"
+        gm_jaargang:
+          id: 11133
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        gm_nummer:
+          id: 11134
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        gm_rubrieken:
+          id: 11135
+          multilevel: false
+          linkText: Selecteer rubriek(en)
+          linkTextActive: Wijzig selectie
+          modalTitle: Selecteer rubriek(en)
+          fieldLabel: fieldLabel
+          fieldPlaceholder: ''
+          label: Zoek rubriek
+          controls:
+            selectAllLabel: Selecteer alle rubrieken
+          Options:
+          - Option: 11136
+            id: 11136
+            title: Aanbestedingen
+            short: Aanbestedingen
+          - Option: 11137
+            id: 11137
+            title: Adviezen Raad van State
+            short: Adviezen Raad van State
+          - Option: 11138
+            id: 11138
+            title: Algemeenverbindendverklaring van CAO-bepalingen
+            short: Algemeenverbindendverklaring van CAO-bepalingen
+          - Option: 11139
+            id: 11139
+            title: Autorisatiebesluiten basisregistratie Personen
+            short: Autorisatiebesluiten basisregistratie Personen
+          - Option: 11140
+            id: 11140
+            title: Bekendmakingen aan de scheepvaart
+            short: Bekendmakingen aan de scheepvaart
+          - Option: 11141
+            id: 11141
+            title: Bekendmakingen aan het wegverkeer
+            short: Bekendmakingen aan het wegverkeer
+          - Option: 11142
+            id: 11142
+            title: Bekendmakingen Nederland Zorgautoriteit
+            short: Bekendmakingen Nederland Zorgautoriteit
+      item6:
+        type: checkbox
+        headerId: header6
+        contentId: con6
+        accordionCheckbox:
+          options:
+          - id: header6
+            text: Provinciaal blad
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con6" id="option-header6" aria-expanded="false"
+        pb_jaargang:
+          id: 11143
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        pb_nummer:
+          id: 11144
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        pb_rubrieken:
+          id: 11145
+          multilevel: false
+          linkText: Selecteer rubriek(en)
+          linkTextActive: Wijzig selectie
+          modalTitle: Selecteer rubriek(en)
+          fieldLabel: fieldLabel
+          fieldPlaceholder: ''
+          label: Zoek rubriek
+          controls:
+            selectAllLabel: Selecteer alle rubrieken
+          Options:
+          - Option: 11146
+            id: 11146
+            title: Aanbestedingen
+            short: Aanbestedingen
+          - Option: 11147
+            id: 11147
+            title: Adviezen Raad van State
+            short: Adviezen Raad van State
+          - Option: 11148
+            id: 11148
+            title: Algemeenverbindendverklaring van CAO-bepalingen
+            short: Algemeenverbindendverklaring van CAO-bepalingen
+          - Option: 11149
+            id: 11149
+            title: Autorisatiebesluiten basisregistratie Personen
+            short: Autorisatiebesluiten basisregistratie Personen
+          - Option: 11150
+            id: 11150
+            title: Bekendmakingen aan de scheepvaart
+            short: Bekendmakingen aan de scheepvaart
+          - Option: 11151
+            id: 11151
+            title: Bekendmakingen aan het wegverkeer
+            short: Bekendmakingen aan het wegverkeer
+          - Option: 11152
+            id: 11152
+            title: Bekendmakingen Nederland Zorgautoriteit
+            short: Bekendmakingen Nederland Zorgautoriteit
+      item7:
+        type: checkbox
+        headerId: header7
+        contentId: con7
+        accordionCheckbox:
+          options:
+          - id: header7
+            text: Waterschapsblad
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con7" id="option-header7" aria-expanded="false"
+        wb_jaargang:
+          id: 11153
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        wb_nummer:
+          id: 11154
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        wb_rubrieken:
+          id: 11155
+          multilevel: false
+          linkText: Selecteer rubriek(en)
+          linkTextActive: Wijzig selectie
+          modalTitle: Selecteer rubriek(en)
+          fieldLabel: fieldLabel
+          fieldPlaceholder: ''
+          label: Zoek rubriek
+          controls:
+            selectAllLabel: Selecteer alle rubrieken
+          Options:
+          - Option: 11156
+            id: 11156
+            title: Aanbestedingen
+            short: Aanbestedingen
+          - Option: 11157
+            id: 11157
+            title: Adviezen Raad van State
+            short: Adviezen Raad van State
+          - Option: 11158
+            id: 11158
+            title: Algemeenverbindendverklaring van CAO-bepalingen
+            short: Algemeenverbindendverklaring van CAO-bepalingen
+          - Option: 11159
+            id: 11159
+            title: Autorisatiebesluiten basisregistratie Personen
+            short: Autorisatiebesluiten basisregistratie Personen
+          - Option: 11160
+            id: 11160
+            title: Bekendmakingen aan de scheepvaart
+            short: Bekendmakingen aan de scheepvaart
+          - Option: 11161
+            id: 11161
+            title: Bekendmakingen aan het wegverkeer
+            short: Bekendmakingen aan het wegverkeer
+          - Option: 11162
+            id: 11162
+            title: Bekendmakingen Nederland Zorgautoriteit
+            short: Bekendmakingen Nederland Zorgautoriteit
+      item8:
+        type: checkbox
+        headerId: header8
+        contentId: con8
+        accordionCheckbox:
+          options:
+          - id: header8
+            text: Blad gemeenschappelijke regeling
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con8" id="option-header8" aria-expanded="false"
+        bgr_jaargang:
+          id: 11163
+          type: number
+          fieldLabel: Jaargang
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        bgr_nummer:
+          id: 11164
+          type: number
+          fieldLabel: Nummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        bgr_rubrieken:
+          id: 11165
+          multilevel: false
+          linkText: Selecteer rubriek(en)
+          linkTextActive: Wijzig selectie
+          modalTitle: Selecteer rubriek(en)
+          fieldLabel: fieldLabel
+          fieldPlaceholder: ''
+          label: Zoek rubriek
+          controls:
+            selectAllLabel: Selecteer alle rubrieken
+          Options:
+          - Option: 11166
+            id: 11166
+            title: Aanbestedingen
+            short: Aanbestedingen
+          - Option: 11167
+            id: 11167
+            title: Adviezen Raad van State
+            short: Adviezen Raad van State
+          - Option: 11168
+            id: 11168
+            title: Algemeenverbindendverklaring van CAO-bepalingen
+            short: Algemeenverbindendverklaring van CAO-bepalingen
+          - Option: 11169
+            id: 11169
+            title: Autorisatiebesluiten basisregistratie Personen
+            short: Autorisatiebesluiten basisregistratie Personen
+          - Option: 11170
+            id: 11170
+            title: Bekendmakingen aan de scheepvaart
+            short: Bekendmakingen aan de scheepvaart
+          - Option: 11171
+            id: 11171
+            title: Bekendmakingen aan het wegverkeer
+            short: Bekendmakingen aan het wegverkeer
+          - Option: 11172
+            id: 11172
+            title: Bekendmakingen Nederland Zorgautoriteit
+            short: Bekendmakingen Nederland Zorgautoriteit
