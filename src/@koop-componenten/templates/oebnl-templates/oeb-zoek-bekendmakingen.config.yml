@@ -88,12 +88,12 @@ context:
         tooltip:
           id: 12312987657456789
         options:
-        - id: 1012
+        - id: 10121
           value:
           label: Publicatie
           linkedto: 1
           selected: selected
-        - id: 1023
+        - id: 10231
           value: 10
           label: Document
       dateselectionDatum:
@@ -287,6 +287,7 @@ context:
             text: Alle
             name: countries
             checked: checked
+            inputClass: js-checkbox-master
       item2:
         type: checkbox
         headerId: header2
