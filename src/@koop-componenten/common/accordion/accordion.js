@@ -20,7 +20,6 @@
 
     this.triggers = this.element.querySelectorAll('.' + this.triggerClass);
     this.checkboxTriggers = this.element.querySelectorAll('.' + this.checkboxTriggerClass);
-    console.log('this.checkboxTriggers', this.checkboxTriggers);
 
     this.init();
     this.initEventListeners();
@@ -57,43 +56,18 @@
   };
 
   accordion.prototype.doCheckboxTriggerAction = function (e) {
-    console.log('e', e);
-    console.log('in', e.target);
-    console.log('in', e.target.classList);
-    console.log('in', e.target.classList.contains(this.checkboxTriggerClass));
-    function findAncestor(el, cls) {
-      while ((el = el.parentElement) && !el.classList.contains(cls));
-      return el;
-    }
-
-    // var header = findAncestor(e, this.accordionHeaderClass);
-    // var trigger = header.querySelector('.' + this.triggerClass);
-    // if (trigger) {
-      // var isExpanded = trigger.getAttribute('aria-expanded') == 'true';
-      // if(isExpanded) {
-        this.doTriggerAction(e, 'checkbox');
-      // }
-    // }
-
+    this.doTriggerAction(e, 'checkbox');
   }
 
   accordion.prototype.doTriggerAction = function (e, type) {
-    // console.log('doTriggerAction', e);
-    // console.log('doTriggerAction', e.target);
     var trigger = e.target;
     var triggerClass;
+
     if(type === "checkbox") {
       triggerClass = this.checkboxTriggerClass;
     } else {
       triggerClass = this.triggerClass;
     }
-
-    console.log('e', e);
-    console.log('in', e.target);
-    console.log('in', e.target.classList);
-    console.log('in', e.target.classList.contains(triggerClass));
-    console.log('in trigger', trigger.classList.contains(triggerClass));
-
 
 
     function findAncestor(el, cls) {
