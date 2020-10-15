@@ -50,7 +50,17 @@
     padding: 1em 1em .25em;
     background: $bgBlue;
     box-shadow: 0px -3px 5px rgba(0,0,0,.05);
-    text-align: right;
+
+    button:first-child {
+      margin-bottom: 1em;
+    }
+
+    @media ( min-width: $breakpointDesktop ) {
+      text-align: right;
+      button {
+        margin-bottom: 0;
+      }
+    }
 
     &:before,
     &:after {
@@ -70,15 +80,15 @@
     @media ( min-width: $breakpointDesktop ) {
       padding-left: 4em;
       padding-right: 4em;
-    }
 
-    .formreset-resetlink {
-      float: left;
-      margin-top: .75em;
+      .formreset-resetlink {
+        float: left;
+        margin-top: .75em;
+      }
     }
   }
   &--fixedpane &__content {
-    border-bottom: 4em solid transparent;
+    border-bottom: 5em solid transparent;
 
     @media ( min-width: $breakpointDesktop ) {
       border-bottom: 5.5em solid transparent;
