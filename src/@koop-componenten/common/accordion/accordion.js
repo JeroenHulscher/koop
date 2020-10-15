@@ -28,7 +28,7 @@
 
   accordion.prototype.init = function () {
     if (!this.allowToggle) {
-      var expanded = this.element.querySelector('[aria-expanded="true"]');
+      var expanded = this.element.querySelector('[aria-checked="true"]');
       if (expanded) {
         expanded.setAttribute('aria-disabled', 'true');
       }
@@ -40,7 +40,7 @@
     var y;
 
     for (y = 0; y < this.checkboxTriggers.length; y++) {
-      this.checkboxTriggers[y].addEventListener('click', function (e) { this.doCheckboxTriggerAction(e); }.bind(this), false);
+      this.checkboxTriggers[y].addEventListener('change', function (e) { this.doCheckboxTriggerAction(e); }.bind(this), false);
 
       // open item when checkbox is checked;
       if (this.checkboxTriggers[y].checked) {
@@ -80,12 +80,12 @@
       }
     }
     if (trigger.classList.contains(triggerClass)) {
-      var isExpanded = trigger.getAttribute('aria-expanded') == 'true';
-      var activePanel = this.element.querySelector('[aria-expanded="true"]');
+      var isExpanded = trigger.getAttribute('aria-checked') == 'true';
+      var activePanel = this.element.querySelector('[aria-checked="true"]');
 
       // close open panel, if there is any.
       if (activePanel && activePanel !== trigger && !this.allowMultiplePanelsOpen) {
-        activePanel.setAttribute('aria-expanded', 'false');
+        activePanel.setAttribute('aria-checked', 'false');
         document.getElementById(activePanel.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
 
         if (!this.allowToggle) {
@@ -95,7 +95,7 @@
 
       // if item is closed, open it.
       if (!isExpanded) {
-        trigger.setAttribute('aria-expanded', 'true');
+        trigger.setAttribute('aria-checked', 'true');
         document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden','false');
 
         if (!this.allowToggle) {
@@ -104,7 +104,7 @@
       }
       // close it again, if it's open and allowed to toggle
       else if (this.allowToggle && isExpanded) {
-        trigger.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute('aria-checked', 'false');
         document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
       }
     }

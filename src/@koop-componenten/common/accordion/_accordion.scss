@@ -100,11 +100,11 @@
           background-repeat: no-repeat;
           background-position: right center;
         }
-        &[aria-expanded="false"] ~ label {
+        &[aria-controls] ~ label {
           background-image: $dartDownIcon;
 
         }
-        &[aria-expanded="true"] ~ label {
+        &[aria-controls][aria-checked="true"] ~ label {
           background-image: $dartUpIcon;
         }
       }
