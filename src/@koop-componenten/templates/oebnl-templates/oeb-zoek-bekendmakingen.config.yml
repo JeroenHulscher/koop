@@ -50,6 +50,7 @@ context:
       labelmodifier: medium
       modifier: input-text--searchmedium
     zoekeninContext:
+      id: 560934590
       fieldLabel: Zoek in
       labelmodifier: accent
       fieldLabelVisible: true
@@ -69,7 +70,7 @@ context:
         hastooltip: true
         tooltip:
           content: 'Datum publicatie: Gebruik de datum waarop het document is gepubliceerd op deze site. Datum document: Gebruik de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
-          id: 1231298765456789
+          id: 123129876545678922
         options:
         - id: 1012
           value:
@@ -288,6 +289,7 @@ context:
             name: countries
             checked: checked
             inputClass: js-checkbox-master
+            arguments: aria-checked="true"
       item2:
         type: checkbox
         headerId: header2
@@ -298,7 +300,7 @@ context:
             text: Tractatenblad
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con2" id="option-header2" aria-expanded="false"
+            arguments: aria-controls="con2" aria-checked="false"
         trac_jaargang:
           id: 11112
           type: number
@@ -325,8 +327,8 @@ context:
           controls:
             selectAllLabel: Selecteer alle onderwerpen
           Options:
-          - Option: 211
-            id: 211
+          - Option: 2112222
+            id: 2112222
             title: Arbeid
             short: Arbeid
           - Option: 212
@@ -401,7 +403,7 @@ context:
             text: Staatsblad
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con3" id="option-header3" aria-expanded="false"
+            arguments: aria-controls="con3" aria-checked="false"
         sb_jaargang:
           id: 11121
           type: number
@@ -426,7 +428,7 @@ context:
             text: Staatscourant
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con4" id="option-header4" aria-expanded="false"
+            arguments: aria-controls="con4" aria-checked="false"
         sc_jaargang:
           id: 11123
           type: number
@@ -491,7 +493,7 @@ context:
             text: Gemeenteblad
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con5" id="option-header5" aria-expanded="false"
+            arguments: aria-controls="con5" aria-checked="false"
         gm_jaargang:
           id: 11133
           type: number
@@ -556,7 +558,7 @@ context:
             text: Provinciaal blad
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con6" id="option-header6" aria-expanded="false"
+            arguments: aria-controls="con6" aria-checked="false"
         pb_jaargang:
           id: 11143
           type: number
@@ -621,7 +623,7 @@ context:
             text: Waterschapsblad
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con7" id="option-header7" aria-expanded="false"
+            arguments: aria-controls="con7" aria-checked="false"
         wb_jaargang:
           id: 11153
           type: number
@@ -686,7 +688,7 @@ context:
             text: Blad gemeenschappelijke regeling
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con8" id="option-header8" aria-expanded="false"
+            arguments: aria-controls="con8" aria-checked="false"
         bgr_jaargang:
           id: 11163
           type: number

@@ -15,8 +15,17 @@
         <div class="form__row form__row--large">
           <fieldset>
             <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
-            <div class="form__row">
-              {{ render "@input-text--medium" inputZoekwoord merge=true }}
+            <div class="columns">
+              <div class="column column-d-9">
+                <div class="form__row">
+                  {{ render "@input-text--medium" inputZoekwoord merge=true }}
+                </div>
+              </div>
+              <div class="column column-d-3">
+                <div class="form__row">
+                  {{ render "@select-custom" zoekeninContext merge=true }}
+                </div>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -29,10 +38,20 @@
                 <small>Herstellen</small>
               </a>
             </fieldset>
+
             <fieldset>
-              <legend>Documentsoort en gedetailleerde gegevens</legend>
+              <legend>Aanvullende zoekcriteria</legend>
               <div class="form__row">
-                {{ render "@checkbox-selectall" checkboxDocumentsoort }}
+                <p class="form__sublegend">Publicerende organisatie(s)</p>
+                {{ render "@input-checkbox" checkboxPub }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Onderwerp(en)</p>
+                {{render "@subselection" subselectionWatContext }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Vergaderjaar</p>
+                {{render "@subselection" subselectionVerContext }}
               </div>
             </fieldset>
           </div>
@@ -40,18 +59,86 @@
 
             <div class="form__row form__row--large">
               <fieldset>
-                <legend>Aanvullende zoekcriteria</legend>
+                <legend>Documentsoort</legend>
                 <div class="form__row">
-                  <p class="form__sublegend">Publicerende organisatie(s)</p>
-                  {{ render "@input-checkbox" checkboxPub }}
-                </div>
-                <div class="form__row">
-                  <p class="form__sublegend">Onderwerp(en)</p>
-                  {{render "@subselection" subselectionWatContext }}
-                </div>
-                <div class="form__row">
-                  <p class="form__sublegend">Vergaderjaar</p>
-                  {{render "@subselection" subselectionVerContext }}
+                  <div data-decorator="init-unselectall" data-config='{"checkboxSelextor":".accordion__item__header .checkbox__input"}'>
+                    {{#> @accordion accordion1 }}
+                      {{#> @accordion-item item1 }}
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item2 }}
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item3 }}
+                        <fieldset>
+                          <legend>Handelingen</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" ha_vergadernummer }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" ha_itemnummer }}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__row">
+                            {{ render "@input-text" ha_paginanummer }}
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item4 }}
+                        <fieldset>
+                          <legend>Kamerstukken</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" ka_dossiernummer }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" ka_ondernummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item5 }}
+                        <fieldset>
+                          <legend>Kamervragen</legend>
+                          <div class="form__row">
+                            {{ render "@input-text" kv_vraagnummer }}
+                          </div>
+                          <div class="form__row">
+                            {{ render "@input-text" kv_aanhangselnummer }}
+                          </div>
+                          <div class="form__row">
+                            {{ render "@input-text" kv_indiener }}
+                          </div>
+                          <div class="form__row">
+                            {{ render "@input-text" kv_ontvanger }}
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item6 }}
+                        <fieldset>
+                          <legend>Moties</legend>
+                          <div class="form__row">
+                            {{ render "@input-text" mo_indiener }}
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item7 }}
+                        <fieldset>
+                          <legend>Niet-dossierstukken</legend>
+                          <div class="form__row">
+                            {{ render "@input-text" nd_documentnummer }}
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                    {{/@accordion}}
+                  </div>
                 </div>
               </fieldset>
             </div>
