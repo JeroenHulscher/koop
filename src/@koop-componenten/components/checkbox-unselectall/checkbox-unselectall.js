@@ -19,7 +19,10 @@
   selectall.prototype.init = function (e) {
     // check mastercheckbox if all checkboxes are checked on pageload;
     if(this.areAllCheckboxesNotChecked()){
+      // this.mastercheckbox.checked = true;
       this.mastercheckbox.checked = true;
+      this.mastercheckbox.setAttribute("checked", "checked");
+      this.mastercheckbox.setAttribute("aria-checked", "true");
     }
     this.initEventListeners();
   }
@@ -33,7 +36,8 @@
     }
 
     // master checkbox (select all)
-    this.mastercheckbox.addEventListener('click', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
+    this.mastercheckbox.addEventListener('click', function (e) { this.changeMasterCheckbox(e);
+    }.bind(this), false);
   };
 
   selectall.prototype.areAllCheckboxesNotChecked = function (e) {
@@ -57,12 +61,18 @@
 
   selectall.prototype.changeCheckbox = function (e) {
     if (e.target.checked === true && this.mastercheckbox.checked) {
+      // this.mastercheckbox.checked = false;
       this.mastercheckbox.checked = false;
+      this.mastercheckbox.removeAttribute("checked");
+      this.mastercheckbox.setAttribute("aria-checked", "false");
     }
 
     // if no checkbox is checked, check the master;
     if (this.countAmountChecked() === 0) {
+      // this.mastercheckbox.checked = true;
       this.mastercheckbox.checked = true;
+      this.mastercheckbox.setAttribute("checked", "checked");
+      this.mastercheckbox.setAttribute("aria-checked", "true");
     }
   }
 
@@ -84,10 +94,11 @@
           // onchange event needs manual triggering on checkboxes
           if ("createEvent" in document) {
             var evt = document.createEvent("HTMLEvents");
-            evt.initEvent("click", false, true);
+            evt.initEvent("change", false, true);
             checkboxes[i].dispatchEvent(evt);
           } else {
-            checkboxes[i].fireEvent("click");
+            var evtObj = document.createEventObject();
+            checkboxes[i].fireEvent("change", evtObj);
           }
         }
       }
