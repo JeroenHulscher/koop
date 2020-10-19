@@ -53,6 +53,33 @@
           </tr>
         </tbody>
       </table>
+      <div class="row">
+        {{render "@map" mapContext }}
+        <script id="config1" type="application/json">
+            {
+              "debug":false,
+              "options": {
+                "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                "class": "kaartprikmodule-overlay",
+                "mode": "geoview",
+                "center": {
+                  "highlight": true,
+                  "type": "location",
+                  "location": {
+                    "type": "gemeente",
+                    "title": "Gemeente Delft"
+                  }
+                },
+                "controls": ["zoom"],
+                "layers": {
+                  "bgtachtergrondkaart": {
+                    "enabled": true
+                  }
+                }
+              }
+            }
+          </script>
+        </div>
     </section>
     <section class="section-chapter js-scrollSection" id="sectie-gemeenschappelijkeregeling">
       <h2>Neemt deel aan gemeenschappelijke regelingen (11):</h2>

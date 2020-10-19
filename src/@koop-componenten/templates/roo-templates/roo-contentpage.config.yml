@@ -59,6 +59,12 @@ context:
   labelType:
     text: 'Gemeente'
     modifier: label--info label--lg label--italic
+  mapContext:
+    id: 1
+    modifier:
+    controls: false
+    kpm:
+      id: 1
   tableGemeenteraad:
     label: default
     items:
