@@ -36,6 +36,12 @@ context:
     buttonDownload: false
   linkAbonneren:
     text: Abonneren op deze zoekvraag
+  mapContext:
+    id: 1
+    modifier:
+    controls: false
+    kpm:
+      id: 1
   resultsContext:
     modifier: result--list--wide
     items:
@@ -52,6 +58,10 @@ context:
       buttons:
         - button: Bekijk details
           type: primary
+        - button: Bekijk op kaart
+          type: secendary
+          action: modal-1
+          modal: true
     - title: Stichting IHE Delft Institute for Water Education
       titleHeader: h2
       address: 'Stichting IHE Delft Institute for Water Education, <br>Westvest 7, 2611 AX Delft'
