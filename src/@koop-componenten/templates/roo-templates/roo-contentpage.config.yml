@@ -53,12 +53,19 @@ context:
       - link: '#'
         text: Exporteer gegevens (csv)
         icon: icon-download.svg
-  labelGewijzigd:
-    text: 'Laatst bijgewerkt op: 27-07-2020'
-    modifier: label-default label--lg label--italic
+  tt1:
+    id: 1
+    label: Help?
+    content: Op 27-07-2020 is door de organisatie aangegeven dat de gegevens correct zijn. De laatste wijziging is op 27-07-2020 doorgevoerd.
   labelType:
     text: 'Gemeente'
     modifier: label--info label--lg label--italic
+  mapContext:
+    id: 1
+    modifier:
+    controls: false
+    kpm:
+      id: 1
   tableGemeenteraad:
     label: default
     items:

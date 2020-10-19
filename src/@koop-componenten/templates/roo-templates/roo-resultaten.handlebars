@@ -159,6 +159,52 @@
 
     {{render "@resultlist" resultsContext }}
 
+    <div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="row row--large">
+            {{render "@map" mapContext }}
+            <script id="config1" type="application/json">
+              {
+                "debug":false,
+                "options": {
+                  "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                  "class": "kaartprikmodule-overlay",
+                  "mode": "geoview",
+                  "center": {
+                    "highlight": true,
+                    "type": "location",
+                    "location": {
+                      "type": "gemeente",
+                      "title": "Gemeente Delft"
+                    }
+                  },
+                  "controls": ["zoom"],
+                  "layers": {
+                    "bgtachtergrondkaart": {
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            </script>
+          </div>
+          <h2>Gemeente Delft</h2>
+          <address>
+             <p>Gemeente Delft, Stationsplein 1, 2611 BV DELFT
+            </p>
+          </address>
+          <p>
+            <a href="#" class="button button--primary">Bekijk details</a>
+          </p>
+          </ul>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+      </div>
+    </div>
+
     {{render "@pagination" }}
 
   </div>

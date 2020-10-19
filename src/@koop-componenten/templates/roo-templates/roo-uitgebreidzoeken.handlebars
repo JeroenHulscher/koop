@@ -1,0 +1,55 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container row" id="content" role="main">
+  <div class="row">
+
+
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+            <div class="form__row">
+              {{ render "@input-text--medium" inputZoekwoord merge=true }}
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--medium columns columns--dominant">
+          <div class="column">
+              <fieldset>
+                <legend>Classificatie</legend>
+                <div class="form__row">
+                  {{ render "@input-checkbox" checkboxClassificaties }}
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Type organisatie</legend>
+                <div class="form__row">
+                  {{ render "@select-custom" selectOrganisatie }}
+                </div>
+              </fieldset>
+          </div>
+          <div class="column">
+          </div>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+          <div class="form__rowsubmit__item">
+            <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+          </div>
+        </div>
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
