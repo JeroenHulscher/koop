@@ -17,3 +17,7 @@ context:
     headerLabel: Accordion Vraag 3
     contentId: con3
     content: Accordion Antwoord 3
+variants:
+  - name: Enkel paneel
+    context:
+      config: '{"allowMultiplePanelsOpen": false}'

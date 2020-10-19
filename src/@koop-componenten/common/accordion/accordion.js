@@ -11,7 +11,12 @@
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
 
-    this.allowMultiplePanelsOpen = this.config.allowMultiplePanelsOpen || true;
+    if (this.config.allowMultiplePanelsOpen === false) {
+      this.allowMultiplePanelsOpen = this.config.allowMultiplePanelsOpen;
+    } else {
+      this.allowMultiplePanelsOpen = true;
+    }
+
     this.allowToggle = this.config.allowToggle || true;
 
     this.triggerClass = this.config.triggerClass || 'accordion__item__header-trigger';
