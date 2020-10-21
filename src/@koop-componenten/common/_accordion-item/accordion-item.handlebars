@@ -1,14 +1,28 @@
 <div class="accordion__item">
-  <div class="accordion__item__header {{#if_eq type 'checkbox'}}accordion__item--checkbox{{/if_eq}}">
-      <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
-        <h3 class="accordion__item__heading">{{headerLabel}}</h3>{{#if headerLabel2}}<span class="accordion__item__heading-extra">{{headerLabel2}}</span>{{/if}}
-      </button>
+
+  <div class="accordion__item__header {{#if type}}accordion__item--{{type}}{{/if}}">
+      {{#if_eq type 'checkbox'}}
+        {{render "@input-checkbox" accordionCheckbox }}
+        {{#if_eq hasContent false}}
+        {{else}}
+          {{!-- <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
+            <span class="visually-hidden">Toon inhoud</span>
+          </button> --}}
+        {{/if_eq}}
+      {{else}}
+        <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
+          <h3 class="accordion__item__heading">{{headerLabel}}</h3>{{#if headerLabel2}}<span class="accordion__item__heading-extra">{{headerLabel2}}</span>{{/if}}
+        </button>
+      {{/if_eq}}
   </div>
-  <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{headerId}}">
+  {{#if_eq hasContent false}}
+  {{else}}
+  <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{#if_eq type 'checkbox'}}option-{{/if_eq}}{{headerId}}">
     <div>
       {{#> @partial-block}}
         {{content}}
       {{/ @partial-block}}
     </div>
   </div>
+  {{/if_eq}}
 </div>

@@ -2,12 +2,17 @@
   border-top: 1px solid $lightGrey;
   margin: 0 0 1em 0;
 
+  &--checkbox {
+    border-top: 0;
+  }
+
   &.is-focused {
     // border: 2px solid $darkBlue;
   }
 
   &__item {
     border-bottom: 1px solid $lightGrey;
+    position: relative;
 
     &__header {
       &-trigger {
@@ -37,7 +42,6 @@
           &:after {
             background-image: $iconArrowUp;
           }
-
         }
       }
     }
@@ -64,5 +68,64 @@
     &__content {
       padding: 1em 0 .5em 2em;
     }
+  }
+
+  &--checkbox &__item {
+    border-bottom: 0;
+    margin-bottom: 2px;
+    background: $bgBlue;
+    border-radius: 3px;
+    padding: .5em 1em;
+
+    &__header {
+
+      .input-checkbox {
+        margin: 0;
+      }
+
+      &-trigger {
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        top: 0.25em;
+        right: 0.5em;
+
+        &:after {
+          background-image: $dartDownIcon;
+          background-size: .5em;
+        }
+        &[aria-expanded="true"] {
+          &:after {
+            background-image: $dartUpIcon;
+          }
+        }
+      }
+      &-checkboxtrigger {
+        & ~ label {
+          display: block;
+          background-size: .5em;
+          background-repeat: no-repeat;
+          background-position: right center;
+        }
+        &[aria-controls] ~ label {
+          background-image: $dartDownIcon;
+
+        }
+        &[aria-controls][aria-checked="true"] ~ label {
+          background-image: $dartUpIcon;
+        }
+      }
+    }
+
+    &__content {
+      padding: 1.25em 0 .5em 0;
+      fieldset {
+        legend {
+          font-size: 1em;
+          padding-bottom: .5em;
+        }
+      }
+    }
+
   }
 }

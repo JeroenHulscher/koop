@@ -387,6 +387,11 @@ fieldset {
     font-size: em(16);
     margin: 0 0 em(6) 0;
     font-weight: bold;
+
+    &--secondary {
+      font-style: italic;
+      font-weight: normal;
+    }
   }
 }
 
