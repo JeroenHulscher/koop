@@ -16,4 +16,209 @@ context:
         - stitle: Uitbreidingen
     - title: Voorbehouden, verklaringen en bezwaren
     - title: Wijzigingen
-
+variants:
+  - name: Treeview niveau 1
+    title: Treeview niveau 1
+    context:
+      id: 2
+      ariaLabel: Thema's
+      modifier: treeview
+      items:
+        - title: Cultur en recreatie
+          href: '#'
+        - title: Economie
+          href: '#'
+        - title: Internationaal
+          href: '#'
+        - title: Migratie en integratie
+          href: '#'
+        - title: Natuur en milieu
+          href: '#'
+        - title: Onderwijs en wetenschap
+          href: '#'
+        - title: Openbare orde en veiligheid
+          href: '#'
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+        - title: Overheidfinancieen
+          href: '#'
+        - title: Recht
+          href: '#'
+        - title: Ruimte en infrastructuur
+          href: '#'
+        - title: Sociale zekerheid
+          href: '#'
+        - title: Verkeer
+          href: '#'
+  - name: Treeview niveau 2
+    title: Treeview niveau 2
+    context:
+      id: 2
+      modifier: treeview
+      items:
+        - title: Thema's
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-1'
+          isMother: true
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+          sactive: true
+          sub: true
+          subItems:
+            - stitle: Informatievoorziening en ICT
+            - stitle: Inkoop en beheer
+              href: 'http://localhost:3000/components/preview/nav--treeview-niveau-3'
+            - stitle: Inrichting van de overheid
+            - stitle: Koninkrijkrelaties
+            - stitle: Overheidspersoneel
+  - name: Treeview niveau 3
+    title: Treeview niveau 3
+    context:
+      id: 2
+      modifier: treeview
+      items:
+        - title: Thema's
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-1'
+          isMother: true
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+          isMother: true
+        - title: Inkoop en beheer
+          sactive: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-3'
+          sub: true
+          subItems:
+            - stitle: Inkoop binnenland
+              href: 'http://localhost:3000/components/preview/nav--treeview-niveau-4'
+            - stitle: Inkoop buitenland
+  - name: Treeview niveau 4
+    title: Treeview niveau 4
+    context:
+      id: 2
+      modifier: treeview
+      items:
+        - title: Thema's
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-1'
+          isMother: true
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+          isMother: true
+        - title: Inkoop en beheer
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-3'
+        - title: Inkoop binnenland
+          sactive: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-4'
+          sub: true
+          subItems:
+            - stitle: Afzetmarkt
+            - stitle: Logistiek
+            - stitle: Warenhuis
+              href: 'http://localhost:3000/components/preview/nav--treeview-niveau-5'
+  - name: Treeview niveau 5
+    title: Treeview niveau 5
+    context:
+      id: 2
+      modifier: treeview
+      items:
+        - title: Thema's
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-1'
+          isMother: true
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+          isMother: true
+        - title: Inkoop en beheer
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-3'
+        - title: Inkoop binnenland
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-4'
+        - title: Warenhuis
+          sactive: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-5'
+          sub: true
+          subItems:
+            - stitle: Directe afname
+              href: 'http://localhost:3000/components/preview/nav--treeview-niveau-6'
+            - stitle: Indirecte afname
+  - name: Treeview niveau 6
+    title: Treeview niveau 6
+    context:
+      id: 2
+      modifier: treeview
+      items:
+        - title: Thema's
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-1'
+          isMother: true
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+          isMother: true
+        - title: Inkoop en beheer
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-3'
+        - title: Inkoop binnenland
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-4'
+        - title: Warenhuis
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-5'
+        - title: Directe afname
+          sactive: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-6'
+          sub: true
+          subItems:
+            - stitle: Hoofdleverancier
+            - stitle: Tussenpersoon
+              href: 'http://localhost:3000/components/preview/nav--treeview-niveau-7'
+  - name: Treeview niveau 7
+    title: Treeview niveau 7
+    context:
+      id: 2
+      modifier: treeview
+      items:
+        - title: Thema's
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-1'
+          isMother: true
+        - title: Organisatie en bedrijfsvoering
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-2'
+          isMother: true
+        - title: Inkoop en beheer
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-3'
+        - title: Inkoop binnenland
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-4'
+        - title: Warenhuis
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-5'
+        - title: Directe afname
+          isMother: true
+          href: 'http://localhost:3000/components/preview/nav--treeview-niveau-6'
+          sub: true
+          subItems:
+            - stitle: Hoofdleverancier
+            - stitle: Tussenpersoon
+              href: 'http://localhost:3000/components/preview/nav--treeview-niveau-7'
+              sactive: true
+  - name: Folders
+    title: Mappen
+    context:
+      id: 2
+      modifier: folders
+      items:
+      - title: Repository
+        sub: true
+        subItems:
+          - stitle: frbr
+            sub: true
+            subItems:
+            - stitle: sgd
+              sub: true
+              subItems:
+              - stitle: 1840
+                sub: true
+                subItems:
+                - stitle: Expression
+                  sub: true
+                  subItems:
+                  - stitle: Manifestation
+                    sactive: true
