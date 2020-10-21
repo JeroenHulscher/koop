@@ -1,0 +1,203 @@
+---
+label: CUP-beheer - Expressie wijzigen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: CUP Beheer
+    skipLinks: false
+    metaLinks:
+      - text: Gebruiker
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+  topbar:
+    navItems:
+      - label: CUP Beheer
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Enviroment
+        url: '#'
+      - text: Platform
+        url: '#'
+      - text: Verkenner
+        url: '#'
+      - text: Metadata werk ag-11580
+        url: '#'
+      - text: Wijzig manifestatie 2
+  navToeContext:
+    id: 2
+    items:
+    - title: SGD
+      href: /components/preview/templates-eb-projectlanding
+      active: true
+      sub: true
+      subItems:
+        - stitle: Publicaties
+          sactive: true
+        - stitle: Spoedpublicaties
+        - stitle: Updaten metadata
+        - stitle: Vervangen verschijningsvormen
+        - stitle: Zoekdienst
+        - stitle: Controlelijst
+        - stitle: OEB ochtendcontrole
+  publicatiegegevens:
+    modifier:
+    items:
+    - item:
+      - column:
+        type: Publicatie gegevens
+        value: Aantal pagina's
+      - column:
+        type: Waarde
+        value: 9
+  table:
+    modifier: table--condensed
+    items:
+      - item:
+        - column:
+          type: Bestandstype
+          value: metadata
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">metadata.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder metadata metadata.xml</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: metadata
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">didl.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder metadata didl.xml</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: jpg
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_0000001.jpg</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg SGD_1234567654_0000001.jpg</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: jpg
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_0000002.jpg</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg SGD_1234567654_0000002.jpg</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: ocr
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_tekt_0000002.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr SGD_1234567654_tekt_0000002.xml</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: ocr
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_tekt_0000001.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr SGD_1234567654_tekt_0000001.xml</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: ocr
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_tekt_0000002.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr SGD_1234567654_tekt_0000002.xml</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: coordinaten
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_coordinaten_0000001.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaten SGD_1234567654_coordinaten_0000001.xml</span></button>'
+      - item:
+        - column:
+          type: Bestandstype
+          value: coordinaten
+        - column:
+          type: Bestandsnaam
+          value: <a href="#">SGD_1234567654_coordinaten_0000002.xml</a>
+        - column:
+          type: Verwijderen
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaten SGD_1234567654_coordinaten_0000002.xml</span></button>'
+  modalContextMetadata:
+    initClosed: true
+    openButton: Manifestatie toevoegen
+    closeButton: Toevoegen
+    selectcustom:
+      id: 1
+      fieldLabel: Bestandstype
+      labelmodifier: accent
+      fieldLabelVisible: true
+      options:
+        - label: Kies type
+          value: ""
+          selected: selected
+        - label: "[nieuw]"
+          value: ""
+          linkedto: "2"
+        - label: metadata
+          value: 10
+        - label: jpg
+          value: 20
+        - label: ocr
+          value: 50
+        - label: pdf
+          value: 60
+        - label: coordinaten
+          value: 100
+    inputAddLabel:
+      id: 123123
+      fieldLabel: Label
+      labelmodifier: accent
+      fieldPlaceholder: 'Bijv: metadata'
+      fieldLabelVisible: true
+    inputfile:
+      type: file
+      fieldLabel: Bestand
+      labelmodifier: accent
+      fieldLabelVisible: true
+      fieldPlaceholder: false
+    buttonSubmitMetadata:
+      text: Toevoegen
+      action: http://www.google.nl
+      anchor: false
+      button: true
+      iconButton: false
+      inputButton: false
+      inputSubmit: true
+      buttonWithDivider: false
+      type: submit
+      modifier: "button--primary"

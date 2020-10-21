@@ -1,0 +1,99 @@
+---
+label: CUP-beheer - metadata wijzigen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: CUP Beheer
+    skipLinks: false
+    metaLinks:
+      - text: Gebruiker
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+  topbar:
+    navItems:
+      - label: CUP Beheer
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Enviroment
+        url: '#'
+      - text: Platform
+        url: '#'
+      - text: Verkenner
+        url: '#'
+      - text: Metadata werk ag-11580
+        url: '#'
+      - text: Wijzig metadata
+  txt1:
+    id: 331
+    value: Staten-Generaal digitaal
+    fieldLabel: oorsprong
+  txt2:
+    id: 332
+    value: sgd:19941995:0000296
+    fieldLabel: sgd-identifier
+    disabled: true
+  txt3:
+    id: 333
+    fieldLabel: sgd-mpeg-identifier
+    value: http://services.kb.nl/mdo/oai?verb=GetRecord&identifier=SGD:sgd:mpeg21:19941995:0000296&metadataPrefix=didl
+  buttonSave:
+    text: Opslaan
+  buttonCancel:
+    text: Annuleren
+  buttonAddMeta:
+    text: Metadataveld toevoegen
+  modalContextMetadata:
+    initClosed: true
+    openButton: Metadata toevoegen
+    closeButton: Toevoegen
+    selectcustom:
+      id: 1
+      fieldLabel: Metadata type
+      labelmodifier: accent
+      fieldLabelVisible: true
+      options:
+        - label: Kies type
+          value: ""
+          selected: selected
+        - label: "[nieuw]"
+          value: ""
+          linkedto: "2"
+        - label: oorsprong
+          value: 10
+        - label: sgd-identifier
+          value: 20
+        - label: sgd-mpeg-identifier
+          value: 50
+    inputAddLabel:
+      id: 123123
+      fieldLabel: Label
+      labelmodifier: accent
+      fieldPlaceholder: 'Bijv: metadata'
+      fieldLabelVisible: true
+    inputMetadata:
+      fieldLabel: Waarde
+      labelmodifier: accent
+      fieldLabelVisible: true
+    buttonSubmitMetadata:
+      text: Toevoegen
+      action: http://www.google.nl
+      anchor: false
+      button: true
+      iconButton: false
+      inputButton: false
+      inputSubmit: true
+      buttonWithDivider: false
+      type: submit
+      modifier: "button--primary"
+  submitContext:
+    type: submit

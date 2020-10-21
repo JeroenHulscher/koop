@@ -47,6 +47,13 @@
       margin: 0;
       padding: .75em 0;
       font-weight: bold;
+      display: inline-block;
+
+      &-extra {
+        display: inline-block;
+        margin-left: 1em;
+        font-style: italic;
+      }
     }
 
     &--checkbox &__header-trigger {
@@ -55,7 +62,7 @@
     }
 
     &__content {
-      padding: .5em 0 .5em 2em;
+      padding: 1em 0 .5em 2em;
     }
   }
 }

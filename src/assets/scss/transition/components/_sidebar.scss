@@ -1,4 +1,10 @@
 .sidebar {
+  &__section {
+    margin-bottom: 2em;
+    @media (min-width: $breakpointDesktop) {
+      margin-bottom: 4em;
+    }
+  }
   &__header {
     margin: 0 0 .25em 0;
   }

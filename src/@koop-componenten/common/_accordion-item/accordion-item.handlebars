@@ -1,7 +1,7 @@
 <div class="accordion__item">
   <div class="accordion__item__header {{#if_eq type 'checkbox'}}accordion__item--checkbox{{/if_eq}}">
       <button class="accordion__item__header-trigger" aria-expanded="{{#if isOpen}}true{{else}}false{{/if}}" role="button" aria-controls="{{contentId}}" id="{{headerId}}">
-        <h3 class="accordion__item__heading">{{headerLabel}}</h3>
+        <h3 class="accordion__item__heading">{{headerLabel}}</h3>{{#if headerLabel2}}<span class="accordion__item__heading-extra">{{headerLabel2}}</span>{{/if}}
       </button>
   </div>
   <div class="accordion__item__content" aria-hidden="{{#if isOpen}}false{{else}}true{{/if}}" id="{{contentId}}" role="region" aria-labelledby="{{headerId}}">

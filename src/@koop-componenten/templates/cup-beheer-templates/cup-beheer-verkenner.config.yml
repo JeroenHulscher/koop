@@ -68,7 +68,7 @@ context:
           value: <a href="#">00001</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Administratief Akkoord tussen het Koninkrijk der Nederlanden en de Republiek Indonesië inzake een project betreffende de instelling van opleidingsmogelijkheden en cursussen in het inventariseren van bosbestand en de interpretatie van luchtfoto's
@@ -87,7 +87,7 @@ context:
           value: <a href="#">00002</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Overeenkomst tussen het Koninkrijk der Nederlanden en het Koninkrijk Saoedi-Arabië inzake luchtvervoer
@@ -106,7 +106,7 @@ context:
           value: <a href="#">00003</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Wijziging van de Overeenkomst van Wenen tot instelling van een internationale classificatie van beeldbestanddelen van merken
@@ -125,7 +125,7 @@ context:
           value: <a href="#">00004</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Overeenkomst inzake het behoud van het architectonische erfgoed van Europa
@@ -144,7 +144,7 @@ context:
           value: <a href="#">00004_w</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value:
@@ -163,7 +163,7 @@ context:
           value: <a href="#">00005</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Overeenkomst tot oprichting van het Multilaterale Agentschap voor Investeringsgaranties
@@ -182,7 +182,7 @@ context:
           value: <a href="#">00005_w</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value:
@@ -201,7 +201,7 @@ context:
           value: <a href="#">00006</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Europees Handvest inzake lokale autonomie
@@ -220,7 +220,7 @@ context:
           value: <a href="#">00006_w</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value:
@@ -239,7 +239,7 @@ context:
           value: <a href="#">00007</a>
         - column:
           type: Area
-          value: vd
+          value: sgd
         - column:
           type: Titel
           value: Internationale Overeenkomst inzake het gebruik van INMARSAT-grondstations aan boord van schepen binnen de territoriale zee en de havens
@@ -252,6 +252,30 @@ context:
         - column:
           type: Laatste wijziging
           value: '<span class="u-nobreak">01-01-2020 07:51</span>'
+  navTree:
+    id: 212312
+    modifier: treeview
+    items:
+      - title: Area's
+        href: '#'
+        isMother: true
+      - title: sgd
+        href: '#'
+        sactive: true
+        sub: true
+        subItems:
+          - stitle: 18661867
+          - stitle: 18681869
+          - stitle: 18691870
+          - stitle: 18701871
+          - stitle: 18711872
+          - stitle: 18721873
+          - stitle: 18711874
+          - stitle: 18711875
+          - stitle: 18711876
+          - stitle: 18711877
+          - stitle: 18711878
+          - stitle: 18711879
   wordintitelInput:
     id: 543
     fieldLabelVisible: true
