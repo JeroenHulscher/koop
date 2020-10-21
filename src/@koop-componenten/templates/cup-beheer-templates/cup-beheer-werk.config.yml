@@ -116,7 +116,11 @@ context:
     - type: Aantal expressies
       value: '3 <small><i>(laatste expressie op: 16-01-2020)</i></small>'
   btnEdit:
+    type: submit
     text: Wijzig metadata
+  submitContext:
+    type: submit
+    text: Verwijder werk
   btnSync:
     text: Synchroniseer
   btnRem:
@@ -139,6 +143,12 @@ context:
           - item: <a href="#">Toon framework manifestat (BE)</a>
           - item: <a href="#">Toon framework manifestat (FR)</a>
           - item: <a href="#">Toon framework manifestat (SE)</a>
+      btnEditE2:
+        type: submit
+        text: Wijzig expressie
+      submitContext2:
+        type: submit
+        text: Verwijder expressie
       tableExpressie1:
         label: default
         caption: "Aanwezige labels: <span class='label'>metadataowns</span> <span class='label'>pdf</span> <span class='label'>metadata</span>"
@@ -257,6 +267,12 @@ context:
           - item: Toon framework manifestat (BE)
           - item: Toon framework manifestat (FR)
           - item: Toon framework manifestat (SE)
+      btnEditE1:
+        type: submit
+        text: Wijzig expressie
+      submitContext1:
+        type: submit
+        text: Verwijder expressie
       moreless2modal1:
         modalId: 5231
         initClosed: true

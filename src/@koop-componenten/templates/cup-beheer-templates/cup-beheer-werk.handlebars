@@ -105,6 +105,10 @@
           </tr>
         </tbody>
       </table>
+      <p>
+        {{ render "@button--secondary-icon-edit" btnEdit merge=true }}
+        {{ render "@button--secondary-icon-bin" submitContext merge=true }}
+      </p>
     </div>
     {{!-- <p>
       {{ render "@button" btnEdit merge=true }}
@@ -116,8 +120,14 @@
       {{#> @accordion-item item2 }}
         <div class="columns columns--gutter-med">
           <div class="column column-d-9">
+            <h4>Metadata expressie details 0000000296/2</h4>
+            <p>Geen metadata aanwezig voor deze expressie</p>
             <h4>Manifestatie(s)</h4>
             {{ render "@table" tableExpressie2 }}
+            <p>
+              {{ render "@button--secondary-icon-edit" btnEditE1 merge=true }}
+               {{ render "@button--secondary-icon-bin" submitContext1 merge=true }}
+            </p>
           </div>
           <div class="column column-d-3">
             <h4>Acties</h4>
@@ -283,8 +293,14 @@
       {{#> @accordion-item item1 }}
         <div class="columns columns--gutter-med">
           <div class="column column-d-9">
+            <h4>Metadata expressie details 0000000296/1</h4>
+            <p>Geen metadata aanwezig voor deze expressie</p>
             <h4>Manifestatie(s)</h4>
             {{ render "@table" tableExpressie1 }}
+            <p>
+              {{ render "@button--secondary-icon-edit" btnEditE2 merge=true }}
+               {{ render "@button--secondary-icon-bin" submitContext2 merge=true }}
+            </p>
           </div>
           <div class="column column-d-3">
             <h4>Acties</h4>
