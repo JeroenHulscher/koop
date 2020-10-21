@@ -90,7 +90,7 @@ context:
           value: <a href="#">didl.xml</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder metadata</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder metadata</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -100,7 +100,7 @@ context:
           value: <a href="#">SGD_1234567654_0000001.jpg</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -110,7 +110,7 @@ context:
           value: <a href="#">SGD_1234567654_0000002.jpg</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder jpg</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -120,7 +120,7 @@ context:
           value: <a href="#">SGD_1234567654_tekt_0000002.xml</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -130,7 +130,7 @@ context:
           value: <a href="#">SGD_1234567654_tekt_0000001.xml</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -140,7 +140,7 @@ context:
           value: <a href="#">SGD_1234567654_tekt_0000002.xml</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder ocr</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -150,7 +150,7 @@ context:
           value: <a href="#">SGD_1234567654_coordinaten_0000001.xml</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></button>'
       - item:
         - column:
           type: Bestandstype
@@ -160,7 +160,7 @@ context:
           value: <a href="#">SGD_1234567654_coordinaten_0000002.xml</a>
         - column:
           type: Verwijderen
-          value: '<a href="#" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></a>'
+          value: '<button type="submit" class="button-icon button-icon--bin"><span class="visually-hidden">Verwijder coordinaat</span></button>'
   modalContextMetadata:
     initClosed: true
     openButton: Bestand toevoegen

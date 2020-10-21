@@ -36,7 +36,7 @@ variants:
             text: Agenda's
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con1" id="option-header1" aria-expanded="false"
+            arguments: aria-controls="con1" id="option-header1" aria-checked="false"
       item2:
         type: checkbox
         headerId: header2
@@ -49,7 +49,7 @@ variants:
             text: Handelingen
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con2" id="option-header2" aria-expanded="false"
+            arguments: aria-controls="con2" id="option-header2" aria-checked="false"
       item3:
         type: checkbox
         headerId: header3
