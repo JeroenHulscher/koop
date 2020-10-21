@@ -152,6 +152,8 @@
     if (hideself) {
       this.hideCurrentQuestion(currentQuestionContainer);
     }
+
+    e.preventDefault();
   };
 
   formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {
