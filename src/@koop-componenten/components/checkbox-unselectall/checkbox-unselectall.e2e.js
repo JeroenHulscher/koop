@@ -8,7 +8,7 @@ describe('Un-select all', function () {
       });
   });
 
-  fit('un-selects the mastercheckbox when checking a different checkbox', function () {
+  it('un-selects the mastercheckbox when checking a different checkbox', function () {
     var masterCheckbox;
 
     browser.get('http://localhost:3000/components/preview/checkbox-unselectall');
@@ -26,7 +26,7 @@ describe('Un-select all', function () {
 
   });
 
-  fit('un-selects all checkboxes when selecting the master (unselect-all) checkbox', function () {
+  it('un-selects all checkboxes when selecting the master (unselect-all) checkbox', function () {
     var masterCheckbox;
 
     masterCheckbox = element(by.css('.js-checkbox-master ~ .checkbox__label'));
@@ -38,7 +38,7 @@ describe('Un-select all', function () {
     });
   });
 
-  fit('un-check the master checkbox again', function () {
+  it('un-check the master checkbox again', function () {
     var masterCheckbox;
 
     var allCheckboxes = element.all(by.css('.checkbox__label'));
