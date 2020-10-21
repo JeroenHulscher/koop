@@ -1,0 +1,99 @@
+{{render "@skiplinks" skipLinks }}
+{{render "@topbar" topbar }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <p>
+        <a href="/components/preview/templates-eb-homepage" class="icon--backlink">Terug naar Werk ag-11580</a>
+      </p>
+    </div>
+  </div>
+
+  <div role="main" id="content">
+
+    <h1>Wijzigen metadata area: sgd/11580 werk: 0000000296</h1>
+
+
+    <form>
+      <fieldset>
+        <legend class="visually-hidden">Metadata wijzigen</legend>
+
+
+        <table class="table--condensed table--headerhighlight">
+          <thead>
+            <tr>
+              <th scope="col">Label</th>
+              <th scope="col">Waarde</th>
+              <th scope="col">Verwijderen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">oorsprong</th>
+              <td data-before="oorsprong">{{ render "@input-text" txt1 merge=true }}</td>
+              <td>{{ render "@button-icon--bin" submitContext merge=true }}</td>
+            </tr>
+            <tr>
+              <th scope="row">sgd-identifier</th>
+              <td data-before="sgd-identifier">{{ render "@input-text" txt2 merge=true }}</td>
+              <td>{{ render "@button-icon--bin" submitContext merge=true }}</td>
+            </tr>
+            <tr>
+              <th scope="row">sgd-mpeg-identifier</th>
+              <td data-before="sgd-mpeg-identifier">{{ render "@input-text" txt3 merge=true }}</td>
+              <td>{{ render "@button-icon--bin" submitContext merge=true }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          {{ render "@button--primary" buttonSave merge=true }}
+          {{ render "@button" buttonCancel merge=true }}
+        </p>
+
+        {{#> @modal modalContextMetadata }}
+        <fieldset data-decorator="init-form-conditionals">
+          <legend class="visually-hidden">Metadata toevoegen</legend>
+          <h2>Metadata toevoegen</h2>
+          <div class="columns">
+            <div class="column">
+              <div id="citem-1" role="region" class="js-form-conditionals__citem">
+                <div class="form__row">
+                  {{ render "@select-custom" selectcustom }}
+                </div>
+              </div>
+              <div id="citem-2" role="region" class="js-form-conditionals__citem">
+                <div class="form__row">
+                  {{ render "@input-text" inputAddLabel merge=true }}
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="form__row">
+                {{render "@input-text" inputMetadata merge=true }}
+              </div>
+            </div>
+          </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{render "@button" buttonSubmitMetadata }}
+            </div>
+          </div>
+        </fieldset>
+        {{/@modal}}
+      </fieldset>
+    </form>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
