@@ -1,5 +1,5 @@
 
-<div class="accordion {{#if_eq type 'checkbox'}}accordion--checkbox{{/if_eq}}" data-decorator="init-accordion" {{#if config}}data-config='{{{config}}}'{{/if}}>
+<div class="accordion {{#if type }}accordion--{{type}}{{/if}}" data-decorator="init-accordion" {{#if config}}data-config='{{{config}}}'{{/if}}>
   {{#> @partial-block}}
     {{ render "@accordion-item" item1 }}
     {{ render "@accordion-item" item2 }}
