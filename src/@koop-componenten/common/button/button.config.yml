@@ -28,6 +28,21 @@ variants:
     context:
       text: Secundaire knop
       modifier: icon-bg icon--searchBlue
+  - name: Secondary Icon Bin
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--bin
+  - name: Secondary Icon Edit
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--edit
+  - name: Secondary Icon Add
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--plusshape
   - name: Secondary Icon Profile
     status: ready
     context:
