@@ -8,7 +8,8 @@
     "start": "gulp dev",
     "e2e": "protractor test/protractor.config.js",
     "vrtest": "backstop reference && backstop test",
-    "vrtest_stopxml": "backstop reference --configPath=backstop_stopxml.json && backstop test --configPath=backstop_stopxml.json",
+    "vrtest_stopxml-basics": "backstop reference --configPath=backstop_stopxml-basics.json && backstop test --configPath=backstop_stopxml-basics.json",
+    "vrtest_stopxml-templates": "backstop reference --configPath=backstop_stopxml-templates.json && backstop test --configPath=backstop_stopxml-templates.json",
     "atest": "pa11y-ci --threshold 10 --config test/pa11yci.json"
   },
   "repository": {

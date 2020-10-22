@@ -1,0 +1,38 @@
+{
+  "id": "koop",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1224,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "stopxml - elementen",
+      "url": "http://localhost:3000/components/preview/templates-1stop-xml-elementen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-1stop-xml-elementen.html"
+    },
+    {
+      "label": "stopxml - voorbeeld",
+      "url": "http://localhost:3000/components/preview/templates-1stop-xml-voorbeeld",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-1stop-xml-voorbeeld.html"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+  },
+  "asyncCaptureLimit": 1,
+  "asyncCompareLimit": 1,
+  "debug": true,
+  "debugWindow": false
+}

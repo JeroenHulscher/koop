@@ -8,6 +8,8 @@ package-lock.json
 !/package.json
 !/backstop.json
 !/backstop_stopxml.json
+!/backstop_stopxml-basics.json
+!/backstop_stopxml-templates.json
 /package-lock.json
 component-library/
 public/
