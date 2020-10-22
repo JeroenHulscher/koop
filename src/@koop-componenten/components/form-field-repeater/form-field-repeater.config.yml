@@ -1,0 +1,16 @@
+---
+title: Form - Veld toevoegen
+label: Form veld toevoegen
+context:
+  id: 1
+  input:
+    id: 200
+    name: koop
+    fieldLabel: Label
+    fieldLabelVisible: true
+  button:
+    id: 100
+    text: Voeg veld toe
+    anchor: false
+    inputButton: true
+    modifier: js-form-fieldrepeater__addbutton
