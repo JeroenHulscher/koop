@@ -377,14 +377,16 @@ context:
           fieldPlaceholder: 'Volgnummer'
           labelmodifier: secondary
         trac_datepicker1:
-          id: 11118
-          fieldLabel: Vanaf
-          fieldInstruction:
+          id: 1111811111
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
           fieldPlaceholder: 'DD-MM-JJJJ'
         trac_datepicker2:
-          id: 11119
-          fieldLabel: Tot en met
-          fieldInstruction:
+          id: 1111922222
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
           fieldPlaceholder: 'DD-MM-JJJJ'
         trac_plaats:
           id: 11120

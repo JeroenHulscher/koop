@@ -1,0 +1,212 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container row" id="content" role="main">
+  <div class="row">
+
+    {{ render "@list--tabs" tabs merge=true }}
+
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+            <div class="columns">
+              <div class="column column-d-9">
+                <div class="form__row">
+                  {{ render "@input-text--medium" inputZoekwoord merge=true }}
+                </div>
+              </div>
+              <div class="column column-d-3">
+                <div class="form__row">
+                  {{ render "@select-custom" zoekeninContext merge=true }}
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--medium columns columns--dominant">
+          <div class="column">
+            <fieldset>
+              <legend>Aanvullende zoekcriteria</legend>
+              <div class="form__row">
+                <p class="form__sublegend">Publicerende organisatie(s)</p>
+                {{ render "@input-checkbox" checkboxPub }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Vergaderjaar</p>
+                {{render "@subselection" subselectionVerContext }}
+              </div>
+            </fieldset>
+          </div>
+          <div class="column">
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Documentsoort</legend>
+                <div class="form__row">
+                  <div data-decorator="init-unselectall" data-config='{"checkboxSelextor":".accordion__item__header .checkbox__input"}'>
+                    {{#> @accordion accordion1 }}
+                      {{#> @accordion-item item1 }}
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item2 }}
+                        <fieldset>
+                          <legend class="visually-hidden">Handelingen</legend>
+                          <fieldset>
+                            <legend>Handelingen</legend>
+                            <div class="form__row">
+                              {{ render "@input-text" ha_dossiernummer }}
+                            </div>
+                            <div data-decorator="init-form-addfield">
+                              <div class="form__row">
+                                {{ render "@input-text" ha_spreker }}
+                              </div>
+                              <div class="form__row">
+                                {{ render "@button" buttonHaAddSpeaker merge=true }}
+                              </div>
+                            </div>
+                          </fieldset>
+                          <fieldset>
+                            <legend>Vergaderdatum</legend>
+                            <div class="columns">
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" ha_datepicker1 merge=true }}
+                                </div>
+                              </div>
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" ha_datepicker2 merge=true }}
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                          <fieldset>
+                            <legend>Pagina's</legend>
+                            <div class="columns">
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@input-text" ha_pagina1 }}
+                                </div>
+                              </div>
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@input-text" ha_pagina2 }}
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item3 }}
+                        <fieldset>
+                          <legend class="visually-hidden">Kamerstukken</legend>
+                          <fieldset>
+                            <legend>Kamerstukken</legend>
+                            <div class="form__row">
+                              {{ render "@input-text" ka_dossiernummer }}
+                            </div>
+                            <div class="form__row">
+                              {{ render "@input-text" ka_ondernummer }}
+                            </div>
+                            <div class="form__row">
+                              {{ render "@input-text" ka_ondertekening }}
+                            </div>
+                          </fieldset>
+                          <fieldset>
+                            <legend>Datum indiening</legend>
+                            <div class="columns">
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" ka_datepicker1 }}
+                                </div>
+                              </div>
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" ka_datepicker2 }}
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item4 }}
+                        <fieldset>
+                          <legend class="visually-hidden">Kamervragen</legend>
+                          <fieldset>
+                            <legend>Kamervragen</legend>
+                            <div class="form__row">
+                              {{ render "@input-text" kv_aanhangselnummer }}
+                            </div>
+                            <div class="form__row">
+                              {{ render "@input-text" kv_indiener }}
+                            </div>
+                            <div class="form__row">
+                              {{ render "@input-text" kv_ontvanger }}
+                            </div>
+                          </fieldset>
+                          <fieldset>
+                            <legend>Datum vraag</legend>
+                            <div class="columns">
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" kv_datepicker1 }}
+                                </div>
+                              </div>
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" kv_datepicker2 }}
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                          <fieldset>
+                            <legend>Datum antwoord</legend>
+                            <div class="columns">
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" kv_datepicker3 }}
+                                </div>
+                              </div>
+                              <div class="column">
+                                <div class="form__row">
+                                  {{ render "@datepicker" kv_datepicker4 }}
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item5 }}
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item6 }}
+                      {{/@accordion-item}}
+                    {{/@accordion}}
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+          <div class="form__rowsubmit__item">
+            <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+          </div>
+        </div>
+      </form>
+    {{/@jumbotron}}
+
+  </div>
+
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

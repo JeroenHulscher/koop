@@ -1,5 +1,5 @@
 ---
-label: OEB 2.0 - Zoek - Parlementaire documenten
+label: OEB 2.0 - Zoek - Historische parlementaire documenten
 status: ready
 context:
   header:
@@ -37,10 +37,10 @@ context:
       - content: <a href="templates-oeb-zoek-bekendmakingen">Officiële bekendmakingen</a>
       - content: <a href="templates-oeb-zoek-documenten" class="is-selected">Parlementaire documenten</a>
   jumbotronContext:
-    heading: Zoek in parlementaire documenten
+    heading: Zoek in historische parlementaire documenten
     hstyle: h2
-    subheading: Parlementaire documenten
-    intro: U kunt ook <a href="#">Zoeken in historische parlementaire documenten (1814 - 1995)</a>.
+    subheading: Historische parlementaire documenten (1814 - 1995)
+    intro: U kunt ook <a href="#">Zoeken in parlementaire documenten na 1995</a>.
     centered: true
     size: semimedium
     inputZoekwoord:
@@ -337,23 +337,12 @@ context:
         accordionCheckbox:
           options:
           - id: header1
-            text: Alle
+            text: Alle documentsoorten
             name: documentsoort
             checked: checked
             inputClass: js-checkbox-master
             arguments: aria-checked="true"
       item2:
-        type: checkbox
-        headerId: header2
-        headerLabel: Accordion Vraag 2
-        contentId: con2
-        hasContent: false
-        accordionCheckbox:
-          options:
-          - id: header2
-            text: "Agenda's"
-            name: documentsoort
-      item3:
         type: checkbox
         headerId: header3
         contentId: con3
@@ -364,28 +353,54 @@ context:
             name: documentsoort
             inputClass: accordion__item__header-checkboxtrigger
             arguments: aria-controls="con3" aria-checked="false"
-        ha_vergadernummer:
+        ha_dossiernummer:
           id: 11112
-          type: number
+          type: text
           fieldLabel: Vergadernummer
           fieldLabelVisible: true
-          fieldPlaceholder: 'JJJJ'
+          fieldPlaceholder: 'Bijv. 12345-XII'
           labelmodifier: secondary
-        ha_itemnummer:
+        ha_spreker:
           id: 1111344
-          type: number
-          fieldLabel: Itemnummer
+          type: text
+          name: spreker
+          fieldLabel: 'Spreker (achternaam)'
           fieldLabelVisible: true
-          fieldPlaceholder: 'Nummer'
+          fieldPlaceholder: 'Naam spreker'
           labelmodifier: secondary
-        ha_paginanummer:
-          id: 11113
+        buttonHaAddSpeaker:
+          id: 100
+          text: Spreker toevoegen
+          anchor: false
+          inputButton: true
+          modifier: js-form-addfield__addbutton
+        ha_datepicker1:
+          id: 11118122232322312
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        ha_datepicker2:
+          id: 1118212312312
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        ha_pagina1:
+          id: 111121
           type: number
-          fieldLabel: Paginanummer
+          fieldLabel: Van
           fieldLabelVisible: true
-          fieldPlaceholder: 'Nummer'
+          fieldPlaceholder: ''
           labelmodifier: secondary
-      item4:
+        ha_pagina2:
+          id: 112121
+          type: number
+          fieldLabel: Tot en met
+          fieldLabelVisible: true
+          fieldPlaceholder: ''
+          labelmodifier: secondary
+      item3:
         type: checkbox
         headerId: header4
         contentId: con4
@@ -410,7 +425,26 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 2'
           labelmodifier: secondary
-      item5:
+        ka_ondertekening:
+          id: 11112212312
+          type: text
+          fieldLabel: Ondertekening
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. achternaam of departement'
+          labelmodifier: secondary
+        ka_datepicker1:
+          id: 11118122232322312
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        ka_datepicker2:
+          id: 1118212312312
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+      item4:
         type: checkbox
         headerId: header5
         contentId: con5
@@ -421,22 +455,15 @@ context:
             name: documentsoort
             inputClass: accordion__item__header-checkboxtrigger
             arguments: aria-controls="con5" aria-checked="false"
-        kv_vraagnummer:
-          id: 1111211
-          type: number
-          fieldLabel: Vraagnummer
-          fieldLabelVisible: true
-          fieldPlaceholder: 'Bijv. 2016Z123456'
-          labelmodifier: secondary
         kv_aanhangselnummer:
-          id: 1111221
+          id: 1111211
           type: number
           fieldLabel: Aanhangselnummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 1234'
           labelmodifier: secondary
         kv_indiener:
-          id: 11112211
+          id: 11112212435
           type: text
           fieldLabel: Indiener (achternaam)
           fieldLabelVisible: true
@@ -449,39 +476,45 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. Jansen'
           labelmodifier: secondary
-      item6:
+        kv_datepicker1:
+          id: 111181222323223128
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        kv_datepicker2:
+          id: 11182123123126
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        kv_datepicker3:
+          id: 111181222323223122
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        kv_datepicker4:
+          id: 11182123123123
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+      item5:
         type: checkbox
         headerId: header6
         contentId: con6
         accordionCheckbox:
           options:
           - id: header6
-            text: Moties
+            text: Naamlijsten
             name: documentsoort
-            inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con6" aria-checked="false"
-        mo_indiener:
-          id: 111122113
-          type: text
-          fieldLabel: Indiener (achternaam)
-          fieldLabelVisible: true
-          fieldPlaceholder: 'Bijv. Jansen'
-          labelmodifier: secondary
-      item7:
+      item6:
         type: checkbox
         headerId: header7
         contentId: con7
         accordionCheckbox:
           options:
           - id: header7
-            text: Niet-dossierstukken
+            text: Registers
             name: documentsoort
-            inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con7" aria-checked="false"
-        nd_documentnummer:
-          id: 111122114
-          type: number
-          fieldLabel: Documentnummer
-          fieldLabelVisible: true
-          fieldPlaceholder: 'Bijv. 2016D123456'
-          labelmodifier: secondary
