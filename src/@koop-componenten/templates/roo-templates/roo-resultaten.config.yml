@@ -42,6 +42,12 @@ context:
     controls: false
     kpm:
       id: 1
+  mapContext2:
+    id: 2
+    modifier:
+    controls: false
+    kpm:
+      id: 2
   resultsContext:
     modifier: result--list--wide
     items:
@@ -75,6 +81,10 @@ context:
       buttons:
         - button: Bekijk details
           type: primary
+        - button: Bekijk op kaart
+          type: secendary
+          action: modal-2
+          modal: true
     - title: Stichting Theater Delft
       titleHeader: h2
       address: 'Stichting Theater Delft, <br>Westvest 7, 2611 AX Delft'
