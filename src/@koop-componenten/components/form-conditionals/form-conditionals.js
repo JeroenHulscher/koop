@@ -72,12 +72,12 @@
       this.inputs[y].addEventListener('change', function(e) { this.actOnChange(e); }.bind(this), false);
     }
     for (i = 0; i < this.buttonNexts.length; i++) {
-      this.buttonNexts[i].addEventListener('click', function(e) { this.actOnChange(e); }.bind(this), false);
+      this.buttonNexts[i].addEventListener('click', function(e) { this.actOnChange(e, "button"); }.bind(this), false);
     }
 
   };
 
-  formConditionals.prototype.actOnChange = function(e) {
+  formConditionals.prototype.actOnChange = function(e, type) {
     var obj;
     var inputType;
     var linkedToQuestionId;
@@ -153,7 +153,9 @@
       this.hideCurrentQuestion(currentQuestionContainer);
     }
 
-    e.preventDefault();
+    if(type === "button") {
+      e.preventDefault();
+    }
   };
 
   formConditionals.prototype.hideCurrentQuestion = function (currentQuestionContainer) {
