@@ -17,7 +17,7 @@ describe('Form add-field', function () {
     });
   });
 
-  fit('on page load should show 2 form rows', function () {
+  it('on page load should show 2 form rows', function () {
     browser.get('http://localhost:3000/components/preview/form-field-repeater');
 
     var width = 1000;
@@ -42,7 +42,7 @@ describe('Form add-field', function () {
 
   });
 
-  fit('on button click should show 3 form rows', function () {
+  it('on button click should show 3 form rows', function () {
 
     buttonAdd = element(by.css('.js-form-fieldrepeater__addbutton'));
     buttonAdd.click();
@@ -63,7 +63,7 @@ describe('Form add-field', function () {
 
   });
 
-  fit('new Id should be updated to 2001', function () {
+  it('new Id should be updated to 2001', function () {
     var row = element.all(by.css('.form__row')).get(1);
     var rowInput = row.element(by.css('.input'));
     var rowInputId = rowInput.getAttribute('id');
@@ -74,7 +74,7 @@ describe('Form add-field', function () {
     expect(rowInputId).toEqual('input-text-2001');
   });
 
-  fit('on button click should show 4 form rows', function () {
+  it('on button click should show 4 form rows', function () {
 
     buttonAdd = element(by.css('.js-form-fieldrepeater__addbutton'));
     buttonAdd.click();
@@ -94,7 +94,7 @@ describe('Form add-field', function () {
     });
   });
 
-  fit('new Id should be updated to 20011', function () {
+  it('new Id should be updated to 20011', function () {
     var row = element.all(by.css('.form__row')).get(2);
     var rowInput = row.element(by.css('.input'));
     var rowInputId = rowInput.getAttribute('id');
@@ -105,7 +105,7 @@ describe('Form add-field', function () {
     expect(rowInputId).toEqual('input-text-20011');
   });
 
-  fit('have the same name attribute', function () {
+  it('have the same name attribute', function () {
     var row1 = element.all(by.css('.form__row')).get(1);
     var row2 = element.all(by.css('.form__row')).get(2);
 
