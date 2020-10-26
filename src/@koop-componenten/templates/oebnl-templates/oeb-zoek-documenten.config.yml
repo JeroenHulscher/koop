@@ -398,7 +398,7 @@ context:
             arguments: aria-controls="con4" aria-checked="false"
         ka_dossiernummer:
           id: 111121
-          type: number
+          type: text
           fieldLabel: Dossiernummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 12345-XII'
@@ -480,7 +480,7 @@ context:
             arguments: aria-controls="con7" aria-checked="false"
         nd_documentnummer:
           id: 111122114
-          type: number
+          type: text
           fieldLabel: Documentnummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 2016D123456'
