@@ -72,17 +72,15 @@ context:
             dd: Zo snel mogelijk na publicatie
       actionsOne:
         - label: Verwijder abonnement Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
-          icon: icon--bin
+          icon: icon--edit
           iconOnly: true
-          href: '#'
           linkedto: 2
           hideself: true
       actionsTwoLabel: Verwijderen?
       actionsTwo:
         - label: Ja
-          href: '#'
+          buttonType: submit
         - label: Nee
-          href: '#'
           linkedto: 1
           hideself: true
       buttonContext:
@@ -106,15 +104,13 @@ context:
         - label: Verwijder abonnement Adamshofstraat 69, 3061ZB Rotterdam
           icon: icon--bin
           iconOnly: true
-          href: '#'
           linkedto: 2
           hideself: true
       actionsTwoLabel: Verwijderen?
       actionsTwo:
         - label: Ja
-          href: '#'
+          buttonType: submit
         - label: Nee
-          href: '#'
           linkedto: 1
           hideself: true
       buttonContext:

@@ -115,6 +115,41 @@
         </div>
       </div>
 
+      <div id="modal-3" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            <div class="row row--large">
+              {{render "@map" mapContext3 }}
+              <script id="config3" type="application/json">
+                      {
+                        "debug":false,
+                        "locations":[
+                        {
+                          "type":"punt",
+                          "geometry":"POINT(85388.72001447542 464483.4858568841)",
+                          "geometry_type":"WKT","title":"Punt 1",
+                          "url":"https://google.com"
+                        }],
+                          "options":{"mode":"geoview"}
+                        }
+                    </script>
+            </div>
+            <h2>Aangevraagde evenementenvergunningen 2018</h2>
+            <p>4 september 2018 - Aangevraagde evenementenvergunningen 2018</p>
+            <ul class="list list--inline list--narrow u-nomargin">
+
+              <li class="list__item">
+                <a href="#" class="button button--primary">Bekijk publicatie</a>
+              </li>
+
+            </ul>
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
+      </div>
+
       {{!-- <div class="pull-right"> --}}
         {{render "@pagination" }}
       {{!-- </div> --}}

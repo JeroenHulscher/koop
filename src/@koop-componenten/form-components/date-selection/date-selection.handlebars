@@ -5,11 +5,21 @@
     </div>
   </div>
   <div id="citem-2" role="region" class="js-form-conditionals__citem">
+    {{#if additionalSelect}}
+      <div class="form__row">
+        {{ render "@select-custom" additionalSelect }}
+      </div>
+    {{/if}}
     <div class="form__row">
       {{render "@datepicker" dateselectionDatum merge=true }}
     </div>
   </div>
   <div id="citem-3" role="region" class="js-form-conditionals__citem">
+    {{#if additionalSelect2}}
+      <div class="form__row">
+        {{ render "@select-custom" additionalSelect2 }}
+      </div>
+    {{/if}}
     {{#if_eq layout 'narrow'}}
       <div class="form__row">
         {{render "@datepicker" dateselectionDatumStart merge=true }}

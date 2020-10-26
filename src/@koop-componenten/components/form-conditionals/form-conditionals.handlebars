@@ -1,71 +1,73 @@
-<div class="form-conditionals" data-decorator="init-form-conditionals">
-  {{#each questions}}
-    <fieldset id="citem-{{id}}" class="form-conditionals__citem form-conditionals__citem js-form-conditionals__citem">
-      <legend>{{question}}</legend>
-        {{#if radio}}
-        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
-        <div class="form__row">
-          {{#each answers}}
-            <div class="input-radio">
-              <input type="radio" class="radio__input" id="option-{{id}}" name="name{{../id}}" data-linkedto="{{link}}" />
-              <label class="radio__label" for="option-{{id}}">
-                {{answer}}
-              </label>
-            </div>
-            {{!-- <label>{{answer}}<input type="radio"  /></label> --}}
-          {{/each}}
-        </div>
-      {{/if}}
-      {{#if checkbox}}
-        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
-        <div class="form__row">
-          {{#each answers}}
-            <div class="input-checkbox">
-              <input type="checkbox" class="checkbox__input" id="option-{{id}}" name="name{{../id}}" />
-              <label class="checkbox__label" for="option-{{id}}">
-                {{answer}}
-              </label>
-            </div>
-            {{!-- <label>{{answer}}<input type="checkbox" name="name{{../id}}" /></label> --}}
-          {{/each}}
-        </div>
-      {{/if}}
-      {{#if select}}
-        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
-        <div class="form__row">
-          <select name="name{{id}}" >
-            {{#each answers}}
-              <option {{#if value}}value="{{value}}"{{/if}} data-linkedto="{{link}}" {{selected}}>{{answer}}</option>
-            {{/each}}
-          </select>
-        </div>
-      {{/if}}
-      {{#if textarea}}
-        {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
-        <div class="form__row">
-          <textarea placeholder="{{placeholder}}"></textarea>
-        </div>
-      {{/if}}
-      {{#if submit}}
-        <div class="form-conditionals__container form-conditionals__container--flex">
+<form>
+  <div class="form-conditionals" data-decorator="init-form-conditionals">
+    {{#each questions}}
+      <fieldset id="citem-{{id}}" class="form-conditionals__citem form-conditionals__citem js-form-conditionals__citem">
+        <legend>{{question}}</legend>
+          {{#if radio}}
           {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
           <div class="form__row">
             {{#each answers}}
-              <button {{#if buttonSubmit}}type="submit"{{/if}} class="button-icon button-icon--{{icon}} js-button-next" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
+              <div class="input-radio">
+                <input type="radio" class="radio__input" id="option-{{id}}" name="name{{../id}}" data-linkedto="{{link}}" />
+                <label class="radio__label" for="option-{{id}}">
+                  {{answer}}
+                </label>
+              </div>
+              {{!-- <label>{{answer}}<input type="radio"  /></label> --}}
             {{/each}}
           </div>
-        </div>
-      {{/if}}
-      {{#if nextButton}}
-        <button class="button js-button-next" data-linkedto="{{link}}" hidden>Volgende</button>
-      {{/if}}
-    </fieldset>
-  {{/each}}
-  <div class="js-form-conditionals__submitcontainer" hidden>
-    <button type="submit" class="button button--primary">{{submitLabel}}</button>
+        {{/if}}
+        {{#if checkbox}}
+          {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
+          <div class="form__row">
+            {{#each answers}}
+              <div class="input-checkbox">
+                <input type="checkbox" class="checkbox__input" id="option-{{id}}" name="name{{../id}}" />
+                <label class="checkbox__label" for="option-{{id}}">
+                  {{answer}}
+                </label>
+              </div>
+              {{!-- <label>{{answer}}<input type="checkbox" name="name{{../id}}" /></label> --}}
+            {{/each}}
+          </div>
+        {{/if}}
+        {{#if select}}
+          {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
+          <div class="form__row">
+            <select name="name{{id}}" >
+              {{#each answers}}
+                <option {{#if value}}value="{{value}}"{{/if}} data-linkedto="{{link}}" {{selected}}>{{answer}}</option>
+              {{/each}}
+            </select>
+          </div>
+        {{/if}}
+        {{#if textarea}}
+          {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
+          <div class="form__row">
+            <textarea placeholder="{{placeholder}}"></textarea>
+          </div>
+        {{/if}}
+        {{#if submit}}
+          <div class="form-conditionals__container form-conditionals__container--flex">
+            {{#if paragraph}}<p>{{paragraph}}</p>{{/if}}
+            <div class="form__row">
+              {{#each answers}}
+                <button {{#if buttonSubmit}}type="submit"{{/if}} class="button-icon button-icon--{{icon}} {{#if link}}js-button-next{{/if}}" data-linkedto="{{link}}" data-triggeresponds="{{triggerReponds}}" data-triggerLastStep="{{triggerLastStep}}">{{answer}}</button>
+              {{/each}}
+            </div>
+          </div>
+        {{/if}}
+        {{#if nextButton}}
+          <button class="button js-button-next" data-linkedto="{{link}}" hidden>Volgende</button>
+        {{/if}}
+      </fieldset>
+    {{/each}}
+    <div class="js-form-conditionals__submitcontainer" hidden>
+      <button type="submit" class="button button--primary">{{submitLabel}}</button>
+    </div>
+    <div class="form-conditionals__responds js-form-conditionals__responds" hidden>
+      <h2 class="form-conditionals__heading">Bedankt voor uw reactie</h2>
+      <p>We gebruiken uw feedback ter verbetering van onze dienstverlening.</p>
+    </div>
   </div>
-  <div class="form-conditionals__responds js-form-conditionals__responds" hidden>
-    <h2 class="form-conditionals__heading">Bedankt voor uw reactie</h2>
-    <p>We gebruiken uw feedback ter verbetering van onze dienstverlening.</p>
-  </div>
-</div>
+</form>

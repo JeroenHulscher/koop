@@ -30,4 +30,9 @@ variants:
     context:
       id: 4
       selectToday: true
+  - name: Met label
+    context:
+      id: 4
+      haslabel: true
+      label: Vanaf
 

@@ -62,7 +62,7 @@ gulp.task( 'fractal:start-twig', function(){
 });
 
 gulp.task( 'fractal:build', function(){
-  const fractal = require( './fractal.js' );
+  const fractal = require( './fractal_build.js' );
   const logger = fractal.cli.console;
   const builder = fractal.web.builder();
 

@@ -1,0 +1,520 @@
+---
+label: OEB 2.0 - Zoek - Historische parlementaire documenten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Parlementaire documenten
+  tabs:
+    items:
+      - content: <a href="templates-oeb-zoek-bekendmakingen">Officiële bekendmakingen</a>
+      - content: <a href="templates-oeb-zoek-documenten" class="is-selected">Parlementaire documenten</a>
+  jumbotronContext:
+    heading: Zoek in historische parlementaire documenten
+    hstyle: h2
+    subheading: Historische parlementaire documenten (1814 - 1995)
+    intro: U kunt ook <a href="#">Zoeken in parlementaire documenten na 1995</a>.
+    centered: true
+    size: semimedium
+    inputZoekwoord:
+      fieldPlaceholder: Zoekterm of (dossier)nummer
+      fieldLabel: Zoek in parlementaire documenten
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    zoekeninContext:
+      id: 9876544567
+      fieldLabel: Zoek in
+      labelmodifier: accent
+      fieldLabelVisible: true
+      modifier: select-custom--large
+      options:
+        - label: Gehele tekst
+          value: gehele-tekst
+          selected: selected
+        - label: Alleen titel
+          value: alleen-titel
+    dateselection:
+      additionalSelect:
+        id: 1678765
+        fieldLabel: Datum van
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: true
+        tooltip:
+          content: 'Datum publicatie: Gebruik de datum waarop het document is gepubliceerd op deze site. Datum document: Gebruik de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          id: 1231298765456782
+        options:
+        - id: 1012
+          value:
+          label: Publicatie
+          linkedto: 1
+        - id: 1023
+          value: 10
+          label: Document
+          selected: selected
+      additionalSelect2:
+        id: 16787654
+        fieldLabel: Datum van
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: true
+        tooltip:
+          id: 12312987657456789
+        options:
+        - id: 10121
+          value:
+          label: Publicatie
+          linkedto: 1
+        - id: 10231
+          value: 10
+          label: Document
+          selected: selected
+      dateselectionDatum:
+        label: Datum
+        value: '2020-09-11'
+        datavalue: '11-09-2020'
+        configDateFormat: 'dd-mm-yy'
+      dateselectionDatumEnd:
+        value: '2020-09-11'
+        datavalue: '11-09-2020'
+        configDateFormat: 'dd-mm-yy'
+    inputsubmitContext:
+      button: Zoek verdagen
+      placeholder: Vul hier uw zoekwoord(en) in
+    checkboxDocumentsoort:
+      id: 5
+      label: documentsoorten en gegevens
+      checkboxes:
+        options:
+          - id: checkbox-20
+            text: Agenda's
+            name: documentsoort
+          - id: checkbox-201
+            text: Handelingen
+            name: documentsoort
+          - id: checkbox-202
+            text: Kamerstukken
+            name: documentsoort
+          - id: checkbox-203
+            text: Kamervragen
+            name: documentsoort
+          - id: checkbox-204
+            text: Moties
+            name: documentsoort
+          - id: checkbox-205
+            text: Niet-dossierstukken
+            name: documentsoort
+    buttonSubmit:
+      id: 123
+      text: Zoek documenten
+      button: true
+      modifier: button--primary form__button
+    checkboxPub:
+      options:
+        - id: checkbox-2011
+          text: Eerste kamer
+          name: puborganisatie
+          checked: checked
+        - id: checkbox-20122
+          text: Tweede kamer
+          name: puborganisatie
+          checked: checked
+        - id: checkbox-20233
+          text: Verenigde Vergadering
+          name: puborganisatie
+          checked: checked
+    subselectionVerContext:
+      linkText: Selecteer informatiesoort(en)
+      id: 20
+      modalTitle: Type organisatie(s)
+      label: Zoek type organisatie(s)
+      inputPlaceholder: 'Zoekterm'
+      searchFilter: true
+      maxShow: 3
+      type: span
+      multilevel: false
+      buttonResetForm: true
+      controls:
+        selectAllLabel: Selecteer alle organisaties
+      Options:
+        - Option: 1
+          id: 1237
+          title: 2019-2020
+          short: 2019-2020
+        - Option: 2
+          id: 22372312321312
+          title: 2018-2019
+          short: 2018-2019
+        - Option: 3
+          id: 323723
+          title: 2017-2018
+          short: 2017-2018
+        - Option: 1222222222
+          id: 1237232
+          title: 2016-2017
+          short: 2016-2017
+        - Option: 2222222222222
+          id: 223712312312
+          title: 2015-2016
+          short: 2015-2016
+        - Option: 3222222221
+          id: 32371231231
+          title: 2014-2015
+          short: 2014-2015
+        - Option: 32222222212
+          id: 32371231232
+          title: 2013-2014
+          short: 2013-2014
+        - Option: 3222222223
+          id: 32371231233
+          title: 2012-2013
+          short: 2012-2013
+        - Option: 3222222224
+          id: 32371231234
+          title: 2011-2012
+          short: 2011-2012
+        - Option: 3222222225
+          id: 32371231235
+          title: 2010-2011
+          short: 2010-2011
+        - Option: 3222222226
+          id: 32371231237
+          title: 2009-2010
+          short: 2009-2010
+        - Option: 3222222227
+          id: 32371231238
+          title: 2008-2009
+          short: 2008-2009
+        - Option: 3222222228
+          id: 32371231239
+          title: 2007-2008
+          short: 2007-2008
+        - Option: 3222222229
+          id: 323712312310
+          title: 2006-2007
+          short: 2006-2007
+        - Option: 32222222271
+          id: 323712312311
+          title: 2005-2006
+          short: 2005-2006
+        - Option: 32222222271
+          id: 3237123123112
+          title: 2004-2005
+          short: 2004-2005
+        - Option: 32222222271
+          id: 3237123123113
+          title: 2003-2004
+          short: 2003-2004
+        - Option: 32222222271
+          id: 3237123123114
+          title: 2002-2003
+          short: 2002-2003
+        - Option: 32222222271
+          id: 3237123123115
+          title: 2001-2002
+          short: 2001-2002
+        - Option: 32222222271
+          id: 3237123123116
+          title: 2000-2001
+          short: 2000-2001
+    subselectionWatContext:
+      linkText: Selecteer informatiesoort(en)
+      id: 1900
+      modalTitle: Onderwerp(en)
+      label: Zoek onderwerp
+      inputPlaceholder: 'Zoekterm'
+      type: span
+      searchFilter: true
+      multilevel: false
+      buttonResetForm: true
+      controls:
+        selectAllLabel: Selecteer alle onderwerpen
+      Options:
+        - Option: 4
+          id: 44551
+          title: Bestuur
+          short: Bestuur
+        - Option: 5
+          id: 54552
+          title: Cultuur en recreatie
+          short: Cultuur en recreatie
+        - Option: 6
+          id: 64553
+          title: Economie
+          short: Economie
+        - Option: 6
+          id: 64554
+          title: Financiën
+          short: Financiën
+        - Option: 6
+          id: 64555
+          title: Huisvesting
+          short: Huisvesting
+        - Option: 6
+          id: 64556
+          title: Internationaal
+          short: Internationaal
+        - Option: 6
+          id: 64557
+          title: Landbouw
+          short: Landbouw
+        - Option: 6
+          id: 64558
+          title: Migratie en integratie
+          short: Migratie en integratie
+        - Option: 6
+          id: 64559
+          title: Natuur en milieu
+          short: Natuur en milieu
+        - Option: 6
+          id: 645510
+          title: Onderwijs en waterschap
+          short: Onderwijs en waterschap
+        - Option: 6
+          id: 645511
+          title: Openbare orde en veiligheid
+          short: Openbare orde en veiligheid
+        - Option: 6
+          id: 645512
+          title: Recht
+          short: Recht
+        - Option: 6
+          id: 645513
+          title: Ruimte en infrastructuur
+          short: Ruimte en infrastructuur
+        - Option: 6
+          id: 645514
+          title: Sociale zekerheid
+          short: Sociale zekerheid
+        - Option: 6
+          id: 645515
+          title: Verkeer
+          short: Verkeer
+        - Option: 6
+          id: 645516
+          title: Werk
+          short: Werk
+        - Option: 6
+          id: 645517
+          title: Zorg en gezondheid
+          short: Zorg en gezondheid
+    accordion1:
+      type: checkbox
+      item1:
+        type: checkbox
+        headerId: header1
+        headerLabel: Accordion Vraag 1
+        contentId: con1
+        hasContent: false
+        accordionCheckbox:
+          options:
+          - id: header1
+            text: Alle documentsoorten
+            name: documentsoort
+            checked: checked
+            inputClass: js-checkbox-master
+            arguments: aria-checked="true"
+      item2:
+        type: checkbox
+        headerId: header3
+        contentId: con3
+        accordionCheckbox:
+          options:
+          - id: header3
+            text: Handelingen
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con3" aria-checked="false"
+        ha_dossiernummer:
+          id: 11112
+          type: text
+          fieldLabel: Vergadernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 12345-XII'
+          labelmodifier: secondary
+        ha_spreker:
+          id: 1111344
+          type: text
+          name: spreker
+          fieldLabel: 'Spreker (achternaam)'
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Naam spreker'
+          labelmodifier: secondary
+        buttonHaAddSpeaker:
+          id: 100
+          text: Spreker toevoegen
+          anchor: false
+          button: true
+          modifier: js-form-fieldrepeater__addbutton
+        ha_datepicker1:
+          id: 11118122232322312
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        ha_datepicker2:
+          id: 1118212312312
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        ha_pagina1:
+          id: 111121333333
+          type: number
+          fieldLabel: Van
+          fieldLabelVisible: true
+          fieldPlaceholder: ''
+          labelmodifier: secondary
+        ha_pagina2:
+          id: 112121
+          type: number
+          fieldLabel: Tot en met
+          fieldLabelVisible: true
+          fieldPlaceholder: ''
+          labelmodifier: secondary
+      item3:
+        type: checkbox
+        headerId: header4
+        contentId: con4
+        accordionCheckbox:
+          options:
+          - id: header4
+            text: Kamerstukken
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con4" aria-checked="false"
+        ka_dossiernummer:
+          id: 111121
+          type: text
+          fieldLabel: Dossiernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 12345-XII'
+          labelmodifier: secondary
+        ka_ondernummer:
+          id: 111122
+          type: number
+          fieldLabel: Ondernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 2'
+          labelmodifier: secondary
+        ka_ondertekening:
+          id: 11112212312
+          type: text
+          fieldLabel: Ondertekening
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. achternaam of departement'
+          labelmodifier: secondary
+        ka_datepicker1:
+          id: 1111812223232231255
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        ka_datepicker2:
+          id: 11182123123127777
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+      item4:
+        type: checkbox
+        headerId: header5
+        contentId: con5
+        accordionCheckbox:
+          options:
+          - id: header5
+            text: Kamervragen
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con5" aria-checked="false"
+        kv_aanhangselnummer:
+          id: 1111211
+          type: number
+          fieldLabel: Aanhangselnummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 1234'
+          labelmodifier: secondary
+        kv_indiener:
+          id: 11112212435
+          type: text
+          fieldLabel: Indiener (achternaam)
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. Jansen'
+          labelmodifier: secondary
+        kv_ontvanger:
+          id: 1111222
+          type: text
+          fieldLabel: Ontvangen (achternaam)
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. Jansen'
+          labelmodifier: secondary
+        kv_datepicker1:
+          id: 111181222323223128
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        kv_datepicker2:
+          id: 11182123123126
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        kv_datepicker3:
+          id: 111181222323223122
+          haslabel: true
+          label: 'Vanaf'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+        kv_datepicker4:
+          id: 11182123123123
+          haslabel: true
+          label: 'Tot en met'
+          labelmodifier: secondary
+          fieldPlaceholder: 'DD-MM-JJJJ'
+      item5:
+        type: checkbox
+        headerId: header6
+        contentId: con6
+        accordionCheckbox:
+          options:
+          - id: header6
+            text: Naamlijsten
+            name: documentsoort
+      item6:
+        type: checkbox
+        headerId: header7
+        contentId: con7
+        accordionCheckbox:
+          options:
+          - id: header7
+            text: Registers
+            name: documentsoort

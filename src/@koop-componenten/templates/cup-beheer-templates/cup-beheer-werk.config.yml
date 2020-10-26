@@ -116,127 +116,264 @@ context:
     - type: Aantal expressies
       value: '3 <small><i>(laatste expressie op: 16-01-2020)</i></small>'
   btnEdit:
+    type: submit
     text: Wijzig metadata
+  submitContext:
+    type: submit
+    text: Verwijder werk
   btnSync:
     text: Synchroniseer
   btnRem:
     text: Verwijderen
-  expressie2:
-    heading: Expressie 2
-    headingExtra: 16-01-2020
-    id: 31
-    modifier: collapsible--initially-visible
-    manifest2Actions:
-      items:
-      - link: '#'
-        text: Toon searchable (NL)
-        icon: icon-publicatie.svg
-        modal: true
-        modalId: 9
-      - link: '#'
-        text: Toon searchable (EN)
-        icon: icon-publicatie.svg
-        modal: true
-        modalId: 10
-      - link: '#'
-        text: Toon framework manifestat
-        icon: icon-publicatie.svg
-        modal: true
-        modalId: 11
-    tableExpressie2:
-      label: default
-      modifier: table--condensed
-      items:
-        - item:
-          - column:
-            type: Label
-            value: metadataowns
-          - column:
-            type: Item naam
-            value: <a href="#">metadata_owms.xml/ag/onopgemaakt</a>
-          - column:
-            type: Grootte
-            value: '-'
-          - column:
-            type: Datum
-            value: 16-01-2020
-        - item:
-          - column:
-            type: Label
-            value: pdf
-          - column:
-            type: Item naam
-            value: <a href="#">ag-11580.pdf</a>
-          - column:
-            type: Grootte
-            value: '-'
-          - column:
-            type: Datum
-            value: 16-01-2020
-        - item:
-          - column:
-            type: Label
-            value: metadata
-          - column:
-            type: Item naam
-            value: <a href="#">metadata.xml</a>
-          - column:
-            type: Grootte
-            value: '-'
-          - column:
-            type: Datum
-            value: 16-01-2020
-  expressie1:
-    heading: Expressie 1
-    headingExtra: 10-01-2020
-    id: 32
-    manifest1Actions:
-      items:
-      - link: '#'
-        text: Toon searchable (NL)
-        icon: icon-publicatie.svg
-        modal: true
-        modalId: 6
-      - link: '#'
-        text: Toon searchable (EN)
-        icon: icon-publicatie.svg
-        modal: true
-        modalId: 7
-      - link: '#'
-        text: Toon framework manifestat
-        icon: icon-publicatie.svg
-        modal: true
-        modalId: 8
-    tableExpressie1:
-      label: default
-      modifier: table--condensed
-      items:
-        - item:
-          - column:
-            type: Label
-            value: metadataowns
-          - column:
-            type: Item naam
-            value: <a href="#">metadata_owms.xml/ag/onopgemaakt</a>
-          - column:
-            type: Grootte
-            value: '-'
-          - column:
-            type: Datum
-            value: 10-01-2020
-        - item:
-          - column:
-            type: Label
-            value: metadata
-          - column:
-            type: Item naam
-            value: <a href="#">metadata.xml</a>
-          - column:
-            type: Grootte
-            value: '-'
-          - column:
-            type: Datum
-            value: 10-01-2020
+  accordionExpressies:
+    item1:
+      headerId: header1
+      headerLabel: Expressie 1
+      headerLabel2: (10-10-2020)
+      contentId: con1
+      content: Accordion Antwoord 1
+      moreless1:
+        listmodifier: list--linked
+        items:
+          - item: <a href="#">Toon searchable (NL)</a>
+          - item: <a href="#">Toon searchable (EN)</a>
+          - item: <a href="#">Toon searchable (BE)</a>
+          - item: <a href="#">Toon framework manifestat (EN)</a>
+          - item: <a href="#">Toon framework manifestat (NL)</a>
+          - item: <a href="#">Toon framework manifestat (BE)</a>
+          - item: <a href="#">Toon framework manifestat (FR)</a>
+          - item: <a href="#">Toon framework manifestat (SE)</a>
+      btnEditE2:
+        type: submit
+        text: Wijzig expressie
+      submitContext2:
+        type: submit
+        text: Verwijder expressie
+      tableExpressie1:
+        label: default
+        caption: "Aanwezige labels: <span class='label'>metadataowns</span> <span class='label'>pdf</span> <span class='label'>metadata</span>"
+        modifier: table--condensed
+        items:
+          - item:
+            - column:
+              type: Label
+              value: metadataowns
+            - column:
+              type: Item naam
+              value: <a href="#">metadata_owms.xml/ag/onopgemaakt</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11585.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11584.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11583.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11582.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11581.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: metadata
+            - column:
+              type: Item naam
+              value: <a href="#">metadata.xml</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+    item2:
+      headerId: header2
+      headerLabel: Expressie 2
+      headerLabel2: (16-10-2020)
+      contentId: con2
+      content: Accordion Antwoord 1
+      isOpen: true
+      collapActions:
+        heading: Acties (4)
+        id: 111
+      moreless2:
+        listmodifier: list--linked
+        items:
+          - item: Toon searchable (NL)
+            attributes: data-handler="open-modal" data-modal="5231"
+          - item: Toon searchable (EN)
+          - item: Toon searchable (BE)
+          - item: Toon framework manifestat (EN)
+          - item: Toon framework manifestat (NL)
+          - item: Toon framework manifestat (BE)
+          - item: Toon framework manifestat (FR)
+          - item: Toon framework manifestat (SE)
+      btnEditE1:
+        type: submit
+        text: Wijzig expressie
+      submitContext1:
+        type: submit
+        text: Verwijder expressie
+      moreless2modal1:
+        modalId: 5231
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      tableExpressie2:
+        label: default
+        caption: "Aanwezige labels: <span class='label'>metadataowns</span> <span class='label'>pdf</span> <span class='label'>metadata</span>"
+        modifier: table--condensed
+        items:
+          - item:
+            - column:
+              type: Label
+              value: metadataowns
+            - column:
+              type: Item naam
+              value: <a href="#">metadata_owms.xml/ag/onopgemaakt</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11585.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11584.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11583.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11582.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11581.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: metadata
+            - column:
+              type: Item naam
+              value: <a href="#">metadata.xml</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
 
 
 

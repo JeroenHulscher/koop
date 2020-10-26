@@ -40,7 +40,7 @@ context:
     heading: Zoek in parlementaire documenten
     hstyle: h2
     subheading: Parlementaire documenten
-    intro: Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.
+    intro: U kunt ook <a href="#">Zoeken in historische parlementaire documenten (1814 - 1995)</a>.
     centered: true
     size: semimedium
     inputZoekwoord:
@@ -49,7 +49,54 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+    zoekeninContext:
+      id: 9876544567
+      fieldLabel: Zoek in
+      labelmodifier: accent
+      fieldLabelVisible: true
+      modifier: select-custom--large
+      options:
+        - label: Gehele tekst
+          value: gehele-tekst
+          selected: selected
+        - label: Alleen titel
+          value: alleen-titel
     dateselection:
+      additionalSelect:
+        id: 1678765
+        fieldLabel: Datum van
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: true
+        tooltip:
+          content: 'Datum publicatie: Gebruik de datum waarop het document is gepubliceerd op deze site. Datum document: Gebruik de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          id: 1231298765456782
+        options:
+        - id: 1012
+          value:
+          label: Publicatie
+          linkedto: 1
+        - id: 1023
+          value: 10
+          label: Document
+          selected: selected
+      additionalSelect2:
+        id: 16787654
+        fieldLabel: Datum van
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: true
+        tooltip:
+          id: 12312987657456789
+        options:
+        - id: 10121
+          value:
+          label: Publicatie
+          linkedto: 1
+        - id: 10231
+          value: 10
+          label: Document
+          selected: selected
       dateselectionDatum:
         label: Datum
         value: '2020-09-11'
@@ -279,3 +326,162 @@ context:
           id: 645517
           title: Zorg en gezondheid
           short: Zorg en gezondheid
+    accordion1:
+      type: checkbox
+      item1:
+        type: checkbox
+        headerId: header1
+        headerLabel: Accordion Vraag 1
+        contentId: con1
+        hasContent: false
+        accordionCheckbox:
+          options:
+          - id: header1
+            text: Alle
+            name: documentsoort
+            checked: checked
+            inputClass: js-checkbox-master
+            arguments: aria-checked="true"
+      item2:
+        type: checkbox
+        headerId: header2
+        headerLabel: Accordion Vraag 2
+        contentId: con2
+        hasContent: false
+        accordionCheckbox:
+          options:
+          - id: header2
+            text: "Agenda's"
+            name: documentsoort
+      item3:
+        type: checkbox
+        headerId: header3
+        contentId: con3
+        accordionCheckbox:
+          options:
+          - id: header3
+            text: Handelingen
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con3" aria-checked="false"
+        ha_vergadernummer:
+          id: 11112
+          type: number
+          fieldLabel: Vergadernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'JJJJ'
+          labelmodifier: secondary
+        ha_itemnummer:
+          id: 1111344
+          type: number
+          fieldLabel: Itemnummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+        ha_paginanummer:
+          id: 11113
+          type: number
+          fieldLabel: Paginanummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Nummer'
+          labelmodifier: secondary
+      item4:
+        type: checkbox
+        headerId: header4
+        contentId: con4
+        accordionCheckbox:
+          options:
+          - id: header4
+            text: Kamerstukken
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con4" aria-checked="false"
+        ka_dossiernummer:
+          id: 111121
+          type: text
+          fieldLabel: Dossiernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 12345-XII'
+          labelmodifier: secondary
+        ka_ondernummer:
+          id: 111122
+          type: number
+          fieldLabel: Ondernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 2'
+          labelmodifier: secondary
+      item5:
+        type: checkbox
+        headerId: header5
+        contentId: con5
+        accordionCheckbox:
+          options:
+          - id: header5
+            text: Kamervragen
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con5" aria-checked="false"
+        kv_vraagnummer:
+          id: 1111211
+          type: number
+          fieldLabel: Vraagnummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 2016Z123456'
+          labelmodifier: secondary
+        kv_aanhangselnummer:
+          id: 1111221
+          type: number
+          fieldLabel: Aanhangselnummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 1234'
+          labelmodifier: secondary
+        kv_indiener:
+          id: 11112211
+          type: text
+          fieldLabel: Indiener (achternaam)
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. Jansen'
+          labelmodifier: secondary
+        kv_ontvanger:
+          id: 1111222
+          type: text
+          fieldLabel: Ontvangen (achternaam)
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. Jansen'
+          labelmodifier: secondary
+      item6:
+        type: checkbox
+        headerId: header6
+        contentId: con6
+        accordionCheckbox:
+          options:
+          - id: header6
+            text: Moties
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con6" aria-checked="false"
+        mo_indiener:
+          id: 111122113
+          type: text
+          fieldLabel: Indiener (achternaam)
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. Jansen'
+          labelmodifier: secondary
+      item7:
+        type: checkbox
+        headerId: header7
+        contentId: con7
+        accordionCheckbox:
+          options:
+          - id: header7
+            text: Niet-dossierstukken
+            name: documentsoort
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con7" aria-checked="false"
+        nd_documentnummer:
+          id: 111122114
+          type: text
+          fieldLabel: Documentnummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 2016D123456'
+          labelmodifier: secondary

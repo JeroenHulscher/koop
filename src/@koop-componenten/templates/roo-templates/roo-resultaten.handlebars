@@ -159,6 +159,95 @@
 
     {{render "@resultlist" resultsContext }}
 
+    <div id="modal-1" class="modal modal--wide modal--off-screen" hidden role="alert">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="row row--large">
+            {{render "@map" mapContext }}
+            <script id="config1" type="application/json">
+              {
+                "debug":false,
+                "options": {
+                  "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                  "class": "kaartprikmodule-overlay",
+                  "mode": "geoview",
+                  "center": {
+                    "highlight": true,
+                    "type": "location",
+                    "location": {
+                      "type": "gemeente",
+                      "title": "Gemeente Delft"
+                    }
+                  },
+                  "controls": ["zoom"],
+                  "layers": {
+                    "bgtachtergrondkaart": {
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            </script>
+          </div>
+          <h2>Gemeente Delft</h2>
+          <address>
+             <p>Gemeente Delft, Stationsplein 1, 2611 BV DELFT
+            </p>
+          </address>
+          <p>
+            <a href="#" class="button button--primary">Bekijk details</a>
+          </p>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+      </div>
+    </div>
+    <div id="modal-2" class="modal modal--wide modal--off-screen" hidden role="alert">
+      <div class="modal__inner">
+        <div class="modal__content">
+          <div class="row row--large">
+            {{render "@map" mapContext2 }}
+            <script id="config2" type="application/json">
+              {
+                "debug":false,
+                "locations": [
+                  {
+                    "type": "punt",
+                    "geometry": "POINT(83388.72001447542 454483.4858568841)",
+                    "geometry_type": "WKT",
+                    "title": "Punt 1",
+                    "url": "https://google.com"
+                  }
+                ],
+                "options": {
+                  "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                  "mode": "geoview",
+                  "controls": ["zoom"],
+                  "layers": {
+                    "bgtachtergrondkaart": {
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            </script>
+          </div>
+          <h2>Stichting IHE Delft Institute for Water Education</h2>
+          <address>
+            <p>Stichting IHE Delft Institute for Water Education, Westvest 7, 2611 AX Delft
+            </p>
+          </address>
+          <p>
+            <a href="#" class="button button--primary">Bekijk details</a>
+          </p>
+        </div>
+        <button type="button" data-handler="close-modal" class="modal__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+      </div>
+    </div>
+
     {{render "@pagination" }}
 
   </div>

@@ -17,3 +17,48 @@ context:
     headerLabel: Accordion Vraag 3
     contentId: con3
     content: Accordion Antwoord 3
+variants:
+  - name: Enkel paneel
+    context:
+      config: '{"allowMultiplePanelsOpen": false}'
+  - name: Checkbox
+    context:
+      type: checkbox
+      item1:
+        type: checkbox
+        headerId: header1
+        headerLabel: Accordion Vraag 1
+        contentId: con1
+        content: Accordion Antwoord 1
+        accordionCheckbox:
+          options:
+          - id: header1
+            text: Agenda's
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con1" id="option-header1" aria-checked="false"
+      item2:
+        type: checkbox
+        headerId: header2
+        headerLabel: Accordion Vraag 2
+        contentId: con2
+        content: Accordion Antwoord 2
+        accordionCheckbox:
+          options:
+          - id: header2
+            text: Handelingen
+            name: countries
+            inputClass: accordion__item__header-checkboxtrigger
+            arguments: aria-controls="con2" id="option-header2" aria-checked="false"
+      item3:
+        type: checkbox
+        headerId: header3
+        headerLabel: Accordion Vraag 3
+        contentId: con3
+        content: Accordion Antwoord 3
+        hasContent: false
+        accordionCheckbox:
+          options:
+          - id: checkbox-3
+            text: Kamerstukken
+            name: countries
