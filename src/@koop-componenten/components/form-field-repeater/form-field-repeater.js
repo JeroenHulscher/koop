@@ -34,7 +34,7 @@
 
     clone.querySelector('label').setAttribute('for', existingRow.querySelector('input').id + '1');
     clone.querySelector('input').id = existingRow.querySelector('input').id + '1';
-    existingRow.after(clone);
+    existingRow.parentNode.insertBefore(clone, existingRow.nextSibling);
     clone.querySelector('input').focus();
 
     e.preventDefault();
