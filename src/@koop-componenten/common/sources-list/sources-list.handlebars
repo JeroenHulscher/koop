@@ -36,9 +36,9 @@
             {{actionsOneLabel}}
             {{#each actionsOne }}
               {{#if iconOnly}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} class="button-icon button-icon--plain button-icon--bin{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button-icon button-icon--plain button-icon--bin{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
               {{else}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
               {{/if}}
             {{/each}}
           </div>
@@ -46,16 +46,16 @@
             <em>{{actionsTwoLabel}}</em>
             {{#each actionsTwo }}
               {{#if iconOnly}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
               {{else}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
               {{/if}}
             {{/each}}
           </div>
           <div id="{{idprefix}}3" class="js-form-conditionals__citem">
             {{actionsThreeLabel}}
             {{#each alternativeActions }}
-              <{{#if href}}a href="{{href}}"{{else}}button{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+              <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" data-linkedto="{{linkedto}}" {{#if linkedto}}data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
             {{/each}}
           </div>
         </div>
