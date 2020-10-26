@@ -18,14 +18,14 @@
     <div class="row">
       <h2>Huidige instellingen e-mailservice <span class="h2__sub">4 abonnementen</span></h2>
       <div class="row">
-        <div data-decorator="init-sourceslist">
-          <form>
-            <fieldset>
-              <legend class="visually-hidden">Abonnementen</legend>
-              {{render "@sources-list" abonnementenContext}}
-            </fieldset>
-          </form>
-        </div>
+        <form>
+          <fieldset>
+            <legend class="visually-hidden">Abonnementen</legend>
+            <div data-decorator="init-sourceslist">
+                {{render "@sources-list" abonnementenContext}}
+            </div>
+          </fieldset>
+        </form>
       </div>
       <div class="columns columns--vcenter">
         <div class="column">

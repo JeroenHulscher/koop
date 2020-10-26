@@ -46,7 +46,7 @@ context:
       actionsTwoLabel: Verwijderen?
       actionsTwo:
         - label: Ja
-          href: '#'
+          href: 'www.overheid.nl'
         - label: Nee
           linkedto: 1
           hideself: true
