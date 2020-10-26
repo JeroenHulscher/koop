@@ -134,7 +134,7 @@ context:
             name: documentsoort
     buttonSubmit:
       id: 123
-      text: Zoek bekendmakingen
+      text: Zoek documenten
       button: true
       modifier: button--primary form__button
     checkboxPub:

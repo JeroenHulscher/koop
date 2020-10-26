@@ -134,7 +134,7 @@ context:
             name: documentsoort
     buttonSubmit:
       id: 123
-      text: Zoek bekendmakingen
+      text: Zoek documenten
       button: true
       modifier: button--primary form__button
     checkboxPub:
@@ -372,8 +372,8 @@ context:
           id: 100
           text: Spreker toevoegen
           anchor: false
-          inputButton: true
-          modifier: js-form-addfield__addbutton
+          button: true
+          modifier: js-form-fieldrepeater__addbutton
         ha_datepicker1:
           id: 11118122232322312
           haslabel: true
@@ -413,7 +413,7 @@ context:
             arguments: aria-controls="con4" aria-checked="false"
         ka_dossiernummer:
           id: 111121
-          type: number
+          type: text
           fieldLabel: Dossiernummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 12345-XII'
