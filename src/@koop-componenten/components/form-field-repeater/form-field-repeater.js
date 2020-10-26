@@ -22,7 +22,9 @@
   }
 
   addfield.prototype.initEventListeners = function () {
-    this.addbutton.addEventListener('click', function (e) { this.actionAddButton(e); }.bind(this), false);
+    if (this.addbutton){
+      this.addbutton.addEventListener('click', function (e) { this.actionAddButton(e); }.bind(this), false);
+    }
   };
 
   addfield.prototype.actionAddButton = function (e) {
