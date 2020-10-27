@@ -26,6 +26,7 @@
 
       var config = JSON.parse(element.getAttribute('data-config')) || [];
       if (typeof window[config.function] === 'function') {
+        console.log('config.data', config.data);
         var functionToCall = window[config.function];
         new functionToCall(config.action, JSON.parse(document.getElementById(config.data).innerHTML));
       }
@@ -36,9 +37,9 @@
       //   }
       // }
 
-      pubsub.publish('/modal/open', {
-        modal: modal
-      });
+      // pubsub.publish('/modal/open', {
+      //   modal: modal
+      // });
 
     },
     close: function( modal ) {

@@ -10,6 +10,7 @@
   });
 
   var kpmService = function (element, action) {
+    // console.log('kpmService');
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.dataFromJSON = document.querySelector(this.config.config).innerHTML;
@@ -25,8 +26,10 @@
 
     if (!isModalVisible) {
       var subscription = pubsub.subscribe('/modal/open', function (obj) {
+        // console.log('subscribe received: /modal/modal');
         var kpmMap = obj.modal.querySelector('.map__kpm');
-        if (!kpmMap) { return; }
+        if (!kpmMap) { console.log('geen kpmMap'); return; }
+        // console.log('id', self.id, kpmMap.getAttribute('id'));
         if (self.id === kpmMap.getAttribute('id')) {
           self.setupMap();
         }
@@ -65,7 +68,8 @@
         // console.log("The following result was returned:", result);
       }
     };
-    this.data.mount_element = document.getElementById(this.element.getAttribute('id'));
+    // this.data.mount_element = document.getElementById(this.element.getAttribute('id'));
+    this.data.mount_element = '#' + this.element.getAttribute('id');
 
 
     // extend object with component config;
@@ -96,6 +100,8 @@
   };
 
   kpmService.prototype.renderMap = function () {
+    // console.log('this.data', this.data);
+    // console.log('this.data.mount_element', this.data.mount_element);
     if (typeof window.kaartprikmodule != "undefined") {
     // if (typeof window.kaartprikmodule.bootstrapKpm != "undefined") {
       // window.kaartprikmodule.bootstrapKpm(this.data);
@@ -103,4 +109,24 @@
     }
   };
 
+
 })();
+
+var kpmService2 = function (action, data) {
+
+  this.data = data;
+  console.log('kpmService2', this.data);
+  console.log('kpmService2 action?', action);
+  if (action === 'push') {
+    this.push(data);
+  }
+};
+
+kpmService2.prototype.push = function (data) {
+  window.kaartprikmodule = window.kaartprikmodule || [];
+  window.kaartprikmodule.push(['bootstrapKpm', data]);
+  console.log('pussssht', data);
+};
+
+new kpmService2();
+
