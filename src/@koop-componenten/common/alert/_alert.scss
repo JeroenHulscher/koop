@@ -15,7 +15,7 @@
     border-color: $orange;
     border-radius: 0;
     margin: .5em 0;
-    padding: 0.5em 1em 0;
+    padding: 0 1em 0 3em;
 
     h3 {
       color: $black;
@@ -61,6 +61,7 @@
   &--fixed {
     position: fixed;
     left: 0;
+    top: 0;
     border-radius: 0;
     width: 100%;
     margin-top: 0;
