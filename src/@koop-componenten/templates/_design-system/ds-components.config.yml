@@ -51,14 +51,22 @@ context:
       sub: true
       anker: true
       subItems:
-        - stitle: Address
-          href: address
+        - stitle: Accordion
+          href: accordion
+        - stitle: Actieblok
+          href: actieblok
+        - stitle: Adres
+          href: adres
         - stitle: Alert
           href: alert
-        - stitle: Article header
-          href: articleheader
+        - stitle: Artikel hoofd
+          href: artikelhoofd
+        - stitle: A-Z Lijst
+          href: azlijst
         - stitle: Banner
           href: banner
+        - stitle: Blok
+          href: blok
         - stitle: Blockquote
           href: blockquote
         - stitle: Browse
@@ -119,6 +127,8 @@ context:
           href: tooltip
         - stitle: Treeview
           href: treeview
+  alertFixed:
+    fixed: true
   subSel1:
     name: Default
     id: 1131312

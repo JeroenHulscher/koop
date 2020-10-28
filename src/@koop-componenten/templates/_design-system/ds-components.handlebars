@@ -19,12 +19,84 @@
 
       </div>
 
-      <section class="section-chapter js-scrollSection" id="address">
-          <h2 id="">Address</h2>
+      <section class="section-chapter js-scrollSection" id="accordion">
+          <h2 class="section-chapter__heading">Accordion</h2>
+
+          <div class="row">
+            <h3 class="section-chapter__subheading">Default</h3>
+            <p>Meerdere items kunnen tegelijk open staan.</p>
+            <div class="ds-preview">
+              <div class="ds-preview__demo">
+                 {{render "@accordion" }}
+              </div>
+              <div class="ds-preview__content">
+                <p>
+                  <a href="/components/detail/accordion">Bekijk configuratie 'Accordion'</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h3 class="section-chapter__subheading">Default - Enkel paneel</h3>
+            <p>Slechts één item kan open staan.</p>
+            <div class="ds-preview">
+              <div class="ds-preview__demo">
+                {{render "@accordion--enkel-paneel" }}
+              </div>
+              <div class="ds-preview__content">
+                <p>
+                  <a href="/components/detail/accordion--enkel-paneel">Bekijk configuratie variant 'Enkel paneel'</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h3 class="section-chapter__subheading">Checkbox</h3>
+            <div class="ds-preview">
+              <div class="ds-preview__demo">
+                {{render "@accordion--checkbox" }}
+              </div>
+              <div class="ds-preview__content">
+                <p>
+                  <a href="/components/detail/accordion--checkbox">Bekijk variant 'checkbox'</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="actieblok">
+          <h2 id="">Actieblok</h2>
+
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+               {{render "@actionblock" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/actionblock">Bekijk component 'Actieblok'</a>
+              </p>
+            </div>
+          </div>
+
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="adres">
+          <h2 id="">Adres</h2>
 
           <p>Gebruik altijd een <code>address</code> element bij het uitschrijven van een adres.</p>
 
-          {{render "@address" }}
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+               {{render "@address" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/actionblock">Bekijk component 'Actieblok'</a>
+              </p>
+            </div>
+          </div>
       </section>
 
       <section class="section-chapter js-scrollSection" id="alert">
@@ -34,36 +106,190 @@
 
           <p>Speciale meldingen (alerts) kunnen gebruikt zowel buiten als binnen een formulier. De class <code>.alert</code> geeft de standaard styling.</p>
 
-          <div class="row">
-            <h2 class="h5">Default</h2>
-            {{render "@alert" }}
+          <h3 class="section-chapter__subheading">Default</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/actionblock">Bekijk component 'Alert'</a>
+              </p>
+            </div>
           </div>
-          <div class="row">
-            <h2 class="h5">Warning</h2>
-            {{render "@alert--warning" }}
+          <h3 class="section-chapter__subheading">Waarschuwing</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert--warning" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/alert--warning">Bekijk component 'Alert Waarschuwing'</a>
+              </p>
+            </div>
           </div>
-          <div class="row">
-            <h2 class="h5">Info</h2>
-            {{render "@alert--info" }}
+          <h3 class="section-chapter__subheading">Informatie</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert--info" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/alert--info">Bekijk component 'Alert Informatie'</a>
+              </p>
+            </div>
           </div>
-          <div class="row">
-            <h2 class="h5">Success</h2>
-            {{render "@alert--success" }}
+          <h3 class="section-chapter__subheading">Succes</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert--success" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/alert--success">Bekijk component 'Alert Succes'</a>
+              </p>
+            </div>
           </div>
+          <h3 class="section-chapter__subheading">Update</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert--update" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/alert--update">Bekijk component 'Alert update'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Klein</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert--small" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/alert--small">Bekijk component 'Alert klein'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Vaste positie (top)</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@alert--fixed-to-top" alertFixed merge=true }}
+              <div id="holder_1"></div>
+              <script>
+                document.getElementsByClassName('alert--fixed')[0].classList.remove('show');
+                var link = document.createElement('a');
+                link.href = '#';
+                link.innerHTML = 'Toon alert';
+                link.id = 'linkId1';
+                document.getElementById('holder_1').appendChild(link);
+                document.getElementById('linkId1').addEventListener("click", function(e){
+                  document.getElementsByClassName('alert--fixed')[0].classList.add('show');
+                  e.preventDefault();
+                }, false);
+              </script>
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/alert--fixed-to-top">Bekijk component 'Alert vaste positie (top)'</a>
+              </p>
+            </div>
+          </div>
+
       </section>
 
-      <section class="section-chapter js-scrollSection" id="articleheader">
-          <h2 id="">Article header</h2>
+      <section class="section-chapter js-scrollSection" id="artikelhoofd">
+          <h2 id="">Artikel hoofd</h2>
           <p>De article header wordt gebruikt boven wetgevingen en geeft de gebruiker functionaliteiten gerelateerd aan de wetgeving en of artikel.</p>
-
-          {{render "@article-header" }}
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@article-header" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/article-header">Bekijk component 'Artikel hoofd'</a>
+              </p>
+            </div>
+          </div>
       </section>
 
+      <section class="section-chapter js-scrollSection" id="azlijst">
+        <div class="row row--large">
+          <h2 id="">A-Z Lijst</h2>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@az" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/az">Bekijk component 'A-Z Lijst'</a>
+              </p>
+            </div>
+          </div>
+      </section>
       <section class="section-chapter js-scrollSection" id="banner">
         <div class="row row--large">
           <h2 id="">Banner</h2>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@banner" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/banner">Bekijk component 'Banner'</a>
+              </p>
+            </div>
+          </div>
+      </section>
+      <section class="section-chapter js-scrollSection" id="blok">
+        <div class="row row--large">
+          <h2 id="">Blok</h2>
+          <h3 class="section-chapter__subheading">Default</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@block" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/banner">Bekijk component 'Blok'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Primair</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@block--primary" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/block--primair">Bekijk variant 'Primair'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Secondair</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@block--secondary" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/block--secondary">Bekijk variant 'Secondair'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Test</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+               \{{> @button }}
+               {{render '@button'}}
+            </div>
+            <div class="ds-preview__content">
 
-          {{render "@banner" }}
+                 {{context '@button'}}
+
+            </div>
+          </div>
       </section>
 
       <article class="row row--xxxlarge">
