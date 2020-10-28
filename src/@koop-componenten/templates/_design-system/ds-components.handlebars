@@ -23,7 +23,7 @@
           <h2 class="section-chapter__heading">Accordion</h2>
 
           <div class="row">
-            <h3 class="section-chapter__subheading">Default</h3>
+            <h3 class="section-chapter__subheading">Standaard</h3>
             <p>Meerdere items kunnen tegelijk open staan.</p>
             <div class="ds-preview">
               <div class="ds-preview__demo">
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="row">
-            <h3 class="section-chapter__subheading">Default - Enkel paneel</h3>
+            <h3 class="section-chapter__subheading">Standaard - Enkel paneel</h3>
             <p>Slechts één item kan open staan.</p>
             <div class="ds-preview">
               <div class="ds-preview__demo">
@@ -106,7 +106,7 @@
 
           <p>Speciale meldingen (alerts) kunnen gebruikt zowel buiten als binnen een formulier. De class <code>.alert</code> geeft de standaard styling.</p>
 
-          <h3 class="section-chapter__subheading">Default</h3>
+          <h3 class="section-chapter__subheading">Standaard</h3>
           <div class="ds-preview">
             <div class="ds-preview__demo">
               {{render "@alert" }}
@@ -278,16 +278,26 @@
               </p>
             </div>
           </div>
-          <h3 class="section-chapter__subheading">Test</h3>
+          <h3 class="section-chapter__subheading">Call to Action</h3>
           <div class="ds-preview">
             <div class="ds-preview__demo">
-               \{{> @button }}
-               {{render '@button'}}
+               {{render "@block--call-to-action" }}
             </div>
             <div class="ds-preview__content">
-
-                 {{context '@button'}}
-
+              <p>
+                <a href="/components/detail/block--call-to-action">Bekijk variant 'Call to Action'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Slim (dun)</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+               {{render "@block--slim" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                <a href="/components/detail/block--slim">Bekijk variant 'Slim' (dun)</a>
+              </p>
             </div>
           </div>
       </section>
@@ -296,8 +306,36 @@
         <div class="row row--large">
           <h2 id="blockquote">Blockquote</h2>
           <p>Een citaat wordt weergegeven in een <code>blockquote</code> element. Geef in de <code>cite</code> de bron aan van de citaat.</p>
+          <h3 class="section-chapter__subheading">Standaard</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{ render "@blockquote"  }}
+               {{!-- {{> '@blockquote' (text='hallo') merge=true}} --}}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                {{context '@blockquote'}}
+              </p>
+              <p>
+                <a href="/components/detail/blockquote">Bekijk component 'Blockquote'</a>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-chapter__subheading">Q</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+              {{render "@blockquote--q" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                {{context "@blockquote--q" }}
+              </p>
+              <p>
+                <a href="/components/detail/block--blockquote--q">Bekijk component 'Q'</a>
+              </p>
+            </div>
+          </div>
 
-          {{render "@blockquote" }}
         </div>
       </article>
 
@@ -305,10 +343,35 @@
         <div class="row row--large">
           <h2 id="browse">Browse</h2>
           <p>Het browse-component toont een lijst van items, inclusief het aantal per item. Beschikbaar in een versie mét en zónder iconen.</p>
-          <h2 class="h5">Default</h2>
-          {{render "@browse" }}
-          <h2 class="h5">With icons</h2>
-          {{render "@browse--icons" }}
+          <h3 class="section-chapter__subheading">Standaard</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+               {{render "@browse" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                {{context '@browse'}}
+              </p>
+              <p>
+                <a href="/components/detail/browse">Bekijk component 'Browse'</a>
+              </p>
+            </div>
+          </div>
+
+          <h3 class="section-chapter__subheading">Met iconen</h3>
+          <div class="ds-preview">
+            <div class="ds-preview__demo">
+               {{render "@browse--icons" }}
+            </div>
+            <div class="ds-preview__content">
+              <p>
+                {{context '@browse--icons'}}
+              </p>
+              <p>
+                <a href="/components/detail/browse--icons">Bekijk variant 'Met iconen'</a>
+              </p>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -350,7 +413,7 @@
         <h2>Buttongroup</h2>
         <p>Verbonden knoppen. Wanneer slechts één van de opties beschikbaar is, is dit component niet van toepassen en wordt deze ook niet weergegeven.</p>
         <div class="row">
-          <h3 class="h5">Default</h2>
+          <h3 class="h5">Standaard</h2>
             <div>{{render "@buttonswitch" }}</div>
         </div>
         <div class="row">
