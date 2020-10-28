@@ -79,7 +79,7 @@ context:
       actionsTwoLabel: Verwijderen?
       actionsTwo:
         - label: Ja
-          type: submit
+          buttonType: submit
         - label: Nee
           linkedto: 1
           hideself: true
@@ -109,7 +109,7 @@ context:
       actionsTwoLabel: Verwijderen?
       actionsTwo:
         - label: Ja
-          type: submit
+          buttonType: submit
         - label: Nee
           linkedto: 1
           hideself: true
