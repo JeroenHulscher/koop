@@ -20,7 +20,7 @@ variants:
     label: Update
     context:
       modifier: alert--update
-      heading: '<h3>Headertext</h3>'
+      heading: 'Headertext'
   - name: small
     label: Small
     context:
