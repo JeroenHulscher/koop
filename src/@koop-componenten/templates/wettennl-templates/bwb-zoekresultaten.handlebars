@@ -7,15 +7,19 @@
 <div class="container columns columns--sticky-sidebar row">
 
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
-    {{ render "@actionblock"  }}
+    <div>
+      {{ render "@actionblock" actieblok }}
+    </div>
   </div>
 
   <div>
 
     {{ render "@pageactions"  }}
 
-    <h1>22 resultaten gevonden</h1>
+    <h1>Zoekresultaten <span class="h1__sub">1-10 van de 22 resultaten</span></h1>
+
     {{ render "@sort" }}
+
     <h2>Wetten</h2>
 
     <div class="result--list">
