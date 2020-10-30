@@ -53,6 +53,7 @@ context:
     items:
     - title: Gemeente Delft
       titleHeader: h2
+      titleHref: 'www.overheid.nl'
       address: 'Gemeente Delft, <br>Stationsplein 1, 2611 BV DELFT'
       share: false
       linklist: true
@@ -70,6 +71,7 @@ context:
           modal: true
     - title: Stichting IHE Delft Institute for Water Education
       titleHeader: h2
+      titleHref: 'www.overheid.nl'
       address: 'Stichting IHE Delft Institute for Water Education, <br>Westvest 7, 2611 AX Delft'
       share: false
       linklist: true
@@ -87,6 +89,7 @@ context:
           modal: true
     - title: Stichting Theater Delft
       titleHeader: h2
+      titleHref: 'www.overheid.nl'
       address: 'Stichting Theater Delft, <br>Westvest 7, 2611 AX Delft'
       share: false
       linklist: true
