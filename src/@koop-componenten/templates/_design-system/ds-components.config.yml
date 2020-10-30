@@ -69,12 +69,16 @@ context:
           href: blok
         - stitle: Blockquote
           href: blockquote
+        - stitle: Bronlijst
+          href: bronlijst
         - stitle: Browse
           href: browse
         - stitle: Buttons
           href: buttons
-        - stitle: CopyURL
-          href: copyurl
+        - stitle: Buttongroup
+          href: buttongroup
+        - stitle: CopyData
+          href: copydata
         - stitle: Characteristics
           href: characteristics
         - stitle: Collapsible
@@ -83,16 +87,18 @@ context:
           href: definitionlist
         - stitle: Del / Ins
           href: delins
-        - stitle: Grid & containers
-          href: gridcontainers
+        - stitle: Documentbanner
+          href: documentbanner
+        - stitle: Facet
+          href: facet
         - stitle: Figure
           href: figure
-        - stitle: Footnote
-          href: footnote
-        - stitle: Forms
-          href: forms
+        - stitle: Grid & containers
+          href: gridcontainers
         - stitle: Highlight
           href: highlight
+        - stitle: Homepage blok
+          href: homepageblok
         - stitle: Jumbotron
           href: jumbotron
         - stitle: Labels
@@ -101,32 +107,103 @@ context:
           href: link
         - stitle: Lists
           href: lists
+        - stitle: Loader
+          href: loader
+        - stitle: Logo
+          href: logo
         - stitle: Modal
           href: modal
         - stitle: Navigation
           href: navigation
-        - stitle: Pageactions
+        - stitle: OpenLayers
+          href: openlayers
+        - stitle: Pagina acties
           href: pageactions
+        - stitle: Pagination
+          href: pagination
+        - stitle: Picture
+          href: picture
         - stitle: Pre
           href: pre
         - stitle: Profiel
           href: profiel
-        - stitle: Resultlist
+        - stitle: Relevances
+          href: relevances
+        - stitle: Resultaten lijst
           href: resultlist
-        - stitle: Sort
+        - stitle: Skiplinks
+          href: skiplinks
+        - stitle: Sorteren
           href: sort
-        - stitle: Steps
+        - stitle: Stappen
           href: steps
-        - stitle: Table
+        - stitle: Sub sup
+          href: subsup
+        - stitle: Tabel
           href: table
+        - stitle: Tabel container
+          href: table-container
+        - stitle: Tabel topbar
+          href: table-topbar
         - stitle: Tabs
           href: tabs
-        - stitle: Themeblock
+        - stitle: Tekst
+          href: text
+        - stitle: Thema blok
           href: themeblock
-        - stitle: Tooltip
-          href: tooltip
+        - stitle: Toolbar
+          href: toolbar
+        - stitle: Topbar
+          href: topbar
         - stitle: Treeview
           href: treeview
+        - stitle: Video
+          href: video
+        - stitle: Voetnoot
+          href: voetnoot
+        - stitle: Well
+          href: well
+  navFormComponentsContext:
+    items:
+    - title: Formulier Componenten
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Autocomplete
+          href: autocomplete
+        - stitle: Datumselectie
+          href: datumselectie
+        - stitle: Datepicker
+          href: datepicker
+        - stitle: Geselecteerde filter
+          href: geselecteerdefilter
+        - stitle: Input Checkbox
+          href: inputcheckbox
+        - stitle: Input File
+          href: inputfile
+        - stitle: Input Group
+          href: inputgroup
+        - stitle: Input InputSubmit
+          href: inputinputsubmit
+        - stitle: Input Radio
+          href: inputradio
+        - stitle: Input Text
+          href: inputtekst
+        - stitle: Select
+          href: select
+        - stitle: Select Multi
+          href: selectmulti
+        - stitle: Subselection
+          href: subselection
+        - stitle: Textarea
+          href: textarea
+        - stitle: Tooltip
+          href: tooltip
+  inputfile2:
+    id: 09876567
+  datepickerToday:
+    id: 0876
   alertFixed:
     fixed: true
   subSel1:
@@ -176,10 +253,5 @@ context:
         short: szw
   profileLoggedin:
     id: 2765432
-  profileNotloggedin:
-    id: 276543
-    loggedIn: false
-    buttonLogin:
-      text: Inloggen
-      anchor: true
-      action: '#'
+  profileLoggedin2:
+    id: 2765431

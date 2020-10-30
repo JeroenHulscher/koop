@@ -13,6 +13,10 @@
       margin-bottom: .5em;
     }
   }
+
+  .container {
+    background: $lightGrey;
+  }
 }
 
 .u-bg--grey {
@@ -25,6 +29,17 @@
   &__demo {
     border: 2px solid $lightGrey;
     padding: 1.5em;
+
+    &__heading {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 1em;
+      margin: 0 0 1em 0;
+    }
+
+    .container {
+      margin-bottom: 1em;
+    }
   }
   &__content {
     padding: 1.5em 1.5em .5em;
