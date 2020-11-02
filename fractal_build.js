@@ -20,7 +20,7 @@ fractal.components.engine(require('@frctl/handlebars')({
 }));
 fractal.components.set( 'ext', '.handlebars' );
 
-fractal.components.set('exclude', '**/templates/stop-xml/**' );
+fractal.components.set('exclude', '**/templates/rps-bms/stop-xml/**' );
 
 const mandelbrot = require('@frctl/mandelbrot');
 const myCustomisedTheme = mandelbrot({
