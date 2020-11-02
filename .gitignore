@@ -12,6 +12,7 @@ package-lock.json
 !/backstop_stopxml-templates.json
 /package-lock.json
 component-library/
+designsystem/
 public/
 backstop_data/html_report/
 backstop_data/bitmaps_test/
