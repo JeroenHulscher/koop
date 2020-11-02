@@ -1,0 +1,151 @@
+{{render "@skiplinks" skipLinks }}
+{{render "@topbar" topbar }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+
+        <h2 class="sidebar__header">Verfijnen op</h2>
+        <div class="row">
+          <p>
+            <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+          </p>
+        </div>
+
+        <div class="form__row form__row--large">
+          <h3 class="h4">Geselecteerde filters (1)</h3>
+          <div data-decorator="showmoreless" data-config='{"amount": 2}'>
+            <ul class="list list--unstyled">
+              <li>
+                <div class="form__selectedfilter">Gegenereerd: Vorige week
+                  <a href="{{url}}" class="form__selectedfilter__remove">
+                    <span class="visually-hidden">verwijder</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <form id="formid">
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Zoekwoord(en)</legend>
+              <div class="form__row">
+                {{ render "@input-inputsubmit" inputsubmitContext }}
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Tijdstip</legend>
+              <div class="form__row">
+                {{ render "@input-radio" radioGegenereed }}
+              </div>
+            </fieldset>
+          </div>
+
+           <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Type</legend>
+              <div class="form__row">
+                {{ render "@input-radio" type }}
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Subtype</legend>
+              <div class="form__row">
+                {{ render "@input-radio" subtype }}
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form__row form__row--large">
+            <fieldset>
+              <legend>Key</legend>
+              <div class="form__row">
+                {{ render "@input-radio" key }}
+              </div>
+            </fieldset>
+          </div>
+
+
+          <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
+            data-config='{"position":"bottom"}'>Zoek opnieuw</button>
+        </form>
+      </div>
+  </div>
+
+  <div id="content" role="main">
+
+    {{ render "@sort--with-amount" }}
+
+    <h1>Overzicht gebeurtenissen
+      <span class="h1__sub">1-10 van de 47 gebeurtenissen</span>
+    </h1>
+
+      <ul class="list list--unstyled">
+        <li>
+      <pre id="pre_event_1" class="pre pre--block" ><code>&lt;event:event user-id="sgd-sgd" creation-time="2020-10-30T12:00:03.419459+01:00" xmlns:event="http://koop.overheid.nl/internal-namespaces/framework/event"&gt;
+    &lt;event:id&gt;284a2bc46a69d02c1f2da8f66a217117-1604055603419~570069633471943&lt;/event:id&gt;
+    &lt;event:type&gt;log&lt;/event:type&gt;
+    &lt;event:subtype&gt;info&lt;/event:subtype&gt;
+    &lt;event:key&gt;default&lt;/event:key&gt;
+    &lt;event:value&gt;default&lt;/event:value&gt;
+    &lt;event:scope&gt;local&lt;/event:scope&gt;
+    &lt;event:payload&gt;
+      &lt;event:payload&gt;
+        &lt;body&gt;
+          &lt;restrictions&gt;
+            &lt;restriction&gt;cup-full&lt;/restriction&gt;
+            &lt;restriction&gt;xdmp-thin&lt;/restriction&gt;
+          &lt;/restrictions&gt;
+          &lt;caller&gt;platform.frbr.batchimport&lt;/caller&gt;
+          &lt;message&gt;corb process completed&lt;/message&gt;
+        &lt;/body&gt;
+      &lt;/event:payload&gt;
+    &lt;/event:payload&gt;
+  &lt;/event:event&gt;</code></pre>
+  </li>
+  <li>
+    <pre id="pre_event_2" style="white-space: pre-wrap;"><code>&lt;event:event user-id="sgd-sgd" creation-time="2020-10-30T11:50:37.621284+01:00" xmlns:event="http://koop.overheid.nl/internal-namespaces/framework/event"&gt;
+      &lt;event:id&gt;284a2bc46a69d02c1f2da8f66a217117-1604055037621~638263690416982&lt;/event:id&gt;
+      &lt;event:type&gt;log&lt;/event:type&gt;
+      &lt;event:subtype&gt;info&lt;/event:subtype&gt;
+      &lt;event:key&gt;default&lt;/event:key&gt;
+      &lt;event:value&gt;default&lt;/event:value&gt;
+      &lt;event:scope&gt;local&lt;/event:scope&gt;
+      &lt;event:payload&gt;
+        &lt;event:payload&gt;
+          &lt;body&gt;
+    	&lt;restrictions&gt;
+    	  &lt;restriction&gt;cup-full&lt;/restriction&gt;
+    	  &lt;restriction&gt;xdmp-thin&lt;/restriction&gt;
+    	&lt;/restrictions&gt;
+    	&lt;caller&gt;platform.frbr.batchimport&lt;/caller&gt;
+    	&lt;message&gt;job succes : a21bf72d-5473-4132-8566-d6fc3c3c3754&lt;/message&gt;
+          &lt;/body&gt;
+        &lt;/event:payload&gt;
+      &lt;/event:payload&gt;
+    &lt;/event:event&gt;</code></pre>
+  </li>
+</ul>
+
+
+    <div class="align-right">
+      {{ render "@pagination" }}
+    </div>
+
+  </div>
+</div>
