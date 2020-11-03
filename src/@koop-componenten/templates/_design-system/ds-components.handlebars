@@ -398,6 +398,14 @@
         <code>button</code> element. Een hyperlink (a) als button krijgt
         <code>role="button"</code> ten behoeve van de toegankelijkheid</p>
       <h3 class="section-chapter__subheading">Primair</h3>
+      <p>De primaire button wordt gebruikt voor de belangrijkste actie op de pagina.</p>
+      <ul>
+        <li>Is altijd de belangrijkste actie op de pagina</li>
+        <li>Beperk zoveel mogelijk het gebruik per pagina tot 1 primaire button, of maximaal 1 per viewport</li>
+        <li>Nooit een afbrekende actie, zoals annuleren</li>
+        <li>Nooit een destructieve actie, zoals verwijderen</li>
+        <li>Wordt vooral gebruikt als actie button</li>
+      </ul>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           <h3 class="h5">Button</h3>
@@ -422,6 +430,12 @@
         </div>
       </div>
       <h3 class="section-chapter__subheading">Secondair</h3>
+      <ul>
+        <li>Een herhaaldelijke actie, zoals zoekresultaten bekijken</li>
+        <li>Mogen er meerdere van op een pagina en/of viewport staan</li>
+        <li>Mag ondersteunend zijn aan de primaire button</li>
+        <li>Wordt vooral gebruikt als navigatie button</li>
+      </ul>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           <h3 class="h5">Button</h3>
@@ -473,6 +487,9 @@
         </div>
       </div>
       <h3 class="section-chapter__subheading">Tertiair</h3>
+      <ul>
+        <li>Mag ondersteunend zijn aan secundaire button</li>
+      </ul>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{render "@button--tertiary" }}
@@ -1126,6 +1143,12 @@
         <h2 id="">Link</h2>
         <p>Een hyperlink komt mee met een standaard style. Het icoon wordt automagisch geplaatst op basis van de
           <code>href</code>.</p>
+        <ul>
+          <li>Een (extern) link openen we altijd in hetzelfde venster.</li>
+          <li>Zodra een link verwijst naar een locatie buiten het domein/platform, dan krijgt deze altijd een ‘externe link’ icoon mee.</li>
+          <li>We maken een uitzondering door te openen in een nieuw venster/tabblad als anders een proces onderbroken wordt of de gebruiker
+          wordt uitlogt.</li>
+        </ul>
         <h3 class="section-chapter__subheading">Standaard</h3>
         <div class="ds-preview">
         <div class="ds-preview__demo">
@@ -1143,6 +1166,7 @@
         </div> --}}
       </div>
         <h3 class="section-chapter__subheading">Met icoon</h3>
+        <p>Mag ondersteunend zijn bij primaire button.</p>
         <div class="ds-preview">
         <div class="ds-preview__demo">
           <p>
@@ -1377,6 +1401,14 @@
         </div>
       </div>
       <h3 class="section-chapter__subheading">Themas</h3>
+      <p>De themalijst wordt ingezet als secundaire vorm van ‘eenvoudig zoeken’ binnen een collectie. Een themalijst item verwijst
+      naar de zoekresultatenpagina met een voorgeselecteerde zoekfilter (op basis van het gekozen thema). Hiermee is de themalijst
+      een ’navigerende zoekfilter’.</p>
+      <h4 class="h5">Gebruik</h4>
+      <ul>
+        <li>Een themalijst mag alleen toegepast worden binnen het template ‘Landing’</li>
+        <li>Een themalijst toont alleen thema’s op het hoofdniveau</li>
+      </ul>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@list--themas" }}
@@ -2154,6 +2186,40 @@
       </div>
     </section>
 
+    <section class="section-chapter js-scrollSection" id="algemeen">
+      <h2>Algemeen</h2>
+      <h3>Styling</h3>
+      <p>Een invoerveld kan bestaan uit:</p>
+      <dl>
+        <dt>Primair label</dt>
+        <dd>Een primair label is altijd verplicht</dd>
+        <dt>Informatie tooltip</dt>
+        <dd>Hieronder kan een helpertekst toegepast worden</dd>
+        <dt>Secundair label</dt>
+        <dd>Voor bijvoorbeeld toelichting van verplicht/optioneel</dd>
+        <dt>Placeholder</dt>
+        <dd>Hulp bij invoer van het veld (zie 'microcopy' voor toelichting)</dd>
+        <dt>Icoon in veld</dt>
+        <dd>Voor bijvoorbeeld datum of dropdown veld</dd>
+        <dt>Icoon buiten veld</dt>
+        <dd>Voor meldingen</dd>
+        <dt>Melding</dt>
+        <dd>Error of bevestiging</dd>
+      </dl>
+      <h3>States</h3>
+      <p>Verschillende statussen van een form element:</p>
+      <ul>
+        <li>Default met placeholder</li>
+        <li>Default met input</li>
+        <li>Focus met input</li>
+        <li>Disabled</li>
+        <li>Error</li>
+        <li>Correct</li>
+      </ul>
+      <p>De verschillende states zijn toe te passen op alle verschillende form elementen.</p>
+      <h3>Validatie</h3>
+      <p>...</p>
+    </section>
     <section class="section-chapter js-scrollSection" id="autocomplete">
       <h2>Autocomplete</h2>
       <p>Gebruik de zoekterm "gem" om resultaten te zien.</p>

@@ -14,9 +14,11 @@ context:
     items:
     - title: Design system
       active: true
-      href: templates-ds---homepage
+      href: templates-ds---index
       sub: true
       subItems:
+        - stitle: Rationale
+          href: templates-ds---rationale.html
         - stitle: Toelichting
           href: templates-ds---toelichting.html
         - stitle: Ontwerpprincipes
@@ -165,11 +167,13 @@ context:
           href: well
   navFormComponentsContext:
     items:
-    - title: Formulier Componenten
+    - title: Formulieren
       active: false
       sub: true
       anker: true
       subItems:
+        - stitle: Algemeen
+          href: algemeen
         - stitle: Autocomplete
           href: autocomplete
         - stitle: Datumselectie
