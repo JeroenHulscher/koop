@@ -1,0 +1,47 @@
+name: flyoutbar
+context:
+  id: 194567
+  ariaLabel: Main Navigation
+  items:
+    - linkLabel: Item 1
+      linkHref: '#'
+    - linkLabel: Item 2
+      linkHref: '#'
+      foldout: true
+      categories:
+        - heading: Cat 1
+          subItems:
+            - linkLabel: Subitem 2.1.1
+              linkHref: '#'
+            - linkLabel: Subitem 2.1.2
+              linkHref: '#'
+            - linkLabel: Subitem 2.1.3
+              linkHref: '#'
+        - heading: Cat 2
+          subItems:
+            - linkLabel: Subitem 2.2.1
+              linkHref: '#'
+            - linkLabel: Subitem 2.2.2
+              linkHref: '#'
+            - linkLabel: Subitem 3.2.3
+              linkHref: '#'
+        - heading: Cat 3
+          subItems:
+            - linkLabel: Subitem 2.3
+              linkHref: '#'
+    - linkLabel: Item 3
+      linkHref: '#'
+      foldout: true
+      subItems:
+        - linkLabel: Subitem 3.1
+          linkHref: '#'
+        - linkLabel: Subitem 3.2
+          linkHref: '#'
+        - linkLabel: Subitem 3.3
+          linkHref: '#'
+    - linkLabel: Item 4
+      linkHref: '#'
+variants:
+  - name: Rechts
+    context:
+      modifier: flyoutbar--alignright

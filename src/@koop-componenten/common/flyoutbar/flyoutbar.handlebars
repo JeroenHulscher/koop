@@ -1,0 +1,35 @@
+<nav class="flyoutbar {{modifier}}" role="presentation" {{#if ariaLabel}}aria-label="{{ariaLabel}}"{{/if}} data-decorator="init-flyoutbar">
+  <ul class="flyoutbar__nav">
+      {{#each items}}
+        <li class="flyoutbar__nav__item">
+          <a href="{{linkHref}}" class="flyoutbar__nav__item__link" {{#if foldout}}role="button" aria-expanded="false" aria-haspopup="true"{{/if}}>{{linkLabel}}</a>
+          {{#if foldout}}
+            <div class="flyoutbar__nav__item__foldout">
+
+              {{#if categories}}
+                {{#each categories}}
+                  <p>{{heading}}</p>
+                    <ul>
+                      {{#each subItems}}
+                        <li>
+                          <a href="{{linkHref}}">{{linkLabel}}</a>
+                        </li>
+                      {{/each}}
+                    </ul>
+                {{/each}}
+              {{else}}
+                <ul>
+                {{#each subItems}}
+                  <li>
+                    <a href="{{linkHref}}">{{linkLabel}}</a>
+                  </li>
+                {{/each}}
+                </ul>
+              {{/if}}
+
+            </div>
+          {{/if}}
+        </li>
+      {{/each}}
+  </ul>
+</nav>

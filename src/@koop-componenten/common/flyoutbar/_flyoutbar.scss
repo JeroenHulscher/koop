@@ -1,0 +1,78 @@
+.flyoutbar {
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      position: relative;
+
+      &__link {
+        display: inline-block;
+        padding: .25em 1em;
+
+        &[aria-expanded="false"] {
+          padding-right: 2em;
+          background: $dartDownIcon no-repeat right 1em center;
+        }
+        &[aria-expanded="true"] {
+          padding-right: 2em;
+          background: #f1f1f1 $dartUpIcon no-repeat right 1em center;
+        }
+      }
+
+      &__foldout {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        min-width: 10em;
+        background: #f1f1f1;
+        padding: 1em;
+
+        > p {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        > ul {
+          margin: 0;
+          padding: 0;
+
+          & ~ p {
+            margin-top: .5em;
+          }
+
+          > li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            a {
+              display: block;
+              padding: .25em 0;
+            }
+          }
+        }
+      }
+      &__link[aria-expanded="true"] ~ &__foldout {
+        display: block;
+      }
+    }
+  }
+
+  &--alignright &__nav {
+    float: right;
+
+    &__item {
+
+      &__foldout {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+}
