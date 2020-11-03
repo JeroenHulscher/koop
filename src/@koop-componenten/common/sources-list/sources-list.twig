@@ -1,49 +1,59 @@
 <ul id="{{ id }}" class="list--sources">
-  {% for item in items %}
+  {% for items_i in items %}
     <li>
-      <div class="list--source__information {{ item.icon }}">
-        {{ item.name }}
-        <span class="list--sources__item__filesize">{{ item.filesize }}</span>
-        {% if item.files %}
-          {% for file in item.files %}
-            <span class="label label--{{ file.type }}">{{ file.type }}</span>
+      <div class="list--source__information {{ items_i.icon }}">
+        {{ items_i.name }}
+        {% if items_i.date %}
+          <div class="list--sources__item__date">
+          {{ items_i.date.timestamp }} {{ items_i.render }}
+           {% if items_i.filesize %}
+              <span class="list--sources__item__filesize">{{ items_i.filesize }}</span>
+            {% endif %}
+          </div>
+        {% else %}
+        {% if items_i.filesize %}
+          <span class="list--sources__item__filesize">{{ items_i.filesize }}</span>
+        {% endif %}
+        {% endif %}
+        {% if items_i.files %}
+          {% for files_i in items_i.files %}
+            <span class="label label--{{ files_i.type }}">{{ files_i.type }}</span>
           {% endfor %}
         {% endif %}
       </div>
 
-      {% if item.buttonContext.action %}
-        <a href="{{ item.buttonContext.action }}" class="button {{ item.buttonContext.modifier }}">{{ item.buttonContext.text }}
-          <span class="visually-hidden">van abonnement: {{ item.name }}</span>
-        </a>
+      {% if items_i.buttonContext.action %}
+      <a href="{{ items_i.buttonContext.action }}" class="button {{ items_i.buttonContext.modifier }}">{{ items_i.buttonContext.text }}
+        <span class="visually-hidden">van abonnement: {{ items_i.name }}</span>
+      </a>
       {% endif %}
 
-      {# {{ render "@button" buttonContext }} #}
-      {% if item.actionsOne %}
-        <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{ item.idprefix }}"}'>
-          <div id="{{ item.idprefix }}1" class="js-form-conditionals__citem">
-            {{ item.actionsOneLabel }}
-            {% for actionOne in item.actionsOne %}
-              {% if actionOne.iconOnly %}
-                <button class="button-icon button-icon--plain button-icon--bin js-button-next" data-linkedto="{{ actionOne.linkedto }}" data-triggeresponds="{{ actionOne.triggeresponds }}" data-hideself="{{ actionOne.hideself }}"><span class="visually-hidden">{{ actionOne.label }}</span></button>
+      {% if items_i.actionsOne %}
+        <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{ items_i.idprefix }}"}'>
+          <div id="{{ items_i.idprefix }}1" class="js-form-conditionals__citem">
+            {{ items_i.actionsOneLabel }}
+            {% for actionsOne_i in items_i.actionsOne %}
+              {% if actionsOne_i.iconOnly %}
+                <{% if actionsOne_i.href %}a href="{{ actionsOne_i.href }}"{% else %}button{% endif %} {% if actionsOne_i.buttonType %}type="{{ actionsOne_i.buttonType }}"{% endif %} class="button-icon button-icon--plain button-icon--bin{% if actionsOne_i.linkedto %} js-button-next{% endif %}" {% if actionsOne_i.linkedto %}data-linkedto="{{ actionsOne_i.linkedto }}" data-triggeresponds="{{ actionsOne_i.triggeresponds }}" data-hideself="{{ actionsOne_i.hideself }}"{% endif %}><span class="visually-hidden">{{ actionsOne_i.label }}</span></{% if actionsOne_i.href %}a{% else %}button{% endif %}>
               {% else %}
-                <button class="button {{ actionOne.buttonContext.modifier }} js-button-next" data-linkedto="{{ actionOne.linkedto }}" data-triggeresponds="{{ actionOne.triggeresponds }}" data-hideself="{{ actionOne.hideself }}">{{ actionOne.label }}</button>
+                <{% if actionsOne_i.href %}a href="{{ actionsOne_i.href }}"{% else %}button{% endif %} {% if actionsOne_i.buttonType %}type="{{ actionsOne_i.buttonType }}"{% endif %} class="button {{ actionsOne_i.buttonContext.modifier }}{% if actionsOne_i.linkedto %} js-button-next{% endif %}" {% if actionsOne_i.linkedto %}data-linkedto="{{ actionsOne_i.linkedto }}" data-triggeresponds="{{ actionsOne_i.triggeresponds }}" data-hideself="{{ actionsOne_i.hideself }}"{% endif %}>{{ actionsOne_i.label }}</{% if actionsOne_i.href %}a{% else %}button{% endif %}>
               {% endif %}
             {% endfor %}
           </div>
-          <div id="{{ item.idprefix }}2" class="js-form-conditionals__citem">
-            <em>{{ item.actionsTwoLabel }}</em>
-            {% for actionTwo in item.actionsTwo %}
-              {% if actionTwo.iconOnly %}
-                <button class="button {{ actionTwo.buttonContext.modifier }} js-button-next" data-linkedto="{{ actionTwo.linkedto }}" data-triggeresponds="{{ actionTwo.triggeresponds }}" data-triggerLastStep="{{ actionTwo.triggerLastStep }}" data-hideself="{{ actionTwo.hideself }}"><span class="visually-hidden">{{ actionTwo.label }}</span></button>
+          <div id="{{ items_i.idprefix }}2" class="js-form-conditionals__citem">
+            <em>{{ items_i.actionsTwoLabel }}</em>
+            {% for actionsTwo_i in items_i.actionsTwo %}
+              {% if actionsTwo_i.iconOnly %}
+                <{% if actionsTwo_i.href %}a href="{{ actionsTwo_i.href }}"{% else %}button{% endif %} {% if actionsTwo_i.buttonType %}type="{{ actionsTwo_i.buttonType }}"{% endif %} class="button {{ actionsTwo_i.buttonContext.modifier }}{% if actionsTwo_i.linkedto %} js-button-next{% endif %}" {% if actionsTwo_i.linkedto %}data-linkedto="{{ actionsTwo_i.linkedto }}" data-triggeresponds="{{ actionsTwo_i.triggeresponds }}" data-triggerLastStep="{{ actionsTwo_i.triggerLastStep }}" data-hideself="{{ actionsTwo_i.hideself }}"{% endif %}><span class="visually-hidden">{{ actionsTwo_i.label }}</span></{% if actionsTwo_i.href %}a{% else %}button{% endif %}>
               {% else %}
-                <button class="button {{ actionTwo.buttonContext.modifier }} js-button-next" data-linkedto="{{ actionTwo.linkedto }}" data-triggeresponds="{{ actionTwo.triggeresponds }}" data-triggerLastStep="{{ actionTwo.triggerLastStep }}" data-hideself="{{ actionTwo.hideself }}">{{ actionTwo.label }}</button>
+                <{% if actionsTwo_i.href %}a href="{{ actionsTwo_i.href }}"{% else %}button{% endif %} {% if actionsTwo_i.buttonType %}type="{{ actionsTwo_i.buttonType }}"{% endif %} class="button {{ actionsTwo_i.buttonContext.modifier }}{% if actionsTwo_i.linkedto %} js-button-next{% endif %}" {% if actionsTwo_i.linkedto %}data-linkedto="{{ actionsTwo_i.linkedto }}" data-triggeresponds="{{ actionsTwo_i.triggeresponds }}" data-triggerLastStep="{{ actionsTwo_i.triggerLastStep }}" data-hideself="{{ actionsTwo_i.hideself }}"{% endif %}>{{ actionsTwo_i.label }}</{% if actionsTwo_i.href %}a{% else %}button{% endif %}>
               {% endif %}
             {% endfor %}
           </div>
-          <div id="{{ item.idprefix }}3" class="js-form-conditionals__citem">
-            {{ item.actionsThreeLabel }}
-            {% for alternativeActions_i in item.alternativeActions %}
-              <button class="button {{ alternativeActions_i.buttonContext.modifier }} js-button-next" data-linkedto="{{ alternativeActions_i.linkedto }}" data-triggeresponds="{{ alternativeActions_i.triggeresponds }}" data-triggerLastStep="{{ alternativeActions_i.triggerLastStep }}" data-hideself="{{ alternativeActions_i.hideself }}">{{ alternativeActions_i.label }}</button>
+          <div id="{{ items_i.idprefix }}3" class="js-form-conditionals__citem">
+            {{ items_i.actionsThreeLabel }}
+            {% for alternativeActions_i in items_i.alternativeActions %}
+              <{% if alternativeActions_i.href %}a href="{{ alternativeActions_i.href }}"{% else %}button{% endif %} {% if alternativeActions_i.buttonType %}type="{{ alternativeActions_i.buttonType }}"{% endif %} class="button {{ alternativeActions_i.buttonContext.modifier }}{% if alternativeActions_i.linkedto %} js-button-next{% endif %}" {% if alternativeActions_i.linkedto %}data-linkedto="{{ alternativeActions_i.linkedto }}" data-triggeresponds="{{ alternativeActions_i.triggeresponds }}" data-triggerLastStep="{{ alternativeActions_i.triggerLastStep }}" data-hideself="{{ alternativeActions_i.hideself }}"{% endif %}>{{ alternativeActions_i.label }}</{% if alternativeActions_i.href %}a{% else %}button{% endif %}>
             {% endfor %}
           </div>
         </div>
@@ -51,21 +61,32 @@
 
       {% endif %}
 
-      {% if item.moreInfo %}
+      {% if items_i.metadata %}
+      <div class="list--source__metadata">
+        <dl class="dl dl--horizontal">
+          {% for items_a in items_i.metadata.items %}
+            <dt>{{ items_a.dt }}</dt>
+            <dd>{{ items_a.dd }}</dd>
+          {% endfor %}
+        </dl>
+      </div>
+      {% endif %}
+
+      {% if items_i.moreInfo %}
         <div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
           <div class="collapsible__header">
             <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible" data-text="show/hide">toon informatie</a>
           </div>
           <div class="collapsible__content" id="collapsible-content-1">
             <div>
-              <h3>{{ item.title }}</h3>
-              <div class="well well--linkContainer">{{ item.link }}</div>
-              {% if item.tableData %}
+              <h3>{{ items_i.title }}</h3>
+              <div class="well well--linkContainer">{{ items_i.link }}</div>
+              {% if items_i.tableData %}
                 <table>
-                  {% for data in item.tableData %}
+                  {% for tableData_i in items_i.tableData %}
                     <tr>
-                      <th>{{ data.type }}</th>
-                      <td data-before="{{ data.type }}">{{ data.value|raw }}</td>
+                      <th>{{ tableData_i.type }}</th>
+                      <td data-before="{{ tableData_i.type }}">{{ tableData_i.value|raw }}</td>
                     </tr>
                   {% endfor %}
                 </table>
