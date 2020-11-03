@@ -17,17 +17,17 @@ context:
       active: true
       sub: true
       subItems:
-        - stitle: Rationale
-          href: templates-ds---rationale.html
-        - stitle: Toelichting
-          href: templates-ds---toelichting.html
-        - stitle: Ontwerpprincipes
-          href: templates-ds---ontwerpprincipes.html
-          sactive: true
         - stitle: Componenten
           href: templates-ds---componenten.html
         - stitle: Content
           href: templates-ds---content.html
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes.html
+          sactive: true
+        - stitle: Rationale
+          href: templates-ds---rationale.html
+        - stitle: Toelichting
+          href: templates-ds---toelichting.html
   navContentContext:
     items:
     - title: Design
