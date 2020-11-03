@@ -28,8 +28,6 @@ context:
           href: templates-ds---componenten.html
         - stitle: Content
           href: templates-ds---content.html
-        - stitle: Templates
-          href: templates-ds---templates.html
   navContentContext:
     items:
     - title: Design

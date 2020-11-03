@@ -213,6 +213,7 @@ gulp.task('ds:copypublic', function () {
 });
 gulp.task('ds:copytemplates', function () {
   return gulp.src([
+    paths.componentlibrary + '/components/preview/templates-ds---rationale.html',
     paths.componentlibrary + '/components/preview/templates-ds---componenten.html',
     paths.componentlibrary + '/components/preview/templates-ds---content.html',
     paths.componentlibrary + '/components/preview/templates-ds---homepage.html',
@@ -224,6 +225,9 @@ gulp.task('ds:copytemplates', function () {
 });
 
 gulp.task('ds:rename', function () {
+  gulp.src(paths.designsystem + '/html/templates/templates-ds---rationale.html')
+    .pipe(rename('/html/templates/rationale.html'))
+    .pipe(gulp.dest(paths.designsystem));
   gulp.src(paths.designsystem + '/html/templates/templates-ds---componenten.html')
     .pipe(rename('/html/templates/componenten.html'))
     .pipe(gulp.dest(paths.designsystem));
@@ -242,7 +246,7 @@ gulp.task('ds:rename', function () {
 });
 
 function performChange(content) {
-    return content.replace(/(\.\.\/\.\.\/)/g, '');
+    return content.replace(/(\.\.\/\.\.\/)/g, '').replace(/\btemplates-ds\b---/g, '');
 }
 
 gulp.task('ds:editfilepaths', function() {
@@ -252,6 +256,7 @@ gulp.task('ds:editfilepaths', function() {
     paths.designsystem + '/html/templates/index.html',
     paths.designsystem + '/html/templates/ontwerpprincipes.html',
     paths.designsystem + '/html/templates/toelichting.html',
+    paths.designsystem + '/html/templates/rationale.html',
     ])
     .pipe(change(performChange))
     .pipe(gulp.dest(paths.designsystem))

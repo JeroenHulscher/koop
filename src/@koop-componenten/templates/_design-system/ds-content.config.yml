@@ -28,8 +28,6 @@ context:
         - stitle: Content
           href: templates-ds---content.html
           sactive: true
-        - stitle: Templates
-          href: templates-ds---templates.html
   jumbotronContext:
     heading: Content
     h: h1
