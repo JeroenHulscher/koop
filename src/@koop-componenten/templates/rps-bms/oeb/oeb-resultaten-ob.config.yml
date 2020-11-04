@@ -43,6 +43,39 @@ context:
       - text: Officiële bekendmakingen
         url: '#'
       - text: Zoekresultaat
+  filter1:
+    text: Openbaar lichaam voor bedrijf en beroep
+  filter2:
+    text: Productschap diervoeder
+  filter3:
+    text: Landbouw
+  linkEdit:
+    text: Pas zoekopdracht aan
+  searchterm:
+    labelmodifier: accent
+    id: 2
+    fieldLabel: Zoeken op
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Zoekterm of (dossier)nummer
+    required: true
+    requiredLabel: true
+    patterntype: text
+  selectContext:
+    fieldLabel: Documentsoort
+    options:
+      - label: Alle documenten
+        value: 10
+        selected: selected
+      - label: Parlementaire documenten
+        value: 20
+      - label: Officiële bekendmakingen
+        value: 50
+  buttonSubmit:
+    id: 123
+    text: Zoek opnieuw
+    button: true
+    modifier: button--primary button--block form__button
   sortContext:
     modifier:
     columns: true
