@@ -187,6 +187,10 @@ div.link {
     @extend .icon;
     @extend .icon--logout;
   }
+  &--feed {
+    @extend .icon;
+    @extend .icon--feed;
+  }
 }
 
 .link-iconed {
