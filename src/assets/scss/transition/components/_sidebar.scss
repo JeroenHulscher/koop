@@ -7,36 +7,11 @@
   }
   &__header {
     // margin: 0 0 .25em 0;
-    margin: 0 0 .5em 0;
+    margin: 0 0 1em 0;
   }
   &__subheader {
     font-size: 1em;
     margin: 0 0 .5em 0;
   }
 
-  &__selectedfilters {
-    margin: 0 0 1.5em 0;
-    padding-top: 1em;
-
-    &__header {
-      font-size: 1.325em;
-      margin: 0 0 .5em 0;
-    }
-    ul {
-      margin: 0 0 .75em 0;
-      padding: 0;
-      li {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 .5em;
-      }
-    }
-    &__filter {
-      padding: 0 .5em;
-      display: inline-block;
-      border-radius: 5px;
-      font-style: italic;
-      background: $lightBlue;
-    }
-  }
 }
