@@ -1,0 +1,383 @@
+---
+label: OEB 2.0 - Resultaten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Officiële bekendmakingen
+        url: '#'
+      - text: Zoekresultaat
+  searchterm:
+    labelmodifier: accent
+    id: 2
+    fieldLabel: Zoeken op
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Zoekterm of (dossier)nummer
+    required: true
+    requiredLabel: true
+    patterntype: text
+  selectContext:
+    fieldLabel: Documentsoort
+    options:
+      - label: Alle documenten
+        value: 10
+        selected: selected
+      - label: Parlementaire documenten
+        value: 20
+      - label: Officiële bekendmakingen
+        value: 50
+  buttonSubmit:
+    id: 123
+    text: Zoek opnieuw
+    button: true
+    modifier: button--primary button--block form__button
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Datum publicatie
+      value: value
+      active: is-active
+    - label: Datum document
+      value: value
+    - label: Relevantie
+      value: value
+  resultsContext:
+    modifier: result--list--wide
+    items:
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+      - title: Autorisatiebesluiten Basisregistratie Personen
+        titleHeader: h2
+        text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
+        share: false
+        downloads:
+        - type: PDF
+          size: (12kb)
+        metadata:
+          - value: "Datum publicatie: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 45222"
+          - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
+        buttons:
+          - button: Bekijk bekendmaking
+            type: secondary
+  fgDocumentsoort:
+    items:
+      - label: Blad gemeenschappelijke regelingen met nog iets
+        href: '#'
+        amount: 10
+        selected: true
+  fgRubriek:
+    items:
+      - label: Aanbestedingen
+        href: '#'
+        amount: 4
+        selected: true
+      - label: Accountantsregister
+        href: '#'
+        amount: 23
+        selected: true
+      - label: Adviezen Raad van State
+        href: '#'
+        amount: 2
+      - label: Algemeen verbindende voorschriften (verordeningen)
+        href: '#'
+        amount: 3
+      - label: Algemeenverbindendverklaring van CAO-bepalingen
+        href: '#'
+        amount: 6874
+      - label: Algemeenverbindendverklaringen van CAO-bepalingen
+        href: '#'
+        amount: 35
+      - label: AMvB
+        href: '#'
+        amount: 8015
+      - label: Andere besluiten van algemene strekking
+        href: '#'
+        amount: 2579
+      - label: Andere vergunningen
+        href: '#'
+        amount: 74031
+      - label: Autorisatiebesluiten Basisregistratie Personen
+        href: '#'
+        amount: 240
+      - label: Bekendmakingen aan de scheepvaart
+        href: '#'
+        amount: 4628
+      - label: Bekendmakingen aan het wegverkeer
+        href: '#'
+        amount: 1015
+      - label: Bekendmakingen Nederlandse Zorgautoriteit
+        href: '#'
+        amount: 1135
+    modal:
+      modalId: modal-987
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Rubriek
+  fgPubOrga:
+    items:
+      - label: "'s-Gravenhage"
+        href: '#'
+        amount: 77638
+      - label: Aalsmeer
+        href: '#'
+        amount: 7265
+      - label: Alkmaar
+        href: '#'
+        amount: 19480
+      - label: Almelo
+        href: '#'
+        amount: 7177
+      - label: Almere
+        href: '#'
+        amount: 11456
+      - label: Alphen aan den Rijn
+        href: '#'
+        amount: 8053
+      - label: Amersfoort
+        href: '#'
+        amount: 27376
+      - label: Amstelveen
+        href: '#'
+        amount: 19719
+      - label: Amsterdam
+        href: '#'
+        amount: 21276
+      - label: Apeldoorn
+        href: '#'
+        amount: 23204
+      - label: Arnhem
+        href: '#'
+        amount: 21319
+    modal:
+      modalId: modal-98762
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Publicerende organisaties
+  fgPublicatiedatum:
+    items:
+      - label: Vandaag
+        href: '#'
+        amount: 10
+      - label: Afgelopen week
+        href: '#'
+        amount: 10
+      - label: Afgelopen maand
+        href: '#'
+        amount: 10
+      - label: Afgelopen jaar
+        href: '#'
+        amount: 10
+      - label: Ouder dan een jaar
+        href: '#'
+        amount: 10
+  fgJaargang:
+    items:
+      - label: 2020
+        href: '#'
+        amount: 10
+      - label: 2019
+        href: '#'
+        amount: 10
+      - label: 2018
+        href: '#'
+        amount: 10
+      - label: 2017
+        href: '#'
+        amount: 10
+      - label: 2016
+        href: '#'
+        amount: 10
+      - label: 2015
+        href: '#'
+        amount: 10
+      - label: 2014
+        href: '#'
+        amount: 10
+      - label: 2013
+        href: '#'
+        amount: 10
+      - label: 2012
+        href: '#'
+        amount: 10
+      - label: 2011
+        href: '#'
+        amount: 10
+      - label: 2010
+        href: '#'
+        amount: 10
+    modal:
+      modalId: modal-987615
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Jaargang
+  fgOnderwerp:
+    items:
+      - label: Arbitrage
+        href: '#'
+        amount: 1221
+      - label: Belasting
+        href: '#'
+        amount: 1385
+      - label: Bestuur | Gemeenten
+        href: '#'
+        amount: 86205
+      - label: Bestuur | Organisatie en beleid
+        href: '#'
+        amount: 193050
+      - label: Bestuur | Provincies
+        href: '#'
+        amount: 2336
+      - label: Bestuur | Rijksoverheid
+        href: '#'
+        amount: 9986
+      - label: Bestuur | Waterschappen
+        href: '#'
+        amount: 9996
+      - label: Cultuur en recreatie | Cultuur
+        href: '#'
+        amount: 3658
+      - label: Cultuur en recreatie | Media
+        href: '#'
+        amount: 1658
+      - label: Cultuur en recreatie | Organisatie en beleid
+        href: '#'
+        amount: 49477
+      - label: Cultuur en recreatie | Recreatie
+        href: '#'
+        amount: 6216
+    modal:
+      modalId: modal-98761
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Jaargang
+  linkAbonneren:
+    text: Abonneer op deze zoekvraag
+  linkFeed:
+    text: Abonneer op deze zoekvraag
