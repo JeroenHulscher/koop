@@ -49,7 +49,7 @@
 
       // open item when checkbox is checked;
       if (this.checkboxTriggers[y].checked) {
-        this.doCheckboxTriggerAction(this.checkboxTriggers[y]);
+        this.doCheckboxTriggerAction(this.checkboxTriggers[y], true);
       }
     }
 
@@ -60,17 +60,26 @@
     }
   };
 
-  accordion.prototype.doCheckboxTriggerAction = function (e) {
-    this.doTriggerAction(e, 'checkbox');
+  accordion.prototype.doCheckboxTriggerAction = function (e, onpageloud) {
+    this.doTriggerAction(e, 'checkbox', onpageloud);
   }
 
-  accordion.prototype.doTriggerAction = function (e, type) {
-    var trigger = e.target;
+  accordion.prototype.doTriggerAction = function (e, type, onpageloud) {
+    var trigger;
     var triggerClass;
+    var ariaType;
+
+    if(e.target) {
+      trigger = e.target;
+    } else {
+      trigger = e;
+    }
 
     if(type === "checkbox") {
       triggerClass = this.checkboxTriggerClass;
+      ariaType = 'aria-checked';
     } else {
+      ariaType = 'aria-expanded';
       triggerClass = this.triggerClass;
     }
 
@@ -80,38 +89,44 @@
       return el;
     }
     if (type != "checkbox") {
-      if (!trigger.classList.contains(this.triggerClass)) {
-        trigger = findAncestor(trigger, this.triggerClass);
+      if (!trigger.classList.contains(triggerClass)) {
+        trigger = findAncestor(trigger, triggerClass);
       }
     }
     if (trigger.classList.contains(triggerClass)) {
-      var isExpanded = trigger.getAttribute('aria-checked') == 'true';
-      var activePanel = this.element.querySelector('[aria-checked="true"]');
+      var isExpanded = trigger.getAttribute(ariaType) == 'true';
+      var activePanel = this.element.querySelector('[' + ariaType + '="true"]');
 
-      // close open panel, if there is any.
-      if (activePanel && activePanel !== trigger && !this.allowMultiplePanelsOpen) {
-        activePanel.setAttribute('aria-checked', 'false');
-        document.getElementById(activePanel.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
+      if (!onpageloud) {
+        // close open panel, if there is any.
+        if (activePanel && activePanel !== trigger && !this.allowMultiplePanelsOpen) {
+          activePanel.setAttribute(ariaType, 'false');
+          document.getElementById(activePanel.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
 
-        if (!this.allowToggle) {
-          trigger.setAttribute('aria-disabled', 'true');
+          if (!this.allowToggle) {
+            trigger.setAttribute('aria-disabled', 'true');
+          }
         }
-      }
 
-      // if item is closed, open it.
-      if (!isExpanded) {
-        trigger.setAttribute('aria-checked', 'true');
-        document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden','false');
 
-        if (!this.allowToggle) {
-          trigger.setAttribute('aria-disabled', 'true');
+        // if item is closed, open it.
+        if (!isExpanded) {
+          trigger.setAttribute(ariaType, 'true');
+          document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden','false');
+
+          if (!this.allowToggle) {
+            trigger.setAttribute('aria-disabled', 'true');
+          }
         }
+        // close it again, if it's open and allowed to toggle
+        else if (this.allowToggle && isExpanded) {
+          trigger.setAttribute(ariaType, 'false');
+          document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
+        }
+      } else {
+        document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden', 'false');
       }
-      // close it again, if it's open and allowed to toggle
-      else if (this.allowToggle && isExpanded) {
-        trigger.setAttribute('aria-checked', 'false');
-        document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden', 'true');
-      }
+
     }
 
     if (type === "checkbox") {

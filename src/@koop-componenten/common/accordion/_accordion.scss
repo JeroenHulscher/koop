@@ -38,9 +38,10 @@
           pointer-events: none;
         }
 
-        &[aria-expanded="true"] {
+        &[aria-expanded="true"],
+        &[aria-checked="true"] {
           &:after {
-            background-image: $iconArrowUp;
+            background-image: $iconArrowUpBlue;
           }
         }
       }
