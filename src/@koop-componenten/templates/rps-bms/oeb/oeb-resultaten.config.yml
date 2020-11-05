@@ -10,6 +10,7 @@ context:
         text: Home
       - url: '#'
         text: Uitgebreid zoeken
+        className: is-active
       - url: '#'
         text: 'Mijn abonnementen'
       - url: '#'

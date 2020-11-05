@@ -13,9 +13,9 @@
 
     this.config.limit = this.config.limit || "5";
 
-    this.list = this.element.querySelector('.js-facetgroup__listholder');
+    this.list = this.element.querySelector('.facetgroup__list');
     this.arrayListItems = this.list.querySelectorAll('li');
-    this.holder = this.element.querySelector('.holder');
+    this.holder = this.element.querySelector('.js-facetgroup__listholder');
 
     if (this.holder) {
       this.init();
