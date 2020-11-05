@@ -108,13 +108,6 @@ context:
       - column:
         type: Waarde
         value: 9
-  werkDL:
-    modifier: dl--horizontal
-    items:
-    - type: Area
-      value: <a href="#">officielepublicaties/ag/onopgemaakt</a>
-    - type: Aantal expressies
-      value: '3 <small><i>(laatste expressie op: 16-01-2020)</i></small>'
   btnEdit:
     type: submit
     text: Wijzig metadata
