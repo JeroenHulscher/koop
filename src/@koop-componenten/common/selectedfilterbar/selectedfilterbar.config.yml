@@ -1,0 +1,19 @@
+title: Selectedfilterbar
+context:
+  id: 109876567
+  heading: Door u gekozen filters
+  selectedFilters:
+    items:
+      - label: Blad gemeenschappelijke regelingen
+        url: "#"
+      - label: Aanbestedingen
+        url: "#"
+      - label:
+        value: Accountantregister
+        url: "#"
+  buttonReset: true
+  linkDelete:
+    text: Wis alle filters
+    action: '#'
+
+

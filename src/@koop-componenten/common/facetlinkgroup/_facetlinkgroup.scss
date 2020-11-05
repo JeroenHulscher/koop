@@ -1,0 +1,46 @@
+.facetgroup {
+
+  &__list {
+    margin: 0 0 .75em 0;
+    padding: 0;
+
+    .modal & {
+      margin-bottom: 2em;
+    }
+
+    > li {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 .625em 0;
+      line-height: 1.25em;
+
+      a {
+
+        &.is-selected {
+          background: $removeBlueIcon no-repeat left top -.1em;
+          padding-left: 1.75em;
+          font-weight: bold;
+          margin-left: -.2em;
+        }
+      }
+
+      .amount {
+        font-size: .9em;
+        font-style: italic;
+        text-decoration: none;
+      }
+    }
+  }
+
+  [data-handler="open-modal"] {
+    border: 0;
+    padding: 0 0 0 2em;
+    font-weight: normal;
+    text-decoration: underline;
+    background: $iconList no-repeat left center;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="selectedfilterbar {{ modifier }}">
+  <{{#if headingTag}}{{headingTag}}{{else}}p{{/if}} class="selectedfilterbar__heading">{{heading}}</{{#if headingTag}}{{headingTag}}{{else}}p{{/if}}>
+  <div class="selectedfilterbar__filters">
+    {{ render "@form-selectedfilter" selectedFilters }}
+  </div>
+  {{#if buttonReset}}
+    <div class="selectedfilterbar__buttonreset">
+      {{ render "@link--delete" linkDelete merge=true }}
+    </div>
+  {{/if}}
+</div>
