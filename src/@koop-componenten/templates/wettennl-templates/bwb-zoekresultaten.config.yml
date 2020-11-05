@@ -1,0 +1,31 @@
+---
+title: BWB 2.0 - Zoekresultaten
+label: BWB 2.0 - Zoekresultaten
+status: wip
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  spoedpublicatiemelding:
+    modifier: alert--info
+    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  actieblok:
+    title: 'Acties'
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        text: Alles openklappen
+        icon: icon-plus.svg
+      - link: '#'
+        text: Alles dichtklappen
+        icon: icon-minus.svg
+      - link: '#'
+        text: Alles aanvinken
+        icon: icon-checkall.svg
+      - link: '#'
+        text: Alles uitvinken
+        icon: icon-uncheckall.svg
+      - link: '#'
+        text: Toon aanvinkte elementen
+        icon: icon-arrow-right.svg

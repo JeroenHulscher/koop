@@ -80,7 +80,6 @@
       padding-left: 0;
       // padding-right: 0;
 
-
       > div:not(.modal-sidebar) {
         padding-top: 1em;
       }
@@ -90,7 +89,7 @@
         border: 1px solid transparent;
         border-right: 1px solid $lighterGrey;
         // top: 1.8em;
-        padding-top: 0;
+        top: 0;
 
         > div:not(.modal-sidebar) {
           padding-top: 0;

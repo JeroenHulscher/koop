@@ -213,6 +213,11 @@ ol {
   list-style: none;
   padding-left: 0;
 
+  ul {
+    margin-left: 1em;
+    // margin-left: 3.7em;
+  }
+
   > li,
   > li li {
     list-style: none;
@@ -233,7 +238,7 @@ ol {
     }
   }
   p:last-child {
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
   // Different indentation if the list is more than once.

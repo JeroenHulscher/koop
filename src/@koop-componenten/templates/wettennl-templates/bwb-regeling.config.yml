@@ -1,0 +1,45 @@
+---
+title: BWB 2.0 - Regeling
+label: BWB 2.0 - Regeling
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - content: <a href="#">Veelgestelde vragen</a>
+  actionBlock:
+    items:
+      - link: '#'
+        text: Alles openklappen
+        icon: icon-plus.svg
+      - link: '#'
+        text: Alles dichtklappen
+        icon: icon-minus.svg
+  counter:
+    modifier: article__header--main
+    counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
+    relationsAmount: 128
+    activeFrom: Geldend van 01-07-2016 t/m heden
+  counter1:
+    modifier: article__header--law--part
+    useTitle: true
+    titleTag: h2
+    counter: Hoofdstuk 1
+    relationsAmount: 128
+  counter2:
+    modifier: article__header--law--chapter
+    useTitle: true
+    titleTag: h3
+    counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
+    relationsAmount: 128
+    activeFrom: Versie geldend per 01-04-2012
+  counter3:
+    useTitle: true
+    titleTag: h3
+    counter: Artikel 1.1
+    relationsAmount: 128
+    activeFrom: Versie geldend per 01-04-2012
