@@ -1,18 +1,57 @@
 .flyoutbar {
+  position: relative;
+
+  &__navbutton {
+    position: relative;
+    border: 1px solid $darkBlue;
+    background: white;
+    font-size: 0.9em;
+    font-family: inherit;
+    border-radius: 3px;
+    color: $darkBlue;
+
+    @media (min-width: $breakpointDesktop) {
+      display: none;
+    }
+  }
 
   &__nav {
     margin: 0;
-    padding: 0;
+    padding: .5em 0 .5em 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 2em;
+    width: 15em;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+
+    @media (min-width: $breakpointDesktop) {
+      display: block;
+      position: relative;
+      left: auto;
+      top: auto;
+      width: auto;
+      box-shadow: none;
+      padding: 0;
+    }
 
     &__item {
       margin: 0;
       padding: 0;
-      display: inline-block;
+      list-style: none;
       position: relative;
 
-      &__link {
+      @media (min-width: $breakpointDesktop) {
         display: inline-block;
+      }
+
+      &__link {
+        display: block;
         padding: .25em 1em;
+
+        @media (min-width: $breakpointDesktop) {
+          display: inline-block;
+        }
 
         &[aria-expanded="false"] {
           padding-right: 2em;
@@ -26,12 +65,15 @@
 
       &__foldout {
         display: none;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        min-width: 10em;
         background: #f1f1f1;
         padding: 1em;
+
+        @media (min-width: $breakpointDesktop) {
+          position: absolute;
+          left: 0;
+          top: 100%;
+          min-width: 10em;
+        }
 
         > p {
           font-weight: bold;
@@ -64,8 +106,17 @@
     }
   }
 
-  &--alignright &__nav {
-    float: right;
+  &--right {
+    text-align: right;
+  }
+  &--right &__nav {
+    text-align: left;
+    right: 0;
+    left: auto;
+    @media (min-width: $breakpointDesktop) {
+      // float: right;
+      right: auto;
+    }
 
     &__item {
 
@@ -75,4 +126,15 @@
       }
     }
   }
+
+  &.is-open &__nav {
+    display: block;
+  }
+  &.is-open &__nav__item__foldout {
+    padding-left: 2em;
+    @media (min-width: $breakpointDesktop) {
+      padding-left: 1em;
+    }
+  }
+
 }

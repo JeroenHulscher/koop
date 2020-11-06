@@ -19,7 +19,7 @@
   };
 
   flyoutbar.prototype.init = function () {
-
+    this.createNavButton();
   };
 
   flyoutbar.prototype.initEventListeners = function () {
@@ -46,8 +46,6 @@
   flyoutbar.prototype.doTriggerAction = function (e) {
     var el = e.target;
     var i;
-
-
 
     if(el.getAttribute('aria-expanded') === "true") {
       this.closeFoldout(el);
@@ -80,5 +78,37 @@
       el.setAttribute('aria-expanded', "false");
     }
   };
+
+  flyoutbar.prototype.createNavButton = function () {
+    var nav = this.element.querySelector('.flyoutbar__nav');
+
+    this.navButton = document.createElement('button');
+    this.navButton.classList.add('flyoutbar__navbutton');
+
+    this.navButton.setAttribute('aria-expanded', false);
+    this.navButton.setAttribute('aria-haspopup', true);
+    this.navButton.setAttribute('aria-controls', nav.getAttribute('id'));
+    this.navButton.setAttribute('id', 'flyoutbar__navbutton-' + nav.getAttribute('id'));
+    this.navButton.innerHTML = this.config.labelNavButton || "menu";
+
+    nav.setAttribute('aria-labelledby', this.navButton.getAttribute('id'));
+
+    nav.parentNode.insertBefore(this.navButton, nav);
+
+    this.navButton.addEventListener('click', function (e) { e.preventDefault(); this.toggleNav(e); }.bind(this), false);
+  };
+
+  flyoutbar.prototype.toggleNav = function () {
+
+    if (this.element.classList.contains('is-open')){
+      this.element.classList.remove('is-open');
+      this.navButton.innerHTML = 'menu';
+      onl.ui.unbindFocusTrap( this.element );
+    } else {
+      this.element.classList.add('is-open');
+      this.navButton.innerHTML = 'sluiten';
+      onl.ui.bindFocusTrap( this.element );
+    }
+  }
 
 })();

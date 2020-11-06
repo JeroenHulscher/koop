@@ -44,4 +44,4 @@ context:
 variants:
   - name: Rechts
     context:
-      modifier: flyoutbar--alignright
+      modifier: flyoutbar--right
