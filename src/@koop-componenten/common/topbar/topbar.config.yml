@@ -7,3 +7,5 @@ context:
       active: true
     - label: Digitaal Loket
       href: '#'
+  flyoutbar:
+    modifier: flyoutbar--right

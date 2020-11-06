@@ -11,5 +11,8 @@
       </ul>
     </nav>
     {{/if}}
+    {{#if flyoutbar}}
+      {{ render "@flyoutbar" flyoutbar merge=true }}
+    {{/if}}
   </div>
 </div>

@@ -6,7 +6,16 @@
     padding: 0;
   }
 
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__nav {
+
+
     > ul {
       margin: 0;
       padding: 0;
@@ -47,5 +56,9 @@
         }
       }
     }
+  }
+
+  .flyoutbar {
+    // float: right;
   }
 }
