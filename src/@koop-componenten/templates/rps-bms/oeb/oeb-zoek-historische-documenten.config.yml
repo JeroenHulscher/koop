@@ -136,6 +136,7 @@ context:
       id: 123
       text: Zoek documenten
       button: true
+      type: submit
       modifier: button--primary form__button
     checkboxPub:
       options:

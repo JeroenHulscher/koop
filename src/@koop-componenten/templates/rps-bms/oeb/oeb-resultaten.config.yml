@@ -68,6 +68,7 @@ context:
     id: 123
     text: Zoek opnieuw
     button: true
+    type: submit
     modifier: button--primary button--block form__button
   sortContext:
     modifier:
