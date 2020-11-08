@@ -4,10 +4,16 @@
     @media (min-width: $breakpointDesktop) {
       margin-bottom: 4em;
     }
+    .sidebar__header {
+      margin: 0 0 1em 0;
+    }
   }
   &__header {
-    // margin: 0 0 .25em 0;
-    margin: 0 0 1em 0;
+    margin: 0 0 .25em 0;
+
+    & ~ .nav-sub--treeview {
+      margin-top: -1em;
+    }
   }
   &__subheader {
     font-size: 1em;
