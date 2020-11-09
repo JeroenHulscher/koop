@@ -1,5 +1,5 @@
 ---
-label: Mijn Abo. - Inloggen
+label: Wachtwoord reset
 status: ready
 context:
   header:
@@ -38,11 +38,11 @@ context:
       url: '#'
     - text: Mijn Abonnementen
       url: '#'
-    - text: Inloggen
+    - text: Reset wachtwoord
   jumbotronContext:
-    heading: Inloggen bij Officiële bekendmakingen
+    heading: Reset uw wachtwoord
     subheading: Officiële bekendmakingen
-    intro: U kunt zich abonneren op een door u gestelde zoekvraag. U wordt vervolgens op de hoogte gesteld als er nieuwe publicaties verschijnen die aan uw zoekterm(en) voldoen.
+    intro: Indien u uw wachtwoord bent vergeten kunt u een nieuw wachtwoord aanvragen. Wij sturen uw nieuwe wachtwoord naar het dor u opgegeven e-mailadres.
     centered: true
     size: s
     headingcentered: true
@@ -60,22 +60,8 @@ context:
       tooltipContext:
         id: 1231
         content: Het e-mailadres waarmee u zich heeft geregistreerd.
-    inputPWContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 2
-      required: true
-      type: password
-      fieldLabel: Wachtwoord
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder: Uw wachtwoord
-    linkWw:
-      text: Wachtwoord vergeten
     buttonSubmit:
       id: 123
-      text: Inloggen
+      text: Reset wachtwoord
       button: true
       modifier: button--primary form__button
-    alert:
-      text: Uw account is succesvol geactiveerd. U kunt nu inloggen.
