@@ -35,7 +35,7 @@
     "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.0",
+    "@frctl/fractal": "^1.5.0",
     "@frctl/mandelbrot": "^1.2.1",
     "@frctl/twig": "^1.0.0-beta.5",
     "autoprefixer": "^9.6.1",
