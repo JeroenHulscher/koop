@@ -64,4 +64,5 @@ context:
       id: 123
       text: Reset wachtwoord
       button: true
+      type: submit
       modifier: button--primary form__button

@@ -78,6 +78,7 @@ context:
       id: 123
       text: Activeren
       button: true
+      type: submit
       modifier: button--primary form__button
     alert:
       text: Wij hebben u een activeringse-mail gestuurd, indien uw e-mailadres nog niet bij ons is geregistreerd.

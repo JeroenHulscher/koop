@@ -83,6 +83,7 @@ context:
       id: 123
       text: Registreren
       button: true
+      type: submit
       modifier: button--primary
   collapsible:
     id: 505

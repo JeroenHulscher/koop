@@ -76,6 +76,7 @@ context:
       id: 123
       text: Inloggen
       button: true
+      type: submit
       modifier: button--primary form__button
     alert:
       text: Uw account is succesvol geactiveerd. U kunt nu inloggen.

@@ -80,6 +80,7 @@ context:
         id: 123
         text: Opslaan abonnement
         button: true
+        type: submit
         modifier: button--primary form__button
     backlink:
       title: Terug naar Mijn abonnementen

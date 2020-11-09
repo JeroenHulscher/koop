@@ -64,4 +64,5 @@ context:
       id: 123
       text: Activeringscode aanvragen
       button: true
+      type: submit
       modifier: button--primary form__button
