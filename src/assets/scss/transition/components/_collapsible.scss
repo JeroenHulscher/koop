@@ -16,6 +16,21 @@
     }
   }
 
+  &--small {
+    .collapsible__header {
+      a {
+        padding-left: 1.5em;
+        background: {
+          size: 1em;
+          position: left top .05em;
+        }
+      }
+    }
+    .collapsible__content {
+      margin-left: 1.5em;
+    }
+  }
+
   .collapsible__content {
     margin: 0 0 .5em 2em;
     padding-top: .75em;

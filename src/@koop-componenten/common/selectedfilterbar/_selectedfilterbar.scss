@@ -1,0 +1,30 @@
+.selectedfilterbar {
+  margin: 0 0 1.5em 0;
+  position: relative;
+
+  &__heading {
+    margin: 0 0 .75em 0;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  &__filters {
+
+  }
+
+  &__buttonreset {
+    margin-left: -.25em;
+    @media (min-width: $breakpointDesktop) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0;
+    }
+  }
+
+  .form__selectedfilter {
+    max-width: 15em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

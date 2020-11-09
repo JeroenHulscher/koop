@@ -20,42 +20,59 @@ context:
 variants:
   - name: Enkel paneel
     context:
+      id: acc2
       config: '{"allowMultiplePanelsOpen": false}'
+      item1:
+        headerId: header11
+        headerLabel: Accordion Vraag 11
+        contentId: con11
+        content: Accordion Antwoord 11
+      item2:
+        headerId: header22
+        headerLabel: Accordion Vraag 22
+        contentId: con22
+        content: Accordion Antwoord 22
+      item3:
+        headerId: header33
+        headerLabel: Accordion Vraag 33
+        contentId: con33
+        content: Accordion Antwoord 33
   - name: Checkbox
     context:
+      id: acc3
       type: checkbox
       item1:
         type: checkbox
-        headerId: header1
-        headerLabel: Accordion Vraag 1
-        contentId: con1
-        content: Accordion Antwoord 1
+        headerId: header12
+        headerLabel: Accordion Vraag 12
+        contentId: con12
+        content: Accordion Antwoord 12
         accordionCheckbox:
           options:
           - id: header1
             text: Agenda's
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con1" id="option-header1" aria-checked="false"
+            arguments: aria-controls="con12" id="option-header1" aria-checked="false"
       item2:
         type: checkbox
-        headerId: header2
-        headerLabel: Accordion Vraag 2
-        contentId: con2
-        content: Accordion Antwoord 2
+        headerId: header23
+        headerLabel: Accordion Vraag 23
+        contentId: con23
+        content: Accordion Antwoord 23
         accordionCheckbox:
           options:
           - id: header2
             text: Handelingen
             name: countries
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con2" id="option-header2" aria-checked="false"
+            arguments: aria-controls="con23" id="option-header2" aria-checked="false"
       item3:
         type: checkbox
-        headerId: header3
-        headerLabel: Accordion Vraag 3
-        contentId: con3
-        content: Accordion Antwoord 3
+        headerId: header34
+        headerLabel: Accordion Vraag 34
+        contentId: con34
+        content: Accordion Antwoord 34
         hasContent: false
         accordionCheckbox:
           options:

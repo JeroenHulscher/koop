@@ -1,5 +1,5 @@
 title: alerts
-label: Meldingen
+label: Alert
 context:
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ac lectus ac maximus. <a href="#">Bekijk hier de toelichting</a>
   modifier: alert-default
@@ -20,11 +20,11 @@ variants:
     label: Update
     context:
       modifier: alert--update
-      heading: '<h3>Headertext</h3>'
+      heading: 'Headertext'
   - name: small
     label: Small
     context:
-      modifier: alert--small
+      modifier: alert--small alert--info
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - name: fixed to top
     label: Vaste positie (top)

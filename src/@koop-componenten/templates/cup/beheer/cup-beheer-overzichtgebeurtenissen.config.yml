@@ -1,0 +1,166 @@
+---
+label: CUP-beheer - Overzicht gebeurtenissen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: CUP Beheer
+    skipLinks: false
+    metaLinks:
+      - text: Gebruiker
+        class: icon icon--profile
+        nonlink: true
+      - url: "#"
+        text: Uitloggen
+        class: button button--logout
+  topbar:
+    navItems:
+      - label: CUP Beheer
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Enviroment
+        url: '#'
+      - text: Overzicht gebeurtenissen
+  pageactions:
+    title: ''
+    intro: ''
+    items:
+      - link: '#'
+        text: Nieuw werk
+        icon: icon-plus-shape.svg
+  inputsubmitContext:
+    id: 5
+    label: Verfijn uw zoekopdracht
+    showLabel: false
+    placeholder: Zoekterm
+    button: Zoeken
+    modifierComponent: input-inputsubmit--s
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Titel
+      value: value
+      active: is-active
+    - label: Laatste wijziging
+      value: value
+    - label: Aanmaakdatum
+      value: value
+  wordintitelInput:
+    id: 543
+    fieldLabelVisible: true
+    fieldPlaceholder: (een deel van een) werk-label
+    fieldLabel: Werk-label
+    labelmodifier: accent
+  wordintextInput:
+    id: 432
+    fieldLabelVisible: true
+    fieldPlaceholder: (deel van een) area
+    fieldLabel: Area
+    labelmodifier: accent
+  cga:
+    modifier: inline-group
+    fieldLabel: false
+    name: cga
+    options:
+      - id: checkbox-1
+        text: Inclusief CGA
+        name: cga
+  radioGegenereed:
+    fieldLabel: false
+    name: Tijdstip
+    explanation: false
+    options:
+      - id: 1
+        name: subject
+        text: Voor vorige week (85632)
+      - id: 2
+        text: Vorige week (7587)
+        name: subject
+        checked: checked
+      - id: 3
+        text: 6 dagen geleden (1178)
+        name: subject
+      - id: 4
+        text: 5 dagen geleden (1078)
+        name: subject
+      - id: 5
+        text: 4 dagen geleden (2848)
+        name: subject
+      - id: 6
+        text: 3 dagen geleden (1478)
+        name: subject
+      - id: 7
+        text: 2 dagen geleden (1245)
+        name: subject
+      - id: 8
+        text: 2 dagen geleden (16)
+        name: subject
+      - id: 9
+        text: gisteren (10)
+        name: subject
+      - id: 10
+        text: vandaag (1161)
+        name: subject
+  subtype:
+    fieldLabel: false
+    name: Subtype
+    explanation: false
+    options:
+      - id: 1111111
+        name: subtype
+        text: Complete
+      - id: 221
+        text: Error
+        name: subtype
+      - id: 332
+        text: Info
+        name: subtype
+      - id: 443
+        text: Process
+        name: subtype
+      - id: 454
+        text: Start
+        name: subtype
+  type:
+    fieldLabel: false
+    name: Type
+    explanation: false
+    options:
+      - id: 1111
+        name: type
+        text: Corb
+      - id: 222
+        text: Log
+        name: type
+      - id: 333
+        text: Micpimport
+        name: type
+  key:
+    fieldLabel: false
+    name: Type
+    explanation: false
+    options:
+      - id: 11112
+        name: key
+        text: Batchimport
+      - id: 22233
+        text: default
+        name: key
+      - id: 335
+        text: error-id
+        name: key
+      - id: 346
+        text: restult
+        name: key
+
+
+

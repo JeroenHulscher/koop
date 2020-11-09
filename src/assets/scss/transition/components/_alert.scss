@@ -16,6 +16,18 @@
     background-size: 1.5em;
     background-position: 1em 1em;
   }
+  &--update {
+    background-position: 1em 1.75em;
+
+    h2,h3 {
+      font-size: 1.5em;
+      line-height: 1.5em;
+      margin: 0 0 .5em;
+    }
+  }
+  &--update &__inner {
+    padding-top: 1.25em;
+  }
 }
 
 .jumbotron {

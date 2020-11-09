@@ -1,0 +1,419 @@
+---
+label: CUP Beheer - Werk
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    nav: false
+    youAreHere:
+      - text: CUP Beheer
+    skipLinks: false
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: G. Bruikersnaam
+          options:
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  topbar:
+    navItems:
+      - label: CUP Beheer
+        href: '#'
+        active: true
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Enviroment
+        url: '#'
+      - text: Platform
+        url: '#'
+      - text: Verkenner
+        url: '#'
+      - text: Metadata werk ag-11580
+  navToeContext:
+    id: 2
+    items:
+    - title: SGD
+      href: /components/preview/templates-eb-projectlanding
+      active: true
+      sub: true
+      subItems:
+        - stitle: Publicaties
+          sactive: true
+        - stitle: Spoedpublicaties
+        - stitle: Updaten metadata
+        - stitle: Vervangen verschijningsvormen
+        - stitle: Zoekdienst
+        - stitle: Controlelijst
+        - stitle: OEB ochtendcontrole
+  actions:
+    items:
+    - link: '#'
+      text: Nieuwe expressie
+      icon: icon-plus-shape.svg
+    - link: '#'
+      text: Genereren searchables
+      icon: icon-info-blue.svg
+    - link: '#'
+      text: Toon framework manifestat
+      icon: icon-publicatie.svg
+      modal: true
+      modalId: 5
+  modalWerkManifest:
+    modalId: 5
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  modalExpressieSearchableNL:
+    modalId: 6
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  modalExpressieSearchableEN:
+    modalId: 7
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  modalExpressieManifest:
+    modalId: 8
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  modalExpressie2SearchableNL:
+    modalId: 9
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  modalExpressie2SearchableEN:
+    modalId: 10
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  modalExpressie2Manifest:
+    modalId: 11
+    initClosed: true
+    openButton: false
+    modifier: modal--wide
+  publicatiegegevens:
+    modifier:
+    items:
+    - item:
+      - column:
+        type: Publicatie gegevens
+        value: Aantal pagina's
+      - column:
+        type: Waarde
+        value: 9
+  btnEdit:
+    anchor: true
+    action: '#'
+    text: Wijzig metadata
+  submitContext:
+    anchor: true
+    action: '#'
+    text: Verwijder werk
+  btnSync:
+    text: Synchroniseer
+  btnRem:
+    text: Verwijderen
+  accordionExpressies:
+    item1:
+      headerId: header1
+      headerLabel: Expressie 1
+      headerLabel2: (10-10-2020)
+      contentId: con1
+      content: Accordion Antwoord 1
+      moreless1:
+        listmodifier: list--linked
+        items:
+          - item: Toon searchable (NL)
+            attributes: data-handler="open-modal" data-modal="52311"
+      moreless1modal1:
+        modalId: 52311
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      btnEditE2:
+        anchor: true
+        action: '#'
+        text: Wijzig expressie
+      submitContext2:
+        anchor: true
+        action: '#'
+        text: Verwijder expressie
+      tableExpressie1:
+        label: default
+        caption: "Aanwezige labels: <span class='label'>metadataowns</span> <span class='label'>pdf</span> <span class='label'>metadata</span>"
+        modifier: table--condensed
+        items:
+          - item:
+            - column:
+              type: Label
+              value: metadataowns
+            - column:
+              type: Item naam
+              value: <a href="#">metadata_owms.xml/ag/onopgemaakt</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11585.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11584.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11583.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11582.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11581.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: metadata
+            - column:
+              type: Item naam
+              value: <a href="#">metadata.xml</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+    item2:
+      headerId: header2
+      headerLabel: Expressie 2
+      headerLabel2: (16-10-2020)
+      contentId: con2
+      content: Accordion Antwoord 1
+      isOpen: true
+      collapActions:
+        heading: Acties (4)
+        id: 111
+      moreless2:
+        listmodifier: list--linked
+        items:
+          - item: Toon searchable (NL)
+            attributes: data-handler="open-modal" data-modal="5231"
+          - item: Toon searchable (EN)
+            attributes: data-handler="open-modal" data-modal="5232"
+          - item: Toon searchable (BE)
+            attributes: data-handler="open-modal" data-modal="5233"
+          - item: Toon framework manifestat (EN)
+            attributes: data-handler="open-modal" data-modal="5234"
+          - item: Toon framework manifestat (NL)
+            attributes: data-handler="open-modal" data-modal="5235"
+          - item: Toon framework manifestat (BE)
+            attributes: data-handler="open-modal" data-modal="5236"
+          - item: Toon framework manifestat (FR)
+            attributes: data-handler="open-modal" data-modal="5237"
+          - item: Toon framework manifestat (SE)
+            attributes: data-handler="open-modal" data-modal="5238"
+      btnEditE1:
+        anchor: true
+        action: '#'
+        text: Wijzig expressie
+      submitContext1:
+        anchor: true
+        action: '#'
+        text: Verwijder expressie
+      moreless2modal1:
+        modalId: 5231
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal2:
+        modalId: 5232
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal3:
+        modalId: 5233
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal4:
+        modalId: 5234
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal5:
+        modalId: 5235
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal6:
+        modalId: 5236
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal7:
+        modalId: 5237
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      moreless2modal8:
+        modalId: 5238
+        initClosed: true
+        openButton: false
+        modifier: modal--wide
+      tableExpressie2:
+        label: default
+        caption: "Aanwezige labels: <span class='label'>metadataowns</span> <span class='label'>pdf</span> <span class='label'>metadata</span>"
+        modifier: table--condensed
+        items:
+          - item:
+            - column:
+              type: Label
+              value: metadataowns
+            - column:
+              type: Item naam
+              value: <a href="#">metadata_owms.xml/ag/onopgemaakt</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11585.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11584.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11583.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11582.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: pdf
+            - column:
+              type: Item naam
+              value: <a href="#">ag-11581.pdf</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+          - item:
+            - column:
+              type: Label
+              value: metadata
+            - column:
+              type: Item naam
+              value: <a href="#">metadata.xml</a>
+            - column:
+              type: Grootte
+              value: '-'
+            - column:
+              type: Datum
+              value: 16-01-2020
+
+
+

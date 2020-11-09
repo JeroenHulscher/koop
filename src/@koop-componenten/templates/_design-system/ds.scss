@@ -1,12 +1,50 @@
 .ds-content {
   .section-chapter {
     border-bottom: 1px solid $lightGrey;
-    margin-bottom: 6em;
+    margin-bottom: 2em;
+    padding-top: 4em;
     padding-bottom: 4em;
+
+    &__heading {
+
+    }
+    &__subheading {
+      font-size: 1.125em;
+      font-weight: bold;
+      margin-bottom: .5em;
+    }
+  }
+
+  .container {
+    background: $lightGrey;
   }
 }
 
 .u-bg--grey {
   background: $lightGrey;
+}
+
+.ds-preview {
+  margin-bottom: 2em;
+
+  &__demo {
+    border: 2px solid $lightGrey;
+    padding: 1.5em;
+
+    &__heading {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 1em;
+      margin: 0 0 1em 0;
+    }
+
+    .container {
+      margin-bottom: 1em;
+    }
+  }
+  &__content {
+    padding: 1.5em 1.5em .5em;
+    background: $lightGrey;
+  }
 }
 

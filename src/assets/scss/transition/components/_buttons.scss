@@ -26,6 +26,12 @@
     color: $primaryBlue;
   }
 
+  &--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
   &--slim {
     padding-right: .75em;
     padding-left: .75em;

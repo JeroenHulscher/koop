@@ -1,0 +1,90 @@
+---
+label: ROO - Uitgebreid zoeken
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Register voor Overheidsorganisaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Contactgegevens overheden
+    hstyle: h2
+    subheading: Register voor Overheidsorganisaties
+    intro: Met dit zoekformulier kunt u meer gericht zoeken naar een organisatie. Vervolgens kunt u op de resultaatpagina filteren op andere eigenschappen van de organisatie, zodat u sneller organisaties met bepaalde kenmerken vindt.
+    centered: true
+    size: semimedium
+    inputZoekwoord:
+      fieldPlaceholder: Zoekterm
+      fieldLabel: Zoek overheidsorganisatie
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    checkboxClassificaties:
+      name: alliedforces
+      options:
+        - id: checkbox-1
+          text: WNT-instelling (Wet normering topinkomens)
+          name: countries
+    selectOrganisatie:
+      id: 1123123
+      fieldLabel: Type organisatie
+      options:
+        - label: Alle organisaties
+          value: 10
+          selected: selected
+        - label: Gemeenten
+          value: 10
+        - label: Provincies
+          value: 20
+        - label: Waterschappen
+          value: 201
+        - label: Ministeries
+          value: 202
+        - label: Zelfstandige bestuursorganen
+          value: 203
+        - label: Gemeenschappelijke regelingen
+          value: 204
+        - label: Regionaal samenwerkingsorgaan
+          value: 205
+        - label: Staten-Generaal
+          value: 206
+        - label: Hoge Colleges van Staat
+          value: 207
+        - label: Adviescolleges
+          value: 208
+        - label: Rechtspraak
+          value: 209
+        - label: Openbare lichamen voor beroep en bedrijf
+          value: 2011
+        - label: Koepelorganisatie
+          value: 2012
+        - label: Politie en brandweer
+          value: 2013
+        - label: Caribisch Nederland
+          value: 2014
+        - label: Aruba, Curaçao en Sint Maarten
+          value: 2015
+        - label: Organisatie met overheidsbemoeienis
+          value: 2016
+    buttonSubmit:
+      id: 123
+      text: Zoek organisaties
+      button: true
+      type: submit
+      modifier: button--primary form__button

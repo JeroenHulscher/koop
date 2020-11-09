@@ -15,13 +15,24 @@
     border-color: $orange;
     border-radius: 0;
     margin: .5em 0;
-    padding: 0.5em 1em 0;
+    padding: 0 1em 0 3em;
+    background-position: 1em 1.25em;
 
+    h2 {
+      font-size: 1.5em;
+      color: $black;
+    }
     h3 {
       color: $black;
     }
 
-    *:not(h3):not(a) {
+    > h2,
+    > h3 {
+      font-size: 1.5em;
+      margin: .5em 0 .25em;
+    }
+
+    *:not(h3, h2):not(a) {
       background: lighten($orange, 30%);
       padding: 0 .5em;
     }
@@ -61,6 +72,7 @@
   &--fixed {
     position: fixed;
     left: 0;
+    top: 0;
     border-radius: 0;
     width: 100%;
     margin-top: 0;

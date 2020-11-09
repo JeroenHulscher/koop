@@ -14,12 +14,12 @@ describe('Subselection', function () {
 
     browser.driver.sleep(500);
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
 
-    element(by.css('#modal-1 #option-5 ~ label')).click();
+    element(by.css('#modal-98764 #option-6545 ~ label')).click();
 
     var modalButton = element(by.css('[data-handler="close-modal"]'));
     modalButton.click();
@@ -35,14 +35,14 @@ describe('Subselection', function () {
 
   it('should disgard changes when selected different inputs on cancel modal', function () {
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
 
-    element(by.css('#modal-1 #option-1 ~ label')).click();
-    element(by.css('#modal-1 #option-2 ~ label')).click();
-    element(by.css('#modal-1 #option-3 ~ label')).click();
+    element(by.css('#modal-98764 #option-6541 ~ label')).click();
+    element(by.css('#modal-98764 #option-6542 ~ label')).click();
+    element(by.css('#modal-98764 #option-6543 ~ label')).click();
 
     browser.driver.sleep(500);
 
@@ -84,7 +84,7 @@ describe('Subselection', function () {
 
   it('should keep the same amount if discarded directly', function () {
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(500);
@@ -103,12 +103,12 @@ describe('Subselection', function () {
 
   it('should disgard changes when selected different inputs on cancel modal', function () {
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
 
-    element(by.css('#modal-1 #option-1 ~ label')).click();
+    element(by.css('#modal-98764 #option-6541 ~ label')).click();
 
     browser.driver.sleep(500);
 
@@ -126,13 +126,13 @@ describe('Subselection', function () {
 
   it('should display 3 items, after selection one more', function () {
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
 
-    element(by.css('#modal-1 #option-1 ~ label')).click();
-    element(by.css('#modal-1 #option-2 ~ label')).click();
+    element(by.css('#modal-98764 #option-6541 ~ label')).click();
+    element(by.css('#modal-98764 #option-6542 ~ label')).click();
 
     browser.driver.sleep(500);
 
@@ -150,12 +150,12 @@ describe('Subselection', function () {
 
   it('should disgard changes when selected different inputs on cancel modal', function () {
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
 
-    element(by.css('#modal-1 #option-3 ~ label')).click();
+    element(by.css('#modal-98764 #option-6543 ~ label')).click();
 
     browser.driver.sleep(500);
 
@@ -173,15 +173,15 @@ describe('Subselection', function () {
 
   // it('should have 5 active filters when selected the other 4.', function () {
 
-  //   var subTrigger = element(by.css('#id1'));
+  //   var subTrigger = element(by.css('#id98764'));
   //   subTrigger.click();
 
   //   browser.driver.sleep(1500);
 
-  //   element(by.css('#modal-1 #option-1 ~ label')).click();
-  //   element(by.css('#modal-1 #option-3 ~ label')).click();
-  //   element(by.css('#modal-1 #option-4 ~ label')).click();
-  //   element(by.css('#modal-1 #option-5 ~ label')).click();
+  //   element(by.css('#modal-98764 #option-1 ~ label')).click();
+  //   element(by.css('#modal-98764 #option-3 ~ label')).click();
+  //   element(by.css('#modal-98764 #option-4 ~ label')).click();
+  //   element(by.css('#modal-98764 #option-5 ~ label')).click();
 
   //   browser.driver.sleep(500);
 
@@ -212,16 +212,16 @@ describe('Subselection', function () {
 
   it('should reset the element to the original trigger label', function () {
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98764'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
 
     // element(by.css('#modal-222 #option-1 ~ label')).click();
-    element(by.css('#modal-1 #option-1 ~ label')).click();
-    element(by.css('#modal-1 #option-2 ~ label')).click();
-    element(by.css('#modal-1 #option-4 ~ label')).click();
-    element(by.css('#modal-1 #option-5 ~ label')).click();
+    element(by.css('#modal-98764 #option-6541 ~ label')).click();
+    element(by.css('#modal-98764 #option-6542 ~ label')).click();
+    element(by.css('#modal-98764 #option-6544 ~ label')).click();
+    element(by.css('#modal-98764 #option-6545 ~ label')).click();
 
     var modalButton = element(by.css('[data-handler="close-modal"]'));
     modalButton.click();
@@ -242,7 +242,7 @@ describe('Subselection', function () {
 
     browser.driver.sleep(500);
 
-    var subTrigger = element(by.css('#id1'));
+    var subTrigger = element(by.css('#id98768'));
     subTrigger.click();
 
     browser.driver.sleep(1500);
@@ -253,7 +253,7 @@ describe('Subselection', function () {
   });
 
   it('should have its buttonSelectAll in the searched state ("dam")', function () {
-    var fieldSearch = element(by.css('#filter-id--1'));
+    var fieldSearch = element(by.css('#filter-id--98768'));
     fieldSearch.sendKeys('dam');
 
     browser.driver.sleep(500);
@@ -280,7 +280,7 @@ describe('Subselection', function () {
   });
 
   it('should have ZERO visible results', function () {
-    var fieldSearch = element(by.css('#filter-id--1'));
+    var fieldSearch = element(by.css('#filter-id--98768'));
     fieldSearch.sendKeys('a');
 
     browser.driver.sleep(500);
@@ -298,7 +298,7 @@ describe('Subselection', function () {
 
 
   it('should have ZERO visible results and display noresults-message', function () {
-    browser.driver.findElements(by.css('#alert-resultfilter-1')).
+    browser.driver.findElements(by.css('#alert-resultfilter-98768')).
       then(function (elems) {
         expect(elems.length).toEqual(1);
       }
@@ -309,7 +309,7 @@ describe('Subselection', function () {
     var buttonReset = element(by.css('.formreset-resetlink'));
     buttonReset.click();
 
-    var fieldSearch = element(by.css('#filter-id--1'));
+    var fieldSearch = element(by.css('#filter-id--98768'));
 
     browser.driver.sleep(500);
 
@@ -317,7 +317,7 @@ describe('Subselection', function () {
   });
 
   it('should reset the searchfield after clicking the clear-button', function () {
-    var fieldSearch = element(by.css('#filter-id--1'));
+    var fieldSearch = element(by.css('#filter-id--98768'));
     fieldSearch.sendKeys('dam');
 
     browser.driver.sleep(500);

@@ -1,0 +1,477 @@
+{{ render "@header" header merge=true }}
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+    id="toggleable-1">
+    <div>
+
+     {{render "@nav" navMenuContext }}
+     {{render "@nav" navContentContext }}
+
+    <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+      <span class="visually-hidden">Sluiten</span>
+    </button>
+
+    {{!-- <a href="#" class="to-top" data-decorator="to-top" title="Terug naar de bovenkant van de pagina">Naar boven</a> --}}
+    </div>
+  </div>
+  <div role="main" id="content" class="content ds-content">
+      <div class="row row--spacer">
+
+        {{#> @jumbotron jumbotronContext }}
+        {{/@jumbotron}}
+
+      </div>
+
+
+      <section class="section-chapter js-scrollSection" id="sectie-atomen">
+        <h2>Atomen</h2>
+        <p>
+          ...
+        </p>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-acties">
+        <h2>Acties</h2>
+        <p>
+           De componentenbibliotheek 2.0 kent 2 type buttons.
+        </p>
+        <dl>
+          <dt>Proces actie</dt>
+          <dd>
+            De proces button beïnvloed de inhoud van een pagina. Het uitvoeren van een actie kan effect hebben op de pagina waar de button zich bevindt of heeft een gevolg voor een onderliggende pagina. Is het gevolg op een onderliggende pagina? Dan navigeert deze button ook direct naar deze pagina.
+          </dd>
+          <dt>Navigatie actie</dt>
+          <dd>
+            De navigatie button verplaatst de gebruiker van pagina A naar pagina B. Navigeren kan naar een pagina binnen het domein of naar een externe pagina.
+          </dd>
+        </dl>
+        <h3>Hiërarchie</h3>
+        <p>
+           Binnen de componentenbibliotheek 2.0 wordt er gebruik gemaakt in de hiërarchie van de buttons die op de pagina te vinden
+          zijn. Deze hiërarchie geeft visuele feedforward over wat de gebruiker van een button kan verwachten. Zo is bijvoorbeeld de
+          meest opvallend knop binnen het platform altijd de belangrijkste actie op de pagina.
+        </p>
+        <p>
+           Er is visueel een groot contrast verschil tussen de verschillende type buttons. Hierdoor kunnen deze ten alle tijden, ook
+          in simultaan gebruik, goed van elkaar onderscheiden worden.
+        </p>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-zoeken">
+        <h2>Zoeken</h2>
+        <p>
+           Met een breed aanbod aan overheidsinformatie is het voor gebruikers belangrijk deze informatie goed te kunnen navigeren.
+          Door de informatie die zichtbaar is te beperken helpen we gebruikers zo snel mogelijk naar het vinden van de informatiebehoefte.
+        </p>
+        <p>
+           Binnen de complib definiëren we 5 vormen van zoeken die gebruikers helpen bij het minimaliseren van de zoekresultaten:
+        </p>
+        <ol>
+          <li>Filters</li>
+          <li>Facetten</li>
+          <li>Vrij zoeken</li>
+          <li>Sorteren</li>
+          <li>Weergeven</li>
+        </ol>
+        <p>
+           Gebruikers komen binnen website's in complib op 3 templates in aanraking met zoeken:
+        </p>
+        <ol>
+          <li>Eenvoudig zoeken</li>
+          <li>Uitgebreid zoeken</li>
+          <li>Zoekresultaten</li>
+        </ol>
+        <h3>Facetten &amp; filters</h3>
+        <p>
+           Filters en facetten hebben in essentie een vergelijkbare functie: Het analyseren van een dataset en op basis van variabelen
+          uitsluiten van items binnen deze set. Het verschil zit in de toepassing. Filters zijn statische variabelen die voor de gehele
+          dataset van toepassing zijn, facetten zijn dynamsiche eigenschappen van de (na filtering overgebleven) data en zijn daarom
+          afhankelijk van de geselecteerde filters.
+        </p>
+        <h4 class="h5">Toepassing</h4>
+        <ul>
+          <li>Filters en facetten hebben een afhankelijkheid van elkaar. Op basis van selectie in filters worden facetten bepaald. Een
+          verfijning op basis van facet kan er voor zorgen dat sommige filters niet meer beschikbaar zijn.</li>
+          <li>Wanneer is een selectie een filter of facet? Dit is afhankelijk van de datastructuur en dient dus per dataset bepaald te
+          worden.</li>
+        </ul>
+        <h3>Filters</h3>
+        <p>
+           Filters zijn voorgedefinieerde categorieën (item wordt in een bakje geplaatst). Filters kunnen op 2 manieren worden toegepast.
+          De te kiezen toepassing is afhankelijk van de dataset.
+        </p>
+        <h4>Navigatie</h4>
+        <ul>
+          <li>Je kunt altijd terug naar het vorige niveau</li>
+          <li>Je kunt altijd terug naar het hoofdniveau</li>
+          <li>We laten altijd de actieve categorie zien en (indien van toepassing) de onderliggende onderdelen</li>
+          <li>Als je op het diepste niveau bent blijven alle 'zusjes’ zichtbaar</li>
+          <li>De moeder blijft altijd zichtbaar</li>
+          <li>Je kunt deze niet resetten, je kunt terug navigeren</li>
+        </ul>
+        <h4>Configuratie</h4>
+        <ul>
+          <li>Hebben altijd een submit nodig voordat de pagina ververst na invullen of wijzigen</li>
+          <li>Submit is geclusterd dus is van toepassing op alle zoekfilters</li>
+          <li>Je kunt deze niet resetten maar per onderdeel aanpassen (of leegmaken)</li>
+        </ul>
+        <p><em>Filter worden opgebouwd op basis van atomen ‘Forms’ &amp; ‘Select’.</em></p>
+        <h3>Facetten</h3>
+        <p>Facetten zijn eigenschappen van een dataset (een item krijgt een label), een item in de dataset kan meerdere eigenschappen
+        hebben. Een facet is dynamisch en afhankelijk van de eerder geselecteerde filters. Als filters en facetten op een zelfde
+        niveau worden toegepast (op ‘Uitgebreid zoeken’ of ‘Zoekresultaten’) moeten deze altijd op elkaar reageren.</p>
+        <h4 class="h5">Toepassing</h4>
+        <ul>
+          <li>Er mogen nooit facetten zichtbaar/bruikbaar zijn die 0 resultaten opleveren in een zoekactie</li>
+          <li>Een facetlijst mag een beperkt aantal items bevatten tenzij deze voldoet aan de ‘Hick’s Law’ (staan op volgorde en zijn herkenbaar).
+          Anders beperken we aantal tot maximaal 15 opties.
+          <ul>
+            <li><strong>Good practice</strong>: Lijst van gemeenten (herkenbare termen)</li>
+            <li><strong>Bad practice</strong>: Lijst van rubrieken (abstracte termen)</li>
+          </ul>
+          </li>
+        </ul>
+        <p><em>Facetten worden opgebouwd op basis van atomen ‘Forms’ &amp; ‘Select’.</em></p>
+        <h3>Vrij zoeken</h3>
+        <p>
+           Een vrij invoerveld, ter behoeve van 'vrij zoeken', geeft gebruikers de mogelijkheid om iedere denkbare term in te voeren
+          en hier op te zoeken binnen de dataset. Aan de hand van deze input wordt de dataset gescand en worden resultaten weergegeven
+          die relevant zijn aan de invoer.
+        </p>
+        <p>
+           Het is moeilijk te voorspellen wat gebruikers hier invoeren en wat daarom de output van het systeem zal zijn. Vrij zoeken
+          wordt daarom ook gezien als een patroon voor powerusers.
+        </p>
+        <h4 class="h5">Toepassing</h4>
+        <ul>
+          <li>Vrij zoeken is nooit de enige zoekoptie binnen een collectie</li>
+          <li>Een vrij zoekveld is nooit beperkt op type of aantal tekens</li>
+          <li>De zoekopdracht wordt uitgevoerd op basis van de term in de titel of inhoud van een publicatie</li>
+        </ul>
+        <div class="alert alert--warning">
+           'Vrij zoeken' kent voor een aantal collecties (PLOOI &amp; Tuchtrecht) een uitzondering waarbij bij het vrij zoekveld gekozen
+          kan worden voor in welk deel van de tekst gezocht mag worden. Dit is een geaccepteerd verschil maar mag niet in een nieuw
+          ontwerp worden toegepast.
+        </div>
+        <h3>Sorteren</h3>
+        <p>Het herorganiseren van de getoonde zoekresultaten aan de hand van uitersten in een parameter.</p>
+        <h3>Weergeven</h3>
+        <p>Het op een bepaalde manier tonen van zoekresultaten (aantallen of grootte van weergave).</p>
+        <h3>Principes</h3>
+        <div class="alert alert--warning">
+           Deze principes niet opnieuw toepassen. Dit is een geaccepteerde afwijking maar mag niet opnieuw doorgevoerd worden. De nieuwe
+          vorm van toepassing wordt uitgelegd per onderdeel in 'Zoeken'.
+        </div>
+        <h4>Subselection</h4>
+        <ul>
+          <li>Bij een enkele (radio button ) of meervoudige (checkbox) selectie wordt bij meer dan 10 items een ’subselect’ toegepast.</li>
+          <li>Er zijn geen items meer zichtbaar op de pagina.</li>
+          <li>Toegepaste filters worden getoont in de vorm van een dynamisch label.</li>
+          <li>Toegepaste filter worden getoont boven de ingang naar de subselect en in een opsomming bovenaan de ‘filter’ kolom</li>
+        </ul>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-zoekresultaten">
+        <h2>Zoekresultaten</h2>
+        <p>
+           Op de zoekresultatenpagina worden de resultaten van een zoekactie weergegeven in ‘zoekresultaat’ blokken. Deze blokken geven
+          een eerste inzicht van de inhoud van de gevonden informatie. Zoekresultaten bevatten daarom:
+        </p>
+        <dl>
+          <dt>Label</dt>
+          <dd>(<em>optioneel</em>) Kan toegepast worden bij bijzonderheden zoals ‘nieuwe publicatie’ of ‘terinzagelegging beschikbaar’</dd>
+          <dt>Titel</dt>
+          <dd>De volledige titel van het item</dd>
+          <dt>Metadata</dt>
+          <dd>Kan per collectie verschillen maar bevat over het algemeen publicatiedatum, organisatie, geldigheidsperiode</dd>
+          <dt>Introductie</dt>
+          <dd>De eerste 2 regels van de publicatie</dd>
+          <dt>Button</dt>
+          <dd>Verwijzing/link naar publicatiepagina</dd>
+        </dl>
+        <h3>Uitzonderingen</h3>
+        <div class="alert alert--warning">
+           Deze uitzonderingen niet opnieuw toepassen. Dit is een geaccepteerde afwijking maar mag niet opnieuw doorgevoerd worden.
+          Alle nieuwe toepassingen moeten voldoen aan de bovenstaande indeling.
+        </div>
+        <p>Bij een aantal collecties zijn er uitzonderingen gemaakt in de toepassing van het zoekresultatenblok:</p>
+        <h4>Berichten over uw Buurt</h4>
+        <p>Deze collectie heeft in het zoekresultaat een extra button waarmee de gebruiker het resultaat op de kaart kan bekijken. Dit
+        is voor deze groep relevant omdat deze publicatie vaak locatiegebonden zijn. Binnen deze variant is ook een ‘Delen’ button
+        toegepast waarmee gebruikders de publicatie vanuit deze view kunnen delen.</p>
+        <h4>PLOOI</h4>
+        <p>Hier is de toevoeging gedaan waarmee gebruiker niet langs een detailpagina hoeven die een (externe) link bevat naar de specifieke
+        informatie maar vanaf het zoekresultaat blok direct het document bij de publicerende partij kunnen inzien. Dit is toegepast
+        om de gebruiker sneller naar de gewenste informatie toe te leiden.</p>
+        <h3>Interactie</h3>
+        <p>De gebruiker kan met het zoekresultaatblok interacteren door de ‘bekijk [X]’ button te gebruiken.</p>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-jumbotron">
+        <h2>Jumbotron</h2>
+        <p>
+           De ‘Jumbotron’ is hero component dat gebruikt wordt om de primaire boodschap of actie op en template onder de aandacht te
+          brengen. Op basis van deze aard (elementair) mag er maximaal 1 Jumbotron per pagina gebruikt worden. Er wordt hierop een
+          uitzondering gemaakt voor de versie ‘inschrijven’.
+        </p>
+        <p>De opbouw van het component is flexibel, er zijn een aantal toegepaste varianten uitgewerkt die op een basis principe terugkomen:
+        </p>
+        <dl>
+          <dt>Vormgeving</dt>
+          <dd>De basis van een Jumbotron bestaat altijd uit een ‘Lichtblauw' vlak</dd>
+          <dt>Boodschap</dt>
+          <dd>De boodschap in een jumbotron is altijd de belangrijskte op de pagina</dd>
+          <dt>Content</dt>
+          <dd>Een Jumbotron bevat altijd een subtitel, titel en introductie tekst</dd>
+        </dl>
+        <p>
+           Om de Jumbotron aan te passen naar de betreffende boodschap of actie is het mogelijk om een aantal moleculen toe te voegen:
+        </p>
+        <dl>
+          <dt>Call to action</dt>
+          <dd>Altijd een primaire button</dd>
+          <dt>Invoerveld/formulier</dt>
+          <dd>Altijd de ‘Large’ versie van invoervelden</dd>
+        </dl>
+        <h3>Eenvoudig zoeken</h3>
+        <p>Eenvoudig zoeken wordt toegepast als primaire actie op de ‘Ladingspagina’ van een collectie. Deze versie van de Jumbotron
+        mag dan ook alleen op dit template worden toegepast.</p>
+        <p>De functionaliteit van eenvoudig zoeken wordt bepaald op basis van de voornaamste zoekactie binnen een collectie. In de meeste
+        gevallen is die ‘vrij zoeken’ op basis van zoekwoord. In sommige gevallen (bijvoorbeeld Berichten over uw Buurt) is invoer
+        van locatie + straal de belangrijkste zoekactie. Bepaal wilde invoervelden hier nodig zijn op basis van de belangrijkste/meest
+        gebruikte zoek actie van een collectie.</p>
+        <p>Bij ‘eenvoudig zoeken’ wordt een secundaire actie toegevoegd in de vorm van een link naar ‘uitgebreid zoeken’.</p>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{#> @jumbotron jumbotronContext2 }}
+            <form class="form" data-decorator="init-form-validation">
+              <fieldset class="u-nomargin">
+                <legend class="visually-hidden">Doorzoek de decentrale overheden</legend>
+                <div class="form__row form__row--medium">
+                  <div class="column form__row column-d-9">
+                    {{ render "@input-text--medium" inputZoekwoord merge=true }}
+                  </div>
+                </div>
+                <div class="form__rowsubmit">
+                  <div class="form__rowsubmit__item">
+                    <button type="submit" class="form__button button button--primary button--large">Zoek regelingen</button>
+                  </div>
+                  <div class="form__rowsubmit__item">
+                    <a href="#" class="cta">Uitgebreid zoeken</a>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            {{/@jumbotron}}
+          </div>
+        </div>
+        <h3>Header</h3>
+        <p>Een header wordt toegepast op pagina’s waar de primaire actie niet direct wordt uitgevoerd. Dit kan betekenen dat er onder
+        de Jumbotron meerdere acties worden gegeven of er een ‘call to action’ wordt toegevoegd naar een onderliggende pagina. De
+        uitvoering is dan in de basis of door het toevoegen van een primaire button.</p>
+        <p>Deze vorm van de Jumbotron mag alleen toegepast worden op templates die zijn opgebouw op basis van een enkele kolom.</p>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+            {{#> @jumbotron jumbotronContext3 }}
+              <p>Uw abonnement beheren? Registreer dan direct!</p>
+              {{ render "@button" buttonSubmit }}
+            {{/@jumbotron}}
+          </div>
+        </div>
+        <h3>Geïsoleerd</h3>
+        <p>De Jumbotron mag geïsoleerd (enige component op de pagina) toegepast worden zodra we gebruikers lineair door een proces heen
+        willen helpen, bijvoorbeeld een aanmeldflow. Gebruikers kunnen op zo’n pagina terecht komen vanaf een externe omgeving (denk
+        aan een e-mail), of via een interne funnel (denk aan de attenderingsflow).</p>
+        <p>Zodra de Jumbotron in deze vorm wordt toegepast dient het component (het blauwe vlak) altijd de volledige hoogte van de browser
+        (minus header, kruimelpad en footer) te beslaan. Er is dus nooit witruimte op de pagina.</p>
+        <p>Er zijn 2 vormen van aanvulling op de basis Jumbotron mogelijk als deze geisoleerd wordt gebruikt:</p>
+        <ol>
+          <li>Tussenstap. Is er op deze pagina een concrete actie gewenst van de gebruiker (tussenstap, verder gaan om een funnel af te ronden), dan
+          wordt er altijd een primaire call to action en een escape (annuleren) uit deze flow geboden in de vorm van een secundaire
+          button.</li>
+          <li>Laatste stap. Heeft de gebruiker de funnel voltooid en wordt de Jumbotron ingezet als eindscherm, dan is er meestal geen concrete actie.
+          Wel bieden we altijd een logische vervolgstap voor de gebruiker. Een pagina mag nooit een dood einde hebben.</li>
+        </ol>
+        <h3>Formulier</h3>
+        <p>Een Jumbotron mag ingezet worden als eerste stap van een formulier. In het component wordt daarin de belangrijkste (eerste)
+        actie van het formulier geplaatst. De basis van subtitel, titel en introductie heeft een vormgeving die afwijkt van de basis
+        Jumbotron maar sluit hiermee beter aan op het template ‘Formulier’. Dit onderscheid wordt gemaakt omdat de Jumbotron in deze
+        toepassing onderdeel uitmaakt van de content.</p>
+        <p>De eerst stap van het formulier wordt in de Jumbotron aangevuld met:</p>
+        <ul>
+          <li>Terug knop. <em>Optioneel</em></li>
+          <li>Invoervelden</li>
+        </ul>
+        <div class="ds-preview">
+          <div class="ds-preview__demo">
+             {{#> @jumbotron jumbotronContext4 }}
+            <form class="form" data-decorator="init-form-validation">
+              <fieldset>
+                <legend class="visually-hidden">E-mailadres</legend>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form__row">
+                      {{render "@input-text" inputPostcodeContext }}
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="form__row">
+                      {{render "@input-text" inputHuisnummerContext }}
+                    </div>
+                  </div>
+                </div>
+                <div class="form__rowsubmit">
+                  <div class="form__rowsubmit__item">
+                    {{ render "@button" buttonSubmit }}
+                  </div>
+                </div>
+              </fieldset>
+
+            </form>
+            {{/@jumbotron}}
+          </div>
+        </div>
+        <h3>Inschrijven</h3>
+        <ul>
+          <li>Niet onder elkaar gebruiken (bij voorkeur kop en staart van een pagina)</li>
+          <li>Alleen op template ‘landing’ dubbel toepassen</li>
+          <li>Verkleinde vorm</li>
+          <li>Andere kleur dan 'Lichtblauw'</li>
+        </ul>
+        <p>Op dit moment ingezet in: Verdragenbank, Berichten over uw Buurt.</p>
+      </section>
+
+      <section class="section-chapter js-scrollSection" id="sectie-templates">
+        <h2>Templates</h2>
+        <h3>Home</h3>
+        <p>Alleen voor overheid.nl</p>
+        <ul>
+          <li>De tegelvariant van overheid.nl is een template exclusief voor deze toepassing</li>
+          <li>De homepage van het portaal moet altijd onderscheidend zijin van die van de collecties omdat die een andere fucntie heeft
+          dan die van de collecties.</li>
+        </ul>
+        <h3>Landing</h3>
+        <p>De ‘Landing’ is de startpagina van een collectie. Dit is (in veel gevallen) het eerste contact wat een gebruiker met een
+        collectie heeft. Van origine krijgt de landing daarom de functie van ‘eenvoudig zoeken’ binnen de specifieke collectie. Een
+        landing is in geen geval een homepage, overheid.nl heeft hier altijd een overkoepelende functie.</p>
+        <p>Het landing template is opgebouwd uit een aantal vaste onderdelen:</p>
+        <dl>
+          <dt>Header</dt>
+          <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+          <dt>Jumbotron</dt>
+          <dd>De jumbotron biedt gebruiker een introductie tot de collectie en de optie tot ‘eenvoudig zoeken’ binnen de collectie</dd>
+          <dt>Collectie onderscheidend</dt>
+          <dd>Deze ruimte mag vrij ingevuld worden door de collectie</dd>
+          <dt>Footer</dt>
+          <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+          <dt></dt>
+          <dd></dd>
+          <dt></dt>
+          <dd></dd>
+          <dt></dt>
+          <dd></dd>
+        </dl>
+        <h4>Collectie onderscheidend</h4>
+        <p>Tijdens de ontwikkeling van complib 2.0 is de wens ontstaan om de landing te verrijken. Deze wens is ontstaan doordat er
+        collecties zijn die, naast het ontsluiten van haar informatie in een zoekbare database, een secundair doel hebben met het
+        platform. Voorbeelden hiervan zijn conversie (voorbeeld: Berichten over uw Buurt attenderingsservice) of informatie (voorbeeld:
+        Berichten over uw Buurt verwijzing naar archief www.officielebekendmakingen.nl). De collectie onderscheidend mag daarom ingezet
+        worden op 2 manieren.</p>
+        <h5>Eenvoudig zoeken</h5>
+        <p>Naast de vorm van ‘eenvoudig zoeken’ in de Jumbotron hebben collecties binnen deze ruimte de mogelijkheid een secundaire
+        vorm van ‘eevoudig zoeken’ toe te passen. Eenvoudig zoeken op landing template mag toegepast worden op basis van deze componenten:</p>
+        <ul>
+          <li><strong>Themalijst</strong>. Als een collectie is opgebouw op basis van categorieen (navigatie zoekfilter)</li>
+        </ul>
+        <h5>Informatie</h5>
+        <p>
+           Het toepassen van informatie binnen een collectie landing template is alleen toegestaan als een collectie een duidelijk
+          secundair doel heeft. Bij het opstellen van een landing is het dan ook belangrijk dat er een content strategie voor een collectie
+          is. Daarbij moet vooral worden afgevraagd wat de doelen van de gebruiker en de collectie zelf zijn.
+        </p>
+        <div class="alert alert--warning">
+           De 'landing' van een collectie bestaat altijd uit een aantal vaste elementen. De invulling van de 'collectie onderscheidend'
+          is specifiek per collectie invulbaar. Momenteel is er nog geen duidelijke rationale achter de invulling hiervan en is er
+          een geaccepteerde afwijking tussen de verschillende collecties.
+        </div>
+        <h3>Uitgebreid zoeken</h3>
+        <p>
+           Uitgebreid zoeken is een template met als actie het invullen van een configuratie om een zoekquery samen te stellen. Deze
+          vorm van zoeken is over het algemeen complex (er moet een basis begrip zijn van de data uit een collectie) en wordt daarom
+          gezien als een functie voor de power user.
+        </p>
+        <p>
+           Een uitgebreid zoeken functie is niet binnen alle collecties toepasbaar. Het toepassen van uitgebreid zoeken voegt waarde
+          toe zodra: ...
+        </p>
+        <p>Als een uitgebreid zoeken wordt toegevoegd aan een collectie dient deze te voldoen aan een aantal voorwaarden:</p>
+        <ul>
+          <li>De filters van de collectie zijn altijd deel van de configuratie</li>
+          <li>De beschikbaar facetten hebben afhankelijkheid van elkaar en de filters.</li>
+          <li>Een gebruiker mag geen facetten selecteren die niet ‘beschikbaar’ (0 resultaten) zijn</li>
+        </ul>
+        <p><em>Een goed voorbeeld van uitgebreid zoeken op basis van deze voorwaarden is www.officielebekendmakingen.nl.</em></p>
+        <p>Een uitgebreid zoeken template bestaat uit een aantal vaste elementen:</p>
+        <dl>
+          <dt>Header</dt>
+          <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+          <dt>Zoekopties</dt>
+          <dd>Deze worden ingericht op basis van de datastructuur</dd>
+          <dt>Footer</dt>
+          <dd>Er wordt altijd een overheid.nl navigatie gevoerd</dd>
+        </dl>
+        <div class="alert alert--warning">
+           Uitgebreid zoeken heeft een afhankelijkheid met de rationale rondom 'zoeken'. Deze rationale zijn nog niet compleet waardoor
+          er een afwijking is ontstaan in de toepassing. Dit is een geaccepteerde afwijking. Nieuwe toepassing van een uitgebreid zoeken
+          template dient te worden gebaseerd op de nieuwe rationale.
+        </div>
+
+        <h3>Zoekresultaten</h3>
+        <p>Hier zien gebruikers de zoekresultaten a.d.h.v. een zoekactie (eenvoudig of uitgebreid) die hier verfijnd kunnen worden.</p>
+        <h4>Zoekfilters</h4>
+        <p>
+          ...
+        </p>
+        <h4>Facetfilters</h4>
+        <p>Zijn al zichtbaar als er nog geen zoekfilter selectie is gedaan. Worden evt aangepast obv de selectie.</p>
+        <h5>Toegepaste filters</h5>
+        <ul>
+          <li>We tonen toegepaste filters altijd op 2 plekken: Bij de specifieke facetfilter en in een opsomming boven de zoekresultaten</li>
+          <li>Toegepaste filters zijn alleen facetfilters</li>
+        </ul>
+        <h5>Toegepaste filters: Bij de filter</h5>
+        <ul>
+          <li>Kunnen los van elkaar worden verwijderd</li>
+        </ul>
+        <h5>Toegepaste filters: Opsomming</h5>
+        <ul>
+          <li>Vormgeving: Dynamisch label</li>
+          <li>Label inhoud: truncate op 20 tekens + [ ...]</li>
+          <li>Label inhoud: Alleen filter, geen filterbron. Dit worden te lange teksten om overzichtelijk te houden en is op een andere
+          plek ook te zien.</li>
+          <li>Kunnen in 1 keer of los van elkaar worden verwijderd</li>
+        </ul>
+        <h4>Sorteren &amp; weergave</h4>
+        <h5>Sorteren</h5>
+        <p>
+          ...
+        </p>
+        <h3>Detail</h3>
+        <h4>Toepassing headings</h4>
+        <p>
+           Op detailniveau (publicatie- en content pagina) wordt regelmatig gebruik gemaakt van titels die op kunnen lopen in lengte/aantal
+          tekens. Dit kan er voor zorgen dat in sommige gevallen de titel een groot deel van de pagina (boven de fold) bestrijkt.
+        </p>
+        <p>
+           Hier wordt op pagina’s van detailniveau het gebruik van headings die in vormgeving een niveau lager worden weergegeven.
+          Dit wil zeggen dat hiërarchisch gezien de headings een H1, H2, H3 enzovoorts structuur behouden, maar dat deze stapsgewijs
+          een kleinere vormgeving met zich meekrijgen.
+        </p>
+      </section>
+
+  </div>
+</div>
+
+

@@ -62,5 +62,11 @@ variants:
       text: Label
       action: '#'
       class: link link--remove
+  - name: Feed
+    label: Feed
+    context:
+      text: RSS van deze zoekvraag
+      action: '#'
+      class: link link--feed
 
 

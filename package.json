@@ -1,6 +1,6 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "1.9.37",
+  "version": "1.9.38",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.2.0",
+    "@frctl/fractal": "^1.5.0",
     "@frctl/mandelbrot": "^1.2.1",
     "@frctl/twig": "^1.0.0-beta.5",
     "autoprefixer": "^9.6.1",
@@ -47,6 +47,7 @@
     "fastselect": "^0.7.3",
     "glob-all": "^3.1.0",
     "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
     "gulp-changed": "^4.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
@@ -54,6 +55,7 @@
     "gulp-header": "^2.0.9",
     "gulp-imagemin": "^6.1.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",

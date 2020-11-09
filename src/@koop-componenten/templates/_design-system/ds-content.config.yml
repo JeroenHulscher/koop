@@ -14,20 +14,20 @@ context:
     items:
     - title: Design system
       active: true
-      href: templates-ds---homepage
+      href: templates-ds---index.html
       sub: true
       subItems:
-        - stitle: Toelichting
-          href: templates-ds---toelichting.html
-        - stitle: Ontwerpprincipes
-          href: templates-ds---ontwerpprincipes.html
         - stitle: Componenten
           href: templates-ds---componenten.html
         - stitle: Content
           href: templates-ds---content.html
           sactive: true
-        - stitle: Templates
-          href: templates-ds---templates.html
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes.html
+        - stitle: Rationale
+          href: templates-ds---rationale.html
+        - stitle: Toelichting
+          href: templates-ds---toelichting.html
   jumbotronContext:
     heading: Content
     h: h1
