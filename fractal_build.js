@@ -5,17 +5,24 @@ const fractal = require( '@frctl/fractal' ).create();
 // Handlebars
 fractal.components.engine(require('@frctl/handlebars')({
     helpers: {
-        increment: function(number, amount) {
-            // Parsing the number to ensure it was not provided as string.
-            return parseInt(number) + amount;
-        },
-        if_eq: function (a, b, opts) {
-          if (a == b) {
-            return opts.fn(this);
-          } else {
-            return opts.inverse(this);
-          }
+      increment: function(number, amount) {
+          // Parsing the number to ensure it was not provided as string.
+          return parseInt(number) + amount;
+      },
+      if_eq: function (a, b, opts) {
+        if (a == b) {
+          return opts.fn(this);
+        } else {
+          return opts.inverse(this);
         }
+      },
+      if_gt: function (a, b, opts) {
+        if (a > b) {
+          return opts.fn(this);
+        } else {
+          return opts.inverse(this);
+        }
+      }
     }
 }));
 fractal.components.set( 'ext', '.handlebars' );
