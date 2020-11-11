@@ -11,7 +11,7 @@
     this.element = element;
     this.mastercheckbox = this.element.querySelector('.js-checkbox-master');
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
-    this.checkboxes = this.element.querySelectorAll(this.config.checkboxSelextor || 'input[type="checkbox"]:not(.js-checkbox-master)');
+    this.checkboxes = this.element.querySelectorAll(this.config.checkboxSelector || 'input[type="checkbox"]:not(.js-checkbox-master)');
 
     this.init();
   };
