@@ -139,8 +139,11 @@ table,
   }
 
   .rotated {
-    writing-mode: vertical-lr;
-    transform: rotate(-180deg);
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
   }
 
   &__container {

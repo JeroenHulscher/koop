@@ -16,6 +16,7 @@ context:
     steps:
       - title: Voorbereiding
       - title: Raad van State
+        active: true
       - title: Tweede kamer
       - title: Eerste kamer
       - title: Bekendmaking

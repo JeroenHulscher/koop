@@ -1,0 +1,10 @@
+name: selectedfilters
+label: Geselecteerde filters
+context:
+  title: U heeft gezocht op
+  items:
+    - label: Openbaar lichaam voor bedrijf en beroep
+    - label: Productschap diervoeder
+    - label: Landbouw
+  linkEdit:
+    text: Pas zoekopdracht aan

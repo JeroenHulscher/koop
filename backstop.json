@@ -162,7 +162,7 @@
     {
       "label": "STOP XML Elementen",
       "url": "http://localhost:3000/components/preview/templates-1stop-xml-elementen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-stop-xml.html"
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-1stop-xml-elementen.html"
     },
     {
       "label": "Verdragenbank - homepage",
@@ -352,14 +352,9 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-homepage.html"
     },
     {
-      "label": "oebnl - templates-oeb-resultaten-ob",
-      "url": "http://localhost:3000/components/preview/templates-oeb-resultaten-ob",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-resultaten-ob.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-resultaten-pd",
-      "url": "http://localhost:3000/components/preview/templates-oeb-resultaten-pd",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-resultaten-pd.html"
+      "label": "oebnl - templates-oeb-resultaten",
+      "url": "http://localhost:3000/components/preview/templates-oeb-resultaten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-resultaten.html"
     },
     {
       "label": "oebnl - templates-oeb-zoek-bekendmakingen",

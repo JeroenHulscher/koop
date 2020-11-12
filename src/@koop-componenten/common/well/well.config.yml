@@ -1,4 +1,13 @@
 ---
 title: well
 label: Well
+variants:
+  - name: secondary
+    label: Secondair
+    context:
+      modifier: well--secondary
+  - name: tertiary
+    label: Tertiair
+    context:
+      modifier: well--tertiary
 

@@ -42,6 +42,7 @@ context:
       id: 123
       text: Zoek organisaties
       button: true
+      type: submit
       modifier: button--primary form__button
   blockIntro:
     id: 1

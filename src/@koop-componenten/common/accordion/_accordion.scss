@@ -18,13 +18,15 @@
       &-trigger {
         background: transparent;
         border: 0;
-        padding: 0 0 0 2em;
+        padding: .75em 0 .75em 2em;
         font-size: 1em;
         font-family: inherit;
         display: block;
         width: 100%;
         text-align: left;
         position: relative;
+        color: $darkBlue;
+        font-weight: bold;
 
         &:after {
           position: absolute;
@@ -38,9 +40,10 @@
           pointer-events: none;
         }
 
-        &[aria-expanded="true"] {
+        &[aria-expanded="true"],
+        &[aria-checked="true"] {
           &:after {
-            background-image: $iconArrowUp;
+            background-image: $iconArrowUpBlue;
           }
         }
       }
@@ -49,13 +52,12 @@
     &__heading {
       font-size: 1em;
       margin: 0;
-      padding: .75em 0;
       font-weight: bold;
-      display: inline-block;
 
       &-extra {
         display: inline-block;
         margin-left: 1em;
+        font-weight: normal;
         font-style: italic;
       }
     }

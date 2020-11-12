@@ -136,8 +136,8 @@
   &--treeview &__item,
   &--treeview &__sub-item {
     .is-mother {
-      background: $dartLeftIcon no-repeat left top .5em !important;
-      background-size: .325em;
+      background: $chevronLeftBlue no-repeat left top .4em !important;
+      background-size: .5em !important;
       padding-left: 1em;
     }
   }

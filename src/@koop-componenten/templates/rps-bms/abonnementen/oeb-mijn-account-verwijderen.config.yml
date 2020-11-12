@@ -1,0 +1,64 @@
+---
+label: Account verwijderen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn abonnementen
+      url: '#'
+    - text: E-mailadres wijigen
+  PWInput:
+    id: 3
+    type: password
+    fieldLabel: Wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Wachtwoord
+    required: true
+    requiredLabel: true
+  buttonSubmit:
+      id: 123
+      text: Verwijder account
+      button: true
+      type: submit
+      modifier: button--primary form__button
+  linkBack:
+    text: Terug naar Mijn abonnementen
+  preheader:
+    value: Mijn abonnementen
