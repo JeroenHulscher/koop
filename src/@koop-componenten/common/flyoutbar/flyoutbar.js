@@ -56,9 +56,7 @@
         }
       }
       this.openFoldout(el);
-
     }
-
     e.preventDefault();
   }
 
@@ -102,12 +100,12 @@
 
     if (this.element.classList.contains('is-open')){
       this.element.classList.remove('is-open');
+      this.navButton.setAttribute('aria-expanded', false);
       this.navButton.innerHTML = 'menu';
-      onl.ui.unbindFocusTrap( this.element );
     } else {
       this.element.classList.add('is-open');
       this.navButton.innerHTML = 'sluiten';
-      onl.ui.bindFocusTrap( this.element );
+      this.navButton.setAttribute('aria-expanded', true);
     }
   }
 
