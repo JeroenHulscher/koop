@@ -1,110 +1,119 @@
 <div class="result--list {{ modifier }}">
   <ul>
-  {{#each items }}
-    <li>
+  {{#if items }}
+    {{#each items }}
+      <li>
 
-      {{#if headerimg }}
-        <p><img src="{{headerimg}}" /></p>
-      {{/if}}
+        {{#if headerimg }}
+          <p><img src="{{headerimg}}" /></p>
+        {{/if}}
 
-      {{#if label }}
-        <p class="result--label"><i><span class="label {{#if labelType}}label--{{labelType}}{{/if}}">{{ label }}</span></i></p>
-      {{/if}}
+        {{#if label }}
+          <p class="result--label"><i><span class="label {{#if labelType}}label--{{labelType}}{{/if}}">{{ label }}</span></i></p>
+        {{/if}}
 
-      {{#if titleHeader }}
-        <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}>
-      {{else}}
-        <a href="{{href}}" class="result--title">{{ title }}</a>
-      {{/if}}
-
-      {{#if metadata }}
-        {{#if theme }}
-          Onderwerpen:
-          {{#each metadata }}
-            {{#if last }}
-              <a href="{{link}}">{{value }}</a>
-            {{else}}
-            <a href="{{link}}">{{value }}</a>,
-            {{/if}}
-          {{/each}}
-          </p>
+        {{#if titleHeader }}
+          <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}>
         {{else}}
-          <ul class="list--metadata">
+          <a href="{{href}}" class="result--title">{{ title }}</a>
+        {{/if}}
+
+        {{#if metadata }}
+          {{#if theme }}
+            Onderwerpen:
             {{#each metadata }}
+              {{#if last }}
+                <a href="{{link}}">{{value }}</a>
+              {{else}}
+              <a href="{{link}}">{{value }}</a>,
+              {{/if}}
+            {{/each}}
+            </p>
+          {{else}}
+            <ul class="list--metadata">
+              {{#each metadata }}
+                <li>{{ value }}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/if}}
+
+        {{#if metadataDates}}
+          <ul class="list--metadata">
+            {{#each metadataDates }}
               <li>{{ value }}</li>
             {{/each}}
           </ul>
         {{/if}}
-      {{/if}}
 
-      {{#if metadataDates}}
-        <ul class="list--metadata">
-          {{#each metadataDates }}
-            <li>{{ value }}</li>
-          {{/each}}
-        </ul>
-      {{/if}}
+        {{#if text }}
+        <p>{{{ text }}}</p>
+        {{/if}}
+        {{#if address }}
+        <address>{{{ address }}}</address>
+        {{/if}}
 
-      {{#if text }}
-       <p>{{{ text }}}</p>
-      {{/if}}
-      {{#if address }}
-       <address>{{{ address }}}</address>
-      {{/if}}
+        {{#if owner }}
+          <p>Organisatie: {{ owner }}<br />
+        {{/if}}
 
-      {{#if owner }}
-        <p>Organisatie: {{ owner }}<br />
-      {{/if}}
-
-      {{#if definitionlist }}
-        <dl class="dl dl--horizontal dl--{{definitionlistModifier}}">
-          {{#each definitionlistItems }}
-            <dt>{{ title }}</dt>
-            <dd>{{ description}}</dd>
-          {{/each}}
-        </dl>
-      {{/if}}
-
-      {{#if hasCollapsable}}
-        {{render "@collapsible" collapsContext }}
-      {{/if}}
-
-      {{#if downloads }}
-        {{#if theme }}
-          {{#each downloads }}
-            <span class="label label--{{type }}">{{type}}</span>
-          {{/each}}
-        {{else}}
-          <ul class="result--actions">
-            {{#each downloads }}
-              <li><a href="#" class="icon icon--download"><span>Download de</span> {{ type }} {{ size }}</a></li>
+        {{#if definitionlist }}
+          <dl class="dl dl--horizontal dl--{{definitionlistModifier}}">
+            {{#each definitionlistItems }}
+              <dt>{{ title }}</dt>
+              <dd>{{ description}}</dd>
             {{/each}}
+          </dl>
+        {{/if}}
+
+        {{#if hasCollapsable}}
+          {{render "@collapsible" collapsContext }}
+        {{/if}}
+
+        {{#> @partial-block}}
+          {{content}}
+        {{/ @partial-block}}
+
+        {{#if downloads }}
+          {{#if theme }}
+            {{#each downloads }}
+              <span class="label label--{{type }}">{{type}}</span>
+            {{/each}}
+          {{else}}
+            <ul class="result--actions">
+              {{#each downloads }}
+                <li><a href="#" class="icon icon--download"><span>Download de </span>{{ type }} {{ size }}</a></li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/if}}
+        {{#if buttons }}
+          <ul class="list list--inline list--narrow">
+            {{#each buttons }}
+              <li class="list__item"><a href="{{href}}" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
+            {{/each}}
+            {{#if share}}
+              <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
+              {{/if}}
           </ul>
         {{/if}}
-      {{/if}}
-      {{#if buttons }}
-        <ul class="list list--inline list--narrow">
-          {{#each buttons }}
-            <li class="list__item"><a href="{{href}}" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
-          {{/each}}
-           {{#if share}}
-            <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
-            {{/if}}
-        </ul>
-      {{/if}}
 
-      {{#if linklist}}
-        <h3 class="h4">{{#if linklistHeading}}{{linklistHeading}}{{else}}Bekijk document direct via{{/if}}</h3>
-        <div data-decorator="showmoreless" data-config='{"amount":"2"}'>
-          <ul class="list list--linked">
-            {{#each linklistItems}}
-            <li><a href="{{#if url}}{{url}}{{else}}http://www.externesite.nl{{/if}}">{{link}}</a> {{txt}}</li>
-            {{/each}}
-          </ul>
-        </div>
-      {{/if}}
+        {{#if linklist}}
+          <h3 class="h4">{{#if linklistHeading}}{{linklistHeading}}{{else}}Bekijk document direct via{{/if}}</h3>
+          <div data-decorator="showmoreless" data-config='{"amount":"2"}'>
+            <ul class="list list--linked">
+              {{#each linklistItems}}
+              <li><a href="{{#if url}}{{url}}{{else}}http://www.externesite.nl{{/if}}">{{link}}</a> {{txt}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
 
-    </li>
-  {{/each}}
+      </li>
+    {{/each}}
+  {{else}}
+     {{#> @partial-block}}
+     {{/ @partial-block}}
+  {{/if}}
   </ul>
 </div>
