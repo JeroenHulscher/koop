@@ -194,6 +194,10 @@ div.link {
     @extend .icon;
     @extend .icon--feed;
   }
+  &--share {
+    @extend .icon;
+    @extend .icon--shareBlue;
+  }
 }
 
 .link-iconed {
