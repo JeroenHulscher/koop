@@ -1,0 +1,12 @@
+label: Open data (1.0)
+context:
+  youAreHere:
+    - text: Open data van de Overheid
+  headerContext:
+    navLinks:
+    - url: '#'
+      text: Eenvoudig zoeken
+    - url: '#'
+      text: uitgebreid zoeken
+    - url: '#'
+      text: zoeken in EU-richtlijnen

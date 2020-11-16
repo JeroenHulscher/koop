@@ -1,0 +1,134 @@
+name: DS - Rationale
+label: DS - Rationale
+context:
+  header:
+    nav: false
+  breadcrumb:
+    last: Content
+    breadcrumbs:
+    - label: Overheid.nl
+      path: 'test'
+    - label: Design system
+      path: 'test'
+  navMenuContext:
+    items:
+    - title: Design system
+      active: true
+      href: templates-ds---index.html
+      sub: true
+      subItems:
+        - stitle: Componenten
+          href: templates-ds---componenten.html
+        - stitle: Content
+          href: templates-ds---content.html
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes.html
+        - stitle: Rationale
+          href: templates-ds---rationale.html
+          sactive: true
+        - stitle: Toelichting
+          href: templates-ds---toelichting.html
+  navContentContext:
+    items:
+    - title: Rationale
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Atomen
+          href: sectie-atomen
+        - stitle: Acties
+          href: sectie-acties
+        - stitle: Zoeken
+          href: sectie-zoeken
+        - stitle: Zoekresultaten
+          href: sectie-zoekresultaten
+        - stitle: Jumbotron
+          href: sectie-jumbotron
+        - stitle: Templates
+          href: sectie-templates
+  jumbotronContext:
+    heading: Rationale
+    h: h1
+    subheading: Design system
+  jumbotronContext2:
+    heading: Regelingen van decentrale overheden
+    subheading: Lokale wet- en regelgeving
+    h: h2
+    intro: Binnen de lokale wet- en regelgeving zoekt u naar algemeen verbindende voorschriften uitgegeven door gemeenten, provincies, waterschappen en regionale samenwerkingsorganen.
+    centered: true
+    headingcentered: true
+    inputZoekwoord:
+      fieldPlaceholder: Zoekwoord of zinsdeel
+      fieldLabel: Zoek naar regelingen
+      fieldLabelVisible: true
+      labelmodifier: medium
+      modifier: input-text--searchmedium
+    block1Context:
+      id: 1
+      htype: 3
+      heading: Welke overheden nemen nog geen deel?
+      subheading: Negatieve lijst
+      highlight: true
+      cta: true
+      ctalabel: Bekijk de lijst
+      ctahref: '#'
+    block2Context:
+      id: 1
+      htype: 3
+      heading: Onduidelijkheden, vragen of opmerkingen over regelingen?
+      subheading: Vragen
+      highlight: true
+      cta: true
+      ctalabel: Neem contact op
+      ctahref: '#'
+  jumbotronContext3:
+    heading: Uw aanmelding is bevestigd
+    h: h2
+    subheading: Berichten over uw Buurt
+    intro: We hebben uw bevestiging ontvangen. U ontvangt vanaf nu de nieuwste berichten over uw buurt in uw inbox.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonSubmit:
+      id: 123
+      text: Registreren
+      anchor: true
+      action: '#'
+      modifier: button--primary
+  jumbotronContext4:
+    heading: Over welke betrekkingen wilt u meldingen ontvangen?
+    subheading: Kies uw meldingen
+    h: h2
+    intro: Kies voor een straal en voorkeursinstellingen om voor u relevante informatie te ontvangen op mail@koop.overheid.nl
+    centered: true
+    size: semimedium
+    backlink:
+      title: Wijzig e-mailadres
+      href: '#'
+    inputPostcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 2453EH
+      required: true
+      patterntype: zipcode
+      title: Vul een geldige postcode in, 4 cijfers en 2 letters (bijv. 1234AB)
+    inputHuisnummerContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Huisnummer
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: 52
+      remove: true
+    buttonSubmit:
+      id: 123
+      text: Adres ophalen
+      button: true
+      modifier: button--primary form__button
+

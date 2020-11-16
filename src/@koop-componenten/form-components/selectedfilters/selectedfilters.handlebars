@@ -1,0 +1,11 @@
+<div class="selectedfilters {{modifiers}}">
+  <h3 class="selectedfilters__header">{{title}}</h3>
+  <ul>
+    {{#each items}}
+    <li><span class="selectedfilters__filter">{{label}}</span></li>
+    {{/each}}
+  </ul>
+  {{#if linkEdit}}
+    <p>{{ render "@link--edit"  linkEdit merge=true }}</p>
+  {{/if}}
+</div>

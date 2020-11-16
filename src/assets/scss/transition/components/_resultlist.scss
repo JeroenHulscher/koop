@@ -31,6 +31,15 @@
         padding-right: 0;
       }
 
+      .alert {
+        margin-top: 1em;
+      }
+
+      // improve html asap;
+      .collapsible__content > fieldset > label {
+        display: block;
+      }
+
       >*:last-child,
       > div[data-decorator="showmoreless"] .list:last-child {
         margin-bottom: 0;

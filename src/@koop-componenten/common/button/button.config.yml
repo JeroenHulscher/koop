@@ -144,3 +144,9 @@ variants:
       text: Button tekst
       modifier: button--text
       button: true
+  - name: Block element
+    status: ready
+    label: Block element
+    context:
+      text: Button tekst
+      modifier: button--primary button--block

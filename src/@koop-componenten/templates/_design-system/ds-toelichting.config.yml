@@ -14,20 +14,20 @@ context:
     items:
     - title: Design system
       active: true
-      href: templates-ds---homepage
+      href: templates-ds---index.html
       sub: true
       subItems:
-        - stitle: Toelichting
-          href: templates-ds---toelichting.html
-          sactive: true
-        - stitle: Ontwerpprincipes
-          href: templates-ds---ontwerpprincipes.html
         - stitle: Componenten
           href: templates-ds---componenten.html
         - stitle: Content
           href: templates-ds---content.html
-        - stitle: Templates
-          href: templates-ds---templates.html
+        - stitle: Ontwerpprincipes
+          href: templates-ds---ontwerpprincipes.html
+        - stitle: Rationale
+          href: templates-ds---rationale.html
+        - stitle: Toelichting
+          href: templates-ds---toelichting.html
+          sactive: true
   navContentContext:
     items:
     - title: Toelichting
@@ -49,5 +49,4 @@ context:
     heading: Toelichting
     h: h1
     subheading: Design system
-    intro: Uitleg over deze pagina.
 

@@ -34,55 +34,59 @@
         </div>
 
         <form id="formid">
+          <fieldset>
+            <legend class="visually-hidden">Verfijn zoekresultaten</legend>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Zoekwoord(en)</legend>
-              <div class="form__row">
-                {{ render "@input-inputsubmit" inputsubmitContext }}
+
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Zoekwoord(en)</legend>
+                  <div class="form__row">
+                    {{ render "@input-inputsubmit" inputsubmitContext }}
+                  </div>
+                </fieldset>
               </div>
-            </fieldset>
-          </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Tijdstip</legend>
-              <div class="form__row">
-                {{ render "@input-radio" radioGegenereed }}
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Tijdstip</legend>
+                  <div class="form__row">
+                    {{ render "@input-radio" radioGegenereed }}
+                  </div>
+                </fieldset>
               </div>
-            </fieldset>
-          </div>
 
-           <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Type</legend>
-              <div class="form__row">
-                {{ render "@input-radio" type }}
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Type</legend>
+                  <div class="form__row">
+                    {{ render "@input-radio" type }}
+                  </div>
+                </fieldset>
               </div>
-            </fieldset>
-          </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Subtype</legend>
-              <div class="form__row">
-                {{ render "@input-radio" subtype }}
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Subtype</legend>
+                  <div class="form__row">
+                    {{ render "@input-radio" subtype }}
+                  </div>
+                </fieldset>
               </div>
-            </fieldset>
-          </div>
 
-          <div class="form__row form__row--large">
-            <fieldset>
-              <legend>Key</legend>
-              <div class="form__row">
-                {{ render "@input-radio" key }}
+              <div class="form__row form__row--large">
+                <fieldset>
+                  <legend>Key</legend>
+                  <div class="form__row">
+                    {{ render "@input-radio" key }}
+                  </div>
+                </fieldset>
               </div>
+
+
+              <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
+                data-config='{"position":"bottom"}'>Zoek opnieuw</button>
             </fieldset>
-          </div>
-
-
-          <button type="submit" class="js-fixedbottom-button__button fixedbottom-button__button button button--primary" hidden data-decorator="init-sticky"
-            data-config='{"position":"bottom"}'>Zoek opnieuw</button>
         </form>
       </div>
   </div>

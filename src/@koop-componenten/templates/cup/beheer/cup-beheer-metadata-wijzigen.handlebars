@@ -54,12 +54,7 @@
           </tbody>
         </table>
 
-        <p>
-          {{ render "@button--primary" buttonSave merge=true }}
-          {{ render "@button" buttonCancel merge=true }}
-        </p>
-
-        {{#> @modal modalContextMetadata }}
+         {{#> @modal modalContextMetadata }}
         <fieldset data-decorator="init-form-conditionals">
           <legend class="visually-hidden">Metadata toevoegen</legend>
           <h2>Metadata toevoegen</h2>
@@ -89,6 +84,13 @@
           </div>
         </fieldset>
         {{/@modal}}
+
+        <p>
+          {{ render "@button--primary" buttonSave merge=true }}
+          {{ render "@button" buttonCancel merge=true }}
+        </p>
+
+
       </fieldset>
     </form>
 

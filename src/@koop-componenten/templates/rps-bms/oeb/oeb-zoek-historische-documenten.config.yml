@@ -1,5 +1,5 @@
 ---
-label: OEB 2.0 - Zoek - Historische parlementaire documenten
+label: Zoeken in historische parlementaire documenten
 status: ready
 context:
   header:
@@ -136,6 +136,7 @@ context:
       id: 123
       text: Zoek documenten
       button: true
+      type: submit
       modifier: button--primary form__button
     checkboxPub:
       options:

@@ -1,0 +1,124 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Zoek bekendmakingen</h2>
+
+        {{ render "@selectedfilters" }}
+
+        <h3 class="visually-hidden">Zoek opnieuw</h3>
+        <form>
+          <fieldset>
+            <legend class="visually-hidden">Zoek bekendmakingen</legend>
+             <div class="form__row">
+              {{ render "@input-text" searchterm }}
+            </div>
+            <div class="form__row">
+              {{ render "@select-custom--with-label" selectContext merge=true }}
+            </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Verfijn bekendmakingen</h2>
+
+        <form>
+          <fieldset>
+            <legend class="visually-hidden">Verfijn bekendmakingen</legend>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Documentsoort</legend>
+                {{ render "@facetlinkgroup" fgDocumentsoort }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Rubriek</legend>
+                {{ render "@facetlinkgroup" fgRubriek }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Publicerende organisaties</legend>
+                {{ render "@facetlinkgroup" fgPubOrga }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Publicatie datum</legend>
+                {{ render "@facetlinkgroup" fgPublicatiedatum }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Jaargang</legend>
+                {{ render "@facetlinkgroup" fgJaargang }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Onderwerp</legend>
+                {{ render "@facetlinkgroup" fgOnderwerp }}
+              </fieldset>
+            </div>
+
+          </fieldset>
+
+        </form>
+
+        <p>
+          {{ render "@link--feed" linkRSS }}<br>
+          {{ render "@link--mail" linkAbonneren merge=true }}
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    <h1>Zoekresultaten
+      <span class="h1__sub">1-10 van de 7396 resultaten</span>
+    </h1>
+
+    {{ render "@selectedfilterbar" }}
+
+    {{ render "@sort" sortContext }}
+
+    {{!-- <div class="row">
+      {{render "@link--mail" linkAbonneren merge=true }}
+    </div> --}}
+
+    {{render "@resultlist" resultsContext }}
+
+    {{render "@pagination" }}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

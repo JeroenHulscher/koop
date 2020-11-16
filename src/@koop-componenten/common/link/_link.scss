@@ -102,6 +102,9 @@ a.link {
 }
 li.link,
 div.link {
+  padding-left: 0 !important;
+  background: none !important;
+
    &--down a {
     background: {
       position: 0 center !important;
@@ -186,6 +189,10 @@ div.link {
   &--logout {
     @extend .icon;
     @extend .icon--logout;
+  }
+  &--feed {
+    @extend .icon;
+    @extend .icon--feed;
   }
 }
 

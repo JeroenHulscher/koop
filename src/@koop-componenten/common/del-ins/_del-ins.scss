@@ -1,7 +1,12 @@
 del {
   background: $lightRed;
-  padding: .1em;
+  // padding: .1em;
   color: $black;
+
+  > * {
+    background: $lightRed;
+  }
+
 
 	&::before,
 	&::after {
@@ -25,9 +30,13 @@ del {
 
 ins {
   background: $lightGreen;
-  padding: .1em;
+  // padding: .1em;
   color: $black;
   text-decoration: none;
+
+  > * {
+    background: $lightGreen;
+  }
 }
 
 .ins,

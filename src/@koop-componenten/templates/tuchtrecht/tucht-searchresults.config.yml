@@ -311,6 +311,7 @@ context:
     - id: checkbox-4012312312312
       text: Uitspraak
       name: onderwerp45
+      checked: checked
     - id: checkbox-4023232131321
       text: Inhoudsindicatie
       name: onderwerp45
