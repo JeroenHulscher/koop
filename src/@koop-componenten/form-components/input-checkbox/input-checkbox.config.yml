@@ -18,6 +18,25 @@ context:
       text: Canada
       name: countries
 variants:
+  - name: met Link
+    context:
+      modifier: inline-group
+      fieldLabel: Welke landen vochten er mee met de geallieerden in de Tweede Wereldoorlog?
+      name: alliedforces
+      options:
+        - id: checkbox-1
+          text: Groot-Brittanië
+          name: countries
+          hasLink: true
+          linkLabel: (Voorbeeld link)
+          linkHref: '#'
+        - id: checkbox-2
+          text: Verenigde Staten
+          checked: checked
+          name: countries
+        - id: checkbox-3
+          text: Canada
+          name: countries
   - name: Many
     label: Uitgebreid
     explanation: false
