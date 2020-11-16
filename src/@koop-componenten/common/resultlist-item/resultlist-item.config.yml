@@ -1,0 +1,5 @@
+title: resultlist-item
+label: Resultlijst-item
+context:
+  items:
+    - title: Titel
