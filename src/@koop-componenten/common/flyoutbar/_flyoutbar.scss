@@ -36,7 +36,7 @@
     }
 
     &__item {
-      margin: 0 1em 0 0;
+      margin: 0 1em 0 1em;
       padding: 0;
       list-style: none;
       position: relative;
@@ -46,6 +46,7 @@
       }
 
       @media (min-width: $breakpointDesktop) {
+        margin: 0 1em 0 0;
         display: inline-block;
       }
 
@@ -63,13 +64,13 @@
         }
         &[aria-expanded="true"] {
           padding-right: 1em;
-          background: #f1f1f1 $dartUpIcon no-repeat right center;
+          background: $dartUpIcon no-repeat right center;
         }
       }
 
       &__foldout {
         display: none;
-        background: #f1f1f1;
+        border-left: 2px solid $darkBlue;
         padding: 1em;
 
         @media (min-width: $breakpointDesktop) {
@@ -77,6 +78,8 @@
           left: 0;
           top: 100%;
           min-width: 10em;
+          background: #f1f1f1;
+          border-left: 0;
         }
 
         > p {
@@ -135,10 +138,10 @@
     display: block;
   }
   &.is-open &__nav__item__foldout {
-    padding-left: 2em;
-    @media (min-width: $breakpointDesktop) {
-      padding-left: 1em;
-    }
+    padding-left: 1em;
+    // @media (min-width: $breakpointDesktop) {
+    //   padding-left: 1em;
+    // }
   }
 
 }
