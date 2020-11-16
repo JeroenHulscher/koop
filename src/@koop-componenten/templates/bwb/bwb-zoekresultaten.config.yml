@@ -29,3 +29,77 @@ context:
       - link: '#'
         text: Toon aanvinkte elementen
         icon: icon-arrow-right.svg
+  resultlist:
+    item1:
+      title: Aanpassingswet enige wetten Ministerie van Veiligheid en Justitie (brengen van een aantal zelfstandige bestuursorganen onder werking van Kaderwet zelfstandige bestuursorganen)
+      titleHeader: h2
+      titleHref: '#'
+      metadata:
+        - value: 148 artikelen
+      collapsible:
+        heading: 148 relevante elementen
+        checkboxes:
+          options:
+            - id: checkbox-1
+              text: Opschrift
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
+            - id: checkbox-2
+              text: Aanhef
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+            - id: checkbox-3
+              text: Deel 1 Algemene bepalingen
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Deel 1 Algemene bepalingen </span>Bekijken)
+            - id: checkbox-4
+              text: Hoofdstuk 1.1 Begripsbepalingen
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Hoofdstuk 1.1 Begripsbepalingen </span>Bekijken)
+            - id: checkbox-5
+              text: Artikel 1.1
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Artikel 1.1 </span>Bekijken)
+            - id: checkbox-6
+              text: Artikel 1.2
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Artikel 1.2 </span>Bekijken)
+    item2:
+      title: Gemeente Delft
+      titleHeader: h2
+      titleHref: '#'
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      modal:
+        initClosed: true
+        closeButton: sluiten
+        openButton: Bekijk op kaart
+        buttonModifier: button-texticon button-texticon--marker
+        mapContext:
+          id: 1
+          modifier:
+          controls: false
+          kpm:
+            id: 1
+    item3:
+      title: Overige besluiten van algemene strekking
+      titleHeader: h2
+      titleHref: '#'
+      text: Grootschalige zonne- en windenergie in de Kempen
+      metadata:
+        - value: 'Datum publicatie: 16-11-2020'
+        - value: 'Jaargang en nummer: Gemeenteblad 2020, 296948'
+        - value: 'Organisatie: Reusel-De Mierden'
+      downloads:
+        - type: Bekijk PDF
