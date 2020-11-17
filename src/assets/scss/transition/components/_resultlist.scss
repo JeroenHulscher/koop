@@ -113,15 +113,6 @@
     }
   }
 
-  @media (min-width: $breakpointDesktop) {
-    &--wide {
-      > ul > li,
-      > ul:first-child > li {
-        padding: 2.25em 4em 2.25em;
-      }
-    }
-  }
-
   &--large > ul,
   &--large > ul:first-child {
     padding: .5em .5em 1px; // 1px fix needed for padding-flow bug;
@@ -147,8 +138,8 @@
 
       .result--actions {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 1em;
+        top: 1em;
 
         li {
           list-style: none;
@@ -163,7 +154,15 @@
   }
 }
 
-
+@media (min-width: $breakpointDesktop) {
+  .result--list--large.result--list--wide,
+  .result--list--wide {
+    > ul > li,
+    > ul:first-child > li {
+      padding: 2.25em 4em 2.25em;
+    }
+  }
+}
 .columns--sticky-sidebar .result--title {
   display: block;
 }
