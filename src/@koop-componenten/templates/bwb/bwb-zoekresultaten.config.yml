@@ -37,6 +37,7 @@ context:
       metadata:
         - value: 148 artikelen
       collapsible:
+        id: 3
         heading: 148 relevante elementen
         checkboxes:
           options:
@@ -76,30 +77,3 @@ context:
               hasLink: true
               linkHref: '#'
               linkLabel: (<span class="visually-hidden">Artikel 1.2 </span>Bekijken)
-    item2:
-      title: Gemeente Delft
-      titleHeader: h2
-      titleHref: '#'
-      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
-      modal:
-        initClosed: true
-        closeButton: sluiten
-        openButton: Bekijk op kaart
-        buttonModifier: button-texticon button-texticon--marker
-        mapContext:
-          id: 1
-          modifier:
-          controls: false
-          kpm:
-            id: 1
-    item3:
-      title: Overige besluiten van algemene strekking
-      titleHeader: h2
-      titleHref: '#'
-      text: Grootschalige zonne- en windenergie in de Kempen
-      metadata:
-        - value: 'Datum publicatie: 16-11-2020'
-        - value: 'Jaargang en nummer: Gemeenteblad 2020, 296948'
-        - value: 'Organisatie: Reusel-De Mierden'
-      downloads:
-        - type: Bekijk PDF

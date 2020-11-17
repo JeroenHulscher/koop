@@ -26,47 +26,6 @@
           {{ render "@input-checkbox" checkboxes }}
         {{/ @collapsible}}
       {{/ @resultlist-item}}
-      {{#> @resultlist-item item2 }}
-         {{#> @modal modal }}
-          <div class="row row--large">
-            {{render "@map" mapContext }}
-            <script id="config1" type="application/json">
-              {
-                "debug":false,
-                "options": {
-                  "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
-                  "class": "kaartprikmodule-overlay",
-                  "mode": "geoview",
-                  "center": {
-                    "highlight": true,
-                    "type": "location",
-                    "location": {
-                      "type": "gemeente",
-                      "title": "Gemeente Delft"
-                    }
-                  },
-                  "controls": ["zoom"],
-                  "layers": {
-                    "bgtachtergrondkaart": {
-                      "enabled": true
-                    }
-                  }
-                }
-              }
-            </script>
-          </div>
-          <h2>Gemeente Delft</h2>
-          <address>
-             <p>Gemeente Delft, Stationsplein 1, 2611 BV DELFT
-            </p>
-          </address>
-          <p>
-            <a href="#" class="button button--primary">Bekijk details</a>
-          </p>
-         {{/ @modal}} {{ render "@link--share" }}
-      {{/ @resultlist-item}}
-      {{#> @resultlist-item item3 }}
-      {{/ @resultlist-item}}
     {{/ @resultlist}}
 
 
