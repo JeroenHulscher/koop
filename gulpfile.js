@@ -13,8 +13,8 @@ const del = require( 'del' );
 const imageOptim = require( 'gulp-imagemin' );
 const changed = require( 'gulp-changed' );
 const header = require( 'gulp-header' );
-// const rename = require( 'gulp-rename' );
-// const change = require( 'gulp-change' );
+const rename = require( 'gulp-rename' );
+const change = require( 'gulp-change' );
 const cleancss = require('gulp-clean-css');
 var replace = require('gulp-replace');
 const paths = {
@@ -276,7 +276,7 @@ gulp.task( 'js:watch', function() {
 gulp.task( 'default', gulp.parallel( 'css', 'images', 'fonts', 'js' ) );
 gulp.task( 'dist-build', gulp.series( 'default', 'dist:clean', 'dist:copypublic' ) );
 
-gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'fractal:build' ) );
+gulp.task( 'fractal-build', gulp.series( 'css', 'images', 'fonts', 'js', 'fractal:build', 'ds' ) );
 // gulp.task( 'watch', gulp.parallel( 'lint:watch', 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'watch', gulp.parallel( 'css:watch', 'js:watch', 'images:watch', 'fonts:watch' ) );
 gulp.task( 'clean', gulp.parallel( 'css:clean', 'images:clean', 'fonts:clean', 'js:clean' ) );
