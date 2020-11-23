@@ -202,6 +202,41 @@ context:
           href: textarea
         - stitle: Tooltip
           href: tooltip
+  navJSComponentsContext:
+    items:
+    - title: Javascript componenten
+      active: false
+      sub: true
+      anker: true
+      subItems:
+        - stitle: Checkbox - Selecteer alle
+          href: checkbox-alle
+        - stitle: Checkbox - De-selecteer alle
+          href: checkbox-dealle
+        - stitle: Kopieer link
+          href: kopieerlink
+        - stitle: Filter resultaten
+          href: filterresultaten
+        - stitle: Formulier condities
+          href: formuliercondities
+        - stitle: Annuleer wijzigingen
+          href: annuleerwijzigingen
+        - stitle: Veld toevoegen
+          href: veldtoevoegen
+        - stitle: Redirecter
+          href: redirecter
+        - stitle: Reset formulier
+          href: resetformulier
+        - stitle: KPM Highlighter
+          href: kpmhighlighter
+        - stitle: Paswoordsterkte
+          href: paswoordsterkte
+        - stitle: Printen
+          href: printen
+        - stitle: Toon meer/minder
+          href: toonmeerminder
+        - stitle: To top
+          href: totop
   inputfile2:
     id: 09876567
   datepickerToday:
