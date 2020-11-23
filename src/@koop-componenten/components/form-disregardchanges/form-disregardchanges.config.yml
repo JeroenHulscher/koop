@@ -3,3 +3,28 @@ label: Form annuleer wijzigingen
 status: ready
 context:
   id: 1
+  checkbox1:
+    options:
+      - id: checkbox-14321
+        text: Groot-Brittanië
+        status: disabled
+        name: countries
+      - id: checkbox-24321
+        text: Verenigde Staten
+        checked: checked
+        name: countries
+      - id: checkbox-34321
+        text: Canada
+        name: countries
+  radio1:
+    options:
+      - id: 13345
+        name: subject
+        checked: checked
+        text: Afgelopen maand
+      - id: 23345
+        text: Afgelopen 3 maanden
+        name: subject
+      - id: 33345
+        text: Afgelopen 12 maanden
+        name: subject
