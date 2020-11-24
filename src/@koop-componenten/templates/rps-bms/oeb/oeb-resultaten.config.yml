@@ -85,81 +85,67 @@ context:
     items:
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
   fgDocumentsoort:
     items:
       - label: Blad gemeenschappelijke regelingen met nog iets
@@ -359,3 +345,5 @@ context:
     text: Abonneer op deze zoekvraag
   linkFeed:
     text: Abonneer op deze zoekvraag
+  alertSruQuery:
+    text: <h2>SRU-zoekvraag:</h2><a href="#">https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%253d%253d%2522officielepublicaties%2522)and(cql.textAndIndexes%253d%2522test%2522)%20AND%20dt.type==%22Aanhangsel%20van%20de%20Handelingen%22&zv=test&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cAanhangsel+van+de+Handelingen</a>
