@@ -11,7 +11,7 @@
     <div>
       <a href="#" class="icon--backlink">Terug naar de publicatie</a>
 
-      <h3 class="nav-sub__heading">Informatie</h3>
+      <h3 class="nav-sub__heading">Extra informatie</h3>
       {{render "@nav" navInformatie }}
 
       <h3 class="nav-sub__heading">Gerelateerd</h3>
@@ -22,6 +22,10 @@
     </div>
   </div>
   <div id="content" role="main" class="content content--publication">
+
+    {{ render "@alert--info" alertinfo1 merge=true }}
+    {{ render "@alert--info" alertinfo2 merge=true }}
+
     <h1>Informatie over deze publicatie</h1>
     <p>
        Deze publicatie is op 17-09-2020 gepubliceerd door Aalsmeer. De publicatie is van het type Beleidsregels en heeft als identifier

@@ -40,12 +40,12 @@ context:
     heading: Zoek in officiële bekendmakingen
     hstyle: h2
     subheading: Officiële bekendmakingen
-    intro: Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.
+    intro: Met de uitgebreide zoekmogelijkheden op dit scherm kunt u gericht zoeken naar officiële bekendmakingen waarin u geïnteresseerd bent.
     centered: true
     size: semimedium
     inputZoekwoord:
       fieldPlaceholder: Zoekterm of (dossier)nummer
-      fieldLabel: Zoek in officiële bekendmakingen
+      fieldLabel: Zoek op trefwoord
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
@@ -62,6 +62,26 @@ context:
         - label: Alleen titel
           value: alleen-titel
     dateselection:
+      dateselectionType:
+        id: 1
+        fieldLabel: Periode
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: false
+        options:
+          - id: 101
+            value:
+            label: Alle data
+            linkedto: 1
+            selected: selected
+          - id: 102
+            value: 10
+            label: Specifieke datum
+            linkedto: 2
+          - id: 103
+            value: 30
+            label: Zelf een periode kiezen
+            linkedto: 3
       additionalSelect:
         id: 1678765
         fieldLabel: Datum van
@@ -69,7 +89,7 @@ context:
         labelmodifier: accent
         hastooltip: true
         tooltip:
-          content: 'Datum publicatie: Gebruik de datum waarop het document is gepubliceerd op deze site. Datum document: Gebruik de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          content: '<strong>Datum publicatie</strong>: De datum waarop het document is gepubliceerd op deze site. <br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
           id: 123129876545678922
         options:
         - id: 1012
@@ -87,7 +107,8 @@ context:
         labelmodifier: accent
         hastooltip: true
         tooltip:
-          id: 12312987657456789
+          content: '<strong>Datum publicatie</strong>: De datum waarop het document is gepubliceerd op deze site. <br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          id: 1231298765456789221
         options:
         - id: 10121
           value:
@@ -102,7 +123,25 @@ context:
         value: '2020-09-11'
         datavalue: '11-09-2020'
         configDateFormat: 'dd-mm-yy'
+        id: 231
+        haslabel: true
+        labelmodifier: accent
+        fieldPlaceholder: DD-MM-JJJJ
+      dateselectionDatumStart:
+        id: 234
+        haslabel: true
+        label: Vanaf
+        labelmodifier: accent
+        fieldPlaceholder: DD-MM-JJJJ
+        value: ''
+        datavalue: ''
+        configDateFormat: 'dd-mm-yy'
       dateselectionDatumEnd:
+        id: 345
+        haslabel: true
+        label: Tot en met
+        labelmodifier: accent
+        fieldPlaceholder: DD-MM-JJJJ
         value: '2020-09-11'
         datavalue: '11-09-2020'
         configDateFormat: 'dd-mm-yy'
@@ -116,7 +155,7 @@ context:
       type: submit
       modifier: button--primary form__button
     subselectionGemContext:
-      linkText: Selecteer informatiesoort(en)
+      linkText: Selecteer type organisatie(s)
       id: 20
       modalTitle: Type organisatie(s)
       label: Zoek type organisatie(s)
@@ -126,7 +165,7 @@ context:
       type: span
       multilevel: false
       controls:
-        selectAllLabel: "Selecteer alle organisaties"
+        selectAllLabel: "Selecteer alle type organisaties"
       Options:
         - Option: 1
           id: 1237
@@ -189,13 +228,13 @@ context:
           title: Zelfstandig berstuurorgaan
           short: Zelfstandig berstuurorgaan
     subselectionPubContext:
-      linkText: Selecteer informatiesoort(en)
+      linkText: Selecteer organisatie(s)
       id: 21
       modalTitle: Publicerende organisatie(s)
       label: Zoek publicerende organisatie(s)
       inputPlaceholder: 'Zoekterm'
     subselectionWatContext:
-      linkText: Selecteer informatiesoort(en)
+      linkText: Selecteer onderwerp(en)
       id: 1900
       modalTitle: Onderwerp(en)
       label: Zoek onderwerp
@@ -323,10 +362,10 @@ context:
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer onderwerp(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek onderwerp
           controls:
-            selectAllLabel: Selecteer alle onderwerpen
+            selectAllLabel: Selecteer alle gevonden onderwerpen
           Options:
           - Option: 2112222
             id: 2112222
@@ -453,7 +492,7 @@ context:
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer rubriek(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek rubriek
           controls:
             selectAllLabel: Selecteer alle rubrieken
@@ -518,7 +557,7 @@ context:
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer rubriek(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek rubriek
           controls:
             selectAllLabel: Selecteer alle rubrieken
@@ -583,7 +622,7 @@ context:
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer rubriek(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek rubriek
           controls:
             selectAllLabel: Selecteer alle rubrieken
@@ -648,7 +687,7 @@ context:
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer rubriek(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek rubriek
           controls:
             selectAllLabel: Selecteer alle rubrieken
@@ -713,7 +752,7 @@ context:
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer rubriek(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek rubriek
           controls:
             selectAllLabel: Selecteer alle rubrieken

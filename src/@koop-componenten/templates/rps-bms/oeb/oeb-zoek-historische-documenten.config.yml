@@ -40,12 +40,12 @@ context:
     heading: Zoek in historische parlementaire documenten
     hstyle: h2
     subheading: Historische parlementaire documenten (1814 - 1995)
-    intro: U kunt ook <a href="#">Zoeken in parlementaire documenten na 1995</a>.
+    intro: Met de uitgebreide zoekmogelijkheden op dit scherm kunt u gericht zoeken naar parlementaire documenten van 1814 tot 1995. U kunt ook <a href="#">zoeken in parlementaire documenten na 1995</a>.
     centered: true
     size: semimedium
     inputZoekwoord:
       fieldPlaceholder: Zoekterm of (dossier)nummer
-      fieldLabel: Zoek in parlementaire documenten
+      fieldLabel: Zoek op trefwoord
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
@@ -153,9 +153,9 @@ context:
           name: puborganisatie
           checked: checked
     subselectionVerContext:
-      linkText: Selecteer informatiesoort(en)
+      linkText: Selecteer vergaderjaar
       id: 20
-      modalTitle: Type organisatie(s)
+      modalTitle: Vergaderjaar
       label: Zoek type organisatie(s)
       inputPlaceholder: 'Zoekterm'
       searchFilter: true
@@ -164,7 +164,7 @@ context:
       multilevel: false
       buttonResetForm: true
       controls:
-        selectAllLabel: Selecteer alle organisaties
+        selectAllLabel: Selecteer alle vergaderjaren
       Options:
         - Option: 1
           id: 1237

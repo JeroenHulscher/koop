@@ -9,13 +9,18 @@
 <div class="container columns columns--sticky-sidebar">
   <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
-      <a href="#" class="icon--backlink">Terug naar zoekresultaten (9430)</a>
+      <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
 
-      <h3 class="nav-sub__heading "><i>Publicatie</i></h3>
+      <h3 class="nav-sub__heading "><i>Inhoudsopgave</i></h3>
       {{ render "@treeview" treeview }}
 
-      <h3 class="nav-sub__heading">Informatie</h3>
+      <h3 class="nav-sub__heading">Extra informatie</h3>
       {{render "@nav" navInformatie }}
+
+      <h3 class="nav-sub__heading">Gerelateerd</h3>
+
+      {{ render "@list" listDownloads1 }}
+
     </div>
   </div>
   <div id="content" role="main" class="content content--publication">

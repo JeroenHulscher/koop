@@ -51,9 +51,6 @@ context:
     fieldLabelVisible: true
     fieldInstruction:
     fieldPlaceholder: Zoekterm of (dossier)nummer
-    required: true
-    requiredLabel: true
-    patterntype: text
   selectContext:
     fieldLabel: Documentsoort
     options:
@@ -90,9 +87,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
@@ -104,9 +98,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
@@ -118,9 +109,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
@@ -132,9 +120,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
@@ -146,9 +131,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
@@ -160,9 +142,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
@@ -174,9 +153,6 @@ context:
         titleHeader: h2
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
