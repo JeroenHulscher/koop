@@ -1,34 +1,11 @@
 ---
-title: BWB - Zoekresultaten
-label: BWB - Zoekresultaten
+title: Resultlijst - Varianten
+label: Resultlijst - Varianten
 status: wip
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-  spoedpublicatiemelding:
-    modifier: alert--info
-    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  actieblok:
-    title: 'Acties'
-    intro: ''
-    modifier: browse--icons
-    items:
-      - link: '#'
-        text: Alles openklappen
-        icon: icon-plus.svg
-      - link: '#'
-        text: Alles dichtklappen
-        icon: icon-minus.svg
-      - link: '#'
-        text: Alles aanvinken
-        icon: icon-checkall.svg
-      - link: '#'
-        text: Alles uitvinken
-        icon: icon-uncheckall.svg
-      - link: '#'
-        text: Toon aanvinkte elementen
-        icon: icon-arrow-right.svg
   resultlist:
     item1:
       title: Aanpassingswet enige wetten Ministerie van Veiligheid en Justitie (brengen van een aantal zelfstandige bestuursorganen onder werking van Kaderwet zelfstandige bestuursorganen)
@@ -37,7 +14,7 @@ context:
       metadata:
         - value: 148 artikelen
       collapsible:
-        id: 3
+        id: 4
         heading: 148 relevante elementen
         checkboxes:
           options:
@@ -77,3 +54,39 @@ context:
               hasLink: true
               linkHref: '#'
               linkLabel: (<span class="visually-hidden">Artikel 1.2 </span>Bekijken)
+    item2:
+      title: Gemeente Delft
+      titleHeader: h2
+      titleHref: '#'
+      text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, obcaecati! Aperiam quasi debitis exercitationem ducimus! Eligendi, iusto, ut! Tempore ab sit eveniet fugit officia minus incidunt atque facilis saepe at!
+      modal:
+        initClosed: true
+        closeButton: sluiten
+        openButton: Bekijk op kaart
+        buttonModifier: button-texticon button-texticon--marker
+        mapContext:
+          id: 1
+          modifier:
+          controls: false
+          kpm:
+            id: 1
+    item3:
+      title: Overige besluiten van algemene strekking
+      titleHeader: h2
+      titleHref: '#'
+      text: Grootschalige zonne- en windenergie in de Kempen
+      metadata:
+        - value: 'Datum publicatie: 16-11-2020'
+        - value: 'Jaargang en nummer: Gemeenteblad 2020, 296948'
+        - value: 'Organisatie: Reusel-De Mierden'
+      downloads:
+        - type: Bekijk PDF
+    item4:
+      title: ECLI:NL:TDIVTC:2020:54 Veterinair Tuchtcollege 's-Gravenhage 2020/3
+      titleHeader: h2
+      titleHref: 'https://tuchtrecht.overheid.nl/zoeken/resultaat/uitspraak/2020/ECLI_NL_TDIVTC_2020_54'
+      text: Dierenarts wordt verweten dat zij ten aanzien van een kat, die een gebitsreiniging zou ondergaan, veterinair tekort is geschoten doordat onder haar verantwoordelijkheid er onrechtmatig is gehandeld.
+      metadata:
+        - value: 'Datum publicatie: 10-11-2020'
+        - value: 'Datum uitspraak: 29-10-2020'
+        - value: 'ECLI:NL:TDIVTC:2020:54'

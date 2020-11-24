@@ -35,6 +35,7 @@
     <label class="checkbox__label" for="option-{{ id  }}">
       {{ text }}
     </label>
+    {{#if hasLink}}<a href="{{linkHref}}">{{{linkLabel}}}</a>{{/if}}
   </div>
   {{/each}}
 

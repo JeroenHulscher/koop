@@ -68,5 +68,11 @@ variants:
       text: RSS van deze zoekvraag
       action: '#'
       class: link link--feed
+  - name: Share
+    label: Delen
+    context:
+      text: Delen
+      action: '#'
+      class: link link--share
 
 

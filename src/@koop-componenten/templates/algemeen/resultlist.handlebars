@@ -1,0 +1,74 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+<div class="container columns columns--sticky-sidebar row">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+
+    </div>
+  </div>
+
+  <div>
+
+    <h1>Resultlijst varianten</h1>
+
+    {{#> @resultlist resultlist }}
+      {{#> @resultlist-item item4 }}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item1 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item2 }}
+         {{#> @modal modal }}
+          <div class="row row--large">
+            {{render "@map" mapContext }}
+            <script id="config1" type="application/json">
+              {
+                "debug":false,
+                "options": {
+                  "location_types": ["provincie", "gemeente", "adres", "punt", "lijn"],
+                  "class": "kaartprikmodule-overlay",
+                  "mode": "geoview",
+                  "center": {
+                    "highlight": true,
+                    "type": "location",
+                    "location": {
+                      "type": "gemeente",
+                      "title": "Gemeente Delft"
+                    }
+                  },
+                  "controls": ["zoom"],
+                  "layers": {
+                    "bgtachtergrondkaart": {
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            </script>
+          </div>
+          <h2>Gemeente Delft</h2>
+          <address>
+             <p>Gemeente Delft, Stationsplein 1, 2611 BV DELFT
+            </p>
+          </address>
+          <p>
+            <a href="#" class="button button--primary">Bekijk details</a>
+          </p>
+         {{/ @modal}} {{ render "@link--share" }}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item3 }}
+      {{/ @resultlist-item}}
+    {{/ @resultlist}}
+
+
+  </div>
+</div>
+
+{{ render "@footer" }}

@@ -54,13 +54,6 @@
       font-size: 0;
     }
 
-    & ~ .list {
-      margin-top: 1em;
-    }
-  }
-
-  [data-handler="open-modal"] {
-    margin-bottom: 0;
   }
 
   &__data {
