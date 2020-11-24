@@ -1,0 +1,338 @@
+---
+label: Zoekresultaten BMS
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    breadcrumb:
+      - text: Home
+        url: '#'
+      - text: Vandaag
+  selectedfilters:
+    title: U heeft gezocht op
+    items:
+      - label: 'Vergaderjaar: 1825-1826'
+    linkEdit:
+      text: Pas zoekvraag aan
+  searchterm:
+    labelmodifier: accent
+    id: 2
+    fieldLabel: Zoeken op
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Zoekterm of (dossier)nummer
+  selectContext:
+    fieldLabel: Documentsoort
+    options:
+      - label: Alle documenten
+        value: 10
+        selected: selected
+      - label: Parlementaire documenten
+        value: 20
+      - label: Officiële bekendmakingen
+        value: 50
+  buttonSubmit:
+    id: 123
+    text: Zoek opnieuw
+    button: true
+    type: submit
+    modifier: button--primary button--block form__button
+  sortContext:
+    modifier:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+    - label: Titel
+      value: value
+      active: is-active
+  resultsContext:
+    modifier: result--list--wide
+    items:
+      - title: Overige besluiten van algemene strekking
+        titleHeader: h2
+        titleHref: '#'
+        text: Kennisgeving Besluit van Provinciale Staten van Noord-Holland van 16 november 2020, nr. 1454270/1458609, tot vaststelling van het Programma Natuurontwikkeling 2021-2025, waarin opgenomen het Natuurbeheerplan Noord-Holland 2020-2021
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Provinciaal blad 2020, 8733"
+          - value: "Organisatie: Noord-Holland"
+      - title: Overige besluiten van algemene strekking
+        titleHeader: h2
+        titleHref: '#'
+        text: Noodverordening van de voorzitter van de Veiligheidsregio Rotterdam-Rijnmond houdende voorschriften ter voorkoming van verdere verspreiding van het coronavirus/COVID-19 (Noodverordening COVID-19 Veiligheidsregio Rotterdam-Rijnmond van 18 november 2020)
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Gemeenteblad 2020, 310033"
+          - value: "Organisatie: Albrandswaard"
+  resultsContext2:
+    modifier: result--list--wide
+    items:
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Beukendaal 135'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Dennendaal 83'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Sint-Janshaven 9'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Vinkenlust 97'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+      - title: Verkeersbesluiten
+        titleHeader: h2
+        titleHref: '#'
+        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
+        share: false
+        metadata:
+          - value: "Datum document: 01-09-2020"
+          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
+          - value: "Organisatie: Rotterdam"
+  fgDocumentsoort:
+    items:
+      - label: Blad gemeenschappelijke regelingen met nog iets
+        href: '#'
+        amount: 10
+        selected: true
+  fgTypeOrga:
+    items:
+      - label: "Dienst en agentschap"
+        href: '#'
+        amount: 14
+      - label: "Gemeente"
+        href: '#'
+        amount: 1275
+      - label: Ministerie
+        href: '#'
+        amount: 24
+      - label: Openbaar lichaam voor bedrijf en beroep
+        href: '#'
+        amount: 93
+      - label: Politiekorps
+        href: '#'
+        amount: 1
+      - label: Provincie
+        href: '#'
+        amount: 42
+      - label: Rechterlijke macht
+        href: '#'
+        amount: 20
+      - label: Regionaal samenwerkingsorgaan
+        href: '#'
+        amount: 1
+      - label: Waterschap
+        href: '#'
+        amount: 58
+      - label: Zelfstandig bestuursorgaan
+        href: '#'
+        amount: 6
+    modal:
+      modalId: modal-987615211
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Type organisatie
+  fgOrga:
+    items:
+      - label: "'s-Gravenhage"
+        href: '#'
+        amount: 1045
+      - label: "Aalsmeer"
+        href: '#'
+        amount: 14
+      - label: Advocaten (cluster)
+        href: '#'
+        amount: 6755
+      - label: Albrandswaard
+        href: '#'
+        amount: 264
+      - label: Almelo
+        href: '#'
+        amount: 7
+      - label: Amersfoort
+        href: '#'
+        amount: 7
+      - label: Amstelveen
+        href: '#'
+        amount: 7
+      - label: Amsterdam
+        href: '#'
+        amount: 7
+      - label: Apeldoorn
+        href: '#'
+        amount: 7
+    modal:
+      modalId: modal-9876152112
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Organisatie
+  fgRubriek:
+    items:
+      - label: Algemeenverbindendverklaring van CAO-bepalingen
+        href: '#'
+        amount: 3
+      - label: AMvB
+        href: '#'
+        amount: 1
+      - label: Beleidsregels
+        href: '#'
+        amount: 10
+      - label: Benoemingen en ontslagen
+        href: '#'
+        amount: 2
+      - label: Beschikkingen | aanvraag
+        href: '#'
+        amount: 598
+      - label: Beschikkingen | afhandeling
+        href: '#'
+        amount: 547
+      - label: Besluiten van algemene strekking
+        href: '#'
+        amount: 8
+      - label: Gerechtelijke aankondigingen | Faillissementen, surseances en schuldsaneringen
+        href: '#'
+        amount: 9
+      - label: Gerechtelijke aankondigingen | Handlichtingen
+        href: '#'
+        amount: 2
+      - label: Gerechtelijke aankondigingen | Ondercuratelestellingen
+        href: '#'
+        amount: 6
+      - label: Gerechtelijke aankondigingen | Ontbinding huwelijk of Scheiding van tafel en bed
+        href: '#'
+        amount: 1
+      - label: Gerechtelijke aankondigingen | Overige aankondigingen
+        href: '#'
+        amount: 97
+      - label: Interne regelingen
+        href: '#'
+        amount: 1
+    modal:
+      modalId: modal-9875566
+      initClosed: true
+      openButton: Toon alle
+      closeButton: sluiten
+      modalTitle: Rubriek
+  linkAbonneren:
+    text: Abonneer op deze zoekvraag
+  linkFeed:
+    text: Abonneer op deze zoekvraag
+  linkEdit:
+    text: Pas zoekvraag aan
+  selectedfilterbar:
+    id: 109876567
+    heading: Door u gekozen filters
+    selectedFilters:
+      items:
+        - label: Blad gemeenschappelijke regelingen
+          url: "#"
+    buttonReset: true
+    linkDelete:
+      text: Wis alle filters
+      action: '#'
+  alertSpoed:
+    text: Spoedpublicaties zijn buiten het vaste publicatiemoment gepubliceerd. Zij worden ook een dag na publicatie nog getoond.

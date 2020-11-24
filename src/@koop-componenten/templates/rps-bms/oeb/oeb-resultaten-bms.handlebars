@@ -1,0 +1,86 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Filter resultaten</h2>
+
+        <form>
+          <fieldset>
+            <legend class="visually-hidden">Filter resultaten</legend>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Documentsoort</legend>
+                {{ render "@facetlinkgroup" fgDocumentsoort }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Type organisatie</legend>
+                {{ render "@facetlinkgroup" fgTypeOrga }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Organisatie</legend>
+                {{ render "@facetlinkgroup" fgOrga }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Rubriek</legend>
+                {{ render "@facetlinkgroup" fgRubriek }}
+              </fieldset>
+            </div>
+
+          </fieldset>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    <h1>Dinsdag 24 november 2020</h1>
+
+    <p>Alle publicaties op dinsdag 24 november 2020 die aan de door u gekozen filters voldoen.</p>
+
+    {{ render "@selectedfilterbar" selectedfilterbar }}
+
+    <h2>Totaal 2 spoedpublicaties</h2>
+
+    {{ render "@alert--info" alertSpoed merge=true }}
+
+    {{render "@resultlist" resultsContext }}
+
+
+
+
+    <h2>Totaal 1272 publicaties</h2>
+
+     {{ render "@sort" sortContext }}
+
+    {{render "@resultlist" resultsContext2 }}
+
+    {{render "@pagination" }}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}
