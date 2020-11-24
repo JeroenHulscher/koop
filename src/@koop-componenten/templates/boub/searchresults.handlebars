@@ -26,7 +26,7 @@
         </address>
         <p>
           <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-4">Wijzigen</a>&nbsp;
-          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-2">Bewaar deze zoekopdracht</a>
+          <a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-5">Bewaar deze zoekopdracht</a>
         </p>
 
       </div>
@@ -169,8 +169,6 @@
 
       </div>
 
-
-
     </div>
     <div class="column column--sidebar">
 
@@ -190,65 +188,6 @@
               <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-4">Wijzigen</a></li>
               <li><a href="#" data-decorator="init-modal" data-handler="open-modal" data-modal="modal-5">Bewaar deze zoekopdracht</a></li>
             </ul>
-
-            <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
-              <div class="modal__inner">
-                <div class="modal__content">
-
-                  {{#> @jumbotron jumbotronChangeContext }}
-
-                    <form class="form" data-decorator="init-form-validation">
-                      <fieldset>
-                        <legend class="visually-hidden">Zoek berichten</legend>
-                        <div class="form__row ">
-                          <div class="columns">
-                            <div class="form__row form__row--medium">
-                              {{render "@input-text" postcodeContext }}
-                            </div>
-                            <div class="form__row form__row--medium">
-                              {{render "@input-text" huisnrContext }}
-                            </div>
-                            <div class="form__row form__row--medium">
-                              {{ render "@select-custom--with-label" selectContext merge=true }}
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form__row align-right">
-                          <button type="submit" class="form__button button button--primary button--large">Zoek opnieuw</button>
-                        </div>
-                      </fieldset>
-                    </form>
-
-                  {{/@jumbotron}}
-
-                </div>
-
-                <button type="button" data-handler="close-modal" class="modal__close">
-                  <span class="visually-hidden">Sluiten</span>
-                </button>
-
-              </div>
-            </div>
-
-            <div id="modal-5" class="modal modal--wide modal--off-screen" hidden role="alert">
-              <div class="modal__inner">
-                <div class="modal__content">
-                   {{#> @jumbotron jumbotronSaveContext }}
-                    <form class="form" data-decorator="init-form-validation">
-                      <fieldset>
-                        <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
-                        <div class="form__row">
-                          {{ render "@input-inputsubmit" inputsubmitSearchSaveContext }}
-                        </div>
-                      </fieldset>
-                    </form>
-                  {{/@jumbotron}}
-                </div>
-                <button type="button" data-handler="close-modal" class="modal__close">
-                  <span class="visually-hidden">Sluiten</span>
-                </button>
-              </div>
-            </div>
 
           </div>
 
@@ -322,13 +261,69 @@
 
         </div>
 
-
-
-
         <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
           <span class="visually-hidden">Sluiten</span>
         </button>
 
+      </div>
+
+      <div id="modal-4" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+
+            {{#> @jumbotron jumbotronChangeContext }}
+
+            <form class="form" data-decorator="init-form-validation">
+              <fieldset>
+                <legend class="visually-hidden">Zoek berichten</legend>
+                <div class="form__row ">
+                  <div class="columns">
+                    <div class="form__row form__row--medium">
+                      {{render "@input-text" postcodeContext }}
+                    </div>
+                    <div class="form__row form__row--medium">
+                      {{render "@input-text" huisnrContext }}
+                    </div>
+                    <div class="form__row form__row--medium">
+                      {{ render "@select-custom--with-label" selectContext merge=true }}
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row align-right">
+                  <button type="submit" class="form__button button button--primary button--large">Zoek opnieuw</button>
+                </div>
+              </fieldset>
+            </form>
+
+            {{/@jumbotron}}
+
+          </div>
+
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+
+        </div>
+      </div>
+
+      <div id="modal-5" class="modal modal--wide modal--off-screen" hidden role="alert">
+        <div class="modal__inner">
+          <div class="modal__content">
+            {{#> @jumbotron jumbotronSaveContext }}
+            <form class="form" data-decorator="init-form-validation">
+              <fieldset>
+                <legend class="visually-hidden">Meld je aan voor de emailservice</legend>
+                <div class="form__row">
+                  {{ render "@input-inputsubmit" inputsubmitSearchSaveContext }}
+                </div>
+              </fieldset>
+            </form>
+            {{/@jumbotron}}
+          </div>
+          <button type="button" data-handler="close-modal" class="modal__close">
+            <span class="visually-hidden">Sluiten</span>
+          </button>
+        </div>
       </div>
 
     </div>
