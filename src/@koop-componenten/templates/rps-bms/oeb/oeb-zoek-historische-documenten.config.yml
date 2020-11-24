@@ -156,7 +156,7 @@ context:
       linkText: Selecteer vergaderjaar
       id: 20
       modalTitle: Vergaderjaar
-      label: Zoek type organisatie(s)
+      label: Zoek vergaderjaar
       inputPlaceholder: 'Zoekterm'
       searchFilter: true
       maxShow: 3
@@ -357,7 +357,7 @@ context:
         ha_dossiernummer:
           id: 11112
           type: text
-          fieldLabel: Vergadernummer
+          fieldLabel: Dossiernummer
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. 12345-XII'
           labelmodifier: secondary
@@ -473,7 +473,7 @@ context:
         kv_ontvanger:
           id: 1111222
           type: text
-          fieldLabel: Ontvangen (achternaam)
+          fieldLabel: Ontvanger (achternaam)
           fieldLabelVisible: true
           fieldPlaceholder: 'Bijv. Jansen'
           labelmodifier: secondary
