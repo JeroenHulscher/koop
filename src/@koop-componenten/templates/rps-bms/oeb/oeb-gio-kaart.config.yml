@@ -1,0 +1,84 @@
+---
+label: GIO Kaart
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Informatieobject 2019, 106
+  documentbanner:
+    heading: Informatieobject
+    items:
+      - title: Datum publicatie
+        value: Onbekend
+      - title: Organisatie
+        value: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+      - title: Jaargang en nummer
+        value: Informatieobject 2019, 106
+      - title: Rubriek
+        value: Geometrie
+  modalDelen:
+    modalId: 512
+    initClosed: true
+    openButton: false
+    closeButton: Toevoegen
+    copydata:
+      url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
+  mapContext:
+    id: 1
+    modifier:
+    controls: false
+    kpm:
+      id: 1
+  pageactions:
+    items:
+    - link: '#'
+      text: Authentieke versie (GML)
+      icon: icon-download.svg
+    - link: '#'
+      text: Informatie over publicatie
+      icon: icon-info-blue.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+      actionPrint: true
+    - link: '#'
+      text: Delen
+      icon: icon-permalink.svg
+      modal: true
+      modalId: 512
