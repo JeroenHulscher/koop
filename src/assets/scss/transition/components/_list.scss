@@ -1,10 +1,17 @@
 .list {
   margin: 0 0 2em 0;
 }
-.facet--heading {
+.facet--heading,
+h2.facet--heading,
+h3.facet--heading,
+h4.facet--heading {
   font-size: 1em;
   padding: 0 0 0 .75em;
   margin-bottom: .5em;
+
+  & ~ .list--relations {
+    padding-left: .75em;
+  }
 }
 
 .list--relations ~ .facet--heading {
