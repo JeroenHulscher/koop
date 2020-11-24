@@ -155,8 +155,8 @@
 }
 
 @media (min-width: $breakpointDesktop) {
-  .result--list--large.result--list--wide,
-  .result--list--wide {
+  .result--list--large,
+  .result--list--large.result--list--wide {
     > ul > li,
     > ul:first-child > li {
       padding: 2.25em 4em 2.25em;
