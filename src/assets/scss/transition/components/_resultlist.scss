@@ -45,6 +45,17 @@
         margin-bottom: 0;
       }
 
+      > .button,
+      > .link {
+        display: inline-block;
+        margin-bottom: 0;
+
+        @media (min-width: $breakpointDesktop) {
+          margin-bottom: 0;
+        }
+
+      }
+
     }
 
   }
