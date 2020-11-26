@@ -180,7 +180,9 @@
       var columns = document.querySelectorAll('.columns--sticky-sidebar > div');
       for (var i = 0; i < columns.length; i++) {
         if (!columns[i].classList.contains('columns--sticky-sidebar__sidebar')) {
-          columns[i].style.minHeight = sidebarHeight + 80 + "px";
+          if (sidebarHeight > window.innerHeight) {
+            columns[i].style.minHeight = window.innerHeight + 80 + "px";
+          }
         }
       }
 
