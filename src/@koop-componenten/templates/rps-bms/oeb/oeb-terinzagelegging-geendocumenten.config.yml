@@ -1,0 +1,97 @@
+---
+label: Terinzagelegging - Geen documenten
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: true
+          textLoggedIn: Profiel
+          options:
+            - text: Mijn abonnementen
+              url: '#'
+              class: link link--forgotpw
+            - text: Uitloggen
+              url: '#'
+              class: link link--logout
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Vandaag
+      url: '#'
+    - text: Staatsblad 2020, 225609
+      url: '#'
+    - text: Terinzagelegging
+  pageactions:
+    items:
+    - link: '#'
+      text: Help
+      icon: icon-info-blue.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+      actionPrint: true
+    - link: '#'
+      text: Delen
+      icon: icon-permalink.svg
+      modal: true
+      modalId: 512
+  documentbanner:
+    img:
+      src: https://www.rotterdam.nl/_images/rotterdam_logo/logo.svg
+    heading: Gemeenteblad Rotterdam
+    items:
+      - title: Datum publicatie
+        value: 25-07-2016 14:17
+        isTime: true
+      - title: Organisatie
+        value: Rotterdam
+      - title: Jaargang en nummer
+        value: Gemeenteblad 2020, 141932
+      - title: Rubriek
+        value: Beschikkingen | aanvraag
+      - title: Reactietermijn
+        value: Tot en met 28-05-2020
+  navInformatie:
+    items:
+      - title: Informatie over deze publicatie
+      - title: Terinzagelegging
+        active: true
+        sactive: true
+  modalDelen:
+    modalId: 512
+    initClosed: true
+    openButton: false
+    closeButton: Toevoegen
+    copydata:
+      url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
+  labelTerm:
+    text: Actief
+  alertDocumenten:
+    text: Er zijn geen documenten in deze terinzagelegging beschikbaar.
+  rowHeadingDocuments:
+    heading: <h2>Documenten <span class="h2__sub">0 documenten</span>
+
+

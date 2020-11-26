@@ -1,0 +1,33 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+
+  </div>
+  <div id="content" role="main">
+
+    <h1>Geen resultaten gevonden</h1>
+
+    <p>Er zijn geen resultaten gevonden voor uw zoekopdracht.</p>
+
+    <h2>Zoektips</h2>
+
+    <ul>
+      <li>Controleer de spelling of probeer een andere zoekterm.</li>
+      <li>Hoe specifieker de zoekvraag, hoe kleiner het aantal resultaten. U kunt proberen een minder specifieke zoekvraag te stellen.
+      De resultaten kunt u verder verfijnen met behulp van de filters op de pagina met zoekresultaten.</li>
+    </ul>
+
+    <p>Ga terug om <a href="#">uw gestelde zoekvraag</a> aan te passen.</p>
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}
