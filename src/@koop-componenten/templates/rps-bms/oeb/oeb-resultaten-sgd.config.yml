@@ -309,3 +309,48 @@ context:
     linkDelete:
       text: Wis alle filters
       action: '#'
+  multiSelectDocumentsoort:
+    id: 1112312
+    placeholder: Selecteer documentsoort
+    name: documenten
+    helptext: Gebruik de TAB toets, of de pijl beneden toets om toegang te krijgen tot de suggesties. Druk om ENTER om uw keuze te bevestigen.
+    labelmodifier: accent
+    fieldInstruction: ''
+    fieldLabel: Documentsoort
+    fieldLabelVisible: true
+    fieldPlaceholder: 'Alle documentsoorten'
+    describedbyId: multiselect-helptext-1
+    categories:
+      - title: Parlementaire documenten
+        options:
+          - label: Alle parlementaire documenten
+            value: apd
+          - label: Handelingen
+            value: hand
+          - label: Moties
+            value: moties
+          - label: Kamervragen
+            value: kv
+          - label: Kamerstukken
+            value: Kames
+          - label: Agenda's
+            value: Agen
+      - title: Officiële bekendmakingen
+        options:
+          - label: Alle bekendmakingen
+            value: ab
+          - label: Tractatenblad
+            value: Tractatenblad
+          - label: Staatsblad
+            value: Staatsblad
+          - label: Staatscourant
+            value: Staatscourant
+          - label: Gemeenteblad
+            value: Gemeenteblad
+          - label: Provinciaal blad
+            value: Provinciaal blad
+          - label: Waterschapsblad
+            value: Waterschapsblad
+          - label: Blad gemeenschappelijke regeling
+            value: Blad gemeenschappelijke regeling
+

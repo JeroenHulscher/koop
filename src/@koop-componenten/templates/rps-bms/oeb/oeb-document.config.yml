@@ -61,6 +61,7 @@ context:
   documentbanner:
     img:
       src: ../../images/maintiendrai-grijs.png
+      alt: logo Overheid
     heading: Staatsblad van het Koninkrijk der Nederlanden
   navInformatie:
     items:

@@ -4,3 +4,8 @@ label: Row heading
 status: ready
 context:
   heading: <h2>Documenten <span class="h2__sub">20 documenten</span>
+  button:
+    modifier: button--slim
+    text: Download alle documenten
+    anchor: true
+    action: '#'

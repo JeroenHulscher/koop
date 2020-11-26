@@ -37,7 +37,7 @@ context:
       - content: <a href="templates-oeb-zoek-bekendmakingen">Officiële bekendmakingen</a>
       - content: <a href="templates-oeb-zoek-documenten" class="is-selected">Parlementaire documenten</a>
   jumbotronContext:
-    heading: Zoek op trefwoord
+    heading: Zoek in parlementaire documenten
     hstyle: h2
     subheading: Parlementaire documenten
     intro: Met de uitgebreide zoekmogelijkheden op dit scherm kunt u gericht zoeken naar parlementaire documenten vanaf 1995. U kunt ook <a href="#">zoeken in historische parlementaire documenten (1814 - 1995)</a>.

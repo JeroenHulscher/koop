@@ -61,6 +61,7 @@ context:
   documentbanner:
     img:
       src: https://www.rotterdam.nl/_images/rotterdam_logo/logo.svg
+      alt: logo Rotterdam
     heading: Gemeenteblad Rotterdam
     items:
       - title: Datum publicatie

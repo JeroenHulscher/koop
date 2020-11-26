@@ -61,6 +61,7 @@ context:
   documentbanner:
     img:
       src: https://www.rotterdam.nl/_images/rotterdam_logo/logo.svg
+      alt: logo Rotterdam
     heading: Gemeenteblad Rotterdam
     items:
       - title: Datum publicatie
@@ -124,7 +125,7 @@ context:
           action: http://www.google.nl
           text: Downloaden
   rowHeadingDocuments:
-    heading: <h2>Documenten <span class="h2__sub">2 documenten</span>
+    heading: <h2>Documenten <span class="h2__sub">2 documenten</span></h2>
     buttonDocumenten:
       modifier: button--slim
       text: Download alle documenten
