@@ -55,14 +55,13 @@
               </div>
             </fieldset>
 
-
           </div>
           <div class="column">
 
             <div class="form__row form__row--large">
               <fieldset>
                 <legend>Documentsoort</legend>
-                <div class="form__row">
+                <div class="form__row form__row--large">
                   <div data-decorator="init-unselectall" data-config='{"checkboxSelector":".accordion__item__header-checkboxtrigger"}'>
                     {{#> @accordion accordion1 }}
                       {{#> @accordion-item item1 }}
@@ -159,10 +158,6 @@
                               </div>
                             </div>
                           </div>
-                          <div class="form__row">
-                            <p class="form__sublegend form__sublegend--secondary">Rubriek(en)</p>
-                            {{ render "@subselection--with-catagories-and-select-all" sc_rubrieken merge=true }}
-                          </div>
                         </fieldset>
                       {{/@accordion-item}}
                       {{#> @accordion-item item5 }}
@@ -179,10 +174,6 @@
                                 {{ render "@input-text" gm_nummer }}
                               </div>
                             </div>
-                          </div>
-                          <div class="form__row">
-                            <p class="form__sublegend form__sublegend--secondary">Rubriek(en)</p>
-                            {{ render "@subselection--with-catagories-and-select-all" gm_rubrieken merge=true }}
                           </div>
                         </fieldset>
                       {{/@accordion-item}}
@@ -201,10 +192,6 @@
                               </div>
                             </div>
                           </div>
-                          <div class="form__row">
-                            <p class="form__sublegend form__sublegend--secondary">Rubriek(en)</p>
-                            {{ render "@subselection--with-catagories-and-select-all" pb_rubrieken merge=true }}
-                          </div>
                         </fieldset>
                       {{/@accordion-item}}
                       {{#> @accordion-item item7 }}
@@ -221,10 +208,6 @@
                                 {{ render "@input-text" wb_nummer }}
                               </div>
                             </div>
-                          </div>
-                          <div class="form__row">
-                            <p class="form__sublegend form__sublegend--secondary">Rubriek(en)</p>
-                            {{ render "@subselection--with-catagories-and-select-all" wb_rubrieken merge=true }}
                           </div>
                         </fieldset>
                       {{/@accordion-item}}
@@ -243,14 +226,14 @@
                               </div>
                             </div>
                           </div>
-                          <div class="form__row">
-                            <p class="form__sublegend form__sublegend--secondary">Rubriek(en)</p>
-                            {{ render "@subselection--with-catagories-and-select-all" bgr_rubrieken merge=true }}
-                          </div>
                         </fieldset>
                       {{/@accordion-item}}
                     {{/@accordion}}
                   </div>
+                </div>
+                <div class="form__row">
+                  <p class="form__sublegend">Rubriek(en)</p>
+                  {{ render "@subselection--with-catagories-and-select-all" sc_rubrieken merge=true }}
                 </div>
               </fieldset>
             </div>

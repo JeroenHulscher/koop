@@ -23,7 +23,7 @@
               {{ render "@input-text" searchterm }}
             </div>
             <div class="form__row">
-              {{ render "@select-custom--with-label" selectContext merge=true }}
+              {{ render "@select-multi" multiSelectDocumentsoort }}
             </div>
             <div class="form__rowsubmit">
               <div class="form__rowsubmit__item">
@@ -32,6 +32,21 @@
             </div>
           </fieldset>
         </form>
+
+      </div>
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Abonneren</h2>
+
+        <p>
+          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
+        </p>
+
+        <p>
+          {{ render "@link--feed" linkRSS }}<br>
+          {{ render "@link--mail" linkAbonneren merge=true }}
+        </p>
 
       </div>
 
@@ -89,11 +104,6 @@
 
         </form>
 
-        <p>
-          {{ render "@link--feed" linkRSS }}<br>
-          {{ render "@link--mail" linkAbonneren merge=true }}
-        </p>
-
       </div>
 
     </div>
@@ -109,10 +119,6 @@
     {{ render "@selectedfilterbar" }}
 
     {{ render "@sort" sortContext }}
-
-    {{!-- <div class="row">
-      {{render "@link--mail" linkAbonneren merge=true }}
-    </div> --}}
 
     {{render "@resultlist" resultsContext }}
 
