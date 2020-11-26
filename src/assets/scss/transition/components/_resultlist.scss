@@ -13,18 +13,18 @@
     margin: 0 0 2.25em 0;
 
     @media (min-width: $breakpointDesktop) {
-      padding: .5em .5em 1px;
+      padding: 1.25em 1.25em 1px;
     }
 
     > li {
       background: white;
       list-style: none;
       padding: 1em;
-      margin-bottom: .5em;
+      margin-bottom: 1.25em;
       border: 0;
 
       @media (min-width: $breakpointDesktop) {
-        padding: 1.75em 1.25em 1.5em 2em;
+        padding: 1.5em 1.25em 1.5em 2em;
       }
 
       p {
@@ -45,20 +45,11 @@
         margin-bottom: 0;
       }
 
-      > .button,
-      > .link {
-        display: inline-block;
-        margin-bottom: 0;
-
-        @media (min-width: $breakpointDesktop) {
-          margin-bottom: 0;
-        }
-
-      }
-
     }
 
   }
+
+
 
   p {
     margin-bottom: 1.325em;
@@ -81,8 +72,6 @@
   }
   h2.result--title {
     margin-bottom: .5em;
-    font-size: 1em;
-    line-height: 1.325em;
 
     ~ .list--metadata {
       line-height: 1.25em;
@@ -103,15 +92,9 @@
   }
 
   .result--actions {
-    position: relative;
-    padding-left: 0;
-
-    li {
-      font-size: 1em;
-    }
+    right: 1em;
+    top: 1em;
   }
-
-
 
   .list--metadata {
     margin-bottom: 1.325em;
@@ -124,56 +107,17 @@
     }
   }
 
-  &--large > ul,
-  &--large > ul:first-child {
-    padding: .5em .5em 1px; // 1px fix needed for padding-flow bug;
-
-    margin: 0 0 2.25em 0;
-
-    @media (min-width: $breakpointDesktop) {
-      padding: 1.25em 1.25em 1px;
-    }
-
-    > li {
-      padding: 1em;
-      margin-bottom: 1.25em;
-
-      @media (min-width: $breakpointDesktop) {
-        padding: 1.5em 1.25em 1.5em 2em;
-      }
-
-      h2.result--title {
-        font-size: 1.5rem;
-        line-height: 1em;
-      }
-
-      .result--actions {
-        position: absolute;
-        right: 1em;
-        top: 1em;
-
-        li {
-          list-style: none;
-          font-size: .875rem;
-        }
-
-        span {
-          font-size: 0;
-        }
+  @media (min-width: $breakpointDesktop) {
+    &--wide {
+      > ul > li,
+      > ul:first-child > li {
+        padding: 2.25em 4em 2.25em;
       }
     }
   }
 }
 
-@media (min-width: $breakpointDesktop) {
-  .result--list--large,
-  .result--list--large.result--list--wide {
-    > ul > li,
-    > ul:first-child > li {
-      padding: 2.25em 4em 2.25em;
-    }
-  }
-}
+
 .columns--sticky-sidebar .result--title {
   display: block;
 }
