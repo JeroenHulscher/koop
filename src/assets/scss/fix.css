@@ -122,6 +122,11 @@ ul  > del *{background:#f4c8c5;}
     transform: rotate(45deg);
 }
 
+.legacy .del table caption,
+.legacy .ins table caption {
+  margin-top: 0;
+}
+
 
 .legacy div.wijzig-lid {background:#eeeeee;}
 .legacy .wat {padding-bottom: 3px; line-height:1em;}
@@ -148,8 +153,7 @@ ol.footnotes sup{vertical-align:top;margin-right: 10px;}
 .ins--block {
     display:block;
     border-left:.5em solid #39870c;
-    padding-left:.5em;
-    padding-right:.5em;
+    padding: 0.5em;
 }
 .del--block p,
 .ins--block p {

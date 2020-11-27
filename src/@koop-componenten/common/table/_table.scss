@@ -7,6 +7,7 @@
   border: .5em solid transparent;
   outline: 1px solid $lightBlue;
   box-sizing: border-box;
+  background: white;
 
   .table__container {
     border: 0;
@@ -41,6 +42,7 @@ table,
   margin: 1em 0;
   table-layout: fixed;
   min-width: 100%;
+  background: white;
 
   &--fontsmall {
     font-size: 0.9em;
@@ -94,6 +96,25 @@ table,
         border-bottom: 2px solid $lighterGrey;
       }
     }
+  }
+
+  tr.del,
+  th.del,
+  td.del {
+    // border: 5px solid #fce3e3 !important;
+    // padding: 3px !important;
+    // text-decoration: line-through;
+    outline: 3px solid #fce3e3;
+    outline-offset: -3px;
+  }
+  tr.ins,
+  th.ins,
+  td.ins {
+    // border: 5px solid #e3fcec !important;
+    // padding: 3px !important;
+    // text-decoration: underline;
+    outline: 3px solid #e3fcec;
+    outline-offset: -3px;
   }
 
 
