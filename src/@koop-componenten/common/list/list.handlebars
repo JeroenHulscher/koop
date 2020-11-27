@@ -4,9 +4,9 @@
 {{/if }}
 
 {{#if orderedList }}
-  <ol class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
+  <ol {{#if id}}id="{{id}}"{{/if}} class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
 {{else}}
-  <ul class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
+  <ul {{#if id}}id="{{id}}"{{/if}} class="{{#if custom}}list-custom{{else}}list{{/if}} {{ modifier }}">
 {{/if }}
 {{#if orderedList }}
   {{#each items }}

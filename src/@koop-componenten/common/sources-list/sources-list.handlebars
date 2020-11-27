@@ -23,22 +23,20 @@
 			</div>
 
       {{#if buttonContext/action}}
-      <a href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}
+      <a {{#if id}}id="{{id}}"{{/if}} href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}
         <span class="visually-hidden">van abonnement: {{name}}</span>
       </a>
       {{/if}}
 
-
-			{{!-- {{ render "@button" buttonContext }} --}}
       {{#if actionsOne}}
         <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{idprefix}}"}'>
           <div id="{{idprefix}}1" class="js-form-conditionals__citem">
             {{actionsOneLabel}}
             {{#each actionsOne }}
               {{#if iconOnly}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button-icon button-icon--plain button-icon--bin{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button-icon button-icon--plain button-icon--bin{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
               {{else}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
               {{/if}}
             {{/each}}
           </div>
@@ -46,16 +44,16 @@
             <em>{{actionsTwoLabel}}</em>
             {{#each actionsTwo }}
               {{#if iconOnly}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}><span class="visually-hidden">{{label}}</span></{{#if href}}a{{else}}button{{/if}}>
               {{else}}
-                <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+                <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
               {{/if}}
             {{/each}}
           </div>
           <div id="{{idprefix}}3" class="js-form-conditionals__citem">
             {{actionsThreeLabel}}
             {{#each alternativeActions }}
-              <{{#if href}}a href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
+              <{{#if href}}a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"{{else}}button{{/if}} {{#if buttonType}}type="{{buttonType}}"{{/if}} class="button {{buttonContext/modifier}}{{#if linkedto}} js-button-next{{/if}}" {{#if linkedto}}data-linkedto="{{linkedto}}" data-triggeresponds="{{triggeresponds}}" data-triggerLastStep="{{triggerLastStep}}" data-hideself="{{hideself}}"{{/if}}>{{label}}</{{#if href}}a{{else}}button{{/if}}>
             {{/each}}
           </div>
         </div>
@@ -76,11 +74,11 @@
 
 
 			{{#if moreInfo }}
-				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="c1">
+				<div class="collapsible collapsible--small" data-decorator="init-collapsible" id="{{#if moreInfoId}}{{moreInfoId}}{{else}}c1{{/if}}">
 				  <div class="collapsible__header">
-				    <a href="#c1" aria-controls="collapsible-content-1" aria-expanded="true" data-handler="toggle-collapsible" data-text="show/hide">toon informatie</a>
+				    <a href="#{{#if moreInfoId}}{{moreInfoId}}{{else}}c1{{/if}}" aria-controls="collapsible-content-{{#if collapsibleContentId}}{{collapsibleContentId}}{{else}}1{{/if}}" aria-expanded="true" data-handler="toggle-collapsible" data-text="show/hide">toon informatie</a>
 				  </div>
-				  <div class="collapsible__content" id="collapsible-content-1">
+				  <div class="collapsible__content" id="collapsible-content-{{#if collapsibleContentId}}{{collapsibleContentId}}{{else}}1{{/if}}">
 				  	<div>
 					  	<h3>{{ title }}</h3>
 					  	<div class="well well--linkContainer">{{ link }}</div>

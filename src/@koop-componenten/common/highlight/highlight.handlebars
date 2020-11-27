@@ -1,4 +1,4 @@
 <span class="highlight">{{ text }}</span>
-<a href="#{{ nextElement }}" class="highlight--next">
+<a {{#if id}}id="{{id}}"{{/if}} href="#{{ nextElement }}" class="highlight--next">
   <span class="visually-hidden">{{nextMarker}}</span>
 </a>

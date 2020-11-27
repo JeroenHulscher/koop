@@ -1,7 +1,7 @@
 <div class="facetgroup {{modifier}}" data-decorator="init-facetgroup">
   <ul class="facetgroup__list">
     {{#each items}}
-      <li><a href="{{href}}" class="{{#if selected}}is-selected{{/if}}">{{label}}</a> {{#if amount}}<span class="amount">({{amount}})</span>{{/if}}</li>
+      <li><a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="{{#if selected}}is-selected{{/if}}">{{label}}</a> {{#if amount}}<span class="amount">({{amount}})</span>{{/if}}</li>
     {{/each}}
   </ul>
   {{#if_gt items.length '5'}}

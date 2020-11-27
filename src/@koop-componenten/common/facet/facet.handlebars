@@ -2,12 +2,12 @@
 	<div class="facet {{ checked }}">
 		<label for="{{ id }}" >
 			{{#if checked}}
-				<input type="radio" id="{{ id }}" name="{{ group }}" checked />
+				<input type="radio" {{#if id}}id="{{id}}"{{/if}} name="{{ group }}" checked />
 			{{else}}
-				<input type="radio" id="{{ id }}" name="{{ group }}" />
+				<input type="radio" {{#if id}}id="{{id}}"{{/if}} name="{{ group }}" />
 			{{/if}}
 			{{ value }}
 		</label>
 		<span>{{ count }}</span>
 	</div>
-{{/each}} 
+{{/each}}

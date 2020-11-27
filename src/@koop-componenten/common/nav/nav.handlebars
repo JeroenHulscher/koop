@@ -1,41 +1,41 @@
 <ul {{#if ariaLabel}}aria-label="{{ariaLabel}}"{{/if}} class="nav-sub {{#if modifier}}nav-sub--{{modifier}}{{/if}}">
   {{#each items}}
     <li class="nav-sub__item {{#if active}}is-active{{/if}}">
-      <a href="{{href}}" class="nav-sub__link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{title}}</a>
+      <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="nav-sub__link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{title}}</a>
       {{#if sub}}
         <ul class="nav-sub__sub">
           {{#each subItems}}
-            <li class="nav-sub__sub-item"><a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{stitle}}</a>
+            <li class="nav-sub__sub-item"><a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{stitle}}</a>
               {{#if sub}}
               <ul class="nav-sub__sub">
                 {{#each subItems}}
                 <li class="nav-sub__sub-item">
-                  <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{stitle}}</a>
+                  <a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{stitle}}</a>
                   {{#if sub}}
                   <ul class="nav-sub__sub">
                     {{#each subItems}}
                     <li class="nav-sub__sub-item">
-                      <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{stitle}}</a>
+                      <a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}" {{#if sactive}}aria-current="page"{{/if}}>{{stitle}}</a>
                        {{#if sub}}
                       <ul class="nav-sub__sub">
                         {{#each subItems}}
                         <li class="nav-sub__sub-item">
-                          <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
+                          <a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
                            {{#if sub}}
                           <ul class="nav-sub__sub">
                             {{#each subItems}}
                             <li class="nav-sub__sub-item">
-                              <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
+                              <a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
                                {{#if sub}}
                               <ul class="nav-sub__sub">
                                 {{#each subItems}}
                                 <li class="nav-sub__sub-item">
-                                  <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
+                                  <a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
                                    {{#if sub}}
                                   <ul class="nav-sub__sub">
                                     {{#each subItems}}
                                     <li class="nav-sub__sub-item">
-                                      <a href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
+                                      <a {{#if id}}id="{{id}}"{{/if}} href="{{#if ../anker}}#{{/if}}{{href}}" class="nav-sub__sub-link {{#if sactive}}is-active{{/if}}{{#if isMother}} is-mother{{/if}}">{{stitle}}</a>
                                     </li>
                                     {{/each}}
                                   </ul>

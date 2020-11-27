@@ -1,7 +1,7 @@
 <div class="table-topbar">
   <ul class="table-topbar__list">
     {{#each items}}
-      <li><a href="{{href}}" class="{{class}}">{{text}}</a></li>
+      <li><a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="{{class}}">{{text}}</a></li>
     {{/each}}
   </ul>
 </div>

@@ -2,7 +2,7 @@
 <ul class="pageactions">
   {{#each items }}
   <li>
-    <a href="{{ link }}" {{#if actionPrint}}data-decorator="init-printtrigger"{{/if}}{{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}"{{/if}}>
+    <a {{#if id}}id="{{id}}"{{/if}} href="{{ link }}" {{#if actionPrint}}data-decorator="init-printtrigger"{{/if}}{{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{#if modalId}}{{modalId}}{{else}}modal-1{{/if}}"{{/if}}>
     {{#if icon }}
     <img src="../../images/{{ icon }}" alt="" role="presentation" />
     {{/if}}

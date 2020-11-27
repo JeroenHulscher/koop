@@ -1,7 +1,7 @@
 {{#if skipLinks}}
 <div class="skiplinks container">
   {{#each skipLinks }}
-  <a href="{{ url }}">{{ text }}</a>
+  <a {{#if id}}id="{{id}}"{{/if}} href="{{ url }}">{{ text }}</a>
   {{/each}}
 </div>
 {{/if}}
@@ -10,7 +10,7 @@
     <div class="container">
 
       {{#if nav}}
-        <button type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
+        <button {{#if id}}id="{{id}}"{{/if}} type="button" class="hidden-desktop button button--icon-hamburger" data-handler="toggle-nav" aria-controls="nav" aria-expanded="false">{{ hamburgerButtonText }}</button>
       {{/if}}
       {{> @logo }}
 
@@ -26,7 +26,7 @@
             {{#if nonlink}}
               <span class="{{class}}">{{ text }}</span>
             {{else}}
-              <a href="{{ url }}" class="{{class}}">{{ text }}</a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{ url }}" class="{{class}}">{{ text }}</a>
             {{/if}}
           {{/if}}
         {{/each}}
@@ -34,7 +34,7 @@
       {{/if}}
       {{#if language }}
       <div class="header__meta">
-        <a href="#" class="link-iconed link-iconed--publication">English</a>
+        <a {{#if languageId}}id="{{languageId}}"{{/if}} href="{{languageHref}}" class="link-iconed link-iconed--publication">{{#if languageLabel}}{{languageLabel}}{{else}}English{{/if}}</a>
       </div>
       {{/if}}
     </div>

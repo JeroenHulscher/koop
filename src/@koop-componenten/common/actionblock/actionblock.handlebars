@@ -5,7 +5,7 @@
   <ul class="actionblock__list">
     {{#each items }}
     <li>
-      <a href="{{ link }}">
+      <a {{#if id}}id="{{id}}"{{/if}} href="{{ link }}">
       {{#if icon }}
       <img src="../../images/{{ icon }}" alt="" role="presentation" />
       {{/if}}

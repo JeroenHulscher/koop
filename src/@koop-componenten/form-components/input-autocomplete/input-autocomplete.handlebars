@@ -1,8 +1,8 @@
-<input type="text" 
-  placeholder="{{placeholder}}" 
-  name="mysuper_field" id="id_mysuper_field" 
-  class="{{modifier}} combobox-input js-combobox" 
-  list="items" 
+<input type="text"
+  placeholder="{{placeholder}}"
+  name="mysuper_field" id="{{#if id}}{{id}}{{else}}id_mysuper_field{{/if}}"
+  class="{{modifier}} combobox-input js-combobox"
+  list="items"
   data-combobox-hidden-field="{{hiddenFieldClass}}" />
 <datalist id="items">
   {{#each items}}
@@ -10,5 +10,5 @@
   {{/each}}
 </datalist>
 {{#if hasHiddenField }}
-  <input type="text" class="{{hiddenFieldClass}}" hidden />
+  <input {{#if hiddenFieldId}}id="{{hiddenFieldId}}"{{/if}} type="text" class="{{hiddenFieldClass}}" hidden />
 {{/if}}

@@ -1,4 +1,4 @@
-<div class="jumbotron{{#if modifier}} jumbotron--{{ modifier }}{{/if}}">
+<div {{#if id}}id="{{id}}"{{/if}} class="jumbotron{{#if modifier}} jumbotron--{{ modifier }}{{/if}}">
   <div class="jumbotron__content{{#if centered}} jumbotron__content--centered{{/if}}{{#if size}} jumbotron__content--centered-{{size}}{{/if}}{{#if contentcentered}} jumbotron__content--aligncenter{{/if}}">
     {{#if backlink}}
       <p class="jumbotron__backlink">

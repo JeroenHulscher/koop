@@ -10,7 +10,7 @@
         {{/ @partial-block}}
       {{/if}}
     </div>
-    <button type="button" data-handler="close-modal" class="modal__close">
+    <button {{#if closeButtonId}}id="{{closeButtonId}}"{{/if}} type="button" data-handler="close-modal" class="modal__close">
       <span class="visually-hidden">{{ closeButton }}</span>
     </button>
   </div>

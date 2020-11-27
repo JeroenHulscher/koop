@@ -6,7 +6,7 @@
       <ul class="sort__options">
         {{#each options}}
           <li>
-            <a href="{{href}}" role="button" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
+            <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" role="button" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
           </li>
         {{/each}}
       </ul>
@@ -15,19 +15,19 @@
     {{#if columns}}
       <div class="column column-d-4 d-align-right">
       {{#if buttonDownload}}
-        <a href="#" class="icon icon--download">Download</a>
+        <a {{#if id}}id="{{id}}"{{/if}} href="#" class="icon icon--download">Download</a>
       {{/if}}
       {{#if amountPerPageFilter}}
           Aantal:
           <ul class="sort__options">
             <li>
-              <a href="{{href}}" class="is-active" role="button" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="is-active" role="button" aria-pressed="true"><span class="visually-hidden">Toon </span>10<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="{{href}}" class="" role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="" role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>20<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
             <li>
-              <a href="{{href}}" class=""  role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class=""  role="button" aria-pressed="false"><span class="visually-hidden">Toon </span>50<span class="visually-hidden"> resultaten per pagina</span></a>
             </li>
           </ul>
 

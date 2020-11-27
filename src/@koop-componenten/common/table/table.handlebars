@@ -1,7 +1,7 @@
 {{#if topbar}}
   {{ render "@table-topbar" topbar }}
 {{/if}}
-<table class="table {{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
+<table {{#if id}}id="{{id}}"{{/if}} class="table {{ modifier }}" {{#if describedby}}aria-describedby="{{describedby}}"{{/if}}>
 {{#if caption }}
   <caption>{{{ caption }}} </caption>
 {{/if}}

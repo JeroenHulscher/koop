@@ -18,6 +18,6 @@
     </p>
   {{/if}}
   {{#if cta}}
-    <a href="{{ctahref}}" class="block-content__cta cta" {{#if ctaexternal}}rel="external"{{/if}}>{{ctalabel}}</a>
+    <a href="{{ctahref}}" {{#if ctaid}}id="{{ctaid}}"{{/if}} class="block-content__cta cta" {{#if ctaexternal}}rel="external"{{/if}}>{{ctalabel}}</a>
   {{/if}}
 </div>

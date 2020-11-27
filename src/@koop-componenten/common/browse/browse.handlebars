@@ -5,7 +5,7 @@
   <ul class="browse__list">
     {{#each items }}
     <li class="browse__item{{#if state}} browse__item--{{state}}{{/if}}{{#if mother}} browse__item--arrowed{{/if}}">
-      <a href="{{ link }}" {{#if aria-label}}aria-label="{{aria-label}}"{{/if}}>
+      <a href="{{ link }}" {{#if id}}id="{{id}}"{{/if}} {{#if aria-label}}aria-label="{{aria-label}}"{{/if}}>
       {{#if icon }}
       <img src="../../images/{{ icon }}" alt="" role="presentation" />
       {{/if}}

@@ -1,5 +1,5 @@
 <div class="skiplinks container">
   {{#each skipLinks }}
-  <a href="{{ url }}">{{ text }}</a>
+  <a {{#if id}}id="{{id}}"{{/if}} href="{{ url }}">{{ text }}</a>
   {{/each}}
 </div>

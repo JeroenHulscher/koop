@@ -23,9 +23,9 @@
             Onderwerpen:
             {{#each metadata }}
               {{#if last }}
-                <a href="{{link}}">{{value }}</a>
+                <a {{#if id}}id="{{id}}"{{/if}} href="{{link}}">{{value }}</a>
               {{else}}
-              <a href="{{link}}">{{value }}</a>,
+                <a {{#if id}}id="{{id}}"{{/if}} href="{{link}}">{{value }}</a>,
               {{/if}}
             {{/each}}
             </p>
@@ -82,7 +82,7 @@
           {{else}}
             <ul class="result--actions">
               {{#each downloads }}
-                <li><a href="#" class="icon icon--download"><span>Download de </span>{{ type }} {{ size }}</a></li>
+                <li><a {{#if id}}id="{{id}}"{{/if}} href="#" class="icon icon--download"><span>Download de </span>{{ type }} {{ size }}</a></li>
               {{/each}}
             </ul>
           {{/if}}
@@ -90,10 +90,10 @@
         {{#if buttons }}
           <ul class="list list--inline list--narrow">
             {{#each buttons }}
-              <li class="list__item"><a href="{{href}}" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
+              <li class="list__item"><a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" {{#if modal}}data-decorator="init-modal" data-handler="open-modal" data-config='{"function":"kpmService", "action":"push", "data":"data"}' data-modal="{{action}}"{{/if}} class="button button--{{type}}">{{button}}</a></li>
             {{/each}}
             {{#if share}}
-              <li class="list__item d-pull-right"><a href="#" class="button button--tertiary button--share">Delen</a></li>
+              <li class="list__item d-pull-right"><a {{#if id}}id="{{id}}"{{/if}} href="#" class="button button--tertiary button--share">Delen</a></li>
               {{/if}}
           </ul>
         {{/if}}
@@ -103,7 +103,7 @@
           <div data-decorator="showmoreless" data-config='{"amount":"2"}'>
             <ul class="list list--linked">
               {{#each linklistItems}}
-              <li><a href="{{#if url}}{{url}}{{else}}http://www.externesite.nl{{/if}}">{{link}}</a> {{txt}}</li>
+              <li><a {{#if id}}id="{{id}}"{{/if}} href="{{#if url}}{{url}}{{else}}http://www.externesite.nl{{/if}}">{{link}}</a> {{txt}}</li>
               {{/each}}
             </ul>
           </div>

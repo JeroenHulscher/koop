@@ -5,7 +5,7 @@
       <ul>
         {{#each navItems}}
         <li>
-          <a href="{{href}}" {{#if active}}class="is-active"{{/if}}>{{label}}</a>
+          <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" {{#if active}}class="is-active"{{/if}}>{{label}}</a>
         </li>
         {{/each}}
       </ul>

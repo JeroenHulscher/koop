@@ -1,6 +1,6 @@
 <ol class="steps">
   {{#each steps}}
-    <li class="steps__step {{#if active}}is-active{{/if}}">
+    <li {{#if id}}id="{{id}}"{{/if}} class="steps__step {{#if active}}is-active{{/if}}">
        {{#if active}}<span class="visually-hidden">Huidige stap: </span>{{/if}}{{title}}
     </li>
   {{/each}}
