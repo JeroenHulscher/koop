@@ -2,7 +2,12 @@
 	{{#each items }}
 		<li>
 			<div class="list--source__information {{icon}}">
-				{{ name }}
+				{{#if nameHref}}
+          <a {{#if nameId}}id="{{nameId}}"{{/if}} href="{{nameHref}}">{{name}}</a>
+        {{else}}
+          {{ name }}
+        {{/if}}
+
         {{#if date }}
           <div class="list--sources__item__date">
           {{ date/timestamp }} {{ render "@tooltip" date/tooltip merge=true }}
