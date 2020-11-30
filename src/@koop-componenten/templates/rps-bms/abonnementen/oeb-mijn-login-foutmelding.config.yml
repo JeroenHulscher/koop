@@ -1,5 +1,5 @@
 ---
-label: Inloggen
+label: Inloggen - Foutmelding
 status: ready
 context:
   header:
@@ -60,6 +60,8 @@ context:
       tooltipContext:
         id: 1231
         content: Het e-mailadres waarmee u zich heeft geregistreerd.
+      error: true
+      errorMessage: Ongeldig e-mailadres
     inputPWContext:
       modifier: input-text--medium
       labelmodifier: accent
@@ -82,5 +84,5 @@ context:
       button: true
       type: submit
       modifier: button--primary form__button
-    alertSuccess:
-      text: Uw account is succesvol geactiveerd. U kunt nu inloggen.
+    alertAlert:
+      text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.
