@@ -104,3 +104,9 @@ variants:
     label: met Remove
     context:
       remove: true
+  - name: Error
+    label: met Foutmelding
+    context:
+      value: uwnaam@overheidnl
+      error: true
+      errorMessage: Ongeldig e-mailadres

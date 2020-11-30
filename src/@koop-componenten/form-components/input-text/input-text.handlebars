@@ -23,7 +23,7 @@
     name="{{#if name}}{{name}}{{else}}{{id}}{{/if}}"
     class="input input-text {{ modifier }} {{class}} {{#if error}}has-error{{/if}}"
     {{#if fieldPlaceholder}}placeholder="{{ fieldPlaceholder }}"{{/if}}
-    {{#if error}}aria-describedby="input-text-1__error"{{/if}}
+    {{#if error}}aria-describedby="input-text-{{id}}__error"{{/if}}
     aria-invalid="{{#if error}}true{{else}}false{{/if}}"
     {{#if required}}required{{/if}}
     {{#if disabled}}disabled{{/if}}
@@ -36,7 +36,7 @@
     {{/if}}/>
 
     {{#if error}}
-      <p role="alert" id="input-text-{{id}}__description" class="form__error">{{errorMessage}}</p>
+      <p role="alert" id="input-text-{{id}}__error" class="form__error">{{errorMessage}}</p>
     {{/if}}
 
 {{#if remove}}
