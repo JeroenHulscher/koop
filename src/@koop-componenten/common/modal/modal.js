@@ -84,7 +84,9 @@
 
   onl.decorate({
     'init-modal': function( element ) {
-
+      if (!element.classList.contains('modal--off-screen')) {
+        modal.setHeight(element);
+      }
     }
   });
 
