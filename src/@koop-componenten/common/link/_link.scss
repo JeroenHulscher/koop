@@ -198,6 +198,10 @@ div.link {
     @extend .icon;
     @extend .icon--shareBlue;
   }
+  &--check {
+    @extend .icon;
+    @extend .icon--check2Blue;
+  }
 }
 
 .link-iconed {
