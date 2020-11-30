@@ -49,6 +49,7 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+      value: Snelweg
     zoekeninContext:
       id: 560934590
       fieldLabel: Zoek in
@@ -73,7 +74,6 @@ context:
             value:
             label: Alle data
             linkedto: 1
-            selected: selected
           - id: 102
             value: 10
             label: Specifieke datum
@@ -171,14 +171,17 @@ context:
           id: 1237
           title: Adviescollege
           short: Adviescollege
+          checked: checked
         - Option: 2
           id: 22372312321312
           title: Deelgemeente
           short: Deelgemeente
+          checked: checked
         - Option: 3
           id: 323723
           title: Dienst en agentschap
           short: Dienst en agentschap
+          checked: checked
         - Option: 1222222222
           id: 1237232
           title: Gemeente
@@ -327,7 +330,6 @@ context:
           - id: header1
             text: Alle
             name: countries
-            checked: checked
             inputClass: js-checkbox-master
             arguments: aria-checked="true"
       item2:
@@ -444,8 +446,9 @@ context:
           - id: header3
             text: Staatsblad
             name: countries
+            checked: checked
             inputClass: accordion__item__header-checkboxtrigger
-            arguments: aria-controls="con3" aria-checked="false"
+            arguments: aria-controls="con3" aria-checked="true"
         sb_jaargang:
           id: 11121
           type: number
@@ -453,6 +456,7 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'JJJJ'
           labelmodifier: secondary
+          value: 2018
         sb_nummer:
           id: 11122
           type: number
@@ -460,6 +464,7 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
+          value: 12
       item4:
         type: checkbox
         headerId: header4
@@ -605,6 +610,7 @@ context:
         id: 11127
         title: Adviezen Raad van State
         short: Adviezen Raad van State
+        checked: checked
       - Option: 11128
         id: 11128
         title: Algemeenverbindendverklaring van CAO-bepalingen
