@@ -74,5 +74,11 @@ variants:
       text: Delen
       action: '#'
       class: link link--share
+  - name: Check
+    label: Vink
+    context:
+      text: Account activeren
+      action: '#'
+      class: link link--check
 
 
