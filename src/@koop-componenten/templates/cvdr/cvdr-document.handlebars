@@ -1,0 +1,34 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar">
+  <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability"
+    id="toggleable-1">
+    <div>
+      <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+
+      <h3 class="nav-sub__heading"><i>Inhoudsopgave</i></h3>
+
+      {{ render "@treeview" }}
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    {{ render "@pageactions" pageactions }}
+
+    <div id="broodtekst" class="stuk broodtekst-container">
+      <h1>Titel van het document</h1>
+      <p>Body van het document</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+{{ render "@footer" }}
