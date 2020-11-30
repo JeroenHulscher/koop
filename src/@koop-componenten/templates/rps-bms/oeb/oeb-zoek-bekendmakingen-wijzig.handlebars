@@ -1,0 +1,291 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container row" id="content" role="main">
+  <div class="row">
+
+    {{ render "@list--tabs" tabs merge=true }}
+
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <div class="form__row form__row--large">
+          <fieldset>
+            <legend class="visually-hidden">Doorzoek alle lokale wet- en regelgeving</legend>
+            <div class="columns">
+              <div class="column column-d-9">
+                <div class="form__row">
+                  {{ render "@input-text--medium" inputZoekwoord merge=true }}
+                </div>
+              </div>
+              <div class="column column-d-3">
+                <div class="form__row">
+                  {{ render "@select-custom" zoekeninContext merge=true }}
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form__row form__row--medium columns columns--dominant">
+          <div class="column">
+            <fieldset data-decorator="init-formreset" data-config='{"elements": "select"}'>
+              <legend>Zoek op datum</legend>
+              {{ render "@date-selection" dateselection }}
+              <a href="#" class="reset formreset-resetlink">
+                <small>Herstellen</small>
+              </a>
+            </fieldset>
+
+            <fieldset>
+              <legend>Aanvullende zoekcriteria</legend>
+              <div class="form__row">
+                <p class="form__sublegend">Type organisatie(s)</p>
+                {{render "@subselection--with-catagories-and-select-all" subselectionGemContext merge=true }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Publicerende organisatie(s)</p>
+                {{render "@subselection--with-catagories-and-select-all" subselectionPubContext merge=true }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Onderwerp(en)</p>
+                {{render "@subselection" subselectionWatContext }}
+              </div>
+            </fieldset>
+
+          </div>
+          <div class="column">
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Documentsoort</legend>
+                <div class="form__row form__row--large">
+                  <div data-decorator="init-unselectall" data-config='{"checkboxSelector":".accordion__item__header-checkboxtrigger"}'>
+                    {{#> @accordion accordion1 }}
+                      {{#> @accordion-item item1 }}
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item2 }}
+                          <fieldset>
+                            <legend class="visually-hidden">Tractatenblad</legend>
+                            <fieldset>
+                              <legend>Tractatenblad</legend>
+                              <div class="columns">
+                                <div class="column">
+                                  <div class="form__row">
+                                    {{ render "@input-text" trac_jaargang }}
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="form__row">
+                                    {{ render "@input-text" trac_nummer }}
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__row">
+                                <p class="form__sublegend form__sublegend--secondary">Onderwerp(en)</p>
+                                {{ render "@subselection--with-catagories-and-select-all" trac_onderwerpen merge=true }}
+                              </div>
+                            </fieldset>
+                            <fieldset>
+                              <legend>Systematisch</legend>
+                              <div class="columns">
+                                <div class="column">
+                                  <div class="form__row">
+                                    {{ render "@input-text" trac_nummer2 }}
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="form__row">
+                                    {{ render "@input-text" trac_jaar }}
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__row">
+                                {{ render "@input-text" trac_volgnummer }}
+                              </div>
+                            </fieldset>
+                            <fieldset>
+                              <legend>Totstandkoming verdrag</legend>
+                              <div class="columns">
+                                <div class="column">
+                                  <div class="form__row">
+                                    {{ render "@datepicker" trac_datepicker1 }}
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="form__row">
+                                    {{ render "@datepicker" trac_datepicker2 }}
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__row">
+                                {{ render "@input-text" trac_plaats }}
+                              </div>
+                            </fieldset>
+                          </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item3 }}
+                        <fieldset>
+                          <legend>Staatsblad</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" sb_jaargang }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" sb_nummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item4 }}
+                        <fieldset>
+                          <legend>Staatscourant</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" sc_jaargang }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" sc_nummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item5 }}
+                        <fieldset>
+                          <legend>Gemeenteblad</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" gm_jaargang }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" gm_nummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item6 }}
+                        <fieldset>
+                          <legend>Provinciaal blad</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" pb_jaargang }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" pb_nummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item7 }}
+                        <fieldset>
+                          <legend>Waterschapsblad</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" wb_jaargang }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" wb_nummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                      {{#> @accordion-item item8 }}
+                        <fieldset>
+                          <legend>Blad gemeentelijke regeling</legend>
+                          <div class="columns">
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" bgr_jaargang }}
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="form__row">
+                                {{ render "@input-text" bgr_nummer }}
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      {{/@accordion-item}}
+                    {{/@accordion}}
+                  </div>
+                </div>
+                <div class="form__row">
+                  <p class="form__sublegend">Rubriek(en)</p>
+                  {{ render "@subselection--with-catagories-and-select-all" sc_rubrieken merge=true }}
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+          <div class="form__rowsubmit__item">
+            <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+          </div>
+        </div>
+      </form>
+    {{/@jumbotron}}
+
+    {{#> @modal }}
+
+      <h2>Zoekvraag wijzigen</h2>
+      <p>
+        U kunt de zoekvraag waarop u bent geabonneerd wijzigen door de volgende stappen uit te voeren:
+      </p>
+
+      <ol>
+        <li>
+          <h3 class="h4">Zoekvraag aanpassen</h3>
+          <p>Wij hebben voor u de zoekvraag waarop u zich heeft geabonneerd ingevuld in het relevante zoekformulier. U kunt hier uw trefwoorden of zoekopties aanpassen. Voer vervolgens de zoekvraag uit.</p>
+        </li>
+        <li>
+          <h3 class="h4">Zoekresultaten filteren</h3>
+          <p>
+            Controleer de resultaten die uw zoekvraag heeft opgeleverd. U kunt de resultaten eventueel verfijnen door aan de linkerzijde van de filteropties gebruik te maken. Klik vervolgens op de link "Abonneren op deze zoekvraag".
+          </p>
+        </li>
+        <li>
+          <h3 class="h4">Zoekvraag opslaan</h3>
+          <p>
+            U kunt het abonnement voorzien van een titel, en aangeven of en hoe vaak u per e-mail op de hoogte wilt blijven. Klik tenslotte op de knop "Zoekvraag opslaan".
+          </p>
+        </li>
+      </ol>
+
+      <p>
+        <button class="button button--primary" type="button" data-handler="close-modal">Zoekvraag wijzigen</button>
+      </p>
+
+    {{/@modal}}
+
+  </div>
+
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

@@ -62,3 +62,5 @@ context:
     text: Terug naar Mijn abonnementen
   preheader:
     value: Mijn abonnementen
+  alertWarning:
+    text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.

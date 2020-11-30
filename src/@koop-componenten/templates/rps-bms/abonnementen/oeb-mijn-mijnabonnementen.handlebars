@@ -18,8 +18,10 @@
     <div class="row">
       {{ render "@alert--success" alert merge=true }}
     </div>
+
     <div class="row">
       <h2>Uw opgeslagen zoekvragen <span class="h2__sub">4 abonnementen</span></h2>
+      {{ render "@sort" sort }}
       <div class="row">
         <form>
           <fieldset>
@@ -57,4 +59,5 @@
 </div>
 
 
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

@@ -13,24 +13,21 @@
       <div class="column">
         <div class="form__row form__row--large">
           {{ render "@heading--preheader" preheader merge=true }}
-          <h1 class="h1 h1--slim">Wachtwoord wijzigen</h1>
+          <h1 class="h1 h1--slim">Wachtwoord opnieuw instellen</h1>
           <p>
-             Voer uw huidige en tweemaal uw gewenste wachtwoord in om uw wachtwoord te wijzigen.
+             Gebruik de bevestigingscode die wij naar uw e-mailadres hebben gestuurd om uw wachtwoord opnieuw in te stellen.
           </p>
         </div>
-
-        {{ render "@alert--warning" alertWarning merge=true }}
         <form class="form" data-decorator="init-form-validation">
           <fieldset>
-            <legend class="visually-hidden">Wachtwoord wijzigen</legend>
-
+            <legend class="visually-hidden">Wachtwoord opnieuw instellen</legend>
             <div class="form__row">
-                {{render "@input-text" oldPWInput }}
+              {{render "@input-text--email" emailInput merge=true }}
             </div>
             <div class="form__row">
               <div data-decorator="init-passwordstrength">
                 <div class="form__row">
-                    {{render "@input-text" newPWInput }}
+                    {{render "@input-text--password" newPWInput merge=true }}
                 </div>
                 <div class="well js-passwordstrength__regexcontainer hidden-desktop">
                   <div>
@@ -49,7 +46,10 @@
               </div>
             </div>
             <div class="form__row">
-              {{render "@input-text" repeatPWInput }}
+              {{render "@input-text--password" repeatPWInput merge=true }}
+            </div>
+            <div class="form__row">
+              {{render "@input-text" inputCode merge=true }}
             </div>
             <div class="form__rowsubmit">
               <div class="form__rowsubmit__item">

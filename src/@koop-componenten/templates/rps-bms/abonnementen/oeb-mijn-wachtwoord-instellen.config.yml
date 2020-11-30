@@ -1,5 +1,5 @@
 ---
-label: E-mailadres wijzigen
+label: Wachtwoord instellen
 status: ready
 context:
   header:
@@ -50,37 +50,58 @@ context:
       url: '#'
     - text: Mijn abonnementen
       url: '#'
-    - text: E-mailadres wijigen
-  oldEmailInput:
+    - text: Wachtwoord opnieuw instellen
+  emailInput:
     id: 1
-    type: email
-    fieldLabel: Huidig e-mailadres
+    fieldLabel: E-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
-    disabled: true
-    value: uwnaam@koop.overheid.nl
-  newEmailInput:
+  oldPWInput:
+    modifier:
+    id: 222
+    type: password
+    fieldLabel: Huidig wachtwoord
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder: Huidig wachtwoord
+    required: true
+    requiredLabel: true
+  newPWInput:
     id: 2
-    type: email
-    fieldLabel: Nieuw e-mailadres
+    class: js-passwordstrength__input
+    fieldLabel: Nieuw wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Nieuw wachtwoord
     required: true
     requiredLabel: true
-  PWInput:
+  repeatPWInput:
     id: 3
-    type: password
-    fieldLabel: Wachtwoord
+    class: js-passwordstrength__inputrepeat
+    fieldLabel: Herhaal nieuw wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
-    fieldPlaceholder: Wachtwoord
+    fieldPlaceholder: Herhaal nieuw wachtwoord
     required: true
     requiredLabel: true
+  inputCode:
+    id: 3
+    fieldLabel: Bevestigingscode
+    fieldLabelVisible: true
+    labelmodifier: accent
+    fieldInstruction:
+    fieldPlaceholder:
+    required: true
+    requiredLabel: true
+    hastooltip: true
+    tooltipContext:
+      id: 9876
+      content: De bevestigingscode die wij naar uw e-mailadres hebben gestuurd.
   buttonSubmit:
       id: 123
       text: Bevestigen

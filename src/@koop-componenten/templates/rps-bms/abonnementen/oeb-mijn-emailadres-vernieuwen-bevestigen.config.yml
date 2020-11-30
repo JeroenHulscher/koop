@@ -1,5 +1,5 @@
 ---
-label: Activeringscode aanvragen
+label: E-mailadres wijzigen bevestigen
 status: ready
 context:
   header:
@@ -38,11 +38,10 @@ context:
       url: '#'
     - text: Mijn Abonnementen
       url: '#'
-    - text: Activeringscode aanvragen
+    - text: Activeer uw account
   jumbotronContext:
-    heading: Activeringscode aanvragen
+    heading: Bevestigen wijziging e-mailadres
     subheading: Officiële bekendmakingen
-    intro: Indien u uw wachtwoord bent vergeten kunt u uw wachtwoord opnieuw instellen. Wij sturen daarvoor een bevestigingscode naar uw e-mailadres. Met deze bevestigingscode kunt u een nieuw wachtwoord aan ons doorgeven.
     centered: true
     size: s
     headingcentered: true
@@ -52,17 +51,34 @@ context:
       id: 1
       required: true
       patterntype: email
-      fieldLabel: E-mailadres
+      fieldLabel: Uw nieuwe e-mailadres
       fieldLabelVisible: true
       fieldInstruction:
-      fieldPlaceholder: Uw e-mailadres
+      fieldPlaceholder: Bijv. uwnaam@overheid.nl
+      value: uwnaam@overheid.nl
+    inputCodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      required: true
+      type: text
+      fieldLabel: Activeringscode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder:
       hastooltip: true
       tooltipContext:
         id: 1231
-        content: Het e-mailadres waarmee u zich heeft geregistreerd.
+        content: De activeringscode uit de activeringse-mail
+    linkNewcode:
+      text: Nieuwe activeringscode aanvragen
+    linkAccount:
+      text: Ik heb al een account
     buttonSubmit:
       id: 123
-      text: Activeringscode aanvragen
+      text: Bevestigen
       button: true
       type: submit
       modifier: button--primary form__button
+    alert:
+      text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.

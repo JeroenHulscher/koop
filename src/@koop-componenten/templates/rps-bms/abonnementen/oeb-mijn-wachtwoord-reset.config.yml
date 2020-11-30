@@ -38,9 +38,9 @@ context:
       url: '#'
     - text: Mijn Abonnementen
       url: '#'
-    - text: Reset wachtwoord
+    - text: Wachtwoord opnieuw instellen
   jumbotronContext:
-    heading: Reset uw wachtwoord
+    heading: Wachtwoord opnieuw instellen
     subheading: Officiële bekendmakingen
     intro: Indien u uw wachtwoord bent vergeten kunt u een nieuw wachtwoord aanvragen. Wij sturen uw nieuwe wachtwoord naar het dor u opgegeven e-mailadres.
     centered: true
@@ -62,7 +62,7 @@ context:
         content: Het e-mailadres waarmee u zich heeft geregistreerd.
     buttonSubmit:
       id: 123
-      text: Reset wachtwoord
+      text: Aanvragen bevestigingscode
       button: true
       type: submit
       modifier: button--primary form__button

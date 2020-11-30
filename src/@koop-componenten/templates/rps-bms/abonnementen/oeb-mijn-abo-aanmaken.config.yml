@@ -69,13 +69,25 @@ context:
       requiredLabel: true
     selectContext:
       modifier: select-custom--large
-      fieldLabel: E-mail notificaties
+      fieldLabel: E-mailnotificaties
       options:
         - label: Ja
           value: 10
           selected: selected
         - label: Nee
           value: 20
+    radioFrequency:
+      fieldLabel: Frequentie
+      name: frequency
+      explanation: false
+      options:
+        - id: 1
+          name: subject
+          checked: checked
+          text: Direct na publicatie
+        - id: 2
+          text: Dagelijks
+          name: subject
     buttonSubmit:
         id: 123
         text: Opslaan abonnement

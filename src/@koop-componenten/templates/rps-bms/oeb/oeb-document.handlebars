@@ -2681,7 +2681,7 @@
 
 
 
-      <h3 class="nav-sub__heading">Extra informatie</h3>
+      <h3 class="nav-sub__heading" id="extrainformatie">Extra informatie</h3>
       {{render "@nav" navInformatie }}
 
       <h3 class="nav-sub__heading">Gerelateerd</h3>
@@ -2695,7 +2695,7 @@
     {{ render "@pageactions" pageactions }}
 
     <article>
-
+<a href="#extrainformatie">test</a>
       <div id="broodtekst" class="stuk broodtekst-container">
 
          <h1 class="staatscourant_kop"><a id="d17e48" name="d17e48"></a>Regeling van de Minister voor Milieu en Wonen, de Staatssecretaris van Defensie, de
@@ -3175,6 +3175,8 @@
           </div>
         </div>
     </article>
+
+    {{ render "@to-top" }}
 
     {{#> @modal modalDelen }}
 

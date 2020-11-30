@@ -24,6 +24,10 @@
             </div>
           </div>
         </div>
+        <div class="form__row">
+          <p class="form__sublegend">Frequentie</p>
+          {{ render "@input-radio" radioFrequency }}
+        </div>
         <div class="form__rowsubmit">
           <div class="form__rowsubmit__item">
             {{ render "@button" buttonSubmit }}
@@ -33,7 +37,7 @@
 
     {{/@jumbotron}}
   </div>
-
 </div>
 
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

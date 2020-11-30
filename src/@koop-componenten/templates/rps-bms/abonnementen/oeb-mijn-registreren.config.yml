@@ -42,6 +42,7 @@ context:
   emailInput:
     modifier:
     id: 1
+    type: email
     fieldLabel: E-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
