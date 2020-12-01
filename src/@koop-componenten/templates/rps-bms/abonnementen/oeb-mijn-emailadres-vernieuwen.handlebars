@@ -24,13 +24,13 @@
           <fieldset>
             <legend class="visually-hidden">E-mailadres wijzigen</legend>
             <div class="form__row">
-                {{render "@input-text" oldEmailInput }}
+                {{render "@input-text--email" oldEmailInput merge=true }}
             </div>
             <div class="form__row">
-                {{render "@input-text" newEmailInput }}
+                {{render "@input-text--email" newEmailInput merge=true }}
             </div>
             <div class="form__row">
-              {{render "@input-text" PWInput }}
+              {{render "@input-text--password" PWInput merge=true }}
             </div>
             <div class="form__rowsubmit">
               <div class="form__rowsubmit__item">

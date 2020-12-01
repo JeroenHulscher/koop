@@ -40,9 +40,7 @@ context:
       url: '#'
     - text: Registreren
   emailInput:
-    modifier:
     id: 1
-    type: email
     fieldLabel: E-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
@@ -50,9 +48,7 @@ context:
     fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
     value: uwnaam@koop.overheid.nl
   newPWInput:
-    modifier:
     id: 2
-    type: password
     class: js-passwordstrength__input
     fieldLabel: Wachtwoord
     fieldLabelVisible: true
@@ -62,9 +58,7 @@ context:
     required: true
     requiredLabel: true
   repeatPWInput:
-    modifier:
     id: 3
-    type: password
     class: js-passwordstrength__inputrepeat
     fieldLabel: Herhaal wachtwoord
     fieldLabelVisible: true

@@ -44,7 +44,6 @@ context:
     - text: E-mailadres wijigen
   PWInput:
     id: 3
-    type: password
     fieldLabel: Wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent

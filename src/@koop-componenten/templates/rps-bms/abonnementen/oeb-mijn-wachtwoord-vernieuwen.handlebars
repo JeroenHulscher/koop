@@ -25,12 +25,12 @@
             <legend class="visually-hidden">Wachtwoord wijzigen</legend>
 
             <div class="form__row">
-                {{render "@input-text" oldPWInput }}
+                {{render "@input-text--password" oldPWInput merge=true }}
             </div>
             <div class="form__row">
               <div data-decorator="init-passwordstrength">
                 <div class="form__row">
-                    {{render "@input-text" newPWInput }}
+                    {{render "@input-text--password" newPWInput merge=true }}
                 </div>
                 <div class="well js-passwordstrength__regexcontainer hidden-desktop">
                   <div>
@@ -49,7 +49,7 @@
               </div>
             </div>
             <div class="form__row">
-              {{render "@input-text" repeatPWInput }}
+              {{render "@input-text--password" repeatPWInput merge=true }}
             </div>
             <div class="form__rowsubmit">
               <div class="form__rowsubmit__item">

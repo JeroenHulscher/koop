@@ -53,7 +53,6 @@ context:
     - text: E-mailadres wijigen
   oldEmailInput:
     id: 1
-    type: email
     fieldLabel: Huidig e-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
@@ -63,7 +62,6 @@ context:
     value: uwnaam@koop.overheid.nl
   newEmailInput:
     id: 2
-    type: email
     fieldLabel: Uw nieuw e-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
@@ -73,7 +71,6 @@ context:
     requiredLabel: true
   PWInput:
     id: 3
-    type: password
     fieldLabel: Wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent

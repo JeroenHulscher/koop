@@ -11,28 +11,30 @@
     {{ render "@link--terug-naar" linkBack merge=true }}
     <div class="columns columns--gutter-med">
       <div class="column">
-    <div class="form__row form__row--large">
-      {{ render "@heading--preheader" preheader merge=true }}
-      <h1 class="h1 h1--slim">Account verwijderen</h1>
-      <p>
-          U kunt uw account verwijderen. Het is daarna niet meer mogelijk om van uw account gebruik te maken. U kunt niet meer inloggen
-        en u ontvangt geen e-mails meer over uw abonnementen. Na een maand worden uw gegevens definitief uit ons systeem verwijderd.
-      </p>
-    </div>
-    {{ render "@alert--warning" alertWarning merge=true }}
-    <form class="form" data-decorator="init-form-validation">
-      <div class="form__row">
-        {{render "@input-text" PWInput }}
-      </div>
-      <div class="form__rowsubmit">
-        <div class="form__rowsubmit__item">
-          {{ render "@button" buttonSubmit }}
+        <div class="form__row form__row--large">
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Account verwijderen</h1>
+          <p>
+              U kunt uw account verwijderen. Het is daarna niet meer mogelijk om van uw account gebruik te maken. U kunt niet meer inloggen
+            en u ontvangt geen e-mails meer over uw abonnementen. Na een maand worden uw gegevens definitief uit ons systeem verwijderd.
+          </p>
         </div>
+        {{ render "@alert--warning" alertWarning merge=true }}
+        <form class="form" data-decorator="init-form-validation">
+          <div class="form__row">
+            {{render "@input-text--password" PWInput merge=true }}
+          </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              {{ render "@button" buttonSubmit }}
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
-  </div>
       <div class="column"></div>
     </div>
+
+  </div>
 
 </div>
 

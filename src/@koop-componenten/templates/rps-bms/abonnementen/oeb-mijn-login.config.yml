@@ -65,7 +65,6 @@ context:
       labelmodifier: accent
       id: 2
       required: true
-      type: password
       fieldLabel: Wachtwoord
       fieldLabelVisible: true
       fieldInstruction:
