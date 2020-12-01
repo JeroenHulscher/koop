@@ -11,7 +11,7 @@ variants:
   - name: Password
     label: Input password
     context:
-      modifier: input--postalcode input--small
+      modifier: input--password input--small
       id: 1
       type: password
       fieldLabel: password
