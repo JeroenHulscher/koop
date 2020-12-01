@@ -19,9 +19,8 @@ context:
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
-      skipLinks:
-        - url: '#content'
-          text: Direct naar content
+      - url: '#content'
+        text: Direct naar content
     metaLinks:
       - profile: true
         profileContext:
