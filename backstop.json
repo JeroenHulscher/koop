@@ -365,6 +365,76 @@
       "label": "oebnl - templates-oeb-zoek-documenten",
       "url": "http://localhost:3000/components/preview/templates-oeb-zoek-documenten",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-zoek-documenten.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-document-info",
+      "url": "http://localhost:3000/components/preview/templates-oeb-document-info",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-document-info.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-abo-aanmaken",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-abo-aanmaken",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-abo-aanmaken.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-account-activeren",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-account-activeren",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-account-activeren.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-account-verwijderen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-account-verwijderen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-account-verwijderen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-codeaanvragen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-codeaanvragen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-codeaanvragen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-emailadres-vernieuwen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-emailadres-vernieuwen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-emailadres-vernieuwen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-emailadres-vernieuwen-bevestigen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-emailadres-vernieuwen-bevestigen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-emailadres-vernieuwen-bevestigen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-login",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-login",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-login.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-login-foutmelding",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-login-foutmelding",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-login-foutmelding.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-mijnabonnementen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-mijnabonnementen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-mijnabonnementen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-registreren",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-registreren",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-registreren.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-wachtwoord-instellen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-instellen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-instellen.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-wachtwoord-reset",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-reset",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-reset.html"
+    },
+    {
+      "label": "oebnl - templates-oeb-mijn-wachtwoord-vernieuwen",
+      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-vernieuwen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-vernieuwen.html"
     }
   ],
   "paths": {
