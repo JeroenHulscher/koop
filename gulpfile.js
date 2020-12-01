@@ -168,7 +168,9 @@ gulp.task( 'js:clean', function( done ) {
 });
 
 gulp.task( 'js:copy', function() {
-  return gulp.src( paths.scripts + '/vendor/kpm.js' )
+  return gulp.src( [
+    paths.scripts + '/vendor/kpm-1.4.0.js',
+    paths.scripts + '/vendor/kpm-1.5.0.js' ])
     .pipe( gulp.dest( paths.drop + '/js/vendor/' ) );
 });
 

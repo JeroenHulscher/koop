@@ -427,6 +427,18 @@ context:
       fieldPlaceholder: Bijv. 12A
       required: true
       patterntype: zipcode
+    selectContext:
+      id: 876
+      modifier: select-custom--large
+      fieldLabel: Straal
+      options:
+        - label: 250m
+          value: 250m
+          selected: selected
+        - label: 1km
+          value: 1km
+        - label: 2km
+          value: 2km
   jumbotron2Context:
     modifier: slim
     heading: Meld je aan voor de mail service
@@ -444,16 +456,5 @@ context:
     id: 15
   tt6:
     id: 16
-  selectContext:
-      id: 876
-      modifier: select-custom--large
-      fieldLabel: Straal
-      options:
-        - label: 250m
-          value: 250m
-          selected: selected
-        - label: 1km
-          value: 1km
-        - label: 2km
-          value: 2km
+
 

@@ -26,6 +26,24 @@
     color: $primaryBlue;
   }
 
+  &-texticon {
+    text-decoration: underline;
+    color: $darkBlue;
+    padding: 0.125em 0 0.125em 1.5em;
+    border: 0;
+    font-weight: normal;
+    margin-right: 1em;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &--marker {
+      background: $markerBlueIcon no-repeat left center;
+      background-size: .75em;
+    }
+  }
+
   &--block {
     display: block;
     width: 100%;

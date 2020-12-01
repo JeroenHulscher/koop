@@ -409,6 +409,11 @@
     setSelectedOption: function (option) {
 
       if (this.optionsCollection.isSelected(option.value)) {
+        // KOOP custom;
+        var selectedItem = document.querySelector('[data-value="' + option.value+'"]');
+        var selectedItemButtonRemove = selectedItem.querySelector('.multiselect__choiceremove');
+        selectedItemButtonRemove.click();
+        // - end
         return;
       }
 

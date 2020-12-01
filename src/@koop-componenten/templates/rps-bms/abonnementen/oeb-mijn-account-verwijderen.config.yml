@@ -44,7 +44,6 @@ context:
     - text: E-mailadres wijigen
   PWInput:
     id: 3
-    type: password
     fieldLabel: Wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent
@@ -62,3 +61,5 @@ context:
     text: Terug naar Mijn abonnementen
   preheader:
     value: Mijn abonnementen
+  alertWarning:
+    text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.

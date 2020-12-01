@@ -3,15 +3,15 @@
     <label class="visually-hidden" for="filter-id--{{id}}">Filter op</label>
     <div class="relative">
       <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{searchfieldPlaceholder}}" name="mysuper_field" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
-      <a href="#" class="input-text__remove invisible" data-handler="empty-input">
+      <a {{#if id}}id="{{id}}"{{/if}} href="#" class="input-text__remove invisible" data-handler="empty-input">
         <span class="visually-hidden">Wis waarde</span>
       </a>
     </div>
   </div>
   {{#if controls}}
   <div class="form__row">
-    <button class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
-    <button class="icon icon--refresh formreset-resetlink">Reset formulier</button>
+    <button {{#if id}}id="{{id}}"{{/if}} class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
+    <button {{#if id}}id="{{id}}"{{/if}} class="icon icon--refresh formreset-resetlink">Reset formulier</button>
   </div>
   {{/if}}
   <div class="form__row">

@@ -3,14 +3,12 @@
   <div class="documentbanner__logo">
     {{#if img}}
       <img src="{{img/src}}" {{#if img/width}}width="{{img/width}}"{{/if}} {{#if img/alt}}alt="{{img/alt}}"{{/if}} />
-    {{else}}
-      <img src="/images/logo.svg" width="200" {{#if img/alt}}alt="{{img/alt}}"{{/if}} />
     {{/if}}
   </div>
 
   <div class="documentbanner__content">
     <article>
-      {{#if heading}}<h1>{{heading}}</h1>{{/if}}
+      {{#if heading}}<h2>{{heading}}</h2>{{/if}}
 
       <table class="table--dataintro">
         <thead>

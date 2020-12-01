@@ -15,44 +15,48 @@
           {{ render "@heading--preheader" preheader merge=true }}
           <h1 class="h1 h1--slim">Wachtwoord wijzigen</h1>
           <p>
-             Voer uw huidige en tweetal uw gewenste wachtwoord in om uw wachtwoord te wijzigen.
+             Voer uw huidige en tweemaal uw gewenste wachtwoord in om uw wachtwoord te wijzigen.
           </p>
         </div>
+
+        {{ render "@alert--warning" alertWarning merge=true }}
         <form class="form" data-decorator="init-form-validation">
+          <fieldset>
+            <legend class="visually-hidden">Wachtwoord wijzigen</legend>
 
-
-          <div class="form__row">
-              {{render "@input-text" oldPWInput }}
-          </div>
-          <div class="form__row">
-            <div data-decorator="init-passwordstrength">
-              <div class="form__row">
-                  {{render "@input-text" newPWInput }}
-              </div>
-              <div class="well js-passwordstrength__regexcontainer hidden-desktop">
-                <div>
-                  <p>
-                    Het wachtwoord dient te voldoen aan de volgende beveiligingseisen:
-                  </p>
-                  <ul class="list list--checked">
-                    <li data-regex="(?&#x3D;.{12,})" data-regex-label="">Minimaal 12 tekens</li>
-                    <li data-regex="(?&#x3D;.*[A-Z])" data-regex-label="">Minimaal 1 hoofdletter</li>
-                    <li data-regex="(?&#x3D;.*[a-z])" data-regex-label="">Minimaal 1 kleine letter</li>
-                    <li data-regex="(?&#x3D;.*[0-9])" data-regex-label="">Minimaal 1 cijfer</li>
-                    <li data-regex="[!@#$%^&amp;*(),.?:{}|&lt;&gt;]" data-regex-label="">Minimaal 1 leesteken</li>
-                  </ul>
+            <div class="form__row">
+                {{render "@input-text--password" oldPWInput merge=true }}
+            </div>
+            <div class="form__row">
+              <div data-decorator="init-passwordstrength">
+                <div class="form__row">
+                    {{render "@input-text--password" newPWInput merge=true }}
+                </div>
+                <div class="well js-passwordstrength__regexcontainer hidden-desktop">
+                  <div>
+                    <p>
+                      Het wachtwoord dient te voldoen aan de volgende beveiligingseisen:
+                    </p>
+                    <ul class="list list--checked">
+                      <li data-regex="(?&#x3D;.{12,})" data-regex-label="">Minimaal 12 tekens</li>
+                      <li data-regex="(?&#x3D;.*[A-Z])" data-regex-label="">Minimaal 1 hoofdletter</li>
+                      <li data-regex="(?&#x3D;.*[a-z])" data-regex-label="">Minimaal 1 kleine letter</li>
+                      <li data-regex="(?&#x3D;.*[0-9])" data-regex-label="">Minimaal 1 cijfer</li>
+                      <li data-regex="[!@#$%^&amp;*(),.?:{}|&lt;&gt;]" data-regex-label="">Minimaal 1 leesteken</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form__row">
-            {{render "@input-text" repeatPWInput }}
-          </div>
-          <div class="form__rowsubmit">
-            <div class="form__rowsubmit__item">
-              {{ render "@button" buttonSubmit }}
+            <div class="form__row">
+              {{render "@input-text--password" repeatPWInput merge=true }}
             </div>
-          </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
         </form>
       </div>
       <div class="column">
@@ -64,4 +68,5 @@
 
 </div>
 
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

@@ -1,12 +1,12 @@
 <div class="pagination">
   <div class="pagination__index">
     <ul>
-      <li class="prev"><a href="#"><span class="">&laquo;</span></a></li>
-      <li><a href="#">{{ previousPage }}</a></li>
+      <li class="prev"><a {{#if id}}id="{{id}}"{{/if}} href="#"><span class="">&laquo;</span></a></li>
+      <li><a {{#if id}}id="{{id}}"{{/if}} href="#">{{ previousPage }}</a></li>
       <li class="active">{{ currentPage }}</li>
       <li>...</li>
-      <li><a href="#">{{ lastPage }}</a></li>
-      <li class="next"><a href="#"><span class="">&raquo;</span></a></li>
+      <li><a {{#if id}}id="{{id}}"{{/if}} href="#">{{ lastPage }}</a></li>
+      <li class="next"><a {{#if id}}id="{{id}}"{{/if}} href="#"><span class="">&raquo;</span></a></li>
     </ul>
   </div>
   {{#if pageFilter}}

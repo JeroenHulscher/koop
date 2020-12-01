@@ -40,12 +40,12 @@ context:
     heading: Zoek in officiële bekendmakingen
     hstyle: h2
     subheading: Officiële bekendmakingen
-    intro: Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.
+    intro: Met de uitgebreide zoekmogelijkheden op dit scherm kunt u gericht zoeken naar officiële bekendmakingen waarin u geïnteresseerd bent.
     centered: true
     size: semimedium
     inputZoekwoord:
       fieldPlaceholder: Zoekterm of (dossier)nummer
-      fieldLabel: Zoek in officiële bekendmakingen
+      fieldLabel: Zoek op trefwoord
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
@@ -62,6 +62,26 @@ context:
         - label: Alleen titel
           value: alleen-titel
     dateselection:
+      dateselectionType:
+        id: 1
+        fieldLabel: Periode
+        fieldLabelVisible: true
+        labelmodifier: accent
+        hastooltip: false
+        options:
+          - id: 101
+            value:
+            label: Alle data
+            linkedto: 1
+            selected: selected
+          - id: 102
+            value: 10
+            label: Specifieke datum
+            linkedto: 2
+          - id: 103
+            value: 30
+            label: Zelf een periode kiezen
+            linkedto: 3
       additionalSelect:
         id: 1678765
         fieldLabel: Datum van
@@ -69,7 +89,7 @@ context:
         labelmodifier: accent
         hastooltip: true
         tooltip:
-          content: 'Datum publicatie: Gebruik de datum waarop het document is gepubliceerd op deze site. Datum document: Gebruik de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          content: '<strong>Datum publicatie</strong>: De datum waarop het document is gepubliceerd op deze site. <br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
           id: 123129876545678922
         options:
         - id: 1012
@@ -87,7 +107,8 @@ context:
         labelmodifier: accent
         hastooltip: true
         tooltip:
-          id: 12312987657456789
+          content: '<strong>Datum publicatie</strong>: De datum waarop het document is gepubliceerd op deze site. <br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          id: 1231298765456789221
         options:
         - id: 10121
           value:
@@ -102,7 +123,25 @@ context:
         value: '2020-09-11'
         datavalue: '11-09-2020'
         configDateFormat: 'dd-mm-yy'
+        id: 231
+        haslabel: true
+        labelmodifier: accent
+        fieldPlaceholder: DD-MM-JJJJ
+      dateselectionDatumStart:
+        id: 234
+        haslabel: true
+        label: Vanaf
+        labelmodifier: accent
+        fieldPlaceholder: DD-MM-JJJJ
+        value: ''
+        datavalue: ''
+        configDateFormat: 'dd-mm-yy'
       dateselectionDatumEnd:
+        id: 345
+        haslabel: true
+        label: Tot en met
+        labelmodifier: accent
+        fieldPlaceholder: DD-MM-JJJJ
         value: '2020-09-11'
         datavalue: '11-09-2020'
         configDateFormat: 'dd-mm-yy'
@@ -116,8 +155,8 @@ context:
       type: submit
       modifier: button--primary form__button
     subselectionGemContext:
-      linkText: Selecteer informatiesoort(en)
-      id: 20
+      linkText: Selecteer type organisatie(s)
+      id: 2099
       modalTitle: Type organisatie(s)
       label: Zoek type organisatie(s)
       inputPlaceholder: 'Zoekterm'
@@ -126,7 +165,7 @@ context:
       type: span
       multilevel: false
       controls:
-        selectAllLabel: "Selecteer alle organisaties"
+        selectAllLabel: "Selecteer alle type organisaties"
       Options:
         - Option: 1
           id: 1237
@@ -189,14 +228,14 @@ context:
           title: Zelfstandig berstuurorgaan
           short: Zelfstandig berstuurorgaan
     subselectionPubContext:
-      linkText: Selecteer informatiesoort(en)
-      id: 21
+      linkText: Selecteer organisatie(s)
+      id: 2199
       modalTitle: Publicerende organisatie(s)
       label: Zoek publicerende organisatie(s)
       inputPlaceholder: 'Zoekterm'
     subselectionWatContext:
-      linkText: Selecteer informatiesoort(en)
-      id: 1900
+      linkText: Selecteer onderwerp(en)
+      id: 190099
       modalTitle: Onderwerp(en)
       label: Zoek onderwerp
       inputPlaceholder: 'Zoekterm'
@@ -317,16 +356,16 @@ context:
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
         trac_onderwerpen:
-          id: 11114
+          id: 1111499
           multilevel: false
           linkText: Selecteer onderwerp(en)
           linkTextActive: Wijzig selectie
           modalTitle: Selecteer onderwerp(en)
           fieldLabel: fieldLabel
-          fieldPlaceholder: ''
+          inputPlaceholder: 'Zoekterm'
           label: Zoek onderwerp
           controls:
-            selectAllLabel: Selecteer alle onderwerpen
+            selectAllLabel: Selecteer alle gevonden onderwerpen
           Options:
           - Option: 2112222
             id: 2112222
@@ -446,46 +485,6 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
-        sc_rubrieken:
-          id: 11125
-          multilevel: false
-          linkText: Selecteer rubriek(en)
-          linkTextActive: Wijzig selectie
-          modalTitle: Selecteer rubriek(en)
-          fieldLabel: fieldLabel
-          fieldPlaceholder: ''
-          label: Zoek rubriek
-          controls:
-            selectAllLabel: Selecteer alle rubrieken
-          Options:
-          - Option: 11126
-            id: 11126
-            title: Aanbestedingen
-            short: Aanbestedingen
-          - Option: 11127
-            id: 11127
-            title: Adviezen Raad van State
-            short: Adviezen Raad van State
-          - Option: 11128
-            id: 11128
-            title: Algemeenverbindendverklaring van CAO-bepalingen
-            short: Algemeenverbindendverklaring van CAO-bepalingen
-          - Option: 11129
-            id: 11129
-            title: Autorisatiebesluiten basisregistratie Personen
-            short: Autorisatiebesluiten basisregistratie Personen
-          - Option: 11130
-            id: 11130
-            title: Bekendmakingen aan de scheepvaart
-            short: Bekendmakingen aan de scheepvaart
-          - Option: 11131
-            id: 11131
-            title: Bekendmakingen aan het wegverkeer
-            short: Bekendmakingen aan het wegverkeer
-          - Option: 11132
-            id: 11132
-            title: Bekendmakingen Nederland Zorgautoriteit
-            short: Bekendmakingen Nederland Zorgautoriteit
       item5:
         type: checkbox
         headerId: header5
@@ -511,46 +510,6 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
-        gm_rubrieken:
-          id: 11135
-          multilevel: false
-          linkText: Selecteer rubriek(en)
-          linkTextActive: Wijzig selectie
-          modalTitle: Selecteer rubriek(en)
-          fieldLabel: fieldLabel
-          fieldPlaceholder: ''
-          label: Zoek rubriek
-          controls:
-            selectAllLabel: Selecteer alle rubrieken
-          Options:
-          - Option: 11136
-            id: 11136
-            title: Aanbestedingen
-            short: Aanbestedingen
-          - Option: 11137
-            id: 11137
-            title: Adviezen Raad van State
-            short: Adviezen Raad van State
-          - Option: 11138
-            id: 11138
-            title: Algemeenverbindendverklaring van CAO-bepalingen
-            short: Algemeenverbindendverklaring van CAO-bepalingen
-          - Option: 11139
-            id: 11139
-            title: Autorisatiebesluiten basisregistratie Personen
-            short: Autorisatiebesluiten basisregistratie Personen
-          - Option: 11140
-            id: 11140
-            title: Bekendmakingen aan de scheepvaart
-            short: Bekendmakingen aan de scheepvaart
-          - Option: 11141
-            id: 11141
-            title: Bekendmakingen aan het wegverkeer
-            short: Bekendmakingen aan het wegverkeer
-          - Option: 11142
-            id: 11142
-            title: Bekendmakingen Nederland Zorgautoriteit
-            short: Bekendmakingen Nederland Zorgautoriteit
       item6:
         type: checkbox
         headerId: header6
@@ -576,46 +535,6 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
-        pb_rubrieken:
-          id: 11145
-          multilevel: false
-          linkText: Selecteer rubriek(en)
-          linkTextActive: Wijzig selectie
-          modalTitle: Selecteer rubriek(en)
-          fieldLabel: fieldLabel
-          fieldPlaceholder: ''
-          label: Zoek rubriek
-          controls:
-            selectAllLabel: Selecteer alle rubrieken
-          Options:
-          - Option: 11146
-            id: 11146
-            title: Aanbestedingen
-            short: Aanbestedingen
-          - Option: 11147
-            id: 11147
-            title: Adviezen Raad van State
-            short: Adviezen Raad van State
-          - Option: 11148
-            id: 11148
-            title: Algemeenverbindendverklaring van CAO-bepalingen
-            short: Algemeenverbindendverklaring van CAO-bepalingen
-          - Option: 11149
-            id: 11149
-            title: Autorisatiebesluiten basisregistratie Personen
-            short: Autorisatiebesluiten basisregistratie Personen
-          - Option: 11150
-            id: 11150
-            title: Bekendmakingen aan de scheepvaart
-            short: Bekendmakingen aan de scheepvaart
-          - Option: 11151
-            id: 11151
-            title: Bekendmakingen aan het wegverkeer
-            short: Bekendmakingen aan het wegverkeer
-          - Option: 11152
-            id: 11152
-            title: Bekendmakingen Nederland Zorgautoriteit
-            short: Bekendmakingen Nederland Zorgautoriteit
       item7:
         type: checkbox
         headerId: header7
@@ -641,46 +560,6 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
-        wb_rubrieken:
-          id: 11155
-          multilevel: false
-          linkText: Selecteer rubriek(en)
-          linkTextActive: Wijzig selectie
-          modalTitle: Selecteer rubriek(en)
-          fieldLabel: fieldLabel
-          fieldPlaceholder: ''
-          label: Zoek rubriek
-          controls:
-            selectAllLabel: Selecteer alle rubrieken
-          Options:
-          - Option: 11156
-            id: 11156
-            title: Aanbestedingen
-            short: Aanbestedingen
-          - Option: 11157
-            id: 11157
-            title: Adviezen Raad van State
-            short: Adviezen Raad van State
-          - Option: 11158
-            id: 11158
-            title: Algemeenverbindendverklaring van CAO-bepalingen
-            short: Algemeenverbindendverklaring van CAO-bepalingen
-          - Option: 11159
-            id: 11159
-            title: Autorisatiebesluiten basisregistratie Personen
-            short: Autorisatiebesluiten basisregistratie Personen
-          - Option: 11160
-            id: 11160
-            title: Bekendmakingen aan de scheepvaart
-            short: Bekendmakingen aan de scheepvaart
-          - Option: 11161
-            id: 11161
-            title: Bekendmakingen aan het wegverkeer
-            short: Bekendmakingen aan het wegverkeer
-          - Option: 11162
-            id: 11162
-            title: Bekendmakingen Nederland Zorgautoriteit
-            short: Bekendmakingen Nederland Zorgautoriteit
       item8:
         type: checkbox
         headerId: header8
@@ -706,43 +585,43 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
-        bgr_rubrieken:
-          id: 11165
-          multilevel: false
-          linkText: Selecteer rubriek(en)
-          linkTextActive: Wijzig selectie
-          modalTitle: Selecteer rubriek(en)
-          fieldLabel: fieldLabel
-          fieldPlaceholder: ''
-          label: Zoek rubriek
-          controls:
-            selectAllLabel: Selecteer alle rubrieken
-          Options:
-          - Option: 11166
-            id: 11166
-            title: Aanbestedingen
-            short: Aanbestedingen
-          - Option: 11167
-            id: 11167
-            title: Adviezen Raad van State
-            short: Adviezen Raad van State
-          - Option: 11168
-            id: 11168
-            title: Algemeenverbindendverklaring van CAO-bepalingen
-            short: Algemeenverbindendverklaring van CAO-bepalingen
-          - Option: 11169
-            id: 11169
-            title: Autorisatiebesluiten basisregistratie Personen
-            short: Autorisatiebesluiten basisregistratie Personen
-          - Option: 11170
-            id: 11170
-            title: Bekendmakingen aan de scheepvaart
-            short: Bekendmakingen aan de scheepvaart
-          - Option: 11171
-            id: 11171
-            title: Bekendmakingen aan het wegverkeer
-            short: Bekendmakingen aan het wegverkeer
-          - Option: 11172
-            id: 11172
-            title: Bekendmakingen Nederland Zorgautoriteit
-            short: Bekendmakingen Nederland Zorgautoriteit
+    sc_rubrieken:
+      id: 1112599
+      multilevel: false
+      linkText: Selecteer rubriek(en)
+      linkTextActive: Wijzig selectie
+      modalTitle: Selecteer rubriek(en)
+      fieldLabel: fieldLabel
+      inputPlaceholder: 'Zoekterm'
+      label: Zoek rubriek
+      controls:
+        selectAllLabel: Selecteer alle rubrieken
+      Options:
+      - Option: 11126
+        id: 11126
+        title: Aanbestedingen
+        short: Aanbestedingen
+      - Option: 11127
+        id: 11127
+        title: Adviezen Raad van State
+        short: Adviezen Raad van State
+      - Option: 11128
+        id: 11128
+        title: Algemeenverbindendverklaring van CAO-bepalingen
+        short: Algemeenverbindendverklaring van CAO-bepalingen
+      - Option: 11129
+        id: 11129
+        title: Autorisatiebesluiten basisregistratie Personen
+        short: Autorisatiebesluiten basisregistratie Personen
+      - Option: 11130
+        id: 11130
+        title: Bekendmakingen aan de scheepvaart
+        short: Bekendmakingen aan de scheepvaart
+      - Option: 11131
+        id: 11131
+        title: Bekendmakingen aan het wegverkeer
+        short: Bekendmakingen aan het wegverkeer
+      - Option: 11132
+        id: 11132
+        title: Bekendmakingen Nederland Zorgautoriteit
+        short: Bekendmakingen Nederland Zorgautoriteit

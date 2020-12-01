@@ -124,13 +124,18 @@ context:
       text: Bekijk ook
     devided: true
     btndouble1:
-      text: Help
-      text2: Hulp bij Officiële bekendmakingen
+      text: Wet- en regelgeving
+      text2: Nationaal
       anchor: true
-      action: "#"
+      action: "https://wetten.overheid.nl"
     btndouble2:
-      text: Reactieformulier
-      text2: Reageren op Officiële bekendmakingen
+      text: Wet- en regelgeving
+      text2: Lokaal
       anchor: true
-      action: "#"
+      action: "https://www.overheid.nl/lokale-wet-en-regelgeving"
+    btndouble3:
+      text: Verdragenbank
+      text2: Internationaal
+      anchor: true
+      action: "https://verdragenbank.overheid.nl"
 

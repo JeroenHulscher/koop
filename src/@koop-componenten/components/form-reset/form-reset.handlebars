@@ -36,7 +36,7 @@
     </div>
     <div class="form__row" data-decorator="init-formreset">
       {{render "@input-checkbox" checkboxes2 merge=true }}
-      <a href="#" class="reset formreset-resetlink">
+      <a {{#if id}}id="{{id}}"{{/if}} href="#" class="reset formreset-resetlink">
         <small>Herstellen</small>
       </a>
     </div>

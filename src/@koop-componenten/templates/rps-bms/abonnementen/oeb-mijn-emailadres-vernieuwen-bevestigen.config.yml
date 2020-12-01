@@ -1,0 +1,84 @@
+---
+label: E-mailadres wijzigen bevestigen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+        className: is-active
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Mijn Abonnementen
+      url: '#'
+    - text: Activeer uw account
+  jumbotronContext:
+    heading: Bevestigen wijziging e-mailadres
+    subheading: Officiële bekendmakingen
+    centered: true
+    size: s
+    headingcentered: true
+    inputEmailContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 1
+      required: true
+      patterntype: email
+      fieldLabel: Uw nieuwe e-mailadres
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. uwnaam@overheid.nl
+      value: uwnaam@overheid.nl
+    inputCodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      required: true
+      type: text
+      fieldLabel: Activeringscode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder:
+      hastooltip: true
+      tooltipContext:
+        id: 1231
+        content: De activeringscode uit de activeringse-mail
+    linkNewcode:
+      text: Nieuwe activeringscode aanvragen
+    linkAccount:
+      text: Ik heb al een account
+    buttonSubmit:
+      id: 123
+      text: Bevestigen
+      button: true
+      type: submit
+      modifier: button--primary form__button
+    alert:
+      text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.

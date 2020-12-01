@@ -1,12 +1,12 @@
 {{#if loggedIn }}
-<div class="profile {{ modifier }}" data-decorator="init-profile-toggle">
+<div {{#if id}}id="{{id}}"{{/if}} class="profile {{ modifier }}" data-decorator="init-profile-toggle">
   <p data-toggler>{{textLoggedIn}}</p>
   <div class="profile__options" data-toggled id="profile-options-{{ id }}">
     <h3 class="visually-hidden">Opties:</h3>
     {{#if options }}
     <ul class="list list--unstyled profile__option-list">
       {{#each options }}
-      <li><a href="{{ url }}" {{#if class}}class="{{class}}"{{/if}}>{{ text }}</a></li>
+      <li><a {{#if id}}id="{{id}}"{{/if}} href="{{ url }}" {{#if class}}class="{{class}}"{{/if}}>{{ text }}</a></li>
       {{/each}}
     </ul>
     {{/if}}

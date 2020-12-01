@@ -60,6 +60,7 @@ context:
     id: sl2
     items:
     - name: Naamgeving zoekvraag
+      nameHref: '#'
       icon: icon-bg--news
       idprefix: unit-1-
       metadata:
@@ -90,6 +91,7 @@ context:
         action: /components/preview/templates-att-stap1
         text: Bewerken
     - name: Zoekvraag 2
+      nameHref: '#'
       icon: icon-bg--news
       idprefix: unit-2-
       metadata:
@@ -131,3 +133,14 @@ context:
         - content: <a href="/uitgebreidzoeken/officielebekendmakingen">Officiële bekendmakingen</a>
   alert:
     text: Uw abonnement is verwijderd.
+  sort:
+    options:
+    - label: Titel
+      href: '#'
+      active: is-active
+    - label: Aanmaakdatum
+      href: '#'
+    - label: Laatste e-mail
+      href: '#'
+    - label: Frequentie
+      href: '#'

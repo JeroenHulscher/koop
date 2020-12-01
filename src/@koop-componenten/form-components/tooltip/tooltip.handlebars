@@ -1,4 +1,4 @@
 <span class="tooltip {{modifier}}" data-decorator="tooltip">
-  <button aria-label="{{label}}" aria-describedby="tt{{id}}" aria-expanded="false" class="tooltip__trigger">{{label}}</button>
-  <span role="tooltip" id="tt{{id}}" class="tooltip__content">{{content}}</span>
+  <button {{#if id}}id="{{id}}"{{/if}} aria-label="{{label}}" aria-describedby="tt{{id}}" aria-expanded="false" class="tooltip__trigger">{{label}}</button>
+  <span role="tooltip" id="tt{{id}}" class="tooltip__content">{{{content}}}</span>
 </span>

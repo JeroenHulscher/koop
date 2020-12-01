@@ -73,6 +73,7 @@
     var filter = this.input.value.toUpperCase();
     var hasVisibleResults = false;
     var setContainers = this.setContainers;
+    var amountResults = 0;
 
     for (i = 0; i < this.results.length; i++) {
       a = this.results[i];
@@ -82,6 +83,7 @@
         this.results[i].removeAttribute('aria-hidden');
         this.results[i].classList.add('is-visible');
         this.results[i].classList.remove('is-invisible');
+        amountResults++;
       } else {
         this.results[i].setAttribute('aria-hidden', 'true');
         this.results[i].classList.add('is-invisible');
@@ -147,10 +149,13 @@
       if(this.input.value === '') {
         this.btnSelectAll.innerHTML = this.btnSelectAll.getAttribute('data-label');
       } else {
-        this.btnSelectAll.innerHTML = 'Selecteer alle "' + this.input.value + '"';
+        if (amountResults === 1) {
+          this.btnSelectAll.innerHTML = 'Selecteer ' + amountResults + ' resultaat';
+        } else {
+          this.btnSelectAll.innerHTML = 'Selecteer ' + amountResults + ' resultaten';
+        }
       }
     }
   };
-
 
 })();

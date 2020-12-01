@@ -1,0 +1,69 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+{{ render "@document-banner" documentbanner }}
+<div class="container columns columns--sticky-sidebar">
+  <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <a href="#" class="icon--backlink">Terug naar publicatie</a>
+
+      <h3 class="nav-sub__heading">Extra informatie</h3>
+      {{render "@nav" navInformatie }}
+    </div>
+  </div>
+  <div id="content" role="main" class="content content--publication">
+
+    {{ render "@pageactions" pageactions }}
+
+    <h1>Kennisgeving ontwerp-omgevingsvergunning "Woning Noordsingel"</h1>
+    <p>
+       U kunt reageren op het ontwerpbesluit met de bijbehorende stukken vanaf vrijdag 17 april 2020 tot en met donderdag 28 mei
+      2020.
+    </p>
+    <h2>Terinzagelegging</h2>
+
+    <table class="">
+      <tbody>
+        <tr>
+          <th scope="row">Publicatie</th>
+          <td data-before="Publicatie">Kennisgeving ontwerp-omgevingsvergunning "Woning Noordsingel"</td>
+        </tr>
+        <tr>
+          <th scope="row">Reactietermijn</th>
+          <td data-before="Reactietermijn">{{render "@label" labelTerm }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Einde reactietermijn</th>
+          <td data-before="Einde reactietermijn">28-05-2020</td>
+        </tr>
+        <tr>
+          <th scope="row">Laatst gewijzigd</th>
+          <td data-before="Laatst gewijzigd">20-04-2020</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Documenten</h2>
+
+    {{ render "@alert--warning" alertDocumenten merge=true }}
+
+    {{#> @modal modalDelen }}
+
+      <h2>Permanente link</h2>
+      <p class="form__sublegend">Kopieer de link naar uw clipboard </p>
+      <div class="row">
+        {{render "@copydata" copydata merge=true }}
+      </div>
+
+    {{/@modal}}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

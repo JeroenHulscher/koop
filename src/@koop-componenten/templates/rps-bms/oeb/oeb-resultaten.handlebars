@@ -11,19 +11,19 @@
 
       <div class="sidebar__section">
 
-        <h2 class="sidebar__header">Zoek bekendmakingen</h2>
+        <h2 class="sidebar__header">Zoekvraag</h2>
 
         {{ render "@selectedfilters" }}
 
         <h3 class="visually-hidden">Zoek opnieuw</h3>
         <form>
           <fieldset>
-            <legend class="visually-hidden">Zoek bekendmakingen</legend>
+            <legend class="visually-hidden">Zoek opnieuw</legend>
              <div class="form__row">
               {{ render "@input-text" searchterm }}
             </div>
             <div class="form__row">
-              {{ render "@select-custom--with-label" selectContext merge=true }}
+              {{ render "@select-multi" multiSelectDocumentsoort }}
             </div>
             <div class="form__rowsubmit">
               <div class="form__rowsubmit__item">
@@ -37,11 +37,26 @@
 
       <div class="sidebar__section">
 
-        <h2 class="sidebar__header">Verfijn bekendmakingen</h2>
+        <h2 class="sidebar__header">Abonneren</h2>
+
+        <p>
+          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
+        </p>
+
+        <p>
+          {{ render "@link--feed" linkRSS }}<br>
+          {{ render "@link--mail" linkAbonneren merge=true }}
+        </p>
+
+      </div>
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Filter resultaten</h2>
 
         <form>
           <fieldset>
-            <legend class="visually-hidden">Verfijn bekendmakingen</legend>
+            <legend class="visually-hidden">Filter resultaten</legend>
 
             <div class="form__row form__row--large">
               <fieldset>
@@ -89,16 +104,13 @@
 
         </form>
 
-        <p>
-          {{ render "@link--feed" linkRSS }}<br>
-          {{ render "@link--mail" linkAbonneren merge=true }}
-        </p>
-
       </div>
 
     </div>
   </div>
   <div id="content" role="main">
+
+    {{ render "@alert--info" alertSruQuery merge=true }}
 
     <h1>Zoekresultaten
       <span class="h1__sub">1-10 van de 7396 resultaten</span>
@@ -107,10 +119,6 @@
     {{ render "@selectedfilterbar" }}
 
     {{ render "@sort" sortContext }}
-
-    {{!-- <div class="row">
-      {{render "@link--mail" linkAbonneren merge=true }}
-    </div> --}}
 
     {{render "@resultlist" resultsContext }}
 

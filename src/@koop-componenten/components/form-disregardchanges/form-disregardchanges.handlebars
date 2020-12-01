@@ -8,12 +8,12 @@
 
     <div class="form__row">
 
-       {{ render "@input-checkbox"  }}
-       {{ render "@input-radio"  }}
+       {{ render "@input-checkbox" checkbox1 }}
+       {{ render "@input-radio" radio1 }}
 
     </div>
 
-    <a href="#" class="js-form-disregardchanges__trigger">Annuleren</a>
+    <a {{#if id}}id="{{id}}"{{/if}} href="#" class="js-form-disregardchanges__trigger">Annuleren</a>
 
   </fieldset>
 </form>

@@ -15,8 +15,16 @@
   &__content {
     order: 2;
 
-    h1 {
-      margin-bottom: 1em;
+    h1,h2 {
+      font-size: em(24);
+      margin-bottom: .5em;
+      line-height: 1.1em;
+      margin-top: 0;
+
+      @media (min-width: $breakpointDesktop) {
+        font-size: em(43);
+        line-height: 1em;
+      }
     }
   }
 }

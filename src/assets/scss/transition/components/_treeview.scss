@@ -1,4 +1,5 @@
-.treeview {
+.treeview,
+.nav.nav-tree {
   li {
     a {
       button[data-handler="toggle-fold"] {

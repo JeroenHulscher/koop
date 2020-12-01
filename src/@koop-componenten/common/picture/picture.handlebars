@@ -1,4 +1,4 @@
-<picture>
+<picture {{#if id}}id="{{id}}"{{/if}}>
   {{#each sources}}
     <source srcset="{{srcset}}{{media}}" media="{{media}}">
   {{/each}}

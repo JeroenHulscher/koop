@@ -1,6 +1,6 @@
 {
   "name": "koop-componentenbibliotheek",
-  "version": "1.9.38",
+  "version": "1.9.39",
   "description": "Componentenbibliotheek die als basis kan worden gebruikt voor overheid.nl, officielebekendmakingen.nl en andere websites die door KOOP worden beheerd.",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "webdriver-manager": "^12.1.7"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.5.0",
+    "@frctl/fractal": "^1.5.1",
     "@frctl/mandelbrot": "^1.2.1",
     "@frctl/twig": "^1.0.0-beta.5",
     "autoprefixer": "^9.6.1",

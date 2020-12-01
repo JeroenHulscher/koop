@@ -65,18 +65,21 @@ context:
       labelmodifier: accent
       id: 2
       required: true
-      type: password
       fieldLabel: Wachtwoord
       fieldLabelVisible: true
       fieldInstruction:
       fieldPlaceholder: Uw wachtwoord
     linkWw:
       text: Wachtwoord vergeten
+    linkActivate:
+      text: Account activeren
+    linkProfile:
+      text: Ik heb nog geen account
     buttonSubmit:
       id: 123
       text: Inloggen
       button: true
       type: submit
       modifier: button--primary form__button
-    alert:
+    alertSuccess:
       text: Uw account is succesvol geactiveerd. U kunt nu inloggen.

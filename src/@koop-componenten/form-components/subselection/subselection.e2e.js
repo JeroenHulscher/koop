@@ -260,7 +260,7 @@ describe('Subselection', function () {
 
     var buttonSelectall = element(by.css('.js-filterresults__btn-selectall'));
 
-    expect(buttonSelectall.getText()).toEqual('Selecteer alle "dam"');
+    expect(buttonSelectall.getText()).toEqual('Selecteer 5 resultaten');
   });
 
   it('should only have 1 category as result', function () {

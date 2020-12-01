@@ -6,24 +6,24 @@ context:
   label: Alle
   checkboxes:
     options:
-    - id: checkbox-20
+    - id: checkbox-2022
       text: Haarlem
       name: onderwerp
-    - id: checkbox-21
+    - id: checkbox-2122
       text: Haarlemmermeerdam
       name: onderwerp
-    - id: checkbox-22
+    - id: checkbox-2222
       text: Utrecht
       name: onderwerp
-    - id: checkbox-23
+    - id: checkbox-2322
       text: Groningendam
       name: onderwerp
-    - id: checkbox-24
+    - id: checkbox-2422
       text: Hattem
       name: onderwerp
-    - id: checkbox-25
+    - id: checkbox-2522
       text: Amsterdam
       name: onderwerp
-    - id: checkbox-26
+    - id: checkbox-2622
       text: Rotterdam
       name: onderwerp

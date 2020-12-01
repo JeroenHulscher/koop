@@ -1,0 +1,31 @@
+---
+label: CVDR - Document
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  terugnaarContext:
+    text: Terug naar de vorige pagina
+  breadcrumb:
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Regeling
+  pageactions:
+    title: ''
+    intro: ''
+    items:
+      - link: '#'
+        text: Downloaden
+        icon: icon-download.svg
+      - link: '#'
+        text: Printen
+        icon: icon-print-blue.svg
+        actionPrint: true

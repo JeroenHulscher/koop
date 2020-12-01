@@ -1,6 +1,13 @@
-.treeview {
+.treeview,
+.nav.nav-tree {
 
   padding-left: 0;
+
+  // legacy treeview, RPS OEB;
+  > .toc {
+    padding-left: 0;
+  }
+  // end
 
   li {
 
@@ -68,4 +75,9 @@
     }
   }
 
+}
+
+// legacy treeview, RPS OEB;
+.nav.nav-tree {
+  margin-bottom: 2em;
 }

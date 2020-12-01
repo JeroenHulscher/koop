@@ -72,7 +72,45 @@
 
         element.appendChild( toggleButton );
       }
+    },
+    'init-legacytreeview': function ( element ) {
+      // used in collection: (RPS) OEB
+      new legacyTreeview(element);
     }
   });
+
+  var legacyTreeview = function (element) {
+    this.element = element;
+    this.init();
+  }
+
+  legacyTreeview.prototype.init = function () {
+    var i;
+    this.foldouts = this.element.querySelectorAll('.nav .first .toc');
+
+    for (i = 0; i < this.foldouts.length; i++) {
+
+      var randomId = '_' + Math.random().toString(36).substr(2, 9);
+      var elementWithChildren = this.foldouts[i].parentNode.querySelector('a:first-child');
+      var toggleButton = document.createElement('button');
+
+      this.foldouts[i].setAttribute('hidden', true);
+      this.foldouts[i].setAttribute('id', randomId);
+
+      toggleButton.type = 'button';
+      toggleButton.textContent = openText;
+      toggleButton.setAttribute('data-handler', 'toggle-fold');
+      toggleButton.setAttribute('aria-expanded', 'false');
+      toggleButton.setAttribute('aria-controls', randomId);
+
+      elementWithChildren.appendChild(toggleButton);
+
+    }
+
+    if (this.foldouts) {
+      this.element.querySelector('.nav.nav-tree').classList.add('treeview--foldable');
+    }
+
+  }
 
 })();

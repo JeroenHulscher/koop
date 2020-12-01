@@ -20,6 +20,16 @@
 
     {{ render "@sort" }}
 
+    {{#> @resultlist resultlist }}
+      {{#> @resultlist-item item1 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+    {{/ @resultlist}}
+
+
+{{!--
     <h2>Wetten</h2>
 
     <div class="result--list">
@@ -252,6 +262,7 @@
         </li>
       </ul>
     </div>
+     --}}
     {{ render "@pagination" }}
   </div>
 </div>

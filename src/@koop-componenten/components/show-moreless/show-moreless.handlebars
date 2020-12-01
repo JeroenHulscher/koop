@@ -3,7 +3,7 @@
   <ul class="{{listmodifier}}">
     {{#each items}}
       <li>
-        <a href="#" {{{attributes}}}>{{{item}}}</a> {{{descr}}}
+        <a {{#if id}}id="{{id}}"{{/if}} href="#" {{{attributes}}}>{{{item}}}</a> {{{descr}}}
       </li>
     {{/each}}
   </ul>

@@ -126,6 +126,7 @@
     </div>
   </div>
 
+  <h2>Tabel</h2>
 
   <div class="table__container">
     <table class="table table--untouched table--striped table__data-overview" aria-describedby="tableDes2">
@@ -262,6 +263,237 @@
     <p>extra</p>
     </div>
   </div>
+
+  <h2>Del / Ins (in een tabel)</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Header
+          <del>kolom 1</del>
+          <ins>rij 1</ins>
+        </th>
+        <th>Header kolom 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde
+          <del>kolom 1</del>
+          <ins>rij 1</ins>, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="ins">
+        <th>
+          <ins>Header kolom 1</ins>
+        </th>
+        <th>
+          <ins>Header kolom 2</ins>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde
+          <del>kolom 1</del>
+          <ins>rij 1</ins>, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="del">
+        <th>
+          <del>Header kolom 1</del>
+        </th>
+        <th>
+          <del>Header kolom 2</del>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde
+          <del>kolom 1</del>
+          <ins>rij 1</ins>, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="table__rowheading table__rowheading--lvl1 ins">
+        <th>
+          <ins>Header kolom 1</ins>
+        </th>
+        <th>
+          <ins>Header kolom 2</ins>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+      <tr class="ins">
+        <td>
+          <ins>Waarde kolom 1, rij 1</ins>
+        </td>
+        <td>
+          <ins>Waarde kolom 2, rij 1</ins>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="table__rowheading table__rowheading--lvl1 del">
+        <th>
+          <del>Header kolom 1</del>
+        </th>
+        <th>
+          <del>Header kolom 2</del>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+      <tr class="del">
+        <td>
+          <del>Waarde kolom 1, rij 1</del>
+        </td>
+        <td>
+          <del>Waarde kolom 2, rij 1</del>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="table__rowheading table__rowheading--lvl1">
+        <th>Header kolom 1</th>
+        <th class="del">
+          <del>Header kolom 2</del>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td class="del">Waarde kolom 2, rij 1</td>
+      </tr>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td class="del">
+          <del>Waarde kolom 2, rij 1</del>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="table__rowheading table__rowheading--lvl1">
+        <th>Header kolom 1</th>
+        <th class="ins">
+          <ins>Header kolom 2</ins>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td class="ins"><ins>Waarde kolom 2, rij 1</ins></td>
+      </tr>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td class="ins">
+          <ins>Waarde kolom 2, rij 1</ins>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr class="table__rowheading table__rowheading--lvl1">
+        <th>
+          <del>Text</del>
+          <ins>Header kolom 1</ins>
+        </th>
+        <th>
+          <del>Text</del>
+          <ins>Header kolom 2</ins>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Waarde kolom 1, rij 1</td>
+        <td>Waarde kolom 2, rij 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ins class="ins ins--block">
+    <table class="table">
+      <thead>
+        <tr class="table__rowheading table__rowheading--lvl1">
+          <th>Header kolom 1</th>
+          <th>Header kolom 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+    </table>
+  </ins>
+
+  <del class="del del--block">
+    <table class="table">
+      <thead>
+        <tr class="table__rowheading table__rowheading--lvl1">
+          <th>Header kolom 1</th>
+          <th>Header kolom 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+    </table>
+  </del>
+
 
   <h5 class="docArtikel">Artikel 2.3 [5]</h5>
   <ol>

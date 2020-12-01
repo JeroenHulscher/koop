@@ -42,7 +42,7 @@ context:
   jumbotronContext:
     heading: Activeringscode aanvragen
     subheading: Officiële bekendmakingen
-    intro: Indien u uw activeringscode niet (meer) heeft, kunt u een nieuwe aanvragen. Wij sturen uw nieuwe activeringscode naar het door u opgegeven e-mailadres.
+    intro: Indien u uw wachtwoord bent vergeten kunt u uw wachtwoord opnieuw instellen. Wij sturen daarvoor een bevestigingscode naar uw e-mailadres. Met deze bevestigingscode kunt u een nieuw wachtwoord aan ons doorgeven.
     centered: true
     size: s
     headingcentered: true

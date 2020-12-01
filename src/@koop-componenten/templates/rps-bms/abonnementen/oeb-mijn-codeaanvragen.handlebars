@@ -15,7 +15,7 @@
         <fieldset>
           <legend class="visually-hidden">E-mailadres</legend>
           <div class="form__row form__row--medium">
-            {{render "@input-text" inputEmailContext }}
+            {{render "@input-text--email" inputEmailContext merge=true }}
           </div>
           <div class="form__rowsubmit">
             <div class="form__rowsubmit__item">
@@ -30,4 +30,5 @@
 
 </div>
 
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

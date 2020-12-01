@@ -44,6 +44,8 @@ context:
     - text: Spoedpublicatie
       url: '#'
     - text: Staatsblad 2020, 225609
+      url: '#'
+    - text: Informatie over deze publicatie
   navInformatie:
     items:
       - title: Informatie over deze publicatie
@@ -67,13 +69,17 @@ context:
       - content: <a href="#" class="icon--downloadfile">Metadata in OWMS formaat</a>
   listDownloads1:
     heading: Publicaties over kamerdossier
-    headingType: h2
+    headingType: h4
     modifier: list--relations
     items:
       - content: <a href="#">Kamerdossier 45643</a><small>Toon publicaties die dit dossier behandelen</small>
   listDownloads2:
     heading: Geconsolideerde regelgeving
-    headingType: h2
+    headingType: h4
     modifier: list--relations
     items:
       - content: <a href="https://wetten.overheid.nl">Tabals- en rookwarenwet</a><small>Toon geconsolideerde verrsie op wetten.nl</small>
+  alertinfo1:
+    text: Deze publicatie is niet beschikbaar als Webversie. Bekijk de authentieke versie (PDF)
+  alertinfo2:
+    text: Wegens privacy-overwegingen is deze publicatie niet meer als Webversie beschikbaar. U kunt wel de authentieke versie (PDF) raadplegen.

@@ -5,7 +5,7 @@
     {{#each categories}}
       <optgroup label="{{ title }}">
         {{#each options}}
-          <option {{selected}} value="{{ value }}">{{ label }}</option>
+          <option {{#if id}}id="{{id}}"{{/if}} {{selected}} value="{{ value }}">{{ label }}</option>
         {{/each}}
       </optgroup>
     {{/each}}

@@ -5,6 +5,10 @@
   padding: 1.15em 1.15em 1.15em 3.5em;
   line-height: 1.25em;
 
+  h2, h3 {
+    font-size: 1em;
+  }
+
   &--info {
     background-color: $lightBlue;
     background-image: $infoIconBlue;
@@ -34,6 +38,9 @@
   .alert {
     &--success {
       border: 2px solid $green;
+    }
+    &--warning {
+      border: 2px solid $red;
     }
   }
 }

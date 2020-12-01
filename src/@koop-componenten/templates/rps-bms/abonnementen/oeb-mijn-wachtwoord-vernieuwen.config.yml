@@ -64,7 +64,6 @@ context:
   oldPWInput:
     modifier:
     id: 222
-    type: password
     fieldLabel: Huidig wachtwoord
     fieldLabelVisible: true
     labelmodifier: accent
@@ -75,7 +74,6 @@ context:
   newPWInput:
     modifier:
     id: 2
-    type: password
     class: js-passwordstrength__input
     fieldLabel: Nieuw wachtwoord
     fieldLabelVisible: true
@@ -87,7 +85,6 @@ context:
   repeatPWInput:
     modifier:
     id: 3
-    type: password
     class: js-passwordstrength__inputrepeat
     fieldLabel: Herhaal wachtwoord
     fieldLabelVisible: true
@@ -106,3 +103,5 @@ context:
     text: Terug naar Mijn abonnementen
   preheader:
     value: Mijn abonnementen
+  alertWarning:
+    text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.

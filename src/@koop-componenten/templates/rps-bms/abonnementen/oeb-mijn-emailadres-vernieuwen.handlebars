@@ -19,30 +19,33 @@
             om uw wijziging te bevestigen. Na bevestiging sturen wij attenderingen voortaan naar uw nieuwe e-mailadres.
           </p>
         </div>
+        {{ render "@alert--warning" alertWarning merge=true }}
         <form class="form" data-decorator="init-form-validation">
-
-
-          <div class="form__row">
-              {{render "@input-text" oldEmailInput }}
-          </div>
-          <div class="form__row">
-              {{render "@input-text" newEmailInput }}
-          </div>
-          <div class="form__row">
-            {{render "@input-text" PWInput }}
-          </div>
-          <div class="form__rowsubmit">
-            <div class="form__rowsubmit__item">
-              {{ render "@button" buttonSubmit }}
+          <fieldset>
+            <legend class="visually-hidden">E-mailadres wijzigen</legend>
+            <div class="form__row">
+                {{render "@input-text--email" oldEmailInput merge=true }}
             </div>
-          </div>
+            <div class="form__row">
+                {{render "@input-text--email" newEmailInput merge=true }}
+            </div>
+            <div class="form__row">
+              {{render "@input-text--password" PWInput merge=true }}
+            </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
         </form>
       </div>
       <div class="column"></div>
     </div>
 
-
+  </div>
 
 </div>
 
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

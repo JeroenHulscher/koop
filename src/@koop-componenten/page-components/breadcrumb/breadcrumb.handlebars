@@ -4,7 +4,7 @@
     {{#each breadcrumb}}
     <li>
       {{#if url }}
-        <a href={{ url }}>{{ text }}</a>
+        <a {{#if id}}id="{{id}}"{{/if}} href={{ url }}>{{ text }}</a>
       {{else }}
         {{ text }}
       {{/if }}

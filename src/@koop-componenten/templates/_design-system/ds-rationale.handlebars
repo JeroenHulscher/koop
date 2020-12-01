@@ -176,37 +176,64 @@
       <section class="section-chapter js-scrollSection" id="sectie-zoekresultaten">
         <h2>Zoekresultaten</h2>
         <p>
-           Op de zoekresultatenpagina worden de resultaten van een zoekactie weergegeven in ‘zoekresultaat’ blokken. Deze blokken geven
-          een eerste inzicht van de inhoud van de gevonden informatie. Zoekresultaten bevatten daarom:
+           Binnen het template Zoekresultaten worden resultaten getoond door middel van een ‘zoekresultaatblok’. Deze blokken geven
+          een overzicht van de (aan de hand van de door gebruiker ingevoerde query) gevonden resultaten. Het blok heeft als doel het
+          informeren over de inhoud van een publicatie. Een zoekresultaatblok wordt daarom opgebouwd op basis van primaire informatie
+          over de publicatie:
         </p>
         <dl>
           <dt>Label</dt>
-          <dd>(<em>optioneel</em>) Kan toegepast worden bij bijzonderheden zoals ‘nieuwe publicatie’ of ‘terinzagelegging beschikbaar’</dd>
+          <dd>(<em>optioneel</em>) Benadrukken van bijzonderheden zoals het verlopen van een regeling of een nieuwe publicatie.</dd>
           <dt>Titel</dt>
-          <dd>De volledige titel van het item</dd>
+          <dd>De volledige titel van de publicatie. Deze is klikbaar en biedt de ingang tot de detailpagina.</dd>
           <dt>Metadata</dt>
-          <dd>Kan per collectie verschillen maar bevat over het algemeen publicatiedatum, organisatie, geldigheidsperiode</dd>
+          <dd>Per collectie instelbaar. Bevat over het algemeen publicatiedatum, organisatie, geldigheidsperiode.</dd>
           <dt>Introductie</dt>
-          <dd>De eerste 2 regels van de publicatie</dd>
-          <dt>Button</dt>
-          <dd>Verwijzing/link naar publicatiepagina</dd>
+          <dd>(<em>optioneel</em>) De eerste 2 regels inhoud van de onderliggende publicatie.</dd>
+          <dt>Actie</dt>
+          <dd>(<em>optioneel</em>) Link naar secundaire actie zoals ‘Download pdf’.</dd>
         </dl>
-        <h3>Uitzonderingen</h3>
+        <p>
+          ## voorbeeld
+        </p>
+        <h3>Gedrag</h3>
+        <p>
+           Binnen het component is het mogelijk om meerdere acties uit te voeren (detailpagina bekijken of een secundaire actie, afhankelijk
+          per collectie). Er is daarom voor gekozen om niet het hele blok klikbaar te maken (alleen de acties), ook als er maar 1 klikbaar
+          element in het blok aanwezig is. Dit om een consistent gedrag te waarborgen.
+        </p>
+        <h3>Verouderd</h3>
         <div class="alert alert--warning">
-           Deze uitzonderingen niet opnieuw toepassen. Dit is een geaccepteerde afwijking maar mag niet opnieuw doorgevoerd worden.
-          Alle nieuwe toepassingen moeten voldoen aan de bovenstaande indeling.
+           Onderstaande verouderde versies worden uitgefaseerd. Tijdens de overgangsperiode is dit een geaccepteerde afwijking maar mogen geen nieuwe toepassingen meer worden gedaan.
         </div>
-        <p>Bij een aantal collecties zijn er uitzonderingen gemaakt in de toepassing van het zoekresultatenblok:</p>
+        <h4>Large</h4>
+        <p>
+           De ‘Large’ uitvoering van dit component is de oude versie van het ‘zoekresultaatblok’ wat in alle collecties werd toegepast.
+          Er is voor gekozen om een kleinere variant te maken omdat resultaatpagina’s vaak onoverzichtelijk werden met de grootte van
+          het component. Daarnaast is ervoor gekozen om de ingang tot de publicatie toe te passen in de titel omdat dit een bekend
+          patroon is.
+        </p>
+        <p>
+          ## voorbeeld
+        </p>
         <h4>Berichten over uw Buurt</h4>
-        <p>Deze collectie heeft in het zoekresultaat een extra button waarmee de gebruiker het resultaat op de kaart kan bekijken. Dit
-        is voor deze groep relevant omdat deze publicatie vaak locatiegebonden zijn. Binnen deze variant is ook een ‘Delen’ button
-        toegepast waarmee gebruikders de publicatie vanuit deze view kunnen delen.</p>
+        <p>
+           Deze collectie heeft in het zoekresultaat een extra button waarmee de gebruiker het resultaat op de kaart kan bekijken.
+          Dit is voor deze groep relevant omdat deze publicatie vaak locatiegebonden zijn. Binnen deze variant is ook een ‘Delen’ button
+          toegepast waarmee gebruikders de publicatie vanuit deze view kunnen delen.
+        </p>
+        <p>
+          ## voorbeeld
+        </p>
         <h4>PLOOI</h4>
-        <p>Hier is de toevoeging gedaan waarmee gebruiker niet langs een detailpagina hoeven die een (externe) link bevat naar de specifieke
-        informatie maar vanaf het zoekresultaat blok direct het document bij de publicerende partij kunnen inzien. Dit is toegepast
-        om de gebruiker sneller naar de gewenste informatie toe te leiden.</p>
-        <h3>Interactie</h3>
-        <p>De gebruiker kan met het zoekresultaatblok interacteren door de ‘bekijk [X]’ button te gebruiken.</p>
+        <p>
+           Hier is de toevoeging gedaan waarmee gebruiker niet langs een detailpagina hoeven die een (externe) link bevat naar de specifieke
+          informatie maar vanaf het zoekresultaat blok direct het document bij de publicerende partij kunnen inzien. Dit is toegepast
+          om de gebruiker sneller naar de gewenste informatie toe te leiden.
+        </p>
+        <p>
+          ## voorbeeld
+        </p>
       </section>
 
       <section class="section-chapter js-scrollSection" id="sectie-jumbotron">

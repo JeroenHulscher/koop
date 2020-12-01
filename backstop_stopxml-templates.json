@@ -215,8 +215,8 @@
     },
     {
       "label": "stopxml - kst-32123-A-136",
-      "url": "http://localhost:3000/components/preview/templates-kst-32123-A-136",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-32123-A-136.html"
+      "url": "http://localhost:3000/components/preview/templates-kst-32123-a-136",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-32123-a-136.html"
     },
     {
       "label": "stopxml - kst-32257-1",
@@ -234,14 +234,14 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-32467-3.html"
     },
     {
-      "label": "stopxml - kst-32600-M",
-      "url": "http://localhost:3000/components/preview/templates-kst-32600-M",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-32600-M.html"
+      "label": "stopxml - kst-32600-m",
+      "url": "http://localhost:3000/components/preview/templates-kst-32600-m",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-32600-m.html"
     },
     {
-      "label": "stopxml - kst-33000-XV-78",
-      "url": "http://localhost:3000/components/preview/templates-kst-33000-XV-78",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-33000-XV-78.html"
+      "label": "stopxml - kst-33000-xv-78",
+      "url": "http://localhost:3000/components/preview/templates-kst-33000-xv-78",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-33000-xv-78.html"
     },
     {
       "label": "stopxml - kst-33348-2",
@@ -274,9 +274,9 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-kst-33988-8.html"
     },
     {
-      "label": "stopxml - nds-tk-2014D29975",
-      "url": "http://localhost:3000/components/preview/templates-nds-tk-2014D29975",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-nds-tk-2014D29975.html"
+      "label": "stopxml - nds-tk-2014d29975",
+      "url": "http://localhost:3000/components/preview/templates-nds-tk-2014d29975",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-nds-tk-2014d29975.html"
     },
     {
       "label": "stopxml - prb-2014-52",
@@ -374,9 +374,9 @@
       "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-stcrt-2009-12252.html"
     },
     {
-      "label": "stopxml - stcrt-2009-20341.handlebars",
-      "url": "http://localhost:3000/components/preview/templates-stcrt-2009-20341.handlebars",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-stcrt-2009-20341.handlebars.html"
+      "label": "stopxml - stcrt-2009-20341",
+      "url": "http://localhost:3000/components/preview/templates-stcrt-2009-20341",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-stcrt-2009-20341.html"
     },
     {
       "label": "stopxml - stcrt-2009-20342",

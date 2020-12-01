@@ -51,9 +51,6 @@ context:
     fieldLabelVisible: true
     fieldInstruction:
     fieldPlaceholder: Zoekterm of (dossier)nummer
-    required: true
-    requiredLabel: true
-    patterntype: text
   selectContext:
     fieldLabel: Documentsoort
     options:
@@ -88,102 +85,67 @@ context:
     items:
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
       - title: Autorisatiebesluiten Basisregistratie Personen
         titleHeader: h2
+        titleHref: '#'
         text: Autorisatiebesluit voor Appel Pensioenuitvoering B.V. namens de in bijlage I genoemde pensioenuitvoerders, Rijksdienst voor Identiteitsgegevens
         share: false
-        downloads:
-        - type: PDF
-          size: (12kb)
         metadata:
           - value: "Datum publicatie: 01-09-2020"
           - value: "Jaargang en nummer: Staatscourant 2020, 45222"
           - value: "Organisatie: Rijksdienst voor Identiteitsgegevens"
-        buttons:
-          - button: Bekijk bekendmaking
-            type: secondary
   fgDocumentsoort:
     items:
       - label: Blad gemeenschappelijke regelingen met nog iets
@@ -383,3 +345,49 @@ context:
     text: Abonneer op deze zoekvraag
   linkFeed:
     text: Abonneer op deze zoekvraag
+  alertSruQuery:
+    text: <h2>SRU-zoekvraag:</h2><a href="#">https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%253d%253d%2522officielepublicaties%2522)and(cql.textAndIndexes%253d%2522test%2522)%20AND%20dt.type==%22Aanhangsel%20van%20de%20Handelingen%22&zv=test&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cAanhangsel+van+de+Handelingen</a>
+  multiSelectDocumentsoort:
+    id: 1112312
+    placeholder: Selecteer documentsoort
+    name: documenten
+    helptext: Gebruik de TAB toets, of de pijl beneden toets om toegang te krijgen tot de suggesties. Druk om ENTER om uw keuze te bevestigen.
+    labelmodifier: accent
+    fieldInstruction: ''
+    fieldLabel: Documentsoort
+    fieldLabelVisible: true
+    fieldPlaceholder: 'Alle documentsoorten'
+    describedbyId: multiselect-helptext-1
+    categories:
+      - title: Parlementaire documenten
+        options:
+          - label: Alle parlementaire documenten
+            value: apd
+          - label: Handelingen
+            value: hand
+          - label: Moties
+            value: moties
+          - label: Kamervragen
+            value: kv
+          - label: Kamerstukken
+            value: Kames
+          - label: Agenda's
+            value: Agen
+      - title: Officiële bekendmakingen
+        options:
+          - label: Alle bekendmakingen
+            value: ab
+          - label: Tractatenblad
+            value: Tractatenblad
+          - label: Staatsblad
+            value: Staatsblad
+          - label: Staatscourant
+            value: Staatscourant
+          - label: Gemeenteblad
+            value: Gemeenteblad
+          - label: Provinciaal blad
+            value: Provinciaal blad
+          - label: Waterschapsblad
+            value: Waterschapsblad
+          - label: Blad gemeenschappelijke regeling
+            value: Blad gemeenschappelijke regeling

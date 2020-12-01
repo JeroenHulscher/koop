@@ -10,14 +10,14 @@
               <label class="form__label form__label--accent" for="filter-id--{{id}}">{{#if label}}{{label}}{{else}}Filter resultaten op trefwoord{{/if}}</label>
               <div class="relative">
                 <input type="text" aria-controls="resultfilter-{{id}}" placeholder="{{#if inputPlaceholder}}{{inputPlaceholder}}{{else}}Typ hier uw organisatie{{/if}}" name="{{#if inputName}}{{inputName}}{{else}}name{{/if}}" id="filter-id--{{id}}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
-                <a href="#" class="input-text__remove invisible" data-handler="empty-input">
+                <a {{#if removeId}}id="{{removeId}}"{{/if}} href="#" class="input-text__remove invisible" data-handler="empty-input">
                   <span class="visually-hidden">Wis waarde</span>
                 </a>
               </div>
             </div>
             {{#if controls}}
               <div class="form__row">
-                <button class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
+                <button {{#if id}}id="{{id}}"{{/if}} class="button js-filterresults__btn-selectall" data-label="{{controls/selectAllLabel}}">{{controls/selectAllLabel}}</button>
               </div>
             {{/if}}
 
@@ -35,7 +35,7 @@
               {{/if}}
               {{#if radio}}
                 <div class="" data-decorator="init-formreset">
-                  <p><a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
+                  <p><a {{#if id}}id="{{id}}"{{/if}} href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
               {{/if}}
 
               {{#if multilevel}}

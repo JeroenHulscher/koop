@@ -1,0 +1,64 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+{{ render "@document-banner" documentbanner }}
+
+<div class="container columns columns--sticky-sidebar">
+  <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+      <a href="#" class="icon--backlink">Terug naar document</a>
+
+    </div>
+  </div>
+  <div id="content" role="main" class="content content--publication">
+
+    {{ render "@pageactions" pageactions }}
+
+    <h1>Geometrische begrenzing van oppervlaktewaterlichamen beheer van de waterkwaliteit</h1>
+
+    <div class="row">
+      {{render "@map" mapContext }}
+      <script id="config1" type="application/json">
+        {
+          "debug":false,
+          "collections": [
+            { "url": "https://repository.officiele-overheidspublicaties.nl/Datacollecties/2019/dc-2019-106/1/gml/dc-2019-106.gml" }
+          ],
+          "options": {
+            "mode": "geoview",
+            "controls": ["zoom"]
+          }
+        }
+      </script>
+    </div>
+
+    <div class="well">
+      <h2>Gegevens in het informatieobject</h2>
+      <p>
+        Dit informatieobject bevat geometrieën die zijn uitgedrukt in de Geography Markup Language (GML). Deze pagina toont voor
+        u de geometrieën op de kaart. Het GML-bestand is echter de authentieke versie van de vastgestelde geometrieën. U kunt de
+        authentieke versie downloaden via:
+        <a id="ioUrl" href="https://repository.officiele-overheidspublicaties.nl/Datacollecties/2019/dc-2019-106/1/gml/dc-2019-106.gml">https://repository.officiele-overheidspublicaties.nl/Datacollecties/2019/dc-2019-106/1/gml/dc-2019-106.gml</a>
+      </p>
+    </div>
+
+    {{#> @modal modalDelen }}
+
+      <h2>Permanente link</h2>
+      <p class="form__sublegend">Kopieer de link naar uw clipboard </p>
+      <div class="row">
+        {{render "@copydata" copydata merge=true }}
+      </div>
+
+    {{/@modal}}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

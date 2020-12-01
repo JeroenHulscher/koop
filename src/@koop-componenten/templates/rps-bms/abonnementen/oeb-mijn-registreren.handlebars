@@ -15,20 +15,18 @@
           {{ render "@heading--preheader" preheader merge=true }}
           <h1 class="h1 h1--slim">Registeren</h1>
           <p>
-            Uw abonnement aanpassen, verwijderen of nieuwe abonnementen aanmaken? Maak een account aan om abonnement(en) te beheren.
+             U kunt zich abonneren op een door u gestelde zoekvraag. U wordt vervolgens op de hoogte gesteld als er nieuwe publicaties verschijnen die aan uw zoekterm(en) voldoen.
           </p>
         </div>
         <form class="form" data-decorator="init-form-validation">
           <fieldset>
-            {{ render "@alert" error }}
-
             <div class="form__row">
-              {{render "@input-text" emailInput }}
+              {{render "@input-text--email" emailInput merge=true }}
             </div>
             <div class="form__row">
               <div data-decorator="init-passwordstrength">
                 <div class="form__row">
-                  {{render "@input-text" newPWInput }}
+                  {{render "@input-text--password" newPWInput merge=true }}
                 </div>
                 <div class="well js-passwordstrength__regexcontainer hidden-desktop">
                   <div>
@@ -47,7 +45,7 @@
               </div>
             </div>
             <div class="form__row">
-              {{render "@input-text" repeatPWInput }}
+              {{render "@input-text--password" repeatPWInput merge=true }}
             </div>
           </fieldset>
           <fieldset>
@@ -69,7 +67,7 @@
                   <p>Wij bewaren uw accountgegevens, tenzij u besluit uw account te verwijderen.</p>
                   <h3 class="h4">Wat zijn uw rechten?</h3>
                   <p>Voor uw rechten m.b.t. de verwerking van uw gegevens verwijzen wij u naar de privacyverklaring van deze website. U kunt
-                    ook contact opnemen met de Servicedesk van KOOP :
+                    ook contact opnemen met de Servicedesk van KOOP:
                     <a href="mailto:servicedesk@koop.overheid.nl">servicedesk@koop.overheid.nl</a>.</p>
                   <p>In de
                     <a href="https://www.overheid.nl/contact/privacyverklaring">privacyverklaring</a> leest u hoe Overheid.nl omgaat met uw persoonsgegevens en met cookies.</p>
@@ -80,8 +78,7 @@
             </div>
           </fieldset>
           <fieldset>
-            <legend>Akkoord verklaring</legend>
-            {{!-- <h2 class="h3">Akkoord verklaring</h2> --}}
+            <legend>Akkoordverklaring</legend>
             {{ render "@input-checkbox" checkboxAgree }}
           </fieldset>
           <div class="form__rowsubmit">
@@ -104,4 +101,5 @@
 
 </div>
 
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

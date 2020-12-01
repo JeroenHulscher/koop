@@ -11,7 +11,7 @@
 
     {{#> @jumbotron jumbotronContext }}
 
-      {{ render "@alert--success" alert merge=true }}
+      {{ render "@alert--success" alertSuccess merge=true }}
 
       <form class="form" data-decorator="init-form-validation">
         <fieldset>
@@ -19,12 +19,12 @@
           <div class="columns">
             <div class="column">
               <div class="form__row form__row--medium">
-                {{render "@input-text" inputEmailContext }}
+                {{render "@input-text--email" inputEmailContext merge=true }}
               </div>
             </div>
             <div class="column">
               <div class="form__row form__row--medium">
-                {{render "@input-text" inputPWContext }}
+                {{render "@input-text--password" inputPWContext merge=true }}
               </div>
             </div>
           </div>
@@ -34,7 +34,8 @@
             </div>
             <div class="form__rowsubmit__item">
               {{render "@link--mail" linkWw merge=true }}<br/>
-              {{render "@link--profiel" }}
+              {{render "@link--profiel" linkProfile merge=true }}<br/>
+              {{render "@link--check" linkActivate merge=true }}
             </div>
           </div>
         </fieldset>
@@ -44,5 +45,5 @@
   </div>
 
 </div>
-
+{{ render "@disclaimer" }}
 {{ render "@footer" }}

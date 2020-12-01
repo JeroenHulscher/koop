@@ -1,0 +1,101 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb merge=true }}
+  </div>
+</div>
+
+<div class="container columns columns--sidebar">
+  <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
+    <div data-decorator="init-fixedbottom-button">
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Zoekvraag</h2>
+
+        {{ render "@selectedfilters" selectedfilters }}
+
+        <h3 class="visually-hidden">Zoek opnieuw</h3>
+        <form>
+          <fieldset>
+            <legend class="visually-hidden">Zoek opnieuw</legend>
+             <div class="form__row">
+              {{ render "@input-text" searchterm }}
+            </div>
+            <div class="form__row">
+              {{ render "@select-multi" multiSelectDocumentsoort }}
+            </div>
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Filter resultaten</h2>
+
+        <form>
+          <fieldset>
+            <legend class="visually-hidden">Filter resultaten</legend>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Documentsoort</legend>
+                {{ render "@facetlinkgroup" fgDocumentsoort }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Publicerende organisaties</legend>
+                {{ render "@facetlinkgroup" fgPubOrga }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Vergaderjaar</legend>
+                {{ render "@facetlinkgroup" fgVergaderjaar }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Dossiernummer</legend>
+                {{ render "@facetlinkgroup" fgDossiernummer }}
+              </fieldset>
+            </div>
+
+          </fieldset>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <div id="content" role="main">
+
+    <h1>Zoekresultaten
+      <span class="h1__sub">1-10 van de 7396 resultaten</span>
+    </h1>
+
+    {{ render "@selectedfilterbar" selectedfilterbar }}
+
+    {{ render "@sort" sortContext }}
+
+    {{render "@resultlist" resultsContext }}
+
+    {{render "@pagination" }}
+
+  </div>
+</div>
+
+{{ render "@disclaimer" }}
+
+{{ render "@footer" }}

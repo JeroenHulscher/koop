@@ -1,5 +1,5 @@
 <div class="logo {{ modifier }}">
-  <a href="{{href}}"><img src="../../images/{{ file }}" alt="{{ alt }}" /></a>
+  <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}"><img src="../../images/{{ file }}" alt="{{ alt }}" /></a>
   {{#if youAreHere }}
     <p class="logo__you-are-here"><span class="visually-hidden">U bent nu hier: </span>
     {{#each youAreHere }}
