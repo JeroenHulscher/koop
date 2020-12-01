@@ -91,7 +91,6 @@
     for (i = 0; i < this.foldouts.length; i++) {
 
       var randomId = '_' + Math.random().toString(36).substr(2, 9);
-      console.log('randomId', randomId);
       var elementWithChildren = this.foldouts[i].parentNode.querySelector('a:first-child');
       var toggleButton = document.createElement('button');
 
