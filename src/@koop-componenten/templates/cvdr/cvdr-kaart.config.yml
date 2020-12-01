@@ -19,7 +19,7 @@ context:
         icon: icon-download.svg
       - link: '#'
         text: Printen
-        icon: icon-print.svg
+        icon: icon-print-blue.svg
         actionPrint: true
   sidebar:
     modifier: list--facet
