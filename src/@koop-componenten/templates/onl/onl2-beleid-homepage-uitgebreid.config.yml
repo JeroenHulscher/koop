@@ -30,6 +30,7 @@ context:
       - id: checkbox-4012312312312
         text: Persoon
         name: onderwerp45
+        checked: checked
         linkedto: 2
       - id: checkbox-4023232131321
         text: Bedrijf
