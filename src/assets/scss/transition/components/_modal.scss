@@ -96,3 +96,8 @@
   }
 
 }
+
+[data-handler="open-modal"].visually-hidden {
+  position: absolute;
+  padding: 0;
+}
