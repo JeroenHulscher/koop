@@ -1,0 +1,12 @@
+title: KPM Tooltip modaal
+label: KPM Tooltip modaal
+context:
+  mapContext:
+    modifier: h-600
+    controls: false
+  modal:
+    modalId: 876
+    initClosed: true
+    openButton: Toon locatie informatie
+    closeButton: sluiten
+    buttonModifier: visually-hidden

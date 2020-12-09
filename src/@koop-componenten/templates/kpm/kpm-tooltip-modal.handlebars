@@ -1,0 +1,40 @@
+<div id="demo0beeee" style="width:1000px;max-width:100%;height:500px"></div>
+<script>
+
+    var locations = [
+      {
+        "id": "my-id-1",
+        "type": "punt",
+        "geometry": "POINT(83388.72001447542 454483.4858568841)",
+        "geometry_type": "WKT",
+        "title": "Rotterdam",
+        "omschrijving": "Een zelfgeplaatst punt",
+        "url": "https://google.com",
+      },
+      {
+        "id": "my-id-2",
+        "locatieserver_id": "adr-617a18a4146998f5ea4c6851ef87c579",
+        "title": "Wilhelmina van Pruisenweg 52, 2595AN ’s-Gravenhage",
+        "omschrijving": "KOOP. (Dit punt heeft geen URL.)",
+      }
+    ];
+
+    kaartprikmodule.bootstrapKpm({
+      mount_element: document.getElementById("demo0beeee"),
+      locations : locations,
+      on_location_click: function(items) {
+        var modalButton = document.querySelector('[data-modal="876"]');
+        window.kpmLocationModal(modalButton, items, '.js-kpm-location-information');
+      },
+      options: {
+        mode: "geoview",
+        controls: ["base-layer", "center", "zoom"],
+      }
+    });
+
+</script>
+</div>
+
+{{#> @modal modal }}
+  <div class="js-kpm-location-information"></div>
+{{/@modal}}
