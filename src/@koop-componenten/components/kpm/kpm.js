@@ -9,6 +9,21 @@
     }
   });
 
+  window.kpmLocationModal = function (modalButton, data, modalContentContainer) {
+    var location = data[0];
+    var infoContainer = document.querySelector(modalContentContainer) || document.querySelector('.js-kpm-location-information');
+    var content = '<h2>' +  location.title + '</h2>';
+    if ( location.omschrijving ){
+      content += '<p>'+ location.omschrijving +'</p>';
+    }
+    if ( location.url ) {
+      content += '<p><a href="' + location.url + '" class="button button--primary">Bekijk publicatie <span class="visually-hidden">"' + location.title + '"</span></p>';
+    }
+
+    infoContainer.innerHTML = content;
+    modalButton.click();
+  }
+
   var kpmService = function (element, action) {
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
