@@ -8,89 +8,121 @@ context:
       - url: '#'
         text: MijnOverheid.nl
   rowLanding:
-    - image: '../../images/temp/homepage-beleid.jpg'
+    - image: '../../images/temp/homepage-beleid2_head.jpg'
       title: Beleid & Regelgeving
-      intro: Hier bekijkt u publicaties omtrent beleid, wet- en regelgeving.
+      intro: Overheid.nl geeft u hier de mogelijkheid om te zoeken naar publicaties omtrent onder meer wet- en regelgeving, rechtspraak, besluitvorming, consultatie, bekendmaking en uitvoering.
   linkSetGroup:
     - linkSet:
       - title: Beleidsonderzoek
         links:
-          - url: https://www.wrr.nl
+          - url: http://rijksbegroting.nl/beleidsevaluaties
+            text: Evaluaties en beleidsdoorlichtingen
+          - url: https://www.wrr.nl/publicaties
             text: Wetenschappelijke Raad voor het Regeringsbeleid (WRR)
-          - url: https://www.cpb.nl/
+          - url: https://www.cpb.nl/publicaties
             text: Centraal Planbureau (CPB)
-          - url: https://www.scp.nl/
+          - url: https://www.scp.nl/publicaties
             text: Sociaal en Cultureel Planbureau (SCP)
-          - url: https://www.cbs.nl
+          - url: https://www.cbs.nl/nl-nl/cijfers/statline/recente-cijfers
             text: Centraal Bureau voor de Statistiek (CBS)
-          - url: https://www.wodc.nl
+          - url: https://www.wodc.nl/publicaties/
             text: Wetenschappelijk Onderzoek- en Documentatiecentrum (WODC)
-          - url: https://www.pbl.nl/
+          - url: http://www.pbl.nl/publicaties
             text: Planbureau voor de Leefomgeving (PBL)
-          - url: https://www.arbeidenoverheid.nl/
-            text: Kennisbank Arbeidszaken Publieke Sector (KAPS)
+          - url: https://kennisopenbaarbestuur.nl/rapporten-publicaties/
+            text: Kennisbank Openbaar Bestuur
       - title: Advies en besluitvorming
         links:
           - url: http://internetconsultatie.overheid.nl
             text: Internetconsultatie
           - url: http://www.raadvanstate.nl/adviezen.html
             text: Adviezen Raad van State
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/parlementaire_documenten
-            text: Parlementaire documenten (bijvoorbeeld Kamervragen, Kamerstukken)
-          - urL: http://almanak.overheid.nl/categorie/53/Adviescolleges/
+          - url: https://almanak.overheid.nl/Adviescolleges/
             text: Meer adviesorganen
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/parlementair
+            text: Parlementaire documenten (bijvoorbeeld Kamervragen, Kamerstukken)
+          - url: https://www.tweedekamer.nl/kamerstukken/stemmingsuitslagen
+            text: Stemmingsuitslagen Tweede Kamer
+          - url: http://www.rijksbegroting.nl/
+            text: Rijksbegrotingen
+          - url: https://rijksfinancien.nl/
+            text: Visuele Rijksbegrotingen
       - title: Bekendmaking
         links:
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/staatsblad
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Staatsblad (landelijk)
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/staatscourant
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Staatscourant (landelijk)
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/tractatenblad
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Tractatenblad (landelijk)
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/gemeenteblad
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Gemeenteblad
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/provinciaal_blad
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Provinciaal blad
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/waterschapsblad
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Waterschapsblad
-          - url: https://zoek.officielebekendmakingen.nl/zoeken/blad_gemeenschappelijke_regeling
+          - url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken/officielebekendmakingen
             text: Blad gemeenschappelijke regeling
-          - url: https://www.officielebekendmakingen.nl
+          - url: https://www.officielebekendmakingen.nl/vandaag
             text: Officiële bekendmakingen vandaag
+          - url: /oproepingen-en-aankondigingen
+            text: Oproepingen + Gerechtelijke aankondigingen
           - url: https://zoek.overheid.nl/berichten_over_uw_buurt_eenvoudig_zoeken
             text: Publicaties op websites van gemeenten, provincies, waterschappen en regionale samenwerkingsverbanden
+          - url: /caribisch-deel-van-het-koninkrijk
+            text: Officiële bekendmakingen van het Caribisch deel van het Koninkrijk
       - title: Wet- en regelgeving
         links:
-          - url: http://eur-lex.europa.eu/collection/eu-law.html
+          - url: /europese-overheidsinformatie
             text: Europees
-          - url: http://wetten.overheid.nl
+          - url: http://wetten.overheid.nl/zoeken
             text: Landelijk
+          - url: /aruba-curacao-sint-maarten
+            text: Aruba, Curaçao en Sint Maarten
+          - url: https://verdragenbank.overheid.nl/nl
+            text: Verdragenbank
           - url: https://wetgevingskalender.overheid.nl/
             text: Wetgevingskalender
-          - url: http://zoekdienst.overheid.nl/ictu_website/CVDR/CVDRZoeken.aspx?searchtype=Simple&amp;connection=CVDR
+          - url: /lokale-wet-en-regelgeving
             text: Plaatselijk (gemeente, provincie, waterschap, regionaal samenwerkingsverband)
-          - url: http://www.ruimtelijkeplannen.nl
+          - url: http://www.ruimtelijkeplannen.nl/web-roo/roo/
             text: Ruimtelijkeplannen.nl
     - linkSet:
       - title: Uitvoering
         links:
-          - url: http://wetten.overheid.nl
+          - url: https://www.rijksoverheid.nl/documenten?trefwoord=&amp;periode-van=&amp;periode-tot=&amp;onderdeel=Alle%20ministeries&amp;type=Jaarplan
+            text: Jaarplannen
+          - url: https://www.rijksoverheid.nl/documenten?trefwoord=&amp;periode-van=&amp;periode-tot=&amp;onderdeel=Alle%20ministeries&amp;type=Jaarverslag
+            text: Jaarverslagen
+          - url: https://puc.overheid.nl/
+            text: Platform Uitvoeringsinformatie
+          - url: https://wetten.overheid.nl/zoeken
             text: Landelijk (beleidsregels, circulaires, uitvoeringsaanwijzingen)
-          - url: http://www.overheid.nl/overheidsinformatie/vergunningen
-            text: Plaatselijke vergunningen
-          - url: http://vergunningenbank.overheid.nl/natuurbeschermingswet
-            text: Vergunningen Natuurbeschermingswet
+          - url: https://puc.overheid.nl/natuurvergunningen/
+            text: Vergunningen Wet natuurbescherming
       - title: Klachten en rechtspraak
         links:
           - url: http://mensenrechten.nl/publicaties/oordelen
             text: College voor de Rechten van de Mens
-          - url: http://www.nationaleombudsman.nl/
+          - url: https://www.nationaleombudsman.nl/themas-en-publicaties
             text: Nationale ombudsman
-          - url: http://www.rechtspraak.nl
+          - url: https://www.raadvanstate.nl/uitspraken.html
+            text: Raad van State afd. Bestuursrechtspraak
+          - url: https://www.rechtspraak.nl/
             text: Rechtspraak.nl
-          - url: http://tuchtrecht.overheid.nl/nieuw
+          - url: https://tuchtrecht.overheid.nl
             text: Tuchtrecht
       - title: Toezicht
         links:
-          - url: http://www.inspectieloket.nl
+          - url: https://www.rijksinspecties.nl/
             text: Inspectieloket
+          - url: https://www.rijksoverheid.nl/documenten?trefwoord=&amp;periode-van=&amp;periode-tot=&amp;onderdeel=Alle%20ministeries&amp;type=Wob-verzoek
+            text: WOB-verzoeken
+      - title: Hoe  werkt de overheid?
+        links:
+          - url: /wie-vormen-de-overheid
+            text: Wie vormen de overheid?
+          - url: /zo-werkt-de-overheid
+            text: Wat doet de overheid?
+          - url: /hoe-werkt-de-democratie
+            text: Hoe werkt de democratie?
