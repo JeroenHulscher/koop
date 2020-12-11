@@ -77,4 +77,26 @@
     }
   }
 
+  &--landing {
+    margin-top: -1.5em;
+
+    .container {
+      padding-top: 1em;
+
+      .content--onimage {
+        padding: 1em;
+
+        h1 {
+          margin-bottom: 0;
+        }
+        .intro--text {
+          margin-top: .5em;
+        }
+        & > *:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
 }
