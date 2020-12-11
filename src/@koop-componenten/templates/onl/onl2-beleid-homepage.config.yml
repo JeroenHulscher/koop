@@ -1,6 +1,6 @@
 ---
-label: ONL 2.0 - Beleid. - Homepage
-status: ready
+label: Landingpage - concept
+status: prototype
 context:
   header:
     file: logo.svg

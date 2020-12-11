@@ -1,11 +1,11 @@
 ---
-name: homepage A-variant
-label: ONL - Homepage
+name: homepage ONL
+label: Homepage
 status: ready
 context:
   headerContext:
     metaLinks:
-      - url: '#'
+      - url: 'https://www.mijnoverheid.nl'
         text: MijnOverheid.nl
   homepageBlock1:
     image: '../../images/temp/homepage-indebuurt.jpg'
