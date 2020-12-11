@@ -21,45 +21,37 @@ context:
     items:
     - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
       titleHeader: h2
+      titleHref: '#'
       label: Nieuw vandaag
       text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
       share: false
       metadataDates:
         - value: Ministerie van Onderwijs, Cultuur en Wetenschap (Ministerie)
         - value: "2020-01-22T14:49:42.458Z"
-      buttons:
-        - button: Bekijken
-          type: icon button--icon-external
     - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
       titleHeader: h2
+      titleHref: '#'
       text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
       share: false
       metadataDates:
         - value: Ministerie van Onderwijs, Cultuur en Wetenschap (Ministerie)
         - value: "2020-01-22T14:49:42.458Z"
-      buttons:
-        - button: Bekijken
-          type: icon button--icon-external
     - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
       titleHeader: h2
+      titleHref: '#'
       text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
       share: false
       metadataDates:
         - value: Ministerie van Onderwijs, Cultuur en Wetenschap (Ministerie)
         - value: "2020-01-22T14:49:42.458Z"
-      buttons:
-        - button: Bekijken
-          type: icon button--icon-external
     - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
       titleHeader: h2
+      titleHref: '#'
       text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
       share: false
       metadataDates:
         - value: Ministerie van Onderwijs, Cultuur en Wetenschap (Ministerie)
         - value: "2020-01-22T14:49:42.458Z"
-      buttons:
-        - button: Bekijken
-          type: icon button--icon-external
   inputsubmitContext:
     id: 9657
     label: Verfijn uw zoekopdracht
