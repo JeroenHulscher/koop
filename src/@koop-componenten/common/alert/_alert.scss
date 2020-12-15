@@ -112,7 +112,8 @@
     display: table;
   }
 
-  &--lg {
+  &--lg,
+  &--large {
     font-size: em(14);
     padding: 1.5em 3em 1.325em 4em;
     background-size: em(32);
@@ -125,7 +126,8 @@
       background-position: 2em center;
     }
   }
-  &--lg &__heading {
+  &--lg &__heading,
+  &--large &__heading {
     font-size: em(22);
     font-weight: bold;
     margin: 0;

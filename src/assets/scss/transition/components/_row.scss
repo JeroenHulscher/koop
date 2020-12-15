@@ -7,28 +7,33 @@
     margin-top: 1.5em;
   }
 
-  // please use: md, lg, etc.
+  // please use: s, m, l, xl, etc.
+  &--m,
   &--md,
   &--medium {
     margin-bottom: 1.5em;
   }
 
+  &--l,
   &--lg,
   &--large {
     margin-bottom: 2.5em;
   }
 
+  &--xl,
   &--xlg,
   &--xlarge {
     margin-bottom: 4em;
   }
 
+  &--xxl,
   &--xxlg,
   &--xxlarge,
   &--spacer {
     margin-bottom: 5em;
   }
 
+  &--xxxl,
   &--xxxlg,
   &--xxxlarge {
     margin-bottom: 6em;

@@ -33,7 +33,7 @@ context:
   alertFoutief:
     heading: Ziet u een fout in deze regeling?
     text: Meld het ons op <a href="mailto:regelgeving@overheid.nl">regelgeving@overheid.nl</a>
-    modifier: alert--success alert--lg icon--document
+    modifier: alert--success alert--large icon--document
   pageactions:
     items:
     - link: '#'
