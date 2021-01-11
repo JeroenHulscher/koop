@@ -75,11 +75,31 @@
     var setContainers = this.setContainers;
     var amountResults = 0;
 
+    function accentFold(inStr) {
+      return inStr.replace(
+        /([àáâãāäå])|([çčć])|([èéêë])|([ìíîïī])|([ñń])|([òóôõōöø])|([ß])|([ùúûüū])|([ÿ])|([æ])/g,
+        function (str, a, c, e, i, n, o, s, u, y, ae) {
+          if (a) return 'a';
+          if (c) return 'c';
+          if (e) return 'e';
+          if (i) return 'i';
+          if (n) return 'n';
+          if (o) return 'o';
+          if (s) return 's';
+          if (u) return 'u';
+          if (y) return 'y';
+          if (ae) return 'ae';
+        }
+      );
+    }
+
     for (i = 0; i < this.results.length; i++) {
       a = this.results[i];
       txtValue = a.textContent || a.innerText;
+      txtValue = txtValue.trim();
+      txtValue = txtValue.toLowerCase();
 
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      if (accentFold(txtValue).indexOf(accentFold(filter.toLowerCase())) > -1) {
         this.results[i].removeAttribute('aria-hidden');
         this.results[i].classList.add('is-visible');
         this.results[i].classList.remove('is-invisible');
