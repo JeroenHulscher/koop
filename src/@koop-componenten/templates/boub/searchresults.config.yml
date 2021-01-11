@@ -7,7 +7,7 @@ context:
     alt: Overheid.nl logo
   mapContext:
     id: 1
-    modifier:
+    modifier: h-200
     controls: false
     kpm:
       id: 1
