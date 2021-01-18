@@ -46,21 +46,30 @@
                     <legend class="visually-hidden">{{#if title}}{{title}}{{/if}}</legend>
                     <div data-decorator="init-selectall">
                       <div class="input-checkbox">
-                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="selectAll" value="Alle iets"
+                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{id}}" name="{{#if name}}{{name}}{{else}}selectAll{{/if}}" value="{{value}}"
                         />
                         <label class="checkbox__label u-nomargin" for="{{id}}">
                           <strong>{{ title }}</strong>
                         </label>
                       </div>
                   {{else}}
-                    <legend>{{#if title}}{{title}}{{/if}}</legend>
+                    {{#if checkbox}}
+                      <div class="input-checkbox">
+                        <input class="checkbox__input" type="checkbox" id="{{id}}" value="{{value}}" data-value="{{ short }}" />
+                        <label class="checkbox__label u-nomargin" for="{{id}}">
+                          <strong>{{ title }}</strong>
+                        </label>
+                      </div>
+                    {{else}}
+                      <legend>{{#if title}}{{title}}{{/if}}</legend>
+                    {{/if}}
                   {{/if}}
 
                   <ul class="list--unstyled">
                     {{#each OptionsSubs }}
                       <li class=" js-filterresults__result">
                         <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
+                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="{{value}}"
                           />
                           <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
                             {{ title }}

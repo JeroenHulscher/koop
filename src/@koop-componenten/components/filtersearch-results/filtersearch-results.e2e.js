@@ -4,7 +4,7 @@ describe('Filtersearch', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should still result all with accents', function () {
+  it('should still result all with accents', function () {
     browser.get('http://localhost:3000/components/preview/filtersearch-results--default');
 
     var width = 1200;

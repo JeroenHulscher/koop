@@ -1,0 +1,569 @@
+---
+title: BWB - Uitgebreid zoeken
+label: BWB - Uitgebreid zoeken
+status: prototype
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+    - text: Wettenbank
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+        className: is-active
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+  qa1:
+    id: 1123123
+    Helptext: <p>U kunt hieronder één, meerdere of alle soorten regelingen aanvinken. Tevens kunt u een selectie naar verantwoordelijke organisatie maken. Via [Startinstellingen opslaan] kunt u een door u gemaakte selectie als standaardselectie opslaan.</p>
+  qa2:
+    id: 2
+    Helptext: <p>Toon ook regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.</p>
+  qa4:
+    id: 412312312
+    Helptext: <p>Toon uitsluitend regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.</p>
+  qa5:
+    id: 5
+    Helptext: <p>U kunt hier zoeken op een of meer woorden die voorkomen in de titel of in de tekst. Wanneer u 'Exact zoeken' uitvinkt, dan zoekt u ook op spellingsvarianten en woordsamenstellingen, e.d.</p>
+  qa6:
+    id: 6
+    Helptext: "<p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>"
+  qa7:
+    id: 7
+    Helptext: "U zoekt hier op woord(en) in de tekst van de regelingen. Als u wilt dat meerdere woorden voorkomen in de tekst, gebruikt u de EN-operator, bijv. ‘gezondheid EN veiligheid’. Als u wilt dat tenminste één van de woorden voorkomt in de tekst, gebruikt u de OF-operator, bijv. ‘gezondheid OF veiligheid’. Indien u ook op woordsamenstellingen wilt zoeken, dan kunt u gebruik maken van een ‘*’. Bijvoorbeeld met de zoekterm: ‘milieu*’, vindt u ook ‘milieuvergunning’ en ‘milieuplan’."
+  qa8:
+    id: 8
+    Helptext: "U kunt hier onderdelen van de tekst selecteren om binnen te zoeken."
+  qa9:
+    id: 9
+    Helptext: "U kunt zoeken op alle voorkomende artikelnummers, zoals “1”, “1.1”, “1:1”."
+  qa10:
+    id: 10
+    Helptext: "Als u zoekt op de wetsfamilie van een regeling, wordt de zoekopdracht beperkt tot de ingevulde regeling met zijn gedelegeerde en gesubdelegeerde regelingen. <em>Geldt niet voor verdragen</em>."
+  qa11:
+    id: 11
+    Helptext: "U kunt zoeken in de regelingen zoals geldend op de datum vandaag (standaard), of een eerdere datum. Regelingen die materieel zijn uitgewerkt worden standaard niet doorzocht, tenzij u het vakje aanvinkt."
+  qa12:
+    id: 12
+    Helptext: "Zoeken op datum ondertekening is niet mogelijk bij verdragen."
+  qa13:
+    id: 13
+    Helptext: "Zoeken op datum totstandkoming is alleen mogelijk bij verdragen."
+  qa14:
+    id: 14
+    Helptext: "U zoekt hier op de publicatiebron van zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin."
+  qa15:
+    id: 15
+    Helptext: "Hier kunt u een of meerdere overheidsthema’s selecteren waarbinnen u wilt gaan zoeken."
+  qa16:
+    id: 16
+    Helptext: "Hier kunt u een of meerdere rechtsgebieden selecteren waarbinnen u wilt gaan zoeken."
+  qa17:
+    id: 17
+    Helptext: "Hier kunt u een of meerdere verdragsthema’s selecteren waarbinnen u wilt gaan zoeken."
+  qa18:
+    id: 18
+    Helptext: "U zoekt hier op de identifier van een in wetten.overheid.nl opgenomen regeling. Bijvoorbeeld ‘BWBR0001840’ voor de Grondwet en ‘BWBV0005225’ voor het Europees Vestingsverdrag."
+  qa19:
+    id: 19
+    Helptext: "U zoekt hier op het dossiernummer van de Kamerstukken behorend bij zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin. Bijvoorbeeld ‘34702’."
+  qa20:
+    id: 20
+    Helptext: "U zoek hier op het (departementaal) kenmerk van de regeling."
+  qa21:
+    id: 21
+    Helptext: "U zoekt hier op de juriconnect-identifier van een in wetten.overheid.nl opgenomen regeling(selement). Bijvoorbeeld ’jci1.3:c:BWBR0001840&hoofdstuk=1&artikel=1’ voor Artikel 1 van de Grondwet."
+  qa22:
+    id: 22
+    Helptext: "Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan."
+  ds1:
+    id: 1
+    layout: default
+    dateselectionType:
+      id: 1
+      fieldLabel: Periode
+      fieldLabelVisible: false
+      labelmodifier: accent
+      options:
+      - id: 101
+        value:
+        label: Voor
+        linkedto: 41231
+        selected: selected
+      - id: 102
+        value:
+        label: Na
+        linkedto: 5
+      - id: 103
+        value: 30
+        label: Tussen
+        linkedto: 3
+      - id: 104
+        value: 30
+        label: Op
+        linkedto: 6
+    dateselectionDatumStart:
+      id: 234
+      haslabel: true
+      label: Vanaf
+      labelmodifier: accent
+      fieldPlaceholder: DD-MM-JJJJ
+      value: ''
+      datavalue: ''
+      configDateFormat: 'dd-mm-yy'
+    dateselectionDatumEnd:
+      id: 345
+      haslabel: true
+      label: Tot en met
+      labelmodifier: accent
+      fieldPlaceholder: DD-MM-JJJJ
+      value: ''
+      datavalue: ''
+      configDateFormat: 'dd-mm-yy'
+    items:
+      - id: 41231
+        datepicker:
+          id: 3453
+          haslabel: true
+          label: Voor
+          labelmodifier: accent
+          fieldPlaceholder: DD-MM-JJJJ
+          value: ''
+          datavalue: ''
+          configDateFormat: 'dd-mm-yy'
+      - id: 5
+        datepicker:
+          id: 346
+          haslabel: true
+          label: Na
+          labelmodifier: accent
+          fieldPlaceholder: DD-MM-JJJJ
+          value: ''
+          datavalue: ''
+          configDateFormat: 'dd-mm-yy'
+      - id: 6
+        datepicker:
+          id: 347
+          haslabel: true
+          label: Op
+          labelmodifier: accent
+          fieldPlaceholder: DD-MM-JJJJ
+          value: ''
+          datavalue: ''
+          configDateFormat: 'dd-mm-yy'
+  inputtext1:
+    id: 1432
+    fieldLabel: Publicatiejaar
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'Jaar'
+    modifier: input--xsmall
+  inputtext2:
+    id: 1433
+    fieldLabel: Nummer
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'Nr'
+    modifier: input--small
+  ss1:
+    id: ss11
+    type: abbr
+    modifier: fixed
+    linkText: Selecteer ministeries
+    modalTitle: Selecteer ministeries
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: ss111
+        id: ss111
+        title: Algemene Zaken
+        short: az
+      - Option: ss112
+        id: ss112
+        title: Binnenlandse Zaken en Koninkrijksrelaties (bzk)
+        short: bzk
+      - Option: ss113
+        id: ss113
+        title: Buitenlandse Zaken (buza)
+        short: buza
+      - Option: ss114
+        id: ss114
+        title: Defensie (def)
+        short: def
+  ss2:
+    id: ss21
+    type: abbr
+    modifier: fixed
+    linkText: Van de ZBO's
+    modalTitle: Selecteer ZBO's
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: ss211
+        id: ss211
+        title: Autoriteit Consument en Markt (acm)
+        short: acm
+      - Option: ss212
+        id: ss212
+        title: Autoriteit Financiële Markten (afm)
+        short: afm
+      - Option: ss213
+        id: ss213
+        title: Autoriteit Nucleaire Veiligheid en Stralingsbescherming (anvs)
+        short: anvs
+      - Option: ss214
+        id: ss214
+        title: Autoriteit Persoonsgegevens (ap)
+        short: ap
+  ss3:
+    id: ss31
+    type: abbr
+    modifier: fixed
+    linkText: Van de organisaties
+    modalTitle: Selecteer organisaties
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: ss311
+        id: ss311
+        title: Bedrijfschap Afbouw (ba)
+        short: ba
+      - Option: ss312
+        id: ss312
+        title: Bedrijfschap Horeca en Catering (hor)
+        short: hor
+      - Option: ss313
+        id: ss313
+        title: Bedrijfschap voor het Natuursteenbedrijf (Opgeheven) (bnb)
+        short: bnb
+      - Option: ss314
+        id: ss314
+        title: Bedrijfschap voor het Slagersbedrijf (Opgeheven) (bsb)
+        short: bsb
+  ss4:
+    id: ss41
+    type: span
+    linkText: Selecteer onderdelen
+    modalTitle: Selecteer onderdelen
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: ss411
+        id: ss411
+        title: Opschrift en aanhef
+        short: Opschrift en aanhef
+      - Option: ss412
+        id: ss412
+        title: Opschriften binnen het lichaam van de regeling
+        short: Opschriften binnen het lichaam van de regeling
+      - Option: ss413
+        id: ss413
+        title: Artikelen of daarmee vergelijkbare tekst
+        short: Artikelen of daarmee vergelijkbare tekst
+      - Option: ss414
+        id: ss414
+        title: Ondertekening en slotformulier
+        short: Ondertekening en slotformulier
+  ss5:
+    id: ss51
+    type: span
+    linkText: Selecteer overheidsthema's
+    modalTitle: Selecteer overheidsthema's
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: ss511
+        id: ss511
+        title: Belastingen
+        short: Belastingen
+      - Option: ss522
+        id: ss522
+        title: Bouwen, wonen en leefomgeving
+        short: Bouwen, wonen en leefomgeving
+      - Option: ss533
+        id: ss533
+        title: Cultuur, sport, vrije tijd
+        short: Cultuur, sport, vrije tijd
+      - Option: ss544
+        id: ss544
+        title: Defensie
+        short: Defensie
+      - Option: ss555
+        id: ss555
+        title: Economie en ondernemen
+        short: Economie en ondernemen
+      - Option: ss566
+        id: ss566
+        title: Familie, jeugd en gezin
+        short: Familie, jeugd en gezin
+      - Option: ss577
+        id: ss577
+        title: Financiën
+        short: Financiën
+      - Option: ss588
+        id: ss588
+        title: Gezondheid en zorg
+        short: Gezondheid en zorg
+      - Option: ss599
+        id: ss599
+        title: Immigratie, integratie en inburgering
+        short: Immigratie, integratie en inburgering
+      - Option: ss5100
+        id: ss5100
+        title: Internationale- en ontwikkelingssamenwerking
+        short: Internationale- en ontwikkelingssamenwerking
+      - Option: ss5101
+        id: ss5101
+        title: Landbouw, natuur en voedsel
+        short: Landbouw, natuur en voedsel
+      - Option: ss5102
+        id: ss5102
+        title: Milieu, ruimte en water
+        short: Milieu, ruimte en water
+      - Option: ss5103
+        id: ss5103
+        title: Onderwijs en wetenschap
+        short: Onderwijs en wetenschap
+      - Option: ss5104
+        id: ss5104
+        title: Openbare orde en veiligheid
+        short: Openbare orde en veiligheid
+      - Option: ss5105
+        id: ss5105
+        title: Overheid, bestuur en koninkrijk
+        short: Overheid, bestuur en koninkrijk
+      - Option: ss5106
+        id: ss5106
+        title: Rechtspraak
+        short: Rechtspraak
+      - Option: ss5107
+        id: ss5107
+        title: Subsidies, uitkeringen en toeslagen
+        short: Subsidies, uitkeringen en toeslagen
+      - Option: ss5108
+        id: ss5108
+        title: Verkeer en vervoer
+        short: Verkeer en vervoer
+      - Option: ss5109
+        id: ss5109
+        title: Werk- en loopbaan
+        short: Werk- en loopbaan
+  ss6:
+    id: ss61
+    type: span
+    linkText: Selecteer rechtsgebieden
+    modalTitle: Selecteer rechtsgebieden
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    multilevel: true
+    Options:
+      - Option: 1111
+        id: 1111
+        title: Agrarisch recht
+        short: Agrarisch recht
+        checkbox: true
+      - Option: 2222
+        id: 2222
+        title: Arbeidsrecht en sociaal-zekerheidsrecht
+        short: Arbeidsrecht en sociaal-zekerheidsrecht
+        checkAll: true
+        OptionsSubs:
+          - OptionsSub: 11776
+            id: 11776
+            title: Ambtenarenrecht
+            short: Ambtenarenrecht
+            name: abc
+          - OptionsSub: 12777
+            id: 12777
+            title: Arbeidsrecht
+            short: Arbeidsrecht
+            name: abc
+          - OptionsSub: 127782
+            id: 127782
+            title: Militaire ambtenarenrecht
+            short: Militaire ambtenarenrecht
+            name: abc
+          - OptionsSub: 12778
+            id: 12778
+            title: Pensioenrecht
+            short: Pensioenrecht
+            name: abc
+          - OptionsSub: 12779
+            id: 12779
+            title: Sociaal zekerheidsrecht
+            short: Sociaal zekerheidsrecht
+            name: abc
+      - Option: 3333
+        id: 3333
+        title: Arbitrage
+        short: Arbitrage
+        checkbox: true
+        name: abc
+      - Option: 2776
+        id: 2776
+        title: Bank- en effectenrecht, financiering
+        short: Bank- en effectenrecht, financiering
+        checkAll: true
+        OptionsSubs:
+          - OptionSub: 21776
+            id: 21776
+            title: Bankrecht
+            short: Bankrecht
+          - OptionSub: 227762
+            id: 227762
+            title: Effectenrecht
+            short: Effectenrecht
+          - OptionSub: 227773
+            id: 227773
+            title: Financiering en zekerheden
+            short: Financiering en zekerheden
+          - OptionSub: 22777
+            id: 22777
+            title: Toezicht bank- en kredietwezen
+            short: Toezicht bank- en kredietwezen
+      - Option: 22778
+        id: 22778
+        title: Belastingrecht
+        short: Belastingrecht
+        checkAll: true
+        OptionsSubs:
+          - OptionSub: 227781
+            id: 227781
+            title: BTW en accijns
+            short: BTW en accijns
+          - OptionSub: 2277822
+            id: 2277822
+            title: Dividendbelasting
+            short: Dividendbelasting
+          - OptionSub: 2277832
+            id: 2277832
+            title: Formeel belastingrecht
+            short: Formeel belastingrecht
+          - OptionSub: 2277841
+            id: 2277841
+            title: Heffingen lokale overheden
+            short: Heffingen lokale overheden
+          - OptionSub: 2277856
+            id: 2277856
+            title: Inkomstenbelasting
+            short: Inkomstenbelasting
+          - OptionSub: 2277851
+            id: 2277851
+            title: Internationale regelingen
+            short: Internationale regelingen
+          - OptionSub: 227786
+            id: 227786
+            title: Invoer en douane
+            short: Invoer en douane
+          - OptionSub: 2277871
+            id: 2277871
+            title: Invorderingsrecht
+            short: Invorderingsrecht
+          - OptionSub: 2277881
+            id: 2277881
+            title: Loonbelasting en premieheffing
+            short: Loonbelasting en premieheffing
+          - OptionSub: 2277891
+            id: 2277891
+            title: Milieubelasting
+            short: Milieubelasting
+          - OptionSub: 2277901
+            id: 2277901
+            title: Successie- en schenkingsrecht
+            short: Successie- en schenkingsrecht
+          - OptionSub: 2277911
+            id: 2277911
+            title: Vennootschapsbelastingrecht
+            short: Vennootschapsbelastingrecht
+  ss7:
+    id: ss71
+    type: span
+    linkText: Selecteer thema's
+    modalTitle: Selecteer thema's
+    fieldLabel: fieldLabel
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: 0612345678'
+    Options:
+      - Option: ss711
+        id: ss711
+        title: Arbeid
+        short: Arbeid
+      - Option: ss712
+        id: ss712
+        title: Arbitrage
+        short: Arbitrage
+      - Option: ss713
+        id: ss713
+        title: Belasting
+        short: Belasting
+      - Option: ss714
+        id: ss714
+        title: Burgerlijk Procesrecht
+        short: Burgerlijk Procesrecht
+      - Option: ss715
+        id: ss715
+        title: Burgerlijke stand
+        short: Burgerlijke stand
+      - Option: ss716
+        id: ss716
+        title: Cultuur
+        short: Cultuur
+      - Option: ss717
+        id: ss717
+        title: Diplomatieke en consulaire betrekkingen
+        short: Diplomatieke en consulaire betrekkingen
+      - Option: ss718
+        id: ss718
+        title: Douane
+        short: Douane
+      - Option: ss719
+        id: ss719
+        title: Economische samenwerking
+        short: Economische samenwerking
+      - Option: ss720
+        id: ss720
+        title: Eigendom, intellectuele en industriële
+        short: Eigendom, intellectuele en industriële
+      - Option: ss721
+        id: ss721
+        title: Energie
+        short: Energie
+  sc1:
+    id: 1876543
+    modifier: select-custom--width-s
+    options:
+      - label: Publicatie
+        value:
+        selected: selected
+      - label: Staatsblad
+        value: stb
+      - label: Staatscourant
+        value: stcrt
+      - label: Staatscourant-supplement
+        value: Supplement-Stcrt
+      - label: Tractatenblad
+        value: Trb
+      - label: Uitleg
+        value: Uitleg
+      - label: Infobulletin
+        value: Infob
+      - label: PBO blad
+        value: Vbbo
+  dp1:
+    id: 112312312
+  dp2:
+    id: 192392138

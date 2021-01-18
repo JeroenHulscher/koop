@@ -1,12 +1,12 @@
 .select-custom {
   position: relative;
   padding: 0;
-  margin: 0 .5em 0 0;
-  border: 1px solid $mediumGrey;
+  margin: 0;
+  border: 1px solid $darkBlue;
   overflow: visible;
   background-color: white;
-  border-radius: .5em;
-  display: inline-block;
+  border-radius: 5px;
+  display: block;
 
   &.has-error {
     border: 2px solid $red;
@@ -17,24 +17,24 @@
 
   &:after {
     position: absolute;
-    right: .125em;
+    right: .25em;
     top: 0;
     width: 1.875em;
     bottom: 0;
-    background: $dartDownIcon no-repeat center center;
-    background-size: .7em;
+    background: $iconArrowDown no-repeat center center;
+    background-size: .9em;
     content: "";
     pointer-events: none;
   }
   select {
-    font-size: .875rem;
+    font-size: 1em;
     padding: 0 2.25em 0 .75em;
-    // width: 100%;
+    width: 100%;
     color: $darkGrey;
     border: none;
     box-shadow: none;
-    // display: block;
-    height: 2.25em;
+    display: block;
+    height: 2.65em;
     background-color: transparent;
     background-image: none;
     appearance: none;
@@ -42,7 +42,6 @@
     transition: outline-offset $fastEaseInOut;
     outline: 2px solid transparent;
     outline-offset: .5em;
-    margin: 0;
 
     &::-ms-expand {
       display: none;
@@ -69,10 +68,6 @@
   &--small select {
     height: 40px;
     font-size: 0.8em;
-  }
-
-  &--width-s {
-    width: 9em;
   }
 
 }

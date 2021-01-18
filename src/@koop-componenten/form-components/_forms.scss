@@ -670,11 +670,12 @@ input[type=date].datepicker__input {
     position: absolute;
     top: 2px;
     right: 2px;
-    height: 46px;
+    height: 31px;
     font-size: 0;
     width: 38px;
     color: white;
-    background-image: $calendarIconWhite;
+    background-color: transparent;
+    background-image: $calendarIconBlue;
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;

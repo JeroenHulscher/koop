@@ -129,12 +129,13 @@ fieldset {
 
 input[type=date].datepicker__input~.ui-datepicker-trigger,
 input[type=text].datepicker__input~.ui-datepicker-trigger {
-  background-color: white;
+  background-color: transparent;
   border: 1px solid $darkBlue;
   border-left: 0;
   background-image: $calendarIconBlue;
   background-size: 22px;
   width: 53px;
+  height: 46px;
   padding: 4em .5em .5em .5em;
 }
 

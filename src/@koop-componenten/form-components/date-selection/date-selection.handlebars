@@ -42,4 +42,16 @@
       </div>
     {{/if_eq}}
   </div>
+  {{#each items}}
+    <div id="citem-{{id}}" role="region" class="js-form-conditionals__citem">
+      {{#if additionalSelect}}
+        <div class="form__row">
+          {{ render "@select-custom" additionalSelect }}
+        </div>
+      {{/if}}
+      <div class="form__row">
+        {{render "@datepicker" datepicker merge=true }}
+      </div>
+    </div>
+  {{/each}}
 </div>

@@ -1,0 +1,53 @@
+---
+title: BWB - Eenvoudig zoeken
+label: BWB - Eenvoudig zoeken
+status: prototype
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+    - text: Wettenbank
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+        className: is-active
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+  qa1:
+    id: 1
+    Helptext: <p>U kunt hieronder één, meerdere of alle soorten regelingen aanvinken.</p>
+  qa2:
+    id: 2
+    Helptext: <p>Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.</p>
+  qa3:
+    id: 3
+    Helptext: <p>Toon ook regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.</p>
+  qa4:
+    id: 4
+    Helptext: <p>Toon uitsluitend regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.</p>
+  qa45:
+    id: 45
+    Helptext: <p>U kunt hier zoeken op een of meer woorden die voorkomen in de titel of in de tekst. Wanneer u 'Exact zoeken' uitvinkt, dan zoekt u ook op spellingsvarianten en woordsamenstellingen, e.d.</p>
+  qa5:
+    id: 5
+    Helptext: <p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>
+  qa6:
+    id: 6
+    Helptext: "<p>U zoekt hier op woord(en) in de tekst van de regelingen. Als u wilt dat meerdere woorden voorkomen in de tekst, gebruikt u de EN-operator, bijv. ‘gezondheid EN veiligheid’. Als u wilt dat tenminste één van de woorden voorkomt in de tekst, gebruikt u de OF-operator, bijv. ‘gezondheid OF veiligheid’. Indien u ook op woordsamenstellingen wilt zoeken, dan kunt u gebruik maken van een '*'. Bijvoorbeeld met de zoekterm: ‘milieu*’, vindt u ook ‘milieuvergunning’ en ‘milieuplan’.</p>"
+  qa7:
+    id: 7
+    Helptext: "U kunt zoeken op alle voorkomende artikelnummers, zoals “1”, “1.1”, “1:1”."
+  qa8:
+    id: 8
+    Helptext: "U kunt zoeken in de regelingen zoals geldend op de datum vandaag (standaard), of een eerdere datum. Regelingen die materieel zijn uitgewerkt worden standaard niet doorzocht, tenzij u het vakje aanvinkt."
+  qa9:
+    id: 9
+    Helptext: "Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan."

@@ -1,0 +1,23 @@
+.input-checkbox {
+  margin-bottom: .25em;
+  position: relative;
+}
+
+.checkbox__input {
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  // top: 0;
+  margin: 0;
+}
+.checkbox__label {
+  padding-left: 1em;
+  display: block;
+}
+.form__element .modal .checkbox__label {
+  padding-left: 2em;
+  display: block;
+  font-weight: normal;
+  padding-top: .1em;
+  line-height: 1;
+}

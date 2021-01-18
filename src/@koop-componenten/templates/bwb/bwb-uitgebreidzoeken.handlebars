@@ -1,0 +1,433 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container row row--heading">
+  <h1>Wet- en regelgeving</h1>
+</div>
+
+<div class="container columns row" id="content">
+  <div>
+    <div class="form__chapter__heading">
+      <h2 class="">Kies een soort regeling</h2>
+      {{ render "@question-explanation" qa1 }}
+    </div>
+    <fieldset class="form__element checkboxgroup">
+      <legend class="visually-hidden">Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
+      <ul class="list--unstyled" id="soortCategorienLijst">
+        <li>
+          <label for="AlleSoorten">
+            <input id="AlleSoorten" type="checkbox" name="name" data-decorator="check-all" data-for="which-types" />Alle soorten regelingen of:
+          </label>
+          <ul>
+            <li>
+              <label for="Verdrag">
+                <input id="Verdrag" type="checkbox" name="name" checked="checked" class="verdragen regelingsoort" data-set="which-types" />Verdragen
+              </label>
+            </li>
+            <li class="listbreaker">
+              {{ render "@subselection" ss1 }}
+            </li>
+            <li class="separator">
+              <label for="Wetten">
+                <input id="Wetten" type="checkbox" name="name" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Wetten (excl. Rijkswetten)
+              </label>
+            </li>
+            <li>
+              <label for="Rijkswetten">
+                <input id="Rijkswetten" type="checkbox" name="name" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Rijkswetten
+              </label>
+            </li>
+            <li>
+              <label for="AMvB">
+                <input id="AMvB" type="checkbox" name="name" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />AMvB's en andere KB's (excl. RijksKB's)
+              </label>
+            </li>
+            <li>
+              <label for="RijksKBs">
+                <input id="RijksKBs" type="checkbox" name="name" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />RijksKB's
+              </label>
+            </li>
+            <li>
+              <label for="MinR">
+                <input id="MinR" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Ministeri&euml;le regelingen
+              </label>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <label for="MinRArchief">
+                    <input id="MinRArchief" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Archiefselectielijsten
+                  </label>
+                </li>
+                <li>
+                  <label for="MinROverig">
+                    <input id="MinROverig" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Overige ministeri&euml;le regelingen
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <label for="Beleid">
+                <input id="Beleid" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Beleidsregels rijksdienst
+              </label>
+            </li>
+            <li>
+              <label for="Circulaires">
+                <input id="Circulaires" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie" data-set="which-types" />Circulaires rijksdienst
+              </label>
+            </li>
+            <li class="listbreaker">
+              {{ render "@subselection" ss2 merge=true }}
+            </li>
+            <li class="separator group">
+              <label for="ZBO">
+                <input id="ZBO" type="checkbox" name="name" class="zbo regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_ZBO" data-set="which-types" />Regelingen zelfstandige bestuursorganen (ZBO's)
+              </label>
+            </li>
+            <li class="listbreaker">
+              {{ render "@subselection" ss3 merge=true }}
+            </li>
+
+            <li class="separator group">
+              <label for="Bedrijf">
+                <input id="Bedrijf" type="checkbox" name="name" class="bedrijf regelingsoort" data-handler="toggle-extra-options" data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_PBO" data-set="which-types" />Regelingen publieke organisatie voor beroep en bedrijf
+              </label>
+            </li>
+
+            <li class="listbreaker"></li>
+
+            <li class="separator">
+              <label for="Reglementen">
+                <input id="Reglementen" type="checkbox" name="name" data-set="which-types" class=" regelingsoort" />Reglementen van de Staten-Generaal
+              </label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="form__element checkboxgroup inline-group">
+      <legend class="visually-hidden">Specifieker zoeken</legend>
+      <ul class="list--unstyled">
+        <li class="separator">
+          <label for="OokBES" class="inline-block">
+            <input id="OokBES" type="checkbox" name="name" />Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
+          </label>
+          {{ render "@question-explanation" qa2 }}
+        </li>
+        <li>
+          <label for="AlleenBES" class="inline-block">
+            <input id="AlleenBES" type="checkbox" name="name" checked="checked" />Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
+          </label>
+          {{ render "@question-explanation" qa4 }}
+        </li>
+      </ul>
+      <ul>
+        <li><a title="Europese regelingen" href="https://www.overheid.nl/home/europa/" rel="external">Europese regelingen (EUR-Lex)</a></li>
+        <li><a title="Decentrale regelgeving" href="https://zoek.overheid.nl/lokale_wet_en_regelgeving" rel="external">Regelingen van provincies, gemeenten,<abbr title="Bonaire, Sint Eustatius en Sint Maarten">BES</abbr>, waterschappen en voormalige Nederlandse Antillen</a></li>
+        <li><a title="Powersearch" href="http://powersearch.wetten.nl" rel="external">Powersearch</a></li>
+      </ul>
+    </fieldset>
+  </div>
+
+  <div>
+    <div class="form__chapter__heading">
+      <h2 class="">Zoek op woord of zinsdeel</h2>
+      {{ render "@question-explanation" qa5 }}
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Titel">In de titel</label>
+        {{ render "@question-explanation" qa6 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Titel" class="input" placeholder="Bijv: bestuursrecht" />
+
+        <div class="form__element checkboxgroup inline-group">
+          <ul class="list--unstyled">
+            <li>
+              <label for="ZoekOp_TitelExact">
+                <input id="ZoekOp_TitelExact" type="checkbox" name="name" checked="checked" data-handler="toggle-option" data-for="ZoekOp_TitelAfkorting" />Exact zoeken
+              </label>
+            </li>
+            <li>
+              <label for="ZoekOp_TitelAfkorting">
+                <input id="ZoekOp_TitelAfkorting" type="checkbox" name="name" />Afkorting of volledige titel
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Tekst">In de tekst</label>
+        {{ render "@question-explanation" qa7 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Tekst" class="input" placeholder="Bijv: toeslag" />
+
+        <div class="form__element checkboxgroup">
+          <label for="ZoekOp_TekstExact">
+            <input id="ZoekOp_TekstExact" type="checkbox" name="name" checked="checked" />Exact zoeken
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Zoek in onderdelen</span>
+        {{ render "@question-explanation" qa8 }}
+      </div>
+      <div class="form__element__inputs">
+        <div class="form__element">
+          {{ render "@subselection" ss4 merge=true }}
+        </div>
+        <div class="form__element checkboxgroup">
+          <label for="ZoekOp_WTI">
+            <input id="ZoekOp_WTI" type="checkbox" name="name" class="onderdeeltypeWti" />Wetstechnische informatie
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Artikelnummer">Artikelnummer</label>
+        {{ render "@question-explanation" qa9 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Artikelnummer" class="input input--small" placeholder="Bijv: 3.7a" />
+        <fieldset class="form__element radiogroup inline-group">
+          <legend class="visually-hidden">Hoe wilt u zoeken </legend>
+          <label for="ZoekOp_ArtikelnummerArtikel">
+            <input id="ZoekOp_ArtikelnummerArtikel" type="radio" name="name1" value="ZoekOp_ArtikelnummerArtikel" checked="checked" title="Selecteer het veld waarbinnen gezocht wordt" />Artikel
+          </label>
+          <label for="ZoekOp_ArtikelnummerBijlage">
+            <input id="ZoekOp_ArtikelnummerBijlage" type="radio" name="name1" value="ZoekOp_ArtikelnummerBijlage" title="Selecteer het veld waarbinnen gezocht wordt" />Bijlage (niet voor verdragen)
+          </label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Wetsfamilie">Wetsfamilie</label>
+        {{ render "@question-explanation" qa10 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Wetsfamilie" class="input input--small" placeholder="Bijv: grondwet" />
+      </div>
+    </div>
+
+    <div class="form__chapter__heading">
+      <h2 class="">Zoek op datum</h2>
+      {{ render "@question-explanation" qa11 }}
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Regeling geldig op</span>
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@datepicker--today" dp1 merge=true }}
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Zichtdatum</span>
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@datepicker--today" dp2 merge=true }}
+
+        <div class="form__element checkboxgroup inline-group">
+          <label for="ZoekOp_OokMaterieel" class="inline-block">
+            <input id="ZoekOp_OokMaterieel" type="checkbox" name="name" />Ook materieel uitgewerkte regelingen
+          </label>
+          {{ render "@question-explanation" qa22 }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <strong>Scope</strong>
+      </div>
+      <div class="form__element__inputs">
+        <fieldset class="form__element radiogroup inline-group">
+          <label for="ZoekOp_DatumscopeRegeling">
+            <input id="ZoekOp_DatumscopeRegeling" type="radio" name="name2" value="ZoekOp_DatumscopeRegeling" checked="checked" title="" />Regeling
+          </label>
+          <label for="ZoekOp_DatumscopeArtikel">
+            <input id="ZoekOp_DatumscopeArtikel" type="radio" name="name2" value="ZoekOp_DatumscopeArtikel" title="" />Artikel
+          </label>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <strong>Datum van</strong>
+      </div>
+      <div class="form__element__inputs">
+        <fieldset class="form__element radiogroup inline-group">
+          <ul class="list--unstyled">
+            <li>
+              <label for="ZoekOp_DatumtypeInwerkingtreding">
+                <input id="ZoekOp_DatumtypeInwerkingtreding" type="radio" name="name" value="ZoekOp_DatumtypeInwerkingtreding" checked="checked" title="" />Inwerkingtreding
+              </label>
+            </li>
+            <li>
+              <label for="ZoekOp_DatumtypeOndertekening" class="inline-block">
+                <input id="ZoekOp_DatumtypeOndertekening" type="radio" name="name" value="ZoekOp_DatumtypeOndertekening" title="" />Ondertekening
+              </label>
+              {{ render "@question-explanation" qa12 }}
+            </li>
+            <li>
+              <label for="ZoekOp_DatumtypeTotstandkoming" class="inline-block">
+                <input id="ZoekOp_DatumtypeTotstandkoming" type="radio" name="name" value="ZoekOp_DatumtypeTotstandkoming" title="" />Totstandkoming
+              </label>
+              {{ render "@question-explanation" qa13 }}
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <strong>Datumbereik</strong>
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@date-selection" ds1 }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container columns row">
+  <div>
+    <div class="form__chapter__heading">
+      <h2 class="">Zoek op publicatie / thema</h2>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Gepubliceerd in</span>
+        {{ render "@question-explanation" qa14 }}
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@select-custom" sc1 }}
+
+        {{ render "@input-text" inputtext1 merge=true }}
+
+        {{ render "@input-text" inputtext2 merge=true }}
+      </div>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Overheidsthema's</span>
+        {{ render "@question-explanation" qa15 }}
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@subselection" ss5 }}
+      </div>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Rechtsgebieden</span>
+
+        {{ render "@question-explanation" qa16 }}
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@subselection" ss6 }}
+      </div>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">Thema's verdragen</span>
+        {{ render "@question-explanation" qa17 }}
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@subselection" ss7 }}
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="form__chapter__heading">
+      <h2 class="">Zoek op nummer</h2>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_BWBID">BWB-ID</label>
+
+        {{ render "@question-explanation" qa18 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_BWBID" class="input--small" />
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Kamerstuknummer">Kamerstuknummer</label>
+        {{ render "@question-explanation" qa19 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Kamerstuknummer" class="input--small" />
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Kenmerk">Kenmerk regeling</label>
+        {{ render "@question-explanation" qa20 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Kenmerk" class="input--small" />
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_JuriconnectID">Juriconnect-ID</label>
+        {{ render "@question-explanation" qa21 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_JuriconnectID" class="input--small" />
+      </div>
+    </div>
+
+    <input type="button" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnWisScherm"
+      value="Wis scherm"
+      onclick="javascript:__doPostBack(&#39;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnWisScherm&#39;,&#39;&#39;)"
+      id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnWisScherm" class="button" />
+    <input type="button"
+      name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnStartinstellingenOpslaan"
+      value="Startinstellingen opslaan"
+      onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnStartinstellingenOpslaan&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+      id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnStartinstellingenOpslaan"
+      class="button" />
+    <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken"
+      value="Zoeken"
+      onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
+      id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnZoeken" class="button button--primary" />
+  </div>
+</div>
+
+<div class="container row">
+  <p>
+    De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het
+    Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen
+    heeft een officieel
+    karakter.
+  </p>
+</div>
+
+
+{{ render "@footer" }}
