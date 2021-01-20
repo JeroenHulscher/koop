@@ -103,7 +103,7 @@
   datepicker.prototype.createHiddenField = function() {
     this.hiddenfield = document.createElement("input");
     this.hiddenfield.setAttribute('type', 'hidden');
-    this.hiddenfield.setAttribute('name', 'datepicker-hidden__' + this.elementId);
+    this.hiddenfield.setAttribute('name', 'date-' + this.elementId);
     this.hiddenfield.setAttribute('value', '');
     this.hiddenfield.setAttribute('class', 'datepicker__hiddenfield');
     this.element.parentNode.appendChild(this.hiddenfield);
