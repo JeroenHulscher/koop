@@ -234,31 +234,25 @@ context:
     items:
     - title: Besluit van Gedeputeerde Staten van de provincie Flevoland houdende regels omtrent de aanwijzing toezichthouders van de afdeling Infrastructuur
       titleHeader: h2
+      titleHref: '#'
       label: Nieuw vandaag
       text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       share: false
       metadata:
         - value: "Uitgegeven door: Flevoland"
-      buttons:
-        - button: Bekijk regeling
-          type: secondary
     - title: Handhavingsbeleid Vergunningplicht Autoverhuur Heerlen 2019
       titleHeader: h2
+      titleHref: '#'
       label: Regeling vervallen per 01-01-2019
       text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       labelType: danger
-      buttons:
-        - button: Bekijk regeling
-          type: secondary
       metadata:
         - value: "Uitgegeven door: Heerlen"
     - title: Verordening i.h.k.v. Wet Gemeentelijke Antidiscriminatievoorzieningen (V-WGA)
       titleHeader: h2
+      titleHref: '#'
       text: Dit is een placeholder voor de introductie. Deze tekst mag maximaal 2 regels zijn.
       share: false
-      buttons:
-        - button: Bekijk regeling
-          type: secondary
       metadata:
         - value: "Uitgegeven door: Bernisse"
   inputSearchContext:
