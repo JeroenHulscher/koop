@@ -13,7 +13,7 @@
   <div>
     <div class="form__chapter__heading">
       <h2 class="">Kies een soort regeling</h2>
-      {{ render "@question-explanation" qa1 }}
+      {{ render "@tooltip" tt1 }}
     </div>
     <fieldset class="form__element checkboxgroup">
       <legend class="visually-hidden">Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
@@ -42,7 +42,7 @@
               <label for="MinR" class="inline-block">
                 <input id="MinR" type="checkbox" name="name" checked="checked" data-set="which-types" />Ministeri&euml;le regelingen
               </label>
-              {{ render "@question-explanation" qa2 }}
+              {{ render "@tooltip" tt2 }}
             </li>
             <li>
               <label for="Beleid">
@@ -81,13 +81,13 @@
           <label for="OokBES" class="inline-block">
             <input id="OokBES" type="checkbox" name="name" />Ook zoeken in regelingen Bonaire, Sint Eustatius en Saba
           </label>
-          {{ render "@question-explanation" qa3 }}
+          {{ render "@tooltip" tt3 }}
         </li>
         <li>
           <label for="AlleenBES" class="inline-block">
             <input id="AlleenBES" type="checkbox" name="name" />Alleen zoeken in regelingen Bonaire, Sint Eustatius en Saba
           </label>
-          {{ render "@question-explanation" qa4 }}
+          {{ render "@tooltip" tt4 }}
         </li>
       </ul>
       <ul>
@@ -105,12 +105,12 @@
   <div>
     <div class="form__chapter__heading">
       <h2>Zoek op woord of zinsdeel</h2>
-      {{ render "@question-explanation" qa45 }}
+      {{ render "@tooltip" tt45 }}
     </div>
     <div class="form__element">
       <div class="form__element__label">
         <label for="ZoekOp_Titel">In de titel</label>
-        {{ render "@question-explanation" qa5 }}
+        {{ render "@tooltip" tt5 }}
       </div>
       <div class="form__element__inputs">
         <input name="name" type="text" id="ZoekOp_Titel" class="input" placeholder="Bijv: bestuursrecht" />
@@ -135,7 +135,7 @@
     <div class="form__element">
       <div class="form__element__label">
         <label for="ZoekOp_Tekst">In de tekst</label>
-        {{ render "@question-explanation" qa6 }}
+        {{ render "@tooltip" tt6 }}
       </div>
       <div class="form__element__inputs">
         <input name="name" type="text" id="ZoekOp_Tekst" class="input" placeholder="Bijv: toeslag" />
@@ -151,7 +151,7 @@
     <div class="form__element">
       <div class="form__element__label">
         <label for="ZoekOp_Artikelnummer">Artikelnummer</label>
-        {{ render "@question-explanation" qa7 }}
+        {{ render "@tooltip" tt7 }}
       </div>
       <div class="form__element__inputs">
         <input name="name" type="text" id="ZoekOp_Artikelnummer" class="input input--small" placeholder="Bijv: 3.7a" />
@@ -169,7 +169,7 @@
 
     <div class="form__chapter__heading">
       <h2 class="">Zoek op datum</h2>
-      {{ render "@question-explanation" qa8 }}
+      {{ render "@tooltip" tt8 }}
     </div>
 
     <div class="form__element">
@@ -185,7 +185,7 @@
           <label for="ZoekOp_OokMaterieel">
             <input id="ZoekOp_OokMaterieel" type="checkbox" name="name" />Ook materieel uitgewerkte regelingen
           </label>
-          {{ render "@question-explanation" qa9 }}
+          {{ render "@tooltip" tt9 }}
         </div>
       </div>
     </div>

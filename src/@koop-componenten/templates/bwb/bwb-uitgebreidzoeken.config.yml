@@ -21,69 +21,90 @@ context:
     breadcrumb:
       - text: Zoeken
         url: '#'
-  qa1:
+  tt1:
     id: 1123123
-    Helptext: <p>U kunt hieronder één, meerdere of alle soorten regelingen aanvinken. Tevens kunt u een selectie naar verantwoordelijke organisatie maken. Via [Startinstellingen opslaan] kunt u een door u gemaakte selectie als standaardselectie opslaan.</p>
-  qa2:
+    label: Help?
+    content: U kunt hieronder één, meerdere of alle soorten regelingen aanvinken. Tevens kunt u een selectie naar verantwoordelijke organisatie maken. Via [Startinstellingen opslaan] kunt u een door u gemaakte selectie als standaardselectie opslaan.
+  tt2:
     id: 2
-    Helptext: <p>Toon ook regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.</p>
-  qa4:
+    label: Help?
+    content: Toon ook regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.
+  tt4:
     id: 412312312
-    Helptext: <p>Toon uitsluitend regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.</p>
-  qa5:
+    label: Help?
+    content: Toon uitsluitend regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.
+  tt5:
     id: 5
-    Helptext: <p>U kunt hier zoeken op een of meer woorden die voorkomen in de titel of in de tekst. Wanneer u 'Exact zoeken' uitvinkt, dan zoekt u ook op spellingsvarianten en woordsamenstellingen, e.d.</p>
-  qa6:
+    label: Help?
+    content: U kunt hier zoeken op een of meer woorden die voorkomen in de titel of in de tekst. Wanneer u 'Exact zoeken' uitvinkt, dan zoekt u ook op spellingsvarianten en woordsamenstellingen, e.d.
+  tt6:
     id: 6
-    Helptext: "<p>U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.</p>"
-  qa7:
+    label: Help?
+    content: U zoekt hier op woord(en) in de citeertitel en het opschrift van de regelingen. U kunt ook populaire benamingen invoeren, zoals 'Flexwet'. Wilt u zoeken op de afkorting of op de volledige regelingtitel vink dan het betreffende vakje aan.
+  tt7:
     id: 7
-    Helptext: "U zoekt hier op woord(en) in de tekst van de regelingen. Als u wilt dat meerdere woorden voorkomen in de tekst, gebruikt u de EN-operator, bijv. ‘gezondheid EN veiligheid’. Als u wilt dat tenminste één van de woorden voorkomt in de tekst, gebruikt u de OF-operator, bijv. ‘gezondheid OF veiligheid’. Indien u ook op woordsamenstellingen wilt zoeken, dan kunt u gebruik maken van een ‘*’. Bijvoorbeeld met de zoekterm: ‘milieu*’, vindt u ook ‘milieuvergunning’ en ‘milieuplan’."
-  qa8:
+    label: Help?
+    content: "U zoekt hier op woord(en) in de tekst van de regelingen. Als u wilt dat meerdere woorden voorkomen in de tekst, gebruikt u de EN-operator, bijv. ‘gezondheid EN veiligheid’. Als u wilt dat tenminste één van de woorden voorkomt in de tekst, gebruikt u de OF-operator, bijv. ‘gezondheid OF veiligheid’. Indien u ook op woordsamenstellingen wilt zoeken, dan kunt u gebruik maken van een ‘*’. Bijvoorbeeld met de zoekterm: ‘milieu*’, vindt u ook ‘milieuvergunning’ en ‘milieuplan’."
+  tt8:
     id: 8
-    Helptext: "U kunt hier onderdelen van de tekst selecteren om binnen te zoeken."
-  qa9:
+    label: Help?
+    content: U kunt hier onderdelen van de tekst selecteren om binnen te zoeken.
+  tt9:
     id: 9
-    Helptext: "U kunt zoeken op alle voorkomende artikelnummers, zoals “1”, “1.1”, “1:1”."
-  qa10:
+    label: Help?
+    content: U kunt zoeken op alle voorkomende artikelnummers, zoals “1”, “1.1”, “1:1”.
+  tt10:
     id: 10
-    Helptext: "Als u zoekt op de wetsfamilie van een regeling, wordt de zoekopdracht beperkt tot de ingevulde regeling met zijn gedelegeerde en gesubdelegeerde regelingen. <em>Geldt niet voor verdragen</em>."
-  qa11:
+    label: Help?
+    content: Als u zoekt op de wetsfamilie van een regeling, wordt de zoekopdracht beperkt tot de ingevulde regeling met zijn gedelegeerde en gesubdelegeerde regelingen. <em>Geldt niet voor verdragen</em>.
+  tt11:
     id: 11
-    Helptext: "U kunt zoeken in de regelingen zoals geldend op de datum vandaag (standaard), of een eerdere datum. Regelingen die materieel zijn uitgewerkt worden standaard niet doorzocht, tenzij u het vakje aanvinkt."
-  qa12:
+    label: Help?
+    content: U kunt zoeken in de regelingen zoals geldend op de datum vandaag (standaard), of een eerdere datum. Regelingen die materieel zijn uitgewerkt worden standaard niet doorzocht, tenzij u het vakje aanvinkt.
+  tt12:
     id: 12
-    Helptext: "Zoeken op datum ondertekening is niet mogelijk bij verdragen."
-  qa13:
+    label: Help?
+    content: Zoeken op datum ondertekening is niet mogelijk bij verdragen.
+  tt13:
     id: 13
-    Helptext: "Zoeken op datum totstandkoming is alleen mogelijk bij verdragen."
-  qa14:
+    label: Help?
+    content: Zoeken op datum totstandkoming is alleen mogelijk bij verdragen.
+  tt14:
     id: 14
-    Helptext: "U zoekt hier op de publicatiebron van zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin."
-  qa15:
+    label: Help?
+    content: U zoekt hier op de publicatiebron van zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin.
+  tt15:
     id: 15
-    Helptext: "Hier kunt u een of meerdere overheidsthema’s selecteren waarbinnen u wilt gaan zoeken."
-  qa16:
+    label: Help?
+    content: Hier kunt u een of meerdere overheidsthema’s selecteren waarbinnen u wilt gaan zoeken.
+  tt16:
     id: 16
-    Helptext: "Hier kunt u een of meerdere rechtsgebieden selecteren waarbinnen u wilt gaan zoeken."
-  qa17:
+    label: Help?
+    content: Hier kunt u een of meerdere rechtsgebieden selecteren waarbinnen u wilt gaan zoeken.
+  tt17:
     id: 17
-    Helptext: "Hier kunt u een of meerdere verdragsthema’s selecteren waarbinnen u wilt gaan zoeken."
-  qa18:
+    label: Help?
+    content: Hier kunt u een of meerdere verdragsthema’s selecteren waarbinnen u wilt gaan zoeken.
+  tt18:
     id: 18
-    Helptext: "U zoekt hier op de identifier van een in wetten.overheid.nl opgenomen regeling. Bijvoorbeeld ‘BWBR0001840’ voor de Grondwet en ‘BWBV0005225’ voor het Europees Vestingsverdrag."
-  qa19:
+    label: Help?
+    content: U zoekt hier op de identifier van een in wetten.overheid.nl opgenomen regeling. Bijvoorbeeld ‘BWBR0001840’ voor de Grondwet en ‘BWBV0005225’ voor het Europees Vestingsverdrag.
+  tt19:
     id: 19
-    Helptext: "U zoekt hier op het dossiernummer van de Kamerstukken behorend bij zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin. Bijvoorbeeld ‘34702’."
-  qa20:
+    label: Help?
+    content: U zoekt hier op het dossiernummer van de Kamerstukken behorend bij zowel de oorspronkelijke versie van de regeling als de wijzigingen daarin. Bijvoorbeeld ‘34702’.
+  tt20:
     id: 20
-    Helptext: "U zoek hier op het (departementaal) kenmerk van de regeling."
-  qa21:
+    label: Help?
+    content: U zoek hier op het (departementaal) kenmerk van de regeling.
+  tt21:
     id: 21
-    Helptext: "U zoekt hier op de juriconnect-identifier van een in wetten.overheid.nl opgenomen regeling(selement). Bijvoorbeeld ’jci1.3:c:BWBR0001840&hoofdstuk=1&artikel=1’ voor Artikel 1 van de Grondwet."
-  qa22:
+    label: Help?
+    content: U zoekt hier op de juriconnect-identifier van een in wetten.overheid.nl opgenomen regeling(selement). Bijvoorbeeld ’jci1.3:c:BWBR0001840&hoofdstuk=1&artikel=1’ voor Artikel 1 van de Grondwet.
+  tt22:
     id: 22
-    Helptext: "Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan."
+    label: Help?
+    content: Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.
   ds1:
     id: 1
     layout: default
