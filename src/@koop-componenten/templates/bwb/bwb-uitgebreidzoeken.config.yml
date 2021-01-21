@@ -1,7 +1,7 @@
 ---
 title: BWB - Uitgebreid zoeken
 label: BWB - Uitgebreid zoeken
-status: prototype
+status: ready
 context:
   headerContext:
     file: logo.svg
@@ -175,6 +175,7 @@ context:
     modifier: input--small
   ss1:
     id: ss11
+    motherCheckboxIds: Wetten,Rijkswetten,AMvB,RijksKBs,MinR,MinRArchief,MinROverig,Beleid,Circulaires
     type: abbr
     modifier: fixed
     linkText: Selecteer ministeries
@@ -201,6 +202,7 @@ context:
         short: def
   ss2:
     id: ss21
+    motherCheckboxIds: ZBO
     type: abbr
     modifier: fixed
     linkText: Van de ZBO's
@@ -227,6 +229,7 @@ context:
         short: ap
   ss3:
     id: ss31
+    motherCheckboxIds: Bedrijf
     type: abbr
     modifier: fixed
     linkText: Van de organisaties
@@ -492,6 +495,7 @@ context:
   ss7:
     id: ss71
     type: span
+    motherCheckboxIds: Verdrag
     linkText: Selecteer thema's
     modalTitle: Selecteer thema's
     fieldLabel: fieldLabel

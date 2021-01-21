@@ -15,65 +15,13 @@
   <script src="{{~ path '/vendor/kpm/js/index.js/index.js' ~}}"></script>
   <link rel="stylesheet" href="{{~ path '/vendor/kpm/css/index.css/index.css' ~}}">
 
-  <link rel="stylesheet" title="2" href="{{~ path '/css/transition.css' ~}}">
-  <link rel="alternate stylesheet" title="1" href="{{~ path '/css/generic.css' ~}}">
+
+  <link rel="stylesheet" title="1" href="{{~ path '/css/generic.css' ~}}">
   <link rel="stylesheet" href="{{~ path '/css/print.css' ~}}">
 
 </head>
 <body class="preview">
   {{{ yield }}}
-
-  <script>
-
-    (function () {
-
-      var links = document.querySelectorAll('link[title]');
-      var styles = new Array();
-      for(var i = 0; i < links.length; i++) {
-        styles.push(links[i].title);
-      }
-
-      var select = document.createElement('select');
-      select.id = 'selectedID';
-      var title = localStorage.getItem('title');
-
-      function selectStyle(title) {
-        for(var i = 0; i < links.length; i++) {
-          links[i].disabled = true;
-          links[i].disabled = links[i].title !== title;
-        }
-        localStorage.setItem('title', title);
-      }
-
-
-
-
-    var myListener = function () {
-      document.removeEventListener('mousemove', myListener, false);
-      if (title) {
-        selectStyle(title);
-      }
-      select.setAttribute('style', 'z-index:999; position: absolute; bottom: 0; left: 0; width: 20px;');
-      for (var i = 0; i < styles.length; i++) {
-        var option = document.createElement('option');
-        option.text = 'CSS: ' + styles[i];
-        option.value = styles[i];
-        option.selected = styles[i] === title;
-        select.add(option);
-      }
-      document.body.appendChild(select);
-
-      select.addEventListener('change', function (event) {
-        title = event.target.options[event.target.selectedIndex].value;
-        selectStyle(title);
-      });
-    };
-
-    document.addEventListener('mousemove', myListener, false);
-
-    }());
-
-  </script>
 
   <script src="{{~ path '/js/main.js' ~}}"></script>
 

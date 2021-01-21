@@ -59,6 +59,7 @@ function findObjectByKey(array, key, value) {
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
+    this.motherCheckboxIds = this.config.motherCheckboxIds || false;
 
     var uniqueId = Math.floor(Math.random() * 1000000);
     this.element.setAttribute('data-id', uniqueId);
@@ -75,7 +76,7 @@ function findObjectByKey(array, key, value) {
     this.items = [];
 
     this.collectValues();
-    this.parseSelectedOptions();
+    this.parseSelectedOptions("firstinit");
 
     this.attachListeners();
   };
@@ -131,12 +132,13 @@ function findObjectByKey(array, key, value) {
     this.parseSelectedOptions();
   };
 
-  formSubselection.prototype.parseSelectedOptions = function() {
+  formSubselection.prototype.parseSelectedOptions = function(firstinit) {
     var y;
     var summary = '';
     var value;
     var title;
     var id;
+    var firstTimeLoaded = firstinit;
 
     for ( y = 0; y < this.items.length; y++ ) {
       value = this.items[y][0];
@@ -151,7 +153,9 @@ function findObjectByKey(array, key, value) {
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
 
-    this.updateTriggerLabel(this.items.length);
+    if(!firstTimeLoaded) {
+      this.updateTriggerLabel(this.items.length);
+    }
     if (this.config.maxShow) {
       this.initHideUnwantedResults();
     }
@@ -234,12 +238,26 @@ function findObjectByKey(array, key, value) {
       this.trigger.innerText = this.config.triggerOnChangeText;
       this.trigger.classList.remove(this.triggerClassDefault);
       this.trigger.classList.add(this.triggerClassActive);
+      this.updateMotherCheckboxes(true);
     } else {
       this.trigger.innerText = this.triggerOnLoadText;
       this.trigger.classList.remove(this.triggerClassActive);
       this.trigger.classList.add(this.triggerClassDefault);
+      // this.updateMotherCheckboxes(false);
     }
   };
+
+  formSubselection.prototype.updateMotherCheckboxes = function (e) {
+    if(this.motherCheckboxIds){
+      var state = e;
+      var a;
+      var boxes = this.motherCheckboxIds.split(',');
+
+      for ( a = 0; a < boxes.length; a++ ) {
+        document.getElementById(boxes[a]).checked = state;
+      }
+    }
+  }
 
   formSubselection.prototype.removeSummaryItem = function (e) {
     var item = e.target.parentNode;
