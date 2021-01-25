@@ -13,9 +13,9 @@
     <input {{{arguments}}} class="checkbox__input {{inputClass}}" {{disabled}} {{checked}} type="checkbox" id="option-{{ id }}" name="{{#if name}}{{ name }}{{else}}name{{/if}}" {{ status }} value="{{ text }}"
     />
     <label class="checkbox__label" for="option-{{ id  }}">
-      {{ text }}
+      {{ text }} {{#if hasLink}}<a href="{{linkHref}}">{{{linkLabel}}}</a>{{/if}}
     </label>
-    {{#if hasLink}}<a href="{{linkHref}}">{{{linkLabel}}}</a>{{/if}}
+
   </div>
 
   {{#if moreless}}
