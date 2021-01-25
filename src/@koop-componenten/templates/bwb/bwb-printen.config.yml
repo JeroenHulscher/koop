@@ -1,0 +1,64 @@
+---
+title: BWB - Printen
+label: BWB - Printen
+status: wip
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wettenbank
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+        className: is-active
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+  alert:
+    text: '<h2 class="h4"><strong>De zoekvraag is als volgt samengesteld:</strong></h2><p>Geldigheid: Alleen regelingen zoeken die geldig zijn op 10-01-2021</p><p>Woord en/of zinsdeel:</p><p>"<strong>awb</strong>" moet voorkomen in de titel van de regeling.</p><p>De zoekresultaten zijn gesorteerd op soort.</p>'
+  afdrukken:
+    href: '#'
+    class: button button--primary
+    label: Afdrukken
+  afdrukken2:
+    id: 2
+    href: '#'
+    class: button button--primary
+    label: Afdrukken
+  annuleren:
+    text: Annuleren
+    anchor: true
+    action: '/zoeken/zoekresultaat/rs/2,3,4/titel/awb/titelf/1/tekstf/1/artnrb/0/d/10-01-2021/dx/0'
+  resultlist1:
+    items:
+      - cleantext: <strong>Aanpassingswet derde tranche Awb I</strong> (189 artikelen)
+      - cleantext: <strong>Aanpassingswet vierde tranche Awb I</strong> (202 artikelen)
+      - cleantext: <strong>Algemene wet bestuursrecht</strong> (202 artikelen)
+      - cleantext: <strong>Derde tranche Algemene wet bestuursrecht</strong> (202 artikelen)
+      - cleantext: <strong>Eerste evaluatiewet Awb</strong> (202 artikelen)
+      - cleantext: <strong>Vierde tranche Algemene wet bestuursrecht</strong> (202 artikelen)
+      - cleantext: <strong>Wet bestuurlijke lus Awb</strong> (202 artikelen)
+      - cleantext: <strong>Wet uniforme openbare voorbereidingsprocedure Awb</strong> (202 artikelen)
+      - cleantext: <strong>Wijzigingswet Algemene wet bestuursrecht enz. (Leemtewet Awb)</strong> (202 artikelen)
+      - cleantext: <strong>Wijzigingswet Algemene wet bestuursrecht, enz. (Aanpassingswet Awb III) </strong> (202 artikelen)
+  resultlist2:
+    items:
+      - cleantext: <strong>Besluit vaste beloning Adviescommissie OCenW bezwaarschriften Awb 2003</strong> (189 artikelen)
+      - cleantext: <strong>Besluit vaste beloning V.W.S.-commissie bezwaarschriften Awb</strong> (189 artikelen)
+      - cleantext: <strong>Wijzigingsbesluit Besluit Infrastructuurfonds (Aanpassing aan Derde tranche Awb)</strong> (189 artikelen)
+      - cleantext: <strong>Wijzigingsbesluit Besluit gegevensverstrekking gemeentelijke belastingheffing en Besluit gemeentelijke parkeerbelastingen (aanpassing aan de derde tranche Awb) </strong> (189 artikelen)
+  resultlist3:
+    items:
+      - cleantext: <strong>Aanpassingsbesluit vacatiegelden Awb-commissie personeelsaangelegenheden 2014 </strong> (189 artikelen)
+      - cleantext: <strong>Besluit VWS-commissie bezwaarschriften Awb</strong> (189 artikelen)
+      - cleantext: <strong>Regeling Commissie Evaluatie Awb III</strong> (189 artikelen)
+      - cleantext: <strong>Regeling indexering griffierechten en aanmaningsbedragen Awb 2013</strong> (189 artikelen)
+      - cleantext: <strong>Regeling model legitimatiebewijs toezichthouders Awb</strong> (189 artikelen)

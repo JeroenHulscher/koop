@@ -1,0 +1,42 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+<div class="container columns columns--sticky-sidebar row">
+
+  <div>
+
+    <h1>19 resultaten gevonden</h1>
+
+    {{ render "@alert--info" alert merge=true }}
+
+    <p>
+      {{ render "@print" afdrukken merge=true }}
+      {{ render "@button" annuleren merge=true }}
+    </p>
+
+    <h2>Wetten</h2>
+
+    {{ render "@resultlist" resultlist1 }}
+
+    <h2>AMVB's en andere KB's</h2>
+
+    {{ render "@resultlist" resultlist2 }}
+
+    <h2>Ministeriële regelingen</h2>
+
+    {{ render "@resultlist" resultlist3 }}
+
+    <p>
+      {{ render "@print" afdrukken2 merge=true }}
+      {{ render "@button" annuleren merge=true }}
+    </p>
+
+  </div>
+</div>
+
+{{ render "@to-top" }}
+
+{{ render "@footer" }}
