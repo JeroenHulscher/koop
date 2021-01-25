@@ -31,15 +31,15 @@ context:
         icon: icon-arrow-right.svg
   resultlist:
     item1:
-      title: Aanpassingswet enige wetten Ministerie van Veiligheid en Justitie (brengen van een aantal zelfstandige bestuursorganen onder werking van Kaderwet zelfstandige bestuursorganen)
-      titleHeader: h2
-      titleHref: '#'
+      title: Aanbestedingswet 2012
+      href: '#'
       metadata:
-        - value: 148 artikelen
+        - value: (430 artikelen)
       collapsible:
         id: 3
-        heading: 148 relevante elementen
-        checkboxes:
+        heading: 430 relevante elementen
+        modifier: collapsible--small
+        checkboxes1:
           options:
             - id: checkbox-1
               text: Opschrift
@@ -53,27 +53,124 @@ context:
               hasLink: true
               linkHref: '#'
               linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+    item2:
+      title: Implementatiewet registratie uiteindelijk belanghebbenden van vennootschappen en andere juridische entiteiten
+      href: '#'
+      label: Regeling materieel uitgewerkt per 08-07-2022
+      labelType: warning
+      metadata:
+        - value: (7 artikelen)
+      collapsible:
+        id: 23
+        heading: 7 relevante elementen
+        modifier: collapsible--small
+        checkboxes2:
+          options:
             - id: checkbox-3
-              text: Deel 1 Algemene bepalingen
+              text: Opschrift
               name: countries
               hasLink: true
               linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Deel 1 Algemene bepalingen </span>Bekijken)
+              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
             - id: checkbox-4
-              text: Hoofdstuk 1.1 Begripsbepalingen
+              text: Aanhef
               name: countries
               hasLink: true
               linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Hoofdstuk 1.1 Begripsbepalingen </span>Bekijken)
+              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+  resultlist2:
+    item1:
+      title: Aanbestedingsbesluit
+      href: '#'
+      metadata:
+        - value: (13 artikelen)
+      collapsible:
+        id: 33
+        heading: 13 relevante elementen
+        modifier: collapsible--small
+        checkboxes1:
+          options:
             - id: checkbox-5
-              text: Artikel 1.1
+              text: Opschrift
               name: countries
               hasLink: true
               linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Artikel 1.1 </span>Bekijken)
+              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
             - id: checkbox-6
-              text: Artikel 1.2
+              text: Aanhef
               name: countries
               hasLink: true
               linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Artikel 1.2 </span>Bekijken)
+              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+    item2:
+      title: Aanbestedingsbesluit op defensie- en veiligheidsgebied
+      href: '#'
+      metadata:
+        - value: (8 artikelen)
+      collapsible:
+        id: 34
+        heading: 8 relevante elementen
+        modifier: collapsible--small
+        checkboxes2:
+          options:
+            - id: checkbox-7
+              text: Opschrift
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
+            - id: checkbox-71
+              text: Aanhef
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+    item3:
+      title: Herhaal resultaat
+      href: '#'
+      metadata:
+        - value: (8 artikelen)
+      collapsible:
+        id: 35
+        heading: 8 relevante elementen
+        modifier: collapsible--small
+        checkboxes2:
+          options:
+            - id: checkbox-8
+              text: Opschrift
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
+            - id: checkbox-81
+              text: Aanhef
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+    item4:
+      title: Herhaal resultaat
+      href: '#'
+      metadata:
+        - value: (8 artikelen)
+      collapsible:
+        id: 36
+        heading: 8 relevante elementen
+        modifier: collapsible--small
+        checkboxes2:
+          options:
+            - id: checkbox-9
+              text: Opschrift
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
+            - id: checkbox-10
+              text: Aanhef
+              name: countries
+              hasLink: true
+              linkHref: '#'
+              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+  pagination:
+    title: Resultaat pagina's
+    hLevel: 2

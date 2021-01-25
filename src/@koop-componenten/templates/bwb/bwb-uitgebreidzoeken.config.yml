@@ -19,8 +19,7 @@ context:
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
-      - text: Zoeken
-        url: '#'
+      - text: Uitgebreid zoeken
   tt1:
     id: 1123123
     label: Help?

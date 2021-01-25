@@ -16,21 +16,53 @@
 
     {{ render "@pageactions"  }}
 
-    <h1>Zoekresultaten <span class="h1__sub">1-10 van de 22 resultaten</span></h1>
+    <h1>10.344 resultaten gevonden</h1>
 
     {{ render "@sort" }}
+
+    <h2>Wetten</h2>
 
     {{#> @resultlist resultlist }}
       {{#> @resultlist-item item1 }}
         {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes }}
+          {{ render "@input-checkbox" checkboxes1 }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item2 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes2 }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+    {{/ @resultlist}}
+
+    <h2>AMVB's en andere KB's</h2>
+
+    {{#> @resultlist resultlist2 }}
+      {{#> @resultlist-item item1 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes1 }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item2 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes2 }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item3 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes2 }}
+        {{/ @collapsible}}
+      {{/ @resultlist-item}}
+      {{#> @resultlist-item item4 }}
+        {{#> @collapsible collapsible }}
+          {{ render "@input-checkbox" checkboxes2 }}
         {{/ @collapsible}}
       {{/ @resultlist-item}}
     {{/ @resultlist}}
 
 
-{{!--
-    <h2>Wetten</h2>
+
+    {{!-- <h2>Wetten</h2>
 
     <div class="result--list">
       <ul>
@@ -262,9 +294,13 @@
         </li>
       </ul>
     </div>
-     --}}
-    {{ render "@pagination" }}
+
+    --}}
+
+    {{ render "@pagination" pagination merge=true }}
   </div>
 </div>
+
+{{ render "@to-top" }}
 
 {{ render "@footer" }}

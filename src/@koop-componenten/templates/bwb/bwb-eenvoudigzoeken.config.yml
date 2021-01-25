@@ -20,7 +20,6 @@ context:
     title: "U bent hier:"
     breadcrumb:
       - text: Zoeken
-        url: '#'
   tt1:
     id: 1
     label: Help?
