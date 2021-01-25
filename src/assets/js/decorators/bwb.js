@@ -59,9 +59,9 @@
             n("#ZoekOp_DatumtypeOndertekening").is(":checked") === !1 && n("#ZoekOp_DatumtypeInwerkingtreding").prop("checked", !0));
   }
   // unused;
-  // function c() {
-  //     n("#ZoekOp_WTI").is(":checked") && (n("#ZoekOp_Onderdeeltype").val(""), n("span[id='overheidbwb.onderdeeltype']").html(""));
-  // }
+  function c() {
+      n("#ZoekOp_WTI").is(":checked") && (n("#ZoekOp_Onderdeeltype").val(""), n("span[id='overheidbwb.onderdeeltype']").html(""));
+  }
   function l(t) {
       var i = [];
       return (
