@@ -15,7 +15,9 @@
         {{#if titleHeader }}
           <{{ titleHeader }} class="result--title {{#if titleIcon}}icon icon--large icon--{{theme}}{{/if}}">{{#if titleHref}}<a href="{{titleHref}}">{{ title }}</a>{{else}}{{ title }}{{/if}}</{{ titleHeader }}>
         {{else}}
-          <a href="{{href}}" class="result--title">{{ title }}</a>
+          {{#if title}}
+            <a href="{{href}}" class="result--title">{{ title }}</a>
+          {{/if}}
         {{/if}}
 
         {{#if metadata }}
@@ -48,6 +50,9 @@
 
         {{#if text }}
         <p>{{{ text }}}</p>
+        {{/if}}
+        {{#if cleantext }}
+          {{{ cleantext }}}
         {{/if}}
         {{#if address }}
         <address>{{{ address }}}</address>
