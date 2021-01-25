@@ -48,6 +48,7 @@
   outline: 2px solid transparent;
   outline-offset: .5em;
   transition: outline-offset $fastEaseInOut;
+  line-height: inherit;
 
   &::before {
     background: $white;
