@@ -14,6 +14,7 @@ variants:
       text: externe link (manual)
       action: http://www.google.nl
       mode: manual
+      external: true
   - name: Wachtwoord vergeten
     label: Wachtwoord vergeten
     context:
