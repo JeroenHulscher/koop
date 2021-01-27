@@ -4,11 +4,9 @@
   display: block;
   border: 1px solid $lighterGrey;
   overflow: hidden;
-  padding: .5em 2em .5em .5em;
+  padding: .75em 2em .75em .5em;
   position: relative;
   background-color: $lightGrey;
-
-
 
   &__datafield {
     font-family: Monospace;
@@ -22,10 +20,10 @@
     position: absolute;
     right: .5em;
     top: .5em;
-    padding-right: 1.5em;
+    padding-right: 2em;
     font-size: .75rem;
     cursor: pointer;
-    background: transparent $copyIcon no-repeat 99% .25em;
+    background: transparent $copyIcon no-repeat right .5em center;
     background-size: 1em;
   }
 }
