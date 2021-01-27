@@ -1,5 +1,11 @@
-<div class="jumbotron {{ modifier ? 'jumbotron--' ~ modifier}}">
-  <div class="jumbotron__content {% if centered %}jumbotron__content--centered jumbotron__content--centered{{ size ? '-' ~ size}}{% endif %}">
+<div {{ create_attribute({'class': ['jumbotron', modifier ? 'jumbotron--' ~ modifier], 'id': id|lower}) }}>
+  <div {{ create_attribute({
+    'class': [
+      'jumbotron__content',
+      centered ? 'jumbotron__content--centered',
+      (centered and size ) ? ' jumbotron__content--centered-' ~ size,
+      contentcentered ? 'jumbotron__content--aligncenter'
+    ]}) }}>
     {% if backlink %}
       {{ backlink }}
     {% endif %}
@@ -15,8 +21,8 @@
       {{ text }}
     {% endif %}
     </div>
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
   </div>
 </div>
