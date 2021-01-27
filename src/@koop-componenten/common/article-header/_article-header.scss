@@ -8,12 +8,24 @@
   }
   width: 100%;
 
+  & > h3 {
+    color: black;
+  }
+
   &--part {
     background: $lightBlue;
   }
 
   &--chapter {
     background: $bgBlue;
+    color: $darkBlue;
+  }
+
+  &--part,
+  &--chapter {
+    & > h3 {
+      color: $darkBlue;
+    }
   }
 
   h2,
@@ -110,7 +122,7 @@
 
     &.action--permalink a {
       background: {
-        image: $permalinkIcon;
+        image: $permalinkIconBlack;
       }
     }
 
@@ -121,7 +133,7 @@
       }
       a {
         background: {
-          image: $downloadIcon;
+          image: $downloadIconBlack;
         }
       }
     }
