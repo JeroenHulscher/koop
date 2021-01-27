@@ -23,23 +23,97 @@ context:
     modifier: article__header--main
     counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
     relationsAmount: 128
-    activeFrom: Geldend van 01-07-2016 t/m heden
+    activeFrom: Geldend van 18-04-2019 t/m heden
+    relationsHref: '#'
+    versionHref: '#'
+    relationsModalId: relations1modal
+    permalinkModalId: permalink1modal
+    printModalId: print1modal
+    exportModalId: export1modal
+    compareModalId: compare1modal
+  modalRelations1:
+    modalId: relations1modal
+    openButton: false
+    initClosed: true
+  modalPermalink1:
+    modalId: permalink1modal
+    openButton: false
+    initClosed: true
+  modalPrint1:
+    modalId: print1modal
+    openButton: false
+    initClosed: true
+    modalPrintButton:
+      text: Ok
+    printradio:
+      options:
+        - id: checkbox-1
+          text: Exclusief wetstechnische informatie
+          name: printopties
+          checked: checked
+        - id: checkbox-2
+          text: Inclusief wetstechnische informatie
+          name: printopties
+  modalCompare1:
+    modalId: compare1modal
+    openButton: false
+    initClosed: true
+    modalCompareButton:
+      text: Vergelijk
+    compareSelect:
+      id: 112
+      fieldLabel: Inwerkingtreding
+      options:
+        - label: 01-01-2019
+          value: 20
+          selected: selected
+        - label: 01-01-2018
+          value: 20
+        - label: 01-01-2017
+          value: 20
+        - label: 01-01-2016
+          value: 20
+  modalExport1:
+    modalId: export1modal
+    openButton: false
+    initClosed: true
+    modalExportButton:
+      text: Exporteer
+    exportradio:
+      options:
+        - id: checkbox-3
+          text: XML (De tekst zal worden geleverd in een .xml-bestand)
+          name: exportopties
+          checked: checked
+        - id: checkbox-4
+          text: TXT (De tekst zal worden geleverd in een .txt-bestand)
+          name: exportopties
+        - id: checkbox-5
+          text: RTF (Maak deze keuze als u de tekst wilt (her)gebruiken in een tekstverwerkingsprogramma)
+          name: exportopties
+    exportradio2:
+      options:
+        - id: checkbox-6
+          text: Tekst zonder afbeeldingen exporteren
+          name: exportopties2
+          checked: checked
+        - id: checkbox-7
+          text: Tekst met afbeeldingen exporteren
+          name: exportopties2
   counter1:
     modifier: article__header--law--part
     useTitle: true
     titleTag: h2
-    counter: Hoofdstuk 1
-    relationsAmount: 128
+    counter: Deel 1. Algemene bepalingen
+    relationsAmount: 2
   counter2:
     modifier: article__header--law--chapter
     useTitle: true
     titleTag: h3
-    counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
-    relationsAmount: 128
-    activeFrom: Versie geldend per 01-04-2012
+    counter: Hoofdstuk 1.1. Begripsbepalingen
+    relationsAmount: 2
   counter3:
     useTitle: true
     titleTag: h3
     counter: Artikel 1.1
-    relationsAmount: 128
-    activeFrom: Versie geldend per 01-04-2012
+    relationsAmount: 1

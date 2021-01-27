@@ -1,0 +1,32 @@
+---
+title: BWB - Regeling WTI
+label: BWB - Regeling WTI
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+  sidebar:
+    modifier: list--facet
+    heading: Officiële bekendmakingen
+    items:
+      - content: <a href="#">Veelgestelde vragen</a>
+  pageactions:
+    title: ''
+    intro: ''
+    modifier: browse--icons
+    items:
+      - link: '#'
+        text: downloaden
+        icon: icon-download-black.svg
+      - link: '#'
+        text: printen
+        icon: icon-print.svg
+        actionPrint: true
+  well:
+    text: appel
+  modalCompare:
+    modalId: popupvergelijken
+    initClosed: true
+    closeButton: sluiten
+    buttonModifier: wti-compare

@@ -1,7 +1,7 @@
 ---
 title: BWB - Printen
 label: BWB - Printen
-status: wip
+status: ready
 context:
   headerContext:
     file: logo.svg
