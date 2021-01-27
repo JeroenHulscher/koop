@@ -5,8 +5,6 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-    youAreHere:
-    - text: Publicaties > Officiële publicaties
     navLinks:
       - url: '#'
         text: Home

@@ -27,8 +27,6 @@ context:
             text: Inloggen
             anchor: true
             action: '#'
-    youAreHere:
-      - text: Publicaties > Officiële publicaties
     skipLinks:
       - url: '#content'
         text: Direct naar content
