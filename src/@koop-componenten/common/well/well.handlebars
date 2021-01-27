@@ -1,4 +1,6 @@
 <div {{#if id}}id="{{id}}"{{/if}} class="well {{ modifier }}">
-  {{> "@text" }}
+  {{#> @partial-block}}
+    {{> "@text" }}
+  {{/ @partial-block}}
 </div>
 
