@@ -1,31 +1,41 @@
 <ul class="treeview {{ modifier }}" id="treeview-{{ id }}">
   <li>
+    <a href="#">
+      Opschrift
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      Aanhef
+    </a>
+  </li>
+  <li>
     <a href="#" class="foldable"{{#if foldability }} data-decorator="add-foldability"{{/if}}>
       Hoofdstuk 1
       <small>Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</small>
     </a>
 
-    <ul id="unique-id-1" hidden="true">
+    <ul id="unique-id-1" hidden>
       <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1</a>
           <span>(Artikelen 1.1-1.23)</span>
-        <ul id="unique-id-2" hidden="true">
+        <ul id="unique-id-2" hidden>
           <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a>
            <span>(Artikelen 1.1-1.23)</span>
          </li>
           <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
-            <ul id="unique-id-3" hidden="true">
+            <ul id="unique-id-3" hidden>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
-                <ul hidden="true">
+                <ul hidden>
                   <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
                   <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a></li>
                 </ul>
               </li>
             </ul>
-            <ul id="unique-id-4" hidden="true">
+            <ul id="unique-id-4" hidden>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
-                <ul hidden="true">
+                <ul hidden>
                   <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
                   <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a></li>
                 </ul>
@@ -36,6 +46,7 @@
       </li>
       <li><a href="#">Artikel 2</a>
          <span>(Artikelen 1.1-1.23)</span>
+      </li>
     </ul>
   </li>
   <li>
@@ -43,6 +54,11 @@
       Hoofdstuk 2
       <small>Ministerie van Defensie</small>
       <span>(Artikelen 1.1-1.23)</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      Slotformulier en ondertekening
     </a>
   </li>
 </ul>
