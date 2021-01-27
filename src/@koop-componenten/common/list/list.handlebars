@@ -25,21 +25,13 @@
 {{else}}
   {{#each items }}
     {{#if subitems }}
-    <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}
-      {{#if orderedList }}
-        <ol>
-        {{#each subitems }}
-          <li>{{{ content }}}</li>
-        {{/each }}
-        </ol>
-      {{else}}
-         {{#if ../custom}}<ul class="list-custom">{{else}}<ul>{{/if}}
+      <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}
+        <ul {{#if ../custom}}class="list-custom"{{/if}}>
           {{#each subitems }}
             <li>{{{content}}}</li>
           {{/each }}
         </ul>
-      {{/if }}
-    </li>
+      </li>
     {{else}}
       <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{#if color}}<span class="{{color}}"></span>{{/if}}{{{ content }}}</li>
     {{/if }}

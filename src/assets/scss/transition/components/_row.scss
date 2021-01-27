@@ -7,28 +7,33 @@
     margin-top: 1.5em;
   }
 
-  // please use: md, lg, etc.
+  // please use: s, m, l, xl, etc.
+  &--m,
   &--md,
   &--medium {
     margin-bottom: 1.5em;
   }
 
+  &--l,
   &--lg,
   &--large {
     margin-bottom: 2.5em;
   }
 
+  &--xl,
   &--xlg,
   &--xlarge {
     margin-bottom: 4em;
   }
 
+  &--xxl,
   &--xxlg,
   &--xxlarge,
   &--spacer {
     margin-bottom: 5em;
   }
 
+  &--xxxl,
   &--xxxlg,
   &--xxxlarge {
     margin-bottom: 6em;
@@ -73,6 +78,29 @@
         margin: 0 0 .5em 0;
         display: block;
         width: 100%;
+      }
+    }
+  }
+
+  &--landing {
+    margin-top: -1.5em;
+    margin-bottom: 2em;
+
+    .container {
+      padding-top: 1em;
+
+      .content--onimage {
+        padding: 1em;
+
+        h1 {
+          margin-bottom: 0;
+        }
+        .intro--text {
+          margin-top: .5em;
+        }
+        & > *:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

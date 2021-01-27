@@ -9,11 +9,27 @@
     }
   });
 
+  window.kpmLocationModal = function (modalButton, data, modalContentContainer) {
+    var location = data[0];
+    var infoContainer = document.querySelector(modalContentContainer) || document.querySelector('.js-kpm-location-information');
+    var content = '<h2>' +  location.title + '</h2>';
+    if ( location.omschrijving ){
+      content += '<p>'+ location.omschrijving +'</p>';
+    }
+    if ( location.url ) {
+      content += '<p><a href="' + location.url + '" class="button button--primary">Bekijk publicatie <span class="visually-hidden">"' + location.title + '"</span></p>';
+    }
+
+    infoContainer.innerHTML = content;
+    modalButton.click();
+  }
+
   var kpmService = function (element, action) {
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     this.dataFromJSON = document.querySelector(this.config.config).innerHTML;
     this.rangeSelectors = document.querySelectorAll(this.config.rangeselector);
+    this.mapInitialized = false;
     var self = this;
     var isModalVisible = true;
     this.id = this.element.getAttribute('id');
@@ -38,16 +54,21 @@
       this.setRangeListener();
     }
 
-    if ( action === 'push') {
+    if ( action === 'push' && !this.mapInitialized) {
       this.setupMap();
     }
+
   };
 
   kpmService.prototype.setRangeListener = function(  ) {
     var y;
 
     for (y = 0; y < this.rangeSelectors.length; y++) {
-      this.rangeSelectors[y].addEventListener('change', function (e) { this.setupMap(e, "editRange"); }.bind(this), false);
+      this.rangeSelectors[y].addEventListener('change', function (e) { this.setupMap(e.target, "editRange"); }.bind(this), false);
+      if(this.rangeSelectors[y].hasAttribute('checked')) {
+        this.setupMap(this.rangeSelectors[y], "editRange");
+        this.mapInitialized = true;
+      }
     }
   };
 
@@ -72,16 +93,16 @@
     Object.assign(this.data, JSON.parse(this.dataFromJSON));
 
     if(action === "editRange") {
-      var rangeType = e.target.getAttribute('data-kpm-rangetype');
-      var rangeTitle = e.target.getAttribute('value');
+      var rangeType = e.getAttribute('data-kpm-rangetype');
+      var rangeTitle = e.getAttribute('value');
       if (rangeType === "gemeente"){
         this.data.options.center.type = 'location';
         this.data.options.center.location = {};
         this.data.options.center.location.type = rangeType;
         this.data.options.center.location.title = rangeTitle;
       } else {
-        if (!isNaN(e.target.value)) {
-          this.data.options.center.circle.radius = parseInt(e.target.value, 10);
+        if (!isNaN(e.value)) {
+          this.data.options.center.circle.radius = parseInt(e.value, 10);
         } else {
           // not a valid number; do nothing.
           return false;

@@ -12,9 +12,12 @@
       <form class="form" data-decorator="init-form-validation">
         <fieldset class="u-nomargin">
           <legend class="visually-hidden">Doorzoek de decentrale overheden</legend>
-          <div class="form__row form__row--medium">
-            <div class="column form__row column-d-9">
+          <div class="columns">
+            <div class="form__row">
               {{ render "@input-text--medium" inputZoekwoord merge=true }}
+            </div>
+            <div class="form__row form__row--medium">
+              {{render "@input-text" postcodeContext }}
             </div>
           </div>
           <div class="form__rowsubmit">

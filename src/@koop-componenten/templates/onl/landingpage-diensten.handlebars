@@ -1,0 +1,516 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container" role="main" id="content">
+
+  <div class="row row--xxlarge">
+
+    {{#> @jumbotron jumbotronContext }}
+      <form class="form" data-decorator="init-form-validation">
+        <fieldset>
+          <legend class="visually-hidden">E-mailadres</legend>
+          <div class="columns">
+            <div class="column column-d-4">
+              <div class="form__row">
+                {{render "@input-text" inputPostcodeContext }}
+              </div>
+            </div>
+            <div class="column column-d-8">
+              <div class="form__row">
+                {{render "@input-text" zoektermContext }}
+              </div>
+            </div>
+          </div>
+          <div class="form__rowsubmit">
+            <div class="form__rowsubmit__item">
+              <button type="submit" class="form__button button button--primary">Zoeken</button>
+            </div>
+            <div class="form__rowsubmit__item">
+              <a href="/components/preview/templates-att-homepage" class="cta">Uitgebreid zoeken</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      {{/@jumbotron}}
+
+  </div>
+
+  {{!-- <div class="container container--centered">
+    <div class="row">
+      <h2 class="row__heading">Levensgebeurtenissen</h2>
+      <p class="row__intro">
+         Verschillende momenten in uw leven hebben gevolgen voor uw relatie met de overheid. Controleer welke wijzigingen in belastingen en rechten op inkomen van de overheid op u van toepassing zijn, wat er van u verwacht wordt en hoe u een en ander kunt regelen.
+      </p>
+      <ul class="list list--iconedcontainer">
+        <li class="list__item list__item--kids">
+          <h3 class="list__item__header">Ouder &amp; Kind</h3>
+          <p class="list__item__intro">
+             Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare
+            vel eu leo.
+          </p>
+          <div class="row columns columns--gutter-med">
+            {{ render "@block" block1Context }}
+            {{ render "@block" block2Context }}
+          </div>
+          <div class="columns  columns--gutter-med">
+            {{ render "@block" block2Context }}
+            <div></div>
+          </div>
+        </li>
+        <li class="list__item list__item--people">
+          <h3 class="list__item__header">Levensfase</h3>
+          <p class="list__item__intro">
+             Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare
+            vel eu leo.
+          </p>
+          <div class="columns  columns--gutter-med">
+            {{ render "@block" block1Context }}
+            {{ render "@block" block2Context }}
+          </div>
+        </li>
+        <li class="list__item list__item--finance">
+          <h3 class="list__item__header">Financieel</h3>
+          <p class="list__item__intro">
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare
+            vel eu leo.
+          </p>
+          <div class="columns  columns--gutter-med">
+            {{ render "@block" block1Context }}
+            {{ render "@block" block2Context }}
+          </div>
+        </li>
+        <li class="list__item list__item--living">
+          <h3 class="list__item__header">Wonen</h3>
+          <p class="list__item__intro">
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare
+            vel eu leo.
+          </p>
+          <div class="columns  columns--gutter-med">
+            {{ render "@block" block1Context }}
+            {{ render "@block" block2Context }}
+          </div>
+        </li>
+        <li class="list__item list__item--family">
+          <h3 class="list__item__header">U &amp; uw partner</h3>
+          <p class="list__item__intro">
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare
+            vel eu leo.
+          </p>
+          <div class="columns  columns--gutter-med">
+            {{ render "@block" block1Context }}
+            {{ render "@block" block2Context }}
+          </div>
+        </li>
+      </ul>
+
+
+  </div> --}}
+
+  <div class="row row--large">
+      <h1>Levensgebeurtenissen</h1>
+      <p>verschillende momenten in uw leven hebben gevolgen voor uw relatie met de overheid. controleer welke
+        wijzigingen in belastingen en rechten op inkomen van de overheid op u van toepassing zijn, wat er van u verwacht
+        wordt en hoe u een en ander kunt regelen.</p>
+  </div>
+</div>
+
+<div class="container content content--publication">
+  <div class="columns columns--fixed">
+    <div>
+      <h2>Een kind adopteren</h2>
+      <div>
+        <p>Wilt u weten wat u moet regelen als u een kind adopteert uit Nederland of buitenland? Wat er komt kijken bij
+          adoptie? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-bij-adoptie">Persoonlijk
+            overzicht bij een kind adopteren</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Een pleegkind krijgen</h2>
+
+      <div>
+        <p>Wilt u weten wat er verandert als er een pleegkind in huis komt wonen? Vul dan uw persoonlijke situatie in en
+          maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-bij-pleegkind-krijgen">Persoonlijk
+            overzicht bij een pleegkind krijgen</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Een kind krijgen</h2>
+
+      <div>
+        <p>Wilt u weten wat er verandert als uw kind geboren wordt? Wat uw rechten zijn tijdens zwangerschap en verlof?
+          En wat de rechten zijn van uw partner? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.
+        </p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-kind-krijgen">Persoonlijk
+            overzicht bij een kind krijgen</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Kind naar Nederland halen</h2>
+
+      <div>
+        <p>Wilt u weten wat u voor uw kind moet regelen als u een geldige verblijfsvergunning heeft en uw minderjarige
+          kind naar Nederland wilt halen? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/minderjarig-kind-naar-nederland-halen-wat-moet-ik-regelen">Persoonlijk
+            overzicht bij kind naar Nederland halen</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Samenlevingscontract</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u een samenlevingscontract wilt afsluiten? Wat er verandert als u een
+          samenlevingscontract afsluit? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-samenlevingscontract">Persoonlijk
+            overzicht bij samenlevingscontract</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Geregistreerd partnerschap</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u een geregistreerd partnerschap wilt sluiten? Wat uw rechten en plichten
+          zijn? Wat er voor u verandert? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-geregistreerd-partnerschap">Persoonlijk
+            overzicht bij geregistreerd partnerschap</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Trouwen</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u gaat trouwen? Wat uw rechten en plichten binnen het huwelijk zijn? Wat
+          er voor u verandert? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-trouwen">Persoonlijk
+            overzicht bij trouwen</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Scheiden of uit elkaar gaan</h2>
+
+      <div>
+        <p>Wilt u weten wat u allemaal moet regelen als u gaat scheiden of uit elkaar gaat? Wat uw rechten zijn? En of u
+          nog ergens recht op heeft? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-bij-scheiden-of-uit-elkaar-gaan">Persoonlijk
+            overzicht bij scheiden of uit elkaar gaan</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>18 jaar worden</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u, of uw kind, 18 jaar wordt? En of u, of uw kind, nog ergens recht op
+          heeft? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-bij-18-jaar-worden">Persoonlijk
+            overzicht bij 18 jaar worden</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Studeren</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen en waar u recht op heeft als u gaat studeren? Vul dan uw persoonlijke
+          situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-studeren">Persoonlijk
+            overzicht bij studeren</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Studeren in het buitenland</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen en waar u recht op heeft als u gaat studeren in het buitenland? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-studeren-in-het-buitenland">Persoonlijk
+            overzicht bij studeren in het buitenland</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Tussenjaar nemen</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen en waar u recht op heeft als u een tussenjaar wilt nemen? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/tussenjaar-nemen-wat-moet-ik-regelen">Persoonlijk
+            overzicht bij tussenjaar nemen</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Woning huren</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u een woning gaat huren? Wat de regels zijn? Vul dan uw persoonlijke
+          situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/wat-moet-ik-regelen-als-ik-een-woning-ga-huren">Persoonlijk
+            overzicht bij woning huren</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Woning kopen</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u een woonhuis of appartement gaat kopen? Wat de regels zijn? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/wat-moet-ik-regelen-als-ik-een-woning-ga-kopen">Persoonlijk
+            overzicht bij woning kopen</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Naar Nederland voor partner</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u naar Nederland wilt komen voor uw partner? Wat uw rechten zijn? Vul dan
+          uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/naar-nederland-komen-voor-partner-wat-moet-ik-regelen">Persoonlijk
+            overzicht bij naar Nederland voor partner</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Naar Nederland voor werk</h2>
+
+      <div>
+        <p>Wilt u weten wat u of uw werkgever moet regelen als u naar Nederland wilt komen voor werk? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/naar-nederland-komen-voor-werk-wat-moet-ik-regelen">Persoonlijk
+            overzicht bij naar Nederland voor werk</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Betalingsachterstanden of schulden</h2>
+
+      <div>
+        <p>Wilt u weten welke hulp er is als het lastig is de rekeningen te betalen? En wat de regels zijn rond
+          betalingsproblemen of schulden? Vul dan de situatie in en maak een overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-schulden">Overzicht
+            bij betalingsachterstanden of schulden</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Werkloos worden</h2>
+
+      <div>
+        <p>Wilt u weten wat u allemaal moet regelen als u werkloos wordt? Wat uw rechten zijn? En of u nog ergens recht
+          op heeft? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-bij-werkloos-worden">Persoonlijk
+            overzicht bij werkloos worden</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Met pensioen gaan</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u met pensioen gaat? Wat uw rechten zijn? En of u nog ergens recht op
+          heeft? Vul dan uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-met-pensioen-gaan">Persoonlijk
+            overzicht bij met pensioen gaan</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Zorg en ondersteuning voor uzelf</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet weten en regelen als uzelf zorg en ondersteuning nodig heeft? Vul dan uw persoonlijke
+          situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/ik-heb-zorg-en-ondersteuning-nodig-wat-moet-ik-weten-en-regelen">Persoonlijk
+            overzicht bij zorg en ondersteuning voor uzelf</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Zorg en ondersteuning partner</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet weten en regelen als uw partner zorg en ondersteuning nodig heeft? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/mijn-partner-heeft-zorg-en-ondersteuning-nodig-wat-moet-ik-regelen-en-weten">Persoonlijk
+            overzicht bij zorg en ondersteuning partner</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Zorg en ondersteuning ouder</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet weten en regelen als uw ouder zorg en ondersteuning nodig heeft? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/mijn-ouder-heeft-zorg-en-ondersteuning-nodig-wat-moet-ik-regelen-en-weten">Persoonlijk
+            overzicht bij zorg en ondersteuning ouder</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Dementie</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als u of iemand in uw omgeving de diagnose dementie heeft gekregen? Vul dan
+          uw persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-dementie">Persoonlijk
+            overzicht bij dementie</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Voorbereiding op eigen overlijden</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet (laten) regelen voor uw eigen overlijden? Vul dan uw persoonlijke situatie in en maak
+          uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/overlijden-hoe-bereid-ik-me-voor-op-mijn-eigen-overlijden">Persoonlijk
+            overzicht bij voorbereiding op eigen overlijden</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Er is iemand overleden</h2>
+
+      <div>
+        <p>Wilt u weten wat u moet regelen als iemand is overleden? En wat de regels zijn voor de uitvaart? Vul dan uw
+          persoonlijke situatie in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/checklist-bij-overlijden">Persoonlijk
+            overzicht bij er is iemand overleden</a></li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h2>Erven</h2>
+
+      <div>
+        <p>Wilt u weten of u erfgenaam bent en wat u moet regelen als u erfgenaam bent? Vul dan uw persoonlijke situatie
+          in en maak uw persoonlijk overzicht.</p>
+      </div>
+      <ul class="list list--linked">
+        <li><a
+            href="https://www.rijksoverheid.nl/onderwerpen/levensgebeurtenissen/vraag-en-antwoord/erven-wat-moet-ik-regelen">Persoonlijk
+            overzicht bij erven</a></li>
+      </ul>
+
+    </div>
+
+
+  </div>
+</div>
+
+  {{ render "@footer" }}

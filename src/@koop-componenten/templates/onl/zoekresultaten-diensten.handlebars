@@ -1,0 +1,115 @@
+{{ render "@header" header merge=true }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" }}
+  </div>
+</div>
+
+<div class="container row" role="main" id="content">
+  <div class="columns columns--sidebar-left">
+    <div class="column">
+
+      {{render "@sort" sortContext }}
+
+      <div class="row">
+          <h1 class="h1 h1--result--list">Zoekresultaten <span class="h1__sub">1-10 van de 105 resultaten</span></h1>
+      </div>
+
+      <div class="row hidden-desktop align-right">
+        <button class="button button--primary button--icon-filter block-element" data-decorator="init-modalsidebar" data-handler="open-modalsidebar" data-modal="modal-filter">Filter opties</button>
+      </div>
+
+      {{render "@resultlist" resultsContext }}
+
+      <div class="pull-right">
+        {{render "@pagination" }}
+      </div>
+
+    </div>
+    <div class="column column--sidebar">
+
+      <div id="modal-filter" class="modal-sidebar" role="alert" data-decorator="init-fixedbottom-button">
+
+        <div class="modal-sidebar__content" >
+
+
+
+            <h2>Zoekfilter</h2>
+            <div class="row">
+              <p>
+                <a href="#" class="icon icon--refresh">Herstel alle filters</a>
+              </p>
+            </div>
+
+
+            <div class="form__row form__row--large">
+              <h3 class="h4">Geselecteerde filters (3)</h3>
+              {{render "@form-selectedfilter" selectedfilterContext }}
+            </div>
+
+          <form class="form" data-decorator="init-form-validation">
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Zoekwoord(en)</legend>
+                {{render "@input-inputsubmit" inputsubmitContext }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Locatie</legend>
+                {{render "@input-text" postcodeContext }}
+              </fieldset>
+            </div>
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Digitaal aanvragen
+                </legend>
+                {{render "@input-radio" digitaalaanvragenContext }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Diensten voor</legend>
+                {{ render "@checkbox-selectall" checkallDienstenvoorContext}}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Gewijzigd</legend>
+                {{render "@input-checkbox" gewijzigdContext }}
+              </fieldset>
+            </div>
+
+            <div class="form__row form__row--large">
+              <fieldset>
+                <legend>Diensten van</legend>
+                {{ render "@checkbox-selectall" checkallDienstenvanContext}}
+              </fieldset>
+            </div>
+
+
+            <button class="js-fixedbottom-button__button modal-sidebar__submit button button--primary" hidden data-decorator="init-sticky" data-config='{"position":"bottom"}'>Opnieuw zoeken</button>
+            {{!-- <button class="modal-sidebar__submt button button--primary">Opnieuw zoeken</button> --}}
+
+          </form>
+
+        </div>
+
+
+
+
+        <button type="button" data-handler="close-modalsidebar" class="modal-sidebar__close">
+          <span class="visually-hidden">Sluiten</span>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{ render "@footer" }}

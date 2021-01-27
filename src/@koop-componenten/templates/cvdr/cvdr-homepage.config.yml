@@ -17,6 +17,15 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+    postcodeContext:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Postcode
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Bijv. 12A
+      patterntype: zipcode
   block1Context:
     id: 1
     htype: 3

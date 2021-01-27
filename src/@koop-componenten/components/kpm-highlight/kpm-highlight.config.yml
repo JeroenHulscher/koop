@@ -6,7 +6,6 @@ context:
       - id: radio-1
         text: 250 meter
         name: radio-group-1
-        checked: checked
         value: 250
       - id: radio-2
         text: 500 meter
@@ -20,6 +19,7 @@ context:
         text: 1500 meter
         name: radio-group-1
         value: 1500
+        checked: checked
       - id: radio-5
         text: 3000 meter
         name: radio-group-1

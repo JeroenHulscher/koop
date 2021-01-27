@@ -59,7 +59,7 @@ context:
     content: Op 27-07-2020 is door de organisatie aangegeven dat de gegevens correct zijn. De laatste wijziging is op 27-07-2020 doorgevoerd.
   labelType:
     text: 'Gemeente'
-    modifier: label--info label--lg label--italic
+    modifier: label--info label--large label--italic
   mapContext:
     id: 1
     modifier:
