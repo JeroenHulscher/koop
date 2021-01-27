@@ -114,3 +114,92 @@
       // });
   });
 })(jQuery);
+
+(function (n) {
+  "use strict";
+  function i() {
+      var i = n("#popupvergelijken .btn-vergelijk"),
+          t = n("#popupvergelijken .dlDatum");
+      i.prop("disabled", t.length === 0 || t.val() === "");
+  }
+  function u() {
+      var o = n("#popupvergelijken .dlDatum option:checked").text(),
+          u = n("#popupvergelijken .dlDatum option:checked").val().split("_"),
+          s = u[0],
+          h = u[1],
+          i,
+          e;
+      r("", o);
+      i = f(n("#hfVergelijkRedirect").val());
+      i === "" && t !== "" && (i = t);
+      e = MaakVergelijkUrl(s, h, i);
+      n(".btn-vergelijk", "#popupvergelijken").hide();
+      window.location.href = e;
+  }
+  function f(n) {
+      var t = n.indexOf("#");
+      return t > 0 ? n.substring(t + 1) : "";
+  }
+  function e() {
+      n(".wti-compare").click(function () {
+          var t = n("input:checked[name=compare]").length;
+          t > 2 ? n("#compareLinkValidationMessage").show() : n("#compareLinkValidationMessage").hide();
+      });
+      n("#compareLinkValidationMessage").hide();
+      n("#compareLink").click(function (t) {
+          var i, u;
+          if ((t.preventDefault(), (i = n("input:checked[name=compare]")), (u = i.length), u !== 2)) return n("#compareLinkValidationMessage").show(), !1;
+          var f = i[0].value,
+              e = i[1].value,
+              h = n("#hiddenBWBId").val(),
+              c = "/" + h + "/" + o(f, "0", "/") + "?VergelijkMet=" + h + "%3fg%3d" + s(e);
+          r(f, e);
+          location.href = c;
+      });
+  }
+  function r(t, i) {
+      n("#spVergelekenMet").html(i);
+      t != "" && n("#spVergelekenVan").html(t);
+      n("#pGeenVergelijkingMogelijk, #pKiesVergelijking, #fKiesVergelijking").hide();
+      n("#pKiesVergelijkingWachten, #LoadMessageCompare, #pKiesVergelijkingWachtenMinuten").show();
+  }
+  function o(n, t, i) {
+      var r = n.replace(/(\d{2})-(\d{2})-(\d{4})/, "$3-$2-$1");
+      return r + i + t;
+  }
+  function s(n) {
+      return n.replace(/(\d{2})-(\d{2})-(\d{4})/, "$3-$2-$1");
+  }
+  var t = "";
+  n(function () {
+      n("#popupvergelijken .dlDatum").on("change", i);
+      n("#pKiesVergelijkingWachten, #LoadMessageCompare, #pKiesVergelijkingWachtenMinuten").hide();
+      n(".popupvergelijken").click(function (i) {
+          var r = n(this).data("inwerking");
+          t = n(this).data("hashfragmentid");
+          r === "" ? n("#iwtHuidige, #iwtHuidige3").hide() : (n("#lblIWTHuidige").html(r), n("#lblIWTHuidige2").html(r), n("#lblIWTHuidige3").html(r), n("#iwtHuidige, #iwtHuidige3").show());
+          var u = n(this).data("bwb-id"),
+              f = n(this).data("toestand-id"),
+              e = n(this).data("volgnummer"),
+              o = n(this).data("label-id");
+          n("#pGeenVergelijkingMogelijk").hide();
+          n(".dlDatum option").attr("disabled", !1);
+          n("#pKiesVergelijking, #divVersies, .btn-vergelijk").show();
+          i.preventDefault();
+      });
+      n("#popupvergelijken .btn-vergelijk").click(function () {
+          return u(), !1;
+      });
+      i();
+      e();
+      n(".sluitPopup", "#popupvergelijken").click(function (t) {
+          t.preventDefault();
+          typeof stop == "function" ? window.stop() : document.execCommand("Stop");
+          n("#pKiesVergelijkingWachten, #LoadMessageCompare, #pKiesVergelijkingWachtenMinuten").hide();
+          n(".btn-vergelijk", "#popupvergelijken").show();
+          n("#pKiesVergelijking, #fKiesVergelijking").show();
+          sluitPopup();
+      });
+  });
+})(jQuery);
+
