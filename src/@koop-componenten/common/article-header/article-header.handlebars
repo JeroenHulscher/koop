@@ -2,15 +2,15 @@
   {{#if useTitle}}
     <{{titleTag}}>{{ counter }}</{{titleTag}}>
   {{ else }}
-    <p class="intro--text"> {{ activeFrom }}</p>
+    <p class=""> {{ activeFrom }}</p>
   {{/if}}
   <ul>
-    <li class="action--relations">{{ relationsAmount }}<a href="{{#if relationsHref}}{{relationsHref}}{{else}}#{{/if}}" data-decorator="init-modal" data-handler="open-modal" data-modal="{{relationsModalId}}"><span>Relaties</span> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--permalink"><a href="{{#if permalinkHref}}{{permalinkHref}}{{else}}#{{/if}}" data-decorator="init-modal" data-handler="open-modal" data-modal="{{permalinkModalId}}"><span>Permanente link</span><span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--version"><a href="{{#if versionHref}}{{versionHref}}{{else}}#{{/if}}"><span>Versie informatie</span> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--compare"><a href="{{#if compareHref}}{{compareHref}}{{else}}#{{/if}}" data-decorator="init-modal" data-handler="open-modal" data-modal="{{compareModalId}}"><span>Versie vergelijk</span> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--print"><a href="{{#if printHref}}{{printHref}}{{else}}#{{/if}}" data-decorator="init-modal" data-handler="open-modal" data-modal="{{printModalId}}"><span>Print</span> <span class="visually-hidden">{{ counter }}</span></a></li>
-    <li class="action--download"><a href="{{#if exportHref}}{{exportHref}}{{else}}#{{/if}}" data-decorator="init-modal" data-handler="open-modal" data-modal="{{exportModalId}}"><span>Bewaar</span> <span class="visually-hidden">{{ counter }}</span></a></li>
+    {{#if relations}}<li class="action--relations {{relationsClass}}" {{#if relationsDataAttributes}}{{{relationsDataAttributes}}}{{/if}}>{{ relationsAmount }}<a href="{{#if relationsAHref}}{{relationsAHref}}{{else}}#{{/if}}" {{#if relationsAClass}}class="{{relationsAClass}}"{{/if}} {{#if relationsADataAttributes}}{{{relationsADataAttributes}}}{{/if}} data-decorator="init-modal" data-handler="open-modal" data-modal="{{relationsAModalId}}"><span>{{relationsLabel}}</span> <span class="visually-hidden"> voor: {{ counter }}</span></a></li>{{/if}}
+    {{#if permalink}}<li class="action--permalink" {{permalinkClass}}><a href="{{#if permalinkAHref}}{{permalinkAHref}}{{else}}#{{/if}}" {{#if permalinkDataAttributes}}{{{permalinkDataAttributes}}}{{/if}} {{#if permalinkAClass}}class="{{permalinkAClass}}"{{/if}} data-decorator="init-modal" data-handler="open-modal" data-modal="{{permalinkAModalId}}"><span>{{permalinkLabel}}</span><span class="visually-hidden"> van: {{ counter }}</span></a></li>{{/if}}
+    {{#if version}}<li class="action--version"><a href="{{#if versionHref}}{{versionHref}}{{else}}#{{/if}}"><span>{{versionLabel}}</span> <span class="visually-hidden"> van: {{ counter }}</span></a></li>{{/if}}
+    {{#if compare}}<li class="action--compare"><a href="{{#if compareHref}}{{compareHref}}{{else}}#{{/if}}" {{#if compareDataAttributes}}{{{compareDataAttributes}}}{{/if}} {{#if compareAClass}}class="{{compareAClass}}"{{/if}} data-decorator="init-modal" data-handler="open-modal" data-modal="{{compareModalId}}"><span>{{compareLabel}}</span> <span class="visually-hidden"> van: {{ counter }}</span></a></li>{{/if}}
+    {{#if print}}<li class="action--print"><a href="{{#if printHref}}{{printHref}}{{else}}#{{/if}}" {{#if printAClass}}class="{{printAClass}}"{{/if}} {{#if printModal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{printModalId}}"{{/if}} {{#if printDataAttributes}}{{{printDataAttributes}}}{{/if}}><span>{{printLabel}}</span> <span class="visually-hidden">{{ counter }}</span></a></li>{{/if}}
+    {{#if export}}<li class="action--download"><a href="{{#if exportHref}}{{exportHref}}{{else}}#{{/if}}" {{#if exportAClass}}class="{{exportAClass}}"{{/if}} {{#if exportDataAttributes}}{{{exportDataAttributes}}}{{/if}} {{#if exportModal}}data-decorator="init-modal" data-handler="open-modal" data-modal="{{exportModalId}}"{{/if}}><span>{{exportLabel}}</span> <span class="visually-hidden">{{ counter }}</span></a></li>{{/if}}
   </ul>
   {{#if useTitle }}
     <p>{{ activeFrom }}</p>
