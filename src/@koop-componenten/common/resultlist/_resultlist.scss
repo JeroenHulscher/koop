@@ -31,7 +31,6 @@
     font-size: 1rem;
     font-weight: 700;
     color: $darkBlue;
-    text-decoration: none;
     display: block;
     max-width: calc(100% - 6em);
     &.icon {
@@ -42,6 +41,7 @@
     font-size: 1.5rem;
     margin-bottom: .75em;
     line-height: 1em;
+    text-decoration: none;
   }
 
   .result--actions {
