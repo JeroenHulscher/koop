@@ -21,7 +21,11 @@ h1,
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: .5em;
-  // margin-top: .5em;
+  margin-top: .5em;
+
+  .pageactions ~ & {
+    margin-top: 0;
+  }
 
   &--large {
     font-size: 2.75rem;
