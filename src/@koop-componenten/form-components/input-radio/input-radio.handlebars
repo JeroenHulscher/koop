@@ -2,8 +2,8 @@
 <div class="input-radio-group">
 {{/if}}
 {{#each options }}
-  <div class="input-radio">
-    <input class="radio__input" value="{{value}}" {{checked}} {{#each dataattributes}}{{data}}="{{value}}" {{/each}} {{disabled}} type="radio" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} id="option-{{ id }}" name="{{ name }}" />
+  <div class="input-radio {{modifier}}">
+    <input class="radio__input {{inputClass}}" value="{{value}}" {{checked}} {{#each dataattributes}}{{data}}="{{value}}" {{/each}} {{disabled}} type="radio" {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} id="option-{{ id }}" name="{{ name }}" />
     <label class="radio__label" for="option-{{ id  }}">
       {{{ text }}}
     </label>
