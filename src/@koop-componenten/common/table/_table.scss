@@ -385,11 +385,13 @@ table.table--headerhighlight {
         height: 100%;
         font-weight: 700;
         content: attr(data-before);
+        word-break: break-all;
+        line-height: 1;
       }
     }
 
     &.table--condensed td::before {
-      padding: .25em;
+      padding: .5em .25em;
     }
   }
 }
