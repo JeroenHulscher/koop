@@ -1,11 +1,27 @@
 ---
 title: BWB - Zoekresultaten
 label: BWB - Zoekresultaten
-status: wip
+status: ready
 context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    youAreHere:
+      - text: Wettenbank
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Zoekresultaten
   spoedpublicatiemelding:
     modifier: alert--info
     text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -29,6 +45,14 @@ context:
       - link: '#'
         text: Toon aanvinkte elementen
         icon: icon-arrow-right.svg
+  pageactions:
+    items:
+      - link: '#'
+        text: downloaden
+        icon: icon-download.svg
+      - link: '#'
+        text: printen
+        icon: icon-print.svg
   resultlist:
     item1:
       title: Aanbestedingswet 2012

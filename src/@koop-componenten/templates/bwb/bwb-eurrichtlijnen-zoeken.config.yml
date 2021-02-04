@@ -1,6 +1,6 @@
 ---
-title: BWB - Eenvoudig zoeken
-label: BWB - Eenvoudig zoeken
+title: BWB - EU Richtlijnen zoeken
+label: BWB - EU Richtlijnen zoeken
 status: ready
 context:
   headerContext:
@@ -11,27 +11,27 @@ context:
     navLinks:
       - url: '#'
         text: Eenvoudig zoeken
-        className: is-active
       - url: '#'
         text: Uitgebreid zoeken
       - url: '#'
         text: Zoeken in EU-richtlijnen
+        className: is-active
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
-      - text: Zoeken
+      - text: Zoeken op EU-richtlijn
   tt1:
     id: 1
     label: Help?
-    content: U kunt hieronder één, meerdere of alle soorten regelingen aanvinken.
+    content: U zoekt hier op het nummer van de richtlijn bestaande uit vier cijfers van het jaartal en maximaal vier cijfers van het nummer.
   tt2:
     id: 2
     label: Help?
-    content: Standaard worden Archiefselectielijsten niet doorzocht. U kunt deze doorzoeken via Uitgebreid zoeken.
+    content: "Vul het gehele nummer (inclusief serie) van de vindplaats publicatieblad EU in en/of de bijbehorende publicatiedatum. Let op dat na de C of een L een spatie moet worden ingevuld. Voorbeeld: L 63/9 - 01-03-2008."
   tt3:
     id: 3
     label: Help?
-    content: Toon ook regelingen die enkel op Bonaire, Sint Eustatius en Saba van toepassing zijn.
+    content: U zoekt hier op woord(en) in de citeertitel en het opschrift van de richtlijnen.
   tt4:
     id: 4
     label: Help?
@@ -60,3 +60,31 @@ context:
     id: 9
     label: Help?
     content: Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.
+  inputtext1:
+    id: 1432
+    fieldLabel: Jaar
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'jjjj'
+    modifier: input--small
+  inputtext2:
+    id: 1433
+    fieldLabel: Nummer
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'nnnn'
+    modifier: input--small
+  inputtext3:
+    id: 1434
+    fieldLabel: EU-publicatieblad
+    fieldVisibility: false
+    fieldInstruction:
+    fieldPlaceholder: 'Bijv: L 63/9'
+    modifier: input--small
+  datepickerPublicatieblad:
+    id: 1
+    fieldLabel: Datum
+    fieldInstruction:
+    fieldPlaceholder: 'dd-mm-yyyy'
+    configDateFormat: 'dd-mm-yy'
+    debug: false

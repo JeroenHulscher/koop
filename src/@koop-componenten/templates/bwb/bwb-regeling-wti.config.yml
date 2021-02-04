@@ -6,6 +6,24 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+        className: is-active
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+    youAreHere:
+      - text: Wettenbank
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Regeling
   sidebar:
     modifier: list--facet
     heading: Officiële bekendmakingen
@@ -30,3 +48,11 @@ context:
     initClosed: true
     closeButton: sluiten
     buttonModifier: wti-compare
+  footnote:
+    customlist: false
+    text: Opmerkingen
+    notes:
+      - id: 1
+        note: Tekstplaatsing met vernummering
+      - id: 2
+        note: Tekstplaatsing met vernummering

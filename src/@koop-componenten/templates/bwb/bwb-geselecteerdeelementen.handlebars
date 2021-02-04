@@ -1,0 +1,209 @@
+{{ render "@header" header merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+<div class="container columns columns--sticky-sidebar row">
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+    <div>
+
+      <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+
+      <h2>Geselecteerde elementen (2) <span>Geldend op 28-01-2021</span></h2>
+
+      {{ render "@actionblock" actionBlock }}
+
+      <h2>Inhoudsopgave</h2>
+
+      <h3>Aanbestedingswet op defensie- en veiligheidsgebied</h3>
+      {{ render "@treeview" treeview }}
+
+      <h3>Aanbestedingswet 2012</h3>
+      {{ render "@treeview" treeview }}
+    </div>
+  </div>
+  <div id="geselecteerdeonderdelen">
+    <form method="post">
+
+      <h1>Geselecteerde elementen (2)</h1>
+
+      {{ render "@article-header" counterFirst }}
+
+
+      <div class="fragment-header">
+        <h1>Aanbestedingswet op defensie- en veiligheidsgebied</h1>
+      </div>
+
+      {{ render "@article-header" counter }}
+
+      {{#> @modal popuplidorelaties }}
+        <h2>Externe relaties (0)</h2>
+        <p>Op linkeddata.overheid.nl zijn onderstaande relaties bekend.</p>
+        <div id="divLidorelaties"></div>
+        {{/@modal}}
+
+        {{#> @modal popuppermanentelink }}
+          <h2>Permanente link</h2>
+          <p>Kopieer één van de onderstaande links of verfijn de link in de Linktool.</p>
+          <h3>Kopieer een link</h3>
+          <ol>
+            <li>
+              link met citeertitel
+              {{ render "@copydata" copydata1 merge=true }}
+            </li>
+            <li>
+              url
+              {{ render "@copydata" copydata2 merge=true }}
+            </li>
+            <li>
+              juriconnect-verwijzing
+              {{ render "@copydata" copydata3 merge=true }}
+            </li>
+          </ol>
+          <h3>Verfijn in Linktool</h3>
+          <p>
+            Met behulp van de Linktool van LiDO is het mogelijk om een meer gedetailleerde link te maken. Zo is het
+            bijvoorbeeld mogelijk om een link te maken naar een specifiek lid van een artikel.
+          </p>
+          <p>
+            Ga naar de <a
+              href="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0008994%2f1998-01-01%2f0&geldigheidsdatum=1998-01-01&zichtdatum=2021-01-25"
+              rel="external"><span class="visually-hidden">Externe link: </span>Linktool</a>
+          </p>
+          {{/@modal}}
+
+          {{#> @modal popupafdrukken }}
+            <h2>Keuze afdrukken regeling</h2>
+            <p>U kunt kiezen voor het toevoegen van de wetstechnische informatie aan de tekst.</p>
+            <form>
+              <fieldset>
+                <legend class="visually-hidden">Afdrukken regeling</legend>
+                <div class="form__row">
+                  {{ render "@input-radio" printradio }}
+                </div>
+                {{ render "@button--primary" modalPrintButton merge=true }}
+              </fieldset>
+            </form>
+            {{/@modal}}
+
+            {{#> @modal popupvergelijken }}
+              <h2>Vergelijk versies</h2>
+
+              <input type="hidden" id="hfVergelijkRedirect" name="hfVergelijkRedirect" value="" />
+
+              <p id="pGeenVergelijkingMogelijk">
+                Er is geen andere versie beschikbaar waarmee u de huidige geselecteerde versie<span id="iwtHuidige3">,
+                  inwerkinggetreden op <span id="lblIWTHuidige3"></span>,</span> kan vergelijken.
+              </p>
+
+              <p id="pKiesVergelijking">
+                Selecteer een andere versie waarmee u de huidige geselecteerde versie<span id="iwtHuidige">,
+                  inwerkinggetreden op
+                  <span id="lblIWTHuidige"></span>,</span> wilt vergelijken.
+              </p>
+
+              <div id="divVersies">
+                <p id="pKiesVergelijkingWachten">
+                  Vergelijken van "<span
+                    id="ctl00_cphContent_Regeling_popupVergelijken_popupvergelijken_lblTitel">Grondwet</span>",
+                  inwerkinggetreden op
+                  <span id='spVergelekenVan'><span id="lblIWTHuidige2"></span></span>, met versie die inwerking is
+                  getreden op <span id='spVergelekenMet'></span>.
+                </p>
+
+                <div id="LoadMessageCompare">
+                  <div class="loader"></div>
+                </div>
+
+                <p id="pKiesVergelijkingWachtenMinuten">Doordat er een grote regeling is gekozen kan de vergelijking
+                  enkele minuten duren. </p>
+
+                <fieldset>
+                  <legend class="visually-hidden"></legend>
+                  <div class="form__row">
+                    {{ render "@select-custom--with-label" compareSelect merge=true }}
+                  </div>
+                  {{ render "@button--primary" modalCompareButton merge=true }}
+                </fieldset>
+              </div>
+
+              {{/@modal}}
+
+              {{#> @modal popupexporteren }}
+                <h2>Exporteer regeling</h2>
+                <p>U kunt kiezen in welk formaat de tekst geëxporteerd wordt.</p>
+                <form>
+                  <fieldset>
+                    <legend>Formaat</legend>
+                    <div class="form__row">
+                      {{ render "@input-radio" exportradio }}
+                    </div>
+                  </fieldset>
+
+                  <div id="popupexporterenafbeeldingen">
+                    <p>
+                      U kunt de tekst inclusief afbeeldingen exporteren. De afbeeldingen worden dan met de tekst in een
+                      .zip-bestand geleverd
+                    </p>
+                    <fieldset>
+                      <legend>Afbeeldingen</legend>
+                      <div class="form__row">
+                        {{ render "@input-radio" exportradio2 }}
+                      </div>
+                    </fieldset>
+                  </div>
+                  {{ render "@button--primary" modalExportButton merge=true }}
+                </form>
+                {{/@modal}}
+
+                <p>Wet van 28 januari 2013 inzake implementatie van richtlijn nr. 2009/81/EG van het Europees Parlement
+                  en
+                  de Raad van 13 juli 2009 betreffende de coördinatie van de procedures voor het plaatsen door
+                  aanbestedende diensten van bepaalde opdrachten voor werken, leveringen en diensten op defensie- en
+                  veiligheidsgebied, en tot wijziging van richtlijnen 2004/17/EG en 2004/18/EG (Aanbestedingswet op
+                  defensie- en veiligheidsgebied)</p>
+                <p>Wij Beatrix, bij de gratie Gods, Koningin der Nederlanden, Prinses van Oranje-Nassau, enz. enz. enz.
+                </p>
+                <p>Allen, die deze zullen zien of horen lezen, saluut! doen te weten:</p>
+                <p>Alzo Wij in overweging genomen hebben, dat het noodzakelijk is om te voorzien in wettelijke regels om
+                  uitvoering te geven aan <a href="?celex=32009L0081" rel="nofollow">richtlijn nr. 2009/81/EG</a> van
+                  het
+                  Europees Parlement en de Raad van 13 juli 2009 betreffende de coördinatie van de procedures voor het
+                  plaatsen door aanbestedende diensten van bepaalde opdrachten voor werken, leveringen en diensten op
+                  defensie- en veiligheidsgebied, en tot wijziging van <a href="?celex=32004L0017"
+                    rel="nofollow">richtlijnen 2004/17/EG</a> en <a href="?celex=32004L0018"
+                    rel="nofollow">2004/18/EG</a>
+                  (PbEU L 216);</p>
+                <p>Zo is het, dat Wij, de Afdeling advisering van de Raad van State gehoord, en met gemeen overleg der
+                  Staten-Generaal, hebben goedgevonden en verstaan, gelijk Wij goedvinden en verstaan bij deze:</p>
+
+                <div class="fragment-header">
+                  <h1>Aanbestedingswet 2012</h1>
+                </div>
+
+                {{ render "@article-header" counter }}
+
+                <p>Tekst regeling</p>
+
+                <input type="hidden" value="BWBR0008994" name="hiddenBWBId" id="hiddenBWBId" />
+                <input type="hidden" name="ctl00$cphContent$hfApplicatieURL" id="hfApplicatieURL"
+                  value="https://wetten.overheid.nl" />
+
+                <input type="hidden" name="ctl00$cphContent$hfRegelingOnderdelen" id="hfRegelingOnderdelen"
+                  value="BWBR0032203/2019-04-18/0/Intitule,BWBR0032203/2019-04-18/0/Aanhef" />
+
+                <input type="hidden" name="hfRegelingOnderdelen" id="hfRegelingOnderdelen" />
+                <input type="hidden" name="hfRegelingOnderdelenActie" id="hfRegelingOnderdelenActie" />
+                <input type="hidden" name="hfRegelingOnderdelenAfdrukken" id="hfRegelingOnderdelenAfdrukken" />
+                <input type="hidden" name="hfRegelingOnderdelenExporteren" id="hfRegelingOnderdelenExporteren" />
+
+    </form>
+  </div>
+
+
+</div>
+
+{{ render "@to-top" }}
+
+{{ render "@footer" }}

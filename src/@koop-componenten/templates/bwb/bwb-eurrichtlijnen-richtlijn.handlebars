@@ -1,0 +1,78 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+  <div id="regeling">
+    <h1 class="h2">RICHTLIJN 2009/116/EG VAN DE RAAD van 25 juni 2009 houdende wijziging van Richtlijn 91/414/EEG teneinde de paraffineoliën CAS-nummer 64742-46-7, CAS-nummer 72623-86-0 en CAS-nummer 97862-82-3 op te nemen als werkzame stoffen</h1>
+
+    {{ render "@article-header" ah1 }}
+
+    <h2>Richtlijn</h2>
+
+    <table class="">
+      <tbody>
+        <tr>
+          <th scope="row">Richtlijn in EUR-Lex</th>
+          <td data-before="Richtlijn in EUR-Lex"><a class="www.mijnoverheid.nl/link" href="#" rel="external"><span class="visually-hidden">Externe link: </span>2009/116</a></td>
+        </tr>
+        <tr>
+          <th scope="row">EU-publicatieblad</th>
+          <td data-before="EU-publicatieblad">L 237/7 (09-09-2009)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Implementatie</h2>
+
+    <table class="">
+      <tbody>
+        <tr>
+          <th scope="row">Uiterste implementatiedatum</th>
+          <td data-before="Uiterste implementatiedatum">30-06-2010</td>
+        </tr>
+        <tr>
+          <th scope="row">Gevalideerde implementatiedatum {{ render "@tooltip" tt1 }}</th>
+          <td data-before="Gevalideerde implementatiedatum">04-02-2010</td>
+        </tr>
+        <tr>
+          <th scope="row">Eerstverantwoordelijk departement</th>
+          <td data-before="Eerstverantwoordelijk departement">Ministerie van Economische Zaken</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="inline-block">Implementatieregeling</h2>
+    {{ render "@tooltip" tt2 }}
+    <p>
+      Implementatieregelingen zijn alleen beschikbaar voor richtlijnen die geïmplementeerd zijn na 2012.
+    </p>
+    <h2 class="inline-block">Gewijzigde regeling</h2>
+    {{ render "@tooltip" tt4 }}
+
+    <p class="u-nomargin">
+      <a class="openresult" href="/BWBR0001854?g=2021-02-03&amp;z=2021-02-03">Wetboek van Strafrecht</a>
+    </p>
+    {{#> @collapsible collapsible }}
+      {{ render "@list--unstyled" list1 }}
+    {{/ @collapsible}}
+
+    <h2 class="inline-block">Implementatiemiddel</h2>
+    {{ render "@tooltip" tt3 }}
+
+    {{ render "@table" tb1 }}
+
+
+  </div>
+</div>
+
+<div class="container row">
+  <p>De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het
+    Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen
+    heeft een officieel karakter.</p>
+</div>
+
+{{ render "@footer" }}

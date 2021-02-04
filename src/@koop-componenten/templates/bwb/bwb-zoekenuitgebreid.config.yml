@@ -1,6 +1,6 @@
 ---
-title: BWB - Uitgebreid zoeken
-label: BWB - Uitgebreid zoeken
+title: BWB - Zoeken Uitgebreid
+label: BWB - Zoeken Uitgebreid
 status: ready
 context:
   headerContext:
@@ -11,9 +11,9 @@ context:
     navLinks:
       - url: '#'
         text: Eenvoudig zoeken
-        className: is-active
       - url: '#'
         text: Uitgebreid zoeken
+        className: is-active
       - url: '#'
         text: Zoeken in EU-richtlijnen
   breadcrumb:

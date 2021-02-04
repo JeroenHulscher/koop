@@ -1,0 +1,53 @@
+---
+title: BWB - Printen zoekresultaten (EU)
+label: BWB - Printen zoekresultaten (EU)
+status: ready
+context:
+  headerContext:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wettenbank
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+        className: is-active
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Zoeken op EU-richtlijn
+        url: '#'
+      - text: Zoekresultaten
+  alert:
+    text: '<h2 class="h4"><strong>De zoekvraag is als volgt samengesteld:</strong></h2><p>De zoekresultaten zijn gesorteerd op naam.</p>'
+  afdrukken:
+    href: '#'
+    class: button button--primary
+    label: Afdrukken
+  afdrukken2:
+    id: 2
+    href: '#'
+    class: button button--primary
+    label: Afdrukken
+  annuleren:
+    text: Annuleren
+    anchor: true
+    action: '/zoeken/zoekresultaat/rs/2,3,4/titel/awb/titelf/1/tekstf/1/artnrb/0/d/10-01-2021/dx/0'
+  resultlist:
+    items:
+      - title: RICHTLIJN 2009/116/EG VAN DE RAAD van 25 juni 2009 houdende wijziging van Richtlijn 91/414/EEG teneinde de paraffineoliën CAS-nummer 64742-46-7, CAS-nummer 72623-86-0 en CAS-nummer 97862-82-3 op te nemen als werkzame stoffen
+        href: '#'
+        label: Richtlijn geïmplementeerd
+        labelType: warning
+      - title: GEDELEGEERDE RICHTLIJN 2014/14/EU van de Commissie van 18 oktober 2013 tot wijziging, met het oog op aanpassing aan de technische vooruitgang, van bijlage III bij Richtlijn 2011/65/EU van het Europees Parlement en de Raad wat betreft een vrijstelling voor 3,5 mg kwik per lamp in compacte fluorescentielampen met enkelvoudige lampvoet voor algemene verlichtingsdoeleinden < 30 W met een levensduur van ten minste 20 000 branduren
+        href: '#'
+        label: Richtlijn geïmplementeerd
+        labelType: warning
+      - title: RICHTLIJN 2009/137/EG VAN DE COMMISSIE van 10 november 2009 tot wijziging van Richtlijn 2004/22/EG van het Europees Parlement en de Raad betreffende meetinstrumenten met betrekking tot het misbruiken van maximaal toelaatbare fouten voor wat betreft de instrumentspecifieke bijlagen MI-001 tot en met MI-005
+        href: '#'
+        label: Richtlijn geïmplementeerd
+        labelType: warning

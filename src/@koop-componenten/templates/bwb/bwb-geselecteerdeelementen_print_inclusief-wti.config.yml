@@ -1,0 +1,62 @@
+---
+title: BWB - Geselecteerde elementen print inclusief WTI
+label: BWB - Geselecteerde elementen print inclusief WTI
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wettenbank
+    navLinks:
+      - url: '#'
+        text: Eenvoudig zoeken
+      - url: '#'
+        text: Uitgebreid zoeken
+        className: is-active
+      - url: '#'
+        text: Zoeken in EU-richtlijnen
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+      - text: Uitgebreid zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Aangevinkte regelingselementen
+  alert:
+    text: '<h2 class="h4"><strong>De zoekvraag is als volgt samengesteld:</strong></h2><p>Geldigheid: Alleen regelingen zoeken die geldig zijn op 10-01-2021</p><p>Woord en/of zinsdeel:</p><p>"<strong>awb</strong>" moet voorkomen in de titel van de regeling.</p><p>De zoekresultaten zijn gesorteerd op soort.</p>'
+  afdrukken:
+    href: '#'
+    class: button button--primary
+    label: Afdrukken
+  afdrukken2:
+    id: 2
+    href: '#'
+    class: button button--primary
+    label: Afdrukken
+  annuleren:
+    text: Annuleren
+    anchor: true
+    action: '/zoeken/zoekresultaat/rs/2,3,4/titel/awb/titelf/1/tekstf/1/artnrb/0/d/10-01-2021/dx/0'
+  counter1:
+    modifier: article__header--main
+    activeFrom: Geldend op 01-02-2021
+  counter2:
+    modifier: article__header--main
+    activeFrom: Geldend van 18-04-2019 t/m heden
+  counter3:
+    modifier: article__header--main
+    counter: Deel 1. Algemene bepalingen
+    useTitle: true
+    titleTag: h2
+  counter4:
+    modifier: article__header--chapter
+    counter: Artikel 1.1
+    useTitle: true
+    titleTag: h3
+  counter5:
+    modifier: article__header--chapter
+    counter: Artikel 1.2
+    useTitle: true
+    titleTag: h3

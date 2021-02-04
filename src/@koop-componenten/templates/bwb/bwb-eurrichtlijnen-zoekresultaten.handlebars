@@ -1,0 +1,32 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row">
+
+  <div>
+
+    {{ render "@pageactions" pageactions }}
+
+    <h1>1.005 resultaten gevonden</h1>
+
+    <h2>EU-richtlijn</h2>
+
+    {{ render "@resultlist" resultlist }}
+
+    {{ render "@pagination" pagination merge=true }}
+
+  </div>
+
+</div>
+
+<div class="container row">
+  <p>De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het
+    Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen
+    heeft een officieel karakter.</p>
+</div>
+
+{{ render "@footer" }}

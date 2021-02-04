@@ -1,0 +1,71 @@
+{{ render "@header" headerContext merge="true" }}
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container row row--heading" id="content">
+  <h1>Wet- en regelgeving</h1>
+</div>
+
+<div class="container columns row">
+  <div>
+    <h2 class="title--underlined">Richtlijnen in de Wettenbank</h2>
+    <p>
+      Deze tab geeft toegang tot informatie over richtlijnen die door Nederland geïmplementeerd zijn/worden vanaf 2005.
+      Voor richtlijnen die volledig zijn geïmplementeerd vanaf 2013 wordt tevens informatie getoond over de wijze van
+      implementeren daarvan in nationale regelgeving.
+    </p>
+    <p>Dit onderdeel is nog experimenteel en kent mogelijk nog onvolkomenheden.</p>
+
+  </div>
+
+  <div>
+    <div class="form__chapter__heading">
+      <h2>Zoek op implementatie EU-richtlijn</h2>
+    </div>
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">EU-richtlijnnummer</span>
+        {{ render "@tooltip" tt1 }}
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@input-text" inputtext1 merge=true }}
+        {{ render "@input-text" inputtext2 merge=true }}
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <span class="form__label form__label--accent">EU-publicatieblad</span>
+        {{ render "@tooltip" tt2 }}
+      </div>
+      <div class="form__element__inputs">
+        {{ render "@input-text" inputtext3 merge=true }}
+        {{ render "@datepicker" datepickerPublicatieblad}}
+      </div>
+    </div>
+
+    <div class="form__element">
+      <div class="form__element__label">
+        <label for="ZoekOp_Tekst">Titel van richtlijn</label>
+        {{ render "@tooltip" tt3 }}
+      </div>
+      <div class="form__element__inputs">
+        <input name="name" type="text" id="ZoekOp_Tekst" class="input" />
+      </div>
+    </div>
+
+    <input type="button" name="name" value="Wis scherm" id="buttonId1" class="button" />
+    <input type="submit" name="name" value="Zoeken" id="buttonId2" class="button button--primary" />
+  </div>
+</div>
+
+<div class="container row">
+  <p>De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het
+    Tractatenblad, het Staatsblad, de Staatscourant en andere vanwege de overheid verkrijgbaar gestelde publicatiebladen
+    heeft een officieel karakter.</p>
+</div>
+
+{{ render "@footer" }}

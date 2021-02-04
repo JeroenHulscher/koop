@@ -1,6 +1,6 @@
 ---
-title: BWB - Regeling
-label: BWB - Regeling
+title: BWB - Geselecteerde elementen
+label: BWB - Geselecteerde elementen
 status: ready
 context:
   header:
@@ -9,9 +9,9 @@ context:
     navLinks:
       - url: '#'
         text: Eenvoudig zoeken
-        className: is-active
       - url: '#'
         text: Uitgebreid zoeken
+        className: is-active
       - url: '#'
         text: Zoeken in EU-richtlijnen
     youAreHere:
@@ -19,11 +19,11 @@ context:
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:
-      - text: Zoeken
+      - text: Uitgebreid zoeken
         url: '#'
       - text: Zoekresultaten
         url: '#'
-      - text: Regeling
+      - text: Aangevinkte regelingselementen
   sidebar:
     modifier: list--facet
     heading: Officiële bekendmakingen
@@ -37,6 +37,18 @@ context:
       - link: '#'
         text: Alles dichtklappen
         icon: icon-minus.svg
+  counterFirst:
+    modifier: article__header--main
+    activeFrom: Geldend van 18-04-2019 t/m heden
+    export: true
+    exportLabel: Sla de geselecteerde elementen op
+    exportHref: 'javascript:void(0)'
+    exportDataAttributes: onclick="$('#hfRegelingOnderdelenActie').val('rtf'); __doPostBack('exporteernaarrtf', '');"
+    print: true
+    printLabel: Druk de geselecteerde elementen af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    printDataAttributes: data-onderdeelids="BWBR0032203/2019-04-18/0/Intitule,BWBR0032203/2019-04-18/0/Aanhef"
   counter:
     modifier: article__header--main
     counter: Afdeling 1.2.1. Algemene bepaling voor het sluiten van schriftelijke overeenkomsten onder bezwarende titel voor het verrichten van werken, leveringen of diensten
@@ -163,47 +175,33 @@ context:
     useTitle: true
     titleTag: h2
     counter: Deel 1. Algemene bepalingen
-    relations: true
-    relationsLabel: Toon relaties in LiDO
-    relationsHref: '#'
-    relationsClass: aantallen-lido
-    relationsAModalId: popuplidorelaties
-    relationsAClass: popuplidorelaties
-    relationsAHref: /jci1.3:c:BWBR0005538&z=2013-07-04&g=2013-07-04
-    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0005538&z=2013-07-04&g=2013-07-04" data-bwbngid="http://wetten.overheid.nl/id/BWBR0005538/2013-07-04/0"'
-    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0005538&z=2013-07-04&g=2013-07-04'"
-    permalink: true
-    permalinkLabel: Maak een permanente link
-    permalinkAModalId: popuppermanentelink
-    permalinkAClass: popuppermanentelink
-    permalinkAHref: /jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01
-    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01" data-citeertitel="Aanpassingswet derde tranche Awb I" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0008994%2f1998-01-01%2f0&amp;geldigheidsdatum=2020-09-28&amp;zichtdatum=2021-01-27"
-    version: true
-    versionLabel: Toon wetstechnische informatie
-    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
-    compare: true
-    compareLabel: Versie vergelijk
-    compareModalId: popupvergelijken
-    compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
-    compareAClass: popupvergelijken
-    print: true
-    printLabel: Druk de regeling af
-    printModalId: popupafdrukken
-    printAClass: popupafdrukken
+    relationsAmount: 2
     export: true
-    exportModal: true
-    exportModalId: popupexporteren
-    exportLabel: Sla de regeling op
-    exportAClass: popupexporteren
-    exportHref: '/BWBR0001840/2018-12-21/0'
+    print: true
+    compare: true
+    version: true
+    permalink: true
+    relation: true
   counter2:
     modifier: article__header--law--chapter
     useTitle: true
     titleTag: h3
     counter: Hoofdstuk 1.1. Begripsbepalingen
     relationsAmount: 2
+    export: true
+    print: true
+    compare: true
+    version: true
+    permalink: true
+    relation: true
   counter3:
     useTitle: true
     titleTag: h3
     counter: Artikel 1.1
     relationsAmount: 1
+    export: true
+    print: true
+    compare: true
+    version: true
+    permalink: true
+    relation: true
