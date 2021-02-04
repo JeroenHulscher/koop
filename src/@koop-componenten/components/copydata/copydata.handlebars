@@ -5,7 +5,7 @@
        "triggerCopiedlabel": "{{triggerLabelCopied}}",
        "triggerClass": "copydata__trigger{{ triggerClassModifier }}"
        }'>
-  <p class="copydata__datafield js-copydata__datafield">
+  <p {{#if datafieldId}}id="{{datafieldId}}"{{/if}} class="copydata__datafield js-copydata__datafield">
      {{ url }}
   </p>
 </div>
