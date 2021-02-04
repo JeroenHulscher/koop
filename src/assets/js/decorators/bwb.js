@@ -203,3 +203,94 @@
   });
 })(jQuery);
 
+// LIDO Relaties modaal;
+(function(n){"use strict";n(function(){n(".popuplidorelaties").click(function(t){var r=n(this).data("juriconnectverwijzing"),u=n(this).parent("li").data("aantal-relaties"),i;n("#popuplidorelaties h2").html("Externe relaties ("+escape(u)+")");i='<div class="alert alert--warning">Er is een fout opgetreden bij het ophalen van de relaties in LiDO.<\/div>';n.get("https://wetten.overheid.nl/Handlers/LiDORelaties.ashx?juriconnect-id="+escape(r)+"&_="+(new Date).getTime(),function(t){t!==""?n("#popuplidorelaties #divLidorelaties").html(t):n("#popuplidorelaties #divLidorelaties").html(i)},"html").fail(function(){n("#popuplidorelaties #divLidorelaties").html(i)});t.preventDefault()})})})(jQuery);
+
+// LIDO Relaties aantal;
+(function(n){"use strict";function t(){var t=n(window).scrollTop(),r=n(window).height(),i=300;setTimeout(function(){n("li.action--relations[data-juriconnectid]").each(function(){ console.log('test');var u=n(this);setTimeout(function(){var f=u.data("top");if(f===0||f||(f=u.closest("ul").offset().top,u.data("top",f)),!u.data("laden")&&!(f<t-i)){if(t+r+i<f)return!1;u.data("laden",!0);n.get("https://wetten.overheid.nl/Handlers/LiDOAantallen.ashx?bwbngid="+escape(u.data("bwbngid")),function(n){parseInt(n,10)>0&&(u.prepend(n),u.data("aantal-relaties",n),u.removeClass("visually-hidden"));u.removeClass("aantallen-lido-onbekend");u.addClass("aantallen-lido")})}},1)})},10)}n(window).on("load scroll resize",function(){typeof t=="function"&&t()})})(jQuery);
+
+// Permanente link;
+(function (n) {
+  "use strict";
+  function r(n) {
+      var t, i, r;
+      typeof getSelection != "undefined" && typeof document.createRange != "undefined"
+          ? ((t = document.createRange()), t.selectNodeContents(n), (i = window.getSelection()), i.removeAllRanges(), i.addRange(t))
+          : typeof document.selection != "undefined" && typeof document.body.createTextRange != "undefined" && ((r = document.body.createTextRange()), r.moveToElementText(n), r.select());
+  }
+  var i = n("#hfApplicatieURL").val(),
+      t = n("h1", "#regeling").text();
+  n(function () {
+      n("div.well--linkContainer").on("click", function () {
+          event.preventDefault();
+          r(this);
+      });
+      n(".popuppermanentelink").click(function (r) {
+          var u = n(this).data("juriconnectverwijzing"),
+              l = n(this).closest(".article__header--law"),
+              f = l.children("h3,h4").first().text(),
+              c = f.indexOf(". "),
+              e,
+              o,
+              s,
+              h;
+          e = c != -1 ? f.slice(0, c) : n.trim(f);
+          o = e;
+          n("#geselecteerdeonderdelen").length == 1 &&
+              (t = n(this).closest(".fragment-header").length == 1 ? n(this).closest(".fragment-header").find("h1").text() : n(this).closest(".wetgeving").parent("div").prev(".fragment-header").find("h1").text());
+          e != t && (o += " " + t);
+          s = n("#divCiteertitel");
+          s.text("");
+          h = n(document.createElement("a"));
+          s.append(h);
+          h.attr("href", i + "/" + u).html(o);
+          n("#divUrl").text(i + "/" + u);
+          n("#divJuriconnectverwijzing").text(u);
+          n("#aLinktoolurl").attr("href", n(this).data("linktoolurl"));
+          r.preventDefault();
+      });
+  });
+})(jQuery);
+
+// Afdrukken
+(function(n){"use strict";n(function(){n(".popupafdrukken").click(function(t){n("#hfPrintOnderdeelID").val(n(this).attr("href"));t.preventDefault()})})})(jQuery);
+
+// Exporteren
+(function (n) {
+  "use strict";
+  n(function () {
+      n(".popupexporteren").click(function (t) {
+          var i = n(this).attr("href");
+          n("#hfRegelingOnderdelenActie").val("");
+          n("#hfExportOnderdeelID").val(i);
+          n("#popupexporterenafbeeldingen").hide();
+          /^\/([a-z0-9]+)\/([0-9|_|-]*)\/([0-9]+)(\/?)$/i.test(i)
+              ? (n("#popupexporterenafbeeldingen").show(), n(".exporteren-xml-optie").show())
+              : (n("#rbZonderAfbeeldingen").prop("checked", !0),
+                n(".exporteren-xml-optie input:checked").length && n('#popupexporteren input[id$="rbRtf"]').prop("checked", !0),
+                n(".exporteren-xml-optie input:checked").prop("checked", !1),
+                n(".exporteren-xml-optie").hide());
+          t.preventDefault();
+      });
+  });
+})(jQuery);
+
+// afdrukken onderdelen;
+(function (n) {
+  "use strict";
+  function t() {
+      var t = n("#rbInclusief").is(":checked");
+      n("#hfRegelingOnderdelenActie").val(t ? "afdrukken informatie" : "afdrukken");
+  }
+  n(function () {
+      n(".popupafdrukken").click(function (i) {
+          n("#hfRegelingOnderdelenAfdrukken").val(n(this).data("onderdeelids"));
+          i.preventDefault();
+          t();
+      });
+      n("#rbExclusief, #rbInclusief").on("click", function () {
+          t();
+      });
+  });
+})(jQuery);
+
