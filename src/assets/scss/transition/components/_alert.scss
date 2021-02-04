@@ -12,6 +12,10 @@
   &--info {
     background-color: $lightBlue;
     background-image: $infoIconBlue;
+
+    h2, h3, h4 {
+      color: $darkBlue;
+    }
   }
 
   &--warning {

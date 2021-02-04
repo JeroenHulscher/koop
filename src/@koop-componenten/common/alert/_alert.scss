@@ -60,6 +60,10 @@
     background-image: $infoIcon;
     border-color: $primaryBlue;
     padding-left: 2.5em;
+
+    h2, h3, h4 {
+      color: $black;
+    }
   }
 
   &--success {
