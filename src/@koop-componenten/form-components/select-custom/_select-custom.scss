@@ -39,17 +39,12 @@
     background-image: none;
     appearance: none;
     border-radius: 0;
-    transition: outline-offset $fastEaseInOut;
-    outline: 2px solid transparent;
-    outline-offset: .5em;
     margin: 0;
 
     &::-ms-expand {
       display: none;
     }
     &:focus {
-      outline: 2px solid $yellow;
-      outline-offset: 0;
       z-index: 1;
     }
   }

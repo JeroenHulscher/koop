@@ -12,11 +12,6 @@
     }
   }
 
-  &:focus + label {
-    outline-color: $focus;
-    outline-offset: 0;
-  }
-
   &:checked + label:before {
     background-color: $darkBlue !important;
     background-image: $iconCheckboxWhite;
@@ -45,9 +40,6 @@
 .checkbox__label {
   position: relative;
   padding: 0 0 0 2em;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
-  transition: outline-offset $fastEaseInOut;
   line-height: inherit;
 
   &::before {

@@ -36,10 +36,6 @@
       }
     }
 
-    &:focus + label {
-      outline: 2px solid $focus;
-    }
-
     &:checked + label:before {
       display: inline-block;
     }

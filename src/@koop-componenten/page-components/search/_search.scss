@@ -16,8 +16,6 @@
     font-size: .85em;
     height: 40px;
     width: 100%;
-    outline: 2px solid transparent;
-    outline-offset: .5em;
     transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
 
     @media ( min-width: $breakpointDesktop ) {
@@ -44,10 +42,6 @@
       }
     }
 
-    &:focus {
-      outline: 2px solid $yellow;
-      outline-offset: -2px;
-    }
   }
 
   .search__term--animating {
@@ -63,8 +57,6 @@
     right: 0;
     top: 0;
     text-indent: -999em;
-    outline: 2px solid transparent;
-    outline-offset: .5em;
     transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
     border: none;
     appearance: none;
@@ -79,11 +71,6 @@
 
     @media ( min-width: $breakpointDesktop ) {
       top: .6em;
-    }
-
-    &:focus {
-      outline: 2px solid $yellow;
-      outline-offset: -2px;
     }
   }
 }

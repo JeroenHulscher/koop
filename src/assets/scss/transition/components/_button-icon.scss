@@ -4,8 +4,6 @@
   color: $darkBlue;
   max-width: 100%;
   border-radius: .25em;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
   padding: 1.05em;
   font-size: 1em;
@@ -69,8 +67,6 @@
   }
 
   &:focus {
-    outline: 2px solid $yellow;
-    outline-offset: 0;
     z-index: 1;
   }
 

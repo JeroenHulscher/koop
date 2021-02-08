@@ -123,21 +123,9 @@
         background-color: $headerBorderColor;
       }
 
-      &:focus {
-        outline-color: $focusOnBlue;
-      }
-
-      &[data-handler="toggle-other-sites"]:focus {
-        outline-color: $focus;
-      }
-
       &.is-active {
         background: $mediumBlue;
         color: $black;
-
-        &:focus {
-          outline-color: $focus;
-        }
       }
     }
 
