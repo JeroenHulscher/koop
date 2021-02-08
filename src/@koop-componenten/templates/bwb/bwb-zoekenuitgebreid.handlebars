@@ -454,20 +454,9 @@
       </div>
     </div>
 
-    <input type="button" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnWisScherm"
-      value="Wis scherm"
-      onclick="javascript:__doPostBack(&#39;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnWisScherm&#39;,&#39;&#39;)"
-      id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnWisScherm" class="button" />
-    <input type="button"
-      name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnStartinstellingenOpslaan"
-      value="Startinstellingen opslaan"
-      onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnStartinstellingenOpslaan&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
-      id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnStartinstellingenOpslaan"
-      class="button" />
-    <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken"
-      value="Zoeken"
-      onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierUitgebreid$btnZoeken&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
-      id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_btnZoeken" class="button button--primary" />
+    {{ render "@button" btnReset merge=true }}
+    {{ render "@button" btnSave merge=true }}
+    {{ render "@button--primary" btnSubmit merge=true }}
   </div>
 </div>
 

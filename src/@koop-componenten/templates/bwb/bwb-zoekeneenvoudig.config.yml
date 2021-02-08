@@ -60,3 +60,10 @@ context:
     id: 9
     label: Help?
     content: Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.
+  btnSubmit:
+    text: Zoeken
+  btnReset:
+    text: Wis scherm
+    inputButton: true
+    inputSubmit: false
+    type: button

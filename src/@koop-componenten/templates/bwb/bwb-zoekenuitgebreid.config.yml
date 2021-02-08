@@ -591,3 +591,15 @@ context:
     id: 112312312
   dp2:
     id: 192392138
+  btnSubmit:
+    text: Zoeken
+  btnSave:
+    text: Startinstellingen opslaan
+    inputButton: true
+    inputSubmit: false
+    type: button
+  btnReset:
+    text: Wis scherm
+    inputButton: true
+    inputSubmit: false
+    type: button

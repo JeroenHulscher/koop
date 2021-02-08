@@ -205,8 +205,8 @@
       </div>
     </div>
 
-    <input type="button" name="name" value="Wis scherm" id="buttonId1" class="button" />
-    <input type="submit" name="name" value="Zoeken" id="buttonId2" class="button button--primary" />
+    {{ render "@button" btnReset merge=true }}
+    {{ render "@button--primary" btnSubmit merge=true }}
   </div>
 </div>
 
