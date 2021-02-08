@@ -14,427 +14,69 @@
   ],
   "scenarios": [
     {
-      "label": "boub - homepage",
-      "url": "http://localhost:3000/components/preview/templates-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-homepage.html"
+      "label": "templates-bwb-eurrichtlijnen-richtlijn",
+      "url": "http://localhost:3000/components/preview/templates-bwb-eurrichtlijnen-richtlijn",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-eurrichtlijnen-richtlijn.html"
     },
     {
-      "label": "boub - searchresults list",
-      "url": "http://localhost:3000/components/preview/templates-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults.html"
+      "label": "templates-bwb-eurrichtlijnen-zoeken",
+      "url": "http://localhost:3000/components/preview/templates-bwb-eurrichtlijnen-zoeken",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-eurrichtlijnen-zoeken.html"
     },
     {
-      "label": "boub - searchresults map",
-      "url": "http://localhost:3000/components/preview/templates-searchresults-map",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-searchresults-map.html",
-      "delay": 2000
+      "label": "templates-bwb-eurrichtlijnen-zoekresultaten",
+      "url": "http://localhost:3000/components/preview/templates-bwb-eurrichtlijnen-zoekresultaten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-eurrichtlijnen-zoekresultaten.html"
     },
     {
-      "label": "identifier - homepage",
-      "url": "http://localhost:3000/components/preview/templates-identifiernl-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-identifiernl-homepage.html"
+      "label": "templates-bwb-geselecteerdeelementen",
+      "url": "http://localhost:3000/components/preview/templates-bwb-geselecteerdeelementen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-geselecteerdeelementen.html"
     },
     {
-      "label": "plooi - homepage",
-      "url": "http://localhost:3000/components/preview/templates-plooi-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage.html"
+      "label": "templates-bwb-geselecteerdeelementen_print_exclusief-wti",
+      "url": "http://localhost:3000/components/preview/templates-bwb-geselecteerdeelementen_print_exclusief-wti",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-geselecteerdeelementen_print_exclusief-wti.html"
     },
     {
-      "label": "plooi - homepage uitgebreid",
-      "url": "http://localhost:3000/components/preview/templates-plooi-homepage-uitgebreid",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-homepage-uitgebreid.html"
+      "label": "templates-bwb-printen-regeling",
+      "url": "http://localhost:3000/components/preview/templates-bwb-printen-regeling",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-printen-regeling.html"
     },
     {
-      "label": "plooi - searchresults",
-      "url": "http://localhost:3000/components/preview/templates-plooi-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-searchresults.html"
+      "label": "templates-bwb-printen-resultaten",
+      "url": "http://localhost:3000/components/preview/templates-bwb-printen-resultaten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-printen-resultaten.html"
     },
     {
-      "label": "plooi - contentpage",
-      "url": "http://localhost:3000/components/preview/templates-plooi-contentpage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-plooi-contentpage.html"
+      "label": "templates-bwb-printen-resultaten-eu",
+      "url": "http://localhost:3000/components/preview/templates-bwb-printen-resultaten-eu",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-printen-resultaten-eu.html"
     },
     {
-      "label": "wetten.nl uitgebreid zoeken",
-      "url": "http://localhost:3000/components/preview/templates-search-laws-complex",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-search-laws-complex.html"
+      "label": "templates-bwb-regeling",
+      "url": "http://localhost:3000/components/preview/templates-bwb-regeling",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-regeling.html"
     },
     {
-      "label": "wetten.nl regeling wti",
-      "url": "http://localhost:3000/components/preview/templates-regeling-wti",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-regeling-wti.html"
+      "label": "templates-bwb-regeling-wti",
+      "url": "http://localhost:3000/components/preview/templates-bwb-regeling-wti",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-regeling-wti.html"
     },
     {
-      "label": "wetten.nl regeling info",
-      "url": "http://localhost:3000/components/preview/templates-regeling-info",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-regeling-info.html"
+      "label": "templates-bwb-zoekeneenvoudig",
+      "url": "http://localhost:3000/components/preview/templates-bwb-zoekeneenvoudig",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-zoekeneenvoudig.html"
     },
     {
-      "label": "wetten.nl regeling",
-      "url": "http://localhost:3000/components/preview/templates-regeling",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-regeling.html"
+      "label": "templates-bwb-zoekenuitgebreid",
+      "url": "http://localhost:3000/components/preview/templates-bwb-zoekenuitgebreid",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-zoekenuitgebreid.html"
     },
     {
-      "label": "Wetgevingskalender homepage",
-      "url": "http://localhost:3000/components/preview/templates-wk-hp",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-hp.html"
-    },
-    {
-      "label": "Wetgevingskalender results",
-      "url": "http://localhost:3000/components/preview/templates-wk-results",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-results.html"
-    },
-    {
-      "label": "Wetgevingskalender detail",
-      "url": "http://localhost:3000/components/preview/templates-wk-detail",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-detail.html"
-    },
-    {
-      "label": "Wetgevingskalender search",
-      "url": "http://localhost:3000/components/preview/templates-wk-search-extended",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-wk-search-extended.html"
-    },
-    {
-      "label": "Internetconsultatie homepage",
-      "url": "http://localhost:3000/components/preview/templates-ic-hp",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-hp.html"
-    },
-    {
-      "label": "Internetconsultatie detail",
-      "url": "http://localhost:3000/components/preview/templates-ic-detail",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-detail.html"
-    },
-    {
-      "label": "Internetconsultatie reply",
-      "url": "http://localhost:3000/components/preview/templates-ic-reply",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-reply.html"
-    },
-    {
-      "label": "Internetconsultatie search-extended",
-      "url": "http://localhost:3000/components/preview/templates-ic-search-extended",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic-search-extended.html"
-    },
-    {
-      "label": "Data homepage",
-      "url": "http://localhost:3000/components/preview/templates-data-home",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-home.html"
-    },
-    {
-      "label": "Data dataset",
-      "url": "http://localhost:3000/components/preview/templates-data-dataset",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-dataset.html"
-    },
-    {
-      "label": "Data kalender",
-      "url": "http://localhost:3000/components/preview/templates-data-kalender",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-kalender.html"
-    },
-    {
-      "label": "Data searchresults",
-      "url": "http://localhost:3000/components/preview/templates-data-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-searchresults.html"
-    },
-    {
-      "label": "Data searchresults",
-      "url": "http://localhost:3000/components/preview/templates-data-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-data-searchresults.html"
-    },
-    {
-      "label": "Previewportaal Homepage",
-      "url": "http://localhost:3000/components/preview/templates-preview-portaal-hp",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-hp.html"
-    },
-    {
-      "label": "Previewportaal Detail",
-      "url": "http://localhost:3000/components/preview/templates-preview-portaal-detail",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-detail.html"
-    },
-    {
-      "label": "Previewportaal Overview",
-      "url": "http://localhost:3000/components/preview/templates-preview-portaal-overview",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-overview.html"
-    },
-    {
-      "label": "Previewportaal Kaartpagina",
-      "url": "http://localhost:3000/components/preview/templates-preview-portaal-kaartpagina",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-preview-portaal-kaartpagina.html"
-    },
-    {
-      "label": "STOP XML Elementen",
-      "url": "http://localhost:3000/components/preview/templates-1stop-xml-elementen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/templates-stopxml/templates-1stop-xml-elementen.html"
-    },
-    {
-      "label": "Verdragenbank - homepage",
-      "url": "http://localhost:3000/components/preview/templates-verdr-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-homepage.html"
-    },
-    {
-      "label": "Verdragenbank - searchresults",
-      "url": "http://localhost:3000/components/preview/templates-verdr-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-searchresults.html"
-    },
-    {
-      "label": "Verdragenbank - wizard",
-      "url": "http://localhost:3000/components/preview/templates-verdr-wizard",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard.html"
-    },
-    {
-      "label": "Verdragenbank - wizard2",
-      "url": "http://localhost:3000/components/preview/templates-verdr-wizard2",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard2.html"
-    },
-    {
-      "label": "Verdragenbank - wizard3",
-      "url": "http://localhost:3000/components/preview/templates-verdr-wizard3",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-verdr-wizard3.html"
-    },
-    {
-      "label": "CUP - Homepage",
-      "url": "http://localhost:3000/components/preview/templates-cup-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-homepage.html"
-    },
-    {
-      "label": "CUP - Content",
-      "url": "http://localhost:3000/components/preview/templates-cup-content",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-content.html"
-    },
-    {
-      "label": "CUP - Browse",
-      "url": "http://localhost:3000/components/preview/templates-cup-browse",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse.html"
-    },
-    {
-      "label": "CUP - Browse (vervolg)",
-      "url": "http://localhost:3000/components/preview/templates-cup-browse-vervolg",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cup-browse-vervolg.html"
-    },
-    {
-      "label": "CVDR - Homepage",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage.html"
-    },
-    {
-      "label": "CVDR - Homepage uitgebreid",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-homepage-uitgebreid",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-homepage-uitgebreid.html"
-    },
-    {
-      "label": "CVDR - Content",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-contentpage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-contentpage.html"
-    },
-    {
-      "label": "CVDR - searchresults",
-      "url": "http://localhost:3000/components/preview/templates-cvdr-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-cvdr-searchresults.html"
-    },
-    {
-      "label": "tucht - Homepage",
-      "url": "http://localhost:3000/components/preview/templates-tucht-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-homepage.html"
-    },
-    {
-      "label": "tucht - Homepage uitgebreid",
-      "url": "http://localhost:3000/components/preview/templates-tucht-homepage-uitgebreid",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-homepage-uitgebreid.html"
-    },
-    {
-      "label": "tucht - Content",
-      "url": "http://localhost:3000/components/preview/templates-tucht-contentpage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-contentpage.html"
-    },
-    {
-      "label": "tucht - searchresults",
-      "url": "http://localhost:3000/components/preview/templates-tucht-searchresults",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-tucht-searchresults.html"
-    },
-    {
-      "label": "att - templates-aanm-aanmelding-bevestigd",
-      "url": "http://localhost:3000/components/preview/templates-aanm-aanmelding-bevestigd",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-aanmelding-bevestigd.html"
-    },
-    {
-      "label": "att - templates-aanm-afgemeld",
-      "url": "http://localhost:3000/components/preview/templates-aanm-afgemeld",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-afgemeld.html"
-    },
-    {
-      "label": "att - templates-aanm-afmelden",
-      "url": "http://localhost:3000/components/preview/templates-aanm-afmelden",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-afmelden.html"
-    },
-    {
-      "label": "att - templates-aanm-bevestig-aanmelding",
-      "url": "http://localhost:3000/components/preview/templates-aanm-bevestig-aanmelding",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-bevestig-aanmelding.html"
-    },
-    {
-      "label": "att - templates-aanm-stap1",
-      "url": "http://localhost:3000/components/preview/templates-aanm-stap1",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap1.html"
-    },
-    {
-      "label": "att - stap 2",
-      "url": "http://localhost:3000/components/preview/templates-aanm-stap2",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap2.html"
-    },
-    {
-      "label": "att - stap 3",
-      "url": "http://localhost:3000/components/preview/templates-aanm-stap3",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-aanm-stap3.html",
-      "delay": 1000
-    },
-    {
-      "label": "att - templates-beh-abowijzigen",
-      "url": "http://localhost:3000/components/preview/templates-beh-abowijzigen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-abowijzigen.html",
-      "delay": 2000
-    },
-    {
-      "label": "att - templates-beh-dashboard",
-      "url": "http://localhost:3000/components/preview/templates-beh-dashboard",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-dashboard.html"
-    },
-    {
-      "label": "att - templates-beh-login",
-      "url": "http://localhost:3000/components/preview/templates-beh-login",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-login.html"
-    },
-    {
-      "label": "att - templates-beh-profile",
-      "url": "http://localhost:3000/components/preview/templates-beh-profile",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-beh-profile.html"
-    },
-    {
-      "label": "att - templates-reg-account-aanmaken",
-      "url": "http://localhost:3000/components/preview/templates-reg-account-aanmaken",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-account-aanmaken.html"
-    },
-    {
-      "label": "att - templates-reg-bevestigingregistratie",
-      "url": "http://localhost:3000/components/preview/templates-reg-bevestigingregistratie",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-bevestigingregistratie.html"
-    },
-    {
-      "label": "att - templates-reg-vernieuw-wachtwoord",
-      "url": "http://localhost:3000/components/preview/templates-reg-vernieuw-wachtwoord",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-vernieuw-wachtwoord.html"
-    },
-    {
-      "label": "att - templates-reg-wachtwoord-opgevraagd",
-      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoord-opgevraagd",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoord-opgevraagd.html"
-    },
-    {
-      "label": "att - templates-reg-wachtwoord-vergeten",
-      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoord-vergeten",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoord-vergeten.html"
-    },
-    {
-      "label": "att - templates-reg-wachtwoordvernieuwd",
-      "url": "http://localhost:3000/components/preview/templates-reg-wachtwoordvernieuwd",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-reg-wachtwoordvernieuwd.html"
-    },
-    {
-      "label": "Foutpagina",
-      "url": "http://localhost:3000/components/preview/templates-page-error",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-page-error.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-document",
-      "url": "http://localhost:3000/components/preview/templates-oeb-document",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-document.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-homepage",
-      "url": "http://localhost:3000/components/preview/templates-oeb-homepage",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-homepage.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-resultaten",
-      "url": "http://localhost:3000/components/preview/templates-oeb-resultaten",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-resultaten.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-zoek-bekendmakingen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-zoek-bekendmakingen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-zoek-bekendmakingen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-zoek-documenten",
-      "url": "http://localhost:3000/components/preview/templates-oeb-zoek-documenten",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-zoek-documenten.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-document-info",
-      "url": "http://localhost:3000/components/preview/templates-oeb-document-info",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-document-info.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-abo-aanmaken",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-abo-aanmaken",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-abo-aanmaken.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-account-activeren",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-account-activeren",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-account-activeren.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-account-verwijderen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-account-verwijderen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-account-verwijderen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-codeaanvragen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-codeaanvragen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-codeaanvragen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-emailadres-vernieuwen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-emailadres-vernieuwen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-emailadres-vernieuwen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-emailadres-vernieuwen-bevestigen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-emailadres-vernieuwen-bevestigen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-emailadres-vernieuwen-bevestigen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-login",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-login",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-login.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-login-foutmelding",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-login-foutmelding",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-login-foutmelding.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-mijnabonnementen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-mijnabonnementen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-mijnabonnementen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-registreren",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-registreren",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-registreren.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-wachtwoord-instellen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-instellen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-instellen.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-wachtwoord-reset",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-reset",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-reset.html"
-    },
-    {
-      "label": "oebnl - templates-oeb-mijn-wachtwoord-vernieuwen",
-      "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-vernieuwen",
-      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-vernieuwen.html"
+      "label": "templates-bwb-zoekresultaten",
+      "url": "http://localhost:3000/components/preview/templates-bwb-zoekresultaten",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/bwb/components/preview/templates-bwb-zoekresultaten.html"
     }
   ],
   "paths": {
