@@ -1,11 +1,11 @@
 {{#if anchor }}
-  <a {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" href="{{ action }}" role="button" {{ disabled }}>{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</a>
+  <a {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" href="{{ action }}" role="button" {{ disabled }} {{attributes}}>{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</a>
 {{else if button }}
-  <button {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" {{#if type}}type="{{type}}"{{/if}} {{ disabled }}>{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</button>
+  <button {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" {{#if type}}type="{{type}}"{{/if}} {{ disabled }} {{attributes}}>{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</button>
 {{else if buttonWithDivider}}
-  <button {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" type="button" {{ disabled }}><span class="divider">{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</span></button>
+  <button {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" type="button" {{ disabled }} {{attributes}}><span class="divider">{{ text }}{{#if text2}} <span class="button__sub">{{text2 }}</span>{{/if}}</span></button>
 {{else if inputButton }}
-  <input {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" type="button" value="{{ text }}" {{ disabled }}/>
+  <input {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" type="button" value="{{ text }}" {{ disabled }} {{attributes}}/>
 {{else if inputSubmit }}
-  <input {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" type="submit" value="{{ text }}" {{ disabled }}/>
+  <input {{#if id}}id="{{id}}"{{/if}} class="button {{ modifier }}" type="submit" value="{{ text }}" {{ disabled }} {{attributes}}/>
 {{/if}}
