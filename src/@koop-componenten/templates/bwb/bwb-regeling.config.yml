@@ -60,11 +60,13 @@ context:
     versionLabel: Toon wetstechnische informatie
     versionHref: '/BWBR0008994/1998-01-01/0/informatie'
     compare: true
+    compareMode: true
     compareLabel: Versie vergelijk
     compareModalId: popupvergelijken
     compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
     compareAClass: popupvergelijken
     print: true
+    printModal: true
     printLabel: Druk de regeling af
     printModalId: popupafdrukken
     printAClass: popupafdrukken
@@ -182,11 +184,13 @@ context:
     versionLabel: Toon wetstechnische informatie
     versionHref: '/BWBR0008994/1998-01-01/0/informatie'
     compare: true
+    compareModal: true
     compareLabel: Versie vergelijk
     compareModalId: popupvergelijken
     compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
     compareAClass: popupvergelijken
     print: true
+    printModal: true
     printLabel: Druk de regeling af
     printModalId: popupafdrukken
     printAClass: popupafdrukken
@@ -206,4 +210,38 @@ context:
     useTitle: true
     titleTag: h3
     counter: Artikel 1.1
-    relationsAmount: 1
+    relations: true
+    relationsLabel: Toon relaties in LiDO
+    relationsHref: '#'
+    relationsClass: aantallen-lido
+    relationsAModalId: popuplidorelaties
+    relationsAClass: popuplidorelaties
+    relationsAHref: /jci1.3:c:BWBR0032203&deel=1&hoofdstuk=1.1&artikel=1.1&z=2019-04-18&g=2019-04-18
+    relationsDataAttributes: 'data-juriconnectid="jci1.3:c:BWBR0032203&amp;deel=1&amp;hoofdstuk=1.1&amp;artikel=1.1&amp;z=2019-04-18&amp;g=2019-04-18" data-bwbngid="http://wetten.overheid.nl/id/BWBR0032203/2019-04-18/0/Deel1/Hoofdstuk1.1/Artikel1.1"'
+    relationsADataAttributes: "data-juriconnectverwijzing='jci1.3:c:BWBR0032203&deel=1&hoofdstuk=1.1&artikel=1.1&z=2019-04-18&g=2019-04-18'"
+    permalink: true
+    permalinkLabel: Maak een permanente link
+    permalinkAModalId: popuppermanentelink
+    permalinkAClass: popuppermanentelink
+    permalinkAHref: /jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01
+    permalinkDataAttributes: data-juriconnectverwijzing="jci1.3:c:BWBR0008994&z=1998-01-01&g=1998-01-01" data-citeertitel="Aanpassingswet derde tranche Awb I" data-linktoolurl="https://linkeddata.overheid.nl/front/portal/linktool-bwb-verfijnen?ext-id=http%3a%2f%2fwetten.overheid.nl%2fid%2fBWBR0008994%2f1998-01-01%2f0&amp;geldigheidsdatum=2020-09-28&amp;zichtdatum=2021-01-27"
+    version: true
+    versionLabel: Toon wetstechnische informatie
+    versionHref: '/BWBR0008994/1998-01-01/0/informatie'
+    compare: true
+    compareModal: true
+    compareLabel: Versie vergelijk
+    compareModalId: popupvergelijken
+    compareDataAttributes: data-inwerking="21-12-2018" data-hashfragmentid="" data-bwb-id="BWBR0001840" data-toestand-id="2018-12-21" data-volgnummer="0" data-label-id=""
+    compareAClass: popupvergelijken
+    print: true
+    printModal: true
+    printLabel: Druk de regeling af
+    printModalId: popupafdrukken
+    printAClass: popupafdrukken
+    export: true
+    exportModal: true
+    exportModalId: popupexporteren
+    exportLabel: Sla de regeling op
+    exportAClass: popupexporteren
+    exportHref: '/BWBR0001840/2018-12-21/0'

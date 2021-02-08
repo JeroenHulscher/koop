@@ -16,26 +16,27 @@
 
       <h2>Inhoudsopgave</h2>
 
+      <h3>Aanbestedingswet 2012</h3>
+      {{ render "@treeview" treeview }}
+
       <h3>Aanbestedingswet op defensie- en veiligheidsgebied</h3>
       {{ render "@treeview" treeview }}
 
-      <h3>Aanbestedingswet 2012</h3>
-      {{ render "@treeview" treeview }}
+
     </div>
   </div>
   <div id="geselecteerdeonderdelen">
     <form method="post">
 
-      <h1>Geselecteerde elementen (2)</h1>
+      <h1>Geselecteerde elementen (3)</h1>
 
       {{ render "@article-header" counterFirst }}
 
 
       <div class="fragment-header">
-        <h1>Aanbestedingswet op defensie- en veiligheidsgebied</h1>
+        <h1>Aanbestedingswet 2012</h1>
+        {{ render "@article-header" counter }}
       </div>
-
-      {{ render "@article-header" counter }}
 
       {{#> @modal popuplidorelaties }}
         <h2>Externe relaties (0)</h2>
@@ -157,34 +158,19 @@
                 </form>
                 {{/@modal}}
 
-                <p>Wet van 28 januari 2013 inzake implementatie van richtlijn nr. 2009/81/EG van het Europees Parlement
-                  en
-                  de Raad van 13 juli 2009 betreffende de coördinatie van de procedures voor het plaatsen door
-                  aanbestedende diensten van bepaalde opdrachten voor werken, leveringen en diensten op defensie- en
-                  veiligheidsgebied, en tot wijziging van richtlijnen 2004/17/EG en 2004/18/EG (Aanbestedingswet op
-                  defensie- en veiligheidsgebied)</p>
-                <p>Wij Beatrix, bij de gratie Gods, Koningin der Nederlanden, Prinses van Oranje-Nassau, enz. enz. enz.
-                </p>
-                <p>Allen, die deze zullen zien of horen lezen, saluut! doen te weten:</p>
-                <p>Alzo Wij in overweging genomen hebben, dat het noodzakelijk is om te voorzien in wettelijke regels om
-                  uitvoering te geven aan <a href="?celex=32009L0081" rel="nofollow">richtlijn nr. 2009/81/EG</a> van
-                  het
-                  Europees Parlement en de Raad van 13 juli 2009 betreffende de coördinatie van de procedures voor het
-                  plaatsen door aanbestedende diensten van bepaalde opdrachten voor werken, leveringen en diensten op
-                  defensie- en veiligheidsgebied, en tot wijziging van <a href="?celex=32004L0017"
-                    rel="nofollow">richtlijnen 2004/17/EG</a> en <a href="?celex=32004L0018"
-                    rel="nofollow">2004/18/EG</a>
-                  (PbEU L 216);</p>
-                <p>Zo is het, dat Wij, de Afdeling advisering van de Raad van State gehoord, en met gemeen overleg der
-                  Staten-Generaal, hebben goedgevonden en verstaan, gelijk Wij goedvinden en verstaan bij deze:</p>
+                <p>Wet van 1 november 2012, houdende nieuwe regels omtrent aanbestedingen (Aanbestedingswet 2012)</p>
 
                 <div class="fragment-header">
-                  <h1>Aanbestedingswet 2012</h1>
+                  <h1>Aanbestedingswet op defensie- en veiligheidsgebied</h1>
+                {{ render "@article-header" counter1 }}
                 </div>
+                <div>
+                  <div class="wetgeving">
+                    <p>Wet van 28 januari 2013 inzake implementatie van richtlijn nr. 2009/81/EG van het Europees Parlement en de Raad van 13 juli 2009 betreffende de coördinatie van de procedures voor het plaatsen door aanbestedende diensten van bepaalde opdrachten voor werken, leveringen en diensten op defensie- en veiligheidsgebied, en tot wijziging van richtlijnen 2004/17/EG en 2004/18/EG (Aanbestedingswet op defensie- en veiligheidsgebied)</p>
 
-                {{ render "@article-header" counter }}
-
-                <p>Tekst regeling</p>
+                    {{ render "@article-header" counter2 }}
+                  </div>
+                </div>
 
                 <input type="hidden" value="BWBR0008994" name="hiddenBWBId" id="hiddenBWBId" />
                 <input type="hidden" name="ctl00$cphContent$hfApplicatieURL" id="hfApplicatieURL"

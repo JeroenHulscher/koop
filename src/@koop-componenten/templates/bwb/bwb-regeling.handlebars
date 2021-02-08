@@ -671,6 +671,17 @@
 
 </div>
 
+<script type="text/javascript">
+//<![CDATA[
+function MaakVergelijkUrl( datum, versie, hash)
+{
+    var url = '/BWBR0032203/2019-04-18?VergelijkMet=BWBR0032203%3fg%3d' + datum + '%26v%3d' + versie;
+    if( hash != '') url += '#' + hash;
+
+    return url;
+}//]]>
+</script>
+
 {{ render "@to-top" }}
 
 {{ render "@footer" }}
