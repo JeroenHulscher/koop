@@ -13,18 +13,10 @@
     color: $darkBlue;
     text-decoration: underline;
     display: inline-block;
-    outline: 2px solid transparent;
-    outline-offset: .5em;
-    transition: outline-offset $fastEaseInOut;
 
     &:hover {
       cursor: pointer;
       text-decoration: none;
-    }
-
-    &:focus {
-      outline: 2px solid $yellow;
-      outline-offset: 0;
     }
 
     &.is-filled {
@@ -96,9 +88,6 @@
         cursor: pointer;
         pointer-events: auto;
         display: inline-block;
-        outline: 2px solid transparent;
-        outline-offset: .5em;
-        transition: outline-offset $fastEaseInOut;
 
         &::-moz-focus-inner {
           border: none;
@@ -106,8 +95,6 @@
         }
 
         &:focus {
-          outline: 2px solid $yellow;
-          outline-offset: 0;
           z-index: 1;
         }
       }

@@ -13,12 +13,8 @@
   }
   display: inline-block;
   transition: background-color $fastEaseInOut, outline-offset $fastEaseInOut;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
 
   &:focus {
-    outline: 2px solid $focus;
-    outline-offset: 0;
     z-index: 1;
   }
 }

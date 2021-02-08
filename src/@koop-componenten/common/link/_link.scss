@@ -1,8 +1,6 @@
 a {
   color: $darkBlue;
   text-decoration: underline;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
   word-break: break-word;
 
@@ -19,11 +17,6 @@ a {
     .related--primaryBlue & {
       background-image: $externalLinkWhiteIcon;
     }
-  }
-
-  &:focus {
-    outline-color: $focus;
-    outline-offset: 0;
   }
 
   &:hover {

@@ -12,15 +12,7 @@ textarea {
   padding: .6em .8em;
   font-size: 1em;
   height: 50px;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
-  transition: outline-offset $fastEaseInOut;
   margin: 0;
-
-  &:focus {
-    outline: 2px solid #ffb612;
-    outline-offset: 0;
-  }
 
   &.has-error {
     border-color: $red;
@@ -33,10 +25,6 @@ textarea {
     background-color: $lightGrey;
     border-color: $mediumGrey;
     color: $darkGrey;
-
-    &:focus {
-      outline: none;
-    }
   }
 }
 textarea {

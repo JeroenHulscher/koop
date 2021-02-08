@@ -95,10 +95,6 @@
         background-color: $mediumGrey;
       }
 
-      &:focus {
-        outline: 2px solid #ffb612;
-        outline-offset: 0;
-      }
     }
 
     @include fade-in-and-out(-58px, 0, 0.75s);

@@ -43,9 +43,6 @@
     &:focus {
       background-image: $explanationHoverIcon;
     }
-    &:focus {
-      outline: 2px solid $focus;
-    }
   }
 
   &__content {
