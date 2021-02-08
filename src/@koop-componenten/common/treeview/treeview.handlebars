@@ -15,15 +15,15 @@
       <small>Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</small>
     </a>
 
-    <ul id="unique-id-1" hidden>
+    <ul id="unique-id-{{id}}1" hidden>
       <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1</a>
           <span>(Artikelen 1.1-1.23)</span>
-        <ul id="unique-id-2" hidden>
+        <ul id="unique-id-{{id}}2" hidden>
           <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a>
            <span>(Artikelen 1.1-1.23)</span>
          </li>
           <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
-            <ul id="unique-id-3" hidden>
+            <ul id="unique-id-{{id}}3" hidden>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
                 <ul hidden>
@@ -32,7 +32,7 @@
                 </ul>
               </li>
             </ul>
-            <ul id="unique-id-4" hidden>
+            <ul id="unique-id-{{id}}4" hidden>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.1</a></li>
               <li><a href="#"{{#if foldability }} data-decorator="add-foldability"{{/if}}>Artikel 1.2</a>
                 <ul hidden>
