@@ -8,24 +8,11 @@ del {
   }
 
 
-	&::before,
-	&::after {
-		clip-path: inset(100%);
-		clip: rect(1px, 1px, 1px, 1px);
-		height: 1px;
-		overflow: hidden;
-		position: absolute;
-		white-space: nowrap;
-		width: 1px;
-	}
-
-	&::before {
-  	content: " [start van verwijderde tekst] ";
-	}
-
-	&::after {
-  	content: " [einde van verwijderde tekst] ";
-	}
+  > img {
+    border: 2px dashed $lightRed;
+    margin: .25em;
+    display: inline-block;
+  }
 }
 
 ins {
@@ -37,12 +24,46 @@ ins {
   > * {
     background: $lightGreen;
   }
+
+  > img {
+    border: 2px dashed $lightGreen;
+    margin: .25em;
+    display: inline-block;
+  }
+}
+
+del ~ figcaption,
+del ~ .figcaption,
+ins ~ figcaption {
+  position: absolute;
+  left: .5em;
+  top: 0.5em;
+}
+
+del,
+ins {
+  picture {
+    padding: 2.5em .5em .5em .5em;
+    display: inline-block;
+  }
 }
 
 .ins,
 .del {
   margin: 0 0 1.5em 0;
   background: $lightGreen;
+
+  &--img {
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+
+    .figcaption {
+      font-size: 0.8em;
+      display: block;
+    }
+  }
 
   &--block {
     text-decoration: none;
@@ -55,6 +76,10 @@ ins {
     }
     p + * {
       margin-top: .5em;
+    }
+
+    .figcaption {
+      font-style: italic;
     }
 
     .table__container {

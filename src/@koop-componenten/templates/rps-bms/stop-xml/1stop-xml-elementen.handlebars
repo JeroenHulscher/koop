@@ -22,8 +22,9 @@
       De Minister van Economische Zaken en Klimaat, de Minister van Infrastructuur en Waterstaat, de Minister van
       Justitie en
       Veiligheid, de Minister van Landbouw, Natuur en Voedselkwaliteit, de Minister van Onderwijs, Cultuur en
-      Wetenschap; Gedaan, mede namens de Minister van Defensie, <img src="/images/temp/wat-doet-overheid.jpg"
-        class="valign valign--middle" width="70" height="40" /> de Minister van Economische Zaken en Klimaat, de
+      Wetenschap; Gedaan, mede namens de Minister van Defensie, <del class="del del--img"><img src="/images/temp/wat-doet-overheid.jpg"
+        class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Verwijderde afbeelding</span></del><ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg"
+        class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Toegevoegde afbeelding</span></ins> de Minister van Economische Zaken en Klimaat, de
       Minister van Infrastructuur en Waterstaat, de Minister van Justitie en Veiligheid, de Minister
       van Landbouw, Natuur en Voedselkwaliteit, de Minister van Onderwijs, Cultuur en Wetenschap;
     </p>
@@ -40,6 +41,12 @@
     <blockquote>
       Dit is een <del>blockqoate</del><ins>blockquote</ins>.
     </blockquote>
+    <ins class="ins ins--block">
+      <p class="figcaption">Toegevoegde tekst</p>
+      <blockquote>
+        Dit is een nieuwe blockquote.
+      </blockquote>
+    </ins>
 
     <h2>Lijst - custom</h2>
     {{ render "@list--custom" listCustom merge=true }}
@@ -48,13 +55,13 @@
     {{ render "@definitionlist" dlList }}
 
     <h2>Afbeelding</h2>
-
     <p>
-      <del><img src="/images/temp/wat-doet-overheid.jpg" width="200" height="80" /></del>
+      <del class="del del--img"><img src="/images/temp/wat-doet-overheid.jpg" class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Verwijderde afbeelding</span></del>
+      <ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg" class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Toegevoegde afbeelding</span></ins>
     </p>
     <p>
-      <figure><del><picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-6.png" style="" width="" height="auto" alt="stcrt-2020-64380-6.png" /></picture></del></figure>
-      <figure><ins><picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" width="" height="auto" alt="stcrt-2020-64380-7.png" /></picture></ins></figure>
+      <figure><del><picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-6.png" style="" width="" height="auto" alt="stcrt-2020-64380-6.png" /></picture></del><figcaption>Verwijderde afbeelding</figcaption></figure>
+      <figure><ins><picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" width="" height="auto" alt="stcrt-2020-64380-7.png" /></picture></ins><figcaption>Toegevoegde afbeelding</figcaption></figure>
     </p>
 
     <p>
@@ -193,26 +200,40 @@
             <th scope="col" colspan="3">Row 3</th>
           </tr>
           <tr class="table__rowheading table__rowheading--lvl4">
-            <th scope="col" colspan="3">Row 4</th>
+            <th scope="col" colspan="3"><del>Row 7</del><ins>row 4</ins></th>
           </tr>
           <tr class="table__rowheading table__rowheading--lvl5">
             <th scope="col" colspan="3">Row 5</th>
+          </tr>
+          <tr class="table__rowheading table__rowheading--lvl5 ins">
+            <th scope="col" colspan="3" class="ins"><ins>Row 6</ins></th>
           </tr>
           <tr class="table__rowheading table__rowheading--lvl6">
             <th scope="col">Klasse</th>
             <th scope="col">Jaren</th>
             <th scope="col"></th>
           </tr>
-          <tr>
-            <td>1A</td>
-            <td>5</td>
-            <td>Tijdelijke bouwwerken, anders dan een woonfunctie: waarbij de termijn genoemd in de omgevingsvergunning
+          <tr class="del">
+            <td><del>1A</del></td>
+            <td><del>5</del></td>
+            <td><del>Tijdelijke bouwwerken, anders dan een woonfunctie: waarbij de termijn genoemd in de omgevingsvergunning
               als bedoeld in
               PM niet langer is dan 5 jaar of die vergunningsvrij zijn voor de activiteit bouwen als bedoeld in PM. Voor
               bouwwerken
               in gevolgklasse CC2 of CC3: binnen deze klasse moeten de in rekening te brengen belastingen zijn gebaseerd
               op een referentieperiode
-              van 15 jaar. Voor CC1 is dit 5 jaar.</td>
+              van 15 jaar. Voor CC1 is dit 5 jaar.</del></td>
+          </tr>
+          <tr class="ins">
+            <td><ins>1A</ins></td>
+            <td><ins>5</ins></td>
+            <td><ins>Tijdelijke bouwwerken, anders dan een woonfunctie: waarbij de termijn genoemd in de omgevingsvergunning
+              als bedoeld in
+              PM niet langer is dan 5 jaar of die vergunningsvrij zijn voor de activiteit bouwen als bedoeld in PM. Voor
+              bouwwerken
+              in gevolgklasse CC2 of CC3: binnen deze klasse moeten de in rekening te brengen belastingen zijn gebaseerd
+              op een referentieperiode
+              van 15 jaar. Voor CC1 is dit 5 jaar.</ins></td>
           </tr>
           <tr>
             <th scope="col">Klasse</th>
@@ -503,6 +524,30 @@
             <ins>Header kolom 1</ins>
           </th>
           <th>
+            <span class="rotated">
+              <del>Text</del>
+              <ins>Header kolom 2</ins>
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table--condensed">
+      <caption>Tabel, condensed.</caption>
+      <thead>
+        <tr class="table__rowheading table__rowheading--lvl1">
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 1</ins>
+          </th>
+          <th>
             <del>Text</del>
             <ins>Header kolom 2</ins>
           </th>
@@ -516,8 +561,100 @@
       </tbody>
     </table>
 
+    <table class="table table--borderless">
+      <caption>Tabel, <del>borderloos</del><ins>borderless</ins>.</caption>
+      <thead>
+        <tr class="table__rowheading table__rowheading--lvl1">
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 1</ins>
+          </th>
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 2</ins>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table--borderless">
+      <caption>Tabel, met footnote.</caption>
+      <thead>
+        <tr class="table__rowheading table__rowheading--lvl1">
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 1</ins>
+          </th>
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 2</ins>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="5">
+            <ul class="list-custom footnotes">
+              <li class="list-custom__item" id="n1">
+                <ins>
+                  <span class="list-custom__itembullet">1</span>
+                  <p>
+                    Bal: Besluit activiteiten leefomgeving; Bbl: Besluit bouwwerken leefomgeving; Bkl: Besluit kwaliteit leefomgeving. <a href="#n1-link" class="reference">Terug naar link van noot.</a>
+                  </p>
+                </ins>
+              </li>
+            </ul>
+        </td>
+      </tr>
+    </tfoot>
+    </table>
+
+    <table class="table table--striped">
+      <caption>Tabel, striped.</caption>
+      <thead>
+        <tr class="table__rowheading table__rowheading--lvl1">
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 1</ins>
+          </th>
+          <th>
+            <del>Text</del>
+            <ins>Header kolom 2</ins>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+        <tr class="del">
+          <td><del>Waarde kolom 1, rij 1</del></td>
+          <td><del>Waarde kolom 2, rij 1</del></td>
+        </tr>
+        <tr>
+          <td>Waarde kolom 1, rij 1</td>
+          <td>Waarde kolom 2, rij 1</td>
+        </tr>
+      </tbody>
+    </table>
+
     <ins class="ins ins--block">
+      <p class="figcaption">Toegevoegde tekst</p>
       <table class="table">
+        <caption>Tabel, in een blok.</caption>
         <thead>
           <tr class="table__rowheading table__rowheading--lvl1">
             <th>Header kolom 1</th>
@@ -534,7 +671,9 @@
     </ins>
 
     <del class="del del--block">
+      <p class="figcaption">Verwijderde tekst</p>
       <table class="table">
+        <caption>Tabel, in een blok.</caption>
         <thead>
           <tr class="table__rowheading table__rowheading--lvl1">
             <th>Header kolom 1</th>
