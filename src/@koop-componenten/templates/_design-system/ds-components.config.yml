@@ -77,8 +77,6 @@ context:
           href: buttons
         - stitle: Buttongroup
           href: buttongroup
-        - stitle: CopyData
-          href: copydata
         - stitle: Characteristics
           href: characteristics
         - stitle: Collapsible
@@ -292,3 +290,5 @@ context:
     id: 2765432
   profileLoggedin2:
     id: 2765431
+  selectall:
+    id: 9767890
