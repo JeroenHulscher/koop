@@ -72,3 +72,7 @@ context:
     closeButton: Toevoegen
     copydata:
       url: https://www.officielebekendmakingen.nl/gmb-2020-233106.html
+  tt100:
+    id: 9876545678
+  alertIntro:
+    text: <p class="u-nomargin"><strong>Dit artikel bevat verschilmarkering t.o.v. eerdere regelingtekst.</strong></p><p>Tekst en afbeeldingen die worden toegevoegd zijn onderstreept en groen gemarkeerd, of van een groen kader voorzien. Tekst en afbeeldingen die worden verwijderd zijn doorgestreept en rood gemarkeerd, of van een rood kader voorzien. Terug naar link van noot.</p>

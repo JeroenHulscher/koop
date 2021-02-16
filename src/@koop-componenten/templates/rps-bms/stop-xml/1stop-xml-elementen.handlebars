@@ -23,8 +23,8 @@
       Justitie en
       Veiligheid, de Minister van Landbouw, Natuur en Voedselkwaliteit, de Minister van Onderwijs, Cultuur en
       Wetenschap; Gedaan, mede namens de Minister van Defensie, <del class="del del--img"><img src="/images/temp/wat-doet-overheid.jpg"
-        class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Verwijderde afbeelding</span></del><ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg"
-        class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Toegevoegde afbeelding</span></ins> de Minister van Economische Zaken en Klimaat, de
+        class="valign valign--middle" width="70" height="40" alt="alt tekst" /></del><ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg"
+        class="valign valign--middle" width="70" height="40" alt="alt tekst" /></ins> de Minister van Economische Zaken en Klimaat, de
       Minister van Infrastructuur en Waterstaat, de Minister van Justitie en Veiligheid, de Minister
       van Landbouw, Natuur en Voedselkwaliteit, de Minister van Onderwijs, Cultuur en Wetenschap;
     </p>
@@ -48,6 +48,8 @@
       </blockquote>
     </ins>
 
+
+
     <h2>Lijst - custom</h2>
     {{ render "@list--custom" listCustom merge=true }}
 
@@ -56,20 +58,46 @@
 
     <h2>Afbeelding</h2>
     <p>
-      <del class="del del--img"><img src="/images/temp/wat-doet-overheid.jpg" class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Verwijderde afbeelding</span></del>
-      <ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg" class="valign valign--middle" width="70" height="40" alt="alt tekst" /><span class="figcaption">Toegevoegde afbeelding</span></ins>
+      <del class="del del--img"><img src="/images/temp/wat-doet-overheid.jpg" class="valign valign--middle" width="70" height="40" alt="alt tekst" /></del>
+      <ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg" class="valign valign--middle" width="70" height="40" alt="alt tekst" /></ins>
     </p>
-    <p>
-      <figure><del><picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-6.png" style="" width="" height="auto" alt="stcrt-2020-64380-6.png" /></picture></del><figcaption>Verwijderde afbeelding</figcaption></figure>
-      <figure><ins><picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" width="" height="auto" alt="stcrt-2020-64380-7.png" /></picture></ins><figcaption>Toegevoegde afbeelding</figcaption></figure>
-    </p>
+
+    <h2>Figure</h2>
+    <h3>Standaard del/in</h3>
+    <ins class="ins ins--figure">
+      <figure>
+        <picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" alt="stcrt-2020-64380-7.png" /></picture>
+        <figcaption>Dit is de bron.</figcaption>
+      </figure>
+    </ins>
+    <del class="del del--figure">
+      <figure>
+        <picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" alt="stcrt-2020-64380-7.png" /></picture>
+        <figcaption>Dit is de bron.</figcaption>
+      </figure>
+    </del>
+    <h3>Aangepaste afbeelding</h3>
+    <figure>
+      <picture><del><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" alt="stcrt-2020-64380-7.png" /></del><ins><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" alt="stcrt-2020-64380-7.png" /></ins></picture>
+      <figcaption>Dit is de bron.</figcaption>
+    </figure>
+    <h3>Aangepaste tekst (figcaption)</h3>
+    <figure>
+      <picture><img src="https://zoek.officielebekendmakingen.nl/stcrt-2020-64380-7.png" style="" alt="stcrt-2020-64380-7.png" /></picture>
+      <figcaption><del>Dit is de bron.</del><ins>De formule voor ultiem geluk.</ins></figcaption>
+    </figure>
+
+
+
+
+
 
     <p>
       De Minister van Economische Zaken en Klimaat, de Minister van Infrastructuur en Waterstaat, de Minister van
       Justitie en
       Veiligheid, de Minister van Landbouw, Natuur en Voedselkwaliteit, de Minister van Onderwijs, Cultuur en
       Wetenschap; Gedaan, mede namens de Minister van Defensie, <img src="/images/temp/wat-doet-overheid.jpg"
-        class="valign valign--middle" width="70" height="40" /> de Minister van Economische Zaken en Klimaat, de
+        class="valign valign--middle" width="70" height="40" alt="alt tekst"/> de Minister van Economische Zaken en Klimaat, de
       Minister van Infrastructuur en Waterstaat, de Minister van Justitie en Veiligheid, de Minister
       van Landbouw, Natuur en Voedselkwaliteit, de Minister van Onderwijs, Cultuur en Wetenschap;
     </p>
@@ -192,7 +220,7 @@
           </tr>
         </thead>
 
-        <body>
+        <tbody>
           <tr class="table__rowheading table__rowheading--lvl2">
             <th scope="col" colspan="3">Row 2</th>
           </tr>
@@ -270,7 +298,7 @@
             <td>50</td>
             <td>Bouwwerken anders dan bedoeld onder 1A, 1B en 2.</td>
           </tr>
-        </body>
+        </tbody>
         <tfoot>
           <tr>
             <td colspan="3">Dit is de voetnote</td>
@@ -305,7 +333,7 @@
           <tr>
             <th rowspan="3" scope="rowgroup">6 Meet- en rekenvoorschriften decentraal Bijlage XIX gereguleerde
               activiteiten</th>
-            <td>Berekenen geluid op geluidgevoelige gebouwen door activiteiten:</t>
+            <td>Berekenen geluid op geluidgevoelige gebouwen door activiteiten:</td>
             <td></td>
             <td rowspan="2">§ 6.2.1 Bijlage XIX</td>
           </tr>
@@ -605,7 +633,7 @@
       </tbody>
       <tfoot>
       <tr>
-        <td colspan="5">
+        <td colspan="2">
             <ul class="list-custom footnotes">
               <li class="list-custom__item" id="n1">
                 <ins>
@@ -644,15 +672,14 @@
           <td><del>Waarde kolom 1, rij 1</del></td>
           <td><del>Waarde kolom 2, rij 1</del></td>
         </tr>
-        <tr>
-          <td>Waarde kolom 1, rij 1</td>
-          <td>Waarde kolom 2, rij 1</td>
+        <tr class="ins">
+          <td><ins>Waarde kolom 1, rij 1</ins></td>
+          <td><ins>Waarde kolom 2, rij 1</ins></td>
         </tr>
       </tbody>
     </table>
 
-    <ins class="ins ins--block">
-      <p class="figcaption">Toegevoegde tekst</p>
+    <ins class="ins ins--table">
       <table class="table">
         <caption>Tabel, in een blok.</caption>
         <thead>
@@ -670,8 +697,7 @@
       </table>
     </ins>
 
-    <del class="del del--block">
-      <p class="figcaption">Verwijderde tekst</p>
+    <del class="del del--table">
       <table class="table">
         <caption>Tabel, in een blok.</caption>
         <thead>

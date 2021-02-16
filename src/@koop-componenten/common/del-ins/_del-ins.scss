@@ -19,7 +19,7 @@ ins {
   background: $lightGreen;
   // padding: .1em;
   color: $black;
-  text-decoration: underline;
+  text-decoration-style: dashed;
 
   > * {
     background: $lightGreen;
@@ -32,24 +32,9 @@ ins {
   }
 }
 
-del ~ figcaption,
-del ~ .figcaption,
-ins ~ figcaption {
-  position: absolute;
-  left: .5em;
-  top: 0.5em;
-}
 
-del,
-ins {
-  picture {
-    padding: 2.5em .5em .5em .5em;
-    display: inline-block;
-  }
-}
-
-.ins,
-.del {
+ins.ins,
+del.del {
   margin: 0 0 1.5em 0;
   background: $lightGreen;
 
@@ -59,13 +44,33 @@ ins {
     font-style: italic;
     text-decoration: none;
 
-    .figcaption {
+    &:before {
+      content: "Toegevoegde afbeelding: ";
       font-size: 0.8em;
       display: block;
     }
   }
 
-  &--block {
+  &--figure {
+    border-left: 0.5em solid $green;
+    padding: 0.5em;
+    display: block;
+    text-decoration: none;
+
+    &:before {
+      content: "Toegevoegd: ";
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+    figcaption {
+      text-decoration-line: underline;
+      text-decoration-style: dashed;
+    }
+  }
+
+  &--block,
+  &--table {
     text-decoration: none;
     display: block;
     border-left: 0.5em solid $green;
@@ -78,10 +83,6 @@ ins {
       margin-top: .5em;
     }
 
-    .figcaption {
-      font-style: italic;
-    }
-
     .table__container {
       margin-bottom: 0;
       & ~ .table__container {
@@ -89,13 +90,62 @@ ins {
       }
     }
   }
+
+  &--table {
+    &:before {
+      content: "Toegevoegde tabel: ";
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+  }
 }
 
-.del {
-  background: $lightRed;
+del.del {
   color: $black;
+  background: $lightRed;
 
-  &--block {
+  &--img {
+    content: "Verwijderde afbeelding: ";
+  }
+
+  &--block,
+  &--figure,
+  &--table {
     border-left: 0.5em solid $red;
+  }
+
+  &--figure {
+    &:before {
+      content: "Verwijderd: "
+    }
+  }
+  &--table {
+    &:before {
+      content: "Verwijderde tabel: "
+    }
+  }
+}
+
+figure picture del,
+figure picture ins {
+  padding: .5em;
+  display: block;
+  text-decoration: none;
+}
+figure picture del {
+  &:before {
+    content: "Verwijderde afbeelding: ";
+    text-decoration: none;
+    font-style: italic;
+    padding-left: .5em;
+  }
+}
+figure picture ins {
+  &:before {
+    content: "Toegevoegde afbeelding: ";
+    text-decoration: none;
+    font-style: italic;
+    padding-left: .5em;
   }
 }
