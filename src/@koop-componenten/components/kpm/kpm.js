@@ -94,7 +94,7 @@
 
     if(action === "editRange") {
       var rangeType = e.getAttribute('data-kpm-rangetype');
-      var rangeTitle = e.getAttribute('value');
+      var rangeTitle = e.getAttribute('data-kpm-rangetitle') || e.getAttribute('value');
       if (rangeType === "gemeente"){
         this.data.options.center.type = 'location';
         this.data.options.center.location = {};
