@@ -1,6 +1,10 @@
 
 <li>
 
+  {{#each hiddenInputs }}
+    <input type="hidden" {{#if id}}id="{{id}}"{{/if}} class="{{class}}" value="{{value}}" />
+  {{/each}}
+
   {{#if headerimg }}
     <p><img src="{{headerimg}}" /></p>
   {{/if}}
@@ -43,9 +47,9 @@
     </ul>
   {{/if}}
 
-  {{#if labelSecondair }}
+  {{#each labelsSecondair }}
     <p class="result--label"><span class="label {{#if labelSecondairType}}label--{{labelSecondairType}}{{/if}}">{{ labelSecondair }}</span></p>
-  {{/if}}
+  {{/each}}
 
   {{#if text }}
     <p>{{{ text }}}</p>
