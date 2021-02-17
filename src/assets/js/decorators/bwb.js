@@ -296,3 +296,29 @@
 
 // inhoudsopgave
 (function(n){"use strict";n("#Unfoldall").on("click",function(t){t.preventDefault();n('ul.treeview button[data-handler="toggle-fold"][aria-expanded="false"]').click()});n("#Foldall").on("click",function(t){t.preventDefault();n('ul.treeview button[data-handler="toggle-fold"][aria-expanded="true"]').click()})})(jQuery);
+
+// zoekresultaten
+(function(n){"use strict";n('.result--list div.collapsible__header a[data-handler="toggle-collapsible"]').on("click",function(){
+
+  var t=n("#"+n(this).attr("aria-controls")),
+    i=n(this).closest(".collapsible").parent();
+    var url = i.find("> input.locationurl").val() || location.href;
+    setTimeout(function(){
+      t.is(":visible")&&!t.html().trim()&&n(t).load(endpointResultaatOnderdelen,{regelingID:i.find("> input.data-id").val(),ref:url})}
+      ,0)
+      }
+      );
+      n("#unmarkallAnchor").on("click",function(t){t.preventDefault();n("div.collapsible__content input:checkbox").each(function(){n(this).prop("checked",!1)})})})(jQuery);
+
+// eurlexpopup.js
+(function ($) {
+    'use strict';
+
+    $(function () {
+        $('#cbNietMeerTonen').click(function () {
+            setTimeout(function () {
+                createCookie('eurlex-popup-niet-tonen', $('#cbNietMeerTonen').is(':checked'));
+            }, 100);
+        });
+    });
+})(jQuery);
