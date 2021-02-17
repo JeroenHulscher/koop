@@ -204,11 +204,10 @@
 })(jQuery);
 
 // LIDO Relaties modaal;
-(function(n){"use strict";n(function(){n(".popuplidorelaties").click(function(t){var r=n(this).data("juriconnectverwijzing"),u=n(this).parent("li").data("aantal-relaties"),i;n("#popuplidorelaties h2").html("Externe relaties ("+escape(u)+")");i='<div class="alert alert--warning">Er is een fout opgetreden bij het ophalen van de relaties in LiDO.<\/div>';n.get("https://wetten.overheid.nl/Handlers/LiDORelaties.ashx?juriconnect-id="+escape(r)+"&_="+(new Date).getTime(),function(t){t!==""?n("#popuplidorelaties #divLidorelaties").html(t):n("#popuplidorelaties #divLidorelaties").html(i)},"html").fail(function(){n("#popuplidorelaties #divLidorelaties").html(i)});t.preventDefault()})})})(jQuery);
+(function(n){"use strict";n(function(){n(".popuplidorelaties").click(function(t){var r=n(this).data("juriconnectverwijzing"),u=n(this).parent("li").data("aantal-relaties"),i;n("#popuplidorelaties h2").html("Externe relaties ("+escape(u)+")");i='<div class="alert alert--warning">Er is een fout opgetreden bij het ophalen van de relaties in LiDO.<\/div>';n.get(endpointLidoRelaties + "?juriconnect-id="+escape(r)+"&_="+(new Date).getTime(),function(t){t!==""?n("#popuplidorelaties #divLidorelaties").html(t):n("#popuplidorelaties #divLidorelaties").html(i)},"html").fail(function(){n("#popuplidorelaties #divLidorelaties").html(i)});t.preventDefault()})})})(jQuery);
 
 // LIDO Relaties aantal;
-(function(n){"use strict";function t(){var t=n(window).scrollTop(),r=n(window).height(),i=300;setTimeout(function(){n("li.action--relations[data-juriconnectid]").each(function(){ var u=n(this);setTimeout(function(){var f=u.data("top");if(f===0||f||(f=u.closest("ul").offset().top,u.data("top",f)),!u.data("laden")&&!(f<t-i)){if(t+r+i<f)return!1;u.data("laden",!0);n.get("https://wetten.overheid.nl/Handlers/LiDOAantallen.ashx?bwbngid="+escape(u.data("bwbngid")),function(n){parseInt(n,10)>0&&(u.prepend(n),u.data("aantal-relaties",n),u.removeClass("visually-hidden"));u.removeClass("aantallen-lido-onbekend");u.addClass("aantallen-lido")})}},1)})},10)}n(window).on("load scroll resize",function(){typeof t=="function"&&t()})})(jQuery);
-
+(function(n){"use strict";function t(){var t=n(window).scrollTop(),r=n(window).height(),i=300;setTimeout(function(){n("li.action--relations[data-juriconnectid]").each(function(){ var u=n(this);setTimeout(function(){var f=u.data("top");if(f===0||f||(f=u.closest("ul").offset().top,u.data("top",f)),!u.data("laden")&&!(f<t-i)){if(t+r+i<f)return!1;u.data("laden",!0);n.get(endpointLidoAantallen + "?bwbngid="+escape(u.data("bwbngid")),function(n){parseInt(n,10)>0&&(u.prepend(n),u.data("aantal-relaties",n),u.removeClass("visually-hidden"));u.removeClass("aantallen-lido-onbekend");u.addClass("aantallen-lido")})}},1)})},10)}n(window).on("load scroll resize",function(){typeof t=="function"&&t()})})(jQuery);
 // Permanente link;
 (function (n) {
   "use strict";
@@ -294,3 +293,6 @@
   });
 })(jQuery);
 
+
+// inhoudsopgave
+(function(n){"use strict";n("#Unfoldall").on("click",function(t){t.preventDefault();n('ul.treeview button[data-handler="toggle-fold"][aria-expanded="false"]').click()});n("#Foldall").on("click",function(t){t.preventDefault();n('ul.treeview button[data-handler="toggle-fold"][aria-expanded="true"]').click()})})(jQuery);
