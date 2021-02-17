@@ -182,8 +182,9 @@ gulp.task( 'js:build', function() {
       paths.scripts + '/main.js',
       paths.components + '/**/*.js',
       '!' + paths.components + '/**/*.e2e.js',
-      '!' + paths.scripts + '/decorators/bwb.js',
-      paths.scripts + '/decorators/*.js',
+      paths.scripts + '/decorators/collapse.js',
+      paths.scripts + '/decorators/stick-sidebar.js',
+      paths.scripts + '/decorators/sticky.js',
       paths.scripts + '/run.js'
     ] )
     .pipe( concat( 'main.js' ) )
@@ -199,6 +200,12 @@ gulp.task( 'js:build', function() {
 
 gulp.task( 'js:bwb', function() {
   return gulp.src( paths.scripts + '/decorators/bwb.js' )
+    .pipe( minify( {
+      minify: true,
+      minifyJS: {
+        sourceMap: false
+      },
+    } ) )
     .pipe( gulp.dest( paths.drop + '/js' ) );
 } );
 
