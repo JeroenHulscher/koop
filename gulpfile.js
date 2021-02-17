@@ -182,6 +182,7 @@ gulp.task( 'js:build', function() {
       paths.scripts + '/main.js',
       paths.components + '/**/*.js',
       '!' + paths.components + '/**/*.e2e.js',
+      '!' + paths.scripts + '/decorators/bwb.js',
       paths.scripts + '/decorators/*.js',
       paths.scripts + '/run.js'
     ] )
@@ -196,7 +197,12 @@ gulp.task( 'js:build', function() {
     .pipe( gulp.dest( paths.drop + '/js' ) );
 } );
 
-gulp.task( 'js', gulp.series( 'js:clean', 'js:build' ) );
+gulp.task( 'js:bwb', function() {
+  return gulp.src( paths.scripts + '/decorators/bwb.js' )
+    .pipe( gulp.dest( paths.drop + '/js' ) );
+} );
+
+gulp.task( 'js', gulp.series( 'js:clean', 'js:build', 'js:bwb' ) );
 
 gulp.task( 'ds:clean', function( done ) {
   return del( [ paths.designsystem ], done );
@@ -206,6 +212,9 @@ gulp.task( 'ds:copypublic', function() {
   return gulp.src( paths.drop + '/**/*' )
     .pipe( gulp.dest( paths.designsystem ) );
 } );
+
+
+
 gulp.task( 'ds:copytemplates', function() {
   return gulp.src( [
       paths.componentlibrary + '/components/preview/templates-ds---rationale.html',
