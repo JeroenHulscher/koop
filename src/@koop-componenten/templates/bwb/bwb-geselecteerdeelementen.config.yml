@@ -34,9 +34,11 @@ context:
       - link: '#'
         text: Alles openklappen
         icon: icon-plus.svg
+        id: Unfoldall
       - link: '#'
         text: Alles dichtklappen
         icon: icon-minus.svg
+        id: Foldall
   treeview:
     id: 1
   treeview2:
@@ -230,13 +232,13 @@ context:
     versionHref: '/BWBR0008994/1998-01-01/0/informatie'
     print: true
     printModal: true
-    printLabel: Druk de regeling af
+    printLabel: Druk het regelingonderdeel af
     printModalId: popupafdrukken
     printAClass: popupafdrukken
     printDataAttributes: data-onderdeelids="BWBR0032898/2019-04-18/0/Intitule,BWBR0032898/2019-04-18/0/Deel1"
     export: true
     exportModal: true
     exportModalId: popupexporteren
-    exportLabel: Sla de regeling op
+    exportLabel: Sla het regelingonderdeel op
     exportAClass: popupexporteren
     exportHref: '/BWBR0032203/2019-04-18/0'

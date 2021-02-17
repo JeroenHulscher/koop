@@ -37,11 +37,9 @@ context:
         text: Alles dichtklappen
         icon: icon-minus.svg
       - link: '#'
-        text: Alles aanvinken
-        icon: icon-checkall.svg
-      - link: '#'
         text: Alles uitvinken
         icon: icon-uncheckall.svg
+        id: unmarkallAnchor
       - link: '#'
         text: Toon aanvinkte elementen
         icon: icon-arrow-right.svg
@@ -49,7 +47,7 @@ context:
     items:
       - link: '#'
         text: downloaden
-        icon: icon-download.svg
+        icon: icon-download-black.svg
         title: Opslaan als RTF-bestand
       - link: '#'
         text: printen
@@ -60,137 +58,66 @@ context:
       title: Aanbestedingswet 2012
       href: '#'
       amountResults: (430 artikelen)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBR0032203/2019-04-18/0
+        - id:
+          class: data-nr
+          value: 0
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
       collapsible:
         id: 3
-        heading: 430 relevante elementen
+        heading: 605 relevante elementen
         modifier: collapsible--small
-        checkboxes1:
-          options:
-            - id: checkbox-1
-              text: Opschrift
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
-            - id: checkbox-2
-              text: Aanhef
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
     item2:
-      title: Implementatiewet registratie uiteindelijk belanghebbenden van vennootschappen en andere juridische entiteiten
+      title: Aanbestedingswet op defensie- en veiligheidsgebied
       href: '#'
-      labelSecondair: Regeling materieel uitgewerkt per 08-07-2022
-      labelSecondairType: warning
-      amountResults: (7 artikelen)
+      labelsSecondair:
+        - labelSecondair: Regeling materieel uitgewerkt per 08-07-2022
+          labelSecondairType: warning
+      amountResults: (173 artikelen)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBR0032898/2019-04-18/0
+        - id:
+          class: data-nr
+          value: 1
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/rs/2,3,4,5,7/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
       collapsible:
         id: 23
-        heading: 7 relevante elementen
+        heading: 247 relevante elementen
         modifier: collapsible--small
-        checkboxes2:
-          options:
-            - id: checkbox-3
-              text: Opschrift
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
-            - id: checkbox-4
-              text: Aanhef
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
   resultlist2:
     item1:
-      title: Aanbestedingsbesluit
+      title: "Aanhangsel I: Internationale Arbeidsorganisatie bij het Verdrag nopens de voorrechten en immuniteiten van de gespecialiseerde organisaties"
       href: '#'
-      amountResults: (13 artikelen)
+      labelsSecondair:
+        - labelSecondair: Authentiek-EN, Vertaling-NL
+          labelSecondairType: warning
+        - labelSecondair: 'Datum totstandkoming: 10-07-1948'
+          labelSecondairType: warning
+        - labelSecondair: 'Plaats totstandkoming: San Francisco'
+          labelSecondairType: warning
       collapsible:
         id: 33
-        heading: 13 relevante elementen
+        heading: 7 relevante elementen
         modifier: collapsible--small
-        checkboxes1:
-          options:
-            - id: checkbox-5
-              text: Opschrift
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
-            - id: checkbox-6
-              text: Aanhef
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
-    item2:
-      title: Aanbestedingsbesluit op defensie- en veiligheidsgebied
-      href: '#'
-      amountResults: (8 artikelen)
-      collapsible:
-        id: 34
-        heading: 8 relevante elementen
-        modifier: collapsible--small
-        checkboxes2:
-          options:
-            - id: checkbox-7
-              text: Opschrift
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
-            - id: checkbox-71
-              text: Aanhef
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
-    item3:
-      title: Herhaal resultaat
-      href: '#'
-      amountResults: (8 artikelen)
-      collapsible:
-        id: 35
-        heading: 8 relevante elementen
-        modifier: collapsible--small
-        checkboxes2:
-          options:
-            - id: checkbox-8
-              text: Opschrift
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
-            - id: checkbox-81
-              text: Aanhef
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
-    item4:
-      title: Herhaal resultaat
-      href: '#'
-      amountResults: (8 artikelen)
-      collapsible:
-        id: 36
-        heading: 8 relevante elementen
-        modifier: collapsible--small
-        checkboxes2:
-          options:
-            - id: checkbox-9
-              text: Opschrift
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Opschrift </span>Bekijken)
-            - id: checkbox-10
-              text: Aanhef
-              name: countries
-              hasLink: true
-              linkHref: '#'
-              linkLabel: (<span class="visually-hidden">Aanhef </span>Bekijken)
+      hiddenInputs:
+        - id:
+          class: data-id
+          value: http://wetten.overheid.nl/id/BWBV0005592/1948-12-02/0
+        - id:
+          class: data-nr
+          value: 0
+        - id:
+          class: locationurl
+          value: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/titelf/1/tekstf/1/wti/0/artnrb/0/d/17-02-2021/zd/17-02-2021/dx/0/ds/0/dt/1/db/1
   pagination:
     title: Resultaat pagina's
     hLevel: 2

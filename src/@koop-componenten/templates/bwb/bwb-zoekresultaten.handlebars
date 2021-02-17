@@ -4,6 +4,9 @@
     {{ render "@breadcrumb" breadcrumb }}
   </div>
 </div>
+<script>
+  var endpointResultaatOnderdelen = 'https://wetten.overheid.nl/Handlers/Onderdelen.ashx';
+</script>
 <div class="container columns columns--sticky-sidebar row">
 
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
@@ -24,37 +27,19 @@
     {{#> @resultlist resultlist }}
       {{#> @resultlist-item item1 }}
         {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes1 }}
         {{/ @collapsible}}
        {{/ @resultlist-item}}
        {{#> @resultlist-item item2 }}
         {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes2 }}
         {{/ @collapsible}}
       {{/ @resultlist-item}}
     {{/ @resultlist}}
 
-    <h2>AMVB's en andere KB's</h2>
+    <h2>Verdragen</h2>
 
     {{#> @resultlist resultlist2 }}
       {{#> @resultlist-item item1 }}
         {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes1 }}
-        {{/ @collapsible}}
-      {{/ @resultlist-item}}
-      {{#> @resultlist-item item2 }}
-        {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes2 }}
-        {{/ @collapsible}}
-      {{/ @resultlist-item}}
-      {{#> @resultlist-item item3 }}
-        {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes2 }}
-        {{/ @collapsible}}
-      {{/ @resultlist-item}}
-      {{#> @resultlist-item item4 }}
-        {{#> @collapsible collapsible }}
-          {{ render "@input-checkbox" checkboxes2 }}
         {{/ @collapsible}}
       {{/ @resultlist-item}}
     {{/ @resultlist}}
