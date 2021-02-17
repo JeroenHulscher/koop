@@ -194,7 +194,7 @@ gulp.task( 'js:build', function() {
         sourceMap: false
       },
     } ) )
-    .pipe( header( '/* Package version: <%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name } ) )
+    .pipe( header( '/* Package version: bwb-<%= version %>, "<%= name %>". */\n', { version: packagejson.version, name: packagejson.name } ) )
     .pipe( gulp.dest( paths.drop + '/js' ) );
 } );
 
@@ -206,6 +206,7 @@ gulp.task( 'js:bwb', function() {
         sourceMap: false
       },
     } ) )
+    .pipe( header( '/* Packaged with "<%= name %>" version: bwb-<%= version %>. */\n', { version: packagejson.version, name: packagejson.name } ) )
     .pipe( gulp.dest( paths.drop + '/js' ) );
 } );
 
