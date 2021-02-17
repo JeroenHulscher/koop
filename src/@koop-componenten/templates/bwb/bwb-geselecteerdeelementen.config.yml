@@ -43,7 +43,7 @@ context:
     id: 2
   counterFirst:
     modifier: article__header--main
-    activeFrom: Geldend van 18-04-2019 t/m heden
+    activeFrom: Geldend op 15-02-2021
     export: true
     exportLabel: Sla de geselecteerde elementen op
     exportHref: 'javascript:void(0)'

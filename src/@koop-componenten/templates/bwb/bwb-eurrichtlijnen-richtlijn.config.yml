@@ -52,9 +52,9 @@ context:
     activeFrom: "EU-richtlijnnummer: 2009/116"
     print: true
     printHref: '/EUR20090116/afdrukken'
-    printLabel: Druk de regeling af
+    printLabel: Druk de richtlijn af
     export: true
-    exportLabel: Sla de regeling op
+    exportLabel: Sla de richtlijn op
     exportHref: '/EUR20090116/xml'
   tt1:
     id: 1123123

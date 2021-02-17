@@ -50,15 +50,16 @@ context:
       - link: '#'
         text: downloaden
         icon: icon-download.svg
+        title: Opslaan als RTF-bestand
       - link: '#'
         text: printen
         icon: icon-print.svg
+        title: Afdrukken
   resultlist:
     item1:
       title: Aanbestedingswet 2012
       href: '#'
-      metadata:
-        - value: (430 artikelen)
+      amountResults: (430 artikelen)
       collapsible:
         id: 3
         heading: 430 relevante elementen
@@ -80,10 +81,9 @@ context:
     item2:
       title: Implementatiewet registratie uiteindelijk belanghebbenden van vennootschappen en andere juridische entiteiten
       href: '#'
-      label: Regeling materieel uitgewerkt per 08-07-2022
-      labelType: warning
-      metadata:
-        - value: (7 artikelen)
+      labelSecondair: Regeling materieel uitgewerkt per 08-07-2022
+      labelSecondairType: warning
+      amountResults: (7 artikelen)
       collapsible:
         id: 23
         heading: 7 relevante elementen
@@ -106,8 +106,7 @@ context:
     item1:
       title: Aanbestedingsbesluit
       href: '#'
-      metadata:
-        - value: (13 artikelen)
+      amountResults: (13 artikelen)
       collapsible:
         id: 33
         heading: 13 relevante elementen
@@ -129,8 +128,7 @@ context:
     item2:
       title: Aanbestedingsbesluit op defensie- en veiligheidsgebied
       href: '#'
-      metadata:
-        - value: (8 artikelen)
+      amountResults: (8 artikelen)
       collapsible:
         id: 34
         heading: 8 relevante elementen
@@ -152,8 +150,7 @@ context:
     item3:
       title: Herhaal resultaat
       href: '#'
-      metadata:
-        - value: (8 artikelen)
+      amountResults: (8 artikelen)
       collapsible:
         id: 35
         heading: 8 relevante elementen
@@ -175,8 +172,7 @@ context:
     item4:
       title: Herhaal resultaat
       href: '#'
-      metadata:
-        - value: (8 artikelen)
+      amountResults: (8 artikelen)
       collapsible:
         id: 36
         heading: 8 relevante elementen
@@ -198,3 +194,10 @@ context:
   pagination:
     title: Resultaat pagina's
     hLevel: 2
+  sort:
+    options:
+      - label: Titel
+        href: '#'
+      - label: Soort
+        href: '#'
+        active: is-active

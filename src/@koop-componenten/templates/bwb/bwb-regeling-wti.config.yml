@@ -37,10 +37,12 @@ context:
       - link: '#'
         text: downloaden
         icon: icon-download-black.svg
+        title: Opslaan als XML-bestand
       - link: '#'
         text: printen
         icon: icon-print.svg
         actionPrint: true
+        title: Afdrukken
   well:
     text: appel
   modalCompare:

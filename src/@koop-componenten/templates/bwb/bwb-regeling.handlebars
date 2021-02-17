@@ -4,6 +4,12 @@
     {{ render "@breadcrumb" breadcrumb }}
   </div>
 </div>
+
+<script>
+  var endpointLidoRelaties = "https://www.wetten.nl/Handlers/LiDORelaties.ashx";
+  var endpointLidoAantallen = "https://www.wetten.nl/Handlers/LiDOAantallen.ashx";
+</script>
+
 <div class="container columns columns--sticky-sidebar row">
   <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
@@ -169,6 +175,8 @@
                   {{ render "@article-header" counter2 }}
 
                   {{ render "@article-header" counter3 }}
+
+                  {{ render "@alert--update" alertUpdate1 merge=true }}
 
                   <p class="al">In deze wet en de daarop berustende bepalingen wordt verstaan onder:</p>
                   <ul class="list--law__unordered ongemarkeerd whitespace-medium">
