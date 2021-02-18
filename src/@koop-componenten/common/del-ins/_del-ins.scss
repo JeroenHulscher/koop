@@ -106,7 +106,9 @@ del.del {
   background: $lightRed;
 
   &--img {
-    content: "Verwijderde afbeelding: ";
+    &:before {
+      content: "Verwijderde afbeelding: ";
+    }
   }
 
   &--block,
