@@ -8,43 +8,69 @@ del {
   }
 
 
-	&::before,
-	&::after {
-		clip-path: inset(100%);
-		clip: rect(1px, 1px, 1px, 1px);
-		height: 1px;
-		overflow: hidden;
-		position: absolute;
-		white-space: nowrap;
-		width: 1px;
-	}
-
-	&::before {
-  	content: " [start van verwijderde tekst] ";
-	}
-
-	&::after {
-  	content: " [einde van verwijderde tekst] ";
-	}
+  > img {
+    border: 2px dashed $lightRed;
+    margin: .25em;
+    display: inline-block;
+  }
 }
 
 ins {
   background: $lightGreen;
   // padding: .1em;
   color: $black;
-  text-decoration: underline;
+  text-decoration-style: dashed;
 
   > * {
     background: $lightGreen;
   }
+
+  > img {
+    border: 2px dashed $lightGreen;
+    margin: .25em;
+    display: inline-block;
+  }
 }
 
-.ins,
-.del {
+
+ins.ins,
+del.del {
   margin: 0 0 1.5em 0;
   background: $lightGreen;
 
-  &--block {
+  &--img {
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+
+    &:before {
+      content: "Toegevoegde afbeelding: ";
+      font-size: 0.8em;
+      display: block;
+    }
+  }
+
+  &--figure {
+    border-left: 0.5em solid $green;
+    padding: 0.5em;
+    display: block;
+    text-decoration: none;
+
+    &:before {
+      content: "Toegevoegd: ";
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+    figcaption {
+      text-decoration-line: underline;
+      text-decoration-style: dashed;
+    }
+  }
+
+  &--block,
+  &--table {
     text-decoration: none;
     display: block;
     border-left: 0.5em solid $green;
@@ -64,13 +90,64 @@ ins {
       }
     }
   }
+
+  &--table {
+    &:before {
+      content: "Toegevoegde tabel: ";
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+  }
 }
 
-.del {
-  background: $lightRed;
+del.del {
   color: $black;
+  background: $lightRed;
 
-  &--block {
+  &--img {
+    &:before {
+      content: "Verwijderde afbeelding: ";
+    }
+  }
+
+  &--block,
+  &--figure,
+  &--table {
     border-left: 0.5em solid $red;
+  }
+
+  &--figure {
+    &:before {
+      content: "Verwijderd: "
+    }
+  }
+  &--table {
+    &:before {
+      content: "Verwijderde tabel: "
+    }
+  }
+}
+
+figure picture del,
+figure picture ins {
+  padding: .5em;
+  display: block;
+  text-decoration: none;
+}
+figure picture del {
+  &:before {
+    content: "Verwijderde afbeelding: ";
+    text-decoration: none;
+    font-style: italic;
+    padding-left: .5em;
+  }
+}
+figure picture ins {
+  &:before {
+    content: "Toegevoegde afbeelding: ";
+    text-decoration: none;
+    font-style: italic;
+    padding-left: .5em;
   }
 }

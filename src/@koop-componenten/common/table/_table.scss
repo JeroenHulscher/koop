@@ -104,7 +104,7 @@ table,
     // border: 5px solid #fce3e3 !important;
     // padding: 3px !important;
     // text-decoration: line-through;
-    outline: 3px solid #fce3e3;
+    outline: 3px solid $red;
     outline-offset: -3px;
   }
   tr.ins,
@@ -113,7 +113,7 @@ table,
     // border: 5px solid #e3fcec !important;
     // padding: 3px !important;
     // text-decoration: underline;
-    outline: 3px solid #e3fcec;
+    outline: 3px solid $green;
     outline-offset: -3px;
   }
 
