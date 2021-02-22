@@ -75,4 +75,4 @@ context:
   tt100:
     id: 9876545678
   alertIntro:
-    text: <p class="u-nomargin"><strong>Dit artikel bevat verschilmarkering t.o.v. eerdere regelingtekst.</strong></p><p>Tekst en afbeeldingen die worden toegevoegd zijn onderstreept en groen gemarkeerd, of van een groen kader voorzien. Tekst en afbeeldingen die worden verwijderd zijn doorgestreept en rood gemarkeerd, of van een rood kader voorzien. Terug naar link van noot.</p>
+    text: <p class="u-nomargin"><strong>Dit document bevat verschilmarkering t.o.v. eerdere regelingtekst.</strong></p><p>Tekst en afbeeldingen die worden toegevoegd zijn onderstreept en groen gemarkeerd, of van een groen kader voorzien. Tekst en afbeeldingen die worden verwijderd zijn doorgestreept en rood gemarkeerd, of van een rood kader voorzien. Terug naar link van noot.</p>
