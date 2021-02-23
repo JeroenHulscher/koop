@@ -38,6 +38,13 @@ del.del {
   margin: 0 0 1.5em 0;
   background: $lightGreen;
 
+  &:before {
+    content: "Toegevoegd: ";
+    font-style: italic;
+    display: block;
+    margin-bottom: 8px;
+  }
+
   &--img {
     display: inline-block;
     text-align: center;
@@ -47,7 +54,6 @@ del.del {
     &:before {
       content: "Toegevoegde afbeelding: ";
       font-size: 0.8em;
-      display: block;
     }
   }
 
@@ -58,9 +64,7 @@ del.del {
     text-decoration: none;
 
     &:before {
-      content: "Toegevoegd: ";
-      font-style: italic;
-      margin-bottom: 8px;
+      content: "Toegevoegde afbeelding: ";
       display: block;
     }
     figcaption {
@@ -105,6 +109,10 @@ del.del {
   color: $black;
   background: $lightRed;
 
+  &:before {
+    content: "Verwijderd: ";
+  }
+
   &--img {
     &:before {
       content: "Verwijderde afbeelding: ";
@@ -119,7 +127,7 @@ del.del {
 
   &--figure {
     &:before {
-      content: "Verwijderd: "
+      content: "Verwijderde afbeelding: "
     }
   }
   &--table {
@@ -128,26 +136,31 @@ del.del {
     }
   }
 }
-
-figure picture del,
-figure picture ins {
+figure del,
+figure ins {
+  text-decoration: none;
+}
+figure del picture ,
+figure ins picture {
   padding: .5em;
   display: block;
   text-decoration: none;
-}
-figure picture del {
+
   &:before {
-    content: "Verwijderde afbeelding: ";
-    text-decoration: none;
+    margin-bottom: 8px;
+    text-decoration: none !important;
     font-style: italic;
-    padding-left: .5em;
+    display: block;
   }
 }
-figure picture ins {
+figure del picture {
+  &:before {
+    content: "Verwijderde afbeelding: ";
+
+  }
+}
+figure ins picture {
   &:before {
     content: "Toegevoegde afbeelding: ";
-    text-decoration: none;
-    font-style: italic;
-    padding-left: .5em;
   }
 }

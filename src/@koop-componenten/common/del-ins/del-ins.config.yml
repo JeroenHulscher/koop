@@ -10,7 +10,9 @@ context:
     <ins>aliquet nec augue eu, feugiat venenatis sem. Donec auctor dapibus metus quis rhoncus. Vivamus varius fermentum posuere</ins>.
     Proin et mi in nisl euismod pulvinar. Curabitur malesuada lorem bibendum tellus dapibus fermentum. Maecenas porttitor enim
     in sapien hendrerit eleifend. Duis non tortor rutrum, sagittis nulla vitae, tincidunt ligula. Etiam quis dignissim felis.
-    Suspendisse at erat a tortor tristique scelerisque. Donec efficitur augue eros.</p>
+    Suspendisse at erat a tortor tristique scelerisque. <del class="del del--img"><img src="/images/temp/wat-doet-overheid.jpg"
+        class="valign valign--middle" width="70" height="40" alt="alt tekst" /></del><ins class="ins ins--img"><img src="/images/temp/wat-doet-overheid.jpg"
+        class="valign valign--middle" width="70" height="40" alt="alt tekst" /></ins> Donec efficitur augue eros.</p>
 variants:
   - name: block level
     context:
