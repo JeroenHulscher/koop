@@ -2,7 +2,7 @@
 
 <div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
 
-  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}'
     id="toggleable-1">
     <div>
 
@@ -235,7 +235,7 @@
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1</dd>
+          <dd>1.9.41</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -487,7 +487,7 @@
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
+          <dd>1.9.41</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -812,7 +812,7 @@
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9</dd>
+          <dd>1.9.40</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -831,7 +831,8 @@
           </p>
         </div>
       </div>
-      <h3 class="section-chapter__subheading">Blok</h3>
+      <h3 class="section-chapter__subheading">Blok (met block level component)</h3>
+      <p>Alle niet 'inline'-elementen worden geplaatst in een block-level ins/del.</p>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{render "@del-ins--block-level" }}
@@ -840,6 +841,28 @@
           <p>
             <a href="https://jeroenhulscher.nl/koop/components/detail/del-ins--block-level.html">Bekijk variant 'Blok'</a>
           </p>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Blok tabel</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <ins class="ins ins--table">
+            <p>tabel</p>
+          </ins>
+          <del class="del del--table">
+            <p>tabel</p>
+          </del>
+        </div>
+      </div>
+      <h3 class="section-chapter__subheading">Blok figuur</h3>
+      <div class="ds-preview">
+        <div class="ds-preview__demo">
+          <ins class="ins ins--figure">
+            {{ render "@figure" }}
+          </ins>
+          <del class="del del--figure">
+            {{ render "@figure" }}
+          </del>
         </div>
       </div>
     </div>
@@ -2035,7 +2058,7 @@
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
+          <dd>1.9.41</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -2197,7 +2220,7 @@
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.39</dd>
+          <dd>1.9.40</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -2456,6 +2479,16 @@
 
     <div class="section-chapter js-scrollSection" id="text">
       <h2>Tekst</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@text" }}
@@ -2557,7 +2590,7 @@
       <dl class="dl columns--data">
         <div>
           <dt>Laatst gewijzigd</dt>
-          <dd>1.9.41</dd>
+          <dd>1.9.40</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -3464,6 +3497,16 @@
 
     <div class="section-chapter js-scrollSection" id="kopieerlink">
       <h2>Kopieer link</h2>
+      <dl class="dl columns--data">
+        <div>
+          <dt>Laatst gewijzigd</dt>
+          <dd>1.9.41</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Ready</dd>
+        </div>
+      </dl>
       <div class="ds-preview">
         <div class="ds-preview__demo">
           {{ render "@copydata" }}
