@@ -10,9 +10,7 @@
   line-height: 1;
   margin: 0 .5em .5em 0;
   max-width: 100%;
-  outline: 2px solid transparent;
-  outline-offset: .5em;
-  transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
+  transition: color $fastEaseInOut;
   padding: $standardButtonPadding; // 40px total height
   position: relative;
   text-align: center;
@@ -42,8 +40,6 @@
   }
 
   &:focus {
-    outline: 2px solid $yellow;
-    outline-offset: 0;
     z-index: 1;
   }
 

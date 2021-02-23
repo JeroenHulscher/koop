@@ -8,43 +8,73 @@ del {
   }
 
 
-	&::before,
-	&::after {
-		clip-path: inset(100%);
-		clip: rect(1px, 1px, 1px, 1px);
-		height: 1px;
-		overflow: hidden;
-		position: absolute;
-		white-space: nowrap;
-		width: 1px;
-	}
-
-	&::before {
-  	content: " [start van verwijderde tekst] ";
-	}
-
-	&::after {
-  	content: " [einde van verwijderde tekst] ";
-	}
+  > img {
+    border: 2px dashed $lightRed;
+    margin: .25em;
+    display: inline-block;
+  }
 }
 
 ins {
   background: $lightGreen;
   // padding: .1em;
   color: $black;
-  text-decoration: underline;
+  text-decoration-style: dashed;
 
   > * {
     background: $lightGreen;
   }
+
+  > img {
+    border: 2px dashed $lightGreen;
+    margin: .25em;
+    display: inline-block;
+  }
 }
 
-.ins,
-.del {
+
+ins.ins,
+del.del {
   margin: 0 0 1.5em 0;
   background: $lightGreen;
 
-  &--block {
+  &:before {
+    content: "Toegevoegd: ";
+    font-style: italic;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &--img {
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+
+    &:before {
+      content: "Toegevoegde afbeelding: ";
+      font-size: 0.8em;
+    }
+  }
+
+  &--figure {
+    border-left: 0.5em solid $green;
+    padding: 0.5em;
+    display: block;
+    text-decoration: none;
+
+    &:before {
+      content: "Toegevoegde afbeelding: ";
+      display: block;
+    }
+    figcaption {
+      text-decoration: underline;
+      text-decoration-style: dashed;
+    }
+  }
+
+  &--block,
+  &--table {
     text-decoration: none;
     display: block;
     border-left: 0.5em solid $green;
@@ -64,13 +94,84 @@ ins {
       }
     }
   }
+
+  &--table {
+    &:before {
+      content: "Toegevoegde tabel: ";
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
+    }
+  }
 }
 
-.del {
-  background: $lightRed;
+del.del {
   color: $black;
+  background: $lightRed;
 
-  &--block {
+  &:before {
+    content: "Verwijderd: ";
+  }
+
+  &--img {
+    &:before {
+      content: "Verwijderde afbeelding: ";
+    }
+  }
+
+  &--block,
+  &--figure,
+  &--table {
     border-left: 0.5em solid $red;
+  }
+
+  &--figure {
+    &:before {
+      content: "Verwijderde afbeelding: "
+    }
+
+    figcaption {
+      text-decoration: line-through;
+    }
+  }
+  &--table {
+    &:before {
+      content: "Verwijderde tabel: "
+    }
+  }
+}
+figure del,
+figure ins {
+  text-decoration: none;
+}
+figure figcaption del {
+  text-decoration: line-through;
+}
+figure figcaption ins {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+figure del picture ,
+figure ins picture {
+  padding: .5em;
+  display: block;
+  text-decoration: none;
+
+  &:before {
+    margin-bottom: 8px;
+    text-decoration: none !important;
+    font-style: italic;
+    display: block;
+  }
+}
+figure del picture {
+  &:before {
+    content: "Verwijderde afbeelding: ";
+
+  }
+}
+figure ins picture {
+  &:before {
+    content: "Toegevoegde afbeelding: ";
   }
 }

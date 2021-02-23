@@ -1,0 +1,25 @@
+---
+title: STOP-XML Elementen
+label: STOP-XML Elementen
+status: ready
+context:
+  listCustom:
+    modifier: list-custom--size-xs
+    custom: true
+    items:
+    - content: <span class="list-custom__itemtype">1</span><p>Met de volgende classnamen is de afstand zelf te bepalen tussen het nummer en de omschrijving .list-custom--size-xs, .list-custom--size-s, .list-custom--size-m, .list-custom--size-l. </p>
+    - content: <del><span class="list-custom__itemtype">2</span><p>2 item</p></del><ins><span class="list-custom__itemtype">3</span><p>3e item</p></ins>
+    - content: <span class="list-custom__itemtype">4</span><p>Een 3e item dat een stuk <del>langer met een <a href="#">link</a></del><ins>korter met een <a href="#">link</a></ins> is dan de andere en misschien wel over twee regels valt.</p>
+      subitems:
+        - content: <span class="list-custom__itemtype">4.1</span><p>1e subitem</p>
+        - content: <span class="list-custom__itemtype">4.3</span><p>2e subitem</p>
+    - content: <span class="list-custom__itemtype">7</span><p>4e item</p>
+    - content: <ins><span class="list-custom__itemtype">8</span><p>8e item</p></ins>
+  dlList:
+    items:
+      - type: Thema
+        value: Huisvesting
+      - type: <del>Status</del><ins>Beschikbaarheid</ins>
+        value: Beschikbaar
+      - type: <ins>Oplevering</ins>
+        value: <ins>Vandaag</ins>
