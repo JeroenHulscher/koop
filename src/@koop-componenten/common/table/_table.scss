@@ -98,25 +98,28 @@ table,
     }
   }
 
-  tr.del,
+  tr.del td,
+  tr.del th,
   th.del,
   td.del {
-    // border: 5px solid #fce3e3 !important;
-    // padding: 3px !important;
-    // text-decoration: line-through;
-    outline: 3px solid $red;
-    outline-offset: -3px;
+    outline: 2px solid $red;
+    outline-offset: -2px;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      outline: 1px solid $red;
+      border: 2px solid $red;
+    }
   }
-  tr.ins,
+  tr.ins td,
+  tr.ins th,
   th.ins,
   td.ins {
-    // border: 5px solid #e3fcec !important;
-    // padding: 3px !important;
-    // text-decoration: underline;
-    outline: 3px solid $green;
-    outline-offset: -3px;
+    outline: 2px solid $green;
+    outline-offset: -2px;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      outline: 1px solid $green;
+      border: 2px solid $green;
+    }
   }
-
 
 
   .table--container & {
