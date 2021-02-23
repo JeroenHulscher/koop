@@ -1,10 +1,22 @@
 {{#if blocklevel}}
-  <del class="del del--block">
-    {{{del}}}
-  </del>
-  <ins class="ins ins--block">
-    {{{ins}}}
-  </ins>
+  {{#if tag}}
+    {{#if_eq type 'figure'}}
+      <{{tag}} class="{{tag}} {{tag}}--figure">{{ render "@figure" }}</{{tag}}>
+    {{/if_eq}}
+    {{#if_eq type 'img'}}
+      <{{tag}} class="{{tag}} {{tag}}--img"><img src="../../images/logo.svg" alt="{{ alt }}" /></{{tag}}>
+    {{/if_eq}}
+    {{#if_eq type 'table'}}
+      <{{tag}} class="{{tag}} {{tag}}--table">{{ render "@table" }}</{{tag}}>
+    {{/if_eq}}
+  {{else}}
+    <del class="del del--block">
+      {{{del}}}
+    </del>
+    <ins class="ins ins--block">
+      {{{ins}}}
+    </ins>
+  {{/if}}
 {{else}}
   {{{delins}}}
 {{/if}}
