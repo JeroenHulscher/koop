@@ -20,14 +20,16 @@
 
         {{#if metadata }}
           {{#if theme }}
-            Onderwerpen:
-            {{#each metadata }}
-              {{#if last }}
-                <a {{#if id}}id="{{id}}"{{/if}} href="{{link}}">{{value }}</a>
-              {{else}}
-                <a {{#if id}}id="{{id}}"{{/if}} href="{{link}}">{{value }}</a>,
-              {{/if}}
-            {{/each}}
+            <p>
+              Onderwerpen:
+              {{#each metadata }}
+                {{#if last }}
+                  <a {{#if id}}id="{{id}}"{{/if}} href="{{link}}">{{value }}</a>
+                {{else}}
+                  <a {{#if id}}id="{{id}}"{{/if}} href="{{link}}">{{value }}</a>,
+                {{/if}}
+              {{/each}}
+            </p>
           {{else}}
             <ul class="list--metadata">
               {{#each metadata }}
