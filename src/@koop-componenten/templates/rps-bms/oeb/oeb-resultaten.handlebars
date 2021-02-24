@@ -37,21 +37,6 @@
 
       <div class="sidebar__section">
 
-        <h2 class="sidebar__header">Abonneren</h2>
-
-        <p>
-          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
-        </p>
-
-        <p>
-          {{ render "@link--feed" linkRSS }}<br>
-          {{ render "@link--mail" linkAbonneren merge=true }}
-        </p>
-
-      </div>
-
-      <div class="sidebar__section">
-
         <h2 class="sidebar__header">Filter resultaten</h2>
 
         <form>
@@ -103,6 +88,22 @@
           </fieldset>
 
         </form>
+
+      </div>
+
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Abonneren</h2>
+
+        <p>
+          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
+        </p>
+
+        <p>
+          {{ render "@link--mail" linkAbonneren merge=true }}<br>
+          {{ render "@link--feed" linkRSS }}
+
+        </p>
 
       </div>
 

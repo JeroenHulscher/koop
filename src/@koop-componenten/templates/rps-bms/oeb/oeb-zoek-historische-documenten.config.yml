@@ -51,6 +51,11 @@ context:
       fieldLabelVisible: true
       labelmodifier: medium
       modifier: input-text--searchmedium
+      hastooltip: true
+      tooltipContext:
+        id: 11456456
+        label: Help?
+        content: 'U kunt zoeken op zinsnede door deze tussen aanhalingstekens te plaatsen: "wet hof". <br>Met een minteken kunt u aangeven welke woorden niet voor mogen komen: -hofman. <br>U kunt het gebruik van aanhalingstekens en het minteken ook combineren: -"wet hofman"'
     zoekeninContext:
       id: 9876544567
       fieldLabel: Zoek in

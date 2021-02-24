@@ -82,6 +82,7 @@ context:
     - label: Relevantie
       value: value
       active: is-active
+      sortOrder: none
     - label: Datum document
       value: value
   resultsContext:

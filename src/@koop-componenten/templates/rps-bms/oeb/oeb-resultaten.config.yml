@@ -80,6 +80,7 @@ context:
       value: value
     - label: Relevantie
       value: value
+      sortOrder: none
   resultsContext:
     modifier: result--list--wide
     items:
@@ -161,7 +162,6 @@ context:
       - label: Accountantsregister
         href: '#'
         amount: 23
-        selected: true
       - label: Adviezen Raad van State
         href: '#'
         amount: 2

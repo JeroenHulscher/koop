@@ -38,10 +38,11 @@ context:
       url: '#'
     - text: Mijn Abonnementen
       url: '#'
-    - text: Activeer uw account
+    - text: Bevestigen wijziging e-mailadres
   jumbotronContext:
     heading: Bevestigen wijziging e-mailadres
     subheading: Officiële bekendmakingen
+    text: U heeft een wijziging doorgegeven voor uw e-mailadres. U dient deze wijziging te bevestigen voordat wij de wijziging doorvoeren. Gebruik daarvoor de bevestigingscode die u op uw nieuwe e-mailadres hebt ontvangen.
     centered: true
     size: s
     headingcentered: true
@@ -62,16 +63,16 @@ context:
       id: 2
       required: true
       type: text
-      fieldLabel: Activeringscode
+      fieldLabel: Bevestigingscode
       fieldLabelVisible: true
       fieldInstruction:
       fieldPlaceholder:
       hastooltip: true
       tooltipContext:
         id: 1231
-        content: De activeringscode uit de activeringse-mail
+        content: De bevestigingscode die u op uw nieuwe e-mailadres heeft ontvangen.
     linkNewcode:
-      text: Nieuwe activeringscode aanvragen
+      text: Nieuwe bevestigingscode aanvragen
     linkAccount:
       text: Ik heb al een account
     buttonSubmit:
@@ -81,4 +82,4 @@ context:
       type: submit
       modifier: button--primary form__button
     alert:
-      text: De combinatie van e-mailadres en wachtwoord is niet bekend in ons systeem.
+      text: Wij hebben een bevestigingscode gestuurd naar het door u opgegeven e-mailadres, indien deze bij ons bekend is.
