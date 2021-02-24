@@ -184,6 +184,11 @@ table,
     min-height: 2.5em; /* always have a height, even if field has no content; this is specifically needed on small screens */
   }
 
+  th *:last-child,
+  td *:last-child {
+    margin-bottom: 0 !important;
+  }
+
   .date {
     min-width: em(100);
   }
