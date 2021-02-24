@@ -64,4 +64,13 @@ variants:
               url: '#'
             - text: Inloggen
               url: '#'
+  - name: Omgeving 'dev'
+    context:
+      enviroment: dev
+  - name: Omgeving 'test'
+    context:
+      enviroment: test
+  - name: Omgeving 'acc'
+    context:
+      enviroment: acc
 
