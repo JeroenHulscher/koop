@@ -16,7 +16,11 @@
       color: white !important;
       a {
         color: white !important;
+        &.nootnum {
+          color: $darkBlue !important;
+        }
       }
+
     }
     tr.head-row-rest td,
     tr.head-row-rest th {
@@ -2097,6 +2101,9 @@ svnversion: warning: please check that your locale name is correct
 #broodtekst h3.wijzig-artikel_kop {
   padding-top: 1em;
 }
+#broodtekst .artikel ~ h3.wijzig-artikel_kop {
+  padding-top: 0em;
+}
 #broodtekst h2.divisiekop1,
 #broodtekst h3.divisiekop1,
 #broodtekst h4.divisiekop1 {
@@ -2163,7 +2170,8 @@ svnversion: warning: please check that your locale name is correct
 }
 #broodtekst .artikel_kop,
 #broodtekst h5.artikel_kop,
-#broodtekst h6.artikel_kop {
+#broodtekst h6.artikel_kop,
+#broodtekst h6.divisiekop3 {
   padding: 0.75em 0 0 0;
   margin: 0 0 .75em;
   font-size: 1em;
@@ -2270,4 +2278,14 @@ svnversion: warning: please check that your locale name is correct
 }
 #broodtekst .officiele-inhoudsopgave {
   margin-bottom: 3em;
+}
+
+#broodtekst .regeling-tekst ~ .regeling-sluiting {
+  margin-top: -1em;
+}
+#broodtekst .context .context_al:empty {
+  display: none;
+}
+#broodtekst .context .context_al:empty ~ .context_al {
+  margin-top: .5em;
 }
