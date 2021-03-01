@@ -64,6 +64,11 @@ variants:
               url: '#'
             - text: Inloggen
               url: '#'
+  - name: met Alert notificatie
+    context:
+      alertNotification:
+        modifier: alert--warning
+        text: Wegens technisch onderhoud is de website op donderdag 2 januari 2020 vanaf 17:00 verminderd beschikbaar.
   - name: Omgeving 'dev'
     context:
       enviroment: dev
