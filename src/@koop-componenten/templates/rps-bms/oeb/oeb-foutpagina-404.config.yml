@@ -1,0 +1,51 @@
+---
+label: OEB - Foutpagina 404
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      skipLinks:
+        - url: '#content'
+          text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  jumbotronContext:
+    heading: '404: Pagina niet gevonden'
+    h: h1
+    subheading: Serverfout
+    intro: Wij kunnen de pagina die u zoekt niet vinden. Mogelijk is de pagina niet meer beschikbaar of u heeft een verkeerde link gebruikt.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonAgain:
+      id: 123
+      text: Zoek opnieuw
+      anchor: true
+      action: '#'
+      modifier: button--primary
+    buttonContact:
+      id: 123
+      text: Neem contact op
+      anchor: true
+      action: '#'
