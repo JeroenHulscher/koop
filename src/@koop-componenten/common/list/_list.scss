@@ -258,7 +258,7 @@ ol {
 .list-custom {
   padding-left: 0;
 
-  li {
+  > li {
     list-style: none;
     position: relative;
     padding-left: 3.5em;
@@ -273,53 +273,53 @@ ol {
     width: 3.5em;
   }
 
-  &--size-xs li {
-    padding-left: 2.5em;
+  &--size-xs > li {
+    padding-left: 2.5em !important;
   }
-  &--size-xs &__itemtype,
-  &--size-xs &__itembullet {
+  &--size-xs > &__itemtype,
+  &--size-xs > &__itembullet {
     left: 0;
-    width: 2.5em;
+    width: 2.5em !important;
     padding-right: .5em;
   }
-  &--size-s li {
+  &--size-s > li {
     padding-left: 3.5em;
   }
-  &--size-s &__itemtype,
-  &--size-s &__itembullet {
+  &--size-s > &__itemtype,
+  &--size-s > &__itembullet {
     left: 0;
     width: 3.5em;
     padding-right: .5em;
   }
-  &--size-m li {
-    padding-left: 4em;
+  &--size-m > li {
+    padding-left: 4em !important;
   }
-  &--size-m &__itemtype,
-  &--size-m &__itembullet {
-    width: 4em;
-    padding-right: .5em;
+  &--size-m > &__itemtype,
+  &--size-m > &__itembullet {
+    width: 4em !important;
+    padding-right: .5em !important;
   }
-  &--size-l li {
+  &--size-l > li {
     padding-left: 5em;
   }
-  &--size-l &__itemtype,
-  &--size-l &__itembullet {
+  &--size-l > &__itemtype,
+  &--size-l > &__itembullet {
     width: 5em;
     padding-right: .5em;
   }
-  &--size-xl li {
+  &--size-xl > li {
     padding-left: 7em;
   }
-  &--size-xl &__itemtype,
-  &--size-xl &__itembullet {
+  &--size-xl > &__itemtype,
+  &--size-xl > &__itembullet {
     width: 7em;
     padding-right: .5em;
   }
-  &--size-xxl li {
+  &--size-xxl > li {
     padding-left: 9em;
   }
-  &--size-xxl &__itemtype,
-  &--size-xxl &__itembullet {
+  &--size-xxl > &__itemtype,
+  &--size-xxl > &__itembullet {
     width: 9em;
     padding-right: .5em;
   }
