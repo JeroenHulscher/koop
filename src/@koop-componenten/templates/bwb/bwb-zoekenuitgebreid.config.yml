@@ -220,12 +220,80 @@ context:
         id: ss114
         title: Defensie (def)
         short: def
+      - Option: ss115
+        id: ss115
+        title: Dummy checkbox
+        short: def
+      - Option: ss116
+        id: ss116
+        title: Dummy checkbox
+        short: def
+      - Option: ss117
+        id: ss117
+        title: Dummy checkbox
+        short: def
+      - Option: ss118
+        id: ss118
+        title: Dummy checkbox
+        short: def
+      - Option: ss119
+        id: ss119
+        title: Dummy checkbox
+        short: def
+      - Option: ss120
+        id: ss120
+        title: Dummy checkbox
+        short: def
+      - Option: ss121
+        id: ss121
+        title: Dummy checkbox
+        short: def
+      - Option: ss122
+        id: ss122
+        title: Dummy checkbox
+        short: def
+      - Option: ss123
+        id: ss123
+        title: Dummy checkbox
+        short: def
+      - Option: ss124
+        id: ss124
+        title: Dummy checkbox
+        short: def
+      - Option: ss125
+        id: ss125
+        title: Dummy checkbox
+        short: def
+      - Option: ss126
+        id: ss126
+        title: Dummy checkbox
+        short: def
+      - Option: ss127
+        id: ss127
+        title: Dummy checkbox
+        short: def
+      - Option: ss128
+        id: ss128
+        title: Dummy checkbox
+        short: def
+      - Option: ss129
+        id: ss129
+        title: Dummy checkbox
+        short: def
+      - Option: ss130
+        id: ss130
+        title: Dummy checkbox
+        short: def
+      - Option: ss131
+        id: ss131
+        title: Dummy checkbox
+        short: def
   ss2:
     id: ss21
     motherCheckboxIds: ZBO
     type: abbr
     modifier: fixed
-    linkText: Van de ZBO's
+    linkText: Selecteer ZBO's
     modalTitle: Selecteer ZBO's
     fieldLabel: fieldLabel
     fieldInstruction:
@@ -252,7 +320,7 @@ context:
     motherCheckboxIds: Bedrijf
     type: abbr
     modifier: fixed
-    linkText: Van de organisaties
+    linkText: Selecteer organisaties
     modalTitle: Selecteer organisaties
     fieldLabel: fieldLabel
     fieldInstruction:
