@@ -3,7 +3,7 @@ Berichten over uw buurt
 
 Beste bewoner,
 
-U ontvangt Berichten over uw buurt van de overheid. Hieronder ziet u de berichten van 7 tot en met 13 december. Er zijn 22 berichten binnen 250 meter rondom uw woning.
+U ontvangt Berichten over uw buurt van de overheid. Hieronder ziet u de berichten van 7 tot en met 13 december. Er zijn {aantal} berichten:
 
 -----------
 In uw buurt
