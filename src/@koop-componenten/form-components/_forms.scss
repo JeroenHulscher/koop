@@ -342,6 +342,10 @@ fieldset {
       background-image: $iconCrossWhite;
     }
 
+    &--noremove {
+      padding-right: 0.5em;
+    }
+
     > span {
       &::before {
         content: "\0022";

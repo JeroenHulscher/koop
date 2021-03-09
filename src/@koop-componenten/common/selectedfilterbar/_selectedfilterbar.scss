@@ -3,21 +3,26 @@
   position: relative;
 
   &__heading {
-    margin: 0 0 .75em 0;
+    margin: 0 0 .25em 0;
     font-weight: bold;
     font-size: 1em;
   }
-  &__filters {
 
+  &__filters {
+    display: inline-block;
+    vertical-align: middle;
+
+    .form__selectedfilter {
+      margin-bottom: .125em;
+    }
   }
 
+  &__buttonaction,
   &__buttonreset {
-    margin-left: -.25em;
-    @media (min-width: $breakpointDesktop) {
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin: 0;
+    @media ( min-width: $breakpointDesktop ) {
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0.325em 0 0 1em;
     }
   }
 
