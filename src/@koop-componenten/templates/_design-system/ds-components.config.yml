@@ -67,6 +67,8 @@ context:
           href: banner
         - stitle: Blok
           href: blok
+        - stitle: Blok indent
+          href: blok-indent
         - stitle: Blockquote
           href: blockquote
         - stitle: Bronlijst
