@@ -5,11 +5,14 @@
   </div>
 </div>
 
+<div class="container">
+  {{ render "@block-search"}}
+</div>
 <div class="container columns columns--sidebar">
   <div class="columns--sidebar__sidebar" role="complementary" data-decorator="add-mobile-foldability" id="toggleable-1">
     <div data-decorator="init-fixedbottom-button">
 
-      <div class="sidebar__section">
+      {{!-- <div class="sidebar__section">
 
         <h2 class="sidebar__header">Zoekvraag</h2>
 
@@ -33,7 +36,7 @@
           </fieldset>
         </form>
 
-      </div>
+      </div> --}}
 
       <div class="sidebar__section">
 
@@ -115,8 +118,6 @@
     <h1>Zoekresultaten
       <span class="h1__sub">1-10 van de 7396 resultaten</span>
     </h1>
-
-    {{ render "@selectedfilterbar" }}
 
     {{ render "@sort" sortContext }}
 

@@ -85,108 +85,168 @@ context:
     - label: Datum document
       value: value
   resultsContext:
-    modifier: result--list--wide
+    modifier: result--list--publications
     items:
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: Daarstelling van overschrijvingen op de tienjarige begrooting; vaststelling der begrooting voor 1826, benevens de middelen van ontvangst; bepaling der som voor aankoop en aflossing van schuld in 1826; ONTWERP VAN WET tot bepaling der som, welke gedurende het jaar 1826, tot aankoop en aflossing van schuld zal besteed worden
+        subTitle: Daarstelling van overschrijvingen op de tienjarige begrooting; vaststelling der begrooting voor 1826, benevens de middelen van ontvangst; bepaling der som voor aankoop en aflossing van schuld in 1826; ONTWERP VAN WET tot bepaling der som, welke gedurende het jaar 1826, tot aankoop en aflossing van schuld zal besteed worden
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk VI, nr. 5A"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5A
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: Daarstelling van overschrijvingen op de tienjarige begrooting; vaststelling der begrooting voor 1826, benevens de middelen van ontvangst; bepaling der som voor aankoop en aflossing van schuld in 1826; OPGAVE van het gebruik bij het amortisatie-syndicaat gemaakt van de som van twee millioenen gulden, bij de wet van den 25sten December 1824 (Staatsblad nº. 77) bestemd om, gedurende het jaar 1825, te worden besteed tot aankoop en aflossing van schuld. Geschiedende deze opgave ter voldoening aan art. 42 der wet van den 27sten December 1822 (Staatsblad nº. 59.)
+        subTitle: Daarstelling van overschrijvingen op de tienjarige begrooting; vaststelling der begrooting voor 1826, benevens de middelen van ontvangst; bepaling der som voor aankoop en aflossing van schuld in 1826; OPGAVE van het gebruik bij het amortisatie-syndicaat gemaakt van de som van twee millioenen gulden, bij de wet van den 25sten December 1824 (Staatsblad nº. 77) bestemd om, gedurende het jaar 1825, te worden besteed tot aankoop en aflossing van schuld. Geschiedende deze opgave ter voldoening aan art. 42 der wet van den 27sten December 1822 (Staatsblad nº. 59.)
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk VI, nr. 5B"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: Daarstelling van overschrijvingen op de tienjarige begrooting; vaststelling der begrooting voor 1826, benevens de middelen van ontvangst; bepaling der som voor aankoop en aflossing van schuld in 1826; EXTRACT uit het Proces-Verbaal van de Vergadering van het Amortisatie-Syndicaat, gehouden binnen Amsterdam op Woensdag den 24sten Augustus 1825, des namiddags ten één ure
+        subTitle: Daarstelling van overschrijvingen op de tienjarige begrooting; vaststelling der begrooting voor 1826, benevens de middelen van ontvangst; bepaling der som voor aankoop en aflossing van schuld in 1826; EXTRACT uit het Proces-Verbaal van de Vergadering van het Amortisatie-Syndicaat, gehouden binnen Amsterdam op Woensdag den 24sten Augustus 1825, des namiddags ten één ure
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk VI, nr. 5C"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: WETBOEK VAN KOOPHANDEL; ANTWOORDEN op de aanmerkingen der Afdeelingen omtrent den Isten Titel van Boek III (van faillissement.)
+        subTitle: WETBOEK VAN KOOPHANDEL; ANTWOORDEN op de aanmerkingen der Afdeelingen omtrent den Isten Titel van Boek III (van faillissement.)
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk XIV, nr. 3B"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: 'WETBOEK VAN KOOPHANDEL; ONTWERP VAN WET, bevattende Titel I van Boek III: van faillissement'
+        subTitle: 'WETBOEK VAN KOOPHANDEL; ONTWERP VAN WET, bevattende Titel I van Boek III: van faillissement'
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk XIV, nr. 3A"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: Onteigening van eigendommen ten algemeenen nutte; ONTWERP VAN WET
+        subTitle: Onteigening van eigendommen ten algemeenen nutte; ONTWERP VAN WET
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk XIV, nr. 2"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: 'Wetboek van koophandel; ONTWERP VAN WET, bevattende Titel III van Boek I: van vennootschappen of maatschappij van koophandel'
+        subTitle: 'Wetboek van koophandel; ONTWERP VAN WET, bevattende Titel III van Boek I: van vennootschappen of maatschappij van koophandel'
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk V, nr. 2 C"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: 'Wetboek van koophandel; ONTWERP VAN WET, bevattende Titel IV van Boek I: van beurzen van koophandel'
+        subTitle: 'Wetboek van koophandel; ONTWERP VAN WET, bevattende Titel IV van Boek I: van beurzen van koophandel'
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk V, nr. 2 D"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Dossier- en ondernummer
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Handelingen
         titleHeader: h2
         titleHref: '#'
-        text: 'Handelingen Tweede Kamer 1825-1826 21 februari 1826'
+        subTitle: 'Handelingen Tweede Kamer 1825-1826 21 februari 1826'
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Pagina's: 174 - 177"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Pagina's
+              value: 174 - 177
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
       - title: Kamerstuk
         titleHeader: h2
         titleHref: '#'
-        text: 'WETBOEK VAN KOOPHANDEL; PROCESSEN-VERBAAL van de beraadslagingen der Afdeelingen over den Isten Titel van Boek III (de la faillite)'
+        subTitle: 'WETBOEK VAN KOOPHANDEL; PROCESSEN-VERBAAL van de beraadslagingen der Afdeelingen over den Isten Titel van Boek III (de la faillite)'
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Vergaderjaar: 1825-1826"
-          - value: "Dossier- en ondernummer: Kamerstuk V, nr. 3A"
-          - value: "Organisatie: Tweede Kamer der Staten-Generaal"
+        publicationDetails:
+          items:
+            - type: Datum document
+              value: 01-09-2020
+            - type: Vergaderjaar
+              value: 1825-1826
+            - type: Pagina's
+              value: Kamerstuk VI, nr. 5B
+            - type: Organisatie
+              value: Tweede Kamer der Staten-Generaal
   fgDocumentsoort:
     items:
       - label: Blad gemeenschappelijke regelingen met nog iets
@@ -353,4 +413,3 @@ context:
             value: Waterschapsblad
           - label: Blad gemeenschappelijke regeling
             value: Blad gemeenschappelijke regeling
-

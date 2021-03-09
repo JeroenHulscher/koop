@@ -40,25 +40,6 @@
             </fieldset>
 
             <fieldset>
-              <legend>Aanvullende zoekcriteria</legend>
-              <div class="form__row">
-                <p class="form__sublegend">Publicerende organisatie(s)</p>
-                {{ render "@input-checkbox" checkboxPub }}
-              </div>
-              <div class="form__row">
-                <p class="form__sublegend">Onderwerp(en)</p>
-                {{render "@subselection" subselectionWatContext }}
-              </div>
-              <div class="form__row">
-                <p class="form__sublegend">Vergaderjaar</p>
-                {{render "@subselection" subselectionVerContext }}
-              </div>
-            </fieldset>
-          </div>
-          <div class="column">
-
-            <div class="form__row form__row--large">
-              <fieldset>
                 <legend>Documentsoort</legend>
                 <div class="form__row">
                   <div data-decorator="init-unselectall" data-config='{"checkboxSelector":".accordion__item__header .checkbox__input"}'>
@@ -141,7 +122,26 @@
                   </div>
                 </div>
               </fieldset>
-            </div>
+
+          </div>
+          <div class="column">
+
+            <fieldset>
+              <legend>Aanvullende zoekcriteria</legend>
+              <div class="form__row">
+                <p class="form__sublegend">Publicerende organisatie(s)</p>
+                {{ render "@input-checkbox" checkboxPub }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Onderwerp(en)</p>
+                {{render "@subselection" subselectionWatContext }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Vergaderjaar</p>
+                {{render "@subselection" subselectionVerContext }}
+              </div>
+            </fieldset>
+
           </div>
         </div>
         <div class="form__rowsubmit">
