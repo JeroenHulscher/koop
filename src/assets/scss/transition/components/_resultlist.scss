@@ -119,6 +119,19 @@
       }
     }
   }
+
+  &--publications {
+    & > ul:first-child {
+      padding: 0;
+      background: none;
+
+      & > li {
+        padding: 0 0 1.5em 0;
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid $mediumGrey;
+      }
+    }
+  }
 }
 
 
