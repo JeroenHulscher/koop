@@ -69,4 +69,39 @@ dl,
     }
   }
 
+  &--publication {
+
+    dt {
+      color: green;
+      font-weight: normal;
+    }
+    dd {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    & > div {
+      margin-bottom: .5em;
+    }
+
+    @media ( min-width: $breakpointDesktop ) {
+      flex-direction: row;
+      display: flex;
+
+
+      & > * {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin-left: 1em;
+        margin-bottom: 0;
+      }
+      & >:first-child,
+      & >:only-child {
+          margin-left: 0;
+      }
+    }
+
+  }
+
 }
