@@ -354,4 +354,10 @@
       margin-right: .2em;
     }
   }
+
+  @media ( min-width: $breakpointDesktop ) {
+    &--nolabel {
+      margin-top: 1.45em;
+    }
+  }
 }
