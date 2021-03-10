@@ -47,6 +47,12 @@ context:
   pageactions:
     items:
     - link: '#'
+      text: Informatie
+      icon: icon-info-blue.svg
+    - link: '#'
+      text: Gerelateerd
+      icon: icon-document.svg
+    - link: '#'
       text: Authentieke versie (PDF)
       icon: icon-download.svg
     - link: '#'
