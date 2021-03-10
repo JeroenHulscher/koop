@@ -46,10 +46,10 @@ context:
     - text: Staatsblad 2020, 225609
   pageactions:
     items:
-    - link: '#'
+    - link: '#extrainformatie'
       text: Informatie
       icon: icon-info-blue.svg
-    - link: '#'
+    - link: '#gerelateerd'
       text: Gerelateerd
       icon: icon-document.svg
     - link: '#'
