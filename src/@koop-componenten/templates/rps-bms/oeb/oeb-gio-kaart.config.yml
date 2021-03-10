@@ -82,3 +82,10 @@ context:
       icon: icon-permalink.svg
       modal: true
       modalId: 512
+  listGerelateerd:
+    modifier: list--relations
+    items:
+      - content: <a href="#">Staatscourant 2020, 64380</a><small>Vaststellingsbesluit</small>
+  navInformatie:
+    items:
+      - title: Informatie over publicatie

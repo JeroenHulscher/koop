@@ -10,12 +10,21 @@
 
   thead {
     tr.head-row1 th.top,
-    th[scope=col] {
+    th[scope=col],
+    th[scope=row] {
       background: $darkBlue !important;
       color: white !important;
       a {
         color: white !important;
+        &.nootnum {
+          color: $darkBlue !important;
+        }
       }
+
+    }
+    tr.head-row-rest td,
+    tr.head-row-rest th {
+      background: $primaryBlue !important;
     }
   }
 }
@@ -611,8 +620,14 @@ hr .item {
 #broodtekst ._p_al {
     line-height: 1.5em;
     margin-bottom: 1em;
-    > sup > object > ._p_table {
-      margin-top: 1em;
+    > sup > object {
+      & > ._p_table {
+        margin-top: 1em;
+      }
+      & > ._p_noot_al {
+        background: $lightGrey;
+        padding: .5em .5em 0.5em .5em;
+      }
     }
 }
 
@@ -1071,6 +1086,11 @@ hr .item {
 #broodtekst li p {
     margin: 0;
     padding: 0 0 .5em 0;
+}
+#broodtekst li th *:last-child,
+#broodtekst li td *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
 }
 
 #broodtekst li ul.preceding-paragraph-empty {
@@ -1694,6 +1714,199 @@ margin-bottom:2em;
 
 /* == end maandbericht.css */
 
+/* === op-table.css */
+
+// #broodtekst table {
+// 	width:100%;
+// 	border-spacing: 5px 5px;
+//     border-collapse: separate;
+// 	border: 0;
+//     margin-bottom: 1.5em;
+// }
+
+	/* caption */
+	// #broodtekst table caption {
+	// 	font-weight: bold;
+	// 	text-align: left;
+	// 	margin-top: 2em;
+	// 	color: #333;
+	// 	line-height: 1.2em;
+	// }
+
+	/* tr */
+	// #broodtekst tfoot td { padding: 0.2em; }
+
+	/* th */
+	// #broodtekst table th {
+	// 	padding: 5px;
+	// 	vertical-align:bottom;
+	// 	border-bottom: 1px solid #154273;
+	// 	border-top: 0;
+  //  		border-right: 0;
+  //   	border-left: 0;
+	// }
+	// #broodtekst table tr.head-row1 th {
+	// 	color:#154273;
+	// }
+	// #broodtekst table tr.head-row1 th p, #broodtekst table tr.head-row1 th sup, #broodtekst table tr.head-row1 th strong { color:#154273; }
+	// #broodtekst table tr.head-row2 th { color:#000;  font-weight:normal;  }
+	// #broodtekst table tr.head-row2 th p, #broodtekst table tr.head-row2 th sub, #broodtekst table tr.head-row2 th strong { color:#154273; }
+	// #broodtekst table tr.head-row3 th { color:#154273; font-weight:normal}
+	// #broodtekst table tr.head-row3 th p, #broodtekst table tr.head-row3 th strong { color:#154273; }
+	// #broodtekst table tr.head-row-last th { color:#154273; font-weight:normal}
+	// #broodtekst table tr.head-row-last th p, #broodtekst table tr.head-row-last th sup, #broodtekst table tr.head-row-last th strong { color:#154273; }
+	// #broodtekst table tr.head-row-reset td {
+  //   background: #007bc7;
+  //   color: #fff;
+  // }
+
+	/* td */
+	// #broodtekst table td {
+
+	// 	vertical-align:top;
+
+	// 	padding: 0px 5px 5px 5px;
+  //   	border-bottom: 1px solid #d3d3d3;
+	// 	border-top: 0;
+  //  		border-right: 0;
+  //   	border-left: 0;
+	// }
+
+	/* paragraaf in tabel*/
+	// #broodtekst table th p,  #broodtekst table td p { width:auto; padding:0;
+	// 	line-height: 1.2em;
+	// }
+
+	/* algemene definities */
+	#broodtekst tbody.invisible tr { visibility: hidden; display:none; }
+	#broodtekst colspec { display: none; }
+
+	#broodtekst .right { text-align: right; }
+	#broodtekst .left, .char { text-align: left; }
+	#broodtekst .center { text-align: center; }
+	#broodtekst .justify { text-align: justify; }
+
+	#broodtekst .top { vertical-align: top; }
+	#broodtekst .middle { vertical-align: middle; }
+	#broodtekst .bottom { vertical-align: bottom; }
+
+	#broodtekst .pct1 { width : 1%; }
+	#broodtekst .pct2 { width : 2%; }
+	#broodtekst .pct3 { width : 3%; }
+	#broodtekst .pct4 { width : 4%; }
+	#broodtekst .pct5 { width : 5%; }
+	#broodtekst .pct6 { width : 6%; }
+	#broodtekst .pct7 { width : 7%; }
+	#broodtekst .pct8 { width : 8%; }
+	#broodtekst .pct9 { width : 9%; }
+	#broodtekst .pct10 { width : 10%; }
+	#broodtekst .pct11 { width : 11%; }
+	#broodtekst .pct12 { width : 12%; }
+	#broodtekst .pct13 { width : 13%; }
+	#broodtekst .pct14 { width : 14%; }
+	#broodtekst .pct15 { width : 15%; }
+	#broodtekst .pct16 { width : 16%; }
+	#broodtekst .pct17 { width : 17%; }
+	#broodtekst .pct18 { width : 18%; }
+	#broodtekst .pct19 { width : 19%; }
+	#broodtekst .pct20 { width : 20%; }
+	#broodtekst .pct21 { width : 21%; }
+	#broodtekst .pct22 { width : 22%; }
+	#broodtekst .pct23 { width : 23%; }
+	#broodtekst .pct24 { width : 24%; }
+	#broodtekst .pct25 { width : 25%; }
+	#broodtekst .pct26 { width : 26%; }
+	#broodtekst .pct27 { width : 27%; }
+	#broodtekst .pct28 { width : 28%; }
+	#broodtekst .pct29 { width : 29%; }
+	#broodtekst .pct30 { width : 30%; }
+	#broodtekst .pct31 { width : 31%; }
+	#broodtekst .pct32 { width : 32%; }
+	#broodtekst .pct33 { width : 33%; }
+	#broodtekst .pct34 { width : 34%; }
+	#broodtekst .pct35 { width : 35%; }
+	#broodtekst .pct36 { width : 36%; }
+	#broodtekst .pct37 { width : 37%; }
+	#broodtekst .pct38 { width : 38%; }
+	#broodtekst .pct39 { width : 39%; }
+	#broodtekst .pct40 { width : 40%; }
+	#broodtekst .pct41 { width : 41%; }
+	#broodtekst .pct42 { width : 42%; }
+	#broodtekst .pct43 { width : 43%; }
+	#broodtekst .pct44 { width : 44%; }
+	#broodtekst .pct45 { width : 45%; }
+	#broodtekst .pct46 { width : 46%; }
+	#broodtekst .pct47 { width : 47%; }
+	#broodtekst .pct48 { width : 48%; }
+	#broodtekst .pct49 { width : 49%; }
+	#broodtekst .pct50 { width : 50%; }
+	#broodtekst .pct51 { width : 51%; }
+	#broodtekst .pct52 { width : 52%; }
+	#broodtekst .pct53 { width : 53%; }
+	#broodtekst .pct54 { width : 54%; }
+	#broodtekst .pct55 { width : 55%; }
+	#broodtekst .pct56 { width : 56%; }
+	#broodtekst .pct57 { width : 57%; }
+	#broodtekst .pct58 { width : 58%; }
+	#broodtekst .pct59 { width : 59%; }
+	#broodtekst .pct60 { width : 60%; }
+	#broodtekst .pct61 { width : 61%; }
+	#broodtekst .pct62 { width : 62%; }
+	#broodtekst .pct63 { width : 63%; }
+	#broodtekst .pct64 { width : 64%; }
+	#broodtekst .pct65 { width : 65%; }
+	#broodtekst .pct66 { width : 66%; }
+	#broodtekst .pct67 { width : 67%; }
+	#broodtekst .pct68 { width : 68%; }
+	#broodtekst .pct69 { width : 69%; }
+	#broodtekst .pct70 { width : 70%; }
+	#broodtekst .pct71 { width : 71%; }
+	#broodtekst .pct72 { width : 72%; }
+	#broodtekst .pct73 { width : 73%; }
+	#broodtekst .pct74 { width : 74%; }
+	#broodtekst .pct75 { width : 75%; }
+	#broodtekst .pct76 { width : 76%; }
+	#broodtekst .pct77 { width : 77%; }
+	#broodtekst .pct78 { width : 78%; }
+	#broodtekst .pct79 { width : 79%; }
+	#broodtekst .pct80 { width : 80%; }
+	#broodtekst .pct81 { width : 81%; }
+	#broodtekst .pct82 { width : 82%; }
+	#broodtekst .pct83 { width : 83%; }
+	#broodtekst .pct84 { width : 84%; }
+	#broodtekst .pct85 { width : 85%; }
+	#broodtekst .pct86 { width : 86%; }
+	#broodtekst .pct87 { width : 87%; }
+	#broodtekst .pct88 { width : 88%; }
+	#broodtekst .pct89 { width : 89%; }
+	#broodtekst .pct90 { width : 90%; }
+	#broodtekst .pct91 { width : 91%; }
+	#broodtekst .pct92 { width : 92%; }
+	#broodtekst .pct93 { width : 93%; }
+	#broodtekst .pct94 { width : 94%; }
+	#broodtekst .pct95 { width : 95%; }
+	#broodtekst .pct96 { width : 96%; }
+	#broodtekst .pct97 { width : 97%; }
+	#broodtekst .pct98 { width : 98%; }
+	#broodtekst .pct99 { width : 99%; }
+	#broodtekst .pct100 { width : 100%; }
+
+
+	/* specifieke tabellen */
+	#broodtekst table.verwijz td { padding:0 5px 4px 5px; border-right:10px solid #fff; border-bottom:4px solid #fff; valign:top; background:#fff; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === waterschapsblad.css */
 
 /* SDU: Version 3.7 build svnversion: warning: cannot set LC_CTYPE locale
@@ -1888,6 +2101,9 @@ svnversion: warning: please check that your locale name is correct
 #broodtekst h3.wijzig-artikel_kop {
   padding-top: 1em;
 }
+#broodtekst .artikel ~ h3.wijzig-artikel_kop {
+  padding-top: 0em;
+}
 #broodtekst h2.divisiekop1,
 #broodtekst h3.divisiekop1,
 #broodtekst h4.divisiekop1 {
@@ -1954,7 +2170,8 @@ svnversion: warning: please check that your locale name is correct
 }
 #broodtekst .artikel_kop,
 #broodtekst h5.artikel_kop,
-#broodtekst h6.artikel_kop {
+#broodtekst h6.artikel_kop,
+#broodtekst h6.divisiekop3 {
   padding: 0.75em 0 0 0;
   margin: 0 0 .75em;
   font-size: 1em;
@@ -2003,6 +2220,9 @@ svnversion: warning: please check that your locale name is correct
 }
 #broodtekst ._p_staatscourant ._p_kop_level0 {
   margin-top: 1em;
+}
+#broodtekst ._p_staatscourant .plaatje img {
+  max-width: none;
 }
 
 #broodtekst .artikel,
@@ -2058,4 +2278,14 @@ svnversion: warning: please check that your locale name is correct
 }
 #broodtekst .officiele-inhoudsopgave {
   margin-bottom: 3em;
+}
+
+#broodtekst .regeling-tekst ~ .regeling-sluiting {
+  margin-top: -1em;
+}
+#broodtekst .context .context_al:empty {
+  display: none;
+}
+#broodtekst .context .context_al:empty ~ .context_al {
+  margin-top: .5em;
 }

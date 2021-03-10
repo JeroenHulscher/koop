@@ -90,6 +90,16 @@
     background-color: $headerBackgroundColor;
     position: relative;
 
+    .header--acc & {
+      background-color: $headerBackgroundColorAcc;
+    }
+    .header--test & {
+      background-color: $headerBackgroundColorTest;
+    }
+    .header--dev & {
+      background-color: $headerBackgroundColorDev;
+    }
+
     > .container {
       display: flex;
       justify-content: space-between;
