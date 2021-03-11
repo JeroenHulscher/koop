@@ -71,11 +71,11 @@ variants:
         text: Wegens technisch onderhoud is de website op donderdag 2 januari 2020 vanaf 17:00 verminderd beschikbaar.
   - name: Omgeving 'dev'
     context:
-      enviroment: dev
+      environment: dev
   - name: Omgeving 'test'
     context:
-      enviroment: test
+      environment: test
   - name: Omgeving 'acc'
     context:
-      enviroment: acc
+      environment: acc
 
