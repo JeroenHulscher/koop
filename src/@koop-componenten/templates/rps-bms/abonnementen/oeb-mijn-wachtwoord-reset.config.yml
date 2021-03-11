@@ -58,4 +58,4 @@ context:
     type: submit
     modifier: button--primary form__button
   preheader:
-    value: Mijn abonnementen
+    value: Officiële bekendmakingen
