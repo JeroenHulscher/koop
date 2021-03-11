@@ -19,9 +19,10 @@ context:
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
-      skipLinks:
-        - url: '#content'
-          text: Direct naar content
+      - url: '#content'
+        text: Direct naar content
+      - url: '#zoekopnieuw'
+        text: Direct naar zoek opnieuw
     metaLinks:
       - profile: true
         profileContext:
@@ -83,6 +84,7 @@ context:
       value: value
       active: is-active
       sortOrder: none
+      singleSort: true
     - label: Datum document
       value: value
   resultsContext:
