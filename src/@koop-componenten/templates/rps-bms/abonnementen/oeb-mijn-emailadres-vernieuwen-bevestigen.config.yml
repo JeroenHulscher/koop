@@ -39,47 +39,40 @@ context:
     - text: Mijn Abonnementen
       url: '#'
     - text: Bevestigen wijziging e-mailadres
-  jumbotronContext:
-    heading: Bevestigen wijziging e-mailadres
-    subheading: Officiële bekendmakingen
-    text: U heeft een wijziging doorgegeven voor uw e-mailadres. U dient deze wijziging te bevestigen voordat wij de wijziging doorvoeren. Gebruik daarvoor de bevestigingscode die u op uw nieuwe e-mailadres hebt ontvangen.
-    centered: true
-    size: s
-    headingcentered: true
-    inputEmailContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 1
-      required: true
-      patterntype: email
-      fieldLabel: Uw nieuwe e-mailadres
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder: Bijv. uwnaam@overheid.nl
-      value: uwnaam@overheid.nl
-    inputCodeContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 2
-      required: true
-      type: text
-      fieldLabel: Bevestigingscode
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder:
-      hastooltip: true
-      tooltipContext:
-        id: 1231
-        content: De bevestigingscode die u op uw nieuwe e-mailadres heeft ontvangen.
-    linkNewcode:
-      text: Nieuwe bevestigingscode aanvragen
-    linkAccount:
-      text: Ik heb al een account
-    buttonSubmit:
-      id: 123
-      text: Bevestigen
-      button: true
-      type: submit
-      modifier: button--primary form__button
-    alert:
-      text: Wij hebben een bevestigingscode gestuurd naar het door u opgegeven e-mailadres, indien deze bij ons bekend is.
+  inputEmailContext:
+    modifier: input-text--medium
+    labelmodifier: accent
+    id: 1
+    required: true
+    patterntype: email
+    fieldLabel: Uw nieuwe e-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Bijv. uwnaam@overheid.nl
+    value: uwnaam@overheid.nl
+  inputCodeContext:
+    id: 2
+    required: true
+    type: text
+    fieldLabel: Bevestigingscode
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder:
+    hastooltip: true
+    tooltipContext:
+      id: 1231
+      content: De bevestigingscode die u op uw nieuwe e-mailadres heeft ontvangen.
+  linkNewcode:
+    text: Nieuwe bevestigingscode aanvragen
+  linkAccount:
+    text: Ik heb al een account
+  buttonSubmit:
+    id: 123
+    text: Bevestigen
+    button: true
+    type: submit
+    modifier: button--primary form__button
+  alert:
+    text: Wij hebben een bevestigingscode gestuurd naar het door u opgegeven e-mailadres, indien deze bij ons bekend is.
+  preheader:
+    value: Mijn abonnementen
