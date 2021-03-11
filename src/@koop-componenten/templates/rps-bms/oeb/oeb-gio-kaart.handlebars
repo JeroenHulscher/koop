@@ -10,7 +10,15 @@
 <div class="container columns columns--sticky-sidebar">
   <div class="columns--sticky-sidebar__sidebar" role="complementary" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
     <div>
-      <a href="#" class="icon--backlink">Terug naar document</a>
+
+      <h3 class="nav-sub__heading" id="extrainformatie">Extra informatie</h3>
+      {{render "@nav" navInformatie }}
+
+      <h3 class="nav-sub__heading">Vaststelling</h3>
+
+      {{ render "@list" listGerelateerd }}
+
+
 
     </div>
   </div>

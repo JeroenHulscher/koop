@@ -5,34 +5,36 @@
   </div>
 </div>
 
-<div id="content" role="main" class="container">
-
-  <div class="row">
-
-    {{#> @jumbotron jumbotronContext }}
-
-      {{ render "@alert--warning" alert merge=true }}
-
-      <form class="form" data-decorator="init-form-validation">
-        <fieldset>
-          <legend class="visually-hidden">Nieuw e-mailadres bevestigen</legend>
-          <div class="form__row form__row--medium">
-            {{render "@input-text" inputCodeContext }}
-          </div>
-          <div class="form__rowsubmit">
-            <div class="form__rowsubmit__item">
-              {{ render "@button" buttonSubmit }}
+<div id="content" role="main" class="container container--centered">
+  <div class="row row--spacer u-margin-top-40">
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        <div class="form__row form__row--large">
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Bevestigen wijziging e-mailadres</h1>
+        </div>
+        {{ render "@alert--success" alert merge=true }}
+        <form class="form" data-decorator="init-form-validation">
+          <fieldset>
+            <legend class="visually-hidden">Nieuw e-mailadres bevestigen</legend>
+            <div class="form__row form__row--medium">
+              {{render "@input-text" inputCodeContext }}
             </div>
-            <div class="form__rowsubmit__item">
-              {{render "@link--mail" linkNewcode merge=true }}
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+              <div class="form__rowsubmit__item">
+                {{render "@link--mail" linkNewcode merge=true }}
+              </div>
             </div>
-          </div>
-        </fieldset>
-      </form>
-    {{/@jumbotron}}
-
+          </fieldset>
+        </form>
+      </div>
+      <div class="column">
+      </div>
+    </div>
   </div>
-
 </div>
 
 {{ render "@disclaimer" }}

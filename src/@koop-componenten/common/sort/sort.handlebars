@@ -6,7 +6,7 @@
       <ul class="sort__options">
         {{#each options}}
           <li>
-            <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" role="button" class="sort--ascending {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
+            <a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" role="button" class="{{#if singleSort}}{{else}}{{#if sortDescending}}sort--descending{{else}}sort--ascending{{/if}}{{/if}} {{active}}" aria-pressed="{{#if active}}true{{else}}false{{/if}}"><span class="visually-hidden">Sorteer op: </span>{{label}}</a>
           </li>
         {{/each}}
       </ul>

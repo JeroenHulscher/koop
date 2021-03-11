@@ -328,13 +328,19 @@
 
           var $choice = $(e.currentTarget).closest(selectorFromClass(options.choiceItemClass));
 
+          // close all, to avoid multi open containers (from multiple instances of component)
+          self.hideAll();
+
+          var input = $(this).parent().parent().find('input')[0];
+          input.focus();
+
           self.removeSelectedOption({
             value: $choice.attr('data-value'),
             text: $choice.attr('data-text')
           }, $choice);
 
           // set focus on inputfield;
-          $(selectorFromClass(options.queryInputClass)).focus();
+          // $(selectorFromClass(options.queryInputClass)).focus();
 
         });
 
@@ -395,6 +401,17 @@
       this.$queryInput.attr('aria-activedescendant', '');
 
       this.$el.removeClass(this.options.activeClass);
+
+      this.documentCancelEvents('off');
+
+    },
+
+    hideAll: function () {
+
+      $('.multiselect__input').attr('aria-expanded', false);
+      $('.multiselect__input').attr('aria-activedescendant', '');
+
+      $('div.multiselect__container').removeClass(this.options.activeClass);
 
       this.documentCancelEvents('off');
 

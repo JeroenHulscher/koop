@@ -1,6 +1,6 @@
 Welkom bij Berichten over uw buurt
 
-Geachte bewoner,
+Beste bewoner,
 
 De overheid stuurt u voortaan een
 overzicht van Berichten over uw buurt. Dit zijn berichten over
@@ -21,11 +21,11 @@ overheid.nl
 Inhoud e-mail veranderen
 ------------------------
 
-Wilt u de afstand tot uw woning
-veranderen of wilt u berichten over uw hele gemeente ontvangen?
-Log dan in bij uw persoonlijke omgeving op MijnOverheid. Via het
-onderdeel 'Berichten over uw buurt' op de pagina ‘Wonen’ kunt u
-uw voorkeuren wijzigen.
+Wilt u de afstand tot uw woning veranderen
+of wilt u berichten over uw hele gemeente ontvangen?
+Log dan in op MijnOverheid. Via het onderdeel
+'Berichten over uw buurt' op de pagina 'Wonen'
+kunt u uw voorkeuren wijzigen.
 
 ----------------------------------
 Ik wil geen e-mails meer ontvangen

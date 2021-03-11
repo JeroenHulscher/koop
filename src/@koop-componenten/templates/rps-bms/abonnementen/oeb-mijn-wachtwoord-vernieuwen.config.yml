@@ -44,12 +44,13 @@ context:
               url: '#'
               class: link link--logout
   breadcrumb:
+    title: "U bent hier:"
     breadcrumb:
     - text: Home
       url: '#'
-    - text: Berichtgeving
+    - text: Mijn Abonnementen
       url: '#'
-    - text: X
+    - text: Wachtwoord wijzigen
   emailInput:
     modifier:
     id: 1

@@ -3,9 +3,9 @@
   <div class="selectedfilterbar__filters">
     {{ render "@form-selectedfilter" selectedFilters }}
   </div>
-  {{#if buttonReset}}
-    <div class="selectedfilterbar__buttonreset">
-      <p>{{ render "@link--delete" linkDelete merge=true }}</p>
+  {{#if buttonAction}}
+    <div class="selectedfilterbar__buttonaction">
+      <p>{{ render "@link" buttonAction }}</p>
     </div>
   {{/if}}
 </div>

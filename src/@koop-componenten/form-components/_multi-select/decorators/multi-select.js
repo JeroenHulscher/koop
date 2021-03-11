@@ -13,7 +13,6 @@
   var multiselect = function (element) {
     this.element = element;
     this.config = [];
-
     this.config.placeholder = this.element.getAttribute( 'data-decorator-placeholder' );
     this.config.searchPlaceholder = 'Zoek opties';
     this.config.noResultsText = 'Geen resultaten';

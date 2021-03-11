@@ -19,6 +19,17 @@ variants:
   - name: horizontal
     context:
       modifier: "dl--horizontal"
+  - name: publication
+    context:
+      divContainer: true
+      modifier: "dl--publication"
+      items:
+        - type: Datum publicatie
+          value: 02-03-2021
+        - type: Jaargang en nummer
+          value: Staatscourant 2021, 10987
+        - type: Organisatie
+          value: Venlo
   - name: data
     context:
       modifier: "columns--data"

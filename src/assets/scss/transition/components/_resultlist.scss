@@ -92,8 +92,12 @@
   }
 
   .result--actions {
-    right: 1em;
-    top: 1em;
+    position: relative;
+    padding: 0;
+    li {
+      font-size: 1em;
+    }
+
   }
 
   .list--metadata {
@@ -112,6 +116,19 @@
       > ul > li,
       > ul:first-child > li {
         padding: 2.25em 4em 2.25em;
+      }
+    }
+  }
+
+  &--publications {
+    & > ul:first-child {
+      padding: 0;
+      background: none;
+
+      & > li {
+        padding: 0 0 1.5em 0;
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid $mediumGrey;
       }
     }
   }

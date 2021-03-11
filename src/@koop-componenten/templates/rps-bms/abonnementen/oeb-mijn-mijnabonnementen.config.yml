@@ -83,12 +83,21 @@ context:
         - label: Nee
           linkedto: 1
           hideself: true
-      buttonContext:
-        modifier: button--secundary
-        button: false
-        anchor: true
-        action: /components/preview/templates-att-stap1
-        text: Bewerken
+      defaultactions:
+        - modifier: button--secondary
+          button: false
+          anchor: true
+          action: /components/preview/templates-att-stap1
+          text: Bewerken
+        - buttonIcon: true
+          buttonIconContext:
+            modifier: button-icon button-icon--bin
+            button: false
+            anchor: true
+            action: /components/preview/templates-att-stap1
+            text: Verwijderen
+            type: submit
+            arguments: 'data-decorator="init-browseralert" data-alertmessage="Weet u zeker dat u uw abonnement wilt verwijderen?"'
     - name: Zoekvraag 2
       nameHref: '#'
       icon: icon-bg--news
@@ -101,25 +110,21 @@ context:
             dd: n.v.t
           - dt: Frequentie
             dd: Zo snel mogelijk na publicatie
-      actionsOne:
-        - label: Verwijder abonnement Adamshofstraat 69, 3061ZB Rotterdam
-          icon: icon--bin
-          iconOnly: true
-          linkedto: 2
-          hideself: true
-      actionsTwoLabel: Verwijderen?
-      actionsTwo:
-        - label: Ja
-          buttonType: submit
-        - label: Nee
-          linkedto: 1
-          hideself: true
-      buttonContext:
-        modifier: button--secondary
-        button: false
-        anchor: true
-        action: /components/preview/templates-att-stap1
-        text: Bewerken
+      defaultactions:
+        - modifier: button--secondary
+          button: false
+          anchor: true
+          action: /components/preview/templates-att-stap1
+          text: Bewerken
+        - buttonIcon: true
+          buttonIconContext:
+            modifier: button-icon button-icon--bin
+            button: false
+            anchor: true
+            action: /components/preview/templates-att-stap1
+            text: Verwijderen
+            type: submit
+            arguments: 'data-decorator="init-browseralert" data-alertmessage="Weet u zeker dat u uw abonnement wilt verwijderen?"'
   modalNewAbo:
     initClosed: true
     buttonModifier: button--primary icon-bg icon-bg--plus-white

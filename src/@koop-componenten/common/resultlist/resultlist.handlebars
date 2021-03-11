@@ -18,6 +18,14 @@
           <a href="{{href}}" class="result--title">{{ title }}</a>
         {{/if}}
 
+        {{#if subTitle}}
+          <p><a href="{{subTitleHref}}" class="result--subtitle">{{ subTitle }}</a></p>
+        {{/if}}
+
+        {{#if publicationDetails}}
+          {{ render "@definitionlist--publication" publicationDetails merge=true }}
+        {{/if}}
+
         {{#if metadata }}
           {{#if theme }}
             <p>
@@ -83,7 +91,7 @@
           {{else}}
             <ul class="result--actions">
               {{#each downloads }}
-                <li><a {{#if id}}id="{{id}}"{{/if}} href="#" class="icon icon--download"><span>Download de </span>{{ type }} {{ size }}</a></li>
+                <li><a {{#if id}}id="{{id}}"{{/if}} href="{{href}}" class="icon icon--download">{{#if prelabel}}<span>Download de </span>{{/if}}{{ type }} {{ size }}</a></li>
               {{/each}}
             </ul>
           {{/if}}

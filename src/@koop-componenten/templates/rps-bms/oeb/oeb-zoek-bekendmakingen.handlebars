@@ -40,26 +40,6 @@
             </fieldset>
 
             <fieldset>
-              <legend>Aanvullende zoekcriteria</legend>
-              <div class="form__row">
-                <p class="form__sublegend">Type organisatie(s)</p>
-                {{render "@subselection--with-catagories-and-select-all" subselectionGemContext merge=true }}
-              </div>
-              <div class="form__row">
-                <p class="form__sublegend">Publicerende organisatie(s)</p>
-                {{render "@subselection--with-catagories-and-select-all" subselectionPubContext merge=true }}
-              </div>
-              <div class="form__row">
-                <p class="form__sublegend">Onderwerp(en)</p>
-                {{render "@subselection" subselectionWatContext }}
-              </div>
-            </fieldset>
-
-          </div>
-          <div class="column">
-
-            <div class="form__row form__row--large">
-              <fieldset>
                 <legend>Documentsoort</legend>
 
                 <div class="form__row form__row--large">
@@ -237,7 +217,27 @@
                   {{ render "@subselection--with-catagories-and-select-all" sc_rubrieken merge=true }}
                 </div>
               </fieldset>
-            </div>
+
+
+          </div>
+          <div class="column">
+
+            <fieldset>
+              <legend>Aanvullende zoekcriteria</legend>
+              <div class="form__row">
+                <p class="form__sublegend">Type organisatie(s)</p>
+                {{render "@subselection--with-catagories-and-select-all" subselectionGemContext merge=true }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Publicerende organisatie(s)</p>
+                {{render "@subselection--with-catagories-and-select-all" subselectionPubContext merge=true }}
+              </div>
+              <div class="form__row">
+                <p class="form__sublegend">Onderwerp(en)</p>
+                {{render "@subselection" subselectionWatContext }}
+              </div>
+            </fieldset>
+
           </div>
         </div>
         <div class="form__rowsubmit">

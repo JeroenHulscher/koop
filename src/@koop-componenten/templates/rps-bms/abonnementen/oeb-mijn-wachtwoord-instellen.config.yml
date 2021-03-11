@@ -57,6 +57,8 @@ context:
     labelmodifier: accent
     fieldInstruction:
     fieldPlaceholder: Bijv. uwnaam@koop.overheid.nl
+    required: true
+    requiredLabel: true
   oldPWInput:
     modifier:
     id: 222

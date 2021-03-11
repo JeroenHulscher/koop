@@ -1,0 +1,27 @@
+<div class="block-search {{#if modifier}}{{modifier}}{{/if}}">
+  {{#> @partial-block}}
+    <form>
+      <fieldset>
+        <legend class="visually-hidden">Opnieuw zoeken:</legend>
+        <div class="columns">
+          <div class="column column-d-5">
+            <div class="form__row">
+              {{ render "@input-text" blocksearchInput }}
+            </div>
+          </div>
+          <div class="column column-d-4">
+            <div class="form__row">
+               {{ render "@select-multi" multiSelectDocumentsoort }}
+            </div>
+          </div>
+          <div class="column column-d-3">
+            <div class="form__row">
+              {{ render "@button" blocksearchSubmit merge=true }}
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    {{ render "@selectedfilterbar" selectedFilters merge=true }}
+  {{/ @partial-block}}
+</div>

@@ -38,30 +38,23 @@ context:
     - text: Mijn Abonnementen
       url: '#'
     - text: Wachtwoord opnieuw instellen
-  jumbotronContext:
-    heading: Wachtwoord opnieuw instellen
-    subheading: Officiële bekendmakingen
-    intro: Indien u uw wachtwoord bent vergeten kunt u een nieuw wachtwoord aanvragen. Wij sturen uw nieuwe wachtwoord naar het dor u opgegeven e-mailadres.
-    centered: true
-    size: s
-    headingcentered: true
-    inputEmailContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 1
-      required: true
-      patterntype: email
-      fieldLabel: E-mailadres
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder: Uw e-mailadres
-      hastooltip: true
-      tooltipContext:
-        id: 1231
-        content: Het e-mailadres waarmee u zich heeft geregistreerd.
-    buttonSubmit:
-      id: 123
-      text: Aanvragen bevestigingscode
-      button: true
-      type: submit
-      modifier: button--primary form__button
+  inputEmailContext:
+    id: 1
+    required: true
+    patterntype: email
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Uw e-mailadres
+    hastooltip: true
+    tooltipContext:
+      id: 1231
+      content: Het e-mailadres waarmee u zich heeft geregistreerd.
+  buttonSubmit:
+    id: 123
+    text: Aanvragen wachtwoord
+    button: true
+    type: submit
+    modifier: button--primary form__button
+  preheader:
+    value: Officiële bekendmakingen

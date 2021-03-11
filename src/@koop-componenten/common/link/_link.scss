@@ -4,7 +4,7 @@ a {
   transition: color $fastEaseInOut, outline-offset $fastEaseInOut;
   word-break: break-word;
 
-  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]),
+  &[href*="://"]:not(.button):not(.link):not(.pull-right):not(.pull-left):not([href*=".overheid.nl"]):not([href*=".officielebekendmakingen.nl"]):not([href*=".officiele-overheidspublicaties.nl"]),
   &[rel="external"] {
     padding-right: 1.5em;
     margin-right: .25em;

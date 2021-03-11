@@ -38,46 +38,38 @@ context:
     - text: Mijn Abonnementen
       url: '#'
     - text: Activeer uw account
-  jumbotronContext:
-    heading: Activeer uw account
-    subheading: Officiële bekendmakingen
-    intro: U dient uw account te activeren voordat u van uw account gebruik kunt maken. Wij hebben een activatiecode naar het door u opgegeven e-mailadres gestuurd.
-    centered: true
-    size: s
-    headingcentered: true
-    inputEmailContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 1
-      required: true
-      patterntype: email
-      fieldLabel: E-mailadres
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder: Uw e-mailadres
-    inputCodeContext:
-      modifier: input-text--medium
-      labelmodifier: accent
-      id: 2
-      required: true
-      type: text
-      fieldLabel: Activeringscode
-      fieldLabelVisible: true
-      fieldInstruction:
-      fieldPlaceholder:
-      hastooltip: true
-      tooltipContext:
-        id: 1231
-        content: De activeringscode uit de activeringse-mail
-    linkNewcode:
-      text: Nieuwe activeringscode aanvragen
-    linkAccount:
-      text: Ik heb al een account
-    buttonSubmit:
-      id: 123
-      text: Activeren
-      button: true
-      type: submit
-      modifier: button--primary form__button
-    alert:
-      text: Wij hebben u een activeringse-mail gestuurd, indien uw e-mailadres nog niet bij ons is geregistreerd.
+
+  inputEmailContext:
+    id: 1
+    required: true
+    patterntype: email
+    fieldLabel: E-mailadres
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder: Uw e-mailadres
+  inputCodeContext:
+    id: 2
+    required: true
+    type: text
+    fieldLabel: Activeringscode
+    fieldLabelVisible: true
+    fieldInstruction:
+    fieldPlaceholder:
+    hastooltip: true
+    tooltipContext:
+      id: 1231
+      content: De activeringscode uit de activeringse-mail
+  linkNewcode:
+    text: Nieuwe activeringscode aanvragen
+  linkAccount:
+    text: Ik heb al een account
+  buttonSubmit:
+    id: 123
+    text: Activeer account
+    button: true
+    type: submit
+    modifier: button--primary form__button
+  alert:
+    text: Wij hebben u een activeringse-mail gestuurd, indien uw e-mailadres nog niet bij ons is geregistreerd.
+  preheader:
+    value: Officiële bekendmakingen

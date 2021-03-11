@@ -77,119 +77,151 @@ context:
       value: value
       active: is-active
   resultsContext:
-    modifier: result--list--wide
+    modifier: result--list--publications
     items:
       - title: Overige besluiten van algemene strekking
         titleHeader: h2
         titleHref: '#'
-        text: Kennisgeving Besluit van Provinciale Staten van Noord-Holland van 16 november 2020, nr. 1454270/1458609, tot vaststelling van het Programma Natuurontwikkeling 2021-2025, waarin opgenomen het Natuurbeheerplan Noord-Holland 2020-2021
+        subTitle: Kennisgeving Besluit van Provinciale Staten van Noord-Holland van 16 november 2020, nr. 1454270/1458609, tot vaststelling van het Programma Natuurontwikkeling 2021-2025, waarin opgenomen het Natuurbeheerplan Noord-Holland 2020-2021
+        subTitleHref: '#'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Provinciaal blad 2020, 8733"
-          - value: "Organisatie: Noord-Holland"
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2021, 10987
+            - type: Organisatie
+              value: Venlo
       - title: Overige besluiten van algemene strekking
         titleHeader: h2
         titleHref: '#'
-        text: Noodverordening van de voorzitter van de Veiligheidsregio Rotterdam-Rijnmond houdende voorschriften ter voorkoming van verdere verspreiding van het coronavirus/COVID-19 (Noodverordening COVID-19 Veiligheidsregio Rotterdam-Rijnmond van 18 november 2020)
+        subTitle: Noodverordening van de voorzitter van de Veiligheidsregio Rotterdam-Rijnmond houdende voorschriften ter voorkoming van verdere verspreiding van het coronavirus/COVID-19 (Noodverordening COVID-19 Veiligheidsregio Rotterdam-Rijnmond van 18 november 2020)
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Gemeenteblad 2020, 310033
+            - type: Organisatie
+              value: Albrandswaard
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Gemeenteblad 2020, 310033"
-          - value: "Organisatie: Albrandswaard"
   resultsContext2:
-    modifier: result--list--wide
+    modifier: result--list--publications
     items:
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Beukendaal 135'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Beukendaal 135
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Gemeenteblad 2020, 310033
+            - type: Organisatie
+              value: Albrandswaard
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Dennendaal 83'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Dennendaal 83
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2020, 61754
+            - type: Organisatie
+              value: Rotterdam
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Sint-Janshaven 9'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Beukendaal 135
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Gemeenteblad 2020, 310033
+            - type: Organisatie
+              value: Albrandswaard
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Vinkenlust 97'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Dennendaal 83
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2020, 61754
+            - type: Organisatie
+              value: Rotterdam
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Beukendaal 135
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Gemeenteblad 2020, 310033
+            - type: Organisatie
+              value: Albrandswaard
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Dennendaal 83
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2020, 61754
+            - type: Organisatie
+              value: Rotterdam
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Beukendaal 135
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Gemeenteblad 2020, 310033
+            - type: Organisatie
+              value: Albrandswaard
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
         share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
-      - title: Verkeersbesluiten
-        titleHeader: h2
-        titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
-        share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
-      - title: Verkeersbesluiten
-        titleHeader: h2
-        titleHref: '#'
-        text: '- Gehandicaptenparkeerplaats op kenteken - Zwijndrechtsestraat 110'
-        share: false
-        metadata:
-          - value: "Datum document: 01-09-2020"
-          - value: "Jaargang en nummer: Staatscourant 2020, 61754"
-          - value: "Organisatie: Rotterdam"
+        subTitle: Gehandicaptenparkeerplaats op kenteken - Dennendaal 83
+        subTitleHref: '#'
+        publicationDetails:
+          items:
+            - type: Datum publicatie
+              value: 02-03-2021
+            - type: Jaargang en nummer
+              value: Staatscourant 2020, 61754
+            - type: Organisatie
+              value: Rotterdam
   fgDocumentsoort:
     items:
       - label: Blad gemeenschappelijke regelingen met nog iets

@@ -55,6 +55,11 @@ context:
       labelmodifier: medium
       modifier: input-text--searchmedium
       value: Snelweg
+      hastooltip: true
+      tooltipContext:
+        id: 1456456
+        label: Help?
+        content: 'U kunt zoeken op zinsnede door deze tussen aanhalingstekens te plaatsen: "wet hof". <br>Met een minteken kunt u aangeven welke woorden niet voor mogen komen: -hofman. <br>U kunt het gebruik van aanhalingstekens en het minteken ook combineren: -"wet hofman"'
     zoekeninContext:
       id: 560934590
       fieldLabel: Zoek in
@@ -94,7 +99,7 @@ context:
         labelmodifier: accent
         hastooltip: true
         tooltip:
-          content: '<strong>Datum publicatie</strong>: De datum waarop het document is gepubliceerd op deze site. <br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          content: '<strong>Datum publicatie</strong>: de datum waarop het document is gepubliceerd op deze site. <br><br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
           id: 123129876545678922
         options:
         - id: 1012
@@ -112,7 +117,7 @@ context:
         labelmodifier: accent
         hastooltip: true
         tooltip:
-          content: '<strong>Datum publicatie</strong>: De datum waarop het document is gepubliceerd op deze site. <br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
+          content: '<strong>Datum publicatie</strong>: de datum waarop het document is gepubliceerd op deze site. <br><br> <strong>Datum document</strong>: de kenmerkende datum van het document, zoals de datum van ondertekening of totstandkoming.'
           id: 1231298765456789221
         options:
         - id: 10121

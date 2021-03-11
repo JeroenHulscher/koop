@@ -28,7 +28,7 @@
       <li class="{{#if ../custom}}list-custom__item{{else}}list__item{{/if}}">{{{ content }}}
         <ul {{#if ../custom}}class="list-custom"{{/if}}>
           {{#each subitems }}
-            <li>{{{content}}}</li>
+            <li class="list-custom__item">{{{content}}}</li>
           {{/each }}
         </ul>
       </li>

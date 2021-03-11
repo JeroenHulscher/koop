@@ -5,7 +5,10 @@
   {{/each}}
 </div>
 {{/if}}
-<header class="header">
+{{#if alertNotification}}
+  {{ render "@alert" alertNotification }}
+{{/if}}
+<header class="header {{#if enviroment}}header--{{enviroment}}{{/if}}">
   <div class="header__start">
     <div class="container">
 

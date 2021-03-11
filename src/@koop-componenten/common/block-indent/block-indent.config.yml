@@ -1,0 +1,18 @@
+---
+label: Blok (indent)
+context:
+  id: 1
+  content: <p>Tekst</p>
+variants:
+  - name: Klein
+    context:
+      modifier: block-indent--size-s
+  - name: Medium
+    context:
+      modifier: block-indent--size-m
+  - name: Groot
+    context:
+      modifier: block-indent--size-l
+  - name: Extra groot
+    context:
+      modifier: block-indent--size-xl

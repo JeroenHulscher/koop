@@ -128,4 +128,45 @@
     font-weight: bold;
     margin: 0;
   }
+
+  body > & {
+    font-size: 0.9em;
+    margin: 0;
+    padding: .75em 1.15em .75em 3em;
+    background-position: 1em 1em;
+
+    @media ( min-width: $breakpointDesktop ) {
+      background-image: none;
+      text-align: center;
+
+      .alert__inner {
+        display: inline-block;
+        padding: 0 2.5em;
+        background-size: 1em;
+        background-position: 0 0.25em;
+        background-repeat: no-repeat;
+      }
+
+      &--warning {
+        background-color: lighten($orange, 50%);
+        .alert__inner {
+          background-image: $warningIcon;
+        }
+      }
+
+      &--info {
+        background-color: lighten($primaryBlue, 50%);
+        .alert__inner {
+          background-image: $infoIcon;
+        }
+      }
+
+      &--success {
+        background-color: $lightGreen;
+        .alert__inner {
+          background-image: $okIconGreen;
+        }
+      }
+    }
+  }
 }
