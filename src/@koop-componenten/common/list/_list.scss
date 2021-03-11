@@ -271,57 +271,74 @@ ol {
     position: absolute;
     left: 0;
     width: 3.5em;
+    padding-right: .5em;
   }
 
   &--size-xs > li {
-    padding-left: 2.5em !important;
+    padding-left: 2.5em;
   }
-  &--size-xs > &__itemtype,
-  &--size-xs > &__itembullet {
-    left: 0;
-    width: 2.5em !important;
-    padding-right: .5em;
+  &--size-xs > li > &__itemtype,
+  &--size-xs > li > &__itembullet,
+  &--size-xs > li > del > &__itemtype,
+  &--size-xs > li > del > &__itembullet,
+  &--size-xs > li > ins > &__itemtype,
+  &--size-xs > li > ins > &__itembullet {
+    width: 2.5em;
   }
   &--size-s > li {
     padding-left: 3.5em;
   }
-  &--size-s > &__itemtype,
-  &--size-s > &__itembullet {
-    left: 0;
+  &--size-s > li > &__itemtype,
+  &--size-s > li > &__itembullet,
+  &--size-s > li > del > &__itemtype,
+  &--size-s > li > del > &__itembullet,
+  &--size-s > li > ins > &__itemtype,
+  &--size-s > li > ins > &__itembullet {
     width: 3.5em;
-    padding-right: .5em;
   }
   &--size-m > li {
-    padding-left: 4em !important;
+    padding-left: 4em;
   }
-  &--size-m > &__itemtype,
-  &--size-m > &__itembullet {
-    width: 4em !important;
-    padding-right: .5em !important;
+  &--size-m > li > &__itemtype,
+  &--size-m > li > &__itembullet,
+  &--size-m > li > del > &__itemtype,
+  &--size-m > li > del > &__itembullet,
+  &--size-m > li > ins > &__itemtype,
+  &--size-m > li > ins > &__itembullet {
+    width: 4em;
   }
   &--size-l > li {
     padding-left: 5em;
   }
-  &--size-l > &__itemtype,
-  &--size-l > &__itembullet {
+  &--size-l > li > &__itemtype,
+  &--size-l > li > &__itembullet,
+  &--size-l > li > del > &__itemtype,
+  &--size-l > li > del > &__itembullet,
+  &--size-l > li > ins > &__itemtype,
+  &--size-l > li > ins > &__itembullet {
     width: 5em;
-    padding-right: .5em;
   }
   &--size-xl > li {
     padding-left: 7em;
   }
-  &--size-xl > &__itemtype,
-  &--size-xl > &__itembullet {
+  &--size-xl > li > &__itemtype,
+  &--size-xl > li > &__itembullet,
+  &--size-xl > li > del > &__itemtype,
+  &--size-xl > li > del > &__itembullet,
+  &--size-xl > li > ins > &__itemtype,
+  &--size-xl > li > ins > &__itembullet {
     width: 7em;
-    padding-right: .5em;
   }
   &--size-xxl > li {
     padding-left: 9em;
   }
-  &--size-xxl > &__itemtype,
-  &--size-xxl > &__itembullet {
+  &--size-xxl > li > &__itemtype,
+  &--size-xxl > li > &__itembullet,
+  &--size-xxl > li > del > &__itemtype,
+  &--size-xxl > li > del > &__itembullet,
+  &--size-xxl > li > ins > &__itemtype,
+  &--size-xxl > li > ins > &__itembullet {
     width: 9em;
-    padding-right: .5em;
   }
 }
 
