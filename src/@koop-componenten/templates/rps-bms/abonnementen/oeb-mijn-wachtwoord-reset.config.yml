@@ -41,19 +41,20 @@ context:
     - text: Wachtwoord opnieuw instellen
   inputEmailContext:
     id: 1
-    required: true
     patterntype: email
     fieldLabel: E-mailadres
     fieldLabelVisible: true
     fieldInstruction:
     fieldPlaceholder: Uw e-mailadres
     hastooltip: true
+    required: true
+    requiredLabel: true
     tooltipContext:
       id: 1231
       content: Het e-mailadres waarmee u zich heeft geregistreerd.
   buttonSubmit:
     id: 123
-    text: Aanvragen wachtwoord
+    text: Aanvragen bevestigingscode
     button: true
     type: submit
     modifier: button--primary form__button
