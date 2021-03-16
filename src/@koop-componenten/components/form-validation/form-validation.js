@@ -21,8 +21,16 @@ var supports = function () {
   'use strict';
 
   onl.decorate({
-    'init-form-validation': function (element) {
+    'init-form-bwbvalidation': function (element) {
       // new formvalidation(element);
+      var my_func = function(event) {
+        event.preventDefault();
+        console.log('Page_ClientValidate()',Page_ClientValidate());
+        if(Page_ClientValidate()){
+          element.submit();
+        }
+    };
+      element.addEventListener("submit", my_func, true);
     }
   });
 
