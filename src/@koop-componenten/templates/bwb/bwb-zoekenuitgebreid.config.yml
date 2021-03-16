@@ -180,14 +180,16 @@ context:
           datavalue: ''
           configDateFormat: 'dd-mm-yy'
   inputtext1:
-    id: 1432
+    id: ZoekOp_BronPublicatieJaar
+    cleanID: true
     fieldLabel: Publicatiejaar
     fieldVisibility: false
     fieldInstruction:
     fieldPlaceholder: 'Jaar'
     modifier: input--xsmall
   inputtext2:
-    id: 1433
+    id: ZoekOp_BronPublicatieNummer
+    cleanID: true
     fieldLabel: Nummer
     fieldVisibility: false
     fieldInstruction:
@@ -635,11 +637,11 @@ context:
         title: Energie
         short: Energie
   sc1:
-    id: 1876543
+    id: ZoekOp_BronPublicatie
     modifier: select-custom--width-s
     options:
       - label: Publicatie
-        value:
+        value: pub
         selected: selected
       - label: Staatsblad
         value: stb
@@ -656,9 +658,11 @@ context:
       - label: PBO blad
         value: Vbbo
   dp1:
-    id: 112312312
+    id: ZoekOp_Geldigheidsdatum
+    cleanId: true
   dp2:
-    id: 192392138
+    id: ZoekOp_Zichtdatum
+    cleanId: true
   btnSubmit:
     text: Zoeken
   btnSave:

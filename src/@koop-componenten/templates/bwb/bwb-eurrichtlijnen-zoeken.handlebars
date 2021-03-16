@@ -20,7 +20,7 @@
     <p>Dit onderdeel is nog experimenteel en kent mogelijk nog onvolkomenheden.</p>
 
   </div>
-
+<form data-decorator="init-form-bwbvalidation">
   <div>
     <div class="form__chapter__heading">
       <h2>Zoek op implementatie EU-richtlijn</h2>
@@ -33,6 +33,10 @@
       <div class="form__element__inputs">
         {{ render "@input-text" inputtext1 merge=true }}
         {{ render "@input-text" inputtext2 merge=true }}
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer" class="form__error" style="display:none;">Naast een jaar is ook een richtlijnnummer vereist.</p>
+                    <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar" class="form__error" style="display:none;">Er is een ongeldig richtlijn jaar opgegeven.</p>
+                    <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnNummer" class="form__error" style="display:none;">Er is een ongeldig richtlijnnummer opgegeven.</p>
+
       </div>
     </div>
 
@@ -44,6 +48,10 @@
       <div class="form__element__inputs">
         {{ render "@input-text" inputtext3 merge=true }}
         {{ render "@datepicker" datepickerPublicatieblad}}
+        {{!-- <div class="datepicker">
+                        <input name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_PublicatiebladDatum" type="date" value="02-03-2021" id="ZoekOp_PublicatiebladDatum" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config="{ &quot;dateFormat&quot; : &quot;dd-mm-yy&quot;, &quot;yearrange&quot;: &quot;c-20:c+0&quot; }" placeholder="dd-mm-yyyy" onchange="Page_ClientValidate()" data-date="" />
+                    </div> --}}
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
       </div>
     </div>
 
@@ -57,10 +65,13 @@
       </div>
     </div>
 
-    <input type="button" name="name" value="Wis scherm" id="buttonId1" class="button" />
-    <input type="submit" name="name" value="Zoeken" id="buttonId2" class="button button--primary" />
+    <input type="submit" name="ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$btnZoeken" value="Zoeken" onclick="Page_ClientValidate();" id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_btnZoeken" class="button button--primary">
+    {{!-- <input type="button" name="name" value="Wis scherm" id="buttonId1" class="button" /> --}}
+    {{!-- <input type="submit" name="name" value="Zoeken" id="buttonId2" class="button button--primary" /> --}}
   </div>
+</form>
 </div>
+
 
 <div class="container row">
   <p>De informatie in dit onderdeel vormt geen bekendmaking in de zin van de Grondwet. Alleen publicatie in het

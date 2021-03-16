@@ -61,14 +61,18 @@ context:
     label: Help?
     content: Regelingen die niet zijn ingetrokken of vervallen maar feitelijk geen werking meer hebben, worden standaard niet doorzocht. Wilt u dit wel, vink dan dit vakje aan.
   inputtext1:
-    id: 1432
+    id: ZoekOp_BesluitnummerDeel1
+    name: ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_BesluitnummerDeel1
+    cleanID: true
     fieldLabel: Jaar
     fieldVisibility: false
     fieldInstruction:
     fieldPlaceholder: 'jjjj'
     modifier: input--small
   inputtext2:
-    id: 1433
+    id: ZoekOp_BesluitnummerDeel2
+    name: ctl00$ctl00$cphContent$zoekpaginaContent$ZoekformulierEURichtlijn$ZoekOp_BesluitnummerDeel2
+    cleanID: true
     fieldLabel: Nummer
     fieldVisibility: false
     fieldInstruction:
@@ -82,9 +86,12 @@ context:
     fieldPlaceholder: 'Bijv: L 63/9'
     modifier: input--small
   datepickerPublicatieblad:
-    id: 1
+    id: ZoekOp_PublicatiebladDatum
+    name: ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum
+    cleanId: true
     fieldLabel: Datum
     fieldInstruction:
     fieldPlaceholder: 'dd-mm-yyyy'
     configDateFormat: 'dd-mm-yy'
     debug: false
+    attributes: onchange="Page_ClientValidate()"
