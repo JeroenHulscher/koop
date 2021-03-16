@@ -21,8 +21,8 @@
     <label class="{{#if hidelabel}}visually-hidden {{else}}{{/if}} form__label{{#if labelmodifier}} form__label--{{labelmodifier}}{{/if}}" for="input--{{id}}">{{label}}</label>
   {{/if}}
   <div class="datepicker">
-    <input type="date" {{#if required}}required{{/if}} value="{{value}}" data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
-      data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="input--{{ id }}" data-placeholder="{{ fieldPlaceholder }}" />
+    <input type="date" {{#if required}}required{{/if}} value="{{value}}" {{#if name}}name="{{name}}"{{/if}} data-date="{{datavalue}}" class="datepicker__input {{#if inputclass}}{{inputclass}}{{/if}}" data-decorator="init-datepicker"
+      data-config='{ "dateFormat" : "{{#if configDateFormat}}{{configDateFormat}}{{else}}dd-mm-yy{{/if}}"{{#if yearrange}}, "yearrange": "{{yearrange}}"{{/if}} }' id="{{#if cleanId}}{{id}}{{else}}input--{{ id }}{{/if}}" data-placeholder="{{ fieldPlaceholder }}" {{{attributes}}}/>
   </div>
 {{/if}}
 {{#if selectToday}}
