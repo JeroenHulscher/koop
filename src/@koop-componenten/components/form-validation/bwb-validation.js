@@ -1381,23 +1381,63 @@ function valideerRichtlijnNummer(n, t) {
 if (typeof ValidatorUpdateDisplay == "function") {
   var oudeValidatorUpdateDisplay = ValidatorUpdateDisplay;
   ValidatorUpdateDisplay = function (n) {
+
+      var getSiblings = function (e) {
+          // for collecting siblings
+          let siblings = [];
+          // if no parent, return no sibling
+          if(!e.parentNode) {
+              return siblings;
+          }
+          // first child of the parent node
+          let sibling  = e.parentNode.firstChild;
+
+          // collecting siblings
+          while (sibling) {
+              if (sibling.nodeType === 1 && sibling !== e) {
+                  siblings.push(sibling);
+              }
+              sibling = sibling.nextSibling;
+          }
+          return siblings;
+      };
+
+
       if (typeof n.display == "string") {
           if (n.display == "None") return;
           if (n.display == "Dynamic") {
               n.style.display = n.isvalid ? "none" : "block";
-              if (n.isvalid) {
-                  // document.getElementById(n.controltovalidate).setAttribute("aria-invalid", false);
-                  // document.getElementById(n.controltovalidate).classList.remove("input--error");
+
+              // set states on input;
+              document.getElementById(n.controltovalidate).setAttribute("aria-invalid", false);
+              document.getElementById(n.controltovalidate).classList.remove("input--error");
+              document.getElementById(n.controltovalidate).removeAttribute("aria-describedby");
+
+              var siblings = getSiblings(n);
+              if(siblings.length === 1 && !n.isvalid) {
+                document.getElementById(n.controltovalidate).setAttribute("aria-invalid", true);
+                document.getElementById(n.controltovalidate).classList.add("input--error");
+                document.getElementById(n.controltovalidate).setAttribute("aria-describedby", n.getAttribute("id"));
               } else {
-                  // document.getElementById(n.controltovalidate).setAttribute("aria-invalid", true);
-                  // document.getElementById(n.controltovalidate).classList.add("input--error");
-                  // document.getElementById(n.controltovalidate).setAttribute("aria-describedby", "#" + n.getAttribute("id"));
+                console.log('siblings.length',siblings.length,siblings.length);
+                for(var i = 0; i < siblings.length; i++) {
+                  if(siblings[i].classList.contains('form__error')){
+                    console.log('siblings[i]',siblings[i]);
+                    if(siblings[i].style.display === "block") {
+                      document.getElementById(n.controltovalidate).setAttribute("aria-invalid", true);
+                      document.getElementById(n.controltovalidate).classList.add("input--error");
+                      document.getElementById(n.controltovalidate).setAttribute("aria-describedby", n.getAttribute("id"));
+                    }
+                  }
+                }
               }
               return;
           }
       }
       navigator.userAgent.indexOf("Mac") > -1 && navigator.userAgent.indexOf("MSIE") > -1 && (n.style.display = "block");
       n.style.visibility = n.isvalid ? "hidden" : "visible";
+
+
   };
 }
 

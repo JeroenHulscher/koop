@@ -23,14 +23,13 @@ var supports = function () {
   onl.decorate({
     'init-form-bwbvalidation': function (element) {
       // new formvalidation(element);
-      var my_func = function(event) {
+      var submitHandler = function(event) {
         event.preventDefault();
-        console.log('Page_ClientValidate()',Page_ClientValidate());
         if(Page_ClientValidate()){
           element.submit();
         }
     };
-      element.addEventListener("submit", my_func, true);
+      element.addEventListener("submit", submitHandler, true);
     }
   });
 
