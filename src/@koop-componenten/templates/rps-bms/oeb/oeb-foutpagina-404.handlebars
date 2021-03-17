@@ -1,6 +1,5 @@
 {{ render "@header" header merge=true }}
 
-
 <div class="container" role="main" id="content">
   <div class="row">
     {{#> @jumbotron jumbotronContext }}
@@ -10,28 +9,5 @@
     {{/@jumbotron}}
   </div>
 </div>
-
-<ul class="list-custom list-custom--size-m">
-    <li class="list-custom__item"><span class="list-custom__itembullet">1</span>
-        <p>Met de volgende classnamen is de afstand zelf te bepalen tussen het nummer en de omschrijving .list-custom--size-xs, .list-custom--size-s, .list-custom--size-m, .list-custom--size-l. </p>
-    </li>
-    <li class="list-custom__item"><span class="list-custom__itembullet">2</span>
-        <p>2 item</p>
-    </li>
-    <li class="list-custom__item"><span class="list-custom__itembullet">4</span>
-        <p>Een 3e item dat een stuk langer is dan de andere en misschien wel over twee regels valt.</p>
-        <ul class="list-custom list-custom--size-xs">
-            <li class="list-custom__item"><span class="list-custom__itembullet">4.1</span>
-                <p>1e subitem</p>
-            </li>
-            <li class="list-custom__item"><span class="list-custom__itembullet">4.3</span>
-                <p>2e subitem</p>
-            </li>
-        </ul>
-    </li>
-    <li class="list-custom__item"><span class="list-custom__itembullet">7</span>
-        <p>4e item</p>
-    </li>
-</ul>
 
 {{ render "@footer" }}

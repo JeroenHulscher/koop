@@ -14,22 +14,6 @@
 
       <div class="sidebar__section">
 
-        <h2 class="sidebar__header">Abonneren</h2>
-
-        <p>
-          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
-        </p>
-
-        <p>
-          {{ render "@link--mail" linkAbonneren merge=true }}<br>
-          {{ render "@link--feed" linkRSS }}
-
-        </p>
-
-      </div>
-
-      <div class="sidebar__section">
-
         <h2 class="sidebar__header">Filter resultaten</h2>
 
         <form>
@@ -84,6 +68,22 @@
 
       </div>
 
+      <div class="sidebar__section">
+
+        <h2 class="sidebar__header">Abonneren</h2>
+
+        <p>
+          Blijf op de hoogte van actuele publicaties door u zich te abonneren op deze zoekvraag.
+        </p>
+
+        <p>
+          {{ render "@link--mail" linkAbonneren merge=true }}<br>
+          {{ render "@link--feed" linkRSS }}
+
+        </p>
+
+      </div>
+
     </div>
   </div>
   <div id="content" role="main">
@@ -93,6 +93,8 @@
     <h1>Zoekresultaten
       <span class="h1__sub">1-10 van de 7396 resultaten</span>
     </h1>
+
+    {{ render "@selectedfilterbar" selectedfilterbar2 }}
 
     {{ render "@sort" sortContext }}
 

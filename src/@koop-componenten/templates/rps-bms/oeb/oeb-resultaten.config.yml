@@ -381,4 +381,17 @@ context:
     text: Abonneer op deze zoekvraag
   alertSruQuery:
     text: <h2>SRU-zoekvraag:</h2><a href="#">https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area%253d%253d%2522officielepublicaties%2522)and(cql.textAndIndexes%253d%2522test%2522)%20AND%20dt.type==%22Aanhangsel%20van%20de%20Handelingen%22&zv=test&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cAanhangsel+van+de+Handelingen</a>
+  selectedfilterbar2:
+    id: 1098765672
+    heading: Door u gekozen filters
+    selectedFilters:
+      items:
+        - label: Blad gemeenschappelijke regelingen
+          url: "#"
+        - label: Aanbestedingen
+          url: "#"
+    buttonAction:
+      text: Wis alle filters
+      action: '#'
+      class: link link--remove
 

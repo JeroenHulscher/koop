@@ -45,15 +45,15 @@ context:
     - text: Staatsblad 2020, 225609
   pageactions:
     items:
+    - link: '#'
+      text: Authentieke versie (PDF)
+      icon: icon-download.svg
     - link: '#extrainformatie'
       text: Informatie
       icon: icon-info-blue.svg
     - link: '#gerelateerd'
       text: Gerelateerd
       icon: icon-document.svg
-    - link: '#'
-      text: Authentieke versie (PDF)
-      icon: icon-download.svg
     - link: '#'
       text: Printen
       icon: icon-print-blue.svg
