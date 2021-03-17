@@ -38,6 +38,6 @@
 // .article__header--law ~ ul,
 // .article__header--law ~ ol,
 // .article__header--law ~ p, {
-.article__header--law ~ *:not(div), {
+.article__header--law ~ *:not(div) {
   margin-top: 1em;
 }
