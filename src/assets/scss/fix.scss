@@ -1,5 +1,12 @@
 /*
-* fix.css - voor OEBNL. Laatste wijziging 06-11-2020.
+* fix.css - voor OEBNL.
+* Dit bestand wordt extra ingeladen op de omgeving van OEBNL waar de legacy.css draait. Ook wordt de stopxml.scss
+* meegeladen op deze omgeving om bepaalde componenten correct te stylen. Dit alles is een tijdelijke oplossing.
+* Wanneer OEBNL over is op de complib (100%), zal de transition.css voldoen. Transition.css bevat de stopxml.css
+* waar alle legacy code (legacy.min.css en meer, van de oebnl bootstrap productie) is opgenomen voor de stopxml html.
+*
+* OEBNL Met bootstrap: stopxml.scss + fix.css
+* OEBNL 100% complib: transition.scss
 */
 #broodtekst h1,
 #broodtekst h2,
