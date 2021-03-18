@@ -150,7 +150,9 @@
 // #broodtekst h1.dossiertitel,#broodtekst h1.dossiertitel * {
 //     color: #154273;
 // }
-
+#broodtekst h1 {
+  font-family: $defaultFontStack !important;
+}
 #broodtekst p.titel {
     font-weight: bold;
     margin-bottom: 0;
