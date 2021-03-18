@@ -16,6 +16,10 @@
     font-size: 1em;
 }
 
+#broodtekst h1 {
+    font-family: "rijksoverheidSans";
+}
+
 #broodtekst .list-custom__itembullet {
     left: 0 !important;
 }
@@ -142,31 +146,4 @@ ol.footnotes sup{vertical-align:top;margin-right: 10px;}
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     white-space: nowrap;
-}
-
-.del,
-.ins{
-    margin:0 0 1.5em 0;
-    background:#e4f0ef;
-}
-.del--block,
-.ins--block {
-    display:block;
-    border-left:.5em solid #39870c;
-    padding: 0.5em;
-}
-.del--block p,
-.ins--block p {
-    margin:0;
-}
-.del--block p+*,
-.ins--block p+* {
-    margin-top:.5em;
-}
-.del{
-    background:#f4c8c5;
-    color:#000;
-}
-.del--block {
-    border-left:.5em solid #d52b1e;
 }
