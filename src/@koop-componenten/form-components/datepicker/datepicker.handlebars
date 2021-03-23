@@ -26,6 +26,6 @@
   </div>
 {{/if}}
 {{#if selectToday}}
-  <a {{#if todayId}}id="{{todayId}}"{{/if}} href="#" data-handler="select-today" data-for="input--{{id}}">Vandaag</a>
+  <a {{#if todayId}}id="{{todayId}}"{{/if}} href="#" data-handler="select-today" data-for="{{#if cleanId}}{{id}}{{else}}input--{{ id }}{{/if}}">Vandaag</a>
 {{/if}}
 
