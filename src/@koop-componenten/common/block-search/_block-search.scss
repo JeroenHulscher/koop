@@ -7,3 +7,9 @@
     padding: 2em 2em 1px;
   }
 }
+.container[data-blocksearch-pageheader] {
+  padding-left: 2em;
+  @media ( min-width: $breakpointDesktop ) {
+    padding-left: 1em;
+  }
+}
