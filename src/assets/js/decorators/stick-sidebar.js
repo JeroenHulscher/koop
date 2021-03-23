@@ -142,8 +142,11 @@
         var newTop = '150';
         var parentOffsets;
         var documentbanner = document.querySelector('.documentbanner');
+        var blocksearch = document.querySelector('[data-blocksearch-pageheader]');
         if (documentbanner) {
           parent = documentbanner;
+        } else if (blocksearch) {
+          parent = blocksearch;
         } else {
           parent = el;
         }
