@@ -641,7 +641,7 @@ context:
     modifier: select-custom--width-s
     options:
       - label: Publicatie
-        value: pub
+        value: ''
         selected: selected
       - label: Staatsblad
         value: stb
@@ -664,6 +664,14 @@ context:
     datavalue: '19-02-2021'
   dp2:
     id: ZoekOp_Zichtdatum
+    cleanId: true
+    value: '2021-03-19'
+    datavalue: '19-03-2021'
+  dp3:
+    id: ZoekOp_Startdatum
+    cleanId: true
+  dp4:
+    id: ZoekOp_Einddatum
     cleanId: true
   btnSubmit:
     text: Zoeken

@@ -27,6 +27,14 @@ var supports = function () {
         event.preventDefault();
         if(Page_ClientValidate()){
           element.submit();
+        } else {
+          var errors = document.querySelectorAll('[data-validation-field]');
+          for(var i = 0; i < errors.length; i++) {
+            if(errors[i].style.display === "block") {
+              document.getElementById(errors[i].getAttribute('data-validation-field')).focus();
+              return;
+            }
+          }
         }
     };
       element.addEventListener("submit", submitHandler, true);

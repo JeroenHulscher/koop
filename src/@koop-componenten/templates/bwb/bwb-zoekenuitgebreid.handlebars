@@ -18,7 +18,7 @@
       </div>
       <fieldset class="form__element checkboxgroup">
         <legend class="visually-hidden">Welke typen regelingen wilt u meenemen in de zoekresultaten?</legend>
-        <span id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerRegelingen" class="form__error" style="display:none;">Geen regelingsoort geselecteerd.</span>
+        <span id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerRegelingen" data-validation-field="AlleSoorten" class="form__error" style="display:none;">Geen regelingsoort geselecteerd.</span>
         <ul class="list--unstyled" id="soortCategorienLijst">
           <li>
             <label for="AlleSoorten">
@@ -28,7 +28,7 @@
             <ul>
               <li>
                 <label for="Verdrag">
-                  <input id="Verdrag" type="checkbox" name="name" checked="checked" class="verdragen regelingsoort"
+                  <input id="Verdrag" type="checkbox" name="name" class="verdragen regelingsoort"
                     data-set="which-types" />Verdragen
                 </label>
               </li>
@@ -37,7 +37,7 @@
               </li>
               <li class="separator">
                 <label for="Wetten">
-                  <input id="Wetten" type="checkbox" name="name" class="ministeries regelingsoort"
+                  <input id="Wetten" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />Wetten (excl. Rijkswetten)
@@ -45,7 +45,7 @@
               </li>
               <li>
                 <label for="Rijkswetten">
-                  <input id="Rijkswetten" type="checkbox" name="name" class="ministeries regelingsoort"
+                  <input id="Rijkswetten" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />Rijkswetten
@@ -53,7 +53,7 @@
               </li>
               <li>
                 <label for="AMvB">
-                  <input id="AMvB" type="checkbox" name="name" class="ministeries regelingsoort"
+                  <input id="AMvB" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />AMvB's en andere KB's (excl. RijksKB's)
@@ -61,7 +61,7 @@
               </li>
               <li>
                 <label for="RijksKBs">
-                  <input id="RijksKBs" type="checkbox" name="name" class="ministeries regelingsoort"
+                  <input id="RijksKBs" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />RijksKB's
@@ -69,7 +69,7 @@
               </li>
               <li>
                 <label for="MinR">
-                  <input id="MinR" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
+                  <input id="MinR" type="checkbox" name="name" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />Ministeri&euml;le regelingen
@@ -79,7 +79,7 @@
                 <ul>
                   <li>
                     <label for="MinRArchief">
-                      <input id="MinRArchief" type="checkbox" name="name" checked="checked"
+                      <input id="MinRArchief" type="checkbox" name="name"
                         class="ministeries regelingsoort" data-handler="toggle-extra-options"
                         data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                         data-set="which-types" />Archiefselectielijsten
@@ -97,7 +97,7 @@
               </li>
               <li>
                 <label for="Beleid">
-                  <input id="Beleid" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
+                  <input id="Beleid" type="checkbox" name="name" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />Beleidsregels rijksdienst
@@ -105,7 +105,7 @@
               </li>
               <li>
                 <label for="Circulaires">
-                  <input id="Circulaires" type="checkbox" name="name" checked="checked" class="ministeries regelingsoort"
+                  <input id="Circulaires" type="checkbox" name="name" class="ministeries regelingsoort"
                     data-handler="toggle-extra-options"
                     data-options="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_EerstVerantwoordelijke_Ministerie"
                     data-set="which-types" />Circulaires rijksdienst
@@ -150,7 +150,7 @@
 
       <fieldset class="form__element checkboxgroup inline-group">
         <legend class="visually-hidden">Specifieker zoeken</legend>
-        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBES" class="form__error" style="display:none;">U moet één van de volgende keuzes selecteren: 'Ook zoeken in regelingen BES' of 'Alleen zoeken in regelingen BES'.</p>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBES" data-validation-field="OokBES" class="form__error" style="display:none;">U moet één van de volgende keuzes selecteren: 'Ook zoeken in regelingen BES' of 'Alleen zoeken in regelingen BES'.</p>
         <ul class="list--unstyled">
           <li class="separator">
             <label for="OokBES" class="inline-block">
@@ -160,7 +160,7 @@
           </li>
           <li>
             <label for="AlleenBES" class="inline-block">
-              <input id="AlleenBES" type="checkbox" name="name" checked="checked" />Alleen zoeken in regelingen Bonaire,
+              <input id="AlleenBES" type="checkbox" name="name" />Alleen zoeken in regelingen Bonaire,
               Sint Eustatius en Saba
             </label>
             {{ render "@tooltip" tt4 }}
@@ -192,7 +192,7 @@
         </div>
         <div class="form__element__inputs">
           <input name="name" type="text" id="ZoekOp_Titel" class="input" placeholder="Bijv: bestuursrecht" />
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTitel" class="form__error" style="display:none;"></p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTitel" data-validation-field="ZoekOp_Titel" class="form__error" style="display:none;"></p>
 
           <div class="form__element checkboxgroup inline-group">
             <ul class="list--unstyled">
@@ -218,7 +218,7 @@
         </div>
         <div class="form__element__inputs">
           <input name="name" type="text" id="ZoekOp_Tekst" class="input" placeholder="Bijv: toeslag" />
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" class="form__error" style="display:none;"></p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerTekst" data-validation-field="ZoekOp_Tekst" class="form__error" style="display:none;"></p>
 
           <div class="form__element checkboxgroup">
             <label for="ZoekOp_TekstExact">
@@ -289,14 +289,14 @@
         <div class="form__element__inputs">
           {{ render "@datepicker--today" dp1 merge=true }}
 
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvGeldigheidsdatum" class="form__error" style="display:none;">Er is geen zoekdatum opgegeven.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum10102010" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052005" class="form__error" style="display:none;">Er kan niet voor 1-5-2005 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01012005" class="form__error" style="display:none;">Er kan niet voor 1-1-2005 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052003" class="form__error" style="display:none;">Er kan niet voor 1-5-2003 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052002" class="form__error" style="display:none;">Er kan niet voor 1-5-2002 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum" class="form__error" style="display:none;">Er kan niet na de zichtdatum worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvGeldigheidsdatum" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er is geen zoekdatum opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum10102010" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052005" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er kan niet voor 1-5-2005 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01012005" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er kan niet voor 1-1-2005 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052003" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er kan niet voor 1-5-2003 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatum01052002" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er kan niet voor 1-5-2002 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum" data-validation-field="ZoekOp_Geldigheidsdatum" class="form__error" style="display:none;">Er kan niet na de zichtdatum worden gezocht.</p>
         </div>
       </div>
 
@@ -307,12 +307,12 @@
         <div class="form__element__inputs">
           {{ render "@datepicker--today" dp2 merge=true }}
 
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum" class="form__error" style="display:none;">Er is geen zoekdatum opgegeven.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum10102010" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052005" class="form__error" style="display:none;">Er kan niet voor 1-5-2005 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052003" class="form__error" style="display:none;">Er kan niet voor 1-5-2003 worden gezocht.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052002" class="form__error" style="display:none;">Er kan niet voor 1-5-2002 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum" data-validation-field="ZoekOp_Zichtdatum" class="form__error" style="display:none;">Er is geen zoekdatum opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum" data-validation-field="ZoekOp_Zichtdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum10102010" data-validation-field="ZoekOp_Zichtdatum" class="form__error" style="display:none;">Er kan niet voor 10-10-2010 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052005" data-validation-field="ZoekOp_Zichtdatum" class="form__error" style="display:none;">Er kan niet voor 1-5-2005 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052003" data-validation-field="ZoekOp_Zichtdatum" class="form__error" style="display:none;">Er kan niet voor 1-5-2003 worden gezocht.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerZichtdatum01052002" data-validation-field="ZoekOp_Zichtdatum" class="form__error" style="display:none;">Er kan niet voor 1-5-2002 worden gezocht.</p>
 
           <div class="form__element checkboxgroup inline-group">
             <label for="ZoekOp_OokMaterieel" class="inline-block">
@@ -377,9 +377,34 @@
           <strong>Datumbereik</strong>
         </div>
         <div class="form__element__inputs">
-          {{ render "@date-selection" ds1 }}
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerEinddatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+
+          <div class="daterange">
+              <div class="form__element">
+                  <select name="" id="ZoekOp_Datumbereik" title="Bereik" class="input--small">
+                    <option selected="selected" value="1">voor</option>
+                    <option value="2">na</option>
+                    <option value="3">tussen</option>
+                    <option value="4">op</option>
+
+                  </select>
+                  <label for="ZoekOp_Startdatum"><span class="visually-hidden">Datum</span></label>
+                  {{!-- {{ render "@datepicker" dp3 merge=true }} --}}
+                  <div class="datepicker">
+                      <input name="" type="date" id="ZoekOp_Startdatum" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy", "yearrange": "c-20:c+0" }' data-date="" />
+                  </div>
+                  <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" data-validation-field="ZoekOp_Startdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+                  <div id="divEinddatum">
+                      <label for="ZoekOp_Einddatum">t/m</label>
+                      <div class="datepicker">
+                          <input name="" type="date" id="ZoekOp_Einddatum" class="datepicker__input" data-date-format="DD-MM-YYYY" data-decorator="init-datepicker" data-config='{ "dateFormat" : "dd-mm-yy", "yearrange": "c-20:c+0" }' data-date="" />
+                      </div>
+                      {{!-- {{ render "@datepicker" dp4 merge=true }} --}}
+                  </div>
+                  <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerEinddatum" data-validation-field="ZoekOp_Einddatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
+              </div>
+          </div>
+          {{!-- <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p> --}}
+          {{!-- <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerEinddatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p> --}}
         </div>
       </div>
     </div>
@@ -401,9 +426,9 @@
 
           {{ render "@input-text" inputtext2 merge=true }}
 
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer" class="form__error" style="display:none;">Naast een publicatiejaar en soort is ook een publicatienummer vereist.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar" class="form__error" style="display:none;">Ongeldig publicatiejaar opgegeven.</p>
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieNummer" class="form__error" style="display:none;">Ongeldig publicatienummer opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer" data-validation-field="ZoekOp_BronPublicatieNummer" class="form__error" style="display:none;">Naast een publicatiejaar en soort is ook een publicatienummer vereist.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar" data-validation-field="ZoekOp_BronPublicatieJaar" class="form__error" style="display:none;">Ongeldig publicatiejaar opgegeven.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieNummer" data-validation-field="ZoekOp_BronPublicatieNummer" class="form__error" style="display:none;">Ongeldig publicatienummer opgegeven.</p>
 
         </div>
       </div>
@@ -449,7 +474,7 @@
         </div>
         <div class="form__element__inputs">
           <input name="name" type="text" id="ZoekOp_BWBID" class="input--small" />
-          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID" class="form__error" style="display:none;">U heeft geen geldig BWB-ID ingevoerd.</p>
+          <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID" data-validation-field="ZoekOp_BWBID" class="form__error" style="display:none;">U heeft geen geldig BWB-ID ingevoerd.</p>
         </div>
       </div>
 
@@ -480,7 +505,7 @@
         </div>
         <div class="form__element__inputs">
           <input name="name" type="text" id="ZoekOp_JuriconnectID" class="input--small" />
-          <span id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuriconnectID" class="form__error" style="display:none;">U heeft geen geldig juriconnect-ID ingevoerd.</span>
+          <span id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuriconnectID" data-validation-field="ZoekOp_JuriconnectID" class="form__error" style="display:none;">U heeft geen geldig juriconnect-ID ingevoerd.</span>
         </div>
       </div>
 

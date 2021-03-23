@@ -1311,59 +1311,139 @@ function valideerJaar(n, t) {
 function valideerDatumOptioneel(n, t) {
   t.IsValid = t.Value == "" ? !0 : validatorIsValide(n, valideerDatum, t);
 }
-function valideerDatum01052002(n, t) {
-  if (
-      validatorIsValide(n, valideerDatum, t) &&
-      validatorIsValide(n, valideerDatum01052003, t) &&
-      validatorIsValide(n, valideerDatum01012005, t) &&
-      validatorIsValide(n, valideerDatum01052005, t) &&
-      validatorIsValide(n, valideerDatum10102010, t) &&
-      (document.getElementById("AlleSoorten").checked || document.getElementById("Wetten").checked || document.getElementById("AMvB").checked || document.getElementById("Reglementen").checked)
-  ) {
-      var i = leesDatum(t.Value);
-      t.IsValid = i.getTime() >= new Date(2002, 4, 1).getTime();
+// function valideerDatum01052002(n, t) {
+//   if (
+//       validatorIsValide(n, valideerDatum, t) &&
+//       validatorIsValide(n, valideerDatum01052003, t) &&
+//       validatorIsValide(n, valideerDatum01012005, t) &&
+//       validatorIsValide(n, valideerDatum01052005, t) &&
+//       validatorIsValide(n, valideerDatum10102010, t) &&
+//       (document.getElementById("AlleSoorten").checked || document.getElementById("Wetten").checked || document.getElementById("AMvB").checked || document.getElementById("Reglementen").checked)
+//   ) {
+//       var i = leesDatum(t.Value);
+//       t.IsValid = i.getTime() >= new Date(2002, 4, 1).getTime();
+//   }
+// }
+// function valideerDatum01052003(n, t) {
+//   if (
+//       validatorIsValide(n, valideerDatum, t) &&
+//       validatorIsValide(n, valideerDatum01012005, t) &&
+//       validatorIsValide(n, valideerDatum01052005, t) &&
+//       validatorIsValide(n, valideerDatum10102010, t) &&
+//       (document.getElementById("AlleSoorten").checked || document.getElementById("MinR").checked)
+//   ) {
+//       var i = leesDatum(t.Value);
+//       t.IsValid = i.getTime() >= new Date(2003, 4, 1).getTime();
+//   }
+// }
+// function valideerDatum01012005(n, t) {
+//   if (
+//       validatorIsValide(n, valideerDatum, t) &&
+//       validatorIsValide(n, valideerDatum01052005, t) &&
+//       validatorIsValide(n, valideerDatum10102010, t) &&
+//       (document.getElementById("AlleSoorten").checked || document.getElementById("Verdrag").checked)
+//   ) {
+//       var i = leesDatum(t.Value);
+//       t.IsValid = i.getTime() >= new Date(2005, 0, 1).getTime();
+//   }
+// }
+// function valideerDatum01052005(n, t) {
+//   if (
+//       validatorIsValide(n, valideerDatum, t) &&
+//       validatorIsValide(n, valideerDatum10102010, t) &&
+//       (document.getElementById("AlleSoorten").checked || document.getElementById("Beleid").checked || document.getElementById("Circulaires").checked || document.getElementById("ZBO").checked || document.getElementById("Bedrijf").checked)
+//   ) {
+//       var i = leesDatum(t.Value);
+//       t.IsValid = i.getTime() >= new Date(2005, 4, 1).getTime();
+//   }
+// }
+// function valideerDatum10102010(n, t) {
+//   if (validatorIsValide(n, valideerDatum, t) && (document.getElementById("OokBES").checked || document.getElementById("AlleenBES").checked)) {
+//       var i = leesDatum(t.Value);
+//       t.IsValid = i.getTime() >= new Date(2010, 9, 10).getTime();
+//   }
+// }
+
+function valideerDatum01052002(src, args) {
+  if (!validatorIsValide(src, valideerDatum, args) || !validatorIsValide(src, valideerDatum01052003, args) || !validatorIsValide(src, valideerDatum01012005, args) || !validatorIsValide(src, valideerDatum01052005, args) || !validatorIsValide(src, valideerDatum10102010, args))
+      return;
+
+  if (document.getElementById('AlleSoorten').checked  || document.getElementById('Wetten').checked || document.getElementById('AMvB').checked || document.getElementById('Reglementen').checked)
+  {
+      var datum = leesDatum(args.Value);
+      args.IsValid = datum.getTime() >= new Date(2002, 4, 1).getTime();
   }
 }
-function valideerDatum01052003(n, t) {
-  if (
-      validatorIsValide(n, valideerDatum, t) &&
-      validatorIsValide(n, valideerDatum01012005, t) &&
-      validatorIsValide(n, valideerDatum01052005, t) &&
-      validatorIsValide(n, valideerDatum10102010, t) &&
-      (document.getElementById("AlleSoorten").checked || document.getElementById("MinR").checked)
-  ) {
-      var i = leesDatum(t.Value);
-      t.IsValid = i.getTime() >= new Date(2003, 4, 1).getTime();
+
+function valideerDatum01052003(src, args) {
+  if (!validatorIsValide(src, valideerDatum, args) || !validatorIsValide(src, valideerDatum01012005, args) || !validatorIsValide(src, valideerDatum01052005, args) || !validatorIsValide(src, valideerDatum10102010, args))
+      return;
+
+  if (document.getElementById('AlleSoorten').checked || document.getElementById('MinR').checked)
+  {
+      var datum = leesDatum(args.Value);
+      args.IsValid = datum.getTime() >= new Date(2003, 4, 1).getTime();
   }
 }
-function valideerDatum01012005(n, t) {
-  if (
-      validatorIsValide(n, valideerDatum, t) &&
-      validatorIsValide(n, valideerDatum01052005, t) &&
-      validatorIsValide(n, valideerDatum10102010, t) &&
-      (document.getElementById("AlleSoorten").checked || document.getElementById("Verdrag").checked)
-  ) {
-      var i = leesDatum(t.Value);
-      t.IsValid = i.getTime() >= new Date(2005, 0, 1).getTime();
+function valideerDatum01012005(src, args) {
+  if (!validatorIsValide(src, valideerDatum, args) || !validatorIsValide(src, valideerDatum01052005, args) || !validatorIsValide(src, valideerDatum10102010, args))
+      return;
+
+  if (document.getElementById('AlleSoorten').checked || document.getElementById('Verdrag').checked)
+  {
+      var datum = leesDatum(args.Value);
+      args.IsValid = datum.getTime() >= new Date(2005, 0, 1).getTime();
   }
 }
-function valideerDatum01052005(n, t) {
-  if (
-      validatorIsValide(n, valideerDatum, t) &&
-      validatorIsValide(n, valideerDatum10102010, t) &&
-      (document.getElementById("AlleSoorten").checked || document.getElementById("Beleid").checked || document.getElementById("Circulaires").checked || document.getElementById("ZBO").checked || document.getElementById("Bedrijf").checked)
-  ) {
-      var i = leesDatum(t.Value);
-      t.IsValid = i.getTime() >= new Date(2005, 4, 1).getTime();
+
+function valideerDatum01052005(src, args) {
+  if (!validatorIsValide(src, valideerDatum, args) || !validatorIsValide(src, valideerDatum10102010, args))
+      return;
+
+  if (document.getElementById('AlleSoorten').checked || document.getElementById('Beleid').checked || document.getElementById('Circulaires').checked || document.getElementById('ZBO').checked || document.getElementById('Bedrijf').checked) {
+      var datum = leesDatum(args.Value);
+      args.IsValid = datum.getTime() >= new Date(2005, 4, 1).getTime();
   }
 }
-function valideerDatum10102010(n, t) {
-  if (validatorIsValide(n, valideerDatum, t) && (document.getElementById("OokBES").checked || document.getElementById("AlleenBES").checked)) {
-      var i = leesDatum(t.Value);
-      t.IsValid = i.getTime() >= new Date(2010, 9, 10).getTime();
+
+function valideerDatum10102010(src, args) {
+  if (!validatorIsValide(src, valideerDatum, args))
+      return;
+
+  if (document.getElementById('OokBES').checked || document.getElementById('AlleenBES').checked)
+  {
+      var datum = leesDatum(args.Value);
+      args.IsValid = datum.getTime() >= new Date(2010, 9, 10).getTime();
   }
 }
-function valideerBronPublicatieJaar(n, t) {
+function valideerDatumBeforeZichtdatum (src, args) {
+  var zichtdatum = document.getElementById('ZoekOp_Zichtdatum');
+
+  var datumZichtdatum = leesDatum(zichtdatum.value);
+  var datumGeldig = leesDatum(args.Value);
+
+  args.IsValid = datumGeldig.getTime() <= datumZichtdatum.getTime();
+}
+
+function valideerBronPublicatieJaar(n,t){
+  // t.IsValid=document.getElementById("ZoekOp_BronPublicatie").value==""||document.getElementById("ZoekOp_BronPublicatieJaar").value=="jaar"?!0:validatorIsValide(n,valideerJaar,t)}
+  // t.IsValid=document.getElementById("ZoekOp_BronPublicatieJaar").value=="jaar"?!0:validatorIsValide(n,valideerJaar,t)}
+  if(validatorIsValide(n,valideerJaar,t)){
+    var i = new Date(),
+      r = i.getFullYear();
+      if(t.Value >= "1815" && t.Value <= r) {
+        t.IsValid = true;
+      } else {
+        t.IsValid = false;
+      }
+  } else {
+    t.IsValid = false;
+  }
+}
+
+
+
+/*function valideerBronPublicatieJaar(n, t) {
   document.getElementById("ZoekOp_BronPublicatieJaar").blur();
   document.getElementById("ZoekOp_BronPublicatieNummer").blur();
   if(document.getElementById("ZoekOp_BronPublicatieJaar").value == "") {
@@ -1371,7 +1451,7 @@ function valideerBronPublicatieJaar(n, t) {
   }
   t.IsValid = document.getElementById("ZoekOp_BronPublicatie").value == "" || document.getElementById("ZoekOp_BronPublicatieJaar").value == "jaar" ? !0 : validatorIsValide(n, valideerJaar, t);
 
-}
+}*/
 function valideerBronPublicatieNummer(n, t) {
   // document.getElementById("ZoekOp_BronPublicatieJaar").blur();
   // document.getElementById("ZoekOp_BronPublicatieNummer").blur();
@@ -1429,6 +1509,16 @@ function valideerRichtlijnJaar(n, t) {
 function valideerRichtlijnNummer(n, t) {
   t.IsValid = !t.Value || t.Value === document.getElementById(n.controltovalidate).txt || /^[0-9]+$/gi.test(t.Value);
 }
+function valideerRichtlijnJaarEnNummer(n, t) {
+  if(document.getElementById("ZoekOp_BesluitnummerDeel1").value != "" && document.getElementById("ZoekOp_BesluitnummerDeel2").value === ""){
+    console.log('false');
+    t.IsValid = false;
+  } else {
+    console.log('true');
+    t.IsValid = true;
+  }
+
+}
 if (typeof ValidatorUpdateDisplay == "function") {
   var oudeValidatorUpdateDisplay = ValidatorUpdateDisplay;
   ValidatorUpdateDisplay = function (n) {
@@ -1472,27 +1562,46 @@ if (typeof ValidatorUpdateDisplay == "function") {
 
 
                 var siblings = getSiblings(n);
-                console.log('siblings',siblings);
-                console.log('siblings.length',siblings.length);
-                console.log('n', n, n.isvalid);
-                console.log('controltovalidate', document.getElementById(n.controltovalidate));
+                // var siblings = document.querySelectorAll('.form__error');
+                // console.log('siblings',siblings);
+                // console.log('siblings.length',siblings.length);
+                // console.log('n', n, n.isvalid);
+                // console.log('controltovalidate', document.getElementById(n.controltovalidate));
 
                 // if(siblings.length === 1 && !n.isvalid) {
                 //   document.getElementById(n.controltovalidate).setAttribute("aria-invalid", true);
                 //   document.getElementById(n.controltovalidate).classList.add("input--error");
                 //   document.getElementById(n.controltovalidate).setAttribute("aria-describedby", n.getAttribute("id"));
                 // } else {
-                  for(var i = 0; i < siblings.length; i++) {
-                    if(siblings[i].classList.contains('form__error')){
-                      console.log('has form__error');
-                      if(siblings[i].style.display === "block") {
-                        console.log('BLOCK!', siblings[i]);
-                        document.getElementById(n.controltovalidate).setAttribute("aria-invalid", true);
-                        document.getElementById(n.controltovalidate).classList.add("input--error");
-                        document.getElementById(n.controltovalidate).setAttribute("aria-describedby", n.getAttribute("id"));
-                      }
-                    }
+
+                // for(var i = 0; i < siblings.length; i++) {
+                //     if(siblings[i].classList.contains('form__error')){
+                //       var field = siblings[i].getAttribute('data-validation-field');
+                //       if(field){
+                //         // console.log('has form__error', siblings[i]);
+                //         if(siblings[i].style.display === "block") {
+                //           document.getElementById(field).setAttribute("aria-invalid", true);
+                //           document.getElementById(field).classList.add("input--error");
+                //           document.getElementById(field).setAttribute("aria-describedby", siblings[i].getAttribute("id"));
+                //           // console.log('BLOCK!', siblings[i]);
+                //         } else {
+                //           document.getElementById(field).setAttribute("aria-invalid", false);
+                //         document.getElementById(field).classList.remove("input--error");
+                //         document.getElementById(field).removeAttribute("aria-describedby");
+                //         }
+                //       }
+                //     }
+                //   }
+
+                var errors = document.querySelectorAll('[data-validation-field]');
+                for(var i = 0; i < errors.length; i++) {
+                  if(errors[i].style.display === "block") {
+                    document.getElementById(errors[i].getAttribute('data-validation-field')).setAttribute("aria-invalid", true);
+                    document.getElementById(errors[i].getAttribute('data-validation-field')).classList.add("input--error");
+                    document.getElementById(errors[i].getAttribute('data-validation-field')).setAttribute("aria-describedby", errors[i].getAttribute("id"));
                   }
+                }
+
                 // }
               }
               return;
@@ -1505,7 +1614,7 @@ if (typeof ValidatorUpdateDisplay == "function") {
   };
 }
 
-/* UITGEBREID ZOEKEN
+/* UITGEBREID ZOEKEN */
 
 // var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_ValidationSummary1"));
 
@@ -1582,7 +1691,7 @@ ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZi
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum.errormessage = "Er kan niet na de zichtdatum worden gezocht.";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum.display = "Dynamic";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum.evaluationfunction = "CustomValidatorEvaluateIsValid";
-ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum.clientvalidationfunction = "valideerDatum01052002";
+ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerDatumZichtdatum.clientvalidationfunction = "valideerDatumBeforeZichtdatum";
 var ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum = document.all ? document.all["ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum"] : document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum");
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum.controltovalidate = "ZoekOp_Zichtdatum";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_rfvZichtdatum.errormessage = "Er is geen zoekdatum opgegeven.";
@@ -1636,8 +1745,8 @@ ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPub
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.errormessage = "Naast een publicatiejaar en soort is ook een publicatienummer vereist.";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.display = "Dynamic";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.evaluationfunction = "CustomValidatorEvaluateIsValid";
-ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.clientvalidationfunction = "valideerBronPublicatieJaarEnNummer"
-ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.validateemptytext = "true";
+// ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.clientvalidationfunction = "valideerBronPublicatieJaarEnNummer"
+// ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaarEnNummer.validateemptytext = "true";
 var ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar = document.all ? document.all["ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar"] : document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar");
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar.controltovalidate = "ZoekOp_BronPublicatieJaar";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieJaar.errormessage = "Ongeldig publicatiejaar opgegeven.";
@@ -1650,7 +1759,6 @@ ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPub
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieNummer.display = "Dynamic";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieNummer.evaluationfunction = "CustomValidatorEvaluateIsValid";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieNummer.clientvalidationfunction = "valideerBronPublicatieNummer";
-ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBronPublicatieNummer.validateemptytext = "true";
 var ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID = document.all ? document.all["ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID"] : document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID");
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID.controltovalidate = "ZoekOp_BWBID";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerBWBID.errormessage = "U heeft geen geldig BWB-ID ingevoerd.";
@@ -1663,17 +1771,19 @@ ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuricon
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuriconnectID.display = "Dynamic";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuriconnectID.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerJuriconnectID.validationexpression = "^jci1.3:c:BWB[R|V|W]\\d{4,7}.*";
-*/
+/* */
 
-/* EU */
+/* EU
 
 var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer"), document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar"), document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnNummer"), document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum"));
 
 var ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer = document.all ? document.all["ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer"] : document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer");
-ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.controltovalidate = "ZoekOp_BesluitnummerDeel1";
+ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.controltovalidate = "ZoekOp_BesluitnummerDeel2";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.errormessage = "Naast een jaar is ook een richtlijnnummer vereist.";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.display = "Dynamic";
+ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.clientvalidationfunction = "valideerRichtlijnJaarEnNummer";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer.validateemptytext = "true";
 var ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar = document.all ? document.all["ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar"] : document.getElementById("ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar");
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar.controltovalidate = "ZoekOp_BesluitnummerDeel1";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar.errormessage = "Er is een ongeldig richtlijn jaar opgegeven.";
@@ -1692,7 +1802,7 @@ ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum.
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum.display = "Dynamic";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum.evaluationfunction = "CustomValidatorEvaluateIsValid";
 ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum.clientvalidationfunction = "valideerDatum";
-/* */
+*/
 
 var Page_ValidationActive = false;
 if (typeof(ValidatorOnLoad) == "function") {

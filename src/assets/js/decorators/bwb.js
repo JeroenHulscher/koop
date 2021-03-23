@@ -36,9 +36,9 @@
           t = n("#ZoekOp_TitelAfkorting");
       i.is(":checked") == !1 ? (t.prop("checked", !1), t.prop("disabled", !0)) : t.prop("disabled", !1);
   }
-  // function u() {
-  //     n("#ZoekOp_Datumbereik").val() === "3" ? n("#divEinddatum").show() : n("#divEinddatum").hide();
-  // }
+  function u() {
+      n("#ZoekOp_Datumbereik").val() === "3" ? n("#divEinddatum").show() : n("#divEinddatum").hide();
+  }
   function f() {
       var i = !0;
       n("#soortCategorienLijst input:checkbox:checked").each(function () {
@@ -50,6 +50,38 @@
           : n("#ZoekOp_DatumtypeOndertekening").prop("disabled", !1);
       t();
   }
+  function z() {
+    var amountChecked = 0;
+    n('.regelingsoort').each(function(){
+      if(n(this).is(':checked')){
+        amountChecked++;
+      }
+    });
+    if(amountChecked === 1 && n("#Verdrag").is(":checked")){
+      n("#ZoekOp_ArtikelnummerBijlage").prop('disabled', true);
+      n("#ZoekOp_ArtikelnummerArtikel").prop('checked', true);
+    } else {
+      n("#ZoekOp_ArtikelnummerBijlage").prop('disabled', false);
+    }
+  }
+  function y(){
+    if(n("#ZoekOp_DatumtypeTotstandkoming").is(":checked")){
+      n("#ZoekOp_DatumscopeArtikel").prop("disabled", true);
+      n("#ZoekOp_DatumscopeRegeling").prop("checked", true);
+    } else {
+      n("#ZoekOp_DatumscopeArtikel").prop("disabled", false);
+    }
+  }
+  function v(){
+    if(n("#ZoekOp_DatumtypeInwerkingtreding").is(":checked")){
+      n("#ZoekOp_DatumscopeArtikel").prop("disabled", false);
+    }
+  }
+  function w(){
+    if(n("#ZoekOp_DatumtypeOndertekening").is(":checked")){
+      n("#ZoekOp_DatumscopeArtikel").prop("disabled", false);
+    }
+  }
   // t = done
   function t() {
       n("#Verdrag").is(":checked") && n("#ZoekOp_DatumscopeRegeling").is(":checked")
@@ -58,9 +90,16 @@
             n("#ZoekOp_DatumtypeTotstandkoming").prop("disabled", !0),
             n("#ZoekOp_DatumtypeOndertekening").is(":checked") === !1 && n("#ZoekOp_DatumtypeInwerkingtreding").prop("checked", !0));
   }
-  // unused;
   function c() {
-      n("#ZoekOp_WTI").is(":checked") && (n("#ZoekOp_Onderdeeltype").val(""), n("span[id='overheidbwb.onderdeeltype']").html(""));
+    if(n("#ZoekOp_WTI").is(":checked")){
+      var onderdelen = document.querySelector('#ss41');
+      if(onderdelen){
+        var onderdelenItems = onderdelen.querySelectorAll('.subselection__summaryitem__remove');
+        for(var i = 0; i < onderdelenItems.length; i++){
+          onderdelenItems[i].click();
+        }
+      }
+    }
   }
   function l(t) {
       var i = [];
@@ -96,16 +135,21 @@
   }
   n(document).ready(function () {
       o();
-      // u();
+      u();
       t();
       f();
-      // n("#ZoekOp_Datumbereik").bind("change", u);
+      n("#ZoekOp_Datumbereik").bind("change", u);
       n("#ZoekOp_TitelExact").bind("change", h);
       n("#soortCategorienLijst input:checkbox").bind("change", f);
       n("#soortCategorienLijst input:checkbox").bind("change", s);
+      n("#soortCategorienLijst .regelingsoort").bind("change", z);
       n("#ZoekOp_DatumscopeArtikel").bind("change", t);
       n("#ZoekOp_DatumscopeRegeling").bind("change", t);
       n("#ZoekOp_WTI").bind("change", c);
+
+      n("#ZoekOp_DatumtypeInwerkingtreding").bind("change", v);
+      n("#ZoekOp_DatumtypeOndertekening").bind("change", w);
+      n("#ZoekOp_DatumtypeTotstandkoming").bind("change", y);
       // n("input[type=checkbox]", ".modal__content").bind("change", function () {
       //     e(n(this).closest(".modal__content"));
       // });
