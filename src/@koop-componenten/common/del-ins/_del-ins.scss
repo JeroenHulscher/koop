@@ -80,12 +80,12 @@ del.del {
     border-left: 0.5em solid $green;
     padding: 0.5em;
 
-    p {
-      margin: 0;
-    }
-    p + * {
-      margin-top: .5em;
-    }
+    // p {
+    //   margin: 0;
+    // }
+    // p + * {
+    //   margin-top: .5em;
+    // }
 
     .table__container {
       margin-bottom: 0;

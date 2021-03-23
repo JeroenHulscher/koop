@@ -282,7 +282,9 @@ ol {
   &--size-xs > li > del > &__itemtype,
   &--size-xs > li > del > &__itembullet,
   &--size-xs > li > ins > &__itemtype,
-  &--size-xs > li > ins > &__itembullet {
+  &--size-xs > li > ins > &__itembullet,
+  &--size-xs > li > p > ins > &__itemtype,
+  &--size-xs > li > p > del > &__itemtype {
     width: 2.5em;
   }
   &--size-s > li {
@@ -293,7 +295,9 @@ ol {
   &--size-s > li > del > &__itemtype,
   &--size-s > li > del > &__itembullet,
   &--size-s > li > ins > &__itemtype,
-  &--size-s > li > ins > &__itembullet {
+  &--size-s > li > ins > &__itembullet,
+  &--size-s > li > p > ins > &__itemtype,
+  &--size-s > li > p > del > &__itemtype {
     width: 3.5em;
   }
   &--size-m > li {
@@ -304,7 +308,9 @@ ol {
   &--size-m > li > del > &__itemtype,
   &--size-m > li > del > &__itembullet,
   &--size-m > li > ins > &__itemtype,
-  &--size-m > li > ins > &__itembullet {
+  &--size-m > li > ins > &__itembullet,
+  &--size-m > li > p > ins > &__itemtype,
+  &--size-m > li > p > del > &__itemtype {
     width: 4em;
   }
   &--size-l > li {
@@ -315,7 +321,9 @@ ol {
   &--size-l > li > del > &__itemtype,
   &--size-l > li > del > &__itembullet,
   &--size-l > li > ins > &__itemtype,
-  &--size-l > li > ins > &__itembullet {
+  &--size-l > li > ins > &__itembullet,
+  &--size-l > li > p > ins > &__itemtype,
+  &--size-l > li > p > del > &__itemtype {
     width: 5em;
   }
   &--size-xl > li {
@@ -326,7 +334,9 @@ ol {
   &--size-xl > li > del > &__itemtype,
   &--size-xl > li > del > &__itembullet,
   &--size-xl > li > ins > &__itemtype,
-  &--size-xl > li > ins > &__itembullet {
+  &--size-xl > li > ins > &__itembullet,
+  &--size-xl > li > p > ins > &__itemtype,
+  &--size-xl > li > p > del > &__itemtype {
     width: 7em;
   }
   &--size-xxl > li {
@@ -337,7 +347,9 @@ ol {
   &--size-xxl > li > del > &__itemtype,
   &--size-xxl > li > del > &__itembullet,
   &--size-xxl > li > ins > &__itemtype,
-  &--size-xxl > li > ins > &__itembullet {
+  &--size-xxl > li > ins > &__itembullet,
+  &--size-xxl > li > p > ins > &__itemtype,
+  &--size-xxl > li > p > del > &__itemtype {
     width: 9em;
   }
 }
