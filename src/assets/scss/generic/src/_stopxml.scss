@@ -634,11 +634,11 @@ hr .item {
 }
 
 #broodtekst ._p_al-groep_al {
-    line-height: 9.25pt;
+    line-height: inherit;
 }
 
 #broodtekst ._p_handelingen_al {
-    line-height: 9.25pt;
+    line-height: inherit;
 }
 
 #broodtekst ._p_onderwerp_al {
@@ -650,7 +650,7 @@ hr .item {
 }
 
 #broodtekst ._p_bezwaarschrift_al {
-    line-height: 9.25pt;
+    line-height: inherit;
     margin-bottom: 3mm;
 }
 
@@ -665,7 +665,7 @@ hr .item {
 
 #broodtekst ._p_opening_al {
     margin-top: 3.5mm;
-    line-height: 9.6pt;
+    line-height: inherit;
     font-size: 8.7pt;
 }
 
