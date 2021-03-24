@@ -67,3 +67,6 @@ context:
     inputButton: true
     inputSubmit: false
     type: button
+  dp1:
+    id: ZoekOp_Geldigheidsdatum
+    cleanId: true

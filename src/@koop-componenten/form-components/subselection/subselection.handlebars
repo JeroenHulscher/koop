@@ -2,7 +2,7 @@
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
-      <div class="modal__content">
+      <div class="modal__content" {{{modalContentAttributes}}}>
         <h2>{{modalTitle}}</h2>
         {{#if searchFilter}}
           <div class="" data-decorator="init-filter-results">
@@ -126,5 +126,5 @@
       </div>
     </div>
   </div>
-  <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger">{{ linkText }}</button>
+  <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger {{buttonClass}}">{{ linkText }}</button>
 </div>

@@ -20,7 +20,7 @@
     <p>Dit onderdeel is nog experimenteel en kent mogelijk nog onvolkomenheden.</p>
 
   </div>
-<form data-decorator="init-form-bwbvalidation">
+<form data-decorator="init-form-bwbvalidation" data-bwbvalidation-form="eu">
   <div>
     <div class="form__chapter__heading">
       <h2>Zoek op implementatie EU-richtlijn</h2>
@@ -34,6 +34,7 @@
         {{ render "@input-text" inputtext1 merge=true }}
         {{ render "@input-text" inputtext2 merge=true }}
         <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer" data-validation-field="ZoekOp_BesluitnummerDeel2" class="form__error" style="display:none;">Naast een jaar is ook een richtlijnnummer vereist.</p>
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaarEnNummer2" data-validation-field="ZoekOp_BesluitnummerDeel1" class="form__error" style="display:none;">Naast een richtlijnnummer is ook een jaar vereist.</p>
         <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnJaar" data-validation-field="ZoekOp_BesluitnummerDeel1" class="form__error" style="display:none;">Er is een ongeldig richtlijn jaar opgegeven.</p>
         <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerRichtlijnNummer" data-validation-field="ZoekOp_BesluitnummerDeel2"  class="form__error" style="display:none;">Er is een ongeldig richtlijnnummer opgegeven.</p>
 
@@ -48,6 +49,7 @@
       <div class="form__element__inputs">
         {{ render "@input-text" inputtext3 merge=true }}
         {{ render "@datepicker" datepickerPublicatieblad}}
+        <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerPublicatiebladnummer" data-validation-field="input-text-1434"  class="form__error" style="display:none;">Er is een ongeldig publicatiebladnummer opgegeven.</p>
         <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerDatum" data-validation-field="ZoekOp_PublicatiebladDatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
       </div>
     </div>

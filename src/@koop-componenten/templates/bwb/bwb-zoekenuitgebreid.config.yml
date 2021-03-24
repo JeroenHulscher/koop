@@ -197,7 +197,6 @@ context:
     modifier: input--small
   ss1:
     id: ss11
-    motherCheckboxIds: Wetten,Rijkswetten,AMvB,RijksKBs,MinR,MinRArchief,MinROverig,Beleid,Circulaires
     type: abbr
     modifier: fixed
     linkText: Selecteer ministeries
@@ -205,6 +204,7 @@ context:
     fieldLabel: fieldLabel
     fieldInstruction:
     fieldPlaceholder: 'Bijv: 0612345678'
+    modalContentAttributes: data-aantevinkencheckboxen="ministeries" data-uittevinkencheckboxen data-veldidgeselecteerdeitems="ZoekOp_EerstVerantwoordelijke_Ministerie"
     Options:
       - Option: ss111
         id: ss111

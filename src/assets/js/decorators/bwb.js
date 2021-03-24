@@ -1,4 +1,247 @@
-(function (n) {
+(function ($) {
+  $(document).ready(function () {
+      toggleMinisteriëleRegelingen();
+      toggleEindatumZichtbaarheid();
+      toggleDatumVanTotstandkoming();
+      toggleDatumVanOndertekening();
+      $('#ZoekOp_Datumbereik').bind('change', toggleEindatumZichtbaarheid);
+      $('#ZoekOp_TitelExact').bind('change', toggleCiteertitelAfkorting);
+      $('#soortCategorienLijst input:checkbox').bind('change', toggleDatumVanOndertekening);
+      $('#soortCategorienLijst input:checkbox').bind('change', toggleWaardelijstselecties);
+      $("#soortCategorienLijst .regelingsoort").bind("change", bijlageConditional);
+      $('#ZoekOp_DatumscopeArtikel').bind('change', toggleDatumVanTotstandkoming);
+      $('#ZoekOp_DatumscopeRegeling').bind('change', toggleDatumVanTotstandkoming);
+      $('#ZoekOp_WTI').bind('change', toggleOnderdeeltype);
+      $('input[type=checkbox]', '.modal__content').bind('change', function () { selecteerModalitem($(this).closest('.modal__content')); });
+      $('.subselection__trigger', '.subselection').bind('click', function () { selecteerModalitem($(this).prev('div').find('.modal__content')); });
+      $("#ZoekOp_DatumtypeInwerkingtreding").bind("change", scopeArtikelReset1);
+      $("#ZoekOp_DatumtypeOndertekening").bind("change", scopeArtikelReset2);
+      $("#ZoekOp_DatumtypeTotstandkoming").bind("change", scopeArtikel);
+  });
+
+  function toggleMinisteriëleRegelingen() {
+
+      /* Overnemen naar beneden */
+      $("#MinR").on('click', function () {
+          var minRGeselecteerd = $("#MinR").is(':checked');
+          $("#MinRArchief, #MinROverig").prop('checked', minRGeselecteerd);
+
+          alleRegelingsoortenAan();
+      });
+
+      /* Overnemen naar boven */
+      $("#MinRArchief, #MinROverig").on('click', function () {
+          var subItemsGeselecteerd = $("#MinRArchief").is(':checked') && $("#MinROverig").is(':checked');
+          $("#MinR").prop('checked', subItemsGeselecteerd);
+
+          alleRegelingsoortenAan();
+      });
+  }
+
+  function alleRegelingsoortenAan() {
+      var elements = onl.dom.$('[data-set="which-types"]');
+      var checkedAll = false;
+      if (elements) {
+          checkedAll = true;
+          elements.forEach(function (input) {
+              if (!input.checked) {
+                  checkedAll = false;
+              }
+          });
+      }
+
+      $("#AlleSoorten").prop('checked', checkedAll);
+  }
+
+
+  function toggleWaardelijstselecties() {
+      /* De waardeselectie verwijderen als de bijbehorende soort regeling is niet meer aangevinkt */
+      toggleWaardelijstselectie("ZBO", "ZoekOp_EerstVerantwoordelijke_ZBO", "", "ss21");
+      toggleWaardelijstselectie("Bedrijf", "ZoekOp_EerstVerantwoordelijke_PBO", "", "ss31");
+      // toggleWaardelijstselectie("Verdrag", "ZoekOp_Taxonomie", "", "ss11");
+  }
+
+  function toggleWaardelijstselectie(inputId, hiddenInputId, spanId, subselectionId) {
+      var isGeselecteerd = $("#" + inputId).is(':checked');
+      
+      if (!$('#AlleSoorten').is(':checked') && !isGeselecteerd) {
+          $("#" + hiddenInputId).val('');
+          // var span = $("span[id='" + spanId + "']");
+          // span.html('');
+          var onderdelen = document.querySelector('#'+subselectionId);
+          if(onderdelen){
+            var onderdelenItems = onderdelen.querySelectorAll('.subselection__summaryitem__remove');
+            for(var i = 0; i < onderdelenItems.length; i++){
+              onderdelenItems[i].click();
+            }
+          }
+      }
+  }
+
+  function toggleCiteertitelAfkorting() {
+      var $CiteertitelExactCheckbox = $(this);
+      var $citeertitelAfkortingCheckbox = $('#ZoekOp_TitelAfkorting');
+      if ($CiteertitelExactCheckbox.is(':checked') == false) {
+          $citeertitelAfkortingCheckbox.prop('checked', false);
+          $citeertitelAfkortingCheckbox.prop('disabled', true);
+      } else {
+          $citeertitelAfkortingCheckbox.prop('disabled', false);
+      }
+  }
+
+  function toggleEindatumZichtbaarheid() {
+      if ($('#ZoekOp_Datumbereik').val() === '3') {
+          $('#divEinddatum').show();
+      } else {
+          $('#divEinddatum').hide();
+      }
+  }
+
+  function toggleDatumVanOndertekening() {
+      var alleenVerdragenGeselecteerd = true;
+      $('#soortCategorienLijst input:checkbox:checked').each(function () {
+          var $soortCatChkbx = $(this);
+          if ($soortCatChkbx.prop('id') != 'Verdrag') {
+              alleenVerdragenGeselecteerd = false;
+          }
+      });
+
+      if (alleenVerdragenGeselecteerd) {
+          if ($('#ZoekOp_DatumtypeOndertekening').is(':checked') === true) {
+              $('#ZoekOp_DatumtypeInwerkingtreding').prop('checked', true);
+          }
+          $('#ZoekOp_DatumtypeOndertekening').prop('disabled', true);
+      } else {
+          $('#ZoekOp_DatumtypeOndertekening').prop('disabled', false);
+      }
+
+      toggleDatumVanTotstandkoming();
+  }
+
+  function toggleDatumVanTotstandkoming() {
+      if ($('#Verdrag').is(':checked') && $('#ZoekOp_DatumscopeRegeling').is(':checked')) {
+          $('#ZoekOp_DatumtypeTotstandkoming').prop('disabled', false);
+      } else {
+          $('#ZoekOp_DatumtypeTotstandkoming').prop('checked', false);
+          $('#ZoekOp_DatumtypeTotstandkoming').prop('disabled', true);
+          if ($('#ZoekOp_DatumtypeOndertekening').is(':checked') === false) {
+              $('#ZoekOp_DatumtypeInwerkingtreding').prop('checked', true);
+          }
+      }
+  }
+
+  function toggleOnderdeeltype() {
+      if ($('#ZoekOp_WTI').is(':checked')) {
+          // Na het selecteren van Wettechnische informatie moeten de onderdeeltypes weer verdwijnen
+          // $('#ZoekOp_Onderdeeltype').val('');
+          // $("span[id='overheidbwb.onderdeeltype']").html('');
+          var onderdelen = document.querySelector('#ss41');
+          if(onderdelen){
+            var onderdelenItems = onderdelen.querySelectorAll('.subselection__summaryitem__remove');
+            for(var i = 0; i < onderdelenItems.length; i++){
+              onderdelenItems[i].click();
+            }
+          }
+      }
+  }
+
+  /*
+      Retourneert een array met alle geselecteerde items uit een waardelijst-modal
+  */
+  function LeesModalitems($modal) {
+      var selection = [];
+      $modal.find("input:checked").each(function () {
+          selection.push({ identifier: this.value, omschrijving: $(this).data('omschrijving') });
+      });
+
+      // Dirty fix, om te zorgen dat aangevinkte checkboxen, zonder dat er iets wordt gewijzigd, in het zoekformulier worden overgenomen
+      $modal.find("input:eq(0)").click().click();
+      return selection;
+  }
+
+  /*
+      Wordt aangeroepen na het aan-/uitvinken van een item in een waardelijst-modal
+  */
+  function selecteerModalitem( $modalcontent) {
+
+      // Als er items zijn geselecteerd en er moeten minimaal een aantal checkboxen aangevinkt zijn
+      var aantevinkencheckboxen = $modalcontent.data('aantevinkencheckboxen');
+      if (aantevinkencheckboxen !== '' && !$('#AlleSoorten').is(':checked')) {
+          var erIsErEenAangevinkt = false;
+          var checkboxen = $('.' + aantevinkencheckboxen);
+          for (var i = 0; i < checkboxen.length; i++) {
+              if ($(checkboxen[i]).is(':checked')) {
+                  erIsErEenAangevinkt = true;
+                  break;
+              }
+          }
+          if (!erIsErEenAangevinkt) {
+              for (var i = 0; i < checkboxen.length; i++) {
+                  $(checkboxen[i]).prop('checked', true);
+              }
+          }
+      }
+
+      // Als er items zijn geselecteerd en er moeten een aantal checkboxen uitgevinkt zijn
+      var uittevinkencheckboxen = $modalcontent.data('uittevinkencheckboxen');
+      if (uittevinkencheckboxen !== "") {
+          var checkboxen = $('.' + uittevinkencheckboxen);
+          for (var i = 0; i < checkboxen.length; i++) {
+              $(checkboxen[i]).prop('checked', false);
+          }
+      }
+
+      // Plaats de geselecteerde items in het hidden veld
+      var veldidgeselecteerdeitems = $modalcontent.data('veldidgeselecteerdeitems');
+
+      var selection = LeesModalitems($modalcontent);
+
+      var geselecteerdeItems = [];
+      for (var i = 0, item; (item = selection[i]) && i < selection.length; i++) {
+          geselecteerdeItems.push(item.identifier);
+      }
+
+      $('#' + veldidgeselecteerdeitems).val(geselecteerdeItems.join(','));
+
+  }
+
+  function scopeArtikel() {
+    console.log('scopeArtikel');
+    if($("#ZoekOp_DatumtypeTotstandkoming").is(":checked")){
+      $("#ZoekOp_DatumscopeArtikel").prop("disabled", true);
+      $("#ZoekOp_DatumscopeRegeling").prop("checked", true);
+    } else {
+      $("#ZoekOp_DatumscopeArtikel").prop("disabled", false);
+    }
+  }
+  function scopeArtikelReset1() {
+    if($("#ZoekOp_DatumtypeInwerkingtreding").is(":checked")){
+      $("#ZoekOp_DatumscopeArtikel").prop("disabled", false);
+    }
+  }
+  function scopeArtikelReset2() {
+    if($("#ZoekOp_DatumtypeOndertekening").is(":checked")){
+      $("#ZoekOp_DatumscopeArtikel").prop("disabled", false);
+    }
+  }
+  function bijlageConditional() {
+    var amountChecked = 0;
+    $('.regelingsoort').each(function(){
+      if($(this).is(':checked')){
+        amountChecked++;
+      }
+    });
+    if(amountChecked === 1 && $("#Verdrag").is(":checked")){
+      $("#ZoekOp_ArtikelnummerBijlage").prop('disabled', true);
+      $("#ZoekOp_ArtikelnummerArtikel").prop('checked', true);
+    } else {
+      $("#ZoekOp_ArtikelnummerBijlage").prop('disabled', false);
+    }
+  }
+
+})(jQuery);
+
+/*(function (n) {
   function o() {
       n("#MinR").on("click", function () {
           var t = n("#MinR").is(":checked");
@@ -21,7 +264,7 @@
   //         }));
   //     n("#AlleSoorten").prop("checked", t);
   // }
-  function s() {
+  function ss() {
       i("ZBO", "ZoekOp_EerstVerantwoordelijke_ZBO", "overheidbwb.eerstverantwoordelijkezbo");
       i("Bedrijf", "ZoekOp_EerstVerantwoordelijke_PBO", "overheidbwb.eerstverantwoordelijkepbo");
       i("Verdrag", "ZoekOp_Taxonomie", "overheidbwb.onderwerpVerdrag");
@@ -141,7 +384,7 @@
       n("#ZoekOp_Datumbereik").bind("change", u);
       n("#ZoekOp_TitelExact").bind("change", h);
       n("#soortCategorienLijst input:checkbox").bind("change", f);
-      n("#soortCategorienLijst input:checkbox").bind("change", s);
+      n("#soortCategorienLijst input:checkbox").bind("change", ss);
       n("#soortCategorienLijst .regelingsoort").bind("change", z);
       n("#ZoekOp_DatumscopeArtikel").bind("change", t);
       n("#ZoekOp_DatumscopeRegeling").bind("change", t);
@@ -150,14 +393,15 @@
       n("#ZoekOp_DatumtypeInwerkingtreding").bind("change", v);
       n("#ZoekOp_DatumtypeOndertekening").bind("change", w);
       n("#ZoekOp_DatumtypeTotstandkoming").bind("change", y);
-      // n("input[type=checkbox]", ".modal__content").bind("change", function () {
-      //     e(n(this).closest(".modal__content"));
-      // });
-      // n(".selection_popup", ".subselection").bind("click", function () {
-      //     e(n(this).prev("div").find(".modal__content"));
-      // });
+      n("input[type=checkbox]", ".modal__content").bind("change", function () {
+          e(n(this).closest(".modal__content"));
+      });
+      n(".subselection__trigger", ".subselection").bind("click", function () {
+          e(n(this).prev("div").find(".modal__content"));
+      });
   });
 })(jQuery);
+*/
 
 (function (n) {
   "use strict";

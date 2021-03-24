@@ -144,11 +144,11 @@ function findObjectByKey(array, key, value) {
       value = this.items[y][0];
       title = this.items[y][1];
       id = this.items[y][2];
-      if (this.config.type !== 'abbr') {
+      // if (this.config.type !== 'abbr') {
         summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove" data-subselection-id="' + this.elementId +'"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
-      } else {
-        summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
-      }
+      // } else {
+        // summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
+      // }
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
