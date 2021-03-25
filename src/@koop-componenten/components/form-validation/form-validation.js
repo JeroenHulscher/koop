@@ -238,6 +238,7 @@ var supports = function () {
       classStateNewField = this.config.classValidField;
       classMessageContainer = this.config.classValidContainer;
       prefixId = 'message';
+      return;
     }
 
     // Add/remove state class to field
@@ -631,7 +632,7 @@ var supports = function () {
       }
     }
     if(hasErrors){
-      this.showErrorSummary(this.errors);
+      // this.showErrorSummary(this.errors);
     }
 
     // Prevent form from submitting if there are errors or submission is disabled
@@ -641,8 +642,11 @@ var supports = function () {
 
     // If there are errrors, focus on first element with error
     if (hasErrors) {
-      var errorsContainer = this.element.querySelector('.' + this.config.classErrorsContainer);
-      errorsContainer.focus();
+      // var errorsContainer = this.element.querySelector('.' + this.config.classErrorsContainer);
+      // errorsContainer.focus();
+      var firstError = this.element.querySelectorAll('.form__error')[0];
+      var firstErrorId = firstError.getAttribute('id');
+      this.element.querySelector('[aria-describedby="'+firstErrorId+'"]').focus();
       return;
     }
 
