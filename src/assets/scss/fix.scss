@@ -1,0 +1,156 @@
+/*
+* fix.css - voor OEBNL.
+* Dit bestand wordt extra ingeladen op de omgeving van OEBNL waar de legacy.css draait. Ook wordt de stopxml.scss
+* meegeladen op deze omgeving om bepaalde componenten correct te stylen. Dit alles is een tijdelijke oplossing.
+* Wanneer OEBNL over is op de complib (100%), zal de transition.css voldoen. Transition.css bevat de stopxml.css
+* waar alle legacy code (legacy.min.css en meer, van de oebnl bootstrap productie) is opgenomen voor de stopxml html.
+*
+* OEBNL Met bootstrap: stopxml.scss + fix.css
+* OEBNL 100% complib: transition.scss
+*/
+#broodtekst h1,
+#broodtekst h2,
+#broodtekst h3,
+#broodtekst h4,
+#broodtekst h5,
+#broodtekst h6 {
+    float: none;
+    width: auto;
+    color: #154273;
+}
+#broodtekst h5,
+#broodtekst h6 {
+    font-size: 1em;
+}
+
+#broodtekst h1 {
+    font-family: "rijksoverheidSans";
+}
+
+#broodtekst .list-custom__itembullet {
+    left: 0 !important;
+}
+
+#broodtekst ol,
+#broodtekst ul {
+    padding-left: 1em;
+}
+#broodtekst ul.list-custom,
+#broodtekst ol.list-custom {
+    padding-left: 0;
+}
+#broodtekst ol li {
+    float: none;
+    width: auto;
+}
+#broodtekst ol:not(.list-custom) li {
+    padding-left: 1em;
+}
+
+table.meta-table {
+    font-size: 16px;
+    border: 0;
+    margin: 0;
+    width: auto;
+    min-width: auto;
+}
+table.meta-table th,
+table.meta-table td {
+    border: 0;
+    padding: 0 40px 0 0;
+}
+
+#broodtekst table {
+    font-size: 16px;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    table-layout: auto;
+}
+
+#broodtekst .footnotes a {
+    word-break: break-word;
+}
+
+div.stuk {
+    width: 100%;
+}
+
+/*
+* LET-OP: Hieronder aanpassingen i.v.m. demo renvooi
+*/
+
+td > del,
+td > ins,
+figure > del,
+figure > ins,
+li > ins,
+li > del,
+ol > ins,
+ol > del,
+ul > ins,
+ul > del,
+div > del,
+div > ins {padding: 0;}
+
+td > ins > *,
+div > ins > *,
+li > ins > *,
+ol > ins > *,
+ul  > ins > *{background:#e4f0ef;}
+
+td > del > *,
+div > del > *,
+li > del > *,
+ol > del > *,
+ul  > del *{background:#f4c8c5;}
+
+.legacy figure > ins > img{border: 5px solid #e4f0ef;}
+.legacy figure > del > img{border: 5px solid #f4c8c5;}
+
+.legacy figure > del > img {
+    position: relative;
+    overflow: hidden; //hide overflow of pseudo elements
+}
+
+.legacy figure > del > img:before, .legacy figure > del > img:after {
+    position: absolute;
+    content: '';
+    background: red;
+    display: block;
+    width: 100%;
+    height: 30px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.legacy figure > del > img:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.legacy .del table caption,
+.legacy .ins table caption {
+  margin-top: 0;
+}
+
+
+.legacy div.wijzig-lid {background:#eeeeee;}
+.legacy .wat {padding-bottom: 3px; line-height:1em;}
+.legacy .wat p  {
+	line-height:1em;margin-bottom:6px}
+
+ol.footnotes {list-style-type: none;}
+ol.footnotes sup{vertical-align:top;margin-right: 10px;}
+
+.rotated {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+}

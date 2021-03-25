@@ -149,7 +149,34 @@ $breakpointDesktopListSources: 65em;
         margin: -.4em 0 -.5em 0;
         width: auto;
       }
+    }
 
+    .list--source__defaultactions {
+      margin: 1em 0 0 3.25em;
+      @media (min-width: $breakpointDesktopListSources) {
+        flex: 0 0 auto;
+        margin: -.4em 0 -.5em 0;
+        width: auto;
+      }
+      .button {
+        padding-right: .75em;
+        padding-left: .75em;
+        padding-top: .55em;
+        padding-bottom: .55em;
+        font-weight: normal;
+        margin-bottom: .5em;
+        margin-right: .5em;
+      }
+      .button-icon {
+        margin-bottom: .5em;
+        margin-right: .5em;
+      }
+      @media (min-width: $breakpointDesktopListSources) {
+        .button,
+        .button-icon {
+          margin: 0 0 0 .5em;
+        }
+      }
     }
 
     > .collapsible {

@@ -27,11 +27,27 @@
 				{{/if}}
 			</div>
 
+
       {{#if buttonContext/action}}
-      <a {{#if id}}id="{{id}}"{{/if}} href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}
-        <span class="visually-hidden">van abonnement: {{name}}</span>
-      </a>
+        <a {{#if id}}id="{{id}}"{{/if}} href="{{buttonContext/action}}" class="button {{buttonContext/modifier}}">{{buttonContext/text}}
+          <span class="visually-hidden">van abonnement: {{name}}</span>
+        </a>
+      {{else}}
+        {{#if defaultactions}}
+          <div class="list--source__defaultactions">
+            {{#each defaultactions}}
+              {{#if buttonIcon}}
+                {{ render "@button-icon" buttonIconContext }}
+              {{else}}
+                <a {{#if id}}id="{{id}}"{{/if}} href="{{action}}" class="button {{modifier}}">{{text}}
+                  <span class="visually-hidden">van abonnement: {{../name}}</span>
+                </a>
+              {{/if}}
+            {{/each}}
+          </div>
+        {{/if}}
       {{/if}}
+
 
       {{#if actionsOne}}
         <div class="list--sources__actions" data-decorator="init-form-conditionals" data-config='{"questionIdTag": "#{{idprefix}}"}'>

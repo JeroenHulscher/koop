@@ -5,30 +5,38 @@
   </div>
 </div>
 
-<div id="content" role="main" class="container">
 
-  <div class="row">
-
-    {{#> @jumbotron jumbotronContext }}
-
-      <form class="form" data-decorator="init-form-validation">
-        <fieldset>
-          <legend class="visually-hidden">E-mailadres</legend>
-          <div class="form__row form__row--medium">
-            {{render "@input-text--email" inputEmailContext merge=true }}
-          </div>
-          <div class="form__rowsubmit">
-            <div class="form__rowsubmit__item">
-              {{ render "@button" buttonSubmit }}
+<div id="content" role="main" class="container container--centered">
+  <div class="row row--spacer u-margin-top-40">
+    <div class="columns columns--gutter-med">
+      <div class="column">
+        <div class="form__row form__row--large">
+          {{ render "@heading--preheader" preheader merge=true }}
+          <h1 class="h1 h1--slim">Wachtwoord opnieuw instellen</h1>
+          <p>
+             Indien u uw wachtwoord bent vergeten kunt u uw wachtwoord opnieuw instellen. Wij sturen daarvoor een bevestigingscode naar uw e-mailadres. Met deze bevestigingscode kunt u een nieuw wachtwoord aan ons doorgeven.
+          </p>
+        </div>
+        <form class="form" data-decorator="init-form-validation">
+          <fieldset>
+            <legend class="visually-hidden">E-mailadres</legend>
+            <div class="form__row form__row--medium">
+              {{render "@input-text--email" inputEmailContext merge=true }}
             </div>
-          </div>
-        </fieldset>
-      </form>
-    {{/@jumbotron}}
-
+            <div class="form__rowsubmit">
+              <div class="form__rowsubmit__item">
+                {{ render "@button" buttonSubmit }}
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="column">
+      </div>
+    </div>
   </div>
-
 </div>
+
 
 {{ render "@disclaimer" }}
 {{ render "@footer" }}

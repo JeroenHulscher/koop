@@ -20,17 +20,9 @@
 
       a {
         &.is-active {
-          // font-style: italic;
-          // text-decoration: none;
           font-weight: bold;
         }
-        padding-right: 1em;
-        background: {
-          repeat: no-repeat;
-          position: right 50%;
-          image: $dartTopIcon;
-          size: 10px;
-        }
+
         &.sort--ascending {
           padding-right: 1em;
           background: {
@@ -50,7 +42,7 @@
             size: 10px;
           }
         }
-        &.sort--none {
+        &.sort--nodecoration {
           padding-right: 0;
           background: none;
         }

@@ -150,7 +150,9 @@
 // #broodtekst h1.dossiertitel,#broodtekst h1.dossiertitel * {
 //     color: #154273;
 // }
-
+#broodtekst h1 {
+  font-family: $defaultFontStack !important;
+}
 #broodtekst p.titel {
     font-weight: bold;
     margin-bottom: 0;
@@ -632,11 +634,11 @@ hr .item {
 }
 
 #broodtekst ._p_al-groep_al {
-    line-height: 9.25pt;
+    line-height: inherit;
 }
 
 #broodtekst ._p_handelingen_al {
-    line-height: 9.25pt;
+    line-height: inherit;
 }
 
 #broodtekst ._p_onderwerp_al {
@@ -648,7 +650,7 @@ hr .item {
 }
 
 #broodtekst ._p_bezwaarschrift_al {
-    line-height: 9.25pt;
+    line-height: inherit;
     margin-bottom: 3mm;
 }
 
@@ -663,7 +665,7 @@ hr .item {
 
 #broodtekst ._p_opening_al {
     margin-top: 3.5mm;
-    line-height: 9.6pt;
+    line-height: inherit;
     font-size: 8.7pt;
 }
 
@@ -1893,7 +1895,7 @@ margin-bottom:2em;
 
 
 	/* specifieke tabellen */
-	#broodtekst table.verwijz td { padding:0 5px 4px 5px; border-right:10px solid #fff; border-bottom:4px solid #fff; valign:top; background:#fff; }
+	#broodtekst table.verwijz td { padding:0 5px 4px 5px; border-right:10px solid #fff; border-bottom:4px solid #fff; vertical-align:top; background:#fff; }
 
 
 

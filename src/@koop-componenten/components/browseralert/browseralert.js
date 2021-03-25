@@ -13,12 +13,11 @@
     var self = this;
 
     this.element.addEventListener('click', function (e) {
-      if(window.confirm(self.element.dataset.alertmessage)) {
+      if(window.confirm(e.target.getAttribute('data-alertmessage'))) {
 
       } else {
         e.preventDefault();
       }
-
     }.bind(this), false);
   };
 

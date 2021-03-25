@@ -18,9 +18,8 @@ context:
     youAreHere:
       - text: Publicaties > Officiële publicaties
     skipLinks:
-      skipLinks:
-        - url: '#content'
-          text: Direct naar content
+      - url: '#content'
+        text: Direct naar content
     metaLinks:
       - profile: true
         profileContext:
@@ -94,6 +93,9 @@ context:
               value: Staatscourant 2021, 10987
             - type: Organisatie
               value: Venlo
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Overige besluiten van algemene strekking
         titleHeader: h2
         titleHref: '#'
@@ -108,6 +110,9 @@ context:
             - type: Organisatie
               value: Albrandswaard
         share: false
+        downloads:
+          - type: Download PDF
+            href: '#'
   resultsContext2:
     modifier: result--list--publications
     items:
@@ -125,6 +130,9 @@ context:
               value: Gemeenteblad 2020, 310033
             - type: Organisatie
               value: Albrandswaard
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -139,6 +147,9 @@ context:
               value: Staatscourant 2020, 61754
             - type: Organisatie
               value: Rotterdam
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -153,6 +164,9 @@ context:
               value: Gemeenteblad 2020, 310033
             - type: Organisatie
               value: Albrandswaard
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -167,6 +181,9 @@ context:
               value: Staatscourant 2020, 61754
             - type: Organisatie
               value: Rotterdam
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -181,6 +198,9 @@ context:
               value: Gemeenteblad 2020, 310033
             - type: Organisatie
               value: Albrandswaard
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -195,6 +215,9 @@ context:
               value: Staatscourant 2020, 61754
             - type: Organisatie
               value: Rotterdam
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -209,6 +232,9 @@ context:
               value: Gemeenteblad 2020, 310033
             - type: Organisatie
               value: Albrandswaard
+        downloads:
+          - type: Download PDF
+            href: '#'
       - title: Verkeersbesluiten
         titleHeader: h2
         titleHref: '#'
@@ -223,6 +249,9 @@ context:
               value: Staatscourant 2020, 61754
             - type: Organisatie
               value: Rotterdam
+        downloads:
+          - type: Download PDF
+            href: '#'
   fgDocumentsoort:
     items:
       - label: Blad gemeenschappelijke regelingen met nog iets
