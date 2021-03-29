@@ -1899,7 +1899,7 @@ if(formType) {
     ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerPublicatiebladnummer.errormessage = "U heeft geen geldig juriconnect-ID ingevoerd.";
     ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerPublicatiebladnummer.display = "Dynamic";
     ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerPublicatiebladnummer.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
-    ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerPublicatiebladnummer.validationexpression = "^[L|C]\\s.*";
+    ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierEURichtlijn_valideerPublicatiebladnummer.validationexpression = "^[l|L|c|C]\\s.*";
 
   }
 }
