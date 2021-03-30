@@ -283,14 +283,15 @@ fieldset {
   &__error {
     font-style: italic;
     color: $red;
-    background: $iconAlertRed top -6px left;
+    background: $iconAlertRed center left -4px;
     background-color: transparent;
     background-repeat: no-repeat;
     // background-size: 1em;
-    padding-left: 1.75em;
+    padding: .5em 0 .5em 1.75em;
     // font-size: 90%;
-    line-height: 0.9;
+    line-height: 1;
     margin-top: em(4);
+    margin-bottom: 0;
   }
 
   &__hint {

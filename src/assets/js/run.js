@@ -4,6 +4,10 @@ document.documentElement.className = 'has-js';
 // run all decorators on page load
 onl.run();
 
+if(onl.ui.isTouch()){
+  document.documentElement.classList.add('is-touch');
+}
+
 // bind click handler so that handlers run on click
 // of elements with data-handler="handler"
 document.addEventListener( 'click', function handleClick( event ) {
