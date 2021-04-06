@@ -5,7 +5,7 @@ context:
   content: Search fields
   selectedFilters:
     id: 109876567
-    heading: Door u gekozen filters
+    heading: Door u gekozen kenmerken
     selectedFilters:
       items:
         - label: Blad gemeenschappelijke regelingen met nog iets
