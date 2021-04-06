@@ -63,19 +63,29 @@
 
   function toggleWaardelijstselectie(inputId, hiddenInputId, spanId, subselectionId) {
       var isGeselecteerd = $("#" + inputId).is(':checked');
-      
+      var hadItems = false;
+
       if (!$('#AlleSoorten').is(':checked') && !isGeselecteerd) {
           $("#" + hiddenInputId).val('');
           // var span = $("span[id='" + spanId + "']");
           // span.html('');
           var onderdelen = document.querySelector('#'+subselectionId);
           if(onderdelen){
+
             var onderdelenItems = onderdelen.querySelectorAll('.subselection__summaryitem__remove');
             for(var i = 0; i < onderdelenItems.length; i++){
               onderdelenItems[i].click();
+                hadItems = true;
             }
+            
           }
+          
       }
+      if(hadItems){         
+        if($("#" + inputId).is(':checked')) {
+        $("#" + inputId).prop('checked', false);
+        }
+    }
   }
 
   function toggleCiteertitelAfkorting() {
@@ -206,7 +216,6 @@
   }
 
   function scopeArtikel() {
-    console.log('scopeArtikel');
     if($("#ZoekOp_DatumtypeTotstandkoming").is(":checked")){
       $("#ZoekOp_DatumscopeArtikel").prop("disabled", true);
       $("#ZoekOp_DatumscopeRegeling").prop("checked", true);
