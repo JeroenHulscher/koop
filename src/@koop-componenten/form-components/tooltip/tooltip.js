@@ -6,6 +6,7 @@
     this.element = element;
     this.config = JSON.parse( this.element.getAttribute( 'data-config' ) ) || [];
     this.trigger = this.element.querySelector(this.config.trigger) || this.element.querySelector( '.tooltip__trigger' );
+    this.content = this.element.querySelector(this.config.content) || this.element.querySelector( '.tooltip__content' );
     this.content = document.getElementById(this.trigger.getAttribute('aria-describedby'));
     this.init();
   };
@@ -14,6 +15,7 @@
     var self = this;
     if(onl.ui.isTouch()){
       this.trigger.addEventListener('click', function (e) { this.showTooltip('click'); e.preventDefault(); }.bind(this), false);
+      this.createCloseButton();
     } else {
       this.content.addEventListener('mouseover', function (e) { this.clearTimeoutTooltip(); }.bind(this), false);
       this.content.addEventListener('mouseout', function (e) { this.timeoutTooltip(); }.bind(this), false);
@@ -22,15 +24,28 @@
       this.trigger.addEventListener('keyup', function (e) { this.hideTooltipKeyboard(e); }.bind(this), false);
       this.trigger.addEventListener('mouseout', function (e) { this.timeoutTooltip(e); }.bind(this), false);
       this.trigger.addEventListener('blur', function (e) { this.timeoutTooltip(e); }.bind(this), false);
-      this.trigger.addEventListener('keydown', (event) => {
+      this.content.addEventListener('click', function (e) { this.showTooltip(e); }.bind(this), false);
+      this.trigger.addEventListener('click', function (e) { this.showTooltip(e); e.preventDefault(); }.bind(this), false);
+      this.trigger.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
           self.hideTooltip();
         }
       });
+
+      this.content.addEventListener('mouseenter', function(element) {
+        self.mouseOverTooltip = true;
+      });
+      this.content.addEventListener('mouseleave', function(element) {
+        self.mouseOverTooltip = false;
+        self.timeoutTooltip();
+      });
+
+
+
     }
     
 
-    this.createCloseButton();
+    
   };
 
   tooltip.prototype.createCloseButton = function () {
@@ -40,7 +55,7 @@
     this.closeButton.classList.add('tooltip__close');
     this.closeButton.innerHTML = '<span class="visually-hidden">Tooltip </span>Sluiten';
     this.content.appendChild(this.closeButton);
-    this.closeButton.addEventListener('click', (event) => {
+    this.closeButton.addEventListener('click', function (event) {
       event.preventDefault();
       self.hideTooltip('closebutton');
     });
@@ -52,6 +67,8 @@
     // });
   }
 
+ 
+  
   tooltip.prototype.showTooltip = function (sourceEvent) {
     var all = document.querySelectorAll('.tooltip__content');
     var i;
@@ -94,7 +111,9 @@
   tooltip.prototype.timeoutTooltip = function () {
     var self = this;
     this.timeoutHide = window.setTimeout(function() {
-      self.hideTooltip();
+      if(!self.mouseOverTooltip){
+        self.hideTooltip();
+      }
     }, 300);
   }
 
