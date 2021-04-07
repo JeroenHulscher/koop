@@ -19,6 +19,37 @@
         allTables[i].parentNode.insertBefore(container, allTables[i]);
         container.classList.add('table__container');
         container.appendChild(allTables[i]);
+
+        var hasHorizontalScrollbar = container.scrollWidth > container.clientWidth;
+        if(hasHorizontalScrollbar){
+          container.classList.add('has-scrollbar');
+
+          // add fullscreen container;
+          var divFullscreen = document.createElement('div');
+          var containerFullscreen = divFullscreen.cloneNode(false);
+          container.parentNode.insertBefore(containerFullscreen, container);
+          containerFullscreen.classList.add('table__container__fullscreen');
+          
+          
+
+          // add link enlarge;
+          var linkEnlarge = document.createElement('button');
+          linkEnlarge.innerHTML = 'Vergroot tabel';
+          linkEnlarge.setAttribute('data-decorator', 'init-tablefullscreen');
+          linkEnlarge.classList.add('table__container__openfullscreen');
+          // container.parentNode.insertBefore(linkEnlarge, container);
+          containerFullscreen.appendChild(linkEnlarge);
+
+          // add link close;
+          var linkClose = document.createElement('button');
+          linkClose.innerHTML = 'Sluiten grote weergave tabel';
+          linkClose.classList.add('table__container__closefullscreen');
+          // container.appendChild(linkClose);
+          containerFullscreen.appendChild(linkClose);
+
+          containerFullscreen.appendChild(container);
+
+        }
       }
     }
   }
