@@ -333,10 +333,7 @@ table.table--headerhighlight {
 
 
 @media ( max-width: $breakpointDesktop ) {
-  table:not(.table__data-overview):not(.table__regulation):not(.table--untouched),
-  &.table--condensed:not(.table__data-overview):not(.table__regulation):not(.table--untouched),
-  &.table--striped:not(.table__data-overview):not(.table__regulation):not(.table--untouched),
-  &.table--hover:not(.table__data-overview):not(.table__regulation):not(.table--untouched) {
+  table.table--mobiletransform {
     position: relative;
     width: 100%;
     // word-break: break-word;
@@ -393,6 +390,12 @@ table.table--headerhighlight {
     &.table--condensed td::before {
       padding: .5em .25em;
     }
+  }
+}
+@media print and ( max-width: $breakpointDesktop ) {
+  .table--container,
+  .table__container {
+    overflow: visible !important;
   }
 }
 
