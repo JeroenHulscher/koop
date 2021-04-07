@@ -43,6 +43,11 @@ variants:
     context:
       text: Secundaire knop
       modifier: icon-bg icon--plusshape
+  - name: Secondary Icon Fullscreen
+    status: ready
+    context:
+      text: Secundaire knop
+      modifier: icon-bg icon--fullscreen
   - name: Secondary Icon Profile
     status: ready
     context:
