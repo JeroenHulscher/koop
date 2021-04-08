@@ -9,6 +9,7 @@ context:
     metaLinks:
       - url: "#"
         text: MijnOverheid.nl
+        rel: external
   breadcrumbContext:
     breadcrumb:
       - text: Home
