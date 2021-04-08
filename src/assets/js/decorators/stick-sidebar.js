@@ -54,7 +54,7 @@
     var scrollY = getScrollY();
     var howMuchOfFooterIsVisible = Math.max( ( window.innerHeight - maxTop ), 0 );
     var sidebarHeight = ( window.innerHeight - howMuchOfFooterIsVisible - 32 );
-    var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 50em)' ).matches;
+    var onDesktop = window.matchMedia && window.matchMedia( '(min-width: 65em)' ).matches;
     var elements;
     var i;
 
@@ -89,7 +89,7 @@
   onl.decorate({
     'add-mobile-foldability': function( el ) {
 
-
+        document.querySelector('.logo__you-are-here').innerHTML = window.innerWidth;
         var parent;
         var newTop = '150';
         var parentOffsets;
