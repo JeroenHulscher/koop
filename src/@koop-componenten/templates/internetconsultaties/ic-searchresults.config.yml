@@ -19,6 +19,8 @@ context:
         url: '#'
       - text: Zoekresultaat
   sortContext:
+    columns: true
+    amountPerPageFilter: true
     options:
       - label: Naam
         value: foo

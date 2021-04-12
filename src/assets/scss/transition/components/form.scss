@@ -187,3 +187,20 @@ input[type=text].datepicker__input~.ui-datepicker-trigger {
   margin: .9em 0 1.5em;
   display: block;
 }
+
+.form__element {
+  .radiogroup,
+  .checkboxgroup {
+    label {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+  select {
+    border-color: $darkBlue;
+    border-radius: .25em;
+    font-size: inherit;
+  }
+}
+

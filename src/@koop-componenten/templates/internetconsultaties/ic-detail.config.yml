@@ -14,7 +14,7 @@ context:
         url: '#'
       - text: Overheidsinformatie
         url: '#'
-      - text: 'Internetconsultatie
+      - text: 'Internetconsultatie'
         url: '#'
       - text: NFP wijzigingspakket 2018-1
   facelistContextActions:
@@ -38,12 +38,18 @@ context:
   resultlistContextDownloads:
     items:
       - title: Concept regeling
+        href: '#'
+        metadata:
+          - value: 'Laatst gewijzigd: 12 september 1986'
         downloads:
           - ext: pdf
-            size: 142kb
+            size: Download PDF (142kb)
         text: Ontwerpbesluit NFP wijziging pakket 2018-1
       - title: Concept regeling
+        href: '#'
+        metadata:
+          - value: 'Laatst gewijzigd: 12 september 1986'
         downloads:
           - ext: pdf
-            size: 142kb
+            size: Download PDF (142kb)
         text: Ontwerpbesluit NFP wijziging pakket 2018-1

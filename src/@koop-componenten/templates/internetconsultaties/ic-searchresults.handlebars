@@ -9,13 +9,13 @@
 
   <div class="container columns columns--sidebar-left row">
     <div>
-      <h1>Zoekresultaat</h1>
-      <p>
-        1025 resultaten<br />
-        Heeft gezocht op: Trefwoord
-      </p>
-      {{ render "@sort" sortContext}}
-      {{ render "@pagination" }}
+
+      {{ render "@sort" sortContext merge=true }}
+      
+      <h1>Zoekresultaten
+        <span class="h1__sub">1-10 van de 1025 resultaten</span>
+      </h1>
+      
       {{ render "@resultlist" resultlistContext }}
       {{ render "@pagination" }}
     </div>
