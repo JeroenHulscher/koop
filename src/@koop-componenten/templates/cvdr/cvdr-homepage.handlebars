@@ -14,12 +14,18 @@
           <legend class="visually-hidden">Doorzoek de decentrale overheden</legend>
           <div class="columns">
             <div class="form__row">
-              {{ render "@input-text--medium" inputZoekwoord merge=true }}
+              <div class="form__row">
+                {{ render "@input-text--medium" inputZoekwoord merge=true }}
+              </div>
+              <div class="form__row">
+                {{ render "@input-radio--inline" radioSearchType merge=true }}
+              </div>
             </div>
-            <div class="form__row form__row--medium">
+            <div class="form__row">
               {{render "@input-text" postcodeContext }}
             </div>
           </div>
+          
           <div class="form__rowsubmit">
             <div class="form__rowsubmit__item">
               <button type="submit" class="form__button button button--primary button--large">Zoek regelingen</button>

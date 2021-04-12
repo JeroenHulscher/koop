@@ -52,7 +52,8 @@ context:
       icon: icon-print-blue.svg
   tablecontainer1:
     topbar:
+      modifier: table-topbar--alignleft
       items:
       - text: Toon volledige tabel
         href: '#'
-        class: icon icon--fullscreen
+        class: button icon-bg icon--fullscreen

@@ -3,7 +3,9 @@ $gutter--sm: 2em;
 $gutter--med: 4em;
 $gutter--lg: 6em;
 
-@media ( min-width: $breakpointDesktop ) {
+$breakpointDesktopAdjusted: 65em;
+
+@media ( min-width: $breakpointDesktopAdjusted ) {
   .column-count {
     column-count:2; column-gap: 4em;
   }
@@ -31,7 +33,7 @@ $gutter--lg: 6em;
       justify-content: center;
     }
 
-    @media ( min-width: $breakpointDesktop ) {
+    @media ( min-width: $breakpointDesktopAdjusted ) {
       flex-direction: row;
       display: flex;
       > * {
@@ -42,14 +44,14 @@ $gutter--lg: 6em;
 
     &--dominant,
     &--gutter-med {
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         > * {
           margin-left: $gutter--med;
         }
       }
     }
     &--gutter-sm {
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         > * {
           margin-left: $gutter--sm;
         }
@@ -61,7 +63,7 @@ $gutter--lg: 6em;
       margin-left: 0;
     }
 
-    @media ( min-width: $breakpointDesktop ) {
+    @media ( min-width: $breakpointDesktopAdjusted ) {
       .u-order--d1 {
         margin-left: 0;
         margin-right: $gutter;
@@ -77,14 +79,14 @@ $gutter--lg: 6em;
 
       &--padded {
         &-med {
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             padding-top: em(25);
             padding-left: em(50);
             padding-right: em(50);
           }
         }
         &-large {
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             padding: em(25) em(75);
           }
         }
@@ -130,7 +132,7 @@ $gutter--lg: 6em;
     }
 
     &--fixed {
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         flex-wrap: wrap;
         > * {
           flex-grow: 1;
@@ -151,7 +153,7 @@ $gutter--lg: 6em;
       layout, the sidebar appears on the left, and the main content
       on the right */
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         > *:first-child {
           flex: 3;
           order: 2;
@@ -175,7 +177,7 @@ $gutter--lg: 6em;
       [data-decorator="init-fixedbottom-button"] {
         padding-bottom: 3em !important;
 
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           padding-bottom: 0 !important;
         }
       }
@@ -184,7 +186,7 @@ $gutter--lg: 6em;
         margin-left: 1.5em;
         margin-right: 1.5em;
 
-        @media ( max-width: $breakpointDesktop ) {
+        @media ( max-width: $breakpointDesktopAdjusted ) {
           // display: block !important;
           // position: fixed !important;
           // bottom: .5em !important;
@@ -192,7 +194,7 @@ $gutter--lg: 6em;
           margin: 0;
         }
 
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           position: relative;
           margin: 0 0 1em 0;
           bottom: .5em !important;
@@ -207,7 +209,7 @@ $gutter--lg: 6em;
 
     &--sidebar-right {
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         > * {
           flex: 1;
           margin-left: $gutter;
@@ -221,7 +223,7 @@ $gutter--lg: 6em;
     }
 
     &--homepage-tiles {
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         flex-wrap: wrap;
       }
 
@@ -229,7 +231,7 @@ $gutter--lg: 6em;
       padding-bottom: 0;
       margin: 0;
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         > * {
           margin-left: 1em;
           flex: 1 calc(25% - 1em);
@@ -240,7 +242,7 @@ $gutter--lg: 6em;
     &--related-info {
       flex-wrap: wrap;
 
-      @media ( min-width: $breakpointDesktop ) {
+      @media ( min-width: $breakpointDesktopAdjusted ) {
         > * {
           flex: 2;
           margin-left: .5em;
@@ -253,7 +255,7 @@ $gutter--lg: 6em;
       > div {
         margin-left: 1em;
 
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           &:not(.columns--sidebar__sidebar) {
             width: calc(100% - 22em);
           }
@@ -282,7 +284,7 @@ $gutter--lg: 6em;
             display: block;
           }
 
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             background: transparent;
             z-index: auto;
             position: static;
@@ -308,7 +310,7 @@ $gutter--lg: 6em;
 
           .has-stickysidebar-open & {
             display: block;
-            @media ( min-width: $breakpointDesktop ) {
+            @media ( min-width: $breakpointDesktopAdjusted ) {
               display: none;
             }
           }
@@ -321,7 +323,7 @@ $gutter--lg: 6em;
         [data-decorator="init-fixedbottom-button"] {
           padding-bottom: 3em !important;
 
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             padding-bottom: 0 !important;
           }
         }
@@ -330,7 +332,7 @@ $gutter--lg: 6em;
           margin-left: 1.5em;
           margin-right: 1.5em;
 
-          @media ( max-width: $breakpointDesktop ) {
+          @media ( max-width: $breakpointDesktopAdjusted ) {
             display: block !important;
             position: fixed !important;
             bottom: .5em !important;
@@ -338,7 +340,7 @@ $gutter--lg: 6em;
             margin: 0;
           }
 
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             position: relative;
             margin: 0 0 1em 0;
             bottom: .5em !important;
@@ -369,7 +371,7 @@ $gutter--lg: 6em;
         left: 0;
         box-shadow: 0 0 4px -1px $black;
         border-radius: 0 $borderRadius $borderRadius 0;
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           display: none;
         }
       }
@@ -389,7 +391,7 @@ $gutter--lg: 6em;
 
       &.container {
 
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           padding-left: 22em;
         }
       }
@@ -400,7 +402,7 @@ $gutter--lg: 6em;
 
       > .columns--sticky-sidebar__sidebar {
 
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           margin-left: 0;
           border: 1px solid $lighterGrey;
           padding: .5em 1em;
@@ -425,13 +427,13 @@ $gutter--lg: 6em;
           top: 0;
           display: none;
 
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             display: none;
           }
 
           .has-stickysidebar-open & {
             display: block;
-            @media ( min-width: $breakpointDesktop ) {
+            @media ( min-width: $breakpointDesktopAdjusted ) {
               display: none;
             }
           }
@@ -453,7 +455,7 @@ $gutter--lg: 6em;
             display: block;
           }
 
-          @media ( min-width: $breakpointDesktop ) {
+          @media ( min-width: $breakpointDesktopAdjusted ) {
             background: transparent;
             z-index: auto;
             position: static;
@@ -495,7 +497,7 @@ $gutter--lg: 6em;
         left: 0;
         box-shadow: 0 0 4px -1px $black;
         border-radius: 0 $borderRadius $borderRadius 0;
-        @media ( min-width: $breakpointDesktop ) {
+        @media ( min-width: $breakpointDesktopAdjusted ) {
           display: none;
         }
       }

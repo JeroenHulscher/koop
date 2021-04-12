@@ -26,6 +26,15 @@ context:
       fieldInstruction:
       fieldPlaceholder: Bijv. 12A
       patterntype: zipcode
+    radioSearchType:
+      options:
+        - id: 1
+          name: type
+          checked: checked
+          text: In de titel
+        - id: 2
+          text: In de tekst
+          name: type
   block1Context:
     id: 1
     htype: 3

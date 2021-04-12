@@ -16,3 +16,8 @@ context:
     - id: 3
       text: Afgelopen 12 maanden
       name: subject
+variants:
+  - name: Inline
+    context:
+      modifier: input-radio--inline
+      group: true
