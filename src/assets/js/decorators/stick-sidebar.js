@@ -89,7 +89,6 @@
   onl.decorate({
     'add-mobile-foldability': function( el ) {
 
-        document.querySelector('.logo__you-are-here').innerHTML = window.innerWidth;
         var parent;
         var newTop = '150';
         var parentOffsets;
