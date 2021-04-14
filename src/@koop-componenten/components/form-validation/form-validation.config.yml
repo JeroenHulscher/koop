@@ -19,6 +19,7 @@ context:
     fieldPlaceholder: 'Bijv: 06-10-1960'
     required: true
   subselectionContext:
+    id: 876
     required: true
     radio: true
     type: span
@@ -120,3 +121,61 @@ context:
         id: 32371231237
         title: Voorburg
         short: Nederland
+  inputtext1:
+    id: 112
+    fieldLabelVisible: true
+    fieldLabel: "Input (text) - NOT REQUIRED"
+  inputtext2:
+    id: 113
+    fieldLabelVisible: true
+    fieldLabel: "Input (text) - regex: only numbers"
+    required: true
+    requiredLabel: true
+    regexpattern: "^[0-9]+$" 
+  inputtext3:
+    id: 114
+    fieldLabelVisible: true
+    fieldLabel: "Input (text) - pattern number"
+    required: true
+    requiredLabel: true
+    patterntype: "number" 
+  inputtext4:
+    id: 115
+    fieldLabelVisible: true
+    fieldLabel: "Input (text) - pattern zipcode"
+    required: true
+    requiredLabel: true
+    patterntype: "zipcode" 
+    title: "(handmatige melding) Het veld Zipcode is incorrect ingevuld. Voorbeeld invoer: 1234AB"
+  inputnumber:
+    id: 116
+    fieldLabelVisible: true
+    fieldLabel: "Input (number)"
+    required: true
+    requiredLabel: true
+  inputemail:
+    id: 117
+    fieldLabelVisible: true
+    fieldLabel: "Input (email)"
+    required: true
+    requiredLabel: true
+  sc1:
+    id: 118
+    fieldLabelVisible: true
+    fieldLabel: "Select custom"
+    required: true
+    requiredLabel: true
+    options:
+      - label: Kies item
+        value: 
+        selected: selected
+      - label: Item 1
+        value: 10
+      - label: Item 2
+        value: 20
+  inputcheckbox1:
+    name: alliedforces
+    options:
+      - id: checkbox-1
+        text: Gaat u hiermee akkoord?
+        required: true

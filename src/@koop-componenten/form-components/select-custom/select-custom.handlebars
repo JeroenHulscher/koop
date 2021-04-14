@@ -1,7 +1,7 @@
 <label for="{{id}}" class="form__label form__label--{{labelmodifier}} {{#if fieldLabelVisible}}{{else}}visually-hidden{{/if}}">{{fieldLabel}}</label>
 {{#if hastooltip}}{{render "@tooltip" tooltip merge=true }}{{/if}}
 <div class="select-custom {{modifier}}">
-  <select id="{{id}}">
+  <select id="{{id}}" {{#if required}}required{{/if}}>
     {{#if optgroup}}
       {{#each items}}
         <optgroup label="{{optgroupLabel}}">

@@ -8,7 +8,7 @@
   border-radius: 5px;
 
   &.has-error {
-    border: 2px solid $red;
+    border: 1px solid $red;
   }
   &.is-valid {
     border-color: $green;

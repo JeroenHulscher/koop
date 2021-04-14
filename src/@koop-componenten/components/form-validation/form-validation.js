@@ -233,21 +233,29 @@ var supports = function () {
     var classStateNewField = this.config.classErrorField;
     var classMessageContainer = this.config.classErrorContainer;
     var prefixId = 'message';
+    var ariavaliditystate = true;
     if(messageType === "success") {
       classStateOldField = this.config.classErrorField;
       classStateNewField = this.config.classValidField;
       classMessageContainer = this.config.classValidContainer;
       prefixId = 'message';
-      return;
+      ariavaliditystate = false;
+      // return;
     }
+
+    console.log('ariavaliditystate',ariavaliditystate);
 
     // Add/remove state class to field
     if (field.type === 'select-one'){
       field.parentNode.classList.add(classStateNewField);
       field.parentNode.classList.remove(classStateOldField);
+      field.parentNode.setAttribute('aria-invalid', ariavaliditystate);
+      // console.log('if ariavaliditystate',ariavaliditystate);
     } else {
       field.classList.add(classStateNewField);
       field.classList.remove(classStateOldField);
+      field.setAttribute('aria-invalid', ariavaliditystate);
+      console.log('else ariavaliditystate',field, ariavaliditystate);
     }
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
@@ -275,6 +283,7 @@ var supports = function () {
     var id;
     if (subselection) {
       var trigger = subselection.querySelector('.subselection__trigger');
+      trigger.setAttribute('aria-invalid', ariavaliditystate);
       id = trigger.getAttribute('id');
     } else {
       id = field.id || field.name;
