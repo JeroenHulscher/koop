@@ -37,17 +37,21 @@
           linkEnlarge.innerHTML = 'Vergroot tabel';
           linkEnlarge.setAttribute('data-decorator', 'init-tablefullscreen');
           linkEnlarge.classList.add('table__container__openfullscreen');
+          linkEnlarge.classList.add('button');
+          linkEnlarge.classList.add('icon-bg');
+          linkEnlarge.classList.add('icon--fullscreen');
           // container.parentNode.insertBefore(linkEnlarge, container);
           containerFullscreen.appendChild(linkEnlarge);
 
           // add link close;
           var linkClose = document.createElement('button');
-          linkClose.innerHTML = 'Sluiten grote weergave tabel';
+          linkClose.innerHTML = '<span class="visually-hidden">Sluiten grote weergave tabel</span>';
           linkClose.classList.add('table__container__closefullscreen');
           // container.appendChild(linkClose);
+          containerFullscreen.appendChild(container);
           containerFullscreen.appendChild(linkClose);
 
-          containerFullscreen.appendChild(container);
+          
 
         }
       }
