@@ -112,7 +112,7 @@ var supports = function () {
 
     // Get validity
     var validity = field.validity;
-
+    
     var label = this.element.querySelector('[for="' + field.getAttribute('id') + '"]');
     if(label){
       label = label.innerHTML;
@@ -152,7 +152,13 @@ var supports = function () {
 
     // If field is required and empty
     if (validity.valueMissing) {
-      if (field.type === 'checkbox') return this.config.messageValueMissingCheckbox.replace('{label}', label);
+      if (field.type === 'checkbox') {
+        if(!field.checked) {
+          return this.config.messageValueMissingCheckbox.replace('{label}', label);
+        } else {
+          return;
+        }
+      }
       if (field.type === 'radio') return this.config.messageValueMissingRadio.replace('{label}', label);
       if (field.type === 'select-multiple') return this.config.messageValueMissingSelectMulti.replace('{label}', label);
       if (field.type === 'select-one') return this.config.messageValueMissingSelect.replace('{label}', label);
@@ -243,8 +249,7 @@ var supports = function () {
       // return;
     }
 
-    console.log('ariavaliditystate',ariavaliditystate);
-
+    
     // Add/remove state class to field
     if (field.type === 'select-one'){
       field.parentNode.classList.add(classStateNewField);
@@ -255,7 +260,6 @@ var supports = function () {
       field.classList.add(classStateNewField);
       field.classList.remove(classStateOldField);
       field.setAttribute('aria-invalid', ariavaliditystate);
-      console.log('else ariavaliditystate',field, ariavaliditystate);
     }
 
     // If the field is a radio button and part of a group, error all and get the last item in the group
@@ -542,7 +546,13 @@ var supports = function () {
   };
 
   formvalidation.prototype.clickHandler = function (event) {
-
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("keyup", false, true);
+      event.target.dispatchEvent(evt);
+    } else {
+      event.target.fireEvent("keyup");
+    }
     // Only run if the field is a checkbox or radio
     var self = this;
     var type = event.target.getAttribute('type');
@@ -565,7 +575,6 @@ var supports = function () {
       return;
     }
     if (!(type === 'checkbox' || type === 'radio')) return;
-
     // Validate the field
     var error = this.hasError(event.target);
 
