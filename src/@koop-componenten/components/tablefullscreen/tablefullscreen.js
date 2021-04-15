@@ -12,9 +12,9 @@
     this.element = element;
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
     
-    this.openButton = this.element.parentNode.querySelector('.table__container__openfullscreen');
-    this.closeButton = this.element.parentNode.querySelector('.table__container__closefullscreen');
-    this.tableFullscreenContainer = this.element.parentNode;
+    this.openButton = this.element;
+    this.closeButton = this.element.nextSibling.querySelector('.table__container__closefullscreen');
+    this.tableFullscreenContainer = this.element.nextSibling;
     this.previouslyFocused = this.openButton;
     
     this.element.addEventListener('click', function (e) {
@@ -29,31 +29,46 @@
   };
 
   tablefullscreen.prototype.openFullscreenMode = function () {
-    this.element.parentNode.classList.add('is-fullscreen');
+
+    // set element state;
+    this.element.nextSibling.classList.add('is-fullscreen');
+
+    // set attributes;
+    this.element.nextSibling.setAttribute('aria-modal', true);
+    this.element.nextSibling.setAttribute('role', 'dialog');
+    
+    // set body state;
     document.body.classList.add('is-modal-open');
-    var table = this.element.parentNode.querySelector('.table__container');
+
+    // set table height in modal;
+    var table = this.element.nextSibling.querySelector('.table__container');
     var windowHeight = window.innerHeight;
     table.style.height = windowHeight - 145 + "px";
 
+    // set and trap focus;
     onl.ui.focus( this.tableFullscreenContainer );
     onl.ui.bindFocusTrap( this.tableFullscreenContainer );
-
-    this.openButton.setAttribute('tabindex', -1);
   };
   tablefullscreen.prototype.closeFullscreenMode = function () {
-    this.element.parentNode.classList.remove('is-fullscreen');
+    // remove element state;
+    this.element.nextSibling.classList.remove('is-fullscreen');
+    
+    // remove body state;
     document.body.classList.remove('is-modal-open');
-    var table = this.element.parentNode.querySelector('.table__container');
+
+    // remove attributes;
+    this.element.nextSibling.removeAttribute('aria-modal', true);
+    this.element.nextSibling.removeAttribute('role', 'dialog');
+
+    // reset table height;
+    var table = this.element.nextSibling.querySelector('.table__container');
     table.style.height = "auto";
 
-    this.openButton.setAttribute('tabindex', 0);
+    // undo focus and set focus on previously focussed element;
     onl.ui.unbindFocusTrap( this.tableFullscreenContainer );
-    console.log('this.previouslyFocused',this.previouslyFocused);
     if ( this.previouslyFocused ) {
       onl.ui.focus( this.previouslyFocused );
     }
-
-    
   };
 
 })();

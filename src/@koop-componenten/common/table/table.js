@@ -12,16 +12,22 @@
     var i;
 
     for (i = 0; i < allTables.length; i++) {
+      
+      // check if the table__container already excists;
       if (!allTables[i].parentNode.classList.contains('table__container')) {
+        
+        // add table__container around table;
         var div = document.createElement('div');
         var container = div.cloneNode(false);
-
         allTables[i].parentNode.insertBefore(container, allTables[i]);
         container.classList.add('table__container');
         container.appendChild(allTables[i]);
 
+        // does the table__container have a scrollbar, caused by the table inside?
         var hasHorizontalScrollbar = container.scrollWidth > container.clientWidth;
-        if(hasHorizontalScrollbar){
+        if ( hasHorizontalScrollbar ) {
+
+          // set container state;
           container.classList.add('has-scrollbar');
 
           // add fullscreen container;
@@ -30,9 +36,7 @@
           container.parentNode.insertBefore(containerFullscreen, container);
           containerFullscreen.classList.add('table__container__fullscreen');
           
-          
-
-          // add link enlarge;
+          // create and append open-button BEFORE table__container;
           var linkEnlarge = document.createElement('button');
           linkEnlarge.innerHTML = 'Vergroot tabel';
           linkEnlarge.setAttribute('data-decorator', 'init-tablefullscreen');
@@ -40,15 +44,17 @@
           linkEnlarge.classList.add('button');
           linkEnlarge.classList.add('icon-bg');
           linkEnlarge.classList.add('icon--fullscreen');
-          // container.parentNode.insertBefore(linkEnlarge, container);
-          containerFullscreen.appendChild(linkEnlarge);
+          containerFullscreen.parentNode.insertBefore(linkEnlarge, containerFullscreen);
 
-          // add link close;
+          // create close-button
           var linkClose = document.createElement('button');
           linkClose.innerHTML = '<span class="visually-hidden">Sluiten grote weergave tabel</span>';
           linkClose.classList.add('table__container__closefullscreen');
-          // container.appendChild(linkClose);
+          
+          // add table__container close INSIDE fullscreen container;
           containerFullscreen.appendChild(container);
+          
+          // add link close INSIDE fullscreen container;
           containerFullscreen.appendChild(linkClose);
 
           
