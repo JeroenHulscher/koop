@@ -60,8 +60,6 @@ context:
       tooltipContext:
         id: 1231
         content: Het e-mailadres waarmee u zich heeft geregistreerd.
-      error: true
-      errorMessage: Ongeldig e-mailadres
     inputPWContext:
       modifier: input-text--medium
       labelmodifier: accent

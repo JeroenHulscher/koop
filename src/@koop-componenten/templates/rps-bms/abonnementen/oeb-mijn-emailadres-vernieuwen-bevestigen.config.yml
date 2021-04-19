@@ -44,6 +44,7 @@ context:
     labelmodifier: accent
     id: 1
     required: true
+    requiredLabel: true
     patterntype: email
     fieldLabel: Uw nieuwe e-mailadres
     fieldLabelVisible: true
@@ -53,6 +54,7 @@ context:
   inputCodeContext:
     id: 2
     required: true
+    requiredLabel: true
     type: text
     fieldLabel: Bevestigingscode
     fieldLabelVisible: true

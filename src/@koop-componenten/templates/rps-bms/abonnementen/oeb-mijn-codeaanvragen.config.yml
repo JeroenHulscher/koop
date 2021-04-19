@@ -44,6 +44,7 @@ context:
   inputEmailContext:
     id: 1
     required: true
+    requiredLabel: true
     patterntype: email
     fieldLabel: E-mailadres
     fieldLabelVisible: true

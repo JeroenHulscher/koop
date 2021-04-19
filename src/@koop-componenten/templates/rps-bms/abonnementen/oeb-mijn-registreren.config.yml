@@ -89,3 +89,4 @@ context:
       - id: checkbox-1
         text: Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan.
         name: regAgree
+        required: required
