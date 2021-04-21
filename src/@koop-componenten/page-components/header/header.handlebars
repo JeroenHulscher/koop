@@ -29,7 +29,7 @@
             {{#if nonlink}}
               <span class="{{class}}">{{ text }}</span>
             {{else}}
-              <a {{#if id}}id="{{id}}"{{/if}} href="{{ url }}" class="{{class}}" {{#if rel}}rel="{{rel}}"{{/if}}>{{ text }}</a>
+              <a {{#if id}}id="{{id}}"{{/if}} href="{{ url }}" class="{{class}}" {{#if rel}}rel="{{rel}}"{{/if}}>{{ text }}{{#if_eq rel 'external'}}<span class="visually-hidden">(externe link)</span>{{/if_eq}}</a>
             {{/if}}
           {{/if}}
         {{/each}}
