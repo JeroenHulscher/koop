@@ -59,10 +59,12 @@ function findObjectByKey(array, key, value) {
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
     this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
-
+    
     var uniqueId = Math.floor(Math.random() * 1000000);
     this.element.setAttribute('data-id', uniqueId);
     this.elementId = uniqueId;
+
+    // this.valueField = onl.dom.$( '.js-valueField', this.element )[0];
 
     // TODO: improve
     setTimeout(function(){
@@ -75,7 +77,7 @@ function findObjectByKey(array, key, value) {
     this.items = [];
 
     this.collectValues();
-    this.parseSelectedOptions();
+    // this.parseSelectedOptions();
 
     this.attachListeners();
   };
@@ -134,6 +136,7 @@ function findObjectByKey(array, key, value) {
   formSubselection.prototype.parseSelectedOptions = function() {
     var y;
     var summary = '';
+    var summaryValueField = '';
     var value;
     var title;
     var id;
@@ -144,12 +147,38 @@ function findObjectByKey(array, key, value) {
       id = this.items[y][2];
       if (this.config.type !== 'abbr') {
         summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '<a href="#" class="subselection__summaryitem__remove" data-subselection-id="' + this.elementId +'"><span class="visually-hidden">Verwijder filter: ' + value + '</a></' + this.config.type +'> ';
+        summaryValueField += value + ',';
       } else {
         summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
+        summaryValueField += value + ',';
       }
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
+
+    // if(this.valueField) {
+    //   console.log('if');
+    //   this.valueField.value = summaryValueField;
+    //   if ("createEvent" in document) {
+    //     var evt = document.createEvent("HTMLEvents");
+    //     evt.initEvent("change", false, true);
+    //     this.valueField.dispatchEvent(evt);
+    //   } else {
+    //     this.valueField.fireEvent("change");
+    //   }
+    // } else {
+    //   console.log('else');
+    //   this.valueField = document.createElement('input');
+    //   this.valueField.setAttribute('type', 'text');
+    //   this.valueField.setAttribute('required', 'required');
+    //   this.valueField.classList.add('js-valuefield');
+    //   this.element.appendChild(this.valueField);
+    //   // this.valueField.value = summaryValueField;
+    // }
+    
+    
+
+    
 
     this.updateTriggerLabel(this.items.length);
     if (this.config.maxShow) {

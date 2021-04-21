@@ -45,6 +45,9 @@ context:
         title: Griekenland
         short: Griekenland
         name: subname
+  ssContext:
+    id: 2044
+    required: true
   rondomadresContext:
     linkText: Selecteer opties rondom een adres
     id: 20
@@ -124,45 +127,84 @@ context:
   inputtext1:
     id: 112
     fieldLabelVisible: true
-    fieldLabel: "Input (text) - NOT REQUIRED"
+    fieldLabel: "Label"
+  inputtext111:
+    id: 11211
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    regexpattern: "^[0-9]+$"
+    fieldPlaceholder: "Bijv: 12" 
+  inputtext1111:
+    id: 112111
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    patterntype: "number"
+    fieldPlaceholder: "Bijv: 12" 
+  inputtext11:
+    id: 1131
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    required: true
+    requiredLabel: true
   inputtext2:
     id: 113
     fieldLabelVisible: true
-    fieldLabel: "Input (text) - regex: only numbers"
+    fieldLabel: "Label"
     required: true
     requiredLabel: true
     regexpattern: "^[0-9]+$" 
+    fieldPlaceholder: "Bijv: 12"
   inputtext3:
     id: 114
     fieldLabelVisible: true
-    fieldLabel: "Input (text) - pattern number"
+    fieldLabel: "Label"
     required: true
     requiredLabel: true
     patterntype: "number" 
+    fieldPlaceholder: "Bijv: 12"
   inputtext4:
     id: 115
     fieldLabelVisible: true
-    fieldLabel: "Input (text) - pattern zipcode"
+    fieldLabel: "Label"
     required: true
     requiredLabel: true
     patterntype: "zipcode" 
-    title: "(handmatige melding) Het veld Zipcode is incorrect ingevuld. Voorbeeld invoer: 1234AB"
+    fieldPlaceholder: "Bijv: 1234AB"
+  inputtext44:
+    id: 1155
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    required: true
+    requiredLabel: true
+    patterntype: "zipcode" 
+    title: "(handmatige melding) Het veld Postcode is incorrect ingevuld. Voorbeeld invoer: 1234AB"
+    fieldPlaceholder: "Bijv: 1234AB"
   inputnumber:
     id: 116
     fieldLabelVisible: true
-    fieldLabel: "Input (number)"
+    fieldLabel: "Label"
     required: true
     requiredLabel: true
+    fieldPlaceholder: "Bijv: 123"
+  inputnumber2:
+    id: 1166
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    required: true
+    requiredLabel: true
+    fieldPlaceholder: "Bijv: 12"
+    attributes: 'min="5" max="20"'
   inputemail:
     id: 117
     fieldLabelVisible: true
-    fieldLabel: "Input (email)"
+    fieldLabel: "Label"
     required: true
     requiredLabel: true
+    fieldPlaceholder: "Bijv: koop@overheid.nl"
   sc1:
     id: 118
     fieldLabelVisible: true
-    fieldLabel: "Select custom"
+    fieldLabel: "Label"
     required: true
     requiredLabel: true
     options:

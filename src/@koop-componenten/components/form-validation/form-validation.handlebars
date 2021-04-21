@@ -1,32 +1,31 @@
 <div class="row row--spacer">
   <h1>
-    Form validation
+    Formulier validatie
   </h1>
   <p>
-    Automatic form validation can be made available by added the follow attribute to the 'form' element.
+    Automatische formulier validatie, die werkt met de HTML5 attributen én een regex pattern.
   </p>
-  <p>The form validator works with predefined patterns (ie. email, url, number), as well as with custom patterns (regex)</p>
 
-  <h2>Getting started</h2>
+  <h2>Implementatie</h2>
   <ol>
-    <li><strong>Add decorator to form-element</strong><br>
-    In order to attach the form validation handlers to your form, simply add the following code to your 'form'-tag: <code>data-decorator="init-form-validation"</code>
+    <li><strong>Voeg de decorator toe aan het form-element</strong>
     <p>Example:</p>
     <pre>
       &lt;form class="form" <strong>data-decorator="init-form-validation"</strong>&gt;&lt;/form&gt;
     </pre>
     </li>
     <li>
-      <strong>Use HTML5 semantic input types and apply validation-related attributes on your form fields</strong><br>
+      <strong>Gebruik HTML5 symantische input typen en voeg waar gewenst de extra attributen toe.</strong><br>
       <ul>
-        <li>Add the required attribute to required fields.</li>
-        <li>Use correct input type: type="text', type="email" and type="url".
-        <li>Include pattern attributes, <code>min</code> and <code>max</code>, and so on to set validation criteria for your form fields.</li>
+        <li>Voeg 'required' toe aan het input-veld.</li>
+        <li>Gebruik de correcte input-type: type="text', type="email", type="number".</li>
+        <li>Gebruik een voorgedefineerde pattern: 'zipcode', 'number'</li>
+        <li>Gebruik HTML5 attributen: <code>min</code> and <code>max</code></li>
       </ul>
     </li>
   </ol>
 
-  <h2>Options and settings</h2>
+  <h2>Opties en instellingen</h2>
   <ol>
     <li><strong>Custom error message</strong><br>Provide a custom error message by applying a filled in <code>title</code> tag.</li>
   </ol>
@@ -45,139 +44,239 @@
 <hr>
 </div>
 
+<div class="container">
+<h2>Voorbeeld formulier</h2>
 
 <form class="form" data-decorator="init-form-validation">
   <fieldset>
-    <legend>Example form with validation</legend>
+    <legend class="visually-hidden">Voorbeeld formulier</legend>
 
-    {{!-- <div class="form__row">
-      {{render "@datepicker" datepicker }}
-    </div>
-
-    <div class="form__row">
-      {{render "@datepicker" datepickerVT }}
-    </div> --}}
+    
 
     <div class="form__row">
       <a href="https://www.google.nl">Random link</a>
     </div>
 
-    <div class="form__row well">
-      {{!-- <fieldset data-decorator="init-form-disregardchanges"> --}}
-      <fieldset>
-        <legend>Subselection, with radio buttons</legend>
-        <p>Apply the class <code>required</code> to the div: <code>.subselection__summary</code></p>
-        <h3 class="form__sublegend">Selecteer gemeenten</h3>
-        {{render "@subselection" subselectionContext}}
-      </fieldset>
-    </div>
+    <div class="columns ">
+      <div class="column">
+        <h3>Input text</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Niet verplicht</legend>
+              {{ render "@input-text" inputtext1 merge=true }}
+            </fieldset>
+        </div>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Niet verplicht, met regex (nummer) controle.</legend>
+              {{ render "@input-text" inputtext111 merge=true }}
+            </fieldset>
+        </div>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Niet verplicht, met standaard pattern: alleen cijfers.</legend>
+              {{ render "@input-text" inputtext1111 merge=true }}
+            </fieldset>
+        </div>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text)</span> Verplicht</legend>
+              <pre>
+                type="text" required
+              </pre>
+              <div class="form__row">
+                {{ render "@input-text" inputtext11 merge=true }}
+              </div>
+            </fieldset>
+        </div>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Regex: alleen cijfers</legend>
+              <pre>
+                type="text" pattern="^[0-9]+$" required
+              </pre>
+              <div class="form__row">
+                {{ render "@input-text" inputtext2 merge=true }}
+              </div>
+              {{!-- <label for="tf1">Text field 1</label> --}}
+              {{!-- <input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required> --}}
+            </fieldset>
+        </div>
 
-    <div class="form__row well">
-      <fieldset data-decorator="init-form-disregardchanges">
-      {{!-- <fieldset> --}}
-        <legend>Subselection, with checkboxes</legend>
-        <p>Apply the class
-          <code>required</code> to the div:
-          <code>.subselection__summary</code>
-        </p>
-        <h3 class="form__sublegend">Rondom een adres</h3>
-        {{render "@subselection" rondomadresContext }}
-      </fieldset>
-    </div>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Standaard pattern: alleen cijfers</legend>
+            <pre>
+                type="text" data-pattern-type="number" required
+            </pre>
+            <div class="form__row">
+              {{ render "@input-text" inputtext3 merge=true }}
+            </div>
+          </fieldset>
+        </div>
 
-    <div class="form__row well">
-      <fieldset>
-        <legend>Subselection - NOT REQUIRED</legend>
-        <h3 class="form__sublegend">Rondom een woonplaats</h3>
-        {{render "@subselection" rondomadres1Context }}
-      </fieldset>
-    </div> 
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Standaard pattern: postcode </legend>
+            <pre>
+                type="text" data-pattern-type="zipcode" required
+            </pre>
+            <div class="form__row">
+                {{ render "@input-text" inputtext4 merge=true }}
+              </div>
+          </fieldset>
+        </div>
 
-    <div class="form__row well">
-      <fieldset>
-        <legend>Input (text) - NOT REQUIRED</legend>
-          {{!-- <label for="tf0">Text field 0</label> --}}
-          {{!-- <input type="text" name="tf0" id="tf0" value=""> --}}
-          {{ render "@input-text" inputtext1 merge=true }}
-        </fieldset>
-    </div>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (text) - </span>Standaard pattern: postcode + handmatige foutmelding</legend>
+            <p>Handmatige foutmelding werkt alleen in combinatie met een regex or standaard pattern.</p>
+            <pre>
+                type="text" data-pattern-type="zipcode" title="(handmatige melding) Het veld is incorrect ingevuld. Voorbeeld invoer: 1234AB" required
+            </pre>
+            <div class="form__row">
+                {{ render "@input-text" inputtext44 merge=true }}
+              </div>
+          </fieldset>
+        </div>
 
-    <div class="form__row well">
-      <fieldset>
-        <legend>Input (text) - regex: only numbers</legend>
-          <pre>
-             &lt;input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required&gt;
-          </pre>
-          <div class="form__row">
-            {{ render "@input-text" inputtext2 merge=true }}
+        <h3>Input nummer</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (nummer)</span> Standaard</legend>
+            <pre>
+                type="number" required
+            </pre>
+            <div class="form__row">
+              {{ render "@input-text--number" inputnumber merge=true }}
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Input (nummer)</span> Min / max</legend>
+            <pre>
+                type="number" min="5" max="20" required
+            </pre>
+            <div class="form__row">
+              {{ render "@input-text--number" inputnumber2 merge=true }}
+            </div>
+          </fieldset>
+        </div>
+
+        <h3>Input e-mail</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend class="visually-hidden">Input (email)</legend>
+            <pre>
+                type="email" required
+            </pre>
+            <div class="form__row">
+              {{ render "@input-text--email" inputemail merge=true }}
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row well">
+            <pre>
+                data-pattern-type="date" required
+            </pre>
+          {{render "@datepicker" datepicker }}
+        </div>        
+        
+      </div>
+      <div class="column">
+        <h3>Subselection</h3>
+
+        <div class="form__row well">
+          <fieldset>
+            <legend><span class="visually-hidden">Subselection </span>Niet verplicht</legend>
+            <h3 class="form__sublegend">Rondom een woonplaats</h3>
+            {{render "@subselection" rondomadres1Context }}
+          </fieldset>
+        </div> 
+
+        <div class="form__row well">
+          {{!-- <fieldset data-decorator="init-form-disregardchanges"> --}}
+          <fieldset>
+            <legend><span class="visually-hidden">Subselection </span>met radio buttons</legend>
+            <p>Apply the class <code>required</code> to the div: <code>.subselection__summary</code></p>
+            <h3 class="form__sublegend">Selecteer gemeenten</h3>
+            {{render "@subselection" subselectionContext}}
+          </fieldset>
+        </div>
+
+        <div class="form__row well">
+          <fieldset data-decorator="init-form-disregardchanges">
+          {{!-- <fieldset> --}}
+            <legend><span class="visually-hidden">Subselection </span>met checkboxes</legend>
+            <p>Apply the class
+              <code>required</code> to the div:
+              <code>.subselection__summary</code>
+            </p>
+            <h3 class="form__sublegend">Rondom een adres</h3>
+            {{render "@subselection" rondomadresContext }}
+          </fieldset>
+        </div>
+
+        <div class="form__row well">
+          <fieldset data-decorator="init-form-disregardchanges">
+          {{!-- <fieldset> --}}
+            <legend><span class="visually-hidden">Subselection </span>uitgebreid</legend>
+            <p>Apply the class
+              <code>required</code> to the div:
+              <code>.subselection__summary</code>
+            </p>
+            <h3 class="form__sublegend">Rondom een adres</h3>
+            {{render "@subselection--with-catagories-and-select-all" ssContext merge=true }}
+          </fieldset>
+        </div>
+
+        
+
+        <h3>Custom select</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend class="visually-hidden">Custom select </legend>
+            {{!-- <pre>
+                &lt;select id="select1" name="selecter1" required&gt;
+            </pre> --}}
+            <div class="form__row">
+              {{ render "@select-custom" sc1 }}
+            </div>
+          </fieldset>
+        </div>
+
+        {{!-- <div class="form__row">
+          <label class="select-custom__label" for="select2">City of birth</label>
+            <select id="select2" name="selecter2" required>
+              <option value="">Choose COB</option>
+              <option value="10">Amsterdam</option>
+              <option value="20">London</option>
+              <option value="50">Barcelona</option>
+              <option value="100">New York</option>
+            </select>
           </div>
-          {{!-- <label for="tf1">Text field 1</label> --}}
-          {{!-- <input type="text" name="tf1" id="tf1" value="" pattern="^[0-9]+$" required> --}}
-        </fieldset>
-    </div>
+        </div> --}}
 
-
-    <div class="form__row well">
-      <fieldset>
-        <legend>Input (number)</legend>
-        <pre>
-            &lt;input type="number" name="nf2" id="nf2" required&gt;
-        </pre>
-        <div class="form__row">
-          {{ render "@input-text--number" inputnumber merge=true }}
+        <h3>Checkbox</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend class="visually-hidden">Checkbox</legend>
+            <div class="form__row">
+              {{ render "@input-checkbox" inputcheckbox1 merge=true }}
+            </div>
+          </fieldset>
         </div>
-        {{!-- <label for="nf2">Number field</label> --}}
-        {{!-- <input type="number" name="nf2" id="nf2" required> --}}
-      </fieldset>
-    </div>
-
-    <div class="form__row well">
-      <fieldset>
-        <legend>Input (text) - pattern: only numbers</legend>
-        <pre>
-            &lt;input type="text" name="tf1" id="tf1" value="" data-pattern-type="number" required&gt;
-        </pre>
-        <div class="form__row">
-          {{ render "@input-text" inputtext3 merge=true }}
-        </div>
-        {{!-- <label for="tf2">Text field 2</label> --}}
-        {{!-- <p class="form__input-helptext">(preset pattern: number)</p> --}}
-        {{!-- <input type="text" name="tf2" id="tf2" data-pattern-type="number" required> --}}
-      </fieldset>
+      </div>
     </div>
 
     
 
-    <div class="form__row well">
-      <fieldset>
-        <legend>Input (email)</legend>
-        <pre>
-            &lt;input type="email" name="ef1" id="ef1" required&gt;
-        </pre>
-        <div class="form__row">
-          {{ render "@input-text--email" inputemail merge=true }}
-        </div>
-        {{!-- <label for="ef1">Email field --}}
-        {{!-- </label> --}}
-        {{!-- <input type="email" name="ef1" id="ef1" required> --}}
-      </fieldset>
-    </div>
+    
 
-    <div class="form__row well">
-      <fieldset>
-        <legend>Input (text) - pattern: zipcode </legend>
-        <pre>
-            &lt;input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="(handmatige melding) Het veld Zipcode
-            is incorrect ingevuld. Voorbeeld invoer: 1234AB" required&gt;
-        </pre>
-        <div class="form__row">
-            {{ render "@input-text" inputtext4 merge=true }}
-          </div>
-        {{!-- <label for="zcf1">Zipcode (dutch)</label> --}}
-        {{!-- <p class="form__input-helptext">(Voorbeeld: '1234AB')</p> --}}
-        {{!-- <input type="text" name="zcf1" id="zcf1" value="" data-pattern-type="zipcode" title="(handmatige melding) Het veld Zipcode is incorrect ingevuld. Voorbeeld invoer: 1234AB" required> --}}
-      </fieldset>
-    </div>
+    
 
     {{!-- <div class="form__row" data-radiogroup-title="Radius zoekgeschiedenis">
       <p class="form__label">Radius zoekgeschiedenis</p>
@@ -199,54 +298,13 @@
       </div>
     </div> --}}
 
-    <div class="form__row well">
-      <fieldset>
-        <legend>Custom select </legend>
-        {{!-- <pre>
-            &lt;select id="select1" name="selecter1" required&gt;
-        </pre> --}}
-        <div class="form__row">
-          {{ render "@select-custom" sc1 }}
-        </div>
-        {{!-- <label class="select-custom__label" for="select1">City of birth</label>
-        <div id="1" class="select-custom">
-          <select id="select1" name="selecter1" required>
-            <option value="">Choose COB</option>
-            <option value="10">Amsterdam</option>
-            <option value="20">London</option>
-            <option value="50">Barcelona</option>
-            <option value="100">New York</option>
-          </select>
-        </div> --}}
-      </fieldset>
-    </div>
-
-    {{!-- <div class="form__row">
-      <label class="select-custom__label" for="select2">City of birth</label>
-        <select id="select2" name="selecter2" required>
-          <option value="">Choose COB</option>
-          <option value="10">Amsterdam</option>
-          <option value="20">London</option>
-          <option value="50">Barcelona</option>
-          <option value="100">New York</option>
-        </select>
-      </div>
-    </div> --}}
-
-    <div class="form__row well">
-      <fieldset>
-        <legend>Checkbox</legend>
-        <div class="form__row">
-          {{ render "@input-checkbox" inputcheckbox1 merge=true }}
-        </div>
-      </fieldset>
-    </div>
-
+    
+    
     <input type="submit" class="button" value="Submit">
 
   </fieldset>
 </form>
-
+</div>
 {{!-- <style>
   .form__row {
     border: 1px solid grey;

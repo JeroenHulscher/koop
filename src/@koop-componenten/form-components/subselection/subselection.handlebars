@@ -1,4 +1,4 @@
-<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+<div class="subselection {{#if required}}{{/if}} {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
@@ -118,4 +118,5 @@
     </div>
   </div>
   <button type="button" id="id{{id}}" data-handler="open-modal" data-modal="modal-{{id}}" class="subselection__trigger">{{ linkText }}</button>
+  {{!-- <input type="text" class="js-valueField" {{#if required}}required{{/if}}/> --}}
 </div>

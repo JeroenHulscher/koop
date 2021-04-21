@@ -72,6 +72,7 @@ var supports = function () {
     this.addNoValidate();
 
     // Event listeners
+    this.element.addEventListener('change', function (e) { this.blurHandler(e) }.bind(this), true); // for custom-select;
     this.element.addEventListener('blur', function (e) { this.blurHandler(e) }.bind(this), true);
     this.element.addEventListener('click', function (e) { this.clickHandler(e) }.bind(this), false);
     this.element.addEventListener('submit', function (e) { this.submitHandler(e) }.bind(this), false);
@@ -124,9 +125,23 @@ var supports = function () {
     if (field.classList.contains('pw-invalid')) return this.config.passwordMismatch.replace("{label}", label);
     if (field.classList.contains('pw-invalid-repeat')) return this.config.passwordRepeatMismatch.replace("{label}", label);
 
+    // console.log('field', field);
+    if (field.classList.contains('datepicker__input')) {
+      if(this.validateDate(field)) {
+        return;
+      } else {
+        if (field.value === '') {
+          return this.config.messageValueMissing.replace('{label}', label);
+        }
+        if (field.hasAttribute('title')) return field.getAttribute('title');
+        return this.config.messagePatternMismatch.replace('{label}', label);
+      }
+    }
+
 
     // in case of use of default patterns (number, email, dutch zipcode)
     if (field.getAttribute('data-pattern-type')) {
+
       if (field.getAttribute('data-pattern-type') === 'number') {
         var pattern = /^\d+$/;
       }
@@ -136,6 +151,7 @@ var supports = function () {
       if (field.getAttribute('data-pattern-type') === 'zipcode') {
         var pattern = /^\d{4} ?[a-z]{2}$/i;
       }
+
       if (pattern.test(field.value)) {
         return;
       } else {
@@ -143,7 +159,7 @@ var supports = function () {
           return this.config.messageValueMissing.replace('{label}', label);
         }
         if (field.hasAttribute('title')) return field.getAttribute('title');
-        return this.config.messagePatternMismatch.replace('{label}', label);;
+        return this.config.messagePatternMismatch.replace('{label}', label);
       }
     }
 
@@ -206,6 +222,33 @@ var supports = function () {
 
   };
 
+  formvalidation.prototype.validateDate = function (field) {
+    var dateString = field.value;
+
+    // First check for the pattern
+    if(!/^\d{1,2}\-\d{1,2}\-\d{4}$/.test(dateString))
+        return false;
+
+    // Parse the date parts to integers
+    var parts = dateString.split("-");
+    var day = parseInt(parts[0], 10);
+    var month = parseInt(parts[1], 10);
+    var year = parseInt(parts[2], 10);
+
+    // Check the ranges of month and year
+    if(year < 1000 || year > 3000 || month == 0 || month > 12)
+        return false;
+
+    var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+    // Adjust for leap years
+    if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+        monthLength[1] = 29;
+
+    // Check the range of the day
+    return day > 0 && day <= monthLength[month - 1];
+  }
+
   formvalidation.prototype.showErrorSubselection = function (subselection) {
     var subselectionTrigger = subselection.querySelector('.subselection__trigger');
     var label = subselection.parentNode.querySelector('.form__sublegend');
@@ -215,6 +258,16 @@ var supports = function () {
       label = '';
     }
     this.showMessage("error", subselectionTrigger, this.config.messageValueMissingCheckbox.replace('{label}', label), 'subselection');
+  }
+  formvalidation.prototype.showSuccessSubselection = function (subselection) {
+    var subselectionTrigger = subselection.querySelector('.subselection__trigger');
+    var label = subselection.parentNode.querySelector('.form__sublegend');
+    if(label){
+      label = label.innerHTML;
+    } else {
+      label = '';
+    }
+    this.showMessage("success", subselectionTrigger, this.config.messageLabelValid, 'subselection');
   }
 
   formvalidation.prototype.showMessage = function (messageType, field, error, options) {
@@ -344,7 +397,7 @@ var supports = function () {
           parent = parent.parentNode;
         }
         labelText = parent.querySelector('label').textContent;
-      }
+        }
     }
 
     // if subselection, use different ID;
@@ -354,6 +407,8 @@ var supports = function () {
       // all others;
       this.errors.push({ "id": field.getAttribute('id'), "label": labelText });
     }
+
+    // console.log('this.errors',this.errors);
 
     // Add ARIA role to the field
     field.setAttribute('aria-describedby', prefixId + '-for-' + id);
@@ -535,6 +590,11 @@ var supports = function () {
       if (error) {
         this.showMessage("error", event.target, error);
         return;
+      } else {
+        if(event.target.hasAttribute('data-pattern-type') || event.target.hasAttribute('pattern')){
+          this.showMessage("success", event.target, this.config.messageLabelValid);
+          return;
+        }
       }
 
       if (this.isRequired(event.target)) {
@@ -559,22 +619,85 @@ var supports = function () {
     if (type == null) {
       type = event.target.tagName;
     }
-    if (type === 'A') {
-      // if event.target is the remove-trigger for the subselection component (removes selected filter)
-      if (event.target.classList.contains('subselection__summaryitem__remove')) {
-        var subselectionId = event.target.getAttribute('data-subselection-id');
-        var subselection = this.element.querySelector('[data-id="'+subselectionId+'"');
-        var error = self.hasErrorInSubselection(subselection);
 
+    
+    // if (type === 'button') {
+    if (this.isRequired(event.target)) {
+      
+      // check if subselection;
+      var subselection = this.getClosest(event.target, '.subselection');
+      if(subselection) {
+        if(!event.target.classList.contains('subselection__trigger')) {
+          if ((type === 'checkbox' || type === 'radio')) {
+            setTimeout(function(){
+              var error = self.hasErrorInSubselection(subselection);
+              if (error != false) {
+                self.showErrorSubselection(subselection);
+              } else {
+                self.showSuccessSubselection(subselection);
+              }
+            },100);
+          } else {
+            var error = self.hasErrorInSubselection(subselection);
+            if (error != false) {
+              self.showErrorSubselection(subselection);
+            } else {
+              self.showSuccessSubselection(subselection);
+            }
+          }
+          return;
+        }
+      }
+      
+      
+      if(event.target.getAttribute('data-handler') === 'close-modal'){
+        
+        var subselection = this.getClosest(event.target, '.subselection');
+        var error = self.hasErrorInSubselection(subselection);
         if (error) {
           self.showErrorSubselection(subselection);
         } else {
-          self.showMessage("success", event.target, subselection);
+          self.showSuccessSubselection(subselection);
         }
       }
-      return;
     }
+      // }
+
+      if (type === 'A') {
+        // if event.target is the remove-trigger for the subselection component (removes selected filter)
+        if (event.target.classList.contains('subselection__summaryitem__remove')) {
+          
+          var subselectionId = event.target.getAttribute('data-subselection-id');
+          var subselection = this.element.querySelector('[data-id="'+subselectionId+'"');
+          // var summary = subselection.querySelector('.subselection__summary');
+          var error = self.hasErrorInSubselection(subselection);
+
+          if (error) {
+            self.showErrorSubselection(subselection);
+          } else {
+            self.showMessage("success", event.target, subselection);
+          }
+          return;
+        }
+        
+        
+        // if (event.target.classList.contains('formreset-resetlink')) {
+        //   var subselection = this.getClosest(event.target, '.subselection');
+        //   var error = self.hasErrorInSubselection(subselection);
+
+        //   if (error) {
+        //     self.showErrorSubselection(subselection);
+        //   } else {
+        //     self.showMessage("success", event.target, subselection);
+        //   }
+        // }
+        // console.log('hier return?');
+        
+      }
+    
     if (!(type === 'checkbox' || type === 'radio')) return;
+    
+
     // Validate the field
     var error = this.hasError(event.target);
 
