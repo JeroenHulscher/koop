@@ -201,6 +201,21 @@ context:
     required: true
     requiredLabel: true
     fieldPlaceholder: "Bijv: koop@overheid.nl"
+  inputurl:
+    id: 1177
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    required: true
+    requiredLabel: true
+    fieldPlaceholder: "Bijv: https://www.overheid.nl"
+  inputtel:
+    id: 11777
+    fieldLabelVisible: true
+    fieldLabel: "Label"
+    required: true
+    requiredLabel: true
+    fieldPlaceholder: "Bijv: 06123456789"
+    patterntype: "number"
   sc1:
     id: 118
     fieldLabelVisible: true

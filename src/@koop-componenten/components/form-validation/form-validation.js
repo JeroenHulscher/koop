@@ -71,11 +71,16 @@ var supports = function () {
     // Add the `novalidate` attribute to all forms
     this.addNoValidate();
 
+    var self = this;
     // Event listeners
     this.element.addEventListener('change', function (e) { this.blurHandler(e) }.bind(this), true); // for custom-select;
     this.element.addEventListener('blur', function (e) { this.blurHandler(e) }.bind(this), true);
     this.element.addEventListener('click', function (e) { this.clickHandler(e) }.bind(this), false);
     this.element.addEventListener('submit', function (e) { this.submitHandler(e) }.bind(this), false);
+
+    var subscription = pubsub.subscribe('/datepicker/onclose', function (obj) {
+      self.blurHandlerDatepicker(obj);
+    });
 
   };
 
@@ -125,7 +130,6 @@ var supports = function () {
     if (field.classList.contains('pw-invalid')) return this.config.passwordMismatch.replace("{label}", label);
     if (field.classList.contains('pw-invalid-repeat')) return this.config.passwordRepeatMismatch.replace("{label}", label);
 
-    // console.log('field', field);
     if (field.classList.contains('datepicker__input')) {
       if(this.validateDate(field)) {
         return;
@@ -145,6 +149,10 @@ var supports = function () {
       if (field.getAttribute('data-pattern-type') === 'number') {
         var pattern = /^\d+$/;
       }
+      if (field.getAttribute('data-pattern-type') === 'tel') {
+        // tel pattern is for now only numbers;
+        var pattern = /^\d+$/;
+      }
       if (field.getAttribute('data-pattern-type') === 'email') {
         var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       }
@@ -152,14 +160,19 @@ var supports = function () {
         var pattern = /^\d{4} ?[a-z]{2}$/i;
       }
 
-      if (pattern.test(field.value)) {
+      if (field.value === '' && this.isRequired(field)) {
+        return this.config.messageValueMissing.replace('{label}', label);
+      }
+
+      if (pattern.test(field.value) && field.value != '') {
         return;
       } else {
-        if (field.value === '') {
-          return this.config.messageValueMissing.replace('{label}', label);
+        if(field.value === ''){
+          return;
+        } else {
+          if (field.hasAttribute('title')) return field.getAttribute('title');
+          return this.config.messagePatternMismatch.replace('{label}', label);
         }
-        if (field.hasAttribute('title')) return field.getAttribute('title');
-        return this.config.messagePatternMismatch.replace('{label}', label);
       }
     }
 
@@ -307,7 +320,7 @@ var supports = function () {
     if (field.type === 'select-one'){
       field.parentNode.classList.add(classStateNewField);
       field.parentNode.classList.remove(classStateOldField);
-      field.parentNode.setAttribute('aria-invalid', ariavaliditystate);
+      field.setAttribute('aria-invalid', ariavaliditystate);
       // console.log('if ariavaliditystate',ariavaliditystate);
     } else {
       field.classList.add(classStateNewField);
@@ -574,10 +587,36 @@ var supports = function () {
     return false;
   }
 
+  formvalidation.prototype.blurHandlerDatepicker = function (event) {
+    // Validate the field
+    var error = this.hasError(event);
+
+    // If there's an error, show it
+    if (error) {
+      this.showMessage("error", event, error);
+      return;
+    } else {
+      if(event.hasAttribute('data-pattern-type') || event.hasAttribute('pattern')){
+        this.showMessage("success", event, this.config.messageLabelValid);
+        return;
+      }
+    }
+
+    if (this.isRequired(event)) {
+      this.showMessage("success", event, this.config.messageLabelValid);
+      this.markFieldValidInSummary(event);
+    }
+  }
   formvalidation.prototype.blurHandler = function (event) {
     var type = event.target.nodeName;
 
     if (event.target.type === 'submit' || type === 'DIV') return;
+
+    // the datepicker autofocusses on the input before opening it's dialog, this undesirely triggers the blurHandler and validates the field. 
+    // This code stops it.
+    // if(event.target.classList.contains('datepicker__input') && event.target.value === '') {
+    //   return;
+    // }
 
     if (type === 'BUTTON') {
 

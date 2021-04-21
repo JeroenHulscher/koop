@@ -73,7 +73,10 @@
       dayNamesShort: ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'],
       showButtonPanel: true,
       closeText: 'Sluiten',
-      onClose: this.removeAria.bind(this),
+      onClose: function(el){ 
+        self.removeAria();
+        pubsub.publish( '/datepicker/onclose', self.element);
+      },
       beforeShow: function(input, inst) {
         inst.dpDiv.css({ marginTop: input.offsetHeight / 2 + 'px' });
       },

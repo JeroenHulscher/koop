@@ -7,28 +7,43 @@
   </p>
 
   <h2>Implementatie</h2>
-  <ol>
-    <li><strong>Voeg de decorator toe aan het form-element</strong>
-    <p>Example:</p>
-    <pre>
-      &lt;form class="form" <strong>data-decorator="init-form-validation"</strong>&gt;&lt;/form&gt;
-    </pre>
+  <ol class="list">
+    <li>Voeg de decorator toe aan het form-element
+      <pre>
+        &lt;form class="form" <strong>data-decorator="init-form-validation"</strong>&gt;&lt;/form&gt;
+      </pre>
     </li>
     <li>
-      <strong>Gebruik HTML5 symantische input typen en voeg waar gewenst de extra attributen toe.</strong><br>
+      Voeg 'required' toe aan het input-veld.
+      <pre>
+        &lt;input type="{type}" <strong>required</strong> /&gt;
+      </pre>
+    </li>
+    <li>
+      Optioneel, voeg één van de onderstaande type validatie toe per veld.
+      <ul class="list">
+        <li>HTML5 input-types:
+          <ul>
+            <li><code>input="text"</code></li>
+            <li><code>input="number"</code></li>
+            <li><code>input="tel"</code></li>
+            <li><code>input="url"</code></li>
+            <li><code>input="email"</code></li>
+          </ul>
+        </li>
+        <li>Regex pattern, bijvoorbeeld: <code>pattern="^[0-9]+$"</code></li>
+        <li>Voorgedefineerde patterns: <code>data-pattern-type="zipcode"</code>, <code>data-pattern-type="number"</code></li>
+      </ul>
+    </li>
+    <li>
+      <p>Optioneel, extra configuratie opties. De onderstaande opties zijn beschikbaar op een 'input' en 'textarea' element.</p>
       <ul>
-        <li>Voeg 'required' toe aan het input-veld.</li>
-        <li>Gebruik de correcte input-type: type="text', type="email", type="number".</li>
-        <li>Gebruik een voorgedefineerde pattern: 'zipcode', 'number'</li>
-        <li>Gebruik HTML5 attributen: <code>min</code> and <code>max</code></li>
+        <li>Minimale / maximale waarde: <code>min</code> and <code>max</code></li>
+        <li>Aangepaste foutmelding: <code>title="{melding}"</code> (alleen te gebruiken in combinatie met een 'pattern'-validatie.</li>
       </ul>
     </li>
   </ol>
 
-  <h2>Opties en instellingen</h2>
-  <ol>
-    <li><strong>Custom error message</strong><br>Provide a custom error message by applying a filled in <code>title</code> tag.</li>
-  </ol>
 
   {{!-- <p>
     Form validation has been made available to the following fields:
@@ -45,7 +60,7 @@
 </div>
 
 <div class="container">
-<h2>Voorbeeld formulier</h2>
+<h2>Voorbeeld implementatie van de velden en opties</h2>
 
 <form class="form" data-decorator="init-form-validation">
   <fieldset>
@@ -63,18 +78,27 @@
         <div class="form__row well">
           <fieldset>
             <legend><span class="visually-hidden">Input (text) - </span>Niet verplicht</legend>
+              <pre>
+                type="text"
+              </pre>
               {{ render "@input-text" inputtext1 merge=true }}
             </fieldset>
         </div>
         <div class="form__row well">
           <fieldset>
             <legend><span class="visually-hidden">Input (text) - </span>Niet verplicht, met regex (nummer) controle.</legend>
+              <pre>
+                type="text" pattern="^[0-9]+$"
+              </pre>
               {{ render "@input-text" inputtext111 merge=true }}
             </fieldset>
         </div>
         <div class="form__row well">
           <fieldset>
             <legend><span class="visually-hidden">Input (text) - </span>Niet verplicht, met standaard pattern: alleen cijfers.</legend>
+              <pre>
+                type="text" data-pattern-type="number"
+              </pre>
               {{ render "@input-text" inputtext1111 merge=true }}
             </fieldset>
         </div>
@@ -178,6 +202,34 @@
           </fieldset>
         </div>
 
+        <h3>Input URL</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend class="visually-hidden">Input (url)</legend>
+            <pre>
+                type="url" required
+            </pre>
+            <div class="form__row">
+              {{ render "@input-text--url" inputurl merge=true }}
+            </div>
+          </fieldset>
+        </div>
+
+        <h3>Input tel</h3>
+        <div class="form__row well">
+          <fieldset>
+            <legend class="visually-hidden">Input (tel)</legend>
+            <p>HTML5 valideert niet automatisch een tel veld, vandaar het gebruik van een pattern-type.</p>
+            <pre>
+                type="tel" data-pattern-type="tel" required
+            </pre>
+            <div class="form__row">
+              {{ render "@input-text--tel" inputtel merge=true }}
+            </div>
+          </fieldset>
+        </div>
+
+        <h3>Datepicker</h3>
         <div class="form__row well">
             <pre>
                 data-pattern-type="date" required
@@ -201,7 +253,7 @@
           {{!-- <fieldset data-decorator="init-form-disregardchanges"> --}}
           <fieldset>
             <legend><span class="visually-hidden">Subselection </span>met radio buttons</legend>
-            <p>Apply the class <code>required</code> to the div: <code>.subselection__summary</code></p>
+            <p>Voeg de class <code>required</code> toe aan de div: <code>.subselection__summary</code></p>
             <h3 class="form__sublegend">Selecteer gemeenten</h3>
             {{render "@subselection" subselectionContext}}
           </fieldset>
@@ -211,10 +263,7 @@
           <fieldset data-decorator="init-form-disregardchanges">
           {{!-- <fieldset> --}}
             <legend><span class="visually-hidden">Subselection </span>met checkboxes</legend>
-            <p>Apply the class
-              <code>required</code> to the div:
-              <code>.subselection__summary</code>
-            </p>
+            <p>Voeg de class <code>required</code> toe aan de div: <code>.subselection__summary</code></p>
             <h3 class="form__sublegend">Rondom een adres</h3>
             {{render "@subselection" rondomadresContext }}
           </fieldset>
@@ -224,10 +273,7 @@
           <fieldset data-decorator="init-form-disregardchanges">
           {{!-- <fieldset> --}}
             <legend><span class="visually-hidden">Subselection </span>uitgebreid</legend>
-            <p>Apply the class
-              <code>required</code> to the div:
-              <code>.subselection__summary</code>
-            </p>
+            <p>Voeg de class <code>required</code> toe aan de div: <code>.subselection__summary</code></p>
             <h3 class="form__sublegend">Rondom een adres</h3>
             {{render "@subselection--with-catagories-and-select-all" ssContext merge=true }}
           </fieldset>
@@ -239,31 +285,22 @@
         <div class="form__row well">
           <fieldset>
             <legend class="visually-hidden">Custom select </legend>
-            {{!-- <pre>
-                &lt;select id="select1" name="selecter1" required&gt;
-            </pre> --}}
+            <pre>
+                &lt;select required&gt;
+            </pre>
             <div class="form__row">
               {{ render "@select-custom" sc1 }}
             </div>
           </fieldset>
         </div>
 
-        {{!-- <div class="form__row">
-          <label class="select-custom__label" for="select2">City of birth</label>
-            <select id="select2" name="selecter2" required>
-              <option value="">Choose COB</option>
-              <option value="10">Amsterdam</option>
-              <option value="20">London</option>
-              <option value="50">Barcelona</option>
-              <option value="100">New York</option>
-            </select>
-          </div>
-        </div> --}}
-
         <h3>Checkbox</h3>
         <div class="form__row well">
           <fieldset>
             <legend class="visually-hidden">Checkbox</legend>
+            <pre>
+                type="checkbox" required
+            </pre>
             <div class="form__row">
               {{ render "@input-checkbox" inputcheckbox1 merge=true }}
             </div>
@@ -300,7 +337,7 @@
 
     
     
-    <input type="submit" class="button" value="Submit">
+    <input type="submit" class="button button--primary" value="Verzend formulier">
 
   </fieldset>
 </form>
