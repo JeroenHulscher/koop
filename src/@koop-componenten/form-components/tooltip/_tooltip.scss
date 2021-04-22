@@ -45,12 +45,28 @@
     }
   }
 
+  &__close {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1em;
+    text-decoration: underline;
+    color: $darkBlue;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__content {
     border: 1px solid $tooltipContainerBorderColor;
     font-size: 1rem;
     font-weight: normal;
     background-color: $white;
-    padding: .5em 1em;
+    padding: 1em 1em 1em;
     position: fixed;
     left: 1em;
     right: 1em;
@@ -60,7 +76,7 @@
     color: $black;
     z-index: 100;
     border-radius: 5px;
-    line-height: 1em;
+    line-height: 1.325em;
 
     @media ( min-width: 400px ) {
       position: absolute;
@@ -111,6 +127,18 @@
         left: auto !important;
       }
     }
+  }
+}
+
+.is-touch .tooltip {
+  &__content {
+    position: fixed;
+    left: 1em;
+    right: 1em;
+    top: 1rem;
+    bottom: auto;
+    max-width: inherit;
+    padding: 1em 1em 2.5em;
   }
 }
 
