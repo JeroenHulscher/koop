@@ -38,7 +38,7 @@
           
           // create and append open-button BEFORE table__container;
           var linkEnlarge = document.createElement('button');
-          linkEnlarge.innerHTML = 'Vergroot tabel';
+          linkEnlarge.innerHTML = 'Toon volledige tabel';
           linkEnlarge.setAttribute('data-decorator', 'init-tablefullscreen');
           linkEnlarge.classList.add('table__container__openfullscreen');
           linkEnlarge.classList.add('button');
