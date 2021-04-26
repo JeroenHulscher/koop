@@ -1,0 +1,27 @@
+<h1>Auto-Start componenten</h1>
+<p>Wanneer een component dynamisch is ingeladen, wordt er middels de MutationObserver ontdekt dat de DOM van de pagina is aangepast. Vervolgens zal de gehele pagina worden doorlopen op nieuwe componenten. Wanneer er een nieuw component gevonden is, die nog niet geinstantieerd is, zal deze worden gestart. (de code is te vinden in run.js)</p>
+
+<h2>Statisch</h2>
+{{ render "@accordion" }}
+
+<h2>Dynamisch</h2>
+<p>Deze componenten worden later op de pagina geplaatst en dit zal een DOM wijziging opleveren.</p>
+<textarea id="textarea">
+    {{ render "@collapsible--default" }}
+    {{ render "@modal" }}
+    {{ render "@subselection--with-catagories-and-select-all" }}
+</textarea>
+<button id="btn">Render</button>
+
+<div id="placeholder"></div>
+
+<script>
+var collaps = document.getElementById('1');
+var btn = document.getElementById('btn');
+
+btn.addEventListener('click', function (e) {
+    var textarea = document.getElementById('textarea');
+    var placeholder = document.getElementById('placeholder');
+    placeholder.innerHTML = textarea.value;
+}.bind(this), false);
+</script>
