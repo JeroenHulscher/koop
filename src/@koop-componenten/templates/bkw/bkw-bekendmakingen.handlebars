@@ -1,0 +1,22 @@
+{{ render "@header" header merge=true }}
+
+
+<div class="container" role="main" id="content">
+  <div id="content" role="main">
+
+
+  <h1>Berichten over uw buurt
+      <span class="h1__sub">1-10 van de 22 resultaten</span>
+    </h1>
+
+    {{ render "@sort--with-amount" sortContext }}
+
+    {{render "@resultlist" resultsContext }}
+
+    {{render "@pagination" }}
+  </div>
+
+</div>
+
+
+{{ render "@footer" }}

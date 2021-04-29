@@ -1,0 +1,48 @@
+---
+label: Opt-out feedback
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    navLinks: false
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: U bent uitgeschreven
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: U bent afgemeld voor Berichten over uw buurt. U ontvangt nog één e-mail met bevestiging van uitschrijving.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    selectContext:
+      modifier: select-custom--large
+      fieldLabel: Ik heb me uitgeschreven omdat
+      options:
+        - label: Kies reden
+          value: ""
+          selected: selected
+        - label: Ik heb geen interesse in deze e-mails
+          value: 10
+        - label: Ik begrijp niet waarom ik deze e-mails krijg
+          value: 20
+        - label: Ik ontvang te veel e-mails
+          value: 50
+        - label: Ik kan niet inloggen op MijnOveheid
+          value: 60
+        - label: Ik kan mijn abonnement niet aanpassen
+          value: 70
+    buttonSubmit:
+      id: 123
+      text: Deel uw reden
+      anchor: true
+      action: '#'
+      modifier: button--primary
