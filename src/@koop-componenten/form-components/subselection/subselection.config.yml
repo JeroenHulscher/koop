@@ -320,6 +320,20 @@ variants:
       selectAllID: 9877
       selectAllOnMain:
         label: Selecteer alle opties
+      Options:
+        - Option: 19999811
+          id: 19999811
+          title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+          short: lnv
+          checked: checked
+        - Option: 29999822
+          id: 29999822
+          title: Onderwijs, Cultuur en Wetenschap (ocw)
+          short: ocw
+        - Option: 39999833
+          id: 39999833
+          title: Sociale Zaken en Werkgelegenheid (szw)
+          short: szw
   - name: With Check All - multiple
     label: met Selecteer alle (meerdere)
     context:
@@ -448,18 +462,6 @@ variants:
               id: 22515567
               title: Nationale Ombudsman
               short: Nationale Ombudsman
-  - name: with Button Check all and Selecteer alle opties
-    label: met Button Check all en Selecteer alle opties
-    context:
-      id: 65498762
-      type: span
-      selectAllID: 98772
-      selectAllOnMain:
-        label: Selecteer alle opties
-      searchFilter: true
-      buttonResetForm: true
-      controls:
-        selectAllLabel: Selecteer alle organisaties
   - name: With Catagories and select all
     label: met Button Check all en Categorieen
     context:
