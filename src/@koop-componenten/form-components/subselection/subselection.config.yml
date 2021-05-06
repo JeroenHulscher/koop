@@ -311,6 +311,15 @@ variants:
       type: span
       selectAll: true
       selectAllID: 123211
+  - name: with Check all options
+    label: met Selecteer alle opties
+    context:
+      id: 65498766
+      type: span
+      selectAll: true
+      selectAllID: 9877
+      selectAllOnMain:
+        label: Selecteer alle opties
   - name: With Check All - multiple
     label: met Selecteer alle (meerdere)
     context:
@@ -439,8 +448,20 @@ variants:
               id: 22515567
               title: Nationale Ombudsman
               short: Nationale Ombudsman
+  - name: with Button Check all and Selecteer alle opties
+    label: met Button Check all en Selecteer alle opties
+    context:
+      id: 65498762
+      type: span
+      selectAllID: 98772
+      selectAllOnMain:
+        label: Selecteer alle opties
+      searchFilter: true
+      buttonResetForm: true
+      controls:
+        selectAllLabel: Selecteer alle organisaties
   - name: With Catagories and select all
-    label: met Categorieen en selecteer alle
+    label: met Button Check all en Categorieen
     context:
       id: 98768
       linkText: Kies 'Publicerende organisatie(s)'
