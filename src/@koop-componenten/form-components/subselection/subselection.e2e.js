@@ -332,6 +332,88 @@ describe('Subselection', function () {
 
 
 
+  // 'Selecteer alle opties' checkbox;
+
+  it('should check all checkboxes in modal, after checking the master check-all (selecteer alle opties)', function () {
+    browser.get('http://localhost:3000/components/preview/subselection--with-check-all-options');
+
+    var width = 1200;
+    var height = 800;
+    var results;
+    browser.driver.manage().window().setSize(width, height);
+
+    browser.driver.sleep(500);
+
+    var label = element(by.css('.checkbox__label'));
+    label.click();
+
+    browser.driver.sleep(500);
+
+    browser.driver.findElements(by.css('.subselection__summaryitem')).
+      then(function (elems) {
+        expect(elems.length).toEqual(3);
+      }
+    );
+  });
+
+  it('should have both select-all in checked state.', function () {
+
+    var modalButton = element(by.css('[data-handler="open-modal"]'));
+    modalButton.click();
+
+    browser.driver.sleep(500);
+
+    element(by.id('9877')).isSelected().then(function(selected) {
+      expect(selected).toBe(true);
+    });
+
+  });
+
+  it('should unchecked both select-all when removing one item from summary (1/2)', function () {
+
+    var modalButton = element(by.css('[data-handler="close-modal"]'));
+    modalButton.click();
+
+    var item = element(by.css('.subselection__summaryitem'));
+    item.click();
+
+    browser.driver.sleep(500);
+
+    element(by.id('ref-9877')).isSelected().then(function(selected) {
+      expect(selected).toBe(false);
+    });
+
+  });
+  it('should unchecked both select-all when removing one item from summary (2/2)', function () {
+
+    element(by.id('9877')).isSelected().then(function(selected) {
+      expect(selected).toBe(false);
+    });
+
+  });
+
+  it('should checked both select-all when checking a checkbox (the last to make them all checked) in modal', function () {
+
+    var modalButton = element(by.css('[data-handler="open-modal"]'));
+    modalButton.click();
+
+    browser.driver.sleep(500);
+
+    var checkbox = element(by.css('[for="option-1777778"]'));
+    checkbox.click();
+
+    browser.driver.sleep(500);
+
+    element(by.id('9877')).isSelected().then(function(selected) {
+      expect(selected).toBe(true);
+    });
+    element(by.id('ref-9877')).isSelected().then(function(selected) {
+      expect(selected).toBe(true);
+    });
+
+  });
+
+
 
 
 
