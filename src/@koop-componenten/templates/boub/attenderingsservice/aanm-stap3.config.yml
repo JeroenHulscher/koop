@@ -58,7 +58,7 @@ context:
     selectAll: true
     selectAllID: 9876
     selectAllOnMain:
-      label: Alle opties selecteren
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
@@ -98,7 +98,7 @@ context:
     required: true
     selectAllID: 9877
     selectAllOnMain:
-      label: Alle opties selecteren
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
@@ -138,7 +138,7 @@ context:
     selectAll: true
     selectAllID: 9879
     selectAllOnMain:
-      label: Alle opties selecteren
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
@@ -178,7 +178,7 @@ context:
     selectAll: true
     selectAllID: 9880
     selectAllOnMain:
-      label: Alle opties selecteren
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
