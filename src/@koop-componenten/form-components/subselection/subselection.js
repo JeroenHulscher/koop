@@ -97,7 +97,6 @@ function findObjectByKey(array, key, value) {
 
   formSubselection.prototype.setStateSelectAll = function(el) {
     this.checkboxSelectAll.checked = el.target.checked;
-    this.checkboxSelectAll.setAttribute('patrick', 'hallo');
 
     if ("createEvent" in document) {
       var evt = document.createEvent("HTMLEvents");
