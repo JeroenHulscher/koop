@@ -432,6 +432,13 @@ context:
           fieldLabelVisible: true
           fieldPlaceholder: 'Nummer'
           labelmodifier: secondary
+        ha_dossiernummer:
+          id: 1111228763566
+          type: text
+          fieldLabel: Dossiernummer
+          fieldLabelVisible: true
+          fieldPlaceholder: 'Bijv. 12345-XII'
+          labelmodifier: secondary
       item4:
         type: checkbox
         headerId: header4
