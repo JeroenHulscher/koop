@@ -22,7 +22,6 @@ context:
     intro: U bent afgemeld voor Berichten over uw buurt. U ontvangt nog één e-mail met bevestiging van uitschrijving.
     centered: true
     headingcentered: true
-    contentcentered: true
     selectContext:
       modifier: select-custom--large
       fieldLabel: Ik heb me uitgeschreven omdat
