@@ -50,7 +50,7 @@ context:
       url: '#'
     - text: Mijn abonnementen
       url: '#'
-    - text: E-mailadres wijigen
+    - text: E-mailadres wijzigen
   oldEmailInput:
     id: 1
     fieldLabel: Huidig e-mailadres
@@ -62,7 +62,7 @@ context:
     value: uwnaam@koop.overheid.nl
   newEmailInput:
     id: 2
-    fieldLabel: Uw nieuw e-mailadres
+    fieldLabel: Uw nieuwe e-mailadres
     fieldLabelVisible: true
     labelmodifier: accent
     fieldInstruction:
