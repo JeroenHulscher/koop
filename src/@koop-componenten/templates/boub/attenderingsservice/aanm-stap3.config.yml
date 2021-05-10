@@ -56,35 +56,43 @@ context:
     maxShow: 3
     required: true
     selectAll: true
+    selectAllChecked: true
     selectAllID: 9876
     selectAllOnMain:
       label: Selecteer alle opties
+      checked: true
     type: span
     Options:
       - Option: 1
         id: 123711111
-        title: Rotterdam
-        short: Rotterdam
+        title: Aanlegvergunning
+        short: Aanlegvergunning
+        checked: checked
       - Option: 2
         id: 22372312321312
-        title: Schiedam
-        short: Schiedam
+        title: Apv vergunning
+        short: Apv vergunning
+        checked: checked
       - Option: 3
         id: 323723
-        title: Vlaardingen
-        short: Vlaardingen
+        title: Bodembeschermingsvergunning
+        short: Bodembeschermingsvergunning
+        checked: checked
       - Option: 1222222222
         id: 12372327
-        title: Den Haag
-        short: Den Haag
+        title: Bouwvergunning
+        short: Bouwvergunning
+        checked: checked
       - Option: 2222222222222
         id: 223712312312
-        title: Scheveningen
-        short: Scheveningen
+        title: Drank- en horecavergunning
+        short: Drank- en horecavergunning
+        checked: checked
       - Option: 322222222
         id: 3237123123
-        title: Voorburg
-        short: Voorburg
+        title: Evenementenvergunning
+        short: Evenementenvergunning
+        checked: checked
   voorlichtingContext:
     linkText: Selecteer opties over voorlichting
     id: 21
@@ -103,28 +111,28 @@ context:
     Options:
       - Option: 1
         id: 1237222222
-        title: Rotterdam
-        short: Spanje
+        title: Aankondiging
+        short: Aankondiging
       - Option: 2
         id: 2237231232131
-        title: Schiedam
-        short: Griekenland
+        title: Huisafval
+        short: Huisafval
       - Option: 3
         id: 3237
-        title: Vlaardingen
-        short: Nederland
+        title: Inspraak
+        short: Inspraak
       - Option: 122222222
         id: 12372329
-        title: Den Haag
-        short: Spanje
+        title: Mededelingen
+        short: Mededelingen
       - Option: 222222222222
         id: 22371231231
-        title: Scheveningen
-        short: Griekenland
+        title: Meldingen
+        short: Meldingen
       - Option: 32222222
         id: 323712123
-        title: Voorburg
-        short: Nederland
+        title: Openingstijden
+        short: Openingstijden
   bestemmingsplannenContext:
     linkText: Selecteer opties over bestemmingsplannen
     id: 22
@@ -143,28 +151,12 @@ context:
     Options:
       - Option: 1
         id: 1237
-        title: Rotterdam
-        short: Spanje
+        title: Bestemmingsplan
+        short: Bestemmingsplan
       - Option: 2
         id: 223723123312
-        title: Schiedam
-        short: Griekenland
-      - Option: 3
-        id: 322333333
-        title: Vlaardingen
-        short: Nederland
-      - Option: 12222222
-        id: 12332
-        title: Den Haag
-        short: Spanje
-      - Option: 22222222222
-        id: 2237312312
-        title: Scheveningen
-        short: Griekenland
-      - Option: 3222222
-        id: 32373123888
-        title: Voorburg
-        short: Nederland
+        title: Voorbereidingsbesluit
+        short: Voorbereidingsbesluit
   voorschriftenContext:
     linkText: Selecteer opties over voorschriften & beleid
     id: 23
@@ -183,28 +175,28 @@ context:
     Options:
       - Option: 1
         id: 123766666
-        title: Rotterdam
-        short: Spanje
+        title: Aanwijzingsbesluit
+        short: Aanwijzingsbesluit
       - Option: 2
         id: 223723321312
-        title: Schiedam
-        short: Griekenland
+        title: Agenda en notulen
+        short: Agenda en notulen
       - Option: 3
         id: 3223
-        title: Vlaardingen
-        short: Nederland
+        title: Belastingbesluit
+        short: Belastingbesluit
       - Option: 12222222
         id: 12372
-        title: Den Haag
-        short: Spanje
+        title: Besluitenlijst
+        short: Besluitenlijst
       - Option: 22222222222
         id: 2237122312
-        title: Scheveningen
-        short: Griekenland
+        title: Collectevergunning
+        short: Collectevergunning
       - Option: 3222222
         id: 32373123
-        title: Voorburg
-        short: Nederland
+        title: Delegatiebesluit
+        short: Delegatiebesluit
   checkallOverheidsorganisatiesContext:
     id: 1
     label: overheidsorganisaties
