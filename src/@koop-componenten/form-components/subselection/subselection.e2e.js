@@ -399,7 +399,7 @@ describe('Subselection', function () {
 
     browser.driver.sleep(500);
 
-    var checkbox = element(by.css('[for="option-1777778"]'));
+    var checkbox = element(by.css('[for="option-19999811"]'));
     checkbox.click();
 
     browser.driver.sleep(500);
