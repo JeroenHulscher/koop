@@ -57,8 +57,11 @@ function findObjectByKey(array, key, value) {
     this.triggerOnLoadText = this.trigger.innerText;
     this.containerSummary = onl.dom.$( '.subselection__summary', this.element )[0];
     this.buttonClose = onl.dom.$( '[data-handler="close-modal"]', this.element );
-    this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.element );
+    this.modal = onl.dom.$( '.modal', this.element )[0];
+    this.options = onl.dom.$( 'input[type=checkbox], input[type=radio]', this.modal );
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
+    this.checkboxSelectAllOnMain = onl.dom.$( '.js-checkbox-selectAllOnMain', this.element )[0];
+    this.checkboxSelectAll = onl.dom.$( '.js-checkbox-master', this.element )[0];
 
     var uniqueId = Math.floor(Math.random() * 1000000);
     this.element.setAttribute('data-id', uniqueId);
@@ -86,7 +89,26 @@ function findObjectByKey(array, key, value) {
     for ( y = 0; y < this.options.length; y++ ) {
       this.options[y].addEventListener( 'change', function (e) { this.collectValues(e); }.bind(this), false);
     }
+
+    if (this.checkboxSelectAllOnMain) {
+      this.checkboxSelectAllOnMain.addEventListener( 'change', function (el) { this.setStateSelectAll(el); }.bind(this), false);
+    }
   };
+
+  formSubselection.prototype.setStateSelectAll = function(el) {
+    this.checkboxSelectAll.checked = el.target.checked;
+    this.checkboxSelectAll.setAttribute('patrick', 'hallo');
+
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      this.checkboxSelectAll.dispatchEvent(evt);
+    } else {
+      this.checkboxSelectAll.fireEvent("onchange");
+    }
+
+
+  }
 
   formSubselection.prototype.attachRemoveListeners = function() {
     var i;
@@ -264,6 +286,18 @@ function findObjectByKey(array, key, value) {
       // } else {
       //   buttonSubmit.fireEvent("click");
       // }
+    }
+
+    var insideSubselection = getClosest(this.element, '.subselection');
+    if(insideSubselection){
+      var checkboxSelectAll = insideSubselection.querySelector('.js-checkbox-master');
+      if(checkboxSelectAll) {
+        checkboxSelectAll.checked = false;
+      }
+      var checkboxSelectAllOnMain = insideSubselection.querySelector('.js-checkbox-selectAllOnMain');
+      if(checkboxSelectAllOnMain) {
+        checkboxSelectAllOnMain.checked = false;
+      }
     }
 
     // onchange event needs manual triggering on checkboxes

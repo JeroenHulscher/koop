@@ -1,0 +1,25 @@
+---
+label: Opt-out bedankt
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    navLinks: false
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Bedankt voor uw reactie
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: Uw reactie draagt bij aan de verbetering van onze dienstverlening.
+    centered: true
+    headingcentered: true
+    contentcentered: true

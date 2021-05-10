@@ -1,0 +1,31 @@
+---
+label: Opt-out
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    navLinks: false
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Uitschrijven
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: Wilt u geen e-mails meer ontvangen met Berichten over uw buurt? Schrijft u zichzelf dan uit door op onderstaande knop te klikken.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonSubmit:
+      id: 123
+      text: Uitschrijven
+      anchor: true
+      action: '#'
+      modifier: button--primary

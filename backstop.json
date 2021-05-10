@@ -435,6 +435,26 @@
       "label": "oebnl - templates-oeb-mijn-wachtwoord-vernieuwen",
       "url": "http://localhost:3000/components/preview/templates-oeb-mijn-wachtwoord-vernieuwen",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-oeb-mijn-wachtwoord-vernieuwen.html"
+    },
+    {
+      "label": "bkw - bkw-bekendmakingen",
+      "url": "http://localhost:3000/components/preview/templates-bkw-bekendmakingen",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-bkw-bekendmakingen.html"
+    },
+    {
+      "label": "bkw - templates-bkw-optout",
+      "url": "http://localhost:3000/components/preview/templates-bkw-optout",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-bkw-optout.html"
+    },
+    {
+      "label": "bkw - templates-bkw-optout-bedankt",
+      "url": "http://localhost:3000/components/preview/templates-bkw-optout-bedankt",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-bkw-optout-bedankt.html"
+    },
+    {
+      "label": "bkw - templates-bkw-optout-feedback",
+      "url": "http://localhost:3000/components/preview/templates-bkw-optout-feedback",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-bkw-optout-feedback.html"
     }
   ],
   "paths": {

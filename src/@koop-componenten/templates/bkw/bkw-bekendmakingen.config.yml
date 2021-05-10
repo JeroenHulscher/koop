@@ -1,0 +1,173 @@
+---
+label: Bekendmakingen
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    navLinks: false
+  breadcrumbAttenderen:
+    breadcrumb:
+    - text: Home
+      url: '#'
+    - text: Berichtgeving
+      url: '#'
+    - text: Berichten over uw buurt
+  jumbotronContext:
+    heading: Uitschrijven
+    h: h1
+    subheading: Berichten over uw Buurt
+    intro: Wilt u geen e-mails meer ontvangen met Berichten over uw buurt? Schrijft u zichzelf dan uit door op onderstaande knop te klikken.
+    centered: true
+    headingcentered: true
+    contentcentered: true
+    buttonSubmit:
+      id: 123
+      text: Uitschrijven
+      anchor: true
+      action: '#'
+      modifier: button--primary
+  sortContext:
+    columns: true
+    amountPerPageFilter: true
+    buttonDownload: false
+    options:
+      - label: Datum publicatie
+        href: '#'
+        active: is-active
+  resultsContext:
+    items:
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary
+      - title: Aangepast eindexamen voortgezet onderwijs bij bijzondere omstandigheden
+        titleHeader: h2
+        titleHref: '#'
+        share: false
+        metadata:
+            - value: Omgevingsvergunning
+            - value: 09-06-2020
+            - value: In uw buurt
+        text: Doe je eindexamen in het voortgezet onderwijs? En heb je een handicap of beperking? Dan kan je school bij het examen daarmee rekening houden.
+        buttons:
+          - button: Bekijk publicatie
+            type: secondary

@@ -1,0 +1,35 @@
+{{ render "@header" header merge=true }}
+
+
+<div class="container" role="main" id="content">
+
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+      <div class="align-center">
+        <h2 class="h4">Reden van uitschrijven</h2>
+        <p>
+          Zou u ons willen laten weten waarom u zich heeft uitgeschreven?
+        </p>
+      </div>
+      <form data-decorator="init-formvalidation">
+      <fieldset>
+        <legend class="visually-hidden">Reden van uitschrijving</legend>
+        <div class="form__row">
+          {{ render "@select-custom--with-label" selectContext merge=true }}
+        </div>
+        <div class="form__rowsubmit">
+          <div class="form__rowsubmit__item">
+            {{ render "@button" buttonSubmit }}
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    {{/@jumbotron}}
+
+  </div>
+</div>
+
+
+{{ render "@footer" }}

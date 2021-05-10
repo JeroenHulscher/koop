@@ -22,10 +22,12 @@
     }
   }
 
-  &__close,
-  &__close:hover {
+  &__close {
     right: 3em;
     top: 2.5em;
+  }
+  &__close,
+  &__close:hover {
     background: {
       image: $iconCrossBlue;
       position: center center;

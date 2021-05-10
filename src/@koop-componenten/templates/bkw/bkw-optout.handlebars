@@ -1,0 +1,19 @@
+{{ render "@header" header merge=true }}
+
+
+<div class="container" role="main" id="content">
+
+  <div class="row">
+
+    {{#> @jumbotron jumbotronContext }}
+      <p>
+        Mocht u op later moment wel weer berichten willen ontvangen? Log dan in op MijnOverheid. Via het onderdeel 'Berichten over uw buurt' op de pagina 'Wonen' kunt u zich opnieuw inschrijven.
+      </p>
+      {{ render "@button" buttonSubmit }}
+    {{/@jumbotron}}
+
+  </div>
+</div>
+
+
+{{ render "@footer" }}

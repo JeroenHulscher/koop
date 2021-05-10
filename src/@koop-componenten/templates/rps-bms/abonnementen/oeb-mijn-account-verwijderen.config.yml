@@ -40,7 +40,7 @@ context:
       url: '#'
     - text: Mijn abonnementen
       url: '#'
-    - text: E-mailadres wijigen
+    - text: Account verwijderen
   PWInput:
     id: 3
     fieldLabel: Wachtwoord

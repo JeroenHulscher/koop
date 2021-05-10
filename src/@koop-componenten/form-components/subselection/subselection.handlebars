@@ -1,4 +1,12 @@
-<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if selectAllOnMain}}, "selectAllOnMain": "{{selectAllID}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+  {{#if selectAllOnMain}}
+    <div class="input-checkbox">
+      <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{selectAllID}}" {{#if_eq selectAllOnMain/checked true}}checked{{/if_eq}} name="{{selectAllOnMain/name}}" value="Alle" />
+      <label class="checkbox__label" for="ref-{{selectAllID}}">
+        {{selectAllOnMain/label}}
+      </label>
+    </div>
+  {{/if}}
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
@@ -27,7 +35,7 @@
               {{#if selectAll}}
               <div data-decorator="init-selectall">
                 <div class="input-checkbox u-margin--m">
-                  <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{selectAllID}}" name="selectAll" value="Alle iets" />
+                  <input class="checkbox__input js-checkbox-master" type="checkbox" {{#if_eq selectAllChecked/checked true}}checked{{/if_eq}} id="{{selectAllID}}" name="selectAll" value="Alle iets" />
                   <label class="checkbox__label" for="{{selectAllID}}">
                     <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
                   </label>
@@ -60,7 +68,7 @@
                     {{#each OptionsSubs }}
                       <li class=" js-filterresults__result">
                         <div class="input-{{#if ../radio}}radio{{else}}checkbox{{/if}}">
-                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="name" {{ status }} data-value="{{ short }}" value="2"
+                          <input class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__input" {{disabled}} {{checked}} {{#if linkedto}}data-linkedto="{{linkedto}}"{{/if}} type="{{#if ../radio}}radio{{else}}checkbox{{/if}}" id="option-{{ id }}" name="{{#if name}}{{name}}{{else}}name{{/if}}" {{ status }} data-value="{{ short }}" value="2"
                           />
                           <label class="{{#if ../radio}}radio{{else}}checkbox{{/if}}__label" for="option-{{ id  }}">
                             {{ title }}
