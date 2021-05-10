@@ -1,4 +1,12 @@
-<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection{{#if buttonResetForm}} init-formreset{{/if}}" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if selectAllOnMain}}, "selectAllOnMain": "{{selectAllID}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+  {{#if selectAllOnMain}}
+    <div class="input-checkbox">
+      <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{selectAllID}}" name="{{selectAllOnMain/name}}" value="Alle" />
+      <label class="checkbox__label" for="ref-{{selectAllID}}">
+        {{selectAllOnMain/label}}
+      </label>
+    </div>
+  {{/if}}
   <div class="subselection__summary {{#if required}}required{{/if}}"></div>
   <div id="modal-{{id}}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">

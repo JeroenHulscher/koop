@@ -57,33 +57,34 @@ context:
     required: true
     selectAll: true
     selectAllID: 9876
+    selectAllOnMain:
+      label: Selecteer alle opties
     type: span
-    triggerSubmit: true
     Options:
       - Option: 1
         id: 123711111
         title: Rotterdam
-        short: Spanje
+        short: Rotterdam
       - Option: 2
         id: 22372312321312
         title: Schiedam
-        short: Griekenland
+        short: Schiedam
       - Option: 3
         id: 323723
         title: Vlaardingen
-        short: Nederland
+        short: Vlaardingen
       - Option: 1222222222
         id: 12372327
         title: Den Haag
-        short: Spanje
+        short: Den Haag
       - Option: 2222222222222
         id: 223712312312
         title: Scheveningen
-        short: Griekenland
+        short: Scheveningen
       - Option: 322222222
         id: 3237123123
         title: Voorburg
-        short: Nederland
+        short: Voorburg
   voorlichtingContext:
     linkText: Selecteer opties over voorlichting
     id: 21
@@ -96,6 +97,8 @@ context:
     selectAll: true
     required: true
     selectAllID: 9877
+    selectAllOnMain:
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
@@ -134,6 +137,8 @@ context:
     required: true
     selectAll: true
     selectAllID: 9879
+    selectAllOnMain:
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
@@ -172,6 +177,8 @@ context:
     required: true
     selectAll: true
     selectAllID: 9880
+    selectAllOnMain:
+      label: Selecteer alle opties
     type: span
     Options:
       - Option: 1
