@@ -1,55 +1,76 @@
-<div class="subselection" data-decorator="init-form-subselection" data-config='{ "type": "{{ type }}"{% if linkTextActive %}, "triggerOnChangeText": "{{ linkTextActive }}"{% endif %}{% if maxShow %}, "maxShow": "{{ maxShow }}"{% endif %}{% if triggerSubmit %}, "triggerSubmit": true{% endif %} }'>
+{% block prefix %}{% endblock %}
+<div class="subselection{% if modifier %} subselection--{{ modifier }}{% endif %}" data-decorator="init-form-subselection{% if buttonResetForm %} init-formreset{% endif %}" data-config='{ "type": "{{ type }}"{% if linkTextActive %}, "triggerOnChangeText": "{{ linkTextActive }}"{% endif %}{% if maxShow %}, "maxShow": "{{ maxShow }}"{% endif %}{% if selectAllOnMain %}, "selectAllOnMain": "{{ selectAllID }}"{% endif %}{% if triggerSubmit %}, "triggerSubmit": true{% endif %} }'>
+  {% if selectAllOnMain %}
+    <div class="input-checkbox">
+      <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{ selectAllID }}" {% if selectAllOnMain.checked %}checked{% endif %} name="{{ selectAllOnMain.name }}" value="Alle" />
+      <label class="checkbox__label" for="ref-{{ selectAllID }}">
+        {{ selectAllOnMain.label ?: 'Select all options'|t }}
+      </label>
+    </div>
+  {% endif %}
   <div class="subselection__summary {% if required %}required{% endif %}"></div>
-  <div id="modal-{{ id }}" class="modal modal--fixedpane modal--off-screen modal--hidden" hidden role="alert">
+  <div id="modal-{{ id }}" class="modal modal--fixedpane modal--off-screen" hidden role="alert">
     <div class="modal__inner">
       <div class="modal__content">
         <h2>{{ modalTitle }}</h2>
         {% if searchFilter %}
           <div class="" data-decorator="init-filter-results">
             <div class="form__row form__row--medium">
-              <label class="visually-hidden" for="filter-id--{{ id }}">{{ label }}</label>
-              <input type="text" aria-controls="resultfilter-{{ id }}" placeholder="{% if inputPlaceholder %}{{ inputPlaceholder }}{% else %}Typ hier uw organisatie{% endif %}" name="mysuper_field" id="filter-id--{{ id }}" class="js-filterresults__input input-text input-text--searchmedium" />
+              <label class="form__label form__label--accent" for="filter-id--{{ id }}">{{ label ?: 'Filter results on keyword'|t }}</label>
+              <div class="relative">
+                <input type="text" aria-controls="resultfilter-{{ id }}" placeholder="{{ inputPlaceholder ?: 'Filter options'|t }}" name="{{ inputName ?: id ~ '_name' }}" id="filter-id--{{ id }}" class="js-filterresults__input input-text input-text--searchmedium" data-decorator="toggle-remove-visibility" />
+                <a {% if removeId %}id="{{ removeId }}"{% endif %} href="#" class="input-text__remove invisible" data-handler="empty-input">
+                  <span class="visually-hidden">{{ 'Clear value'|t }}</span>
+                </a>
+              </div>
             </div>
+            {% if controls %}
+              <div class="form__row">
+                <button {% if id %}id="{{ id }}"{% endif %} class="button js-filterresults__btn-selectall" data-label="{{ controls.selectAllLabel }}">{{ controls.selectAllLabel }}</button>
+              </div>
+            {% endif %}
+
             <fieldset class="js-filterresults__results" id="resultfilter-{{ id }}" aria-live="polite">
               <legend class="visually-hidden">{{ modalTitle }}</legend>
               {% endif %}
               {% if selectAll %}
               <div data-decorator="init-selectall">
                 <div class="input-checkbox u-margin--m">
-                  <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{ selectAllID }}" name="selectAll" value="Alle iets" />
+                  <input class="checkbox__input js-checkbox-master" type="checkbox" {% if selectAllChecked.checked %}checked{% endif %} id="{{ selectAllID }}" name="selectAll" value="Alle iets" />
                   <label class="checkbox__label" for="{{ selectAllID }}">
-                    <strong>Alle <i class="js-amount-checkboxes"></i> verdragen</strong>
+                    <strong>{{ 'Select all <i class="js-amount-checkboxes"></i> options'|t }}</strong>
                   </label>
                 </div>
               {% endif %}
               {% if radio %}
                 <div class="" data-decorator="init-formreset">
-                  <p><a href="#" class="icon icon--refresh formreset-resetlink">Reset keuze</a></p>
+                  <p><a {% if id %}id="{{ id }}"{% endif %} href="#" class="icon icon--refresh formreset-resetlink">{{ 'Reset selection'|t }}</a></p>
               {% endif %}
 
               {% if multilevel %}
                 {% for Options_i in Options %}
+                  <fieldset class="js-filterresults__resultmother">
+
                   {% if Options_i.checkAll %}
+                    <legend class="visually-hidden">{% if Options_i.title %}{{ Options_i.title }}{% endif %}</legend>
                     <div data-decorator="init-selectall">
                       <div class="input-checkbox">
-                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{ Options_i.id }}" name="selectAll" value="Alle iets"
-                        />
+                        <input class="checkbox__input js-checkbox-master" type="checkbox" id="{{ Options_i.id }}" name="selectAll" value="Alle iets" />
                         <label class="checkbox__label u-nomargin" for="{{ Options_i.id }}">
                           <strong>{{ Options_i.title }}</strong>
                         </label>
                       </div>
                   {% else %}
-                    <p class="form__label">{% if Options_i.title %}{{ Options_i.title }}{% endif %}</p>
+                    <legend>{% if Options_i.title %}{{ Options_i.title }}{% endif %}</legend>
                   {% endif %}
 
                   <ul class="list--unstyled">
-                    {% for OptionsSubs_i in Options_i.OptionsSubs %}
+                    {% for optionsSubs_i in Options_i.OptionsSubs %}
                       <li class=" js-filterresults__result">
                         <div class="input-{% if Options_i.radio %}radio{% else %}checkbox{% endif %}">
-                          <input class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__input" {{ OptionsSubs_i.disabled }} {{ OptionsSubs_i.checked }} {% if OptionsSubs_i.linkedto %}data-linkedto="{{ OptionsSubs_i.linkedto }}"{% endif %} type="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}" id="option-{{ OptionsSubs_i.id }}" name="name" {{ OptionsSubs_i.status }} data-value="{{ OptionsSubs_i.short }}" value="2"
-                          />
-                          <label class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ OptionsSubs_i.id }}">
-                            {{ OptionsSubs_i.title }}
+                          <input class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__input" {{ optionsSubs_i.disabled }} {{ optionsSubs_i.checked }} {% if optionsSubs_i.linkedto %}data-linkedto="{{ optionsSubs_i.linkedto }}"{% endif %} type="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}" id="option-{{ optionsSubs_i.id }}" name="{% if optionsSubs_i.name %}{{ optionsSubs_i.name }}{% else %}name{% endif %}" {{ optionsSubs_i.status }} data-value="{{ optionsSubs_i.short }}" value="2" />
+                          <label class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ optionsSubs_i.id }}">
+                            {{ optionsSubs_i.title }}
                           </label>
                         </div>
                       </li>
@@ -58,21 +79,22 @@
                 {% if Options_i.checkAll %}
                   </div>
                 {% endif %}
+                </fieldset>
               {% endfor %}
 
             {% else %}
                 <ul class="list--unstyled">
                   {% for Options_i in Options %}
+                    {% block Options_i %}
                   <li class=" js-filterresults__result">
-                    <div class="input-{% if radio %}radio{% else %}checkbox{% endif %}">
-                      <input class="{% if radio %}radio{% else %}checkbox{% endif %}__input" {{ Options_i.disabled }} {{ Options_i.checked }} {{ Options_i.required }} {% if Options_i.linkedto %}data-linkedto="{{ Options_i.linkedto }}"
-                        {% endif %} type="{% if radio %}radio{% else %}checkbox{% endif %}" id="option-{{ Options_i.id }}" name="{% if Options_i.name %}{{ Options_i.name }}{% else %}name{% endif %}" {{ Options_i.status }} data-value="{{ Options_i.short }}"
-                        value="2" />
-                      <label class="{% if radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ Options_i.id }}">
+                    <div class="input-{{ Options_i.radio ? 'radio' : 'checkbox' }}">
+                      <input class="{{ Options_i.radio ? 'radio' : 'checkbox' }}__input" {{Options_i.disabled}} {{Options_i.checked}} {{Options_i.required}}{% if Options_i.linkedto %} data-linkedto="{{Options_i.linkedto}}"{% endif %} type="{{ Options_i.radio ? 'radio' : 'checkbox' }}" id="option-{{ Options_i.id }}" name="{% if Options_i.name %}{{Options_i.name}}{% else %}name{% endif %}" {{ Options_i.status }} data-value="{{ Options_i.short }}" value="2" />
+                      <label class="{{ Options_i.radio ? 'radio' : 'checkbox' }}__label" for="option-{{ Options_i.id  }}">
                         {{ Options_i.title }}
                       </label>
                     </div>
                   </li>
+                    {% endblock %}
                   {% endfor %}
                 </ul>
             {% endif %}
@@ -89,15 +111,19 @@
         {% endif %}
 
         <div class="modal__buttonpane">
+          {% if buttonResetForm %}
+            <button class="icon icon--refresh formreset-resetlink">{{ 'Search again'|t }}</button>
+          {% endif %}
           {% if buttonSubmit %}
-            <button type="submit" class="button button--primary">Opnieuw zoeken</button>
+            <button type="submit" class="button button--primary">{{ buttonSubmitLabel ?: 'Search again'|t }}</button>
           {% else %}
-            <button type="button" data-handler="close-modal" class="button button--primary">Kiezen</button>
+            <button type="button" data-handler="close-modal" class="button button--primary">{{ 'Select'|t }}</button>
           {% endif %}
         </div>
-        {% if hideClose %}{% else %}<button type="button" data-handler="close-modal" class="modal__close">Sluit modaal</button>{% endif %}
+        {% if hideClose %}{% else %}<button type="button" data-handler="close-modal" class="modal__close">{{ 'Close window'|t }}</button>{% endif %}
       </div>
     </div>
   </div>
-  <a href="#" id="id{{ id }}" data-handler="open-modal" data-modal="modal-{{ id }}" class="subselection__trigger icon">{{ linkText }}</a>
+  <button type="button" id="id{{ id }}" data-handler="open-modal" data-modal="modal-{{ id }}" class="subselection__trigger">{{ linkText }}</button>
 </div>
+{% block suffix %}{% endblock %}
