@@ -65,12 +65,12 @@
                   {% endif %}
 
                   <ul class="list--unstyled">
-                    {% for optionsSubs_i in Options_i.OptionsSubs %}
+                    {% for OptionsSubs_i in Options_i.OptionsSubs %}
                       <li class=" js-filterresults__result">
                         <div class="input-{% if Options_i.radio %}radio{% else %}checkbox{% endif %}">
-                          <input class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__input" {{ optionsSubs_i.disabled }} {{ optionsSubs_i.checked }} {% if optionsSubs_i.linkedto %}data-linkedto="{{ optionsSubs_i.linkedto }}"{% endif %} type="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}" id="option-{{ optionsSubs_i.id }}" name="{% if optionsSubs_i.name %}{{ optionsSubs_i.name }}{% else %}name{% endif %}" {{ optionsSubs_i.status }} data-value="{{ optionsSubs_i.short }}" value="2" />
-                          <label class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ optionsSubs_i.id }}">
-                            {{ optionsSubs_i.title }}
+                          <input class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__input" {{ OptionsSubs_i.disabled }} {{ OptionsSubs_i.checked }} {% if OptionsSubs_i.linkedto %}data-linkedto="{{ OptionsSubs_i.linkedto }}"{% endif %} type="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}" id="option-{{ OptionsSubs_i.id }}" name="{% if OptionsSubs_i.name %}{{ OptionsSubs_i.name }}{% else %}name{% endif %}" {{ OptionsSubs_i.status }} data-value="{{ OptionsSubs_i.short }}" value="2" />
+                          <label class="{% if Options_i.radio %}radio{% else %}checkbox{% endif %}__label" for="option-{{ OptionsSubs_i.id }}">
+                            {{ OptionsSubs_i.title }}
                           </label>
                         </div>
                       </li>
