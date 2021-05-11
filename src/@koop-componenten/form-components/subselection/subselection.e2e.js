@@ -344,6 +344,26 @@ describe('Subselection', function () {
 
     browser.driver.sleep(500);
 
+    element(by.id('ref-9877')).isSelected().then(function(selected) {
+      expect(selected).toBe(true);
+    });
+  });
+
+  it('should check all checkboxes in modal, after checking the master check-all (selecteer alle opties)', function () {
+    browser.get('http://localhost:3000/components/preview/subselection--with-check-all-options');
+
+    var width = 1200;
+    var height = 800;
+    var results;
+    browser.driver.manage().window().setSize(width, height);
+
+    browser.driver.sleep(500);
+
+    var item = element(by.css('.subselection__summaryitem'));
+    item.click();
+
+    browser.driver.sleep(500);
+
     var label = element(by.css('.checkbox__label'));
     label.click();
 

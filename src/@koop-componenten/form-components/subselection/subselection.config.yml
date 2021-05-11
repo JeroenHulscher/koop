@@ -330,10 +330,12 @@ variants:
           id: 29999822
           title: Onderwijs, Cultuur en Wetenschap (ocw)
           short: ocw
+          checked: checked
         - Option: 39999833
           id: 39999833
           title: Sociale Zaken en Werkgelegenheid (szw)
           short: szw
+          checked: checked
   - name: With Check All - multiple
     label: met Selecteer alle (meerdere)
     context:
