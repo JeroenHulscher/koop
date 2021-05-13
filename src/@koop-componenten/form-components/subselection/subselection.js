@@ -71,7 +71,10 @@ function findObjectByKey(array, key, value) {
     setTimeout(function(){
       self.resetLink = self.element.querySelector('.' + self.resetLinkClass);
       if (self.resetLink) {
-        self.resetLink.addEventListener('click', function (e) { self.collectValues(e); }.bind(self), false);
+        self.resetLink.addEventListener('click', function (e) {
+          self.resetCheckboxes(e);
+          // self.collectValues(e);
+        }.bind(self), false);
       }
     }, 1000);
 
@@ -316,6 +319,24 @@ function findObjectByKey(array, key, value) {
     this.collectValues();
   };
 
+  formSubselection.prototype.resetCheckboxes = function (e) {
+    var y;
+    console.log('reset');
+    for ( y = 0; y < this.options.length; y++ ) {
+      this.options[y].checked = false;
+    }
+
+    // onchange event needs manual triggering on checkboxes
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      this.options[0].dispatchEvent(evt);
+    } else {
+      this.options[0].fireEvent("onchange");
+    }
+    e.preventDefault();
+  };
+
 
   // ======
 
@@ -393,17 +414,20 @@ function findObjectByKey(array, key, value) {
       // set state;
       var input = document.getElementById(item.ID);
       input.checked = state[i].state;
+    }
 
-      // onchange event needs manual triggering on checkboxes
-      if ("createEvent" in document) {
-        var evt = document.createEvent("HTMLEvents");
-        evt.initEvent("change", false, true);
-        input.dispatchEvent(evt);
-      } else {
-        input.fireEvent("onchange");
-      }
+    var checkbox = document.getElementById(state[0].ID);
+    // onchange event needs manual triggering on checkboxes
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      checkbox.dispatchEvent(evt);
+    } else {
+      checkbox.fireEvent("onchange");
     }
   }
+
+
 
 
 
