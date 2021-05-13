@@ -70,9 +70,9 @@ $breakpointDesktopAdjusted: 65em;
       }
     }
 
-    > *:only-child {
-      max-width: 40em;
-    }
+    // > *:only-child {
+    //   max-width: 40em;
+    // }
 
     .column {
       position: relative;
@@ -144,6 +144,10 @@ $breakpointDesktopAdjusted: 65em;
           }
         }
       }
+    }
+
+    &--main {
+      max-width: 52em;
     }
 
     &--sidebar-left {

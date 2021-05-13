@@ -4,16 +4,16 @@
 <div class="container" role="main" id="content">
   <div id="content" role="main">
 
+  <div class="columns--main">
+      <h1>Berichten over uw buurt <span class="h1__sub">1-10 van de 22 resultaten</span></h1>
 
-  <h1>Berichten over uw buurt
-      <span class="h1__sub">1-10 van de 22 resultaten</span>
-    </h1>
+      {{ render "@sort--with-amount" sortContext }}
 
-    {{ render "@sort--with-amount" sortContext }}
+      {{render "@resultlist" resultsContext }}
 
-    {{render "@resultlist" resultsContext }}
+      {{render "@pagination" }}
 
-    {{render "@pagination" }}
+    </div>
   </div>
 
 </div>
