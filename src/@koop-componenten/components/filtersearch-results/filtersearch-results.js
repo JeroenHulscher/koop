@@ -46,15 +46,15 @@
       }
 
       this.allCheckboxes[i].checked = true;
+    }
 
-      // onchange event needs manual triggering on checkboxes
-      if ("createEvent" in document) {
-        var evt = document.createEvent("HTMLEvents");
-        evt.initEvent("change", false, true);
-        this.allCheckboxes[i].dispatchEvent(evt);
-      } else {
-        this.allCheckboxes[i].fireEvent("onchange");
-      }
+    // onchange event needs manual triggering on checkboxes; only send even once for performance reasons.
+    if ("createEvent" in document) {
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      this.allCheckboxes[0].dispatchEvent(evt);
+    } else {
+      this.allCheckboxes[0].fireEvent("onchange");
     }
 
     // IE 10 triggers a form-submit, therefor we have to use this statement.

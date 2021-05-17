@@ -1,5 +1,7 @@
+$breakpointDesktopAdjusted: 65em;
+
 html {
-  @media (min-width: 50em) {
+  @media (min-width: $breakpointDesktopAdjusted) {
     padding-bottom: 16.5em;
   }
 }

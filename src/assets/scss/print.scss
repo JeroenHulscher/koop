@@ -54,6 +54,37 @@
     flex: none;
   }
 
+  .list-custom__itembullet, .list-custom__itemtype {
+    position: absolute;
+  }
+
+  .list-custom {
+    &--size-xs > li > p > &__itemtype,
+    &--size-xs > li > p > &__itembullet {
+      left: -2.5em;
+    }
+    &--size-s > li > p > &__itemtype,
+    &--size-s > li > p > &__itembullet {
+      left: -3.5em;
+    }
+    &--size-m > li > p > &__itemtype,
+    &--size-m > li > p > &__itembullet {
+      left: -4em;
+    }
+    &--size-l > li > p > &__itemtype,
+    &--size-l > li > p > &__itembullet {
+      left: -5em;
+    }
+    &--size-xl > li > p > &__itemtype,
+    &--size-xl > li > p > &__itembullet {
+      left: -7em;
+    }
+    &--size-xxl > li > p > &__itemtype,
+    &--size-xxl > li > p > &__itembullet {
+      left: -9em;
+    }
+  }
+
 
   .header {
     border: none;

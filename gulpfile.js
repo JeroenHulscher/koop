@@ -47,14 +47,16 @@ gulp.task( 'fractal:start', function() {
 gulp.task( 'fractal:start-twig', function() {
 
   // Twig adapter
-  const twigAdapter = require( '@frctl/twig' )( {
+  const twigAdapter = require( '@geit/fractal-twig-adapter' )( {
     importContext: true
   } );
 
   // Fractal
   const fractal = require( './fractal.js' );
+
   fractal.components.engine( twigAdapter );
   fractal.components.set( 'ext', '.twig' );
+
   const logger = fractal.cli.console;
   const server = fractal.web.server( {
     sync: true,
@@ -177,6 +179,7 @@ gulp.task( 'js:build', function() {
       paths.scripts + '/vendor/fastselect.js',
       paths.scripts + '/vendor/moment.js',
       paths.scripts + '/vendor/stickybit.min.js',
+      paths.scripts + '/vendor/mutationobserver.min.js',
       paths.scripts + '/vendor/jquery-autocomplete.js',
       paths.scripts + '/vendor/validityState.polyfill.js',
       paths.scripts + '/polyfills.js',

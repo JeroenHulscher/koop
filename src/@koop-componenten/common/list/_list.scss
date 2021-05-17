@@ -5,7 +5,6 @@ ul {
 td ul {
   padding: 0;
   margin: 0;
-  list-style: none;
 
   li {
     margin: 0;
@@ -283,7 +282,11 @@ ol {
   &--size-xs > li > del > &__itembullet,
   &--size-xs > li > ins > &__itemtype,
   &--size-xs > li > ins > &__itembullet,
+  &--size-xs > li > p > &__itemtype,
+  &--size-xs > li > p > &__itembullet,
   &--size-xs > li > p > ins > &__itemtype,
+  &--size-xs > li > p > ins > &__itembullet,
+  &--size-xs > li > p > del > &__itembullet,
   &--size-xs > li > p > del > &__itemtype {
     width: 2.5em;
   }
