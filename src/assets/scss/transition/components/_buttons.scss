@@ -58,22 +58,6 @@
     font-weight: normal;
   }
 
-  &.icon-bg {
-    padding-right: 3.75em;
-    background-position: right .75em center;
-    background-repeat: no-repeat;
-
-    &:after {
-      content: "";
-      position: absolute;
-      right: 2.75em;
-      top: .6em;
-      bottom: .6em;
-      width: 1px;
-      background: $darkBlue;
-    }
-  }
-
   &.block-element {
     padding-left: 1em;
     padding-right: 1em;
