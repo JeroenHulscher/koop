@@ -1,5 +1,5 @@
 {% block prefix %}{% endblock %}
-<div class="subselection{% if modifier %} subselection--{{ modifier }}{% endif %}" data-decorator="init-form-subselection{% if buttonResetForm %} init-formreset{% endif %}" data-config='{ "type": "{{ type }}"{% if linkTextActive %}, "triggerOnChangeText": "{{ linkTextActive }}"{% endif %}{% if maxShow %}, "maxShow": "{{ maxShow }}"{% endif %}{% if selectAllOnMain %}, "selectAllOnMain": "{{ selectAllID }}"{% endif %}{% if triggerSubmit %}, "triggerSubmit": true{% endif %} }'>
+<div class="subselection{% if modifier %} subselection--{{ modifier }}{% endif %}"{% if selectType %} data-drupal-selector="subselection-{{selectType}}"{% endif %} data-decorator="init-form-subselection{% if buttonResetForm %} init-formreset{% endif %}" data-config='{ "type": "{{ type }}"{% if linkTextActive %}, "triggerOnChangeText": "{{ linkTextActive }}"{% endif %}{% if maxShow %}, "maxShow": "{{ maxShow }}"{% endif %}{% if selectAllOnMain %}, "selectAllOnMain": "{{ selectAllID }}"{% endif %}{% if triggerSubmit %}, "triggerSubmit": true{% endif %} }'>
   {% if selectAllOnMain %}
     <div class="input-checkbox">
       <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{ selectAllID }}" {% if selectAllOnMain.checked %}checked{% endif %} name="{{ selectAllOnMain.name }}" value="Alle" />
