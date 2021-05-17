@@ -12,16 +12,24 @@
     var i;
 
     for (i = 0; i < allTables.length; i++) {
-      
+
+      if (allTables[i].parentNode.classList.contains('table--container')) {
+        allTables[i].parentNode.classList.add('table__container');
+      }
       // check if the table__container already excists;
-      if (!allTables[i].parentNode.classList.contains('table__container')) {
-        
+      if (!allTables[i].parentNode.classList.contains('table__container') && !allTables[i].parentNode.classList.contains('table--container')) {
+
         // add table__container around table;
         var div = document.createElement('div');
         var container = div.cloneNode(false);
         allTables[i].parentNode.insertBefore(container, allTables[i]);
         container.classList.add('table__container');
         container.appendChild(allTables[i]);
+      }
+
+      if (allTables[i].parentNode.classList.contains('table__container')) {
+
+        container = allTables[i].parentNode;
 
         // does the table__container have a scrollbar, caused by the table inside?
         var hasHorizontalScrollbar = container.scrollWidth > container.clientWidth;
@@ -35,7 +43,7 @@
           var containerFullscreen = divFullscreen.cloneNode(false);
           container.parentNode.insertBefore(containerFullscreen, container);
           containerFullscreen.classList.add('table__container__fullscreen');
-          
+
           // create and append open-button BEFORE table__container;
           var linkEnlarge = document.createElement('button');
           linkEnlarge.innerHTML = 'Toon volledige tabel';
@@ -50,14 +58,14 @@
           var linkClose = document.createElement('button');
           linkClose.innerHTML = '<span class="visually-hidden">Sluiten grote weergave tabel</span>';
           linkClose.classList.add('table__container__closefullscreen');
-          
+
           // add table__container close INSIDE fullscreen container;
           containerFullscreen.appendChild(container);
-          
+
           // add link close INSIDE fullscreen container;
           containerFullscreen.appendChild(linkClose);
 
-          
+
 
         }
       }
