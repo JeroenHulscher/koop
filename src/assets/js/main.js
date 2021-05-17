@@ -283,7 +283,10 @@ window.onl = {
 
       decoratorArr.forEach( function( decorator ) {
         if ( typeof onl.decorators[ decorator ] === 'function' ) {
-          onl.decorators[ decorator ]( element );
+          if(!element.getAttribute('data-decorator-initialized')) {
+            onl.decorators[ decorator ]( element );
+            element.setAttribute('data-decorator-initialized', true);
+          }
         }
       });
     });
