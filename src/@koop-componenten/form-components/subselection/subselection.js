@@ -321,7 +321,6 @@ function findObjectByKey(array, key, value) {
 
   formSubselection.prototype.resetCheckboxes = function (e) {
     var y;
-    console.log('reset');
     for ( y = 0; y < this.options.length; y++ ) {
       this.options[y].checked = false;
     }
