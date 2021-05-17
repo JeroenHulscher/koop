@@ -281,7 +281,6 @@ window.onl = {
       .toLowerCase()
       .split( WHITESPACE );
 
-      console.log(element.getAttribute('data-decorator-initialized'));
       if(!element.getAttribute('data-decorator-initialized')) {
         decoratorArr.forEach( function( decorator ) {
           if ( typeof onl.decorators[ decorator ] === 'function' ) {

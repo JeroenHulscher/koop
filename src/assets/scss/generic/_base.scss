@@ -1,6 +1,7 @@
 $defaultFontFamily: 'Rijksoverheid Sans';
 $defaultFontStack: $defaultFontFamily, sans-serif;
 $fontPath: '../fonts' !default;
+$breakpointDesktopAdjusted: 65em;
 
 @font-face{
   font-family: $defaultFontFamily;
@@ -41,7 +42,7 @@ html {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
 
-  @media (min-width: $breakpointDesktop) {
+  @media (min-width: $breakpointDesktopAdjusted) {
     padding-bottom: 12em;
   }
 }
@@ -72,7 +73,7 @@ p,
   float: left;
   width: 100%;
 }
-@media (min-width: $breakpointDesktop) {
+@media (min-width: $breakpointDesktopAdjusted) {
   .footer {
     position: absolute;
     left: 0;
