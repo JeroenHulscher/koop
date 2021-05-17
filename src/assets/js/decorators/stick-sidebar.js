@@ -129,7 +129,7 @@
 
         // set height based on parents position on page. The header can vary in layout (and height), therefor we take it's parent as the guide.
         button.style.top = Math.round(newTop) + 40 + 'px';
-
+        console.log('button',button);
         el.before( button );
 
         // apply first time

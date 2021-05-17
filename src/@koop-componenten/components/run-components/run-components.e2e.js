@@ -4,7 +4,7 @@ describe('Run components', function () {
     browser.waitForAngularEnabled(false);
   });
 
-  fit('should render new components in the init state.', function () {
+  it('should render new components in the init state.', function () {
     browser.get('http://localhost:3000/components/preview/run-components');
 
     var width = 1200;
