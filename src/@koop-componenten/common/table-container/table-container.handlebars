@@ -1,8 +1,8 @@
 {{#if topbar}}
   {{ render "@table-topbar" topbar }}
 {{/if}}
-<div class="table__container {{#if modifier}}table__container--{{modifier}}{{/if}}">
+{{!-- <div class="table__container {{#if modifier}}table__container--{{modifier}}{{/if}}"> --}}
   {{#> @partial-block}}
     {{{content}}}
   {{/ @partial-block}}
-</div>
+{{!-- </div> --}}
