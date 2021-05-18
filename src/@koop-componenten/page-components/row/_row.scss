@@ -89,11 +89,15 @@ $thinBorder: .5em;
 
   &--landing {
     min-height: 15em;
-      .content--onimage {
-        padding: .5em 1em 1em;
-        margin-bottom: 2em;
-      }
+    .content--onimage {
+      padding: .5em 1em 1em;
+      margin-bottom: 2em;
     }
+  }
+
+  &--container {
+    margin-bottom: 4em;
+  }
 
   &--footer {
     background-color: $lightBlue;
