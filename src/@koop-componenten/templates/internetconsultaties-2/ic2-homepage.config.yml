@@ -1,0 +1,167 @@
+---
+label: IC - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Home
+      - url: '#'
+        text: Uitgebreid zoeken
+      - url: '#'
+        text: 'Mijn abonnementen'
+      - url: '#'
+        text: Help
+        modifier: secondary
+    youAreHere:
+      - text: Publicaties > Officiële publicaties
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+    metaLinks:
+      - profile: true
+        profileContext:
+          id: 12
+          loggedIn: false
+          buttonLogin:
+            text: Inloggen
+            anchor: true
+            action: '#'
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Denk mee over nieuwe wetten en regels
+    h: h1
+    subheading: Internetconsultatie
+    intro: Uw mening geven over nieuwe wetten en regels, voordat ze definitief worden? Dat kan. De overheid verzamelt via deze website ideeën van burgers en bedrijven over wetsvoorstellen. Dit worden consultaties genoemd. Denkt u ook mee?
+    centered: true
+    headingcentered: true
+    searchterm:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Zoekwoord
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Waar wilt u op zoeken?
+      required: true
+      requiredLabel: true
+      patterntype: text
+    selectContext:
+      modifier: select-custom--large
+      fieldLabel: Thema
+      options:
+        - label: Kies een thema
+          value:
+          selected: selected
+        - label: Bestuur
+          value: 10
+        - label: Cultuur en recreatie
+          value: 20
+        - label: Economie
+          value: 30
+        - label: Financiën
+          value: 30
+        - label: Huisvesting
+          value: 30
+        - label: Internationaal
+          value: 30
+        - label: Migratie en integratie
+          value: 30
+        - label: Natuur en milieu
+          value: 30
+        - label: Onderwijs en wetenschap
+          value: 30
+        - label: Openbare orde en veiligheid
+          value: 30
+        - label: Recht
+          value: 30
+        - label: Ruimte en infrastructuur
+          value: 30
+        - label: Sociale zekerheid
+          value: 30
+        - label: Verkeer
+          value: 30
+        - label: Werk
+          value: 30
+        - label: Zorg en gezondheid
+          value: 30
+    buttonSubmit:
+      id: 123
+      text: Zoeken
+      button: true
+      type: submit
+      modifier: button--primary form__button
+    linkPar:
+      text: Bekijk alle thema's
+  vandaag:
+    value: Woensdag 19 augustus 2020
+  browse:
+    items:
+      - link: '#'
+        text: Spoedpublicaties
+        count: 25
+        count_context: gepubliceerd
+        state: alert
+      - link: '#'
+        text: Tractatenblad
+        count: 3
+        count_context: gepubliceerd
+      - link: '#'
+        text: Staatsblad
+        count: 14
+        count_context: bekend gemaakt
+      - link: '#'
+        text: Staatscourant
+        count: 5
+        count_context: gepubliceerd
+      - link: '#'
+        text: Gemeenteblad
+        count: 40
+        count_context: gepubliceerd
+      - link: '#'
+        text: Provinciaal blad
+        count: 1923
+        count_context: gepubliceerd
+      - link: '#'
+        text: Waterschapsblad
+        count: 32
+        count_context: gepubliceerd
+      - link: '#'
+        text: Blad gemeenschappelijke regeling
+        count: 102
+        count_context: gepubliceerd
+  buttonPar:
+    anchor: true
+    action: '#'
+    text: Parlementaire documenten
+  buttonOf:
+    anchor: true
+    action: '#'
+    text: Officiële bekendmakingen
+    modifier: icon-bg icon--searchBlue
+  buttonbarContext:
+    header:
+      tag: h2
+      text: Bekijk ook
+    devided: true
+    btndouble1:
+      text: Wet- en regelgeving
+      text2: Nationaal
+      anchor: true
+      action: "https://wetten.overheid.nl"
+    btndouble2:
+      text: Wet- en regelgeving
+      text2: Lokaal
+      anchor: true
+      action: "https://www.overheid.nl/lokale-wet-en-regelgeving"
+    btndouble3:
+      text: Verdragenbank
+      text2: Internationaal
+      anchor: true
+      action: "https://verdragenbank.overheid.nl"
+
