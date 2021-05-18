@@ -1,0 +1,34 @@
+<div class="block-cards">
+  <p class="block-cards__subheading">Voor u geselecteerd</p>
+  <h2 class="block-cards__heading">Uitgelichte wetsvoorstellen</h2>
+  <div class="block-cards__intro">
+    <p>
+      Wetsvoorstellen worden uitgelicht als ze belangrijk kunnen zijn voor veel mensen. Bijvoorbeeld omdat het onderwerp nu in de samenleving speelt. Of omdat ze grote gevolgen hebben voor burgers of bedrijven. Wat is úw mening over deze voorstellen?
+    </p>
+  </div>
+  <div class="columns">
+    {{#each cards}}
+      <div class="block-cards__card">
+        <div class="block-cards__card__media">
+          <img src="/images/temp/illu-walkingdog.png" />
+        </div>
+        <div class="block-cards__card__tags">
+          {{#each labels}}
+            {{ render "@label--large" label }}
+          {{/each}}
+        </div>
+        {{#if subheading}}
+          <p class="block-cards__card__subheading">
+            {{subheading}}
+          </p>
+        {{/if}}
+        {{#if heading}}
+          <h3 class="block-cards__card__heading">{{#if heading/isLink}}<a href="#">{{/if}}{{heading/label}}{{#if heading/isLink}}</a>{{/if}}</h3>
+        {{/if}}
+        {{#if cta}}
+          <a href="{{cta/href}}" {{#if cta/id}}id="{{cta/id}}"{{/if}} class="block-cards__card__cta" {{#if cta/external}}rel="external"{{/if}}>{{cta/label}}</a>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</div>
