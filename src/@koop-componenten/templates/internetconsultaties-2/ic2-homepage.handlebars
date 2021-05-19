@@ -48,49 +48,22 @@
   </div>
 
 
-  <div class="row row--xlarge">
+  <div class="row row--container">
 
-    {{!-- <h2 class="row__heading">Omgevingen</h2> --}}
-
-    <div class="columns columns--gutter-med">
+    {{!-- <div class="columns"> --}}
+    {{!-- <div class="container columns columns--sidebar-left row"> --}}
+    <div class="containe columns columns--sidebar">
       <div class="column">
-        <h2>Welke informatie vindt u op deze website?</h2>
-        <p>
-          Op officielebekendmakingen.nl vindt u de officiële publicaties van het Staatsblad, de Staatscourant, het Tractatenblad, de
-          Gemeentebladen, Provinciale bladen, Waterschapsbladen en Bladen gemeenschappelijke regeling. Daarnaast vindt u hier alle
-          publicaties van het parlement.
-        </p>
-        <h3>Direct uitgebreid zoeken</h3>
-        <p>
-          Wilt u op een gestructureerde manier zoeken naar parlementaire documenten of officiële bekendmakingen? Dan kunt u daarvoor
-          gebruik maken van de uitgebreide zoekmogelijkheden.
-        </p>
-        <p>
-          <a href="#" class="button icon-bg icon--searchBlue">Parlementaire documenten</a><br>
-          <a href="#" class="button icon-bg icon--searchBlue">Officiële bekendmakingen</a>
-        </p>
-
-
+        {{ render "@block" block }}
       </div>
       <div class="column">
-        <h2>Recente bekendmakingen</h2>
-        <p>In totaal <a href="#">2137 publicaties</a> op vrijdag 19 augustus 2020.</p>
-         {{ render "@browse" browse }}
+        {{ render "@resultlist" }}
       </div>
     </div>
 
   </div>
 
-  <div class="row">
-    {{#> @buttonbar buttonbarContext }}
-       {{ render "@button--doubleline" btndouble1 merge=true }}
-       {{ render "@button--doubleline" btndouble2 merge=true }}
-       {{ render "@button--doubleline" btndouble3 merge=true }}
-    {{/@buttonbar}}
-  </div>
 
 </div>
-
-{{ render "@disclaimer" }}
 
 {{ render "@footer" }}

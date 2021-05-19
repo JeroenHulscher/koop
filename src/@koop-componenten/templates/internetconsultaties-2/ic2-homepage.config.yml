@@ -98,70 +98,9 @@ context:
       modifier: button--primary form__button
     linkPar:
       text: Bekijk alle thema's
-  vandaag:
-    value: Woensdag 19 augustus 2020
-  browse:
-    items:
-      - link: '#'
-        text: Spoedpublicaties
-        count: 25
-        count_context: gepubliceerd
-        state: alert
-      - link: '#'
-        text: Tractatenblad
-        count: 3
-        count_context: gepubliceerd
-      - link: '#'
-        text: Staatsblad
-        count: 14
-        count_context: bekend gemaakt
-      - link: '#'
-        text: Staatscourant
-        count: 5
-        count_context: gepubliceerd
-      - link: '#'
-        text: Gemeenteblad
-        count: 40
-        count_context: gepubliceerd
-      - link: '#'
-        text: Provinciaal blad
-        count: 1923
-        count_context: gepubliceerd
-      - link: '#'
-        text: Waterschapsblad
-        count: 32
-        count_context: gepubliceerd
-      - link: '#'
-        text: Blad gemeenschappelijke regeling
-        count: 102
-        count_context: gepubliceerd
-  buttonPar:
-    anchor: true
-    action: '#'
-    text: Parlementaire documenten
-  buttonOf:
-    anchor: true
-    action: '#'
-    text: Officiële bekendmakingen
-    modifier: icon-bg icon--searchBlue
-  buttonbarContext:
-    header:
-      tag: h2
-      text: Bekijk ook
-    devided: true
-    btndouble1:
-      text: Wet- en regelgeving
-      text2: Nationaal
-      anchor: true
-      action: "https://wetten.overheid.nl"
-    btndouble2:
-      text: Wet- en regelgeving
-      text2: Lokaal
-      anchor: true
-      action: "https://www.overheid.nl/lokale-wet-en-regelgeving"
-    btndouble3:
-      text: Verdragenbank
-      text2: Internationaal
-      anchor: true
-      action: "https://verdragenbank.overheid.nl"
+  block:
+    id: 1
+    heading: Alle lopende consultaties
+    subheading: Actuele wetsvoorstellen
+    content: '<p>In deze lijst staan alle lopende consultaties: wetsvoorstellen waar u nog op kunt reageren. Na de sluitingsdatum van een consultatie bekijkt de minister alle reacties. Soms wordt het wetsvoorstel dan aangepast.</p>'
 

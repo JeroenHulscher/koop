@@ -127,6 +127,12 @@ $breakpointDesktopAdjusted: 65em;
           &-11 {
             flex-basis: calc((100%/12)*11);
           }
+          &-1d {
+            flex-basis: 33%;
+          }
+          &-2d {
+            flex-basis: 66%;
+          }
         }
       }
     }
