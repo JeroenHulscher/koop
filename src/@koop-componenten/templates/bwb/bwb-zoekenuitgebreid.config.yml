@@ -20,6 +20,8 @@ context:
     title: "U bent hier:"
     breadcrumb:
       - text: Uitgebreid zoeken
+  alert:
+    text: De instellingen van het uitgebreid zoekscherm zijn als start zoekinstelling bewaard op uw PC
   tt1:
     id: 1123123
     label: Help?

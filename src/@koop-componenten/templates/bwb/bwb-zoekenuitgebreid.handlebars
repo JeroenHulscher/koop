@@ -7,6 +7,8 @@
 
 <div class="container row row--heading" id="content">
   <h1>Wet- en regelgeving</h1>
+
+  {{ render "@alert--success" alert merge=true }}
 </div>
 
 <form data-decorator="init-form-bwbvalidation" data-bwbvalidation-form="uitgebreid">
@@ -401,7 +403,7 @@
                       {{!-- {{ render "@datepicker" dp4 merge=true }} --}}
                       <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerEinddatum" data-validation-field="ZoekOp_Einddatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p>
                   </div>
-                  
+
               </div>
           </div>
           {{!-- <p id="ctl00_ctl00_cphContent_zoekpaginaContent_ZoekformulierUitgebreid_valideerStartdatum" class="form__error" style="display:none;">Er is een ongeldige zoekdatum opgegeven.</p> --}}

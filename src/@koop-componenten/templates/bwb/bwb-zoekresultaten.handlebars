@@ -7,49 +7,50 @@
 <script>
   var endpointResultaatOnderdelen = 'https://wetten.overheid.nl/Handlers/Onderdelen.ashx';
 </script>
-<div class="container columns columns--sticky-sidebar row">
+<form action="/submitpage">
+  <div class="container columns columns--sticky-sidebar row">
 
-  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
-    <div>
-      {{ render "@actionblock" actieblok }}
+    <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" id="toggleable-1">
+      <div>
+        {{ render "@actionblock" actieblok }}
+      </div>
+    </div>
+    <div id="content">
+
+      {{ render "@pageactions" pageactions }}
+
+      <h1>10.344 resultaten gevonden</h1>
+
+      {{ render "@sort" sort merge=true }}
+
+      <p id="ctl00_cphContent_ZoekresultaatStandaard_validatorAangevinkteElementen" class="alert alert--warning" hidden>Er zijn geen elementen aangevinkt.</p>
+
+      <h2>Wetten</h2>
+
+      {{#> @resultlist resultlist }}
+        {{#> @resultlist-item item1 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+        {{#> @resultlist-item item2 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+      {{/ @resultlist}}
+
+      <h2>Verdragen</h2>
+
+      {{#> @resultlist resultlist2 }}
+        {{#> @resultlist-item item1 }}
+          {{#> @collapsible collapsible }}
+          {{/ @collapsible}}
+        {{/ @resultlist-item}}
+      {{/ @resultlist}}
+
+    {{ render "@pagination" pagination merge=true }}
     </div>
   </div>
-  <div id="content">
-
-    {{ render "@pageactions" pageactions }}
-
-    <h1>10.344 resultaten gevonden</h1>
-
-    {{ render "@sort" sort merge=true }}
-
-    <p id="ctl00_cphContent_ZoekresultaatStandaard_validatorAangevinkteElementen" class="alert alert--warning" hidden>Er zijn geen elementen aangevinkt.</p>
-
-    <h2>Wetten</h2>
-
-    {{#> @resultlist resultlist }}
-      {{#> @resultlist-item item1 }}
-        {{#> @collapsible collapsible }}
-        {{/ @collapsible}}
-       {{/ @resultlist-item}}
-       {{#> @resultlist-item item2 }}
-        {{#> @collapsible collapsible }}
-        {{/ @collapsible}}
-      {{/ @resultlist-item}}
-    {{/ @resultlist}}
-
-    <h2>Verdragen</h2>
-
-    {{#> @resultlist resultlist2 }}
-      {{#> @resultlist-item item1 }}
-        {{#> @collapsible collapsible }}
-        {{/ @collapsible}}
-      {{/ @resultlist-item}}
-    {{/ @resultlist}}
-
-  {{ render "@pagination" pagination merge=true }}
-  </div>
-</div>
-
+</form>
 {{ render "@to-top" }}
 
 {{ render "@footer" }}
