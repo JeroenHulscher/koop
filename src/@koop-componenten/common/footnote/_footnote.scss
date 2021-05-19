@@ -8,8 +8,12 @@
     padding-top: 0;
   }
 
+  > li {
+    border: 2px solid transparent;
+  }
   > li:target {
     background-color: lighten($lightBlue,3);
+    border: 2px solid $darkBlue;
   }
 }
 
