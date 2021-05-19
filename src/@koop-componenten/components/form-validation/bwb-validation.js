@@ -1576,7 +1576,7 @@ if (typeof ValidatorUpdateDisplay == "function") {
 
 
                 var siblings = getSiblings(n);
-                
+
 
                 var errors = document.querySelectorAll('[data-validation-field]');
                 for(var i = 0; i < errors.length; i++) {
@@ -1597,6 +1597,14 @@ if (typeof ValidatorUpdateDisplay == "function") {
 
   };
 }
+
+jQuery('.js-aangevinkteelementen').on('click', function(e){
+  if(jQuery('input[name="regelingOnderdeel"]:checked').length <= 0) {
+    var errorMessage = document.getElementById('ctl00_cphContent_ZoekresultaatStandaard_validatorAangevinkteElementen');
+    errorMessage.removeAttribute('hidden');
+    e.preventDefault();
+  }
+});
 
 var formType = document.querySelector('[data-bwbvalidation-form]');
 if(formType) {

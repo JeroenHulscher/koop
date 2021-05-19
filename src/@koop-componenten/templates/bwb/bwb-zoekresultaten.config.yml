@@ -40,7 +40,8 @@ context:
         text: Alles uitvinken
         icon: icon-uncheckall.svg
         id: unmarkallAnchor
-      - link: '#'
+      - link: '/selectie/?g=18-05-2021&z=18-05-2021'
+        class: js-aangevinkteelementen
         text: Toon aanvinkte elementen
         icon: icon-arrow-right.svg
   pageactions:
