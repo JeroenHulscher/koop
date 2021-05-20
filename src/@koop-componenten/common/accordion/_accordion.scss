@@ -18,7 +18,7 @@
       &-trigger {
         background: transparent;
         border: 0;
-        padding: .75em 0 .75em 2em;
+        padding: .75em 0 .75em 2.5em;
         font-size: 1em;
         font-family: inherit;
         display: block;
@@ -34,8 +34,7 @@
           top: 0;
           width: 1.875em;
           bottom: 0;
-          background: $iconArrowDown no-repeat center center;
-          background-size: .9em;
+          background: $arrowCTAIcon no-repeat center center;
           content: "";
           pointer-events: none;
         }
@@ -44,6 +43,7 @@
         &[aria-checked="true"] {
           &:after {
             background-image: $iconArrowUpBlue;
+            background-size: 1.3em;
           }
         }
       }
@@ -51,7 +51,7 @@
 
     &__heading {
       font-size: 1em;
-      margin: 0;
+      margin: 0 !important;
       font-weight: bold;
 
       &-extra {
@@ -68,7 +68,7 @@
     }
 
     &__content {
-      padding: 1em 0 .5em 2em;
+      padding: 1em 0 .5em 2.5em;
     }
   }
 
