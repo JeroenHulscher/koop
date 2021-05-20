@@ -195,6 +195,10 @@ div.link {
     @extend .icon;
     @extend .icon--check2Blue;
   }
+  &--download {
+    @extend .icon;
+    @extend .icon--download;
+  }
 }
 
 .link-iconed {
