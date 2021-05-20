@@ -577,6 +577,7 @@ ol {
   }
 }
 
+// Deze lijst wordt gebruikt in het component: paswoord-sterkte
 .list--checked {
   list-style: none;
   padding: 0;
@@ -602,6 +603,26 @@ ol {
       &:before {
         opacity: 1;
       }
+    }
+  }
+}
+
+.list--check {
+  list-style: none;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 2em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.25em;
+      height: 1.25em;
+      background: $iconCheck2Green no-repeat;
     }
   }
 }
@@ -858,6 +879,14 @@ ol {
   }
 }
 
+.list--icons {
+  padding: 0;
+  list-style: none;
+  > li {
+    margin-bottom: 0.25em;
+  }
+}
+
 .list--iconedcontainer {
   margin: 0;
   padding: 0;
@@ -988,3 +1017,5 @@ ol {
     }
   }
 }
+
+
