@@ -42,6 +42,19 @@ $breakpointDesktopAdjusted: 65em;
       }
     }
 
+    @media ( min-width: $breakpointDesktopAdjusted ) {
+      &--1-2rd {
+        > * {
+          flex-basis: 67%;
+        }
+
+        > div:first-child {
+          flex-basis: calc(33% - 3em);
+          margin-right: 3em;
+        }
+      }
+    }
+
     &--dominant,
     &--gutter-med {
       @media ( min-width: $breakpointDesktopAdjusted ) {
