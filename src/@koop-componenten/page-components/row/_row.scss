@@ -99,6 +99,14 @@ $thinBorder: .5em;
     margin-bottom: 4em;
   }
 
+  // Gebruikt in de content/publicatie kolom;
+  &--contentcontainer {
+    margin-bottom: 4em;
+  }
+  &--contentheading {
+    margin-bottom: 3em;
+  }
+
   &--footer {
     background-color: $lightBlue;
     border-top: $fatBorder solid $mediumBlue;
