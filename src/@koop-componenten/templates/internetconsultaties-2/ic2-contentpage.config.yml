@@ -1,0 +1,127 @@
+---
+label: IC - Contentpagina
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    language: true
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  navConsultatieContext:
+    id: 3
+    items:
+    - title: Consultatie
+      sub: true
+      active: true
+      sactive: true
+      subItems:
+      - stitle: In het kort
+        href: "#section-1"
+      - stitle: Consultatiegegevens
+        href: "#section-2"
+      - stitle: Voor wie is dit belangrijk
+        href: "#section-3"
+      - stitle: Wat verandert deze wet?
+        href: "#section-4"
+      - stitle: Praktijkvoorbeelden
+        href: "#section-5"
+      - stitle: Waar kunt u op reageren?
+        href: "#section-6"
+      - stitle: Ondersteunende documenten
+        href: "#section-7"
+  navReagerenContext:
+    id: 4
+    items:
+    - title: Reageren
+      sub: true
+      active: true
+      subItems:
+      - stitle: Reageren
+        href: "#section-8"
+      - stitle: Reacties
+        href: "#section-9"
+  listDelen:
+    items:
+        - content: <a href="#" class="icon icon--facebook">Facebook</a>
+        - content: <a href="#" class="icon icon--linkedin">LinkedIn</a>
+        - content: <a href="#" class="icon icon--twitter">LinkedIn</a>
+        - content: <a href="#" class="icon icon--instagram">Instagram</a>
+        - content: <a href="#" class="icon icon--mail">E-mail</a>
+        - content: <a href="#" class="icon icon--whatsapp">Whatsapp</a>
+  pageactions:
+    items:
+    - link: '#'
+      text: Downloaden
+      icon: icon-download.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+  label1:
+    text: Consultatie gesloten
+    modifier: label--large label--danger
+  label2:
+    text: Onderwijs
+  labelStatus:
+    text: Gesloten
+    modifier: label--large label--danger
+  linkReageer:
+    text: Reageer op deze consultatie
+  linkAbonneer:
+    text: Abonneer op nieuwe consultaties
+  accordion:
+    accordionitem1:
+      headerId: header1
+      headerLabel: Consultatiegegevens
+      contentId: con1
+      content: Accordion Antwoord 1
+    accordionitem2:
+      headerId: header2
+      headerLabel: Voor wie is dit belangrijk?
+      contentId: con2
+      content: Accordion Antwoord 2
+    accordionitem3:
+      headerId: header3
+      headerLabel: Wat verandert deze wet?
+      contentId: con3
+      content: Accordion Antwoord 3
+    accordionitem4:
+      headerId: header4
+      headerLabel: Praktijkvoorbeelden
+      contentId: con4
+      content: Accordion Antwoord 4
+    accordionitem5:
+      headerId: header5
+      headerLabel: Waar kunt u op reageren?
+      contentId: con5
+      content: Accordion Antwoord 5
+    accordionitem6:
+      headerId: header6
+      headerLabel: Ondersteunende documenten
+      contentId: con6
+      content: Accordion Antwoord 6
+  sourcesContext2:
+    sourcesContext2:
+    id: 113
+    items:
+      - name: Concept regeling
+        filesize: (1kb)
+        files:
+          - type: PDF
+        buttonContext:
+          modifier:
+          button: false
+          anchor: true
+          action: http://www.google.nl
+          text: Downloaden
+      - name: Ontwerp toelichting
+        filesize: (1kb)
+        files:
+          - type: PDF
+        buttonContext:
+          modifier:
+          button: false
+          anchor: true
+          action: http://www.google.nl
+          text: Downloaden
