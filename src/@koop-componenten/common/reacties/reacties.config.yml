@@ -1,0 +1,29 @@
+---
+label: Reacties
+context:
+  id: 122
+  reacties:
+    - auteur: Anoniem
+      date: Schijndel | 16 juli 2020
+      readmore:
+        text: Lees de volledige reactie
+    - auteur: Anoniem
+      date: Schijndel | 16 juli 2020
+      readmore:
+        text: Lees de volledige reactie
+    - auteur: Meneer Abdelali Ameziane
+      date: Rotterdam | 16 juli 2020
+      content: <p>Geachte heer/mevrouw, Allereerst wens ik mijn respect en dank te uiten voor het feit dat u onze mening vraagt middels deze internetconsultatie. Dat waarderen wij uiteraard zeer, aangezien de toekomst van thuisonderwijs in Nederland ons nauw ...</p>
+      readmore:
+        text: Lees de volledige reactie
+  actions:
+    - button:
+        text: Reageren
+        action: '#'
+        anchor: true
+        modifier: button--primary
+    - button:
+        text: Bekijk alle reacties
+        action: '#'
+        anchor: true
+
