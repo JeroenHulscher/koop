@@ -28,6 +28,7 @@
 
     this.init();
     this.initEventListeners();
+    this.readHashForActions();
 
   };
 
@@ -59,6 +60,19 @@
       // this.triggers[i].addEventListener('blur', function () { this.element.classList.remove('is-focused'); }.bind(this), false);
     }
   };
+
+  accordion.prototype.readHashForActions = function (e) {
+    var hash = window.location.hash.substr(1);
+
+    // is accordion? then open the item;
+    var el = document.querySelector('#'+hash);
+    if(el.classList.contains('accordion__item')){
+      var trigger = el.querySelector('.accordion__item__header-trigger');
+      if(trigger) {
+        trigger.click();
+      }
+    }
+  }
 
   accordion.prototype.doCheckboxTriggerAction = function (e, onpageloud) {
     this.doTriggerAction(e, 'checkbox', onpageloud);
