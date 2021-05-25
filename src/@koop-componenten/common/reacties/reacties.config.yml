@@ -2,6 +2,10 @@
 label: Reacties
 context:
   id: 122
+  heading:
+      tag: h2
+      label: Reacties op deze consultatie
+      sublabel: 395 openbaar
   reacties:
     - auteur: Anoniem
       date: Schijndel | 16 juli 2020
