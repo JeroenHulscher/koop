@@ -15,39 +15,40 @@ context:
     - title: Consultatie
       sub: true
       active: true
+      sactive: true
       subItems:
       - stitle: In het kort
-        href: "#section-1"
+        href: "/components/preview/templates-ic2-contentpage#section-1"
       - stitle: Consultatiegegevens
-        href: "#section-2"
+        href: "/components/preview/templates-ic2-contentpage#sectie-consultatiegegevens"
       - stitle: Voor wie is dit belangrijk
-        href: "#section-3"
+        href: "/components/preview/templates-ic2-contentpage#sectie-watisbelangrijk"
       - stitle: Wat verandert deze wet?
-        href: "#section-4"
+        href: "/components/preview/templates-ic2-contentpage#sectie-watveranderdewet"
       - stitle: Praktijkvoorbeelden
-        href: "#section-5"
+        href: "/components/preview/templates-ic2-contentpage#sectie-praktijkvoorbeelden"
       - stitle: Waar kunt u op reageren?
-        href: "#section-6"
+        href: "/components/preview/templates-ic2-contentpage#sectie-waarkuntuopreageren"
       - stitle: Ondersteunende documenten
-        href: "#section-7"
+        href: "/components/preview/templates-ic2-contentpage#sectie-ondersteunendedocumenten"
   navReagerenContext:
     id: 4
     items:
-    - title: Reacties
-      sub: true
-      active: true
-      sactive: true
     - title: Reageren
       sub: true
-      active: true
+      subItems:
+      - stitle: Reageren
+        href: "#"
+      - stitle: Reacties
+        href: "#"
   listDelen:
     items:
-        - content: <a href="#" class="icon icon--facebook">Facebook</a>
-        - content: <a href="#" class="icon icon--linkedin">LinkedIn</a>
-        - content: <a href="#" class="icon icon--twitter">LinkedIn</a>
+        - content: <a href="https://www.facebook.com/sharer/sharer.php?u=#http://www.internetconsultaties.nl/" class="icon icon--facebook">Facebook</a>
+        - content: <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internetconsultaties.nl/&title=titel&summary=summary&source=internetconsultaties" class="icon icon--linkedin">LinkedIn</a>
+        - content: <a href="http://twitter.com/share?text=omschrijving&url=http://www.internetconsultaties.nl/&hashtags=hashtag1" class="icon icon--twitter">Twitter</a>
         - content: <a href="#" class="icon icon--instagram">Instagram</a>
-        - content: <a href="#" class="icon icon--mail">E-mail</a>
-        - content: <a href="#" class="icon icon--whatsapp">Whatsapp</a>
+        - content: <a href="mailto:?subject=onderwerp&amp;body=omschrijving" class="icon icon--mail">E-mail</a>
+        - content: <a href="whatsapp://send?text=omschrijving" class="icon icon--whatsapp">Whatsapp</a>
   pageactions:
     items:
     - link: '#'
@@ -65,55 +66,6 @@ context:
     text: Abonneer op nieuwe consultaties
   linkReageer:
     text: Reageer op deze consultatie
-  reacties:
-    id: 122
-    reacties:
-      - auteur: Anoniem
-        date: Schijndel | 16 juli 2020
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Anoniem
-        date: Schijndel | 16 juli 2020
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Meneer Abdelali Ameziane
-        date: Rotterdam | 16 juli 2020
-        content: <p>Geachte heer/mevrouw, Allereerst wens ik mijn respect en dank te uiten voor het feit dat u onze mening vraagt middels deze internetconsultatie. Dat waarderen wij uiteraard zeer, aangezien de toekomst van thuisonderwijs in Nederland ons nauw ...</p>
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Meneer Abdelali Ameziane
-        date: Egypt | 16 juli 2020
-        content: <p>As a father of a homeschooling family (Dutch-Arabic-English) I really support homeschooling for those that choose to do so for their conscience. It should be a possibility for each family that wishes to do so. The government should trust parents more ...</p>
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Dr. L Efimova
-        date: Enschede | 16 juli 2020
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Anoniem
-        date: Schijndel | 16 juli 2020
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Anoniem
-        date: Schijndel | 16 juli 2020
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Anoniem
-        date: Schijndel | 16 juli 2020
-        content: '<p>Geachte heer /mevrouw, Graag zou ik willen reageren op voorliggend wetsvoorstel. Dit wetsvoorstel miskent de geschiedenis, de achtergrond en het wezen van de vrijstellingsgrond vanwege richtingbezwaren, als uitwerking van een fundamenteel ...</p>'
-        readmore:
-          text: Lees de volledige reactie
-      - auteur: Kind Ibrahim Ameziane
-        date: Rotterdam | 16 juli 2020
-        content: '<p>Beste minister, Ik heet Ibrahim en ik ben 9 jaar. Ik krijg thuisonderwijs en ik vind dat het moet blijven. Ik vind het leuk om te fietsen, om de rubikskubus te maken, om te dammen, om presentaties te geven over dieren, om bouwplaten te maken ...</p>'
-        readmore:
-          text: Lees de volledige reactie
-    actions:
-      - button:
-          text: Reageren
-          action: '#'
-          anchor: true
-          modifier: button--primary
   listCheck:
     items:
       - content: Bent u blij, boos of verdrietig om dit voorstel? Schrijf dan duidelijk op waaróm dat zo is
@@ -150,7 +102,7 @@ context:
     fieldLabelModifier: form__label--accent
     fieldPlaceholder: Schrijf uw reactie
   buttonSubmit:
-    text: Reageren
+    text: Ga verder naar persoonsgegevens
     button: true
     inputButton: true
     type: submit

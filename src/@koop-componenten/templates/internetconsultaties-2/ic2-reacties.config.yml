@@ -15,39 +15,40 @@ context:
     - title: Consultatie
       sub: true
       active: true
+      sactive: true
       subItems:
       - stitle: In het kort
-        href: "#section-1"
+        href: "/components/preview/templates-ic2-contentpage#section-1"
       - stitle: Consultatiegegevens
-        href: "#section-2"
+        href: "/components/preview/templates-ic2-contentpage#sectie-consultatiegegevens"
       - stitle: Voor wie is dit belangrijk
-        href: "#section-3"
+        href: "/components/preview/templates-ic2-contentpage#sectie-watisbelangrijk"
       - stitle: Wat verandert deze wet?
-        href: "#section-4"
+        href: "/components/preview/templates-ic2-contentpage#sectie-watveranderdewet"
       - stitle: Praktijkvoorbeelden
-        href: "#section-5"
+        href: "/components/preview/templates-ic2-contentpage#sectie-praktijkvoorbeelden"
       - stitle: Waar kunt u op reageren?
-        href: "#section-6"
+        href: "/components/preview/templates-ic2-contentpage#sectie-waarkuntuopreageren"
       - stitle: Ondersteunende documenten
-        href: "#section-7"
+        href: "/components/preview/templates-ic2-contentpage#sectie-ondersteunendedocumenten"
   navReagerenContext:
     id: 4
     items:
-    - title: Reacties
-      sub: true
-      active: true
-      sactive: true
     - title: Reageren
       sub: true
-      active: true
+      subItems:
+      - stitle: Reageren
+        href: "#"
+      - stitle: Reacties
+        href: "#"
   listDelen:
     items:
-        - content: <a href="#" class="icon icon--facebook">Facebook</a>
-        - content: <a href="#" class="icon icon--linkedin">LinkedIn</a>
-        - content: <a href="#" class="icon icon--twitter">LinkedIn</a>
+        - content: <a href="https://www.facebook.com/sharer/sharer.php?u=#http://www.internetconsultaties.nl/" class="icon icon--facebook">Facebook</a>
+        - content: <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internetconsultaties.nl/&title=titel&summary=summary&source=internetconsultaties" class="icon icon--linkedin">LinkedIn</a>
+        - content: <a href="http://twitter.com/share?text=omschrijving&url=http://www.internetconsultaties.nl/&hashtags=hashtag1" class="icon icon--twitter">Twitter</a>
         - content: <a href="#" class="icon icon--instagram">Instagram</a>
-        - content: <a href="#" class="icon icon--mail">E-mail</a>
-        - content: <a href="#" class="icon icon--whatsapp">Whatsapp</a>
+        - content: <a href="mailto:?subject=onderwerp&amp;body=omschrijving" class="icon icon--mail">E-mail</a>
+        - content: <a href="whatsapp://send?text=omschrijving" class="icon icon--whatsapp">Whatsapp</a>
   pageactions:
     items:
     - link: '#'
@@ -65,6 +66,10 @@ context:
     text: Abonneer op nieuwe consultaties
   reacties:
     id: 122
+    heading:
+      tag: h2
+      label: Reacties op deze consultatie
+      sublabel: 395 openbaar
     reacties:
       - auteur: Anoniem
         date: Schijndel | 16 juli 2020

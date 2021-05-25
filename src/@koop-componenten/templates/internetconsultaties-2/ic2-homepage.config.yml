@@ -48,8 +48,6 @@ context:
       fieldLabelVisible: true
       fieldInstruction:
       fieldPlaceholder: Waar wilt u op zoeken?
-      required: true
-      requiredLabel: true
       patterntype: text
     selectContext:
       modifier: select-custom--large
