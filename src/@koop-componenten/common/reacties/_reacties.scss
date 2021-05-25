@@ -1,5 +1,15 @@
 .reacties {
 
+  &__heading {
+    font-size: 1.375em;
+    margin-bottom: 1.5em !important;
+  }
+  &__sublabel {
+    font-weight: normal;
+    font-style: italic;
+    display: inline-block;
+    margin-left: .5em;
+  }
 
   > ul {
     list-style: none;
@@ -14,14 +24,16 @@
 
     &-auteur {
       font-weight: bold;
-      .reacties__reactie-date {
-        margin-left: .5em;
-      }
+      display: inline-block;
     }
     &-date {
-      font-size: 0.8em;
+      margin-left: .5em;
+      display: inline-block;
+      font-size: 0.9em;
       font-weight: normal;
+      margin-left: .5em;
     }
+
     &-content {}
   }
 }
