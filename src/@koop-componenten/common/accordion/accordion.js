@@ -63,13 +63,14 @@
 
   accordion.prototype.readHashForActions = function (e) {
     var hash = window.location.hash.substr(1);
-
-    // is accordion? then open the item;
-    var el = document.querySelector('#'+hash);
-    if(el.classList.contains('accordion__item')){
-      var trigger = el.querySelector('.accordion__item__header-trigger');
-      if(trigger) {
-        trigger.click();
+    if(hash){
+      // is accordion? then open the item;
+      var el = document.querySelector('#'+hash);
+      if(el.classList.contains('accordion__item')){
+        var trigger = el.querySelector('.accordion__item__header-trigger');
+        if(trigger) {
+          trigger.click();
+        }
       }
     }
   }
@@ -127,6 +128,7 @@
         if (!isExpanded) {
           trigger.setAttribute(ariaType, 'true');
           document.getElementById(trigger.getAttribute('aria-controls')).setAttribute('aria-hidden','false');
+          trigger.scrollIntoView({behavior: "smooth"});
 
           if (!this.allowToggle) {
             trigger.setAttribute('aria-disabled', 'true');
