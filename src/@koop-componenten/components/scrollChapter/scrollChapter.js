@@ -78,14 +78,16 @@
       link = this.chapterLinks[i];
       if (link.hash !== '') {
         section = document.querySelector(link.hash);
-        offset = this.offset(section);
-        if (
-          offset.top <= fromTop &&
-          offset.top + section.offsetHeight > fromTop
-        ) {
-          link.classList.add('is-currentchapter');
-        } else {
-          link.classList.remove('is-currentchapter');
+        if(section){
+          offset = this.offset(section);
+          if (
+            offset.top <= fromTop &&
+            offset.top + section.offsetHeight > fromTop
+          ) {
+            link.classList.add('is-currentchapter');
+          } else {
+            link.classList.remove('is-currentchapter');
+          }
         }
       }
     }
