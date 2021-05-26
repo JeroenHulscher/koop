@@ -1,19 +1,26 @@
 $breakpointDesktopAdjusted: 65em;
 
 .block-cards {
+  margin-bottom: 2em;
+
   &__subheading {
     margin: 0;
     font-style: italic;
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   &__heading {
-    margin: 0 0 0.25em 0;
+    margin: 0 0 0.5em 0;
+    font-size: 1.8125em;
+    @media ( min-width: $breakpointDesktopAdjusted ) {
+      margin: 0 0 0.25em 0;
+    }
   }
   &__intro {
-    font-size: 1.2em;
 
     @media ( min-width: $breakpointDesktopAdjusted ) {
-      max-width: 40em;
+      max-width: 35em;
+      font-size: 1.2em;
+      line-height: 1.3;
     }
   }
 
@@ -40,14 +47,16 @@ $breakpointDesktopAdjusted: 65em;
     }
 
     &__tags {
-      margin: 0 0 .5em;
+      margin: 0 0 .25em;
     }
     &__subheading {
-      margin: 0 0 0.5em;
+      margin: 0 0 0.75em;
+      color: $darkGrey;
       font-style: italic;
     }
     &__heading {
       font-size: 1em;
+      line-height: 1.3;
       margin: 0 0 0.5em 0;
     }
     &__cta {
