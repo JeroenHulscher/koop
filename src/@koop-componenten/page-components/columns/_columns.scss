@@ -44,11 +44,14 @@ $breakpointDesktopAdjusted: 65em;
 
     @media ( min-width: $breakpointDesktopAdjusted ) {
       &--1-2rd {
-        > * {
+
+        > div:nth-child(2) {
+          width: 67%;
           flex-basis: 67%;
         }
 
-        > div:first-child {
+        > div:nth-child(1) {
+          width: calc(33% - 3em);
           flex-basis: calc(33% - 3em);
           margin-right: 3em;
         }
