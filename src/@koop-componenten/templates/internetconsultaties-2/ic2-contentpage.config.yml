@@ -5,10 +5,23 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-    language: true
+    navLinks:
+      - url: '#'
+        text: Over internetconsultaties
+      - url: '#'
+        text: Uitgebreid zoeken
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
     skipLinks:
       - url: '#content'
         text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Consultatie
   navConsultatieContext:
     id: 3
     items:
@@ -35,6 +48,7 @@ context:
     id: 4
     items:
     - title: Reageren
+      href: "#"
       sub: true
       subItems:
       - stitle: Reageren
@@ -46,7 +60,6 @@ context:
         - content: <a href="https://www.facebook.com/sharer/sharer.php?u=#http://www.internetconsultaties.nl/" class="icon icon--facebook">Facebook</a>
         - content: <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internetconsultaties.nl/&title=titel&summary=summary&source=internetconsultaties" class="icon icon--linkedin">LinkedIn</a>
         - content: <a href="http://twitter.com/share?text=omschrijving&url=http://www.internetconsultaties.nl/&hashtags=hashtag1" class="icon icon--twitter">Twitter</a>
-        - content: <a href="#" class="icon icon--instagram">Instagram</a>
         - content: <a href="mailto:?subject=onderwerp&amp;body=omschrijving" class="icon icon--mail">E-mail</a>
         - content: <a href="whatsapp://send?text=omschrijving" class="icon icon--whatsapp">Whatsapp</a>
   pageactions:
@@ -67,6 +80,7 @@ context:
   linkAbonneer:
     text: Abonneer op nieuwe consultaties
   accordion:
+    config: '{"allowMultiplePanelsOpen": false}'
     accordionitem1:
       itemId: sectie-consultatiegegevens
       headerId: header1

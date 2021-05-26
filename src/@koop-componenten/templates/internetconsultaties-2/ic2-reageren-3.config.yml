@@ -1,5 +1,5 @@
 ---
-label: IC - Reageren
+label: IC - Reageren (persoonsgegevens)
 status: ready
 context:
   header:
@@ -81,50 +81,34 @@ context:
     text: Abonneer op nieuwe consultaties
   linkReageer:
     text: Reageer op deze consultatie
-  listCheck:
-    items:
-      - content: Bent u blij, boos of verdrietig om dit voorstel? Schrijf dan duidelijk op waaróm dat zo is
-      - content: Verwijs naar onderdelen van de wet door deze stukken te kopiëren in uw antwoord
-      - content: Onderbouw je mening of idee met feiten
-  reactiesoort:
-    options:
-      - id: 1
-        name: subject
-        checked: checked
-        text: Vrije invoer
-        linkedto: 2
-      - id: 2
-        text: Vragen beantwoorden
-        name: subject
-        linkedto: 3
-      - id: 3
-        text: Document uploaden
-        name: subject
-        linkedto: 4
-  textareaContext:
-    id: 543
-    fieldLabel: Uw reactie
-    fieldLabelModifier: form__label--accent
-    fieldPlaceholder: Schrijf uw reactie
-  textareaContext2:
-    id: 544
-    fieldLabel: Vraag 1
-    fieldLabelModifier: form__label--accent
-    fieldPlaceholder: Schrijf uw reactie
-  textareaContext3:
-    id: 545
-    fieldLabel: Vraag 2
-    fieldLabelModifier: form__label--accent
-    fieldPlaceholder: Schrijf uw reactie
   buttonSubmit:
-    text: Ga verder naar persoonsgegevens
+    text: Inzenden
     button: true
     inputButton: true
     type: submit
     modifier: button--primary
+  buttonVorige:
+    text: Vorige stap
+    button: true
+    inputButton: true
+    type: submit
+    modifier: button--icon-left
   steps:
     steps:
       - title: Uw reactie
-        active: true
       - title: Uw gegevens
       - title: Controleren
+        active: true
+  sl:
+    id: 113
+    items:
+      - name: 2021-advertentie-denhaag-5.pdf
+        filesize: (121kb)
+        files:
+          - type: PDF
+        buttonContext:
+          modifier:
+          button: false
+          anchor: true
+          action: http://www.google.nl
+          text: Downloaden

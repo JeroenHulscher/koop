@@ -7,28 +7,14 @@ context:
     alt: Overheid.nl logo
     navLinks:
       - url: '#'
-        text: Home
+        text: Over internetconsultaties
       - url: '#'
         text: Uitgebreid zoeken
-      - url: '#'
-        text: 'Mijn abonnementen'
-      - url: '#'
-        text: Help
-        modifier: secondary
     youAreHere:
-      - text: Publicaties > Officiële publicaties
+      - text: Wegwijzer naar informatie en diensten van alle overheden
     skipLinks:
       - url: '#content'
         text: Direct naar content
-    metaLinks:
-      - profile: true
-        profileContext:
-          id: 12
-          loggedIn: false
-          buttonLogin:
-            text: Inloggen
-            anchor: true
-            action: '#'
   breadcrumb:
     title: "U bent hier:"
     breadcrumb:

@@ -2,7 +2,7 @@
 
 <div class="row row--page-opener">
   <div class="container">
-    {{ render "@breadcrumb" }}
+    {{ render "@breadcrumb" breadcrumb }}
   </div>
 </div>
 
@@ -15,8 +15,6 @@
       </p>
 
       {{render "@nav" navConsultatieContext }}
-
-      <h3 class="nav-sub__heading">Reageren</h3>
 
       {{render "@nav" navReagerenContext }}
 
@@ -37,9 +35,10 @@
 
   <div role="main" id="content" class="content content--publication">
 
-
+    <div class="row--contentheading">
       <h1>Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden</h1>
       <p>{{ render "@label--danger" label1 merge=true }} {{ render "@label--large" label2 merge=true }}</p>
+    </div>
 
     <div class="row--contentcontainer">
       <p class="p-intro">
@@ -57,6 +56,8 @@
       </p>
       {{ render "@list--check" listCheck merge=true }}
     </div>
+
+    {{ render "@steps" steps }}
 
     <form>
       <div class="form-conditionals" data-decorator="init-form-conditionals">

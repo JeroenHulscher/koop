@@ -1,5 +1,5 @@
 ---
-label: IC - Reageren
+label: IC - Reageren (persoonsgegevens)
 status: ready
 context:
   header:
@@ -81,50 +81,77 @@ context:
     text: Abonneer op nieuwe consultaties
   linkReageer:
     text: Reageer op deze consultatie
-  listCheck:
-    items:
-      - content: Bent u blij, boos of verdrietig om dit voorstel? Schrijf dan duidelijk op waaróm dat zo is
-      - content: Verwijs naar onderdelen van de wet door deze stukken te kopiëren in uw antwoord
-      - content: Onderbouw je mening of idee met feiten
-  reactiesoort:
+  inputemail:
+    id: 44
+    fieldPlaceholder: "E-mail"
+    fieldLabelVisible: true
+    fieldLabel: E-mailadres
+    required: true
+    requiredLabel: true
+  inputemail2:
+    id: 45
+    fieldPlaceholder: "Herhaal e-mailadres"
+    fieldLabelVisible: true
+    fieldLabel: Herhaal e-mailadres
+    required: true
+    requiredLabel: true
+  inputtitel:
+    id: 46
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Titel
+  inputvoorletters:
+    id: 47
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Voorletters
+    required: true
+    requiredLabel: true
+  inputachternaam:
+    id: 48
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Achternaam
+    required: true
+    requiredLabel: true
+  inputbedrijfsnaam:
+    id: 50
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Bedrijfsnaam
+  inputplaats:
+    id: 51
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Plaats
+    required: true
+    requiredLabel: true
+  checkboxContent:
     options:
-      - id: 1
-        name: subject
-        checked: checked
-        text: Vrije invoer
-        linkedto: 2
-      - id: 2
-        text: Vragen beantwoorden
-        name: subject
-        linkedto: 3
-      - id: 3
-        text: Document uploaden
-        name: subject
-        linkedto: 4
-  textareaContext:
-    id: 543
-    fieldLabel: Uw reactie
-    fieldLabelModifier: form__label--accent
-    fieldPlaceholder: Schrijf uw reactie
-  textareaContext2:
-    id: 544
-    fieldLabel: Vraag 1
-    fieldLabelModifier: form__label--accent
-    fieldPlaceholder: Schrijf uw reactie
-  textareaContext3:
-    id: 545
-    fieldLabel: Vraag 2
-    fieldLabelModifier: form__label--accent
-    fieldPlaceholder: Schrijf uw reactie
+      - id: checkbox-1
+        text: 'Ik heb de <a href="#">algemene voorwaarden</a> gelezen en ik ga hiermee akkoord..'
+        name: countries
+        arguments: required
+      - id: checkbox-2
+        text: 'Ik ga akkoord met de verwerking van mijn persoonsgegevens volgens het <a href="#">privacystatement</a>.'
+        name: countries
+        arguments: required
   buttonSubmit:
-    text: Ga verder naar persoonsgegevens
+    text: Ga verder naar de samenvatting
     button: true
     inputButton: true
     type: submit
     modifier: button--primary
+  buttonVorige:
+    text: Vorige stap
+    button: true
+    inputButton: true
+    type: submit
+    modifier: button--icon-left
   steps:
     steps:
       - title: Uw reactie
-        active: true
       - title: Uw gegevens
+        active: true
       - title: Controleren
+

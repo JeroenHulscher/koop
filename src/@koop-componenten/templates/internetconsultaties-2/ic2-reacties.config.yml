@@ -5,17 +5,30 @@ context:
   header:
     file: logo.svg
     alt: Overheid.nl logo
-    language: true
+    navLinks:
+      - url: '#'
+        text: Over internetconsultaties
+      - url: '#'
+        text: Uitgebreid zoeken
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
     skipLinks:
       - url: '#content'
         text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Consultatie
+        url: '#'
+      - text: Reacties
   navConsultatieContext:
     id: 3
     items:
     - title: Consultatie
       sub: true
-      active: true
-      sactive: true
       subItems:
       - stitle: In het kort
         href: "/components/preview/templates-ic2-contentpage#section-1"
@@ -35,18 +48,20 @@ context:
     id: 4
     items:
     - title: Reageren
+      href: "#"
       sub: true
+      active: true
       subItems:
       - stitle: Reageren
         href: "#"
       - stitle: Reacties
         href: "#"
+        sactive: true
   listDelen:
     items:
         - content: <a href="https://www.facebook.com/sharer/sharer.php?u=#http://www.internetconsultaties.nl/" class="icon icon--facebook">Facebook</a>
         - content: <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internetconsultaties.nl/&title=titel&summary=summary&source=internetconsultaties" class="icon icon--linkedin">LinkedIn</a>
         - content: <a href="http://twitter.com/share?text=omschrijving&url=http://www.internetconsultaties.nl/&hashtags=hashtag1" class="icon icon--twitter">Twitter</a>
-        - content: <a href="#" class="icon icon--instagram">Instagram</a>
         - content: <a href="mailto:?subject=onderwerp&amp;body=omschrijving" class="icon icon--mail">E-mail</a>
         - content: <a href="whatsapp://send?text=omschrijving" class="icon icon--whatsapp">Whatsapp</a>
   pageactions:
