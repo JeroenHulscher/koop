@@ -6,4 +6,19 @@ context:
   headerLabel: Accordion Item Vraag 1
   contentId: con1
   content: Accordion Item Antwoord 1
-  type: checkbox
+variants:
+  - name: Checkbox
+    label: checkbox
+    context:
+      type: checkbox
+      headerId: header12
+      headerLabel: Accordion Vraag 12
+      contentId: con12
+      content: Accordion Antwoord 12
+      accordionCheckbox:
+        options:
+        - id: header1
+          text: Agenda's
+          name: countries
+          inputClass: accordion__item__header-checkboxtrigger
+          arguments: aria-controls="con12" id="option-header1" aria-checked="false"
