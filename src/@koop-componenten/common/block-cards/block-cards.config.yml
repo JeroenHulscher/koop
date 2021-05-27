@@ -6,6 +6,12 @@ context:
     - heading:
         label: Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden
       subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+      figure:
+        figcaption: false
+        source: false
+        picture:
+          src: ../../images/temp/illu-walkingdog.png
+          alt: alt text
       labels:
         - label:
             text: Onderwijs
@@ -18,6 +24,12 @@ context:
     - heading:
         label: Wet deelgezag
       subheading: Ministerie van Justitie en Veiligheid
+      figure:
+        figcaption: false
+        source: false
+        picture:
+          src: ../../images/temp/illu-walkingdog.png
+          alt: alt text
       labels:
         - label:
             text: Gezien
@@ -30,6 +42,12 @@ context:
     - heading:
         label: Wijziging van o.a. het EKB WEB i.v.m. de uitwerking van het taalschakeltraject als onderwijsroute inburgering en de examinering Nt2
       subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+      figure:
+        figcaption: false
+        source: false
+        picture:
+          src: ../../images/temp/illu-walkingdog.png
+          alt: alt text
       labels:
         - label:
             text: Onderwijs

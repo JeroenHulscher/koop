@@ -9,9 +9,11 @@
   <div class="columns">
     {{#each cards}}
       <div class="block-cards__card">
-        <div class="block-cards__card__media">
-          <img src="/images/temp/illu-walkingdog.png" />
-        </div>
+        {{#if figure}}
+          <div class="block-cards__card__media">
+            {{ render "@figure" figure }}
+          </div>
+        {{/if}}
         <div class="block-cards__card__tags">
           {{#each labels}}
             {{ render "@label--large" label }}
