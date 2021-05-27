@@ -4,5 +4,5 @@
     <small>{{ fieldInstruction }}</small>
   {{/if }}
 
-  <textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" rows="{{ rows }}"></textarea>
+  <textarea id="textarea--{{ id }}" placeholder="{{ fieldPlaceholder }}" {{#if rows}}rows="{{ rows }}"{{/if}}></textarea>
 {{!-- </div> --}}
