@@ -1,0 +1,134 @@
+---
+label: IC - Reacties
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Over internetconsultaties
+      - url: '#'
+        text: Uitgebreid zoeken
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Consultatie
+        url: '#'
+      - text: Reacties
+  navConsultatieContext:
+    id: 3
+    items:
+    - title: Consultatie
+      sub: true
+      subItems:
+      - stitle: In het kort
+        href: "/components/preview/templates-ic2-contentpage#section-1"
+      - stitle: Consultatiegegevens
+        href: "/components/preview/templates-ic2-contentpage#sectie-consultatiegegevens"
+      - stitle: Voor wie is dit belangrijk
+        href: "/components/preview/templates-ic2-contentpage#sectie-watisbelangrijk"
+      - stitle: Wat verandert deze wet?
+        href: "/components/preview/templates-ic2-contentpage#sectie-watveranderdewet"
+      - stitle: Praktijkvoorbeelden
+        href: "/components/preview/templates-ic2-contentpage#sectie-praktijkvoorbeelden"
+      - stitle: Waar kunt u op reageren?
+        href: "/components/preview/templates-ic2-contentpage#sectie-waarkuntuopreageren"
+      - stitle: Ondersteunende documenten
+        href: "/components/preview/templates-ic2-contentpage#sectie-ondersteunendedocumenten"
+  navReagerenContext:
+    id: 4
+    items:
+    - title: Reageren
+      href: "#"
+      sub: true
+      active: true
+      subItems:
+      - stitle: Reageren
+        href: "#"
+      - stitle: Reacties
+        href: "#"
+        sactive: true
+  listDelen:
+    items:
+        - content: <a href="https://www.facebook.com/sharer/sharer.php?u=#http://www.internetconsultaties.nl/" class="icon icon--facebook">Facebook</a>
+        - content: <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internetconsultaties.nl/&title=titel&summary=summary&source=internetconsultaties" class="icon icon--linkedin">LinkedIn</a>
+        - content: <a href="http://twitter.com/share?text=omschrijving&url=http://www.internetconsultaties.nl/&hashtags=hashtag1" class="icon icon--twitter">Twitter</a>
+        - content: <a href="mailto:?subject=onderwerp&amp;body=omschrijving" class="icon icon--mail">E-mail</a>
+        - content: <a href="whatsapp://send?text=omschrijving" class="icon icon--whatsapp">Whatsapp</a>
+  pageactions:
+    items:
+    - link: '#'
+      text: Downloaden
+      icon: icon-download.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+  label1:
+    text: Consultatie gesloten
+    modifier: label--large label--danger
+  label2:
+    text: Onderwijs
+  linkAbonneer:
+    text: Abonneer op nieuwe consultaties
+  reacties:
+    id: 122
+    heading:
+      tag: h2
+      label: Reacties op deze consultatie
+      sublabel: 395 openbaar
+    reacties:
+      - auteur: Anoniem
+        date: Schijndel | 16 juli 2020
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Anoniem
+        date: Schijndel | 16 juli 2020
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Meneer Abdelali Ameziane
+        date: Rotterdam | 16 juli 2020
+        content: <p>Geachte heer/mevrouw, Allereerst wens ik mijn respect en dank te uiten voor het feit dat u onze mening vraagt middels deze internetconsultatie. Dat waarderen wij uiteraard zeer, aangezien de toekomst van thuisonderwijs in Nederland ons nauw ...</p>
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Meneer Abdelali Ameziane
+        date: Egypt | 16 juli 2020
+        content: <p>As a father of a homeschooling family (Dutch-Arabic-English) I really support homeschooling for those that choose to do so for their conscience. It should be a possibility for each family that wishes to do so. The government should trust parents more ...</p>
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Dr. L Efimova
+        date: Enschede | 16 juli 2020
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Anoniem
+        date: Schijndel | 16 juli 2020
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Anoniem
+        date: Schijndel | 16 juli 2020
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Anoniem
+        date: Schijndel | 16 juli 2020
+        content: '<p>Geachte heer /mevrouw, Graag zou ik willen reageren op voorliggend wetsvoorstel. Dit wetsvoorstel miskent de geschiedenis, de achtergrond en het wezen van de vrijstellingsgrond vanwege richtingbezwaren, als uitwerking van een fundamenteel ...</p>'
+        readmore:
+          text: Lees de volledige reactie
+      - auteur: Kind Ibrahim Ameziane
+        date: Rotterdam | 16 juli 2020
+        content: '<p>Beste minister, Ik heet Ibrahim en ik ben 9 jaar. Ik krijg thuisonderwijs en ik vind dat het moet blijven. Ik vind het leuk om te fietsen, om de rubikskubus te maken, om te dammen, om presentaties te geven over dieren, om bouwplaten te maken ...</p>'
+        readmore:
+          text: Lees de volledige reactie
+    actions:
+      - button:
+          text: Reageren
+          action: '#'
+          anchor: true
+          modifier: button--primary

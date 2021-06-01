@@ -206,3 +206,14 @@ variants:
       items:
         - content: <a href="#" class="is-selected">Tab 1</a>
         - content: <a href="#">Tab 2</a>
+  - name: Icons
+    label: Icoons
+    context:
+      modifier: list--icons
+      items:
+        - content: <a href="#" class="icon icon--facebook">Facebook</a>
+        - content: <a href="#" class="icon icon--linkedin">LinkedIn</a>
+  - name: Check
+    label: check
+    context:
+      modifier: list--check

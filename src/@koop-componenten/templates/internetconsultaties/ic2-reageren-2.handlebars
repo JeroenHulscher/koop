@@ -1,0 +1,108 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+      </p>
+
+      {{render "@nav" navConsultatieContext }}
+
+      {{render "@nav" navReagerenContext }}
+
+      <h3 class="nav-sub__heading">Delen</h3>
+
+      {{ render "@list--icons" listDelen merge=true }}
+
+      <h3 class="nav-sub__heading">Abonneren</h3>
+      <p>
+        Op de hoogte blijven van wetsvoorstellen waar u interesse in heeft?
+      </p>
+      <p>
+        {{ render "@link--mail" linkAbonneer merge=true }}
+      </p>
+
+    </div>
+  </div>
+
+  <div role="main" id="content" class="content content--publication">
+
+    <div class="row--contentheading">
+      <h1>Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden</h1>
+      <p>{{ render "@label--danger" label1 merge=true }} {{ render "@label--large" label2 merge=true }}</p>
+    </div>
+
+    {{ render "@steps" steps }}
+
+    <form>
+      <fieldset>
+        <legend>Reageren op consultatie</legend>
+        <p>
+          Een e-mailadres kan maar één keer gebruikt worden per consultatie. Na het versturen van uw reactie krijgt u een bevestiging toegestuurd naar het e-mailadres dat u hier opgeeft. In deze bevestigingsmail staat een link naar de consultatie website die u moet aanklikken om uw reactie te bevestigen. Dit om misbruik van de site tegen te gaan. Het is daarom van belang dat u hier uw e-mailadres juist invult.
+        </p>
+        <div class="form__row">
+          {{ render "@input-text--email" inputemail }}
+        </div>
+        <div class="form__row">
+          {{ render "@input-text--email" inputemail2 }}
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Persoonlijke gegevens</legend>
+
+        <p>
+          Anoniem reageren op een consultatie is niet toegestaan. Daarom dient u hier uw naam en woonplaats op te geven. Uw gegevens worden gebruikt voor het verwerken van de inzending. Meer informatie vindt u in het <a href="#">privacystatement</a>.
+        </p>
+        <p>
+          Uw reactie wordt onder vermelding van uw organisatienaam (indien van toepassing), voorletter, achternaam en plaats gepubliceerd op de website. Als u niet wilt dat uw reactie op de site wordt gepubliceerd kunt u dit hieronder aangeven. Uw reactie wordt in dat geval niet gepubliceerd behoudens de verantwoordelijkheid van de overheid op grond van een wettelijke informatieverplichting of rechterlijke uitspraak.
+        </p>
+
+        <div class="form__row">
+          {{ render "@input-text" inputtitel }}
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="form__row">
+              {{ render "@input-text" inputvoorletters }}
+            </div>
+          </div>
+          <div class="column">
+            <div class="form__row">
+              {{ render "@input-text" inputachternaam }}
+            </div>
+          </div>
+        </div>
+        <div class="form__row">
+          {{ render "@input-text" inputbedrijfsnaam }}
+        </div>
+        <div class="form__row">
+          {{ render "@input-text" inputplaats }}
+        </div>
+        <div class="form__row">
+          {{ render "@input-checkbox" checkboxContent }}
+        </div>
+
+        <div class="form__row">
+          {{ render "@button" buttonVorige }}
+          {{ render "@button" buttonSubmit }}
+        </div>
+
+
+      </fieldset>
+    </form>
+
+
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

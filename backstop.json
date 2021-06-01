@@ -455,6 +455,36 @@
       "label": "bkw - templates-bkw-optout-feedback",
       "url": "http://localhost:3000/components/preview/templates-bkw-optout-feedback",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-bkw-optout-feedback.html"
+    },
+    {
+      "label": "ic2-homepage",
+      "url": "http://localhost:3000/components/preview/templates-ic2-homepage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-homepage.html"
+    },
+    {
+      "label": "ic2-contentpage",
+      "url": "http://localhost:3000/components/preview/templates-ic2-contentpage",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-contentpage.html"
+    },
+    {
+      "label": "ic2-reacties",
+      "url": "http://localhost:3000/components/preview/templates-ic2-reacties",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-reacties.html"
+    },
+    {
+      "label": "ic2-reageren",
+      "url": "http://localhost:3000/components/preview/templates-ic2-reageren",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-reageren.html"
+    },
+    {
+      "label": "ic2-reageren-2",
+      "url": "http://localhost:3000/components/preview/templates-ic2-reageren-2",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-reageren-2.html"
+    },
+    {
+      "label": "ic2-reageren-3",
+      "url": "http://localhost:3000/components/preview/templates-ic2-reageren-3",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-reageren-3.html"
     }
   ],
   "paths": {

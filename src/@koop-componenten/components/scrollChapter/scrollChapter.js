@@ -12,7 +12,7 @@
     this.config = JSON.parse(this.element.getAttribute('data-config')) || [];
 
     this.chapterLinks = this.config.chapterLinks || document.querySelectorAll('.nav-sub a');
-    this.chapters = this.config.chapters || document.querySelectorAll('.js-scrollSection');
+    // this.chapters = this.config.chapters || document.querySelectorAll('.js-scrollSection');
     this.lastId;
     this.cur = [];
 
@@ -21,6 +21,11 @@
   };
 
   scrollChapter.prototype.initEventListeners = function() {
+    var y;
+
+    for (y = 0; y < this.chapterLinks.length; y++) {
+      this.chapterLinks[y].addEventListener('click', function (e) { this.chapterLinksClickhandler(e); }.bind(this), false);
+    }
 
     window.addEventListener('scroll', function(e) {
       var self = this;
@@ -36,6 +41,24 @@
      }.bind(this), false);
 
   };
+
+  scrollChapter.prototype.chapterLinksClickhandler = function(el){
+    var target;
+    var targetHash = el.target.hash;
+
+    // check if the hash destination is linked to an accordion item, if so; open the accordion item.
+    if(targetHash != "") {
+      target = document.getElementById(targetHash.substring(1));
+      if(target.getAttribute('class') === 'accordion__item') {
+        var trigger = target.querySelector('.accordion__item__header-trigger');
+        if(trigger) {
+          if(trigger.getAttribute('aria-expanded') === 'false') {
+            trigger.click();
+          }
+        }
+      }
+    }
+  }
 
   scrollChapter.prototype.offset = function(el){
     var rect = el.getBoundingClientRect(),
@@ -55,14 +78,16 @@
       link = this.chapterLinks[i];
       if (link.hash !== '') {
         section = document.querySelector(link.hash);
-        offset = this.offset(section);
-        if (
-          offset.top <= fromTop &&
-          offset.top + section.offsetHeight > fromTop
-        ) {
-          link.classList.add('is-currentchapter');
-        } else {
-          link.classList.remove('is-currentchapter');
+        if(section){
+          offset = this.offset(section);
+          if (
+            offset.top <= fromTop &&
+            offset.top + section.offsetHeight > fromTop
+          ) {
+            link.classList.add('is-currentchapter');
+          } else {
+            link.classList.remove('is-currentchapter');
+          }
         }
       }
     }

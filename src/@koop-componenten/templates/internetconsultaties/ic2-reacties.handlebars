@@ -1,0 +1,53 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+      </p>
+
+      {{render "@nav" navConsultatieContext }}
+
+      {{render "@nav" navReagerenContext }}
+
+      <h3 class="nav-sub__heading">Delen</h3>
+
+      {{ render "@list--icons" listDelen merge=true }}
+
+      <h3 class="nav-sub__heading">Abonneren</h3>
+      <p>
+        Op de hoogte blijven van wetsvoorstellen waar u interesse in heeft?
+      </p>
+      <p>
+        {{ render "@link--mail" linkAbonneer merge=true }}
+      </p>
+
+    </div>
+  </div>
+
+  <div role="main" id="content" class="content content--publication">
+
+    <div class="row--contentheading">
+      <h1>Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden</h1>
+      <p>{{ render "@label--danger" label1 merge=true }} {{ render "@label--large" label2 merge=true }}</p>
+      {{ render "@sort--with-amount" }}
+    </div>
+
+
+    {{ render "@reacties" reacties }}
+
+    {{ render "@pagination" }}
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

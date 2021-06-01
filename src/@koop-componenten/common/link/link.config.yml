@@ -80,5 +80,11 @@ variants:
       text: Account activeren
       action: '#'
       class: link link--check
+  - name: Download
+    label: download
+    context:
+      text: Download
+      action: '#'
+      class: link link--download
 
 

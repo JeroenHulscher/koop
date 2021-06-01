@@ -1,0 +1,157 @@
+---
+label: IC - Reageren (persoonsgegevens)
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Over internetconsultaties
+      - url: '#'
+        text: Uitgebreid zoeken
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    breadcrumb:
+      - text: Zoeken
+        url: '#'
+      - text: Zoekresultaten
+        url: '#'
+      - text: Consultatie
+        url: '#'
+      - text: Reageren
+  navConsultatieContext:
+    id: 3
+    items:
+    - title: Consultatie
+      sub: true
+      subItems:
+      - stitle: In het kort
+        href: "/components/preview/templates-ic2-contentpage#section-1"
+      - stitle: Consultatiegegevens
+        href: "/components/preview/templates-ic2-contentpage#sectie-consultatiegegevens"
+      - stitle: Voor wie is dit belangrijk
+        href: "/components/preview/templates-ic2-contentpage#sectie-watisbelangrijk"
+      - stitle: Wat verandert deze wet?
+        href: "/components/preview/templates-ic2-contentpage#sectie-watveranderdewet"
+      - stitle: Praktijkvoorbeelden
+        href: "/components/preview/templates-ic2-contentpage#sectie-praktijkvoorbeelden"
+      - stitle: Waar kunt u op reageren?
+        href: "/components/preview/templates-ic2-contentpage#sectie-waarkuntuopreageren"
+      - stitle: Ondersteunende documenten
+        href: "/components/preview/templates-ic2-contentpage#sectie-ondersteunendedocumenten"
+  navReagerenContext:
+    id: 4
+    items:
+    - title: Reageren
+      href: "#"
+      sub: true
+      active: true
+      subItems:
+      - stitle: Reageren
+        href: "#"
+        sactive: true
+      - stitle: Reacties
+        href: "#"
+  listDelen:
+    items:
+        - content: <a href="https://www.facebook.com/sharer/sharer.php?u=#http://www.internetconsultaties.nl/" class="icon icon--facebook">Facebook</a>
+        - content: <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.internetconsultaties.nl/&title=titel&summary=summary&source=internetconsultaties" class="icon icon--linkedin">LinkedIn</a>
+        - content: <a href="http://twitter.com/share?text=omschrijving&url=http://www.internetconsultaties.nl/&hashtags=hashtag1" class="icon icon--twitter">Twitter</a>
+        - content: <a href="mailto:?subject=onderwerp&amp;body=omschrijving" class="icon icon--mail">E-mail</a>
+        - content: <a href="whatsapp://send?text=omschrijving" class="icon icon--whatsapp">Whatsapp</a>
+  pageactions:
+    items:
+    - link: '#'
+      text: Downloaden
+      icon: icon-download.svg
+    - link: '#'
+      text: Printen
+      icon: icon-print-blue.svg
+  label1:
+    text: Consultatie gesloten
+    modifier: label--large label--danger
+  label2:
+    text: Onderwijs
+  linkAbonneer:
+    text: Abonneer op nieuwe consultaties
+  linkReageer:
+    text: Reageer op deze consultatie
+  inputemail:
+    id: 44
+    fieldPlaceholder: "E-mail"
+    fieldLabelVisible: true
+    fieldLabel: E-mailadres
+    required: true
+    requiredLabel: true
+  inputemail2:
+    id: 45
+    fieldPlaceholder: "Herhaal e-mailadres"
+    fieldLabelVisible: true
+    fieldLabel: Herhaal e-mailadres
+    required: true
+    requiredLabel: true
+  inputtitel:
+    id: 46
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Titel
+  inputvoorletters:
+    id: 47
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Voorletters
+    required: true
+    requiredLabel: true
+  inputachternaam:
+    id: 48
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Achternaam
+    required: true
+    requiredLabel: true
+  inputbedrijfsnaam:
+    id: 50
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Bedrijfsnaam
+  inputplaats:
+    id: 51
+    fieldPlaceholder: ""
+    fieldLabelVisible: true
+    fieldLabel: Plaats
+    required: true
+    requiredLabel: true
+  checkboxContent:
+    options:
+      - id: checkbox-1
+        text: 'Ik heb de <a href="#">algemene voorwaarden</a> gelezen en ik ga hiermee akkoord..'
+        name: countries
+        arguments: required
+      - id: checkbox-2
+        text: 'Ik ga akkoord met de verwerking van mijn persoonsgegevens volgens het <a href="#">privacystatement</a>.'
+        name: countries
+        arguments: required
+  buttonSubmit:
+    text: Ga verder naar de samenvatting
+    button: true
+    inputButton: true
+    type: submit
+    modifier: button--primary
+  buttonVorige:
+    text: Vorige stap
+    button: true
+    inputButton: true
+    type: submit
+    modifier: button--icon-left
+  steps:
+    steps:
+      - title: Uw reactie
+      - title: Uw gegevens
+        active: true
+      - title: Controleren
+

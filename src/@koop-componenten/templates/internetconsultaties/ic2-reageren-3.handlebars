@@ -1,0 +1,111 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+      </p>
+
+      {{render "@nav" navConsultatieContext }}
+
+      {{render "@nav" navReagerenContext }}
+
+      <h3 class="nav-sub__heading">Delen</h3>
+
+      {{ render "@list--icons" listDelen merge=true }}
+
+      <h3 class="nav-sub__heading">Abonneren</h3>
+      <p>
+        Op de hoogte blijven van wetsvoorstellen waar u interesse in heeft?
+      </p>
+      <p>
+        {{ render "@link--mail" linkAbonneer merge=true }}
+      </p>
+
+    </div>
+  </div>
+
+  <div role="main" id="content" class="content content--publication">
+
+    <div class="row--contentheading">
+      <h1>Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden</h1>
+      <p>{{ render "@label--danger" label1 merge=true }} {{ render "@label--large" label2 merge=true }}</p>
+    </div>
+
+    {{ render "@steps" steps }}
+
+    <form>
+
+      <h2>Uw gegevens</h2>
+      <p>
+        U heeft onderstaande gegevens opgegeven.
+      </p>
+      <p>
+        Gebruik de knop 'Vorige stap' als u deze gegevens wilt wijzigen.
+      </p>
+
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">E-mailadres</th>
+            <td>gebruiker@domein.nl</td>
+          </tr>
+          <tr>
+            <th scope="row">Titel</th>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">Voorletters</th>
+            <td>A.</td>
+          </tr>
+          <tr>
+            <th scope="row">Achternaam</th>
+            <td>de Beer</td>
+          </tr>
+          <tr>
+            <th scope="row">Bedrijfsnaam</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Plaats</th>
+            <td>Den Haag</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Ingestuurd document</h2>
+
+      {{ render "@sources-list" sl }}
+
+      {{!-- <div class="form__rowsubmit">
+        <div class="form__rowsubmit__item">
+          {{ render "@button" buttonSubmit }}
+        </div>
+        <div class="form__rowsubmit__item">
+          {{ render "@button" buttonVorige }}
+        </div>
+      </div> --}}
+      <div class="form__row">
+        {{ render "@button" buttonVorige }}
+        {{ render "@button" buttonSubmit }}
+      </div>
+
+
+
+    </form>
+
+
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}

@@ -1,0 +1,101 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+      </p>
+
+      {{render "@nav" navConsultatieContext }}
+
+      {{render "@nav" navReagerenContext }}
+
+      <h3 class="nav-sub__heading">Delen</h3>
+
+      {{ render "@list--icons" listDelen merge=true }}
+
+      <h3 class="nav-sub__heading">Abonneren</h3>
+      <p>
+        Op de hoogte blijven van wetsvoorstellen waar u interesse in heeft?
+      </p>
+      <p>
+        {{ render "@link--mail" linkAbonneer merge=true }}
+      </p>
+
+    </div>
+  </div>
+
+  <div role="main" id="content" class="content content--publication">
+
+    <div class="row--contentheading">
+      <h1>Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden</h1>
+      <p>{{ render "@label--danger" label1 merge=true }} {{ render "@label--large" label2 merge=true }}</p>
+    </div>
+
+    <div class="row--contentcontainer">
+      <p class="p-intro">
+        Soms kunnen ouders geen school voor hun kind vinden die past bij hun godsdienst of levensovertuiging. Deze ouders mogen ‘vrijstelling van de leerplicht’ aanvragen. Het kind gaat dan niet naar school, maar krijgt thuis les van de ouders. Met deze wet komen er strengere eisen aan dit thuisonderwijs.
+      </p>
+      <p>
+        {{ render "@link--cta" linkReageer merge=true }}
+      </p>
+    </div>
+
+    <div class="row--contentcontainer">
+      <h2>Reageer op dit wetsvoorstel</h2>
+      <p>
+        De minister is benieuwd naar uw mening over de vorm en inhoud van dit wetsvoorstel. U kunt bijvoorbeeld laten weten hoe u denkt dat de wet zal uitpakken in de praktijk. We kunnen uw reactie het best gebruiken als deze duidelijk is geschreven. Een paar tips voor een goede reactie:
+      </p>
+      {{ render "@list--check" listCheck merge=true }}
+    </div>
+
+    {{ render "@steps" steps }}
+
+    <form>
+      <div class="form-conditionals" data-decorator="init-form-conditionals">
+        <fieldset id="citem-1" class="js-form-conditionals__citem">
+          <legend class="visually-hidden">Reactie soort</legend>
+          <p class="form__label form__label--accent">Reactie soort</p>
+          <div class="input-radio--inline">
+            {{ render "@input-radio" reactiesoort }}
+          </div>
+        </fieldset>
+        <fieldset id="citem-2" class="js-form-conditionals__citem" aria-hidden="true">
+          <div class="form__row">
+            {{ render "@textarea" textareaContext }}
+          </div>
+        </fieldset>
+        <fieldset id="citem-3" class="js-form-conditionals__citem" aria-hidden="true">
+          <div class="form__row">
+            {{ render "@textarea" textareaContext2 }}
+          </div>
+          <div class="form__row">
+            {{ render "@textarea" textareaContext3 }}
+          </div>
+        </fieldset>
+        <fieldset id="citem-4" class="js-form-conditionals__citem" aria-hidden="true">
+          <div class="form__row">
+            {{ render "@input-file" }}
+          </div>
+        </fieldset>
+      </div>
+      <div class="form__row">
+        {{ render "@button" buttonSubmit }}
+      </div>
+    </form>
+
+
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
