@@ -32,4 +32,9 @@ variants:
     context:
       text: gevaar
       modifier: label--danger
+  - name: Large
+    label: Groot
+    context:
+      text: Label
+      modifier: label--large
 

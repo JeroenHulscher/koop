@@ -18,6 +18,11 @@
   color: $black;
   vertical-align: middle;
 
+  &--large {
+    font-size: 1em;
+    font-style: italic;
+  }
+
   &--blue {
     background: $darkBlue;
     color: $white;

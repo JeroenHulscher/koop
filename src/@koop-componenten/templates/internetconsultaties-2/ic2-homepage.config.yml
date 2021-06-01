@@ -1,0 +1,121 @@
+---
+label: IC - Homepage
+status: ready
+context:
+  header:
+    file: logo.svg
+    alt: Overheid.nl logo
+    navLinks:
+      - url: '#'
+        text: Over internetconsultaties
+      - url: '#'
+        text: Uitgebreid zoeken
+    youAreHere:
+      - text: Wegwijzer naar informatie en diensten van alle overheden
+    skipLinks:
+      - url: '#content'
+        text: Direct naar content
+  breadcrumb:
+    title: "U bent hier:"
+    breadcrumb:
+    - text: Home
+  jumbotronContext:
+    heading: Denk mee over nieuwe wetten en regels
+    h: h1
+    subheading: Internetconsultatie
+    intro: Uw mening geven over nieuwe wetten en regels, voordat ze definitief worden? Dat kan. De overheid verzamelt via deze website ideeën van burgers en bedrijven over wetsvoorstellen. Dit worden consultaties genoemd. Denkt u ook mee?
+    centered: true
+    headingcentered: true
+    searchterm:
+      modifier: input-text--medium
+      labelmodifier: accent
+      id: 2
+      fieldLabel: Zoekwoord
+      fieldLabelVisible: true
+      fieldInstruction:
+      fieldPlaceholder: Waar wilt u op zoeken?
+      patterntype: text
+    selectContext:
+      modifier: select-custom--large
+      fieldLabel: Thema
+      options:
+        - label: Kies een thema
+          value:
+          selected: selected
+        - label: Bestuur
+          value: 10
+        - label: Cultuur en recreatie
+          value: 20
+        - label: Economie
+          value: 30
+        - label: Financiën
+          value: 30
+        - label: Huisvesting
+          value: 30
+        - label: Internationaal
+          value: 30
+        - label: Migratie en integratie
+          value: 30
+        - label: Natuur en milieu
+          value: 30
+        - label: Onderwijs en wetenschap
+          value: 30
+        - label: Openbare orde en veiligheid
+          value: 30
+        - label: Recht
+          value: 30
+        - label: Ruimte en infrastructuur
+          value: 30
+        - label: Sociale zekerheid
+          value: 30
+        - label: Verkeer
+          value: 30
+        - label: Werk
+          value: 30
+        - label: Zorg en gezondheid
+          value: 30
+    buttonSubmit:
+      id: 123
+      text: Zoeken
+      button: true
+      type: submit
+      modifier: button--primary form__button
+    linkPar:
+      text: Bekijk alle thema's
+  block:
+    id: 1
+    heading: Alle lopende consultaties
+    subheading: Actuele wetsvoorstellen
+    content: '<p class="block-content__intro">In deze lijst staan alle lopende consultaties: wetsvoorstellen waar u nog op kunt reageren. Na de sluitingsdatum van een consultatie bekijkt de minister alle reacties. Soms wordt het wetsvoorstel dan aangepast.</p>'
+  resultlist:
+    items:
+      - title: Toekomstig gebruik PAMR-frequentieband (450 MHz)
+        titleHeader: h3
+        titleHref: '#'
+        text: De PAMR-frequentievergunning loopt november 2024 af. Het ministerie van EZK heeft beleid ontwikkeld voor het toekomstig gebruik van de PAMR-frequentieband van 2 x 3 MHz in het 450 - 470 MHz spectrum. EZK heeft hiervoor verschillende onderzoeken laten doen. Gelet op de uitkomsten daarvan is een beleidsvoornemen geformuleerd. U wordt uitgenodigd uw zienswijze te geven, zodat deze kan worden meegewogen in de verdere besluitvorming.
+        metadata:
+          - value: 'Sluitingsdatum: 25-04-2021 Ministerie van Economische Zaken en Klimaat'
+      - title: Programma EMVAF
+        titleHeader: h3
+        titleHref: '#'
+        text: Dit betreft het Programma voor het Europees Maritiem, Visserij en Aquacultuur Fonds (EMVAF) en de daarbij horende ontwerp Strategische Milieubeoordeling (SMB). In het Programma is vastgelegd op welke manier Nederland de haar beschikbare EU middelen en aanvullende nationale cofinanciering voor de periode 2021 – 2027 voornemens is te besteden. Het doel van de SMB-procedure is om het milieubelang een volwaardige en tijdige plaats te geven in het plan- en besluitvormingsproces over het Programma.
+        metadata:
+          - value: 'Sluitingsdatum: 23-04-2021 Ministerie van Landbouw, Natuur en Voedselkwaliteit'
+      - title: Regeling hernieuwbare energie bij ingrijpende renovatie
+        titleHeader: h3
+        titleHref: '#'
+        text: Deze ministeriële regeling maakt deel uit van de implementatie van de EU-richtlijn voor hernieuwbare energie (REDII). Het vormt de nadere uitwerking van het Besluit in verband met hernieuwbare energie bij ingrijpende renovatie. Meer informatie is te vinden in de nota van toelichting in het geconsulteerde document.
+        metadata:
+          - value: 'Sluitingsdatum: 16-06-2021 Ministerie van Binnenlandse Zaken en Koninkrijksrelaties'
+      - title: AVV-aanvraag kalversector
+        titleHeader: h3
+        titleHref: '#'
+        text: Stichting Brancheorganisatie Kalversector (SBK) verzoekt de Minister van LNV om een verbindend verklaring van voorschriften op het gebied van onderzoek en innovatie voor een duurzame kalversector en de financiering daarvan.
+        metadata:
+          - value: 'Sluitingsdatum: 18-06-2021 Ministerie van Landbouw, Natuur en Voedselkwaliteit'
+      - title: Wijziging Regeling legionellapreventie in verband met eisen aan zorgwoningcomplexen
+        titleHeader: h3
+        titleHref: '#'
+        text: Het Ministerie van Infrastructuur en Waterstaat bereidt een wijziging voor van de Regeling legionellapreventie in drinkwater en warm tapwater. Met deze wijziging worden met name zorgwoningcomplexen weer verplicht tot legionellapreventie.
+        metadata:
+          - value: 'Sluitingsdatum: 15-06-2021 Ministerie van Infrastructuur en Waterstaat'

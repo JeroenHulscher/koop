@@ -1,0 +1,59 @@
+---
+label: Blok (cards)
+context:
+  id: 1
+  cards:
+    - heading:
+        label: Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden
+      subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+      figure:
+        figcaption: false
+        source: false
+        picture:
+          src: ../../images/temp/illu-walkingdog.png
+          alt: alt text
+      labels:
+        - label:
+            text: Onderwijs
+            modifier: label--large label--info
+        - label:
+            text: 16-07-2020
+            modifier: label--large
+      cta:
+        label: Bekijk consultatie
+    - heading:
+        label: Wet deelgezag
+      subheading: Ministerie van Justitie en Veiligheid
+      figure:
+        figcaption: false
+        source: false
+        picture:
+          src: ../../images/temp/illu-walkingdog.png
+          alt: alt text
+      labels:
+        - label:
+            text: Gezien
+            modifier: label--large label--info
+        - label:
+            text: 10-03-2021
+            modifier: label--large
+      cta:
+        label: Bekijk consultatie
+    - heading:
+        label: Wijziging van o.a. het EKB WEB i.v.m. de uitwerking van het taalschakeltraject als onderwijsroute inburgering en de examinering Nt2
+      subheading: Ministerie van Onderwijs, Cultuur en Wetenschap
+      figure:
+        figcaption: false
+        source: false
+        picture:
+          src: ../../images/temp/illu-walkingdog.png
+          alt: alt text
+      labels:
+        - label:
+            text: Onderwijs
+            modifier: label--large label--info
+        - label:
+            text: 10-03-2021
+            modifier: label--large
+      cta:
+        label: Bekijk consultatie

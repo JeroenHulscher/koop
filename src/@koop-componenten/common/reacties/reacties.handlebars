@@ -1,0 +1,30 @@
+<div class="reacties">
+  {{#if heading}}
+    <{{heading/tag}} class="reacties__heading">{{heading/label}}{{#if heading/sublabel}}<span class="reacties__sublabel">{{heading/sublabel}}</span>{{/if}}</{{heading/tag}}>
+  {{/if}}
+  {{#if reacties}}
+    <ul>
+    {{#each reacties}}
+      <li class="reacties__reactie">
+        <p class="reacties__reactie-auteur">{{auteur}}</p> <span class="reacties__reactie-date"><span class="visually-hidden">Reactie geplaatst op: </span>{{date}}</span>
+        <div class="reacties__reactie-content">
+          {{{content}}}
+        </div>
+        {{#if linkDownload}}
+          <p>
+            {{ render "@link--download" linkDownload merge=true }}
+          </p>
+        {{/if}}
+        {{#if readmore}}
+          <p>
+            {{ render "@link--cta" readmore merge=true }}
+          </p>
+        {{/if}}
+      </li>
+    {{/each}}
+    </ul>
+  {{/if}}
+  {{#each actions}}
+    {{ render "@button" button }}
+  {{/each}}
+</div>

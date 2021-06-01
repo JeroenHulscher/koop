@@ -1,0 +1,159 @@
+{{ render "@header" header merge=true }}
+
+<div class="row row--page-opener">
+  <div class="container">
+    {{ render "@breadcrumb" breadcrumb }}
+  </div>
+</div>
+
+<div class="container columns columns--sticky-sidebar row" data-decorator="init-scroll-chapter">
+
+  <div class="columns--sticky-sidebar__sidebar" data-decorator="stick-sidebar add-mobile-foldability" data-config='{"scrollContentElement":".js-scrollContentElement"}' id="toggleable-1">
+    <div>
+      <p>
+        <a href="#" class="icon--backlink">Terug naar zoekresultaten</a>
+      </p>
+
+      {{render "@nav" navConsultatieContext }}
+
+      {{render "@nav" navReagerenContext }}
+
+      <h3 class="nav-sub__heading">Delen</h3>
+
+      {{ render "@list--icons" listDelen merge=true }}
+
+      <h3 class="nav-sub__heading">Abonneren</h3>
+      <p>
+        Op de hoogte blijven van wetsvoorstellen waar u interesse in heeft?
+      </p>
+      <p>
+        {{ render "@link--mail" linkAbonneer merge=true }}
+      </p>
+
+    </div>
+  </div>
+
+  <div role="main" id="content" class="content content--publication">
+
+    {{ render "@pageactions" pageactions }}
+
+    <div class="row row--container">
+
+      <div class="row--contentheading">
+        <h1>Extra eisen aan thuisonderwijs als ouders geen geschikte school kunnen vinden</h1>
+        <p>{{ render "@label--danger" label1 merge=true }} {{ render "@label--large" label2 merge=true }}</p>
+      </div>
+
+      <section id="section-1">
+        <h2 class="">In het kort</h2>
+        <p class="p-intro">
+          Soms kunnen ouders geen school voor hun kind vinden die past bij hun godsdienst of levensovertuiging. Deze ouders mogen ‘vrijstelling van de leerplicht’ aanvragen. Het kind gaat dan niet naar school, maar krijgt thuis les van de ouders. Met deze wet komen er strengere eisen aan dit thuisonderwijs.
+        </p>
+        <p>
+          In Nederland is <strong>vrijheid van onderwijs</strong>. Dat staat in de Grondwet. Het betekent dat ouders het recht hebben om een school voor hun kind te kiezen die past bij hun overtuigingen. Is er geen passende school in de buurt? Dan mogen ouders <strong>vrijstelling van de leerplicht</strong> aanvragen. De ouders hebben dan <strong>richtingbezwaren</strong>: ze zijn het niet eens met de godsdienst of levensovertuiging van de scholen in de buurt.
+        </p>
+        <p>
+          Met een vrijstelling mogen ouders hun kinderen <strong>thuis lesgeven</strong>. Er zijn nu geen regels voor de kwaliteit van dit thuisonderwijs. De overheid wil de wet veranderen om dit beter te regelen. Bij deze consultatie vraagt de overheid jouw mening over dit plan.
+        </p>
+        <p>
+          {{ render "@link--cta" linkReageer merge=true }}
+        </p>
+      </section>
+
+    </div>
+
+    <div class="row row--container">
+
+      {{#> @accordion accordion }}
+        {{#> @accordion-item accordionitem1 }}
+
+            <table class="table__data-overview">
+              <tbody>
+                <tr>
+                  <th scope="row">Publicatiedatum</th>
+                  <td>02-06-2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">Einddatum consultatie</th>
+                  <td>16-07-2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">Status</th>
+                  <td>{{ render "@label--danger" labelStatus merge=true}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Type consultatie</th>
+                  <td>Wet</td>
+                </tr>
+                <tr>
+                  <th scope="row">Organisatie</th>
+                  <td>Ministerie van Onderwijs, Cultuur en Wetenschap</td>
+                </tr>
+                <tr>
+                  <th scope="row">Keten ID</th>
+                  <td><a href="#">9318</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Onderwerpen</th>
+                  <td><a href="#">Basisonderwijs Voortgezet onderwijs</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+        {{/@accordion-item }}
+        {{#> @accordion-item accordionitem2 }}
+            <ol>
+              <li><strong>Ouders</strong> die hun kind(eren) thuis les willen geven omdat zij het niet eens zijn met de godsdienst of overtuiging van de scholen in de buurt. </li>
+              <li><strong>Kinderen en jongeren</strong> die thuisonderwijs krijgen omdat hun ouders een vrijstelling hebben aangevraagd.</li>
+            </ol>
+
+        {{/@accordion-item }}
+        {{#> @accordion-item accordionitem3 }}
+            <p>
+              Er bestaat al een wet die ervoor zorgt dat ouders met richtingbezwaren vrijstelling van de leerplicht mogen aanvragen. Maar in die wet staat niet dat de kinderen van deze ouders in zo’n situatie nog steeds goed onderwijs moeten krijgen. De overheid wil daarom extra onderdelen toevoegen aan de wet.
+            </p>
+            <ol>
+              <li><strong>Verplichte gesprekken:</strong> <br>Ouders moeten samen met hun kind een verplicht gesprek voeren bij de gemeente. Pas daarna kunnen zij de vrijstelling krijgen. Als het kind 12 jaar wordt is er weer een gesprek. Zo kan de gemeente controleren of het thuisonderwijs ook de goede keuze is voor het kind.</li>
+              <li><strong>Regels voor het thuisonderwijs:</strong> <br> Het thuisonderwijs moet net zo goed zijn als op school. Ouders moeten daarom elk jaar een uitgebreid onderwijsplan maken. Ze moeten in het plan laten zien dat alle lesstof aan bod komt. De ouders moeten zelf ook aan eisen voldoen. En er zijn regels voor de plek waar wordt lesgegeven: die moet rustig en ordelijk zijn.</li>
+              <li><strong>Meer controle: </strong> <br>De onderwijsinspectie gaat controleren of het thuisonderwijs aan de eisen van punt 2 voldoet. Ook moeten de kinderen drie keer een toets maken voor de vakken taal en rekenen. Voor kinderen ouder dan 12 jaar moeten de ouders laten zien dat zij toewerken naar een diploma zoals havo, vwo of mbo niveau 2 of hoger (een startkwalificatie).</li>
+            </ol>
+
+        {{/@accordion-item }}
+        {{#> @accordion-item accordionitem4 }}
+            <ol>
+              <li><strong>Belang van het kind: </strong> <br>Normaal gesproken houdt de leerkracht in de gaten of het goed gaat met een leerling. Dat is niet mogelijk bij kinderen die thuis les krijgen. Door de nieuwe wet moeten ouders die een vrijstelling aanvragen eerst samen met het kind een gesprek voeren bij de gemeente. Denkt de gemeente dat de thuissituatie niet veilig is voor het kind? Dan kan de gemeente hulp bieden en de vrijstelling niet geven. Als het kind 12 jaar is, volgt een tweede gesprek. Het kind mag zijn mening geven en daar moet naar worden geluisterd. Ouders moeten samen met hun kind een verplicht gesprek voeren bij de gemeente. Pas daarna kunnen zij de vrijstelling krijgen. Als het kind 12 jaar wordt is er weer een gesprek. Zo kan de gemeente controleren of het thuisonderwijs ook de goede keuze is voor het kind.</li>
+              <li><strong>Kwaliteit van het onderwijs: </strong> <br>De overheid wil dat kinderen die thuisonderwijs volgen net zoveel leren als kinderen die naar school gaan. Het thuisonderwijs moet dus aan dezelfde eisen voldoen als het onderwijs op school. Die eisen zijn vastgelegd in wetten. Ouders die zelf les willen geven moeten een onderwijsplan maken. In dat plan leggen ze uit hoe zij aan al die eisen gaan voldoen. Daar horen ook andere dingen bij. Kinderen moeten leren over de maatschappij en kennismaken met kinderen met een andere achtergrond. De ouders moeten ook bewijzen dat zij zelf goed les kunnen geven. Ze moeten bijvoorbeeld Nederlands op niveau B2/3F beheersen. De onderwijsinspecteur controleert al deze zaken. Is de kwaliteit van het onderwijs niet goed genoeg? Dan moet het kind weer ingeschreven worden bij een school.</li>
+            </ol>
+
+        {{/@accordion-item }}
+        {{#> @accordion-item accordionitem5 }}
+            {{ render "@sources-list" sourcesContext2 }}
+
+        {{/@accordion-item }}
+        {{#> @accordion-item accordionitem6 }}
+            <p>De volgende documenten geven extra informatie over dit wetsvoorstel. U kunt niet op deze documenten reageren.</p>
+            <ul>
+              <li>
+                <strong>2018-07-28</strong><br> <a href="#" rel="external"><span class="visually-hidden">Externe link: </span>Bron: wetten.overheid.nl</a>
+              </li>
+              <li>
+                <strong>2019-02-01</strong><br> <a href="#" rel="external"><span class="visually-hidden">Externe link: </span>Bron: wetten.overheid.nl</a>
+              </li>
+            </ul>
+
+        {{/@accordion-item }}
+      {{/@accordion}}
+
+    </div>
+
+    <div class="row row--container">
+
+      {{ render "@reacties" }}
+
+    </div>
+
+  </div>
+
+</div>
+
+{{ render "@footer" }}
