@@ -3,27 +3,20 @@ label: Datepicker
 status: ready
 context:
   id: 1
-  fieldLabel: Datum
-  fieldInstruction:
   fieldPlaceholder: 'Bijv: 06-10-1960'
   value: '2020-04-19'
   datavalue: '19-04-2020'
   configDateFormat: 'dd-mm-yy'
-  debug: false
 variants:
   - name: Range
     status: prototype
     context:
       id: 2
       range: true
-      fieldLabel: Datum
-      fieldInstruction:
       fieldPlaceholder: 'Bijv: 06-10-1960'
   - name: Custom years
     context:
       id: 3
-      fieldLabel: Datum
-      fieldInstruction:
       fieldPlaceholder: 'Bijv: 06-10-1960'
       yearrange: "c-50:c+5"
   - name: Today

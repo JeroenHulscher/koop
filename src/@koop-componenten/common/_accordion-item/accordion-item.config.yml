@@ -1,6 +1,6 @@
 ---
 title: Accordion item
-status: prototype
+status: ready
 context:
   headerId: header1
   headerLabel: Accordion Item Vraag 1

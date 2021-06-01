@@ -6,9 +6,6 @@ context:
   type: abbr
   linkText: Selecteer
   modalTitle: Selecteer ministeries
-  fieldLabel: fieldLabel
-  fieldInstruction:
-  fieldPlaceholder: 'Bijv: 0612345678'
   Options:
     - Option: 1777778
       id: 1777778
@@ -50,9 +47,6 @@ variants:
       linkText: Kies 'iets'
       linkTextActive: Wijzig selectie
       modalTitle: Selecteer ministeries
-      fieldLabel: fieldLabel
-      fieldInstruction:
-      fieldPlaceholder: 'Bijv: 0612345678'
       Options:
         - Option: 199998
           id: 199998
@@ -95,9 +89,6 @@ variants:
       linkText: Kies 'iets'
       linkTextActive: Wijzig selectie
       modalTitle: Selecteer ministeries
-      fieldLabel: fieldLabel
-      fieldInstruction:
-      fieldPlaceholder: 'Bijv: 0612345678'
       maxShow: 3
       Options:
         - Option: 1
@@ -344,9 +335,6 @@ variants:
       linkText: Kies 'iets anders'
       linkTextActive: Wijzig selectie
       modalTitle: Selecteer uit deze themas
-      fieldLabel: fieldLabel
-      fieldInstruction:
-      fieldPlaceholder: 'Bijv: 0612345678'
       maxShow: 3
       multilevel: true
       Options:
