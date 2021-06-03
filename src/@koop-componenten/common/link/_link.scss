@@ -25,7 +25,9 @@ a {
       position: relative;
     }
     .related--primaryBlue & {
-      background-image: $externalLinkWhiteIcon;
+      &:after {
+        background-image: $externalLinkWhiteIcon;
+      }
     }
   }
 
