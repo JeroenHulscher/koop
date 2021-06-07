@@ -485,6 +485,11 @@
       "label": "ic2-reageren-3",
       "url": "http://localhost:3000/components/preview/templates-ic2-reageren-3",
       "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-ic2-reageren-3.html"
+    },
+    {
+      "label": "homepage-onl",
+      "url": "http://localhost:3000/components/preview/templates-homepage-onl",
+      "referenceUrl": "https://jeroenhulscher.nl/koop/components/preview/templates-homepage-onl.html"
     }
   ],
   "paths": {
