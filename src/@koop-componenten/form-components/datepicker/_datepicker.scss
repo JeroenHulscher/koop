@@ -3,7 +3,7 @@
   // padding-right: 2em;
   position: relative;
 
-  [data-decorator="init-datepicker"] ~ .ui-datepicker-trigger {
+  [data-decorator="init-datepicker"]:disabled ~ .ui-datepicker-trigger {
     display: none;
   }
 }
