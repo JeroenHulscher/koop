@@ -55,7 +55,10 @@
     }
 
     for (i = 0; i < this.triggers.length; i++) {
-      this.triggers[i].addEventListener('click', function (e) { this.doTriggerAction(e); }.bind(this), false);
+      if(!this.triggers[i].classList.contains('has-eventlisterner')) {
+        this.triggers[i].addEventListener('click', function (e) { this.doTriggerAction(e); }.bind(this), false);
+        this.triggers[i].classList.add('has-eventlisterner');
+      }
       // this.triggers[i].addEventListener('focus', function () { this.element.classList.add('is-focused'); }.bind(this), false);
       // this.triggers[i].addEventListener('blur', function () { this.element.classList.remove('is-focused'); }.bind(this), false);
     }

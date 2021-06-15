@@ -28,4 +28,10 @@ variants:
       id: 4
       haslabel: true
       label: Vanaf
+  - name: Disabled
+    context:
+      id: 4
+      haslabel: true
+      label: Disabled veld
+      disabled: true
 

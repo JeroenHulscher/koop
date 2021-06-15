@@ -3,3 +3,10 @@ label: Auto-start componenten
 status: ready
 context:
   id: 1
+  accordion:
+    id: accordion1
+  accordionItem:
+    headerId: headernew1
+    headerLabel: Nieuw accordion item
+    contentId: connew1
+    content: Inhoud van de nieuwe accordion item

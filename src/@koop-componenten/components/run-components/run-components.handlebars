@@ -1,22 +1,50 @@
 <h1>Auto-Start componenten</h1>
 <p>Wanneer een component dynamisch is ingeladen, wordt er middels de MutationObserver ontdekt dat de DOM van de pagina is aangepast. Vervolgens zal de gehele pagina worden doorlopen op nieuwe componenten. Wanneer er een nieuw component gevonden is, die nog niet geinstantieerd is, zal deze worden gestart. (de code is te vinden in run.js)</p>
 
-<h2>Statisch</h2>
-{{ render "@accordion" }}
 
-<h2>Dynamisch</h2>
-<p>Deze componenten worden later op de pagina geplaatst en dit zal een DOM wijziging opleveren.</p>
-<textarea id="textarea">
-    {{ render "@collapsible--default" }}
-    {{ render "@modal" }}
-    {{ render "@subselection--with-catagories-and-select-all" }}
-    {{ render "@datepicker" }}
-</textarea>
-<button id="btn">Render</button>
+<div class="row--contentcontainer">
+  <h2>Statisch + dynamisch item toevoegen</h2>
+  {{ render "@accordion" accordion merge=true }}
 
-<div id="placeholder"></div>
 
+  {{ render "@accordion-item" accordionItem }}
+
+  <button id="btn-accordionitem">Activeer accordion item</button>
+</div>
+<div class="row--contentcontainer">
+  <h2>Dynamisch</h2>
+  <p>Deze componenten worden later op de pagina geplaatst en dit zal een DOM wijziging opleveren.</p>
+  <textarea id="textarea">
+      {{ render "@collapsible--default" }}
+      {{ render "@modal" }}
+      {{ render "@subselection--with-catagories-and-select-all" }}
+      {{ render "@datepicker" }}
+      {{ render "@select-multi" }}
+  </textarea>
+  <p>
+    <button id="btn">Render</button>
+  </p>
+
+  <div id="placeholder"></div>
+</div>
 <script>
+var accordion = document.getElementById('accordion1');
+var btn2 = document.getElementById('btn-accordionitem');
+
+btn2.addEventListener('click', function (e) {
+    var itemTrigger = document.getElementById('headernew1');
+    var item = itemTrigger.parentNode.parentNode.parentNode;
+    console.log('item', item);
+    var accordion = document.getElementById('accordion1');
+    accordion.appendChild(item);
+    //var placeholder = document.getElementById('placeholder');
+    //placeholder.innerHTML = textarea.value;
+
+    var btn2 = document.getElementById('btn-accordionitem');
+    btn2.parentNode.removeChild(btn2);
+}.bind(this), false);
+
+
 var collaps = document.getElementById('1');
 var btn = document.getElementById('btn');
 
@@ -25,4 +53,5 @@ btn.addEventListener('click', function (e) {
     var placeholder = document.getElementById('placeholder');
     placeholder.innerHTML = textarea.value;
 }.bind(this), false);
+
 </script>

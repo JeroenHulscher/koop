@@ -2,6 +2,10 @@
   display: inline-block;
   // padding-right: 2em;
   position: relative;
+
+  [data-decorator="init-datepicker"]:disabled ~ .ui-datepicker-trigger {
+    display: none;
+  }
 }
 
 .ui-datepicker:not(:empty) {

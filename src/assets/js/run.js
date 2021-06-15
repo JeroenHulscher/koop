@@ -6,6 +6,11 @@ onl.run();
 
 var mutationObserver = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
+    if(mutation.target.dataset.decorator === 'init-accordion') {
+      var accordionId = mutation.target.id;
+      var accordion = document.querySelector('#'+accordionId);
+      accordion.removeAttribute('data-decorator-initialized');
+    }
     onl.run();
   });
 });
