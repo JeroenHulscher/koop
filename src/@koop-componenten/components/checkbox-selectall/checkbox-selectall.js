@@ -31,6 +31,10 @@
 
       if(this.checkboxSelectAllOnMain) {
         this.checkboxSelectAllOnMain.checked = true;
+
+        pubsub.publish('/selectall/init/checkboxSelectAllOnMain/true', {
+          element: this.element
+        });
       }
     }
     this.initEventListeners();
@@ -46,7 +50,7 @@
 
     // master checkbox (select all)
     // this.mastercheckbox.addEventListener('click', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
-    this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); }.bind(this), false);
+    this.mastercheckbox.addEventListener('change', function (e) { this.changeMasterCheckbox(e); console.log('change this.mastercheckbox') }.bind(this), false);
   };
 
   selectall.prototype.areAllCheckboxesChecked = function (e) {
@@ -124,7 +128,14 @@
       if(insideSubselection && checkboxSelectAllOnMain) {
         checkboxSelectAllOnMain.checked = stateMasterCheckbox;
       }
+
+      var subselectionId = insideSubselection.getAttribute('data-id');
+      pubsub.publish('/selectall/changeMasterCheckbox', {
+        element: subselectionId
+      });
     }
+
+
 
   };
 
