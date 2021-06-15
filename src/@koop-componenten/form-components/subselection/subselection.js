@@ -96,6 +96,7 @@ function findObjectByKey(array, key, value) {
     field.type = 'hidden';
     field.classList.add("js-hiddenvaluefield");
     field.id = 'hvf-' + this.elementId;
+    field.name = 'hvf-' + this.elementId;
     this.element.appendChild(field);
   }
 
