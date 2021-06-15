@@ -1,4 +1,4 @@
-<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if selectAllOnMain}}, "selectAllOnMain": "{{selectAllID}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}} }'>
+<div class="subselection {{#if modifier}}subselection--{{modifier}}{{/if}}" data-decorator="init-form-subselection" data-config='{ "type": "{{type}}"{{#if linkTextActive}}, "triggerOnChangeText": "{{linkTextActive}}"{{/if}}{{#if maxShow}}, "maxShow": "{{maxShow}}"{{/if}}{{#if selectAllOnMain}}, "selectAllOnMain": "{{selectAllID}}"{{/if}}{{#if triggerSubmit}}, "triggerSubmit": true{{/if}}{{#if hiddenValueField}}, "hiddenValueField": true{{/if}} }'>
   {{#if selectAllOnMain}}
     <div class="input-checkbox">
       <input class="checkbox__input js-checkbox-selectAllOnMain" type="checkbox" id="ref-{{selectAllID}}" {{#if_eq selectAllOnMain/checked true}}checked{{/if_eq}} name="{{selectAllOnMain/name}}" value="Alle" />

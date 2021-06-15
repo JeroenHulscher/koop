@@ -62,6 +62,7 @@ function findObjectByKey(array, key, value) {
     this.resetLinkClass = this.config.resetLink || 'formreset-resetlink';
     this.checkboxSelectAllOnMain = onl.dom.$( '.js-checkbox-selectAllOnMain', this.element )[0];
     this.checkboxSelectAll = onl.dom.$( '.js-checkbox-master', this.element )[0];
+    this.hasHiddenValueField = this.config.hiddenValueField || false;
 
     var uniqueId = Math.floor(Math.random() * 1000000);
     this.element.setAttribute('data-id', uniqueId);
@@ -80,11 +81,23 @@ function findObjectByKey(array, key, value) {
 
     this.items = [];
 
+    if(this.hasHiddenValueField) {
+      this.createHiddenValueField();
+    }
+
     this.collectValues();
     this.parseSelectedOptions();
 
     this.attachListeners();
   };
+
+  formSubselection.prototype.createHiddenValueField = function() {
+    var field = document.createElement("input");
+    field.type = 'hidden';
+    field.classList.add("js-hiddenvaluefield");
+    field.id = 'hvf-' + this.elementId;
+    this.element.appendChild(field);
+  }
 
   formSubselection.prototype.attachListeners = function() {
     var y;
@@ -176,6 +189,7 @@ function findObjectByKey(array, key, value) {
     var value;
     var title;
     var id;
+    var hiddenvalue = '';
 
     for ( y = 0; y < this.items.length; y++ ) {
       value = this.items[y][0];
@@ -186,9 +200,16 @@ function findObjectByKey(array, key, value) {
       } else {
         summary += '<' + this.config.type + ' class="subselection__summaryitem" title="' + title + '" data-linkedid="' + id + '">' + value + '</' + this.config.type + '> ';
       }
+      hiddenvalue += "," + id;
     }
     this.containerSummary.innerHTML = summary;
     this.containerSummary.setAttribute('aria-live', 'polite');
+
+    if(this.hasHiddenValueField) {
+      var hiddenvaluefield = this.element.querySelector('#hvf-' + this.elementId);
+      hiddenvaluefield.value = hiddenvalue.substring(1);
+    }
+
 
     this.updateTriggerLabel(this.items.length);
     if (this.config.maxShow) {

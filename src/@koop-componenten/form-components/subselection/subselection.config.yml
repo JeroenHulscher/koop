@@ -22,6 +22,25 @@ context:
       title: Sociale Zaken en Werkgelegenheid (szw)
       short: szw
 variants:
+  - name: With hidden input
+    context:
+      id: 98761
+      type: span
+      hiddenValueField: true
+      Options:
+        - Option: 1999987
+          id: 1999987
+          title: Landbouw, Natuur en Voedselkwaliteit (lnv)
+          short: lnv
+          checked: checked
+        - Option: 2999988
+          id: 2999988
+          title: Onderwijs, Cultuur en Wetenschap (ocw)
+          short: ocw
+        - Option: 3999989
+          id: 3999989
+          title: Sociale Zaken en Werkgelegenheid (szw)
+          short: szw
   - name: Secondary
     context:
       id: 98761
