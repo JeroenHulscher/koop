@@ -1,3 +1,7 @@
+**LET OP! Deze repository is NIET MEER IN GEBRUIK, versie 1.9.48 is de laatste versie. De nieuwe repository voor de componentenbibliotheek van KOOP is terug te vinden in TFS (genaamd: 'applicatie-cb')**
+
+
+
 # KOOP componentenbibliotheek
 De componentenbibliotheek voor KOOP.
 
